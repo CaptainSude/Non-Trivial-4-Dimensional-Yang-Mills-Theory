@@ -1,0 +1,354 @@
+TURN56 — ORIGINAL WILSON INSERTIONS AND COMPLETE TAGGED HISTORIES
+20 October 2026. Independent derivation by history47.
+
+RESULT
+
+There is a positive payoff and a precise obstruction.
+
+Once the ACTUAL positive original/current/history joint measure is
+identified, TURN54's mass bound for a positive complete-history restriction
+transfers automatically to every bounded original insertion. Its conditional
+posterior need not be local or analytic. This controls real characteristic
+functions of arbitrarily rescaled physical observables, because their
+modulus is one. It does not control their derivatives or prove tightness.
+Separately tagged signed localization/walk terms need the stronger joint
+absolute bound described in Section 4; a terminal marginal bound alone
+does not suffice for them.
+
+An exact normalized reference redraw can be constructed directly. But
+normalization alone neither identifies its output with the native R
+expression nor supplies the native bounds for its original branch masses.
+A Wilson-stationary repair that always redraws into a weak region cannot
+heal a positive amount of its complement without reverse flow. This is
+proved below for the actual finite Wilson conditional, not just inferred
+from a generic warning about Markov kernels.
+
+No frozen proof/status file is changed. No original-law or continuum gap
+is declared closed.
+
+READING USED
+
+ current_proof_frontier_turn54.txt, especially Sections 5,7;
+ native_R_identity_reassessment_turn54.txt, especially Sections 3–6;
+ native_tagged_history_propagation_turn54.txt;
+ native_R_joint_law_turn15.txt, Sections 1–6;
+ native_R_backward_read_audit_turn15.txt, Sections 2–8;
+ native_partition_ratio_source_audit_turn14.txt, Sections 4–7;
+ qeo_full_measure_bridge_turn50.txt, Sections 2–4.
+
+The primary identifications used below are exactly those already audited:
+B119 (0.1) is the ordinary normalized T pushforward; B122-II p378 gives
+the terminal first-class integrated reverse-FP identity. The basic R
+matching numerator/domain identity remains deferred to Large-I in the
+inspected sources. This note does not reconstruct its damaged formula.
+
+1. WHAT CAN BE CONSTRUCTED EXACTLY ON THE ORIGINAL WILSON LAW
+
+On a finite lattice let G be compact, H normalized product Haar, and
+  rho_beta(U)=exp[-beta S_W(U)],  Z_beta=integral rho_beta dH.
+At finite real beta the continuous Wilson action is bounded, so rho_beta
+is strictly positive and bounded above/below. For finite sets of links
+this gives ordinary Borel conditional kernels; no weak-field theorem is
+needed for their existence.
+
+Split links into a changed interior x and retained exterior e. Write
+S_W(x,e)=S_int(x;e)+S_ext(e), assigning to S_int all plaquettes that read
+x. Then the exact conditional law is
+  p_e(dx)=exp[-beta S_int(x;e)] H_int(dx)/Z_int(e).          (1.1)
+It has full Haar support at every exterior e. The conditional heat bath
+K((x,e),d(y,e'))=p_e(dy) delta_e(de') preserves the full Wilson law and
+is reversible. Indeed its joint density is
+  mu_ext(de) p_e(dx) p_e(dy),                              (1.2)
+which is symmetric in x,y.
+
+Equation (1.2) is a concrete exact construction, but p_e is the FULL
+Wilson conditional. It is not a constrained-minimum reference density
+restricted to a weak chart. The source's reference denominator alone
+does not identify those two distributions.
+
+More generally, let a_h(x,e)>=0 be an exact positive partition of unity
+on the original state, with all determining variables retained. For
+each h,e choose any defined probability q_h,e(dy), for example an
+explicit weak-chart reference quotient on its admitted exterior. The
+joint unnormalized measure
+  J_h(de,dx,dy)=a_h(x,e) rho_beta(x,e) H(de,dx) q_h,e(dy)    (1.3)
+has original marginal sum_h J_h(de,dx)=rho_beta H. Its new marginal is
+  nu_h(de,dy)=m_h(de) q_h,e(dy),
+  m_h(de)=integral_x a_h(x,e) rho_beta(x,e) H(de,dx).        (1.4)
+
+This retains the OLD branch mass exactly. It does not replace m_h by
+the reference normalization. If a branch or exterior is inadmissible,
+its actual complementary branch must be retained; an undefined quotient
+is not an implicit probability kernel. Sequential normalized kernels
+give the same construction over finitely many dates, provided every
+selection is made at the declared point in the chronology.
+
+Consequently one can define a mass-preserving alternative R_ref now.
+What is not supplied by this definition is the equality
+  native post-basic-step density = the marginal in (1.4), (1.5)
+with the native cuts, variables, Jacobians, gauge factors and vacuum
+scalars. Nor does (1.3) establish the native complete-history estimates
+for its m_h. Those are precisely substantive attachments, not issues
+that disappear on normalizing q.
+
+2. A SHARP OBSTRUCTION TO A STATIONARY WEAK-REGION RESET
+
+Fix e and a measurable weak region D with p_e(D^c)>0. Consider the
+accepted-reference kernel
+  K_e(x,dy)=a(x)q_e(dy)+(1-a(x))delta_x(dy),                (2.1)
+where 0<=a<=1 and q_e(D)=1. Every x in D stays in D.
+If p_e is invariant under (2.1), then
+  p_e(D)=(p_e K_e)(D)
+        =p_e(D)+integral_(D^c) a(x) p_e(dx).
+Thus a=0 p_e-almost everywhere on D^c.                  (2.2)
+
+This applies to a genuine finite Wilson conditional whenever D^c has
+positive Haar measure. It is independent of how a depends on the old
+configuration. The same conclusion holds for any invariant kernel for
+which D is absorbing: stationary outflow from D^c must be balanced by
+inflow from D, and here there is no such inflow.
+
+In particular an independence Metropolis correction of a proposal
+q_e supported on D cannot accept proposals from a point with q_e(x)=0:
+the reverse proposal factor vanishes. It preserves p_e by refusing
+exactly those proposed one-way healings.
+
+This does NOT contradict native R, which is meant to change the current
+representation, not keep the entire current Wilson distribution fixed.
+It rules out a proposed shortcut: use a weak-chart redraw, enforce
+stationarity, and then treat the same function of the new field as
+the unchanged original physical observable. To preserve original
+expectations under a nonstationary redraw one must transport the
+observable, as follows.
+
+3. THE EXACT INSERTION AFTER A REFERENCE REDRAW
+
+For the actual joint (1.3) and a bounded original F(x,e), define the
+complex numerator measure nu_h^F by pushing F J_h to (e,y). Then
+  nu_h^F(de,dy)
+    = [integral_x F(x,e) a_h(x,e)rho_beta(x,e)H(de,dx)]
+                                                   q_h,e(dy).
+Relative to nu_h, its density is
+  f_h(e,y)=E_original[F(X,e) | e,h].                      (3.1)
+The right side is independent of the redrawn y. Set it arbitrarily
+on a nu_h-null set. It obeys |f_h|<=||F||_infinity.
+
+The numerator is generally NOT F(y,e)nu_h(de,dy).
+For example if a branch is selected by an old bad-field event, that
+event may have conditional probability one in (3.1), even while the
+new reference is supported entirely in a weak region. Keeping its
+ancestral history label prevents confusing those two events.
+
+At an ordinary T step, by contrast, a specified coarse observable f
+has exact original pullback f(M(U)); a general fine F transports as
+T(F rho)/T rho. These are different directional statements. A
+conditional expectation cannot be inverted as an operator on every
+original observable: it can discard conditional variance. Keeping
+the actual joint variables preserves the numerator identity, not
+an identity F=f(M(U)).
+
+4. POSITIVE PAYOFF: TURN54'S TAGGED BOUND FOR BOUNDED ORIGINAL F
+
+Here the attachment is stated precisely enough to distinguish an
+actual native joint measure from an arbitrary coupling of equal-mass
+marginals.
+
+Fix a COMPLETE continued native history h through terminal date k,
+including its original/ancestral tag, all later factors, and all
+remaining external data e. Suppose the actual normalized insertions
+and legitimate changes of variables have identified a finite
+POSITIVE joint measure J_h^e on the original and retained variables.
+Its specified terminal projection pi has the native marginal
+  nu_h^e=pi_*J_h^e.                                      (4.1)
+This is an equality of the actual construction; it is not inferred
+from equality of two scalar integrals.
+
+For any bounded original insertion F, the measure
+  nu_h^{e,F}=pi_*(F J_h^e)
+satisfies the measure inequality
+  |nu_h^{e,F}| <= ||F||_infinity nu_h^e.                  (4.2)
+Proof: for a measurable terminal set B, the total variation of the
+pushforward is at most the pushforward of |F|J_h^e, which is bounded
+by ||F|| times nu_h^e. Equivalently its Radon–Nikodym derivative
+f_h^e is a conditional posterior with |f_h^e|<=||F||.
+Singular gauge slices cause no problem for this finite-measure
+argument. No division by a small branch mass is used in the bound.
+
+TURN54 Section 7, at its stated native inputs, bounds the complete
+tagged component with its fixed weaker account. For a tag which is
+an ACTUAL measurable restriction of this positive history law, let
+J_(k,X;tag_i)^e denote the full continued component measure, including
+its allowed native history sum. Once its marginal identity (4.1)
+is attached, the positive mass version of TURN54 gives immediately
+  |integral F dJ_(k,X;tag_i)^e|
+    <= C exp[-c N_i/(M R_i)]
+       exp[-2lambda_0 c_beta P_k-kappa_c d_k(X)]
+       ||F||_infinity.                                  (4.3)
+Use the precise history summation/supremum convention of TURN54;
+its census must not be counted again in summing (4.3).
+
+There is no extra locality, analyticity, or derivative requirement
+on f_h^e for (4.3). The conclusion is simply a positive-mass bound.
+Even if the source formulation first states the operator estimate
+on a smaller terminal test class, its positive mass estimate
+(test 1) together with the ACTUAL joint measure proves (4.3).
+
+This is weaker than pointwise domination of the old joint density
+by a native envelope, but it is enough for this scalar inserted
+numerator. A bound on the correct positive terminal marginal mass
+is sufficient. One does NOT need to reconstruct a pointwise
+envelope on every eliminated variable merely to prove (4.3).
+
+Crucial scope:
+  * The terminal marginal must be the marginal of the actual J_h^e.
+    An arbitrary product coupling to a convenient native measure
+    does not establish (4.1).
+  * All future factors reading old private variables must already
+    be included in the COMPLETE continuation before (4.1)–(4.3)
+    are applied. A partial integrated mass cannot then be reused
+    before unspecified later old-variable reads.
+  * Fixed e contains all still-live external data. Uniform native
+    bounds can then be integrated against the actual positive
+    exterior measure. They cannot be applied outside their
+    admitted domain.
+  * The object is the positive unresummed raw component restricted
+    by an actual history event. Signed connected-log, walk or
+    localization coefficients are not probability measures.
+  * The original numerator after summing histories is divided
+    by the WHOLE original Z_beta. Normalizing q_h,e does not
+    normalize m_h or eliminate this denominator.
+
+Thus a verified positive reference insertion identity could close
+the bounded-insertion part together with the mass identity. One
+would not additionally need a full analytic observable transport
+theorem for every bounded F merely to discard the tagged histories.
+
+There is a decisive distinction for a separately retained SIGNED
+analytic decoration. Let x take values 0,1, let y have one value *,
+and set the signed joint measure
+  J=(delta_0-delta_1) tensor delta_*.
+Its terminal marginal pi_*J is zero. Thus every bounded terminal
+test has integral zero. But F(0)=1,F(1)=-1 gives integral F dJ=2.
+Even exact terminal total-variation control does not control an
+old insertion when cancellation occurred over discarded x.
+
+For such decorations the sufficient bound is on pi_*|J|, or on
+an original-variable absolute majorant strong enough to dominate
+it. Merely knowing |pi_*J| is insufficient. A tagged positive
+MAJORANT of a walk expansion is not automatically an actual
+positive event of the original law.
+
+Accordingly the posterior result can be used for actual positive
+geometric history events once their joint identity is known.
+For signed winding-walk terms used in a cover comparison, retain
+the full joint absolute walk bound through the original insertion,
+or supply the corresponding inserted expansion. TURN54's stated
+bounded-TERMINAL-test conclusion alone does not prove that stronger
+backward assertion. If its underlying complete proof bounds the
+full joint absolute integrand before eliminating the old variables,
+that would be a sufficient additional attachment; this note does
+not infer it just from the final operator estimate.
+
+5. BOUNDED SOURCES: WHAT THE PAYOFF DOES AND DOES NOT GIVE
+
+For any real original observable X, however large its physical
+rescaling, F_t=exp(i t X) has modulus one. At the positive-history
+scope of (4.1)–(4.3), the discarded numerator is bounded uniformly
+for real t.
+It also applies to finite products of such characteristic functions.
+
+For bounded original F_1,...,F_m with bounds B_l, leave the actual
+baseline kernels, cutoffs and coupling fixed and insert
+exp(sum_l z_l F_l) in the OLD density. Positivity and absolute
+convergence give for any tagged numerator its coefficient-sum
+majorant on |z_l|<=r_l:
+  sum_n |[z^n] N_tag(z)| product_l r_l^(n_l)
+      <= exp(sum_l r_l B_l) J_tag(1).                    (5.1)
+The same TURN54 estimate applies to J_tag(1). This is an exact
+bound on discarded source terms, not a claim that the complete
+renormalized analytic density class is closed under those sources.
+If B_l grow with the cutoff, (5.1) does not give a fixed uniform
+complex disc at no cost.
+
+Boundedness alone is not tightness of X. Conditional expectation
+contraction gives |E(exp(i t X)|terminal)|<=1, not uniform continuity
+at t=0. For example take the exact finite beta=0 SU(2) Wilson
+law (product Haar), and let U_p be the holonomy of one nondegenerate
+plaquette. Its four distinct Haar links make U_p Haar distributed.
+The observable
+  X_n=n(1-Re Tr(U_p)/2)
+is gauge invariant.
+This family is not tight: the nonnegative parenthesis is positive
+almost surely. Redraw the displayed field to identity with a
+normalized reference delta measure and keep the actual joint
+law. Its current field is perfectly tight, and every original
+characteristic posterior is bounded by one, but these facts do
+not make X_n tight. This is an arbitrary wrong scaling, used
+to diagnose the missing implication, not the physical scaling
+that YM should use.
+
+To obtain continuum control, one still needs information about
+the actual original observable on the retained good histories:
+for example its comparison with a tight coarse observable, or
+uniform characteristic-function continuity/moment estimates.
+The posterior in (3.1) is not automatically that coarse observable.
+Likewise E(F_1 F_2|terminal) is not generally the product of the
+two separate posteriors; discarded conditional fluctuations matter
+for covariance and nontriviality.
+
+6. WHY NORMALIZATION ALONE DOES NOT REPRODUCE THE NATIVE LEDGER
+
+The explicit construction (1.3) gives exact original mass and
+numerators for any normalized q. Its terminal marginal remembers
+the actual m_h, which contains the original integrals and every
+old selector. Replacing it by a tractable native expression is
+precisely the evaluation that needs verification.
+
+Three concrete alternatives are:
+
+  A. Identify the native normalized reference insertion and
+     changes of variables, including all scalars, with (4.1).
+    Then the positive complete-history bounds immediately give
+    (4.3) and (5.1) for bounded old insertions. Separately signed
+    decorations still require the absolute-joint condition.
+
+  B. Define the explicit alternative R_ref and prove the needed
+     large-field/continuation estimates anew for its exact
+     m_h and resulting complete density. This is a possible
+     new construction, not an import of native bounds solely
+     because its reference q resembles the native reference.
+
+  C. Use the genuine Wilson heat bath (1.1). This needs no
+     original-law identity audit, but the weak-reference
+     suppression/localization estimates must be proved for
+     the full conditional; stationarity does not supply them.
+
+An arbitrary mass-one correction to an unmatched native output
+chooses a different marginal or introduces the missing likelihood
+ratio. Its numerator then contains that ratio. A small native
+tag mass by itself cannot bound the ratio on the tagged set.
+The support calculation (2.2) shows concretely why stationary
+acceptance/rejection is not a free way around this issue.
+
+7. CURRENT AUDIT CONCLUSION
+
+The positive bounded-insertion payoff removes one unnecessary
+extra demand: after an ACTUAL positive joint representation is
+verified, no local analytic control of every posterior is needed
+for the positive-history discarded-numerator bound. Terminal
+positive mass is enough, with full chronology and normalization
+as specified above. The signed-decoration counterexample shows
+exactly why this cannot be inferred for every terminal expansion
+term without its joint absolute or inserted estimate.
+
+The present files do not yet supply (4.1) for the whole basic R
+operation attached to the original Wilson density. TURN54's
+tagged estimate applies to its admitted native continuations.
+The equality of those continuations with the constructed original
+joint law is still the decisive attachment. The source's ordinary
+T and terminal reverse-FP identities cover particular steps only.
+
+This narrows the original-insertion obligation. It does not
+replace it with a generic assertion of mass preservation, nor
+does it establish the renormalized physical-observable bounds
+needed for a nontrivial continuum theory.

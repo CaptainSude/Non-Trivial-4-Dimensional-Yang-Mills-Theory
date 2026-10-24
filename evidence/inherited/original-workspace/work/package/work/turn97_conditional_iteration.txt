@@ -1,0 +1,322 @@
+TURN97 -- TWO ORIGINAL-LAW CONDITIONAL UPDATES DO NOT PRESERVE THE
+COUPLING-INDEPENDENT REAL RESPONSE BOUND
+21 October 2026. Agent heatbath97. Finite SU(2) Wilson theorem.
+
+RESULT AND RELEVANCE
+
+The proposed repetition of actual heatbath conditional expectations is
+legitimate while retaining the original Wilson probability measure. It
+does not preserve the one-step source-response estimate from TURN96.
+There is an explicit homogeneous-Wilson two-link fiber, with a smooth
+bounded-speed exterior path, for which the first conditional source has
+the proved coupling-independent response bound, but the second has
+exterior derivative
+
+  -64 beta/(105 pi) + E_beta,       |E_beta| <= 2/pi.       (0.1)
+
+This is a quantitative obstruction to an unrestricted real Lipschitz
+source class, not a counterexample to a cutoff-uniform averaged source
+estimate or to a restricted small-field block estimate. It is important
+because neither a changed action nor a replacement conditional law is
+involved: both updates are the actual single-link Wilson conditionals.
+The obstruction survives inclusion of the entire constant-profile
+Wilson action: its leading response coefficient is
+beta[1/4-64/(105 pi)], which is strictly positive. Thus it cannot be
+removed simply by summing neighboring constant-profile source terms.
+
+The same example also gives a precise weaker fact: the large derivative
+forms a bounded-variation transition layer. Along the specified real
+exterior path, its integrated absolute derivative is at most 2, uniformly
+in beta. Converting that fact into a full Wilson bound would require a
+bound for the actual exterior density in this path coordinate. No such
+density estimate is proved here.
+
+Read inputs: work/turn96_pressure_route.txt;
+work/current_proof_frontier_turn96.txt;
+outputs/yang-mills-integrated-boundary-response.txt, especially the
+realization of a two-link homogeneous-Wilson conditional fiber.
+The TURN70 selected reverse-martingale covariance estimate is not being
+reproved. No frontier file or existing producer was edited.
+
+1. WHAT REPEATED ORIGINAL-LAW CONDITIONAL EXPECTATIONS DO PRESERVE
+
+Let mu_beta be the original finite periodic four-dimensional SU(2)
+Wilson measure, with every lattice period at least four, and beta>0.
+For a link e let P_e be conditional expectation over U_e, keeping every
+other original link fixed. If a companion observable F does not read e,
+then for every integrable G with the needed products integrable,
+
+  E_mu G = E_mu P_e G,
+  Cov_mu(F,G) = Cov_mu(F,P_e G).                          (1.1)
+
+Consequently, for a sequence e_1,...,e_n, ALL absent from the read of F,
+
+  Cov_mu(F,G)=Cov_mu(F,P_{e_n}...P_{e_1}G).              (1.2)
+
+These are compositions of actual conditional-expectation operators. They
+are different from the additive star-source transformation in TURN96.
+The kernel for a new update remains the original Wilson heatbath kernel,
+but its input observable is the full already-transformed function.
+There is no permission to replace that function by a Wilson star energy.
+
+A later update can reintroduce dependence on a link integrated earlier:
+its kernel depends on that earlier link, which is still a coordinate of
+the unchanged original state space. Thus repeated heatbath projection is
+not a decimation map, a conditional expectation onto an increasing or
+decreasing sigma-algebra, or automatically a coarse-lattice source.
+
+Individual P_e are orthogonal projections on L2(mu), hence contractions,
+but that fact alone gives no small cutoff-uniform source norm: the
+untransformed integrated source still has its microscopic root census.
+No new reverse-martingale estimate is claimed from (1.1)-(1.2).
+
+2. AN ACTUAL TWO-LINK CONDITIONAL FIBER
+
+Choose two opposite parallel links of one elementary plaquette. Write
+their oriented quaternion variables as u,v in S^3 so that the common
+plaquette trace is u dot v. All transverse links used in their plaquette
+stars can be held equal to I. Their other five plaquettes contribute
+staple sums A,B in R^4. Condition on every link except these two. Up to
+exterior-only terms, the literal homogeneous-Wilson density is
+
+  exp[beta (u dot v + A dot u + B dot v)] du dv.          (2.1)
+
+Use the real quaternion I=(1,0,0,0), choose
+
+  A=I,             B(t)=(-1+t) I,        |t|<1/2.        (2.2)
+
+These sums are realized by actual unit-quaternion staples with a
+bounded-speed dependence on t. To see this explicitly, choose a fixed
+imaginary unit quaternion J. Three of the five staples can be
+
+  I,  -I/2 + sqrt(3) J/2,  -I/2 - sqrt(3) J/2,
+
+whose sum is zero. The other pair, for any -2<c<2, can be
+
+  c I/2 + sqrt(1-c^2/4) J,
+  c I/2 - sqrt(1-c^2/4) J.                              (2.3)
+
+Their sum is c I. Take c=1 for the u-star and c=-1+t for
+the v-star. On |t|<1/2 each derivative in (2.3) is bounded by an
+absolute constant independent of beta. If the orientation of an
+individual plaquette requires inversion, choose the inverse parallel
+link; inversion preserves these bounded-speed statements.
+
+All ten parallel exterior links prescribing these staples are distinct.
+For example take the raw parallel links in direction 1 at sites 0 and
+e_2. The five other parallel links for the first star are at -e_2,
+plus/minus e_3, plus/minus e_4. Those for the second star are at
+2e_2, e_2 plus/minus e_3, e_2 plus/minus e_4. Periods at least four
+prevent identification among these ten links or with the raw pair.
+Changing the second set therefore does not change the first star or
+its five-staple sum A. Plaquettes containing only exterior links are
+conditional constants in (2.1), as they must be.
+
+3. FIRST UPDATE: EXACT SAME ONE-LINK RESULT AS TURN96
+
+Consider the constant-profile six-plaquette source of the u link:
+
+  S_u(u,v)=6-u dot (I+v).                               (3.1)
+
+This is the literal sum of its six original Wilson plaquette energies.
+Let m(s)=I_2(s)/I_1(s), continued by m(0)=0. The first actual heatbath
+conditional expectation is
+
+  H_beta(v):=(P_u S_u)(u,v)
+    =6-r(v) m(beta r(v)),       r(v)=|I+v|.
+                                                           (3.2)
+
+It is independent of u and independent of the path parameter t.
+As a function of the staple sum I+v its gradient has norm at most one,
+by TURN96. The global flat-value subtraction 6[1-m(6 beta)] is a scalar
+and has no effect on any derivative below.
+
+4. SECOND UPDATE: AN EXTERIOR RESPONSE OF ORDER BETA
+
+Now apply P_v to the CHANGED observable H_beta. Evaluate the resulting
+function at u=I. By (2.2), the actual conditional staple sum for v is
+
+  u+B(t)=t I.
+
+Thus the full second projection, with its actual normalizer, equals
+
+  T_beta(t) := (P_v P_u S_u)(I,v;B(t))
+    = [integral_(S^3) H_beta(v) exp(beta t v_0) dv]
+      /[integral_(S^3) exp(beta t v_0) dv],              (4.1)
+
+where v_0=I dot v. It is independent of the displayed old v. Since the
+mark H_beta has no t dependence, differentiation of the normalized
+integral gives exactly
+
+  T_beta'(0)=beta Cov_Haar(H_beta(v),v_0).               (4.2)
+
+The constant six drops out, and E_Haar v_0=0. Moreover
+
+  0 <= H_beta(v) - [6-r(v)]
+     =r(v)[1-m(beta r(v))] <= 3/(2 beta),               (4.3)
+
+including r=0, by the global Gamma domination inequality proved in
+TURN96. The scalar coordinate of Haar S^3 has density
+
+  (2/pi) sqrt(1-x^2) dx,   -1<=x<=1,
+
+and E_Haar |v_0|=4/(3 pi). It follows that
+
+  |T_beta'(0)+beta E_Haar[v_0 sqrt(2+2v_0)]|<=2/pi.
+                                                           (4.4)
+
+The remaining integral is elementary. Set y=(1+x)/2:
+
+  E[v_0 sqrt(2+2v_0)]
+    =(16/pi) integral_0^1 (2y-1)y(1-y)^(1/2) dy
+    =(16/pi)[2 B(3,3/2)-B(2,3/2)]
+    =(16/pi)[32/105-4/15]
+    =64/(105 pi).                                      (4.5)
+
+Equations (4.4)-(4.5) prove (0.1) without an asymptotic Bessel
+expansion. In particular, for beta>=105/16,
+
+  |T_beta'(0)| >= 32 beta/(105 pi).                     (4.6)
+
+The exterior path has a uniformly bounded speed in the product of
+original-link quaternion metrics. Hence no uniform original-exterior
+Lipschitz constant for P_v P_u S_u is possible on ALL real exteriors.
+This remains true after any t-independent flat-value or vacuum-scalar
+subtraction.
+
+The balanced second staple sum at t=0 is essential. The first one-link
+response estimate included a special cancellation between the star
+energy mark and its own heatbath score. After P_u, the mark H_beta is
+no longer the v-star energy; that cancellation is absent. Keeping the
+action fixed does not keep this special source class fixed.
+
+4A. COMPLETING THE SOURCE DOES NOT CANCEL THE LARGE RESPONSE
+
+The source consisting of the union of both complete original stars has
+eleven plaquettes, since the common plaquette is counted once. It is
+
+  G(u,v;t)=11-u dot v-A dot u-B(t) dot v.                (4.7)
+
+Its source coefficients are constant numbers, all one. The displayed
+t dependence comes only from the underlying exterior links, not from
+any change of the source profile. The first projection is exactly
+
+  P_u G=11-r(v)m(beta r(v))-B(t) dot v.
+
+At u=I the second projection therefore is
+
+  K_beta(t):=(P_vP_u G)(I,v;t)
+     =5+T_beta(t)+(1-t)m(beta t),                        (4.8)
+
+where m is extended as an odd smooth function through zero. Since
+m(0)=0 and m'(0)=1/4, differentiating (4.8) gives
+
+  K_beta'(0)=beta c_*+E_beta,
+  c_*=1/4-64/(105 pi)>0,       |E_beta|<=2/pi.            (4.9)
+
+Now complete G to the full original Wilson energy S_all. The remaining
+plaquettes contain neither raw link, so their sum S_ext is unchanged
+by both conditional projections. Only the two exterior links in the
+moving pair (2.3) depend on t. At t=0 each has quaternion speed 1/sqrt(3).
+Each original link lies in six plaquettes, and the derivative of one
+plaquette energy is bounded by the sum of the speeds of its moving
+links, because multiplication by unit quaternions is isometric. Thus
+
+  |S_ext'(0)|<=12/sqrt(3)=4sqrt(3),
+
+where this deliberately loose bound is enough. Consequently
+
+  d_t (P_vP_u S_all)(I,v;t)|0
+    =beta c_*+R_beta,
+  |R_beta|<=2/pi+4sqrt(3).                              (4.10)
+
+The same statement holds for any deterministic source profile that is
+identically one on the eleven raw-link plaquettes and on all plaquettes
+incident to the two moved exterior links. Terms farther away do not
+depend on u,v or the moved links and have zero derivative. In particular
+one can take a smooth compactly supported physical profile that equals
+one in a fixed neighborhood of this microscopic patch, for all fine
+enough meshes. A separated companion insertion can be placed outside
+the patch, so the exact covariance-preservation premise in (1.2) is
+also consistent with this example.
+
+This strengthens the obstruction from an individual star term to the
+whole locally constant source. It still does not estimate the weight
+that the original Wilson measure assigns to these exterior configurations.
+
+5. THE LARGE RESPONSE HAS A UNIFORM INTEGRATED VARIATION BOUND
+
+The function x -> H_beta(x), with r=sqrt(2+2x), is nonincreasing:
+the function s m(s) has positive derivative. For any tilted probability
+in (4.1), covariance of a nonincreasing function of x with x is
+nonpositive. Consequently
+
+  T_beta'(t)=beta Cov_(beta t)(H_beta(v_0),v_0)<=0.       (5.1)
+
+The range of H_beta is the interval
+
+  [6-2m(2beta), 6].
+
+For any subinterval [a,b] of the actual realizable path |t|<1/2,
+
+  integral_a^b |T_beta'(t)| dt
+    =T_beta(a)-T_beta(b)<=2m(2beta)<=2.                 (5.2)
+
+For any fixed 0<delta<1/2, as beta goes to infinity the tilted law at
+t=delta concentrates at v=I, whereas the tilted law at t=-delta
+concentrates at v=-I. The uniform approximation (4.3) then gives
+
+  T_beta(delta)->4,     T_beta(-delta)->6,
+  integral_(-delta)^delta |T_beta'(t)|dt ->2.             (5.3)
+
+Away from t=0 the same concentration gives convergence to these
+constant limits. Therefore the derivative measures on (-delta,delta)
+converge weakly to -2 times a unit point mass at t=0. This is an actual
+response concentration, not a loose beta factor introduced by an
+absolute score bound.
+
+For a nonnegative density w in this ONE specified exterior coordinate,
+(5.2) would give integral w(t)|T_beta'(t)|dt <=2||w||_infinity.
+The full Wilson measure is not the arbitrary path measure w(t)dt, and
+no beta-uniform bound on its corresponding conditional density has been
+established. The inequality is recorded only to identify what an
+averaged-response strategy would have to control.
+
+6. CONSEQUENCES FOR THE MAIN PROGRAM
+
+(a) Exact projection identities can preserve a separated covariance
+while the companion insertion avoids all updated links. They do not
+by themselves generate a controlled multiscale source class.
+
+(b) The one-link 1-Lipschitz response and O(beta^-2) flat quadratic
+coefficient cannot be promoted to an all-real-exterior iterative
+estimate by repeatedly applying the same one-link formula. The changed
+observable already produces (4.6) at the second original-law update.
+
+(c) The example is away from a uniformly nondegenerate-staple/small-field
+region. It does not rule out a perturbative flat-block expansion, a
+large-field probability estimate paying for this response, or an
+integrated conditional-density estimate. It specifies exactly why one
+of those inputs is needed.
+
+(d) The large derivative survives completion to the full original action
+or a smooth physical source profile locally constant on the specified
+patch, by (4.10). The single-star monotonicity and integrated variation
+bound of Section 5, however, are stated only for T_beta and should not
+be transferred unchanged to that completed source.
+
+(e) This is not an estimate for a history-conditioned native kernel;
+no history indicators or alternate reference distributions appear.
+There is also no claim of an actual Wilson covariance lower bound,
+continuum nontriviality, or failure of such a bound.
+
+SELF-AUDIT
+
+The original Wilson law and normalizers are retained; the exterior
+path is realized by original links; all moved links are outside the
+first source star; the shared-plaquette orientation uses u dot v;
+the second source is H_beta, not a freshly reused star action;
+the evaluated old u=I is permitted because P_v P_u reintroduces u;
+all beta powers and the nonzero constant in (4.5) were calculated
+exactly; and no pointwise bad-exterior response was presented as a
+typical-field or full-measure result.

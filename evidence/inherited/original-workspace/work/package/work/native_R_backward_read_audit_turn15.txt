@@ -1,0 +1,346 @@
+NATIVE R: OUTPUT SUPPORT, BACKWARD READS, AND THE REAL LOCALIZATION SHIFT
+19 October 2026. Independent admission/proof audit, turn 15.
+
+RESULT
+
+The reconstructed fixed-branch reference formula gives a precise local
+replacement candidate. Its changed field region is Lambda_i, but its
+backward data read is the larger component X_i (including any genuine
+boundary slots). The old branch mass m_tau is NOT an extra input to this
+fixed-branch backward kernel. The reference denominator has exactly the
+same parameter reads as its numerator.
+
+This does not yet attach the complete native R evolution to the strict
+half-algebra criterion. In particular, B119 explicitly removes a nonlocal
+background dependence of its characteristic functions by a change of
+fluctuation variables. An observable must be pulled through that same
+change. The remaining H-dependent read is exponentially small on the
+specified changed region, not identically zero. A concrete unitary loop
+bound for this change is proved below, with the coupling factor correct.
+
+The original Part-I prebranch normalization and full local-minimum datum
+dictionary remain source-verification requirements. The modified run's
+iterated geometry selection also needs a local input-read certificate;
+an unbounded iteration count alone is NOT a proof that no such certificate
+exists. No full native Markov/half-algebra theorem is asserted here.
+
+1. EVIDENCE AND PROVENANCE
+
+Read current_proof_frontier_turn14.txt and Sections 5,7 of
+native_partition_ratio_source_audit_turn14.txt.
+
+The useful reconstructed locators are:
+
+ * Raw I875--944: exact T, outline of R, and retained first/second classes.
+ * Raw I156882--156900: the exterior is outside X_i; reference extension
+   V_(Lambda_i), localized minimum U_(k,X_i), and exterior gate
+   chi_k(Omega_k^{~4}) chi_(k,Lambda_i).
+ * Raw I157071--157074: tau -> m_tau s, with normalized, possibly singular
+   reference s and m_tau the old integrated component mass.
+ * Raw II108959--109078: proposed Markov interpretation; the formula is at
+   109004--109038. The enclosing lemma explicitly says its proof is
+   incomplete for the modified operation.
+ * Raw I80876--80924: literal real fluctuation change, quoting B119(1.22),
+   and its repetitions in the regular and large-field steps.
+
+These files are secondary reconstructions, not independent verification
+of the original Part-I formulas. Raw I's broader positivity/locality
+proposition ends at 156950 with 'Proof outstanding'. In particular its
+exterior-free integration-space clause must not be used as an established
+theorem about the complete operation.
+
+Primary text inspected in this pass:
+
+B119, CMP119 (1988), pp251--252, (1.21)--(1.24), and p269 near (3.21).
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+The p269 passage identifies a nonlocal dependence through V^(k), changes
+fluctuation coordinates to remove it from the characteristic function,
+and adds the corresponding action/Jacobian terms. Its H response is small
+on S_(k+1). This is not a statement that the original observable has lost
+its dependence on H.
+
+B122-II, CMP122 (1989), pp356--360, (1.2)--(1.17).
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+These formulas supply the reference normalization, its local constrained
+critical field, a common fluctuation-coordinate integral, and localized
+response bounds. They do not by themselves identify all branches of a
+normalized observable transition. Exact Part-I display verification was
+not obtained in this audit.
+
+2. THE FIXED-BRANCH BACKWARD OPERATOR
+
+Fix a component, geometry, gauge graph and all other prebranch labels
+h=(X,Lambda,G,T,...). Write e for the complete retained datum outside
+Lambda. The reconstructed reference quotient has the following form:
+
+ s_h(dv';e) = Z_h(e)^(-1) delta_G(v') chi_Lambda(v')
+   exp[-g_k^(-2) A(zeta,U_(k,X)(v' V_Lambda(e)))] dv',       (2.1)
+
+where Z_h is the integral of the numerator over the active v' variables.
+The field written on Lambda is v' V_Lambda(e); elsewhere the field is
+unchanged. Let Phi_h(e,v') denote this complete output field. For fixed h,
+
+ (K_h f)(v) = integral s_h(dv';e(v)) f(Phi_h(e(v),v')).      (2.2)
+
+The exact source assertion awaiting the full datum check is that all
+parameters in (2.1), including V_Lambda, read only V_k|_(X\Lambda).
+If a boundary convention requires an additional collar, replace X by its
+ACTUAL complete read X^read; do not suppress that collar in (2.2).
+
+The locality conclusion is an equality statement, requiring no estimate:
+if two inputs coincide on X^read and on the part of the support of f left
+unchanged, and have the same h, their values under K_h f coincide. Thus
+
+ read(K_h f) subset (read(f)\Lambda) union X^read.          (2.3)
+
+If read(f) misses Lambda and f ignores any changed auxiliary label, then
+K_h f=f exactly, even if the reference has extensive exterior dependence.
+
+Why m_tau is absent. Disintegrate the old branch as
+tau(de,dx)=m_tau(de) q_e(dx), with q_e normalized. The replacement
+tau'=m_tau(de) s_h(dy;e) is realized by delta_e(de') s_h(dy;e).
+The old q_e and m_tau are part of the input law; neither is an argument
+which the fixed-branch sampler must recompute. In particular there is
+no extra global denominator from m_tau in (2.2). This corrects an overly
+pessimistic reading of the mass-preservation formula.
+
+Conversely, after FORGETTING labels, the posterior formula
+K(v,dy)=sum_h w_h(v) K_h(v,dy) has w_h=d tau_h/d(sum tau_h).
+Those weights can have wider reads. A joint local construction should
+retain the original chronological labels, rather than infer local
+posterior weights from a signed or fully resummed density expansion.
+
+3. NORMALIZATION DOES NOT ENLARGE EXACT READS, BUT DOES NOT ERASE THEM
+
+If the unnormalized reference weight and its integration domain depend
+only on e|D, then Z_h and the normalized reference depend only on e|D.
+No locality is lost just by doing that integral. However, an interior
+output observable can read EVERY part of D through the normalized law.
+
+This is already visible for the exact finite Gaussian reference
+
+ w(y;e) = exp[-(y^T A y+2 y^T B e+e^T C e)/(2g^2)], A>0.
+
+Its normalized mean is -A^(-1)B e. For a symmetric quadratic mark D,
+
+ K(y^T D y)
+  = g^2 tr(D A^(-1))
+    + e^T B^T A^(-1)D A^(-1)B e.                          (3.1)
+
+Thus opposite-half exterior data affect a positive-half output whenever
+the displayed response is nonzero. A concrete elliptic illustration is
+the chain action (1/2)sum_(j=0)^n(a_(j+1)-a_j)^2 with a_0=e,a_(n+1)=0.
+Its interior mean is e(1-j/(n+1)); the mean square of an interior discrete
+curvature a_(j+1)-a_j contains e^2/(n+1)^2. This is an illustration of the
+reference's boundary-response mechanism, not a separately verified
+counterexample for every nonabelian native R branch.
+
+In particular, a refill confined to the positive half may have zero
+conditional reflected NOISE covariance while its backward expectation
+reads negative-half INPUT. These are different obligations in the
+reflection ledger. A bound on the changed region Lambda cannot establish
+positive-half membership; the full X^read must lie in the permitted half,
+or its crossing response must be estimated and compensated.
+
+4. WHAT CAN BE BUNDLED INTO ONE COMPONENT NOISE
+
+Suppose that, conditional on the complete prebranch state, component i
+has a finite choice theta_i with nonnegative weights p_i(theta_i;e),
+sum_theta_i p_i=1, followed by its normalized reference draw. The pair
+(theta_i,v'_i) is then one component noise. There is no additional
+selection-covariance term outside this noise.
+
+For a product of such component kernels the complete input reads of
+component i must avoid the active variables of component j, or else a
+simultaneous product is not the stated kernel. Disjoint X_i suffice if
+X_i are genuinely the complete reads; disjoint Lambda_i alone do not.
+Sequential updates remain possible but their backward reads must be
+composed in the actual order.
+
+The outer reconstructed factor (1/N_i)sum_(...,G_i,T_i)chi_(k,Lambda_i)
+is not automatically such a probability distribution. The required
+pointwise identity for its weights must come from the original preceding
+partition of unity, including any discarded/ineligible branch. Equality
+of the final integrated mass is weaker. This is the precise branch
+definition check passed to the source agent.
+
+Deterministic component selection has no random-selection innovation
+once the complete input is fixed. It can nevertheless have a large
+input read. Pure random gauge restoration is free on true gauge-orbit
+observables; a random physical reference choice is not free for that
+reason alone.
+
+5. AN ACTUAL SOURCE OF NONLOCAL BACKWARD READS
+
+The native regular step itself supplies a warning stronger than a
+generic example. B119(3.21) is initially nonlocal through V^(k), which is
+obtained from the minimizing background. The source localizes the
+characteristic by changing its fluctuation coordinates using H^(k).
+The same type of operation is repeated during R preparation (secondary
+locator Raw I80918--80924).
+
+This creates the following exact alternative for a joint interpretation:
+
+ * Keep the old physical coordinates. Then the original characteristic
+   and its label can retain the nonlocal minimizing-background read.
+ * Use the localized characteristic and the new integration coordinates.
+   Then pull every old observable through the H-dependent coordinate
+   change, and retain the actual Jacobian and action change in the joint
+   law.
+
+One cannot choose the localized label from the second description and
+the unchanged observable from the first. A change of variables preserves
+the integral with the transformed insertion; it is not an observable
+identity obtained by dropping the transformation.
+
+The source's bound on H on the changed fluctuation region gives a route
+to QUANTITATIVE quasilocality. It does not give exact zero dependence
+outside a fixed set of current coarse datum links: even a local read of
+the global minimum U_(k+1)(V_(k+1)) must still be pulled back to V_(k+1).
+An alternative strictly local joint realization is not ruled out here,
+but it is not supplied by the displayed localization identity alone.
+
+6. EXACT REAL WILSON-LOOP BOUND THROUGH THE CHANGE
+
+Use a separate letter psi for the cutoff function to avoid confusion
+with the coupling. The literal real group identity of B119(1.22), as
+transcribed at Raw I80881--80886, is
+
+ exp(i g_k A_e)
+   = exp(i g_k A'_e) exp[-i psi(A'_e) H_e],  0<=psi<=1.      (6.1)
+
+On the other changed bonds psi=1. This identity, not a truncated BCH
+formula, controls a bounded Wilson insertion. In a fixed unitary
+representation rho, Duhamel gives for real Hermitian generators
+
+ ||rho(exp(-i psi H))-1|| <= |psi| ||d rho(H)||
+                         <= C_rho ||H||.                  (6.2)
+
+Multiplication by unitary surrounding links does not change this bound.
+The potential difference has leading size H/g_k, but the link contains
+g_k A. Hence (6.2) has neither an extra factor g_k nor a factor g_k^(-1).
+If another lattice convention literally inserts eta H, that literal
+angle must be used; an eta factor cannot be inferred from (6.1).
+
+Let gamma be an oriented loop, counting repeated edges with multiplicity,
+and w_gamma=d_rho^(-1)tr product_(e in gamma)rho(U_e), with or without
+taking the real part. Telescoping the ordered product yields
+
+ |w_gamma(U^H)-w_gamma(U^0)|
+   <= C_rho sum_(e in gamma intersect S_changed) ||H_e||.   (6.3)
+
+Reversed edges obey the same bound because inversion is an isometry on
+unitaries. No commutativity between different edge factors was used.
+
+If the same native frame also gives V_global,e=exp(iH_e)V_local,e, then
+combining this identity with (6.1) gives the COMPLETE physical link
+
+ exp(i g_k A_e)V_global,e
+   = exp(i g_k A'_e)exp[i(1-psi(A'_e))H_e]V_local,e.         (6.4)
+
+The residual is (1-psi)H; it vanishes where psi=1. Equation (6.4) is
+used only when those are the actual matched background factors in the
+insertion. Otherwise retain the separate exact background read. It is
+not permissible to infer this cancellation for a separately gauged or
+separately reconstructed background.
+
+If h_k bounds H only on S_changed, (6.3) gives C_rho n_gamma,S h_k.
+No bound on H elsewhere is needed or asserted. In the source situation
+where h_k<=C epsilon_k exp(-R_k) on that set, a loop with a fixed number
+of native edges has precisely this small error times its edge count.
+
+For O_a=a^d sum_x f(ax) w_(gamma+x), the exact consequence is
+
+ |O_a(U^H)-O_a(U^0)|
+ <= C_rho a^d sum_x |f(ax)|
+       sum_(e in (gamma+x) intersect S_changed) ||H_e||.    (6.5)
+
+This retains the location of every changed edge. The coarser bound is
+C_rho ||f||_(l1,a) |gamma| h_k. A fixed physical length can have
+|gamma|=O(a^(-1)); therefore superpolynomial smallness in log(g_k^-2)
+alone does not prove a UV-uniform sum over dates. A renormalization
+factor Z_a multiplies the error by |Z_a|. Products of finitely many
+bounded normalized loops obey the corresponding sum of their errors.
+Already-backward functions require their own influence bounds; (6.3)
+does not prove that they remain bare Wilson loops.
+
+7. A NORMALIZER-FREE SENSITIVITY IDENTITY ON ONE ADMITTED BRANCH
+
+There is a useful reduction for (2.1), but its domain conditions matter.
+Suppose the branch is written on a COMMON parameter-independent slice
+and fluctuation window, with weight w_e(z)>0 and output Phi_e(z).
+Along a differentiable admitted parameter path,
+
+ d_e K_e f
+   = E_s[d_e(f o Phi_e)]
+     + Cov_s(f o Phi_e, d_e log w_e).                     (7.1)
+
+This is obtained by differentiating numerator and denominator together.
+An e-dependent scalar in log w_e cancels from the covariance exactly;
+in particular the large background action extracted in the reference
+normalization is not a separate denominator loss.
+
+For real f, the second term is bounded by
+(1/4) osc(f o Phi_e) osc(d_e log w_e), with the safe constant 1/2 for
+complex functions. Thus an actual exponential bound on the OSCILLATION
+of the remote score would directly control normalized reference reads
+without an additional lower bound for the old history mass.
+
+The reference's fixed native fluctuation coordinates in B122-II(1.2)
+are favorable for this calculation. However, (7.1) does not differentiate
+through changes of the exterior gate chi_(k,Lambda), component geometry,
+or first/second-class selection. Moving domains need their exact boundary
+terms or a common-coordinate reformulation. Analyticity inside a branch
+does not bound a jump of a sharp selector near its threshold. No uniform
+remote-score estimate for all branches is established by this audit.
+
+8. THE PRECISE LOCAL-SELECTION CERTIFICATE STILL NEEDED
+
+The reconstructed eligibility rule (Raw I50478--50504) bounds the size of
+the component acted on and also consults recent creation and waiting
+history. A valid local-selection certificate would say:
+
+ For every source read S, all branches that can change S, including their
+ eligibility, preparation gates, full minimum data, and physical output
+ maps, are determined by the input augmented state in
+ S^{+C M R_k r_k}, with a fixed C and the same complete chronological law.
+
+The component diameter condition alone proves only the output part of
+this statement. The modified creating recursion in Raw I50316--50383
+explicitly replaces the original decomposition by repeated bond/rim tests;
+its stopping count has no bound there. The stabilized boxing definition
+at 50087--50097 likewise supplies no uniform iteration bound. This shows
+that a bounded local certificate has not yet been proved by those
+definitions; it does NOT show that a clever certificate is impossible.
+The original and modified operations must remain distinguished.
+
+If the certificate were established and all reconstructed primitive
+averaging reads were included, its physical backward-cone cost would be
+manageable. For r_i=L^(i-n)r_n and
+R_i<=C[1+log(gamma_n+D(n-i))]^r,
+
+ sum_(i<=n) r_i R_i <= C_(L,r,D) r_n [1+log gamma_n]^r.    (8.1)
+
+The proof is the convergent geometric series with the remaining age
+dependence bounded by a fixed power of 1+log(1+age). This is uniform in
+the UV starting date. Buffered source algebras could then be transported
+while shrinking their buffer by this finite amount. It does not prove
+the full unbuffered half algebra is preserved, and the actual H-dependent
+read in Section 5 is one input which would instead need a tail estimate.
+
+9. PRESENT CONCLUSION
+
+At fixed labels the reconstructed R reference is compatible with a
+local backward kernel on its COMPLETE component read, and componentwise
+choice/refill noise can be bundled when its pointwise normalization and
+cross-read exclusions are verified. The fixed-branch old mass is harmless.
+
+The complete original-field half-algebra attachment is not established.
+The explicit native localization shift is a concrete nonlocal read which
+cannot be discarded with the characteristic functions. Its effect on a
+bounded Wilson loop has the exact real bound (6.3), and a matched
+background can improve it to the residual (1-psi)H in (6.4). What remains
+is a uniform propagated influence/tail estimate for the actual backward
+sources, together with the literal prebranch/selection joint-law check.
+Neither localized action coefficients nor absolute large-field history
+weights alone imply that normalized observable estimate.

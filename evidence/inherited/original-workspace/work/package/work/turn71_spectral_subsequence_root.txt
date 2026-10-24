@@ -1,0 +1,199 @@
+ONE-OBSERVABLE SPECTRAL COMPACTNESS AND A DYNAMIC WITNESS
+TURN71. Root derivation. 20 October 2026.
+
+This is a conditional consumer theorem, not a Yang--Mills estimate.
+Its purpose is to avoid requiring a full cross-cutoff Cauchy theorem
+when a subsequential existence construction would suffice, and to
+distinguish a surviving positive-energy state from a frozen mixture.
+
+1. SETUP
+
+For every cutoff a, let A_a be a nonnegative self-adjoint operator,
+Omega_a a normalized ground vector, and v_a a centered physical
+observable vector. No common Hilbert space is assumed.
+
+Let rho_a(B)=||1_B(A_a)v_a||^2. At each fixed cutoff rho_a is finite.
+The estimates below also work when this is only locally finite and
+the stated positive-time transforms exist.
+
+For a fixed time-window width delta>0 put
+
+ b_delta(E)=(1-exp(-delta E))/E,   b_delta(0)=delta,
+
+ R_a(t)=integral exp(-2tE)b_delta(E)^2 rho_a(dE).
+
+This is the squared norm of exp(-t A_a)b_delta(A_a)v_a.
+For the actual fixed-spatial Hamiltonian and a magnetic multiplication
+observable it is also the reflected covariance of the centered time
+window [t,t+delta]. Its finite-regulator source identity was derived
+in TURN67 and attached to temporal Wilson limits in TURN68--69.
+Nothing here extends those results uniformly in the spatial cutoff.
+
+2. SUBSEQUENCE WITHOUT A CAUCHY ESTIMATE
+
+Suppose for some t0>0 that R_a(t0)<=M<infinity uniformly along a
+cutoff sequence a->0. Set
+
+ nu_a(dE)=exp(-2t0 E)b_delta(E)^2 rho_a(dE).
+
+These positive measures have total mass <=M. Regard them as measures
+on the compact metrizable interval [0,infinity], including infinity.
+They have a weakly convergent subsequence nu_a -> nu_hat. Let nu be
+the restriction of nu_hat to finite energies.
+
+For every t>t0 the function exp[-2(t-t0)E], assigned value zero at
+infinity, is continuous on this compactification. Hence on the SAME
+subsequence,
+
+ R_a(t) -> R(t)
+   := integral_[0,infinity) exp[-2(t-t0)E] nu(dE).
+
+An atom of nu_hat at infinity is lost at these strictly later times.
+Thus a uniform early-time upper bound alone already gives a nonnegative
+Laplace-transform subsequential limit for this single observable.
+It does not give convergence at the boundary t=t0.
+
+For any k>=1 and t>=t0+eta,
+
+ |partial_t^k R_a(t)|
+   <= M sup_(E>=0) (2E)^k exp(-2eta E)
+   = M [k/(e eta)]^k.
+
+Weak convergence of the continuous derivative kernels and these
+bounds give convergence of every derivative locally uniformly for
+t>t0. This can also be proved by Arzela--Ascoli on compact time
+intervals, with the pointwise Laplace limit fixing every subsequential
+limit. No analyticity of a physical-source logarithm is required for
+this implication.
+
+This theorem does not produce the PREMISE R_a(t0)<=M. The available
+selected-sector upper bound is not automatically such a bound for
+the original Hamiltonian/Wilson physical source.
+
+3. WHY A LATER POSITIVE NORM ALONE CAN LEAVE ONLY ZERO ENERGY
+
+A later lower bound R_a(t1)>=m>0 prevents all weighted spectral mass
+from escaping to infinity. It need not prevent collapse to zero.
+
+For example take the two-state Markov Hamiltonian
+
+ A_epsilon=(epsilon/2)[[1,-1],[-1,1]],
+ Omega=(1,1)/sqrt(2),
+ Q=diag(1,-1),  v=Q Omega.
+
+It has a unique ground state at every epsilon>0, a positive
+semigroup, and centered spectral measure delta_epsilon. Its stationary
+reversible path law is reflection positive. Nevertheless
+
+ R_epsilon(t)=exp(-2t epsilon)b_delta(epsilon)^2 -> delta^2
+
+at every fixed t. The limiting centered state can lie in an enlarged
+zero-energy sector. Finite-regulator uniqueness does not rule this out.
+
+For a full QFT construction, vacuum clustering/ergodic-component
+control is one way to address this. The following stronger finite-
+cutoff criterion gives a directly dynamic witness instead. It is
+sufficient, not asserted necessary for every observable choice.
+
+4. A QUANTITATIVE FIXED POSITIVE-ENERGY BAND
+
+In addition to R_a(t0)<=M, suppose for fixed t1>t0 and s>0,
+
+ D_a:=R_a(t1)-R_a(t1+s)>=m>0.
+
+Let alpha=2(t1-t0)>0 and beta=2s>0. Then
+
+ D_a=integral q(E) nu_a(dE),
+ q(E)=exp(-alpha E)(1-exp(-beta E)).
+
+This q is nonnegative, bounded by one, and vanishes at BOTH zero
+and infinity. Put
+
+ epsilon=m/(4 beta M),
+ Lambda=max(2 epsilon, alpha^-1 log(4M/m)).
+
+The premises imply 0<m<=M. On E<epsilon, q(E)<=beta E, so that
+
+ integral_(E<epsilon) q(E) nu_a(dE)<=m/4.
+
+On E>Lambda, q(E)<=exp(-alpha Lambda), whence
+
+ integral_(E>Lambda) q(E) nu_a(dE)<=m/4.
+
+Therefore
+
+ integral_[epsilon,Lambda] q(E) nu_a(dE)>=m/2,
+ nu_a([epsilon,Lambda])>=m/2.
+
+This is a FIXED physical energy band, independent of cutoff. Since
+exp(-2t0 E)b_delta(E)^2<=delta^2, it also implies
+
+ rho_a([epsilon,Lambda])>=m/(2 delta^2).
+
+Passing to the weak subsequence from Section2, q is continuous on
+[0,infinity], with q(0)=q(infinity)=0, so
+
+ integral q(E)nu(dE)>=m.
+
+The same low/high estimates give nu([epsilon,Lambda])>=m/2.
+No choice of interval endpoints with zero atom is necessary for this
+conclusion; it follows by the integral estimate.
+
+The resulting single-observable spectral representation has a
+nonzero positive-energy subspace. For example on L2(nu), multiplication
+by E is a nonnegative self-adjoint generator and the vector 1 has
+nonzero projection onto [epsilon,Lambda]. Its semigroup matrix
+elements reproduce R(t0+u/2) for u>0.
+
+This is an abstract one-observable limit, not a local four-dimensional
+Yang--Mills theory: no common continuum algebra, spatial translations,
+rotations, products, or gauge-theory identification follows.
+
+5. EXACT ORIGINAL-SOURCE EXPRESSION FOR THIS CRITERION
+
+For a fixed finite-spatial magnetic observable Q, define
+
+ K_a(T,z)=log <Omega_a,
+    exp[-T(H_a-z Q_a-E_a)] Omega_a>.
+
+The endpoints are the UNSOURCED ground vector, and
+K_a(T,0)=0. Write J_a(T)=partial_z^2 K_a(T,0).
+TURN67's exact Duhamel/reflection identity is
+
+ R_a(t)=(1/2)Delta_delta^2 J_a(2t),
+ Delta_delta^2 J(T)=J(T+2delta)-2J(T+delta)+J(T).
+
+Consequently the dynamic witness in Section4 is exactly
+
+ D_a=(1/2)[Delta_delta^2 J_a(2t1)
+                   -Delta_delta^2 J_a(2t1+2s)].
+
+There are only finitely many required slab lengths. Any source scalar
+affine in T cancels in each Delta_delta^2, provided the SAME
+normalization is used at all these lengths. Source-dependent errors
+not known to be affine cannot be discarded.
+
+For the global logarithmic coupling source of TURN67, with magnetic
+observable Q_gamma=4 gamma S_sp/a and gamma=g^-2, the factor 1/2
+above is replaced by 1/8 for its source curvature. Local coupling
+profiles have the separately retained energy-current correction;
+this identity does not remove it.
+
+These formulas specify the quantitative source information that
+would suffice. No upper bound M or positive difference m uniform
+in spatial cutoff has been proved for the actual required YM family.
+
+6. ROLE IN THE EXISTENCE PROGRAM
+
+Full-sequence uniqueness and cross-cutoff Cauchy estimates are not
+logically necessary for a subsequential existence argument. One
+can instead seek compatible limits and preserve positivity along
+a common subsequence. The present theorem demonstrates this for
+one physical spectral family and supplies a sufficient positive-
+energy witness.
+
+The full proof still needs estimates for the ORIGINAL law, a common
+local observable algebra with the required products and continuum
+symmetries, and an appropriate reconstruction. Neither a scalar
+Laplace-transform limit nor compactness of unrelated correlations
+performs those steps.

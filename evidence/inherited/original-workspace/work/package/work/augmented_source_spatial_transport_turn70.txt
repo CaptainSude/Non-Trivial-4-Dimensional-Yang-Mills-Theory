@@ -1,0 +1,276 @@
+SUPPORTED LOW-JET TRANSPORT WITH ONE NEUTRAL SCALAR SOURCE
+TURN70. history47. 20 October 2026.
+
+STATUS
+
+This is a complete spatial/support consumer of explicit SOURCE-ANCHORED
+kernel cancellations. It supplies the missing quadratic estimate without
+integrating a derivative onto the source. The Ward classification and
+finite-period repair that supply those cancellations are separate inputs,
+being derived by root. The classical complete-field map is the actual
+ordinary prefix already established in pregauge_holder_prefix_research.
+No full native quantum/source/history conclusion is asserted here.
+
+1. SOURCE SPACE, KERNELS, AND BACKGROUND
+
+The current lattice has unit spacing and dimension four. The endpoint
+ratio is L; h=L^-1. Fields a have finitely many direction/color components.
+Sources f are neutral scalar values at lattice sites. Set
+
+ P_n(f,a)=1/n! sum_x f(x) sum_(r_1,...,r_n)
+                  K_n(r_1,...,r_n)[a(x+r_1),...,a(x+r_n)].
+
+Unlike the homogeneous anchored-first-field notation, ALL n field
+displacements here are independent: x is the SOURCE site.
+All internal-index sums are included in the following bound. For n=2,3,4,
+write m=sum_i |r_i|_1 and assume
+
+  sum_(internal indices,r_1,...,r_n)
+           exp(sigma m)|K_n(r_1,...,r_n)| <= epsilon b^-n. (1.1)
+
+Separate fixed constants C_n(J) can be absorbed into epsilon. A total
+source-linear analytic carrier family supplies this bound by fixed-order
+source/field differentiation and its spatial/cardinality reserve, if the
+corresponding source-rooted kernel extraction has been established. That
+extraction, including finite-volume identities, is not assumed merely
+from invariance of individual coefficients.
+
+The exact kernel hypotheses are:
+
+ Q2a: for every s, sum_r K_2(r,s)=0; for every r,
+       sum_s K_2(r,s)=0, componentwise;
+ Q2b: sum_(r,s) r_mu s_nu K_2(r,s)=0 for every mu,nu;
+ Q3:  the zeroth and ALL first moments of K_3 vanish;
+ Q4:  the zeroth moment of K_4 vanishes.
+
+Root's proposed independent-leg Ward argument yields Q2a, and subtraction
+of the unique scalar marginal supplies Q2b. The hypotheses above state
+exactly what the present proof uses; no source derivative is needed.
+
+Let a(w) be the actual coherent ordinary prefix on the final radius-b
+field ball. Its strict complete C^(1,alpha) family on fixed physical
+collars obeys
+
+  sup_i sum_X exp[kappa tau({i} union X)+A|X|]
+             ||a_(i,X)||_(C1alpha,b) <= C_* b h.         (1.2)
+
+The norm uses physical derivatives at mesh h, and is taken BEFORE the
+support sum. All coefficients restrict one coherent global field family.
+Thus the following are inequalities for weighted coefficient families:
+
+  |a|<=Cbh, |D a|<=Cbh^2,
+  |a(x+r)-a(x)-sum_mu r_mu D_mu a(x)|
+                   <=Cb h^(2+alpha)|r|^(1+alpha)       (1.3)
+
+inside a fixed physical collar when |r|<=L. Negative path steps use the
+positive difference at their lower endpoint, as in the exact discrete
+Taylor formula of pregauge_holder_prefix_research §5.
+
+2. INTERPOLATION DOES NOT INTRODUCE A SOURCE-DIMENSION LOSS
+
+For final source f on the coarse vertex lattice, use tensor piecewise-
+linear interpolation on the nested grid:
+
+  (I_L f)(x)=sum_z theta_z(x) f(z),
+  theta_z(x)>=0, sum_z theta_z(x)=1.                    (2.1)
+
+At most 2^4 coefficients are nonzero; their sites lie in a fixed physical
+collar of x/L. Therefore ||I_L f||_infinity<=||f||_infinity on complex
+source sup balls as well. Nested interpolation is exact:
+I_L1 I_L2=I_(L1 L2), with the natural grid identifications.
+
+In every supported term below retain the actual source vertex z. Summing
+its absolute interpolation weights costs one; connecting it to the
+source root x/L costs only a fixed geometric constant. There is no second
+L^4 source-coordinate count.
+
+The output uses the STRONG marked connected J-cell norm. Write
+B_H(f,w)=sum_(z in H) f_z B_(H,z)(w) and set
+
+  ||B||_(a0,b;f)=sup_I sum_(H contains I)
+                   exp(a0|H|) sum_(z in H)||B_(H,z)||_b.
+
+This is stronger than taking only a joint supremum of the summed source
+functional on the source unit ball. No equivalence of those norms is
+assumed. Every H contains all its source and field reads. Coefficients can be
+grouped by connected H after the absolute majorant below. They need not
+be individually gauge invariant.
+
+3. THE EXACT QUADRATIC DOUBLE-INCREMENT IDENTITY
+
+Using Q2a before taking absolute values gives
+
+ P_2(f,a)=1/2 sum_(x,r,s) f(x) K_2(r,s)
+                    [a(x+r)-a(x),a(x+s)-a(x)].         (3.1)
+
+No summation by parts is used. In particular no difference hits f.
+Define
+
+  ell_r(x)=sum_mu r_mu D_mu a(x),
+  R_r(x)=a(x+r)-a(x)-ell_r(x).
+
+By Q2b the ell_r times ell_s term cancels, so the exact residual is
+
+  P_2(f,a)=1/2 sum_(x,r,s) f(x) K_2(r,s)
+       [ell_r,R_s]+[R_r,ell_s]+[R_r,R_s].              (3.2)
+
+Brackets denote the appropriate bilinear tensor contractions; K_2 remains
+inside each of the three terms. Moment cancellations are applied to the
+FULL kernels before splitting near/far displacements.
+
+For m<=L, all reads fit in one fixed final physical collar. By (1.3),
+each coefficient product in (3.2) is bounded by
+
+  C b^2 h^(4+alpha) (1+m)^(2+2alpha).                  (3.3)
+
+The R_r R_s term has the stronger h^(4+2alpha) and is bounded by the same
+right side for h<=1. The exponential norm (1.1) pays every displacement
+polynomial. Thus the contribution per old source root is at most
+C epsilon h^(4+alpha).
+
+This directly replaces the homogeneous Laurent-factorization/integration-
+by-parts step. Exact independent-leg sums Q2a are essential; knowing only
+the homogeneous restriction K_2(p,-p) would not justify (3.1).
+
+4. CUBIC AND QUARTIC TERMS WITH THE SAME SOURCE ANCHOR
+
+For n=3 expand ALL three shifted factors as a(x)+ell_r(x)+R_r(x).
+Q3 cancels the one constant product and the three products with exactly
+one ell and two anchor fields. The remaining 23 products each contain
+either an R, or at least two ell factors. In the near region m<=L their
+weighted complete-family norms are bounded by
+
+  C b^3 h^(4+alpha)(1+m)^9.                            (4.1)
+
+The leading terms are a,a,R; a,ell,ell has power h^5 and is no worse.
+
+For n=4 use Q4 to subtract the all-anchor product and telescope the four
+factor product. Each term has one difference a(x+r)-a(x) and three
+endpoint/anchor fields. Its near bound is
+
+  C b^4 h^5(1+m).                                     (4.2)
+
+The source f stays at x in every identity. After (2.1), these statements
+hold uniformly in its unit sup ball. No C1 or Hölder source norm is used.
+
+5. COMPLETE SUPPORTS, THE FIXED NORM, AND THE ROOT COUNT
+
+For each coefficient product retain the interpolated source vertex and
+all field-factor roots actually used. A near product uses one enlarged
+source-root collar; a far product uses at most a fixed number of endpoint
+and nearest-neighbor collars. Coherence in (1.2) is what permits the near
+differences to have the small norm in (1.3) term by term.
+
+Connect the projected roots and the terminal support sets by deterministic
+short macro graphs. The standard fixed projection bound is
+
+  |H|<=1+T,
+  T <= (2/J)[tau(roots)+sum_occ tau({root} union X)]
+                     +4[n0+sum_occ |X|].              (5.1)
+
+Here n0 is a fixed constant, including the one source vertex. If z lies
+in H, exp(a0|H|)1_(z in H) is bounded by
+
+  exp(a0) exp[-dist(z,j(x))] exp[(a0+1)T],              (5.2)
+
+where j(x) is the final J-cell containing x/L.
+Choose J and A once with
+
+  2(a0+1)/J<=kappa, A>=4(a0+1).
+
+These pay all support and rerooting costs in (1.2). For a near summand the
+root-joining cost is fixed. Finally
+
+  sum_x exp[-dist(z,j(x))] <= (JL)^4 S_1,
+  S_1=sum_(u in Z^4)exp(-|u|_1).                       (5.3)
+
+This is the ONLY microscopic source-root count. It multiplies the gains
+h^(4+alpha), h^(4+alpha), h^5 in (3.3),(4.1),(4.2). The near contributions
+are therefore bounded by
+
+  C(J) epsilon L^-alpha.                              (5.4)
+
+All constants are fixed after J and before the eventual endpoint L.
+The output uses the same a0,b as specified, with the complete classical
+reserve chosen once to pay them.
+
+6. FAR DISPLACEMENTS AND EXACT LOCALIZATION
+
+For m>L keep the exact residual formulas (3.2) and Section 4. Evaluate
+endpoint factors at their separate collar roots. The crude family bounds
+
+  |a|<=Cbh, |ell_r|<=Cb h^2 m,
+  |R_r|<=Cb h(1+hm)
+
+suffice. Consequently the degree-n product is at most
+C b^n h^n(1+m)^C for n=2,3,4. The root-joining tree has length
+at most C(m/L+1), so (5.2) adds at most C exp[C' m/(JL)].
+For sufficiently large fixed L0 this consumes at most one quarter of
+the kernel exponent. Another fixed fraction pays the polynomials.
+The remaining tail, after (5.3), is bounded by
+
+  C(J) epsilon (L^2+L+1) exp(-sigma L/4)
+                   <= C'(J) epsilon L^-alpha.          (6.1)
+
+Normal convergence of these absolute majorants justifies the rearrangements
+and grouping by H. Thus there is a deterministic linear localization with
+
+ sum_H B_H(f,w)=sum_(n=2)^4 P_n(I_L f,a_(M,L)(w)),
+ ||B||_(a0,b;f)<=C(J)epsilon L^-alpha, L>=L0.           (6.2)
+
+It is uniform in preceding depth M and volume whenever the stated coherent
+prefix and exact kernel identities hold. Compact support of f or of w
+gives ordinary absolute scalar sums; on a finite regulator there is no
+total-sum issue. Vacuum-linear source terms are kept separately.
+
+7. FINITE-PERIOD DEFECT CONSUMER
+
+The theorem does not mistake finite kernels for periodized infinite ones.
+Suppose an actual short-lift construction supplies exponentially small
+defects of Q2a, Q2b, Q3, Q4 with their relevant weighted row norms bounded
+by delta_N epsilon b^-n. Retain the defect tensors explicitly, rather
+than declaring the cancellations exact.
+
+The missing one-leg subtractions in (3.1) produce terms with two
+undifferenced fields, hence at most C epsilon L^2 delta_N after root
+summation. A Q2b defect gives C epsilon delta_N. Cubic zeroth and first
+defects give at most C epsilon(L+1)delta_N; a quartic zeroth defect gives
+C epsilon delta_N. Thus the safe total estimate is
+
+  ||B|| <= C epsilon[L^-alpha+(L^2+L+1)delta_N].        (7.1)
+
+The constants presuppose the SAME complete support/read bounds on the
+defect tensors. A scalar defect bound alone is insufficient.
+
+If delta_N<=C exp(-c N_old) and the original current period obeys
+N_old>=L N_min, the second term is uniformly smaller than a fixed
+multiple of L^-alpha, and can be made arbitrarily small by choosing
+the minimum final period first and then a finite endpoint power.
+This is a consumer for root's actual finite-lift repair; it is not a
+proof of that repair or a license to drop winding image labels.
+
+8. HIGH FIELD DEGREE AND THE ACTUAL NEXT GATE
+
+Coefficientwise field Taylor projection through degree four is bounded
+on the same field radius by the circle integral, with the source held
+fixed. The fifth-order remainder can be transported by the established
+high_jet_background_transport theorem. In that construction I_L f can
+handled separately for each declared coefficient E_(H,x). Its source
+read x lies in H and the interpolated source vertices lie in the same
+projected halo. Sum their nonnegative interpolation weights, which gives
+one, and then sum the input norms over x. Thus the strong marked norm
+incurs no additional |H|. The large auxiliary lambda rescales the FIELD
+only. A finite endpoint ratio is chosen before the final radius, exactly
+as in that theorem.
+
+Together with actual augmented Ward extraction and its finite-period
+repair, (6.2) is therefore the low-field-degree part of a possible
+finite-block classical contraction on the augmented source quotient.
+It uses total kernels, so it does not require individually invariant
+output carriers.
+
+Still required for a full source recursion are: the exact augmented
+counterterm/interpolation semigroup; the quotient realization and
+uniform quantum derivative on that module; and the full native source
+and original-normalizer attachment. Neither (6.2) nor its input Ward
+identities by themselves prove a nonzero physical separated limit.

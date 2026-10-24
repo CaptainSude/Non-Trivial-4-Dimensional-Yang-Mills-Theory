@@ -1,0 +1,105 @@
+TURN76 -- A STRICT TIME-DEPENDENCE BENCHMARK ON A FIXED WILSON LATTICE
+20 October 2026. Root.
+
+This strengthens only the finite Wilson benchmark in
+turn76_original_channel_tail.txt Section3. The graph and temporal period
+stay fixed. It does not establish the missing comparison to a native
+terminal density, a half-local pullback, or a continuum time family.
+
+1. SETTING
+
+Take the exact finite SU2 Wilson transfer operator of that note,
+T=M C M on H_phys, with strictly positive temporal couplings and
+M=exp(-V/2) for the real bounded gauge-invariant spatial action V.
+Let f be a real bounded gauge-invariant slice function that is not
+Haar-almost everywhere constant. Set A=f-E_W f, as multiplication,
+and Z=Tr_phys T^N, for an even period N>=4.
+
+The exact centered slice correlation is
+
+ C(m)=Z^(-1) Tr_phys(T^(N-m) A T^m A),  0<=m<=N.            (1.1)
+
+For 0<m<N it is strictly positive by the preceding finite benchmark.
+We prove additionally
+
+                C(m)>C(m+1),  0<=m<N/2.                   (1.2)
+
+This is a finite-time statement, stronger than a positive ordinary
+variance or a positive reflected norm at only one separation.
+
+2. EXACT SPECTRAL DIFFERENCE
+
+Let {e_i} be a complete physical eigenbasis of the positive injective
+trace-class T, with eigenvalues lambda_i>0. Since A is self-adjoint,
+the paired eigenbasis expansion is
+
+ Z C(m)=sum_i lambda_i^N |A_ii|^2
+   +sum_(i<j) 2(lambda_i lambda_j)^(N/2)
+       cosh[(N/2-m) log(lambda_i/lambda_j)] |A_ij|^2.        (2.1)
+
+All terms are nonnegative and the trace is finite for bounded A;
+at m=0 it is Tr(T^N A^2). The countable positive sum can be handled
+by finite partial sums and monotone convergence. For integer m<N/2,
+each term in the difference of (2.1) at m and m+1 is nonnegative.
+It is strictly positive whenever lambda_i!=lambda_j and A_ij!=0.
+It remains to show that at least one such pair exists.
+
+3. WHY NONCONSTANT MULTIPLICATION CANNOT COMMUTE WITH T
+
+On the full kinematic Haar space extend T as T0=M C P M, where P
+is normalized site-gauge averaging. Since C and M commute with P,
+T0 agrees with T on H_phys and vanishes on its orthogonal complement.
+Its Haar integral kernel is
+
+ K0(U,V)=M(U) M(V) integral_gauge dg
+                     product_e q_(beta_e)(U_e (V^g_e)^(-1)), (3.1)
+
+with the inverse convention adjusted equivalently by Haar invariance.
+The normalized Wilson q functions are everywhere strictly positive.
+Thus K0(U,V)>0 everywhere. It is invariant separately under endpoint
+site-gauge changes after the averaging, as required for T0=P T0 P.
+
+Suppose A_ij=0 whenever lambda_i!=lambda_j. Then the bounded A
+commutes with T on H_phys. Because f is gauge invariant, A commutes
+with P and preserves both H_phys and its orthogonal complement.
+Consequently [A,T0]=0 on the full Haar space. Its Hilbert-Schmidt
+kernel is exactly
+
+                   [f(U)-f(V)] K0(U,V).                   (3.2)
+
+The zero operator has zero kernel almost everywhere. Strict positivity
+of K0 implies f(U)=f(V) for Haar-almost every pair (U,V), so f is
+Haar-almost everywhere constant, a contradiction. This proves existence
+of the strict pair in Section2 and hence (1.2).
+
+No quantitative lower bound on the eigenvalues, no spectral gap uniform
+in the graph, and no differential Hamiltonian approximation is used.
+
+4. FIXED COARSE PHYSICAL-SEPARATION TARGET
+
+For N>=8, the two reflected slice separations m=2 and m=4 obey
+
+                        C(2)-C(4)>0.                      (4.1)
+
+They are obtained by placing the positive observable at times1 and2
+relative to reflection in time0. Each lies strictly between the two
+fixed slices0 and N/2. The second separation can equal N/2 when N=8;
+the strict comparison still follows from (1.2).
+
+On any fixed compact set of strictly positive ordinary Wilson
+couplings, both C(4) and C(2)-C(4) are continuous and strictly positive.
+They therefore have positive minima on that set. Continuity follows
+directly from the finite compact-group integrals with positive
+denominators. This remains a fixed graph and fixed period conclusion.
+
+This supplies a benchmark for both positive reflected size and actual
+time dependence if a future comparison controls the same translated
+observable family at both separations. A separate forward filter at
+each time need not be a translation of the same original observable.
+Its own filter means, supports and native kernels may change; the
+positive difference in (4.1) cannot be transferred without checking
+that coherence and the two comparison errors.
+
+In particular this note does not rule out a zero-energy continuum
+limit of an as-yet-uncontrolled family, and does not supply any missing
+continuum reconstruction or Yang--Mills identification.

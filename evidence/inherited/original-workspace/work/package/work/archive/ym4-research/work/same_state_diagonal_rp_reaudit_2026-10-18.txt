@@ -1,0 +1,187 @@
+SAME-STATE DIAGONAL RP: ADVERSARIAL RE-AUDIT OF THE TWO-FRAME CHAIN
+18 October 2026. Independent constrained_fiber working audit.
+
+Verdict. I reread the actual stronger chain in diagonal_fold_research,
+two_frame_geometry_research, transfer_schatten_research, gauge_layer_research,
+and reflection_assembly_audit. I found no mathematical defect in the
+interfaces checked below. This chain uses substantially more than pressure
+equality or symmetry. The recent nonseparating-torus and pressure-only
+countertests do not invalidate its twisted-Schatten construction. The
+conclusion is at fixed finite Wilson SU(2) coupling, with thermodynamic
+limit before tilt removal. It is not a continuum rotation theorem.
+
+1. WHAT THE OPERATOR ARGUMENT ACTUALLY NEEDS
+
+The adapted diagonal torus already supplies diagonal RP. New coordinate
+planes are used only to obtain reflection INVARIANCE of a comparison law,
+and then invariance under even translations. It is unnecessary to realize
+every coordinate reflected quadratic as a positive operator X. The proof
+does not claim that the expectation-preserving local reduction is positive.
+
+For a finite selected spatial edge set S, C_S is convolution with
+K_S(v,u)=product_e exp[(beta/2)Tr(v_e u_e^-1)]. Its Peter--Weyl eigenvalues
+c_j=2 I_(2j+1)(beta)/beta are strictly positive. The insertion is
+
+ G_X(u,v)=[C_S^(1/2) X C_S^(1/2)](v,u)/K_S(v,u).
+
+The identity is allowed separately from finite-rank kernels, and gives
+G_I=1 exactly. Finite representation kernels and I+itA have bounded
+continuous G_X. An X commuting with simultaneous endpoint gauge actions
+embeds as X tensor I into the full physical transfer space, with the same
+operator-norm upper bound. Diagonal/coordinate reflections give unitary
+or antiunitary relabelings (and adjoints), preserving that norm.
+
+The amplified bound |lambda(G_X)|<=||X||, including I+itA for selfadjoint
+A, gives Im lambda(G_A)=0 by expansion of
+
+ |1+it lambda(G_A)|^2<=1+t^2||A||^2.
+
+Thus the functional is Hermitian. The crossing-kernel argument swap is
+G_X composed theta=conjugate(G_(X*)); conjugation of probability
+expectations then gives lambda(G_X composed theta)=lambda(G_X).
+
+For an arbitrary smooth gauge-invariant two-layer observable Y, first
+temporally transport the bottom variables to the top. Enlarge S to include
+all spatial links it reads on both slices. Then Y=Y(u_S,v_S) and is
+invariant under simultaneous upper endpoint gauges. K_Y=K_S Y has the
+same equivariance. Product Peter--Weyl projections P_m commute with those
+gauges and converge in smooth kernels. Consequently
+
+ X_m=C_S^-1/2 P_m K_Y P_m C_S^-1/2
+
+is bounded finite-rank and equivariant. G_(X_m) tends uniformly to Y,
+because K_S has a positive lower bound on this finite compact space.
+The norms ||X_m|| may diverge: tilt removal is done for each fixed m
+before m tends to infinity. This is sufficient and introduces no hidden
+uniform approximation requirement. Uniform approximation extends to
+continuous two-layer gauge-invariant observables.
+
+2. THE PAIRED LOCAL REDUCTION IS AN EXACT EXPECTATION DEVICE
+
+At the bottom slice j, gauge invariance of P gives the pointwise identity
+P(U)=Ptilde(u,U_>=j+1), u_e=a_x^-1 b_e a_y. This does not gauge fix the law.
+Conditional integration of the selected upper partners v_e has exactly
+K_S(v,u)W(v,eta), where all factors W read only slices j+1,j+2 and their
+spatial stars. Every remaining lower factor is independent of v_S.
+
+For finite Peter--Weyl f, T_f=C_S^-1 M_f C_S maps C-infinity to itself
+with finite derivative loss. Multiplication changes spin by a bounded
+amount, while c_j/c_k is polynomial in j for bounded |j-k|. The tensor
+product estimate on fixed S has no ambient-volume factor. Therefore
+
+ Q=W^-1 sum_i T_(f_i)(W P_i)
+
+is a smooth local upper-slice observable with exactly the same expectation
+as P=sum_i f_i(u)P_i(v,eta). Endpoint equivariance of convolution makes
+Q gauge invariant. For the sparse tilted source, the extra local factor
+R(v,eta,u) may read lower variables: these are frozen parameters in T_f.
+The exact Q_t can retain them, but ||Q_t-Q||_infinity<=C_P t uniformly
+in volume, since only finitely many smooth source copies meet S and the
+derivative loss is finite. That is all the tilted reduction needs.
+
+Successive upper/lower removals, with gauge-invariant polynomial
+approximations between steps, telescope errors in actual expectations.
+They do not multiply earlier sup-norm errors by later inverse-operator
+norms. The reflected construction supplies theta Y for theta P with
+the same epsilon+C_epsilon t control. After volume then t limits,
+two-layer invariance implies invariance of all local P at that clean
+coordinate plane. Two adjacent clean link planes give translation by
+2e_mu. These arguments use no uniqueness or boundary insensitivity.
+
+3. TWISTED FOLDS AND THE SOURCE/PRESSURE NORMALIZATION
+
+The diagonal split-plaquette feature kernel is a positive inner product
+with constant finite feature norm. Shared boundary Haar variables and
+features glue each Wilson plaquette exactly once. A sheared closing
+identification gives a unitary U in Tr(U^-1 S_J ... S_1). No positivity
+of that twisted trace is asserted. Schatten Holder removes U in the
+absolute bound. Each reflected factor closes with its matching pure
+normal period and equals Tr(Y*Y)^(J/2), an ordinary Wilson integral.
+
+After every one-axis fold the boundary variables/features have already
+been contracted, leaving ordinary Wilson on the straightened graph.
+The next axis can therefore reclassify plaquettes without double-counting
+corners. This justifies the full cellwise inequality, not merely a
+one-slab estimate. Coordinate link/site boundary factors C^(1/2) and
+V^(1/2) glue to C and V; positivity of a C^(1/2) integral kernel is never
+assumed.
+
+The original odd-L volume n=2 L^M is retained. The diagonal counts are
+(n/h,2n/h,n/h,n/h), all even. The second frame uses half-integer width
+w=qh/2 and counts (2A,8A,4A,4A), all even. Its index brick represents
+both the adapted torus and its coordinate straightening. The explicit
+parity-vector injection remains injective modulo the period lattice.
+All source boxes avoid both coordinate cell walls and operator cuts.
+The placement gives strictly positive integer slab gaps in the fixed
+finite set {1,...,2w-1}; a stronger claimed 2h image margin is not used.
+
+The complete reflected source array on the ORIGINAL coordinate torus
+is essential for the first Jensen comparison. It yields
+nu(O)<=lambda_t(O), after the pressure defect divided by t times the
+number of source cells tends to zero. For the second amplification,
+the unnormalized numerator costs
+
+ ||X||^(N') exp[t N||O||] exp[p_beta volume+o(volume)],
+
+and the one original denominator costs exp[-t N||O||] times its source-
+free partition function. Taking the N'-th root gives
+
+ limsup |mu_(D_n,t)(G_X)|
+       <=exp[2t(H/h)^4||O||] ||X||.
+
+The finitely many possible gap lengths and directions give one uniform
+pressure error after h,w,H are fixed. No pressure equality of local
+states is inferred. No denominator is counted twice.
+
+4. COMMON LAW AND THE FULL CLOSED-HALF POSITIVE ALGEBRA
+
+Fix O,h and the target diagonal plane. The adapted sequence D_n,t is
+then fixed. For every fixed X, its possibly much larger w,H are used
+only to prove a limsup bound for that SAME sequence. Consequently every
+cluster law lambda_t satisfies all these bounds. A single limit as
+t decreases to zero has diagonal RP and all the coordinate invariances
+just proved. The clean adjacent planes depend on O,h, not on X.
+
+Define R as the compact convex set of gauge-invariant probability LAWS
+that are invariant and reflection positive at the fixed diagonal plane.
+Here RP means ALL continuous functions of the CLOSED positive-half
+link algebra, including functions with color charges on boundary links.
+It must NOT be silently restricted to gauge-invariant half observables.
+
+This full version is available on the adapted torus: the diagonal
+feature proof is on raw Haar links with no gauge quotient; conditional
+on the fixed sheet links its reflected form is a sum/integral of
+absolute squares. Both boundary sheets are pointwise fixed because the
+adapted closing period is pure normal. It applies to arbitrary complex
+half-observables. Full closed-half RP therefore survives into lambda.
+
+The convex-separation step still uses only gauge-invariant full-space
+observables O. If a gauge-invariant nu were outside this FULL-RP class,
+a continuous cylinder separator could be averaged over its finite
+endpoint gauge group without changing expectations under nu or ANY
+lambda in R. This averaging need not preserve a half algebra: the
+separator is an arbitrary full-space observable. Finite Peter--Weyl
+approximation gives an eligible real gauge-invariant polynomial O.
+
+Translate O by an even vector into a diagonal cell having the fixed
+target plane as a wall. Nu is fully translation invariant and its
+comparison lambda is even-translation invariant. Hence the one-observable
+domination returns to the original position, contradicting separation.
+Thus nu belongs to the FULL-RP class. No boundary-color decomposition
+or positive-X representation of a diagonal quadratic is required.
+
+5. SCOPE OF THE RE-AUDIT
+
+The conclusion applies to each fixed-beta coordinate-torus subsequential
+state, so it does not replace the thermodynamic state used by the source
+construction. It requires the literal pure Wilson SU(2) action and the
+proved SU(2) convolution ratio bound; it is not asserted for arbitrary
+Gibbs interactions or arbitrary gauge groups. All large constants are
+allowed to depend on fixed beta because volume is sent to infinity first.
+
+The source/moment passage to a common continuum hierarchy, diagonal
+closed-half slab estimates with its centering, and the continuous-rotation
+theorem remain their own interfaces. This audit identifies no new missing
+input in the fixed-beta two-frame chain itself. It does not invoke the
+weaker and insufficient claim that pressure equality identifies local
+states, nor spatial averaging of RP laws.

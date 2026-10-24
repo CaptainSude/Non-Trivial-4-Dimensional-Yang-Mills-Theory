@@ -1,0 +1,258 @@
+AN EXTERIOR COLLAR WITH A BARE ACTION COST AND VALID FIRST AVERAGES
+19 October 2026. balaban_inputs. Turn37 geometric/source attachment.
+
+RESULT
+
+The proposed collar construction works. A collar-only tree gauge makes
+the entire core boundary small on a gauge-invariant event, and failure
+has an explicit action cost in an expanded bare cube. The ordinary
+bare chessboard estimate then controls the failure probability without
+an assumed good-boundary probability. The stronger threshold proposed
+by root also works: it gives O(g T) links in one common core/collar
+frame and intrinsic validity of every FIRST ordinary native average
+whose complete read touches the core. It does not prove the native
+chi_0 fluctuation cutoff or later history/analytic-domain admission.
+
+1. GEOMETRY AND THE EXTERIOR-DETERMINED GAUGE
+
+Use the core D_R={0,...,R}^4 and expanded cube
+ D^+={-w,...,R+w}^4,  w=C_L L,
+where L is the FIXED first blocking ratio and C_L is a fixed geometric
+constant large enough to contain every two-endpoint-block footprint
+meeting a free core edge. Taking, for example, C_L=10d is conservative.
+Assume R>=2w; changing finitely many smaller R is unnecessary here.
+Write S=R+2w, so S<=2R.
+
+The collar graph C has vertices D^+\{1,...,R-1}^4 and every nearest-
+neighbor edge with both endpoints there. It includes the complete core
+boundary. Every collar edge is fixed when the bare core interior is
+conditioned upon its complete exterior.
+
+Choose the outer corner o=(-w,...,-w). From any x in C, choose one
+coordinate x_mu outside the strict interval (0,R). Keep it fixed while
+moving the other coordinates to -w, then move x_mu to -w. The path stays
+in C and has length at most 4S. Thus a fixed geometric breadth-first
+tree rooted at o has height <=4S. The fundamental loop of any collar
+chord consists of that chord and two rooted tree paths, and has length
+<=8S+1. The tree is chosen independently of the gauge field.
+
+Gauge the collar tree to identity, based at o, and define
+
+ d_C(U)=max_(collar chords e) ||U^C_e-I||.                 (1.1)
+
+Tree edges already equal I. Each U^C_e is a rooted loop holonomy, so
+d_C is invariant under all original vertex gauge transformations.
+The actual transformation on collar vertices depends ONLY on collar
+links. It need not be close to identity, and it need not be a tree
+contained in the surface of the core. Neither property is required.
+
+2. ACTION CONTROL OF THE COLLAR
+
+Let S_big(U) be the nonnegative Wilson sum over ALL plaquettes wholly
+in D^+, including those in its boundary. Use normalized Hilbert--Schmidt
+distance for the fixed faithful unitary representation, so
+
+ ||UV-I||<=||U-I||+||V-I||,
+ ||WUW^-1-I||=||U-I||,   ||U_p-I||^2=2 h(U_p).
+
+First put the full cube into a coordinate-order rooted tree gauge.
+The path from o to x changes coordinate 1, then 2, then 3, then 4.
+For an edge in direction mu, compare the rooted path to its first
+endpoint followed by that edge with the rooted path to its second
+endpoint. Move this one mu-step past the later-coordinate segments.
+This fills the fundamental loop by unit-width coordinate strips with
+at most 3S distinct elementary plaquettes. Peeling these strips gives
+an exact product of conjugated plaquette holonomies. Therefore every
+edge in this full-cube gauge obeys
+
+ max_e ||U^tree_e-I|| <= C sqrt(S) sqrt(S_big(U))
+                         <= C S sqrt(S_big(U)).          (2.1)
+
+Only the weaker second bound is used below. No small-field assumption
+is needed, and the conjugating transports need not be small.
+
+Evaluate a collar fundamental loop in this gauge. Its length is <=CS,
+so the triangle inequality and(2.1) give
+
+              d_C(U)<=C S^2 sqrt(S_big(U)).              (2.2)
+
+Consequently, with R>=2w,
+
+       {d_C>delta} implies S_big>=c delta^2 R^-4.         (2.3)
+
+In particular delta=c_0 R^-24 gives the claimed cost c R^-52.
+This uses the uncentered nonnegative action. It would not be justified
+with S_big minus an arbitrary conditional minimum.
+
+3. EXACT CONDITIONAL CORE LAW IN THIS FRAME
+
+Fix the complete exterior omega of the free core edges. The collar
+gauge in Section1 is now deterministic. Extend it arbitrarily to the
+interior vertices, for example by the identity there. This is a
+product-Haar change of the free core coordinates with boundary data
+transformed by the already fixed collar gauge. Gauge invariance leaves
+the Wilson conditional law exactly
+
+ Z_V(g)^-1 exp[-S_V(u)/g^2] dHaar(u),                     (3.1)
+
+where V is the transformed core boundary. On d_C<=delta every boundary
+link satisfies ||V-I||<=delta. Apply the boundary-anchored forest inside
+the core. This second gauge is identity on EVERY boundary vertex and
+therefore leaves all collar links unchanged.
+
+Thus one common frame contains the small collar links, the identity
+core forest, and the core chords controlled by the bare box theorem.
+No independent patch gauges are being glued. The conditional theorem
+does not require the exterior gauge to have been produced by a boundary
+tree; it requires exactly the small fixed boundary values now obtained.
+
+For completeness the resulting good-window event is gauge invariant.
+Under an original vertex gauge change the collar-tree representative
+changes by one global conjugation at o. After the core forest fixing,
+the same is true of the complete representative. The unique small
+minimum, its logarithm and the centered norm window transform by that
+same conjugation. All norms and the action are invariant.
+
+4. ORIGINAL BARE CHESSBOARD PROBABILITY, WITH ALL VOLUME COSTS
+
+Work on a reflection-compatible periodic Wilson lattice tiled by
+reflection cells containing D^+ with side comparable to S. Use the
+usual closed-cell convention; let q_* be the fixed maximal plaquette
+multiplicity. This is the exact bare-law setup of
+chessboard_native_joint_tail_turn14, Sections1 and3. The new ingredient
+is the explicit growing-cell energy inequality(2.3), replacing its
+unspecified fixed-cell constant.
+
+For the disseminated bad-collar event in m cells,
+ sum_cells S_big<=q_* S_total and(2.3) imply
+ S_total>=m c delta^2 R^-4/q_*.
+Split the original Boltzmann action into two equal parts. With
+beta=g^-2 this gives
+
+ Z_beta(all bad)<=exp[-c beta m delta^2 R^-4] Z_(beta/2).
+
+The elementary link-ball lower bound and normalized Haar upper bound
+are
+ Z_beta>=exp[-C N_sites(1+log beta)],  Z_(beta/2)<=1.
+Taking the chessboard root AFTER this comparison yields
+
+ p_col(g,R,delta)
+ <=min{1, exp[C R^4(1+log(1/g))-c g^-2 delta^2 R^-4]}.
+                                                               (4.1)
+The multilinear chessboard inequality gives the product of these
+bounds for any chosen distinct reflected cells. The collar trees and
+cores are reflected with their cells. No independence of their
+boundary links is assumed. Constants are independent of the total
+compatible torus volume; the R^4 entropy is retained explicitly.
+
+This is a positive original bare event. No signed history expansion,
+modified coupling trajectory, or ultraviolet-vacuum cancellation is
+used. For delta=c_0 R^-24 and R growing polylogarithmically, (4.1) is
+superpolynomially small in g.
+
+5. SHARPER THRESHOLD: O(gT) THROUGHOUT THE COMMON FRAME
+
+The polynomially small boundary threshold alone gives a core minimum
+of order R^-8, which can be much larger than gT. The following direct
+estimate gives the proposed improvement.
+
+In the forest coordinates of polylog_box_conditional_tail_turn37,
+there are n<=C R^4 free scalar coordinates and
+ D^2 S_V>=c R^-8 I on the small chart. At x=0 every free link equals I,
+and each boundary link differs from I by at most delta. Each free
+edge meets only a fixed number of plaquettes; differentiation of the
+Wilson plaquette action at this configuration therefore gives
+
+ max_e |partial_(x_e) S_V(0)|<=C delta,
+              |grad S_V(0)|_2<=C R^2 delta.              (5.1)
+
+The minimum x_* and zero lie in the convex chart. Strong monotonicity
+of its gradient, grad S_V(x_*)=0, and Cauchy--Schwarz give
+
+ c R^-8 |x_*|_2^2
+ <= -<grad S_V(0),x_*>
+ <= C R^2 delta |x_*|_2.
+
+Hence
+
+              |x_*|_infty<=|x_*|_2<=C R^10 delta.        (5.2)
+
+Choose
+             delta(g,R)=c_* g R^-10 T,                 (5.3)
+with c_* small enough that(5.2) is at most gT/4. For weak enough g in
+the polylog range this threshold is also <=c_0 R^-24, so all hypotheses
+used to obtain the minimum and the convex chart remain satisfied.
+
+On the centered core window |x-x_*|_infty<=gT, every core chord is
+O(gT); forest links are I. The entire collar is O(delta)<=O(gT) in
+the SAME frame. From(4.1),
+
+ p_col<=exp[C R^4(1+log(1/g))-c R^-24 T^2].              (5.4)
+
+Put ell=log(1/g), R<=C_R ell^b, T=ell^a. The sufficient condition
+
+                         a>14b+1/2                     (5.5)
+
+makes (5.4) at most C exp[-c ell^(2a-24b)], hence smaller than every
+fixed power of g. It also implies the weaker exponent condition for
+the conditional core tail alpha from the original box theorem.
+All chart conditions, including gT<=c R^-8 and delta<=c_0 R^-24,
+hold eventually because g dominates every fixed logarithmic power.
+
+6. EXACT FIRST ORDINARY-AVERAGE ADMISSION, AND ITS LIMIT
+
+Primary source: Bałaban, CMP109(1987)249--301, pp253--255,
+(0.5)--(0.12), (0.15)--(0.17):
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+
+The intrinsic group mean is defined on small-diameter families. The
+ordinary average(0.12) uses endpoint-block paths, a translated coarse
+edge and a relative loop logarithm. The chosen collar contains ALL
+those reads for every first-step row touching a free core edge. With
+L fixed, each path has at most C_d L fine edges. In the common frame
+from Sections3 and5, telescoping products give deviations O(L gT)
+from I; the contour families have diameter O(L gT), and the relative
+loop products have the same bound. For weak enough g they lie in
+the fixed analytic neighborhoods defining the native mean/logarithm.
+The ordinary coarse links are O(L gT) in this frame.
+
+This proves INTRINSIC ordinary-average branch validity, including all
+collar crossings, with no assumed invalid-collar mass left over.
+Gauge covariance transports the conclusion to the original frame.
+It does not say the coarse links or individual open contour products
+are close to I in that original frame.
+
+In particular the characteristic on |U(y,x)-I| used for the specified
+gauge fixing in(0.16), the fluctuation cutoff relative to a constrained
+minimum in(0.17), and later history predicates are NOT consequences
+of this argument. They must still be retained as their actual factors
+or justified by their own exact gauge/branch construction. No complex
+s-disc or differentiated native family is furnished here.
+
+For the annealed disintegration in coarse_preserving_box_replacement
+turn37 and polylog_box_native_matching_turn37, use
+             Y=the exact ordinary averages of ORIGINAL U,
+including every row reading a free core. The collar/core gauge changes
+interior coarse-root frames. Thus using averages of the gauged field
+instead would preserve only a different framed datum unless those
+root transformations were also retained. Conditioning on original Y
+avoids this error. All other needed finite branch multipliers may be
+retained as actual measurable data when their complete reads split;
+a distributional gauge delta requires its separate gauge identity.
+
+7. BOUNDED CONSEQUENCE
+
+The bare collar bad event now has the explicit chessboard parameter
+p_col. Conditional on good collar data the core bad-window probability
+is alpha from the bare box theorem. The exact fiber replacement can
+therefore use a good-fiber threshold theta, retaining the full coarse
+datum and exterior. Its uncontrolled-fiber parameter is alpha/theta;
+its mean coupling discrepancy is at most alpha. In the complete
+separated-read construction these combine with the original collar
+marks as proved in the disintegration note. For instance theta=sqrt
+alpha leaves a superpolynomial parameter under(5.5).
+
+This is a positive, first ordinary-blocking-scale bridge with fixed L.
+It neither identifies the replacement with native R nor yields an
+all-scale bad-history law, an effective-action comparison, or a
+continuum Yang--Mills construction.

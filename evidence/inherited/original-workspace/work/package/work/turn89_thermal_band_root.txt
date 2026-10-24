@@ -1,0 +1,188 @@
+TURN89 -- EXACT THERMAL PAIRING ON THE ORIGINAL WILSON SEQUENCE
+20 October 2026. Scope: a spectral reduction, NOT a YM4 existence proof.
+
+1. Setup and the distinction from TURN88
+
+Use the actual finite Wilson transfer operator T=M Q M on the physical
+(gauge-invariant) spatial Hilbert space, at positive Wilson coupling.
+It is positive, injective and compact; the powers used below are trace
+class. Write its eigenvalues lambda_i>0 and Z_N=Tr(T^N), for an even
+temporal period N. The temporal lattice spacing is a and the physical
+time circumference is P=Na. The spatial regulator may vary with a.
+
+Let Phi be multiplication by the SAME real gauge-invariant slice
+observable phi in [0,1] in both factors. In our application phi is the
+fixed nonnegative unit-mass spatial smear of the bounded spatial-flow
+observable in TURN88. The spectral argument needs only these properties.
+The thermal expectation is E_N. Center A=Phi-E_N(phi)I when discussing
+variance; its matrix elements between unequal eigenspaces equal Phi_ij.
+
+No limit N->infinity at a fixed spatial regulator is taken in this note.
+In particular, no uniform spectral gap or ground-state dominance is used.
+
+Define a finite positive measure on (0,infinity):
+
+ mu_(a,N) = Z_N^(-1) sum_(lambda_i>lambda_j)
+               lambda_i^N |Phi_ij|^2 delta_(E_ij),
+ E_ij = a^(-1) log(lambda_i/lambda_j)>0.                         (1)
+
+Each unequal-eigenvalue pair is counted once, with the larger eigenvalue
+first. Degenerate pairs do not enter. Formula (1) is invariant under
+basis changes within degenerate eigenspaces. Since its mass is a subset
+of the nonnegative terms in Tr(T^N A^2)/Z_N,
+
+                  mu_(a,N)((0,infinity)) <= Var_N(phi) <= 1/4. (2)
+
+This is a measure of positive ENERGY DIFFERENCES in a finite thermal
+trace. It is not an assertion that a finite thermal reconstruction has
+a nonnegative Hamiltonian with this spectral measure.
+
+2. Exact filtered boundary and reflected formulas
+
+Choose nonnegative weights w_k of sum one, with t_k=ak in [T0,T1],
+where T0>0 and T1 are fixed physical constants. Let d be a positive
+integer, delta_a=ad in [delta_min,D], with delta_min>0. Set
+
+ F=sum_k w_k [phi(k)-phi(k+d)],   G=phi(0),
+ kappa=E_N(FG),                  N_F=E_N((Theta F)F).
+
+All original reads of F must lie strictly in the chosen reflected half:
+in particular P>2(T1+D), with the buffers required by TURN88. Reflection
+is through time zero and the opposite fixed slice. Spatial flow stays
+within each original time slice. Stationarity gives E_N F=0.
+
+For E>0 put
+
+ L_-(E)=sum_k w_k exp(-t_k E),
+ L_+(E)=sum_k w_k exp(+t_k E),
+ K(E)=L_-(E)(1-exp(-delta_a E)).
+
+Then the following identities hold for the ORIGINAL finite Wilson law:
+
+ kappa = int (1-exp(-delta_a E))
+          [L_-(E)-exp(-(P-delta_a)E)L_+(E)] mu_(a,N)(dE),     (3)
+
+ N_F = int (1-exp(-delta_a E))^2
+          [L_-(E)^2+exp(-(P-2delta_a)E)L_+(E)^2]
+                                                   mu_(a,N)(dE). (4)
+
+Proof. For 0<=s<=N the two-point trace is
+ Z_N^(-1) sum_(i,j) lambda_i^(N-s) lambda_j^s |Phi_ij|^2.
+For a pair lambda_i>lambda_j set r=lambda_j/lambda_i=exp(-aE).
+The two directions give lambda_i^N(r^s+r^(N-s))|Phi_ij|^2/Z_N.
+The boundary difference at k,k+d is therefore
+ lambda_i^N(1-r^d)(r^k-r^(N-k-d))|Phi_ij|^2/Z_N.
+The reflected double difference at k,l is
+ lambda_i^N(1-r^d)^2[r^(k+l)+r^(N-k-l-2d)]|Phi_ij|^2/Z_N.
+Sum the nonnegative weights. Equal-eigenvalue terms cancel exactly.
+Each initial correlation is finite and bounded. Pair regrouping can
+also be justified by finite spectral truncation and the bounded trace
+form; the displayed paired kernels are nonnegative in the stated
+geometry, so the final sums converge monotonically. This proves (3)-(4).
+
+The conditional original-boundary product law from TURN88 still gives
+N_F>=4 kappa^2. Here (3) also gives kappa>=0 directly; strict positivity
+under the nonconstant-observable conditions remains the TURN88 result.
+
+3. Uniform control of the backward thermal terms
+
+Define positive forward quantities
+
+ kappa^+=int K(E)mu(dE),   N_F^+=int K(E)^2mu(dE).
+
+Let R1=P-T1-D and R2=P-2T1-2D. If both are positive, then
+
+ 0 <= kappa^+-kappa <= D/(4e R1),                            (5)
+ 0 <= N_F-N_F^+       <= D^2/(e^2 R2^2).                     (6)
+
+Indeed L_+<=exp(T1 E), 1-exp(-delta_a E)<=D E and mu mass<=1/4.
+The suprema of E exp(-R1 E) and E^2 exp(-R2 E) are respectively
+1/(eR1) and 4/(e^2 R2^2). No spectral gap occurs in these estimates.
+
+Consequently, on ANY simultaneous sequence of original finite Wilson
+regulators with P_a->infinity, the two backward errors tend to zero
+uniformly in the spatial volume, the spectrum and the cutoff. Coupling
+constants can vary with a. This removes the ground-FIRST order of limits
+from this particular spectral reduction; it does not establish the
+continuum Wilson law or interchange any unproved field limits.
+
+4. Equivalent quantitative target on a fixed physical band
+
+Keep T0,T1,delta_min,D fixed and P_a->infinity. A positive lower bound
+for kappa_a is equivalent to retaining positive mu_a mass on some fixed
+band [epsilon,Lambda] with 0<epsilon<Lambda<infinity. A positive lower
+bound for N_F,a is equivalent to the same property.
+
+Explicit forward direction: if kappa_a>=c>0, then kappa_a^+>=c. Since
+the total mass is at most 1/4, necessarily c<=1/4. Choose
+
+ epsilon=c/D,
+ Lambda=max{2epsilon, T0^(-1) log(1/c)}.
+
+The contributions to kappa_a^+ below epsilon and above Lambda are each
+at most c/4, because K<=D E and K<=exp(-T0 E). Since K<=1,
+
+                    mu_a([epsilon,Lambda]) >= c/2.           (7)
+
+Conversely if this band has mass at least b>0, then
+
+ kappa_a^+ >= b exp(-T1 Lambda)(1-exp(-delta_min epsilon)),    (8)
+ N_F,a^+ >= b exp(-2T1 Lambda)(1-exp(-delta_min epsilon))^2.   (9)
+
+Subtract (5) for kappa; (4) gives N_F>=N_F^+ with no subtraction.
+For the norm-to-band direction, (6) gives a positive lower bound on
+N_F^+ eventually whenever N_F has one, and K^2<=K gives kappa^+>=N_F^+.
+Apply the same low/high argument with a smaller positive constant.
+These implications use uniform floors, not merely strict positivity
+at each finite cutoff.
+
+At finite period there is also a direct boundary lower bound if
+P>=Pmin>2T1+D:
+
+ kappa >= b exp(-T1 Lambda)(1-exp(-delta_min epsilon))
+                    (1-exp(-(Pmin-2T1-D)epsilon)).           (10)
+
+For each time t the kernel in (3) is
+(1-exp(-delta_a E))exp(-tE)[1-exp(-(P-2t-delta_a)E)].
+This proves (10) by positivity. The stronger support requirement
+P>2(T1+D) is retained whenever F is used in the original reflected half.
+
+5. Subsequences and the bounded scalar limit
+
+If w_k are exact cell weights for a fixed nonnegative time profile of
+mass one supported in [T0,T1], and delta_a->delta>0, then K_a converges
+uniformly on E>=0 to
+ K_infinity(E)=(int w(t)exp(-tE)dt)(1-exp(-delta E)).
+The bound sup_(E>=0) E exp(-T0 E)=1/(eT0) controls cell-placement errors
+and the delta error. A harmless slightly smaller T0 handles boundary
+cells. The same holds for K_a^2. Both limiting kernels are continuous
+and vanish at zero and infinity.
+
+The mass bound gives a subsequence of mu_a converging weak-* on
+C_0((0,infinity)) to a finite positive Radon measure. Mass may disappear
+at zero or infinity. These two kernels see neither escaped component,
+so (3)-(6) identify the limits of the filtered correlations and norms
+with the integrals of K_infinity and K_infinity^2 against that measure.
+This extraction can be taken along the common bounded-scalar subsequence
+of TURN87. The physical-period divergence is essential for dropping
+the backward terms in this statement.
+
+When the infinite-time stationary reflection-positive scalar law and
+its strongly continuous semigroup are available as in TURN88, the
+filtered class is (I-exp(-delta H)) applied to a positive-time average.
+It annihilates the entire kernel of H. A surviving reflected norm
+therefore gives a genuinely positive-energy scalar sector. The thermal
+measure above is not thereby identified with a full local YM field
+spectral measure, and locality, Euclidean rotations, coupling matching,
+joint field/source estimates and YM reconstruction remain separate.
+
+6. What remains unproved
+
+No lower bound on mu_a([epsilon,Lambda]), kappa_a, N_F,a, or the ordinary
+variance criterion studied in the companion TURN89 note is proved here.
+The exact original source row still is
+ Z^(-1) int w_B G Z_+ Z_F dB,
+with the original boundary and opposite-half weights retained. Native
+unmarked bounds and a normalized new-slot reference replacement do not
+estimate that signed old-observable row. This note strengthens the
+consumer of a future quantitative estimate; it does not supply one.

@@ -1,0 +1,134 @@
+NATIVE SEPARATED-DATA TRANSFER TO h-WEIGHTED JETS
+23 October 2026. Finite analytic lemma; application hypotheses retained.
+The interacting continuum YM4 construction remains unproved.
+STATUS: internally audited PASS at the conditional scope below.
+Audit: native_separated_data_h_jet_transfer_independent_audit_20261023.txt.
+
+1. INPUTS AND SCOPE
+
+Write ell_j=L^j eta, L>1, and G=R M1 for the FIXED native gap.
+Use the determining-root metric of CMP96(2.46), not an age proxy.
+Its contour length is sum_j ell_j^(-1)|Gamma intersect grade j|.
+CMP96 Lemma2.1/(2.60) gives the grade-crossing cost
+G max(|a-q|-1,0). The full mixed geometry includes its native grade-zero
+completion; a Dirichlet restriction only removes paths.
+
+The analytic input is CMP102 Proposition9/(190), with beta=delta0/8.
+For the jets actually specified there, the response kernel has output
+factor ell_a^(-p), p=1,2,3, input density ell_q^(-d), and exp(-beta d).
+No assertion about other derivatives is added. In particular a bound
+for a prescribed second-order combination is not a bound for every
+second derivative. The native mixed input measure is ell_q^d, so the
+remaining sum is over determining roots, with a fixed orientation factor.
+
+Consider a datum path on ONE admitted intrinsic-minimum tube and ONE
+fixed array. Its tangent has component norm <=E and is supported on K.
+The entire path and required gauges must be admitted by Proposition9.
+Exact equality of both endpoint data on the collar is preserved by the
+straight path in their common local logarithmic datum coordinates.
+This requires the same determining rows, branches and coordinate frames.
+
+Let x be an output point with determining grade a<h. Assume the complete
+changed determining read K is physically separated from the complete
+output stencil by r ell_h, r>0 fixed. Retain native projected-endpoint
+offsets: for a path whose largest visited grade is p, the resulting
+root-to-root physical lower bound is r ell_h-C_inc ell_p, with C_inc
+fixed. One may instead impose the stronger separation directly on roots.
+This hypothesis is NOT supplied by agreement at a single seam plaquette.
+
+2. METRIC ESTIMATE INCLUDING FINE CHANGED INPUTS
+
+For any admissible contour from output root y of grade a to z in K,
+let p be its largest visited grade. A subcontour reaching that grade
+costs at least G(p-a-1), by the native grade-crossing argument. Native
+incident-root conventions can add a fixed endpoint cost; include it in
+C_inc below. Also every grade on the contour is <=p, hence its weighted
+length is at least its physical length divided by ell_p. Therefore
+
+ length_d(Gamma) >= G(p-a-1),
+ length_d(Gamma) >= r L^(h-p)-C_inc.
+
+Put t=h-a and q=h-p. Averaging these bounds gives
+
+ length_d(Gamma) >= (G/2)t
+        + [r L^q-Gq-G-C_inc]/2.
+
+The supremum S(G,r,L)=sup_(q in R)[Gq-rL^q] is finite: its expression
+tends to minus infinity in both directions. If desired its maximizing
+point is q=log_L[G/(r log L)]. Thus, with
+
+ C_* = max(0,[G+C_inc+S(G,r,L)]/2),
+
+                 d(y,z) >= (G/2)(h-a)-C_*.             (1)
+
+The proof allows fine changed rows, paths which leave the h patch, and
+paths visiting grades above h. It does not assume the input grade >=h.
+Finitely many native incident-root corrections alter C_*, not the slope.
+
+3. SCHUR SUM AND THE h-WEIGHTED JETS
+
+Let c0(u)=sum_(n in Z) exp[-u delta0 |n|]. Choose the fixed native gap so
+
+ delta0 G/64 > 2d log c0(1/32)+1,                     (2)
+ delta0 G >= 96 log L.                               (3)
+
+Equation(2) is the actual CMP96 Schur condition for alpha=1/16.
+Spend half of the rate beta on (1) and the other half on that Schur sum:
+
+ sum_(z in K) exp[-beta d(y,z)]
+   <= exp[beta C_*/2] exp[-beta G(h-a)/4]
+                       12[c0(1/32)]^d.               (4)
+
+After integrating the admitted datum path, Proposition9 yields
+
+ |jet_p delta H(x)|
+   <= C E ell_a^(-p) exp[-beta G(h-a)/4].             (5)
+
+The constant includes the fixed orientation, matrix, coordinate and
+Schur constants. Multiplication by ell_h^p gives
+
+ ell_h^p |jet_p delta H(x)|
+   <= C E exp[(p log L-beta G/4)(h-a)] <= C E,         (6)
+
+for every specified p<=3 by(3). If a>=h, the ordinary native estimate
+already has ell_h^p ell_a^(-p)<=1. Local conversion from the prescribed
+response coordinates to the minimum/current must retain the actual
+gauge and polynomial formula; it is not a new kernel theorem.
+
+All constants are independent of eta and h. They can depend strongly
+on the fixed geometry and separation r. The weak-field floor must be
+chosen AFTER these constants; no claim of a small absolute constant is
+made. If an earlier fixed geometry does not satisfy(2)--(3), increase
+its fixed native threshold before choosing the later carrier M and
+weak-field floor. No cutoff-dependent change is allowed.
+
+4. PRECISE DOWNSTREAM GATES
+
+For the split minimum application, verify separately:
+ (i) the actual h collar has unchanged determining data on the WHOLE
+     native read, with physical separation r ell_h from changed data;
+ (ii) the artificial second-minimum boundary misses this read;
+ (iii) both minima lie in the same admitted tube and same datum gauges;
+ (iv) the chosen real comparator has native h-regularity;
+ (v) changes in complementary U2 rows, if any, obey the same hypotheses.
+
+An actual supported physical center supplies a candidate for(iv).
+An arbitrary BASIC real center is not thereby physical or h-regular.
+Keeping actual old-real U2 slots fixed can remove its perturbation,
+but only when this is the literal active source continuation.
+
+Exact grade-zero identity bands can separately settle currents on the
+plaquettes crossing the join. They do not alone establish(i) throughout
+the full boundary tower. Until these gates are matched, (6) is a proven
+conditional transfer lemma, not full forced-response/d1 admission.
+
+5. PRIMARY PROVENANCE
+
+T. Balaban, CMP96(1984)223--250, doi:10.1007/BF01240221:
+ (2.2) native gap; (2.46) metric; (2.59)--(2.63) Schur/grade bounds;
+ (2.69) mixed measure. Original pixels and exact source transcription:
+ evidence/inherited/original-workspace/
+ work/cmp96_source_match_20261021.txt (join the displayed lines).
+T. Balaban, CMP102, Proposition9/(190), printed308, declared published
+ derivative kernel input, including its stated output jets only.
+The elementary new deduction in this note is(1), then(4)--(6).

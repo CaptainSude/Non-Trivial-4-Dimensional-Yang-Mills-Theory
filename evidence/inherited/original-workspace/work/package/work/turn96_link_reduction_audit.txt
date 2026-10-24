@@ -1,0 +1,359 @@
+TURN96 -- INDEPENDENT AUDIT OF THE ORIGINAL WILSON ONE-LINK SOURCE REDUCTION
+21 October 2026. holonomy96. No frontier edit.
+
+VERDICT
+
+PASS at the stated finite-regulator, original-Wilson-law scope of
+work/turn96_pressure_route.txt, read in full. Sections1--6 contain valid
+conditional identities and bounds, including arbitrary real exterior
+staples, complete staple cancellation, weighted profiles, the 1/4 global
+count, and the two-sided separated covariance identity at its stated
+complete-read disjointness. The note correctly avoids treating the
+subtracted flat-exterior value as the original Wilson mean.
+
+The result does not close native source transport. The producer already
+states the necessary limitations concerning histories, changed actions,
+real versus complex domains, and covariance error estimates. Section7
+below gives a concrete original-Wilson example of the complex-domain
+limitation, stronger than a generic two-point posterior illustration.
+
+1. CONDITIONAL LAW AND REGULATOR GEOMETRY
+
+For an unfixed original link of the stated periodic four-dimensional
+lattice, exactly six distinct Wilson plaquettes depend on it, each once.
+Orientation reversal is an orthogonal operation on the four real
+quaternion coordinates. The conditional weight is therefore exactly
+exp(beta u dot V) relative to normalized S^3 Haar measure, V=sum v_p,
+with six unit vectors v_p. Rotational invariance and elementary S^3
+integration give z(s)=2 I1(s)/s and E u=m(s)V/r, m=I2/I1, s=beta r.
+All nonincident Wilson terms are part of the original exterior marginal;
+they have not been discarded or replaced by another law.
+
+For an open box, the same formulas need the actual number k of incident
+plaquettes in place of six. A fixed boundary link cannot be integrated
+with this kernel. The producer avoids those issues by its periodic
+periods-at-least-four assumption. Arbitrary values of all surviving
+exterior links are allowed under that assumption.
+
+2. GLOBAL BESSEL SLOPE AND CONVEXITY PROOF
+
+The stated Riccati equation m'=1-m^2-3m/s is correct for I2/I1. Put g=sm.
+Differentiation gives
+
+ g'=s-(g^2+2g)/s,
+ g''=2-(2g+3)g'/s.
+
+Near zero, m=s/4+O(s^3), so g'=s/2+O(s^3) and g''=1/2+O(s^2).
+For s>0, m>0 and m'=Var_s(u dot n)>0, hence g'>0. If g' first reached
+one from below, then
+
+ g+1=sqrt(s^2-s+1),
+ g''=2-[2sqrt(s^2-s+1)+1]/s<0,
+
+contradicting the derivative sign at first contact. The square-root
+inequality follows from s^2-s+1=(s-1/2)^2+3/4; there is no omitted small-s
+case. Thus 0<g'<1 globally.
+
+At a zero of g'', direct differentiation gives
+
+ g'''=2(1-g'^2)/s>0.
+
+This forbids a first zero reached from g''>0. Consequently g is strictly
+convex on (0,infinity), continuous with g(0)=0. These arguments exclude
+both crossings and tangential first contacts.
+
+For s*=6 beta and s=beta r, convexity gives g(s)<=s g(s*)/s*, while the
+slope bound gives g(s*)-g(s)<=s*-s. Therefore
+
+ m(6 beta)D <= T_beta(D) <= D, D=6-r.
+
+Both endpoints r=0 and r=6 are included by continuity. No weak-field or
+large-beta assumption occurs here.
+
+3. GAMMA ESTIMATE AND THE REFINED REMAINDER
+
+Under the tilted S^3 law, z=s(1-u dot n) has Gamma(3/2,1) weight times
+w_s(z)=(1-z/(2s))^(1/2) 1[0<=z<=2s]. This is nonincreasing in z.
+Its mean is at most the unweighted Gamma mean3/2 because
+Cov_Gamma(z,w_s)<=0. Hence 1-m(s)<=3/(2s), proving
+
+ 0<=D-T_beta(D)<=[1-m(6 beta)]D<=D/(4 beta).
+
+For the sharper Section4 estimate, differentiating log w_s on its support
+gives z/[4s^2(1-z/(2s))], so the displayed covariance formula for
+b'(s), b=s(1-m), has the correct factor and sign. The endpoint contributes
+zero to the first derivative: the original density vanishes there and
+the resulting inverse-square-root singularity is locally integrable.
+The normalizing integral is uniformly bounded below on 0<=z<=1 for s>=1.
+The numerator integral on s<=z<=2s is at most C s^(7/2)e^(-s), as stated,
+and is therefore uniformly bounded. This proves 0<=b'(s)<=C/s^2.
+
+Since D-T=[b(6 beta)-b(beta r)]/beta, integration yields the claimed
+C(beta r0)^(-2)D bound for r>=r0>0, beta r0>=1. The global D/(4 beta)
+comparison remains the appropriate bound when r approaches zero.
+
+4. CLOSED LOOPS AND PROFILE CORRECTION
+
+For six unit vectors,
+
+ sum_(p<p') |v_p-v_p'|^2=36-|sum_p v_p|^2.
+
+Rationalizing 6-r therefore gives exactly
+
+ D=2/(6+r) sum_(p<p') (1-v_p dot v_p').
+
+The two staples have the same endpoints; their product with inverse
+orientation is a closed exterior loop. Its quaternion dot product is
+half its SU(2) trace. Thus D is gauge invariant, local, and independent
+of the conditioned link. It satisfies 0<=D<=6 on every real exterior.
+
+With qbar=(1/6)sum q_p and delta_p=1-n dot v_p, one has sum delta_p=D
+and delta_p>=0. The exact profile correction is
+
+ m(beta r)sum_p(q_p-qbar)delta_p,
+
+with absolute value at most omega(q)D. At r=0, any n gives sum delta=6,
+and m(0)=0. The alternate expression
+
+ -[m(beta r)/r]sum_p(q_p-qbar)v_p dot V
+
+extends with m(beta r)/r=beta/4 at zero and is smooth in the real
+quaternion variables. No profile-independent constant was hidden in this
+bound. The source profile must actually be scalar and smooth across
+orientations to replace omega(q) by a spatial gradient times the mesh.
+
+5. FULL ORIGINAL COVARIANCE AND ITS MEASURABILITY
+
+Each plaquette has four edges, so S_q=(1/4)sum_e S_(q,e). The separate
+conditional expectation at each e preserves the pairing with a random
+variable F precisely when F is measurable outside e. Hence the stated
+condition that F be measurable outside every e in E(q) is sufficient.
+Summing the six-star scalar gives
+
+ (1/4)sum_e c_beta qbar_e=(c_beta/6)sum_p q_p.
+
+This verifies both the expectation identity and the global covariance
+identity, including the normalization and the factor1/4.
+
+For deterministic original action sources, link-disjoint support suffices
+for the one-sided identity. For the two-sided identity one needs the
+complete exterior-star read of the first transformed source to avoid
+the other source edges; this is exactly the producer's extra condition.
+No independence of overlapping heat-bath updates has been assumed.
+
+A history-owned raw source need not be exterior measurable, even when
+its original plaquette locations are far away: ownership and deciding
+labels can depend on e. Conditioning the Gibbs measure on those labels
+also changes the conditional density. The producer correctly excludes
+that application without an additional proof.
+
+6. WHAT THE BOUNDS DO NOT YET CONTROL
+
+The pointwise remainder bound in Section6 correctly implies
+
+ |Cov(F,error)|<=sum_e coefficient_e E[|F-EF| D_e]/4.
+
+It does not imply a multiplicative bound for Cov(F,D), nor does it prove
+that the displayed right side is uniformly bounded as the fine mesh
+vanishes. The original source-root census is still present.
+
+D=O(a^4) holds on a specified smooth classical background, not uniformly
+on arbitrary raw exterior configurations. My separate TURN96 calculation
+in work/turn96_old_holonomy.txt exhibits surviving linear raw boundary
+currents. Eliminating one link does not, by itself, eliminate every raw
+read in the exterior staple loops. Consequently the new transform is a
+valid real conditional descendant, but not yet a fixed-core native
+source class or a multiscale contraction theorem.
+
+D=6-|V| is itself nonsmooth at V=0. The exact conditional combination
+T_beta(D), and the weighted correction combined as in (3.2), are smooth
+there. One should retain those exact functions if later differentiating;
+the real comparison with D does not supply their complex analytic norm.
+
+7. ACTUAL WILSON COMPLEX-POSTERIOR POLES NEAR A RAW EXTERIOR
+
+The complex-domain caveat has a concrete example within the very same
+six-staple conditional law. Assign the exterior staple matrices
+
+ v1(t)=exp(t i sigma3), v2=-I, v3=I, v4=-I, v5=I, v6=-I.
+
+Here the notation identifies unit quaternions with SU(2) matrices for
+real t. These six staples can be realized independently: set their
+outer legs equal to I and choose the distinct middle links of their
+three-link paths. On the stated periodic lattice those middle links are
+distinct. All other exterior links can be fixed arbitrarily.
+
+Their quaternion sum is V(t)=v1(t)-I, so the holomorphic continuation of
+its Euclidean squared norm (WITHOUT complex conjugation) is
+
+ V(t) dot V(t)=4 sin^2(t/2).
+
+Choose the odd analytic branch r(t)=2 sin(t/2); the normalizer is even in
+this branch and equals
+
+ z_beta(t)=2 I1(2 beta sin(t/2))/(2 beta sin(t/2)).
+
+Let j be any positive simple zero of J1. The identity I1(i j)=i J1(j)
+then gives zeros at
+
+ t_beta=2 i asinh(j/(2 beta))=i j/beta+O(beta^-3).
+
+These are simple for sufficiently large beta. Simplicity can also be
+seen directly: a nonzero common zero of J1 and J1' would contradict
+uniqueness for its second-order differential equation. At such a zero,
+I2 is nonzero by the recurrence I1'=I2+I1/s. Therefore the normalized
+conditional total-star source
+
+ 6-r(t) I2(beta r(t))/I1(beta r(t))
+
+has a pole at t_beta. Subtracting its flat-exterior scalar does not
+remove the pole. This is an actual finite Wilson conditional integral
+with allowed real raw exterior data; it is not the generic two-point
+posterior example from TURN95.
+
+Consequently no complex neighborhood of radius c beta^-1/2 around EVERY
+real raw exterior can support a uniform holomorphic normalized-star
+source: these zeros occur at distance O(beta^-1). This does not rule out
+a source-specific native history domain which avoids the family, and it
+does not affect any real identity above. The UNNORMALIZED marked integral
+and its normalizer remain entire; the obstruction is introduced by
+forming the conditional ratio. Any later native use must retain or
+estimate that denominator on its actual domain rather than infer
+admission from the real boundedness of the conditional expectation.
+
+No numerical value of the Bessel zero is needed. The elementary fact
+that J1 has positive zeros follows from its real oscillatory Bessel
+solution, or equivalently its standard Sturm-Liouville equation. This
+section is an analytic scope check, not an assertion about zeros of the
+full lattice partition function.
+
+AUDIT INPUTS
+
+Read work/turn96_pressure_route.txt in full after its initial write;
+communicated the geometry/r=0 and covariance caveats to response96/root.
+Independently differentiated every Bessel/Gamma formula, checked the
+SU(2) scalar and adjoint identities and the plaquette-edge count. No
+simulation, asymptotic fit, or external numerical theorem is used for
+the finite real-field result. No earlier producer or frontier was edited.
+
+ADDENDUM -- LATEST SECTION3A AND TWO-LINK TORQUE AUDIT
+
+The producer's subsequent Section3A also passes. For
+A_beta(V)=6-beta^(-1)g(beta|V|), the Euclidean gradient has norm
+g'(beta|V|)<1 away from zero and extends by zero at V=0. Integration
+along a straight segment proves a global1-Lipschitz bound on real R^4,
+therefore in particular on the attainable staple-sum ball. The constant
+is independent of beta and includes the weight-score response.
+The smooth extension at zero follows from the even expansion of g.
+No identical derivative bound for arbitrary weighted profiles follows;
+the producer expressly retains that limitation.
+
+I also independently read Sections2--3 of work/turn96_mixed_response.txt.
+For P_t=Q V_t R V_t^(-1), the change R'=V_t R V_t^(-1) sends
+Tr(BR) to Tr(V_t B V_t^(-1) R'), with the displayed sign. Haar contraction
+of Tr(AQ) Tr(B_t Q^(-1) S) is Tr(A S B_t)/2. Averaging the central
+S law gives the mixed logarithmic coefficient m(beta)Tr(A B_t)/8.
+For A=i sigma1,B=i sigma2,T=i sigma3, Tr(A[T,B])=-4, hence the
+mixed derivative of the energy response is +eta m'(beta)/2.
+
+The stated conditional-fiber realization is valid on periods>=4:
+the other five parallel middle staple links for Q and the other five
+for R are mutually distinct. The two common transverse links are not
+read by the other incident Q/R plaquettes. Each five-staple sum can
+realize cA, 0<=c<=2, by three equilateral unit quaternions summing to
+zero and a pair A exp(+/-theta C) with2cos(theta)=c. Exterior-only
+plaquettes contribute conditional constants.
+
+Finally the response vanishes on either kappa=0 or lambda=0 axis, and
+simultaneous (Q,R') -> (-Q,-R') changes both exterior amplitudes' signs
+while leaving the coupled plaquette unchanged. Thus after the nonzero
+kappa lambda coefficient, the diagonal kappa=lambda=epsilon remainder
+is O_beta(eta epsilon^4). The finite-beta positivity consequence follows.
+This verifies a genuine integrated boundary current, while preserving
+the producer's warning that no admitted native history or uniform
+physical correlation bound has yet been attached to that example.
+
+SECOND ADDENDUM -- CONDITIONAL MINIMUM, WEIGHTED QUADRATIC JET, UNIFORM TORQUE
+
+The source-reduction producer's Section3B passes. Since minimizing
+6-u dot V over unit u yields6-|V|, D is the actual conditional classical
+minimum. For v_p=(1-|x_p|^2/2,x_p)+O3 near a common flat value,
+D^(2)=(1/2)sum|x_p-xbar|^2. This is the unweighted star Hessian's Schur
+complement, with xbar=(1/6)sum x_p. Differentiating T in D gives
+T_beta'(0)=g'(6 beta)=1-b'(6 beta), and the already proved estimate
+b'(s)<=C/s^2 supplies the stated O(beta^-2) correction.
+
+For a weighted profile, delta_p^(2)=(1/2)|x_p-xbar|^2 and the quadratic
+conditional coefficient at p is
+
+ qbar g'(6 beta)+m(6 beta)(q_p-qbar).
+
+The classical source evaluated at the UNWEIGHTED BASELINE minimizer
+has coefficient q_p. Subtraction gives
+qbar(g'-1)D^(2)+(m-1)sum_p(q_p-qbar)delta_p^(2), hence the claimed
+[C beta^-2|qbar|+omega(q)/(4 beta)]D^(2) absolute bound. No optimization
+with the source profile as a new action was used.
+
+The subsequent Section3A of work/turn96_mixed_response.txt also passes
+mathematically. Integrating the direction of the S=QR' quaternion gives
+F(lambda^2(1-a^2)(1-c^2)) with F(x)=sinh(sqrt(x))/sqrt(x). Its series
+removes endpoint coordinate singularities. The positive radial multiplier
+k_t is between exp(-2K) and exp(2K); differentiating after subtracting the
+identically zero kappa=0 t derivative gives the factor kappa lambda.
+The c derivative of the logarithmic t score is therefore bounded by
+C_K|eta kappa lambda|. The independent-copy covariance identity, followed
+by the density ratio bound, gives response at most this Lipschitz
+constant times exp(4K)m'(beta). The stated elementary bound
+m'(beta)<=9/(4 beta^2), beta>=1, is correct. Thus the compact fiber
+response is bounded by C_K|eta kappa lambda| beta^-2.
+
+A small realization qualification was sent to mixed96: its explicit
+five-staple construction realizes |kappa|,|lambda|<=2 beta (negative
+amplitudes are absorbed in -A or -B). Thus the homogeneous-Wilson claim
+for every parameter in |kappa|,|lambda|<=K is established by that
+construction when beta>=max(1,K/2), or throughout the restricted realizable
+range. The mathematical compact-fiber inequality itself holds for all
+beta>=1 and bounded amplitudes. This distinction does not affect the
+intended fixed-K weak-coupling limit, but should be stated.
+
+PRIMARY CHECK FOR THE SPECIAL-FUNCTION FACT IN SECTION7
+
+NIST DLMF Section10.21(i), checked21 October2026, states that real-order
+J_nu has infinitely many positive real zeros and that the relevant
+nonzero cylinder-function zeros are simple:
+https://dlmf.nist.gov/10.21#i
+
+The I/J rotation relation is given in NIST DLMF Section10.27, equation6:
+https://dlmf.nist.gov/10.27#E6
+For order1, I1(i x)=i J1(x) also follows immediately from their power
+series. Only these standard special-function facts are imported for
+the explicit conditional-pole example; the actual staple realization
+and zero locations in the t plane were derived above.
+
+FINAL AUDIT FREEZE
+
+Confirmed the mixed-response theorem now explicitly assumes
+beta>=max(1,K/2), and distinguishes the wider compact-integral inequality
+from the homogeneous-Wilson realizability range. This closes the only
+scope correction requested during this audit.
+
+The source producer's final (1.5) is also correct:
+
+ E S_(q,e)-c_beta qbar
+ =m(beta r)sum_p q_p delta_p
+       +[sum_p q_p][m(6 beta)-m(beta r)].
+
+For q_p>=0 both terms are nonnegative because delta_p>=0 and m is
+increasing. This is pointwise nonnegativity of the transformed source,
+not a sign theorem for a separated connected covariance.
+
+Final producer hashes at audit freeze:
+turn96_pressure_route.txt
+36B2674CDF45A03E2BDCC1D5A335342CB044694C5A81C8230815EDEC94285A44
+turn96_mixed_response.txt
+40620BB01166977D8F8A2AAFDA48B59A4EDAA86CB14F3F2A790A3E18D9CE2010
+
+FINAL VERDICT: PASS at every stated finite-Wilson/conditional-fiber scope.
+No all-scale native admission, separated-covariance uniformity, or
+continuum nontriviality is certified by this audit. No further extensions
+are pending from this auditor.

@@ -1,0 +1,360 @@
+SOURCE DOMAIN INCLUSION AND THE LIMIT OF SHRINKING-DOMAIN SCORE BOUNDS
+18 October 2026. Primary-source bridge and independent mathematical audit.
+
+RESULT
+
+The uniform-fraction input UF in Notebook 42 can be discharged for the
+common-radius, identity-centered physical (A,J) product ball that its
+homogeneous specialization actually uses. This follows from a quantitative
+estimate printed in CMP109, not just from its qualitative smaller-constant
+sentence. The radius is c min(alpha0,alpha1,a_cap); c and a_cap are independent
+of the radii, refinement, local restriction and volume in the published
+geometric class. This also supplies straight independent (A,J) segments.
+
+This result does NOT turn shrinking radii into fixed radii. A separate
+gauge-invariant quartic example proves that the printed bounded analytic
+class, even with vanishing vacuum and Maxwell jets, does not imply the
+O(g) interaction-jet hypothesis of the new real-response theorem. This is
+an obstruction to an inference from those assumptions, not a claim that
+the actual recursively generated E has that bad behavior.
+
+1. PRIMARY SOURCE INPUT, WITH ITS PARAMETER SCOPE
+
+[B109] T. Balaban, Commun. Math. Phys. 109 (1987), 249--301,
+doi:10.1007/BF01215223.
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+
+Use the source geometric class with primitive ratio, block constants and
+regularity-theorem constants fixed once. The conditions defining
+U_j^c(X,alpha0,alpha1,gamma0) are (1.10)--(1.16), pp262--263.
+Set gamma0=alpha0. In the paragraph immediately following (1.16), p263,
+the paper considers (i)--(iii) with smaller alpha0',alpha1', and states:
+"From Proposition 9 [15] we obtain".
+Its next display bounds both reconstructed quantities required in (iv)
+by 2 B3 alpha0' times their respective mesh weights in (1.16).
+
+For precision, define C_n(U) and J_n^rec(U) to be the two left-hand
+quantities in (1.16), divided by those exact respective mesh weights.
+The displayed implication used here is
+
+ max_n { C_n(U), J_n^rec(U), C_n(Ubar), J_n^rec(Ubar) }
+                         <= 2 B3 alpha0'.                    (1)
+
+The maximum is over the source maximal local domain subsequences;
+the quantities are read on the source two-layer interior X^{-2}.
+Overbars denote the source real reference configuration, not complex
+conjugation. Formula (1) preserves the mesh normalizations of (1.16);
+it does not replace them by unweighted current bounds.
+
+B3 is the fixed constant in that variational estimate. The estimate is
+applied inside its fixed smallness ceiling, chosen below as a_cap.
+No claim is made uniform in the primitive ratio, the already chosen
+large block parameters, or changes of the underlying source geometry.
+We use the quantitative result reproduced in B109; we do not claim a
+new proof of its cited variational theorem in CMP102.
+
+2. UNIFORM COMMON-RADIUS INCLUSION
+
+PROPOSITION 1.
+There are a_cap>0 and c_src>0 depending only on the fixed source constants
+such that, for any positive target alpha0,alpha1 below the source ceilings,
+put
+
+             a = min(alpha0,alpha1,a_cap).
+
+Any pair satisfying (i)--(iii) with the common smaller parameters
+alpha0'=alpha1'=c_src a and gamma0'=c_src a belongs to the full target
+space U_j^c(X,alpha0,alpha1). The constants are uniform in j, X and the
+admissible finite regulator.
+
+Proof. Choose a_cap inside every fixed smallness requirement of the
+reconstruction estimate (1). Choose c_src <= min(1/4,1/(4 B3)). The first
+three target conditions follow by monotonicity of their bounds. Formula
+(1) gives all four reconstructed bounds <= a/2 <= alpha0/2, strictly
+inside (iv). This proves target membership. The choices do not depend
+on either target radius. QED.
+
+The conclusion is deliberately a common-radius statement. It does not
+assert that arbitrary independently prescribed shrinking fractions of
+unequal radii are available without checking their other compatibility
+conditions. This common-radius result is sufficient for our use.
+
+PROPOSITION 2 (independent physical product ball).
+Let eta be the physical fine spacing in the source convention. Write
+U=exp(i eta A), take the real reference Ubar=I, and let J be INDEPENDENT
+of A. There is c>0, uniform as in Proposition 1, such that
+
+ ||A||_infinity + ||nabla_eta A||_infinity < c a,
+ ||J||_infinity < c a                                  (2)
+
+implies (U,J) in U_j^c(X,alpha0,alpha1). The field and derivative bounds
+are imposed on the source restriction with every collar needed to form
+its plaquettes and reconstructed interiors. The norm and J are the
+physical ones used in source (1.8), (1.12)--(1.14).
+
+Proof. The real reference I satisfies (i) with zero left sides. The
+complex perturbation A supplies (ii). Multiplying four exponentials
+around a plaquette, canceling the constant first-order potential terms,
+and using the first differences gives
+
+ ||U(partial p)-I|| <= C eta^2
+       (||nabla_eta A||_infinity + ||A||_infinity^2).       (3)
+
+Here eta<=1 and all matrix exponentials lie in a fixed chart; C depends
+only on dimension, the matrix norm and that chart. This elementary bound
+is uniform in mesh and volume. For a_cap<=1, choose c small enough that
+the right side of (3), divided by eta^2, and both bounds in (2), lie
+strictly below c_src a. This verifies the smaller conditions (i)--(iii).
+Proposition 1 supplies (iv). QED.
+
+The domain (2) is a convex product ball in the INDEPENDENT variables A,J.
+Consequently straight segments between any two points in a smaller
+fraction of (2) remain inside it, with a fixed margin available for
+Cauchy estimates. No constraint equation is imposed on J in this fact.
+
+COROLLARY 3 (actual homogeneous specialization).
+Use the ordinary homogeneous minimizing field and physical Wilson
+current of work/birth_radius_growth_2026-10-17.txt, Proposition 1 and
+the previously proved homogeneous potential estimates. They give
+
+ ||A_ord(B)||_{C1,eta} + ||J_phys(U_ord(B))||_infinity
+                                      <= C_h ||B||_infinity.
+
+Thus every source R_X or E_X bounded by A_X on its stated source domain
+specializes to a holomorphic function of the FULL coarse-link product
+ball ||B||_infinity < c a/C_h, with supremum <= A_X. This proves the
+domain assertion in Notebook 42 Corollary 2 without the separate UF
+hypothesis. Local restrictions of the same global field are allowed.
+The constant is independent of X and refinement because both inputs are.
+
+This statement does not say the specialization is local in B. Its
+support/derivative norm must still be proved by the localization work.
+It does not prove domain inclusion for arbitrary mixed-boundary
+backgrounds or every complex decoupling used in a cluster expansion.
+Nor does it assert that a noisy configuration has a small physical
+Wilson current merely because its link angles are small.
+
+3. CONSEQUENCES FOR THE ACTUAL SHRINKING RADII
+
+[B119] T. Balaban, Commun. Math. Phys. 119 (1988), 243--285,
+doi:10.1007/BF01217741.
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+
+The source E extension and its radii are (2.27)--(2.28), p259:
+alpha_a,j = C_a g_j (log g_j^{-2})^{q_a}, q_a>1. The R class in
+(2.30)--(2.31), p260 uses the same domains and exp[-kappa d_j(X)].
+Older R fluctuation expressions are absorbed into E before (3.26),
+pp270--271. The actual source E therefore cannot simply be replaced by
+the autonomous zero-R E for an accumulated-response estimate.
+
+For t_j=log(g_j^{-2}) large, a_j is comparable to g_j t_j^q,
+q=min(q0,q1), with fixed constants. The propositions above give a TRUE
+analytic product ball of this size; they do not give a fixed ball.
+
+For a scalar function f bounded by A on ||u||<r, a fractional interior
+has ||D^k f|| <= C_k A r^{-k} in Banach multilinear norm. For a fixed
+analytic fluctuation chart u=Phi(B,gx), with physical-coordinate first
+and second chart derivatives bounded independently of r and g, the
+chain rule gives, on an admitted fractional interior,
+
+ ||D_x f(Phi(B,gx))|| <= C A g/r,
+ ||D_x^2 f(Phi(B,gx))||
+               <= C A (g^2/r^2 + g^2/r).                 (4)
+
+These are directional operator bounds. A weighted local Hessian Schur
+bound requires the separate support summation and cannot be inferred
+from (4) alone. With r comparable to g t^q, the dominant bounds in (4)
+are A t^{-q} and A t^{-2q}, respectively. Background differentiation
+can cost additional powers r^{-1}. Hence the analytic-radius argument
+by itself supplies inverse logarithms, not the requested O(g) score
+or O(g) jets through two background derivatives.
+
+[B116] T. Balaban, Commun. Math. Phys. 116 (1988), 1--22,
+doi:10.1007/BF01239022.
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-4penm4k7hc.pdf
+
+For comparison, (1.19)--(1.22), pp6--7, retain the explicit gB factor
+in the analytic fluctuation map; Lemma 1, (1.33)--(1.36), pp9--10,
+localizes the inherited-action difference. With the original fixed
+analytic radii, differentiation costs fixed constants. Those constants
+must be tracked anew when the radii in B119 shrink. The source cluster
+decomposition by itself is not a uniform real Hessian convexity theorem.
+
+4. A GAUGE-INVARIANT QUARTIC OBSTRUCTION TO AN O(g) INFERENCE
+
+The following example is a test of the stated function class. It is NOT
+asserted to arise from the Wilson bare state under the actual recursion.
+
+On an oriented plaquette p, let P=U(partial p) and use the fixed
+normalized trace tau. Define the holomorphic, gauge-invariant scalar
+
+       Q_p(U) = tau(2I-P-P^{-1}).
+
+The matrix identity P+P^{-1}-2I=(P-I)^2 P^{-1} implies
+|Q_p(U)| <= C alpha0^2 eta^4 on the source curvature domain. Fix a
+nonzero sufficiently small lambda and set
+
+ E_{r,p}(U) = lambda Q_p(U)^2/(C_* alpha0^4 eta^8),       (5)
+
+with C_* chosen so |E_{r,p}|<=|lambda| throughout that domain.
+This function is independent of J. A fixed source localization domain
+containing p carries it with the corresponding fixed decay factor.
+Summing the same construction over plaquettes supplies Euclidean
+covariance; it does not change any local estimate. Constant factors
+depending on the fixed localization convention are absorbed in lambda.
+
+The Taylor expansion at I begins at fourth order. Thus the vacuum,
+first and second jets vanish, and its Maxwell extraction is zero.
+It is gauge invariant, analytic and bounded with the printed type of
+uniform local envelope, despite its quartic coefficient alpha0^{-4}.
+
+Choose a commuting local potential direction whose plaquette holonomy
+is P(t)=exp(i eta^2 t H), with tau(H^2)>0. Such a direction is obtained
+by assigning commuting link potentials around one plaquette. For fixed
+eta, Taylor expansion gives
+
+       E_{r,p}(t) = c_H lambda (t/alpha0)^4
+                         + O(lambda eta^4 t^6/alpha0^4), (6)
+
+where c_H>0 is fixed. Equivalently one may work on the unit mesh, which
+already suffices to disprove a purported uniform implication. On a
+physical fluctuation line t=B+gx subtract the static value at t=B.
+Writing V_g(B,x)=E_{r,p}(B+gx)-E_{r,p}(B), its leading jets at B=0 are
+
+ V_g(0,x)       = c_H lambda g^4 alpha0^{-4} x^4 + ...,
+ D_x V_g(0,x)   = 4 c_H lambda g^4 alpha0^{-4} x^3 + ...,
+ D_B V_g(0,x)   = 4 c_H lambda g^3 alpha0^{-4} x^3 + ...,
+ D_B^2 V_g(0,x) = 12 c_H lambda g^2 alpha0^{-4} x^2 + ... . (7)
+
+The dots have extra powers g^2 on any fixed x interval. Take
+alpha0=C0 g (log g^{-2})^{q0}. The first two lines of (7) are of size
+(log g^{-2})^{-4q0}, rather than O(g); the last two have additional
+factors g^{-1} and g^{-2}. Nonzero Gaussian moments give the same
+failure in any fixed local L^p norm. On a fixed compact x interval the
+failure is already pointwise, so no tail issue is involved.
+
+At a nonzero background B=theta alpha0 in an admitted real direction,
+the leading linear fluctuation score is of order g/alpha0. The flat
+example (7) is sufficient and avoids needing that larger real path.
+
+Consequently vacuum subtraction, Maxwell subtraction, Ward symmetry
+and the shrinking analytic envelope alone do not prove the O(g)
+finite-order interaction-jet input used in the real-response theorem.
+This example has zero quadratic jet, so subtracting a Maxwell term
+cannot repair it. Additional generated-state structure or an explicit
+fixed-radius plus small-mark decomposition is required.
+
+5. EXACT ONE-MODE NORMALIZED RESPONSE TEST
+
+PROPOSITION 4.
+Uniform real convexity and locality, together with a bounded shrinking
+analytic interaction and vanishing interaction Maxwell jet, do not by
+themselves imply an O(g^2) static-subtracted response Hessian for a mark
+of fixed analytic norm.
+
+Proof. Fix lambda>0 and take the exactly normalized probability measure
+
+ dmu_B(x)=Z_B^{-1} exp[-x^2/2-lambda(B+gx)^4/r^4] dx,
+ W(u)=u^2,   R(B)=E_muB[(B+gx)^2-B^2].                    (9)
+
+This is a one-mode model, not a Wilson-generated state. Its real
+fluctuation potential has Hessian
+1+12 lambda g^2(B+gx)^2/r^4 >=1. There are no off-diagonal locality
+conditions to verify. The interaction lambda u^4/r^4 is bounded by
+lambda on |u|<r and has zero quadratic jet. The mark W has fixed norm
+on any fixed physical u-ball.
+
+Put epsilon=lambda g^4/r^4 and m_n=E_mu0 x^n. The measure mu0 is even.
+Differentiating its NORMALIZED expectations gives
+
+ (E_muB x)'|_0 = -(4 epsilon/g) m_4,
+ (E_muB x^2)''|_0
+   =-(12 epsilon/g^2)(m_4-m_2^2)
+      +(16 epsilon^2/g^2)(m_8-m_2 m_6).
+
+Since R(B)=2Bg E_muB x+g^2 E_muB x^2, it follows exactly that
+
+ R''(0)=-epsilon(28m_4-12m_2^2)
+                  +16epsilon^2(m_8-m_2m_6).             (10)
+
+As epsilon decreases to zero, dominated Gaussian integration gives
+m_2=1+O(epsilon), m_4=3+O(epsilon), and bounded m_6,m_8. Thus
+
+                   R''(0)=-72epsilon+O(epsilon^2).       (11)
+
+With r=g(log g^{-2})^q, this is of order (log g^{-2})^{-4q},
+not O(g^2). All normalization terms are included in (10). QED.
+
+The sign in (11) is not an amplification assertion: this example
+specifically disproves the proposed absolute O(g^2) estimate from the
+weaker premises. It does not disprove the finite-order response theorem,
+whose O(g) interaction-jet hypothesis fails here. The plaquette example
+in Section 4 supplies the independent gauge-invariance diagnostic.
+
+6. WHY A WEAKER INVERSE-LOG PER-STEP LOSS IS NOT ENOUGH
+
+Let gamma=g^{-2}. Suppose one could prove only a multiplicative
+propagation majorant 1+C/(log gamma)^a, a>0, at every later step.
+Such a majorant cannot, by itself, be paid by a birth factor
+exp[-c(log gamma_i)^nu] for any fixed finite nu.
+
+Proof. Consider the exact decreasing scalar schedule gamma_{k+1}=gamma_k-1
+until a fixed terminal gamma_*>1, and take an initial gamma_i=T.
+This schedule has bounded drift and strictly positive blocks. At the
+steps gamma_k in [T/2,T], log(1+C/(log gamma_k)^a)
+>=c_a/(log T)^a for T large. There are at least T/3 such steps, hence
+
+ product_{k>=i}(1+C/(log gamma_k)^a)
+                     >= exp[c'_a T/(log T)^a].            (12)
+
+Multiplication by exp[-c(log T)^nu] still diverges as T->infinity.
+This is a failure of that proposed majorant as a proof method; it is
+not a lower bound on the actual RG amplification. A genuine g^2 times
+polylog factor is qualitatively different and is covered by the
+logarithmic-transport lemma already proved on 17 October.
+
+Finite startup intervals of O(log gamma_i) steps can be treated
+separately: a polynomial-in-g_i^{-1} factor per step costs at most
+exp[C(log gamma_i)^2]. Fresh birth suppression with exponent nu>2
+can pay that cost, subject to the actual source parameter hierarchy.
+The proof still needs a verified stronger norm after startup; small
+birth size alone does not establish analytic descendant control.
+
+7. SUPPORT METRIC CHECK FOR THE PARALLEL LOCALIZATION PROOF
+
+B109 p257 defines d_j(X) using a shortest tree meeting every fixed-M
+cube in X, with lengths divided by M. It is not the graph distance
+after grouping into MR_j cubes. B119 (2.30)--(2.31) restricts R supports
+to unions of MR_j cubes but retains d_j(X).
+
+[B122] T. Balaban, Commun. Math. Phys. 122 (1989), 355--392,
+doi:10.1007/BF01238433.
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+
+Immediately before (1.100), p390, the source replaces the intermediate
+large-field size in (1.99) by d_k(X) for the fresh bulk terms. Thus the
+fresh bound keeps the fixed-M metric as well as exp[-p0(g_k)]. The
+primed size functions used for large-field connected components are
+not a redefinition of this final bulk weight. A conversion to ordinary
+physical diameter must retain the fixed M factor, but incurs no
+additional 1/R_j weakening of that decay.
+
+STATUS FOR INTEGRATION
+
+Closed: common-radius UF, the independent (A,J) interior product ball,
+and the resulting homogeneous coarse product-ball specialization.
+Proved diagnostic: the currently printed shrinking-domain assumptions
+do not alone give O(g) fluctuation score or second-background jets.
+Not closed: real uniform convexity and weighted Hessian locality for
+the entire actual inherited integrand; an O(g) local interaction-jet
+bound after every absorption and counterterm; accumulated marked
+transport; the full density coupling bridge or continuum existence.
+
+Independent audit: constrained_fiber checked the common-radius source
+inclusion against B109 pp262--263 and passed its identity-centered
+scope on 18 October. minimal_route independently reopened those same
+primary pages and passed both the quantitative common-radius inclusion
+and the independent physical (A,J) product-ball proof. Both root and
+minimal_route independently checked
+the exact scalar arithmetic (10)--(11). No generated-state assertion
+has been inferred from these diagnostics.

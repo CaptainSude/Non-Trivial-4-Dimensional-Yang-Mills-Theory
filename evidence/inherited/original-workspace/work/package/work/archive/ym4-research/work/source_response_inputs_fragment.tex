@@ -1,0 +1,173 @@
+\section{A source domain input and a sharp limitation}
+
+Fix the primitive ratio, the large block constants and the variational
+constants of \cite{B109}. The following result discharges the
+common-radius version of the source-domain hypothesis used in the
+homogeneous birth-radius argument.
+
+\begin{proposition}[Uniform common-radius source inclusion]
+There are fixed $c_*,a_*>0$ such that, with
+$a=\min(\alpha_0,\alpha_1,a_*)$, source conditions (i)--(iii) of
+\cite[pp.~262--263, (1.10)--(1.16)]{B109}, imposed with all three
+parameters equal to $c_*a$, imply membership in the full space
+$\mathcal U_j^c(X,\alpha_0,\alpha_1)$.
+The constants are uniform in admissible $X$, refinement and finite
+volume, and in the target radii below the fixed source ceilings.
+\end{proposition}
+
+\begin{proof}
+The displayed estimate on p.~263 immediately after (1.16) applies the
+source variational Proposition~9. Each reconstructed curvature and
+current quantity in condition (iv), for both the complex field and
+its real reference, is at most $2B_3\alpha'_0$ times its respective
+mesh weight in (1.16). Here $B_3$ is fixed with the source geometry;
+the estimate is used below its fixed smallness ceiling. Choose $a_*$
+inside that ceiling and
+$c_*\leq\min(1/4,(4B_3)^{-1})$. Conditions (i)--(iii) at the target
+radii follow by monotonicity. All normalized reconstructed bounds
+are at most $a/2\leq\alpha_0/2$, proving (iv). This choice is independent
+of the shrinking radii. This argument uses the quantitative display,
+not only the subsequent qualitative smaller-constant sentence.
+\end{proof}
+
+\begin{corollary}[An independent physical product ball]
+Write $U=\exp(i\eta A)$ and use the real reference $I$, with $J$
+independent of $A$. For a fixed $c>0$, the ball
+\[
+ \norm{A}_{\infty}+\norm{\nabla_\eta A}_{\infty}<ca,
+ \qquad \norm{J}_{\infty}<ca
+\]
+lies in $\mathcal U_j^c(X,\alpha_0,\alpha_1)$. The norms, mesh factors
+and current convention are those of the source; the fields are given
+on the required collars. Straight segments in these independent
+variables stay in the ball. In particular, the previously proved
+homogeneous potential and nonlinear-current estimates imply that a
+source function bounded by $A_X$ specializes with the same bound to
+the full coarse-link product ball
+$\norm{B}_\infty<c'\min(\alpha_0,\alpha_1,a_*)$.
+\end{corollary}
+
+\begin{proof}
+The real reference has zero curvature. Plaquette multiplication gives
+\[
+ \norm{U(\partial p)-I}
+ \leq C\eta^2
+ \bigl(\norm{\nabla_\eta A}_\infty+\norm{A}_\infty^2\bigr).
+\]
+For $a_*\leq1$, a fixed small $c$ puts this and the independent current
+strictly inside the smaller conditions (i)--(iii). Apply the proposition.
+The product ball is convex in $(A,J)$. For the last assertion substitute
+the existing uniform holomorphic bound
+$\norm{A_{\rm ord}(B)}_{C^1,\eta}
++\norm{J_{\rm phys}(U_{\rm ord}(B))}_\infty\leq C_h\norm{B}_\infty$.
+\end{proof}
+
+This proves only the stated physical product-domain inclusion.
+Locality of the specialized function in $B$, noisy-current bounds,
+mixed-boundary geometries and all complex cluster-decoupling domains
+are separate issues. Uniformity in a varying primitive ratio is not
+asserted.
+
+\begin{proposition}[Shrinking envelopes do not imply an $O(g)$ score]
+The analytic bounds with
+$\alpha_{a,j}=C_a g_j(\log g_j^{-2})^{q_a}$ of
+\cite[(2.27)--(2.31)]{B119}, even with gauge invariance and vanishing
+vacuum and Maxwell jets, do not alone imply an $O(g_j)$ fluctuation
+score or an $O(g_j)$ interaction-jet norm through two background
+derivatives.
+\end{proposition}
+
+\begin{proof}
+It suffices to test the asserted implication at a fixed finite mesh.
+For a plaquette holonomy $P$, set
+\[
+ Q(P)=\tau(2I-P-P^{-1}),\qquad
+ E(P)=\frac{\lambda}{C_*\alpha_0^4\eta^8}Q(P)^2,
+\]
+where $\lambda\ne0$ is fixed and small. The identity
+$P+P^{-1}-2I=(P-I)^2P^{-1}$ shows that $|E|\leq|\lambda|$ on the
+source curvature domain after fixing $C_*$. This is holomorphic and
+gauge invariant, is independent of $J$, and begins at fourth order
+at the identity. A fixed localization domain supplies the prescribed
+decay factor; identical copies over plaquettes supply Euclidean
+covariance. Its Maxwell and vacuum extractions vanish.
+
+On a commuting direction $P(t)=\exp(i\eta^2tH)$ with
+$\tau(H^2)>0$, its leading term is
+$c_H\lambda t^4/\alpha_0^4$, with $c_H>0$. For the physical
+fluctuation line $t=B+gx$, let $V(B,x)=E(B+gx)-E(B)$. At $B=0$,
+the leading terms of $V,\partial_xV,\partial_BV,\partial_B^2V$ are
+respectively
+\[
+ \frac{c_H\lambda}{\alpha_0^4}
+ \bigl(g^4x^4,\ 4g^4x^3,\ 4g^3x^3,\ 12g^2x^2\bigr).
+\]
+The higher terms have an extra $g^2$ on fixed $x$ intervals. With
+$\alpha_0=C_0g(\log g^{-2})^{q_0}$, the first two are inverse powers
+of $\log g^{-2}$, while the last two have additional factors $g^{-1}$
+and $g^{-2}$. These are not $O(g)$, also in fixed local Gaussian
+$L^p$ norms. The zero quadratic jet rules out a repair by Maxwell
+subtraction alone.
+\end{proof}
+
+The example disproves an inference from the stated function class;
+it is not claimed to be generated by the Wilson initial state.
+For an actual chart and a bounded analytic insertion, elementary
+Cauchy estimates yield costs $g/r$ and $g^2/r^2+g^2/r$ for the first
+two fluctuation derivatives on a fractional interior. At
+$r\asymp g(\log g^{-2})^q$ these are inverse logarithms. Weighted
+local Hessian bounds additionally require support summation. The
+fixed-radius reasoning in \cite[(1.19)--(1.22), Lemma~1]{B116}
+cannot silently make these shrinking-domain constants uniform.
+
+\begin{proposition}[An exact normalized one-mode diagnostic]
+Convexity and locality, together with a bounded shrinking analytic
+interaction of zero quadratic jet, do not imply an absolute $O(g^2)$
+static-subtracted response Hessian for a mark of fixed analytic norm.
+\end{proposition}
+
+\begin{proof}
+This is a one-mode test, not a Wilson-generated state. Fix $\lambda>0$,
+set $W(u)=u^2$, and use the normalized measure
+\[
+ d\mu_B(x)=Z_B^{-1}
+   e^{-x^2/2-\lambda(B+gx)^4/r^4}\,dx,
+ \qquad R(B)=\mathbb E_{\mu_B}\bigl[(B+gx)^2-B^2\bigr].
+\]
+Its real fluctuation Hessian is
+$1+12\lambda g^2(B+gx)^2/r^4\geq1$. The interaction is bounded
+by $\lambda$ on the physical complex ball $|u|<r$ and has zero
+quadratic jet; $W$ has a fixed norm on a fixed ball. Put
+$\epsilon=\lambda g^4/r^4$ and $m_n=\mathbb E_{\mu_0}x^n$.
+Normalized differentiation gives
+\[
+ \left.\partial_B\mathbb E_{\mu_B}x\right|_0
+       =-\frac{4\epsilon}{g}m_4,
+ \qquad
+ \left.\partial_B^2\mathbb E_{\mu_B}x^2\right|_0
+       =-\frac{12\epsilon}{g^2}(m_4-m_2^2)
+        +\frac{16\epsilon^2}{g^2}(m_8-m_2m_6).
+\]
+Using $R(B)=2Bg\mathbb E_{\mu_B}x+g^2\mathbb E_{\mu_B}x^2$,
+\[
+ R''(0)=-\epsilon(28m_4-12m_2^2)
+          +16\epsilon^2(m_8-m_2m_6)
+        =-72\epsilon+O(\epsilon^2).
+\]
+The final equality follows by dominated Gaussian integration as
+$\epsilon\downarrow0$. For $r=g(\log g^{-2})^q$, this is an inverse
+logarithm and is not $O(g^2)$.
+\end{proof}
+
+This diagnoses the missing interaction-jet input; it does not
+contradict the response theorem, whose $O(g)$ jet hypothesis fails
+in this example. Its displayed sign is not an amplification claim.
+
+There is a quantitative reason to retain this distinction. Along
+$\gamma_{k+1}=\gamma_k-1$ down to a fixed weak endpoint, a product of
+allowed bounds $1+C/(\log\gamma_k)^a$ grows at least as
+$\exp[c\gamma_i/(\log\gamma_i)^a]$. No birth suppression
+$\exp[-c'(\log\gamma_i)^\nu]$ with fixed finite $\nu$ pays that
+majorant. A verified stronger norm after a finite startup, or a
+$g^2$ times polylogarithm propagation bound, is still required.
+

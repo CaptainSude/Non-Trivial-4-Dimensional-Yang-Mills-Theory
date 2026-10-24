@@ -1,0 +1,234 @@
+DIAGONAL SLAB ARRAYS BOUNDED BY COORDINATE CHESSBOARD
+18 October 2026. Fixed-UV pressure consumer, then uniform insertion bound.
+
+This proves the diagonal-chain version of rotation_slab_operator_consumer
+(2.2) using ONLY the original coordinate-torus source producer. No source
+RG estimate on an adapted/diamond torus is used. Diagonal RP is required
+only afterward, for reflection doubling in the SAME thermodynamic state.
+
+1. PACKET AND LATTICE GEOMETRY
+
+Use planar coordinates
+
+ u=(t+x)/sqrt(2),   v=(t-x)/sqrt(2),
+
+and transverse coordinates y,z. Let the packet profile be
+phi_delta(u,v) f(y,z), where phi_delta=delta^-2 phi(./delta), the C1
+shape phi is supported in a fixed square, and f is compact with fixed
+C1 norm/support. Reflected or conjugate profiles have the same bounds.
+Take 0<delta<=delta_0<=1. First work at bare mesh epsilon much smaller
+than delta. Choose b an EVEN integer multiple of epsilon such that
+
+ C_0 delta <= b <= (C_0+1)delta,
+ Delta=sqrt(2)b,                                      (1)
+
+with C_0 larger than a fixed multiple of the planar support radius.
+The harmless rounded upper bound follows when epsilon<<delta. The
+total slab padding Delta is O(delta), uniformly in epsilon.
+
+Put m packet centers at u_l=(l+1/2)Delta, v_l=0,
+l=0,...,m-1. In coordinate variables these are
+
+ (t_l,x_l)=(b(l+1/2),b(l+1/2)).                        (2)
+
+Choose fixed transverse intervals J_y,J_z, with integer-mesh lengths
+B_y,B_z, containing supp f with positive fixed buffers. In the ordinary
+COORDINATE rectangular grid of widths (b,b,B_y,B_z), packet l lies
+strictly inside the cell
+
+ C_l=[lb,(l+1)b] x [lb,(l+1)b] x J_y x J_z.            (3)
+
+Its planar support occupies only a fixed small fraction of that cell.
+These are m DISTINCT coordinate cells. On the entire closed cell C_l,
+
+                  l Delta <= u <= (l+1)Delta.         (4)
+
+This exact range is the endpoint separation mechanism. Any endpoint
+observable whose complete support is in u<0 or u>m Delta reads no
+variable in any array cell. Its transverse size is unrestricted.
+In particular an OS polynomial translated to beyond the last slab,
+and its reflected partner before the first slab, have this property
+when their original supports are compact in the strict halfspace.
+
+The usual doubling array can be chosen with packet centers at the slab
+midpoints, so it has precisely (2). Diagonal reflection in u=l Delta
+is an affine signed coordinate permutation with mesh-integral shift,
+because b/epsilon is integral. It preserves the scalar lattice Wilson
+observable and its bare sampling. Coordinate reflections used to
+disseminate (3) need not preserve the packet's diagonal orientation;
+the resulting orientations have the same support/C1 bounds.
+
+2. ONE COMPLETE COORDINATE FOLD OF ONE PACKET
+
+On a finite original C torus let
+
+ d_epsilon,T(z;phi_l)=log mu_epsilon,T(exp[z O(phi_l)]),
+ d_epsilon,T(0;phi_l)=0.                               (5)
+
+Use that torus's OWN exact singleton normalization. The source identity
+mu(exp[zO])=exp(E_UV(zphi_l)) h_l(z) and the fixed-support h bound give
+|h_l(z)-1|<=1/2 on |z|<c delta^3, uniformly in position, cutoff and
+sufficiently large torus. Thus (5) has the required analytic branch.
+The branch respects exact bare translations, coordinate signed
+permutations and conjugation. These covariance statements use invariance,
+not reflection positivity of a diagonal finite-torus cut.
+
+Let rho_delta=c_1 delta^(7/2), with c_1 fixed sufficiently small. Consider
+the normalized single-cell function
+
+ F_l=exp[z_l O(phi_l)-d_epsilon,T(z_l;phi_l)],
+ |z_l|<=rho_delta.                                    (6)
+
+Its complete coordinate chessboard dissemination contains N_cells
+translated/reflected/conjugated packets. All their FULL supports are
+separated by c delta: the planar cell buffers supply that distance in
+t,x, and the transverse cell buffers supply a fixed distance in y,z.
+Disjointness implies that the local source norm of the entire array is
+the norm of one packet, up to a fixed constant; it does not carry a
+factor N_cells. On a source scale of endpoint length a it is bounded by
+
+ |z| M_a,  M_a=max(delta^-2,sqrt(a)delta^-3).            (7)
+
+This lies in the admitted source class at |z|<=rho_delta. The square-
+root scale factor is the actual W_j Lipschitz allowance; it is not
+replaced by an unsourced stronger regularity bound.
+
+Use the SAME local e_j(X;w) for the total array and for each singleton.
+Subtracting all singleton values makes every coefficient reading at most
+one packet cancel exactly. For a carrier meeting r_X>=2 packets, subtract
+the linear Taylor term and use the reserved local source disc. The full
+array's quadratic remainder is bounded by C |z|^2 M_a^2; the sum of its
+r_X singleton remainders is bounded by C r_X |z|^2 M_a^2. Charge r_X to
+the packets met, retain the tree crossing gain exp(-c delta/a), and use
+the planar scale sum already proved in source-gradient Section17. It gives
+
+ |E_UV(total)-sum_l E_UV(single_l)|
+            <= C_f N_cells |z|^2 delta^-7
+            <= C_f N_cells.                          (8)
+
+This is an all-orders analytic remainder bound, not a truncation of the
+source expansion. Carriers reading one packet cancel by locality even
+when their fixed-scaffold coefficients vary with the packet position.
+No small-grid covariance of those coefficients is asserted.
+
+For each clone E_UV(single)-d(single)=-log h_single is bounded uniformly
+on rho_delta. The full source stability bound gives
+|h_total|<=exp(C V_stop). Therefore
+
+ |mu_epsilon,T(Fold F_l)|
+ <=exp[C_f N_cells+C V_stop].                         (9)
+
+The physical final volume is exactly N_cells times the fine rectangular
+cell volume b^2 B_y B_z. The latter is bounded by a constant depending
+only on f, and is actually O_f(delta^2). Taking the chessboard root gives
+
+                  ||F_l||_CB <= exp(C_f),             (10)
+
+uniformly in delta, epsilon, l and the total number of cells. The full
+fold is nonnegative by coordinate RP, but the estimate(9) used its
+modulus and so applies to the required complex sources.
+
+3. THE CHAIN AND ARBITRARY ENDPOINT POLYNOMIALS
+
+Coordinate closed-cell chessboard Holder bounds the product of the m
+distinct array-cell functions by the product of their norms(10), hence
+by exp(C_f m). This uses only coordinate RP on the original C torus.
+There is no enumeration of signs or array-cell patterns and no factor
+depending on the number of possible empty cells.
+
+Let A and its reflected/translated endpoint partner be finite polynomials
+in local plaquette observables, supported beyond u=m Delta and before
+u=0. At fixed epsilon, expand each into finitely many products of link
+matrix entries. Assign each link to any closed coordinate cell containing
+it, and group the factors by cells. By(4), these endpoint factors are
+in cells DIFFERENT from all m array cells. Nongauge-invariant matrix-entry
+factors and links on coordinate cell faces are allowed: coordinate
+site-plane RP is the conditional square with the mirror links retained,
+and its chessboard inequality applies to the closed-cell algebras.
+
+Each endpoint-cell norm is at most its supremum norm. The number and
+total coefficient size of the resulting products depend on epsilon,A,
+delta, but not m. Translation of the positive endpoint by m Delta is
+the mesh translation (mb,mb), so it changes neither this bound nor the
+number of occupied endpoint cells. Thus
+
+ |mu_epsilon,T[(product_l F_l) A_left A_right]|
+                   <=C_(epsilon,A,delta) exp(C_f m).  (11)
+
+The coefficient C_f is INDEPENDENT of A. This is the crucial operator-
+norm requirement. If endpoint generating functions are preferred, their
+ordinary Taylor series in finitely many fixed-UV plaquette variables
+has an absolutely summable matrix-entry expansion on any fixed compact
+source polydisc. The same argument yields(11) with endpoint exponentials
+and a finite prefactor depending on that polydisc. No source-RG estimate
+for the endpoint profiles is needed, and no absolute value or real-part
+replacement is made inside a normalized array factor.
+
+4. COMMENSURABILITY AND ORDER OF LIMITS
+
+Take cubic side lengths which are even common multiples of b,B_y,B_z
+and all required RG periods. The initial free integer N_T permits this.
+A single sequence with free factor divisible by 2 k! at its kth member
+eventually works for every fixed integer cell length and every fixed m.
+Choose one common thermodynamic subsequence of states and local vacuum
+coefficients. At fixed epsilon local observables are bounded, so their
+MGFs converge uniformly on compact source sets; the singleton branch
+(5) and the uniform bounds pass to the SAME state mu_epsilon.
+
+The older two-frame fold geometry also permits these tori: for n=2a
+it only needs fixed odd h,H,b_0 to divide a. If a=N_T ell^M, this holds
+eventually. Its counts (2A,8A,4A,4A), A=a/b_0, remain even whether A
+is odd or even. No use of odd a is necessary in the twisted-trace
+comparison. Thus commensurability does not force a different family
+when applying the separately audited same-state diagonal-RP argument.
+
+First take the thermodynamic limit for each fixed epsilon. Only then
+let m=2^r tend to infinity in the reflection doubling argument. Only
+after the uniform operator bound is established is epsilon removed.
+The endpoint prefactor in(11) disappears under the 2^-r root at fixed
+epsilon. No uniform-in-epsilon endpoint norm is required.
+
+5. CONSEQUENCE WHEN THE SAME STATE HAS DIAGONAL RP
+
+If mu_epsilon has diagonal RP and translation invariance in the u
+direction, the exact reflection-doubling identities in
+rotation_slab_operator_consumer Section3 apply to(11). They yield a
+bounded holomorphic normalized slab insertion for |z|<=rho_delta.
+Cauchy at zero gives the centered linear insertion estimate
+
+ ||B_delta(phi_delta f)|| <= C_f delta^-7/2.           (12)
+
+The centering is the derivative of the exact d in(5). All self-source
+counterterms were retained until that derivative. An arbitrary C1
+planar alpha supported in a square of radius delta fits the same
+geometry after increasing C_0 once. Normalize it as
+alpha=c_alpha delta^-2 phi(./delta), with
+
+ |c_alpha|<=C delta^2(||alpha||_infty+delta||grad alpha||_infty),
+
+and a uniformly bounded C1 shape. By linearity(12) gives
+
+ ||B_delta(alpha f)||
+ <=C_f delta^(2-7/2)
+       (||alpha||_infty+delta||grad alpha||_infty).     (13)
+
+Its total padding is O(delta). This covers the small mollifiers needed
+by the planar point-insertion lemma. The other diagonal orientation
+uses u=(t-x)/sqrt(2) and the same coordinate cells with one index
+reversed; all counts and endpoint separation statements are unchanged.
+
+SCOPE. Equations(8)--(11) follow from the existing coordinate source
+producer, local vacuum bounds, singleton bound and coordinate
+chessboard only. They do not require source stability on D_n. The
+conversion to(12)--(13) additionally needs diagonal RP of that SAME
+coordinate-periodic thermodynamic state, supplied only if the separate
+old stronger fold/operator/paired-DLR chain survives its current audit.
+
+Independent audit. constrained_fiber rechecked the complete argument.
+In particular the full two-dimensional planar dissemination adds no
+hidden clone-density factor to(8): root each carrier at each packet it
+meets, retain exp(-c delta/a), and use the per-packet anchor counts
+O_f(delta^2 a^-4) for a<=delta and O_f(a^-2) for a>=delta. Together
+with M_a^2 these give the stated delta^-7 sum. The audit also checked
+the exact finite-C singleton normalization, all-scaffold-phase bound,
+complete-support endpoint separation, and arbitrary-N_T arithmetic.

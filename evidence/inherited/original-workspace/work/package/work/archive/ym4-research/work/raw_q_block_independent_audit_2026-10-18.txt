@@ -1,0 +1,163 @@
+INDEPENDENT AUDIT OF THE RAW FINITE-BLOCK RESPONSE
+18 October 2026. Research check; no publication artifact.
+
+Audited files:
+  raw_q_block_cluster_response_2026-10-18.txt
+  auxiliary_cutoff_comparison_2026-10-18.txt (including new Section 5)
+  strict_support_comparison_gauge_2026-10-18.txt
+
+1. EXACT COEFFICIENT LEDGER
+
+The raw identity is valid for the homogeneous universal BULK COEFFICIENTS.
+It must not be read as an identity deleting the large-field/boundary sectors
+from the full Wilson density. CMP119 pp278--279, around (3.47), identifies
+interior E terms with their whole-lattice functions and identifies interior
+R'' terms as independent of the surrounding Lambda. Their sum is the exact
+decomposition of the conditional logarithm. CMP122-II (1.98)--(1.100)
+exponentiates the subsequent R-operation; its interior second group is the
+additive new bulk R' functional F. Thus, on a homogeneous compatible
+periodic regulator, the exponential of the universal coefficients obeys
+
+ rho_{r+1}^bulk = exp(F_r) K_r^outer rho_r^bulk
+
+modulo the explicitly tracked vacuum scalar. Here F_r is the actual
+coefficient produced by the full source R operation, then frozen; it is
+not a claim that applying the R operation just to rho^bulk reproduces all
+large-field sectors. R'' is already inside the logarithm of K and must
+not be counted as another F insertion. Static old R is not removed from R.
+
+The q-fold raw unrolling and formulas (12)--(15) then follow algebraically.
+The source beta(E)=0 conditions apply to the endpoint regular coordinates,
+not separately to each young R piece. All density-coordinate intermediate
+classical factors cancel before introducing normalized Gaussian measures.
+
+2. THE OUTER-WINDOW ISSUE AND ITS EXACT RESOLUTION
+
+The independent identity-centered UF ball does NOT imply inclusion of every
+original q-layer outer-window field. CMP109 (1.14) bounds actual curvature
+and current, so changing the real reference does not remove this issue.
+If p_cut exceeds q_min, a generic noise of size g log^p_cut can exceed the
+proved common ball g log^q_min. No such inclusion should be asserted.
+
+Section 5 of auxiliary_cutoff_comparison resolves this without that
+inclusion. At each ACTUAL source state set
+
+ h_r = log[(K_r^outer rho_r)/(K_r^inner rho_r)].
+
+Its denominator and logarithm branch are supplied by the same connected
+source expansion. The exact equality is
+
+ rho_{r+1}=exp(F_r+h_r) K_r^inner rho_r.
+
+Unroll these equalities with the h_r frozen at their actual output fields.
+There is no cutoff-modified trajectory and no hybrid-state admissibility
+assumption. Only inner kernels remain. The actual one-step prepared class
+controls h_r; CMP119 p276 following (3.43) treats the full measure (3.27),
+including young R, with the same preparation as E apart from its second
+coupling subtraction. Fix the interpolation parameter s=1. The independent
+source extension of h_r seed-converts to the full analytic activity norm.
+Every fixed partial inner chart is bounded by C_q(b+g log^t), and hence fits
+the true source radius g log^q_min when 1/2<t<s<q_min and b=cg log^s.
+Its tail remains superpolynomially small after all fixed-q constants and
+b^-2 extraction. This is an exact repair of the original Section 9.
+
+For finite primitive containment use a DISTINCT h_r^reg, the same annular
+ratio in the regular s=t=0 integral with E+R_old. Then
+
+ E_{r+1}=P[T_1E_r+D_1+N_1(E_r+R_old)+h_r^reg].
+
+The classical R_old remains in R; young interpolation creates R''. Thus
+the primitive coupling increment needs only past E and R_old, not the R
+birth at the output whose source bound is being established.
+
+3. INNER q-LAYER PREPARATION
+
+The action telescoping is exact because the coupling-free stationary
+actions use the same nested ordinary minima. With the initial gamma
+factored from the raw Wilson phase, summing the primitive action
+differences yields the q-endpoint stationary action plus q quadratic
+forms and remainders. At the zero-noise static suffix the quadratic form
+is block-diagonal in the retained species. The changes from static to
+noisy suffix are cubic (background difference O_q(gR) times x_r squared).
+The triangular nested coordinate transformation has the product of the
+primitive Jacobians; no extra cross-layer Jacobian occurs.
+
+One precision is necessary in the written formula. A primitive source
+Gaussian precision contains both Wilson and gauge-fixing quadratic
+parts. With actual gauge parameters gamma_r and Wilson gamma_j, either
+retain the mixed precision gamma_j A_r^Wilson+gamma_r A_r^gauge, or put
+the difference from the uniformly gamma_j-scaled full source precision
+in the O_q(g^2 R^2) interaction. Only after that choice may a scalar
+gamma_j/gamma_r multiple of the entire source precision be used. The
+determinant of the scalar gamma ratio is field independent; the remaining
+static determinant is part of D_q, not a discarded denominator.
+
+The coefficient derivatives in the noisy-minus-static precision do not
+cost b^-1: these are the geometric source Hessians/propagators on fixed
+small physical domains, and the actual fixed-q chart is on that domain.
+Their complete localized operator bounds, not entrywise fine-coordinate
+norms, are the inputs. Both explicit noise slots belong to the support.
+The displayed cubic and Jacobian bounds are therefore of size
+C_q(gR^3+D_q g^2R^2), small for logarithmic R.
+
+4. SPATIAL AND GAUSSIAN RESERVES
+
+The separate multihomogeneous expansion of an input activity, subtraction
+at zero noise, and the connected-animal compression pay the factor
+(1-u)^(-|H|-1), the marked |H|, and inherited carriers using separate
+fractions of the old a exponent. New chart trees use the chosen A norm.
+A factor counting old roots per new block is finite (at most O(L^4))
+and belongs to C_q; uniformity as q tends to infinity is not claimed.
+This supports the stated same-a Delta_q estimate for a fixed sufficiently
+large q. Leaving w as a strict local spectator under covariance
+decoupling is legitimate: include each mark support in Y_0 before the
+retained/bad-set split, so its noise arguments remain inside its domain.
+
+The direct-sum Gaussian extension uses the source random-walk and square-
+root construction with a central domain containing the whole prescribed
+carrier plus its collar (CMP116 p13, following (2.6)). In final physical
+units, an error escaping that collar costs exp(-cJ/h_r), while the trace
+coordinate count is a fixed power of J/h_r. Thus summing species is
+bounded by C J^D sum_s ell^(Ds) exp(-cJ ell^s), uniformly for truncated
+q sums. No J(q) enlargement is needed. Interior short walks are retained
+in the exact conditional Gaussian, not bounded as errors.
+
+In particular the potentially delicate square root in CMP116 (2.6) does
+not introduce an unanchored exterior trace: it appears in the Gamma
+product coupling Z0 to its exterior. The conditional covariance
+determinant is restricted to Z0. Thus every remote decoupling change
+contributing to the displayed G reaches Z0 through the collar. Short
+walks solely in the exterior do not contribute to this difference.
+The exp(-cJ/h_r) assertion concerns this Gaussian stage BEFORE physical
+background substitution. The static-prefix dependence on final w has
+only coarsest-scale locality. Its fixed exponent is paid by the chosen
+J/support reserve and its q-dependent amplitude by the smaller fixed
+background ceiling; it is not assigned the faster species exponent.
+
+The remaining q-dependent finite local coordinate count is paid by a
+smaller fixed geometric background ceiling and smaller Gaussian contour
+margin. For annular marker comparisons the positive quadratic coefficient
+may also be chosen smaller after q is fixed. These choices leave a>0 in
+exp(-a log^(2t)) and do not impair superpolynomial smallness. There is no
+claim of constants uniform in q. Under these explicit conventions, the
+source conditional Gaussian estimates, disconnected-support factorization,
+and connected logarithm arguments extend by finite direct sums; I found
+no missing cross-species covariance or unnormalized determinant term.
+
+5. REMAINING SCOPE OF THIS AUDIT
+
+This verifies the inner joint integral mechanism and the actual-state
+cutoff/coefficient ledger, not continuum existence. Finite primitive
+containment and the positive-block-flow induction still have to be closed
+without assuming their own future R estimates. For intermediate estimates,
+shrinking the analytic radius alone need not preserve the same cardinality
+exponent after one primitive step. A finite decreasing sequence of carrier
+exponents, or an explicit finite spatial reserve, is allowed; the audited
+q-endpoint compression restores the fixed endpoint exponent. All primitive
+phase losses are fixed-q costs, not losses repeated along the whole flow.
+
+Primary URLs:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-4penm4k7hc.pdf
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf

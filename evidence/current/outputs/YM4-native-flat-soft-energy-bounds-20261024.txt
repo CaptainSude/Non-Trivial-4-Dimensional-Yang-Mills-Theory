@@ -1,0 +1,215 @@
+NATIVE FLAT SOFT OPERATORS: UNIFORM ENERGY, TWISTS AND HEAT TRACE
+24 October 2026. Root proof. Independent review requested.
+
+RESULT AND SCOPE
+
+This supplies the flat operator item(H1) and the elementary flat heat
+bound from native_affine_multiplier_and_heat_operator_interface_20261024.
+It uses the actual flat ordinary/corrected averages, the newly registered
+uniform classical quadratic kernels and the native Wilson lower bound.
+It does not identify the full native determinant with a different archive
+formula, bound nonzero-source derivatives, prove coarse Schur gaps, or
+compute a signed logarithmic coefficient.
+
+Work first on the infinite current lattice and its declared periodic
+periodizations. K=L^p, mu=1/K. All pairings are counting pairings.
+D is the scalar-to-bond forward difference, d_1 is bond-to-plaquette
+curl, and q_W=d_1^*d_1. Write Delta_0=D^*D and
+Delta_1=q_W+DD^*. Delta_1 is the componentwise scalar lattice Laplacian.
+The reference energies are R_s=Delta_0+mu^2 I and R_v=Delta_1+mu^2 I.
+This distinction avoids calling the vector curl form alone an elliptic
+reference. Color only multiplies fixed dimensions.
+
+The matched classical inputs are
+
+ q_W <= q_m <= C q_W,    ||q_m||<=R_q,                       (1)
+
+with uniform exponential quadratic rows and spatial moments. The lower
+bound is the exact native curl-average contraction; the upper bound and
+the twist estimate below follow from the uniform classical kernels and
+Ward identity. These have independent producer/audit notes.
+
+1. THE TWO ACTUAL FLAT AVERAGES
+
+Let Q_0 be the arithmetic average on centered disjoint K-blocks:
+
+ Q_0 f(Y)=K^-4 sum_(r in B_K) f(KY+r).
+
+Its counting Hilbert norm is K^-2. Let J=K^2 Q_0^*, Pi=JJ^*,
+P=I-Pi. J is an isometry and Pi is the orthogonal block-constant
+projection. The corrected flat ordinary bond average A is, componentwise,
+
+ (A v)_alpha(Y)=sum_(s=0)^(K-1)
+                        Q_0(translation_(s e_alpha) v_alpha)(Y).       (2)
+
+Indeed the native ordinary differential has the two endpoint means;
+subtracting the exact coarse gradient of their mean leaves the straight
+string average. Literal primitive composition gives(2), because balanced
+block digits and ordinary string digits enumerate their K-block/segment
+once each. Thus this is the actual Cbar(0), not a new large-block map.
+The translated Q_0 operators each have norm K^-2, whence
+
+                         ||A||<=K^-1=mu.                    (3)
+
+This is diagonal in bond direction. Its rows have physical range bounded
+by a numerical constant, with nonnegative scalar coefficients.
+
+2. SCALAR BLOCK POINCARE AND THE SOFT SCALAR ENERGY
+
+The one-dimensional telescoping estimate on an interval and tensorization
+over a K-cube give
+
+                   ||P f||^2<=C K^2 ||D f||^2.              (4)
+
+Only internal block differences are needed: the average is constant on
+those edges. There is no derivative of a discontinuous block indicator.
+Orthogonality gives mu^2||f||^2<=C||Df||^2+mu^2||J^*f||^2.
+Consequently the actual flat soft scalar
+
+                       T=Delta_0+mu^2 Pi
+
+satisfies
+
+                            c R_s<=T<=R_s.                 (5)
+
+The constants are uniform in K and volume, including K=1. The infinite
+operator has the same estimate by finitely supported approximation.
+
+3. A DIRECT VECTOR MASS ESTIMATE
+
+Apply(4) to each component of v. Since mu J^*=K Q_0,
+
+ mu||v|| <= C||nabla v||+||K Q_0 v||.                      (6)
+
+The difference between this simpler scalar average of each component
+and the ACTUAL A can be controlled without a new Fourier alias lemma:
+
+ ||A-K Q_0|| applied to v
+ <= sum_(s=0)^(K-1) K^-2 ||(translation_(s e_alpha)-I)v_alpha||
+ <= K^-2 sum_s s ||nabla v|| <= (1/2)||nabla v||.            (7)
+
+The displayed last constant can be enlarged for vector components.
+Therefore
+
+             mu^2||v||^2<=C(||nabla v||^2+||A v||^2).       (8)
+
+Choose a fixed a>=R_q+1, as in the archived soft completion. The native
+flat coarse Hessian q_(m+p) has the same bound R_q by(1). Define
+
+ V=q_m+DD^*+A^*(aI-q_(m+p))A.                              (9)
+
+At flatness the actual multiplier is zero and q_(m+p)D_c=0, so the
+ordinary and corrected constraints agree inside C^*q_(m+p)C. Thus(9)
+is the actual flat soft vector appearing in the affine interface; its
+classical term remains q_m, rather than a substituted Wilson action.
+
+Equations(1),(8) imply V>=Delta_1+A^*A>=c R_v. Equations(1),(3)
+give the upper bound V<=C Delta_1+C mu^2 I. Hence
+
+                            c R_v<=V<=C R_v.                (10)
+
+No separate estimate for a pinned ghost inverse is used. The soft
+completion and its exact block average are essential here.
+
+4. PHYSICAL EXPONENTIAL TWISTS
+
+Conjugate fine fields by W_theta(x)=exp(theta.x/K), and coarse fields
+by exp(theta.Y), initially as kernel identities. Take real theta with
+|theta| sufficiently small; complex theta works on a smaller strip.
+The entries of Q_0, J and A have bounded physical displacement. Their
+scalar entries are nonnegative, so domination by the untwisted positive
+operators, and the mean-value bound for the exponential weight, give
+
+ ||J_theta||<=C,       ||J_theta-J||<=C|theta|,
+ ||A_theta||<=C mu,    ||A_theta-A||<=C mu|theta|.            (11)
+
+For real theta use (A^*)_theta=(A_(-theta))^*, and likewise for J.
+For complex theta the Hermitian adjoint identity instead uses
+-conjugate(theta); equivalently continue the real transpose formula
+holomorphically. Do not use the Hermitian adjoint at theta itself.
+
+Uniform exponential rows make q_m(k) analytic in a fixed strip.
+The Ward relation q_m(k)d(k)=0 implies q_m(0)=0 by approaching zero
+along each coordinate axis. Positivity at both signs of a real momentum
+forces every first derivative at zero to vanish. Uniform second moments
+therefore imply, with delta(k)=sum_alpha|exp(ik_alpha)-1|^2,
+
+ ||q_m(k+i mu theta)-q_m(k)||
+       <=C(mu|theta|sqrt(delta(k))+mu^2|theta|^2).           (12)
+
+Near zero use Taylor's formula and the double zero; away from zero,
+bounded analytic first derivatives suffice since sqrt(delta) is bounded
+below. DD^* and Delta_0 have the same type of estimate.
+Since R_s and R_v are scalar Fourier multipliers in their fibers,
+(12) divided by delta+mu^2 is bounded by C(|theta|+|theta|^2).
+
+The coarse q_(m+p) changes by O(|theta|) in operator norm. Its two A
+legs each cost O(mu), so the complete correction in(9) changes by
+O(mu^2|theta|). Similarly mu^2 Pi changes by O(mu^2|theta|).
+It follows that
+
+ ||R_s^-1/2(T_theta-T)R_s^-1/2||<=C|theta|,
+ ||R_v^-1/2(V_theta-V)R_v^-1/2||<=C|theta|.                 (13)
+
+Together with(5),(10), a Neumann inverse gives a fixed physical strip
+and uniform bounds on
+
+ R_s^1/2 T_theta^-1 R_s^1/2,
+ R_v^1/2 V_theta^-1 R_v^1/2.                              (14)
+
+The square roots in(13)--(14) are the UNTWISTED positive reference
+energies. Uniform constants do not rely on their commuting with block
+operators. This proves the energy-sandwiched inverse part of(H1).
+
+On the infinite block-periodic lattice these bounds also yield uniform
+final-block operator decay for energy legs, via the block Fourier strip.
+For the ordinary gradient and mu I legs, their twisted versions have
+uniform R^-1/2 bounds directly from their symbols. If square-root R
+legs are used instead, delta(k+i mu theta)+mu^2 has positive real part
+comparable to delta(k)+mu^2 on a smaller fixed strip; its analytic
+square-root ratios and their inverses are therefore uniformly bounded.
+This supplies the required twisted-leg bounds before Fourier inversion.
+The internal fine fiber has K^4 entries; no entrywise sum over this
+fiber is taken. For finite tori one can periodize the infinite weighted
+block kernels. Nothing here equates unrelated finite winding kernels
+with these specified periodizations.
+
+5. THE ELEMENTARY FLAT TRACE BOUND
+
+Consider a torus of side NK in fine units, i.e. N per final direction.
+The quadratic forms(5),(10) imply by the finite-dimensional min-max
+principle (not by an operator-monotonicity claim for exp) that for
+W=T or V,
+
+ N^-4 Tr exp(-u K^2 W)
+  <= C exp(-c u){K^4/(1+K^2 u)^2+N^-4},   u>=0.           (15)
+
+To see the lattice factor, diagonalize the componentwise Laplacian.
+For a one-dimensional cyclic factor of n=NK sites, its heat sum is
+at most C(1+n/sqrt(1+K^2u)), by the elementary lower bound on
+4 sin^2(pi j/n), splitting j at n/2. Taking four factors and using
+(a+b)^4<=8(a^4+b^4) gives(15). The fixed color and bond dimensions
+are absorbed in C. The separate exp(-cu) comes from the mu^2 mass.
+The same estimate per physical volume follows in the infinite limit.
+
+This is an undifferentiated flat trace bound. It does not substitute
+for the rooted source insertions, coarse Schur factors or cancellation
+estimates needed for the determinant's Maxwell coefficient. In
+particular one cannot multiply (14) by the K^4-dimensional fiber to
+obtain a uniform differentiated trace bound.
+
+DEPENDENCIES AND OPEN WORK
+
+Inputs: homogeneous_classical_rooted_taylor_kernels_20261024.txt;
+native_affine_multiplier_and_heat_operator_interface_20261024.txt
+Sections1--2 and its actual flat moving-reference algebra; native
+ordinary contours B109(0.3),(0.5)--(0.12). The archive's Notebook36
+soft-vector section specifies a>=R_q+1 and the same operator(9).
+
+The proof closes the flat soft scalar/vector energy, physical twist
+inverse and elementary heat trace items at the stated infinite and
+periodized scope. Ordinary physical-source trajectory(T), moving-map
+derivatives(M), source vertices(H2), differentiated coarse Schur
+bounds(H3), actual determinant matching and signed band evaluation
+retain their own proof obligations. No continuum construction follows
+from these flat estimates alone.

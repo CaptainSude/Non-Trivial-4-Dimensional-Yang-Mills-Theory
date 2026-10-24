@@ -1,0 +1,232 @@
+ORIGINAL FIRST PRIOR MASKS: A UNIFORM POINCARE INEQUALITY
+BY SOFT PENALTIES ON THE CONTAINING PRODUCT
+24 October 2026. Root finite proof. Archive and previous outputs unchanged.
+
+RESULT AND STATUS
+
+The complete first guarded real law, restricted by its actual earlier
+P0 and averaged-gauge masks, has a volume-independent unweighted
+Poincare constant. This includes coincident corner masks. The proof
+uses the already matched complete first action and native finite-read
+mask geometry. It does not require pair transversality or a uniform
+lower bound on the probability that all masks pass.
+
+This is a finite first-step theorem on the specified near-flat,
+guarded certificate, not an all-scale Yang--Mills result. It does NOT
+assert arbitrary-principal-section bounds, exponential spatial
+covariance, background differentiability, or fourth-power source age.
+In particular the word 'uniform' refers to active volume and the weak
+floor in this explicitly matched family.
+
+1. FINITE HYPOTHESES AND NATIVE MATCH
+
+Let I be a finite subset of the first noise lattice, with fixed real
+block dimension m. Let Omega=product_(i in I) B_S. The actual active
+support is
+
+ D={x in Omega: q_j(x)<s_j for every j in J},
+ q_j(x)=|w_j(x)|,                                    (1)
+
+with no added outer cutoff: the unique original chart already puts
+the original support strictly inside Omega, enlarging its fixed
+containing radius if necessary. Each w_j is smooth on a neighborhood
+of Omega and reads only T_j. Read size, diameter and incidence are
+bounded by constants v,d,B independent of I. D has positive measure.
+
+Fix r>=2. Assume S/r, s_j/r, r/s_j bounded above by fixed constants.
+On the whole containing product,
+
+ |D w_j|<=C,  |D^2 w_j|<=C g0,
+ |w_j(0)|<=theta s_j, theta<1.                        (2)
+
+Take one weak floor such that C g0 S^2 <=(1-theta)s_j/4
+for every j. Complete reconstruction reads, including private-pivot
+inputs, are meant in (2). A mask with no active read is already held
+and can be omitted if it passes; no failed held mask is divided out.
+
+The base probability has positive density exp(-H), where H is the
+COMPLETE conditional action, including Haar, pivot and coarea terms.
+It satisfies H''>=lambda I. For every mask j choose
+
+ chi_i^j=exp[-eta dist(i,T_j)],  X_i^j=chi_i^j x_i.     (3)
+
+Assume the complete weighted Hessian accretivity for these weights
+and |grad_i H(0)|<=C r. The first native Hessian row/column bounds
+give that accretivity after eta is decreased once. Lattice shell
+sums give sum_i chi_i^j+sum_i(chi_i^j)^2<=C_eta, uniformly in j,I.
+
+These are precisely the first-action and geometry inputs checked in
+native_prior_domain_geometry_20261024 and
+first_source_weight_transport_20261024. There s_j=2 asin(epsilon0/2)/g0,
+S=C_pre epsilon0/g0 and r=delta0/g0, with a fixed hierarchy ratio.
+The earlier whole-product admission supplies the strict margin in
+(2). The extension to remote defects requires the SAME complete local
+certificate and action-difference match of
+local_remote_prior_defect_extension_20261024. No statement is made on
+its complement or after varying the physical local coarse reference.
+
+2. OUTWARD FLUX ON THE ENTIRE PENALIZED REGION
+
+For q_k(x)>=s_k, its gradient is well defined. The exact identity
+
+ D w_k(x)x = w_k(x)-w_k(0)
+              +integral_0^1 [D w_k(x)-D w_k(t x)]x dt
+
+and (2) show
+
+ x dot grad q_k(x) >= q_k(x)-|w_k(0)|-C g0 |x_Tk|^2
+                    >=c s_k.                         (4)
+
+This is valid throughout the outside-cut part of Omega, not merely
+on a boundary level. For i0 in T_k, the fixed read diameter implies
+|chi_i^j/chi_i0^j-1|<=C eta on T_k. Hence
+
+ X^j dot grad q_k
+ >=chi_i0^j[c s_k-C eta S] >=c' chi_i0^j s_k>=0      (5)
+
+by a fixed choice of eta, independent of volume and g0. For k=j the
+weights on T_j equal one, so X^j dot grad q_j>=c s_j.
+
+At every product boundary, X^j has nonnegative outward flux, since
+each block component is a nonnegative scalar times that block's
+radial vector. Furthermore
+
+ |X^j|<=C S,  div X^j<=C,
+ div X^j-X^j dot grad H <=C(1+r^2).                  (6)
+
+For the last bound integrate H'' along t x. With W=diag(sqrt chi),
+weighted accretivity gives
+sum chi_i x_i dot[grad_i H(x)-grad_i H(0)]>=c sum chi_i |x_i|^2.
+Young's inequality absorbs the linear force using |grad_i H(0)|<=Cr.
+No estimate on the unknown masked-law mean is used.
+
+3. SOFTENING AND A UNIFORM PENALTY-TRACE BOUND
+
+For t>0 put psi_t(u)=t(u_+)^4 and
+
+ H_t=H+sum_j psi_t(q_j-s_j),
+ nu_t(dx)=Z_t^-1 1_Omega exp(-H_t) dx.                (7)
+
+The composed penalty is C^2 (indeed C^3) on Omega: q_j is smooth
+where it is used, while the penalty is identically zero near w_j=0.
+The choice of the fourth power is just a convenient C^2 approximation.
+All finite t laws are positive and normalized; no lower bound on Z_t
+relative to the base partition function is assumed.
+
+For smooth real f, integrate div(f^2 X^j exp(-H_t)). The boundary
+flux is nonnegative. By (5), every penalty term is nonnegative, and
+the j-th one is at least c s_j psi_t'(q_j-s_j) f^2. Therefore
+
+ c s_j E_t[psi_t'(q_j-s_j) f^2]
+ <= E_t[2 f X^j dot grad f+(div X^j-X^j dot grad H) f^2]. (8)
+
+This sign is essential: the nonnegative boundary term is SUBTRACTED
+when the penalty drift is moved to the other side. It can be dropped
+in the upper bound. Equation (8) uses the base drift H, not H_t.
+
+Using (6), S/s_j<=C, (1+r^2)/s_j<=Cr, and Young, for every a>0,
+
+ E_t[psi_t'(q_j-s_j) f^2]
+ <=C a E_t|grad f|^2+C(a^(-1)+r) E_t f^2.            (9)
+
+The constants are independent of t,j,I and the total mask count.
+This is an expectation bound for the soft penalty, not a rare-event
+bound for arbitrary boundary traces. It does not use a small global
+failure probability or sum over exterior prior records.
+
+4. BOCHNER ABSORPTION
+
+For q_j>0 the FULL, not only tangent, Hessian formula is
+
+ D^2 q_j[v,v]
+ =(|D w_j v|^2-|n_j dot D w_j v|^2)/q_j
+      +n_j dot D^2 w_j[v,v],  n_j=w_j/q_j.
+
+Consequently D^2 q_j>=-C g0 P_Tj in quadratic form. The convex
+psi_t'' term in the penalty Hessian is positive, so
+
+ H_t''[v,v]>=lambda |v|^2
+             -C g0 sum_j psi_t'(q_j-s_j)|v_Tj|^2.    (10)
+
+Apply (9) to each real component of grad_i u for i in T_j and sum.
+Bounded read incidence, rather than mask count, gives
+
+ sum_j E_t[psi_t'(q_j-s_j)|(grad u)_Tj|^2]
+ <=C B a E_t|D^2 u|^2
+     +C B(a^(-1)+r) E_t|grad u|^2.                  (11)
+
+For L_t=Delta-grad H_t dot grad, the integrated Neumann Bochner
+identity on a smooth convex domain has nonnegative boundary term:
+
+ E_t(L_t u)^2 >= E_t|D^2u|^2+E_t H_t''[grad u,grad u]. (12)
+
+Thus with a=1 and one weak floor satisfying
+C B g0<=1/2 and C B g0(1+r)<=lambda/2,
+
+ E_t(L_t u)^2 >=(1/2) E_t|D^2u|^2
+                         +(lambda/2) E_t|grad u|^2.  (13)
+
+The actual hierarchy has g0 r=delta0 tending to zero. It therefore
+admits this floor without changing the source normalization or any
+native cutoff ratio.
+
+5. DOMAIN REGULARITY AND THE LIMIT TO THE ORIGINAL LAW
+
+There is no need to invoke a Bochner identity on the nonconvex masked
+domain or to assert that corners have no contribution. First work
+instead on the smooth convex inner exhaustion
+
+ Omega_p={sum_(i in I)(|x_i|/S)^(2p)<1}, p=1,2,... .   (14)
+
+For fixed finite I these increase to the open product Omega. Their
+boundaries are smooth, and X^j dot n>=0 because all chi_i are positive.
+Equations (2)--(11) remain valid pointwise there with the SAME constants.
+For each finite t,p, the classical smooth Neumann problem for positive
+C^2 density on a bounded connected convex domain has discrete spectrum.
+Apply (13) to a nonconstant eigenfunction with eigenvalue kappa>0:
+
+ kappa^2 E_t u^2 >=(lambda/2) kappa E_t u^2,
+ so kappa>=lambda/2.
+
+Expansion in this basis gives Var_(t,p) f<=2 lambda^(-1) E_(t,p)|grad f|^2.
+First let p increase to infinity at fixed t. Finite normalized dominated
+convergence yields the same inequality on Omega. Then let t increase
+to infinity. The penalties converge to zero exactly on all successes
+and to infinity if any mask fails. The equality surfaces have measure
+zero for nonredundant native masks; redundant masks lie strictly below
+their cut. D has positive volume by its admitted product core. Hence
+the finite integrals converge to the ORIGINAL normalized restricted law
+
+                    mu_D(dx)=Z_D^-1 1_D exp(-H) dx,
+
+and for every smooth f on the containing product,
+
+               Var_(mu_D) f <=(2/lambda) E_(mu_D)|grad f|^2. (15)
+
+The original domain is a finite Lipschitz domain with a common strictly
+inward radial direction, as proved in the native geometry note. Smooth
+approximation then extends (15) to its Sobolev W^(1,2) functions. The
+finite-dimensional approximation constants need not be volume uniform:
+the inequality's constant is already uniform before taking the limits.
+
+For an arbitrary finite subset of these masks, the proof is unchanged.
+In particular no N sqrt(rho) restriction is needed for (15). This is
+distinct from the small-total-activity condition in the replica spatial
+comparison theorem. However fixing arbitrary additional x coordinates
+may destroy (2); no arbitrary-section Poincare claim is made.
+
+6. LIMITS FOR TRANSPORT AND BACKGROUND RESPONSE
+
+The estimate is unweighted. Inserting a spatial diagonal matrix W in
+the gradient equation does not leave the positive rank-one penalty
+Hessians positive after similarity. Their psi_t'' factors need not
+stay bounded as t tends to infinity. In the hard limit this is exactly
+the multi-site normal/tangent problem identified in the geometry audit.
+Thus (15) is not an exponential source-to-boundary covariance proof.
+
+Nor does a spectral gap differentiate a moving coincident mask pair.
+The actual boundary cusp obstruction survives. Spatial comparison
+must use a separately proved mechanism (for example the exact replica
+comparison currently under review), or a new weighted boundary form.
+No age-four gain, source-owned R admission, all-scale closure, common
+continuum state, or interaction witness is inferred from this note.

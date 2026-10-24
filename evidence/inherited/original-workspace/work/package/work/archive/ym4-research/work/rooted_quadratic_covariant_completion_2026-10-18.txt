@@ -1,0 +1,214 @@
+ROOTED QUADRATIC GAUGE-WARD JETS: COVARIANT COMPLETION
+18 October 2026. Working proof; ordinary coarse-link variables only.
+
+Scope. The lattice is a finite periodic unit lattice, with fixed-size
+J-blocks and fixed SU(2) color dimension. A block contains at most C_J
+independent link/color slots. All constants below are independent of
+the torus size. No assertion is made for a block containing an
+unbounded fine-refinement fiber. The proof uses a fixed positive
+spatial-exponent reserve. It does not itself prove that such a loss
+can be repeated without bound along an RG history.
+
+1. INPUT AND NORMS
+
+Fix an external root block z. Let
+
+             W_z(A)=sum_H W_{z,H}(A_H)
+
+be holomorphic on the ordinary complex link ball ||A||_infinity<b0.
+H is a finite strict support, and tau(z,H) is the length of a shortest
+connected block graph containing z and H. Include a harmless additive
+1 in all lengths below. Suppose
+
+       sum_H exp(kappa0 tau(z,H)+a0 |H|)
+                    sup_{||A_H||<b0}|W_{z,H}(A_H)| <= W0.     (1.1)
+
+The total W_z is invariant under local gauge transformations whenever
+both configurations are in its analytic domain. It has no nontrivial
+external color index. In particular its first field derivative at
+zero vanishes: a global SU(2) transformation would otherwise give an
+invariant linear covector on a direct sum of adjoint representations.
+Let
+
+                Q_z(A)=(1/2) D^2 W_z(0)[A,A].                (1.2)
+
+Differentiating the local gauge identity, and using DW_z(0)=0,
+shows that the Hessian annihilates lattice gradients in either slot:
+
+             Q_z(A+d lambda)=Q_z(A).                       (1.3)
+
+This identity is on the actual finite torus, including all finite
+volume modes. No infinite-volume or nonwinding limit is used.
+
+First average each W_{z,H} over simultaneous CONSTANT compact color
+conjugation of all its arguments. Its support and supremum do not
+increase, and the total remains W_z. Thus each quadratic color tensor
+may be taken invariant under simultaneous adjoint conjugation.
+
+Expand the quadratic pieces into fixed-dimensional link slots:
+
+          Q_z(A)=sum_{e,f} q_{z;ef}(A_e,A_f).               (1.4)
+
+Here q is complex bilinear, not sesquilinear. One may retain the old
+H label during the expansion and sum it afterwards. Coordinate
+Cauchy and polarization give at most C_J |H|^2 coefficients per H,
+with total bilinear norm bounded by C_J |H|^2 b0^-2 sup|W_H|.
+For any fixed kappa1<kappa0, the polynomial |H|^2 is paid by the
+remaining exponent, since |H|<=C(1+tau(z,H)). Consequently
+
+ M := sum_{e,f} exp(kappa1 tau(z,e,f)) ||q_{z;ef}||
+                         <= C b0^-2 W0.                    (1.5)
+
+The main construction can equivalently take (1.3), color invariance,
+and finite M in (1.5) as its input, without any parent W.
+
+2. ONE GLOBAL SHORTEST-PATH TREE AND THE LINEAR IDENTITY
+
+Choose a spanning tree of the finite graph rooted at a representative
+vertex of z, such that the path P_x from the root to x is shortest.
+This exists by breadth-first search. Fixed J gives
+
+             length(P_x)<=C_J(1+dist(z,block(x))).          (2.1)
+
+For an oriented link e=(e-,e+), let C_e be the rooted closed walk
+
+                P_(e-) followed by e followed by P_(e+)^-1.
+
+Repeated/backtracking edges are allowed. Its oriented linear sum is
+
+ B_e(A)=sum_{p in C_e} epsilon_p A_p
+       =A_e+lambda_A(e-)-lambda_A(e+),
+ lambda_A(x)=sum_{p in P_x} epsilon_p A_p.                 (2.2)
+
+Thus B=A+d lambda_A, with a sign convention absorbed in d. Applying
+the finite-torus Ward identity (1.3) gives the exact polynomial
+identity
+
+                  Q_z(A)=sum_{e,f}q_{z;ef}(B_e(A),B_f(A)).  (2.3)
+
+The SAME tree is used for every coefficient. Choosing an unrelated
+gauge for each (e,f) would not justify (2.3).
+
+Let ell_e be the number of oriented links in C_e and K_ef its two-loop
+support, enlarged to J-blocks. Every path length is bounded by its
+root-to-endpoint distance. Hence, with a fixed C_J,
+
+ ell_e+ell_f+|K_ef|+tau(z,K_ef)
+                       <= C_J(1+tau(z,e,f)).               (2.4)
+
+This is the crucial linear support-enlargement bound. Expanding
+quadratic coefficients BEFORE adding the paths avoids the potentially
+quadratic support enlargement of adjoining root paths for every link
+in a large original H at once. Winding paths on the finite torus are
+allowed; shortest graph distance is the metric used in (2.1)--(2.4).
+
+3. EXACT NONLINEAR GAUGE-INVARIANT COMPLETION
+
+Put U_e=exp(i A_e), U_(e^-1)=U_e^-1, and let V_e(U) be the ordered
+holonomy along C_e. Define
+
+            L(V)=pi_g((V-V^-1)/(2i)),
+
+where pi_g is the fixed complex-linear adjoint-equivariant projection
+onto the represented complexified Lie algebra. For SU(2), V-V^-1
+is already traceless. The projection can also be fixed using the
+invariant trace metric. It is holomorphic and satisfies
+
+             L(I)=0,       D[L(exp(i t B))]_(t=0)=B.       (3.1)
+
+Under local gauge transformations a rooted holonomy transforms as
+V_e -> g_z V_e g_z^-1. Equivariance of L and constant-color invariance
+of q therefore make EACH summand in
+
+             C(Q_z)(U)=sum_{e,f}q_{z;ef}(L(V_e),L(V_f))     (3.2)
+
+exactly locally gauge invariant. Compact color invariance of q extends
+to the connected complexified group by holomorphy; compact invariance
+alone already suffices on the real physical fields.
+
+The first derivative of L(V_e(exp(iA))) at A=0 is B_e(A).
+Equations (2.3) and (3.1) show
+
+          C(Q_z)(exp(iA))=Q_z(A)+terms of degree >=3.        (3.3)
+
+Thus C(Q_z) has zero vacuum and linear terms and exactly the desired
+quadratic homogeneous polynomial. Equivalently,
+D^2 C(Q_z)(0)=D^2 W_z(0), with the 1/2 convention in (1.2).
+
+If q is real on real Lie algebra fields, so is the completion on SU(2)
+links. A translation-covariant family of rooted trees is obtained by
+using a fixed ordering of directions relative to z. If a point-group
+covariant choice is desired, averaging the finitely many transformed
+completions preserves every conclusion and changes constants only by
+a fixed amount. No rotational covariance is needed for the lemma.
+
+4. UNIFORM HOLONOMY ESTIMATES AND THE CUBIC DIFFERENCE
+
+Use a fixed submultiplicative matrix norm. For complex ||A||<=b,
+successive product expansion gives, with absolute fixed constants,
+
+ ||L(V_e)|| <= C ell_e b exp(C ell_e b),
+ ||L(V_e)-B_e(A)|| <= C ell_e^2 b^2 exp(C ell_e b).          (4.1)
+
+For completeness, expand each exp(+/-i A_p) into its absolutely
+convergent series. The total degree-n coefficient norm of the product
+is bounded by (ell_e b)^n/n! times a fixed norm constant. Removing
+degrees 0 and 1 yields the second estimate, with the same argument
+for the reversed inverse product. Projection pi_g is bounded.
+Repeated links and inverses cause no extra volume dependence.
+
+For one bilinear coefficient the first estimate gives
+
+ |q_ef(L_e,L_f)|
+       <= C ||q_ef|| b^2 ell_e ell_f exp(C b(ell_e+ell_f)).  (4.2)
+
+To estimate the difference one MUST first use (2.3), obtaining the
+strict representation
+
+ C(Q_z)-Q_z = sum_ef [q_ef(L_e,L_f)-q_ef(B_e,B_f)].         (4.3)
+
+Termwise subtraction of q_ef(A_e,A_f) would leave quadratic terms;
+the cancellation is the global linear Ward identity, not a separate
+identity for each coefficient. Bilinearity, (4.1), and telescoping give
+
+ |q_ef(L_e,L_f)-q_ef(B_e,B_f)|
+   <= C ||q_ef|| b^3 ell_e ell_f(ell_e+ell_f)
+                                      exp(C b(ell_e+ell_f)). (4.4)
+
+Choose positive output weights kappa2,a2 with
+C_J(kappa2+a2)<kappa1/2. Then choose a fixed b_* small enough that
+the exponential in (4.2)--(4.4), after (2.4), consumes less than a
+further kappa1/4 of the input reserve. The remaining exponential pays
+the displayed length polynomials. Grouping equal K_ef, or retaining
+their coefficient labels, yields the rooted strict-support norms
+
+              ||C(Q_z)||_(kappa2,a2;b) <= C M b^2,
+        ||C(Q_z)-Q_z||_(kappa2,a2;b) <= C M b^3,            (4.5)
+
+uniformly for 0<b<=b_*. Constants depend only on the fixed exponents,
+J, and group/coordinate norms, not the torus. The sums converge
+normally on smaller complex balls, including on an infinite lattice
+if the same uniform rooted coefficient bound is supplied.
+
+5. PRECISE APPLICATION AND LIMITS
+
+For an actual gauge-invariant mark W and a linearly gauge-invariant
+quadratic reference Q_free, W-C(Q_free) is exactly gauge invariant.
+Its quadratic jet is Q_actual-Q_free; it has no quadratic jet only
+when those two quadratic forms are equal. Both cases may be useful,
+but they must not be conflated.
+
+The completion error has analytic norm O(M b^3), hence after dividing
+by the natural b^2 mark scale it is O(M b). This justifies an O(b)
+per-step comparison cost when M is uniformly bounded in the stronger
+input norm. It does not by itself establish that such costs are
+summable over an unlimited history, nor that a repeatedly degraded
+spatial exponent remains available. The current application must use
+its already proved static neutral transport / rooted carrier bounds
+and keep one fixed stronger kernel reserve for each new completion.
+
+In particular this lemma repairs gauge invariance of the comparison
+mark without assuming a nonlinear common Gaussian background chart.
+The quantum response estimate, the actual/free quadratic comparison,
+and their history bounds remain separate inputs. No full existence
+or nontriviality conclusion is asserted by this construction alone.

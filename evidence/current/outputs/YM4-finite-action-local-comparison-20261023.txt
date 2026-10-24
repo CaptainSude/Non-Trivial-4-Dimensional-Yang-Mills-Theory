@@ -1,0 +1,207 @@
+FINITE ENDPOINT ACTION COMPARISON ON A COMMON ORDINARY FIBER
+23 October 2026. New finite theorem; no general reset admission claimed.
+
+PURPOSE AND SCOPE
+
+For a background or geometry comparison it is unnecessary to construct a
+physical interpolating background, provided BOTH actual conditional laws
+already have the same independent variables and the same product cut.
+Interpolate their COMPLETE real actions instead. This avoids derivatives
+of a background-dependent precision, gauge chart, or minimum along an
+unproved physical path. Their actual finite action difference remains an
+input; endpoint fluctuation bounds do not by themselves estimate it.
+
+The result below is a consumer for exactly matched endpoint laws. It is
+not a proof that an LII removed-versus-empty pair has that match. The
+common-chart, complete-read, and all-debt payment gates remain separate.
+
+1. HYPOTHESES THAT CAN BE CHECKED AT THE TWO ENDPOINTS
+
+Let K=product_(i in I) K_i be a finite product of convex Euclidean balls
+with nonempty interiors. Use the same original free-coordinate metric d
+and coordinate dimensions at both endpoints. Suppose the exact two laws
+of these coordinates, conditional on their specified outer records, are
+
+ q_sigma(dx)=Z_sigma^(-1) 1_K(x) exp[-H_sigma(x)] dx,
+ sigma=0,1.                                                       (1)
+
+Include every x-dependent density, constraint Jacobian, and interaction
+in H_sigma. An x-independent scalar may be removed from each H_sigma,
+since (1) normalizes it out. The actual outer record and its mass are
+unaffected. H_sigma is C2 on a neighborhood of K, or is a limit covered
+by the same uniform approximation argument as the ordinary theorem.
+
+For sigma=0,1 assume pointwise on ALL of K:
+
+  H_sigma'' >= c0 I,                                              (2)
+
+and for the SAME family of block-scalar positive diagonal W with
+nu-Lipschitz log weights, the native weighted accretivity estimate
+
+ Re <v,W H_sigma'' W^(-1)v> >= c_nu ||v||_2^2,                     (3)
+
+with c0,c_nu>0. Also assume the complete exponentially weighted absolute
+block row AND column Hessian sums are bounded by M_nu. These are
+pointwise Hessian hypotheses, not merely numerical covariance constants
+for the two endpoint measures. The corresponding principal-submatrix
+conditions follow by zero extension of v and by restriction of the sums.
+Use the same Neumann/product-convex conditional covariance theorem as in
+YM4-local-marginal-response-20261023. In particular (2)--(3) supply its
+unweighted and weighted covariance constants on every principal fiber.
+
+Set H_tau=(1-tau)H_0+tau H_1, 0<=tau<=1, and normalize q_tau on K.
+Equations (2)--(3) are linear inequalities in the Hessian. The absolute
+row/column bounds follow by the triangle inequality. Hence ALL the
+required conditional estimates hold for every q_tau with the SAME
+constants. No physical geometry, background, or gauge field is assigned
+to intermediate tau; it is only an auxiliary finite-dimensional density.
+
+It would be insufficient to assume that each endpoint is strongly
+convex and then assert a spatial estimate. Condition (3), or the full
+common weighted perturbation/commutator hypotheses that imply it, must
+be verified. Two endpoint covariance inequalities alone do not justify
+the interpolation step.
+
+2. FINITE-DIFFERENCE SCORE AND BOUNDED LOCAL RESPONSE
+
+Put Delta H=H_1-H_0. For a bounded real measurable F(x_R) depending only
+on a specified R subset I, write b_F=osc(F)/2. Exact differentiation on
+the fixed compact domain gives
+
+ d_tau q_tau F=-Cov_(q_tau)(F,Delta H).                            (4)
+
+The normalizing partition derivative gives the centering in (4).
+It is not an approximation by an unnormalized numerator.
+
+For any smooth G, the projected-mean estimate proved in the separate
+ordinary consumer, applied to m_R=E_(q_tau)[G|x_R], gives
+
+ ||grad_R m_R||_(L2(q_tau))
+   <= C_nu ||W_R grad G||_(L2(q_tau)),
+ (W_R)_i=exp[-nu d(i,R)],
+ C_nu=sqrt[1+(M_nu/c_nu)^2].                                      (5)
+
+To recall the actual mechanism, for a vector v on R,
+ D_v m_R=E[v.grad_R G|x_R]-Cov_complement(G,v.grad_R H_tau).
+The direct R gradient and complementary weighted gradient form disjoint
+coordinate blocks. Conditional Cauchy--Schwarz and weighted covariance,
+then their two-block Euclidean norm, give (5). Full-law Poincare applies
+to m_R(x_R); no marginal-curvature assertion is needed.
+
+Thus (4), sd(F)<=b_F and full-law Poincare give
+
+ |q_1F-q_0F|
+  <= b_F C_nu/sqrt(c0)
+       integral_0^1 ||W_R grad Delta H||_(L2(q_tau)) d_tau.          (6)
+
+For the local marginals q_sigma^R, with TV=one half of the L1 distance,
+
+ TV(q_1^R,q_0^R)
+  <= min{1,C_nu/(2sqrt(c0))
+       integral_0^1 ||W_R grad Delta H||_(L2(q_tau)) d_tau}.         (7)
+
+Apply (6) to every indicator, whose oscillation is one, before taking
+the supremum. This explains the factor 1/2 in (7). A pointwise weighted
+gradient bound on K can replace the integral in (6)--(7).
+
+If grad Delta H has a verified spatial arm at a changed read D,
+ ||exp[nu d(.,D)] grad Delta H||_2<=B,
+then ||W_R grad Delta H||_2<=B exp[-nu d(R,D)] by the triangle
+inequality. This is a sufficient finite-difference input, not something
+implied by (2)--(3) for unrelated endpoint actions.
+
+3. A VALUE-ONLY LOCAL ACTION-WORD VERSION
+
+There is also a version needing no derivative of the difference words.
+Suppose, as real functions on this very K,
+
+ Delta H=constant+sum_w G_w(x_(T_w)),                               (8)
+
+where b_w=osc(G_w)/2 and sum_w b_w<infinity. At finite cutoff the
+slightly weaker local summability needed for the following covariance
+sum would also suffice, with a justified limiting argument. Each T_w
+must be the COMPLETE current-coordinate read, not its nominal carrier.
+
+For disjoint R,T_w, the previously proved bounded-two-test theorem on
+q_tau gives
+ |Cov(F,G_w)|<=b_F b_w min{1,(K_nu/c0)exp[-nu d(R,T_w)]},
+ K_nu=M_nu+M_nu^2/c_nu.
+For intersecting reads, use the elementary b_F b_w bound. Define
+ A_nu=max{1,K_nu/c0}. Then both cases imply
+
+ |q_1F-q_0F|
+  <= b_F A_nu sum_w b_w exp[-nu d(R,T_w)],                         (9)
+ TV(q_1^R,q_0^R)
+  <= min{1,(A_nu/2)sum_w b_w exp[-nu d(R,T_w)]}.                  (10)
+
+Constants in (8) disappear exactly. Absolute uniform convergence after
+subtracting one constant per word justifies the covariance sum and the
+tau integral. In particular a finite endpoint localization of the
+COMPLETE action difference can feed (9), even if no joint complex
+background tube or mixed-background derivative theorem was established.
+Two independent upper bounds for |H_0| and |H_1| need not produce a
+small or remote right-hand side; genuine endpoint cancellation/locality
+must still be proved for their actual words.
+
+4. EXACT MIXTURES AND DIRECT SOURCE READ CHANGES
+
+The result can compare different exterior mixtures. Let alpha_0,alpha_1
+be ANY two probability distributions of admitted outer records, and
+let q_(sigma,z)^R be their exact local conditional marginals. If the
+common-coordinate construction and (7) or (10) give
+
+ sup_(z in support alpha_0, z' in support alpha_1)
+       TV(q_(0,z)^R,q_(1,z')^R)<=epsilon,
+
+then the TV distance of their two actual mixtures is <=epsilon. One
+may integrate the pairwise bound against alpha_0 times alpha_1 instead
+when it is not uniform. This product is only a coupling used to compare
+two probability measures; it is NOT a product replacement of the
+physical joint history or a way to combine incompatible cost slots.
+The proof integrates the difference of each bounded indicator. Small
+selection probabilities never appear in a denominator in the estimate.
+
+For source values that change under the endpoint identification, retain
+the exact identity
+
+ q_1 F_1-q_0 F_0=q_1(F_1-F_0)+(q_1-q_0)F_0.                      (11)
+
+The first term needs its own actual read/change bound. A change of
+observable chart, direct retained argument, or source selector does not
+vanish because the local probability marginals are close.
+
+If the two pullbacks have distinct K_sigma, (1) fails. A coordinate
+change may repair it only after its exact Jacobian, the full pulled-back
+action, the pulled-back source, and the now-common boundary are verified.
+An arbitrary ball overlap or a comparison of local minima does not
+supply that verification. A residual boundary sector retains its actual
+probability and is not lost in (11).
+
+5. NATIVE USE AND PRECISE LIMIT
+
+On a fixed admitted ordinary geometry with only current retained free
+coordinates changed, the existing normalized-score theorem already
+proves (1)--(3) on the same product chart. Equations (6)--(10) give an
+equivalent finite-endpoint route in that concrete native family.
+
+For a geometry-changing pair, the advantage is narrower but useful:
+after a genuine common local fiber has been established, the next target
+can be the full endpoint Delta H on that fiber. There is no additional
+need to prove that a physical interpolation between the old arrays
+exists or stays admitted. The comparison must still include the finite
+change in every quadratic, E/R/B, variable-coupling, gauge/measure,
+constraint, and switch contribution.
+
+This theorem has not established locality or smallness of that full
+Delta H for arbitrary LII removed-versus-empty histories. It does not
+pay retained word debts, normalize a selected good-sector law in place
+of the full one, or extend a fresh source theorem to all compiled
+descendants. Those remain the substantive native steps.
+
+PROOF SOURCES
+
+outputs/YM4-local-marginal-response-20261023.txt, Sections 1--4;
+outputs/YM4-separated-error-consumer-20261023.txt, projected means;
+outputs/YM4-normalized-ordinary-response-20261023.txt, full density match.
+All new deductions here are finite-dimensional and self-contained
+relative to their stated inherited ordinary weighted-covariance input.

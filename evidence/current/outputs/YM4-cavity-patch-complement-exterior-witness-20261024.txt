@@ -1,0 +1,307 @@
+ORIGINAL CAVITY PATCH COMPLEMENT: AN EXTERIOR CURVATURE WITNESS
+24 October 2026. connected_energy. New finite producer; review requested.
+No archive or output edits.
+
+RESULT
+
+Failure of the canonical boundary patch for a four-edge original
+plaquette cavity forces an ADDITIONAL nearby original plaquette to
+have curvature at a smaller fixed threshold. Its complete read uses
+no cavity edge. An explicit cubical filling proves this; no assertion
+about the topology of an unspecified deleted neighborhood is needed.
+The original Wilson joint moment then gives a strictly stronger
+original-weighted rare bound for the retained complement. An exact
+witness partition keeps original masses, source scalars and contacts.
+
+One deterministic enlargement of the physical cavity also turns that
+whole complement into a new finite boundary coefficient. On a new
+controlled boundary patch it has a uniform rare cap with an explicit
+beta^840 entropy price. The new patch complement remains exact. This
+is a finite physical reassembly BEFORE native histories, not an
+arbitrary cluster construction, a native P0-owner assignment, or a
+proof of all-scale source bounds.
+
+DEPENDENCIES
+
+work/original_rare_cavity_source_projection_20261024.txt and its audit;
+work/rare_cavity_first_ordinary_admission_20261024.txt;
+work/cavity_weighted_finite_propagation_20261024.txt, Sections1--3;
+work/source_compatible_native_pivot_feasibility_20261024.txt;
+the original Wilson joint energy moment imported there from TURN64.
+
+1. EXACT ORIGINAL OBJECTS AND GEOMETRY
+
+Use the original normalized compact SU(2) Wilson measure
+
+ P_beta(dU)=Z_beta^-1 exp[-beta sum_q h_q(U)] dU,
+ h_q=1-Tr U_q/2=||U_q-I||op^2/2,
+ beta=C_W/g0^2.                                        (1)
+
+Translate and orient the original plaquette p to the unit12-square
+with corners(0,0,0,0),(1,0,0,0),(1,1,0,0),(0,1,0,0).
+Let C be its four edges. Let B be all other edges in plaquettes
+meeting C. Thus |B|<=72, every B vertex has
+
+ x1,x2 in[-1,2],  x3,x4 in[-1,1].                       (2)
+
+Work with a nonwrapping lifted local read; periodic side lengths at
+least4L suffice for this construction and the later finite native
+pivot reads. A local chart crossing a periodic seam is translated
+and lifted, not discarded. Exceptional genuinely wrapping reads
+remain separate.
+
+Fix the deterministic spanning forest T on B from the first-ordinary
+producer. For each nontree edge e, its canonical edge holonomy is the
+holonomy of its forest fundamental loop, conjugated at the root of
+its component. Its length is at most |B|+1<=73. Tree edges become I.
+For a fixed positive patch constant c_C put
+
+ chi_B(U)=1{max_(e in B)||C_T(U)_e-I||op<=c_C epsilon0}.
+
+The cut is invariant under all original vertex gauges: one residual
+constant color rotation per forest component only conjugates the
+corresponding canonical edges.
+
+For the literal original source and mark set
+
+ E_p={||U_p-I||op>=epsilon0},
+ F_p=c_a f_p h_p, alpha_p=|c_a f_p|,
+ a_p(U_B)=E_P[F_p1_(E_p)|links outside C],
+ f_p^comp=(1-chi_B)a_p.                                (3)
+
+The coefficient a_p really depends only on B. All original source
+calibration and microscopic labels are retained. In particular the
+event E_p is an original P0 witness, while the smaller threshold below
+will NOT automatically be an original P0 failure at epsilon0.
+
+2. EXPLICIT FILLINGS USING NO EDGE OF C
+
+Let D be the vertex box
+
+             D=[-1,2]^2 x [-1,1] x [-1,2].              (4)
+
+For every loop gamma of B we construct a disk word using only
+plaquettes in D that have NO edge in C, with at most12 length(gamma)
+plaquette occurrences. Occurrences are counted with multiplicity.
+
+First lift each vertex vertically in direction4 to height x4=2.
+Each oriented edge not in direction4 sweeps a strip with at most
+three plaquettes. Direction4 edges give exact path cancellation and
+need no plaquette. Normally the strip contains no cavity edge.
+
+The only forbidden case is a direction1 or2 edge at height x4=-1
+whose projection to x4=0 is an edge e0 of C. The strip then includes
+the TWO adjacent (e0,4) faces at heights[-1,0] and[0,1]. Their common
+edge is e0. Replace this two-square rectangle by the other FIVE
+rectangular faces of the prism formed by extruding it from x3=0 to
+x3=1. The replacement has eight unit plaquettes:
+
+ - two on the opposite (direction(e0),4) face at x3=1;
+ - one on each (direction(e0),3) end face at x4=-1 and x4=1;
+ - two on each (3,4) face at the two endpoints of e0.
+
+None has an edge in C. The first group has x3=1, the second has
+x4=+-1, and the final groups have only direction3/4 edges. The
+remaining strip between heights1 and2 also avoids C. Hence the
+entire replacement of a lifted edge costs at most9 exterior faces.
+
+This is a cubical disk replacement with the SAME perimeter. Its
+orientation may be reversed when the original edge orientation is
+reversed; curvature norms do not change. It is not a commuting or
+Abelian Stokes argument. Elementary face moves write the loop as a
+product of conjugated plaquette holonomies, with signs determined
+by the disk orientation.
+
+The lifted loop lies at x4=2, in the three-dimensional rectangle
+[-1,2]^2 x [-1,1]. Contract it with ordered coordinate paths1,2,3
+from the specific root o=(0,0,0,2). For a direction1 edge commute it
+past at most |x2|+|x3|<=3 unit steps; for a direction2 edge commute
+past at most |x3|<=1; a direction3 edge cancels directly. All these
+plaquettes lie at x4=2 and avoid C. The top filling therefore costs
+at most3 per loop edge. Together with the lifted strips this proves
+the announced12 length bound, including arbitrary signs, repeated
+edges and self-intersections of the loop word.
+
+For unitary matrices, a sequence of such face moves implies
+
+ ||U_gamma-I||op <= sum_(q in disk, with multiplicity)
+                                      ||U_q-I||op.       (5)
+
+Conjugating transport words have unit operator norm. This is the
+only non-Abelian estimate needed; no spanning surface is assumed to
+carry an independent measure.
+
+Let Q_ext be the fixed set of all plaquettes in D with no edge in C.
+There are at most612 plaquettes in D: the six orientation counts are
+108,96,108,96,108,96. Thus M_ext=|Q_ext|<=612. Define
+
+ A_*=12*73=876,
+ tau_*=c_C epsilon0/A_*,
+ E_q^*={||U_q-I||op>=tau_*}.                             (6)
+
+If chi_B fails, one of its fundamental loops has norm>c_C epsilon0.
+Its exterior filling and(5) therefore give the deterministic inclusion
+
+           {chi_B=0} subset union_(q in Q_ext) E_q^*.    (7)
+
+Every witness q is distinct from p, and its entire plaquette read is
+measurable outside C. The threshold is a fixed small MULTIPLE of
+the original epsilon0, not a changed coupling or a new definition of
+the original P0 record.
+
+3. EXACT WITNESS ROWS AND THE EXTRA ORIGINAL RARITY
+
+Order Q_ext deterministically. Let J_q be the indicator that q is
+the first witness E_q^* in that order. Then sum_q J_q=1 on{chi_B=0}.
+All J_q are measurable outside C on the fixed complete read D.
+The exact complementary coefficient partition is
+
+             f_p^comp=sum_q f_p^comp J_q.              (8)
+
+For every bounded test G outside C, the ORIGINAL cavity identity gives
+
+ E_P[f_p^comp J_q G]
+      =E_P[F_p 1_(E_p) (1-chi_B) J_q G].               (9)
+
+Its original scalar and exterior normalizer have not changed. In
+particular, from |F_p|<=2 alpha_p,
+
+ ||f_p^comp J_q||_(L1(P))
+       <=2 alpha_p P_beta(E_p intersect E_q^*).          (10)
+
+Use the actual original moment
+
+ E_P exp[(beta/4)sum_(v in S)h_v] <=2^(3|S|/4)
+
+for the TWO distinct plaquettes S={p,q}. On E_p intersect E_q^*,
+h_p+h_q >=(epsilon0^2+tau_*^2)/2. Hence
+
+ P_beta(E_p intersect E_q^*)
+ <=2^(3/2) exp[-beta(epsilon0^2+tau_*^2)/8],
+
+ ||f_p^comp||_1
+ <=2 alpha_p M_ext 2^(3/2)
+                  exp[-beta(epsilon0^2+tau_*^2)/8].     (11)
+
+Compared with the previous one-witness envelope, this has a genuine
+additional exp[-beta tau_*^2/8] factor at a fixed finite count M_ext.
+It is an ORIGINAL-LAW joint bound; there is no conditional rarity
+claim at arbitrary exteriors and no division by a rare selected atom.
+The two witnesses need not be independent or vertex-disjoint. Their
+distinct plaquette energies are exactly what the joint moment pays.
+
+The complete source read of each partitioned row is outside C and
+inside the fixed D-edge set. Any genuine later conditional expectation
+under the corresponding original input/output marginals contracts
+its L1 norm, so the bound(10) remains available with the actual atom
+weights. This supplies no source-age power. In particular a signed
+catalogue operator is not called an L1 contraction merely because it
+appears in a later representation.
+
+For raw first/mixed packets on the SAME event E_p(1-chi_B)J_q, apply
+(9) coefficientwise before connected subtraction. Their raw mixed
+cap has the SAME joint rare probability, not its square. Conditional
+contacts and the covariance of boundary means are retained by the
+usual exact total-covariance identity. Flat scalar entries are kept.
+
+4. ONE DETERMINISTIC CAVITY ENLARGEMENT OF THE WHOLE COMPLEMENT
+
+Let K be ALL edges with both endpoints in D. Its exact edge count is
+
+ |K|=144+144+128+144=560.                                (12)
+
+The mark M_p=E_p intersect{chi_B=0} and source F_p are fixed Borel
+functions of these integrated links. Define under the SAME original
+Wilson law
+
+ b_K(y)=E_P[F_p 1_(M_p)|links outside K=y].             (13)
+
+The nested physical-cavity identity cancels the intermediate Z_C
+exactly and shows b_K=E_P[f_p^comp|links outside K]. For any test G
+outside K, E_P[f_p^comp G]=E_P[b_K G]. The new exterior marginal is
+exactly Z_beta^-1 exp[-beta H_out,K] Z_K dy. Thus this is a permitted
+further reassembly of separated original correlations before native
+histories, not an equality under arbitrary later retained selectors.
+
+Every configuration in M_p has a witness q from(7). Both p and q
+are fully inside K, and all Wilson energies are nonnegative, so
+
+ H_K >=(epsilon0^2+tau_*^2)/2 =:tau_eff^2/2
+                      on M_p.                          (14)
+
+The original pointwise complex ratio argument now applies to(13):
+for a sparse complex exterior displacement of size c/(beta|Gamma|),
+the analytic coefficient is bounded by C alpha_p times the actual
+conditional probability of M_p. Its original exterior average is
+bounded by(11); there is no accumulated intermediate analytic loss.
+The mark stays fixed inside K during that continuation.
+
+There is also a uniform rare cap on a NEW boundary patch, with its
+entropy price explicit. Let B(K) be all exterior edges in plaquettes
+meeting K, and take a deterministic forest on B(K). On the canonical
+patch max||C_T(y)_e-I||<=c_K tau_eff, restrict every integrated K-link
+to a Haar ball of radius c/sqrt(beta). Compact SU(2) Haar volume gives
+c_1^|K| beta^(-3|K|/2). The action on that set is at most
+C_K/beta+C n_(P_K)c_K^2 tau_eff^2. Choose the FIXED constant c_K
+after the actual finite count n_(P_K), so the latter term is at most
+tau_eff^2/4. Consequently
+
+ Z_K(y)>=c_K' beta^-840 exp[-C_K-beta tau_eff^2/4],
+
+ |b_K(y)|<=C_K alpha_p beta^840
+                             exp[-beta tau_eff^2/4].    (15)
+
+The coefficient and mark are gauge invariant, so the forest gauge
+is implemented by the exact original Haar change of variables.
+The same small beta^-1 analytic tube, with a fixed remaining patch
+margin, inherits this rare cap. No enlarged pinned-cavity tube is
+claimed for the 560-link integral.
+
+The entropy in(15) is enormous but FIXED: log price840 log beta.
+The literal primary choice B119 printed245--246 has geometric r_geom>=2
+and cutoff p0>=5r_geom, with epsilon0/g0=A0 log^p0(g0^-2).
+Thus this fixed entropy is beaten at a sufficiently weak floor by
+beta tau_eff^2. This is not a bound with cavity size allowed to grow
+without its corresponding entropy and boundary action being paid.
+
+The new patch and M_p are nonempty. For example, with exterior flat,
+one can change an edge of p and separately a NON-TREE edge of its
+translated four-edge cycle at x3=1. Such an edge exists because T
+is a forest; keep every other B edge equal to I. All these links are
+integrated K-edges. The first change makes E_p true; the latter then
+has its forest canonical holonomy itself exceeding c_C epsilon0 and
+hence makes chi_B fail. Strict inequalities give positive Haar
+mass. This establishes a real finite packet, not merely a formal
+zero coefficient. Its exact flat scalar may be nonzero.
+
+Split b_K into its new boundary-patch cut and its new patch complement.
+Only the former has the uniform cap(15); the latter stays exact and
+still has its original-weighted joint rare envelope. The new boundary
+read lies inside the one-unit expansion of D, with at most6 vertices
+in every coordinate. Therefore its intersection with any native
+private interface contains at most6^3=216 interface bonds, whereas
+the full interface has L^3>216 for native L>11. Its own forest does
+not enlarge that physical read. The actual private-pivot constructor
+therefore also applies to this enlarged finite CUT boundary source.
+The first-bare fixed-real-source theorem may be used again as a new
+FIRST ordinary entry of this reassembled packet, with the original
+first measure and exact complements. It is not a second RG step or
+proof that a previously integrated coarse source remains thin.
+
+5. PRECISE SCOPE
+
+The new result is the explicit exterior-only filling(5)--(7), its
+additional original energy witness and exact partition(8)--(11),
+and the finite deterministic reassembly(13)--(15). All positions are
+original microscopic positions; there are no current-density substitutions.
+The read/entropy/count constants are fixed once and do not depend on
+the ultraviolet cutoff or source age. The factor L^(4 age) is not
+paid merely because a birth tail is very small.
+
+No arbitrarily large connected-bad-cluster construction is inferred.
+Such a construction would need a controlled exterior filling and
+low-energy boundary extension whose costs are uniform in the actual
+cluster geometry, and a matching whole-history source/read theorem.
+No smaller-threshold witness is relabeled as an existing native P0
+or reset owner. No mass-gap clustering, source-age h^4, or full-source
+continuum bound is claimed here.

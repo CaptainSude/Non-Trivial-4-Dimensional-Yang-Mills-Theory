@@ -1,0 +1,360 @@
+FULL-ACTION REFERENCE: GAUGE REDUCTION, CHART OBSTRUCTION,
+AND A FIXED-FOREST ALTERNATIVE -- TURN59
+20 October 2026. gauge47.
+
+RESULT
+
+Gauge invariance does simplify a full soft denominator, provided the
+action is actually defined on the entire integration region. For a
+globally defined coarse Wilson action, Section2 proves a full
+untruncated complex plaquette-source neighborhood with explicit
+polynomial dimension/width cost. This is a concrete candidate
+reference result, not an identification of the native reconstructed
+fine action.
+
+The proposed smooth weak-chart workaround has a sharp limitation:
+orbit averaging a nonzero smooth product link cutoff supported in
+a proper weak ball gives a current profile which is NOT analytic at
+the flat physical datum, already on two links. Smoothing the hard
+cut does not fix this issue. Section3 proves this by positive
+spectral moments, without assuming a particular boundary shape.
+
+There is a different exact fixed-chart construction. Fix a construction
+forest F, extend the chart cut invariantly by its unique axialization,
+and keep F as part of the reference specification. This has an exact
+weak plateau and an exterior-holomorphic fixed-coordinate denominator
+on its admitted action domain. Section4 verifies the Haar measure,
+gauge covariance, and parameter dependence. It is NOT independent of
+the choice of construction forest and does not supply the missing
+native G0,T0 law or initial R identity.
+
+1. WHAT THE GAUGE IDENTITY DOES AND DOES NOT DO
+
+Use the anchored finite graph of TURN58, with integrated links E,
+m nonanchor vertices, and real reference t. Put
+
+ psi_t(U)=exp[-lambda sum_e q(U_e t_e^-1)],
+ bar_psi_t(U)=int_H psi_t(U^h)dh,
+ phi_t=bar_psi_t/w_lambda^m,
+ q(V)=1-Tr(V)/2,    w_lambda=int_SU(2) exp[-lambda q(V)]dV.
+
+For the SAME globally defined invariant weight W_e(U), full Haar
+integration and exact anchored tree factorization give
+
+ int_slice phi_t(U) W_e(U)dU_slice
+   =w_lambda^-m int_full psi_t(U) W_e(U)dU
+   =w_lambda^-m int_full exp[-lambda sum q(v_e)]
+                                      W_e(vt)dv.       (1.1)
+
+The identity includes the actual fixed exterior conventions. A
+conditional coarea cannot be dropped if the true measure is not
+the full Haar link product/slice used here.
+
+When W_e=exp[-S_e/g^2], subtracting S_e(t) factors out exactly
+exp[-S_e(t)/g^2]. It does not prove the centered action nonnegative
+on the full compact group. A stationary point and a local physical
+gap alone are insufficient for that global assertion.
+
+Most importantly, the right side of(1.1) is not defined by a local
+reconstruction which exists only for weak v. Since psi_t is strictly
+positive everywhere, the undefined part cannot be discarded as a
+small integrand. Smallness is an estimate of a defined expression.
+
+This separates the current task from the following earlier results:
+
+ * matched_convex_local_score_turn10 proves real convex marginal/score
+   statements under GLOBAL Hessian hypotheses. It neither provides a
+   compact gauge-field global extension nor a complex normalizer.
+ * finite_g_local_chart_turn42 constructs finite-order stable entire
+   polynomial approximants on an explicitly fixed first-step chart.
+   Its equality, gauge-covariance and all-scale limitations are
+   retained. It is not an exact extension of the native action.
+ * native_reference_score_attempt_turn15 concerns the ACTUAL fixed
+   relative B window on an admitted native branch. It already cancels
+   the large background scalar and bounds real centered moments.
+   Its admitted complex exterior path, reconstruction, and fixed
+   window are essential. It does not give unrestricted soft tails.
+
+2. A GENUINE FULL COARSE-WILSON DENOMINATOR
+
+This subsection is an explicit globally defined model, not a generic
+convexity premise assigned to the native action.
+
+Take a finite bounded-incidence plaquette graph, with each plaquette
+a word of at most four integrated or fixed-identity links. Its
+anchored gauge group preserves those fixed links. Set
+
+ S(U)=sum_p q(U_p)>=0,     t_e=I,
+ Q(U)=sum_(e in E) q(U_e),
+ beta=g^-2,      lambda=(gW)^-2,
+              W>=1,       0<g<=1,       gW<=1.
+
+Let n=|E|, and let D bound the number of plaquette occurrences of
+one integrated link, including fixed finite multiplicity. Define
+
+ Z(z)=int_full exp[-X(U)-g^-2 sum_p z_p q(U_p)]dU,
+ X(U)=g^-2 S(U)+lambda Q(U)>=0.                         (2.1)
+
+All products are compact SU(2) integrals, so Z is entire in the
+finite collection of complex plaquette multipliers z_p. The action
+and integrand are genuinely defined on the whole integration space.
+
+The corresponding soft orbit reference in any anchored slice has
+partition w_lambda^-m Z(z), by(1.1); the factor does not depend on z.
+
+Here is a bound on the ACTUAL full baseline distribution. Restrict
+every variable link to dist(U_e,I)<=c g with fixed0<c<=1/4.
+For a plaquette, bi-invariance and q(V)<=dist(V,I)^2/2 give
+
+ q(U_p)<=2 sum_(e occurs in p) dist(U_e,I)^2.
+
+Thus on this product ball,
+g^-2 S<=2D c^2 n and lambda Q<=c^2 n/2. Its Haar volume is
+at least (c_1 g^3)^n with c_1>0 depending only on c.
+Consequently
+
+                       Z(0)>=(c_D g^3)^n               (2.2)
+
+for a fixed c_D>0 depending only on D,c.
+
+At half temperature we may discard the nonnegative Wilson action:
+
+ int exp[-X/2]dU
+      <=w_(lambda/2)^n
+      <=[C_H (lambda/2)^-3/2]^n
+      =[(2^(3/2)C_H)g^3 W^3]^n.                       (2.3)
+
+The all-positive-s Haar upper bound from TURN58 is used here.
+With respect to dmu_X=Z(0)^-1 exp(-X)dU, (2.2)--(2.3) imply
+
+ E_mu_X exp(X/2)<=exp(K_full),
+ K_full=max(1,n log[C_D W^3]),                          (2.4)
+
+where C_D can be enlarged to be at least e. Constants depend on
+bounded plaquette incidence, not on g or the number of links.
+In particular K_full=O(1+n(1+log W)).
+
+For 0<=s<=1/2, Holder interpolation gives
+E_mu_X exp(sX)<=exp(2K_full s). If r=max_p |z_p|, then
+
+ |g^-2 sum_p z_p q(U_p)|<=r X.
+
+Hence, for r<=1/2,
+
+       |Z(z)/Z(0)-1|<=exp(2K_full r)-1.                (2.5)
+
+In particular r<1/(16K_full) gives a zero-free domain with
+|Z(z)/Z(0)-1|<1/4 and a bounded holomorphic logarithm.
+All original scalar factors, including w_lambda^-m, are retained.
+No global convexity or removal of a gauge-null mode was used:
+nonnegativity of the actual Wilson action and the full link soft
+weight supplied the real moment estimate.
+
+This is a full-action improvement over an orbit-profile-only bound,
+but in a deliberately different and explicit model. The parameters
+are plaquette multipliers, not arbitrary native exterior fields t(e).
+Replacing the native reconstructed reference action by this coarse
+Wilson action would still require the actual fine/coarse action
+cancellation, source domains, and original-law identity. No such
+replacement follows from(2.5).
+
+3. SMOOTH COMPACT LINK CUTS STILL FAIL AFTER ORBIT AVERAGING
+
+The following obstruction prunes a particular workaround, not every
+invariant chart construction.
+
+Let f be a nonzero real C-infinity function on SU(2), supported in
+{dist(U,I)<=delta} with delta<pi/2. It may be a smooth plateau
+cutoff multiplied by exp[-lambda q(U)]. On two parallel links
+p->q, anchor p and leave q free. For the product cutoff f(U_1)f(U_2),
+the orbit average in the slice U_1=I,U_2=h_s=exp(i s sigma_3) is
+
+       C(s)=int f(h)f(h_s h)dh = <f,L_s f>_L2,           (3.1)
+
+where L_s is a unitary circle action of period2pi.
+
+CLAIM. C has no real-analytic germ at s=0.
+
+Proof. Let P_k be the spectral projection of this circle action
+with frequency k in Z, and a_k=||P_k f||_2^2>=0. Then
+
+              C(s)=sum_k a_k exp(i k s).
+
+Smoothness of f gives every finite spectral moment, and
+
+      (-1)^j C^(2j)(0)=sum_k k^(2j) a_k.                (3.2)
+
+If C were analytic near0, its complex germ on a smaller disk would
+give |C^(2j)(0)|<=M(2j)! R^(-2j). For0<r<R, positivity and Tonelli
+would therefore give
+
+ sum_k a_k cosh(rk)
+   =sum_(j>=0) r^(2j)/(2j)! sum_k k^(2j)a_k
+   <=M/[1-(r/R)^2].
+
+Thus sum_k exp(r|k|)a_k<infinity. Disintegrate Haar measure over
+the left circle orbits. The spectral projections are exactly the
+Fourier modes on those orbits, and the last sum is the integral
+of their exponentially weighted squared Fourier coefficients.
+For almost every orbit, the Fourier coefficients therefore define
+an analytic periodic function in a strip |Im s|<r/2. Since f is
+smooth, that function agrees with its actual restriction to the
+real orbit.
+
+On any orbit which intersects the support ball, translation by pi
+sends the intersecting point h to -h. Its distance from I is
+pi-dist(h,I)>delta. Thus each such orbit has an open interval on
+which f vanishes. An analytic orbit restriction must vanish
+identically. This contradicts f nonzero in L2. QED.
+
+The argument does not merely replace the TURN58 hard cusp by a
+claim of slow smoothness: it rules out an analytic germ for every
+nonzero smooth product cutoff with this proper weak support.
+A positive analytic current Wilson weight and an exterior-only
+normalizing scalar cannot make C analytic; division by that
+nonvanishing analytic factor would make C analytic again.
+
+This is a statement about the CURRENT profile. A fully integrated
+fixed-domain parameter integral can still be holomorphic. The
+argument also does not apply to every possible nonproduct cut,
+or to the fixed-forest invariant extension constructed next.
+
+4. AN EXACT INVARIANT EXTENSION OF ONE FIXED CHART CUT
+
+Orbit averaging the cut is not the only way to make it invariant.
+The distinction below is useful because the native reference is
+already specified on a particular axial slice.
+
+Fix a construction forest F with one anchor per component. For each
+real U,t, let a_(F,t)(U) be the unique anchored gauge transformation
+such that
+
+              pi_(F,t)(U):=U^(a_(F,t)(U)),
+              pi_(F,t)(U)_e=t_e for e in F.              (4.1)
+
+For an edge parent->child its recursive equation is
+
+              a_child=t_e^-1 a_parent U_e.
+
+The reverse orientation is obtained by inversion. These finite
+matrix products define a global real-analytic map, and a holomorphic
+map on the corresponding SL(2,C) coordinates. There is no logarithm
+or branch choice in this axialization.
+
+Let y_e=pi_(F,t)(U)_e t_e^-1 on the chords e notin F. Choose a
+nonnegative smooth class function chi(y) on these relative chords,
+with a plateau equal to1 on a smaller product ball and support in
+a larger, admitted product ball. Define
+
+                    chi_tilde_(F,t)(U)=chi(y).          (4.2)
+
+For anchored h, uniqueness gives
+a_(F,t)(U^h)=a_(F,t)(U)h^-1, hence pi_(F,t)(U^h)=pi_(F,t)(U).
+Therefore(4.2) is exactly invariant. It has the desired plateau
+on the corresponding physical chart.
+
+For a joint change of frames k, transforming U,t and all external
+data together, uniqueness gives
+
+ pi_(F,t^k)(U^k)=pi_(F,t)(U)^k.
+
+The chord relative variables transform by conjugation at their
+initial endpoints. Choosing chi invariant under these conjugations
+proves joint frame covariance, including nontrivial boundary frames.
+The forest itself and its roots are carried with the geometry.
+
+Now suppose the ACTUAL local action S_e is defined and invariant on
+the gauge saturation of this supported chart. Define the real
+weight there by chi_tilde exp[-S_e/g^2], and set it to zero outside.
+No value of S_e outside that saturation is used. Exact forest Haar
+factorization gives
+
+ int_full chi_tilde_(F,t)(U) exp[-S_e(U)/g^2]dU
+    =int_chords chi(y) exp[-S_e(V_F(y,t))/g^2]dy,         (4.3)
+
+where V_F(y,t)_e=t_e on F and V_F(y,t)_e=y_e t_e on chords.
+This is the same fixed relative slice integral, with its complete
+Haar factors if one subsequently uses Lie-algebra coordinates.
+
+If t=t(e) and S_e(V_F(y,t(e))) are holomorphic in exterior parameters
+on ONE common disk for every y in supp chi, with a uniform bound
+on this compact support, the right side of(4.3) is holomorphic.
+The cut is fixed in y; no differentiation of a moving hard boundary
+is required. Real positivity gives local nonvanishing; a quantitative
+uniform zero-free radius still needs actual coefficient estimates.
+The admitted fixed-window native estimates of TURN15, and the
+separate TURN59 fixed-window work, address precisely such estimates.
+
+On the inner plateau, the cut is identically1, so the current density
+there is the actual analytic action density. This construction
+therefore avoids the autocorrelation obstruction of Section3:
+it defines an invariant cut by a fixed orbit coordinate, rather
+than averaging a product cut over vertex gauges.
+
+Three restrictions are essential.
+
+ (a) F is part of the definition. Changing this CONSTRUCTION forest
+     generally changes chi_tilde and the physical reference law.
+     The TURN57 theta counterexample remains valid. For the SAME
+     fixed invariant weight, one may use another integration slice,
+     but that is a different operation from changing(4.2).
+
+ (b) Holomorphy requires the complete actual action and its derived
+     background/current domain on the entire supported family.
+     The fixed-chart formula does not manufacture that domain.
+     Replacing t(e) by an uncontrolled or discontinuously selected
+     reference invalidates the claimed common analytic disk.
+
+ (c) A deterministic local F can define a new finite-graph reference
+     and can be compared across identical finite graph data. This
+     does not prove it is an allowable complete native G0,T0 pair,
+     or that the coupled native action/history estimates are uniform
+     for the new choice. The initial positive R identity remains a
+     separate source attachment.
+
+5. WHY AN ARBITRARY ACTION EXTENSION IS NOT A FREE ALTERNATIVE
+
+A holomorphic extension agreeing exactly with a local holomorphic
+action on an open set is constrained by the identity theorem.
+An arbitrary bump splice cannot preserve that equality and global
+holomorphy. A smooth real splice can be constructed in many finite
+settings, but its exterior analyticity, covariance and estimates
+are additional facts, not consequences of the existence of a bump.
+
+Even a perfectly analytic global extension can have deeper minima
+outside the original chart. Local stationarity and a local Hessian
+gap do not exclude them. For example, on a single SU(2) physical
+loop let q=1-Tr(U)/2 and
+
+                       S(U)=2+q-q^2.
+
+It is nonnegative, has a strict local minimum S(I)=2 with positive
+quadratic term, and has S(-I)=0. Subtracting S(I) therefore yields
+a negative well away from the admitted chart. A soft penalty with
+lambda=g^-2/W^2 and sufficiently large fixed W does not prevent
+that well from dominating at weak g. This example is not a claim
+about the actual Wilson minimum; it shows the insufficiency of
+using only the local chart facts to justify an arbitrary extension.
+
+6. IMPLICATION FOR THE CURRENT PROOF ROUTE
+
+The full soft-action route is viable in an explicit globally
+defined coarse Wilson model, as Section2 proves. It is not yet
+attached to the native reconstructed fine action. In particular,
+the Section2 source variable is not the native exterior datum.
+
+For an action available only on an admitted local chart, keeping
+that chart has a mathematically coherent alternative: the exact
+fixed-forest extension(4.2)--(4.3). It preserves the original chosen
+slice integral and a weak plateau, while retaining the forest as
+part of the specification. It does not require the unrestricted
+soft tails or solve their full-action problem. It also does not
+remove the native choice/identity gate by renaming a new forest.
+
+The product smooth-cut orbit average is the shortcut eliminated
+here. No general impossibility of modified references or of a YM4
+construction is inferred. At present the unchanged native counted
+route has fewer new action-extension obligations. A modified route
+must justify a specific replacement and its complete estimates;
+the finite-graph constructions are options, not completed native
+renormalization theorems.

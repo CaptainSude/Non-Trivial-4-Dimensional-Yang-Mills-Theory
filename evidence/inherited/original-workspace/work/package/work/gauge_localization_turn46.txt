@@ -1,0 +1,426 @@
+GAUGE-COVARIANT FINITE-STEP REFERENCE AND THE REMAINING CARRIER PROBLEM
+19 October 2026. TURN46. gauge46 research note.
+
+SCOPE AND OUTCOME
+
+The present weak-chart assumptions do not justify averaging an arbitrary
+carrier over the full vertex gauge group. Nor is there a support-preserving
+bounded projection of the needed kind with size-independent bounds. An
+explicit SU(2) cycle example below quantifies the latter obstruction.
+These are obstructions to particular deductions, not to gauge localization.
+
+There is a useful constructive repair of the AUXILIARY REFERENCE itself.
+Use relative link coordinates at the constrained saddle, its MOVING
+orthogonal tangent space, the canonical right inverse of the ordinary
+constraint, and independent Gaussian COLOR BALLS. Every object then
+transforms by local adjoint rotations. The entire auxiliary integral and
+the actual-versus-auxiliary tail are separately gauge invariant on their
+common weak domains. The existing any-leg analytic catalogue is preserved
+by the explicit analytic operations used below. The local cluster terms
+obtained by the old Taylor/tree assignment need not be individually gauge
+invariant. That last fact is kept separate throughout.
+
+An additional norm-contracting global-color average does make every
+carrier globally color invariant, with zero linear datum jet at identity,
+without changing any source bound or the exact summed identity. This is
+not a local Ward identity.
+
+1. THE PRECISE RESIDUAL GAUGE ACTION ON THE FOREST SECTION
+
+Use the actual G0 forest of intrinsic_energy_framed_reference_turn41:
+its roots are the active coarse centers and the geometric boundary
+anchors. G0 is the fine gauge group fixed at those roots, and its unique
+forest representative has every forest link equal to I. The remaining
+fine chord links carry PRODUCT Haar measure after G0 integration.
+
+Assign a coarse gauge h(r) to each active root and I to every fixed
+boundary root. Extend h to a fine vertex v by h(r(v)), where r(v) is
+the root of its forest component. This is constant on each forest
+component. Hence a forest link (v,w), whose endpoint roots coincide,
+still equals I after the transformation. A chord link transforms as
+
+ U_b -> h(r(b_-)) U_b h(r(b_+))^-1.                    (1.1)
+
+This is the literal section-preserving lift; a block-constant lift
+would be sufficient only when its blocks are these forest components.
+No unstated identification of two different forests is used.
+
+The complete ordinary coarse map transforms at its coarse endpoints.
+The conditional action, its physical plaquette source, and the original
+energy cutoff are invariant. Fixed exterior links remain fixed when
+the lift fixes their endpoints; otherwise include the transformed exterior
+as a datum and state the identity jointly in (Y,e). All statements below
+use this latter convention whenever required by the geometry.
+
+Let U_*(u) be the already established constrained saddle in this section.
+For real h for which both the original and transformed candidates remain
+in the common uniqueness neighborhood, (1.1) maps its constrained
+stationarity equation to that for u^h. Uniqueness of the LOCAL KKT branch
+then gives U_*(u^h)=U_*(u)^h. In the actual covered finite-box regime one
+can equivalently transport the complete physical fiber minimum. No
+uniqueness modulo the full fine gauge group outside this section is used.
+
+It is enough for the local identities below to take h in a neighborhood
+of I. Simultaneous constant color conjugations are allowed in their full
+compact group whenever the exterior is transformed too (or is identity).
+Extension to the native orbit domains is not asserted merely from this
+local statement.
+
+2. AN EXPLICIT EQUIVARIANT ORTHOGONAL CONSTRAINT CHART
+
+The fine chord space is a direct sum of fixed-dimensional Lie-algebra
+color spaces. Write a nearby field in LEFT relative coordinates,
+
+                  U_b=exp(c_b) U_{*,b}(u).
+
+The relative coordinate transforms exactly as c -> R_h c, where
+R_h is block diagonal with block Ad(h(r(b_-))) on chord b. For real
+compact gauges R_h is orthogonal in the invariant color inner product.
+The coarse relative constraint is
+
+ F_u(c)=log[M(exp(c)U_*(u))Y^-1],     Q_u=DF_u(0).
+
+On the actual fiber F_u(c)=0. Its output action is another block diagonal
+adjoint S_h, and the exact covariance identity is
+
+ F_(u^h)(R_h c)=S_h F_u(c),    Q_(u^h) R_h=S_h Q_u.     (2.1)
+
+The complete ordinary-row right inverse already proved in TURN39--42
+implies a uniform lower bound for Q_u Q_u^t on a smaller real weak
+domain. Its analytic inverse persists on a fixed smaller complex domain.
+Define
+
+ E_u=Q_u^t(Q_u Q_u^t)^-1,
+ P_u=I-E_u Q_u,             T_u=ker Q_u.               (2.2)
+
+For real u, P_u is the orthogonal projection onto T_u. For complex u,
+transpose is the holomorphic BILINEAR transpose; P_u is an analytic
+idempotent, not a Hermitian projection. The ranks remain fixed. Equation
+(2.1) gives, for real gauges and hence as a local holomorphic identity,
+
+ E_(u^h)=R_h E_u S_h^-1,       P_(u^h)=R_h P_u R_h^-1.  (2.3)
+
+For b in T_u solve the literal constraint by
+
+ c_u(b)=b+E_u tau_u(b),       F_u(c_u(b))=0.
+
+The derivative of F_u in tau at (0,0) is I; its derivative in b is zero.
+The analytic implicit equation therefore gives tau_u(b)=O(b^2), on a
+fixed small sup domain. Its ambient extension replaces b by P_u b.
+Uniqueness and (2.1)--(2.3) give
+
+ tau_(u^h)(R_h b)=S_h tau_u(b),
+ c_(u^h)(R_h b)=R_h c_u(b).                             (2.4)
+
+All analytic operations here are quantitatively controlled by the
+already used any-leg tree algebra. Q_u is the finite-read derivative
+of the original ordinary map, composed with the local KKT branch. It
+therefore has the full datum catalogue, including its two operator legs.
+The inverse of Q_u Q_u^t is uniformly exponentially local by its gap;
+its marked inverse series gives the same any-leg bounds. Multiplication,
+the implicit equation for tau, and the entire local group exponential
+then give a fixed-radius catalogue for c_u and its derivatives. This
+uses the all-arity TURN41--42 inputs, not merely a physical C2 Hessian.
+
+3. COMPLETE COAREA FACTOR AND MOVING COVARIANCE
+
+The measure is unchanged by using this new chart. For real u, let
+A_u(b):T_u -> fine chord tangent space be the derivative of
+b -> exp(c_u(b))U_*(u), written in invariant orthonormal tangent frames.
+Let Q_phi be the derivative of the complete ordinary map at that point,
+also in invariant fine/coarse tangent frames. The exact coarea formula
+relative to full coarse Haar is
+
+ a_E(u)=int_(T_u) exp[-f_u(b)/g^2] J_u(b)
+                         psi(f_u(b)/E0) db,
+
+ f_u(b)=S_e(exp(c_u(b))U_*(u)),
+ J_u(b)=c_geo [det_(T_u)(A_u(b)^t A_u(b))]^(1/2)
+                           [det(Q_phi Q_phi^t)]^(-1/2).          (3.1)
+
+c_geo retains the fixed normalized-Haar volume conventions. The chart
+integral is over the complete supported fiber in the covered weak regime;
+the previous coverage result still applies since this is an analytic
+coordinate change about the same saddle with uniformly invertible tangent
+map. The smooth cutoff is the same fixed real function of total energy.
+
+At b=0, A_u(0) is the inclusion T_u -> ambient, so
+
+ J_*(u)=c_geo det(Q_u Q_u^t)^(-1/2).                  (3.2)
+
+Formula (3.1) is also an explicit analytic formula: embed the numerator
+determinant as det[A^t A+I-P_u], and use the square-root branches fixed
+by positivity on the real domain. At zero b this embedded matrix is I.
+The denominator has its uniform gap. Its logarithm and the numerator
+logarithm have local trace-series catalogues by the same marked-cycle
+argument as the earlier complete Jacobian. Thus the full log J catalogue
+is retained. A naked constant Euclidean fiber measure is NOT substituted
+for (3.1).
+
+Let H_u=D_b^2 f_u(0) restricted to T_u. The first derivative vanishes
+by constrained stationarity. Its positive gap follows from the already
+proved constrained Hessian and the bounded tangent coordinate change.
+Extend H_u by zero on T_u^perp and set
+
+ Aprec_u=H_u+(I-P_u),
+ C_u=P_u Aprec_u^-1 P_u,
+ K_u=P_u Aprec_u^(-1/2) P_u.                          (3.3)
+
+The branch is the positive one on real data. This avoids taking a square
+root across the moving zero eigenvalues. The established resolvent and
+any-leg composition arguments give fixed-radius local analytic catalogues
+for P_u,C_u,K_u, with the same type of volume-independent constants and
+some fixed remaining localization reserve. On real data K_u maps a
+standard ambient Gaussian to the intrinsic Gaussian on T_u, and
+
+ K_u^t H_u K_u=P_u.
+
+Every factor in (3.1)--(3.3) is equivariant under R_h; determinants are
+invariant. In particular J_(u^h)(R_h b)=J_u(b), H_(u^h)=R_h H_u R_h^-1,
+and K_(u^h)=R_h K_u R_h^-1. The leading Gaussian density is gauge invariant
+separately. Its value agrees with that in the old chart by ordinary
+Gaussian change of variables; its coordinate factors need not separately
+look the same before their Jacobians are multiplied.
+
+4. PRODUCT COLOR BALLS GIVE A SEPARATELY INVARIANT AUXILIARY INTEGRAL
+
+Let q=dim g and let n_ch be the number of ambient fine chord color blocks,
+so m=q n_ch. Replace the old scalar cube by
+
+             C_T={xi: |xi_b|_g <=T for every chord b}.
+
+Its reference law mu_T is the product of normalized q-dimensional Gaussian
+balls, and c_(q,T)=Pr{|Z_q|<=T}. Its COMPLETE cutoff normalization is
+c_(q,T)^(n_ch), not a power of dim T_u and not one. Redundant Gaussian
+directions have still been retained.
+
+Define, exactly as in TURN45 but in the new chart,
+
+ V_z(xi,u)=-[f_u(zK_u xi)-s(u)-z^2 xi^t P_u xi/2]/z^2
+                    +log[J_u(zK_u xi)/J_*(u)].
+
+The apparent z=0 singularity is removable. Real compact gauges preserve
+each color ball and its Gaussian measure, and (2.4), (3.3) give
+
+              V_z(R_h xi,u^h)=V_z(xi,u).               (4.1)
+
+The physical source sum sum_p w_p h_p is invariant under the same map.
+Hence a change of the FIXED real Gaussian variables proves exact gauge
+invariance of the full auxiliary density and its normalized source log.
+No sharp complex cutoff has been moved. Local complex gauge identities
+follow from holomorphic uniqueness, initially proved for real h near I.
+
+The entire bounded-potential cluster proof still applies: cells now carry
+q coordinates, where q is fixed; each scalar coordinate is bounded by T;
+disjoint cells are independent; and simultaneous xi -> -xi preserves the
+product law. The any-leg catalogues above therefore give a local analytic
+logarithm F(z,u)=sum_X F_X(z,u), with F_X even in z and
+
+                         ||F(z,.)||_kappa <=C|z|^2 T^6.
+
+The whole F is gauge invariant. The Taylor/tree assignment used to obtain
+the F_X is not itself equivariant under local coarse gauges, so individual
+F_X are NOT claimed gauge invariant.
+
+The pure-tail comparison of TURN45 survives this replacement. The Gaussian
+union bound is now
+
+ Pr(C_T^c)<=C n_ch (1+T)^q exp(-T^2/2),
+
+and C_T lies in the same linear ball if n_ch T^2<<Lambda^2. The linear
+and Morse comparison requires an additional step because the tangent
+space moves. In particular, the indicator |P_u xi|<=R must NOT be used
+as a complex-parameter integration domain. Here is a fixed-domain repair.
+
+Let P_0=P_(u=0). On a smaller common datum domain set
+
+ W_u=P_u P_0+(I-P_u)(I-P_0),
+ O_u=W_u [I-(P_u-P_0)^2]^(-1/2).
+
+The convergent branch near I satisfies O_u^t O_u=I, det O_u=1,
+P_u O_u=O_u P_0, and ||O_u-I||<=C||u||. These algebraic identities
+hold for symmetric analytic idempotents with the bilinear transpose;
+on real u this is a real orthogonal matrix. The functions are analytic
+and bounded by the same resolvent/power-series argument. O_u is used
+only to justify a contour comparison, not as a new covariant carrier.
+
+First compare the product-color-ball integral with the integral on the
+FIXED FULL AMBIENT real ball |xi|<=R, R=c Lambda. Their common integrand
+is e^{-|xi|^2/2+V_z(xi,u)}, and their difference is bounded by the color-
+ball Gaussian union tail, exactly as in TURN45. The full ambient ball
+contains the product of balls once n_ch T^2<R^2/4.
+
+Next apply holomorphic Stokes in ambient dimension m to the two chains
+xi in B_R and O_u xi, xi in B_R, using
+
+ omega=(2pi)^(-m/2) exp[-xi^t xi/2+V_z(xi,u)] dxi_1...dxi_m.
+
+The interpolating side is xi_t=[I+t(O_u-I)]xi with |xi|=R. On this
+side Re(xi_t^t xi_t)>=R^2/2 after a fixed datum shrink, while
+|V_z(xi_t,u)|<=C|z|R^3+CN|z|R=o(1). The homotopy stays in the entire
+analytic fluctuation chart. Its volume and sphere factors are bounded
+by exp(Cm) times a polynomial in R, so the side contribution is
+O(exp(CN-cR^2)). The determinant at the final chain is exactly one;
+no absolute-value substitute for a complex Jacobian is made.
+
+In the final integral use the FIXED orthogonal decomposition
+xi=eta+nu with eta in T_0 and nu in T_0^perp. The identities above give
+K_u O_u nu=0 and (O_u xi)^t(O_u xi)=|eta|^2+|nu|^2. Thus V_z(O_u xi,u)
+is independent of nu. Replace the full ball by the cylinder
+|eta|<=R/2, nu arbitrary. The symmetric difference is bounded by a
+Gaussian tail: on the ball part outside the cylinder, |eta|>R/2;
+on the cylinder part outside the ball, |nu|>sqrt(3)R/2. The nonlinear
+factor is uniformly bounded since it reads only eta, with |eta|<=R
+on both parts. Hence this replacement also costs exp(CN-cR^2).
+Integrating nu gives one, exactly. The remaining integral is the
+linear whitened physical-tangent ball with fixed coordinate eta in T_0.
+
+Apply the TURN45 fiber Stokes comparison to that last d-dimensional
+ball, expressed in b=O_u b_0 coordinates. Its quadratic form is exactly
+|eta|^2/2, its linear and Morse chains stay in the analytic chart, and
+its side estimate is exp(CN-cR^2). The final radial comparison is the
+ORIGINAL d-dimensional Morse comparison with psi(t/E0) at real total
+energy t; the redundant normal variables never enter this cutoff.
+The common energy interval cancels exactly, leaving the same Gamma
+tail as before. No cutoff of an augmented normal-coordinate energy is
+introduced. All comparison integrals agree with the old actual density
+on real weak data, so their holomorphic extensions are the same branch.
+
+Combining these fixed-domain comparisons gives
+
+ |R_E-R_aux|<=C n_ch(1+T)^q exp(-T^2/2)
+                                      +C exp(CN-cLambda^2),
+
+with the previously stated exp(CN) division cost on the larger arbitrary-
+profile source disc. Increasing the fixed tail constants pays the extra
+polynomial in T. The constant-source local O(g^(2n+2)T^6) estimates remain
+unchanged in type. The exact full source log, its classical term, Gaussian
+vacuum, full local sum, and tail retain all their normalizers.
+
+Since the actual density and the new auxiliary density are separately
+invariant, their analytic logarithmic difference D is separately invariant
+on the compatible branch. This is stronger than inferring invariance only
+after adding a noninvariant local correction to its compensating tail.
+It is still a single finite-step statement, with the same energy window.
+
+5. A SAFE CARRIERWISE GLOBAL-COLOR PROJECTION
+
+Use color-ball datum domains, with invariant Euclidean norms on every Lie
+algebra factor. They lie inside a fixed slightly larger scalar polydisc
+after at most fixed color-dependent radius changes. Include all exterior
+datum slots if they are not identity. For a local analytic carrier define
+
+        P_col F_X(u,w)=int_G F_X(Ad_h u,w) dh.          (5.1)
+
+This compact average stays INSIDE the declared domain. It is analytic,
+does not enlarge the read set X, commutes with source and z derivatives,
+and contracts its supremum norm. Therefore it contracts every rooted
+exponential carrier norm. Apply it also to the tiny whole-box carrier.
+
+For any total function already invariant under simultaneous conjugation,
+sum_X P_col F_X=P_col(sum_X F_X)=sum_X F_X. Absolute convergence justifies
+the interchange. Thus (5.1) preserves the exact source identity and all
+established local/tail powers. At the all-identity datum, each projected
+carrier has zero linear datum jet: every linear covector would be invariant
+under the adjoint representation, which has no trivial subrepresentation
+for a semisimple Lie algebra. This holds at each fixed scalar source w.
+
+For a fixed nonidentity exterior that is NOT included as a transformed
+slot, full simultaneous-conjugation invariance need not hold. In that
+case (5.1) cannot silently replace the original total. Also (5.1) gives
+no Ward identity for gauges varying from vertex to vertex.
+
+6. WHY NAIVE LOCAL REYNOLDS AVERAGING DOES NOT FOLLOW
+
+A single weak link U=I is sent by independent endpoint gauges to h_-h_+^-1.
+For SU(2), choose h_-=I and h_+=-I. The transformed link is -I, outside
+every sufficiently small logarithmic chart about I. Thus the integral
+over all endpoint gauges asks for values that our analytic carriers do
+not possess on their stated domain. Knowing that their SUM has a global
+physical definition does not extend each summand there.
+
+There is a quantitative obstruction even to a uniformly bounded,
+support-preserving projection applied carrier by carrier. Consider a
+single simple cycle of m edges with free vertex gauges, SU(2) links, and
+the weak domain ||log U_e||<r, where 0<r is fixed and er<1. Put
+
+             W(U)=1-(1/2)Tr(U_1...U_m).
+
+This holomorphic class function is real on SU(2) and gauge invariant.
+Expand each U_e=I+(U_e-I). The expansion of W is a finite sum W_S over
+edge subsets S; the full-support term is
+
+             W_E=-(1/2)Tr product_(e in E)(U_e-I),
+                    ||W_E|| <=(e r)^m.              (6.1)
+
+Every proper subset can be assigned to a proper connected path carrier
+containing it (omit one missing cycle edge). Such a carrier is a forest.
+A gauge-invariant analytic function supported only on a forest is
+constant: its infinitesimal vertex gauge fields span all its link tangent
+directions near identity. This local argument does not require taking a
+large gauge transformation outside the chart.
+
+Suppose a linear support-preserving family P_X produces gauge-invariant
+carriers and preserves the sum of every gauge-invariant decomposition,
+allowing a constant vacuum adjustment. All projected proper-path terms
+are constant, so P_E W_E must reproduce all variation of W. Take all
+U_e=exp(i theta sigma_3/m) with fixed 0<theta<1 and m>theta/r. This field
+and identity are in the weak domain, and W changes by 1-cos(theta)>0.
+Consequently
+
+     ||P_E|| >= [1-cos(theta)]/[2(e r)^m].             (6.2)
+
+Hence no size-independent norm bound is possible for this proposed
+support-preserving projection. Its unavoidable exponential cost cannot
+be paid from an unspecified small localization reserve. The example
+does not rule out controlled support enlargement, a different covariant
+construction, or the specialized Bałaban localization scheme.
+
+7. INDEPENDENT BACKGROUNDS AND THE PUBLISHED LOCALIZATION THEOREM
+
+With an independent background V, the relative decoupling
+
+ U_e^s=V_e exp[s_e log(V_e^-1 U_e)]
+
+is equivariant under simultaneous endpoint transformations of U,V, on
+its common branch. Any alternating difference or anchored derivative
+constructed from a gauge-invariant total then remains jointly invariant.
+However a coefficient may still read V everywhere. Already the zero-
+increment term of F(U)=sum_p f_p(U) is F(V), which retains all background
+reads. A derivative coefficient of a general quasi-local F has the same
+issue. Thus this operation is not a strict-support producer unless the
+background dependence is separately localized. The independent current
+variables in the native construction are not manufactured by this fact.
+
+The relevant published result is Bałaban, CMP116 (1988), Lemma 2,
+pp.10--11, (1.41)--(1.43), and its integration Lemma 3, p.20, (2.38),
+with logarithmic estimate (2.41). It treats its original localized
+exponent on the CMP109 orbit/current domains, including the restricted
+reconstructions and its own operator walk deformations. The archived
+primary-source interface audit is cmp116_interaction_bridge_research.md.
+The primary publication metadata and abstract were rechecked this turn:
+https://doi.org/10.1007/BF01239022
+https://scholarship.libraries.rutgers.edu/esploro/outputs/journalArticle/Renormalization-group-approach-to-lattice-gauge/991031665969904646
+
+That theorem is a genuine route to carrierwise gauge invariance in its
+own setting. This note has not proved that our newly defined covariance,
+energy window, independent domains, or finite-step source match all its
+hypotheses. In particular a convergent polynomial expansion of a local
+covariant positive operator about scalar cI preserves covariance term by
+term, but saddle-dependent matrix coefficients can still read the datum
+globally. Its covariance does not by itself localize those datum reads.
+
+8. EXACT ADVANCE AND REMAINING OBLIGATION
+
+The moving orthogonal chart and color-ball reference remove a concrete
+finite-step cutoff/gauge mismatch. They provide separately gauge-invariant
+TOTAL local correction and tail, with the same local source powers and
+tail estimates, given the previously recorded all-arity geometric inputs.
+Global-color averaging additionally gives carrierwise color invariance
+and vanishing linear datum jets at identity.
+
+Neither result is the native carrierwise local-gauge theorem. An exact
+bounded localization of the saddle/background dependence on the required
+independent current/orbit domains is still missing. No all-scale Wilson
+history closure, large-field recurrence, physical nontriviality witness,
+or continuum existence is inferred.

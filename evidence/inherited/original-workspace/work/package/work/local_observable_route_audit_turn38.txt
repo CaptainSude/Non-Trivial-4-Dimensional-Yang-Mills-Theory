@@ -1,0 +1,250 @@
+LOCAL OBSERVABLE ROUTE: PUBLIC SCOPE AND A PRECISE RECONSTRUCTION TEST
+19 October 2026. public_argument_audit. Turn38.
+
+RESULT
+
+There is no overlooked public theorem constructing the full tensor
+hierarchy or its Wightman fields. The public zeroth draft expressly
+restricts its observable result to the scalar action density and
+separately excludes the relevant tensor and reconstruction conclusions.
+Its separate rotation note contains a useful, concrete exponential-slab
+argument, but that argument requires a value estimate before taking
+source derivatives. A normalized scalar pressure or a finite list of
+tensor jets is not that input.
+
+The new mathematical check below isolates one exact danger: even in a
+Gaussian model, complete single-block vacuum normalization can make all
+normalized complex partition amplitudes equal to one while their
+ordinary absolute majorants diverge with the number of ultraviolet
+modes. Thus the public exponential-slab proof cannot simply consume a
+normalized composite-source pressure estimate after inserting arbitrary
+boundary states. This does NOT refute the local Schwinger-source route,
+which needs no such arbitrary-state bound.
+
+1. WHAT THE PUBLIC CONSTRUCTION ACTUALLY STATES
+
+Primary snapshot: Ethan Sussman/Levent Alpoge repository, commit
+785a68fdeef78a1da854c4807fe1f17b597d05e7 (the turn37 live check found
+14 commits, no newer public companion).
+
+https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/blob/785a68fdeef78a1da854c4807fe1f17b597d05e7/ym4_manuscript_zeroth_draft.pdf
+
+Precise locators in that primary draft:
+
+ * p5 explicitly excludes multiple stress tensors, the topological
+   density, other F tensor F components and Wilson loops. It does not
+   assert Wightman fields, clustering or unconditional full rotations.
+ * Section4.4, Theorem4.17, pp73--75 constructs the scalar OS Hilbert
+   space and the translation semigroup, using per-ball bounds.
+ * Remark4.19, p75 distinguishes that construction from field operators.
+   It attributes a factorial-growth improvement to a companion and
+   does not include it in Theorem0.
+ * Remark8.22, p141 again limits its conditional rotation result to the
+   scalar observable. Section9 states which companion results are
+   claimed complete and which inputs remain separately assumed.
+
+This is stronger than mere compactness, but is intentionally narrower
+than the full observable goal. The protected constant scalar source is
+a coupling shift; rotating it does not manufacture independent tensor
+source directions. The single stress insertion used in its rotation
+argument is not a common repeated stress-tensor source theorem.
+
+The older raw I/II/III architecture and its finite scalar fusion frames
+have already been traced in repository_route_reset_turn30 and the
+earlier fusion audits. Their required physical diagonal matching and
+joint source estimates cannot be replaced by the title of an unpublished
+companion. No newly public proof of those missing tensor clauses was
+located in this bounded check.
+
+2. WHAT FULL EUCLIDEAN COVARIANCE DOES AND DOES NOT SETTLE
+
+Primary: Osterwalder--Schrader II, CMP42(1975)281--305.
+https://doi.org/10.1007/BF01608978
+https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-42/issue-3/Axioms-for-Euclidean-Greens-functions-II-with-an-Appendix-by/cmp/1103899050.pdf
+
+Its introduction, pp282--283, already includes full Euclidean covariance
+when distinguishing analytic continuation from tempered boundary values.
+ChapterIII's alternative is continuity in the joint Fourier--Laplace
+image topology. ChapterVI is precisely the additional temperedness
+estimate; covariance has not been postponed until after that step.
+Consequently our time-only counterexample is not a four-dimensional
+counterexample, but adding O(4) is not an omitted hypothesis that makes
+the cited reconstruction proof automatic.
+
+For this project the per-arity target remains, with the notation and
+precise cone seminorm of per_arity_reconstruction_audit_turn36,
+
+  |S_(n-1)(f)| <= C_n p_(N_n)(L f on (V_+)^(n-1)).       (2.1)
+
+Ordinary real Euclidean Schwartz bounds are different seminorms.
+No common factorial bound is logically necessary if (2.1) is proved.
+Conversely, a common factorial bound is one available sufficient route,
+not a consequence of asserting rotations.
+
+Zinoviev's primary alternative, Theorem4.1, also adds an explicit weak
+spectral/inverse-Laplace condition to E0--E4:
+https://arxiv.org/pdf/hep-th/9408009
+That condition has not been verified by the fixed-order source moments.
+I do not assert a general impossibility theorem for fully Euclidean
+covariant hierarchies, or that a question left open in the original OS
+paper is resolved by our time-only example.
+
+3. THE CONCRETE PUBLIC SLAB BRIDGE
+
+Primary separate note:
+https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/blob/785a68fdeef78a1da854c4807fe1f17b597d05e7/QED3_slop/YM_Rotation_Invariance_simplified.pdf
+
+Theorem A assumes a probability law of linearly closed two-forms with
+a full Gaussian exponential bound for all real L2 tests. AppendixA.1,
+pp13--14, proves an exponential slab bound by repeated RP
+Cauchy--Schwarz; AppendixA.4 then differentiates a common holomorphic
+source ball to obtain a bounded insertion operator. This is an actual
+argument under its assumptions. It is not a theorem for nonabelian
+curvature bilinears or their normalized source generating functions.
+
+The exact reusable part can be stated without assuming a Gaussian law.
+Assume a time-translation-invariant RP law on arbitrarily long time
+intervals, for example an infinite-time law at fixed ultraviolet cutoff,
+or a compatible volume limit with the following bounds uniform in time
+length. A SINGLE fixed periodic time box is not enough for the limit
+m->infinity below. Let a be a bounded complex amplitude in a time slab
+of width ell. Let a# be its translated reflected-conjugate product,
+in a slab of width L=2ell. It is reflection symmetric with conjugation.
+Let K_m be m adjacent copies of a#. Suppose one has the ACTUAL bound
+
+       E |K_m| <= exp(m p + o(m))                        (3.1)
+
+along dyadic m, with p uniform in the cutoff. Then the slab operator
+
+              T_a[A]=[a U_ell A]
+
+on bounded positive-time observables obeys ||T_a||<=exp(p/2).
+Here all normalizing scalar factors are part of a and remain in K_m.
+
+Proof. Set b=||[A]|| and b_m=||[K_m U_(mL) A]||. Reflection and a common
+translation give b_m^2<=b b_(2m). Also
+
+  b_m^2 <= ||A||_infty^2 E |K_(2m)|
+          <= ||A||_infty^2 exp(2m p+o(m)).
+
+Iterating the first inequality, taking the 1/m power of the second,
+and sending dyadic m to infinity gives b_1<=b exp(p). A final reflected
+identity for a gives ||T_a A||^2<=b b_1. Null vectors are killed by the
+same inequalities. This proves the assertion.
+
+If (3.1) holds uniformly for a holomorphic amplitude a_z on a common
+complex source disc, then operator-valued Cauchy estimates give bounded
+source insertions. It suffices to control copied versions of the chosen
+slab profile; one need not begin by postulating an operator norm on all
+states. However (3.1) really is an ordinary absolute estimate in the
+last step with A. Replacing it by |E K_m| is not justified.
+
+4. AN EXACT COMPOSITE-NORMALIZATION OBSTRUCTION TO THAT SUBSTITUTION
+
+Let xi_1,...,xi_N be independent standard real Gaussians and put
+
+  F_N=sum_(j=1)^N (xi_j^2-1),
+  Z_N(z)=E exp(z F_N)=exp(-Nz)(1-2z)^(-N/2),
+  a_N(z)=exp(z F_N)/Z_N(z),                |z|<1/2.       (4.1)
+
+Use the analytic logarithm continued from zero. These are centered
+quadratic marks and their COMPLETE one-block normalization, not a
+missing mean subtraction. For independent blocks,
+
+           E product_(blocks b) a_N(z_b)=1              (4.2)
+
+for any complex sources in the disc. Thus every such normalized
+partition amplitude has a perfect cutoff-uniform value bound. Its
+cross pressure is zero.
+
+Nevertheless for real t!=0,
+
+ |Z_N(it)|=(1+4t^2)^(-N/4),
+ |a_N(it)|=(1+4t^2)^(N/4),
+ E |product_(b=1)^m a_N(it)|
+                   =(1+4t^2)^(Nm/4).                   (4.3)
+
+The per-copy pressure in the absolute bound grows linearly in N.
+Reflected pairs with conjugate parameters do not fix this: the absolute
+cost doubles per pair. For real z, by contrast, a_N(z) is positive with
+mean one and independent-copy pressure zero. Therefore real normalized
+pressure bounds do not provide the holomorphic absolute bound needed
+to apply Cauchy after the proof in Section3.
+
+This is NOT a counterexample to a uniform actual OS insertion norm:
+in a completely independent block model the operator may collapse to
+its constant expectation. It is a counterexample to the proposed
+positive-majorant inference. The cancellation is precisely what taking
+absolute values before the appropriate conditional integration loses.
+It explains why the free off-diagonal determinant formulas in turn37
+must not be promoted to arbitrary-boundary Schur bounds merely because
+their normalized partition amplitudes are uniformly holomorphic.
+
+4A. REAL ARRAY BOUNDS DO NOT CONTROL EVEN ONE SOURCE DERIVATIVE
+
+There is a separate exact RP countertest with genuinely unbounded
+derivative norm, rather than merely a failed majorant argument. Take
+one symmetric Rademacher variable sigma and the stationary process
+sigma(t)=sigma for all real times. Its positive-half RP form is the
+ordinary L2 form on this two-point space. Time translations are the
+identity, with positive generator H=0. Thus arbitrarily many adjacent
+time copies are available in one common stationary RP law.
+
+For integer N define F_N=N sigma and the fully normalized amplitude
+
+ B_N(t)=exp(tN sigma)/cosh(Nt)=1+sigma tanh(Nt).
+
+For EVERY real t, 0<B_N(t)<2. Consequently every real array of m copied
+amplitudes, with arbitrary choices of the real source values, satisfies
+
+ E |product_(a=1)^m B_N(t_a)|<=2^m,
+
+uniformly in N. In particular the reflected two-copy kernel is
+
+ E[B_N(s)B_N(t)]=1+tanh(Ns)tanh(Nt)<=2.
+
+Yet B_N'(0)=N sigma has OS norm N. The complex poles of the normalized
+amplitude occur at z=i pi(2k+1)/(2N), approaching zero. This proves that
+a real interval of positive, uniformly bounded normalized arrays plus
+RP cannot replace the common COMPLEX germ required to differentiate
+the slab bound. No uniform lower bound on opposite-sign two-copy
+partition values is claimed or needed for this countertest.
+
+The finite two-half version has law
+P(sigma_+,sigma_-)=(1+rho sigma_+sigma_-)/4, 0<rho<=1,
+and RP Gram diag(1,rho). Its derivative has reflected square rho N^2.
+The constant-time version rho=1 additionally verifies the arbitrarily-
+long-time assumption used in Section3. Neither example claims the
+full spatial/field hypotheses of a four-dimensional gauge theory.
+
+5. CONSEQUENCE FOR THE ACTUAL LOCAL TENSOR TARGET
+
+The local Schwinger-source route is strictly less demanding than the
+arbitrary-state slab route just tested. Its complex chessboard estimate
+can use complete reflected source partition functions with their actual
+vacuum catalogue. It does not insert an arbitrary bounded boundary A
+and need not establish (3.1). The failure in Section4 is therefore no
+obstruction to that route, and no reason to reopen the scalar proof.
+
+What the public scalar construction does NOT provide is the corresponding
+local, total-volume-uniform tensor source estimate after its own complete
+tensor/mixed vacuum subtraction. Fixed-order coefficients on a finite
+stopped volume do not give a common complex value disc, and O(4)
+covariance does not supply its missing coefficient estimates. The
+published/public rotation note uses a stronger full-value assumption,
+not a finite-order replacement for it.
+
+Thus the productive next action remains a direct estimate of the actual
+local tensor source coefficients or source amplitudes, with the complete
+same-law vacuum/copy cancellations retained. There is no need to prove
+arbitrary-state Schur bounds first. If a per-arity reconstruction route
+is pursued instead, (2.1), rather than another real-moment bound, is the
+additional estimate that must be established. No primary theorem read
+here derives (2.1) solely from the current real fixed-order bounds plus
+full rotations.
+
+This audit neither strengthens the full YM conclusion nor turns the
+scalar subtheory into a claimed complete gauge-invariant observable
+algebra. It identifies a precise public scope and a concrete failed
+normalization inference, with the original simpler local-source route
+left intact.

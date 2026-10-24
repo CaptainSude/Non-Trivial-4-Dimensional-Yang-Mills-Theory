@@ -1,0 +1,213 @@
+BARE CHESSBOARD AND SURVIVING BAD HISTORIES: EXACT MISSING INTERFACE
+18 October 2026. Short audit; no new normalized component claim.
+
+1. WHAT WOULD SUFFICE
+
+Let C be a closed reflection cell in the original bare Wilson lattice,
+and let p_C(U) be a nonnegative bounded function of links in C (with
+the usual shared-face convention). Suppose the bad-history contribution
+in that cell is dominated by p_C and its reflected disseminated product
+has the source estimate
+
+  Z(prod_reflections p_C) <= exp[-m p_bad+C_+ V_stop],
+  Z(1) >= exp[-C_- V_stop],   V_stop=m v_C.
+
+The bare reflection-positive chessboard inequality then gives
+
+  <p_C> <= exp[-p_bad+(C_++C_-)v_C].
+
+Thus an extensive stability bound is not itself fatal: its volume
+factor disappears after the chessboard root. The source suppression
+must dominate the actual cell volume v_C, including any logarithmic
+collar. This argument also needs a positive majorant for the marked
+numerator, not just an unmarked event probability.
+
+2. THE HISTORY INDICATOR IS NOT YET SUCH A BARE LOCAL FUNCTION
+
+A surviving component of the R-resampled description is an event in
+the auxiliary history. It need not be a deterministic event of the
+original Wilson field. Reflection positivity of the bare measure does
+not imply reflection positivity of an arbitrary positive stochastic
+resampling law or of its joint auxiliary law.
+
+Even if a history is triggered by some initial bad plaquette, the
+proxy 'at least one initial bad plaquette in the ancestor cell' is
+too weak. A fixed physical cell contains exponentially many bare
+plaquettes as the ultraviolet inverse coupling grows, whereas a
+single initial bad-field gain is exp[-c(log gamma_0)^p]. A naive
+union over that initial mesh can exceed one. The lifetime renewal
+implemented by R is precisely what this proxy throws away.
+
+3. A PRECISE POSSIBLE DUAL-KERNEL ROUTE
+
+If the fixed source-free positive mass-preserving R construction is
+written as a Markov kernel on the finite-regulator original measure,
+its adjoint defines
+
+  p_bad(U_bare)=P(auxiliary bad history | U_bare),  0<=p_bad<=1.
+
+Its expectation is the desired unmarked bad probability. To use bare
+chessboard one must additionally prove BOTH:
+
+ (a) A positive closed-cell local domination or approximation for this
+     dual function, with a summably small error for histories whose
+     complete carrier leaves the cell.
+ (b) The reflected copies' product is bounded by the same disseminated
+     source/lifetime majorant, with independent local reference factors
+     or an exact compatible factorization.
+
+These are not consequences of mass preservation. In particular the
+localized connected coefficients of the unnormalized T expansion can
+have signs. They are not probabilities of localized histories.
+Localizing an actual conditional probability may involve its component
+reference denominator, whereas our nilpotent history estimate purposely
+never divides by T(X)1. The source's absolute opened-history bound does
+not alone bound that new ratio or prove (a),(b).
+
+4. PRESENT AUDIT RESULT
+
+The regular original-tube nilpotent recurrence and the unnormalized
+healed/annular tails are established at the scope stated in
+finite_prefix_nilpotent_tail_control_2026-10-18.txt (independently
+audited by minimal_route). The Gaussian omitted-infrared covariance
+in gaussian_finite_prefix_infrared_remainder_2026-10-18.txt also checks:
+Schur complement, direct-prefix F C F bound, and Wick give precisely
+C g^4[(h rho)^4+(h rho)^8]. The original-tube neutral endpoint bound
+in endpoint_original_tube_neutral_2026-10-18.txt closes the good-sector
+remainder using its literal dated extensions.
+
+None of those three statements supplies the positive local dual-kernel
+interface (a),(b). Accordingly the normalized contribution of surviving
+large-field components remains open here. A proof should supply this
+interface, an RP-preserving auxiliary law, or a genuine normalized
+polymer/relative-partition estimate. Dividing existing upper and lower
+stability bounds only gives exp(C V_stop), which is insufficient before
+one of these locality mechanisms is proved.
+
+5. DIRECT REAL PEIERLS SURGERY: THE SPECIFIC MISSING LOWER COMPARISON
+
+Primary check: CMP122-II, pp377--380, (1.68)--(1.75), at
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+The action is completed in (1.70), with the difference entered in V.
+The original own-scale core bound (1.69) controls this difference.
+At p378 the components are split according to the current small/bad
+characteristic functions. The good class permits reversing the gauge
+fixing only after integration of the current variables on that component.
+The surviving class retains the bad current characteristic function.
+
+Equations (1.73)--(1.75) compare the same T_k(X) at a complex and a
+real background. Its real density is positive. Normalizing that SAME
+operator gives a bounded expectation, although T_k(X,(U,0))1 can be
+arbitrarily small. This is not a comparison to the healed component.
+In particular the current coarse/background U is fixed in this
+operator. Dividing the historical B/T_h integral by its mass does not
+change a current bad U into a current good fill.
+
+Here is a precise sufficient surgery inequality. Let xi denote the
+unchanged exterior/current collar plus the retained outside history.
+Let D_ref(xi) be the actual positive reference filling normalization,
+and let F_out(xi) be the outside factor kept exactly. The already
+proved bad-field estimate has to be matched to the form
+
+  W_bad(X|xi) <= exp[-p_X+C nu_X] D_ref(xi) F_out(xi).
+
+One then needs an ADMITTED healed class of the ACTUAL density, with
+the same xi and a controlled inverse multiplicity, such that
+
+  W_fill(X|xi) >= exp[-C' nu_X] D_ref(xi) F_out(xi).    (RF)
+
+Here nu_X is the original sum of own-scale volumes/action debits,
+not a fine-volume count of a later component. Dividing these two
+inequalities and summing a surgery map with inverse multiplicity
+at most exp(C'' nu_X) would cancel the global Z and give the desired
+normalized Peierls bound.
+
+To derive (RF) from the reference measure it suffices to exhibit an
+actual healed-field set G_X(xi) whose reference probability is at
+least exp[-C nu_X], and on which the actual/reference density ratio
+is at least exp[-C nu_X], with all constraints, gauge volumes, vacuum
+terms, and historical normalizers included. The reference kernel's
+normalization alone says its TOTAL mass is one; it says neither that
+G_X is admissible nor that it has this lower probability.
+
+The source action completion (1.68)--(1.70) is useful for the local
+density-ratio cost once the SAME fill and external constraints have
+been matched. It does not itself supply the good-field subset or its
+lower mass. The current-field integration and determining-set change
+are the unproved matching step. Nor may one bound a fill's classical
+action absolutely by gamma alpha_0^2 per site: the original analytic
+radius alpha_0=g log^q can make that cost larger than the available
+bad-field reserve. The actual common reference/minimum must cancel
+before the remaining perturbative debit is estimated.
+
+Conclusion of this source audit: (1.73)--(1.75) do not prove (RF).
+They provide real positivity and a normalized expectation on a fixed
+selected component. A local lower fill estimate with the changed
+current determining data, together with the surgery multiplicity,
+would be a concrete sufficient repair. It has not been extracted
+from the presently checked primary equations.
+
+6. A SHARP NEGATIVE TEST: A GOOD COLLAR WITHOUT A FRACTIONAL MARGIN
+
+Consider a fixed finite cubical Abelian lattice box, with Dirichlet
+potential on a full exterior collar and interior gauge fixed. Its
+quadratic Wilson measure is exp[-||dA||^2/(2g^2)]dA. Let A_bar be an
+affine potential whose only nonzero curvature component is the constant
+t_g on every (1,2) plaquette. It is stationary for the interior action,
+because d^*d A_bar=0. The conditional field is exactly
+
+  A=A_bar+g X,
+
+where X is a centered Dirichlet Maxwell Gaussian independent of g.
+Choose an interior plaquette p for which the curvature functional
+Y=(dX)_{12}(p) has variance sigma^2>0; such a plaquette exists in any
+box with an interior cycle. Put epsilon_g=g(log g^-2)^p, p>0, and
+t_g=epsilon_g-g^2. The entire fixed exterior collar is strictly good:
+its curvature magnitude is less than epsilon_g. Nevertheless
+
+ P((dA)_{12}(p)>epsilon_g | exterior=A_bar)
+       =P(Y>g) -> 1/2.
+
+Consequently the conditional weight of a bad interior cube cannot be
+bounded by exp[-c(log g^-2)^nu] times its good-filling weight uniformly
+over all exterior collars satisfying ONLY |F|<epsilon_g. This already
+fails in the flat quadratic gauge theory, before questions about R
+normalizers, source counterterms or changing determining sets arise.
+The background tends to zero and is inside every fixed small-field
+analytic ceiling. Large absolute action of the background does not
+repair the ratio: its common classical action cancels exactly.
+
+This is a counterexample to that proposed UNIFORM COLLAR INFERENCE,
+not yet a counterexample to the source's actual component geometry.
+If its literal prepared collar supplies a strict bound theta epsilon
+with theta<1/C for the relevant filling estimate, the example is
+excluded. Alternatively a surgery can enlarge the component to absorb
+near-threshold collars, but it must prove termination, multiplicities
+and compatibility with the original determining constraints.
+
+There is also an important alternative threshold. The endpoint analytic
+tube a=g(log gamma)^q is much wider than epsilon=g(log gamma)^p when
+q>p. A collar O(polylog·epsilon) may be a vanishing fraction of a,
+so the example does not obstruct an estimate for genuine violations
+of the analytic tube. The original R reference is concentrated near
+its regular minimizing fill and explicitly cuts its displacement.
+But an R-history mark can retain old core data even when its CURRENT
+field is analytic; classifying a current field as good is not by itself
+an identification of that history-dependent mark with the universal
+regular coefficient. That identification or a relative history bound
+would still be necessary for the normalized witness calculation.
+
+7. PRIMARY ACCESS UPDATE
+
+The corrected official Part I endpoint was retried:
+https://projecteuclid.org/download/pdf_1/euclid.cmp/1104178393
+It returns a security HTML response rather than the PDF in the current
+environment. Springer exposes subscription metadata; OpenAlex lists
+no alternative open PDF and INSPIRE record 282445 has no document.
+No security challenge was bypassed. Part I (1.99)--(1.102) has therefore
+NOT been newly inspected here. The directly readable Part II pp356--359
+does analyze its reference denominator: the regular minimizer fixes
+averages on Z minus Lambda, allows all variations supported in Lambda,
+and the Gaussian-normalized integral has lower bound exp[-O(|Lambda|)]
+after its classical action is extracted. This proves the local reference
+normalization lower bound, not the actual healed-branch comparison RF.

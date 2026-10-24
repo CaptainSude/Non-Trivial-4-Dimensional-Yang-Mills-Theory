@@ -1,0 +1,397 @@
+ACTUAL SPATIAL-FLOW DERIVATIVES AND GAUGE-ORBIT TEMPLATE ENTROPY
+TURN66 -- 20 October 2026. gauge47.
+
+RESULT AND PRECISE LIMIT
+
+The TURN65 finite-template consumer asks for deterministic linear
+source arrays with variance proxy O(a/beta), logarithmic family size
+O(beta), and a separately controlled actual remainder. A natural
+attempt is to approximate the actual magnetic probe's random derivative
+by a uniform relative net in the source norm.
+
+That particular uniform-net attempt fails on an explicit smooth
+background for the ACTUAL nonlinear compact SU2 spatial flow.
+Its gauge orbit alone has a fixed-relative-radius packing with
+
+                         log M >= c a^-3.
+
+The derivative has the desired squared source norm comparable to
+a/beta. The obstruction is not a loose cover of arbitrary matrices:
+every packed array is the true derivative of the same gauge-invariant
+flowed scalar, at a gauge transform of one specified background.
+
+There is also a one-edge counterexample to inheriting TURN65 after
+a field-dependent gauge choice. Making the present link the identity
+turns the scalar aligned increment into its positive plaquette energy.
+It has strictly positive mean, contradicting the centered source bound
+that such a direct substitution would require.
+
+These results do NOT disprove the full finite-template consumer with
+an actual L2 remainder. We do not prove a uniform Wilson mass lower
+bound for the derivative-spread backgrounds. A different observable-
+level approximation, a probability-dependent exception set, or a new
+properly centered gauge-fixed source theorem remains possible.
+
+Inputs read: current_proof_frontier_turn65.txt,
+temporal_multislab_addendum_turn65.txt,
+spatial_magnetic_gaussian_limit_turn63.txt,
+nonlinear_spatial_flow_energy_turn65.txt.
+All new statements below follow from finite-lattice identities and
+elementary Fourier/ODE estimates; no continuum nonlinear-flow theorem
+is imported.
+
+1. THE ACTUAL PROBE, METRIC AND SOURCE ARRAYS
+
+Fix physical L,s,g_*,alpha>0 and cubic spatial tori of spacing a=L/N,
+with N tending to infinity. Use positively oriented spatial edges
+and the Pauli/2 metric. The actual compact spatial flow is
+
+                 dV_s/ds=-4a^-2 grad S_sp(V_s).
+
+At a fixed spatial plaquette p0 of orientation12 let
+
+ F_a(U)=exp[-alpha |2p(P12(V_s;0))/(g_*a^2)|^2],       (1.1)
+
+where P=p0 I+i p.sigma. This is the original finite-regulator,
+bounded, gauge-invariant scalar, not a Gaussian replacement.
+
+Identify each link with its unit quaternion q_e in R4. Define b_e(U)
+to be the ROUND-EUCLIDEAN tangential gradient of F_a on that factor:
+
+ DF_a(U)[delta q]=sum_e b_e(U).delta q_e,
+ b_e(U).q_e=0.                                      (1.2)
+
+This is the canonical tangential coefficient array, not an arbitrary
+extension in the normal direction. Its source norm at homogeneous
+beta is
+
+                 ||b||_beta^2=beta^-1 sum_e |b_e|^2. (1.3)
+
+The quaternion gauge action is orthogonal on each edge. Equivariance
+of the flow and invariance of F_a therefore imply the EXACT identity
+
+               b_e(U^g)=O_e(g)b_e(U).                 (1.4)
+
+For a center gauge g_x=sign_x I, sign_x in{+1,-1},
+O_e(g)=sign_x sign_y I4 on e=(x,y).
+
+2. A WEIGHTED STAR-CUBE ENTROPY LEMMA
+
+Let V be any independent set of spatial vertices, so no edge joins
+two members. Their incident edge stars are disjoint. For a fixed
+coefficient array b put
+
+ q_v=beta^-1 sum_(e incident to v)|b_e|^2, v in V.
+
+Changing the center sign independently at the vertices of V flips
+the complete coefficient array on each corresponding star and
+leaves other edges unchanged. Thus for two such gauges indexed
+by signs epsilon,eta,
+
+ ||b^epsilon-b^eta||_beta^2
+                 =4 sum_(v:epsilon_v!=eta_v) q_v.     (2.1)
+
+Suppose |V|=d and q_v>=q_min>0. A greedy binary packing supplies
+at least exp(c d) sign vectors with mutual Hamming distance at
+least d/4. Indeed a Hamming ball of radius d/4 has at most
+exp[H(1/4)d+o(d)] elements, with H(1/4)<log2; divide the
+2^d-element cube by this bound.
+
+The corresponding derivative arrays have mutual distance at
+least sqrt(d q_min). Hence every cover by balls of radius less
+than sqrt(d q_min)/2 needs at least exp(c d) centers, even when
+the centers are arbitrary arrays not themselves on the orbit.
+
+If d q_min>=c0||b||_beta^2, this is a fixed-relative-radius
+entropy lower bound. It uses complete incident stars, so no
+edge affected by the gauge action is discarded.
+
+3. AN EXPLICIT SMOOTH BACKGROUND FOR THE NONLINEAR FLOW
+
+Let k=2pi/L and choose a sufficiently small FIXED epsilon>0.
+Set
+
+ U2(x)=exp[i theta2(x)sigma3/2],
+ theta2(x)=a epsilon sin(k x1),    U1=U3=I.            (3.1)
+
+All links are Cartan valued. The spatial flow preserves this
+subgroup and the dependence on x1 alone. The only curvature angle
+is phi=d1 theta2 on12 plaquettes. With d the dimensionless lattice
+exterior derivative and d* its counting-measure adjoint, the
+abelian flow and its curvature equation are exactly
+
+ theta'=-2a^-2 d* sin(d theta/2),
+ phi'=-2a^-2 Delta_1 sin(phi/2).                     (3.2)
+
+Here Delta_1=2-shift_1-shift_1^-1 is the positive scalar lattice
+Laplacian in the x1 direction. The other curvature components
+stay zero.
+
+Initially |phi|<=k epsilon a^2. For small a this is inside the
+interval on which sin(phi/2) is increasing. At a maximum of phi
+the right side of(3.2) is nonpositive, and at a minimum it is
+nonnegative. Thus, for all 0<=t<=s,
+
+                    ||phi_t||infty<=k epsilon a^2.    (3.3)
+
+The real angles may be evolved on their real covering space;
+exponentiating gives the exact compact flow. This is not a
+claim about a gauge-fixed quantum field.
+
+Since sin(phi/2)-phi/2=O(epsilon^3 a^6), Duhamel for the scalar
+heat equation, using ||Delta_1||infty<=4, gives
+
+ ||phi_t-exp(-t Delta_1/a^2)phi_0||infty
+                         <=C_s epsilon^3 a^4.        (3.4)
+
+At the plaquette based at x1=0, the single Fourier mode therefore
+satisfies
+
+           phi_s(0)/a^2 -> epsilon k exp(-s k^2).     (3.5)
+
+In particular this physical magnetic component is nonzero, with
+size comparable to epsilon. It remains small but fixed as a->0.
+
+4. EXACT CARTAN LINEARIZATION AND ITS POINT-CURL ROW
+
+Allow an arbitrary Cartan variation of every initial spatial link,
+not just a variation preserving the one-dimensional ansatz. Its
+linearized angle equation is
+
+ delta theta'=-L_t delta theta,
+ L_t=a^-2 d* C_t d,
+ C_t(p)=cos(phi_t(p)/2).                              (4.1)
+
+C_t=1 except possibly on12 plaquettes, and(3.3) implies
+
+ ||C_t-I||infty<=C epsilon^2 a^4,
+ E_t=L_t-L0, L0=a^-2 d*d,
+ ||E_t||_(l1->l1)<=C epsilon^2 a^2.                  (4.2)
+
+Let T(s,0) be this exact linearized propagator and let
+
+                   k_a=T(s,0)* d* delta_(p0).         (4.3)
+
+Then delta phi_s(p0)=sum_e k_a(e) delta theta_e(0).
+The initial covector d*delta_(p0) has four entries of modulus1.
+
+Both L_t and L0 preserve divergence-free1-forms, since
+d_0* d_1*=0. On this subspace the flat L0 is the componentwise
+scalar lattice Laplacian, divided by a^2, by the discrete Hodge
+identity. The covector in(4.3) is in that subspace. E_t also maps
+into it.
+
+To estimate(4.3), solve the adjoint equation in reversed time:
+w'(r)=-L_(s-r)w(r), w(0)=d*delta_(p0).
+Then w(s)=k_a. Duhamel relative to scalar heat and(4.2) give
+
+ ||w(r)||1<=4 exp(C epsilon^2 a^2 r).                 (4.4)
+
+Let H_r^a be the scalar heat kernel on the physical L-torus.
+It is nonnegative with l1 mass1. Its finite Fourier series gives,
+for 0<r<=s,
+
+ ||H_r^a||infty
+    <=min{1,C_L a^3(1+r^-3/2)},
+ int_0^s ||H_r^a||infty dr<=C_(s,L) a^2.             (4.5)
+
+For example the first bound follows by comparing
+a^3 L^-3 sum_k exp(-r omega_a(k)^2) with the Gaussian sum,
+using omega_a(k)>=2|k|/pi in the Brillouin zone. Splitting
+the integral at r=a^2 proves the second estimate.
+
+Let k_a^0=exp(-s L0)d*delta_(p0). Equations(4.2)--(4.5)
+give a pointwise, uniform-in-volume-sequence bound
+
+                 ||k_a-k_a^0||infty
+                         <=C_(s,L) epsilon^2 a^4.    (4.6)
+
+This estimate does not assume the full nonlinear tangent is
+uniformly parabolic on arbitrary gauge backgrounds. It concerns
+the explicit Cartan background, its exact Cartan variation,
+and a uniformly small coefficient perturbation of scalar heat
+on the divergence-free subspace.
+
+5. A POSITIVE-VOLUME REGION OF ACTUAL DERIVATIVE COEFFICIENTS
+
+For fixed s,L the scalar lattice heat kernel satisfies
+
+ a^-4[H_s^a(x+a e_i)-H_s^a(x)]
+                      ->partial_i H_s,L(x)           (5.1)
+
+uniformly on lattice points, where H_s,L is the continuum heat
+kernel on the physical torus. This elementary comparison concerns
+the FLAT propagator only. To prove it, use its finite Fourier
+series, divide the difference multiplier by a, and dominate
+each summand by C|k|exp(-c s|k|^2). The latter is summable
+on the fixed dual lattice. The Fourier tails give uniform
+convergence in x.
+
+The periodic heat kernel is nonconstant at every finite s>0.
+Consequently there is a fixed open region O of positive volume
+where |partial_1 H_s,L|>=c_(s,L)>0. The edge2 component of
+k_a^0 is, up to a harmless shift/sign, the difference in(5.1).
+Therefore
+
+ |k_a^0(e)|<=C_(s,L)a^4 on every edge,
+ |k_a^0(e2,x)|>=c_(s,L)a^4 for x in O                (5.2)
+
+for sufficiently small a (shrinking O slightly if needed).
+Choose the fixed epsilon small enough that the right side of
+(4.6) is less than half the latter lower bound. Then(5.2)
+holds for the ACTUAL k_a with changed constants.
+
+It remains to relate this Cartan row to the complete gradient,
+rather than merely one component of it. The entire background
+and its flow are fixed by every constant Cartan gauge rotation.
+F_a is gauge invariant. Its derivative in either transverse
+color at each edge must therefore vanish: those two components
+rotate nontrivially under this stabilizer. Only the Cartan
+tangent component can remain. This is an exact symmetry
+statement at the chosen background.
+
+On the Cartan output plaquette,
+
+ F_a=exp[-4alpha sin^2(phi_s/2)/(g_*^2 a^4)],
+ partial_phi F_a
+         =-2alpha sin(phi_s) F_a/(g_*^2 a^4).          (5.3)
+
+By(3.5), its modulus is between c epsilon/a^2 and
+C epsilon/a^2. For q_e(theta) the initial quaternion,
+|q'_e(theta)|=1/2. The tangential gradient in(1.2) is exactly
+
+        b_e=4(partial_phi F_a) k_a(e) q'_e(theta).     (5.4)
+
+Thus, with constants depending on fixed physical parameters
+and the chosen small epsilon,
+
+ |b_e|<=C epsilon a^2 on every edge,
+ |b_(e2,x)|>=c epsilon a^2 on a positive-volume O,
+ c epsilon^2 a/beta<=||b||_beta^2
+                         <=C epsilon^2 a/beta.       (5.5)
+
+No Gaussian-law comparison has been used. This is a coefficient
+calculation for the exact nonlinear compact observable.
+
+6. APPLYING THE ENTROPY LEMMA TO THIS ACTUAL DERIVATIVE
+
+Among the sites x in O choose an independent vertex set V.
+The degree-six spatial graph admits such a set with
+
+                    d=|V|>=c_(O,L) a^-3.
+
+Each selected vertex has an incident edge2 coefficient satisfying
+the lower bound in(5.5); all its at most six incident coefficients
+obey the upper bound. Hence
+
+       c epsilon^2 a^4/beta<=q_v
+                         <=C epsilon^2 a^4/beta.     (6.1)
+
+Equations(5.5),(6.1) give d q_min>=c0||b||_beta^2.
+Section2 now supplies exp(c a^-3) true coefficient arrays,
+all on one gauge orbit of(3.1), with pairwise distance at least
+c'||b||_beta.
+
+For some fixed delta>0, independent of a and beta, every
+deterministic weighted-l2 net satisfying
+
+ sup_g inf_(r<=M)
+       ||b(U^g)-b^(r)||_beta <=delta ||b(U)||_beta
+
+therefore has
+
+                         log M>=c a^-3.               (6.2)
+
+In particular log M=O(beta) is impossible for this uniform-net
+strategy whenever beta=o(a^-3), including logarithmic coupling.
+At the same time the actual coefficient variance proxy is of
+the desired order a/beta by(5.5).
+
+The obstruction is entirely within gauge copies of one physical
+background. Gauge transformations leave every plaquette energy,
+the output F_a and the full Wilson density unchanged. Requiring
+a weak REPRESENTATIVE does not eliminate its other gauge copies
+from the original integral.
+
+One can also quantify the center-gauge average. If a ball of
+radius delta||b||_beta contains one cube vertex, all other cube
+vertices in it differ from that vertex in at most
+C delta^2 d signs, by(2.1),(5.5),(6.1). For delta sufficiently
+small, its fraction of the 2^d sign cube is at most exp(-c d).
+The union of M such balls covers at most M exp(-c d) of the
+uniform center orbit. This requires no Wilson-probability
+independence: it is the finite, exact gauge average at a fixed
+physical orbit.
+
+7. WHY QUOTIENTING THE FRAMES DOES NOT INHERIT TURN65
+
+Under a common gauge change on the present slice, the actual
+aligned quaternion increment transforms by the same O_e(g)
+as b_e. The pairing b.Delta is invariant. It is tempting to
+choose a field-dependent gauge g(U) making b simpler and then
+apply TURN65 to the transformed increments with fixed templates.
+
+This requires a NEW source theorem. The existing Fourier/unitary
+proof assumes deterministic coefficients before the field is
+drawn. A field-dependent change of representative rotates the
+increments in a way correlated with their endpoints.
+
+There is a direct one-edge contradiction to a naive inheritance.
+For e=(x,y), choose g_x=U_e^-1 and g_y=I (all other choices may
+be fixed). The current transformed link is exactly I. Transform
+the actual aligned next link by the same gauge:
+
+ U_e^g=I,     (V^h)_e^g=U_e^-1(V^h)_e.
+
+The scalar component of its increment is
+
+ [Delta_e^g]_0
+     =1-(1/2)Tr[U_e^-1(V^h)_e]
+     =h_temporal,e >=0.                              (7.1)
+
+It has strictly positive expectation in the finite original
+Wilson law: the latter has a strictly positive density on the
+compact link space, while h_temporal is positive on a nonempty
+open set.
+
+If the centered deterministic source bound survived this
+adaptive frame unchanged, it would give
+
+                 E exp(t h_temporal,e)<=exp(t^2/(2beta))
+
+for all real t. The right derivative at t=0 would force
+E h_temporal,e<=0, contradicting (7.1). This obstruction
+already occurs on one edge, without any covering entropy.
+
+It does not prohibit a legitimate gauge-fixed source theorem
+with its drift, density and constraints retained. It shows
+exactly why one cannot use the old theorem after merely declaring
+the coefficients fixed in quotient coordinates.
+
+8. WHAT HAS AND HAS NOT BEEN EXCLUDED
+
+The result excludes a uniform small-relative-error deterministic
+net of the actual full derivative array with log M=O(beta).
+It also excludes direct inheritance of the centered source
+bound under arbitrary field-dependent gauge fixing.
+
+It does NOT exclude the more general TURN65 pathwise consumer
+
+ |F1-F0|<=max_r |Z_r|+|R|,       E|R|^2=O(a).
+
+A scalar difference could admit an approximation that does not
+approximate its full derivative in the weighted-l2 norm, or an
+actual-probability exception set could be allowed. The explicit
+smooth backgrounds above have positive measure neighborhoods at
+each fixed regulator, but no cutoff-uniform ORIGINAL Wilson mass
+lower bound for those neighborhoods is proved here. Their gauge
+copies do not resolve that missing physical probability estimate.
+
+The useful next alternatives are therefore more specific:
+retain the physical invariant pairing and prove a centered
+conditional source estimate in a controlled local gauge, or
+construct an observable-level finite approximation with a
+proved original-law remainder that avoids a uniform derivative
+net. Either requires new estimates. No nonlinear magnetic
+increment, physical variance floor or complete YM4 existence
+theorem is claimed by this note.

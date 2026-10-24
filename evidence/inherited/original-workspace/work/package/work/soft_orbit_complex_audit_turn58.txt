@@ -1,0 +1,124 @@
+INDEPENDENT AUDIT OF THE SOFT SU(2) ORBIT PROFILE BOUND
+20 October 2026. TURN58. tail47.
+
+Audited work/soft_orbit_complex_bound_turn58.txt, Sections1--7.
+
+VERDICT: PASS. All displayed numerical estimates, normalization
+ratios, holomorphy claims and stated scope check. No correction
+is needed. This certifies the finite-graph profile, not a full
+native action/normalizer or a basic-R replacement.
+
+1. Twisted action and the forest
+
+The relative gauge action in (1.2) is correct for U=exp(A)t with
+t fixed. For real SU(2) background t0, the discrepancy
+b_e=|g_u-Ad_(t0_e)g_v| has b_e^2=4q(g_u t0_e g_v^-1 t0_e^-1).
+Parallel transport along a forest path preserves the Frobenius
+norm and fixes I. Hence a_v^2<=4d_v Q_F.
+
+Summing b_e^2<=(a_u+a_v)^2<=2(a_u^2+a_v^2) yields exactly
+Q0<=2 S_F Q_F<=C_F Q_F. The endpoint sum in (2.4) is at
+most 4S_F Q_F<=2C_F Q_F, as claimed.
+
+The triangular forest map solves
+g_child=t0_e^-1 h_e^-1 g_parent t0_e.
+Its factors are normalized-Haar-preserving. Reversing an edge
+conjugates or inverts the relevant SU(2) relative element and
+does not change q. Thus the forest integral is precisely w_s^m,
+not a quantity with an unrecorded tree Jacobian or gauge volume.
+
+When m=0, all g vertices are fixed to I. Then Q0=Q_F=0,
+Psi_lambda(0,t0)=1 and w_lambda^m=1. The later estimates remain
+valid, including nonzero field A.
+
+2. Complex t perturbation
+
+For B=t0_e g_v^-1 t0_e^-1, integrating
+exp(sT)[T,B-I]exp(-sT) gives
+|exp(T)Bexp(-T)-B|<=2e^2 tau |B-I| for tau<=1.
+The trace of that difference is zero. Therefore multiplication
+by g_u may be replaced by multiplication by g_u-I in its trace.
+
+This supplies both vanishing factors and gives
+
+ |Q_(0,t)-Q0|
+ <= (C0 tau/4) sum_e(a_u^2+a_v^2)
+ <= (C0/2) C_F tau Q0.
+
+In particular, there is no additive error proportional to
+lambda tau times graph volume. The error vanishes with Q0.
+No commutation of the complex background and gauge variables
+has been assumed.
+
+3. Field perturbation and constants
+
+The triangle-square estimate for Y_T gives
+sum_e|Y_T-I|^2<=8Q0+4C0^2 tau^2 C_F Q0.
+With tau<=delta/(2C0 C_F), its last coefficient is at most
+delta^2/C_F<=1, so (4.2)'s bound 9Q0 is valid.
+
+Cyclicity correctly places A beside Y_T, and Tr A=0 removes
+the identity part. The linear term is bounded by
+(3/2)||A||_2 sqrt(Q0).
+
+The matrix exponential remainder obeys
+|R(A)|<=(e^r_A/2)|A|^2. Since
+|Y_T|<=sqrt(2)e^2, including the factor 1/2 in q gives
+C_R=sqrt(2)e^(r_A+2)/4 exactly.
+
+Young's inequality has the correct coefficient:
+(3/2)a sqrt(Q0)<=delta Q0/2+9a^2/(8delta).
+Together with the background error delta Q0/4, this is
+slightly stronger than (4.5), so the stated weaker
+(1-delta)Q0-C_delta||A||_2^2 follows.
+
+The graph dependence is confined to the chosen t radius.
+The displayed C_delta is indeed graph-independent once that
+radius has been imposed.
+
+4. Haar normalization
+
+The normalized SU(2) radial measure is
+(2/pi) sin^2(theta)dtheta.
+The lower bound on [0,s^-1/2] gives
+c=8 exp(-1/2)/(3pi^3).
+The Gaussian upper integral with
+1-cos(theta)>=2theta^2/pi^2 gives
+C=pi^(5/2)/2^(5/2).
+
+The latter upper bound is valid for ALL s>0. Therefore (5.3)
+is valid even if (1-delta)lambda<1, with lambda>=1.
+This detail avoids an artificial gap in the range 1<=lambda<2.
+Also C_F lambda>=1, so the lower ratio in (5.4) is legitimate.
+
+The denominator is the fixed scalar w_lambda^m throughout.
+There is no division by Psi_lambda(0,t), no loss of its
+background dependence, and no unproved complex lower bound.
+
+5. Complex upper bound and physical scale
+
+Taking the absolute value, using (4.5), then discarding
+nonnegative real nonforest energy gives exactly
+
+ |phi_lambda(A,t)|
+ <= exp[C_delta lambda||A||_2^2]
+        (w_((1-delta)lambda)/w_lambda)^m.
+
+The power m is essential and has been retained.
+Under lambda=(gW)^-2 and |A_e|<=C_A g h(g), h(g)<=W,
+the exponent lambda||A||_2^2 is at most C_A^2|E|.
+Since m<=|E|, (7.1)'s exp(C|E|) upper bound follows.
+No inverse power of g remains in that exponent.
+
+Joint entireness in the finitely many complex traceless A,T
+coordinates follows from matrix exponentials and compact Haar
+integration, with domination on each compact parameter set.
+This is consistent with a graph-dependent quantitative domain.
+It does not imply a graph-uniform zero-free logarithm domain;
+the producer explicitly does not infer one.
+
+The graph-dependent lower cost m log(1/c_F) is also retained.
+It is not converted into a graph-uniform pressure estimate.
+All native-background extension, full-action cancellation,
+old/new source identity, locality and retained-jet requirements
+remain outside the theorem, as they should.

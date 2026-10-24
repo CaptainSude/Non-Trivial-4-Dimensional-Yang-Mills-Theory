@@ -1,0 +1,66 @@
+TURN56 — FOCUSED AUDIT OF THE BOUNDED WITNESS NOTE
+20 October 2026. history47.
+
+Reviewed work/bounded_witness_limits_turn56.txt.
+Verdict: PASS at its explicitly stated comparison and limiting-algebra
+hypotheses. No assertion about the actual YM4 variance is inferred.
+
+1. Reflection and centering
+
+For A_t=exp(itX_+)-m(t), the antilinear reflection gives
+Theta A_t=exp(-itX_-)-conjugate(m(t)).
+Reflection invariance gives E exp(-itX_-)=conjugate(m(t)).
+Expansion therefore gives exactly
+  E[(Theta A_t)A_t]=q(t)-|m(t)|^2.
+The constant-centered vector is orthogonal to the vacuum vector.
+Reflection positivity makes the displayed number real and nonnegative.
+
+2. Gaussian witness and comparison margin
+
+For equal variance v and covariance c,
+q(t)=exp[-t^2(v-c)] and |m(t)|^2=exp[-t^2 v].
+At t^2=1/v their difference is e^-1(e^(c/v)-1)>=c/(ev).
+The errors in the two specified characteristic functions give
+  |q_actual-q_G| + ||m_actual|^2-|m_G|^2| <= 3 epsilon,
+since both one-point functions have modulus at most one.
+Thus epsilon<=r/(6e), r=c/v>0, gives the claimed r/(2e) margin.
+No differentiation in the source is used.
+
+3. Maximal-correlation bound
+
+The Hermite calculation is valid for complex f:
+  centered reflected form = sum_(n>=1) |a_n|^2 r^n.
+For 0<=r<1 this lies between zero and
+  r sum_(n>=1)|a_n|^2 = r Var(f).
+The extension from polynomials to L2 follows by completeness and
+Cauchy–Schwarz for the cross expectation. For |f|<=1, Var(f)<=1.
+The bound remains valid for cutoff-dependent bounded f.
+Its coefficient r is sharp on the full L2 class (the first Hermite
+mode); no assertion of sharp attainment within |f|<=1 is needed.
+
+4. Positive realization and exact scope
+
+With X_t=Y+epsilon_t and all noises independent, the two open halves
+are independent and identically reflected conditional on Y. Therefore
+  E[(Theta F)F]=E |E[F|Y]|^2
+for every bounded positive-half F. This proves the stated finite-site
+reflection positivity. The permutation invariance and pair covariance
+also follow directly. The example concerns one-probe witnesses; it
+does not exclude averaging many probes to recover the common Y.
+
+5. Limit and transport qualifications
+
+The note correctly requires identification in the intended limiting
+positive-half algebra. A uniform cutoff OS lower bound on arbitrary
+posterior functions, without a common limiting observable/support,
+does not itself establish a nonvacuum continuum state.
+
+The transport sentence was qualified after the initial audit:
+automatic bounded-posterior control concerns actual positive history
+restrictions. Separately signed localization/walk decorations require
+the joint absolute/inserted bound explained in
+original_wilson_transport_turn56.txt Section 4.
+
+No other correction was requested. This audit does not certify the
+model-specific characteristic-function comparison (1.4), which the
+producer explicitly leaves as an input to be proved.

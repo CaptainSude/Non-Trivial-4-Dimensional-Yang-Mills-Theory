@@ -1,0 +1,332 @@
+ORIGINAL LOCAL GAUGE-PATCH COMPLEMENT: MASS BOUNDS AND BUFFER RANGE
+24 October 2026. audit_two_root. No archive/output edits.
+
+RESULT
+
+The original Wilson exponential moment gives prescribed coarse-
+curvature failure bounds with the ORIGINAL normalization, summed
+over all prior records. It also gives actual eligible P1-failure
+bounds via complete fine-plaquette witnesses. Neither requires a
+global all-good probability or conditional independence.
+
+There is a sharper elementary gauge-patch estimate than using the
+earlier safe n^2 filling bound: coordinate-tree loops in a filled
+side-n coarse box have fillings of size O(n). Direct use of the
+Wilson moment then gives, at a coarse bond-angle radius b,
+
+ P(complete coarse patch admitted AND chosen tree patch fails)
+ <=min{1,C(1+n)^4 exp[C_L(1+n)-c_L beta b^2/(1+n)]}.       (A)
+
+For b a fixed multiple of epsilon0 or delta0, beta b^2 is of order
+r^2 with fixed hierarchy constants. Estimate(A) is useful in a
+small enough n=O(r) range. It does NOT price the buffers already
+chosen for rare-times-h^4 boundary errors, where n is at least a
+fixed multiple of r^2. On those buffers the displayed upper bound
+becomes uninformative. This is a limitation of the proved estimate,
+not a lower bound or a claim that the patch usually fails.
+
+A separate registration, native_local_source_epsilon_box_
+registration_20261024, establishes that the source family with
+actual guards HELD successful can use b=c min(epsilon0,epsilon1).
+The current original-law guard-pressure proof requires its smaller
+O(delta0) lane. That distinction remains explicit below.
+
+1. THE LAW AND IMPORTED MOMENT
+
+Let mu_beta be the full original finite periodic SU(2) Wilson law
+with normalized link Haar, homogeneous beta>0 and nondegenerate
+periods. Put h_p=1-Tr(U_p)/2. The proved finite-volume input is
+
+ E_mu exp[(beta/4)sum_(p in E) h_p]<=2^(3|E|/4)             (1)
+
+for every deterministic finite set of distinct plaquettes E.
+Its exact original Z_beta is in the denominator. Here beta=C_W/g0^2
+with the actual fixed normalization C_W retained. This note imports
+finite_volume_wilson_energy_turn64; it does not reprove its finite
+transfer argument or claim an arbitrary-exterior conditional version.
+
+Use the exact first joint law on its actual admitted coarse rows,
+with the original P0/P1 partitions, positive present-set averaged-
+gauge insertion and Q1 partition. B109's averaged-contour map is
+only specified on its admitted clustered-contour neighborhood. No
+global measurable equivariant extension on rough configurations
+is assumed here. Write A_c for admission of ALL four coarse rows
+and their complete native reads for a candidate coarse plaquette c.
+An undefined or ineligible row is assigned to the separate prior-
+record complement; its putative curvature is never evaluated.
+
+The partitions sum pointwise to1 and each inserted gauge factor
+has its native normalized mass. Fine transformations used in that
+insertion fix the coarse centers, so the defined coarse values are
+unchanged. The expectation of an admitted coarse event, and of its
+gauge-invariant fine curvature witnesses, is therefore bounded
+under the same original law after summing all records. No number
+of records multiplies (1). The random presence of a gauge center
+is not replaced by an independent formal bit.
+
+All results below are annealed with this original normalization.
+They may be disintegrated afterward to get Lq bounds on conditional
+probabilities, but not suprema over arbitrary supported exteriors.
+
+2. A COMPLETE LOCAL FINE WITNESS FOR COARSE CURVATURE
+
+For each elementary coarse plaquette c, let T_c be a deterministic
+finite fine-plaquette set containing every averaging contour and
+a filled fixed-L block neighborhood of its four coarse rows.
+It has |T_c|<=v_L and its translates have overlap <=B_L, where
+v_L,B_L depend on fixed L and the native averaging convention.
+
+There are fixed t_L>0 and C_L such that
+
+ max_(p in T_c)||U_p-1||<=t<=t_L
+       implies ||V_c-1||<=C_L t.                         (2)
+
+This is the local averaging regularity behind the explicit B119
+printed246 consequence of Proposition1 [12], ||V_c-1||<2L^2 epsilon0
+on a prior-good coarse plaquette. The constant 2L^2 need not be
+retained for the present weaker complete-read estimate.
+
+A direct verification uses only the native definitions. On the
+fixed finite filled fine neighborhood choose a tree gauge. Every
+non-tree fine link is a loop filled by at most C_L plaquettes, so
+all transformed fine links are C_L t-close to1. Every native path
+product, endpoint average M and anchored logarithm is then in its
+fixed analytic chart. B109(0.5)--(0.12), including M's first jet,
+bound the four coarse links and their plaquette by C_L t. Coarse
+plaquette norm is unchanged by the induced gauge at coarse centers.
+Thus no averaged-gauge SMALLNESS event is needed for(2). The full
+coarse-averaging read and its filling are essential.
+
+On A_c the estimate can be expressed as
+
+ ||V_c-1||<=C'_L sum_(p in T_c)||U_p-1||.                 (3)
+
+Indeed (2) proves this when all fine plaquettes are <=t_L. If one
+exceeds t_L, choose C'_L>=2/t_L and use ||V_c-1||<=2 ON A_c.
+Only an already defined admitted unitary value is used in that
+case. Outside A_c, (3) is not a statement about a coarse value.
+
+3. PRESCRIBED COARSE FAILURES AND THEIR LOCAL PRESSURE
+
+For 0<tau below a fixed constant, let
+E_c(tau)=A_c intersect {||V_c-1||>=tau}. By(2), E_c has a fine witness in T_c
+with ||U_p-1||>=tau/C_L. For distinct coarse plaquettes J, choose
+one witness for each c in J. The distinct witness union has at
+least |J|/B_L elements. Using ||U_p-1||^2=2h_p, (1), and at most
+v_L^|J| witness choices gives
+
+ P_mu(all c in J fail at tau)<=rho_c(tau)^|J|,
+ rho_c(tau)=min{1,C_L exp(-c_L beta tau^2)}.               (4)
+
+Constants include the exact fixed read overlap. There is no
+conditioning on P0=P1=empty or on every coarse plaquette passing.
+For a deterministic finite coarse plaquette set S, finite product
+expansion gives, for u>=0,
+
+ E exp[u sum_(c in S)1_(E_c(tau))]
+   <=exp[|S|rho_c(tau)(exp u-1)].                         (5)
+
+Undefined/ineligible rows remain separate prior-record defects.
+In Sections5--7 every tree-patch failure estimate is likewise for
+failure intersected with admission of its COMPLETE coarse patch;
+to bound the whole certificate complement one must ADD the actual
+prior-ineligibility estimates from Section4. No global rough map
+is being silently selected. This is a volume-independent local
+pressure with the original
+source-zero normalizer. Its usefulness depends on the ACTUAL tau;
+one cannot keep the epsilon0 exponent after lowering the threshold.
+
+4. P1 FAILURES HAVE A DIFFERENT, NONSHRINKING WITNESS THRESHOLD
+
+Consider a deterministic candidate P1 seed D on the actual B119
+grid. Its failure indicator is used only when D is actually eligible
+under the preceding P0 record. B119(1.2) constructs U_(1,D) from
+the COMPLETE D~4 determining datum of V and the Q_f interpolation
+in(1.3). Let T_D^1 contain the complete fine pullback of all those
+coarse averaging, boundary and mixed determining rows, with a fixed
+additional filled block collar. Keep its literal size v1 and the
+maximum overlap B1 of these reads for the chosen seed grid.
+
+If all fine plaquettes on T_D^1 have norm below t, (2) gives
+coarse determining curvatures at most C_L t. The Q_f lift is1
+inside each fine block and equals V on a coarse interface. A fine
+plaquette of that lift is either1 or a corresponding coarse
+plaquette (up to orientation/conjugation); any further fixed first
+averaging rows preserve a C_L t bound by(2). This includes the
+mixed determining boundary faces, not just the interior coarse
+plaquettes.
+
+CMP102 Theorem1, printed278--279, applies to this complete regular
+determining datum and gives the local minimum's curvature bound
+C_L B3 t with the actual fixed first-grade L factors. Therefore,
+choosing a fixed c1>0 small enough,
+
+ max_(p in T_D^1)||U_p-1||<c1 epsilon1
+       implies the native P1 success in B119(1.4).        (6)
+
+The choice of c1 includes L^(-2) in that literal success threshold.
+This is an application of the stated minimum theorem to the full
+determining set; it is not inferred from closeness of two unspecified
+minima or from a gauge-fixed potential bound. Small plaquette
+curvature is the gauge-invariant datum in CMP102 condition(7).
+
+Thus an ACTUAL eligible P1 failure has a fine Wilson witness at
+threshold c1 epsilon1. The same proof as(4) gives
+
+ P(all D in J eligible and P1-bad)<=rho1^|J|,
+ rho1=min{1,2^(3/4)v1 exp[-c1^2 beta epsilon1^2/(8B1)]}.  (7)
+
+For the native translated fixed-enlargement grid, v1 is at most a
+fixed polynomial in M2 R1 and B1 is a fixed geometric constant.
+One may instead retain exact finite v1,B1. Ineligible seeds are
+not assigned a fictitious bad bit; their P0 exclusion is handled
+by the original P0 bound.
+
+Consequently a deterministic local prior certificate requiring no
+bad P0/P1 exclusion footprint in a complete region has failure
+bound N0 rho0+N1 rho1, capped by1, once S0,S1 contain ALL original
+enlarged footprints that could delete a needed gauge center or
+Q1 seed. The actual finite counts N0,N1 remain. No Q1 success or
+coarse gauge-patch admission is included in this assertion.
+
+On the registered adjacent-grade weak trajectory epsilon1/g0 is
+of the same polylogarithmic order as epsilon0/g0. Then (7), like
+the original P0 bound, is rare on polynomial-size local certificates.
+If that trajectory comparison is unavailable, keep beta epsilon1^2
+explicitly; do not identify running and bare couplings by notation.
+
+5. OPTIMIZING THE DETERMINISTIC TREE FILLING
+
+Let the complete W fit in a filled coarse box {0,...,n}^4, with no
+wrapping cycle. Use paths from0 which first move in coordinate1,
+then2, then3, then4. These are consistent paths of a rooted tree.
+For a positive bond (x,x+e_mu), its fundamental tree loop is obtained
+by commuting that one mu-step through the later-coordinate path
+segments. Each commutation inserts a mu/nu plaquette; the number is
+
+             sum_(nu>mu)x_nu <=3n.                       (8)
+
+Hence the earlier safe A_W<=C n^2 can be sharpened, for this filled
+box and this particular tree, to A_W<=C n. The resulting sufficient
+curvature criterion for its bond-angle box of radius b is
+
+                   max_W curvature < c b/(1+n).         (9)
+
+For this deterministic criterion, (4) and a union bound give
+
+ P(complete coarse patch admitted AND criterion(9) fails)
+ <=min{1,C(1+n)^4 exp[-c beta b^2/(1+n)^2]}.              (10)
+
+Because (9) is SUFFICIENT, it also bounds the probability of failure
+to admit the chosen tree gauge (and of failure to admit any gauge),
+in each case intersected with COMPLETE coarse-patch admission.
+Its complement is not an equivalent characterization of either
+failure event, and no probability lower bound follows.
+
+A uniform O(curvature) potential bound independent of n is not
+available deterministically. For an Abelian constant-curvature
+field with n^2 kappa small, a square of side n has holonomy distance
+at least c n^2 kappa. If every link in some gauge were a-close to1,
+the boundary product estimate would give at most4n a. Thus some
+link must have size at least c n kappa. This explains a genuine
+worst-case n factor, but says nothing about its Wilson probability.
+
+6. A STRONGER ORIGINAL-LAW TREE-ANGLE TAIL
+
+One need not first require every plaquette to meet(9). For each
+coarse bond's O(n)-plaquette tree filling, use(3). Its complete
+fine-plaquette union E_b has cardinality <=C_L(1+n); fixed local
+overlaps and multiplicities have bounded constants. The exact
+unitary product bound gives
+
+ ||V^k(b)-1|| <=C_L sum_(p in E_b)||U_p-1||
+             <=C_L sqrt[(1+n)sum_(p in E_b)h_p].         (11)
+
+For b below a fixed small group radius, failure of the desired
+principal-angle box implies a bond norm >=c b. Hence that failure
+at a specified bond implies sum_(E_b) h_p>=c_L b^2/(1+n).
+Exponential Markov with(1), followed by the O((1+n)^4) bond census,
+proves the displayed admitted-patch bound(A). Undefined or ineligible
+coarse patches are handled by the separate prior-defect estimates.
+
+This is a direct stochastic consequence of the original moment,
+stronger in its useful range than the maximum-curvature witness
+bound(10). It keeps the entropy cost C_L(1+n) from the ACTUAL
+filling's moment bound. Omitting that cost would falsely turn an
+absolute-energy estimate into cancellation of curvature components.
+It does not use an arbitrary-exterior normalized conditional law.
+
+7. THE CRITICAL BUFFER RANGE AND WHAT IS STILL MISSING
+
+Write R_b=b/g0 and beta=C_W/g0^2. The bound(A) for failure
+intersected with complete coarse-patch admission is
+
+ min{1,C(1+n)^4 exp[C_L(1+n)-c_L R_b^2/(1+n)]}.           (12)
+
+For n<=c_* R_b with c_* sufficiently small (depending on the fixed
+constants), its exponent is <=-c R_b^2/(1+n); the remaining
+polynomial census is explicit. For b=c min(epsilon0,epsilon1)
+or b=c_delta delta0, R_b is a fixed hierarchy multiple of r at
+the registered first adjacent-grade trajectory. Thus there is a
+useful finite small-patch range, but not a rare bound uniform over
+all growing patch sizes.
+
+The current rare-times-h^4 boundary prescription has
+
+ D(s)=ceil[Kbuf(r^2+s)^2/r^2]+d_read >=Kbuf r^2.
+
+Its complete W contains this physical active buffer; with fixed
+first-grade scale conversion, n>=c D(s). Then even at s=0,
+R_b^2/(1+n) is bounded while the positive filling cost is of order
+r^2. The bound(12) is1 after truncation. The earlier n^2-area route
+would be weaker still, with exponent r^2/n^4 for its maximum-
+curvature event. Increasing the fixed epsilon0/delta0 hierarchy
+does not cure these asymptotic powers.
+
+This is NOT a proof that the actual gauge-patch complement has
+large mass. It proves that the present original absolute-energy
+moment plus deterministic fillings does not price that complement
+on the required buffers. A stochastic gauge-potential/flux estimate
+with actual cancellation, or a different local source comparison
+which needs a much smaller patch, is a genuinely additional input.
+Signed/transported curvature concentration does not follow from
+(1) by replacing its energies by signed components. Native later
+current-image bounds could supply admission on selected histories,
+but they are not a probability estimate for the original complement.
+
+The local source domain can use O(epsilon0) as separately registered.
+The present guard-pressure bound nevertheless holds only on its
+O(delta0) gauge-patched lane. Extending it to the larger source box,
+or paying the intervening complement, remains separate. One must
+not combine the larger source domain with the smaller-lane guard
+mass as though their hypotheses coincided.
+
+For actual original marks, boundedness gives, for any failure event E,
+E[|c_a f_p h_p|1_E]<=2 alpha_p P(E), and analogous raw pair caps
+with ONE probability factor. On a prior-good source read its sharper
+epsilon0^2 cap may be used. These retain all microscopic labels and
+do not pay their ultraviolet density or provide spatial connectedness.
+An analytic comparison outside its admitted patch is not invented.
+
+PRIMARY CHECKS
+
+B119 printed246, (1.1)--(1.4): explicit coarse-curvature consequence,
+Q_f interpolation, complete D~4 local minimum and P1 test. B109
+printed253--255, (0.5)--(0.16): exact averaging covariance, local
+analytic chart and gauge insertion. CMP102 printed278--281:
+gauge-invariant determining curvature condition and Theorem1.
+The finite Wilson moment(1) is the existing finite_volume_wilson_
+energy_turn64 theorem. Original P0 witness/pressure scope is in
+completed_sector_defect_gate; actual original Q1 pressure and its
+stricter coarse box are in local_prior_q1_guard_pressure.
+
+Pixel readback: I inspected work/remote_record_B119246.png after
+the text extraction. The original formula(1.3) explicitly assigns
+1 to within-block bonds and V(c) to the interface family B(c),
+and(1.2) uses the mixed determining datum obtained from this lift.
+The printed P1 failure threshold is epsilon1 L^(-2) on D~. Thus
+the complete-boundary lift and fixed scale constants used in
+Section4 are literal parts of the native construction.
+
+No all-record original source norm, all-history construction, or
+continuum Yang--Mills theorem follows from these mass statements.

@@ -1,0 +1,224 @@
+INDEPENDENT AUDIT OF THE POSITIVE-CHANNEL INNOVATION LEDGER
+19 October 2026. Audit of positive_channel_innovation_ledger_turn14.txt only.
+
+VERDICT
+
+The covariance telescope, the random-geometry qualification, the product
+refill oscillation inequality with constant1/4, and the dimension-four
+translated-loop bound are correct under their stated hypotheses. They
+do not themselves verify a native R kernel or backward influence estimate.
+
+Three clarifications strengthen the exact scope:
+ (i) bare-field transfer must not hide an auxiliary random seed in X_0;
+ (ii) the integrated innovation budget gives an L1 product-defect bound on
+      the specified finite reference span, not a uniform algebra embedding;
+ (iii) geometric-mesh summability makes the EARLY ultraviolet tail small;
+       all later stochastic dates still have to be paid, and any observable
+       renormalization factor is squared in the variance estimate.
+
+1. EXACT COVARIANCE TELESCOPE: PASS
+
+For an actual finite Markov chain and F_N in L2(mu_N), write
+
+ F_j=K_j F_(j+1),    H_j=sigma(X_0,...,X_j).
+
+The Markov property gives E[F_N(X_N)|H_j]=F_j(X_j). Jensen makes every
+F_j square integrable. The vector differences
+
+ d_j=F_(j+1)(X_(j+1))-F_j(X_j)
+
+satisfy E[d_j|H_j]=0. They are orthogonal to every earlier square-
+integrable martingale increment and to the centered F_0(X_0). Therefore
+
+ Cov(F_N(X_N))=Cov(F_0(X_0))+sum_j E[d_j d_j^T],
+ E[d_j d_j^T]=E_mu_j Cov_(K_j(X_j,.))(F_(j+1)).        (1.1)
+
+Every summand is positive semidefinite. The parent note's operator-norm
+comparison with a terminal covariance floor consequently gives the claimed
+bare-side covariance floor for F_0, subject to the initial-state clause
+below. No independence of distinct replacement dates is required.
+
+The same calculation works for complex references with Hermitian covariance
+and conjugate transpose, or by taking real and imaginary parts. The note
+correctly states the real-vector version.
+
+1A. INITIAL AUXILIARY RANDOMNESS MUST BE PAID
+
+For an interpretation as an observable of the original Wilson field U,
+the initial sigma-field must be sigma(U), with only deterministic auxiliary
+data. If the enlarged initial state is X_0=(U,A), where A is a random
+partition, random frame, global seed or other auxiliary variable, set
+
+ F_bare(U)=E[F_0(U,A)|U].
+
+Then the true bare-field identity is
+
+ Cov(F_N)=Cov(F_bare(U))
+          +E_U Cov(F_0(U,A)|U)+sum_j D_j.             (1.2)
+
+The extra positive matrix cannot be dropped. Equivalently begin the chain
+at U and sample A in an initial transition, so that its innovation is
+already in the ledger. Augmenting the state to make a process Markov is
+legitimate; moving all randomness to a hidden seed at time0 and then
+calling the remaining deterministic transitions innovation-free would
+not prove bare nondegeneracy. This is the only additional exact initial-
+state condition needed for the stated covariance argument.
+
+2. RANDOM GEOMETRY AND CONDITIONAL PRODUCTS: PASS
+
+If a transition first draws a geometry label A conditional on x and then
+draws a refill Y conditional on(x,A), the exact decomposition is
+
+ Var(f(A,Y)|x)
+ =E_A Var(f(A,Y)|x,A)+Var_A(E[f(A,Y)|x,A]|x).          (2.1)
+
+The second term remains even if the field refills are independent once A
+is fixed. If A is itself determined by x, it vanishes. If A was sampled
+earlier, it must already be in the conditioned state. The parent note
+states precisely this requirement.
+
+A pure deterministic averaging map has zero innovation. But a T-stage
+implementation which additionally samples a partition, gauge choice or
+other future-relevant label is not a deterministic transition on the
+enlarged state. It should be split into pure averaging and its actual
+auxiliary sampling substeps. Conditioning on the sampled choice does
+not dispose of the second term in(2.1).
+
+For a product refill law conditional on the COMPLETE input state, the
+Efron--Stein/tensorization inequality reads
+
+ Var(f)<=sum_i E[Var(f|Y_(not i))].
+
+The conditional range inequality Var(Z)<=(sup Z-inf Z)^2/4 gives
+
+ Var(f)<=1/4 sum_i osc_i(f)^2.                       (2.2)
+
+The oscillation must cover the complete actual coordinate/read change
+in the i-th refill, with the other output coordinates fixed. The factor
+1/4 is correct. Applying(2.2) to each unit vector c.F and then taking
+the supremum over c gives the parent note's matrix bound, provided v_j
+is a measurable bound valid for every such c. Conditional product
+structure is a genuine hypothesis: separated centers are insufficient
+when the output laws share interior constraints or changed read collars.
+
+3. PRODUCT DEFECT: EXACT FORM AND NORM OF THE CONCLUSION
+
+Let P_(0,j)=K_0...K_(j-1), with P_(0,0)=I, and let
+
+ C_j(x_j)=Cov_(K_j(x_j,.))(F_(j+1)).
+
+There is a POINTWISE conditional covariance identity on the initial state:
+
+ C_total(x_0)
+ :=P_(0,N)(F_N F_N^T)(x_0)-F_0(x_0)F_0(x_0)^T
+  =sum_j P_(0,j) C_j(x_0).                           (3.1)
+
+It follows either by conditional variance or by telescoping
+P_(0,j+1)(F_(j+1)F_(j+1)^T)-P_(0,j)(F_jF_j^T).
+Integration gives E_mu0 C_total=sum_j D_j. All these matrices are
+positive semidefinite pointwise where defined.
+
+If ||sum_j D_j||_op<=epsilon, then for fixed c,d,
+
+ || c^T C_total d ||_(L1(mu0))
+ <= [E c^T C_total c]^(1/2)[E d^T C_total d]^(1/2)
+ <=epsilon |c||d|.                                 (3.2)
+
+Thus the backward channel is approximately multiplicative in L1 on
+products of the specified finite linear combinations of terminal
+references. An L-infinity estimate, a uniform operator product theorem,
+or multiplicativity for the generated unbounded algebra does NOT follow
+from the integrated budget alone. The parent phrase "approximately
+multiplicatively" should be understood with this norm and finite-family
+scope. Combined with the covariance lower bound, it does give a genuine
+injective map of that finite centered reference space in L2.
+
+The single-step identity K(fh)-(Kf)(Kh)=Cov_K(f,h) is exact. The forward
+conditional source map Lf(y)=E[f(X)|Y=y] and the backward map Kh(x)=
+E[h(Y)|X=x] satisfy
+
+ int f Kh dmu_X = int (Lf) h dmu_Y.
+
+They are the two Hilbert adjoints associated with the SAME actual joint
+law. Neither formula permits replacing K by L without changing the
+direction of the observable being transported. The parent distinction
+is correct.
+
+4. TRANSLATED LOOPS IN DIMENSION FOUR: THE COUNTING PASSES
+
+Suppose the loop has n_gamma<=C(1+ell/a) edge occurrences at mesh a.
+For each occurrence and one specified fine link, at most one lattice
+translation places that occurrence on the link, up to the fixed
+orientation conventions. Repetitions or periodic wrapping can reduce
+the number of distinct affected translations; counting occurrences
+still provides the stated upper bound.
+
+Each changed real normalized character differs by at most2. Thus
+
+ osc_e(O_a)<=2 a^d ||f||_infinity n_gamma
+          <=C ||f||_infinity (ell+a) a^(d-1).         (4.1)
+
+Changing v links sequentially gives osc_B<=v times(4.1). For at most
+C_V a^-d independently refilled blocks, (2.2) gives
+
+ Var_K(O_a)<=C_V ||f||_infinity^2 (ell+a)^2
+                                      v^2 a^(d-2). (4.2)
+
+For variable block sizes the sharper direct expression is
+
+ C ||f||_infinity^2 (ell+a)^2 a^(2d-2) sum_i |B_i|^2, (4.3)
+
+exactly as in the parent note. No small-field expansion or Gaussian
+concentration is used. The constants retain the actual physical volume
+and the weight norm. The count is for complete link changes, not merely
+the geometric core if a refill modifies a larger collar.
+
+If v(a)<=C(1+log(1/a))^p and a runs through geometric meshes below h,
+then in d>2
+
+ sum_(a_j<=h) a_j^(d-2) v(a_j)^2
+       <=C h^(d-2)(1+log(1/h))^(2p).                 (4.4)
+
+For d=4 the right side is O(h^2 times a fixed logarithmic power). This
+proves a small EARLY ultraviolet tail as h->0. Summing all scales up to
+a fixed terminal physical scale instead gives only a finite bound;
+the later stochastic innovations need a separate quantitative budget.
+
+For a renormalized observable Z_a O_a, multiply(4.2)--(4.3) by |Z_a|^2.
+In particular an a-dependent renormalization may destroy summability.
+The bounded-character estimate is not a free estimate for curvature
+fields obtained by dividing shrinking-loop defects by powers of a.
+The parent already warns that it has not supplied such a normalization
+or a terminal continuum covariance witness; this arithmetic makes the
+warning explicit.
+
+5. BACKWARD FUNCTIONS VERSUS BARE LOOP FUNCTIONS: ESSENTIAL DISTINCTION
+
+The innovation at date j applies(2.2) to the actual F_(j+1), which includes
+ALL later backward transitions. The bare loop count(4.1) does not by
+itself estimate that function. Even a deterministic positive channel
+can amplify individual-coordinate influence while being an L-infinity
+contraction: map one input spin u in{-1,1} to N identical output spins
+(u,...,u). The terminal mean N^(-1)sum_i y_i has individual-output-spin
+oscillation2/N, but its backward image is u and has input oscillation2.
+No innovation is generated by this deterministic map; the example only
+disproves automatic propagation of the small influence norm.
+
+Therefore a native attachment needs a quantitative backward influence
+estimate, including all source-support enlargements, large components,
+geometry choices and exact conditional refills. The terminal coarse
+density minorization controls none of those quantities by itself.
+The parent note correctly keeps this as a separate target, and does not
+replace it by an estimate on an arbitrarily chosen loop at date j.
+
+6. AUDIT CONCLUSION
+
+The main ledger and the d4 counting calculation are valid. No source
+paper or full native-history assumption was required to check the
+identities. The useful corrections are the time0 auxiliary term(1.2),
+the L1 finite-span product norm(3.2), and the early-tail/normalization
+qualification(4.4). Their incorporation leaves a precise possible
+native target; it does not establish that the original R construction
+satisfies the needed conditional factorization or backward influence
+bound, nor identify F_bare with a prescribed Wilson/native-average
+observable.

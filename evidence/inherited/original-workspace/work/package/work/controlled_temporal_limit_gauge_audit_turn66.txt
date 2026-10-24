@@ -1,0 +1,252 @@
+INDEPENDENT AUDIT OF THE CONTROLLED TEMPORAL LIMIT -- TURN66
+20 October 2026. gauge47.
+
+STATUS: PASS for the fixed-spatial-lattice temporal bridge.
+Section8 below proves an additional original-Hamiltonian energy
+estimate directly, without an isotropic Wilson admission.
+
+Reviewed work/controlled_temporal_limit_turn66.txt, Sections1--7.
+SHA256 at this review:
+BAA6BB5445796438B32A5F4765537BE1FBA986200D9C4505EAEAEE0B867A6579
+
+1. EXACT WILSON MATCHING AND METRIC FACTORS
+
+For the Pauli/2 metric, the one-link Casimir is j(j+1).
+The compact Wilson kernel has fixed-spin expansion
+
+  1-r_j(beta)=2j(j+1)/beta+O_j(beta^-2).
+
+Thus beta_delta=2/(kappa delta), not 1/(kappa delta),
+is the correct matching for the generator kappa K.
+Equivalently the quaternion angle theta is half the Pauli/2
+angle; its three local coordinate variances are 1/beta,
+giving the same factor2 in the heat generator.
+
+The half spatial multipliers exp(-delta V/2) give exactly
+one factor exp(-delta V) at each original Wilson time slice.
+All c(beta_delta) constants remain in (1.2). On inserting
+kappa_a=g_a^2/(2a), V_a=4S_sp/(g_a^2 a), the displayed
+beta_time=4a/(g_a^2 delta) and
+beta_space=4delta/(g_a^2 a) follow exactly.
+They coincide with beta=4/g_a^2 only when delta=a.
+
+The proof correctly takes the infinite temporal-period limit
+at each fixed delta before claiming the ground-state pair
+law. This is not a replacement of a finite-temperature trace
+by its top vector without a limiting step.
+
+2. ELECTRIC GENERATOR AND COMPACTNESS
+
+The exact bound 1-r_j<=2j(j+1)/beta and product
+subadditivity imply 0<=B_delta<=kappa K in their common
+spectral basis. Dominated convergence gives the strong
+generator limit on D(K); applying the same domination in
+fixed high Sobolev norms justifies the stated uniform
+generator limit for smooth functions.
+
+The order in spin used for compactness is valid:
+I_(nu+1)/I_nu is a positive expectation of x in(-1,1),
+hence is below1. Outside the K<=R spectral cutoff, at
+least one edge has Casimir exceeding R/|E|. Its single-link
+factor supplies the lower bound for B_delta. Taking first
+delta->0 and then R->infinity proves the required spectral
+tail compactness. No uniform spatial-cutoff constant is
+hidden in this order of limits.
+
+3. GROUND STATE
+
+The exact decomposition
+I-M Q M=I-M^2+M(I-Q)M gives both convergence on the
+smooth physical core and the lower form estimate (3.4).
+The smooth H ground vector is a legitimate variational
+trial, giving the limsup energy bound.
+
+The spectral tail bound and M_delta->I give strong L2
+precompactness of normalized Omega_delta. Testing the
+eigenvalue equation against the core correctly identifies
+each limit as an H eigenvector. Its energy must be E0,
+and the positive ground state is unique. Thus all the
+limits in (3.6) follow, including the logarithmic one.
+
+Elliptic positivity on the full compact product implies
+that the unique full ground state is gauge invariant;
+restriction to the physical subspace therefore has the
+same lowest energy. This fact is also useful for the
+trial estimate in Section8 below.
+
+4. NONLINEAR INCREMENT LIMIT
+
+The literal ground-state pair law gives (1.3). The gauge
+projection can be removed there by changing the next
+slice variable, because F and w_delta are gauge invariant.
+The kernel left afterward is exactly Q_delta.
+
+The generator product rule gives
+C_delta F->2kappa|grad F|^2 uniformly. The AM--GM upper
+bound has coefficient 1/(2lambda_delta). Its difference
+from d_delta/delta is precisely the nonnegative integral
+(4.4), with coefficient 1/(4lambda_delta delta).
+
+The fixed compact Lipschitz estimate (4.5) is valid in
+the Pauli/2 metric: geodesic distance is 2theta, and
+theta^2<=C(1-cos theta). The kernel comparison
+h q_beta<=C beta^-1 q_(beta/2) retains the normalizer
+ratio, which is bounded by 2^(3/2).
+
+Since beta_delta delta=2/kappa, the resulting defect
+is bounded by a finite sum of
+<w_delta,(I-Q_delta,e^half)w_delta>.
+Strong L2 convergence of w_delta and strong convergence
+of these bounded Markov operators to I force the sum
+to zero. No uniform derivative bound on Omega_delta
+or unjustified intermediate-field equilibrium law is used.
+
+This proves the full equality in (0.1), not merely its
+upper limsup. It is a genuine nonlinear fixed-spatial
+result which avoids the false finite-step relative
+operator domination from the other TURN66 note.
+
+5. SEMIGROUP AND DIAGONAL
+
+The core resolvent argument is correct and uses only
+nonnegativity of A_delta. The scalar estimate comparing
+(1-x)^n with exp(-nx) is uniform for x in[0,1] and
+gives the powers of T_delta at fixed positive physical
+time. Ground-energy normalization then gives (5.2).
+
+Bounded insertion words converge using strong operator
+convergence and Omega_delta->Omega. At each fixed delta,
+the simple leading eigenvalue and trace class property
+justify approximating these words by sufficiently long
+finite periodic Wilson systems.
+
+The diagonal construction in Section6 is therefore valid
+for every specified finite collection at each spatial
+cutoff. It does not provide spatial tightness, a uniform
+convergence rate, or an exchange of the temporal and
+spatial limits. The text retains these distinctions.
+
+6. DOES THIS CHANGE THE PHYSICAL TASK?
+
+It genuinely removes one obstruction: the nonlinear
+increment is now governed by an exact local gradient
+form in a controlled temporal limit, rather than by
+uniform finite-template approximation or a false
+finite-step commutator inequality.
+
+It does not itself give either physical estimate (7.3).
+It also changes the regulator trajectory to a strongly
+anisotropic one. The isotropic Bałaban admissions and
+coupling interpretation cannot be silently inherited.
+Restoring continuous spatial rotations/full Euclidean
+symmetry and constructing compatible continuum local
+observables remain separate obligations.
+
+The ground-state identity (7.1) follows by integration
+by parts with H Omega=E0 Omega; the potential and
+ground-energy terms cancel. Spectral Jensen proves
+(7.2) with the stated kappa factor. With
+kappa=g^2/(2a), the desired gradient target is indeed
+E|grad F_a|^2=O(a/g^2).
+
+Thus this is a legitimate change of method, not a
+completion of the physical continuum argument.
+
+7. AUDIT CONCLUSION
+
+No mathematical defect found in the reviewed temporal
+bridge. Its constants and exact original Wilson matching
+are consistent. It proves a fixed-spatial result and a
+conditional diagonal route; it does not merely rename
+the finite isotropic logarithm as a differential operator.
+
+8. DIRECT ADDITIONAL HAMILTONIAN ENERGY ESTIMATE
+
+There is a useful actual-Hamiltonian estimate available
+without importing an isotropic Wilson probability bound.
+On a periodic3D spatial lattice with n vertices,
+|E|=|P_sp|=3n. Consider the precise Hamiltonian
+
+ H=[g^2/(2a)] K+[4/(g^2 a)]S_sp,       g>0.
+
+Its normalized positive ground vector is denoted Omega,
+and its lowest energy is E0. Then
+
+ E0<=9n/a,
+ E_(Omega^2) S_sp<=(9/4)n g^2,
+ <Omega,K Omega><=18n/g^2.                            (8.1)
+
+PROOF. For lambda>0 use the normalized positive trial
+
+ psi_lambda(U)=product_e q_lambda(U_e)^(1/2),
+ q_lambda(U)=exp[-lambda(1-u0)]/c(lambda).
+
+This trial is not locally gauge invariant. It is still
+a legitimate bound for the same physical ground energy,
+because the unique full elliptic ground state is gauge
+invariant, as noted in Section3.
+
+For one link,
+|grad u0|^2=(1-u0^2)/4 and Delta u0=-3u0/4 in the
+Pauli/2 metric. Integrating Delta exp(lambda u0)
+over normalized Haar gives exactly
+
+ lambda E_(q_lambda)(1-u0^2)=3 E_(q_lambda)u0<=3.
+
+Consequently the trial kinetic energy on one edge is
+
+ int |grad sqrt(q_lambda)|^2
+   =(lambda^2/16)E_(q_lambda)(1-u0^2)
+   <=3lambda/16.                                    (8.2)
+
+Let m_lambda=E_(q_lambda)u0, which belongs to[0,1].
+Each trial link is independent and central, so for
+every elementary plaquette with four distinct edges
+
+ E_trial h_p=1-m_lambda^4<=4(1-m_lambda).
+
+The scalar density of h under q_lambda is proportional
+to h^(1/2)e^(-lambda h) sqrt(2-h)1_(0<=h<=2).
+The last factor is decreasing. Comparing its h mean
+with the untruncated Gamma(3/2,lambda) mean gives
+
+ E_(q_lambda)h<=3/(2lambda),
+                    E_trial h_p<=6/lambda.          (8.3)
+
+This is an elementary integral for the chosen trial
+state, not an imported original isotropic estimate.
+
+Combining (8.2)--(8.3),
+
+ <psi_lambda,H psi_lambda>
+  <= [g^2/(2a)]|E|(3lambda/16)
+       +[4/(g^2a)]|P_sp|(6/lambda).
+
+Choose lambda=16/g^2. Each edge term and each plaquette
+term is 3/(2a). Since both counts are3n, the trial
+energy is at most9n/a. The variational principle proves
+the first inequality in(8.1). Both parts of H are
+nonnegative, so the other two follow immediately.
+
+The Hamiltonian ground law is translation invariant by
+uniqueness. Therefore each spatial orientation satisfies
+E h_p<=9g^2/4; on a cubic torus permutation symmetry
+improves this to
+
+                         E h_p<=3g^2/4.              (8.4)
+
+The same respective per-orientation bounds hold after
+the deterministic spatial Wilson flow, by monotonicity
+of total spatial action and its symmetry covariance.
+
+This supplies genuine weak magnetic energy control and
+a global kinetic/Fisher budget for the Hamiltonian law.
+It does not yet bound the physical probe gradient in
+(7.3), nor its variance. For example on the cubic torus
+the elementary estimate for X=2p/(g_*a^2) gives only
+
+ E|X|^2<=6g^2/(g_*^2 a^4),
+
+which is inadequate at the intended weak-coupling spatial
+scales. Thus (8.1) adds an honest starting input without
+promoting it to the missing physical estimate.

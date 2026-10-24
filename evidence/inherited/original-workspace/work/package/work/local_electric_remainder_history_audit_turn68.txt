@@ -1,0 +1,58 @@
+FOCUSED INDEPENDENT AUDIT: LOCAL ELECTRIC REMAINDER -- TURN68
+20 October 2026. history47.
+
+Reviewed:
+ work/hamiltonian_source_control_turn68.txt, Sections3--4.
+ Final producer SHA256:
+ 92220933053CE6378994F03849AB2E963C0DC09C641A3DAFA489D66E48E076C6
+
+Verdict: PASS on the actual cubic finite-spatial SU2 ground law.
+
+Let H_f=T_eta+Q_f and r_f Omega=(H_f-<H_f>)Omega, where
+eta_e is the arithmetic mean of the four incident plaquette weights.
+Since independent edge Laplacians commute, the commutator is
+
+ [H,H_f]=kappa v sum_(e,p) (f_p-eta_e)[K_e,h_p].
+
+The ground equation gives A(r_f Omega)=[H,H_f]Omega exactly.
+For every real smooth F, Haar integration by parts cancels the
+two terms containing grad Omega in
+
+ <F Omega,[K_e,h_p]Omega>
+                   =E_mu grad_e F . grad_e h_p.
+
+Using the ground Dirichlet identity on the left and cancelling
+kappa gives the weak gradient-space projection formula (4.4).
+Taking F=r_f and applying Cauchy--Schwarz yields (4.5). At this
+finite compact regulator Omega is smooth and strictly positive,
+so r_f is an admitted smooth function for this argument.
+
+The Pauli/2 identity |grad_e h_p|^2=(2h_p-h_p^2)/4<=h_p/2,
+four incident plaquettes, and E h_p<=3g^2/4 give
+
+ D(r_f)<=kappa v^2 * (3g^2/2)
+                         sum_(e,p)(f_p-eta_e)^2
+        =12 a^-3 sum_(e,p)(f_p-eta_e)^2.
+
+The same bound without profile differences counts each plaquette's
+four links, giving D(q_f)<=48a^-3 sum_p f_p^2. These constants
+are correct. The averaging eta_e minimizes the numerical square
+sum at each edge.
+
+For the local elliptic coupling family H_f^loc(tau), its centered
+first derivative on Omega is (2q_f-r_f)Omega, and its second
+derivative supplies the contact operator C_f. The fixed-unsourced-
+endpoint Duhamel curvature and second time-difference formulas
+therefore retain rho_(2q_f-r_f). Only constant f makes r_f vanish.
+
+The notation was repaired to distinguish H_f^loc(0)=H from the
+weighted operator H_f. No mathematical correction was required.
+
+The quotient r_f may be globally dependent through Omega. This
+calculation does not turn it into an original local magnetic
+source. Its Dirichlet estimate controls the first spectral moment;
+without further low-energy control it cannot discard r_f from a
+separated window. The smooth-profile bound still grows like a^-4.
+These limitations are correctly explicit in the producer.
+
+Audit frozen.

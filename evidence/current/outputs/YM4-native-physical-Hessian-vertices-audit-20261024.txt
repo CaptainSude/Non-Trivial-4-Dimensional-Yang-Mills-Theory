@@ -1,0 +1,191 @@
+NATIVE ACTION-HESSIAN PHYSICAL VERTICES: INDEPENDENT AUDIT
+24 October 2026. compiled_source. Scoped PASS of the action part of H2.
+
+Audited the section ``Covariance and physical relative Hessian vertices''
+of archive/ym4-research/outputs/ym4-soft-determinant-notebook.tex,
+lines299--629 in the supplied archive. No archive or output was edited.
+Native inputs are the newly proved and independently audited
+homogeneous_classical_rooted_taylor_kernels_20261024.txt, its audit
+homogeneous_classical_kernels_interface_audit_20261024.txt, and Sections
+1--4 of native_affine_multiplier_and_heat_operator_interface_20261024.txt.
+
+The conclusion is uniform in homogeneous old classical depth and K for
+the first two PHYSICAL C1 coefficients of the ACTUAL left-relative
+classical Hessian. It does not by itself establish the moving coarse
+maps, the constrained multiplier terms at generic backgrounds, the
+coarse determinant factors, or the complete heat comparison.
+
+1. THE PRECISE NATIVE HESSIAN AND ITS COVARIANCE
+
+Let U(a)=exp(i a) on the current lattice, and define the symmetric
+bilinear left-relative Hessian by
+
+ L(a)[b,c] = D_b D_c S_m(exp(i b) U(a)) at b=0,
+
+where the two derivatives mean the symmetric second derivative in the
+same left tangent chart. Under a FIXED site gauge u, the tangent at
+bond e based at x transforms as b_e -> Ad_(u(x)) b_e. This identity is
+linear in b and exact before differentiation. Gauge invariance of the
+actual minimum VALUE S_m therefore gives exact block-adjoint covariance
+of L, at stationary and nonstationary backgrounds alike.
+
+An ordinary Hessian in the raw coordinate a is not being declared
+covariant. If c(a,b)=log(exp(i b)exp(i a))/i, its relation to L is
+
+ L(a)=c_b(a,0)^T S_coord''(a)c_b(a,0)
+                         + S_coord'(a) contracted with c_bb(a,0).
+
+The second, gradient-dependent term is retained. Taylor coefficients
+of L through degree2 require action derivatives through degree4 and
+only finite, bond-local BCH-coordinate coefficients. The new native
+rooted action kernels therefore give the complete rooted row AND
+column bounds required in the archive, including these current/chart
+contributions. No Hessian-comparison inequality is differentiated and
+no current term of the actual S_m is removed.
+
+For the flat q=L(0), translation covariance and global color invariance
+give a color-scalar kernel in the actual current-lattice bond fibers.
+Gauge Ward gives q(k)d(k)=0. Taking k to zero in every direction implies
+q(0)=0. The original Wilson minimum is nonnegative to quadratic order;
+positivity for both signs of real k then gives q'(0)=0 componentwise.
+The new uniform exponential quadratic rows supply the corresponding
+uniform absolute moments and analytic strip. Thus both zero moments
+required by the archive hold without importing its stronger displayed
+Maxwell-normalized O(|k|^4) expansion. The proof needs only the double
+zero, not that particular fourth-order remainder.
+
+These continuous-momentum statements are on the compatible infinite
+homogeneous kernel system. Explicit periodizations with the specified
+lifted paths are covered. They do not identify an arbitrary actual
+finite-regulator winding kernel with that periodization.
+
+2. ORDERED LAURENT FACTORIZATION
+
+The archived operator B_rho telescopes a Laurent function by setting
+successive variables to one. Therefore, when q(1)=0,
+
+ q(z)=sum_rho (z_rho-1) B_rho q(z).
+
+Its first moment vanishing gives (B_rho q)(1)=0, so telescope each
+B_rho q once more. Since z_rho-1=(z_rho^-1-1)(-z_rho), this proves
+
+ q(z)=sum_(rho,tau)(z_rho^-1-1) H_(rho,tau)(z)(z_tau-1),
+ H_(rho,tau)=-z_rho B_tau B_rho q.
+
+The ordering in this formula is important and correct. It does not
+symmetrize away the skew bond-component/odd-displacement entries of a
+forward-difference Maxwell kernel. A monomial of length l produces
+at most l^2 divided monomials, with only the displayed one-step shift.
+Spending exponential reserve controls this cost uniformly. The exact
+numerical bound stated in the archive follows from
+sup_(l>=0) l^2 exp(-sigma l/2)=16/(e^2 sigma^2), with its extra shift
+factor exp(sigma/2); any harmless finite-fiber norm conversion is fixed.
+
+Full transpose of H includes displacement reversal and all gradient
+and bond indices. Replacing H by (H+H^T)/2 preserves q because q is
+transpose symmetric. Hence q=D0^T H0 D0 with H0 symmetric, color scalar,
+and uniformly exponentially summable in both matrix indices. This
+factorization is valid without entrywise symmetry at fixed displacement.
+
+3. LOCAL PATH GAUGE AND THE REPAIRED FLAT COMPARISON
+
+Choose translated coordinate paths with reversal for the negative
+displacements. For the matrix row at x, transport from x defines a
+formal gauge g_x(z). Each transformed edge is a loop of length
+O(1+d(x,z)) and admits O((1+d(x,z))^2) plaquettes in a coordinate filling.
+For a= t mu A with
+
+ ||A||_infty + mu^-1 ||nearest differences A||_infty <= a_*,
+
+the first loop-angle coefficient obeys
+|b1(z)| <= C mu^2 a_* (1+d(x,z))^2: discrete Stokes gains the physical
+first difference. The second coefficient is a sum of pairs of original
+link coefficients, including its BCH logarithm term; it obeys
+|b2(z)| <= C mu^2 a_*^2 (1+d(x,z))^2. No extra derivative of A is needed.
+
+These are formal jets, not a claim that g_x is a bounded global gauge.
+One can truncate its polynomial gauge jets, apply exact finite gauge
+covariance, and pass coefficientwise using the rooted exponential
+kernels. The complete source/row/column roots make all polynomial
+tails absolutely summable. This also avoids inserting an affine field
+into a finite periodic flux sector.
+
+In this gauge L(t mu A) compares with its dressed flat kernel
+q(y-x) W_xy(t mu A). At first order the error is L'[b1]. At second
+order it is L'[b2], (1/2)L''[b1,b1], and L'[b1] times the first path
+transport coefficient. Their Schur bounds respectively have the
+required mu^2 a_* and mu^2 a_*^2 powers; the last two second-order
+terms in fact have mu^4 and mu^3. The row anchor must be retained
+until summing the gauge-path/background roots, as the archive does.
+
+Dress H0 by endpoint transports and define Qcov(a)=D_a^T H^P(a)D_a.
+Color scalarity and path reversal make this exactly covariant and
+transpose symmetric. Its own first two rooted Taylor kernels have
+uniform exponential bounds, since differentiated paths cost polynomial
+length. The same local-gauge argument applies to it, with the SAME
+flat q. Subtracting the two comparisons yields symmetric errors
+
+ Ecal_j=[t^j](L(t mu A)-Qcov(t mu A)),
+ ||Ecal_j||_Schur <= C mu^2 a_*^j, j=1,2.
+
+This step does not require paths generated by D_a^T H^P D_a to coincide
+with the initially chosen endpoint paths. That potentially incorrect
+identification is explicitly avoided.
+
+4. FACTORS, PHYSICAL WEIGHTS AND COMPLETE SOURCE COLLARS
+
+Write D_a=D0+tF1+t^2F2 and H^P=H0+tH1+t^2H2. Nearest-neighbor
+locality and path moments give
+
+ ||F1||+||H1|| <= C mu a_*,
+ ||F2||+||H2|| <= C mu^2 a_*^2.
+
+The archive's exact expansion then gives
+
+ L_j=D0^T Z_j+Z_j^T D0+E_j,
+ Z1=(1/2)H1 D0+H0 F1,
+ Z2=(1/2)H2 D0+H1 F1+H0 F2,
+ E1=Ecal1, E2=F1^T H0 F1+Ecal2.
+
+Thus ||Z1||<=C mu a_*, ||E1||<=C mu^2 a_*,
+||Z2||<=C mu^2 a_*^2, ||E2||<=C mu^2 a_*^2.
+For R0=D0^T D0+mu^2 I, the bounds
+||D0 R0^-1/2||<=1 and ||R0^-1/2||<=mu^-1 prove the claimed uniform
+energy-sandwiched vertex bounds. D0 here is the componentwise gradient
+of a BOND field, not the scalar gauge generator.
+
+Localization must use complete directions in smooth physical collars,
+not sharp indicators. For two marks, the mixed estimate follows by
+polarization before discarding their individual roots. A mark in a
+distant collar either lies on a long endpoint transport, or lies on a
+local-gauge loop whose original background root is correspondingly
+far from the matrix row. In both cases the original complete rooted
+kernel pays the distance. Discrete Stokes enlarges the collar by one
+fine edge. Fixed polynomial path/filling multiplicities consume only
+an exponential reserve. Fine-coordinate row and column Schur bounds
+then give the final-block operator bound; there is no K^4 entry count.
+
+Conjugating by exp(theta f(x/K)) with f Lipschitz changes a path factor
+by at most exp(C|theta|mu times its length). A fixed small theta is
+paid by the same reserve. Commuting D0 with this weight is O(theta mu);
+its product with Z1 or Z2 has the zero-order size already allowed for
+E1 or E2. Hence the weighted localized action-Hessian statement also
+passes, with reduced fixed rates if necessary.
+
+5. CLOSED NATIVE INPUT AND REMAINING OPERATORS
+
+The action-Hessian part of native interface H2 is now registered:
+the actual homogeneous S_m supplies the covariant Hessian, its complete
+degree<=4 kernels, and the double zero, uniformly in old grade. The
+proof retains the local coordinate/gradient terms and complete smooth
+source reads, and gives the precise powers of mu required by H2.
+
+It does NOT estimate Cbar or its physical derivatives, the moving
+scalar average, the actual constrained correction lambda.f'' away
+from the audited affine jet, or the derivative of the coarse term
+Cbar^T[a-S_(m+p)'']Cbar. Those require the separate native map and
+trajectory bounds. It also does not prove uniform heat-trace estimates,
+the coarse Schur determinant bounds, regulator matching or a positive
+Gaussian beta coefficient. The archived physical-Hessian proof itself
+passes after the native hypotheses above are substituted, without
+promoting those other claims.

@@ -1,0 +1,283 @@
+FIXED-q DOMAIN GAIN WITH STRICT LOCALIZATION BY THREE CIRCLES
+18 October 2026. Separate research derivation; not part of the reviewed
+Notebook43 PDF. One use of a fixed number q of homogeneous charts.
+
+RESULT AND SCOPE
+
+The fixed-q field-domain gain of Notebook42 can be combined with the
+strict localization of Notebook43 even when the gauge used to exhibit
+the gain has no proved supported expansion. The scalar observable is
+bounded on the larger domain using the gauge-adjusted field. On a
+smaller concentric domain it equals the ordinary, unadjusted chart
+composition, whose strict locality is known. Hadamard's three-circles
+theorem interpolates the shell bounds between these two domains.
+
+The result is a strict supported scalar family on an enlarged
+background-field ball, with positive exponential diameter decay and
+every fixed derivative cost C_{q,k} r^{-k}. Constants are uniform in
+preceding UV refinement and compatible volume, for q fixed. This is
+a theorem for a composed observable before integration. It does not
+bound a normalized conditional, its weights, its background scores,
+or an iterated family of quantum descendants.
+
+1. PRECISE INPUTS AND UNITS
+
+Fix the primitive ratio ell, and choose q ONCE so that
+
+  S=ell^q,                 theta=C_0/S<1/4.                  (1)
+
+M_ref denotes preceding homogeneous UV refinement. Distances below
+are measured in the FINAL, coarsest unit lattice after these q steps.
+The finer retained variables at all q levels are grouped by their
+final-scale cells. The number of scalar coordinates in a grouped
+cell can depend on q, but not on M_ref or total volume.
+
+Let F_M(w,t) be the exact unrooted retained chart mrg-chart. Compose
+the q maps with the correct successive refinement depths and write
+
+  B_q(w;t_0,...,t_{q-1})
+
+for the resulting old-scale field. The already proved mrg-block-gain
+gives a background-only holomorphic gauge gamma_q(w), and
+
+  Bhat_q(w;t)=log[(exp(i B_q(w;t)))^{gamma_q(w)}]/i,
+  ||Bhat_q(w;t)|| <= theta ||w|| + C_q max_a ||t_a||.       (2)
+
+These maps are holomorphic on fixed q-dependent product balls, with
+constants uniform in M_ref and volume. The bound and gauge are those
+of Notebook42; no additional locality property of gamma_q is used.
+
+Let R_X(U,J) be an actual gauge-invariant homogeneous source birth,
+with |R_X|<=A_X=epsilon exp(-kappa_s d_i(X)) on its independent source
+domain. Define f_X(b)=R_X(T(b)), where T is the complete ordinary
+physical pair (potential,current) of Notebook43. Choose r comparable
+to the source radius so that f_X is holomorphic and bounded by A_X
+on ||b||<r. This includes the strict fractional margin needed for
+independent source-domain Cauchy bounds. Further require r<=r_q,
+where r_q>0 is fixed and ensures every domain below lies inside the
+fixed q-chart domains. No constants below deteriorate as r shrinks.
+
+Gauge invariance is used in its precise usual sense: if b and b^v
+are sufficiently small ordinary coarse representatives related by
+a compatible gauge v, the equivariance/uniqueness of the homogeneous
+minimum gives gauge-equivalent complete physical pairs. Therefore
+f_X(b^v)=f_X(b) whenever the compared representatives lie in the
+source domain. This identity is also holomorphic for the small
+complex gauges at issue here, by the ordinary-minimum comparison and
+analytic continuation from real fields/gauges. Only this overlap
+identity, not an extension of f_X to arbitrary large raw fields, is
+used below.
+
+The raw finite composition has the following locality consequence
+of the supported maps already used in Notebook43. For q fixed there
+are K_q<infinity and kappa_q>0 such that the complete pair
+
+  (w,t) -> T(B_q(w;t))                                  (3)
+
+has strict supported families on a fixed product ball, with complete
+physical output norm and exponential spatial weight in FINAL units.
+In particular, if two joint inputs agree on the n-neighborhood of
+the projected source collar, and their norms are at most a, then
+the difference of (3) on that collar is at most
+
+  K_q a exp(-kappa_q n).                                (4)
+
+Here and below an enlarged K_q covers finitely many collar cells.
+To verify (3)--(4), compose the supported stationary prefix maps,
+the actual finite-range retained pivot charts, and the finite-range
+rooting/unrooting maps, then the supported complete physical pair T.
+There are only q compositions. Use the complete-output Banach norms
+before summing supports; the fixed-q regrouping and the strict support
+gluing inequality give some positive kappa_q and finite K_q. Taking
+the maximum over outputs in the source collar gives (4), without a
+factor counting its fine coordinates. All scale factors in this
+argument are fixed at q. No claim is made that kappa_q equals S
+times a single-step exponent.
+
+2. A LARGE BOUNDED DOMAIN AND A SMALL LOCAL DOMAIN
+
+Use the balanced joint product domain
+
+  Q_r={||w||<2r,  max_a ||t_a||<r/(4 C_q)}.               (5)
+
+If necessary enlarge C_q in (2), and decrease r_q. Equation (2)
+then gives ||Bhat_q||<3r/4 on Q_r. Thus the scalar
+
+  Phi_X(W)=f_X(Bhat_q(W))-f_X(0),   W=(w,t),              (6)
+
+is holomorphic on Q_r and bounded by 2A_X there.
+
+The raw composition and its complete pair vanish at W=0 and have
+uniform fixed-q analytic Lipschitz bounds on a fixed ball. Consequently
+there is eta_q in (0,1/2), independent of r,M_ref,X and volume, such
+that on eta_q Q_r both B_q and Bhat_q, as well as the relevant source
+physical pairs, lie in a strict fraction of their source balls.
+For clarity eta_q is chosen after all fixed-q chart constants and
+source margins, and is held fixed as r decreases. On eta_q Q_r,
+gauge invariance gives the exact identity
+
+  Phi_X(W)=R_X(T(B_q(W)))-R_X(0).                        (7)
+
+The right side supplies locality ONLY on this smaller domain. On
+Q_r itself the definition is (6); the raw field need not be in the
+birth domain.
+
+Let x_X be a deterministic birth anchor. Project the source collar
+to the final lattice, and choose a radius D'_X enclosing it about
+the projected anchor, with
+
+  D'_X <= C D_X/S + C_q,    D_X<=C mathfrak M(1+d_i(X)). (8)
+
+Let H_{X,n} be the final graph ball of radius D'_X+n. P_H sets ALL
+joint coordinate species outside H to zero, including each retained
+noise level. It preserves every scaled domain sigma Q_r. Define
+
+  phi_{X,0}(W)=Phi_X(P_{H_{X,0}}W),
+  phi_{X,n}(W)=Phi_X(P_{H_{X,n}}W)
+                -Phi_X(P_{H_{X,n-1}}W), n>=1.           (9)
+
+Each piece is strictly supported in H_{X,n}, holomorphic on Q_r,
+and bounded there by 2A_X. (The vacuum constant cancels for n>=1.)
+On a compatible finite torus the series telescopes exactly once
+the balls cover the torus.
+
+On eta_q Q_r, insert (7) in both terms of (9). The source independent
+product ball gives ||DR_X||<=C A_X/r. Equations (3)--(4) give a
+complete-pair difference at most K_q r exp(-kappa_q n), and the
+straight segment between the pairs lies in the same smaller convex
+product ball. Hence, including n=0 by increasing a constant,
+
+  ||phi_{X,n}||_{eta_q Q_r}
+                <= C_q A_X exp(-kappa_q n).             (10)
+
+No support estimate for the comparison gauge was invoked.
+
+3. THREE-CIRCLES TRANSFER AND FIXED JETS
+
+LEMMA. If h is holomorphic on a balanced product domain Q, with
+sup_Q|h|<=A and sup_{eta Q}|h|<=B, then for eta<sigma<1,
+
+  sup_{sigma Q}|h| <= B^lambda A^{1-lambda},
+  lambda=log(1/sigma)/log(1/eta).                         (11)
+
+Proof. For V in Q, apply Hadamard's three-circles inequality to the
+one-variable function z -> h(zV) at radii eta,sigma,1, first using
+strictly interior radii if necessary. Then take the supremum over
+V and the increasing limit to the boundary radii. This proof works
+for every finite regulator with constants independent of dimension.
+
+Apply (11) with sigma=7/8 and eta=eta_q. Equations (9)--(10) give
+
+  ||phi_{X,n}||_{(7/8)Q_r}
+      <= C'_q A_X exp(-lambda_q kappa_q n),
+  lambda_q=log(8/7)/log(1/eta_q)>0.                      (12)
+
+Take the final domain (3/4)Q_r. Its background radius is 3r/2,
+strictly larger than the original radius r. Every coordinate has a
+margin at least c_q r between this domain and (7/8)Q_r. Scalar Cauchy
+estimates therefore give, for every fixed ordered coordinate tuple
+alpha of length k, repetitions allowed,
+
+  ||partial_alpha phi_{X,n}||_{(3/4)Q_r}
+     <= C_{q,k} A_X r^{-k} exp(-lambda_q kappa_q n).       (13)
+
+The derivative vanishes unless all its coordinate slots belong to
+H_{X,n}. There is no all-degree multivariable Taylor sum. These
+bounds prove absolute convergence of the shell family, uniformly
+in compatible volume and preceding refinement.
+
+4. ROOTED DIAMETER NORM AND THE ACTUAL RESCALING COST
+
+Assume the same sufficiently strong source exponent kappa_s as in
+Notebook43, and sum over actual source births X with their amplitudes
+A_X. For every fixed p,k there is mu_q>0 such that
+
+ sup_z sum_{X,n:H_{X,n} contains z}
+  (1+|H_{X,n}|)^p exp(mu_q diam H_{X,n})
+  sum_{alpha in H_{X,n}^k}
+       ||partial_alpha phi_{X,n}||_{(3/4)Q_r}
+                       <= C_{q,p,k} epsilon r^{-k}.      (14)
+
+Proof. Repeat the rooted shell summation of mlc-conversion, now with
+(12)--(13). Each grouped cell has a fixed q-dependent coordinate
+count. The support and derivative sums cost only fixed powers of
+1+D'_X+n. Choose mu_q and delta_q>0 sufficiently small compared to
+lambda_q kappa_q and to the source exponent in (8). Insert
+1_{z in H}<=exp[-delta_q dist(z,x'_X)]
+             exp[delta_q(D'_X+n)],
+and spend a second small exponential to pay the fixed polynomials.
+The n-sum is geometric. Equation (8) and the original source tree
+bound pay the D'_X and source-shape sums. Finally sum the anchors.
+
+There are O(S^4) OLD birth anchors above one final cell in four
+dimensions. This multiplicity is INCLUDED in C_{q,p,k}; it is not
+set equal to one. At q fixed it is a fixed finite cost. Uniformity
+in M_ref concerns earlier UV refinement, and does not remove this
+age factor. No canonical h^4 cancellation has been used. This
+proves (14).
+
+The centered scalar Phi_X(w;t)-Phi_X(w;0) has the same construction,
+with a further fixed factor. All norms remain joint-field sup norms
+before any retained-variable integration. One may apply finite-order
+Taylor identities in t on a smaller domain, but actual retained
+supports must lie in it and their moment/score bounds are separate.
+
+5. WHAT SPATIAL RESCALING DOES AND DOES NOT GIVE
+
+Lengths in an inherited old-scale support shrink by S when expressed
+in final units. Thus an inherited decay exp(-kappa_in d_old), by
+itself, corresponds to exp(-S kappa_in d_final), up to fixed collars.
+But the newest classical minimizer and constraint lift generate tails
+on the final physical scale. Their locality exponent is controlled
+by (3), here denoted kappa_q. It is not multiplied by S just because
+the original source support was old.
+
+Accordingly, if a composable weighted analytic norm has separately
+established an inherited rate kappa_in and a raw chart rate kappa_q,
+the candidate rate after this interpolation is bounded by
+
+       lambda_q min{S kappa_in, kappa_q},                (15)
+
+with any additional fixed reserve loss from that composition proof.
+Equation (15) is a diagnostic ceiling, not a theorem of repeated
+norm propagation. The proven result here is (14) for one source
+birth and one fixed-q composition. The newest-map locality ceiling
+prevents concluding exponent replenishment from S lambda_q alone.
+
+For repeated startup, one must prove a composable weighted analytic
+norm estimate, retain the multiplicity of old anchors in every
+current cell, and establish quantitative constants for the relevant
+family of compositions. The shell pieces are generally not separately
+gauge invariant, so their gauge adjustment cannot simply be repeated
+piece by piece. Applying this argument anew to a complete scalar
+requires its larger-domain boundedness and small-domain locality;
+those are not consequences of a finite set of real jets alone.
+
+Even a successful repeated observable estimate would leave the actual
+normalized conditional weights, their two background responses, and
+the stability of the full generated state to be controlled. Thus no
+exp(C log^2 gamma) startup cost, no full marked-history bound, and no
+four-dimensional existence result is inferred here.
+
+LOCAL PROOF DEPENDENCIES
+
+Notebook42: mrg-chart, mrg-primitive, mrg-block-gain; the ordinary
+two-minimum comparison csg-comparisons and exact ordinary gauge
+representative ot-ordinary-representative.
+Notebook43: source homogeneous independent product ball; complete
+physical current families mlc-current-supports; shell and rooted
+summation proof mlc-conversion. Their proofs are retained in
+work/marked_radius_fragment.tex and
+work/marked_localization_conversion_fragment.tex.
+
+This derivation uses the actual same q retained charts. It does not
+replace q quantum kernels with one large-ratio kernel, and does not
+commute comparison gauges through conditional measures.
+
+ROOT REVIEW
+The one-variable three-circles interpolation, fixed derivative margin,
+shell telescope and fixed-q anchor counting were checked against the
+displayed inputs. The conclusion is accepted only in the stated one-use,
+composed-observable scope. The newest-lift locality ceiling, non-invariant
+individual shell pieces and lack of normalized-weight estimates prevent
+promoting it to repeated startup or actual descendant propagation.

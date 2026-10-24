@@ -1,0 +1,597 @@
+RAW FINITE-BLOCK CLUSTER RESPONSE AND THE ACTUAL SOURCE COUNTERTERM LEDGER
+18 October 2026. Working calculation, no publication artifact.
+
+1. FIX THE OPERATOR BEFORE CHANGING ITS COORDINATES
+
+Work on a compatible finite periodic homogeneous regulator. Fix q and
+the actual geometric blocking kernels K_j,...,K_{j+q-1}. Their retained
+cutoff thresholds, gauge-fixing normalizers, averaging constraints, and
+real coupling parameters used in these geometric kernels are frozen at
+their actual values. K_r is linear in the density to which it is applied.
+Do not vary those parameters when inserting the scalar complex mark used
+below. This does not freeze the physical coupling for the actual RG run;
+it is the exact operator at one already specified finite prefix.
+
+Let S_r be the source coupling-free classical action, with exactly the
+source trace normalization. Write the homogeneous density coordinate as
+
+              rho_r=exp(-gamma_r S_r+E_r+R_r-v_r).
+
+Here R_r is the ENTIRE source static R history, not just its mature part,
+and v_r is the vacuum constant. The old-R absorption in CMP119 p271 is
+only into the fluctuation difference in (3.28). It does not remove the
+static R history (2.30). Before the subsequent R-operation, the identity
+(3.26) decomposes the SAME logarithm into E, R'', and boundary pieces.
+Consequently on the homogeneous bulk the sum E+R obeys the raw density
+identity. The R-operation adds its new homogeneous bulk functional F_r;
+these are the second-group terms in CMP122-II (1.98)--(1.100). Denoting
+vacuum-adjusted equality by equality modulo a field-independent scalar,
+
+ exp(-gamma_{r+1}S_{r+1}+E_{r+1}+R_{r+1})
+       = exp(F_r) K_r exp(-gamma_r S_r+E_r+R_r).                 (1)
+
+The R'' terms are part of the decomposition of K_r, not additional
+multiplicative births on the right side of (1). Counting them a second
+time would be wrong. The subsequent R-operation bulk F_r is additional.
+
+The scope of (1) is the exponential of the UNIVERSAL HOMOGENEOUS BULK
+coefficients. CMP119 pp278--279, around (3.47), identifies the interior
+E and R'' coefficients with the whole-lattice functions and decomposes
+their conditional logarithm exactly. CMP122-II (1.98)--(1.100) adds the
+universal interior F_r=R' coefficient. F_r is frozen at its actual value
+from the full source R-operation; (1) does not apply a new R-operation
+to rho_r alone. Boundary sectors remain in the full source
+representation. In particular (1) is not a statement that they vanish
+or that rho_r alone is the full Wilson density.
+
+Unrolling (1) gives a nested RAW integral with F_r inserted at its actual
+intermediate field. Every intermediate factor exp(+gamma_r S_r) from
+the log coordinate cancels exp(-gamma_r S_r) from the next density.
+Every intermediate vacuum normalization contributes only a final scalar.
+No background-dependent normalization denominator is discarded: one can
+either keep all such factors inside K_r or unroll K_r before any Gaussian
+normalization. The calculation below uses the latter convention.
+
+2. EXACT FINITE-BLOCK RATIO
+
+Put gamma=gamma_j, g=gamma^-1/2, and let I_q(X;F)(w) be the raw nested
+integral with initial interaction X and the actual intermediate F_r.
+The entire classical phase -gamma S_{j+q}(w) is factored out. Let I_q(0;0)
+denote the SAME raw kernels and cutoffs with X=0 and F_r=0. Define
+
+ D_q(w)=log I_q(0;0)(w),
+ T_q X(w)=X(P_q w),
+ N_q(X)(w)=log[I_q(X;0)(w)/I_q(0;0)(w)]-T_qX(w),
+ B_q(X;F)(w)=log[I_q(X;F)(w)/I_q(X;0)(w)].                    (2)
+
+All logarithms use the branch supplied by the connected expansion; take
+vacuum differences at the end. P_q is the exact ordinary stationary
+prefix, with the comparison gauge inside invariant scalar inputs as
+proved in strict_support_comparison_gauge_2026-10-18.txt. Thus
+
+ log I_q(X;F)=D_q+T_qX+N_q(X)+B_q(X;F).                       (3)
+
+In particular the normalized quantity in N_q is an exact log ratio, not
+the log of a numerator with an omitted denominator.
+
+Let Delta_q X=X(Bhat_q(w,t))-X(P_q w), where Bhat_q is the actual
+composed retained field after the noise-independent comparison gauge.
+Scalar gauge invariance of X implies the exact identity
+
+ N_q(X)=log <exp(Delta_qX)>_{q,0},                            (4)
+
+where the expectation is normalized by I_q(0;0). Its measure includes
+EVERY raw q-layer weight. Formula (4) does not identify this measure with
+one endpoint-ratio RG integral, nor with a product of independently
+normalized kernels whose changing denominators have been omitted.
+
+3. THE STRICT SAME-EXPONENT INPUT ESTIMATE
+
+Fix an output activity exponent a and choose a larger prepared exponent
+A, including the fixed reserve needed for the source connected expansion
+and the final complete-field specialization. Fix the physical grouping
+J and all support algebras for A BEFORE choosing q. Write L=ell^q.
+The supported comparison-gauge construction gives
+
+ ||Bhat_q(w,t)||_support <= theta b+C_q rho,
+ theta=C_A/L,   rho=max_r ||t_r||,
+
+on |w|<b and rho within the common fixed ceiling. Its zero-noise family
+is the DIRECT ordinary prefix; keeping the larger family obtained by
+multiplying gauge factors instead would lose the needed theta.
+
+For a connected old J-cell carrier H, parent proved
+
+ |pi_L H| <= 3^4[1+(|H|-1)/L].                              (5)
+
+The proof colors final cells mod3 and uses a depth-first tour of a
+spanning tree of H. It applies to arbitrary connected animals, not only
+boxes. Choose q sufficiently large that theta is small and
+3^4 A/L<a/8. The needed q is fixed once; it is not sent to infinity.
+
+Let X=sum_H X_H, with ||X||_{a,b}=mu. Expand X_H in blockwise Banach
+multihomogeneous degrees. The separately polarized coefficient bound
+is ||X_H||_b (e/b)^degree. The chart support algebra controls each
+substituted argument by theta b+C_q rho. The output carrier consists
+of pi_L H and the newly attached chart trees. The latter are paid in
+the A support norm of the chart; (5) pays the former from the old a
+weight. Subtract the zero-noise series. Every surviving monomial has
+at least one noisy argument, so the absolute degree sum is bounded by
+
+ C (rho/b) |H| (1-e theta-e C_q rho/b)^(-|H|-1) ||X_H||_b.
+
+Choose theta and rho/b small enough that the exponential loss in |H|
+is <a/8. The factor |H| uses another fixed portion of the old reserve.
+Root summation is performed as in the analytic seed proof, with an
+additional tiny tree reserve for transporting the chosen root. This
+proves the SAME input/output exponent estimate
+
+ ||Delta_q X||_{prepared A,,|w|<b,,|t|<rho}
+                      <= C_q (rho/b) ||X||_{a,b}.              (6)
+
+No derivative of the state is assumed. This is an estimate of the full
+holomorphic activity, not merely its quadratic jet. The constants may
+depend on q and the chosen fixed support parameters.
+
+An arbitrary physical X needs no artificial independent-(U,J) extension.
+After (6), its strict terms are functions of w and the retained noises
+only. Add w as a spectator variable beside the source background pairs;
+leave these functions unchanged under covariance decoupling. Include
+their supports in Y_0 before the retained/bad-set split. This ensures
+that they are never evaluated outside their retained analytic domain.
+
+4. PREPARATION OF THE RAW q-LAYER BASE: EXPLICIT TERMS
+
+Use a common noise scale g for the algebra; a step originally written
+with g_r is changed by the real scalar rescaling x_r -> (g/g_r)x_r.
+The corresponding powers in Lebesgue measure are field-independent
+vacuum factors. The retained radius is changed by the reciprocal ratio,
+so the physical window is EXACTLY the same. On a finite weak prefix with
+|gamma_r-gamma_j|<=D_q, all these ratios are 1+O_q(g^2).
+
+The source stationary action identities give at each stage
+
+ S_r(Phi_r(B,t_r))=S_{r+1}(B)+1/2<t_r,H^W_r(B)t_r>+V^W_{3,r}(B,t_r),
+             |V_{3,r}| <= C_q ||t_r||^3
+
+in localized form. This is B109 (2.5)--(2.13), localized by B116
+(1.19)--(1.21), (1.37)--(1.40). Here Phi_r is the retained chart (not
+the fresh birth F_r in (1)), and H^W is the constrained Wilson Hessian.
+The raw gauge quadratic is separate, with Hessian H^G_r and coefficient
+gamma_r; the Wilson phase in the unrolled integral has coefficient
+gamma_j. After the common rescaling t_r=g x_r, use H_r=H^W_r+H^G_r as
+the free Hessian. The remaining gauge quadratic is exactly
+(gamma_r/gamma_j-1)<x_r,H^G_r x_r>/2, and belongs to item (v). One must
+not multiply the whole Wilson-plus-gauge Hessian by gamma_r/gamma_j.
+Equivalently one may keep H^W_r+(gamma_r/gamma_j)H^G_r as the free form;
+its difference from the chosen free form is precisely item (v).
+Summing the EXACT Wilson decompositions
+telescopes the classical values to S_{j+q}(w). Put every quadratic
+form at the corresponding STATIC suffix B^0_{r+1}(w), and put the
+difference at the noisy suffix into the interaction. The complete list
+of new non-Gaussian terms is:
+
+ (i) g^-2 V_{3,r}(B_{r+1}(w,gx),gx_r), size C_q g R^3;
+ (ii) 1/2<x_r,[H_r(B_{r+1}(w,gx))-H_r(B^0_{r+1}(w))]x_r>,
+      size C_q g R^3;
+ (iii) nonquadratic gauge-fixing terms, size C_q g R^3;
+ (iv) the log Haar/chart/pivot Jacobian minus its value at the static
+      zero-noise point, size C_q gR;
+ (v) the small quadratic coefficient changes caused by using the actual
+      g_r rather than g in geometric gauge factors, size C_q D_q g^2 R^2.
+
+The nested change of variables is triangular: its Jacobian is the
+product of the exact primitive Jacobians. There is no additional mixed
+Jacobian. The source local operators and actual homogeneous charts are
+holomorphic on fixed ceilings; differentiating their background
+coefficients in (ii) therefore costs a fixed constant, not b^-1.
+Their existing random-walk localizations and complete strict supports
+give localized families with these bounds and the chosen spatial
+reserve. In (ii) the two indicated noise slots are part of the support.
+
+Normalize the q static Gaussian forms ONLY AFTER this rewriting of the
+raw Lebesgue integral. The resulting free covariance is the direct sum
+of the q static covariances, and the free prefactor contains their full
+Gaussian determinants and the zero-noise primitive Jacobians. Thus
+there are no missing intermediate determinant ratios. The remaining
+interaction has a prepared bounded envelope
+
+            ||V_base,q||_pre <= C_q(gR^3+D_q g^2 R^2).         (7)
+
+This deliberately uses the crude retained supremum. For logarithmic R
+it tends to zero, and no moment or parity theorem is needed.
+
+5. FIXED GROUPING AND THE q-SPECIES GAUSSIAN LOCALIZATION
+
+One must not increase J after choosing q, since that could change the
+prefix contraction constant used above. The following scale calculation
+is the reason no such increase is necessary.
+
+In final physical units the successive retained species have spacings
+h_r=ell^{r-q}. Source propagator kernels and their localizations have
+exponential bounds in distance divided by h_r, with the source uniform
+complete-operator constants. The covariance localization of B116
+(2.5)--(2.8) permits the central localization patch to contain an
+arbitrary prescribed interaction carrier and its fixed J collar; this
+is the freedom described on p13, following (2.6).
+
+A walk contributing to a decoupling error across that collar has
+length at least c J/h_r in its own units. The number of coordinates
+per final J-block is at most C(J/h_r)^4. Trace/determinant error bounds
+can therefore be majorized, even with a harmless larger fixed power d_*,
+by
+
+ C J^{d_*} sum_{s=1}^q ell^{d_* s} exp(-cJ ell^s)
+                         <= C' J^{d_*} exp(-c'J).             (8)
+
+The last inequality follows by the ratio test: after a fixed choice
+of J, the ratio of consecutive terms is at most 1/2. This is uniform
+in q. The same estimate applies to the off-central random-walk terms
+after the fixed source complex-contour factors are included. Thus the
+Gaussian localization reserve is determined by the already fixed J,
+not by a new J(q). Short walks entirely inside the central patch are
+not decoupled and are part of its exact conditional Gaussian.
+
+The TOTAL number of local coordinates C_q can be large. Its effect on
+the complex-background determinant comparison is handled separately:
+choose the common background analytic ceiling after q, so that the
+trace bound C_q(alpha_0+alpha_1) fits the source fixed Gaussian margin.
+This choice is independent of the moving radius b and of the coupling;
+eventually b is below that fixed ceiling. The coefficient (7) is made
+small by taking g sufficiently small. Neither operation changes J or q.
+The free Gaussian determinants themselves are treated by the existing
+localized determinant construction, not bounded by their absolute
+finite-volume sizes.
+
+With these choices, the q Gaussian species satisfy the actual estimates
+B116 (2.15)--(2.25): the covariance norm is the maximum of the individual
+norms, complex quadratic errors have the same strict coercivity margin,
+and the trace errors per localization block have the bound (8) plus the
+chosen small background term. The Mayer potentials are the bounded
+families (7). Replacing the scalar retained coordinate at a site by this
+finite collection of species changes the displayed Gaussian products
+and determinants only by their block-direct-sum versions. Their
+conditional integrations factor by species before the bounded
+potentials are inserted. The source connected-support factorization
+(2.10) is unchanged. The retained/bad-set split is performed for each
+species, with its actual radius. Thus the absolute resummations
+(2.27)--(2.41) apply with constants depending on q but with a fixed
+prepared-to-output reserve A->a. The cutoff-only activities remain.
+
+The physical specialization of the q source background pairs uses the
+complete block product construction with q copies of the (A,J) slot
+and the spectator w slot. There are finitely many complete slots, not
+an enumeration of fine sites. Choosing b below the fixed q ceiling
+gives a fixed margin. This preserves the prepared-to-output reserve
+already included when A was chosen, and the output radius remains b.
+
+For clarity, the finite-species extension can be checked at the actual
+operator formulas, rather than inferred only from a species count.
+Write C=direct_sum_r C_r. Given a projected central carrier Z0, let
+Z0,r be its coordinate subset on the r-th retained lattice, thickened
+by the prescribed collar. Then the conditional covariance C(Z0), its
+positive square root, the precision, and the mixed operator Gamma in
+B116 (2.5)--(2.8), (2.14) are the respective direct sums. Conditional
+Gaussian integrations and all determinant quotients factor by r.
+The source error estimates (2.16)--(2.17) therefore add in the trace
+exponent and take a maximum in the operator norm. Their sums are
+exactly controlled by (8) and the q-dependent small background term.
+
+There is no unconnected exterior determinant hidden in this check.
+The conditional determinant is restricted to Z0,r; Gamma connects
+Z0,r to the exterior; the square root enters G only through that
+Gamma product. Thus any changed walk under an exterior decoupling
+which affects G must reach Z0,r. An exterior short walk by itself
+does not contribute. This verifies the collar gain for each operator
+actually used in the source proof, including the square root.
+
+The q-layer potentials may couple several species. They are bounded
+analytic functions on the union of those species' retained supports;
+put every such coordinate into Y0 before B116 (2.3). The Mayer product
+and its derivative bounds use the scalar bound on that full potential,
+not independence of its species. When the final projected domain has
+disconnected components, the strictly supported potentials and the
+decoupled covariance both factor over those components, proving the
+same factorization (2.10). The remaining connected-graph sums have
+the same supports and scalar majorants. This proves the direct-sum
+extension of (2.27)--(2.41), with no new species combinatorics beyond
+the already counted coordinate trace and the bounded potential norm.
+
+Finally (8) is a statement BEFORE physical specialization of the
+independent background pairs. A static suffix minimizer substituted
+afterward has coarsest-scale locality, not decay exp[-cJ/h_r]. Its
+complete strict-support family uses the preallocated exponent A and
+has finite q-dependent amplitude. The final blockwise Banach
+substitution spends its already allocated reserve and a smaller fixed
+background ceiling. It does not change J, and it does not borrow
+the finer-scale Gaussian collar gain.
+
+6. WHOLE-FAMILY COMPLEX MARK AND THE SMALL RESPONSE
+
+Let nu=||Delta_q X||_pre. Take a fixed source bounded-potential budget
+sigma>0 above the base envelope (7). For nu<=sigma/2, insert z Delta_qX
+into the exact raw q-layer base and take |z|<sigma/nu. The source
+absolute construction just verified is uniform on this disc. Its
+localized connected logarithm has a fixed bound K_q. Cauchy gives
+
+ ||log<exp(Delta_qX)>_{q,0}||_{a,b}
+       <= 2K_q nu/sigma <= C_q (gR/b)||X||_{a,b}.              (9)
+
+The zero-free branch and denominator are supplied by the same connected
+series. Taking vacuum differences costs at most a factor two.
+
+More generally, throughout a fixed whole-input ball with enough budget,
+
+ ||N_q(X+Y)-N_q(X)||_{a,b} <= C_q (gR/b)||Y||_{a,b}.           (10)
+
+Proof: the preparation X->Delta_qX is linear. Center the complex disc
+at its actual prepared potential Delta_qX and reserve half the budget
+for z Delta_qY. The same one-parameter Cauchy argument applies. Thus
+(10) is not inferred by subtracting two unrelated upper bounds.
+
+For ||X||_{a,b}<=K b^2 and R=(log gamma)^t with t<s and
+b=c g(log gamma)^s, the coefficient delta_q=C_q gR/b tends to zero.
+This is all that contraction and scalar drift need. The stronger
+quadratic parity gain is unnecessary here.
+
+7. THE GAUSSIAN/GEOMETRIC FORCING HAS SIZE b^2
+
+For the zero-input q map, the source fixed-domain homogeneous induction
+and its retained-threshold variant give D_q on a FIXED background ball
+b_*(q), with a fixed localized analytic norm. This also follows from the
+explicit q preparation above plus the localized free determinants.
+Every gauge/pivot/Jacobian factor in Section4 is part of D_q.
+
+The total is invariant under global color conjugation. Average each
+localized activity over the compact global SU(2) conjugation action.
+This does not enlarge its support or norm and does not change the total.
+Each averaged activity has zero linear jet because su(2) has no
+nonzero invariant linear functional. Subtract its vacuum value. Scalar
+Cauchy on the fixed b_* ball then gives, for b<=b_*/2,
+
+                     ||D_q-D_q(0)||_{a,b} <= C_q b^2.         (11)
+
+The same argument works for SU(N), N>=2; the positive Gaussian drift
+used elsewhere remains restricted to the group's proved coefficient.
+Equation (11) uses the COMPLETE forcing, not merely its determinant
+piece, and the normalization is the raw one fixed in Section2.
+
+8. EXACT SOURCE E AND COUPLING EXTRACTION
+
+Put X_in=E_j+R_j and B=gamma_j-gamma_{j+q}. From (1)--(3),
+
+ E_out+R_out = T_q(E_j+R_j)+D_q+N_q(E_j+R_j)
+                           +B_q(E_j+R_j;F)-B S_out.          (12)
+
+Define the actual source correction
+
+ Z_q = T_qR_j + [N_q(E_j+R_j)-N_q(E_j)]
+                  +B_q(E_j+R_j;F)-R_out.                    (13)
+
+Then (12) becomes
+
+ E_out=T_qE_j+D_q+N_q(E_j)+Z_q-BS_out.                       (14)
+
+The source coordinate has beta(E_j)=beta(E_out)=0. The exact classical
+transport has beta(T_qE_j)=beta(E_j), and beta(S_out)=1. Applying beta
+to (14) therefore proves
+
+ B=beta[T_qE_j+D_q+N_q(E_j)+Z_q],
+ E_out=P[T_qE_j+D_q+N_q(E_j)+Z_q],   P=I-S_out beta.           (15)
+
+This proves the requested counterterm identity. No static R has been
+absorbed into E, and its endpoint subtraction -R_out is explicit.
+It is enough that the TOTAL bracket has the source symmetry; separate
+young R summands need not individually have scalar Maxwell symmetry.
+
+If the independently proved static-history estimate gives
+||R_j||_{a,b_in}<=rho b_in^2 and ||R_out||_{a,b_out}<=rho b_out^2,
+and the finitely many F_r have total norm <=rho b_out^2 on their actual
+intermediate fields, then (6), (10) and the same bounded-insertion
+cluster argument give
+
+                        ||Z_q||_{a,b_out}<=C_q rho b_out^2.   (16)
+
+The ratio b_out/b_in is uniformly close to one on q bounded weak steps;
+the chart margins can absorb that change. A newborn inserted inside q
+has its source radius larger than the chosen moving b by the fixed
+small prefactor c, so its finitely many intermediate chart expansions
+are paid once. This is not a bound on an indefinitely propagated mark.
+
+Finite primitive extension must establish the source R_out bounds
+BEFORE using (16). Parent's finite-phase auxiliary-radius construction
+and source finite-prefix inequalities provide the intended bootstrap;
+future positive block drift must not be assumed in order to obtain
+the R_out bound used to prove that same block's positivity.
+
+9. RESTORING THE ACTUAL OUTER RETAINED WINDOW
+
+Sections3--8 use an auxiliary inner cutoff R=(log gamma)^t with
+1/2<t<s<min(q0,q1), where the last inequality is permitted by the
+printed q0,q1>1. They do not replace the original source cutoff or its
+large-field geometry. The exact difference between outer and inner
+homogeneous logarithms is estimated separately by the annular-marker
+argument in auxiliary_cutoff_comparison_2026-10-18.txt. It uses the ACTUAL source
+prepared potential on the full outer domain, not the moving b class
+outside its ball. Define, at each ACTUAL prefix state rho_r,
+
+ h_r(w)=log[(K_outer,r rho_r)(w)/(K_inner,r rho_r)(w)].         (17)
+
+Both kernels retain their exact actual normalization factors, and the
+log branch is the source connected branch. The actual prepared
+interaction includes young R at s=1 in CMP119 (3.27), not only the
+regular s=0 kernel. CMP119 p276 explicitly treats the R-determined
+action as E for this preparation, except that its second coupling
+counterterm is unnecessary. Thus the annular theorem applies to the
+full actual homogeneous X_r=E_r+R_r at the state where (17) is defined.
+Its output is a source-localized holomorphic h_r with norm
+C exp[-c(log gamma_r)^(2t)] on the source OUTPUT (U,J) domain.
+
+The actual source equality (1) is now EXACTLY
+
+ rho_{r+1}=exp(F_r+h_r) K_inner,r rho_r,                      (18)
+
+modulo vacuum. Unroll THESE ACTUAL equalities. Each h_r is frozen after
+evaluating the actual prefix state; it becomes an output insertion at
+the same position as F_r. Every kernel in the resulting nested integral
+is inner. No auxiliary or hybrid state is ever evaluated on the outer
+annulus, and no q-layer outer-domain inclusion is required.
+
+The source-output h_r has an independent-(U,J) extension. Apply the
+complete physical seed specialization to it and then the finite-q
+inner chart substitution. An intermediate inner field has size
+C_q[b+g(log gamma)^t], whereas its source radius is bounded below by
+c_q g(log gamma)^(min(q0,q1)). Taking t<s<min(q0,q1) gives a strict
+margin for sufficiently weak gamma. The finite-q strict substitution
+therefore bounds the sum of inserted h_r by
+C_q exp[-c_q(log gamma)^(2t)]. This is superpolynomially small because
+2t>1, and its b^-2 extraction cost is negligible.
+
+In Sections2 and8 replace the family F by F+h. The definitions and
+counterterm identities remain exact, while the estimate on Z_q gains
+at most C_q exp[-c_q(log gamma)^(2t)]. This is a source connected-log
+annular estimate, not a pointwise Gaussian tail argument.
+
+10. PARITY REFINEMENT OF THE SAME HOLomorphic MACRO RESPONSE
+
+The crude estimate (9) suffices for scalar positive block drift. A
+stronger estimate, useful for sourced coupling shifts, follows from
+the already established bounded whole-family analytic construction.
+No Gaussian moment regulator or exponentiation of an unbounded cubic
+mark is needed. Write mu=||X||_{a,b}, delta=gR/b, and
+
+ epsilon_base=C_q(gR^3+D_q g^2 R^2).
+
+The simultaneous-noise Taylor expansion has the exact form
+
+ Delta_q X(w,x)=L_X(w,x)+Q_X(w,x),
+
+where L_X is linear in ALL retained noises jointly. The same supported
+composition argument as Section3, on the larger noise ball |t|<c_q b,
+and scalar Cauchy in the common noise amplitude give
+
+ ||L_X||_pre<=C_q delta mu,
+ ||Q_X||_pre<=C_q delta^2 mu.                                (19)
+
+One can obtain (19) by expanding X(Bhat_q(w,z t))-X(P_qw) in z:
+its prepared norm is <=C_q mu for |z|<c_q/delta, and its constant
+coefficient is zero. Summing terms of degree at least two gives the
+second estimate. The coarse-carrier compression and support reserves
+are spent once for this larger noise ball; no derivative of X is
+introduced. Every retained characteristic function is invariant under
+the simultaneous reversal x_r -> -x_r for all r.
+
+Let A(V) be the source localized connected log of the centered static
+q-Gaussian with the actual inner retained windows and bounded prepared
+potential V, including the cutoff-only log. On a fixed prepared ball
+||V||<sigma the construction in Sections5--6 gives a holomorphic map
+with a fixed output-norm bound K_q. All these statements are uniform
+in the permitted complex backgrounds and covariance decouplings.
+
+For the pure linear mark, A(z L_X)=A(-z L_X). Indeed the centered
+Gaussian, its complex centered continuations, the retained/bad-set
+factors, and their localized conditional versions are even under
+simultaneous noise reversal. In every localized term the first
+derivative at zero therefore integrates an odd function and vanishes.
+Equivalently the localized output family may be symmetrized in z;
+this preserves its sum, support, and norm. Consequently
+
+ ||A(L_X)-A(0)||<=C_q ||L_X||_pre^2.                         (20)
+
+The two-parameter Cauchy formula, on the fixed whole-family budget,
+also gives
+
+ ||A(V+L_X)-A(V)-A(L_X)+A(0)||
+                   <=C_q ||V||_pre ||L_X||_pre.              (21)
+
+For example use radii sigma/(4||V||) and sigma/(4||L_X||) for
+the two amplitudes; the mixed difference keeps only terms containing
+both amplitudes. Their absolutely convergent geometric sums prove
+(21). The same budget gives
+
+ ||A(V+L_X+Q_X)-A(V+L_X)||<=C_q ||Q_X||_pre.                 (22)
+
+Using V=V_base,q in (20)--(22) proves the full holomorphic estimate
+
+ ||N_q(X)||_{a,b}
+ <=C_q [delta^2 mu + delta^2 mu^2 + epsilon_base delta mu].   (23)
+
+For mu<=K b^2, the mu^2 term is absorbed into the first term. Thus
+the logarithmic small factor can be delta^2 rather than delta. This
+is a bound in the same analytic activity norm as (9), not just a
+second-background jet. The gauge quadratic mismatch is even; the
+possibly odd cubic, Jacobian, and noisy-background terms are all in
+V_base,q and are accounted for by (21). No term has been omitted from
+the normalized ratio.
+
+Since q_min=min(q0,q1)>1, it is possible to choose
+
+ 1/2<t<s<q_min,        2(s-t)>1.
+
+For an explicit choice put e=min{(q_min-1)/4,1/4},
+s=1+2e, and t=1/2+e/2. Then s<q_min, t>1/2, and
+p=2(s-t)=1+3e>1. Also
+
+ epsilon_base/delta=C_q[b R^2+D_q g b R] ->0.
+
+Hence (23) is bounded by C_q delta^2 mu for sufficiently weak
+coupling on the admitted moving envelope. Fresh births F_r and the
+actual-state annular outputs h_r are NOT assumed even. They are
+frozen small output insertions in B_q(X;F+h) and Z_q, handled by the
+separate whole-family Lipschitz estimate and their superpolynomial
+bounds. The parity statement concerns N_q with F=h=0; putting these
+insertions into the reference measure and then claiming exact parity
+would be an error. Static q covariances may depend holomorphically on
+the background w; for each such fixed background they remain centered,
+so reversal of all noise variables is still exact. All real couplings
+and retained windows are fixed during this argument.
+
+Then delta^2 is a logarithmic power with exponent greater than one.
+Along a positive-flow sequence gamma comparable to depth, a future
+relative-coupling derivative bound C delta^2/gamma would be summable.
+Equation (23) itself does NOT establish that derivative bound: the
+analytic source/coupling parameter ledger and the admitted complex
+state family must still be verified. The annular and fresh-birth
+terms retain their independent superpolynomial bounds.
+
+For clarity delta^2 itself is NOT summable over an indefinitely long
+positive-flow run. The useful scalar series has the additional factor
+gamma^-1. If gamma_{j-a}>=gamma_j+c a-C0 on completed blocks, then
+sum_a [gamma_{j-a}(log gamma_{j-a})^p]^-1 is bounded by a constant
+times (log gamma_j)^(1-p), using comparison with
+integral_{gamma_j-C0}^infinity dx/[x(log x)^p]. This tends to zero
+as the weak threshold grows. Establishing the gamma^-1 derivative
+gain from an actual source parameter extension remains necessary.
+
+Constrained_fiber independently audited this parity proof against the
+whole-family macro map and found no parity or domain obstruction.
+
+STATUS FOR INDEPENDENT AUDIT
+
+The scalar raw-density/counterterm identities (1)--(4), (12)--(15) are
+exact algebra once the stated source homogeneous bulk identity is
+matched. The same-exponent preparation (6) explicitly spends coarse
+compression and separate new-tree reserves. The source q-species
+extension is reduced in Sections4--5 to its displayed action terms,
+direct-sum conditional Gaussian bounds, and the uniform cross-scale
+trace estimate (8); the fixed grouping is not changed after q.
+
+Before promoting (9) to an established actual-source macro theorem,
+an independent audit should check the precise raw K_r factorization
+against the source gauge/retained-coordinate convention, the local
+operator identification in item(ii), and whether all carrier collars
+used in (8) fit the declared fixed support reserve. These are concrete
+proof checks, not assertions that the full existence proof is complete.
+
+Audit update, 18 October: constrained_fiber checked the universal bulk
+ledger, the Wilson/gauge quadratic split, and the actual conditional
+Gaussian operators in B116 (2.5)--(2.8), (2.14)--(2.17). No operator
+obstruction was found; the square root enters only through Gamma, so
+its relevant decoupling changes also cross the central collar. The
+finite direct-sum extension and full cross-species support accounting
+were checked as above. The result is audited RELATIVE TO our prior
+complete localized operator/classical lemmas and the published source
+conditional class. It is not external proof certification or a claim
+that all hypotheses of a four-dimensional continuum existence theorem
+have now been proved. The quantitative fixed-point constants and
+continuum reconstruction remain separate obligations.

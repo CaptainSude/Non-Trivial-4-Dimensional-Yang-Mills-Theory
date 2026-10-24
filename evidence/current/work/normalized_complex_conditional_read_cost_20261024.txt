@@ -1,0 +1,338 @@
+NORMALIZED COMPLEX CONDITIONAL EXPECTATION: READ COST AND A FINITE CRITERION
+24 October 2026. audit_two_root. Scratch mathematical result and native gate.
+No archive/output edits.
+
+RESULT
+
+There is a direct finite normalized-expectation bound which avoids an
+exponential seed price on a sufficiently small, read-dependent complex
+tube. It requires a bound on the TOTAL phase-gradient energy under the
+positive real-part tilt. With a Schur-bounded score-gradient kernel and
+h changed parameters, the sufficient radius is c/(K sqrt(h)), subject
+to the original action and source-image margins. Fixed-order Cauchy
+prices are then polynomial in h. This is a smaller tube, not a bound
+on the old fixed native pair domain.
+
+Real positivity, strong convexity, finite-range dependence, even cuts,
+and a small complex Hessian perturbation do NOT themselves bound the
+complex normalized functional on bounded tests polynomially in h.
+An exact independent centered Gaussian example gives exp(c h rho^2).
+For holomorphic tests the available analytic domain matters: that
+bounded-test example alone does not refute an improved bound for the
+native wide occupied-noise source ball. A separate narrow-strip example
+does refute an unrestricted positivity-to-holomorphic-norm inference.
+
+The remaining native question is precise: can the actual complex
+R-marginal be represented, or bounded on holomorphic source functions,
+inside their full source domain with polynomial read cost on the
+DESIRED output radius? Existing occupied Gaussian cancellation gives a
+small exponential body-volume price; it does not by itself prove this
+stronger statement. No second-step source-image inclusion is supplied
+by the present note.
+
+1. EXACT PHASE IDENTITY AND THE SOURCE MARGINAL
+
+Let K be a fixed finite real product cut, dxi its fixed reference
+measure, and H_z its complete holomorphic exponent, real for real z.
+All Haar/pivot/coarea densities must be included, or equivalently kept
+as a holomorphic density with a fixed nonzero branch on this chart.
+Assume the finite integrals exist. No source-dependent normalizer or
+cut is introduced. Put
+
+ Z(z)=integral_K exp(-H_z) dxi,
+ Q_z F=Z(z)^-1 integral_K F_z exp(-H_z) dxi.
+
+At a fixed complex z define the POSITIVE probability
+
+ nu_z(dxi)=exp(-Re H_z(xi)) dxi / Z_abs(z),
+ Theta_z(xi)=Im H_z(xi),
+ c_z=nu_z exp(-i Theta_z).
+
+Then Z(z)=Z_abs(z)c_z, and, whenever c_z is nonzero,
+
+ Q_z F=nu_z[F_z exp(-i Theta_z)]/c_z.                    (1)
+
+A field-independent complex scalar cancels from (1) exactly. Its
+original outer-law factor must still be retained in the full ledger.
+
+The norm on ALL bounded measurable complex tests is EXACTLY
+
+              ||Q_z||_(Linf -> C)=1/|c_z|.              (2)
+
+The upper bound is immediate; F=exp(i Theta_z) attains it. There is
+no positivity assertion about Q_z itself.
+
+If tests read only independent coordinates R, disintegrate nu_z over
+xi_R and put b_z(xi_R)=nu_z[exp(-i Theta_z)|xi_R]. Then the exact norm
+on arbitrary bounded R-tests is
+
+ C_R(z)=nu_(z,R)|b_z| / |nu_(z,R)b_z|.                 (3)
+
+In particular C_R<=1/|c_z|. Phases independent of R can cancel from
+this ratio; one must not replace an ambient volume by |R| without
+proving such cancellation or a bound on the actual marginal b_z.
+Formula(3) does not require b_z to have a zero-free logarithm.
+
+For a holomorphic source F on its own domain D, with sup_D|F|<=M,
+these inequalities apply whenever its COMPLETE actual image Psi_z(K)
+lies in D. They only use the resulting pointwise cap on K. The norm
+on this smaller holomorphic class can be strictly less than (2)/(3).
+
+2. THREE SUFFICIENT FINITE CRITERIA
+
+(a) Phase oscillation. If some scalar theta has
+
+       |Theta_z(xi)-theta|<=a<pi/2 on K,
+
+then |c_z|>=cos(a) and |Q_z F|<=M/cos(a). More generally an interval
+of phase length 2a suffices. This costs total phase oscillation, not
+the supremum of the source alone.
+
+(b) Complete log-density oscillation. Relative to a positive real
+center z0, suppose after subtracting one scalar that
+
+             sup_K |H_z-H_z0-c(z)|<=delta<log(2).
+
+Then |Z(z)e^{c(z)}/Z(z0)|>=2-exp(delta) and
+
+             |Q_z F|<=M exp(delta)/(2-exp(delta)).       (4)
+
+The proof is |exp(-w)-1|<=exp(delta)-1 and the triangle inequality.
+This is the previously used direct finite density-ratio argument.
+If one complete physical boundary score has cap C beta, h independently
+changed boundary coordinates give delta<=C beta h rho and hence a
+sufficient radius O((beta h)^-1). No inverse global cut mass appears.
+
+(c) Phase variance. Center Theta_z by its nu_z mean. Since
+cos(u)>=1-u^2/2,
+
+ |c_z|>=1-Var_(nu_z)(Theta_z)/2.
+
+Consequently, for v<2,
+
+ Var_(nu_z)(Theta_z)<=v
+    implies Z(z)!=0 and |Q_z F|<=M/(1-v/2).             (5)
+
+This is an exact finite statement, with no cumulant truncation. The
+positive law in (5) is nu_z, not the original law at Re z. Its actual
+real-part exponent and cutoff must be used.
+
+Suppose additionally nu_z has Poincare constant c0^-1, uniformly on
+the complex parameter set being tested. Then
+
+ Var_(nu_z)(Theta_z)<=c0^-1 nu_z |grad_xi Theta_z|^2.     (6)
+
+For convex product balls a uniform lower bound on the full real-part
+action Hessian is one sufficient source of this Poincare inequality.
+No complex normalized probability is used in its proof. A theorem
+only for the positive law at REAL parameters is not automatically a
+theorem for nu_z; that extension must be checked separately.
+
+3. A POLYNOMIAL READ-PRICE COROLLARY ON A SMALLER TUBE
+
+Fix a real parameter center a and a finite changed parameter set T,
+|T|=h. Leave all other parameters fixed at their actual real values.
+Let z=a+Delta, with max_q|Delta_q|<=rho. Assume throughout that tube:
+
+ * the same K and complete density chart are valid;
+ * the source's complete actual image lies in its own bounded domain;
+ * nu_z has the Poincare constant in(6);
+ * for a nonnegative matrix K_iq,
+
+   ||partial_(xi_i) Theta_z||_(L2(nu_z))
+                    <=sum_(q in T) K_iq |Delta_q|,
+   ||K||_(ell2 -> ell2)<=K_* .                         (7)
+
+An exponentially decaying mixed-score kernel with uniform row and
+column sums is sufficient for the last operator bound. Equation(7)
+can be proved by integrating the COMPLETE mixed action derivatives
+along the parameter segment, provided the L2 bounds are uniform for
+the final nu_z (or have a proved uniform comparison to that law).
+Minkowski does not by itself change the integration measure from one
+point of the segment to another.
+
+It follows directly that
+
+ nu_z |grad Theta_z|^2<=K_*^2 ||Delta||_2^2
+                         <=K_*^2 h rho^2.
+
+Thus rho<=sqrt(c0)/(K_* sqrt(h)) gives v<=1 in(5) and
+
+                         |Q_z F|<=2M.                  (8)
+
+Intersect this radius with every source-image, real/complex chart,
+minimum-response and actual action margin. Those margins may be the
+smaller restriction. The case h=0 is trivial.
+
+Holomorphy and Cauchy on a fixed smaller fraction of this tube now give
+for each fixed total derivative order k
+
+ |partial^k Q_z F|<=C_k M [K_* sqrt(h)/sqrt(c0)]^k,       (9)
+
+with the other inverse margins included when they dominate rho.
+This is a genuine polynomial-in-read FIXED-JET estimate, not an
+analytic bound on an h-independent radius. The source can itself
+depend holomorphically on z; (8) uses its uniform cap, so no missing
+direct-source derivative is dropped in (9).
+
+Coordinate-scaled versions are immediate: replace h rho^2 by the
+actual squared ell2 parameter displacement. This can be considerably
+smaller than a box bound for a localized perturbation.
+
+The analogous result for R-local tests without an ambient parameter
+count needs (7) for an ACTUAL reduced marginal phase, or another bound
+on(3). Defining -log b_z would require a zero-free conditional b_z;
+this is an extra hypothesis, not a consequence of global Z(z)!=0.
+
+4. BETA, NOISE UNITS AND WHAT THE RADIUS MEANS
+
+Two scalings must not be conflated.
+
+For a physical-coordinate strongly convex law with Hessian of size
+beta, a physical linear score of size beta rho gives phase-gradient
+energy beta^2 h rho^2. Division by the Poincare gap beta gives a
+sufficient phase variance O(beta h rho^2). Thus the variance criterion
+allows rho=O(beta^-1/2 h^-1/2)=O(g h^-1/2), rather than the conservative
+oscillation radius O(beta^-1 h^-1). The same calculation in normalized
+noise x, where physical noise is g x, has gap O(1) and phase force
+O(rho/g); the answer is unchanged.
+
+After the WHOLE stationary linear cancellation, a parameter may enter
+only the precision and higher primitive. If the complete normalized
+mixed score instead has L2 size O(rho) per coordinate, the sufficient
+radius is O(h^-1/2), with no inverse g. This stronger scaling requires
+that actual mixed-score estimate. One must not assign it to an
+uncanceled physical current, boundary term or change of coordinates.
+
+The registered first primitive small-mean/centered-moment bounds are
+useful inputs to such L2 estimates; they do not remove the sum over h
+independent phase contributions. Nor do they alone prove (7) for the
+positive real-part law at every complex output pair.
+
+5. EXACT FAILURE OF A GENERIC POSITIVITY IMPLICATION
+
+Take the normalized centered Gaussian on the ORIGINAL symmetric cut
+[-r,r], with r>0 fixed, and its n-fold product. Write X for one scalar
+coordinate. For a sufficiently small fixed nonzero epsilon put
+
+ H_epsilon(x)=sum_i x_i^2/2 - i epsilon sum_i x_i^2.
+
+Its real-part Hessian is exactly the identity, the cut is even, the
+range is zero, the complex Hessian perturbation is as small as desired,
+and there is no linear primitive. Let
+
+                 m(epsilon)=E exp(i epsilon X^2).
+
+Since Var(X^2)>0,
+
+ log |m(epsilon)|=-epsilon^2 Var(X^2)/2+O(epsilon^4).
+
+For small fixed epsilon, m is nonzero and has modulus below1. The
+normalized complex functional on bounded tests therefore has norm
+
+                |m(epsilon)|^-n=exp(c_epsilon n).       (10)
+
+The phase-canceling bounded test attains it. The source noise read is
+the n coordinates themselves, so this is not an ambient-volume error.
+It proves that real positivity, centered cuts, convexity and small
+complex quadratic perturbation do not imply a polynomial bounded-test
+norm. Even exact unmarked Gaussian normalization does not erase(10).
+
+CAUTION: this does NOT prove the same lower bound on the native bounded
+HOLomorphic source class. The phase-canceling entire function has a
+large supremum on a wide complex noise ball; normalizing by that sup
+may erase the growth. This distinction is essential here.
+
+There is nevertheless a simple holomorphic counterexample if no width
+compatibility is imposed. Use instead H_t=sum x_i^2/2-i t sum x_i and
+m1(t)=E exp(i t X). For small fixed t>0, m1(t)>0 and
+
+                 -log m1(t)=sigma_r^2 t^2/2+O(t^4).
+
+On the product strip |Im z_i|<a, define
+
+                 F_n(z)=exp(-i t sum z_i-n t a).
+
+It is entire and has modulus at most1 on that strip (also on its
+intersection with any larger real-coordinate box). But
+
+                 Q_t F_n=exp[-n t a] m1(t)^-n.
+
+Choose a=sigma_r^2 t/4 and then t small. The result grows exponentially
+in n. All denominators are nonzero, the real law is strongly convex,
+and the source is bounded holomorphic on its declared domain.
+
+This does not model the verified first cavity entry, whose source has
+a much wider occupied-noise ball than its real cut. It identifies the
+missing logical implication: source holomorphy without a quantitative
+contour/domain compatibility condition is not enough.
+
+6. WHAT EXACT CONTOUR CANCELLATION COULD ADD
+
+A sufficient analytic-source criterion stronger than(5) is an exact
+positive representation supported inside the source domain: if
+
+ Q_z F = integral F(Phi_z(y)) dnu(y) + R_z(F),
+
+where nu is a probability, Phi_z(y) lies in the source's holomorphic
+domain, and |R_z(F)|<=epsilon M, then |Q_z F|<=(1+epsilon)M. This
+criterion concerns the action, contour, source image and boundary
+terms together. It must be proved for the SAME original cut/normalizer.
+
+For a full Gaussian, an admissible contour translation/rotation can
+give an exact such representation. A hard product cut adds surface
+terms. Existing occupied-body/contour estimates bound a collection of
+marked surfaces and determinant/primitive losses by small factors
+PER occupied block. Summing them gives, in general, an upper bound of
+the form exp(c_small |S|), or (1+epsilon_site)^|S|. This is polynomial
+only in a range such as c_small |S|<=C log(2+|S|). That upper bound is
+not asserted sharp; it simply does not prove a better global claim.
+
+In particular one may not first drop the active source cut, use a full
+Gaussian cancellation, and then omit the contour boundary terms. The
+source must remain on all images actually used by that deformation.
+For the verified first column, B116 keeps f(B) on protected REAL B
+with chi_Y0; its unrestricted whitened exterior X never enters f.
+This fact proves source admissibility for that construction, but is
+not itself a new positive representation of its complex normalized
+R-marginal on an arbitrary large carrier.
+
+7. CURRENT NATIVE STATUS AND THE SMALLEST USEFUL NEXT ESTIMATE
+
+The existing finite density-ratio notes provide(4) with explicit read
+and beta prices on sufficiently small tubes. The complete real action,
+local score and L2 covariance notes suggest a route to(7), but the
+positive REAL-PART complex tilt and the source-specific full image
+must both be registered. This note does not declare that registration
+complete for the second ordinary step or all generated carriers.
+
+If(7) is proved, (8)--(9) are a usable direct finite propagation result:
+no exponential read constant, with a read-dependent complex radius
+and polynomial fixed-order jet cost. It cannot be substituted for an
+analytic coefficient on a larger fixed native pair tube. Applying it
+on such a tube would require either a cumulative phase bound on(3),
+or the analytic positive-representation/contour criterion above.
+
+The original marked cluster construction remains a valid alternative:
+it keeps exp(c_seed|S|), pays it by the incoming COMPLETE carrier tree
+reserve, and restores a fixed weaker exponent by actual reblocking.
+That method and this shrinking-tube criterion solve different norm
+problems. Neither method proves the missing generated-pair image
+inclusions, changes the original denominator, or grants fresh rarity
+to a descendant source.
+
+FILES USED FOR THE NATIVE COMPARISON
+
+* analytic_mark_finite_admission_transport_20261024: actual source-only
+  contours, occupied cut, seed price and reblocking reserve.
+* pinned_cavity_native_pair_first_column_20261024 and focused audit:
+  concrete first source image; later generated images still open.
+* cavity_weighted_finite_propagation_20261024, Section3: complete
+  pointwise density ratio and source-image criterion on a fixed fiber.
+* local_full_projection_spatial_profile_20261024, sparse tube section:
+  finite changed-parameter density bounds, not arbitrary fixed radii.
+* product_ball_L2_covariance_and_small_mean_20261024 and first-bare
+  local-force registration: positive-law moment/score inputs only.
+
+No continuum existence, all-history propagation or fixed-radius
+polynomial native carrier theorem is claimed.

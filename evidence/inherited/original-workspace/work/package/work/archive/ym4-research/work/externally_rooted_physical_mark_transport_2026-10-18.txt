@@ -1,0 +1,416 @@
+NEUTRAL CLASSICAL TRANSPORT OF AN EXTERNALLY ROOTED PHYSICAL MARK
+18 October 2026. Working proof. The compact gauge is applied to the whole
+invariant mark before any new support expansion; individual support
+coefficients are not required to be locally gauge invariant.
+
+1. CLASS AND PRECISE CLASSICAL INPUT
+
+Let z be one external source cell on the OLD unit lattice, and write
+
+ W_z(A)=sum_{H connected, z in H} W_{z,H}(A|_H).            (1)
+
+The fields are actual ordinary physical link potentials; a bounded
+complete block fiber can include their spatial derivatives. Each
+coefficient is analytic on the independent block
+b-ball. Let N_H be its number of fixed old blocks and D_H its diameter
+in old physical units. Assume a fixed positive cardinality and diameter
+reserve, with
+
+ sum_H exp(a_in N_H+kappa_in D_H)
+       sup_{||A||<b_in}|W_{z,H}(A)| <= M_z b_in^2.          (2)
+
+The COMPLETE sum W_z is invariant under compact local physical gauge
+transformations and has W_z(0)=0. This is the situation for the derivative
+of a gauge-invariant generating action with respect to the scalar source
+at z. It does not assert invariance of W_{z,H} separately.
+
+Use the already constructed direct ordinary minimizing prefix P_h,
+h=ell^(-q). It is the direct map, not q separately bounded compositions.
+In final physical units its complete supported field norm and first
+spatial derivative norm are <=C_a b_out, uniformly in q, refinement,
+and compatible volume. The support constants retain a fixed positive
+physical tree reserve. In old units this reads
+
+ ||A||_support <=C_a h b_out,
+ ||nabla_old A||_support <=C_a h^2 b_out, A=P_h(B).         (3)
+
+These are the direct-prefix complete-fiber bounds from the classical
+localization theorem and the ordinary-representative transfer. They
+are not inferred from a C_q b composite bound. Fix the requested output
+cardinality/tree weights first; their C_a is then independent of q.
+The relevant tori have final side bounded below by one fixed positive
+number, so a sufficiently small fixed final cube embeds in every torus.
+
+Claim. For all sufficiently small h, the physical function T_h W_z=
+W_z(P_h(B)) has a strict supported representation rooted at the final
+cell containing hz, with
+
+ ||T_h W_z||_(a_out,kappa_out;b_out) <= C M_z h^4 b_out^2. (4)
+
+C is independent of q and of b_in,b_out, when b_out/b_in stays in a
+fixed compact subinterval of (0,infinity). The whole output is again
+gauge invariant. No source independent-(U,J) reentry is claimed or used.
+
+2. PREPARE THE INPUT WITHOUT SPATIAL GAUGE AVERAGING
+
+Subtract the constant of each W_{z,H}. Their sum is unchanged because
+W_z(0)=0. Average each resulting coefficient over the CONSTANT compact
+color group. This preserves its support, analytic ball, and norm, and
+preserves the complete function W_z by its global-color invariance.
+For a semisimple Lie algebra the averaged coefficient has zero linear
+jet: an adjoint-invariant linear functional annihilates [g,g]=g.
+Thus every coefficient now starts at total field degree two.
+
+This step averages only constant color conjugations. It never averages
+over a spatial gauge group on a small potential ball.
+
+3. THE COMPACT ROOT GAUGE AND GLOBAL ADMISSION
+
+Choose c>0 small enough that the final cube of radius 4c embeds in every
+regulator. Fix a smooth scalar cutoff chi equal to one for |y|<=c and
+zero for |y|>=2c, with fixed derivatives. Choose an old vertex z_0 at
+bounded distance from z and set A_0,mu=A_mu(z_0). Define
+
+ lambda_A(x)=chi(h(x-z_0)) sum_mu (x_mu-z_0,mu) A_0,mu,
+ v_A(x)=exp(i lambda_A(x)).                              (5)
+
+Take the sign convention U^v(x,y)=v(x)U(x,y)v(y)^-1.
+On the old lattice the support radius of lambda is 2c/h. By (3),
+
+ ||lambda||_support <=C b_out,
+ ||nabla lambda||_support <=C h b_out,
+ ||nabla^2 lambda||_support <=C h^2 b_out.                (6)
+
+The coefficient carriers introduced by this gauge lie in a fixed final
+cube about hz and connect to the supported coefficients of A(z_0).
+Their final cardinality cost is fixed, not h^-4. The cutoff has no
+input-field dependence. Products/exponentials are the same convergent
+unital support-algebra products used for the comparison gauge.
+
+For the global transformed link logarithm A^v, the analytic gauge-action
+formula and (3),(6) imply
+
+ ||A^v||_support <=C h b_out,
+ ||nabla_old A^v||_support <=C h^2 b_out.                 (7)
+
+Consequently the ENTIRE transformed field lies in a fixed fractional
+part of the input b_in-ball when h is sufficiently small. The gauge
+amplitude is O(b_out), even though its OLD support radius is O(1/h).
+This is exactly why a cutoff at that radius is used.
+
+For real B, v_A is a compact unitary gauge, and whole-mark invariance
+gives W_z(A)=W_z(A^v). For complex B the same equality follows by
+holomorphy on the common ball. Equivalently one can first use the
+small complex gauge Ward identity. In neither argument is invariance
+of an individual W_{z,H} used.
+
+4. THE EXTRA ROOT-NEAR POWER, INCLUDING THE NONLINEAR TERMS
+
+For H at old distance/diameter D from z, with h(1+D)<=c/2, chi=1
+on its full fixed collar. Write A(x)=A_0+E(x). The complete supported
+mean-value estimate from (3) gives
+
+ ||E||_H <=C h^2(1+D)b_out.                              (8)
+
+The transformed CONSTANT connection has no term linear in A_0:
+lambda(x+eta e_mu)-lambda(x)=eta A_0,mu exactly in this region.
+The exact matrix-exponential remainder, after division by eta, is
+bounded by C(1+D)||A_0||^2 when ||lambda|| is on its fixed small ball.
+Perturbing the middle link from A_0 to A_0+E costs C||E||. Thus
+
+ ||A^v||_H <=C[||E||_H+(1+D)||A_0||^2]
+             <=C h^2(1+D)b_out.                         (9)
+
+The same formula controls the complete C1 fiber: spatial derivatives
+cost ||nabla E||+||A_0||^2+||A_0||||E||, with constants on the fixed
+lambda ball. There is no false omission of a D|A_0||E| term; that term
+is absorbed by the bounded exponential/conjugation factor in the
+Lipschitz estimate for E. The present theorem consumes ordinary-link
+functions. It makes no independent-current extension claim: a small
+norm on the physical minimizing graph would not control an arbitrary
+analytic companion-current extension.
+
+All bounds (8)--(9) hold in the supported algebra, not just after scalar
+evaluation. To see this without a hidden coefficient cancellation,
+represent A(x)-A(z_0) by its complete spatial-difference field along a
+path of old length O(1+D), and use the displayed constant-connection
+remainder before expanding products. Near paths occupy a fixed final
+cube. The direct-prefix first-derivative family in (3) pays their length.
+
+5. THE FULL ANALYTIC/CARDINALITY SUM
+
+For a fixed H, insert the supported fields A^v into W_{z,H}. Put
+alpha_H=C h^2(1+D_H)b_out/b_in in the near case and
+alpha_H=C h b_out/b_in otherwise, using (7). In all cases alpha_H<=C h.
+Expand multihomogeneously by the N_H OLD PHYSICAL BLOCKS, not by their
+fine coordinates. Separate Banach polarization costs at most e per
+degree. As the constant and first jets vanish, the absolute substitution
+majorant is bounded by
+
+ C N_H^2 alpha_H^2 exp(C N_H alpha_H)
+              sup_{b_in}|W_{z,H}|.                      (10)
+
+Indeed the full majorant is product_v(1-u_v)^-1, u_v<=C alpha_H;
+remove its degree-zero and degree-one terms and use u_v<1/2. This is
+bounded by C(sum_v u_v)^2 exp(C sum_v u_v). There is no entropy factor
+exponential in the number of fine coordinates.
+
+A connected old carrier has a connected final carrier with at most
+C_d(1+h N_H) blocks, before the fixed gauge cube is added. The direct
+prefix's support propagator carriers have already been charged to C_a.
+Choose h small enough that this compressed-carrier weight and the
+exp(C h N_H) factor in (10) consume less than a fixed part of the input
+cardinality reserve. The factor N_H^2 consumes another arbitrarily small
+fixed part. A small positive final tree/diameter reserve is retained by
+the direct map and by kappa_in D_H >=kappa_out h D_H plus a fixed reserve.
+
+For the near carriers, alpha_H^2 contributes
+C h^4(1+D_H)^2(b_out/b_in)^2; the polynomial diameter costs a fixed part
+of the input diameter reserve. For the other carriers, D_H>=c/(2h)-1,
+and the weaker h^2 factor is sufficient because
+
+ h^2 exp[-kappa_in c/(8h)] <= C h^4.                    (11)
+
+Multiply (10) by the final carrier weights, apply these reserve bounds,
+and sum (2). This proves (4), including its full analytic support norm.
+The h^4 gain was obtained from the genuine whole-mark gauge identity
+before localization. No nonlinear gauge covariance at deformed
+localization parameters is being claimed.
+
+6. WHAT THIS GIVES FOR AN ACTUAL FIRST MARK, AND WHAT IS STILL NEEDED
+
+Let K_j be the matched INNER-retained normalized homogeneous
+source-free conditional kernel, with all Jacobians, constraints and
+its cutoff factors retained. Its retained window obeys g T_aux<c b.
+For an infinitesimal source insertion W, its first marked output is
+exactly K_j W (up to the explicitly tracked vacuum constant). It is a
+linear operator on the physical insertion, and maps invariant whole
+insertions to invariant whole insertions. An external source label z
+is retained throughout; regrouping coefficient carriers does not erase it.
+
+The classical substitutions here are DATED, not autonomous minimizers
+of a newly substituted Wilson action. In the notation of
+work/classical_background_semigroup_research.md, let U_M(D) minimize
+the same original fine Wilson sum under its M-fold ordinary constraint,
+and put
+
+ P_(M,R)(D)=M_ell^k U_(MR)(D),  M=ell^k.                 (6a)
+
+The source classical action at current refinement M is S_M(D)=
+S_bare(U_M(D)); it is not replaced here by a new nearest-neighbor
+Wilson action on the current lattice. The original retained source
+chart at zero noise is exactly (6a): its fine field is U_(MR)(D), and
+its current field is that fine field's M-fold ordinary average. This
+is the zero-noise P_q used in raw_q_block_cluster_response Section2
+and in strict_support_comparison_gauge Section5. The extra geometric,
+running-coupling and interaction weights belong to K_j, not to a
+redefinition of this stationary chart.
+
+Thus at macro step j use M_j=M_0 R^j. The proven identity is
+
+ P_(M,R1)(P_(MR1,R2)(D)) ~ P_(M,R1R2)(D),                (6b)
+
+where ~ is fine/current gauge equivalence. It follows from two genuine
+minimum comparisons on the SAME original fine graph and action, as
+proved in classical_background_semigroup_research Sections1--3. It
+does not assert P_R composed with P_R after resetting M. Applying a
+whole invariant mark gives an exact scalar identity on the common
+connected ball; equality first holds as a germ and extends there by
+holomorphy. Taking R>C_0 ensures each dated primitive and each direct
+prefix is admitted on that common ball. This also covers a finite
+sequence of comparable moving radii, since each contraction has a
+fixed fractional margin.
+
+For norm estimates subtract each first-mark output's field-independent
+value at B=0 and keep that scalar in the source vacuum ledger. This
+does not change a later connected covariance. It is not permission
+to discard the mixed second-source scalar, which is part of the
+connected two-mark birth and must be retained for the witness.
+
+At fixed macro ratio h_0=ell^(-q_0), write exactly
+
+ K_j=T_(h_0)+Q_j.                                       (12)
+
+The existing normalized marked Gaussian/source estimate supplies a
+strict support bound on Q_j with coefficient epsilon_j, using the
+actual fixed-q kernel. A conservative choice from the already matched
+whole-family parity theorem is
+
+ epsilon_j=C_q[delta_j^2+epsilon_base,j delta_j],
+ delta_j=g_j T_aux,j/b_j.                               (12a)
+
+Here the inherited state has norm <=K b_j^2, so the factor linear in
+its activity amplitude in the derivative of the quadratic correction
+is bounded uniformly. The original sourced cutoff comparison, when
+used to compare with the outer kernel, contributes a SEPARATE marked
+tail as specified below. This
+choice avoids needing a new cutoff-independent q-species moment
+theorem. The stronger (g/b)^2 estimate can be used only when its
+same-radius q-block interface has been checked. For fixed h_0 the
+extra factor h_0^-4 below is a fixed constant.
+
+There is no need to multiply a classical constant C at every step.
+The dated classical prefixes (6a)--(6b) obey the exact semigroup identity
+on WHOLE invariant marks, modulo the established comparison gauge.
+The telescoping identity for (12) has one direct classical prefix
+between a quantum correction and the final scale. Applying (4) to
+that direct prefix gives, for the canonically rescaled first-mark norm
+M_j=h_0^(-4j)||W_j||/b_j^2,
+
+ M_n <= C M_0+C_(q_0) sum_{i<n} epsilon_i M_i.           (13)
+
+The bounded finite prefixes below the threshold in (4) only change C.
+If sum_{i<n}epsilon_i=o(1), discrete Gronwall gives uniform neutral
+control, with an o(1) deviation from direct classical transport in the
+same canonically rescaled rooted norm. For n=O(log gamma), (12a) is
+sufficient when b=c g(log gamma)^s, T_aux=(log gamma)^t and
+2(s-t)>1; epsilon_base is power-small in g times a fixed logarithmic
+power. This is the previously used source/flow logarithmic hierarchy.
+
+This section identifies the exact first-mark recurrence. A two-mark
+connected birth estimate and its spatial/root summation are separate
+inputs for the nontriviality witness; (4) alone is not that witness.
+
+7. WHY THE EXISTING QUANTUM ESTIMATE APPLIES TO THIS ROOTED CLASS
+
+For clarity, the linear map in (12) is the derivative of the actual raw
+q-block logarithm at its actual input interaction X_j=E_j+R_j. Keep
+the real source-free geometric kernels, cuts, intermediate insertions
+and reference inverses fixed. Insert the scalar mark zeta W_z only in
+the incoming density. Exact normalized differentiation gives
+
+ d/dzeta log I_q(X_j+zeta W_z)|_(zeta=0)
+       = <W_z(Bhat_q)>_(q,X_j).                         (14)
+
+For the raw kernel without additional fixed intermediate insertions,
+differentiating D_q+T_q X+N_q(X) identifies
+Q_j W_z=D N_q(X_j)[W_z]. With actual fixed intermediate F insertions,
+differentiate the full N_q(X)+B_q(X;F) of the raw-block note instead;
+the F weights are part of the unmarked measure and are not discarded.
+Their previously proved small supported bounds fit its reserved base
+potential class. No normalization denominator is omitted in (14).
+
+The source same-exponent preparation and cluster estimates apply to
+an arbitrary strictly supported physical input as a spectator field;
+they do not require individual pieces to be gauge invariant. The
+whole-family parity estimate is uniform on a reserved ball
+||X||<=C K b_j^2. Cauchy on
+
+ |zeta| < c K b_j^2/||W_z||
+
+therefore gives the linear norm bound (12a), since the supremum of
+N_q on that ball is at most
+C[delta_j^2 K b_j^2+delta_j^2 K^2 b_j^4
+  +epsilon_base,j delta_j K b_j^2].
+The harmless constants K are fixed by the source-free state bound.
+
+For the external-root version, retain the label z on the distinguished
+mark in the same connected expansion. Every surviving cluster meets
+that mark; attach its already-carried path to z. The unmarked tree
+summation is the same summation as for the ordinary activity estimate.
+The rooted diameter reserve pays transport of z through the output
+grouping. There is no additional sum over ambient volume. This proves
+the required rooted version of the linear bound, with the same fixed-q
+constant. Exact physical covariance of the full kernel gives whole-mark
+gauge invariance of its output. We need no assertion about the symmetry
+of each new strict coefficient.
+
+Consequently Sections1--7 close the CLASS of ordinary-link, externally
+rooted first marks under the matched inner homogeneous normalized kernels:
+neutral direct classical transport and a small quantum correction.
+They do not replace a large-field observable ledger, nor the separate
+two-root connected estimate needed to certify a nontrivial continuum
+observable.
+
+For precision, the unmarked actual-state identity involving
+h=log(K_outer rho/K_inner rho) does not imply equality of the marked
+kernels after freezing h. On an outer retained window with g R_outer>b,
+a general member of the present small-b class has no controlled
+continuation. The correct comparison retains the source derivative
+of the annular/large-field contribution as a separate marked tail,
+bounded by the ORIGINAL sourced producer before restricting to this
+physical class. One must not infer that tail bound from (2) alone.
+For a broad packet its finite support/volume costs can be paid by a
+previously reserved arbitrary power g^P, but that source-tail ledger
+remains an explicit part of the full witness comparison.
+
+8. SHARP MOMENT RESPONSE ON THE ACTUAL b=c g log(gamma) BALL
+
+18 October integration addendum, published_density. The crude estimate
+(12a), involving (gT/b)^2, need not have a summable logarithmic-prefix
+error for the ACTUAL homogeneous choice b=c g log(gamma). We instead
+use the sharp fixed-degree normalized-moment estimate already proved
+in inner_two_mark_gaussian_prefix Section4. It applies to every
+analytic whole invariant rooted mark of the present class, not only
+to a completed Gaussian quadratic mark.
+
+Precisely, let ||W_z||_b<=M b^2 on the admitted input ball. Subtract its
+vacuum and constant-color-average its strict coefficients. Each such
+coefficient then has zero first field jet. The supported q-chart has
+a fixed fractional background margin and gT<cb. Taylor expansion in
+the ONE simultaneous noise-amplitude variable gives
+
+ W_z(Bhat(B,gx))-W_z(PB)
+       =g L_z+g^2 Q_z+(g^3/b) C_z+(g^4/b^2) D_z.       (16)
+
+Here L_z is odd linear, Q_z even quadratic, C_z odd cubic. D_z has
+degree-four growth on its retained conditioning set. Their localized
+analytic coefficient bounds are respectively C M b,C M,C M,C M.
+The nonlinear chart Taylor derivatives are included in these terms;
+(16) does not assume additive link coordinates or an entire polynomial W.
+
+Use the actual centered Gaussian C_B at the STATIC background, with
+the even original retained windows. The unmarked potential has
+V_g=g O+g^2 D, with O odd of degree at most three and D of degree-four
+growth, uniformly on the reserved physical base ball. For inherited
+||X||_b<=K b^2, its cubic coefficient in O is O(g^2/b), and its
+fourth coefficient in D is O((g/b)^2); both are bounded. Linear terms
+from the background or Jacobian are in O. No complex history tangent
+and no flat-background replacement of C_B is made.
+
+The exact normalized interpolation identity is
+ d/dt <F>_t=Cov_t(F,V_g),  0<=t<=1.
+The retained Gaussian at t=0 is even, including for admitted complex
+backgrounds. Hence <L_z>_0=<C_z>_0=0. The fixed-degree normalized
+cumulant estimate, with the source mark support in its conditioning
+set, gives
+
+ ||<L_z>_1||<=C M b g,   ||<C_z>_1||<=C M g,
+ ||<Q_z>_1||<=C M,       ||<D_z>_1||<=C M.              (17)
+
+These are full analytic activity estimates on the smaller admitted
+output ball. They are not bounds on a global total-variation density.
+Local decoupling preserves centered quadratic forms; if intermediate
+coefficient choices obscure parity, symmetrize simultaneous noise
+reversal, which preserves their supports and their absolute norms.
+The polynomial degrees are fixed and their carrier-size factors are
+paid by the same q-preparation reserve as in inner_two_mark Section4.
+The external root stays on W_z throughout the connected sum.
+
+Taking the expectation in(16), then subtracting its value at B=0,
+costs at most twice the analytic norm and yields
+
+ ||Pi(A-T)W_z|| <= C M[g^2 b+g^2+g^4/b+g^4/b^2]
+                 <=C M g^2=C(g/b)^2 ||W_z||_b,         (18)
+
+since b<=1 and g/b is small. This is the sharp first-mark bound used
+by the direct-age neutral Volterra inequality and scalar burn-in.
+Gauge invariance of the WHOLE mark ensures that the output remains
+in their neutral class; no separate invariance of strict coefficients
+is asserted or needed in(16)--(18).
+
+Thus with the actual b=c g log(gamma), choose ANY fixed 1/2<t<1 and
+T=(log gamma)^t. Then gT/b tends to zero, the cutoff tail is
+exp[-c(log gamma)^(2t)], and for N=O(log gamma)
+
+ N eta ->0,  eta=C[(g/b)^2+g^2+exp(-cT^2)].             (19)
+
+In fact N(g/b)^2=O(1/log gamma). The stronger condition 2(s-t)>1
+was sufficient for the earlier crude response route but is neither
+available nor needed at s=1. No change of the homogeneous state
+bootstrap radius is being made in this sharp-moment addendum.
+
+Independent audit: minimal_route and root checked(16)--(19), including
+the complex output-ball norm, fixed-degree moment support reserve,
+and retained external root. The exact complex normalized marked-moment
+input of inner_two_mark Section1(b) remains an explicit dependency.

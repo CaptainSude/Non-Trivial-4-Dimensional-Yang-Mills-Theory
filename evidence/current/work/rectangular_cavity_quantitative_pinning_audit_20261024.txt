@@ -1,0 +1,208 @@
+INDEPENDENT AUDIT: QUANTITATIVE RECTANGULAR WILSON CAVITY
+24 October 2026. audit_two_root. No archive/output edits.
+
+AUDITED PRODUCER AND VERDICT
+
+Read work/rectangular_cavity_quantitative_pinning_20261024.txt in full,
+Sections1--7. SCOPED PASS for the finite theorem as stated, with the
+algebraic clarifications below. The powers R^-60 and beta>=C R^80 are
+conservative but supported by the displayed relative estimates; they
+are not merely a fixed-dimensional Laplace claim with R hidden in a
+constant. No native growing-cavity image admission follows.
+
+This audit is independent of the previously delivered fixed 560-link
+cavity theorem. Neither its status nor its original-law interpretation
+depends on the quantitative extension succeeding.
+
+1. EXACT FOREST HAAR DISINTEGRATION
+
+For every strict interior vertex v the selected edge (v-e4,v) is in K.
+The selected graph is a union of rooted vertical chains with endpoints
+on x4=0. Order its vertices from each root upwards. Then
+
+ U_(parent,v)=gamma_parent^-1 gamma_v
+
+is a triangular product-Haar change of coordinates: conditional on the
+preceding gamma variables, left multiplication preserves normalized
+Haar for gamma_v. For every other link, conditional on this entire
+forest, the map is an independent fixed left/right Haar translation.
+Thus the exact measure factorization has Jacobian1 in Haar coordinates,
+and integrating the v_int based gauge variables gives exactly1.
+
+All boundary/outside gauge values are identity. Every edge incident to
+a strict interior vertex is integrated, so no held exterior variable is
+changed. The complete crossing action, not just internal plaquettes,
+is invariant. A gauge-invariant complete marked insertion is therefore
+unchanged. An arbitrary noninvariant mark would retain its gamma
+dependence; the producer correctly excludes it from the reduced marked
+claim. The same unmarked identity holds at complex exterior parameters
+by algebraic trace invariance under these real interior gauges.
+
+The remaining count M=E-v_int and real dimension d=3M are exact. The
+Gaussian factor beta^-3M/2 is not beta^-3E/2. No Faddeev--Popov or
+coarea factor is being guessed or omitted by this compact change.
+
+2. NONLINEAR PINNING AND THE FLAT GAP
+
+For each remaining edge, the forest paths and the external closing
+path have total length O(R). A boundary endpoint can first step in an
+outward normal direction, hold that coordinate outside the box while
+moving the other coordinates to -1, then reach the common exterior
+corner. Every such closing edge lies outside K. At flat held data it
+is identity. If the chosen closing/filling construction uses exterior
+edges beyond the finite read B, assign those auxiliary edges identity
+ONLY for this flat algebraic filling. This adds no original variable,
+constraint or action term.
+
+Ordered-coordinate contraction in the expanded rectangle fills the
+loop by O(R^2) plaquette OCCURRENCES. Faces not meeting K are identity
+under this flat extension; every remaining face is in the actual action.
+Unitary transport preserves the operator norm, so the product telescope
+gives
+
+ ||V_e-I|| <= C R^2 (sum_(q meeting K)||U_q-I||^2)^(1/2).
+
+This deliberately permits maximum plaquette multiplicity O(R^2). It
+does not rely on an unproved bounded-overlap filling. Therefore the
+R^-4 nonlinear max-link pinning is valid. It also establishes uniqueness
+of the reduced flat minimum, independently of a dimension argument.
+
+Differentiating on A=t a at the identity gives the stronger max-coordinate
+quadratic pinning. Summing over O(R^4) retained links yields Q>=cR^-8 I.
+The upper Q<=C I follows from bounded elementary plaquette incidence.
+Color factors are fixed. This confirms both inequalities in(4).
+
+3. LOCAL ANALYTIC BOUNDS AND THE STATIONARY VALUE
+
+After forest fixing, each action term is still a plaquette word with
+at most four variable factors. It has not acquired the long forest
+paths as arguments. Consequently row/column Hessian bounds and the
+local third-order Taylor bound in(5)--(6) are uniform in R. Mixed
+adjacent-link cubic monomials are bounded by a finite sum of |u_e|^3;
+finite incidence pays that sum. Replacing this estimate by a global
+supremum CR^4||u||^3 would lose useful powers and is unnecessary.
+
+The force norm at A=0 is at most CR^2||z||infty. Combining it with
+||Q^-1||<=CR^8 gives the stated stationary branch bound
+||A_*||2<=CR^10||z||infty. The nonlinear contraction constant is at
+most CR^18||z||infty, uniformly on the R^-60 tube.
+
+The action bound uses stationarity, not the crude upper Hessian bound
+times ||A_*||2^2. Explicitly, with b=H_A(0,z), the critical equation and
+the local Taylor estimates imply
+
+ A_*^T Q A_*=-b^T A_*+O(||z||infty ||A_*||2^2+||A_*||2^3).
+
+Thus the stationary action is bounded POINTWISE by
+
+                  |e_*(z)|<=CR^12||z||infty^2
+
+throughout the tube. The higher terms CR^30||z||infty^3 and
+CR^20||z||infty^3 are smaller there. This pointwise version is what
+allows its reuse on the smaller marked tube in Section6. I asked the
+author to spell out these two immediate details before freezing. Final
+readback confirms that both are now explicit in Section4, and the
+auxiliary exterior identity assignment is explicit in Section2.
+
+The relative precision defect is CR^18 rho, and multiplication by
+d=O(R^4) gives CR^22 rho. With rho=cR^-60, the real and complex
+Gaussian determinant ratios are bounded by absolute constants. This
+is a bilinear transpose-symmetric analytic precision; no conjugation
+is introduced at complex field values. Haar ratios at A_* are also
+bounded by local logarithm estimates with their exact J(0) retained.
+
+4. WHY THE GROWING-DIMENSION LAPLACE ESTIMATE IS SUFFICIENT
+
+The proof is RELATIVE to
+
+ L_R(z)=(2pi)^(d/2) J(A_*) det D(z)^(-1/2).
+
+Its modulus can be exponentially small or large in O(R^4 log R).
+The producer retains that fact. It does not first claim an absolute
+polynomial error and then divide by this small prefactor.
+
+On the shifted cube of scalar halfwidth a=c_a R^-16,
+
+ |T3(u)|<=Ca||u||2^2 <=C(a/lambda)u^T Q u,
+ lambda=cR^-8,
+ d a/lambda=O(R^-4).
+
+Hence the auxiliary positive Gaussian used to dominate the exponential
+Taylor remainder has only a bounded determinant inflation. Reserving
+a FIXED fraction of all d Gaussian directions without this small
+relative loss would instead introduce an exponential dimension cost;
+the saved proof avoids it.
+
+For v=sqrt(beta)u, each color-block third moment is at most C lambda^-3/2.
+Summing O(R^4) blocks gives CR^16, and hence the relative cubic error
+CR^16/sqrt(beta). The quadratic Haar term gives CR^12/beta. Its linear
+term includes A_*, so the displayed conservative CR^18 rho/sqrt(beta)
+is sufficient. Near-real determinant comparison converts these positive
+Gaussian estimates to the actual normalized complex Gaussian without
+an extra C^d factor.
+
+The coordinatewise Gaussian tail bound using variance C beta^-1 R^8
+gives the stated CR^4 exp(-c beta R^-40). It need not be strengthened
+to use the max-coordinate pinning.
+
+For the compact complement and the connecting prisms, the nonlinear
+max-link pinning gives the stronger real action gap cR^-4 a^2=cR^-36.
+On a prism one real scalar coordinate remains at least a/2 since the
+stationary shift is much smaller than a. The real boundary perturbation
+is CR^4 rho; the joint imaginary displacement changes the real action
+only quadratically, by C(R^20 rho^2+R^4 rho^2). Both are negligible
+compared with R^-36. The same is true for the stationary scalar e_*.
+
+There are O(d) prism pieces. After bounding their volumes/Haar densities
+and dividing by beta^-d/2 L_R, the relative tail price is indeed of the
+form
+
+           exp[CR^4 log(beta R)-c beta R^-36].
+
+This keeps both dimension and log-determinant entropy. At
+beta>=C_beta R^80, every central error and both tail estimates in(15)
+can be made <=1/4 in total by choosing the fixed constants in the
+stated order. The exponential tail bound decreases beyond that floor:
+its negative linear beta derivative dominates the logarithmic entropy.
+Thus the claim holds for all beta above the floor, not only at it.
+
+It follows that the ORIGINAL compact cavity partition function is
+zero-free on the declared R^-60 boundary tube. This remains a finite
+geometric theorem; it is not a global complex Gibbs statement.
+
+5. RAW MARK, ORIGINAL MASS AND DOMAIN LIMIT
+
+Section6 keeps the fixed discontinuous mark on real integrated links.
+Only the unmarked denominator is contour-deformed. A completely internal
+energy witness supplies its lower bound for every real boundary value,
+so the numerator estimate follows from the quadratic imaginary-boundary
+cost CR^4||Im z||infty^2. Together with the pointwise stationary action
+bound CR^12||z||infty^2, the tube
+
+                 c min(R^-60, tau R^-6)
+
+pays both costs against tau^2. The remaining prefactor is
+exp(CR^4) beta^(3M/2), with logarithmic size O(R^4 log beta). It is
+not called a polynomial prefactor uniform in the number of links.
+
+The marked numerator has not been shown zero-free. The result applies
+to raw coefficients and their actual connected subtractions, retaining
+one event rarity for a shared marked contact. No division by the event
+probability is justified on this enlarged tube. The original exterior
+mass exp(-beta H_out)Z/Z_full remains unchanged; the saddle formula is
+an estimate, not a replacement of that factor in the original law.
+
+Finally, the image obstruction is correctly stated as a limitation of
+these sufficient estimates. An unchanged first noise size delta0
+proportional to epsilon0 does not fit epsilon0 R^-6 at unbounded R
+under a fixed A0/A1 hierarchy, and the R^-60 cap can be stricter.
+Beating the extensive entropy by rare-event energy does not repair
+that missing complex source-image inclusion. This is not a proof that
+all possible growing-cavity admission mechanisms fail.
+
+AUDIT SCOPE
+
+The argument above verifies the finite geometry, exact measure,
+quantitative analytic estimates and original-law scalar/mark ledger.
+It does not verify a new native ordinary-map inclusion, later retained
+history, all-source position/date census, or continuum construction.

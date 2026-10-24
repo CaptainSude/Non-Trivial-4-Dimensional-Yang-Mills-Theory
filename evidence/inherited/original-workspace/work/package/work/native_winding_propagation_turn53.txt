@@ -1,0 +1,262 @@
+WINDING ERRORS UNDER DATED POLYNOMIAL RESPONSE
+20 October 2026. TURN53. Root.
+
+STATUS AND PURPOSE
+
+This note proves a sequence estimate relevant to the native cover
+comparison. It permits polynomial per-step amplification and long
+memory. It does NOT prove the missing native full-state comparison
+map, matching of reconstruction maps, or matching of hard cuts.
+Those are separate premises. In particular, a source estimate on
+resummed live boundary terms relative to retained large regions
+must not be silently substituted for a full-support difference norm.
+
+The new conclusion is that contraction is unnecessary for this
+particular finite-volume error. A quantitative minimum period is
+necessary for the uniform polynomial prefactor claimed here. That
+condition can be arranged once at the physical reference scale.
+
+1. AN EXACT FORWARD RESOLVENT ESTIMATE
+
+Let j=0,...,n denote successive steps from fine to coarse. Assume
+gamma_j>=2 and
+
+ gamma_i <= C_g (gamma_j + j-i + 1),    0<=i<=j<=n.       (1.1)
+
+The fixed constant C_g may incorporate bounded signed primitive
+steps and positive sums over a fixed number of steps. No positive
+primitive drift is assumed.
+
+Let e_j,b_j be nonnegative numbers satisfying
+
+ e_j <= b_j + sum_(i<j) K_(j,i)e_i,                       (1.2)
+
+ K_(j,i) <= C_0 L^[D(j-i)] (1+j-i)^q
+                                  (2+gamma_i+gamma_j)^A, (1.3)
+
+where L>1, C_0>0 and A,D,q>=0 are fixed. Bounds with extra fixed
+powers of either endpoint coupling or gamma_i/gamma_j are included
+by increasing A; both couplings are at least two. A finite vector
+of dated classes is included by
+taking its nonnegative matrix row-sum norm and increasing C_0.
+
+There is C_1 depending only on these constants such that
+
+ e_j <= sum_(s=0)^j b_s
+          exp[C_1(j-s) log(2+gamma_j+j-s)].                (1.4)
+
+For s=j the exponential is one.
+
+Proof. The strictly lower triangular matrix K is nilpotent.
+Iteration of (1.2), with no infinite-series issue, gives
+e <= (I+K+...+K^n)b. A term from s to j is a strictly increasing
+chain s=i_0<i_1<...<i_v=j. Put a=j-s and h_t=i_t-i_(t-1).
+Then v<=a and sum h_t=a. For every point of the chain, (1.1)
+bounds every visited endpoint coupling by C(2+gamma_j+a).
+Consequently its weight
+is at most
+
+ max(1,C_0)^a L^(Da) 2^(qa)
+                         [C(2+gamma_j+a)^A]^a,
+
+since 1+h<=2^h for every positive integer h. There are exactly
+2^(a-1) compositions of a when a>=1; they bound all the chains.
+Absorb these exponential factors into C_1 a log(2+gamma_j+a).
+This proves (1.4).
+
+Thus the old-cell count L^(4a), polynomial collar factors and a
+polynomial per-step response do not require separate contractions.
+They do require an actual estimate of the form (1.2)--(1.3).
+
+2. EXPONENTIAL BIRTHS AND THE MINIMUM-PERIOD CONDITION
+
+Define
+
+ ell(gamma) = [1+log(2+gamma)]^r,    r>=0,
+ N_i=N_j L^(j-i),    x_j=N_j/ell(gamma_j).                 (2.1)
+
+Suppose, for fixed B,c_0>0 and B_0>=0,
+
+ b_i <= B_0(2+gamma_i)^B
+                       exp[-c_0 N_i/ell(gamma_i)].        (2.2)
+
+There are constants K_*,C_*,c_*>0, independent of n,j,gamma_j,
+N_j,B_0, such that
+
+ x_j >= K_* log(2+gamma_j)                                (2.3)
+
+implies
+
+ e_j <= C_* B_0 (2+gamma_j)^B exp(-c_* x_j).               (2.4)
+
+If an additional final read has an incidence/cell-count kernel
+of the form (1.3), incorporate that read as one more application
+of the same triangular bound. Its possible fixed polynomial
+prefactor is retained; it is not declared norm one.
+
+Proof. From (1.1),
+
+ (2+gamma_(j-a))^B <= C(2+gamma_j)^B(1+a)^B,
+ ell(gamma_(j-a)) <= C ell(gamma_j)(1+a)^r.
+
+Insert these bounds in (1.4). It suffices to bound
+
+ sum_(a>=0) (1+a)^B
+   exp[C_1 a log(2+gamma_j+a)
+                         -c_2 x_j L^a/(1+a)^r].          (2.5)
+
+Put h_a=L^a/(1+a)^r. The numbers
+
+ d = inf_(a>=0) h_a,
+ S = sup_(a>=1) a[1+log(1+a)/log(4)]/h_a
+
+satisfy d>0 and S<infinity. Also
+
+ log(2+gamma_j+a)
+           <= log(2+gamma_j)+log(1+a).
+
+Thus the positive exponent in (2.5) is at most
+C_1 S log(2+gamma_j) h_a. Choose
+K_*>=max(1/log(4),2 C_1 S/c_2). Condition (2.3) pays this
+cost with half the negative exponent and also gives x_j>=1.
+The remaining sum is bounded by
+
+ exp[-c_2 d x_j/4]
+       sum_(a>=0)(1+a)^B exp[-c_2 h_a/4].
+
+The series is finite, since h_a grows exponentially up to a
+polynomial denominator. This proves (2.4).
+
+3. WHY THE SCALE CONDITION CANNOT JUST BE OMITTED
+
+For fixed x>0 and A,c>0, consider the contribution
+
+        gamma^(Aa) exp(-c x L^a).                         (3.1)
+
+It is obtained, for example, from a scalar nearest-step recurrence
+with response gamma^A and a birth a dates earlier with the displayed
+winding factor. Constant gamma satisfies the upper comparison (1.1).
+Choosing a=floor[(log log gamma)/(2 log L)] as gamma tends to infinity
+makes the logarithm of (3.1) grow as a positive constant times
+log gamma log log gamma, up to smaller terms. It exceeds the
+logarithm of every fixed polynomial in gamma.
+
+Therefore a polynomial-in-gamma prefactor at fixed x is not a
+consequence of polynomial response alone. Section2 does not make
+this false assertion. The finite-scale estimate in TURN52 Section12B
+already withheld it for this amplification class.
+
+4. THE PHYSICAL REFERENCE SCALE MAKES THE CONDITION UNIFORM
+
+Suppose the chosen continuum-cutoff sequence has
+
+ N_j=N_* L^(n-j),
+ 2<=gamma_j<=C_p[Gamma+(n-j)+1],    Gamma>=2.              (4.1)
+
+The native positive-block profiles in TURN52 supply an upper
+comparison of this form, with their fixed block/step constants.
+The number N_* is the torus period in terminal coarse-cell units;
+it is fixed as the ultraviolet cutoff n increases.
+
+There is K_p, independent of n and Gamma, such that
+
+ N_* >= K_p [1+log(2+Gamma)]^(r+1)                        (4.2)
+
+implies (2.3) for every j. Indeed, for m=n-j,
+
+ 1+log(2+gamma_j)
+             <= C[1+log(2+Gamma)](1+m).
+
+The quantity sup_(m>=0) L^(-m)(1+m)^(r+1) is finite.
+Taking K_p larger than K_* times the resulting constant proves
+N_j >= K_* ell(gamma_j)log(2+gamma_j) simultaneously.
+Rounding N_* up to an allowed lattice multiple only improves it.
+
+This is a condition on the relation between reference box size,
+reference lattice units and weak-coupling floor. It is not an
+estimate for every box with arbitrary independent values of
+N_* and Gamma.
+
+For a prescribed tube radius delta>0 and fixed B_0, enlarge the
+constant in (4.2), if necessary with an additive dependence on
+log_+(B_0/delta). The right side of (2.4) can then be made less
+than delta/2 at all dates. To see this without an asymptotic
+shortcut, use x_j>=K log(2+gamma_j) to pay the factor
+(2+gamma_j)^B with half the exponential and use the positive
+uniform lower bound on x_j to pay 2 C_* B_0/delta.
+
+5. SUMMING THE VOLUME-WEIGHTED OUTPUT
+
+If the actual vacuum comparison at date j is bounded by
+C N_j^4 e_j, then Sections2 and4 give
+
+ sum_(j=0)^n C N_j^4 e_j
+   <= C' B_0 N_*^4(2+Gamma)^B
+       exp[-c' N_*/ell(Gamma)],                           (5.1)
+
+after modifying constants depending on the fixed profile bounds.
+This is uniform in the ultraviolet depth n.
+
+Proof. In (2.4) substitute m=n-j and (4.1). With
+x_*=N_*/ell(Gamma), the sum is bounded by a constant times
+
+ B_0 N_*^4(2+Gamma)^B
+   sum_(m>=0) L^(4m)(1+m)^B
+            exp[-c x_* L^m/(1+m)^r].
+
+Because x_*>=1 and L^m/(1+m)^r has a positive minimum and
+exponential growth, splitting the exponent as in Section2
+gives (5.1). The L^(4m) volume weight is included in the
+convergent series; it is not discarded.
+
+For a fixed integer cover multiplicity J, a factor J^4 in
+the raw vacuum comparison is harmless but must be restored
+in the final two-volume statement.
+
+6. EXACT NATIVE ATTACHMENT AND WHAT IS STILL MISSING
+
+The following items are established at the stated source/classical
+premises in TURN52:
+
+ * Flat raw Gaussian vacuum contributions have winding tails
+   in the actual localized resolvent support catalogue.
+ * Scalar and original-domain field perturbations, at FIXED
+   reconstruction maps and cuts, enter a native component with
+   a pointwise old-cell sum containing L^(4a) and polynomial
+   collar factors.
+ * The positive full component mass gives a response retaining
+   its small activity and a fixed smaller spatial exponent.
+ * Its raw supported connected expansion gives a fresh R response.
+
+The present lemma proves that, IF the remaining full dated
+E/R/live-B comparison map obeys (1.2)--(1.3) in one fixed weaker
+comparison norm, all such inherited winding errors are summable.
+There is no need to prove that this entire map is contractive.
+The same stronger baseline support reserve must be retained at
+every step; repeated weakening of the exponent is not allowed.
+
+In particular, the lemma does not supply:
+
+ (i) a small difference in the full original mixed live-B norm,
+     or a proved replacement by a closed mass-weighted norm;
+ (ii) equality/comparison of the complete nonlinear reads and
+      hard-cut integration domains;
+ (iii) a response estimate through an unverified regrouping
+       of retained large-field regions;
+ (iv) equality of the full raw finite-volume partition normalization;
+ (v) local-observable bounds, continuum symmetry, reconstruction
+     or physical nontriviality.
+
+If a nonlinear map satisfies the local response bound only inside
+a fixed comparison tube, the uniform delta/2 majorant can be used
+in a finite first-exit induction, PROVIDED each step is defined
+and the response inequality holds throughout that tube. This
+does not establish native class admission or continuity across
+changing hard cuts on its own.
+
+CONCLUSION
+
+The amplification/summation problem is settled at explicit
+polynomial-response hypotheses and a reference-scale condition.
+The remaining native boundary/read comparison must still be
+proved before this becomes a full vacuum-cover theorem.

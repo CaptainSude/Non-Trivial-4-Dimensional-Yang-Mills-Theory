@@ -1,0 +1,336 @@
+ORIENTED CUBIC: CREATION PACKETS, ACTUAL SIGN SYMMETRY, AND ONE REGULAR BLOCK
+18 October 2026. Adversarial extension of scalar_fusion_oriented_cubic_first_order.
+
+Scope: exact finite-regulator symmetry and free-field algebra; fixed-q regular
+kernel estimates relative to the actual same-contour inputs of
+inner_two_mark_gaussian_prefix Section1. No full-history cubic field claim.
+
+1. EXPLICIT POSITIVE-FREQUENCY PACKETS
+
+Fix k0!=0 and e perpendicular to k0. Choose a smooth nonnegative pair of
+momentum bumps chi(k)=chi(-k) supported close to +/-k0, invariant under
+rotations about the k0 axis. Let s be +1 on the positive bump and -1 on the
+negative bump, and set
+
+       a(k)=s(k) chi(k) [e-k(k dot e)/|k|^2].                (1)
+
+This is a smooth transverse one-photon wavefunction. It is odd in k; the
+transverse bracket is even. In a positive-frequency Maxwell expansion the
+electric creation amplitude at Euclidean (tau,0), tau>0, is proportional to
+
+     integral |k| e^(-tau|k|) a(k)/sqrt(2|k|) dk = 0.
+
+The magnetic amplitude is proportional to
+
+     integral e^(-tau|k|) k cross a(k)/sqrt(2|k|) dk,
+
+which is a nonzero multiple of k0 cross e. The axis symmetry makes the
+direction exact. A harmless constant complex phase makes that multiple real.
+Rotate this construction in the three independent color spaces to obtain
+E^a(tau,0)=0 and B^a(tau,0)=c_tau e_a, c_tau!=0.
+
+The product of the three one-photon states has distinct colors and finite
+norm. Its matrix element against the Wick cubic is
+
+ epsilon_abc F^a_ij F^b_jk F^c_ki = 6 det(B^1,B^2,B^3)
+                                  =6 c_tau^3 !=0.          (2)
+
+All wavefunctions are smooth and compactly supported away from k=0, so the
+matrix element is continuous around (tau,0). A compact smooth test supported
+in that positive-time neighborhood has a nonzero matrix element. Under free
+Maxwell OS reconstruction its reflected square is the norm of that created
+vector, hence strictly positive. No assumption of real Euclidean creation
+amplitudes is required. No zero-total-momentum three-gluon scattering
+amplitude is being used.
+
+2. EXACT SIGNED-g IDENTITY FOR THE ACTUAL WILSON CONSTRUCTION
+
+Provenance: the zero-inherited-input fixed-T symmetry and the complex
+g-disc of radius c T^-3 were already established in
+quantum_zero_input_parity_fragment.tex. They are not new results here.
+This section checks their exact physical-coordinate interpretation and
+limits; the new marked issue is the inherited-state class in Section6.
+
+Write U_e=exp(g A_e), with anti-Hermitian A, and gamma=g^-2. Then
+
+                 U_e(-g,-A)=U_e(g,A).                       (3)
+
+This is equality of the physical link, not invariance under inversion of all
+links at FIXED g. The latter is generally false for a nonabelian plaquette.
+
+The Wilson action, compact Haar measure, all group constraints, based gauge
+insertions, and their normalizers are identical under (3). A canonical Haar
+Jacobian uses |g|^dim times j(gA); its absolute normalization is even. The
+actual inherited action E_gamma(U), static R, and source counterterms are
+functions of the same physical U and the same gamma, so they too agree.
+The coarse datum exp(gB) and its unique admitted saddle agree when B changes
+sign. The retained coordinate is the ORIGINAL nonpivot relative logarithm
+gx; simultaneously x->-x preserves that relative field and its pivot solution.
+
+All retained radial windows are preserved. A threshold denoted g log^p gamma
+in the positive-coupling construction means |g| log^p gamma in this signed
+extension; T=log^t gamma is even. Large-field indicators, history partitions,
+and R-operations defined in physical group variables and gamma are unchanged.
+All running g_j have the same chosen sign, so their ratios are unchanged.
+Thus no separate cutoff or inherited-action sign hypothesis is needed for
+the exact real identity. A global principal-log chart may be used almost
+everywhere for this identity, but is not required for the local chart proof.
+
+For any odd canonical external test P3, the corresponding gauge-fixed/local
+matching functional consequently satisfies M(-g)=-M(g). At g=0 the centered
+Gaussian measure and retained windows are even, so its even Gaussian input
+has zero pairing with P3. This is useful algebra, not a rate estimate.
+
+In particular, the signed extension of a scale-dependent family need not
+be holomorphic through g=0 on a fixed disc. M(g)=sign(g)/log(g^-2) obeys
+the same exact parity. The existing relative complex-coupling disc does not
+contain g=0 and cannot exclude such behavior. An external colored three-
+photon functional is a matching device; it is not by itself a positive
+gauge-invariant observable of the interacting Wilson state.
+
+3. EXPLICIT FREE SCALAR DIMENSION-SIX DESCENDANT CALCULATION
+
+Use the inner product <F,G>=(1/2)sum_mu,nu F_mu,nu G_mu,nu on real two-forms.
+Away from coincidence, the free curvature covariance is a nonzero scalar
+multiple of |x|^-4 R_n, where n=x/|x| and
+
+                    R_n G=G-2 n wedge i_n G.
+
+Normalized S^3 angular moments give
+
+ < n_alpha n_beta <F,R_n G> >_(S^3)
+   =[delta_alpha,beta <F,G>
+      -F_alpha,nu G_beta,nu-F_beta,nu G_alpha,nu]/12.         (4)
+
+The zeroth angular average of R_n is zero. For the midpoint product expand
+F(x/2) and F(-x/2) to second order. The dimension-six bilinear coefficient,
+apart from the common scalar/Wick factor, is obtained from
+
+ (1/8)[K_alpha,beta(partial_alpha,beta F,F)
+       +K_alpha,beta(F,partial_alpha,beta F)]
+ -(1/4)K_alpha,beta(partial_alpha F,partial_beta F),            (5)
+
+where K is the bilinear tensor on the right of (4) and repeated indices
+are summed. For a free Maxwell field, divergence F=0 and Box F=0 make
+both same-factor terms zero. For the cross term, Bianchi gives the
+POINTWISE identity
+
+ sum_alpha,beta,nu partial_alpha F_beta,nu partial_beta F_alpha,nu
+                     =(1/2)sum_alpha,beta,nu
+                                  (partial_alpha F_beta,nu)^2. (6)
+
+Indeed multiply partial_alpha F_beta,nu+partial_beta F_nu,alpha
++partial_nu F_alpha,beta=0 by partial_alpha F_beta,nu; the last two
+terms are the same negative contraction after relabeling. The divergence
+term in K vanishes, and its remaining two terms cancel by (6).
+
+Thus (5) is zero modulo FREE EOM, with NO integration by parts and no
+discarded total derivative. The independent audit
+scalar_midpoint_dimension_six_independent_audit gives the unreduced local
+expression [|d|^2-F_beta,nu partial_beta d_nu]/48, d_nu=partial_alpha F_alpha,nu,
+up to that same common Wick factor. It is EOM-only.
+
+This proves directly that the free scalar angular OPE coefficient of
+Box(F^2) is zero. No conformal-family assertion is needed. In formal
+perturbative matching the two-leg coefficient is even in g and therefore
+has no order-g term. Exact real parity alone does not assert a g^2 rate
+for the nonperturbative scale-dependent coefficient.
+
+For parity-even, pure-YM scalar dimension six, the local basis modulo
+Bianchi and EOM consists of C3 and Box tr(F^2). A double divergence of
+tr(F_mu,rho F_nu,rho) reduces to the latter plus EOM by stress conservation;
+the other two-derivative bilinears reduce by Gracey's (2.24)--(2.26):
+https://arxiv.org/html/hep-ph/0204266
+Parity-odd epsilon-Lorentz operators are excluded by full reflection-even
+angular averaging. This classification does not discard EOM/contact terms
+inside coincident spectators.
+
+There is an exact finite-lattice way to handle EOM at separated supports.
+For a left-invariant link derivative nabla_e^a and a local multiplier Z_e^a,
+define the complete Schwinger--Dyson insertion
+
+ E_Z=sum_(e,a)[Z_e^a nabla_e^a S - nabla_e^a Z_e^a].         (7)
+
+Compact Haar integration by parts gives <E_Z F_ext>=
+sum <Z_e^a nabla_e^a F_ext>=0 when the external observable has disjoint link
+support. The second term in (7) is essential. A classical D*F expression
+is not automatically the exact insertion (7); its local renormalization
+and contact ledger must be matched. This identity is for the ORIGINAL
+Wilson expectation (or its exact sourced partition representation), not
+an assertion that an unsourced R replacement preserves EOM observables.
+
+4. AN ACTUAL FIXED-q FIRST-ORDER CUBIC COEFFICIENT
+
+Here the marks are literal fixed-geometric-radius plaquette/Wilson-loop
+densities, or a fixed finite family with that same proven radius. They
+are not arbitrary generated mixed marks.
+
+Set physical background B=g A with A in a fixed canonical complex ball.
+The matched q-chart is analytic on a fixed physical geometric ball. After
+canonical division by g^2, each vacuum-subtracted fixed-radius density has
+
+            phi_a=Q_a(A,x)+g C_a(A,x)+g^2 R_a,g(A,x),        (8)
+
+with Q quadratic, C cubic in the joint canonical background/noise, and a
+fixed polynomial-growth remainder on the retained set. The complete
+geometric law relative to the flat, centered retained Gaussian has
+
+            V_g=g V1(A,x)+g^2 R_g(A,x).                    (9)
+
+V1 includes the first variations of the background Gaussian precision,
+chart, Wilson action, pivot/gauge/Haar amplitude; it is not just the
+cubic Wilson vertex. At nonzero A it need not be odd in x alone. Frozen
+primitive coupling ratios differ from one only by O(g^2).
+
+The actual inherited interaction X has ||X||_b<=K b^2 and DX(0)=0.
+On the canonical region, its static-subtracted insertion is bounded by
+C K g^2 (|A||x|+|x|^2) in the supported polynomial-growth norm. This follows
+from D^2 X=O(K) on a fixed fractional b-margin and the actual chart. It
+therefore belongs to R_g, not V1. This remains true for the complete
+rooted family: global color averaging removes the first jets of strict
+coefficients and the connected estimates attach extensive X to the mark.
+No extension of X to a fixed physical-radius ball has been made.
+
+For the actual normalized covariance, fixed-degree connected interpolation
+now gives
+
+ Cov_g(phi1,phi2)=Cov_0(Q1,Q2)
+ +g[Cov_0(C1,Q2)+Cov_0(Q1,C2)+kappa_0(Q1,Q2,V1)]
+ +O(g^2).                                                  (10)
+
+Every term uses the SAME retained coordinates and complete normalized
+law. To prove the remainder, use d Cov_t/dt=kappa_t(.,.,V_g) and a second
+normalized interpolation for the leading V1 term. The largest pure
+polynomial degree needed is fixed (Q1,Q2,V1,V1 has degree ten); retained
+Taylor remainders also have fixed growth degree. The existing connected
+mark estimate supplies volume-free rooted constants. No cubic potential
+is exponentiated separately. All interpolations remain inside the
+reserved source budget.
+
+The degree-three canonical-background projection of Cov_0(Q1,Q2) vanishes.
+Projecting (10) on a fixed A-ball costs only a fixed Cauchy factor, not b^-3.
+Thus the cubic projection is g times the displayed computable Gaussian
+coefficient plus O(g^2). Removing the retained Gaussian cutoff changes
+that first coefficient by O(exp[-c T^2]); its contribution is multiplied
+by g. This proves a fixed-q interaction-sensitive coefficient estimate
+under the actual admitted geometric/moment inputs.
+
+It does NOT identify that finite-q coefficient with the continuum 8/Q^2
+coefficient, nor sum a long prefix, nor control arbitrary initial mixed
+marks, nor add source-dependent annular/R derivatives. Those remain
+separate tasks.
+
+5. A CONCRETE OBSTRUCTION IN THE OLD MIXED-MARK CLASS
+
+Let C3_lat(B) be a fixed local gauge-invariant clover-loop cubic whose
+lowest jet is C3 and whose norm on the b-ball is O(b^3). The family
+
+                 W12,g(B)=(g^2/b) C3_lat(B)                (11)
+
+obeys the old mixed-mark bound ||W12||<=C g^2 b^2. Its coefficient is
+even in signed g when b=|g|log(g^-2), so it obeys the exact physical
+symmetry of Section2. But its canonically normalized cubic is
+
+                W12,g(gA)/g^4=(g/b) C3(A)+... .            (12)
+
+This is sign(g)/log(g^-2), much larger than g. A color-odd external
+functional does not kill it. It can carry a connected two-root local
+carrier, so connectedness does not exclude it either. This is an
+admissible comparison-class counterexample, not a claim about the
+actual generated Wilson coefficient. Actual production must be proved
+to preserve a stronger cubic/odd norm; sign symmetry alone is insufficient.
+
+6. THE REFINED PARITY CLASS DOES CLOSE FOR ONE REGULAR q-STEP
+
+Write W_even(B)=[W(B)+W(-B)]/2 and W_odd similarly, in the actual local
+logarithm chart. These pieces need not separately be gauge invariant.
+The WHOLE rooted W is invariant. Suppose
+
+          ||W_even||_b<=M b^2, ||W_odd||_b<=M b^3.           (13)
+
+For mixed marks replace M by M12 g^2. Here DW(0)=0 is part of the input;
+for the own-invariant rooted marks it follows from global color
+invariance. First choose a common smaller joint (B,t)-ball, with each
+radius a fixed fraction of b, such that BOTH geometric images below
+lie in the admitted b-ball of W with a fixed remaining margin. Every
+output/Cauchy norm in this paragraph uses that smaller ball. The fixed
+fractions depend on q and the geometric chart bounds, not on g, volume,
+or the age of the input. The same support reserves as the original
+fixed-q theorem are used. The actual
+joint geometric chart has
+
+ Phi(-B,-t)=-Phi(B,t)+O((|B|+|t|)^2)                       (14)
+
+on a fixed geometric ball. Hence the reflected mark defect
+D(B,t)=W(Phi(B,t))-W(Phi(-B,-t)) has norm O(M b^3) on the joint b-ball
+and vanishes through joint degree two. Its static-subtracted noise
+increment has coefficients
+
+       g L_D + g^2 Q_D + g^3 C_D + (g^4/b)R_D,
+       ||L_D||<=C M b^2, ||Q_D||<=C M b,
+       ||C_D||+||R_D||<=C M.                               (15)
+
+The ordinary increment has moment size O(M g b); the defect increment
+has moment size O(M g b^2), by the fixed-degree estimates and g<=b.
+Thus replacing either mark in a covariance by its defect costs
+C M1 M2 g^2 b^3 in the rooted connected norm.
+
+For the law comparison, substitute x->-x in the law at -B. The retained
+windows are exactly unchanged. Absorb the precision difference into
+the residual potential on these SAME retained coordinates; interpolate
+between the actual and reflected residual potentials in the reserved
+local Gaussian/absolute-potential cluster class. The established source
+budget and local coercivity leave this entire path admissible. This is
+not interpolation of a total-variation norm of full-volume densities.
+The Gaussian precision difference is
+O(b) times a quadratic noise mark. The purely geometric interaction
+difference is O(g) in fixed polynomial-growth norms, and the inherited
+static-subtracted difference is O(g b)+O(g^2). Since g<=b, normalized
+interpolation between these two admitted laws contributes at most
+O(b) times the product of the centered mark moment sizes. This gives
+the same covariance bound:
+
+        ||[Cov(W1,W2)]_odd||_b <=C M1 M2 g^2 b^3.           (16)
+
+This argument retains the two external roots and their connecting
+tree; fixed polynomial moments spend only the already chosen reserve.
+There is no total-variation estimate of a full-volume density.
+
+Transport of a single mark needs the sharper centered-noise argument,
+not merely O(b) law variation. The quantum odd part is bounded by
+
+         ||[(A-T)W]_odd||_b <= C M g^2 b.                   (17)
+
+The reflected noise defect and the law defect must be assembled before
+their Taylor remainder estimates. A shorter equivalent implementation
+of (15) is the exact second-order noise formula
+Delta D=g L_D+g^2 R_D, with supported polynomial-moment bounds
+L_D=O(M b^2), R_D=O(M b); the second derivative is evaluated along the
+common smaller joint ball. This avoids bounding two separate fourth
+remainders before their parity cancellation.
+
+Indeed (15), or this second-order formula, has mean O(M g^2 b): its linear term gains g from the actual
+centered-Gaussian interpolation, its quadratic term is O(M g^2 b), and
+the remaining terms are no larger. For the precision-defect insertion,
+b times a quadratic mark paired with the ordinary g L term has zero
+centered-Gaussian covariance by noise parity and gains another g under
+interpolation. The g^2 Q term costs g^2 b; higher terms cost at most
+g^4/b<=g^2 b. The O(g) odd geometric defect paired with g L costs
+g^2 b directly; its other terms are bounded in the same way. The
+inherited interaction can instead be removed by exact covariance
+interpolation; its static-subtracted increment has moment size O(gb),
+giving no worse bound. Constants in the log law cancel in every ratio.
+
+The static pullback preserves (13) with a fixed constant by (14). For
+mixed input, (17) is M12 g^4 b, and g^4 b<=g^2 b^3. Combining it with
+(16) therefore preserves the stated mixed odd weight in ONE regular
+q-step. Vacuum subtraction changes no odd part. Whole color invariance
+makes the output first B-jet exactly zero; strict coefficients may be
+constant-color averaged as in the existing preparation.
+
+This closes the one-step class, excluding (11) from inputs to the refined
+ledger. It is not yet an all-age contraction or coefficient-identification
+theorem. In particular, fixed constants per step cannot simply be ignored.
+The next issue is an actual cubic normal form after full quadratic
+completion, with its engineering-dimension-six contraction and controlled
+higher-jet feedback.

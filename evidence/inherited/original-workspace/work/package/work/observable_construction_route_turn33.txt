@@ -1,0 +1,387 @@
+OBSERVABLE CONSTRUCTION ALTERNATIVES -- TURN33
+19 October 2026. Primary-source search and exact finite-cutoff deductions.
+This is not a Yang--Mills existence proof.
+
+RESULT
+
+The most useful new algebraic simplification is specific to SU(2): the
+entire normalized multi-loop moment functional is a positive linear
+average of SINGLE-loop word expectations. The actual lattice loop
+equations can consequently be written linearly on this infinite word
+space. This permits a different prospective producer: uniform local
+area/shape jets of one normalized Wilson-loop functional, with complete
+contact subtractions, rather than a separate exponential source family
+for every composite. The algebra is exact; the required continuum jet
+estimate is not supplied by the papers inspected.
+
+Two precise limitations are also established below. All scalar local
+coupling jets do not determine the gauge-orbit law even at a fixed finite
+lattice. And the available random-data spatial Yang--Mills heat-flow
+theorem does not cover the equal-time roughness of a four-dimensional
+free gauge potential. Neither limitation is a no-go for interacting
+point splitting or for a future spatial-flow construction.
+
+0. PRIOR SCOPE AND PRIMARY SOURCES
+
+Read against ym_observable_algebra_minimality_turn4,
+local_observable_ope_route_turn6, MRS_alternative_scope_turn7,
+alternative_continuum_routes_turn30 and physical_diagonal_matching_turn17.
+In particular, do not repeat a sharp conditional/prepared-norm obstruction
+as an obstruction in the physical OS norm. Do not use four-dimensional
+heat smoothing as a reflection-positive pushforward. Do not identify a
+scalar net with the full invariant-polynomial hierarchy by affiliation.
+
+Primary sources actually inspected this pass:
+
+[KZ] V. Kazakov and Z. Zheng, Bootstrap for finite N lattice Yang--Mills
+ theory, JHEP03(2025)099. arXiv2404.16925v4, equations(1.1),(2.31),
+ Section2.3.1 and discussion pp32--33.
+ https://arxiv.org/pdf/2404.16925
+ https://doi.org/10.1007/JHEP03(2025)099
+
+[SSZ] H. Shen, S.A. Smith and R. Zhu, A new derivation of the finite N
+ master loop equation for lattice Yang--Mills, EJP29(2024)29.
+ arXiv2202.00880v2, Theorem1.1 and equations(1.1),(4.2)--(4.3).
+ https://arxiv.org/pdf/2202.00880
+ https://doi.org/10.1214/24-EJP1090
+
+[CC] N. Cao and S. Chatterjee, Yang--Mills heat flow with random
+ distributional initial data, arXiv2111.10652. Assumptions(A)--(E),
+ Theorem1.19, Remark1.21; G_alpha in Definition1.13.
+ https://arxiv.org/pdf/2111.10652
+
+[B] H. Bostelmann, Operator product expansions as a consequence of phase
+ space properties, arXivmath-ph/0502004, (2.7), Theorems3.2--3.3.
+ https://arxiv.org/pdf/math-ph/0502004
+
+[FH] M.B. Froeb and J. Holland, All-order existence of and recursion
+ relations for the operator product expansion in Yang--Mills theory,
+ arXiv1603.08012, Theorems1 and4.
+ https://arxiv.org/pdf/1603.08012
+
+No secondary reconstructed Raw file is used as mathematical authority.
+The checked local upstream snapshot is the one recorded in turn32.
+RawII around88910--88940 itself distinguishes scalar plane-independent
+source extraction from an extra anisotropic clause. RawIII around109509
+likewise distinguishes scalar cumulants from a tensor shell insertion.
+These are clues about its stated scope, not new primary theorems.
+
+1. AN EXACT POSITIVE SU(2) REDUCTION OF ALL MULTI-LOOP MOMENTS
+
+Use w(A)=Tr(A)/2. Cayley--Hamilton for B in SU(2) gives
+
+              w(A)w(B) = [w(AB)+w(AB^{-1})]/2.              (1.1)
+
+This is [KZ](1.1) in normalized-trace convention. Transport the based
+holonomies of any finite collection of loops to a common vertex by fixed
+lattice paths. Each trace is unchanged. Apply (1.1) successively:
+
+ product_(j=1)^n w(A_j)
+     = 2^{-(n-1)} sum_(epsilon_2,...,epsilon_n in {+,-})
+                        w(A_1 A_2^{epsilon_2}...A_n^{epsilon_n}). (1.2)
+
+The formula is pointwise, not a factorization of expectations. It holds
+under the SAME normalized Wilson law, any source-deformed positive law,
+and indeed any probability law of these matrices. The weights have total
+mass one. There is no normalization denominator to compare, no large-N
+limit and no factorial cost from this trace reduction. Ordinary joint
+moments determine cumulants by the usual partition formula if desired.
+
+Complete reads matter. The single words contain the common-base paths,
+their inverse segments and every original loop. The union may be much
+larger than an individual loop. A product supported on separated sets
+does not become a local one-loop observable in either set. The equality
+is exact despite this path dependence of the individual terms.
+
+[KZ](2.31) makes the SU(2) lattice loop equation linear on single-loop
+expectations after this reduction. It is an INFINITE loop-space equation;
+plaquette deformations increase word length. Their finite-length bootstrap
+does not prove continuum convergence or uniqueness from short-loop data.
+The discussion pp32--33 explicitly leaves convergence and selection of
+physical solutions as further questions. [SSZ] independently supplies
+the exact normalized finite-N loop identities for the Wilson law.
+
+Thus a claim that SU(2) necessarily retains an irreducible multitrace
+hierarchy would be too pessimistic. A claim of finite-jet or finite-length
+closure would be too optimistic.
+
+2. EXACT QUADRATIC AND ORIENTED CUBIC LOCAL LOOP WORDS
+
+Write P=p0 I+i p.sigma, Q=q0 I+i q.sigma and R=r0 I+i r.sigma,
+with p0^2+|p|^2=1 etc. All loops in this paragraph have a common base.
+Direct Pauli multiplication gives
+
+ p.q = w(P)w(Q)-w(PQ)
+     = [w(PQ^{-1})-w(PQ)]/2,                               (2.1)
+
+       det(p,q,r) = [w(PQR)-w(PRQ)]/2.                     (2.2)
+
+The second identity retains orientation: the vector part of PQ is
+p0 q+q0 p-p cross q, so its scalar triple product contributes with the
+displayed positive sign. These are finite local gauge-invariant loop
+observables, including when the plaquette planes have no shared edge.
+They are not functions solely of the separate plaquette traces.
+
+For smooth small plaquettes in the convention F=F^a sigma_a/2,
+P=exp(i g a^2 F_A+o(a^2)), one has p=g a^2 F_A^components/2+o(a^2)
+at FIXED nonzero g. This is a classical benchmark. Uniform use along a
+running g(a)->0 requires the stronger error o(g(a)a^2), with the
+corresponding differentiated remainder bounds if jets are taken.
+Consequently the leading terms of (2.1),(2.2) are respectively
+
+       (g^2 a^4/4) F_A.F_B,
+       (g^3 a^6/8) det(F_A,F_B,F_C).                        (2.3)
+
+The trace DIFFERENCE in (2.2) therefore has coefficient g^3 a^6/4.
+This supplies an exact orientation-sensitive lattice representative,
+without assuming that an O(3)-invariant free quadratic net contains it.
+It does not establish its interacting continuum renormalization.
+
+There is also an exact connection to link integration by parts. Suppose
+P and Q each traverse the same oriented link once and are based at that
+link's initial vertex. For left generators X_a with exp(i t sigma_a/2),
+
+ X_a w(P)=-p_a/2,
+ Gamma_e(w(P),w(Q)):=sum_a X_a w(P) X_a w(Q)=p.q/4.          (2.4)
+
+With E_P=1-w(P), |p|^2=(1-p0)(1+p0)<=2E_P, so
+
+ |Gamma_e(w(P),w(Q))| <= sqrt(E_P E_Q)/2
+                         <=(E_P+E_Q)/4.                   (2.5)
+
+This is a genuine pointwise estimate under the full Wilson law, with no
+weak-field qualification or history normalization. Opposite orientations
+require the appropriate signed/transported link derivative. If the loops
+share no link, this particular Gamma_e is zero; (2.1) still applies to
+their based loop words. We do not use a fictitious shared-edge formula.
+
+The useful limit of (2.5) is equally explicit: division by g^2 a^4 costs
+exactly those canonical factors. Scalar vacuum-subtracted correlations
+do not bound the uncentered positive E_P/a^4 by themselves. Likewise
+|det(p,q,r)|<=(8 E_P E_Q E_R)^{1/2} is not a uniform renormalized cubic
+bound. The contact/subtraction problem remains after this algebra.
+
+Independent bounded audit: public_argument_audit checked (1.1)--(2.5),
+the Pauli signs and the g^3 a^6/4 trace-difference coefficient.
+
+2A. EXACT SOURCE-NORMALIZATION PRICE
+
+At lattice spacing a define the literal canonical representatives
+
+ Qhat_(A,B)=4(g^2 a^4)^{-1}[w(P_A)w(P_B)-w(P_A P_B)],
+ That_(A,B,C)=4(g^3 a^6)^{-1}[w(P_A P_B P_C)-w(P_A P_C P_B)].
+
+Their smooth classical limits are F_A.F_B and det(F_A,F_B,F_C),
+respectively. For a physical smearing a^4 sum_x f(x), a source coupled
+to Qhat multiplies the raw loop difference by 4 f/g^2, whereas a source
+coupled to That multiplies it by 4 f/(g^3 a^2). These are the coefficients
+in the exponent, if an exponentiated deformation is used. Fixed-degree
+nilpotent differentiation avoids requiring that whole exponential disc,
+but it does NOT remove these factors from the coefficient estimates.
+
+For example the source derivative of a normalized expectation is exactly
+Cov_mu(O,Qhat(f)) or Cov_mu(O,That(f)). Formula(2.5) alone leaves an
+uncentered energy on the right after these divisions. A scalar contact
+subtraction cannot be discarded before estimating that covariance.
+Thus no inference from a bounded raw loop to an admitted canonical
+dimension-six source is hidden in the proposed route.
+
+3. NORMALIZED SCHWINGER--DYSON: WHAT IT DOES AND DOES NOT SOLVE
+
+Let S=sum_p beta_p E_p on a finite graph with product Haar measure, and
+mu_J=Z(J)^{-1}exp[-S+sum_p J_p E_p]dH. All J below are real, or complex
+near a point where the finite partition function is nonzero. Put
+Delta_e=sum_a X_a^2, Gamma_e(f,g)=sum_a(X_a f)(X_a g).
+Haar integration by parts, BEFORE any absolute value, gives
+
+ mu_J[Delta_e f-Gamma_e(S,f)+sum_p J_p Gamma_e(E_p,f)]=0.     (3.1)
+
+For f=E_q, a plaquette traversing e once, Delta_e E_q=3 w(Q)/4.
+Hence
+
+ sum_p(beta_p-J_p) mu_J[Gamma_e(E_p,E_q)]
+                            =3 mu_J[w(Q)]/4.               (3.2)
+
+Only incident plaquettes occur. This is an exact finite-volume,
+normalized, interacting identity. Differentiating produces normalized
+covariances and the explicit derivative of beta_p-J_p. No vacuum factor
+or independent conditional normalizer is introduced.
+
+But (3.2) determines a weighted sum, not all off-diagonal Gamma insertions.
+For example, one J derivative also produces unknown covariances of each
+Gamma insertion with E_r. Iteration enlarges the insertion catalogue.
+Equations(1.1) and(3.1) reduce it to loop words; they do not truncate word
+length or provide an inverse of the loop equation with a cutoff-uniform
+norm at beta~log(1/a). That inverse/estimate is the new analytic problem.
+
+An exact Langevin interpretation is possible: for L=Delta-Gamma(S,.),
+L(fg)-fLg-gLf=2Gamma(f,g). It shows which dynamic response adds Gamma to
+the scalar algebra. Static scalar-coupling moments alone do not supply
+this generator or its continuum domain. No continuum stochastic
+quantization construction is inferred.
+
+4. ALL SCALAR COUPLING JETS STILL LEAVE FIBER INFORMATION
+
+Here is an elementary finite-lattice check, independent of free color
+parity. Let a free-boundary four-dimensional cubical graph have n>=2
+vertices in each direction. It has V=n^4 vertices, E=4(n-1)n^3 links,
+and P=6(n-1)^2 n^2 elementary plaquettes. On the generic SU(2) orbit
+stratum the gauge quotient has dimension
+
+                 D=3(E-V)=9n^4-12n^3,
+                 D-P=3n^2(n^2-2)>0.                       (4.1)
+
+For completeness: tree gauge leaves E-V+1 independent SU(2) holonomies;
+generic residual simultaneous conjugation has dimension3. Two
+noncommuting cycle holonomies ensure the discrete generic stabilizer.
+
+The smooth map from this stratum to the P separate plaquette traces
+has rank at most P. Near a maximum-rank point the constant-rank theorem
+therefore gives positive-dimensional fibers. Individual plaquette traces
+do not separate all gauge orbits. Tree-gauge loop words do: pair traces
+recover vector Gram data and triple traces recover orientation, including
+degenerate cases by continuity. On a regular-rank open patch the quotient
+Haar law has a smooth positive density; disintegration in constant-rank
+coordinates has positive density along the positive-dimensional fibers.
+A loop word differing along a fiber can be chosen nonconstant on such
+an open fiber patch. Its conditional variance is positive on a set of
+positive quotient measure. Thus some bounded invariant loop observable
+is not measurable, even almost everywhere, in the plaquette-trace sigma
+field. This uses the positive-density local structure, not topological
+noninjectivity alone.
+
+Let mu_0 be product Haar on the gauge quotient, choose bounded invariant
+f not measurable in that sigma field E, and set
+
+                 h=f-E_mu0[f|E].                          (4.2)
+
+For sufficiently small real epsilon, (1+epsilon h)mu_0 is a different
+positive gauge-invariant probability law. Yet its partition function
+under EVERY plaquette-energy tilt equals the original Haar tilted
+partition function, since E_mu0[h|E]=0. All scalar local-coupling jets
+are identical, including at a Wilson tilt. The conditional fiber laws
+differ.
+
+This is an information statement, not an alternative Wilson theory or
+an RP counterexample: the modified law is not claimed to satisfy the
+complete Wilson SD identities or RP. It proves that a passage from all
+scalar source jets to all loop/curvature fields requires additional
+structure. Knowing the original lattice measure is Wilson does not
+remove the need to CONTROL its extra observables in the continuum.
+
+5. WHAT PHASE SPACE AND PERTURBATIVE OPE ACTUALLY ADD
+
+[B](2.7) requires finite-rank approximation of the energy-damped inclusion
+on the ENTIRE shrinking local-algebra unit ball, to every prescribed
+power. Theorems3.2--3.3 then give OPE approximations for finite products
+of existing fields. Neither the condition nor identification of the
+resulting field spaces with YM invariant polynomials follows from
+finitely many scalar pressure derivatives. This is the same quantifier
+identified in turn6; this pass found no primary theorem removing it.
+
+[FH] Theorems1 and4 establish asymptotic OPEs and coupling-recursion
+relations at arbitrary but FIXED perturbative order. They are useful for
+the finite mixing and contact catalogue, including gauge identities.
+They do not bound the nonperturbative remainder of the Wilson measure
+uniformly in the cutoff or prove summability of perturbation theory.
+Using their recursion as a nonperturbative definition requires existence,
+uniqueness and matching estimates not asserted by that theorem.
+
+6. A NEW PRECISE TIME-ZERO/SPATIAL-FLOW MISMATCH
+
+At finite lattice cutoff a deterministic time-slice map commuting with
+reflection preserves RP, because its pullback preserves the positive
+half-algebra. Spatial flow is compatible with this fact. On an infinite
+slice it has spatial tails; a strictly local finite-region version must
+declare its boundary data. Neither formulation by itself gives a local
+rotation-covariant continuum net.
+
+[CC] assumes covariance bounded in position space by G_alpha, whose
+Fourier coefficients are |k|^{-alpha}. Theorem1.19 requires
+
+                alpha>max(d-4/3,d/2).                     (6.1)
+
+It gives a local random-time smooth heat-flow solution and convergence
+of Fourier truncations under the additional stated moment assumptions.
+In spatial dimension3, (6.1) is alpha>5/3. This includes the 3D GFF
+covariance |k|^{-2}; it does NOT cover the time-zero restriction of a
+4D free potential. Indeed, for a transverse polarization,
+
+ integral_(R) dp0/(2pi) 1/(p0^2+|k|^2)=1/(2|k|).           (6.2)
+
+Thus its spatial covariance exponent is alpha=1, and its positive trace
+singularity is |x-y|^{-2}, too singular for the G_alpha bound with any
+alpha>5/3. The transverse projector does not improve this power.
+Already the Gaussian UV reference therefore fails this imported flow
+theorem. This calculation does not prove impossibility of renormalized
+spatial flow; it identifies the stronger random-data theory and Wilson
+estimates that would be needed. A 3D Euclidean YM state-space theorem
+cannot simply be applied to the equal-time law of 4D YM.
+
+7. THE CONCRETE NEXT ESTIMATE SUGGESTED BY THE SINGLE-LOOP ROUTE
+
+For each finite list of desired invariant-polynomial labels, choose
+actual local small-loop words such as(2.1),(2.2), parallel-transported
+finite differences for covariant derivatives, and ALL required lower
+field/contact subtractions. Denote the resulting signed loop-word
+combination for an n-point test F by nu_(a,F). Repeated(1.1) turns its
+normalized moment exactly into the LINEAR functional
+
+                    G_(a,n)(F)=m_a(nu_(a,F)),
+             m_a(C)=E_Wilson,a[w(C)].                      (7.1)
+
+This is only a representation. The coefficients of nu contain inverse
+powers of a and g; ordinary |m_a(C)|<=1 destroys the cancellations.
+The useful missing estimate is instead a bound on the COMPLETE signed
+combination, for common successive cutoffs and renormalized local words,
+
+ |m_(a/2)(nu_(a/2,F))-m_a(nu_(a,F))|
+              <= A^n (n!)^B epsilon_a p_(s n)(F),
+                  sum_(dyadic a) epsilon_a<infinity,       (7.2)
+
+with fixed s,B and the appropriate collision-test space; compatible
+one-cutoff distribution bounds and field identities must accompany it.
+One whole-correlation epsilon is sufficient for the direct OS approach;
+no arbitrary-copy operator-norm gain is claimed necessary.
+
+Equation(1.2) means that, BEFORE canonical subtractions, passage from
+joint loop moments to a single-loop functional costs total coefficient
+mass1. The problem in(7.2) is shrinking-lobe/shape regularity and local
+renormalization, not an unavoidable multitrace factorial explosion.
+A useful research target is a weak-coupling loop-equation estimate on
+this signed local-jet space. Neither [KZ] nor [SSZ] supplies it.
+
+For separated loops, common-base connectors make the representation
+nonlocal term by term. Their exact cancellations must remain before
+estimates; no perimeter-divergent thin-loop limit is silently inserted.
+Positive-flow words would still need a separate flow-to-local limit.
+
+The criterion is non-circular in the following limited sense: (7.2) is
+an inequality for explicitly given, normalized ORIGINAL Wilson integrals
+of finite loop combinations. It assumes neither a continuum cubic field
+nor its source theorem. It could be proved by a different method, such
+as a loop-equation estimate with a uniform norm on these signed jets.
+If it holds simultaneously for a countable compatible catalogue, with
+the stated fixed-arity growth and the needed coincident-point extensions,
+the moment limits are constructed directly. Local support and lattice
+reflection identities pass along those limits. Full Euclidean covariance,
+nonzero Gram matrices for the new labels and the required ultraviolet
+YM matching remain separate tests; (7.2) by itself does not assert them.
+
+In particular the nonzero classical coefficient in(2.3) is not a lower
+bound on the normalized interacting two-point function of That. Conversely
+the free quadratic O(3) closure obstruction does not invalidate(2.2):
+its ordered trace words are additional observables, not words in the
+separate quadratic trace-energy net. This is an honest enlargement of
+the finite-cutoff observable catalogue.
+
+STATUS
+
+Proved here: normalized convex single-word reduction; exact quadratic
+and oriented cubic word identities with constants; link-energy bound;
+normalized finite-graph SD formula; finite-graph information obstruction;
+and the explicit time-zero covariance mismatch for the proposed flow
+import. Primary scope checks found no ready-made nonperturbative bridge
+from the scalar sector to the full YM hierarchy. The single-loop jet
+formulation is a concrete alternative producer target, not closure of
+the existing construction or a replacement for its missing estimates.

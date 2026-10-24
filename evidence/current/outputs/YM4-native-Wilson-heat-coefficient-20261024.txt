@@ -1,0 +1,237 @@
+FIXED WILSON HEAT COEFFICIENT IN THE NATIVE NORMALIZATION
+24 October 2026. Root proof/readback. Independent review requested.
+
+RESULT
+
+Let the unit-lattice Wilson action count each unoriented plaquette
+once and use tr(1)=1. For a Cartan element H with tr(H^2)=1, write
+C_H=Tr_ad(ad_H^2)>0 and alpha_g=C_H/(48pi^2). Let h_v(s),h_s(s)
+be the affine coefficients [t^2] of the diagonal vector and scalar
+heat densities on Z^4 for
+
+ B_v(A)=S_W''(exp(iA))+D_A D_A^T,
+ B_s(A)=D_A^T D_A,
+ A_alpha(x)=t x_nu H, alpha!=nu.                           (1)
+
+The Hessian is the actual left-relative Hessian. The statement is
+about its polynomial Taylor kernels at zero, not a nonzero affine
+field inside a bounded global analytic domain. Then
+
+ |h_v(s)-10alpha_g|+|h_s(s)+alpha_g/2|<=C s^-1/2, s>=1,
+             h_v(s)-2h_s(s)=11alpha_g+O(s^-1/2).           (2)
+
+Consequently integral_1^(K^2)(h_v-2h_s)ds/s equals
+22alpha_g log K+O(1). This is the fixed reference computation only.
+It supplies the sign for the native Gaussian ONLY after its exact
+reduction and uniform comparison are proved. For SU(2) with
+tr=Tr_fund/2, C_H=8, so this native logarithmic slope is
+22alpha_g=11/(3pi^2). No identification with a differently normalized
+continuum coupling is implicit in that number.
+
+SOURCE AND INDEPENDENT CONTENT
+
+I read the entire supplied work/wilson_continuum_heat_comparison_
+fragment.tex under work/handoff/original-workspace/work/package/work/
+archive/ym4-research/, and recomputed its scaling, heat-variation
+power count, continuum charges and determinant sign. Its archived
+audit was read for comparison only; it is not a premise of this proof.
+This note records the actual computation and the normalization needed
+for the present native route. B109 printed252(0.2),264(1.20)--(1.22),
+297(5.37),(5.42)--(5.43) give the matching original conventions.
+
+1. THE EXACT PLAQUETTE AND LEFT-RELATIVE CONTINUUM VERTICES
+
+Introduce a physical mesh epsilon. At one plaquette use jet variables
+a=A_mu, b=A_nu, c=nabla_(epsilon,mu)A_nu,
+e=nabla_(epsilon,nu)A_mu. The EXACT plaquette is
+
+ P_epsilon=exp(i epsilon a)exp(i epsilon b+i epsilon^2 c)
+                 exp(-i epsilon a-i epsilon^2 e)exp(-i epsilon b).
+
+P_0=I and its epsilon-linear coefficient is zero. Thus
+F_epsilon=(P_epsilon-I)/epsilon^2 is jointly holomorphic at zero.
+The identity P+P^-1-2=(P-I)^2 P^-1 gives the exact physical density
+
+ L_epsilon=-(1/2)tr(F_epsilon^2 P_epsilon^-1),
+ S_epsilon=epsilon^4 sum_(x,mu<nu)L_epsilon(J_epsilon A).
+
+Direct expansion yields F_0=i(c-e)-[a,b] and
+L_0=(1/2)tr(c-e+i[a,b])^2. On each fixed bounded complex jet
+polydisc the difference L_epsilon-L_0 and every required fixed
+field derivative are O(epsilon), by holomorphy and Cauchy.
+
+The physical plane-wave difference symbol is
+(exp(i epsilon k)-1)/epsilon=ik+O(epsilon), jointly analytically
+on bounded momenta. Differentiating the exact density in amplitudes
+therefore identifies the continuum action
+
+ S_c(A)=(1/2) integral sum_(mu<nu) tr(F_munu(A)^2) dx,
+ F_munu=partial_mu A_nu-partial_nu A_mu+i[A_mu,A_nu],
+
+and the ordinary n-point vertices satisfy, n=2,3,4,
+
+ Gamma_n^W(epsilon p_1,...,epsilon p_n)
+       =epsilon^(4-n) Gamma_n^c(p_1,...,p_n)
+                         +O(epsilon^(5-n)).               (3)
+
+The estimates include the fixed external momentum derivatives below.
+The bare quadratic fourth-order remainder is a MIDPOINT-coordinate
+statement; source-site cross entries may have cubic phases. The FULL
+flat vector Feynman symbol is exactly delta(k)I in either convention,
+delta(k)=4 sum_mu sin^2(k_mu/2), and hence has fourth-order error.
+
+For the left-relative chart,
+Xi_(epsilon,A)(B)=log(exp(i epsilon B)exp(i epsilon A))/(i epsilon)
+=A+B+O(epsilon). The Hessian is BOTH
+S_coord''[Xi_B B,Xi_B C] and S_coord'[Xi_BB(B,C)]. The second
+term is retained. The first relative background correction has
+momentum order at least two from Gamma_2; the second has order at
+least one from Gamma_3, or at least two from Gamma_2/current terms.
+They stay within the errors in(3). The actual gauge generator obeys
+
+ epsilon^-1 D_(epsilon A) -> partial+i ad_A.
+
+Integration by parts in S_c gives the limiting scalar and vector
+operators
+
+ L_c=-D_c^2,
+ (B_c)_munu=-D_c^2 delta_munu-2i ad_(F_munu).               (4)
+
+The opposite consistent gauge-generator sign convention gives the
+same heat traces. The flat coefficient of -partial^2 is ONE.
+
+2. ENDPOINT-SAFE LATTICE/CONTINUUM COMPARISON
+
+Use source-site Fourier conventions throughout. The flat lattice and
+continuum symbols are delta(k)I and |k|^2 I. For rho=|k| in a fixed
+small ball, their differences through r<=2 derivatives are
+O(rho^(4-r)). Let V(k,p) be the first background vertex, mapping
+quantum momentum k to k+p, and W(k;p,-p) the mixed second vertex.
+Equation(3) and the retained relative chart terms give at p=0
+
+ |partial_p^r(V_W-V_c)|<=C rho^(2-r),
+ |partial_p^r(W_W-W_c)|<=C rho^(1-r), r<=2.                 (5)
+
+The shifted return vertex V(k+p,-p) satisfies the same bound when
+BOTH arguments are differentiated. The rho^-1 second derivative
+bound in the second line is deliberately loose; the actual lattice
+derivative is analytic and bounded. Baselines obey the sufficient
+bounds |partial^r V|<=C rho^(1-r), |partial^r W|<=C rho^-r.
+
+The exact total heat Hessian for compact sources is
+
+ H_ab(s,p)=-s integral tr(exp(-sB(k))W_ab(k;p,-p)) dk/(2pi)^4
+  +s^2 integral_0^1 integral tr(exp(-s(1-v)B(k+p)) V_a(k,p)
+                  exp(-svB(k)) V_b(k+p,-p)) dk/(2pi)^4 dv. (6)
+
+There is no extra factor2. This follows by differentiating the
+first total trace variation; only total-trace cyclicity is used.
+Lattice integrals are on the Brillouin zone, continuum integrals
+on R^4. Positive-time Gaussian smoothing justifies the continuum
+compact-source differential insertions. Equivalently(6) defines
+their absolutely convergent momentum kernel directly.
+
+For E(t,k)=exp(-tB(k)), direct derivatives or Duhamel give
+
+ |partial_k^r E|<=C rho^-r(1+t rho^2)^r exp(-ct rho^2),
+ |partial_k^r(E_W-E_c)|
+       <=C t rho^(4-r)(1+t rho^2)^r exp(-ct rho^2).          (7)
+
+These have no inverse heat-time singularity and hold at t=0.
+After two external derivatives of(6), a tadpole vertex difference
+is bounded by C rho^-1 exp(-cs rho^2). Its four-dimensional integral
+times s is O(s^-1/2). The heat-difference tadpole term has
+C s rho^4 exp(-cs rho^2) before its outer s and is O(s^-2).
+
+In the bubble, telescoping the four factors replaces either a vertex
+or a heat factor. A vertex replacement has degree2+1 before the
+two derivatives, hence bound C rho P(s rho^2)exp(-cs rho^2).
+Its integral times s^2 is O(s^-1/2). A heat replacement yields
+C s rho^4 P(s rho^2)exp(-cs rho^2) after differentiation, whose
+integral times s^2 is O(s^-1). The two heat times add to s, so these
+bounds are uniform over v in[0,1], including its endpoints.
+Outside the small ball the lattice contribution is exponentially
+small in s; the continuum contribution and tail are likewise
+controlled by polynomial vertices times a Gaussian. Therefore
+
+            |partial_p^2(H_W-H_c)(s,0)|<=C s^-1/2.         (8)
+
+The lattice diagonal heat density is individually gauge invariant,
+and its first color jet is zero. The exact rooted density/moment
+identity at each fixed s gives
+
+              h_W(s)=(1/4)partial_(p_nu)^2 H_aa(s,0),
+                                    a=alpha H.            (9)
+
+Continuum kernels may contain contact distributions. No absolute
+continuum spatial-moment identity is asserted; the next explicit
+transverse diagram verifies the same quarter factor there directly.
+
+3. CONTINUUM DENSITY AND A DIRECT TRANSVERSE CHECK
+
+Let q range over all eigenvalues of ad_H in the complexified adjoint
+space, with both signs and their multiplicities. For F_12=fH, the
+scalar heat density of one charge is
+
+             k_q(s;f)=(4pi s)^-2 (qfs)/sinh(qfs).          (10)
+
+Indeed Fourier transformation in one magnetic direction gives the
+oscillator levels |qf|(2n+1); the degeneracy per area is |qf|/(2pi).
+Their geometric sum and the two free heat directions give(10).
+It is regular at qf=0. The spin matrix in(4) has eigenvalues
+0,0,2qf,-2qf. Thus its vector density is
+
+                     k_q(s;f)[2+2cosh(2qfs)].              (11)
+
+Using x/sinh x=1-x^2/6+O(x^4) and
+2+2cosh(2x)=4+4x^2+O(x^4), one obtains
+
+ [f^2]k_q=-q^2/(96pi^2),
+ [f^2](vector density)=10q^2/(48pi^2).                    (12)
+
+Here is an independent check of the coefficient relevant to(9),
+without a continuum spatial-moment assumption. Take an external
+alpha-potential with momentum p=p_nu e_nu, alpha!=nu. The scalar
+first vertex is 2q k_alpha and the second is 2q^2, the latter
+independent of p. The bubble in(6) is exactly
+
+ 2q^2 s (4pi s)^-2 integral_0^1 exp(-sv(1-v)p^2) dv.
+
+Its second p derivative is -q^2/(24pi^2), since
+integral_0^1 v(1-v)dv=1/6. Multiplication by1/4 gives the scalar
+value in(12). The vector orbital term is four copies of this
+scalar term. Its two spin vertices have Lorentz trace product
+8q^2 p^2. Their bubble contributes q^2/(4pi^2) after the same
+quarter derivative, yielding the vector value in(12). Mixed
+spin/orbital terms vanish by the zero Lorentz trace of one spin
+matrix. Thus the diagram derivative and magnetic density agree.
+
+Complexification preserves the trace of the original real adjoint
+operator; summing both charge signs is already that trace and does
+not warrant another factor2. Summing(12) therefore gives continuum
+h_s=-alpha_g/2 and h_v=10alpha_g. Equations(8)--(9) prove(2).
+
+For SU(N), write H=diag(h_i), sum h_i=0. In normalized trace
+tr(H^2)=1 means sum h_i^2=N. The adjoint charges are h_i-h_j,
+including zero diagonal directions, and
+sum_(i,j)(h_i-h_j)^2=2N sum_i h_i^2=2N^2.
+In particular C_H=8 for SU(2), positive for the specified nonzero H.
+
+4. SIGN, NORMALIZATION AND LIMITS OF THIS RESULT
+
+For log det T-(1/2)log det V, the proper-time quadratic density
+is (1/2)h_v-h_s. The native extractor is beta=2[t^2]rho_0, so
+its integrand is h_v-2h_s, with NO extra multiplier. The continuum
+value is 11alpha_g>0; integration from1 to K^2 gives
+22alpha_g log K. The error in(2) is integrable against ds/s with
+a constant independent of K.
+
+This fixes the scalar, vector, color, source, orientation and log
+sign conventions. It neither defines separate massless infinite
+determinants at nonzero magnetic field nor claims a uniform bound
+for their infrared integrals. The actual soft pair's outer bands,
+coarse corrections, native exact scalar reduction and old-grade
+base comparison are separate matched inputs. Only their combination
+can establish positive drift for the original coupling recursion.
+No existence or nontriviality theorem for the full four-dimensional
+Yang--Mills state is inferred from this reference calculation alone.

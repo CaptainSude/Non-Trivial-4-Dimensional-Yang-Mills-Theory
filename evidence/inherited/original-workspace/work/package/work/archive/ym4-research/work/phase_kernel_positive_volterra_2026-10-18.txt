@@ -1,0 +1,110 @@
+PERIODIC PHASE KERNELS: A POSITIVE RECURRENCE WITH A SLOW MEMORY WINDOW
+18 October 2026. Working lemma; the analytic kernel premise is separate.
+
+Purpose. Periodic root coefficients need not have zero marginal at each
+old root merely because the matured cohort has zero marginal. A root
+divergence or period-block cancellation may give an age kernel with a
+polylogarithmic prefactor. Bounding that prefactor outside every sum
+would impose an unnecessarily strong smallness condition. The neutral
+bound and the improved bound must first be combined by a minimum.
+
+ASSUMPTIONS AND LEMMA
+
+Let gamma_j>=Gamma, with gamma_u<=gamma_j+D(1+j-u) for u<=j. Work at
+aligned endpoints so gamma decreases; fixed within-block comparisons
+can be included in constants. Set t=j-u. Suppose the literal positive
+kernel of one permanently dated birth satisfies
+
+ k_(j,u) <= C(1+t)^q min{1, C(1+log gamma_u)^r exp(-beta t)}
+              + C(1+t)^q exp(-beta t),                         (1)
+
+where all exponents and constants are fixed, beta>0. In particular
+the neutral member of the minimum has NO power of the period. Suppose
+the actual fluctuation prefactor obeys
+
+ delta_j <= C (log gamma_j)^(-nu),       nu>0.                   (2)
+
+The prefactor delta is the original prepared-difference gain gT/a;
+it is not identified with the future-projection parameter g^2/b^2.
+
+Then, for L_j=1+log(1+log gamma_j),
+
+                 sum_(u<=j) k_(j,u) <= C L_j^(q+1).             (3)
+
+Proof. For t<=gamma_j, gamma_u<=C gamma_j. Put
+T_j=C_0+C_1 log(1+log gamma_j), choosing C_1>2r/beta. For t<=T_j
+use the neutral member; its sum is O((1+T_j)^(q+1)). For
+T_j<t<=gamma_j use the improved member and a geometric tail.
+For t>gamma_j, gamma_u<=C(1+t), so its improved member is bounded
+by C(1+t)^q(1+log(1+t))^r exp(-beta t), whose sum is uniformly
+bounded. This proves (3). Fixed additive oscillations change only C.
+
+In particular sup_(gamma>=Gamma) delta(gamma)L(gamma)^(q+1) tends
+to zero as Gamma tends to infinity. No condition of the form
+delta(gamma)(log gamma)^r<<1 has been used.
+
+POLYNOMIAL ADMISSION FOR AN ARBITRARY SINGLE COHORT
+
+Suppose c_j<=A w_j, with w_j=(gamma_i/gamma_j)^p, and
+
+ m_i<=A,
+ m_(j+1)<=C delta_j[c_j+sum_(u=i)^j k_(j,u)m_u]+f_(j+1),         (4)
+
+where |f_(j+1)|<=A w_(j+1), and all quantities in the inequality
+are nonnegative majorants. Since w_u<=C w_(j+1), divide by
+w_(j+1), use (3), and take the weak floor so the resulting
+coefficient of sup_(u<=j)m_u/w_u is <=1/2. Induction gives
+
+                        m_j<=C A w_j.                         (5)
+
+Consequently the already used once-only date-count bound gives
+sum_(u=i)^j m_u <=C A(1+j-i)w_j. This costs only a fixed power of
+the initial inverse coupling when j-i<=C gamma_i. It neither
+redates old activities nor bounds their static values by (5).
+
+DECAY ON THE FUSION-TO-MIDPOINT WINDOW
+
+Suppose on i<=j<=m the couplings lie in [cG,CG], and let
+L=1+log(1+log G). For alpha=a/L with a>0 sufficiently small and
+fixed, (1) gives the uniform exponential moment
+
+          sum_(u=i)^j exp(alpha(j-u)) k_(j,u)<=C L^(q+1).        (6)
+
+Indeed the neutral range has length O(L), where exp(alpha t)
+is bounded by a fixed constant; the remaining geometric tail
+has exponent beta-alpha>=beta/2. The same proof as (3) applies.
+
+Assume the compensated physical coefficient obeys
+c_j<=A[exp(-alpha_0(j-i))+zeta_G], alpha_0>0 fixed,
+and the additional forcing is bounded by
+|f_(j+1)|<=C A delta_j zeta_G. Set m_i<=A. Increase G so that
+alpha<=alpha_0 and C exp(alpha)delta_* L^(q+1)<1/2, where
+delta_*=sup_(i<=j<=m)delta_j. The induction in (4), first with
+the weight exp(-alpha(j-i)) and then with the constant weight,
+gives
+
+       m_j <= C A[exp(-a(j-i)/L)+zeta_G].                       (7)
+
+For j-i>=c_0G the first term is exp[-cG/(1+log log G)]. Any
+fixed exp[C(log G)^d] preparatory loss is absorbed by this
+term after reducing c. A native floor zeta_G=G^-K remains a
+power-law floor and must be budgeted separately. Multiplying
+it by exp[C(log G)^d] is NOT harmless for d>1; such a term must
+use a direct native-error estimate without that read loss, or
+have a stronger independently established suppression.
+
+SCOPE AND CHECKS STILL REQUIRED
+
+This is a proved scalar majorant lemma under (1)--(4). Applying
+it to the actual recursion requires the phase cancellation on
+the SAME fine clover and assigned analytic contours, the period
+bound, and the neutral estimate without a period prefactor.
+The phase mean must be the actual hat-weighted matured marginal.
+Masks, profile differences and historical boundary strips stay
+in their separate exact ledgers; they are not part of (1) unless
+their stated estimates have been proved. Nonlinear mixed groups
+still use the original connected expansion and prefix forest.
+
+This lemma fixes the recurrence loss associated with a finite
+phase-maturation window. It is not the copied pressure theorem
+and is not a Yang--Mills existence theorem.

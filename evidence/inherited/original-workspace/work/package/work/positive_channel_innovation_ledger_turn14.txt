@@ -1,0 +1,212 @@
+POSITIVE RG CHANNELS: AN EXACT INNOVATION COVARIANCE LEDGER
+19 October 2026. Root proof; native kernel attachment remains separate.
+
+WHY THIS IS THE RELEVANT CONSUMER
+
+A completed coarse-state measure can have a uniformly positive reference
+Gram matrix even if part or all of its variance was introduced by a
+stochastic replacement operation. The published complete sequence is
+(RT)^k, not automatically the deterministic native average of the bare
+law. This note isolates exactly the additional quantity needed to transfer
+coarse nondegeneracy to cutoff observables on the original field.
+
+The ledger does not require rarity of each historical component. It
+requires a bound on actual conditional replacement variances of the
+BACKWARD transported observables. That may be a weaker target, but it is
+not supplied merely by a scalar stability theorem.
+
+1. EXACT FINITE MARKOV IDENTITY, INCLUDING ALL HISTORY VARIABLES
+
+Let X_0,...,X_N be a finite Markov chain with actual probability kernels
+K_j(x_j,dx_(j+1)), and laws mu_j. Any history needed to make a transition
+Markov is part of X_j. There is no assertion that a signed localized
+coefficient is such a kernel. Scalar normalization/vacuum constants must
+first be separated so that these are the true positive normalized laws.
+
+Let F_N be a finite real vector in L2(mu_N). Define the backward functions
+
+ F_j(x)=K_j F_(j+1)(x),      j=N-1,...,0.                 (1.1)
+
+For the natural filtration H_j=sigma(X_0,...,X_j),
+
+ M_j=F_j(X_j)=E[F_N(X_N)|H_j]
+
+is a vector martingale. Its increments have zero conditional mean and
+are orthogonal in L2 at distinct dates. Therefore
+
+ Cov_(mu_N)(F_N)
+ =Cov_(mu_0)(F_0)+sum_(j=0)^(N-1) D_j,                  (1.2)
+
+ D_j=E_(mu_j) Cov_(K_j(X_j,.))(F_(j+1)) >=0.             (1.3)
+
+The formulas hold componentwise, including cross covariances. For a
+scalar c.F_N they follow from the variance decomposition; polarization
+proves the full matrix identity. The means are identical at every j.
+
+In particular, if Cov_(mu_N)(F_N)>=c I and
+
+                   ||sum_j D_j||_op <=c/2,              (1.4)
+
+then Cov_(mu_0)(F_0)>=c I/2. This gives a genuine nonzero variance for
+the specified BACKWARD cutoff observable F_0. Its physical observable
+identification, support, symmetry and normalization remain obligations.
+It need not equal the bare deterministic block-average observable.
+
+For a claim about the ORIGINAL bare field U, X_0 must consist only of
+U and deterministic data. If X_0 already includes auxiliary randomness,
+set F_bare(U)=E[F_0(X_0)|U] and add
+D_init=E Cov(F_0(X_0)|U) to the innovation sum. Otherwise an initial
+random geometry or seed could itself supply the alleged bare variance.
+
+For a deterministic blocking transition X_(j+1)=q_j(X_j), D_j=0 exactly.
+Thus the loss in (1.2) comes only from stochastic steps in a fine enough
+decomposition of the chain. They may be split into their actual substeps
+without changing the identity. A positive operation preserving total
+mass is useful here only after its genuine Markov representation is
+identified; formal positivity of an unrelated majorant is insufficient.
+
+2. WHY A POSITIVE COARSE GRAM MATRIX ALONE DOES NOT TRANSFER
+
+Take X_0 to be one deterministic point and let K_0 replace it by an
+independent variable with a smooth positive density on a compact group.
+Many nonconstant real class functions F_1 then have positive variance.
+Nevertheless F_0=K_0F_1 is constant and has zero variance. Here D_0 is
+the ENTIRE terminal variance. A pointwise lower density bound for mu_1,
+or its positive finite Gram matrix, does not constrain D_0.
+
+The exact product defect of a backward positive channel is
+
+ K(fh)-(Kf)(Kh)=Cov_(K(x,.))(f,h).                        (2.1)
+
+Thus the same ledger measures a finite-source product defect. More
+precisely the composite backward channel P satisfies
+P(fh)-(Pf)(Ph)=Cov(f(X_N),h(X_N)|X_0). Its L1(mu_0) norm is bounded
+by the square root of the two integrated conditional variance budgets.
+This controls the fixed reference span and its specified products;
+it is not a uniform operator-algebra or L-infinity embedding theorem.
+Joined source coefficients cannot be discarded just because the
+singleton images remain bounded. The forward normalized conditional
+source map and the backward channel used here are distinct adjoints
+of the same actual joint law; their formulas must not be interchanged.
+
+3. CONDITIONAL PRODUCT REFILLS: A DETERMINISTIC OSCILLATION BOUND
+
+Suppose that, conditional on the full input state x, one transition
+draws variables Y_1,...,Y_m independently in disjoint active regions
+B_1,...,B_m and leaves the exterior fixed. Their laws can depend on x
+and need not have densities, Gaussian tails or small bad-event weights.
+Assume the ACTIVE REGIONS and their read/selection data are already
+fixed at this conditioning. For any scalar output observable f,
+
+ Var_(K(x,.))(f)<=1/4 sum_i osc_(B_i)(f)^2,              (3.1)
+
+where osc_(B_i) is the supremum difference obtained by changing only
+Y_i, with all other output variables held fixed. It can be restricted
+to the actual conditional supports if those are known. Tensorization
+of variance gives Var f<=sum_i E Var_(Y_i)(f|Y_(not i)); the elementary
+range variance bound Var Z<=(sup Z-inf Z)^2/4 gives (3.1).
+
+Consequently, if for every unit reference vector c
+
+ sum_i osc_(B_i)(c.F_(j+1))^2 <=v_j(x),
+
+then ||D_j||_op<=E_mu_j[v_j]/4. A summable estimate on these quantities
+is sufficient for (1.4). This pays the actual source influence rather
+than the probability of every separately labeled history.
+
+Random choices of the partition or other auxiliary labels require their
+own conditional variance term. Conditioning on that label does not
+remove Var(E[f|label,x]|x). Interacting output blocks do not satisfy the
+product tensorization merely because their geometric centers are apart.
+The real refill kernel must supply the factorization or a separately
+proved conditional variance inequality with the required constant.
+
+4. A CONCRETE GLOBAL OSCILLATION ESTIMATE FOR AVERAGED WILSON LOOPS
+
+The oscillation bound has a useful geometric gain in dimension4, without
+any small-field assumption. Work on a fixed physical periodic box of a
+d-dimensional cubic lattice of mesh a. Choose a fixed rectilinear loop
+shape of physical length bounded by ell, resolved at mesh a, with at most
+C(1+ell/a) fine edges counted with multiplicity. Let w(U_gamma) be a real
+normalized character with |w|<=1. Let f be a bounded weight supported in
+a fixed physical volume. Define
+
+ O_a(U)=a^d sum_(lattice translations x) f(ax) w(U_(gamma+x)). (4.1)
+
+Changing one fine link can affect at most C(1+ell/a) translated loops:
+each occurrence of an edge of gamma determines at most one translation
+that puts it on that fine link, with the finitely many orientation
+conventions included. Therefore its oscillation is at most
+
+             C ||f||_infty (ell+a) a^(d-1).             (4.2)
+
+Changing a block of at most v fine links gives at most v times this
+bound by telescoping over links. If a product refill step uses at most
+C_V a^-d disjoint blocks, each with at most v links, then
+
+ Var_K(O_a)<=C_V ||f||_infty^2 (ell+a)^2 v^2 a^(d-2).   (4.3)
+
+For d=4 this is O(v^2 a^2). This bound is exact for arbitrary compact
+group link values and arbitrary independent block refill laws. It uses
+bounded characters and support counting, not a Taylor approximation.
+If v grows as a fixed power of log(1/a), a^(d-2) v^2 remains summable
+over geometric meshes in d>2. The same proof works for a fixed finite
+linear combination of loop shapes, with its actual coefficient norms.
+Only the UV tail of this sum, over a<=epsilon, becomes small as
+epsilon tends to zero. All later stochastic dates still contribute;
+summability alone does not show their total is below a covariance floor.
+
+For variable block sizes a useful version is
+
+ Var_K(O_a)<=C ||f||_infty^2 (ell+a)^2 a^(2d-2)
+                                  sum_i |B_i|^2.        (4.4)
+
+An expectation bound on this squared-size sum suffices. A deterministic
+bound on the total number of active links alone is insufficient if a
+single component can have macroscopic size.
+
+5. WHAT (4.3) DOES NOT AUTOMATICALLY ESTIMATE
+
+The f in (3.1) for the martingale ledger is F_(j+1), the observable AFTER
+all later transitions have been averaged backward. It is not an
+arbitrarily chosen bare loop function at date j+1. Equation(4.3) closes
+the ledger only if these actual transported functions retain an estimate
+of type (4.2), with a summable quantitative enlargement. Neither a
+pointwise terminal density bound nor finite-field analyticity proves
+that propagation. A discontinuous group average or a data-dependent
+large refill can destroy a small individual-link influence.
+
+Also, unrenormalized averaged Wilson loops need not have a nonzero
+continuum covariance. Equations(4.1)--(4.4) prove an influence bound;
+they do not choose the physical renormalization or establish a positive
+terminal covariance witness. The path-holonomy obstruction of turn13
+is not repaired by citing the boundedness of w.
+Multiplying O_a by a cutoff-dependent normalization Z_a multiplies its
+variance bound by |Z_a|^2; that factor can destroy the UV summability.
+
+Lastly, (1.4) must be quantitatively compared with the available terminal
+Gram floor. A minorization constant which becomes exponentially small
+in the entire coarse volume cannot be compared with a merely geometric
+UV variance tail by suppressing its volume dependence. Fixed-volume
+nondegeneracy and volume-uniform physical nondegeneracy are different.
+
+6. A PRECISE ALTERNATIVE NATIVE TARGET
+
+For the actual positive R/T construction retain its full auxiliary state
+and prove both:
+ (a) the terminal invariant reference has a calibrated covariance floor
+     at the chosen physical scale;
+ (b) its backward functions obey a conditional influence estimate whose
+     complete innovation covariance sum is smaller than that floor.
+
+The deterministic T steps contribute no innovation once their actual
+map is fixed. In the R steps the common-frame supports, random choices,
+joint refill distribution and long carriers must all be accounted for.
+The sufficient product-refill bound above is available if those actual
+hypotheses hold. It does not assert that Bałaban R has them.
+
+This target does not demand a separately normalized rarity theorem for
+every ancient component. It can in principle pay a large component by
+a small physical source influence. Whether the native maps have the
+needed bounds is the substantive next question. No continuum existence
+or nontriviality transfer is claimed without that attachment.

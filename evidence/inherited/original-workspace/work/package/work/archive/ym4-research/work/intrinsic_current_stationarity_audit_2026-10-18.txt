@@ -1,0 +1,209 @@
+INTRINSIC CURRENT FROM CONSTRAINED STATIONARITY: OPERATOR AUDIT
+18 October 2026. Working note; no public theorem is changed.
+
+Continuity note: the stationarity identity and its exact composite/profile
+obligations were already proved in current_interface_research.md Section6,
+equations(32)--(40). Section3 below is the new fixed-L adjusted-Q* audit;
+Sections1--2 record its normalization/interface rather than claim a new
+current reconstruction theorem.
+
+1. Exact normalization and algebra.
+
+Use the physical lattice pairings of the source. Its H0 satisfies
+
+ Q H0 = ell^{-1},   E0 := H0 ell,   Q E0 = I,
+ P0 := I-E0 Q,     P0^T Q* = 0.                         (1)
+
+These are Raw I4.5, lines13640--13665 (CMP102b129,131), not QH0=I.
+Let W be an actual real constrained critical configuration, J its actual
+Wilson-action derivative, and F its plaquette force, with exact first-variation
+identity J=D_W* F. If its adjusted constraint tangent is Q, then
+
+ P0^T J=0,
+ J=Q* E0* J=Q* (D_W E0)* F.                            (2)
+
+Equivalently, lambda=E0*J and J=Q*lambda. No inverse fine derivative of F is
+taken. The normalization matters: H0 has order -1, D H0 order -2, whereas
+E0=H0 ell has order0 and D E0 order -1. Thus (2), with the source kernel
+bounds and bounded Q*, has exactly curvature weight -2 to current weight -3.
+
+This is a conditional algebraic implication, not yet a bound for every
+modified mixed minimum used by CMP122-II.
+
+2. Why the adjusted tangent can be used, and its remaining boundary check.
+
+CMP98(92), transcribed in Raw I24239--24380, expresses the adjusted average
+as the ordinary relative average conjugated at its two retained endpoints by
+the explicitly normalized contour mean. Hence a curve whose adjusted average
+is identically the background average has ordinary average in the same
+coarse gauge orbit. Extending that retained endpoint gauge to a fine gauge
+restores the ordinary constraint, and gauge invariance preserves the action.
+Differentiation gives criticality against ker Q. The adjusted logarithmic
+derivative at zero is ell Q, so ker(ell Q)=ker Q.
+
+For a specified mixed problem one must still check that this extension is
+identity on the fixed external boundary and assigns compatible values at all
+retained sites. Compact variations with the full averaging stencil inside
+the admissible domain have this property. Equality of only a local scalar
+functional does not replace that constraint/boundary verification.
+
+3. A new elementary Q* bound on a uniform own-tier collar.
+
+The explicit CMP98(124), transcribed Raw I24339--24380, gives, for one fixed
+odd-L block step, Q=Q0+E. Here
+
+ (Q0 A)_c = sum_{x in B(c_-)} L^{-(d+1)}
+             (R_{0,c_-}A)([x,x']),                    (3)
+
+and every coefficient in E vanishes when Y=Y_x=0. The connectors and the
+last root-bond term in that formula are part of E; they are not discarded.
+For real W all R factors are isometries. The fixed one-step paths have a
+bounded number of bonds and incidences. Consequently
+
+ ||E*||_{infinity->infinity} <= C_L kappa,             (4)
+
+if all the background loop logarithms Y,Y_x have size <=C_L kappa. The
+adjoint here includes the physical coarse/fine measure ratio L^d. Since L
+is fixed, that ratio and every possible concentration at a root only change
+C_L. There is no claim uniform in L.
+
+The pinned source cross-check is stronger than an inference about the
+auxiliary letters: Raw I25169--25174 explicitly records that CMP98 bounds
+the operator coefficients in the correction terms of (124) by
+O(L^2 alpha0), with alpha0 the curvature constant of CMP98(52).
+Only this real-background statement is used here.
+
+The main term has the sharper bound
+
+ ||Q0*||_{infinity->infinity} <= 1.                    (5)
+
+Indeed a fixed positively oriented fine bond occurs in the straight strings
+in its own direction with total scalar coefficient L^{-d}; multiplication
+by the coarse/fine measure ratio L^d gives one. The sum includes the two
+possible adjacent coarse starting blocks; treating each separately would
+give a false factor2 per step. Parallel transports only decrease the norm
+of the weighted sum. Different directions do not mix in Q0. Boundary
+restriction can only remove summands.
+
+Now take final physical block scale r and initial spacing eta, and suppose
+the complete uniform averaging collar has plaquette defect <=a(eta/r)^2.
+CMP98 Prop2 controls the intermediate background at spacing h_p=L^p eta by
+C_L a(h_p/r)^2. The same fixed geometric loop estimate yields
+kappa_p<=C_L a(h_p/r)^2. The corrected higher averages are compositions of
+the one-step corrected operations, as in CMP98(88)--(92). Their linear
+derivatives therefore compose, and their physical transposes compose in
+reverse order. Equations(4)--(5) give
+
+ ||Q_{eta->r}*|| <= product_p[1+C_L a(h_p/r)^2]
+                 <= exp[C_L a sum_p(h_p/r)^2]
+                 <= exp[C'_L a].                     (6)
+
+Thus the nonflat connector concentration does not by itself force an
+ultraviolet loss for the ADJUSTED average. The geometric curvature factors
+pay it. A hypothetical O(a) remainder independent of p would not suffice.
+The proof also gives block-local weighted versions on this uniform collar.
+
+The displayed source formula is known here through the pinned transcription;
+its original CMP98 PDF has not been independently recovered in this pass.
+
+3A. Adjacent-terminal-level assembly, checked with published_density.
+
+Assume the literal determining rows at level j have coarse roots in
+Omega_j\Omega_(j+1), and their read support is the union of their two
+j-blocks (a fixed C ell_j neighborhood of those roots). Let a fine bond b
+have own tier n. If j<=n-2, b is in Omega_n subset Omega_(j+2), whereas a
+level-j root is outside Omega_(j+1). The admitted gap between Omega_(j+2)
+and Omega_(j+1)^c exceeds the row footprint. If j>=n+2, the row footprint
+stays in Omega_(j-1) subset Omega_(n+1), which does not contain b. Thus
+only j=n-1,n,n+1 can contribute, with a fixed enlargement for endpoint and
+bond conventions. The large fixed gap constant pays that enlargement.
+
+More explicitly, for the C ell_j footprint choose the admitted gap with
+R mathfrak M > C L plus the fixed endpoint allowance. This constant
+condition was checked independently by constrained_fiber. There are
+O_d(1) coarse rows per contributing level through a fixed fine bond.
+
+For any one such row its entire double block has own tiers at least j-1;
+the curvature bound in j units therefore controls all intermediate averages
+used in (6), with a fixed adjacent-radius factor. Each fixed-level operator
+is block-local with fixed incidence. Summing only these adjacent terminal
+levels gives the weighted order0 bound for Q and Q*, with fixed L factors,
+not a depth factor. Their support also has bounded graded block distance,
+so the same statement holds with the admissible exponential weights.
+
+This proves the proposed incidence reduction under the displayed terminal
+row convention. It does not identify a different truncated composite
+determining set with that convention merely by a shared symbol Q. The
+current_interface Section6 profile comparison in the SELECTED structure's
+metric remains separate.
+
+Stationarity precision: CMP102b(178) is explicitly transcribed at RawI15765:
+the intrinsic minimizer's J annihilates every delta A with Q(U_k)delta A=0.
+That directly supplies the adjusted tangent for that intrinsic problem.
+Its application to each modified minimum still requires using its actual
+determining family and fixed-boundary convention.
+
+4. What is not supplied by (6).
+
+(a) A mixed determining family stops the iterated averages at different
+levels. One must verify bounded incidence of the terminal double blocks, or
+the corresponding source K0 bound for Q*. The word 'block-local' alone
+does not imply it. An unrestricted sum of all nested terminal levels could
+grow with depth. Original admissible grading should exclude that sum, but
+the exact endpoint convention must be checked.
+
+(b) To estimate E0*D_W* in (2), the localized first-derivative kernel bound
+for E0 is required. The source primitive package gives this by composing
+the first-derivative G0 bound, Q*, q0, and ell; transposition uses the
+physical pairings and the graded kernel algebra. A bare unweighted N(E0b)
+operator estimate does not by itself control its transpose on sup data.
+
+(c) An own-tier a_m estimate needs either local curvature bounds with the
+same weighted kernel envelope or a controlled ratio of the radii a_n/a_m.
+Replacing all a_n by an uncontrolled global maximum would lose the needed
+dated smallness. Polynomial age ratios can be absorbed into the exponential
+graded kernel reserve once those ratios are actually established.
+
+(d) Raw I128912ff explicitly treats the multilevel extension of the
+CMP109(1.16) current bound as hypothesis(b). That paragraph is not an
+independent proof of the desired mixed current estimate. Likewise the
+generic independent pair class S expressly omits CMP99b(3.36),(3.38).
+
+5. Narrow conclusion.
+
+The correct stationarity identity is (2), and a UV-uniform Q* bound on a
+uniform own-tier collar follows from the literal adjusted one-step formula
+plus the geometric intermediate-curvature estimate. This removes the
+suggested flat root-path obstruction at that level. Actual mixed-family
+terminal incidence, kernel specialization, and boundary/tangent matching
+remain the exact source interfaces before asserting the full intrinsic
+current bound or first-contact smoothing.
+
+6. Fixed-ceiling corollary within the admitted primitive package.
+
+Suppose the REAL intrinsic minimum is known to obey the source C1
+background conditions and |F|_(-2)<=a on its full same-family tower and
+boundary stencil. Suppose the quoted G0 first-derivative, q0 and graded
+transpose bounds hold there WITHOUT a separate assumed physical-current
+bound, as in the explicitly admitted free-current primitive package.
+Then Sections3--3A give Q,Q* of order0. The source composition gives
+H0 of order-1 and D_W H0 of order-2. With E0=H0 ell, transposition and
+the graded composition rule give
+
+ Q*(D_W E0)* in K_(-1),
+ |Jphys(W)|_(-3) <= C a.                              (7)
+
+The source weighted Schur summation proves (7) directly from the
+curvature weight-2; it does not differentiate that curvature. Constants
+depend on fixed L, the admitted gap and primitive constants, not the
+fine mesh or tower depth. Choose the fixed initial C1 ceiling a so that
+C a is within the current radius of the subsequent gauge-fixing/chart
+theorem. This fixed-ceiling statement may suffice for the real local
+Holder argument with polynomial losses in the dated small radius.
+
+This corollary does not use, or prove, the stronger two-scale frozen
+profile comparison(36) of current_interface Section6. Nor does it prove
+that every modified minimum on every simultaneous real parameter
+diameter has the full same-family C1/curvature/stencil premise. That
+application check remains explicit. The point is to avoid assuming a
+physical-current bound as part of the proof of (7).

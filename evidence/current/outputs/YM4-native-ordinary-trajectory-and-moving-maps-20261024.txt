@@ -1,0 +1,310 @@
+UNIFORM NATIVE ORDINARY TRAJECTORY AND MOVING-MAP BOUNDS
+24 October 2026. Producer: connected_energy.
+Independent review: native_ordinary_trajectory_moving_maps_audit_20261024.txt,
+scoped PASS. No mathematical correction requested after checking the
+native signs/reads, complex bootstrap, explicit second-jet constant and
+Hilbert product estimates.
+
+Result
+------
+The quantitative certificates(T) and(M) in Sections5--6 of
+native_affine_multiplier_and_heat_operator_interface_20261024.txt hold
+for the actual primitive B109 ordinary average on a fixed small physical
+supremum ball. In particular they hold for its complete physical C1
+inputs. Constants depend on the fixed primitive L, dimension and group,
+but NOT on K=L^p, p, old homogeneous grade, or compatible lattice volume.
+
+The proof does not assert that the raw primitive derivative has supremum
+norm L. Its endpoint gauge term can give a larger linear norm. Instead,
+an exact identity for all products of the flat derivative gives
+||Q^n||_infty<=C_* L^n. A Duhamel argument treats the nonlinear defects,
+whose scale weights are summable. This prevents a spurious C_L^p loss.
+
+The input is U_0(A)=exp(i mu A), mu=L^-p, and U_j=M_L^j U_0.
+All fields, endpoint contours, source directions and matrix branches are
+the literal native ones. This concerns ordinary averages of prescribed
+backgrounds. It does not identify a mixed history, change a sharp window,
+or prove the heat comparison's additional energy/trace estimates.
+
+1. Native local chart, conventions, and the fixed-L constants
+-----------------------------------------------------------
+Use B109 printed252--254(0.3),(0.5)--(0.12): centered odd L-blocks,
+translation-covariant coordinate-order endpoint paths, the actual
+analytic equivariant mean, and its anchored-relative-log average.
+Its supplied primary is
+ work/handoff/original-workspace/work/package/sources/supplied/balaban9.pdf.
+The corresponding text is package/work/turn125_primary/b109_full.txt
+under work/handoff/original-workspace/work/.
+
+At every grade use unit coordinates on that grade. Bond and site spaces
+have the maximum of a fixed finite-dimensional color norm for supremum
+estimates; Hilbert estimates later use counting measure and the
+trace-orthonormal color norm. An ordinary coarse bond reads the complete
+two endpoint blocks, all actual endpoint paths, its translated strings
+and its center reference string. Repeated reads are the literal recursive
+unions of these reads. They are never cut off to a smaller source patch.
+
+For complex theta in a fixed supremum ball ||theta||<delta_L, put
+
+ F(theta)=Log[M_L(exp(i theta))]/i,
+                     F(theta)=Q theta+N(theta).             (1)
+
+Choose delta_L small enough that EVERY endpoint mean, path product,
+anchored relative log and final log has its fixed native analytic branch
+on a larger closed ball. There are finitely many input bonds per
+primitive read, with number depending only on L. The same local formula
+at every translate, and ordinary finite-dimensional Cauchy estimates on
+this larger ball, give uniform local-to-supremum bounds
+
+ ||N(theta)|| <= n_0 ||theta||^2,
+ ||DN(theta)[v]|| <= n_1 ||theta|| ||v||,
+ ||D^2N(theta)[v,w]|| <= n_2 ||v|| ||w||.                    (2)
+
+The constants n_i may depend on L and on the chosen native mean. They
+are independent of the number of blocks and remain valid for complex
+inputs. Equation(2) uses the ACTUAL local analytic formula once at fixed
+L, not analyticity of a large composite with an unspecified K-dependent
+radius. F(0)=0 and Q=DF(0) are exact. The ensuing estimates ensure the
+entire ordinary trajectory stays inside this common primitive chart.
+
+2. An exact flat product bound: why no C_L^p occurs
+-------------------------------------------------
+Let S be the straight-string part of the flat ordinary average:
+
+ (S a)_mu(y)=L^-4 sum_(r in B_L) sum_(s=0)^(L-1)
+                                      a_mu(y+r+s e_mu).
+
+It is a positive average followed by a sum of L translates, so
+||S||_infty=L and ||S^j||_infty<=L^j. Let tau_y(r) be the arithmetic
+mean of the actual endpoint path line integrals from y to y+r and set
+psi(a)(y)=L^-4 sum_r tau_y(r). With the native signed gradient convention
+d phi(y,y')=phi(y)-phi(y'), the exact flat formula is
+
+                  Q=S+d psi.                              (3)
+
+Every endpoint path has length |r|_1<=d(L-1)/2, whence
+||psi||_infty<=c_psi=d(L-1)/2. Native endpoint gauge covariance gives
+
+                  Q d=d r,                                (4)
+
+where r restricts a fine site field to the ACTUAL coarse centers.
+It is restriction, NOT the scalar block average. Thus ||r^k||_infty=1
+and ||d r^k||_infty<=2, in the unit coordinates of the output lattice.
+
+The product difference has the exact order
+
+ Q^n-S^n=sum_(j=0)^(n-1) Q^(n-1-j)(Q-S)S^j
+        =sum_(j=0)^(n-1) d r^(n-1-j) psi S^j.               (5)
+
+The formula means the successive grade versions of these identical
+operators; all domains and codomains are their corresponding lattices.
+Combining(5) with the previous norms gives
+
+ ||Q^n||_infty <= L^n+2 c_psi (L^n-1)/(L-1)
+                <= C_* L^n,         C_*=1+d.               (6)
+
+This proof also works on compatible tori: periodic translations and
+restrictions have the same bounds. There is no volume sum. The equality
+on constant inputs Q a=L a alone would NOT prove(6); the whole endpoint
+gradient structure and the correct right factor S^j in(5) are needed.
+
+3. Uniform complex nonlinear trajectory
+---------------------------------------
+Let p>=1, mu=L^-p, s_j=mu L^j for 0<=j<=p, and theta_0=mu A.
+Take ||A||<=a. The exact recursion from(1) is
+
+ theta_j=Q^j theta_0
+                +sum_(l=0)^(j-1) Q^(j-1-l)N(theta_l).      (7)
+
+Set B=2C_*. Choose a fixed a_*>0 so that
+
+ B a_* <= delta_L/2,
+ C_* n_0 B^2 a_* /[L(L-1)] <= C_*/2.                      (8)
+
+There is no p in this choice. If ||theta_l||<=B a s_l for l<j, then
+the nonlinear part of(7) is at most
+
+ C_* n_0 B^2 a^2 sum_(l<j) L^(j-1-l)s_l^2
+ =C_* n_0 B^2 a^2 (s_j/L) sum_(l<j)s_l
+ <=C_* n_0 B^2 a^2 s_j^2/[L(L-1)].                       (9)
+
+Together with the linear term C_* a s_j and s_j<=1, (8) closes the
+induction with room to spare. Hence for EVERY complex A with ||A||<=a_*,
+
+                 ||theta_j(A)||<=B a_* s_j,
+          and in fact <=B ||A|| s_j,  0<=j<=p.             (10)
+
+All intermediate means/logs have been defined on their native branch by
+the induction itself. Thus (10) provides a K-uniform physical complex
+input ball, not just estimates for a formally assumed trajectory.
+
+For j<p the actual small-angle defects are summable:
+
+ sum_(j<p)||theta_j|| <= B||A||/(L-1).                     (11)
+
+The endpoint j=p is also controlled by(10), as needed to define the
+final output; it is not included in the primitive-factor sum(11).
+
+4. First and second physical-source derivatives
+-----------------------------------------------
+Fix A in the smaller closed physical ball, for instance ||A||<=a_*/2,
+and complete directions A_1,A_2, with b_l=||A_l||. All derivatives below
+are derivatives of the ACTUAL logarithm theta_j(A), not of an affine
+surrogate. Set u_j=D theta_j[A_1], v_j=D^2theta_j[A_1,A_2].
+Differentiating the finite recursion gives
+
+ u_j=Q^j(mu A_1)
+       +sum_(l<j)Q^(j-1-l) DN(theta_l)u_l,                (12)
+
+ v_j=sum_(l<j)Q^(j-1-l){DN(theta_l)v_l
+           +D^2N(theta_l)[u_l^(1),u_l^(2)]}.              (13)
+
+There is no second derivative of theta_0=mu A. With x_j=||u_j||/s_j,
+(2),(6),(10) give
+
+ x_j<=C_* b_1+(C_* n_1 B a_*/L)sum_(l<j)s_l x_l.
+
+Discrete Gronwall, using sum_(l<j)s_l<=1/(L-1), yields
+
+             ||u_j||<=C_1 s_j b_1.                       (14)
+
+Here C_1=C_* exp[C_* n_1 B a_*/(L(L-1))] is independent of p.
+Using(14) in(13), the same argument with its increasing inhomogeneous
+term proportional to sum_(l<j)s_l<=s_j/(L-1) gives
+
+             ||v_j||<=C_2 s_j^2 b_1 b_2.                 (15)
+
+For example C_2=C_* n_2 C_1^2 exp[C_* n_1 B a_*/(L(L-1))]
+/[L(L-1)] is sufficient. This stronger square-scale bound implies the
+requested <=C s_j b_1b_2, since s_j<=1. Uniform Banach Cauchy on the
+larger ball from Section3 gives the weaker requested estimate as an
+independent check, but(12)--(15) retain the sharper scale and exact maps.
+
+For the physical norm in the interface,
+ ||A||_phys,1=||A||_infty+mu^-1||nearest difference A||_infty,
+one simply has b_l<=||A_l||_phys,1. Therefore(10),(14),(15) prove(T)
+for every complete physical C1 input. No spatial derivative of A was
+needed for this particular supremum trajectory theorem. Such derivatives
+are still needed in the separate physical-vertex theorem.
+
+The derivative defects are summable:
+
+ sum_(j<p)||D theta_j[A_1]||<=C_1 b_1/(L-1),
+ sum_(j<p)||D^2theta_j[A_1,A_2]||<=C_2 b_1b_2/(L^2-1).     (16)
+
+The larger complex ball and strict margins ensure all these derivatives
+have the complete original recursive source read. No Taylor coefficient
+has been evaluated on a smaller, incompatible field domain.
+
+5. Actual primitive moving-reference maps and their flat norms
+-------------------------------------------------------------
+At a primitive background U=exp(i theta), use exactly the maps of
+Section5 of native_affine_multiplier_and_heat_operator_interface:
+
+ B_U phi(y)=L^-4 sum_(x in B_L(y)) Ad_(P_L(U;y,x)) phi(x),
+ Z_U v(y)=L^-4 sum_x D_v Log[P_L(exp(iv)U;y,x)P_L(U;y,x)^-1]/i,
+ C_U=the left-relative derivative of the actual M_L,
+                    Cbar_U=C_U-D_(M_L U) Z_U.              (17)
+
+Here Cbar is the moving-reference corrected tangent; no derivative of a
+fixed-identity corrected nonlinear map is substituted. Endpoint
+covariance gives Cbar_U D_U=D_(M_L U) B_U. The total corrected tangent
+is the chronological product of the primitive Cbar's at U_j; the total
+B is the corresponding product of the primitive B's. Their exact
+intertwining and C_total-Cbar_total=D_final Z_total are the algebraic
+identities registered in that interface. This section estimates those
+SAME products.
+
+At flatness, Z_0=psi and Cbar_0=Q-d psi=S, by(3). Let P_0 be the
+ordinary scalar block average. Its rows have disjoint fine supports,
+and its 4D counting Hilbert norm is exactly L^-2. The straight map is
+S=sum_(s=0)^(L-1)P_0 translation_(s e_mu), on each bond direction.
+Therefore
+
+           ||B_0||_(2->2)=L^-2,
+           ||Cbar_0||_(2->2)<=L^-1.                        (18)
+
+This is the actual four-dimensional volume normalization. It is not an
+entrywise estimate with a hidden number of fine bonds.
+
+At fixed L, every coefficient of B_theta,Cbar_theta has its complete
+finite primitive read and is analytic on the chart of Section1. The
+number of nonzero blocks per matrix row/column is bounded in L.
+Entrywise differentiated Cauchy bounds followed by the finite Schur
+bound thus yield, for F=B or Cbar and lambda=L^-2 or L^-1 respectively,
+
+ ||F(theta)|| <= lambda[1+c_L||theta||],
+ ||D_theta F(theta)[w]|| <=lambda c_L||w||,
+ ||D_theta^2 F(theta)[w,z]||<=lambda c_L||w||||z||.          (19)
+
+The first estimate uses the exact flat norm(18) plus a perturbation;
+it is NOT replaced by lambda times a fixed constant greater than one
+at every stage. Factors L in converting the finite Schur estimate to
+the relative form(19) are absorbed in the fixed primitive c_L.
+
+6. Product derivatives prove(M)
+-------------------------------
+For either primitive family write F_j(A)=F(theta_j(A)). Equations
+(10),(14),(15),(19) imply
+
+ ||F_j||<=lambda(1+C s_j a_*),
+ ||D_A F_j[A_1]||<=lambda C s_j b_1,
+ ||D_A^2 F_j[A_1,A_2]||<=lambda C s_j^2 b_1b_2.            (20)
+
+In the last line both D_theta F times D_A^2theta_j and D_theta^2F
+times the two first derivatives are included. Let F_tot=F_(p-1)...F_0.
+Submultiplicativity, (11), and exact product Leibniz differentiation
+give
+
+ ||F_tot||<=lambda^p exp(C a_* sum_(j<p)s_j),
+ ||D_A F_tot[A_1]||<=lambda^p C b_1,
+ ||D_A^2 F_tot[A_1,A_2]||<=lambda^p C b_1b_2.              (21)
+
+Indeed the one-insertion sum costs sum_j s_j, and the two-insertion
+sums cost sum_j s_j^2+(sum_j s_j)^2, all bounded by(16). No inverse of
+a factor is used, and no lower singular-value bound for an averaging
+map is needed. This argument is valid on the same uniform complex ball.
+
+For Cbar, lambda^p=L^-p=mu. For B, lambda^p=L^-2p=mu^2.
+Writing J_A=mu^-2 B_tot(A)^T in the native counting pairings, (21) gives
+
+ ||J_A||<=C,       ||D_A^r J_A[A_1,...,A_r]||<=C prod_l b_l,
+ ||Cbar_tot||<=C mu,
+ ||D_A^r Cbar_tot[A_1,...,A_r]||<=C mu prod_l b_l,
+                                      r=1,2.              (22)
+
+Transpose here is the native analytic bilinear transpose; its operator
+norm has the same Hilbert bound. On real backgrounds the stronger exact
+row identity B_tot B_tot^T=K^-4 Id gives ||J_A||=1. The complex estimate
+in(22), rather than orthogonality alone, supplies the analytic bound.
+
+All products keep the complete recursive source reads. In the native
+homogeneous geometry the scalar hierarchical endpoint read lies in its
+final block; the bond read lies in its two adjacent final endpoint
+blocks with their actual incident bonds/contours. Equivalently one may
+keep the literal recursive union; no estimate depends on deleting any
+part of it. The uniform constants in(21)--(22) are operator constants,
+not a sum over K^4 source coordinates.
+
+7. What has and has not been proved
+----------------------------------
+This proves(T) and(M) for the literal ordinary trajectory and the
+literal moving-reference maps. Their constants are uniform in K and
+in the number of primitive steps. The elementary M_L construction
+does not involve the old grade m, so these constants are uniform in m
+as well. If another theorem asks for a smaller fixed classical analytic
+margin, intersect a_* with that already established margin once.
+
+It does NOT prove that every resulting endpoint belongs to every
+original selected history or sharp-mask sector. It supplies no new
+uniform large-block stationary inverse, changes no current/coarea
+factor, and does not identify the complete heat operators with a
+different reference. The remaining energy-sandwiched vertex, soft-pair
+infrared cancellation and normalized trace estimates(H1)--(H3) retain
+their distinct hypotheses. In particular this result does not negate
+the known growing raw mean-zero gauge-vertex example; it estimates B,
+Cbar and J, not that separately differentiated sandwiched vertex.
+
+The compatible infinite or finite-periodic lattice conventions are
+retained throughout. No periodic affine flux or regulator passage is
+needed for the uniform bounded-input trajectory theorem.

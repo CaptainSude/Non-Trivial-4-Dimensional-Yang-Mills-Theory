@@ -1,0 +1,340 @@
+POLYNOMIAL ZERO-FREE DOMAIN FOR THE SOFT ORBIT INTEGRAL -- TURN58
+20 October 2026. gauge47.
+
+RESULT
+
+The soft SU(2) orbit integral has a zero-free complex neighborhood
+whose radii have polynomial, rather than exponential, dependence on
+the finite graph. The proof uses its anchored real energy distribution,
+not a crude absolute bound divided by an exponentially small baseline.
+
+The precise radii are
+
+ ||A||_2 < 1/(16 C_* sqrt(lambda K)),
+ ||T||_infinity < 1/(32 C_* C_F K),                     (0.1)
+
+where C_* is absolute, K=O(1+m(1+log C_F)), with K>=1, and C_F is
+an explicit polynomial forest constant. On this domain,
+
+   |Psi_lambda(A,exp(T)t0)/Psi_lambda(0,t0)-1| < 1/4.   (0.2)
+
+The logarithm and reciprocal therefore exist holomorphically there.
+Fixed-order directional jet costs are polynomial in sqrt(lambda K)
+and C_F K. This is a result about the ORBIT PROFILE ONLY. It does
+not prove zero-freeness of the full fine-action reference denominator.
+
+1. PRECISE FINITE-GRAPH SETUP
+
+Use the graph, anchored group, and conventions of
+work/soft_orbit_complex_bound_turn58.txt, Sections1--5.
+All fixed exterior-incident vertices are anchored. E contains the
+integrated variable links, not fixed exterior links. Every connected
+component meets the anchor set B. Let
+
+   m=|V\B|,
+   d_v=distance of v from its root in an anchored spanning forest F,
+   C_F=max(1,2 sum_(e=(u,v) in E)(d_u+d_v)).
+
+There is exactly one anchor in each forest component, and |F|=m.
+For real t0_e in SU(2), complex traceless A_e,T_e, set
+
+ t_e=exp(T_e)t0_e,
+ Q(A,t;g)=sum_(e=(u,v))
+             q(g_u exp(A_e)t_e g_v^-1 t_e^-1),
+ q(U)=1-Tr(U)/2,
+ Q0(g)=Q(0,t0;g),
+ Psi_lambda(A,t)=int_(SU(2)^(V\B)) exp[-lambda Q(A,t;g)] dg.
+                                                               (1.1)
+
+Here lambda>=1 is real; gauge Haar measure is normalized.
+This is the twisted relative action appropriate to physical
+links exp(A_e)t_e. The Hilbert--Schmidt and operator norms are
+
+ ||A||_2^2=sum_e |A_e|_HS^2,
+ ||T||_infinity=max_e ||T_e||op.
+
+The finite compact integral is entire in these complex A,T
+coordinates. For real t0 its value
+
+                       Psi0=Psi_lambda(0,t0)
+
+is strictly positive. Psi0 is fixed throughout the comparison:
+it is not replaced by Psi_lambda(0,t) when T changes.
+
+Let
+
+ w_s=int_SU(2) exp[-s q(g)]dg,
+ phi_lambda(A,t)=Psi_lambda(A,t)/w_lambda^m.
+
+The profile retains exactly this fixed normalization.
+
+2. THE TWO REAL ESTIMATES AND THEIR QUANTITATIVE CONSTANTS
+
+The forest calculation gives
+
+              Q_F <= Q0 <= C_F Q_F,
+              int exp[-s Q_F]dg=w_s^m.                  (2.1)
+
+For completeness, |g_v-I| is bounded by the sum of the covariant
+edge differences along its rooted forest path. Squaring gives
+|g_v-I|^2<=4d_v Q_F. Applying this to both endpoints of every
+edge gives Q0<=2 sum_e(d_u+d_v) Q_F. The forest variables have
+product Haar law by recursive inversion and translation.
+
+Consequently
+
+          w_(C_F lambda)^m <= Psi0 <= w_lambda^m.        (2.2)
+
+The elementary radial Haar integral supplies constants
+
+   c_H=8 exp(-1/2)/(3 pi^3),
+   C_H=pi^(5/2)/2^(5/2),
+
+such that w_s>=c_H s^-3/2 for s>=1 and
+w_s<=C_H s^-3/2 for EVERY s>0.
+The latter all-positive-s scope matters when 1<=lambda<2.
+
+Define
+
+ L_F=log[(C_H/c_H)(2 C_F)^(3/2)],
+ K=max(1,m L_F).                                        (2.3)
+
+Since C_F>=1 and C_H/c_H>1, L_F is positive and
+K=O(1+m(1+log C_F)). No unknown partition function enters K.
+
+3. ENERGY EXPONENTIAL MOMENT WITHOUT AN EXPONENTIAL RADIUS LOSS
+
+Consider the real probability measure
+
+      dmu0=Psi0^-1 exp[-lambda Q0(g)]dg,
+      X=lambda Q0(g)>=0.
+
+Its moment at one half is
+
+ M(1/2)=E_mu0 exp(X/2)
+       =Psi_(lambda/2)(0,t0)/Psi_lambda(0,t0)
+       <=[w_(lambda/2)/w_(C_F lambda)]^m
+       <=[(C_H/c_H)(2 C_F)^(3/2)]^m
+       <=exp(K).                                       (3.1)
+
+The denominator uses C_F lambda>=1; the numerator uses the
+all-s upper bound. Thus no exception or hidden restriction
+lambda>=2 is needed.
+
+For 0<=s<=1/2, Holder's inequality, or convexity of log M,
+gives the sharper consequence
+
+                     M(s)<=exp(2Ks).                   (3.2)
+
+Indeed log M(0)=0 and the graph of log M lies below the chord
+joining its values at0 and1/2. The large factor exp(K) in(3.1)
+is therefore paid only with exponent2s, which will be O(1/K).
+This is the step that avoids an exponentially small radius.
+
+4. THE ACTUAL COMPLEX INCREMENT BOUND
+
+The following is the sharpened trace calculation of
+soft_orbit_complex_bound_turn58, Sections3--4, with r_A=1
+and its fixed parameter delta=1/2.
+
+Put C0=2 exp(2) and C_R=sqrt(2)exp(3)/4. For
+
+     ||T||_infinity<=1/(4 C0 C_F),   max_e |A_e|_HS<=1,
+
+one has
+
+ |Q(0,t)-Q0| <= (C0/2) C_F ||T||_infinity Q0,
+
+ |Q(A,t)-Q(0,t)| <= (3/2)||A||_2 sqrt(Q0)
+                                      +C_R ||A||_2^2.  (4.1)
+
+These estimates are uniform in real t0. The background term
+has no additive volume error: writing
+B=t0_e g_v^-1 t0_e^-1, its conjugation change has trace zero,
+so Tr[g_u(exp(T)Bexp(-T)-B)] contains the additional factor
+g_u-I. The anchored path estimate controls both factors.
+
+The A-linear term uses Tr A_e=0 and the l2 bound on
+exp(T)Bexp(-T)g_u-I; the Taylor remainder is quadratic in A.
+It is important to retain the resulting sqrt(Q0) in(4.1),
+rather than replacing it by a worst-case graph volume.
+
+Set
+
+ C_*=max(1,C0/2,3/2,C_R),
+ tau_F=C_F ||T||_infinity,
+ a=sqrt(lambda)||A||_2.
+
+Multiplying(4.1) by lambda gives
+
+ |lambda[Q(A,t)-Q0]|
+              <=C_* (tau_F X+a sqrt(X)+a^2).            (4.2)
+
+The proposed radii(0.1) imply all hypotheses of(4.1):
+C_*>=C0/2, K>=1 give
+||T||_infinity<=1/(16 C0 C_F)<1/(4C0 C_F), and
+max_e |A_e|<=||A||_2<=1/(16C_*)<1.
+
+5. EXPLICIT ZERO-FREE ESTIMATE
+
+Assume the closed inequalities corresponding to(0.1), and use
+
+                         epsilon=1/(32K).
+
+Young's inequality gives
+
+ C_* a sqrt(X)<=epsilon X+C_*^2 a^2/(4epsilon).
+
+Therefore, with Y=|lambda[Q(A,t)-Q0]|,
+
+ Y<=theta X+b,
+ theta=C_* tau_F+1/(32K)<=1/(16K),
+ b=C_* a^2+8 C_*^2 K a^2<=1/256+1/32=9/256.            (5.1)
+
+In particular theta<=1/2. Combining(3.2) and(5.1),
+
+ E_mu0 exp(Y)
+       <=exp[b+2K theta]
+       <=exp(9/256+1/8)
+       =exp(41/256)<5/4.                               (5.2)
+
+Since |exp(-z)-1|<=exp(|z|)-1,
+
+ |Psi_lambda(A,t)/Psi0-1|
+   =|E_mu0 exp[-lambda(Q(A,t)-Q0)]-1|
+   <=E_mu0(exp(Y)-1)
+   <=exp(41/256)-1
+   <1/4.                                               (5.3)
+
+This proves the claimed zero-free neighborhood. It also proves
+
+       (3/4)Psi0 < |Psi_lambda(A,t)| < (5/4)Psi0,
+       |Psi0/Psi_lambda(A,t)|<4/3.                     (5.4)
+
+The holomorphic branch
+
+      L(A,T)=log[Psi_lambda(A,exp(T)t0)/Psi0],
+      L(0,0)=0,
+
+is given throughout this neighborhood by the convergent log(1+z)
+series. Uniformly there,
+
+                         |L|<log(4/3).                 (5.5)
+
+No change of the actual reference measure is involved in this
+comparison by the fixed real number Psi0.
+
+There is also a useful bound that tends to zero with the perturbation.
+Put b_T=(C0/2)C_F||T||_infinity. The elementary inequality
+sqrt(X)<=(X+K)/(2sqrt(K)), applied directly to(4.1), gives
+
+ |lambda[Q(A,t)-Q0]|
+   <=sX+3a sqrt(K)/4+C_Ra^2,
+       s=b_T+3a/(4sqrt(K)).
+
+Whenever the hypotheses of(4.1) and s<=1/2 hold, (3.2) yields
+
+ |Psi_lambda(A,t)/Psi0-1|
+   <=exp[2K b_T+(9/4)a sqrt(K)+C_Ra^2]-1.              (5.6)
+
+Thus the small parameters are explicitly C_F||T||_infinity K
+and a sqrt(K). This refinement, suggested independently by
+tail47, is compatible with the fixed constants in(0.1).
+
+6. THE BASELINE SCALAR AND THE RECIPROCAL ARE RETAINED
+
+The same relative estimates hold for phi/phi(0,t0). From(2.2),
+
+      c_F^m<=phi_lambda(0,t0)<=1,
+      c_F=(c_H/C_H) C_F^-3/2.                            (6.1)
+
+Thus the actual logarithm is
+
+ log phi_lambda(A,t)=log phi_lambda(0,t0)+L(A,T),
+             m log c_F<=log phi_lambda(0,t0)<=0,         (6.2)
+
+and
+
+              |phi_lambda(A,t)^-1|< (4/3)c_F^-m.         (6.3)
+
+The radii are polynomial although the absolute reciprocal can
+carry this exponential baseline cost. These are different claims.
+
+The baseline is a scalar for each FIXED comparison background t0.
+If t0 itself varies among physical backgrounds, it need not be a
+universal vacuum constant. Its actual dependence must be retained.
+Neither(6.2) nor the proof resets the profile to one at all backgrounds.
+
+When m=0 there are no gauge variables, and Q0=0 exactly. Then
+
+   Psi_lambda(A,t)=exp[-lambda sum_e q(exp(A_e))]
+
+is independent of t and is nonzero for ALL finite complex A.
+Its explicit exponent is an entire logarithm. The smaller domain
+above remains valid with K=1 but is unnecessary in this case.
+
+7. DIRECTIONAL CAUCHY COROLLARY
+
+Let R_A=1/(16C_*sqrt(lambda K)) and
+R_T=1/(32C_*C_F K). At a point satisfying
+
+                    ||A||_2<=R_A/2,
+                    ||T||_infinity<=R_T/2,
+
+take fixed complex traceless direction arrays H,J with
+||H||_2<=1 and ||J||_infinity<=1. The two-variable function
+
+                    (z,w)->L(A+zH,T+wJ)
+
+is bounded by B0=log(4/3) on |z|<R_A/2, |w|<R_T/2.
+For all nonnegative integers p,q, Cauchy's estimate gives
+
+ |partial_z^p partial_w^q L(A+zH,T+wJ)|_(z=w=0)
+   <=p!q! B0
+        (32 C_* sqrt(lambda K))^p
+        (64 C_* C_F K)^q.                              (7.1)
+
+These are repeated derivatives along the stated fixed directions.
+General multilinear derivatives require polarization; one may
+include the usual factors p^p/p! and q^q/q! in addition, or absorb
+them into exponential-in-order constants. No exact p!q! bound for
+arbitrary independent directions is asserted without that step.
+
+The same argument applies to the relative reciprocal Psi0/Psi,
+with the uniform bound4/3 in place of B0. For the absolute
+reciprocal, the scalar factor Psi0^-1 is also retained.
+
+8. SCALE AND MODEL SCOPE
+
+For lambda=(gW)^-2>=1, the A radius is
+
+                        R_A=gW/(16 C_*sqrt(K)).
+
+It is a total l2 radius. A simultaneous per-edge bound
+|A_e|<=r is guaranteed to fit only when sqrt(|E|)r<=R_A.
+It is not a fixed per-edge radius independent of the graph.
+In particular, |A_e|<=C_A g h(g) is admitted by this result
+if
+
+           C_A h(g) sqrt(|E|K)/W <=1/(16C_*).           (8.1)
+
+For a fixed bounded block, this costs only fixed constants.
+For growing blocks it is an explicit additional width/domain
+condition, rather than an automatic native source-radius claim.
+
+At each fixed derivative order, the losses in(7.1) are polynomial
+in sqrt(lambda K) and C_F K. If the graph data and W,W^-1 have
+at most fixed powers of g^-1 and log(1/g), then a genuinely
+available factor exp[-c(log(1/g))^kappa], kappa>1, absorbs
+these fixed-order derivative losses. This statement concerns
+the polynomial jet factors. An absolute baseline reciprocal
+cost such as c_F^-m requires its own comparison with the rare
+reserve if m grows; it is not automatically a polynomial.
+
+The actual rare-branch factor, its placement, the native source
+domain, and the action cancellation must still be proved for any
+proposed replacement. A full denominator weighted by the fine
+action has a DIFFERENT real baseline measure; its exponential
+moment need not satisfy(3.1). Thus this zero-free orbit theorem
+does not certify the full fine-action denominator, a normalized
+native replacement, original observable transport, or YM4 existence.

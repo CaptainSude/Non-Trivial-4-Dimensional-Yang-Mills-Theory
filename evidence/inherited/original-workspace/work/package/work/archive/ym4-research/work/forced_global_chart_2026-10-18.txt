@@ -1,0 +1,201 @@
+FORCED GLOBAL RESPONSE CHART: AFFINE DATUM, CURRENT PARTNER, AND PHYSICAL MATCH
+Research note, 18 October 2026. Working proof, not a new published-source theorem.
+
+All I: references refer to the pinned upstream Raw I. The construction below uses the
+actual primitive and nonlinear coefficient estimates in Raw I4.5, not the later
+unrecovered global-layer theorem. In particular the quoted inverse-block covariance
+walk theorem and the analytic averaging input retain their printed-source status.
+The determining family must be one on which those primitive estimates apply. The
+separate verification of general graded determining families is not hidden in the
+notation K109.
+
+1. Domains and the precise forcing convention
+
+Raw I12935--12970 defines S by real local C1 regularity (CMP99b3.35), a complex C1
+twist (3.37), and an independent current |J|_{-3}<a_gamma. Raw I110264--110283
+defines K109 by the same three analytic conditions, on a determining family, with
+M alpha0<=a0 and alpha1 below fixed ceilings. Thus, after decreasing the common
+ceilings, these analytic background conditions are exactly those needed by I4.5;
+no derivative of the independent current is added. Eligibility of the determining
+family for the primitive propagator construction is a separate geometric matter.
+
+Use the following exact primitive names:
+  T0=P0 G0=G0 P0^T,  G=G^J=(I-T0 Theta)^(-1)T0,
+  H0=G0 Q* q0 ell^(-1),  HJ=Gpi^J Q* qJ ell^(-1).
+E is the potential C1/Hölder space N_beta, F the forcing space |.|_{-3}, and B the
+coarse block sup space. All transposes are bilinear, including at complex fields.
+The source formulas and estimates are I13583--13676,13723--13977 and13980--14080.
+
+Let f in F be an independent FORCING and b in B independent block data. Define
+  P=H0 b + G[-f+Theta H0 b - V'(P)],                 (1.1)
+  X=D^J(P),  H=P-HJ X.                              (1.2)
+Equivalently A0=P-H0b satisfies the same equation with H0b removed on the left.
+At sigma=1, (1.1) is EXACTLY
+  P=H0 b+T0[-f+Theta P-V'(P)].                       (1.3)
+Indeed multiply (1.1) by I-T0 Theta, or use its convergent Neumann identity.
+There is no change of higher-order action in this rearrangement.
+
+The affine potential datum of (1.3) is j0=T0 f. The affine datum after resummation
+is j_res=G f=(I-T0 Theta)^(-1)j0. These are not interchangeable. In particular,
+inserting j0 directly into P=-j_res+(I+G Theta)H0b-GV'(P) changes the equation.
+
+At complex decoupling sigma, use the EXACT K10 primitive convention I15265--15339:
+expand the complete primitive walk with all side branches first and decorate each
+distinct visited cube once. Define (1.1) from those decorated G_sigma,H0_sigma,
+Theta_sigma,V'_sigma. Do not claim that decorated G_sigma is a resolvent recomputed
+from decorated T0_sigma,Theta_sigma. Accordingly (1.3) is asserted only at sigma=1.
+This is an explicit definition of a forced extension of K10; no missing decoupled
+inverse identity is required. At f=0 it is exactly the K10 block-only chart.
+
+2. Uniform existence, response kernels and analyticity
+
+The earlier coefficient lemmas supply constants, at any fixed allowed sigma-disc,
+  ||G||_{F->E}<=g0, ||H0||_{B->E}<=h0,
+  ||Theta||_{E->F}<=theta0, |V'(P)|_F<=c0 N(P)^2.
+Constants grow by the explicitly allowed fixed exp(C kappa1) factors in K10.
+They are independent of volume, depth and forcing. Let
+  L=(I+G Theta)H0, l0=h0(1+g0 theta0),
+  d=g0 |f|_F+l0 |b|.
+Take 2r inside the V' analytic ball, 8g0 c0 r<=1, and d<=r/2. Then (1.1) has a
+unique solution in N(P)<=r, is jointly holomorphic, and N(P)<=2d, N(H)<=4d.
+
+Proof. The equation is P=-Gf+Lb-GV'(P). Cauchy on the radius-2r ball gives
+||V''(P)||<=4c0r on the radius-r ball. The right side is a contraction of ratio
+at most1/2 and maps that ball into itself (in fact d+g0c0r^2<=5r/8). Picard
+iteration proves holomorphy on every strict parameter subdomain. Its uniform
+limit obeys N(P)<=d+N(P)/2. The nonlinear correction bound gives N(H)<=2N(P).
+
+The same argument in every allowed exponential weight rho uses the WHOLE-BALL
+weighted Hessian estimate proved in K8, I14841--14866 and14952--14969. It yields
+  N_rho(delta P)<=C_rho(|delta f|_{F,rho}+|delta b|_{B,rho}),
+  N_rho(delta H)+|delta X|_rho<=C_rho(|delta f|_{F,rho}+|delta b|_{B,rho}). (2.1)
+Writing R_P=(I+GV''(P))^(-1) and T_P=I-HJ D'(P), the exact data kernels are
+  D_fP=-R_P G,              D_bP=R_P L,
+  D_fH=-T_P R_P G,          D_bH=T_P R_P L.           (2.2)
+The weighted Neumann series for R_P converges with ratio at most1/2, so these
+are actual exponentially localized data-response kernels, not merely unweighted
+analytic derivatives. Higher data derivatives follow by Cauchy on a fixed smaller
+data ball. Their n dependence is at most C^n n!, with the radius displayed in
+the estimate; there is no volume factor. Gauge covariance and component
+factorization follow term by term in Picard iteration from the same properties
+of the K10 coefficients and the data.
+
+3. A bounded current companion, using no second derivative of a datum
+
+Put k=(qJ-a)ell^(-1), Delta'=Delta-D_W*D_W and Xi=Theta P-V'(P). Define
+  Lambda_f=P0^T(Xi-f)+Q*(q0-a)ell^(-1)b
+             -Q*kX-Lambda^T j_J(HJ X),
+  K_f=Lambda_f-Delta' H+F(W,H).                     (3.1)
+Every coefficient in (3.1) is one of I4.5's bounded first-order/lower-order
+operators. In particular Delta' is local E->F of norm O(a0+a1), and F is the
+current remainder of I14083--14130. The only new direct term is -P0^T f, an
+order-zero localized operator on F. Thus
+  |K_f|_{F,rho}<=C_rho(|f|_{F,rho}+|b|_{B,rho}),     (3.2)
+and the corresponding two-data Lipschitz bound holds. No D* f or Delta HJ is
+estimated or assumed. Formula (3.1) defines the companion also at complex sigma.
+
+For completeness, define the bounded E->F derivative operator
+  M_P=P0^T(Theta-V''(P))-Q*kD'(P)
+       -Lambda^T j_J HJ D'(P)-Delta'T_P+F_H'(W,H)T_P.
+Then its exact data kernels are
+  D_fK=-P0^T+M_P(-R_PG),
+  D_bK=Q*(q0-a)ell^(-1)+M_P R_PL.                  (3.3)
+These have the exponential weighted bounds just proved. Formula (3.3) also
+shows explicitly why merely adding a first forcing slot does not require a
+Laplacian estimate for the free-current HJ propagator.
+
+4. Exact sigma=1 identities and the physical-current defect
+
+At sigma=1, QP=ell^(-1)b and applying Delta_a to (1.3) gives
+  Delta_a P=P0^T(Xi-f)+Q*q0 ell^(-1)b.              (4.1)
+Consequently (3.1) becomes
+  K_f=(Delta_a-Q*aQ-Delta')P
+        -{Q*kX+Lambda^T j_J(HJX)-Delta'HJX}+F(W,H). (4.2)
+All these identities hold for independent complex (W,J,f), with the supplied
+primitive inverse identities, and do not use a physical-current interpretation.
+
+Let Jphys(W) be the actual action current. CMP109(3.11), p272, gives
+  Jphys(e^(i eta H)W)-Jphys(W)=D_W*D_WH+F(W,H).     (4.3)
+The following exact defect is useful and has not been dropped:
+  K_f-[D_W*D_WH+F(W,H)]
+   =D_W R D_W*H+k_J(Lambda HJX)+Lambda^T m_J(Lambda HJX). (4.4)
+
+Proof. Subtract (4.3)'s increment from (4.2). The result before simplification is
+D_W R D_W*P+Delta HJX-Q*kX-Lambda^Tj_J(HJX). Use
+(Delta_a-Theta'_J)HJ=Q*qJ ell^(-1), QHJ=ell^(-1), and
+Theta'_J=k_J Lambda+Lambda^Tj_J+Lambda^Tm_JLambda. The Q*k and Lambda^Tj_J
+terms cancel, and D_WRD_W*(P-HJX)=D_WRD_W*H. This proves (4.4).
+
+In particular the companion is the physical current increment whenever
+  R D_W*P=0 and R D_W*HJ=0.                        (4.5)
+It is not legitimate to impose (4.5) at arbitrary independent complex pairs.
+Off the physical branch K_f is simply the bounded independent current rider
+required by the analytic source domain. Identity (4.4) states exactly what would
+have to vanish for physical matching; it prevents a hidden second-order claim.
+
+5. Physical matching: which source must be restored
+
+At a true real pair J=Jphys(W), the actual constrained physical action in the
+linearized P variable has expansion
+  S(e^(i eta L(P))W)=S(W)+<J,P>
+       +1/2<P,(Delta-Theta)P>+V(P).                (5.1)
+This is the true-pair reduction I15575--15673, using the corrected higher-order
+functional V^disp+W^J (I14155--14201), not V^disp alone. For a published small
+Landau critical point P_* with QP_*=ell^(-1)b, criticality on ker Q gives
+  P0^T[J+Delta_aP_*-Theta P_*+V'(P_*)]=0.
+The same algebra as I15746--15788, but WITHOUT setting P0^TJ=0, gives
+  P_*=H0b+T0[-J+Theta P_*-V'(P_*)].                (5.2)
+Hence the forced chart with f=J equals P_* by uniqueness in its small ball.
+The published Landau properties of P_* and HJ then give (4.5), so J+K_J is
+exactly Jphys(e^(i eta H)W). This identifies both field and current, not just the
+Euler equation. On the old special background where J lies in range Q*, GJ=0
+and this reduces to the block-only chart's diagonal exactness.
+
+The matching uses a small physical critical point satisfying the published
+Landau/regularity hypotheses, or a proof that the gauge-fixed fixed point itself
+has those properties. For a general real regular carrier which is not already
+a background admitted by CMP102, it is not enough to say 'J is a true current'.
+The remaining physical issue is precisely whether the selected global layers'
+actual real carriers and determining families meet that published hypothesis,
+or whether the gauge-orbit argument establishes (4.5) for the new forced chart.
+This note does not infer it from the independent-pair class K109 alone.
+
+The natural physical forcing is f=J, not an arbitrary independent f. A different
+f corresponds at most to an additional linear source in (5.1); that sourced
+functional need not be gauge invariant, so the Landau conclusion cannot simply
+be reused. At general sigma exact physical identification is neither needed nor
+asserted; the complex companion (3.1) is a controlled analytic extension.
+
+6. A lower-order cutoff companion
+
+Once physical matching has been proved at sigma=1, define for the scalar cutoff
+chi used by the source
+  K_sigma[chi]=chi K_sigma+[D_W*D_W,chi]H_sigma
+                  +F(W,chi H_sigma)-chi F(W,H_sigma). (6.1)
+It is holomorphic, covariant, component-local and bounded in |.|_{-3} using only
+the proved C1/Hölder field and combined-current bounds. The exact lattice
+commutator estimate is proved in work/current_interface_research.md, (9): it
+requires one field derivative and two scalar cutoff differences, no second
+field derivative. At a true sigma=1 pair, (4.3) makes (6.1) exactly
+Jphys(e^(i eta chi H)W)-Jphys(W). Thus this consumer can use the new independent
+current companion without reinstating the missing graph norm.
+
+If the earlier global definition of the cut rider is retained literally, its
+equality with (6.1) away from sigma=1 has not been established. Replacing that
+definition by (6.1) is legitimate only after checking the source consumers use
+holomorphy, locality, bounds and physical matching, rather than a separate
+off-diagonal algebraic identity. The old deposited theorem is not silently
+declared proved by constructing a different extension.
+
+7. Primary-source status
+
+CMP109 DOI10.1007/BF01215223 was reopened on18October2026 at
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+Its p272(3.11) is the physical current identity used in(4.3); pp272--273 discuss
+the Landau cancellation and the second-order substitution issue. The original
+CMP99b and CMP102b articles are DOI10.1007/BF01240355 and10.1007/BF01229381.
+Their precise primitive and variational formulas above are quoted through the
+located Raw I4.5 reconstruction; this note has not newly inspected original
+CMP99b/CMP102b page images. The university metadata confirms publication and
+the physical variational theorem's subject, not the stronger free-current
+extension. No physical-branch conclusion is claimed on metadata alone.

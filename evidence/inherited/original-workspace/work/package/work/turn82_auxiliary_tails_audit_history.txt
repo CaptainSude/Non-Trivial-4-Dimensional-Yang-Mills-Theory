@@ -1,0 +1,99 @@
+TURN82 -- INDEPENDENT AUDIT OF ACTUAL AUXILIARY TAILS
+20 October 2026. history47.
+
+Producer: work/turn82_auxiliary_tails_tail.txt
+SHA256 0FD113A88619C31BCD6047B2E1B2C8478582BE0AAB0AF05B0238B0E22CFE40D1.
+Reviewed complete Sections1--7, including the path-convention variant.
+
+VERDICT: PASS after the explicit auxiliary-only Safe_e definition was
+clarified. No remaining correction. The estimates are for the actual
+finite Wilson/HS joint law and its exact interacting auxiliary marginal;
+they do not assert a Gaussian marginal or a continuum conclusion.
+
+1. Exact drift and normalization
+The conditional generation U~mu, G=m+Z, R=sqrt(beta)U_h/2+G V_h^dagger+W
+is the exact two-HS law of TURN81. The standard complex matrix noise
+has E Z^dagger Z=2Id. SU(2) gives
+m^dagger m=beta(1-h_p/2)Id. Expanding both current incidences therefore
+gives the noise-free formulas(2.2); the second incidence alone receives
+4U_e on taking its exact conditional mean. Thus J^0 differs from the
+mean by12U_e in the standard three-first/three-second convention.
+The aligned first trace is beta(3/2-h/2), the second beta(3-3h/2).
+Their sum gives a(J^0) dot u>=3beta for every original configuration.
+No favorable-staple or small-plaquette condition is needed for this
+bound. The physical normalization a(cU)=2c u and |a(J)|<=sqrt2||J||_F
+is consistently retained.
+
+2. Noncentral moments and repeated auxiliary blocks
+With b=1+beta, the exact Gaussian moment is controlled by denominators
+b-t or b-2t. For the respective t ranges, beta/(b-t)<=1 and
+beta/(b-2t)<=1, giving exactly exp(2t) and exp(9t/2) in(3.1).
+After conditional unitary right multiplication, the complete plaquette
+fluctuation block is (Z,Z+W_A,Z+W_B); its covariance eigenvalues are
+1,2-sqrt3,2+sqrt3. There are four complex copies, so the determinant
+majorant has power12. The mean-square bound11beta and
+beta/(b-c0 t)<=1 give K(t) as written. Conditional independence holds
+between DISTINCT complete plaquette noise blocks, which is sufficient
+for(3.2) and requires no marginal independence under nu.
+
+The current exponential bound uses sqrt(beta)r<=beta/2+r^2/2 and
+2rg<=r^2+g^2. Summing link stars repeats any plaquette at most four
+times and uses at most6|S| distinct plaquettes. This proves(3.3)--(3.4)
+with the stated t domains and constants.
+
+3. Safe event and its conditional probability
+The exact first-incidence perturbation costs2t beta. The second costs
+(7t+4t^2)beta, using ||m||op<=sqrt(beta) and
+||r^0||op<=3sqrt(beta)/2. Thus three of each give
+beta(27t+12t^2). At t=1/40 its physical-current error is strictly less
+than beta, yielding |a(J_e)|>=2beta. The Frobenius mean/noise bounds
+give the two upper auxiliary bounds(4.3).
+
+The final producer now defines Safe_e by ONLY the auxiliary magnitude
+condition |a(J_e)|>=2beta and the stated auxiliary upper bounds.
+The stronger aligned inequality involving the original u_e is used
+only to prove the inclusion N_e subset Safe_e. This is the correct
+auxiliary-marginal event. Conditional on every original U, the twelve
+relevant independent standard noises have union tail at most
+12*16 exp[-beta/(2*40^2)]=192 exp[-beta/3200]. Taking min with1
+and averaging preserves the bound. The eighteen-noise variant has
+the correct changed prefactor288.
+
+4. Convention variant and prescribed-set rarity
+With m first incidences, the corresponding bounds are m beta for the
+noise-free aligned physical current and
+beta[(42-5m)t+4(6-m)t^2] for the matrix error. Reversed link traversal
+adjoints the matrix current and preserves both the aligned real trace
+and Frobenius norms. For m>=2,t=1/80, the physical error is less than
+beta, proving(4.6) and its denominator12800 in the exponential tail.
+The standard purely spatial plaquette choices give two first spatial
+incidences even when temporal choices are changed for reflection.
+The standard flat value27beta is correctly not exported to all such
+conventions.
+
+The shared-plaquette link graph has degree at most18. A greedy
+independent subset has size at least |S|/19; its complete plaquette
+noise blocks are disjoint. Given U, the corresponding Safe complements
+are independent functions of these disjoint blocks. Their uniform
+conditional probability bound gives p_beta^(|S|/19), then averaging
+gives the same actual marginal bound. The regularized inverse-moment
+estimate(5.2) follows by splitting Safe and its complement; no singular
+inverse moment or all-lattice safety is inferred.
+
+5. Wilson alignment refinement
+The first noise-free incidence differs from its flat value by at most
+beta sqrt(h_p); the second by at most
+beta sqrt(h_p)+sqrt2 beta h_p. With h<=eta^2 this yields(6.2).
+Projection and the noise bound give(6.3). At eta=t=epsilon/64 the
+displayed coefficient is strictly below1. The twelve-noise probability
+has denominator8192, and the six-plaquette TURN64 energy tail has
+denominator16384 and prefactor6*2^(3/4). Their sum is at most the
+stated203 exp[-epsilon^2 beta/16384]. The radial marginal event is
+contained in the joint aligned failure by the reverse triangle
+inequality. Gauge covariance, literal beta scaling, and the use of
+the original Wilson energy estimate only in this refinement are correct.
+
+The final read-count union cost, logarithmic-beta physical scaling,
+interacting-marginal limitation and absence of a physical lower bound
+are all retained. No producer or authoritative output was modified by
+this audit.

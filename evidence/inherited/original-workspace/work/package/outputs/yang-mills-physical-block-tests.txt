@@ -1,0 +1,859 @@
+TURN90 -- TESTING TWO ACTUAL LOWER-BOUND ROUTES
+21 October 2026 UTC, 20 October local.
+
+The nontrivial continuum YM4 proof remains incomplete. This pass tried
+to obtain the missing original-law variance lower bound, rather than
+derive another sufficient spectral criterion. Neither attempt supplied
+that bound. They did yield precise exclusions for two proposed ways of
+obtaining it, and an exact score identity which retains the terms that
+the unsuccessful estimate loses.
+
+The prior TURN89 state and report were revalidated before work. That
+turn counts as progress: it established exact finite-thermal formulas
+and a physical-time variance consumer, with the missing floor explicit.
+This turn's conclusions concern the actual original Wilson probability
+and its exact positive auxiliary representation. They do not prove that
+the desired continuum theory or the variance floor is impossible.
+
+1. The intended lower bound and the physical-block attempt
+
+For the fixed bounded original spatial-flow slice observable phi_t in
+[0,1], keep all its physical parameters and define
+ G_n=n^-1 sum_(0<=t<n)phi_t-n^-1 sum_(n<=t<2n)phi_t,
+ with L=na in a fixed positive physical interval.
+The target remains a positive uniform lower bound on Var_W G_n.
+TURN89 proves what such a bound would imply; it does not give it.
+
+Total variance suggests conditioning on the exterior of a physical
+spacetime block. The retained bare Dirichlet theorem indeed estimates
+the actual conditional nonlinear Wilson law, but its quantitative
+domain requires boundary links within delta=cR^-24 and gT<=cR^-8,
+where R is the block side in lattice units and T>=1. The latter already
+forces beta=g^-2>=c'R^16. It is outside the intended logarithmic regime
+when R is proportional to a^-1. The powers are sufficient theorem
+conditions; no claim of their optimality is made.
+
+More decisively, the required fine-boundary event itself can be bounded
+under the full original Wilson law. Even allowing any boundary gauge,
+
+ P_W(all boundary links can be delta-close to I)
+ <=[min{1,C(1+beta)^(3/2)delta^3}]^[floor(R/2)^2(R+1)].
+
+The proof first replaces the gauge choice by a necessary small-plaquette
+condition. A one-edge conditional tilted-Haar density bound controls
+each of a packed set of face plaquettes. Successive conditioning gives
+the product bound; independence of Wilson plaquettes is not assumed.
+At delta=cR^-24 and polylogarithmic beta this is at most
+exp[-c'R^3 log R]. Thus even a maximal bounded conditional variance on
+THAT boundary event contributes an amount tending to zero. The outer
+conditional-mean variance and the rest of the boundary distribution
+remain unestimated. This rules out that particular proposed lower-bound
+argument, not a different theorem for genuinely coarse boundary data.
+
+At the other extreme, a microscopic block whose free links affect only
+K time slices changes G_n through a conditional range of length at most
+K/n. Its conditional variance is therefore at most K^2/(4n^2).
+A nondegenerate fixed microscopic conditional variable is insufficient
+by itself. Coherent contributions over physical distances are needed.
+
+2. A full-law collective deformation and its exact score
+
+For any smooth vector field X on the original product of SU2 link groups,
+the normalized Wilson score is
+ sigma_X=beta X S4-div_Haar X,
+ where S4 contains all four-dimensional plaquettes without beta.
+It obeys E sigma_X=0 and E XG_n=E G_n sigma_X. Hence an actual bounded
+score variance and a nonzero response would lower-bound Var_W G_n.
+The divergence matters for field-dependent, gauge-covariant fields.
+
+The weighted Hodge identity gives the exact, signed expression
+
+ E sigma_X^2=E[|nabla X|^2-|dXflat|^2+|X|^2/2
+                                      +beta Hess S4(X,X)].
+
+All terms use the Pauli/2 product metric. The Wilson Hessian has the
+explicit covariant-curl and ordered curvature/commutator formula in the
+proof. Its curvature marks remain correlated with X under the original
+measure. The strain, exterior derivative and Ricci terms also have
+real cancellations; for an invariant frame vector their kinematic sum
+is exactly zero.
+
+The simple uniform bound Hess S4<=6 Id would give
+ B_X=E|nabla X|^2+(6beta+1/2)E|X|^2
+ as an upper bound on the true score variance. This looks volume-safe,
+but the following new result shows that it cannot deliver our target:
+
+          |E XG_n|^2/B_X <=4/n,  beta>=1,
+
+for EVERY smooth original X, including collective and gauge-equivariant
+ones. The result concerns this certificate, not Var_W G_n itself and
+not the quotient using the true score denominator.
+
+3. Why that certificate loses the macroscopic signal
+
+In the exact HS joint, given the complete auxiliary record xi, original
+links are independent. For this same source,
+ E Var(G_n|xi)<=1/(2n).
+Every score with zero conditional mean given xi sees only that contact.
+Its response squared divided by its own squared norm is at most1/(2n).
+
+For an original X(U), the score with xi held fixed is instead
+ sigma_cond=sigma_X-Xlog kappa_U,
+ E sigma_cond^2=E sigma_X^2+E I_U(X),
+ I_U(X)<= (18beta+24)|X|^2.
+The last estimate is pointwise conditional on every original U. The
+cross term vanishes because Xlog kappa_U is centered given U. Combining
+these exact identities with B_X proves the4/n ceiling.
+
+There is an explicit sharper description. For the standard HS convention,
+
+ I_U(X)=sum_e D_e(U)|X_e|^2-beta Hess S4(X,X),
+ D_e=6+(beta/4)[27-sum_first h_p-3sum_second h_p].
+
+This identity holds pointwise in U. In the conditional score variance,
+the entire Wilson Hessian cancels against its Fisher contribution.
+The conditional-noise calculation therefore discards precisely the
+covariant-curl/curvature structure whose true score might be small.
+
+This is not a prohibition on joint auxiliary deformations. Moving U
+while keeping the independent Gaussian innovations Z,W fixed gives an
+explicit joint lift with score sigma_X itself. It moves xi and falls
+outside the fixed-xi exclusion. It supplies neither a sharper estimate
+on sigma_X nor a response floor by itself.
+
+A bounded true-score, nonzero-response construction would necessarily
+have a nonzero limiting covariance between C G_n and C sigma_X under
+the full interacting auxiliary marginal. Its conditional noise error
+is at most sqrt[E sigma_X^2/(2n)]. That correlated response is still
+unproved; replacing the auxiliary marginal by independent Gaussians
+would change the problem.
+
+4. Published inputs checked for the block estimate
+
+The targeted literature search found no applicable lower-bound theorem
+at the inspected scope. This is not a claim about all possible literature.
+Chatterjee's pure U(N) free-energy proof has a direct small-box parameter
+delta=n^((d+1)/2)sqrt(logbeta/beta) and a pressure error containing
+beta delta^3. At d4 the squared quantities are respectively
+n^5 logbeta/beta and n^15(logbeta)^3/beta. They do not become small for
+a fixed physical block at logarithmic beta. The large-box pressure
+decomposition does not give a source-preserving normalized physical-block
+comparison. The U(N)/SU2 distinction is also retained.
+
+The MRS fixed-infrared-cutoff construction uses a different bare measure
+and does not supply the original Wilson source or the needed RP matching.
+Its published introductory proof-status qualification was recorded.
+The newly checked Deng--Shen critical4D result concerns an Anderson
+resolvent with a Gaussian fluctuation limit; Yang--Mills applications are
+explicitly left to future work. Neither is imported as a YM4 theorem.
+Exact primary locations and inspection scopes are in the source note.
+
+5. Remaining direction and full objective
+
+The bare weak-fine-boundary strategy and the coarse score certificate
+above should not be pursued as though their current estimates could
+produce the physical variance floor. A genuine route still needs an
+original-law estimate of correlated physical-scale response: for example
+a native coarse conditional law with its old source and boundary weights
+actually controlled, or a sharper collective score estimate retaining
+the signed curvature/strain cancellations and a nonzero source response.
+No such estimate is established in this report.
+
+The full target also still requires the local gauge-invariant continuum
+observables, physical scale/coupling identification and nonabelian
+interaction, Euclidean covariance, joint/contact/separated source control,
+common continuum and volume limits, and reconstruction. The fixed spatial
+flow scalar sector alone is insufficient. The user's complete objective
+has not been replaced by these finite results. Goal remains active.
+
+
+========================================================================
+
+TURN90 -- ORIGINAL WILSON SUPPRESSION OF THE RETAINED WEAK DIRICHLET BOUNDARY
+history47. 21 October 2026.
+
+RESULT
+
+The existing quantitative bare Dirichlet theorem cannot provide the proposed physical-block conditional-variance floor on the intended logarithmic weak-coupling sequence. There are TWO explicit losses:
+
+(1) Its admitted source/window domain requires g T <= c R^-8 with T>=1, hence beta=g^-2 >= c' R^16. For a fixed physical block R asymptotic to a^-1 and beta growing only polylogarithmically in1/a, that domain is empty for sufficiently small a.
+
+(2) Even apart from this chart failure, its sufficient boundary condition max_boundary ||V_e-I||<=c R^-24 has extremely small probability under the ORIGINAL Wilson law, even when an arbitrary boundary gauge is allowed. In a four-dimensional embedded cube,
+
+ P_W(exists boundary gauge with all boundary links delta-close to I)
+   <= [min{1,C(1+beta)^(3/2) delta^3}]^[floor(R/2)^2(R+1)].       (A)
+
+Thus at delta=c R^-24 and polylogarithmic beta the probability is at most exp[-c' R^3 log R]. This is an actual probability upper bound, not a failed lower-bound method or a hypothetical counterlaw.
+
+It rules out obtaining a nonzero bounded conditional-variance contribution ONLY from this particular sufficient event. It does NOT prove the full variance vanishes, that weak genuinely coarse boundaries are rare, or that native RG cannot supply a different effective physical-block estimate.
+
+1. EXACT ORIGINAL LAW, GEOMETRY AND EVENT
+
+Take a finite nondegenerate four-dimensional periodic hypercubic lattice, all periods at least4, with
+ dmu_beta(U)=Z_beta^-1 exp[-beta sum_p h(U_p)] product_e dU_e,
+ h(V)=1-Re Tr(V)/2, beta>=0.
+All plaquettes of this full original law are retained. Embed the integer cube B_R={0,...,R}^4, R>=2, without periodic identification; it suffices that every ambient period is at least R+2. This avoids degenerate bonds or plaquette multiplicities. A larger enclosing volume is arbitrary.
+
+Let E_boundary be the links of the topological boundary subcomplex. Define
+
+ E_R(delta)={there exist g_v in SU(2), v on boundary vertices,
+             max_(e in E_boundary) ||g_(e-) U_e g_(e+)^-1-I||op<=delta},
+                                                        0<delta<=1/4. (1.1)
+
+The infimum over gauges is attained by compactness, so this is a measurable closed event. It is gauge invariant and measurable with respect to the full exterior plus boundary links used in the Dirichlet conditioning. It is more permissive than a prescribed tree-gauge boundary condition. No probability of a continuum gauge fixing, no Faddeev--Popov determinant and no union bound over gauges is used.
+
+For any boundary plaquette, telescoping the product of four unitary matrices gives ||U_p-I||op<=4delta on E_R(delta), after the witnessing boundary gauge. The SU(2) identity ||U_p-I||op^2=2h(U_p) then gives
+
+          E_R(delta) subset {h(U_p)<=8delta^2
+                              for EVERY boundary plaquette p}.       (1.2)
+
+This necessary curvature condition removes the gauge choice before estimating probability.
+
+2. AN EXACT UNIFORM ONE-EDGE CONDITIONAL ESTIMATE
+
+Condition on all original links except a single independent link e. The six incident plaquettes give a conditional quaternion density
+
+           k_z(q)=exp(z.q)/int_(S3)exp(z.q)domega(q),
+           q in S3,                   |z|<=6beta.                     (2.1)
+
+This is the full conditional of the ORIGINAL law. All crossing plaquettes and the actual exterior staples are included. An inverse occurrence of e merely changes the exterior unit coefficient. For every incident plaquette p there is an exterior-measurable a_p in S3 such that h(U_p)=1-a_p.q.
+
+For kappa=|z|, a spherical cap of angular radius c/sqrt(1+kappa) about z/kappa has Haar mass at least c'(1+kappa)^(-3/2) and z.q>=kappa-C. Include kappa=0 by the same uniform bound. Consequently
+
+             sup_q k_z(q)<=C(1+kappa)^(3/2)
+                          <=C'(1+beta)^(3/2).                         (2.2)
+
+Under normalized SU(2) Haar, h=1-a.q has density
+                    (2/pi)sqrt(h(2-h)),   0<=h<=2.
+Therefore P_Haar(h<=t)<=C t^(3/2). Combining with(2.2), at t=8delta^2,
+
+ P_W(h(U_p)<=8delta^2 | every link except e)
+          <= p_(beta,delta):=min{1,C(1+beta)^(3/2)delta^3}.             (2.3)
+
+The constant is numerical and independent of the box, surrounding volume, boundary configuration, gauge choice and beta. This proof is the low-energy-ball version of the exact density estimate in coherent_energy_window_suppression_turn65.txt Section1; it is not a Gaussian approximation to the Wilson law.
+
+3. FACE PACKING WITHOUT AN INDEPENDENCE ASSERTION
+
+On the face x4=0 take orientation12 plaquettes with lower corners
+ (2i,2j,l,0), where
+ 0<=i,j<floor(R/2),             0<=l<=R.
+Their number is
+                m_R=floor(R/2)^2(R+1)>=R^3/16.                       (3.1)
+They are pairwise edge disjoint. Choose one designated edge e_p of each. Each event A_p={h(U_p)<=8delta^2} is measurable with respect to all links except e_q whenever q!=p.
+
+Condition on all links except e_p, apply(2.3), and then remove that event. Repeating yields
+
+                        P_W(intersection_p A_p)<=p_(beta,delta)^m_R. (3.2)
+
+The full action can couple the designated links through OTHER plaquettes. No conditional or unconditional independence is asserted or needed for this successive conditional-bound argument. Equations(1.2) and(3.2) prove(A).
+
+In particular if sqrt(1+beta_R) delta_R ->0, then p_(beta_R,delta_R)->0 and E_R(delta_R) has vanishing probability. If sqrt(1+beta_R)delta_R<=C R^-eta for some eta>0, the bound is exp[-c_eta R^3 log R] for sufficiently large R. The constants may be fixed before enlarging the ambient lattice.
+
+4. ATTACHMENT TO THE ACTUALLY RETAINED DIRICHLET THEOREM
+
+turn72_dirichlet_wilson_root.txt Sections1--2 proves the conditional nonlinear Wilson estimate for a FIXED box and a box-dependent weak-boundary neighborhood. It does not give uniform constants for R->infinity. Its boundary-curvature companion explicitly keeps its finite filling constant A_B and introduces no new annealed boundary estimate.
+
+The more quantitative retained theorem is polylog_box_conditional_tail_turn37.txt. Its displayed(1.1)--(1.3) states, in its fixed group norm,
+
+ delta_boundary<=c0 R^-24,
+ g<=c1 R^-8/4,              1<=T, gT<=c1 R^-8/4,
+ P(W^c | boundary)
+ <= exp[C R^4 log(2+R)-c R^-8 T^2]
+    +exp[C R^4 log((2+R)/g)-c R^-20/g^2].                        (4.1)
+
+Norm equivalence for the fixed group converts its boundary condition to(1.1), changing only c0. The exact anchored forest gauge and all plaquettes involving free edges are retained in that theorem. It is uniform in the surrounding lattice but not a fixed physical-box theorem.
+
+Already T>=1 and gT<=c R^-8 imply beta>=c'R^16. Hence for R_a asymptotic to L/a with fixed L>0 and beta_a<=C[log(1/a)]^q, q fixed, there is no admitted T for small a. Increasing T to beat the entropy in(4.1) makes this conflict worse. Dropping its chart condition would not be an application of the proved result.
+
+Independently apply(A) to its sufficient boundary set, allowing ANY boundary gauge:
+
+ P_W(E_R(c0 R^-24))
+ <= [min{1,C(1+beta)^(3/2)R^-72}]^m_R.                     (4.2)
+
+For the same physical-block/polylogarithmic-beta sequence this is bounded by exp[-c R^3 log R]. The upper bound remains true if the actual weak-boundary set is narrower. The theorem only certifies this sufficient neighborhood; this note does not claim its radius is mathematically optimal or that larger weak data could not be admitted by a new proof.
+
+The earlier TURN37 good-collar theorem works in its stated polylogarithmic-size regime with a different compatible threshold hierarchy. It is not contradicted by(4.2), and cannot be extrapolated to R proportional to a^-1 while keeping the proved domain.
+
+5. CONSEQUENCE FOR A CONDITIONAL-VARIANCE LOWER-BOUND STRATEGY
+
+Let mathcal E_R contain all original exterior and boundary links and let F be the actual bounded contrast of two positive-time averages, so -1<=F<=1. No finite-read simplification of its spatial flow is needed for the following estimate. Total variance gives
+
+ Var_W F=E_W Var(F|mathcal E_R)+Var_W(E[F|mathcal E_R]).
+
+For the boundary event(1.1), which is mathcal E_R measurable,
+
+ 0<=E_W[1_(E_R(delta)) Var(F|mathcal E_R)]<=P_W(E_R(delta)).      (5.1)
+
+Thus even the largest possible conditional variance on the boundary domain currently certified by(4.1) has a contribution tending to zero on a physical block. A proposed lower bound obtained by multiplying a bounded conditional floor by the probability of THAT event cannot yield a positive limiting variance. The complement and the outer conditional-mean variance remain in the exact full variance; (5.1) is NOT an upper bound on the latter.
+
+A fixed microscopic block has the opposite size problem. If its free spatial links lie in at most K distinct time slices, condition on all other links. For
+ G_n=n^-1 sum_(0<=t<n)phi_t-n^-1 sum_(n<=t<2n)phi_t,
+with each phi_t in[0,1] depending only on the original spatial links at t, the conditional range of G_n has length at most K/n. Therefore
+
+                  Var(G_n | exterior)<=K^2/(4n^2).                  (5.2)
+
+This is deterministic boundedness and Popoviciu's inequality, not a mixing assumption. Whole-slice spatial flow does not change its time-slice read. For fixed K and n asymptotic to a^-1, the contribution of one such block vanishes. It does not exclude coherent contributions of many blocks or the outer mean channel; simply finding a nondegenerate fixed microscopic conditional variable cannot by itself give the macroscopic contrast floor.
+
+6. A SECOND, INTRINSIC DIMENSION COST OF THE FIXED-BOX METRIC WINDOW
+
+For perspective, a separate finite-size fact shows why the fixed-block radial moment constants cannot remain bounded in R. At identity boundary, the anchored forest in the quantitative theorem leaves
+ m_R^free=(R-1)^3(3R+1)
+ independent SU(2) chords, hence D_R=3m_R^free asymptotic to9R^4 real coordinates. The Hessian H_R of S at its unique flat minimum has largest eigenvalue <=C independent of R, by the bounded plaquette incidence already proved in TURN37 Section3.
+
+At each FIXED R, ordinary finite-dimensional Laplace asymptotics for the globally unique nondegenerate minimum gives x/g converging in law, as g->0, to a Gaussian of covariance H_R^-1 in orthonormal exponential coordinates. Thus Tr(H_R^-1)>=D_R/C. For this Gaussian Z,
+ E|Z|^4=(Tr H_R^-1)^2+2Tr H_R^-2<=3(Tr H_R^-1)^2.
+Paley--Zygmund yields P(|Z|^2>=Tr(H_R^-1)/2)>=1/12. Continuity at the threshold gives, for sufficiently small g depending on R,
+
+        P_(g,I)(dist(U,I)>=c g R^2)>=1/24.                       (6.1)
+
+This concerns the product metric after the exact forest gauge. It proves that a high-probability METRIC window dist<=gT cannot have T fixed uniformly over growing R. It does not prove a simultaneous physical-sequence Gaussian limit, and it is not a claim about the different native projected max-color window. The explicit domain failure and original probability estimate in Sections4--5 do not depend on this auxiliary observation.
+
+7. WHAT A GENUINE COARSE-BOUNDARY ROUTE WOULD STILL HAVE TO CHANGE
+
+The estimates above concern the original FINE boundary of a bare physical cube. They do not bound the probability of suitably renormalized coarse boundary data. A native weak coarse region may retain typical fine fluctuations, whereas E_R(cR^-24) excludes them through its fine plaquettes. Avoiding(A) therefore requires an actually different original pushforward/coarse conditional measure and a conditional variance theorem for that measure, with its generated interactions and exact source record retained. Reusing the bare Dirichlet theorem at a relabelled effective scale would not supply that identification.
+
+The TURN89 time-average variance target remains an original-law real-source curvature and a sufficient route to a positive-energy scalar sector. No positive floor has been derived here. The progress is an explicit actual-law exclusion of the currently certified bare physical-block boundary strategy, plus the microscopic conditional-range bound; it is not a no-go for native RG, for coarse physical probes, or for full YM4. All earlier notes and authoritative files were left unchanged.
+
+
+========================================================================
+
+TURN90 -- ORIGINAL WILSON COLLECTIVE SCORES AND A SHARP CONTACT OBSTRUCTION
+gauge47. 21 October 2026 UTC. Finite original-law estimates only.
+
+RESULT
+
+The exact original Wilson score admits the quadratic identity
+
+ E sigma_X^2 = E[|nabla X|^2-|d X^flat|^2+(1/2)|X|^2
+                                      +beta Hess S4(X,X)],
+ sigma_X=beta X S4-div X.                                  (0.1)
+
+It includes the Haar divergence and the Riemannian connection. The
+Wilson plaquette Hessian can be retained explicitly as a covariant curl
+square plus an ordered curvature/commutator term. Replacing that Hessian
+by its uniform bound6 Id gives the actual volume-independent score bound
+
+ E sigma_X^2 <= B_X:=E|nabla X|^2+(6beta+1/2)E|X|^2.         (0.2)
+
+However, this particular certificate CANNOT prove the desired variance
+floor for the specified two-window source. For beta>=1 and every smooth
+original vector field X, including field-dependent gauge-equivariant X,
+
+              |E XG_n|^2/B_X <=4/n.                       (0.3)
+
+The quotient is zero if B_X=0. This is not an upper bound on Var G_n.
+It is an obstruction to certifying its lower bound using (0.2). It holds
+in the ACTUAL Wilson law and its exact HS disintegration, not a changed
+potential or a generic countermodel. Rescaling X cannot change it.
+
+More directly, every fixed-auxiliary conditional score sigma with
+E[sigma|xi]=0 has reverse-variance quotient at most1/(2n). Such a score
+sees only the conditional link-noise contact, whose contribution to the
+macroscopic time-average variance disappears. A successful original-law
+collective deformation must control its true score more sharply than
+(0.2), retaining curvature/strain cancellations, and respond to the
+interacting conditional-mean channel. No such response lower bound is
+proved here.
+
+1. SOURCE, LAW AND PREVIOUS RESULTS NOT RECLAIMED AS NEW
+
+Use the nondegenerate periodic four-dimensional SU(2) Wilson lattice,
+periods at least4, homogeneous beta>0, and normalized product Haar:
+
+ mu(dU)=Z^(-1) exp[-beta S4(U)]dU,
+ S4=sum_(ALL four-dimensional plaquettes p) h_p,
+ h_p=1-Re Tr U_p/2.
+
+S4 is beta-free. Give each link the bi-invariant metric in which
+i sigma_c/2 are orthonormal. All following expectations are under this
+same original probability or its exact positive HS augmentation.
+
+Let phi_t in[0,1] be the prescribed fixed spatial smear of the original
+spatial-flow radial scalar on slice t, with physical s,alpha,g_* fixed:
+
+ b_(a,s)(t,x)=exp[-alpha|2p(P_12(Phi_s U_t;x))/(g_*a^2)|^2].
+
+The source is literally
+
+ G_n=(1/n)sum_(t=0)^(n-1)phi_t
+                   -(1/n)sum_(t=n)^(2n-1)phi_t,          (1.1)
+
+with2n<=N and L=na in a fixed positive physical interval. No beta source
+factor or running replacement of g_* is inserted. Stationarity gives
+E G_n=0. The TURN89 spectral consumer proves that a uniform positive
+Var G_n would yield a positive finite band and a buffered reflected norm;
+it does not prove that variance floor.
+
+I read physical_variance_uncertainty_turn67.txt Sections1--3,
+turn81_native_deformation_gauge.txt Sections1--4B, and
+turn85_full_wilson_profile_tail.txt Sections1--3 before this calculation.
+The zero mean response of an unframed deterministic color displacement,
+the general score/Cauchy identity, and the one-link exterior Ward/contact
+identities are already established there. They are not new conclusions
+of this note. The TURN67 score bound concerns the Hamiltonian ground law
+Omega^2, whose Hess log Omega was not controlled. Here the density is
+the literal finite Wilson exp(-beta S4), so its Hessian is explicit.
+
+2. THE EXACT ORIGINAL SCORE AND ITS WEIGHTED BOCHNER IDENTITY
+
+Let X be any real smooth vector field on the product of original link
+groups. Its components and full reads may depend on all original links.
+If a gauge-invariant deformation is desired, require X to be equivariant;
+the identities themselves do not require this. Define
+
+ sigma_X=-div_mu X=-div_Haar X+beta dS4(X).
+
+Compact-manifold integration by parts gives
+
+ E sigma_X=0,
+ E(XF)=E[(F-EF)sigma_X],
+ Var_mu F >= |E XF|^2/E sigma_X^2                       (2.1)
+
+when the denominator is positive. For zero denominator the mean response
+vanishes. In particular a field-dependent vector field cannot have its
+Haar divergence silently omitted.
+
+Write omega=X^flat and use the exterior-form convention
+ |d omega|^2=sum_(i<j)(nabla_i X_j-nabla_j X_i)^2
+in an orthonormal frame. The weighted adjoint is
+ d_mu^* omega=-div X+beta dS4(X)=sigma_X.
+Integration by parts and commuting two covariant derivatives give
+
+ ||d_mu^* omega||_L2(mu)^2+||d omega||_L2(mu)^2
+  =E[|nabla X|^2+Ric(X,X)+beta Hess S4(X,X)].             (2.2)
+
+This can also be verified in normal coordinates: integrate
+E X_i partial_i[-div X+beta X_j partial_j S4], move the second
+derivative of X across the density, and cancel the resulting first
+derivative of S4 against the derivative of X_j partial_j S4. The
+remaining derivatives of X are sum_(i,j)nabla_i X_j nabla_j X_i
+=|nabla X|^2-|d omega|^2; curvature contributes Ric(X,X).
+Thus no independent bound on the square of the Wilson force is needed.
+
+For this SU(2) metric the sectional curvature is1/4 and Ric=(1/2)metric;
+on the product there are no cross-factor Ricci terms. Equation(2.2)
+therefore proves the exact identity(0.1). The tensor nabla X includes
+the Levi--Civita connection in the moving left frame. It is not merely
+the array of derivatives of the left-frame coefficients.
+
+As a normalization check, a constant left-invariant field on one SU(2)
+factor has |nabla X|^2=|X|^2/2 and |d X^flat|^2=|X|^2. Its entire
+kinematic expression |nabla X|^2-|d X^flat|^2+|X|^2/2 cancels. This
+recovers E sigma_X^2=beta E Hess S4(X,X) for a product left-invariant
+Haar-divergence-free field. Discarding the negative exterior-derivative
+term loses this exact cancellation even before estimating the action.
+
+3. THE WILSON HESSIAN: EXACT CURL AND CURVATURE TERMS
+
+The per-plaquette identity below was proved in
+nonlinear_spatial_flow_energy_turn65.txt Section2. It applies without
+change to ALL four-dimensional plaquettes here. Its role is to display
+exactly what a sharper score estimate must retain, not claim a new
+plaquette formula.
+
+At a fixed U and tangent X, run the product-metric geodesic with that
+initial tangent. Transport each signed edge tangent to the starting
+vertex of an oriented plaquette using its fixed base links. Write the
+transported Pauli/2 vectors as x_1,...,x_4, so that exactly
+
+ U_p(t)=exp(i t x_1.sigma/2)...exp(i t x_4.sigma/2) U_p.
+
+An inverse edge supplies its negative tangent transported through that
+base edge. Put U_p=p0 I+i pvec.sigma and d_U X(p)=sum_i x_i. Then
+
+ Hess h_p(X,X)
+   =(p0/4)|d_U X(p)|^2
+            -(1/2)pvec.sum_(i<j)(x_i cross x_j).         (3.1)
+
+Indeed the second derivative of the ordered exponential product is
+(sum A_i)^2+sum_(i<j)[A_i,A_j], with
+[A_i,A_j]=-i(x_i cross x_j).sigma/2. Taking -Re Tr/2 yields(3.1).
+Thus the action part of the EXACT score variance is
+
+ (beta/4)sum_p E[(1-h_p)|d_U X(p)|^2]
+ -(beta/2)sum_p E[pvec_p.sum_(i<j)(x_i cross x_j)].       (3.2)
+
+These are marked same-original-law expectations. The second term is
+signed and has size at most a constant times sqrt(h_p) sum_(e in p)|X_e|^2;
+it cannot be replaced by h_p times that sum. The whole Bochner expression
+is nonnegative, but its individual terms need not be. A field-dependent
+covariant X is correlated with these curvatures; the unmarked energy MGF
+does not factor such a product.
+
+For a coarse but completely uniform upper bound, each product-geodesic
+plaquette satisfies
+
+ |Hess h_p(X,X)| <=(1/4)(sum_(e in p)|X_e|)^2
+                 <=sum_(e in p)|X_e|^2.                (3.3)
+
+The first inequality follows directly by differentiating the unitary
+word: a first factor derivative has operator norm |X_e|/2 and a second
+has norm |X_e|^2/4. The half real trace is at most operator norm. Each
+original edge belongs to six plaquettes, so Hess S4<=6 Id as quadratic
+forms, with no volume factor. Discarding -|d omega|^2 in(0.1) now proves
+the actual bound(0.2).
+
+There is a physical grading difference. For a formal smooth connection
+variation X_e=g_a a f_mu(x_e) on a fixed FOUR-dimensional physical region,
+sum|X_e|^2 is of order g_a^2 a^(-2). If beta g_a^2 is comparable to1,
+the6beta term in(0.2) is of order a^(-2). In an admitted smooth frame,
+an ordinary curl difference instead has size g_a a^2 per plaquette,
+so beta sum|curl X|^2 can be O(1). This is a scaling comparison, not an
+estimate for the actual rough, covariant field. Gauge frames, ordered
+commutators and the strain/Ricci cancellation in(0.1) must all be
+controlled before replacing the first cost by the second. A deterministic
+fixed-color variation has zero physical mean response by the old result.
+The g_a used in this deformation scaling does not redefine g_* in(1.1).
+
+4. THE EXACT CONDITIONAL CONTACT OBSTRUCTION
+
+Use the positive original HS joint of TURN82 and TURN89:
+
+ Pi(dU,dxi)=mu(dU) kappa_U(dxi)=nu(dxi) k_xi(dU),
+
+where k_xi is the product of normalized tilted-Haar laws on ALL original
+links. Let C denote conditioning on xi. Since different original time
+slices have disjoint link sets, their phi_t are conditionally independent.
+Even though auxiliary current stars overlap, the exact conditional bound
+for(1.1) is
+
+ E Var(G_n|xi)=E sum_(t=0)^(2n-1) Var(phi_t|xi)/n^2
+                                      <=1/(2n).         (4.1)
+
+This is the contact identity of turn89_averaged_source_root.txt. It uses
+only the same bounded source and the actual normalized conditional law.
+
+For ANY real square-integrable joint random variable sigma satisfying
+C sigma=0, conditional Cauchy--Schwarz gives
+
+ |E[G_n sigma]|^2
+   =|E[(G_n-CG_n)sigma]|^2
+   <=[E Var(G_n|xi)] E sigma^2
+   <=E sigma^2/(2n).                                    (4.2)
+
+In particular, fix xi and deform the original U variables by an arbitrary
+smooth field X(U,xi). Its conditional score
+
+ sigma_cond=-div_U X-X log k_xi(U)
+
+has conditional mean zero, and integration by parts at fixed xi gives
+E XG_n=E G_n sigma_cond. Therefore its reverse-variance certificate is
+at most1/(2n). This remains true for field-dependent, gauge-covariant or
+collective variations. It is not a statement about all ORIGINAL scores:
+the conditional normalization and score are different.
+
+One can further restrict X to m of the2n original slices. Conditional on
+xi and the other original variables, the score still has mean zero in
+its acted-on variables. The corresponding bound improves to
+
+             |E XG_n|^2 <=[m/(4n^2)]E sigma_cond^2.      (4.3)
+
+Dependence of the coefficients of X on the remaining coordinates does
+not invalidate this conditional integration. The entire acted-on subset
+and its bounded source terms must be retained. Equation(4.2) suffices
+for the full collective case.
+
+5. ORIGINAL VERSUS CONDITIONAL SCORES: THE EXACT FISHER PRICE
+
+Return to a smooth ORIGINAL field X(U), independent of xi. Define the
+conditional-lift score
+
+ S_kappa(U,xi)=X log kappa_U(xi).
+
+It has E_(kappa_U) S_kappa=0 at every U. Taking the U derivative of the
+two exact joint densities gives
+
+ sigma_cond=sigma_X-S_kappa,
+ E sigma_cond^2=E sigma_X^2+E I_U(X),
+ I_U(X)=E_(kappa_U) S_kappa^2.                           (5.1)
+
+The cross term vanishes by conditioning on U, even for field-dependent
+X(U). Also E[G_n S_kappa]=0 since G_n is an original function. Thus
+both integration-by-parts numerators equal the same E XG_n. No derivative
+of an auxiliary posterior is being thrown away.
+
+The exact Gaussian-score calculation in
+turn82_auxiliary_channel_gauge.txt Section4 gives, for every real U and
+every tangent v,
+
+ I_U(v)<= (18beta+24)|v|^2.                              (5.2)
+
+The underlying calculation holds G fixed when differentiating the
+conditional R mean, kills the cross scores by their conditional Gaussian
+mean zero, and sums the six plaquette incidences. Hence it applies
+pointwise with v=X(U). Combining(4.2),(5.1) proves the actual necessary
+response condition
+
+ |E XG_n|^2 <=[E sigma_X^2+E I_U(X)]/(2n)
+             <=[E sigma_X^2+(18beta+24)E|X|^2]/(2n).     (5.3)
+
+For example, E sigma_X^2<=C and |E XG_n|>=c>0 would require
+ E I_U(X)>=2n c^2-C. It is consistent with a genuinely collective
+deformation; it says its auxiliary lift cannot have negligible Fisher
+cost. That cost cannot be relabelled as the original score variance.
+
+For beta>=1, equations(0.2),(5.2) imply
+
+ E sigma_cond^2 <= B_X+(18beta+24)E|X|^2 <=8 B_X,
+
+because (18beta+24)/(6beta+1/2)<=7. Inserting this in(4.2) proves
+(0.3). It rules out a uniform floor obtained by substituting B_X for
+the actual score denominator in(2.1), for EVERY original X at once.
+It does NOT bound Var G_n from above and does not rule out a deformation
+whose actual score is much smaller than B_X because the terms in(0.1)
+cancel. This is the precise failure of the crude Hessian certificate.
+
+5A. THE EXACT FISHER MATRIX AND WHAT FIXED AUXILIARIES REMOVE
+
+There is an explicit refinement of(5.2), using the SAME standard
+three-first/three-second convention. At fixed real xi the U-dependent
+part of log Pi is exactly sum_e a_e(xi).q_e(U_e). Along a product
+Pauli/2 geodesic, q_e''=-|X_e|^2 q_e/4. Therefore
+
+ Hess_U log kappa_U(xi)(X,X)
+   =-(1/4)sum_e [a_e(xi).q_e(U_e)]|X_e|^2
+                                           +beta Hess S4(X,X).
+
+Twice differentiating integral kappa_U(dxi)=1 gives the Fisher identity
+I_U(v)=-E_(kappa_U) Hess log kappa_U(v,v) for every fixed tangent v.
+The tangent may then be evaluated at v=X(U), without differentiating
+the coefficients of X. Thus, pointwise at every original U,
+
+ I_U(X)=sum_e D_e(U)|X_e|^2-beta Hess S4(X,X),
+ D_e(U)=(1/4)E_(kappa_U)[a_e.q_e].                       (5A.1)
+
+The exact conditional mean of the current in
+turn82_auxiliary_tails_tail.txt Section2 yields
+
+ D_e=6+(beta/4)[27-sum_(p:first at e)h_p
+                          -3sum_(p:second at e)h_p],
+ 6+3beta/4 <=D_e<=6+27beta/4.                            (5A.2)
+
+Indeed each first incidence has a(J^0).q=3beta-beta h_p,
+each second incidence6beta-3beta h_p, and the three second-incidence
+Gaussian corrections add24 to a(J).q. There are three incidences of
+each type. Equations(5A.1)--(5A.2) retain all plaquettes and the actual
+original U; no flat approximation or original-law averaging was used.
+For example(3.3) also gives the improved, though unnecessary here,
+Fisher upper bound I_U(X)<=(6+51beta/4)|X|^2.
+
+Writing K(X)=|nabla X|^2-|d X^flat|^2+|X|^2/2, the exact variance
+relation(5.1) and(0.1) now become
+
+ E sigma_cond^2=E[K(X)+sum_e D_e(U)|X_e|^2].              (5A.3)
+
+The Wilson covariant-curl/curvature contribution cancels EXACTLY between
+the original score and the conditional-lift Fisher term. K(X) is signed;
+no pointwise positivity or lower bound on(5A.3) is inferred by discarding
+it. This explicit cancellation explains why fixed-auxiliary conditional
+noise is not a substitute for the physical original collective response.
+
+Conversely one CAN lift an original deformation without paying a new
+score by holding its independent real Gaussian innovations fixed. Write
+the exact generative joint as mu(dU) gamma(dZ,dW), with
+G=m(U)+Z and R=n(U,G)+W. Vary U with X, keeping Z,W fixed, and push
+forward G,R accordingly. This joint variation has score sigma_X exactly,
+since gamma has no U dependence. In the (U,xi) coordinates it includes
+the auxiliary variations dot G=Dm[X] and
+dot R=D_U n[X]+D_G n[dot G]. It does NOT hold xi fixed and is therefore
+outside the conditional-score exclusion(4.2). It supplies no new bound
+on sigma_X or nonzero response; all cancellations in(0.1) remain needed.
+
+6. THE REMAINING OUTER RESPONSE AND PHYSICAL-BLOCK SCOPE
+
+For an original score, write M=CG_n and Q=C sigma_X. Then exactly
+
+ E XG_n=E_nu[M Q]+E[(G_n-M)(sigma_X-Q)],
+ |E[(G_n-M)(sigma_X-Q)]|
+                  <=sqrt[E sigma_X^2/(2n)].             (6.1)
+
+The scores have mean zero. Thus a bounded-score, nonvanishing response
+must have a nonvanishing limiting covariance of M and Q under the FULL
+interacting nu. From(5.1), C sigma_cond=0 also implies Q=C S_kappa.
+This identifies the auxiliary mean-score which the conditional-noise
+construction misses. There is no lower bound on it here. Computing Q
+under independent auxiliary Gaussians would change the law and erase
+the issue.
+
+The same identities and the4/n certificate obstruction also hold after
+conditioning on arbitrary original exterior links of a finite block,
+provided the free variables remain an ordinary product of SU(2) links,
+ALL action plaquettes touching them (including boundary crossings) are
+retained, and the slice probes remain bounded in[0,1]. Given the exterior
+and the actual auxiliary record, the free original links still have a
+product law. No stationarity is needed for(4.1)'s upper bound, and the
+same six-incidence Hessian/Fisher upper bounds apply to free directions.
+There is no weak-boundary hypothesis in this negative certificate test.
+
+This does not import the identities into an exact coarse-constraint
+fiber equipped with a different volume/Jacobian, or a raw native
+operator. Such a setting needs its own score and boundary terms. Nor
+does a conditional-block response give a full-law variance floor without
+the original boundary marginal and its response being kept.
+
+The concrete next estimate is therefore sharper than 'find a smooth
+collective X': one must control the exact signed score expression(0.1)
+with its actual source-dependent curvature and strain marks, and prove
+a nonzero outer response(6.1), on the SAME regulator/calibration sequence.
+Neither unmarked Wilson energy moments nor a uniform bound on Hess S4
+does this. The full nontrivial YM4 goal remains open.
+
+
+========================================================================
+
+TURN90 -- PRIMARY INPUT CHECK FOR AN ORIGINAL PHYSICAL-BLOCK LOWER BOUND
+Checked 2026-10-21 02:43 UTC (20 October local).
+Scope: targeted source review and an explicit scaling check. No new YM4
+existence, original-law variance floor, or authoritative frontier change.
+
+1. EXACT TARGET REVALIDATED
+
+TURN89 requires, on ONE original SU(2) Wilson cutoff/volume sequence,
+ Var_W G_n >= v > 0,
+ G_n = n^-1 sum_{k=0}^{n-1} phi_a(k)
+       - n^-1 sum_{k=n}^{2n-1} phi_a(k),  n a in [L_min,L_max].
+The bounded slice scalar phi_a uses fixed physical spatial flow, fixed
+spatial weights, and fixed observable parameters h,g_*. This is a
+time-window contrast, not an equal-time variance. TURN89 then supplies
+the actual finite-thermal physical-band and reflected-norm consumers.
+Neither the variance premise nor its interacting auxiliary-mean version
+is proved. A Dirichlet/free-boundary substitute must be attached to the
+original law on the whole read, including its boundary distribution.
+
+Read against current_proof_frontier_turn89_draft.txt and the retained
+TURN61/69 source reviews. The result of this targeted check is NEGATIVE
+AT THE INSPECTED SOURCE SCOPE: no applicable lower-bound theorem found.
+This is not a literature-wide impossibility claim.
+
+2. PURE WILSON: QUANTITATIVE SMALL-BOX SCALE IN CHATTERJEE
+
+Primary: S. Chatterjee, The leading term of the Yang-Mills free energy,
+J. Funct. Anal.271 (2016),2944--3005; arXiv:1602.01222v6.
+ https://arxiv.org/pdf/1602.01222v6
+ https://doi.org/10.1016/j.jfa.2016.04.032
+
+Source statements: U(N), free-boundary boxes, beta=g_0^-2. Theorem2.1
+is a free-energy-per-site asymptotic. Theorem10.1 (PDFp21) controls an
+axially gauged region with link radius C delta_{n,beta}, where
+ delta_{n,beta}=n^((d+1)/2) sqrt(log(beta)/beta).
+Lemma17.2 (PDFp41) has remainder C/n^d+C delta+C beta delta^3 in the
+pressure bound. Theorem16.3 (PDFp40) supplies the Taylor error
+ |S(exp(iH))-(1/2)M(H)| <= C r^3 n^d.
+Lemma17.3 and the proof of Lemma17.4 (PDFpp42--43) handle large boxes
+by decomposing into smaller ones. None of these is a source-preserving
+normalized comparison for a physical-block observable.
+
+NEW CHECK OF THESE ACTUAL NUMERICAL CONDITIONS (our arithmetic): in d=4,
+ delta^2=n^5 log(beta)/beta,
+ (beta delta^3)^2=n^15 (log(beta))^3/beta.
+Thus the displayed direct small-box errors tend to zero only under
+the corresponding smallness conditions; in particular beta delta^3->0
+requires n^15 (log(beta))^3/beta->0. This is a condition on this bound,
+not a necessary condition for Yang-Mills Gaussian behavior.
+
+For a fixed positive physical side R_phys, n~R_phys/a and an intended
+logarithmic inverse coupling beta~log(1/a), even delta is unbounded.
+More generally a polylogarithmic beta cannot pay any positive power of
+n. Small physical volume does not change this as a->0 with R_phys fixed.
+Taking comparison boxes m to grow as a small power of beta makes their
+physical diameter a m tend to zero. Cutting into such boxes can recover
+an extensive pressure but does not preserve a source joining two fixed
+physical time windows. This is exactly the source interface that would
+have to be added; it is not present in the inspected proof.
+
+The U(N) theorem is not automatically an SU(2) theorem. Its numerical
+failure to supply our bound already occurs before that group issue.
+
+Independent check of why a pressure theorem is insufficient here:
+for |G_n|<=1 and any real s,
+ |log E_W exp(s G_n)| <= |s|.
+Its contribution to pressure per site is at most |s|/|Lambda|. Hence
+an unmarked o(1) pressure-per-site remainder can be much larger than
+the entire signal whose second source derivative is sought. This
+observation does not justify differentiating that remainder. The
+required additional estimate is an O(1), source-resolved remainder.
+
+The two critical pages were rendered and visually checked:
+ work/turn90_sources_tail/Chatterjee-p21.png
+ work/turn90_sources_tail/Chatterjee-p41.png
+PDF SHA256:
+ F939A1E8786059486DCCB14085CEC1637B7A254DB21CCDBC3DEE3B6C7689BCAA.
+
+3. FIXED INFRARED CUTOFF IS NOT THE MISSING ORIGINAL-WILSON THEOREM
+
+Primary: J. Magnen, V. Rivasseau, R. Seneor, Construction of YM4 with
+an infrared cutoff, CMP155(1993),325--383.
+ https://doi.org/10.1007/BF02097397
+Author-uploaded published text:
+ https://www.researchgate.net/publication/251358884_Construction_of_YM_4_with_an_infrared_cutoff
+Author preprint entry: https://web.ma.utexas.edu/mp_arc-bin/mpa?yn=92-38
+
+Read published introduction pp325--328, not a new full-proof audit.
+The stated model is SU(2), fixed infrared cutoff, trivial topological
+sector, regularized axial gauge, special momentum cutoff and restoring
+counterterms. SectionII.A removes the constant Fourier mode. Page327
+states ultraviolet convergence and Slavnov identities for its specified
+bare measure (II.77), while explicitly saying that a detailed proof of
+that statement is not provided. The same page proposes lattice matching
+as additional work toward OS positivity. Infrared removal is excluded.
+
+Consequently even accepting its stated construction does not provide a
+checked lower bound for our original Wilson flowed scalar with the same
+normalizer, boundary law and positive transfer matrix. A fixed-IR model
+cannot silently be substituted for that law. This sharpens the earlier
+TURN7 scope note by recording the published proof-status qualification;
+it does not assert the construction is false.
+
+Provenance precision: these introductory passages were inspected in the
+author-uploaded indexed full text and matched against the publisher
+abstract. No new visual PDF check is claimed for MRS. The attempted
+Euclid downloads returned HTML challenge pages (saved as .html), not
+PDFs. The paper's actual local estimates have not been re-audited here.
+
+4. MODERN CANDIDATES: WHAT IS AND IS NOT NEW
+
+(a) Deng--Shen, arXiv:2607.10105v2 (25Aug2026), The four-dimensional
+Anderson model: a case study for critical SPDEs.
+ https://arxiv.org/html/2607.10105v2
+Theorem1.1 concerns a random Schrodinger resolvent on T^4 at coupling
+lambda/sqrt(|log epsilon|), after centering, rescaling and counterterms.
+Section1 explicitly leaves nonlinear Yang-Mills applications to future
+work. It is a genuine critical-model limit, not a Wilson correlation
+theorem. This newly inspected primary result provides no current input.
+
+(b) Brennecke's 2026 leading-free-energy paper, the 2025 plaquette-field
+generating-function paper, and the 2026 completely broken Higgs/Proca
+limit were already scoped in regular_channel_primary_inputs_turn69.txt.
+No new correlation theorem was identified by refreshing their stated
+scope. The last model has a Higgs-derived mass and different tuning;
+the first is pressure; the second gives upper source bounds. The SU(2)-Higgs
+abstract was checked separately for its model and Gaussian-limit tuning;
+no full-proof audit or pure-Wilson input is claimed.
+
+(c) FSS Gaussian domination and perturbative Yang-Mills/gradient-flow
+renormalization were already checked in TURN69/63. They are not a new
+nonperturbative lower bound for this nonlinear original Wilson probe.
+No secondary mass-gap claim or repository assertion is used as input.
+
+5. CONSEQUENCE FOR THE NEXT ACTION
+
+No source checked here replaces the original-law boundary/mean estimate.
+The concrete new exclusion is numerical: the small-box Gaussian bound
+actually used in the pure-Wilson pressure proof has the n^5 and n^15
+losses above. Its large-box repair does not repair the marked interface.
+The finite physical Dirichlet route therefore still needs a multiscale
+normalized source comparison with a boundary event of sufficient original
+probability; choosing a fixed number of weak fine links is not that event.
+The separate TURN90 history producer examines this original probability.
+
+Finally, no bare-field rescaling is allowed to manufacture the desired
+signal. A Maxwell limit for a field divided by a vanishing bare coupling
+would concern a different observable unless the complete physical source
+normalization is matched. The fixed g_* in phi_a is an observable parameter,
+not an already proved running-coupling identification. All physical flow,
+spatial/time profiles and original measure must stay on the same sequence.
+
+VERDICT: no usable original physical-window variance lower bound obtained
+from the inspected primary sources. The quantitative Chatterjee scale
+check and the MRS proof/model distinctions narrow which theorem is still
+needed; they do not prove a no-go or close the continuum construction.

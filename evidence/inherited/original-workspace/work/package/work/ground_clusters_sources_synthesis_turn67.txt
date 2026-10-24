@@ -1,0 +1,289 @@
+ACTUAL GROUND-LAW CLUSTERS AND FINITE-TIME PHYSICAL SOURCES
+TURN67. 20 October 2026.
+
+THE COMPLETE NONTRIVIAL YM4 CONTINUUM EXISTENCE PROOF HAS NOT BEEN OBTAINED.
+This turn is PROGRESS, not completion. The full goal remains active.
+
+The two main advances are an actual-law joint large-field estimate
+and an exact source formula for a separated physical state. The
+former controls local magnetic action and its bad-component geometry.
+The latter identifies a finite-time source remainder whose uniform
+control could replace the unresolved nonlinear-flow derivative
+estimate. Neither result supplies that final physical estimate.
+
+1. THE LAW IS THE ACTUAL HAMILTONIAN GROUND LAW
+
+On a finite periodic spatial SU2 lattice, use the Pauli/2 metric,
+n sites, K=-Delta, and
+
+ H_a=g_a^2 K/(2a)+4 S/(g_a^2 a),
+ S=sum_(spatial p) h_p, h_p=1-Tr U_p/2.
+
+Let Omega_a>0 be its normalized ground state, E0(a) its ground
+energy, and mu_a=Omega_a^2 dHaar. TURN66 constructed this state
+from actual anisotropic Wilson measures by taking the temporal
+ground limit and then the continuous-time limit at fixed spatial
+lattice. That proof retained the complete normalizer.
+
+Its direct trial estimate gives E0(a)<=9n/a. The new multiplier
+identity and the pointwise bound |grad S|^2<=8S imply
+
+ log E_mu_a exp(t S/g_a^2)
+                  <=(a E0(a)/2)artanh(t/2)
+                  <=(9n/2)artanh(t/2), 0<=t<2.         (1.1)
+
+This uses the actual ground equation. It is stronger than the
+unmarked first moment but remains an extensive action bound.
+
+2. JOINT LOCAL CONTROL, INCLUDING TILE BOUNDARIES
+
+Take even spatial periods and rectangular tiles of fixed lattice
+side lengths l_i>=2, with N_i/l_i powers of2. Put V=l_1l_2l_3.
+Spatial site-reflection positivity follows by conditioning on
+the two fixed planes in the finite Wilson model, then passing
+to the fixed-spatial ground limits.
+
+The multipoint estimate is proved explicitly. Normalize each
+block function by its full-board dissemination norm, maximize
+over the finite set of label patterns, and apply RP
+Cauchy--Schwarz. Either reflected half of a maximizing pattern
+is still maximizing. Dyadic reflections then disseminate one
+label throughout the board. Its normalized expectation is1.
+This gives the full mixed-pattern chessboard inequality.
+
+For strict-interior tile actions S_b^int, the copies are disjoint:
+
+ log E exp(sum_b t_b S_b^int/g_a^2)
+          <=(9V/2)sum_b artanh(t_b/2), 0<=t_b<2.        (2.1)
+
+For closed tiles every plaquette is covered and appears at most
+twice. Shared boundary links are permitted by the site-RP
+pairing. Consequently
+
+ log E exp(sum_b t_b S_b^cl/(2g_a^2))
+          <=(9V/2)sum_b artanh(t_b/2), 0<=t_b<2.        (2.2)
+
+For the closed-tile bad events
+
+ A_b={S_b^cl>=g_a^2 L^2},
+ q=min{1,3^(9V/4)exp(-L^2/2)},
+
+and EVERY prescribed finite set A of distinct tiles,
+
+                 mu_a(intersection_(b in A) A_b)<=q^|A|. (2.3)
+
+This is a simultaneous probability estimate under the original
+ground law. It assumes no independence of block variables.
+
+Give the tile board a specified adjacency of maximum degree D.
+For the bad component C_b containing a fixed tile b,
+
+ mu_a(|C_b|>=k)<=q(D^2q)^(k-1).                         (2.4)
+
+The proof counts rooted connected k-sets by their canonical
+depth-first spanning-tree walks. Taking the union over the
+whole board costs its number K_board of tiles:
+
+ mu_a(some bad component has size>=k)
+                    <=K_board q(D^2q)^(k-1).           (2.5)
+
+If D^2q<=exp(-c0)<1 and the physical volume is fixed, then
+K_board=O(a^-3). Taking k>=4log(1/a)/c0+1 makes (2.5) O(a),
+in fixed physical units. Outside this exceptional event every
+component has physical diameter O(a log(1/a)), which tends
+to zero. Touching adjacency (D<=26) covers all geometric contacts.
+Face adjacency (D<=6) gives the corresponding face-connected result.
+
+These events measure unflowed plaquette action at one fixed tile
+resolution. They do not include Bałaban's complete reconstruction,
+minimizer, gauge, or history predicates. Shrinking component
+diameter does not by itself bound its effect on the flow.
+
+3. WHAT THE LOCAL ESTIMATE GIVES FOR A DERIVATIVE MARK
+
+A4^3 tile contains a full spatial edge star. For this consequence
+take N_i/4 to be nonnegative integral powers of2. With
+rho_e=sum_(p containing e)sqrt(h_p), the new local bound gives
+
+                  E_mu_a exp[rho_e^2/(4g_a^2)]<=3^144.
+
+For a nonnegative actual mark W, m=E_mu_a W>0, and the tilted
+law nu=(W/m)mu_a, entropy comparison therefore proves
+
+ E_mu_a[rho_e W]
+    <=2g_a m sqrt[H((pi_e)_*nu | (pi_e)_*mu_a)+144log3]. (3.1)
+
+Here pi_e reads only the finite star. For a flowed mark W_r,
+replace its tilted star marginal by
+(pi_e o Phi_r)_*((W_r/EW_r)mu_a), keeping the unflowed ground
+star law in the entropy denominator.
+
+This retains the actual correlation between curvature and
+the derivative. The marked entropy is still unbounded by the
+current estimates. Even a bounded entropy would require
+preserving the spatial parabolic coercivity; a crude Gronwall
+bound would still have an unacceptable coefficient g_a/a^2.
+
+Ground-law integration by parts exposes a weighted divergence
+term or a second configuration derivative. It does not remove
+them. The exact formulas and their scope appear in the producer.
+
+4. AN ALTERNATIVE PHYSICAL CONSUMER: SEPARATED COMPOSITES
+
+Let Q_a be a physically calibrated real gauge-invariant local
+insertion, bounded at each regulator but not necessarily bounded
+uniformly as a->0. Its renormalization is part of the work still
+required. In the actual ground state set
+
+ A_a=H_a-E0(a), q_a=Q_a-EQ_a,
+ C_a(t)=<q_a Omega_a,exp(-t A_a)q_a Omega_a>.
+
+For t>0, the vector exp(-t A_a)q_a Omega_a has squared norm
+C_a(2t), and its energy form is bounded by C_a(t)/(e t).
+Thus a separated lower bound C_a(2t)>=c>0 together with
+C_a(t)<=C would avoid the equal-time variance and nonlinear
+spatial-flow derivative requirements for this vector.
+
+The new exact formulation uses an insertion integrated over a
+positive-time interval[t,t+delta]. Its reflected norm is
+
+ R_a(t,delta)
+   =int exp(-2tE)[(1-exp(-delta E))/E]^2 rho_a(dE),       (4.1)
+
+where rho_a is the positive centered spectral measure of Q_a.
+For0<s<t its energy is at most R_a(t-s,delta)/(2e s).
+An earlier-window upper bound and later-window lower bound
+are therefore sufficient for a nonzero bounded-energy vector.
+
+This is an exact consumer, not a proved interacting estimate.
+A full continuum local algebra still requires compatible mixed
+insertions, physical renormalization, symmetry and reconstruction.
+
+5. FINITE-TIME SOURCE DATA EXTRACTS EXACTLY THAT NORM
+
+Keep the SAME unsourced ground vector on both ends and define
+
+ K_Q(T,lambda)
+   =log<Omega,exp[-T(H-lambda Q-E0)]Omega>,
+ J_Q(T)=partial_lambda^2 K_Q(T,0).
+
+The exact stationary ground-process identity gives
+
+ J_Q(T)=2int[T/E-(1-exp(-TE))/E^2]rho_Q(dE).
+
+Consequently, for Delta_delta^2 f(T)=f(T+2delta)-2f(T+delta)+f(T),
+
+              R_Q(T/2,delta)=(1/2)Delta_delta^2 J_Q(T). (5.1)
+
+The second finite difference cancels every affine term in T.
+In particular the asymptotic bulk susceptibility2T int rho/E
+does not determine this positive finite-time remainder.
+
+There is an exact version for the actual global coupling source.
+Put gamma=g^-2 and
+
+ K_gamma(T,tau)
+ =log<Omega_gamma,
+       exp[-T(H_(gamma exp(tau))-E(gamma))]Omega_gamma>.
+
+The operator derivatives are H'=Q-T_kin and H''=H for
+Q=4gamma S/a. On the ground vector the centered H' equals
+twice centered Q. Hence
+
+ chi_Q=int_0^infinity C_Q(t)dt
+       =[E-gamma E_gamma'-gamma^2 E_gamma'']/8,
+
+ R_Q(T/2,delta)=(1/8)Delta_delta^2
+                                  partial_tau^2 K_gamma(T,0). (5.2)
+
+The kinetic second-derivative term is retained before it cancels
+under the finite difference. This global source is a zero-spatial-
+momentum insertion; local source profiles remain an additional task.
+
+There is a quantitative remainder target. If
+J_a(s)=A_a s+B_a+R_*(s)+e_a(s) at the three matched time lengths,
+with |e_a(s)|<=epsilon, then the actual window norm differs
+from Delta_delta^2 R_*(T)/2 by at most2epsilon. For source-log
+errors before two source derivatives, a common zero-free
+holomorphic disc of radius r gives the cost4epsilon/r^2.
+For the log-coupling version these constants become epsilon/2
+and epsilon/r^2. Such remainder and source-disc estimates are
+not yet proved for the physically renormalized interacting model.
+
+All identities here are at the fixed-spatial Hamiltonian level.
+The prior temporal construction realizes fixed real source
+values and finite products. It does not justify interchanging
+source second derivatives with a temporal-regulator limit.
+
+6. CHECKED LIMITATIONS THAT AVOID FALSE COMPLETION
+
+The following conclusions were checked in the accompanying notes.
+
+* Extensive ground-energy and Fisher upper bounds, even together
+  with an upper bound on the Dirichlet form of the SAME physical
+  observable, cannot alone force its variance floor. Exact IMS
+  localization constructs positive gauge-invariant comparison
+  states with those bounds and collapsing variance. These states
+  are not asserted to be the actual ground state or Wilson path law.
+
+* Static source susceptibility alone does not force positive-time
+  spectral weight. Explicit reversible finite-state examples have
+  bounded observables, variance1 and susceptibility1 while every
+  fixed positive-time covariance tends to zero. These examples
+  test a spectral inference, not the Yang--Mills model.
+
+* Under the actual original isotropic Wilson law, bounded nonlinear
+  processing of polynomially many private physical thin-loop reads
+  still has centered reflected norm tending to zero when each private
+  set has at least c/a edges and beta=O(log(1/a)). Sequential exact
+  conditioning proves this; no independence is assumed. Thick
+  or flowed loops and renormalized unbounded insertions are
+  outside that exclusion.
+
+* The free magnetic composite has a strictly positive finite
+  separated covariance:
+  0<C_Q(t)<=3q_col||f||_2^2/(32pi^2 t^5) for nonzero nonnegative
+  f in C_c^infinity. Here q_col counts independent color copies
+  (q_col=3 for the SU2 free benchmark). Its equal-time L2 divergence does not
+  prevent a positive-time OS vector. This free computation
+  has not been transferred to the interacting law.
+
+* A recent subcritical Gaussian heat-flow theorem does not
+  supply the physical spatial-flow estimate. The free
+  four-dimensional equal-time covariance on a three-dimensional
+  slice is1/(2|k|), or1/(4pi^2|x|^2) in position space.
+  Its fractional dimension is4, at the theorem's excluded
+  endpoint. This is an admission check, not a flow nonexistence
+  result or an asserted interacting covariance.
+
+7. WHAT REMAINS TO PROVE
+
+The immediate physical source target is a uniform normalized
+finite-time remainder estimate producing a nonzero separated
+state, with an earlier-time upper bound. The alternative
+bounded-flow target still requires BOTH a physical variance
+floor and an averaged initial-field gradient bound under the
+actual law. Neither has been replaced by reference-field variance.
+
+The native Bałaban route retains its verified marginal-preserving
+replacement identity, admitted reference coercivity, and
+success-weighted counting results. Its low-reference-success
+second-class contribution and original-observable transport
+remain unresolved. The present Hamiltonian cluster events do
+not settle those native admissions.
+
+The temporal-limit regulator has not automatically inherited
+isotropic Bałaban running-coupling and source estimates.
+A compatible spatial continuum and infinite-volume local theory,
+the required Euclidean symmetries, reconstruction, and
+nontriviality remain to be established.
+
+The public repository refresh found no changed files relative
+to TURN64 in Ethan/Sussman's repository, at commit
+cf596e69629e0da2e25e33ab8cafc507c023a1de.
+Both user-supplied Bałaban papers have already been incorporated.
+No unpublished completion is used as a theorem.
+
+The report includes internal derivations and independent internal
+checks. These are not external peer review. The new estimates are
+progress toward the stated goal, not a complete YM4 existence proof.

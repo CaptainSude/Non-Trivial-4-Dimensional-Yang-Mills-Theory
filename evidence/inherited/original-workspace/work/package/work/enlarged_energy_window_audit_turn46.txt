@@ -1,0 +1,343 @@
+ENLARGING THE ACTUAL ENERGY WINDOW WITHOUT A SMALL OUTER CUBIC EXPONENT
+19 October 2026. TURN46. Independent audit/proof by native46.
+
+VERDICT
+
+PASS, with the hypotheses and qualifications stated below. The TURN45
+conditions g Lambda^3+Ng Lambda<<1 are unnecessarily strong for comparing
+the actual energy-window integral with its auxiliary product-cutoff
+integral. They made the interacting correction uniformly bounded by a
+constant throughout the outer integration domain. For a PURE-TAIL
+comparison it suffices to retain coercive Gaussian decay there and pay
+an exp(CN) amplitude cost.
+
+The replacement conditions are a fixed small bound g Lambda<=epsilon,
+the actual geometric coverage of the entire supported fiber in its
+complete chart, and the original auxiliary cluster conditions. In
+particular gT^3<<1 is still required on the auxiliary cube. The comparison
+is joint in complex datum and source variables, and its logarithm uses
+the auxiliary cluster lower bound, not a near-one Laplace ratio.
+
+One quantitative change must be retained: the real positive-mixture
+deficit now has an exp(CN) prefactor and a weaker Gaussian exponent,
+exp(CN)m exp(-cT^2). The dimension-free earlier C m exp(-T^2/2) estimate
+is not asserted in this larger window regime.
+
+1. INPUTS, PARAMETERS, AND THE ACTUAL COVERAGE REQUIREMENT
+
+Use exactly the complete fixed-L, fixed-crossing, G0-quotient/coarea
+chart of TURN41--45, with all charged plaquettes and all affected coarse
+rows. Retain the same original Haar and coarse-Haar normalizers. Write
+K=ker Q, Pi for its Euclidean orthogonal projector, d=dim K, and m for
+the full ambient Gaussian dimension, with d,m<=C_L N. The nonorthogonal
+constraint-chart projector is not used in Gaussian decompositions.
+
+The existing joint chart supplies the holomorphic saddle B_*(u), action
+s(u), constrained Hessian H(u), complete Jacobian J, and the uniform
+analytic Morse inverse b_M(y,u). In a fixed small complex neighborhood,
+
+ |s(u)|<=C N ||u||_infinity^2,
+ ||B_*(u)||_2<=C sqrt(N)||u||_infinity,
+
+ f(B_*+b,u)-s(u)=b^t H(u)b/2+R_3(b,u),
+ |R_3(b,u)|<=C||b||_2^3,
+ |log[J(B_*+b,u)/J_*(u)]|<=CN||b||_2,                 (1.1)
+
+and H, H^(-1), H^(+-1/2) have uniformly bounded operator norms. The
+principal square-root branch is symmetric for the bilinear transpose.
+The Morse map obeys
+
+ f(B_*+b_M(y,u),u)-s(u)=y^t y/2,
+ b_M(y,u)=H(u)^(-1/2)y+O(||y||_2^2),                 (1.2)
+
+with the corresponding first-derivative remainder. It is defined on a
+fixed Euclidean y-ball, uniformly in the admitted datum polydisc. The
+logarithmic y derivative of its complete amplitude A(y,u)/A0(u) is
+bounded by CN there. These are exactly the previous chart inputs; no
+new massless propagator estimate is imported.
+
+Set
+
+ E0=g^2 Lambda^2,  rho=c0 g Lambda/sqrt(N),
+ sigma=rho+gT,   R=Lambda/2,
+ ||u||_infinity<rho,  ||w||_infinity<c_w/sigma^2.       (1.3)
+
+Choose c0 sufficiently small that |s(u)|<E0/8. Require
+
+ g Lambda<=epsilon,
+ mT^2<=R^2/4,
+ rho<r0,
+ gT^3<=epsilon_cluster,                              (1.4)
+
+with epsilon small enough for ALL linear, Morse, angular and Stokes
+charts in this note; r0 is the existing fixed local analytic datum radius.
+The auxiliary local source catalogue must satisfy its original smallness
+condition C ||w|| sigma^2<=epsilon_source, ensured by the fixed c_w.
+
+Additionally require the actual geometric coverage of the supported
+fiber f<=2E0, with an open margin, in the complete G0 chart. A sufficient
+condition furnished by TURN41 is
+
+ C_L [g R_geom Lambda+R_geom ||e||+||Y-I||] <=epsilon_cov,
+                                                               (1.5)
+
+where R_geom is the relevant fine box diameter and e,Y are the entire
+fixed exterior/coarse datum. Relative/framed coordinate conversion has
+fixed-L constants. This condition must hold for the REAL family used
+to identify the holomorphic extension with the actual integral. The
+complex proof then uses (1.1)--(1.4) on the whole polydisc.
+
+Conditions (1.4) alone do not imply (1.5). In particular a large box's
+global energy-to-chart coverage is a genuine geometric restriction.
+No global compact-fiber convexity is inferred from local convexity.
+
+2. COERCIVITY ON THE LINEAR CONTOUR, INCLUDING COMPLEX DATA
+
+Let xi be real in the ambient space and put
+b=g H(u)^(-1/2) Pi xi. Because H(u) is symmetric and its analytic square
+root commutes with H(u),
+
+                 b^t H(u)b=g^2 |Pi xi|^2.             (2.1)
+
+This is an exact BILINEAR identity, even though u and b can be complex.
+It is not a claim that a complex matrix defines a positive Hermitian
+form. Equation (1.1) gives for r=|Pi xi|,
+
+ Re[(f(B_*+b,u)-s(u))/g^2] >=r^2/2-Cg r^3.            (2.2)
+
+For r<=C_0 Lambda, choosing g Lambda small relative to C_0 gives
+
+ Re[(f(B_*+b,u)-s(u))/g^2] >=c_1 r^2.                 (2.3)
+
+The real actual support, after linear whitening, satisfies such a bound
+r<=C_0 Lambda by chart coverage and the uniform real constrained gap.
+The fixed linear comparison ball has r<=R and is also covered.
+
+The complete Jacobian satisfies
+|J/J_*|<=exp(CN g r)<=exp(CN). The plaquette estimate remains
+
+ sum_p |h_p(B_*+b,u)| <=C(||b||_2^2+N||u||^2)<=CE0,   (2.4)
+
+and therefore the full physical source factor costs at most exp(CN),
+since E0/sigma^2<=N/c0^2. The same bound holds throughout the Morse
+ball and swept side, after fixed changes of constants.
+
+Crucially, the reference ambient Gaussian cancels only in K. Including
+the untouched K-perpendicular factor, the absolute normalized density
+is bounded by
+
+ exp(CN) (2pi)^(-m/2)
+       exp[-c_1|Pi xi|^2-|Pi_perp xi|^2/2].          (2.5)
+
+This is bounded by an isotropic Gaussian of rate c_2=min(c_1,1/2),
+whose normalization relative to the standard Gaussian costs
+(2c_2)^(-m/2)<=exp(CN). Consequently its integral on the ambient
+cube complement C_T^c is bounded by
+
+                  exp(CN) m exp(-cT^2).              (2.6)
+
+This argument explicitly pays both the weakened-Gaussian determinant
+and the full ambient dimension. It does not use an incorrect product
+Gaussian identity for the coordinates of Pi xi.
+
+3. LINEAR BALL VERSUS THE ACTUAL AUXILIARY CUBE
+
+Use the complete quantities R_aux and L_R defined in TURN45, with the
+exact auxiliary normalizer c_T^m. The condition mT^2<=R^2/4 puts the
+ambient cube inside the linear ball. Their integrands agree on that
+cube. Applying (2.6) to their difference gives
+
+ |L_R(u,w)-R_aux(u,w)|<=exp(CN) m exp(-cT^2).           (3.1)
+
+Both integrals are holomorphic in u,w on the declared common domain:
+the K linear ball is fixed, compact, and wholly inside the chart; the
+perpendicular Gaussian integrates exactly. No complex positivity is
+used. The cube is also inside the REAL cutoff plateau when
+Lambda^2>=C[mT^2+N Z^2+1], with ||u_real||<=gZ, or more generally by
+the direct bound f<=E0 on the cube for the stated real family. This is
+the same plateau condition as before and must remain explicit.
+
+At zero source and real data, the positive restricted-submeasure identity
+still holds. Coercivity bounds the numerator from C_T^c by (2.6), and
+the auxiliary lower bound of Section6 gives
+
+ 0<=1-a_aux(u;0)/a_E(u;0)<=exp(CN)m exp(-cT^2).        (3.2)
+
+The constants in exp(CN) can change. Neither exact positivity nor full
+normalization is lost, but the former sharper deficit is not retained.
+
+4. LINEAR BALL VERSUS MORSE BALL: THE MOVING COMPLEX CONTOUR
+
+The two oriented chains are
+
+ b_0(xi)=gH(u)^(-1/2)xi,
+ b_1(xi)=b_M(gxi,u),       xi in K real, |xi|<=R.
+
+Use the same explicit homotopy b_t=b_0+t(b_1-b_0). The small fixed bound
+gLambda<=epsilon keeps every point in the holomorphic chart. On |xi|=R,
+
+ |b_t-b_0|<=Cg^2R^2,
+ ||D_xi(b_t-b_0)||<=Cg^2R,
+ |partial_t b_t|<=Cg^2R^2.                           (4.1)
+
+The uniform Taylor bound gives
+
+ (f(B_*+b_t,u)-s)/g^2=R^2/2+O(gR^3).
+
+Its real part is >=R^2/4 under gR<=epsilon. This absorption requires
+gR small, NOT gR^3 small. The leading R^2 is retained throughout.
+The complete Jacobian and source factor on the side cost exp(CN) by
+Section2; they need not be bounded by a dimension-independent constant.
+
+Integrate the normalized holomorphic top-degree form used in TURN45.
+It is closed; Stokes applies to this smooth real (d+1)-chain in C^d,
+including complex u. The pulled-back side wedge has absolute size at
+most C^d g^(d+1) R^2 dt dS_R. The normalized side integral is therefore
+bounded by
+
+ exp(CN) C^d g R^2 (2pi)^(-d/2)
+                      |S^(d-1)| R^(d-1) exp(-R^2/4).
+
+Using the sphere area and the same Gamma estimate as TURN45, together
+with gR<=1, gives
+
+                |L_R-M_R|<=exp(CN-cLambda^2).        (4.2)
+
+There is no hidden power of g^(-1) left outside this bound. For example
+gR^2<=R is sufficient before applying the Gamma bound. The homotopy
+need not be injective, and the smooth cutoff never enters it.
+
+5. THE ACTUAL CUTOFF VERSUS THE MORSE BALL
+
+On |v|<=3E0 and the full complex datum/source domain define
+
+ h_w(v,u)=average_theta [A(sqrt(2v)theta,u)/A0(u)]
+                         exp[Phi_w(b_M(sqrt(2v)theta,u),u)].
+
+The uniform Morse chart applies if sqrt(6)gLambda is sufficiently small.
+Its amplitude bound is
+
+                       |h_w(v,u)|<=exp(CN).           (5.1)
+
+Odd angular powers cancel, so h_w is holomorphic in v. No estimate of
+h_w-1 or smallness of N gLambda is used. No assertion h_w(0,u)=1 is
+made for nonzero sources.
+
+Let a=d/2, t0=E0/2, q=t0-s(u). The exact actual normalized integral is
+continued by
+
+ R_E=1/[g^(2a)Gamma(a)] {
+ q^a int_0^1 exp(-qz/g^2)z^(a-1)h_w(qz,u)dz
+ +int_(t0)^(2E0) exp[-(t-s)/g^2](t-s)^(a-1)
+                                  h_w(t-s,u)psi(t/E0)dt }.
+
+The identity holds on the real family by the full supported-fiber Morse
+change of variables. It defines a holomorphic extension because the
+cutoff is a bounded function of FIXED REAL t and |s|<E0/8. Every energy
+argument remains in |v|<3E0. The same branch choices as TURN42 apply.
+
+The Morse-ball integral ends at v_R=E0/8. Deform the first radial path
+to its real segment followed by a vertical connector. The common
+[0,v_R] integral cancels EXACTLY. Remaining real radial segments start
+at v>=E0/8; the connector and outer term have Re v>=3E0/8. Inserting
+(5.1) into the normalized Gamma tail bounds gives
+
+                   |R_E-M_R|<=exp(CN-cLambda^2).      (5.2)
+
+In particular we never compare the entire Morse integral to one.
+The large common interacting core cancels before bounds are applied.
+For d=0 there is no side or radial integral. The real cutoff is on its
+plateau, the actual holomorphic generator is direct, and only the
+ambient redundant-cube normalization c_T^m is compared.
+
+6. ZERO-FREENESS FROM THE LOCAL CLUSTER, WITH NO NEAR-ONE ASSUMPTION
+
+The auxiliary cluster theorem on its UNCHANGED small cube supplies
+
+ R_aux(u,w)=c_T^m exp F(u,w),
+ |F(u,w)|<=C N,       c_T>=c_1>0  for T>=1.
+
+Therefore
+
+                   |R_aux(u,w)|>=exp(-CN).            (6.1)
+
+This is valid on the full complex datum/source polydisc by the assumed
+local catalogue conditions. It does not use gLambda^3 or N gLambda.
+Combining (3.1), (4.2), (5.2), then dividing by (6.1), gives
+
+ |R_E/R_aux-1|<=exp(CN)[m exp(-cT^2)+exp(-cLambda^2)]
+                       =:delta_enlarged.             (6.2)
+
+Choose the cutoffs so delta_enlarged<1/4. Then D=log(R_E/R_aux) is
+holomorphic with ||D||<=C delta_enlarged, and
+
+ log[a_E(u;w)/a_E(u;0)]
+ =sum_X[F_X(u,w)-F_X(u,0)]+D(u,w)-D(u,0).             (6.3)
+
+The exact leading prefactors and all vacuum/source-only contributions
+are retained before forming this ratio. Datum derivatives of D cost
+rho^(-k), source derivatives cost sigma^(2n), with the usual factorial
+Cauchy bounds. A full-box carrier is paid by imposing
+
+ T^2>=A[N+(p+1)log(1/g)+log(m+1)],
+ Lambda^2>=A[N+(p+1)log(1/g)+1],
+
+as well as the separate cube/plateau requirement Lambda^2>=C mT^2
+and the real-family energy margin. Fixed A absorbs the weakened rates
+c and the desired exp(kappa C_L N) carrier weight. Increasing Lambda
+does not improve the cube-complement term unless T is increased too.
+
+7. WHAT LARGER WINDOWS ARE NOW PERMITTED
+
+Suppose R_geom and N have fixed polylogarithmic growth and the exterior
+family is weak enough for (1.5). Take, with a sufficiently small fixed
+epsilon_* and the necessary coverage constants absorbed,
+
+ Lambda=epsilon_*/(g R_geom),
+ E0=epsilon_*^2/R_geom^2,
+ rho=c0 epsilon_*/(R_geom sqrt(N)).                   (7.1)
+
+Then gLambda=epsilon_*/R_geom is small, the geometric energy term in
+(1.5) is epsilon_*, and the complex datum term obeys
+R_geom rho=c0 epsilon_*/sqrt(N). The datum radius is still inside the
+fixed chart. A native real family gZ with fixed polylogarithmic Z lies
+well inside this larger disc for small g. The original auxiliary
+polylogarithmic T has gT^3<<1 and mT^2<<Lambda^2.
+
+Thus the ACTUAL WINDOW TAIL becomes
+
+             exp[CN-c/(g^2 R_geom^2)],               (7.2)
+
+up to constants depending on epsilon_* and the fixed geometry. This
+statement is compatible with the recorded chart hypotheses; the old
+restriction Lambda<<g^(-1/3) is not needed for this comparison.
+
+The full comparison still contains exp(CN)m exp(-cT^2). It is incorrect
+to report (7.2) as its sole error when T is only polylogarithmic. One may
+retain the old pure-cube-tail budget while exploiting the stronger
+omitted-energy exponent separately. Trying to enlarge T as far as
+Lambda violates the auxiliary gT^3 condition and requires a new theorem.
+
+Nor does (7.2) by itself bound every omitted original-Wilson history:
+one still needs the relevant conditional denominator, actual coarse
+constraint/current geometry, and history counting. This note repairs
+the single-step energy-window estimate only.
+
+8. AUDIT SUMMARY
+
+* Complex coercivity is proved by exact bilinear whitening plus cubic
+  absorption; it is not inferred from real positivity.
+* The weaker ambient Gaussian and its dimension cost are explicit.
+* Jacobian and physical-source amplitudes cost exp(CN), which is allowed
+  only because these bounds multiply tail terms.
+* The Stokes homotopy remains inside a fixed analytic chart and retains
+  its R^2 phase; no complex cutoff is introduced.
+* The radial common core cancels exactly; no false near-one estimate is
+  used at the enlarged window.
+* The local auxiliary cluster supplies the nonzero denominator.
+* Complete real-fiber coverage and the unchanged auxiliary small-cube
+  cluster are still indispensable hypotheses.
+* The enlarged omitted-energy exponent does not erase the separate
+  auxiliary-cube error or prove an all-scale construction.
+
+End of audit/proof.

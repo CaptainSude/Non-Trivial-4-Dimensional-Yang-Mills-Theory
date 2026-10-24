@@ -1,0 +1,136 @@
+INDEPENDENT AUDIT: ACTUAL GROUND-STATE LOCAL MGF AND MARKED FLOW COST
+TURN67. 20 October 2026. history47.
+
+Producer: work/hamiltonian_marked_derivative_turn67.txt.
+Scope checked: Sections1--8, especially the spatial reflection-positive
+attachment, strict-interior dyadic doubling, local constants, and
+transported entropy identity.
+Verdict: PASS at the stated finite-lattice/dyadic-period scope.
+No mathematical repair requested. The physical gradient bound and
+variance floor remain explicitly unproved.
+
+1. THE GROUND-STATE MULTIPLIER AND GLOBAL MGF
+
+The multiplier identity follows by multiplying H Omega=E0 Omega
+by f^2 Omega and integrating. With kappa=g^2/(2a), v=4/(g^2a)
+and |grad S|^2<=8S, f=exp(lambda S/2) gives
+
+ (v-2kappa lambda^2) Z'(lambda)<=E0 Z(lambda).
+
+Its positivity range is exactly0<=lambda<2/g^2.
+Integration from Z(0)=1 gives
+(aE0/2)artanh(lambda g^2/2), and E0<=9n/a gives the producer's
+(9n/2) coefficient. The t=1 factor is3^(9n/4).
+All factors of4 in the Pauli/2 metric have been retained.
+This is an actual Omega^2 statement, not an isotropic-Wilson
+conditional-law import.
+
+2. SPATIAL SITE REFLECTION POSITIVITY
+
+On the stated even periodic spatial lattice a site reflection
+has two fixed coordinate planes. Each elementary spatial or
+temporal plaquette lies in one closed half or in its boundary:
+a nearest-neighbor edge cannot jump from a strictly positive
+vertex to a strictly negative one across the fixed site plane.
+Conditional on all boundary-plane links, the finite anisotropic
+Wilson measure therefore has the claimed positive boundary
+weight times reflected product of two half weights.
+
+The reflection preserves the specified temporal slice. Its
+quadratic-form inequality passes first to the finite-delta
+transfer ground state and then to Omega, because the relevant
+spatial-half tests are bounded continuous and Omega_delta->Omega
+in L2 implies convergence of the associated squared densities
+in L1. Neither limit needs a bound uniform in the spatial lattice.
+This establishes precisely the site-RP needed by the next step.
+No RP of a nonlinear flow pushforward is inferred.
+
+3. THE SINGLE-FUNCTION DOUBLING AND LOCAL CONSTANT
+
+At each dyadic stage the existing product occupies a block of
+length at most half the corresponding period. Reflect across
+its right site plane and apply RP Cauchy--Schwarz against1.
+The result squares the number of copies and halves the exponent.
+Iterating in all three directions yields exponent1/K_B.
+
+The strict-interior convention ensures that outer boundary
+planes remain outside every copied function's read set.
+Different tiles' plaquette sets are disjoint; reflected h_p
+is the same nonnegative Wilson plaquette function with the
+reflected orientation. Hence sum of all copies S_B<=S pointwise.
+This proves
+
+ log E exp(t S_B/g^2)<=(9V_B/2)artanh(t/2).
+
+This argument keeps V_B as the enclosing tile volume; it does
+not assert an arbitrary-set bound with its plaquette cardinality.
+The required dyadic divisibility is explicit.
+
+A4^3 tile with an edge from(1,2,2) to(2,2,2) contains its four
+incident spatial plaquettes strictly in its interior. Their
+vertices have each coordinate in{1,2,3}. Thus rho_e^2<=4S_B,
+and9*64/4=144 gives the claimed bound3^144. The thirteen-link
+star count is also correct: one common edge and three distinct
+additional edges for each of the four plaquettes.
+
+4. THE ACTUAL MARKED ENTROPY CONSUMER
+
+For nu=(W/EW)mu the entropy variational inequality with
+rho_e^2/(4g^2), followed by Cauchy--Schwarz under nu, proves
+
+ E_mu rho_e W <=2g EW sqrt[H(nu|mu)+144log3].
+
+Since rho_e reads only its star, the identical argument on the
+star marginal replaces full entropy by the marginal relative
+entropy. This does not require independence. If that entropy
+is infinite, the stated inequality remains valid but uninformative.
+
+For the current-field version the relevant law is exactly
+(pi_e o Phi_r)_*((W_r/EW_r)mu), compared with the UNFLOWED
+ground marginal mu_e whose MGF has just been proved. This is a
+legitimate entropy comparison and does not silently assert the
+same concentration or RP for the pushed ground law.
+The missing entropy of the actual derivative-weighted marginal
+is stated explicitly. Even a bounded entropy alone would not
+remove the a^-2 adverse parabolic coefficient.
+
+5. INTEGRATION-BY-PARTS AND ENTROPY TRANSPORT
+
+For f_r=f o Phi_r, autonomy gives partial_r f_r=b.grad f_r
+with b=-c grad S. Differentiating its gradient energy and using
+div_mu b=-cB gives the producer's two terms
+
+ -2c E Hess S(grad f_r,grad f_r)+c E B|grad f_r|^2.
+
+The latter has no sign from E B=0. At a flat field B=3|P_sp|,
+so the positive smooth example W=1+epsilon B indeed has
+E BW=epsilon E B^2>0. Integration by parts moves that term
+to Hess f_r; it does not eliminate it.
+
+The vector-mark multiplier bound has kappa/v=g^4/8 and
+E0/v<=9ng^2/4, confirming(6.5). The distinction between
+current-field gradients and derivatives of the original-field
+flow remains intact.
+
+The flow is a finite-time diffeomorphism of the compact smooth
+configuration manifold. Its change-of-variables formula gives
+
+ d_r H((Phi_r)_*nu_0|mu)=c E_((Phi_r)_*nu_0) B,
+
+with the sign and factor c=4/a^2 as printed. Holding a
+final-time-dependent initial mark fixed for this particular
+identity is legitimate; differentiating that mark was not used.
+
+Finally the Gaussian diagnostic is the exact entropy between
+centered product Gaussians with variance ratios exp(-2r omega_k).
+Its formula and high-frequency order n r/a^2 are correct. It is
+clearly separated from the nonlinear ground-law claim.
+
+CONCLUSION
+
+The producer establishes a new genuine local exponential curvature
+bound in the actual Hamiltonian ground state on the admitted
+dyadic regulators, and its exact entropy-weighted consumer.
+It does not prove the marked entropy estimate, a uniform nonlinear
+flow gradient bound, a physical variance floor, or a continuum
+Yang--Mills construction. No source or scope correction is needed.

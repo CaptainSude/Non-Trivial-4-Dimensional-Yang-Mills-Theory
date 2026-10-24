@@ -1,0 +1,260 @@
+TURN92 -- POSITIVE SOURCE TRANSFER AND A GLOBAL MICROSCOPIC CUTOFF TEST
+21 October 2026. Root derivation. Finite original-Wilson statements.
+
+RESULT AND SCOPE
+
+The new QED3 manuscripts suggest a useful precise target: a positive
+retained-field density, compared with a reference using the full original
+partition normalization. The one-real-source reduction in
+turn92_response_transfer_tail.txt makes a positive source INCREMENT enough
+for our particular two-window witness. Neither a near-one good-event mass
+nor an upper estimate for the discarded complement is required for that
+lower bound. A selected contribution of nonvanishing actual mass is still
+needed, and it must retain the original observable.
+
+Sections 1--2 state the exact positive-sector consumer, with the old-source
+error visible. Section 3 proves a new finite Wilson probability estimate:
+excluding every fine plaquette outside an angle cap of radius r has mass
+at most exp[-V exp(-18 beta r)/14]. In the logarithmic beta regime and
+with r=(log beta)^q/sqrt(beta), this mass tends to zero. This is an actual
+original-law test of ONE global microscopic cutoff recipe. It is not a
+claim about every native RG history or about QED3's different linear
+coordinate event, and it is not a no-go theorem for Yang--Mills.
+
+These results narrow the possible adaptation; they do not establish the
+missing physical source floor or the full YM4 construction.
+
+1. THE LITERAL POSITIVE INCREMENT
+
+Let mu_a be the homogeneous original SU(2) Wilson law on a periodic
+four-dimensional lattice. Write
+ G_n=(1/n)sum_(0<=t<n)phi_t-(1/n)sum_(n<=t<2n)phi_t,
+ 0<=phi_t<=1, 2n<=N,
+where each phi_t is the same spatial-flow and smear recipe on its slice.
+The reflection t -> 2n-1-t modulo N preserves mu_a and negates G_n.
+Consequently E_mu G_n=0, |G_n|<=1 and, for s>0,
+ M_a(s)=Z_a(s)/Z_a(0)=E_mu cosh(sG_n),
+ (s^2/2) E_mu G_n^2 <= M_a(s)-1
+                         <=(cosh s-1) E_mu G_n^2.       (1.1)
+The action, source recipe and denominator do not change with s.
+
+Put K_s(x)=cosh(sx)-1 and C_s=cosh s-1. For any complete positive
+probability lift Pi of this SAME original law, and any measurable event E,
+ tau=1_E Pi,
+one has
+ Var_mu G_n >= tau(K_s(G_n))/C_s.                      (1.2)
+Here the original G_n is a passive function of the original coordinates
+of Pi. The event need not be reflection invariant and its conditional law
+need not center G_n. If Pi=J/Z_a(0) for an unnormalized positive joint J,
+the numerator in (1.2) is
+       J(1_E K_s(G_n))/Z_a(0),                         (1.3)
+not J(1_E K_s(G_n))/J(E).
+
+For lower bounds the omitted complement contributes nonnegatively.
+The baseline subtraction must occur inside the event integral. The
+different expression tau(exp(sG_n))-1 would pay for missing event mass
+and is not what (1.2) uses. For the same reason (1.2) does not require
+E to contain almost every configuration. Directly, and more sharply
+when its second moment is available,
+       Var_mu G_n >= tau(G_n^2).                      (1.4)
+The real-source form is useful when the retained calculation produces a
+partition ratio or a marked terminal density rather than a second jet.
+
+If E has actual probability p_a and its normalized source increment is
+at least q_a, (1.2) gives p_a q_a/C_s. Since 0<=K_s<=C_s on [-1,1], a
+vanishing p_a cannot yield a fixed positive floor by this selected-event
+bound, even if its normalized response is well behaved.
+
+2. A QUANTITATIVE TERMINAL TRANSFER CONSUMER
+
+This is an elementary sufficient criterion, not an asserted Wilson RG
+estimate. Let A be a retained variable of Pi, p=Pi(E)>0, and let rho be
+the law of A conditional on E. Let gamma be a specified probability
+reference on the same A space, and assume
+ d_TV(rho,gamma):=sup_(|f|<=1)|rho(f)-gamma(f)| <= Delta. (2.1)
+The convention has maximum distance 2. Let g(A) be a real proxy in [-1,1]
+and define the actual old-source error
+ eta^2=E_Pi[(G_n-g(A))^2 | E].                         (2.2)
+Neither (2.1) nor (2.2) follows just from an identity of partition masses.
+
+Since probabilities have the same mass, for 0<=f<=B,
+ |rho(f)-gamma(f)|<=B Delta/2:
+apply (2.1) to 2f/B-1. Also |K_s'(x)|<=s sinh(s) on [-1,1]. Hence
+ tau(K_s(G_n))
+ >=p[gamma(K_s(g))-C_s Delta/2-s sinh(s) eta],          (2.3)
+and therefore
+ Var_mu G_n
+ >=p[gamma(K_s(g))/C_s-Delta/2
+                         -(s sinh(s)/C_s)eta]_+.      (2.4)
+The positive part is valid because the left side is nonnegative.
+This needs one integrated marked comparison at the chosen real s; it
+does not require all source derivatives or all retained Borel tests if
+those stronger inputs are unavailable.
+
+There is a sharper second-moment version. If gamma(g^2)>=v,
+ rho(g^2)>=max(v-Delta/2,0),
+and the reverse triangle inequality in L2(Pi(.|E)) gives
+ Var_mu G_n
+ >=p[ sqrt(max(v-Delta/2,0))-eta ]_+^2.                (2.5)
+No centering of g under the selected law is presumed. It is the original
+G_n that is globally centered by reflection. Thus p>=p0>0, v-Delta/2>=v0>0
+and eta<=sqrt(v0)/2 would give Var_mu G_n>=p0 v0/4.
+
+A weaker first-mark criterion is enough. Set
+ m_E(A)=E_Pi[G_n|A,E],
+ eta_m=||m_E-g||_L2(rho).
+Conditional Jensen gives
+ tau(K_s(G_n))>=p rho(K_s(m_E)),
+ tau(G_n^2)>=p rho(m_E^2).
+Repeating the same Lipschitz and reverse-triangle arguments proves
+(2.3)--(2.5) with eta_m in place of eta. Orthogonal conditional
+decomposition gives eta_m<=eta, but eta_m can be small even when the
+discarded conditional fluctuations have large variance. Thus this
+consumer only needs a quantitative approximation of the FIRST marked
+posterior, not small conditional variance or an entire old-source
+generating family. This is a sufficient reduction, not an estimate of
+that posterior under the Wilson law.
+
+All three quantities p, Delta and eta refer to the actual original law
+and its actual complete lift. In particular, at a native basic R
+replacement a new reference draw is not automatically the forward coarse
+coordinate of the old field. Its good reference variance can coexist
+with zero conditional old-source pullback. Equation (2.2), or a directly
+estimated first posterior or source coefficient, prevents that
+substitution. The smaller error eta_m must also be computed in that
+actual complete law, rather than a convenient replacement fiber.
+
+The exact terminal disintegration makes the missing object particularly
+plain. With nu_E=pi_A*(1_E Pi), define
+ b_s(A)=E_Pi[K_s(G_n)|A,E],
+so tau(K_s(G_n))=int b_s(A) dnu_E(A), b_s>=0. A theorem about nu_E alone
+does not estimate b_s. One may instead estimate this one positive marked
+density directly. Upper bounds for arbitrary old bounded insertions,
+proved in TURN56, do not supply its lower bound.
+
+TPM1's inspected theorem estimates the actual retained linear photon
+coordinate, with its restricted Gaussian masses and vacuum factors kept.
+Its terminal marginal TV comparison therefore has the form (2.1) for
+that coordinate. For a general old observable its correct coefficient
+still integrates that observable along the fluctuation fiber; the
+additional error (2.2) is not eliminated by terminal Borel scope.
+
+3. AN EXACT GLOBAL MICROSCOPIC ANGLE-CAP BOUND
+
+Theorem. Consider the original homogeneous SU(2) Wilson probability on
+a periodic four-dimensional rectangular lattice, every period at least
+4, V sites, and beta>0. For W in SU(2), let theta(W) in [0,pi] be its
+principal angle, so (1/2)Re Tr W=cos theta(W). For 0<r<=pi/6 define
+ A_r={theta(U_p)<=r for every plaquette p}.
+Then
+ mu_beta(A_r)
+ <=[1+exp(-18 beta r)]^(-V/7)
+ <=exp[-(V/14)exp(-18 beta r)].                        (3.1)
+Integer rounding can strengthen the first exponent; the displayed real
+exponent is sufficient. The same estimate holds if all plaquettes are
+required only in one fixed orientation, such as (1,2).
+
+Proof, independent conditional coordinates. Take all links in direction
+1. Two such links occur in a common elementary plaquette only when their
+base sites differ by plus or minus one unit in direction 2,3 or 4. Their
+conflict graph has degree at most 6. Greedy selection yields a set I of
+m>=V/7 links, no two of which occur in any common plaquette. Conditional
+on every other link, the original action is a sum of single-link terms
+for e in I plus a constant. The selected links are therefore conditionally
+independent. All Haar measures remain normalized.
+
+For each e=(x,1) in I choose the oriented plaquette p_e=(x;1,2), in which
+e occurs first and positively. No other selected link belongs to p_e.
+Its holonomy is U_e B_e with B_e fixed under this conditioning. The cap
+C_e={theta(U_e B_e)<=r} is a Haar translate of the identity cap.
+
+Fix any R in SU(2) of principal angle 3r and replace U_e by R U_e.
+The bi-invariant spherical distance from the identity is theta. Its
+reverse triangle inequality gives, on C_e,
+ theta(R U_e B_e)>=theta(R)-theta(U_e B_e)>=2r>r.
+Thus the Haar-preserving map sends C_e into a disjoint subset of its
+complement. Choosing 3r<=pi/2 ensures the indicated principal angle for
+R and avoids any ambiguity; the distance inequality itself is global.
+
+The link belongs to exactly 6 plaquettes. In each, whether it occurs
+positively or negatively, unitarity and cyclicity imply
+ |h(U_p')-h(U_p)|
+ <=||R-I||_op=2 sin(3r/2)<=3r,
+where h(W)=1-Re Tr W/2. Thus the change of the FULL action is at most
+18r in absolute value. For its normalized conditional density f_e,
+       f_e(R U_e)>=exp(-18 beta r) f_e(U_e).           (3.2)
+No bound on staples, boundary gauge or partition ratio is needed.
+
+Integrating (3.2) on C_e and using the disjoint image proves
+       1>=P(C_e | exterior)[1+exp(-18 beta r)].        (3.3)
+Conditional independence now bounds the probability that all selected
+plaquettes lie in their caps by the product of these bounds. A_r implies
+that selected event. Integrate over the actual conditioned exterior to
+get the first inequality of (3.1). Finally log(1+x)>=x/2 for 0<=x<=1
+gives its second inequality. No external event probability or effective
+RG conditional measure was used. This completes the finite proof.
+
+4. WHAT THIS TEST DOES TO A DIRECT QED-STYLE ADAPTATION
+
+Take a sequence with fixed positive physical four-volume, V_a comparable
+to a^-4, beta_a -> infinity and beta_a<=C log(1/a). This is a stated
+regime, not a proof of the Yang--Mills running coupling. For any fixed
+q>=0 and C0>0 let
+       r_a=C0(log(2+beta_a))^q/sqrt(beta_a).
+Eventually r_a<=pi/6, and
+ beta_a r_a=O(sqrt(log(1/a))
+                    (log log(1/a))^q)=o(log(1/a)).
+It follows rigorously from (3.1) that
+       mu_(beta_a)(A_(r_a))<=exp[-a^(-4+o(1))] -> 0.   (4.1)
+Equivalently, beta h_p bounded by a fixed power of log beta at EVERY
+fine plaquette defines an asymptotically negligible global event in
+this regime. To justify the equivalence of the cutoff scales, use
+1-cos theta comparable to theta^2 near zero; changing fixed constants
+does not change (4.1).
+
+More generally the finite theorem forces vanishing whenever
+       log V_a-18 beta_a r_a -> +infinity.
+It gives no such conclusion when that condition fails. It also does not
+describe the probability of a fixed finite set of coarse observables.
+
+In TPM1 Proposition 3.2, equation (24), the good event instead restricts
+all orthonormal Gaussian fluctuation coordinates of a FIXED linear tower
+and the terminal curvature. At UV depth d its charge obeys
+ e_j=e_* L^(-d/2), v_j=-log e_j=v_*+(d/2)log L,
+and the box radius p_(0,j)=v_j^9 yields tails exp(-v_j^18/2), against
+coordinate multiplicity of order L^(3d). This explicit summability
+mechanism is superrenormalizable. Merely replacing v_j by order log d
+does not give the same estimate against L^(4d).
+
+Our cap event is NOT TPM1's linear-coordinate event and is NOT asserted
+to equal a Bałaban native multiscale cutoff. Formula (4.1) is a separate
+actual-Wilson result ruling out the naive version which discards every
+bad microscopic plaquette with this usual logarithmic cutoff. It must
+not be cited as a theorem that all native RG good sectors have zero mass.
+
+For the positive-increment route, an event contained in A_(r_a) gives
+ tau(K_s(G_n))<=C_s mu(A_(r_a)) -> 0,
+so it cannot supply the desired fixed lower contribution through (1.2).
+One must allow the relevant microscopic exceptional configurations in
+the complete positive history sum, or choose a different actual sector
+whose mass and marked response can be controlled. A positive sector at
+a fixed coarse scale is not excluded, but its full normalized law and
+its old-source coefficient remain to be proved.
+
+5. WHAT IS AND IS NOT ADVANCED
+
+The new finite content is the original-Wilson angle-cap bound (3.1) and
+its use to test a direct global-cutoff adaptation. The consumer in
+Sections 1--2 records precisely what the new retained-density mechanism
+would need for our existing physical source. It is not credited as a
+new model-specific estimate or as a solution of its own hypotheses.
+
+The immediate mathematical task is now a lower bound for ONE positive
+original marked integral at full normalization, permitting the necessary
+fine histories, or a direct one-sided comparison of M_a(s) at fixed s.
+An unsourced partition bound, an independent replacement-field variance,
+finite polynomial Wick identities, and a globally restricted cap sector
+do not furnish that bound. The source floor, the common local continuum
+gauge observables, physical scale/coupling matching, O(4) covariance,
+nonabelian interaction and reconstruction are still unproved requirements
+of the full goal.

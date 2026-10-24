@@ -1,0 +1,188 @@
+PROTECTED ONE-LEG CUBIC SECTORS: EXACT HYPERCUBIC AUDIT
+19 October 2026. public_argument_audit.
+
+Use SU(2) adjoint curvature vectors F_ab=-F_ba in R^3, or their
+complexifications. The color determinant is invariant under the
+adjoint SO(3) action, so the following are genuine gauge-invariant
+cubic polynomials. Distinct indices i,j,k,l run through the four axes.
+All statements concern the WHOLE covariant homogeneous coefficient
+catalogue. Fixed geometry/pivot summands need not have these symmetries.
+
+1. A NONZERO PATH-DIFFERENCE WITH NO QUADRATIC TARGET
+
+Define
+ C_ij;kl=det(F_ik,F_kl,F_lj),
+ D_ij;kl=det(F_il,F_lk,F_kj),
+ X_ij;kl=C_ij;kl-D_ij;kl.
+
+Under coordinate sign reflections epsilon_a=+/-1, each F_ab acquires
+epsilon_a epsilon_b, so C,D,X have character epsilon_i epsilon_j.
+The complete space of gauge-invariant quadratic curvature polynomials
+with this character is spanned by
+
+ Q_k=Tr(F_ik F_jk),              Q_l=Tr(F_il F_jl).
+
+Indeed a product of two distinct 2-form components must share exactly
+one index; its two unshared indices are i,j. Diagonal squares have
+trivial reflection character, and disjoint pairs have all-odd character.
+The unique SU(2) invariant bilinear color form is the dot product/trace.
+
+Let tau swap i and j while leaving k,l fixed. Directly,
+
+ tau C=det(F_jk,F_kl,F_li)
+      =det(F_kj,F_kl,F_il)
+      =-det(F_il,F_kl,F_kj)=D.
+
+Similarly tau D=C. Thus tau X=-X. But tau Q_k=Q_k and tau Q_l=Q_l,
+since the color bilinear form is symmetric. Any linear quadratic
+extractor Pi that intertwines the complete hypercubic action therefore
+satisfies Pi X=0. A constant/vacuum coefficient is also excluded by
+the nontrivial reflection character. This applies to a ONE-LEG linear
+transport of X under an equivariant scalar body: its entire transported
+homogeneous family remains in the same symmetry sector.
+
+For i=0,j=1,k=2,l=3,
+
+ X=det(F_02,F_13,F_23)+det(F_03,F_12,F_23).
+
+It is nonzero: take F_02=e1,F_13=e2,F_23=e3 and F_03=F_12=0.
+Arbitrary antisymmetric Lie-algebra curvature values can be prescribed
+at one point by a linear potential vanishing at that point, so this is
+not an algebraically inadmissible curvature assignment.
+
+There are six independent path-character directions, one for each
+unordered pair {i,j}. Their distinct reflection characters prove their
+linear independence. Swapping the complementary indices reverses X;
+swapping i,j also reverses X. Axis permutations permute the six lines
+with the corresponding signs, so their span is a hypercubic submodule.
+
+2. THREE MORE PROTECTED STAR DIFFERENCES
+
+Define
+
+ S_i=(1/6) sum_(j,k,l) epsilon_ijkl
+                         det(F_ij,F_ik,F_il).
+
+Only the six permutations of the other three axes contribute. For an
+ordered complement a,b,c this equals
+epsilon_iabc det(F_ia,F_ib,F_ic). Under every coordinate reflection
+it has the all-odd character product_a epsilon_a. Under a permutation
+pi of the axes,
+
+                         pi S_i=sgn(pi) S_(pi i).
+
+The four S_i are linearly independent: turn on only the three edges
+incident to i, with independent color vectors, to isolate S_i. Their
+trace-zero coefficient subspace sum_i c_i=0 therefore has dimension 3.
+
+The all-odd quadratic target is the three-dimensional disjoint-pair
+space. Choosing oriented representatives
+
+ F_01 dot F_23,    F_02 dot F_31,    F_03 dot F_12,
+
+its permutation action is sign times the permutation of the three
+pairings. There is a simple exact no-intertwiner proof without an
+irreducible-character table. The Klein four subgroup of S4 consisting
+of the identity and the three double transpositions fixes every pairing
+and has positive sign. Thus it acts trivially on that target. On the
+four-star permutation space it acts transitively on the four indices,
+so its average is projection onto the constants. Its average is ZERO
+on the trace-zero star subspace. For any intertwiner L from that
+subspace to the pairing space, L=L average_(Klein)=0.
+
+Hence the full quadratic extractor of each trace-zero star combination
+vanishes. Their nontrivial reflection character also excludes vacuum.
+The star trace itself is NOT protected by this argument.
+
+3. COMBINED NINE-DIMENSIONAL SCOPE AND PARITY
+
+The six path directions and three star differences have different
+reflection sectors and together give a protected nine-dimensional
+hypercubic module. It can be matched to the hypercubic transformation
+rules of a pseudo-traceless symmetric rank-two array by assigning the
+path with odd axes {i,j} to the complementary off-diagonal slot {k,l},
+with an epsilon convention, and the stars to diagonal slots. This
+does NOT alone prove that the polynomial span is invariant under the
+full continuous O(4) action, or identify a physical spin-(3,3) field.
+
+Full coordinate inversion -I fixes each F_ab and hence every cubic
+above. Every dimension-five quadratic curvature word with one
+covariant derivative is odd under that inversion. Therefore such
+one-derivative FF terms cannot occur in the equivariant one-leg
+homogeneous channel either. This is a symmetry selection rule, not a
+new native h^6 or h^7 Taylor estimate and not a reconstruction theorem.
+
+Two or more cubic insertions tensor these characters and can have
+allowed quadratic and vacuum contacts. None of the above forbids
+those mixed terms. Nor does it prove source admission, all-history
+continuation, a separated limiting field, or an improved engineering
+bound on original complex field/current contours. For native use,
+Pi must be the previously matched universal full quadratic extractor
+and covariance must hold for the complete catalogue with geometry
+and pivot labels transformed together.
+
+4. AN EXACT O(4) POLYNOMIAL REALIZATION OF THE NINE COMPONENTS
+
+This additional algebra identifies the polynomial module, without
+asserting rotation covariance of a limiting quantum field. Give R^4
+the orientation epsilon_0123=1 and use (*F)_ab=(1/2)epsilon_abcd F_cd.
+For each color a, regard F^a as a real antisymmetric 4 by 4 matrix. Set
+
+ U_mn=epsilon_abc (F^a F^b (*F^c))_mn,
+ T=Sym_0 U=(U+U^t)/2-(Tr U)I/4.                         (4.1)
+
+The color epsilon makes this gauge invariant. For R in O(4),
+*(RFR^t)=(det R)R(*F)R^t, hence
+
+                         T(RF)=(det R)R T(F)R^t.       (4.2)
+
+Thus T is an exact pseudo-symmetric-traceless polynomial tensor.
+Its components are precisely the protected components above, up to
+the following nonzero normalization and orientation choices:
+
+ T_ii=-2(S_i-(1/4)sum_a S_a),
+ T_kl=-epsilon_ijkl X_ij;kl       (i,j,k,l distinct).    (4.3)
+
+These identities follow by direct matrix multiplication. For example,
+write A=F01,B=F02,C=F03,D=F12,E=F13,F=F23. Then
+S0=det(A,B,C), S1=det(A,D,E), S2=det(B,D,F),
+S3=det(C,E,F), and
+
+ U00=2(S1+S2+S3),        Tr U=6 sum_i S_i,
+ U01=U10=det(A,C,D)-det(A,B,E)=-X_23;01.
+
+Axis permutations give the other entries, with the epsilon sign in
+(4.3). Consequently the nine-dimensional polynomial span actually
+IS invariant under continuous O(4), refining the deliberately weaker
+hypercubic conclusion of Section3. Nonzero follows already from
+F02=e1,F13=e2,F23=e3, all other components zero: T23=T32=-1,
+and all other entries vanish. A pointwise Bianchi constraint does not
+force this example to vanish; curvature values at one point are free.
+
+This is only an algebraic representation statement. It does not prove
+continuous rotations of the renormalized lattice source, a nonzero
+continuum tensor, protected mixed contacts, or a native high-order
+preparation bound. The exact hypercubic selection arguments remain
+the basis for the one-leg quadratic cancellation at finite cutoff.
+
+5. THE PROTECTED COMPONENT STILL HAS A QUADRATIC TWO-LEG CONTACT
+
+The preceding protection is strictly a one-leg statement. Let
+B=F02,E=F13,C=F03,D=F12 be four independent centered color Gaussian
+vectors with covariance sigma^2 I, and put F=F23=m+xi, where xi is
+independent with the same covariance. The protected component is
+
+                 T23=-det(B,E,F)-det(C,D,F).
+
+Conditionally on F the two summands are independent and centered.
+For one independent pair B,E,
+E[(B cross E)(B cross E)^t]=2 sigma^4 I; therefore
+
+ Var(T23|F)=4 sigma^4 |F|^2,
+ Var(T23)=4 sigma^4 |m|^2+12 sigma^6.                  (5.1)
+
+The background Hessian of this two-leg conditional coefficient is
+8 sigma^4 I. Hence even this specifically protected component
+generates an allowed quadratic channel when two legs meet. This is
+a finite Gaussian contact calculation, not a statement about a
+separated continuum limit or the size of an interacting native term.

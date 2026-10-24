@@ -1,0 +1,331 @@
+ACTUAL FINITE-SPATIAL HAMILTONIAN ENERGY AND FLOW BOUNDS -- TURN66
+20 October 2026. history47.
+Status: frozen after gauge47's independent audit PASS of Sections1--6.
+
+RESULT
+
+On a finite nondegenerate periodic three-dimensional SU2 spatial
+lattice with n sites, Pauli/2 link metric, and homogeneous g>0,
+consider the ACTUAL Hamiltonian of the controlled temporal limit:
+
+ H_a = [g^2/(2a)]K + [4/(g^2 a)]S_sp,
+ K=-Delta,  S_sp=sum_(spatial p)[1-Tr U_p/2].             (0.1)
+
+Its normalized positive ground state Omega obeys
+
+ E0<=9n/a,
+ E_(Omega^2) S_sp <=(9/4)n g^2,
+ E_(Omega^2) K <=18n/g^2.                               (0.2)
+
+The last expression means the quadratic form
+<Omega,K Omega>=int|grad Omega|^2, not a pointwise random variable K.
+All constants are independent of n,a,g; the inequalities hold
+for every g>0 and in particular for0<g<=1.
+
+For the actual compact spatial flow
+Phi_s'=-4a^-2 grad S_sp(Phi_s), the same ground-state initial
+law satisfies
+
+ E S_sp(Phi_s U)<=(9/4)n g^2,
+ E int_0^s |grad S_sp(Phi_r U)|^2 dr
+                         <=(9/16)n a^2 g^2,
+ E |grad S_sp(Phi_s U)|^2<=18n g^2.                     (0.3)
+
+These are genuine full-ground-state estimates, without a selected
+history or an unknown gauge-average normalization. They close
+the magnetic-energy input left open by the degenerating temporal
+Wilson coefficient in controlled_temporal_limit_turn66.txt.
+They do not give a physical variance floor, an initial-field
+flow Jacobian bound, or the averaged gradient of the physical
+radial probe required for a nonzero reflected witness.
+
+1. THE SAME PHYSICAL GROUND ENERGY CAN USE AN UNGAUGED TRIAL
+
+Let X=SU2^E with normalized product Haar, where |E|=3n.
+Each plaquette has four distinct edges and |P_sp|=3n.
+The metric is the product metric in which i x.sigma/2
+has squared norm|x|^2. Thus it is four times the round
+unit-quaternion metric, and one-link K has eigenvalues j(j+1).
+
+For fixed finite graph,a,g, H_a is a uniformly elliptic
+Schrodinger operator on the connected compact manifold X
+with smooth nonnegative bounded potential. Its heat semigroup
+is positivity improving: the strictly positive product heat
+kernel and the bounded Feynman--Kac weight give this directly.
+The lowest eigenvalue is therefore simple with a strictly
+positive smooth eigenfunction Omega, normalized in L2.
+
+The gauge group acts by isometries and preserves S_sp.
+Every gauge transform of Omega is another normalized positive
+ground state; uniqueness makes it equal to Omega. Therefore
+the full-space and gauge-invariant ground energies coincide:
+
+            inf_spec(H_a on L2(X))
+             =inf_spec(H_a on H_phys)=E0.               (1.1)
+
+A normalized ungauged product trial is consequently a legal
+variational upper bound on the SAME physical E0. It is not
+necessary to project that trial onto gauge invariants or
+divide by the norm of its gauge average. The trial itself
+is not claimed to represent the ground-state law.
+
+This is the Hamiltonian rigorously obtained at fixed spatial
+lattice in controlled_temporal_limit_turn66.txt. It is not
+asserted to equal the exact logarithm of a finite isotropic
+Wilson transfer matrix.
+
+2. A NORMALIZED ONE-LINK TRIAL AND ITS EXACT KINETIC ENERGY
+
+For q=(u0,u) in S3=SU2 and t>0 define
+
+ Z(t)=int_SU2 exp(t u0)dq,
+ psi_t(q)=Z(t)^(-1/2)exp(t u0/2),
+ c(t)=int u0 psi_t(q)^2 dq.                             (2.1)
+
+All quantities are finite and smooth. The scalar c lies in[0,1]:
+the Haar u0 density is even, so the numerator of c pairs into
+int_(u0>0) u0[e^(t u0)-e^(-t u0)]dHaar>=0.
+
+The Pauli/2 metric gives
+
+ Delta u0=-(3/4)u0,
+ |grad u0|^2=(1-u0^2)/4.
+
+Integrate div(exp(t u0) grad u0) over SU2. With no boundary,
+
+                 t E_t(1-u0^2)=3c(t).                  (2.2)
+
+It follows EXACTLY that
+
+ <psi_t,K_e psi_t>
+   =int|grad psi_t|^2
+   =(t^2/16)E_t(1-u0^2)
+   =3t c(t)/16
+   <=3t/16.                                           (2.3)
+
+This retains the factor4 of the metric. Using the round-S3
+Laplacian instead would give a different constant.
+
+3. THE ONE-LINK LOCALIZATION MOMENT AND PRODUCT POTENTIAL
+
+Put h(q)=1-u0. Under psi_t^2 dHaar its density on[0,2]
+is proportional to
+
+             e^(-t h) h^(1/2)(2-h)^(1/2).
+
+Let Gamma_t be the probability law on[0,infinity) with
+density proportional to e^(-t h)h^(1/2), shape3/2 and
+rate t. The preceding law is Gamma_t tilted by the
+nonnegative decreasing function w(h)=(2-h)_+^(1/2).
+For independent H,H' with law Gamma_t,
+
+ Cov(H,w(H))
+   =(1/2)E[(H-H')(w(H)-w(H'))]<=0.
+
+Since E w(H)>0, division by this exact normalizer yields
+
+              1-c(t)=E_t h<=E_Gamma H=3/(2t).          (3.1)
+
+No asymptotic Gaussian replacement or missing tail is used.
+For t=16/g^2 this in particular gives E_t h<=3g^2/32,
+so the trial is localized on a link-angle scale of order g.
+It nevertheless has full smooth support, avoiding a cutoff
+derivative at a chart boundary.
+
+Take the normalized product trial
+
+                   Psi_t(U)=product_e psi_t(U_e).       (3.2)
+
+Its squared law makes distinct links independent, with
+E_t U_e=c(t)I and E_t U_e^-1=c(t)I. Since a plaquette uses
+four distinct edges,
+
+            E_(Psi_t^2) h_p=1-c(t)^4
+                   <=4(1-c(t))<=6/t.                   (3.3)
+
+The equality includes all path ordering: expectation of
+each independent matrix is a scalar multiple of the identity.
+The inequality uses0<=c<=1. No claim of independence is made
+for the actual ground state.
+
+Summing the exact kinetic and potential expectations,
+
+ <Psi_t,H_a Psi_t>
+   <=(n/a)[9g^2 t/32+72/(g^2 t)].                       (3.4)
+
+Choose t=16/g^2. The two displayed terms are each9/2,
+so the Rayleigh principle and(1.1) give
+
+                            E0<=9n/a.                  (3.5)
+
+Both terms of H_a are nonnegative. The ground-state
+energy identity therefore gives
+
+ [4/(g^2a)] E_(Omega^2) S_sp<=E0,
+ [g^2/(2a)] int|grad Omega|^2<=E0,
+
+which proves(0.2). It also gives the exact full-density
+Fisher-information upper bound
+
+ int Omega^2 |grad log(Omega^2)|^2
+       =4 int|grad Omega|^2<=72n/g^2.                   (3.6)
+
+This is an integrated bound on the ground density's score.
+It is not a pointwise score bound or a product conditional law.
+
+4. ACTUAL SPATIAL-FLOW ENERGY AND CURRENT-ACTION GRADIENT
+
+At each fixed graph the compact smooth flow exists for
+all finite s. Its exact dissipation identity is
+
+ dS_sp(Phi_s U)/ds
+                     =-(4/a^2)|grad S_sp(Phi_s U)|^2.    (4.1)
+
+Integrate in s, then in the original ground-state initial
+law Omega^2 dU. The nonnegative remaining action and(0.2)
+give the first two inequalities of(0.3).
+No invariance of Omega^2 under this deterministic flow is
+asserted or needed.
+
+There is also an elementary pointwise finite-lattice
+gradient bound. For an edge appearing once in a plaquette,
+left/right multiplication by its other links is an isometry;
+therefore
+
+ |grad_e h_p|^2=(2h_p-h_p^2)/4<=h_p/2.
+
+A spatial edge meets four plaquettes. Cauchy--Schwarz
+on their four gradient contributions and summation over
+edges, each plaquette being counted four times, give
+
+                 |grad S_sp|^2<=8 S_sp.                (4.2)
+
+Apply(4.2) to Phi_s U and then use action monotonicity:
+
+          E_(Omega^2)|grad S_sp(Phi_s U)|^2<=18n g^2.    (4.3)
+
+The gradient in(4.1)--(4.3) is taken at the CURRENT flowed
+configuration. It is not grad_U[S_sp(Phi_s U)], which
+contains D Phi_s(U). This distinction is essential.
+
+Translations preserve the Hamiltonian. By uniqueness
+Omega^2 is translation invariant, and equivariance of
+Phi_s preserves that property for its pushed law.
+For any fixed spatial orientation on a rectangular torus,
+nonnegativity of the other orientations yields
+
+                E h_(ij,x)(Phi_s U)<=(9/4)g^2.          (4.4)
+
+On a cubic torus with isotropic action, permutation
+symmetry makes the three orientation means equal, so
+
+                E h_(ij,x)(Phi_s U)<=(3/4)g^2.          (4.5)
+
+The square-root curvature weight rho_e=sum_(p containing e)
+sqrt(h_p) consequently satisfies E rho_e<=6g in the
+rectangular case, improved to2sqrt(3)g in the cubic case.
+This is an unmarked expectation, not a bound on
+E[rho_e |D Phi_s J|^2].
+
+For a set of m spatial plaquettes define the same discrete
+critical norm used in TURN65,
+
+              B_D=(sum_(p in D) h_p^(3/4))^(2/3).
+
+Holder and Jensen, using(4.4), give
+
+              E B_D<=m^(1/6)(E sum_D h_p)^(1/2)
+                         <=(3/2)g m^(2/3).             (4.6)
+
+For a box of R^3 cells this is O(g R^2). Markov gives
+P(B_D>eta)<=(3/2)g m^(2/3)/eta. No independent-plaquette
+or Gamma exponential tail for Omega^2 follows from this
+argument. The expectation is useful on R<<g^(-1/2),
+whose physical radius aR still shrinks on a logarithmic
+weak-coupling sequence.
+
+5. THE PHYSICAL RADIAL PROBE: A REAL BUT DEGENERATING MEAN BOUND
+
+For the same physical normalization as TURN63--66 set
+
+ X_(a,s)=2p(P12(Phi_s U;x))/(g_* a^2),
+ F_(a,s)=exp[-alpha |X_(a,s)|^2],
+
+with fixed physical g_*,s,alpha>0. The SU2 identity
+|p|^2=2h-h^2<=2h and(4.4) give
+
+          E_(Omega^2)|X_(a,s)|^2
+                       <=18g^2/(g_*^2a^4).             (5.1)
+
+The cubic improvement is6g^2/(g_*^2a^4).
+Jensen therefore proves the actual mean lower bound
+
+ E_(Omega^2)F_(a,s)
+           >=exp[-18alpha g^2/(g_*^2a^4)],              (5.2)
+
+or the corresponding6 constant with cubic symmetry.
+On a usual logarithmic weak-coupling sequence this lower
+bound degenerates. That does not assert the actual mean
+tends to zero. Nor does it give a variance floor.
+
+The temporal-limit witness theorem instead needs
+
+ Var_(Omega^2)(F_(a,s))>=v_*>0,
+ [g^2/(2a)]E_(Omega^2)|grad_U F_(a,s)|^2<=C.             (5.3)
+
+Equations(4.1)--(4.6) do not prove the second condition.
+The initial-field derivative contains the full nonlinear
+flow Jacobian. Its exact averaged Jacobi estimate retains
+the correlated term E[rho_e(Phi_r U)|J_r,e|^2];
+the unmarked O(g) bound on rho cannot be substituted into it.
+The score bound(3.6) also cannot replace that missing marked
+estimate or produce a variance lower bound by itself.
+
+The deterministic large-Hessian example of TURN65 is
+consistent with these energy estimates. Its actual Wilson
+coherent-window suppression theorem used a one-edge Wilson
+conditional density. Omega^2 has not been shown to have
+that conditional density, so that suppression theorem is
+not automatically imported to this Hamiltonian ground law.
+
+6. TEMPORAL ATTACHMENT AND PRECISE REMAINING SCOPE
+
+For each fixed spatial lattice,a,g, the controlled temporal
+limit constructs H_a from the anisotropic Wilson family
+
+ beta_time=4a/(g^2 delta),
+ beta_space=4delta/(g^2 a),  delta->0.
+
+It proves convergence of the ground-state slice laws in
+L1, and hence of every bounded multiplication observable.
+S_sp and S_sp composed with any fixed finite spatial
+flow time are bounded continuous functions at that fixed
+graph. Their expectations can therefore be approximated
+by actual anisotropic Wilson ground-state expectations,
+and then by sufficiently long finite time periods.
+
+Along a sequence of spatial lattices one can choose the
+temporal spacings/periods diagonally to make these errors
+as small as prescribed after fixing each spatial regulator.
+Thus the magnetic-energy input need not be obtained by
+dividing a degenerating beta_space energy inequality.
+No convergence rate uniform in the spatial cutoff is used.
+
+By contrast K is an unbounded differential operator.
+The L1 convergence of slice densities alone does not
+transfer(0.2)'s kinetic bound to a finite-delta Wilson
+kinetic expectation. No such inference is made here.
+
+These estimates apply to the full ground state, not to
+the selected homogeneous RG trajectories. They do not
+identify the required running g(a), extend isotropic
+Balaban inputs to anisotropy, construct a compatible
+spatial continuum measure, or restore continuous
+Euclidean symmetry. Those remain separate obligations.
+
+The new conclusion is the explicit uniform energy bound
+E0<=9n/a, its full-ground-state magnetic/kinetic consequences,
+and the resulting actual nonlinear action-dissipation bounds.
+The physical variance and averaged observable-gradient
+conditions(5.3), and complete nontrivial YM4 existence,
+remain unproved.

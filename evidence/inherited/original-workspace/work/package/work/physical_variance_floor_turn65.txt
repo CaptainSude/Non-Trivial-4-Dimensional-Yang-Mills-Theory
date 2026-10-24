@@ -1,0 +1,402 @@
+VARIANCE FLOORS: A FULL WILSON RESULT AND ITS PHYSICAL LIMIT -- TURN65
+20 October 2026. history47.
+
+RESULT
+
+The new finite-volume original-law energy bound and the exact SU(2)
+single-link conditional law give a genuine cutoff-uniform variance
+floor for a bounded observable:
+
+ F_(beta,p)=exp[-t beta h_p],   h_p=1-Tr(U_p)/2, t>0 fixed,
+
+              Var_W(F_(beta,p)) >= c_t>0, beta>=1.     (0.1)
+
+The constant is independent of the periodic volume and of beta.
+There is a stronger result: this same probe has an adjacent-time
+increment bounded BELOW by c_t/2. Thus it cannot satisfy the
+O(a_t) increment premise of the new physical-time witness criterion.
+This is an actual ultraviolet-noise statement about this bounded
+microscopic Wilson observable, not a counterexample with a different
+measure or merely the failure of an available upper bound.
+
+The proof uses a uniform RELATIVE conditional variance inequality.
+It does not need a small-field restriction, a favorable-staple event,
+a selected-sector normalizer, or an independence assertion between
+neighboring plaquettes.
+
+The corresponding physical variance floor for the spatially flowed,
+physically normalized magnetic probe remains unproved. Sections5--7
+explain precisely why the inspected earlier source/convexity results
+do not supply it. No complete YM4 construction is claimed.
+
+1. SOURCES AND CONVENTIONS
+
+Read the authoritative TURN64 frontier and these earlier producers:
+ work/covariant_fisher_witness_turn45.txt,
+ work/spatial_interacting_observable_turn39.txt,
+ work/constant_original_source_trajectory_turn49.txt,
+ work/physical_observable_sources_turn63.txt,
+ work/finite_volume_wilson_energy_turn64.txt,
+ work/transfer_matrix_witness_turn64.txt.
+
+The setting for the new original-law theorem is the finite periodic
+nondegenerate four-dimensional SU(2) Wilson lattice, with normalized
+link Haar measures and action beta sum_p h_p. All periods>=4 suffice.
+For an elementary spatial plaquette choose one edge e. It occurs
+once in that plaquette and in at most six elementary plaquettes.
+The next-time translated spatial plaquette uses none of the variable
+U_e. These are the only geometric conditions needed below.
+
+The conditional distribution of U_e, given all other links, is
+
+ dmu_z(q)=Z(z)^-1 exp(z dot q)domega(q),   q in S^3,
+ z=beta b,      |b|<=6,                               (1.1)
+
+where dω is normalized round Haar measure. For the selected plaquette,
+
+                        h_p=1-a dot q, |a|=1.          (1.2)
+
+Both a and b are functions of the fixed exterior. A reversed edge
+orientation changes the corresponding quaternion linear map
+orthogonally, so (1.1)--(1.2) remain valid. These exact identities
+are the same ones used in TURN45, with no chart approximation.
+
+The original full-law upper bound from TURN64 implies
+
+                         E_W[beta h_p]<=3/2.           (1.3)
+
+Indeed its moment generating function equals1 at source0 and is
+bounded by (1-2s)^(-3/4). Taking the right derivative at0 proves
+(1.3); at a fixed finite beta, h_p is bounded, so this derivative
+interchange is elementary. No higher coefficient comparison is
+being inferred from the generating-function inequality.
+
+2. A UNIFORM HESSIAN LOWER BOUND FOR THE COMPACT CONDITIONAL LAW
+
+Define
+ L(z)=log Z(z),    Z(z)=integral_(S^3) exp(z dot q)domega(q).
+Differentiating the compact integral gives
+
+                  Hess L(z)=Cov_(mu_z)(q).             (2.1)
+
+There is a numerical c>0 such that, for every real z in R^4,
+
+                 Hess L(z) >= c(1+|z|)^-2 I_4.         (2.2)
+
+Here is a direct proof, independent of the Fisher/Bochner proof in
+TURN45. Write z=kappa n, kappa>=0, |n|=1. For kappa<=4, the density
+of mu_z relative to Haar is at least exp(-8). Thus, for every unit a,
+
+ Var_(mu_z)(a dot q)
+   =inf_c E_(mu_z)(a dot q-c)^2
+   >=exp(-8) inf_c E_Haar(a dot q-c)^2
+   =exp(-8)/4.
+
+For kappa>=4 put u=1-n dot q. Its unnormalized density is
+
+       exp(kappa) exp(-kappa u) sqrt(u(2-u)), 0<u<2.
+
+The normalizer is at most C exp(kappa) kappa^-3/2. Each of the
+intervals
+
+ I_1=[1/(4kappa),1/(2kappa)],
+ I_2=[1/kappa,2/kappa]
+
+has unnormalized mass at least c exp(kappa) kappa^-3/2. This follows
+by setting v=kappa u and using1<=2-u<=2 on these intervals.
+Hence their normalized probabilities are bounded below by a
+positive numerical constant. For two independent copies u,u',
+the event u in I_1,u' in I_2 has a gap at least1/(2kappa).
+The identity Var(u)=E[(u-u')^2]/2 proves
+
+                 Var(n dot q)>=c kappa^-2.            (2.3)
+
+For any unit vector r orthogonal to n, transverse rotation symmetry
+gives
+
+ E(r dot q)=0,
+ Cov(n dot q,r dot q)=0,
+ E(r dot q)^2=(1/3)E[1-(n dot q)^2]>=c/kappa,           (2.4)
+
+where the last inequality follows already on I_2. Decomposing an
+arbitrary unit a into its longitudinal and transverse parts proves
+Var(a dot q)>=c kappa^-2. Together with the bounded-kappa case,
+this proves(2.2).
+
+The quadratic power is essential: the longitudinal concentration
+of a compact Wilson conditional distribution has variance of order
+kappa^-2. No uniform strictly positive covariance independent of
+kappa is claimed.
+
+3. RELATIVE CONDITIONAL VARIANCE OF A BOUNDED PLAQUETTE PROBE
+
+Fix t>0. Conditional on the exterior of e,
+
+ F=exp[-t beta] exp(v dot q),   v=t beta a.
+
+Exact compact integration gives
+
+ E(F^2|out)/E(F|out)^2
+   =exp{L(z+2v)-2L(z+v)+L(z)}.                         (3.1)
+
+The finite difference has the exact representation
+
+ L(z+2v)-2L(z+v)+L(z)
+   =integral_0^1 integral_0^1
+       v^T Hess L(z+(s+r)v) v ds dr.                  (3.2)
+
+Since |z+(s+r)v|<=beta(6+2t), (2.2) yields, for beta>=1,
+
+ L(z+2v)-2L(z+v)+L(z)
+      >=c(t beta)^2/[1+beta(6+2t)]^2
+      >=c t^2/(7+2t)^2=:a_t>0.                        (3.3)
+
+The subscript t here is the fixed source parameter, not temporal
+lattice spacing. Put delta_t=exp(a_t)-1>0. Equations(3.1)--(3.3)
+prove, for EVERY exterior,
+
+       Var(F|out) >= delta_t [E(F|out)]^2.              (3.4)
+
+This is a relative lower bound. It does not assert that the
+conditional mean itself is uniformly bounded below: a hostile
+exterior may make the entire conditional F extremely small.
+
+The full original Wilson measure supplies the missing mean by(1.3)
+and convexity:
+
+            E_W F >=exp[-t E_W(beta h_p)]>=exp(-3t/2).
+
+Therefore conditional Jensen and total variance give
+
+ E_W Var(F|out)
+    >=delta_t E_W[E(F|out)^2]
+    >=delta_t(E_W F)^2
+    >=delta_t exp(-3t)=:c_t>0,                         (3.5)
+
+                    Var_W F >=c_t.                    (3.6)
+
+This proves(0.1). It is a bound for the entire original compact
+measure, including every large-field configuration. Volume does
+not enter any constant. The proof also shows exactly how the
+microscopic upper energy control and the compact conditional
+fluctuation lower bound complement one another.
+
+4. THIS PARTICULAR FLOOR IS ULTRAVIOLET: AN ACTUAL INCREMENT LOWER BOUND
+
+Let F_0 be the probe for the chosen spatial plaquette at time0,
+and F_1 its translate by one time step. Choose e in F_0's plaquette;
+F_1 is measurable in the exterior sigma algebra of that edge.
+The elementary conditional identity gives
+
+ E[(F_1-F_0)^2|out]
+   =Var(F_0|out)+[F_1-E(F_0|out)]^2
+   >=Var(F_0|out).
+
+Consequently,
+
+                d_beta=(1/2)E[(F_1-F_0)^2]>=c_t/2.     (4.1)
+
+This holds for every beta>=1 and every allowed periodic volume.
+It remains true along any beta_a tending to infinity and temporal
+spacing a_time tending to0. In particular d_beta is NOT O(a_time).
+
+Thus calibrating a bounded observable by its bare energy beta h_p
+can guarantee nonzero ordinary variance while preserving a fixed
+amount of one-step temporal noise. The new adjacent-increment
+criterion cannot use this microscopic probe directly.
+
+This is not a proof that every reflected correlation of this
+observable vanishes, nor a proof that no separated or renormalized
+component can be extracted from it. The sufficient O(a_time)
+criterion has failed for this explicit family. A local variance
+floor alone never established the stronger physical claim.
+
+4A. A POSITIVE AMOUNT OF ACTUAL ULTRAVIOLET SPECTRAL WEIGHT
+
+The positive transfer matrix gives a sharper interpretation, still
+without excluding a surviving low-energy component.
+Use the exact finite-period physical transfer operator T from TURN64
+and enumerate an orthonormal eigenbasis with
+lambda_0>=lambda_1>=...>0, including multiplicities.
+Let N>=4 be the time period, Z_T=Tr(T^N), A=F-EF, and
+v=Var(F). For i<j set
+
+ r_ij=lambda_j/lambda_i in(0,1],
+ M_ij=(lambda_i^N+lambda_j^N)|A_ij|^2/Z_T,
+ M_ii=lambda_i^N|A_ii|^2/Z_T.
+
+All weights are nonnegative and
+
+ v=sum_i M_ii+sum_(i<j)M_ij,
+ d=sum_(i<j)M_ij ell_N(r_ij),
+ ell_N(r)=(1-r)(1-r^(N-1))/(1+r^N)<=1-r.               (4.2)
+
+These formulas pair the two ordered thermal spectral terms.
+Degenerate pairs have r=1 and contribute zero to d; diagonal
+terms do likewise. No ratio is incorrectly assumed to be at most1
+before this pairing. Countable sums follow from the finite bounded
+correlations and their positive spectral expansion.
+
+Put delta=min(c_t/2,1/8), so d>=delta by(4.1), while0<=F<=1
+implies v<=1/4. Define the high-difference pair set
+H={i<j:1-r_ij>=2delta}. Splitting(4.2) into H and its complement gives
+
+ d<=2delta v+sum_H M_ij,
+                    sum_H M_ij>=delta/2.               (4.3)
+
+For the exact Hamiltonian H_W=-a_time^-1 log(T/lambda_0),
+these pairs have energy differences
+
+ E_j-E_i=-a_time^-1 log r_ij
+           >=[-log(1-2delta)]/a_time.                 (4.4)
+
+Thus a fixed positive, UNNORMALIZED portion of the observable's
+variance spectral measure lies at energy differences of ultraviolet
+size. The statement concerns the finite-period thermal spectral
+pair measure; it is not a claim that the state is a pure high-energy
+vacuum excitation. Another portion may remain at low energy.
+Equations(4.3)--(4.4) quantify the noise conclusion without asserting
+that the fixed-physical-time covariance vanishes.
+
+5. WHY THIS DOES NOT YET LOWER-BOUND THE FLOWED PHYSICAL VARIANCE
+
+The actual proposed slice probe is
+
+ B_(a,s)=exp[-h |2p(P_12^s(U))/(g_* a^2)|^2],
+
+with fixed physical s>0 and g_*>0. Its finite spatial flow is an
+equivariant diffeomorphism, so B is nonconstant and Var B>0 at
+each fixed regulator. That qualitative fact was already recorded.
+
+The NEW argument in Sections2--3 cannot simply be substituted here:
+
+ (i) Given all but one ORIGINAL edge, B is a nonlinear function
+     of that edge through flow time s/a^2 and through the full
+     plaquette reconstruction. It is not exp(const+v dot q).
+     The exact partition-ratio identity(3.1) is then unavailable.
+
+ (ii) Even an estimate of B's conditional variance needs a
+      lower bound on its actual sensitivity to the remaining
+      private variables. Smoothness, gauge covariance and a
+      finite-lattice inverse flow do not bound that sensitivity
+      uniformly as s/a^2 and the graph dimension grow.
+
+ (iii) Bare beta normalizes the microscopic probe in(0.1).
+       The fixed physical divisor g_* in B is a different
+       renormalization question. No equality between them is
+       implied by (1.3), by the finite conditional density, or
+       by a fixed-scale coordinate convention.
+
+The new microscopic theorem is therefore a useful diagnostic
+and a genuine original-law fluctuation bound, not the missing
+physical-scale variance floor in disguise.
+
+There is a direct ORIGINAL-law consequence of the new energy theorem
+for the actual spatial flow, but its scale is insufficient. On one
+periodic spatial slice let S_sp be the sum of its spatial plaquette
+energies. The negative gradient flow has
+
+                 S_sp(V_s(U))<=S_sp(U) pointwise.
+
+Translation invariance of the original periodic measure and of the
+flow, together with nonnegativity and(1.3), gives for each spatial
+orientation on a rectangular three-dimensional slice
+
+                    E_W[beta h(P_ij^s)]<=9/2.          (5.1)
+
+Indeed each orientation has the same number of plaquettes; the sum
+over its three spatial orientations has mean at most3*(3/2)/beta.
+An individual orientation is at most that nonnegative sum. On a
+spatially cubic geometry with the full permutation symmetry, the
+right side improves to3/2.
+
+Writing P=u_0 I+i p.sigma gives |p|^2=2h(P)-h(P)^2<=2h(P).
+Thus for the physically divided field X=2p/(g_*a^2), (5.1) yields
+
+ E_W|X|^2<=36/(beta g_*^2 a^4),
+ E_W exp(-h|X|^2)>=exp[-36h/(beta g_*^2 a^4)].          (5.2)
+
+Here h>0 is the scalar probe parameter, distinct from h(P).
+All statements in(5.1)--(5.2) concern the actual flowed original
+field. Along the intended logarithmic bare-coupling scale, the
+displayed lower bound in(5.2) tends to0, not to a positive constant.
+It is not a claim that the actual mean tends to0. This computes the
+physical-scale loss in the elementary energy/monotonicity attempt
+instead of treating finite flow as a missing definition.
+
+6. EXACT SCOPE OF THE PREVIOUS INTERACTING/SOURCE RESULTS
+
+TURN39 treats the ORIGINAL identity-Dirichlet Wilson box, retaining
+the compact complement and its actual normalizer. This is a stronger
+measure statement than a merely selected-sector calculation.
+But its controlled box radius is polylog(1/g), and its sources have
+fixed local read/overlap and coercive bounded coefficients.
+An observable smeared over a fixed physical scale along a fine
+continuum sequence has a growing read of order1/a. It is not
+inside that theorem simply because both boxes are finite.
+The proved connected order-g^2 coefficient and summable g^4
+remainder do not supply the missing physical-scale comparison.
+
+TURN49 is a DIFFERENT statement. It transports one constant
+ORIGINAL action source through the admitted homogeneous SELECTED
+trajectory with its baseline projected-product windows frozen.
+It controls the extracted field-dependent source class:
+
+ sup_j ||alpha_j-zeta||<=C eta sum_j g_j^4,
+ sum_j ||u_j||<=C eta sum_j g_j^4.
+
+The source-dependent vacuum factors Z_j(zeta) are retained exactly,
+but their extensive cumulants are not bounded by these class
+estimates. A curvature of the FULL source pressure would include
+their second derivatives. One may not extract a lower variance
+from the controlled field quotient while omitting those factors.
+
+Moreover the source is constant over the original action, not the
+spatially flowed local magnetic probe. Independent physical local
+sources and their marked domains are not provided by that theorem.
+The selected trajectory's terminal inverse coupling Gamma_* is a
+coordinate of its selected effective density, not by itself an
+identified original-law physical coupling for B_(a,s).
+
+The later exact Large-I old-marginal-preserving insertion clarifies
+the native positive chronology. It does not retrospectively turn
+the TURN49 selected product weights into the entire original law
+or bound the low-reference-success contribution from TURN64.
+
+For clarity, if 0<=W<=1 is an exact selected weight and
+nu=W mu/mu(W), then
+
+                   Var_mu(F)>=mu(W) Var_nu(F).          (6.1)
+
+This follows by minimizing E_mu(F-c)^2 over constants. A selected
+variance floor transfers through(6.1) only with a nonvanishing
+ORIGINAL selected mass. The inspected selected-trajectory source
+theorem supplies neither that local mass bound nor a physical
+variance floor for the specified F. No change of its denominator
+is legitimate.
+
+7. THE SHARP CURRENT PHYSICAL TARGET
+
+A useful actual conditional-variance strategy would need, for the
+ORIGINAL flowed probe, private variables and an original exterior
+sigma algebra E_a for which both quantities are controlled:
+
+ E_W Var(B_(a,s)|E_a) >=v_*>0,
+
+or a relative version
+
+ Var(B_(a,s)|E_a)>=delta [E(B_(a,s)|E_a)]^2
+ together with E_W B_(a,s)>=m_*>0.
+
+Sections2--3 prove exactly such a pair for the microscopic
+exponential plaquette because its one-edge conditional law is
+explicit. They do not prove the analogous pair after physical
+spatial flow. Nor would the variance part alone replace the
+quadratic physical-time increment estimate.
+
+The concrete progress of this pass is a uniformly nonzero bounded
+ORIGINAL Wilson variance and a simultaneous, rigorous adjacent-time
+lower bound exposing its ultraviolet component. The inspected
+native/selected results leave the physical variance/calibration
+attachment unresolved. No distant Gaussian matching, full-history
+mass estimate, or complete existence theorem is assumed.

@@ -1,0 +1,99 @@
+TURN82 -- INDEPENDENT AUDIT OF BUFFERED PHYSICAL-TIME CONTINUITY
+20 October 2026. history47.
+
+Producer: work/turn82_physical_translation_gauge.txt
+SHA256 8C482E2D725DB5C44DECFD2064F65DE34FB428882A2380D0C0513345243FFDD5.
+Complete Sections1--6 reviewed against the retained transfer and thin-loop
+proofs. VERDICT: PASS. No correction remains; the real/orthogonal
+eigenfunction precision was explicitly adopted before this audit.
+
+1. Transfer normalization and physical state space
+The one-link kernel exp[-beta h]/c(beta) has normalized Haar integral1
+and eigenvalues I_(2j+1)(beta)/I_1(beta). For beta>0 these are positive,
+and their representation-weighted sum converges. The finite product Q
+commutes with normalized site-gauge averaging P_G; the spatial multiplier
+M is gauge invariant. Hence M Q P_G M on the full space restricts to
+M Q M on H_phys and is zero on the orthogonal gauge sectors. Multiplying
+slab kernels includes every temporal-link Haar integral and both half
+spatial potentials; tracing gives precisely c(beta)^(2N|E|)Tr_phys T^(2N).
+This agrees with transfer_matrix_witness_turn64 Section2. All gauge
+volumes are1. No Gauss projection or endpoint normalization is omitted.
+
+On H_phys, positive invertible M and injective Q imply strictly positive
+eigenvalues of T. Trace-class compactness gives the selfadjoint logarithm
+used here, without an upper bound on its energies. This is the exact
+finite-spacing Hamiltonian; no differential electric Hamiltonian is
+substituted. beta>0 is now explicit.
+
+2. General block insertion and the thermal vector
+For a gauge-invariant bounded insertion in the central N-2q slabs, the
+pointwise kernel bound |K_F|<=||F||infinity T^(N-2q) follows directly
+before integration. The endpoint gauge variables and half potentials
+are the same as in the unmarked transfer construction. Reflecting and
+conjugating the complete insertion gives the adjoint kernel, so the
+original periodic OS form is exactly the Hilbert--Schmidt inner product
+of A_F=T^q K_F T^q/sqrt(Z_T). This remains true for a general block
+function; no factorization into slice multipliers is assumed.
+
+Translation changes the two unmarked margins oppositely. In the chosen
+kernel orientation this gives(2.3), and in the transfer eigenbasis its
+factor is exp[-ma(E_i-E_j)]. The sign convention would reverse under
+the opposite kernel orientation, without changing any subsequent
+two-sided bound. The stated orientation is internally consistent.
+The buffered endpoint hypothesis keeps both translated read sets in the
+positive half. Ordinary stationarity and Cauchy--Schwarz bound each
+translated OS norm by the SAME original variance v.
+
+3. Spectral constants
+The squared Hilbert--Schmidt coefficients give a finite positive measure
+on energy DIFFERENCES. The two endpoint bounds imply integral
+cosh(2d_a lambda)dnu<=v, including both signs of lambda. Therefore
+cosh(2x)>=2x^2 gives ||L A_F||^2<=v/(2d_a^2).
+
+For |t|<=d_a/2,
+ |e^(-t lambda)-1|^2<=t^2 lambda^2 e^(2|t lambda|).
+After division by cosh(2d_a lambda), this is at most
+(t/d_a)^2 2x^2 e^(-|x|), x=d_a lambda. Its maximum is8/e^2,
+so(3.3) has the correct constant. The argument legitimately uses
+nonnegative summation and supplies a continuous interpolated vector
+inside the buffer; only integer t/a are literal lattice translates.
+
+This gives a uniform UNNORMALIZED OS modulus for an already buffered
+state. It does not bound normalized energy without a state-norm lower
+bound, and it does not transfer a coincident ordinary variance to a
+separated reflected norm. The finite-period generator is the thermal
+Liouvillian, not a positive vacuum Hamiltonian.
+
+4. Ground-law illustration and actual thin-loop test
+The fixed-spatial infinite-time illustration is a separate ground-state
+construction. For psi=e^(-d_a H)f Omega with ||f Omega||^2<=v,
+sup_(E>=0) E e^(-2d_a E)=1/(2e d_a) and
+sup E^2 e^(-2d_a E)=1/(e^2 d_a^2), giving(4.2).
+No infinite-time extension of the HS theorem is asserted.
+Real excited eigenfunctions orthogonal to Omega can be chosen because
+the transfer kernel is real symmetric. At fixed finite spatial lattice
+the positive analytic ground state is bounded below and each eigenfunction
+is bounded, so B_j lies in[0,1], has mean1/2, and its centered buffered
+state has normalized energy exactly E_j. This is a valid fixed-regulator
+example of why no normalized uniform bound follows from the damping
+estimate alone.
+
+The thin-loop input is the actual original-Wilson proof in
+physical_coarse_variance_turn66 Sections1--4. Its selected-edge packing
+m>=length/19, uniform conditional SU2 contractions, and character-square
+formula give exactly(5.1). For a fixed physical loop and
+a(1+beta_a)->0, variance tends to1/4 while centered OS norm is at most
+2eta. Scaling to B=(1+W)/2 gives variance1/16 and OS bound eta/2.
+The exact buffered HS channel preserves that OS norm and supplies the
+new derivatives, so this is a valid actual-law test of the stronger
+inference. It makes no assertion about failure of flowed/thick probes.
+
+5. Scope
+The source of the time-continuity result is the original transfer matrix
+and the physical buffer, independent of HS smoothing. Original-field
+coordinate derivatives are not identified with physical translations.
+The note preserves the remaining nonzero physical channel and joint
+continuum construction, including translation/symmetry identification.
+No scope inflation or constant mismatch found.
+
+No producer, frozen prior work or authoritative output was changed.

@@ -1,0 +1,326 @@
+TURN91 -- FINITE ORIGINAL WILSON TRANSPORTS AND THE OUTER RESPONSE
+21 October 2026. tail47. Finite original-law calculations.
+
+STATUS
+
+No physical variance floor or continuum Yang--Mills construction is
+proved. Three concrete conclusions are established below.
+
+(i) For EVERY finite-entropy change of the exact Wilson/HS joint law,
+the response of the physical two-window average differs from its
+interacting auxiliary-marginal response by at most sqrt(D_cond/n).
+This includes deformations moving the auxiliary record, and not just
+fixed-record moves. Bounded entropy cannot produce an order-one
+response entirely from conditional link noise.
+
+(ii) An explicit triangular, tree-framed finite SU2 transport has
+exact Haar Jacobian one. It eliminates the action change on the tree
+faces, but the actual Wilson conditional mixing of long transverse
+chords gives a bulk entropy cost proportional to beta theta^2 times
+the number of moved links. At theta=g a on a fixed physical torus,
+this cost diverges like a^-2. This is a calculation for this particular
+frame construction, not a prohibition of all adapted transports.
+
+(iii) Full four-dimensional Wilson flow is a legitimate different
+deformation: its temporal read is not confined to one slice, so the
+slice-gradient score statements do not automatically apply. Its exact
+Jacobian/action formula is given in Section5. Available unmarked
+energy estimates do not yet control the required cancellation or the
+response of the prescribed original probe.
+
+The current target remains the same original bounded spatial-flow
+observable and one common original Wilson sequence. This note does
+not change its spatial flow, g_*, temporal calibration or RP support.
+
+1. LAW, TARGET AND INPUTS
+
+Let mu(dU)=Z^-1 exp[-beta S(U)]dHaar(U) on a nondegenerate periodic
+four-dimensional SU2 lattice, all periods at least4, beta>0,
+ S=sum_p h_p, h_p=1-w(U_p), w(V)=Re Tr(V)/2.
+All four-dimensional plaquettes, including temporal plaquettes, occur
+in S. The Pauli/2 basis i sigma_c/2 is orthonormal.
+
+Let phi_t in[0,1] be the prescribed original gauge-invariant spatial-
+flow slice observable. Its complete read lies on slice t, possibly on
+the whole spatial slice. Set
+ G_n=n^-1 sum_(0<=t<n)phi_t-n^-1 sum_(n<=t<2n)phi_t, 2n<=N. (1.1)
+The physical window L=na remains in a fixed positive interval. The
+unproved target is Var_mu(G_n)>=v>0. TURN89 supplies the physical-band
+and buffered reflected-norm consumer for that target. No variance
+floor is inserted in any calculation below.
+
+Use the exact positive HS disintegration already proved in TURN81:
+ Pi(dU,dxi)=mu(dU)kappa_U(dxi)=nu(dxi)k_xi(dU).             (1.2)
+Given the entire real xi, ALL original links are independent. Thus
+the 2n slice observables in(1.1) are independent under k_xi. Write
+ m(xi)=C G_n=E_(k_xi)G_n.
+
+The second source input, used only in Section4, is the actual original
+private-edge conditional Haar theorem from
+ physical_coarse_variance_turn66.txt Sections1--5 and
+ temporal_filter_physical_probe_turn67.txt Sections2--3:
+for an edge-simple loop and m sparse private edges, no two sharing a
+plaquette, the conditional law of its holonomy, given all other links,
+obeys
+ ||Law(C|outside I)-Haar||_L1
+ <=epsilon_m=C(1+beta)^(3/4) exp[-c(m-1)/(1+beta)].        (1.3)
+The constants are uniform in the conditioned original links. A greedy
+selection along z distinct edges gives m>=z/19. Outside tests may read
+all other links but must not read I. No independent-plaquette model or
+selected-history law is used.
+
+Specifically, finite_volume_wilson_energy_turn64.txt(0.2) gives
+ E exp(beta h_p/4)<=2^(3/4).
+Jensen therefore gives E beta h_p<=3 log2<8. The harmless loose bound
+implies, for EVERY orientation on the rectangular torus,
+ c_p=E w(U_p) obeys 1-8/beta<=c_p<=1.                    (1.4)
+No equality between different orientations on a rectangular torus is
+needed below; translations give equality within each orientation.
+We use beta>=16 when a positive lower bound for these means is needed.
+
+2. FINITE ENTROPY: THE INTERACTING MARGINAL CANNOT BE OMITTED
+
+Conditional Hoeffding, with 2n ranges of length1/n, gives exactly
+ E_(k_xi) exp[s(G_n-m(xi))]<=exp[s^2/(4n)], s real.        (2.1)
+This is uniform in xi and in the original cutoff, volume and beta.
+
+Let Q be ANY probability absolutely continuous with respect to Pi,
+with finite relative entropy. Disintegrate
+ Q(dU,dxi)=nu_Q(dxi)q_xi(dU),
+ D_cond=int D(q_xi||k_xi)nu_Q(dxi).
+The chain rule reads
+ D(Q||Pi)=D(nu_Q||nu)+D_cond.                             (2.2)
+Apply the entropy variational inequality to q_xi versus k_xi, then
+integrate, using(2.1), with a common s>0. Applied to both signs it yields
+ |E_Q G_n-E_(nu_Q)m|<=D_cond/s+s/(4n).
+Optimization proves
+ |E_Q G_n-E_(nu_Q)m|<=sqrt(D_cond/n).                    (2.3)
+For D_cond=0 this follows directly or by s downarrow0.
+
+Consequently the ORIGINAL mean displacement decomposes as
+ E_QG_n-E_muG_n
+ = [E_(nu_Q)m-E_nu m] + error,
+ |error|<=sqrt(D_cond/n).                                (2.4)
+An order-one response under bounded total relative entropy therefore
+requires an order-one response of the interacting conditional mean
+under the changed auxiliary marginal. Formula(2.4) does not bound that
+outer response by o(1). The general Pinsker bound, where applicable,
+does not supply the missing lower bound either.
+
+This applies to original finite transports and their fixed-innovation
+lifts: xi may move, so nu_Q need not equal nu. It is strictly broader
+than the fixed-xi score obstruction. Conversely, if a proposed finite
+transport keeps nu unchanged, then
+ |E_QG_n-E_muG_n|<=sqrt(D(Q||Pi)/n).                      (2.5)
+
+There is also a literal finite-displacement statement for a map
+ (U,xi) -> (T_xi U,xi)
+whose output law Q has finite entropy D. The absolute-value MGF from
+(2.1) is at most2 exp[s^2/(4n)]. Therefore
+ E_Q|G_n-m|<=sqrt((D+log2)/n),
+ E_Pi|G_n-m|<=1/sqrt(2n),
+ E_Pi|G_n(T_xiU)-G_n(U)|
+ <=sqrt((D+log2)/n)+1/sqrt(2n).                          (2.6)
+The second inequality uses the actual conditional variance bound
+E Var(G_n|xi)<=1/(2n). In particular, a fixed-record finite map of
+uniformly bounded entropy cannot move G_n by a fixed positive amount
+on a set of probability bounded below. This is a two-event restriction
+on that transport, NOT an upper bound on Var_mu(G_n).
+
+3. A SIMPLE EXACT FINITE ACTION COST
+
+For orientation mu=1, multiply only the positively oriented mu-links:
+ U_e -> exp(i theta_e sigma3) U_e,
+where the theta_e are deterministic and |theta_e|<=1. All other links
+are unchanged. This product translation preserves Haar and is invertible,
+so its output law has exact relative entropy
+ D(T_*mu||mu)=beta E_mu[S(TU)-S(U)].                      (3.1)
+
+Independent original vertex-gauge averages at the two distinct starting
+vertices of the mu-links of a mu-nu plaquette give
+ E w(U_p(TU))=cos(theta_e)cos(theta_e') c_p.
+This uses invariance of the ORIGINAL law. It does not replace a noisy
+plaquette by its flat value. Therefore
+ D=beta sum_(p containing mu)
+                  c_p [1-cos(theta_e)cos(theta_e')].    (3.2)
+For |theta|,|phi|<=1,
+ (theta^2+phi^2)/6<=1-cos(theta)cos(phi)
+                              <=(theta^2+phi^2)/2.
+Each mu-link belongs to six such plaquettes. From(1.4), beta>=16 gives
+ (beta/2)sum_e theta_e^2 <= D <=3beta sum_e theta_e^2.    (3.3)
+Spatial smoothness of the deterministic angles does not turn this cost
+into a difference-of-angles action: unframed color directions at
+different vertices have been independently gauge averaged.
+
+For theta_e=g_a a v(x_e), with a nonzero fixed smooth physical profile
+and beta g_a^2 comparable to1, the cost is of order a^-2 in four
+dimensions. This is not a bound on every gauge-framed transport. The
+next section tests one such frame with its exact Jacobian retained.
+
+4. A TRIANGULAR TREE FRAME: ZERO TREE COST, LARGE CHORD COST
+
+Take periods N0,N1,R,R in directions0,1,2,3 respectively. For each
+plane (t,x1), construct the comb tree on its transverse R by R torus:
+from root(0,0), first follow direction2 along the bottom row without
+wrapping, then direction3 up the column without wrapping. Denote the
+root-to-x parallel transport by P_x. It uses ONLY links in directions
+2 and3. Let H_(t,x1) be any fixed Pauli unit axis and put
+ K_x=P_x^-1 exp(i theta H_(t,x1))P_x,
+ T_theta U_1(x)=K_x U_1(x), other directions unchanged.  (4.1)
+Use one common |theta|<=1. Frames depend only on unchanged links, so
+this is an invertible triangular Haar-preserving transformation:
+conditional on all direction2,3 links, it is a product of fixed left
+translations of direction1 links. Thus(3.1) is still exact, including
+every temporal plaquette and the full partition normalization.
+
+4A. Independent root-axis averages are legitimate for this calculation.
+Under an arbitrary original vertex gauge g,
+ P_x(U^g)=g_root P_x(U)g_x^-1,
+ T_H(U^g)=(T_(Ad(g_root^-1)H)U)^g.
+The Wilson measure and action are gauge invariant. Distinct plane roots
+are distinct vertices. Hence E[S(T_H U)-S(U)] is independent of each
+root-axis direction. It may be computed by averaging these axes
+independently and uniformly. This is an equality of expected costs for
+the fixed-axis maps, not a lower bound on the entropy of their mixture.
+
+4B. Exact tree and chord formula.
+For a direction1-nu plaquette, nu=2 or3, with x and y=x+nu on the
+same transverse plane, write its old holonomy as P, and set
+ A=P_x P P_x^-1, C=P_x U_nu(x)P_y^-1.
+Its new Wilson trace is
+ w(exp(i theta H) A C exp(-i theta H) C^-1).
+If (x,y) is a tree edge, C=I and the trace is unchanged pointwise.
+For an arbitrary chord, uniform axis averaging in SU2 gives
+ E_H[h_p(T_HU)-h_p(U)]
+ =(4/3)sin^2(theta) [w(A)-w(AC)w(C^-1)].                 (4.2)
+Indeed averaging conjugation by exp(i theta H) multiplies the vector
+part of any quaternion by (1+2cos(2theta))/3. In particular the absolute
+value of(4.2) is at most(8/3)sin^2(theta), without any weak-field event.
+
+For a nonwrapping direction2 chord at height z, with x2<R-1, cancel
+the shared bottom stem in C. The remaining loop is an edge-simple
+rectangle of width1 and height z. The far vertical branch at x2+1 has
+z edges, none read by A: A uses the near tree branch, the local
+direction1-2 plaquette, and the shared stem. Select m>=z/19 sparse
+edges on the far branch. Conditional on their complement, A is fixed
+and(1.3) applies to the rectangle holonomy. The SU2 Schur identity is
+ int w(A C)w(C^-1)dC=w(A)/4.
+Conjugating by the fixed bottom stem does not alter the statement.
+It follows, after the full original expectation, that
+ E[w(A)-w(AC)w(C^-1)] >=(3/4)c_p-epsilon_m.               (4.3)
+Choose an integer z0 so epsilon_m<=1/8 whenever z>=z0. One may take
+ z0=ceil{19[1+(1+beta)c^-1 log(max(2,8C(1+beta)^(3/4)))]}.
+Thus z0=O((1+beta)log(2+beta)), with the fixed constants of(1.3).
+For beta>=16, the right side of(4.3) is at least1/4. Every such bulk
+chord therefore has expected action cost at least sin^2(theta)/3.
+
+4C. All other faces and the global entropy lower bound.
+Nonwrapping direction3 edges are tree edges and cost exactly zero.
+The direction2 chords of height z<z0, including any tree edges, may
+be bounded below by -(8/3)sin^2(theta) each. There are at most
+(R-1)z0 of them per transverse plane. The wrapping direction2 and
+direction3 chords contribute at most2R further possibly negative
+terms, with the same bound. There are (R-1)(R-z0) good chords.
+
+Temporal direction0-1 plaquettes connect two distinct transverse
+planes. Independent root-axis averaging gives cos^2(theta) w(P)
+for their new trace; their expected cost is c_p sin^2(theta)>=0.
+No temporal plaquette is discarded. Faces not containing direction1
+are unchanged.
+
+Summing the preceding bounds, the cost per plane is at least
+ (sin^2(theta)/3)[R(R-1)-9(R-1)z0-16R].
+In particular, if R>=128 and z0<=R/36, it is at least
+ sin^2(theta)R^2/6. Together with(3.1),
+ D((T_theta)_*mu||mu)
+ >= (beta sin^2(theta)/6) N0 N1 R^2.                    (4.4)
+The per-face absolute estimates also give
+ D((T_theta)_*mu||mu)<=8 beta sin^2(theta)N0 N1 R^2.     (4.5)
+
+For fixed physical side lengths, R,N0,N1 comparable to a^-1, and
+polylogarithmic beta, z0/R tends to0. At theta=g_a a v with fixed
+nonzero v and beta g_a^2 comparable to1, both bounds are of order
+a^-2. The frame cancels every tree-face cost but its long transverse
+chords are not uniformly coherent under the actual Wilson law.
+
+This result excludes a bounded-KL certificate for this specified
+triangular comb-frame move at that amplitude. It does not prove that
+the move changes G_n by order one. It also does NOT bound the entropy
+of a randomized-axis mixture from below, nor exclude gauge-covariant
+transports using different frames, changes of transverse links,
+field-dependent amplitudes, nontrivial Jacobians or auxiliary motion.
+The private-loop estimate is used as an ORIGINAL conditional theorem,
+not as a claim that the flowed probe itself is a thin Wilson loop.
+
+5. FULL FOUR-DIMENSIONAL FLOW IS A DISTINCT DEFORMATION
+
+This section is a precise scope check, not a claimed inexpensive
+transport. Define the finite-lattice gradient flow Phi_tau by
+ dU/dtau=-grad S(U).                                     (5.1)
+It is a global smooth diffeomorphism for every finite positive or
+negative tau on the compact product of groups. This convention fixes
+all constants below; a physical flow time s corresponds, up to the
+chosen fixed conventional factor, to tau=s/a^2.
+
+The group Laplacian gives Delta h_p=3w(U_p), since each of the four
+links contributes Casimir3/4. Therefore
+ Delta S=3(P-S), P=number of plaquettes.
+Liouville's formula and action dissipation give the exact identities
+ log Jac_Haar Phi_tau(U)=-3 int_0^tau [P-S(Phi_r U)]dr,
+ S(Phi_tau U)-S(U)=-int_0^tau |grad S(Phi_r U)|^2 dr,
+ D((Phi_tau)_*mu||mu)
+ =int_0^tau E_mu[3(P-S(Phi_r U))
+                     -beta|grad S(Phi_r U)|^2]dr.       (5.2)
+At tau=0 the integrand has expectation zero by the actual Wilson
+integration-by-parts identity. The entropy is nonnegative as a whole;
+one cannot retain the positive Jacobian term and drop the negative
+action term as if that produced a sharp physical cost. Nor does the
+unmarked action MGF estimate their cancellation at tau~a^-2.
+
+More generally, let Q(U)=q(Phi_tau U), where q is a bounded smooth
+gauge-invariant four-dimensional smoothed action functional. In
+covariant differential notation J_tau=D Phi_tau,
+ grad Q=J_tau^* grad q(Phi_tau U),
+ Hess Q(v,w)=Hess q(J_tau v,J_tau w)
+                    +<grad q,(nabla D Phi_tau)(v,w)>.   (5.3)
+The genuine score of X=grad Q is beta<grad S,grad Q>-Delta Q,
+including both terms in(5.3). Finite flow has a full spacetime read;
+it is not a sum of independent slice-local vector fields. Thus the
+slice-local score tridiagonality does not apply without a new argument.
+The general TURN90 coarse Hessian certificate still applies, and is
+still insufficient for the chosen G_n. Keeping its exact signed terms
+instead needs actual marked bounds for J_tau, its second variation,
+and their correlation with the ORIGINAL law and G_n.
+
+The deterministic Hessian bound |Hess S|<=6 Id only gives
+ ||J_tau||<=exp(6|tau|), which is unusable at fixed physical s as
+a downarrow0. This does not say that typical derivatives grow at that
+rate. It identifies what the existing bound fails to estimate.
+
+A four-dimensional flowed generator can be used for a deformation
+without changing the half-local original observable: the RP support
+condition belongs to G_n and its reflected test, not to an auxiliary
+integration-by-parts vector field. However, such a generator has not
+yet supplied either a uniformly controlled true entropy/score cost
+or an order-one response. By(2.4), any successful bounded-entropy
+construction must in particular move the interacting mean channel.
+
+6. CHANGE OF NEXT ACTION AND LIMITS
+
+The conditional part of a finite transport is quantitatively settled
+by(2.3): at physical n~a^-1 it contributes at most O(sqrt(a D_cond)).
+One should calculate the OUTER response and its true cost for a
+candidate that moves the auxiliary record, or retain cancellations in
+the original exact score. Repeating fixed-record noise deformations
+cannot produce the desired response at bounded entropy.
+
+The tree calculation supplies a tested alternative to the cheapest
+fixed-color move: exact gauge framing and Jacobian one alone do not
+make its physical cost finite. The missing input is not repaired by
+declaring a thin framed chord smooth. More adaptive frames or full
+four-dimensional flow remain legitimate, but their marked correlated
+cost is an additional estimate, not an unmarked energy consequence.
+
+None of these statements is an upper bound on the full physical
+variance, an obstruction to Yang--Mills existence, a spectral-band
+lower bound, or a new scalar continuum construction.

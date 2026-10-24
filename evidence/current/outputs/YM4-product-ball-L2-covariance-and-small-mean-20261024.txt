@@ -1,0 +1,239 @@
+PRODUCT-BALL L2 COVARIANCE AND A RADIUS-INDEPENDENT SMALL MEAN
+24 October 2026. audit_two_root. Finite proof; native registration separate.
+Archive and outputs unchanged.
+
+RESULT
+
+The proposed mean improvement is valid. On a fixed product of symmetric
+convex balls, a uniform weighted Hessian gap gives the usual exponential
+covariance estimate with L2 gradients, not only bounded gradients.
+The Neumann boundary creates no loss because the spatial weight is
+scalar on each entire coordinate block. Uniform centered fourth moments
+then replace the crude noise-radius square in the primitive gradient.
+For H_t=xQx/2+tV and the local quadratic-growth gradient premise below,
+
+                   sup_i |E_t x_i| <= tan(C g t),
+
+and hence at most2Cgt for Cg<=pi/4. Constants are independent of every
+ball radius and the number of blocks. The proof concerns the original
+fixed convex-product law; it does not apply after an arbitrary hard
+mask, to a moving support, or to nonproduct constraint coordinates.
+
+1. PRECISE FINITE ASSUMPTIONS
+
+Let I be a finite set in a metric lattice of bounded density, with
+
+              C_a=sup_i sum_j exp[-a d(i,j)]<infinity    (1)
+
+at the fixed positive rates used below, uniformly in I. Each x_i is
+in R^m, with m fixed (e.g. the finite Lie-algebra color dimension).
+Let K=product_i B_(S_i)(0), with positive finite S_i. Unequal radii
+are allowed. Put
+
+ dnu_t=Z_t^-1 1_K exp[-H_t(x)]dx,
+ H_t=one half x^T Q x+tV(x),       0<=t<=1.              (2)
+
+Q is real symmetric, and H_t is C2 on a neighborhood of K (smooth
+approximation is sufficient). Suppose, uniformly in x,t,
+
+ H_t'' >= c0 I,
+ Re <v, W H_t'' W^-1 v> >= cnu |v|^2                  (3)
+
+for all real vectors v and the block-scalar weights
+W_i=exp[+/-nu d(i,j)] centered at any j. More generally the argument
+allows every fixed-in-x W with nu-Lipschitz logarithm. Both c0,cnu
+are positive and independent of I,S_i,t.
+
+The second inequality follows, for example, from the unweighted gap
+and a small two-sided Schur commutator bound for W H_t'' W^-1-H_t''.
+It is a COMPLETE Hessian condition, not just convexity without spatial
+control. If it holds at t=0 and t=1 with the same constants, convexity
+of the quadratic form gives it for their linear interpolation.
+
+Finally assume the full primitive has the pointwise gradient bound
+
+ |grad_j V(x)| <= C_V g sum_k exp[-mu d(j,k)](1+|x_k|^2) (4)
+
+on ALL of K. C_V,mu are fixed. A bounded finite-read polynomial
+gradient is a special case. All native stationary/current/gauge/Haar/
+pivot terms must be included before verifying (3),(4). This proof
+does not derive (4) from an undifferentiated interaction cap.
+
+2. THE NEUMANN ONE-FORM IDENTITY ON THE PRODUCT
+
+Fix one t and suppress it. Let
+
+       L=-Delta+grad H dot grad
+
+be the positive scalar generator with Neumann boundary condition.
+For centered G, solve Lu=G-EG and set v=grad u. For smooth data its
+weak differentiated equation is
+
+ a(v,w)=<grad G,w>_(L2(nu)),                             (5)
+
+on the vector form domain consisting of H1 vector fields tangent to
+EACH smooth boundary face. Its form is
+
+ a(v,w)=integral_K [sum_l <partial_l v,partial_l w>
+                              +<H''v,w>]dnu
+       +sum_faces integral_face II(v_tan,w_tan)dnu_face. (6)
+
+On the face |x_i|=S_i the outer normal has entries only in block i;
+the second fundamental form is (1/S_i) times the tangential inner
+product in that block and is zero on other coordinate blocks. It is
+nonnegative. The density in the face integral is the same normalized
+e^-H surface density. There is no extra derivative of the normalizing
+constant and no boundary force of unspecified sign.
+
+To verify the sign in(6), differentiate the Neumann condition
+grad u dot n=0 along a tangent vector w. It gives
+(partial_n grad u) dot w=-II(grad u,w). Integrating L grad u by parts
+and using grad Lu=L grad u+H''grad u gives exactly(5),(6).
+
+Corners of a product need not be rounded into a nonproduct domain.
+A precise approximation is available from the tensor products of
+the smooth Neumann eigenfunctions on the INDIVIDUAL balls. Their
+finite sums are smooth up to every face and form an operator core
+for the product Neumann Laplacian. Convexity gives its H2 estimate;
+the bounded smooth drift is a relatively bounded first-order
+perturbation, so the Neumann Poisson solution above is in the same
+H2 domain. Approximate u in that graph/H2 norm by these finite sums.
+Their gradients converge in H1, including the face traces. To pass
+the right side of(5), first integrate it as
+
+ -integral (Lu)(div w-grad H dot w)dnu;
+
+the boundary term is zero since w is tangent on every face. Thus
+only L2 convergence of Lu is needed. Then use G in H1 and density
+of smooth tangent tests. This proves(5) on the form domain. Face
+intersections have codimension at least2 and create no edge integral.
+Qualitative approximation constants may depend on the finite domain;
+the quantitative estimates below use only(3), not those constants.
+
+Equivalently, (6) is the absolute one-form/Neumann realization of
+the differentiated weighted Laplacian. No claim about weighted
+Neumann operators on general intersecting multiblock mask surfaces
+is made: their tangent spaces need not be preserved by W.
+
+3. LEGITIMATE L2 WEIGHTED AND SPATIAL COVARIANCE
+
+For a spatial block-scalar W, both Wv and W^2v remain tangent on
+every product face. W is constant in x and commutes with every face
+II operator. Test(5) with W^2v. The first term in(6) becomes
+sum_l ||W partial_l v||_2^2 and the boundary term is nonnegative.
+The Hessian term is bounded below by cnu||Wv||_2^2 by(3). Hence
+
+          ||W grad u||_2 <= cnu^-1 ||W grad G||_2.       (7)
+
+The scalar Neumann integration by parts gives
+Cov(F,G)=<grad F,grad u>. Therefore for F,G in H1(nu),
+
+ |Cov(F,G)| <= cnu^-1 ||W^-1 grad F||_2
+                                      ||W grad G||_2.  (8)
+
+These are genuine L2 norms under the SAME exact normalized law.
+Neither gradient needs a pointwise uniform bound.
+
+There is also the familiar blockwise version. Let B be the positive
+one-form operator of(6). The same weighted energy argument applies
+to Bv=h for any L2 vector forcing h, not necessarily a gradient.
+For h supported at block j, take W_k=exp[nu d(k,j)]. It yields
+
+ ||P_i B^-1 P_j||_(L2->L2)<=cnu^-1 exp[-nu d(i,j)].      (9)
+
+Since Cov(F,G)=<grad F,B^-1 grad G>, decompose the forcing into its
+actual coordinate blocks and obtain
+
+ |Cov(F,G)| <= cnu^-1 sum_(i,j) exp[-nu d(i,j)]
+                         ||grad_i F||_2 ||grad_j G||_2. (10)
+
+All sums are finite before taking uniform bounds. This does not
+assume that each separated component of grad G is itself a gradient.
+The one-form inverse is defined on arbitrary vector forcing by its
+coercive form. For F=e dot x_i, |e|=1, either(8) with
+W_j=exp[-nu d(i,j)] or(10) gives the required local L2 response.
+
+4. CENTERED FOURTH MOMENTS INDEPENDENT OF THE CUT RADIUS
+
+Linear tilts of nu have Hamiltonian H-s e dot x_i, on the SAME K,
+and preserve H''. Taking W=1 in the preceding proof gives
+Var(e dot x_i)<=1/c0 in every such tilted law. The second derivative
+of its logarithmic moment generating function is this variance.
+Integrating twice gives
+
+ E exp[s e dot(x_i-E x_i)] <= exp[s^2/(2c0)].            (11)
+
+Thus every color component has a centered Gaussian tail. A finite
+color-net or component estimate gives
+
+ E|x_i-m_i|^4 <= C_m c0^-2,
+ ||1+|x_i|^2||_2 <= C_(m,c0)(1+|m_i|^2), m_i=E x_i.   (12)
+
+For example the component tail gives fourth moment at most16/c0^2;
+sum the fixed m components. No product radius, number of blocks or
+ambient mean norm occurs. The moments are centered at the ACTUAL
+coordinate mean, which need not initially have been estimated.
+
+5. THE MEAN DIFFERENTIAL INEQUALITY
+
+Let M(t)=max_i |m_i(t)|. From(4), Minkowski and(12),
+
+ ||grad_j V||_2
+ <=C_V g sum_k exp[-mu d(j,k)] ||1+|x_k|^2||_2
+ <=C_1 g(1+M(t)^2),                                    (13)
+
+where C_1 includes the uniformly finite row sum C_mu in(1).
+The domain is fixed, so differentiation of its normalized ratio is
+exactly
+
+                 m_i'(t)=-Cov_t(x_i,V).                 (14)
+
+Test against an arbitrary unit color vector before taking the norm.
+Equation(8) or(10), together with the fixed spatial sum in(1), gives
+
+          |m_i'(t)| <= C_2 g(1+M(t)^2).                 (15)
+
+At t=0 the correlated truncated Gaussian is globally even under
+x->-x because both its quadratic and the symmetric product K are
+even. Thus m_i(0)=0 exactly, despite correlations between blocks.
+Each m_i is C1 on this finite product; M is Lipschitz and its upper
+Dini derivative obeys
+
+              D+ M <= C_2 g(1+M^2), M(0)=0.
+
+Comparison with the Riccati solution, or integrating arctan M at
+almost every point, yields
+
+       M(t)<=tan(C_2 g t),  0<=t<pi/(2 C_2 g).          (16)
+
+For C_2 g<=pi/4 and 0<=t<=1 this is at most2 C_2 g t.
+The bootstrap is noncircular: fourth moments were centered at the
+unknown m_i, and M was closed only in the scalar differential
+inequality. No initial bound g S^2 was inserted.
+
+6. NATIVE USE AND LIMITATIONS
+
+If the literal cancelled first-bare primitive satisfies(4), and the
+complete action has the uniform weighted gap on its ENTIRE product
+|x_i|<=S with S<=epsilon_cap/g, then(16) permits that large fixed
+physical window. The old crude mean estimate Cg(1+S^2) can be replaced
+by Cg. This alone does not prove(4), the whole containing product's
+admission, a source-compatible inverse chart or a moving-domain tail.
+
+An arbitrary held exterior force changes m(0). The same calculation
+then starts from its actual M(0), not zero. For the native guarded
+boundary z one can instead start at z=0 and use the independently
+proved spatial boundary-score response along the admitted path:
+
+ |E_z x_i| <= Cg+C sum_b exp[-nu d(i,b)]|z_b|.
+
+This is valid only if that complete mixed Hessian/score premise is
+verified; a distant boundary is not silently deleted. It explains
+how the radius-independent central mean can coexist with larger
+means near a retained boundary.
+
+All estimates use the complete source-zero normalized product law.
+Hard earlier-mask conditioning must still be transferred by its
+actual mass or a separate theorem. Block-scalar weights, fixed
+product support, complete Hessian accretivity and the primitive
+gradient growth are essential hypotheses, not presentation choices.

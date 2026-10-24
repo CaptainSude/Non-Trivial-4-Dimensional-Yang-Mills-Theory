@@ -1,0 +1,280 @@
+STATIC RESTRICTION BY A COMPLETE LOCAL AVERAGING TOWER
+22 October 2026. New v20 note; originals and frozen checkpoints unchanged.
+Status: PASS / frozen after independent final readback. Proved finite
+constraint-completion lemma and real restriction theorem for the actual
+admitted buffered-center sector below. Independent audit:
+work/static_local_tower_fiber_identity_audit_20261022.txt, including Section5.
+Full complex datum admission and a new static near-source column are NOT
+established here.
+
+1. THE NATIVE AVERAGING FACT THAT IS AVAILABLE
+
+Use ONE averaging convention throughout the old array, the local tower and
+all comparisons. B98 printed23--24 (42)--(43) defines the ordinary average
+recursively. If M_j denotes that j-fold average, then, literally,
+
+             M_p(U)=M_{p:r}(M_r(U)),       p>=r.             (1)
+
+Here M_{p:r} applies the same one-step operations on the successively coarser
+grids. It is not the assertion that a separately defined direct large-block
+average equals an iterated average. B98 immediately after (43) states that a
+j-row uses only bonds in the two j-blocks associated with its endpoints.
+The covariance statement in the following paragraph permits a common gauge
+to be used throughout this comparison.
+
+B109 printed252--254 replaces the original contour choice by the symmetric
+one-step definition (0.12), and explicitly retains the B98 results for that
+choice. The argument here uses its same recursion, block locality and gauge
+covariance. It does NOT replace the actual averages by the older nonsymmetric
+ones. Nor does it use the corrected relative averages B98(88)--(92) as if they
+were ordinary M_j. Those are different objects.
+
+2. COMPLETE TOWER DATA DETERMINE THE GLOBAL TOP AVERAGE
+
+Let D_0 contain the mutable fine field and let
+
+             D_0 superset D_1 ... superset D_r,
+             D_(r+1)=empty,
+
+be a native local determining tower as in B119256--257 (2.13), or B109273
+before (3.18). Each D_j is a union of the native j-blocks. Its collars obey
+the native separation, so an elementary j-edge cannot jump from D_(j+1)
+to D_j^c. Use the actual incident-edge convention: an edge is included in
+a vertex region when at least one endpoint belongs to it. Prescribe M_j
+on the incident rows of D_j\D_(j+1), and fix the exterior fine field and
+the native fine Dirichlet boundary rows. This is the complete tower, not
+only the interior top-r rows.
+
+Suppose U and W have these same data and the same fixed exterior. Then
+
+                         M_r(U)=M_r(W) globally.           (2)
+
+Here "globally" is rowwise on the common domain of the native recursive
+averages. If an unnecessary far-exterior coarse average is not defined,
+no value is assigned to it: run the following completion only on the
+finite backward reads of the old constraints that are actually used,
+together with the local tower. Those reads are admitted for W, and
+the induction preserves their values and hence their definition for
+the compared local variation. No regularity of arbitrary far-exterior
+coarse rows is being added. If all global averages are defined, (2)
+holds literally on the whole grid.
+
+Proof by upward completion. At grade0, the prescribed 0-rows and the fixed
+exterior determine every fine row with an endpoint outside D_1. Assume
+M_(j-1) agrees on all rows with an endpoint outside D_j. Consider a j-row
+with an endpoint outside D_(j+1).
+
+* If it has an endpoint in D_j\D_(j+1), it is a prescribed j-row.
+* Otherwise both endpoints are outside D_j. The remaining possibility of
+  a direct edge from D_(j+1) to D_j^c is excluded by the native collar.
+  The two endpoint j-blocks are outside D_j, since D_j is a union of
+  those blocks. The complete one-step read in the (j-1)-field therefore
+  uses only rows already fixed by the induction hypothesis. Applying
+  the SAME one-step average gives equality for this row.
+
+Boundary-crossing incident rows are in the first case; they are not silently
+discarded. Bonds at the faces of the two blocks are included in the known
+incident rows in the second case. The induction determines M_j on the
+complement of D_(j+1), with these incident rows. At j=r the complement is
+the whole grid, which proves (2). This is the exact recursive virtual-row
+completion underlying the interface convention in CMP102278 (7).
+
+Consequently (1) gives M_p(U)=M_p(W) for every p>=r, including an old
+p-row whose averaging read crosses the local box. It is not necessary
+to impose such crossing old p-rows separately after (2) is known.
+
+3. REAL CONSTRAINED-FIBER RESTRICTION
+
+Let W be the ACTUAL real minimum U_k^0 for the original determining array
+B'', before the new LII(1.61) joins. Let the local tower above be contained
+in a complete read buffer with these two properties:
+
+(a) every original B'' row of grade p<r has its entire averaging read
+    disjoint from the mutable region;
+(b) W itself belongs to the native local regular admissible class on
+    this tower, with its specified fine boundary/exterior, and is in
+    the uniqueness regime of CMP102 Theorem1.
+
+Give every local determining row its ACTUAL value M_j(W), and keep the
+fine exterior equal to W. Any admissible local variation with these
+data preserves all old p<r rows by (a), and all old p>=r rows by (2)
+and (1). Hence its full constraint fiber is contained in the old B''
+fiber, as far as constraints are concerned.
+
+For the variational conclusion, restrict to sufficiently small local
+variations which also remain in the original regular class. W is an
+interior point of that class with the stipulated strict allowances;
+the finite cutoff then permits all local tangent directions to be
+tested. The old criticality gives local constrained criticality.
+The action difference is the local Wilson-action difference with the
+fixed native fine boundary, because exterior plaquettes are unchanged
+and incident boundary plaquettes are included in the local action.
+CMP102278--279 (6)--(9) now gives equality of the local critical orbit:
+
+             W|D_0 = U(B_r(D_0), M'W)|D_0
+                         up to the allowed return gauge. (3)
+
+This uses admissibility (b). Constraint inclusion alone does not prove
+membership in the local regular class or permit invoking uniqueness.
+Likewise the stronger assertion that EVERY distant regular point in
+the local fiber belongs to the original regular class is unnecessary
+for this critical-point argument and is not claimed.
+
+Let X^+ include every incident bond used by the physical current of
+the source, and lie in the equality region of (3). Then the equality
+extends to the physical source pair on X^+:
+
+ (W,J_phys(W)) = (U_loc,J_phys(U_loc))^g on X^+.             (4)
+
+Thus the SAME gauge-invariant native own-field F_i has the same physical
+value on both sides, in the correct source units. This is not a claim
+that either physical current is zero. For an additional marked source,
+all its old-real and private arguments must also be retained. The
+orbit statement alone does not eliminate such arguments.
+
+B109(3.18)--(3.19) and (3.38)--(3.39) are the printed compatible-tower
+instances of this type of restriction identity. LII(1.61), by contrast,
+retains the old interior array in B'' join B(Y1). Equation (3) is usable
+only after the stated refinement argument; it does not follow by
+replacing that joined array with an unrelated homogeneous minimum.
+
+4. THE QUALIFIED ONE-FINER GEOMETRIC ATTACHMENT
+
+The existing geometric result in
+joined_minimum_complex_holder_registration_20261022.txt, Section4,
+provides the required buffer for a definite subset of proper-n records.
+Take n<=h, r=n-1>=1, i<=r. Require an ACTUAL preceding pair
+(Omega_(n-1),Lambda_(n-1)) having the native MR boundary separation,
+retained for this record. It is not enough to call the n-row
+ordinary-born: its preceding pair may already have been changed by R.
+For a point x in the relevant n-stratum, interlacing gives
+
+ dist(x,Omega_(n-1)^c) >= c M R_(n-1) L^(n-1) eta.
+
+LI179 leaves Omega''_j=Omega_j for j<=h. Later completed R enlarges
+the older Omega_(n-1), so a buffer genuinely obtained this way persists.
+At the fixed weak floor cR_min>C_near L, the proper-n Pi^5 box AND its
+complete averaging/current collar fit within Omega''_r. The collar
+is chosen large enough that (a) holds, not merely so that the nominal
+source carrier avoids low-grade endpoints. Native old rows on this
+complete neighborhood have grade at least r.
+
+This verifies the geometric part of the real restriction for these
+records. The real admissibility match for the actual admitted center
+is given next; it is not inferred from geometry alone. Reset-created
+strata without this retained MR buffer are not covered. The case i=n
+has only the fixed one-step loss; it is kept separate. Initial grade-zero
+constructions also stay separate. New artificial collars introduced
+AFTER (3) cannot be silently included in this geometric argument.
+
+4A. LOCAL REGULAR ADMISSION OF THE ACTUAL REAL CENTER
+
+In LII370 (1.50)--(1.51), W=U_k^0 is the B=0 center of the SAME native
+minimum as U''_k. Setting the real fluctuation to its center is inside
+the admitted determining-data domain; no new external field is chosen.
+Keep its actual graded regular envelope epsilon_W. At the admitted
+real prefix this is uniformly small at the common weak floor. In
+particular one may retain a bound C g_k (log g_k^(-2))^P, with every
+fixed LI preliminary L0 loss included in C,P, as in the inherited
+input argument of new_mixed_array_admission_20261022.txt, Section4.
+This is an admitted-center statement, not an admission theorem for
+arbitrary old exterior arrays or arbitrary independent pairs.
+
+Write ell_j=L^j eta. CMP102(2) imposes its curvature and physical-current
+bounds on the WHOLE Omega''_r, not only on the r-stratum. On D0 its
+normalized bounds are epsilon_W ell_r^(-2) and epsilon_W ell_r^(-3),
+respectively, with the common fine-lattice prefactors of (2). Since
+every local D_j lies in D0 and j<=r, these imply the local j bounds:
+ell_r^(-a)<=ell_j^(-a), a=2,3. Thus W belongs to the local regular
+space with parameter epsilon_W, including the fixed boundary rows.
+
+The paragraph after CMP102(7) applies to this nonempty local constrained
+regular space. Its B98 averaging estimate, WITH the recursive virtual
+interface convention, gives the complete local determining-data cap
+
+                    epsilon_1,loc <= C_av epsilon_W.
+
+Choose a fixed C_* larger than both 1 and B3 C_av, and set
+epsilon_0,loc=C_* epsilon_W, enlarging C_* strictly if necessary.
+At the common weak floor,
+
+       B3 epsilon_1,loc < epsilon_0,loc < a0.
+
+W is in the interior of this local class, and CMP102 Theorem1 applies.
+The ORIGINAL real regular class also has its native strict allowances;
+the finite-cutoff criticality argument in Section3 uses that original
+interiority, not a false inclusion of all local competitors. This
+discharges (b) for the retained-buffer actual real centers in question.
+
+No current PDE for an arbitrary independent pair is invoked here.
+Nor does this prove admission of the NEW datum map on its later complex
+localizer circles: the center argument and the full complex map in
+(5) are different assertions.
+
+5. WHAT THIS DOES AND DOES NOT SUPPLY FOR SECOND STATIC PREPARATION
+
+For records satisfying the real premises, (4) permits rewriting the
+complete physical static insertion BEFORE LII(1.61). One may then seek
+a new coherent analytic representation of that insertion. This is
+exactly the ordering principle in
+static_physical_rewrite_extension_order_20261022.txt, which is correct
+at its stated conditional scope. An old/new independent-pair identity
+away from the physical graph is not required.
+
+The remaining input is a literal holomorphic datum map K_r(z), on all
+occupied old-real, independent-pair, localizer and source contours,
+such that:
+
+  K_r(z) is in the full native local-r determining-data tube;
+  its returned local minimum/current pair on X^+ is in the original
+  F_i domain; all subsequent substitutions preserve these conditions;
+  the common near gauges, response norms and source/localizer column
+  reserves hold uniformly on that same domain.              (5)
+
+No step above proves (5). In particular B109's far errors (3.21)--(3.22)
+remove distant RESPONSE data and vanish at zero response; they are
+not an error estimate for a newly changed static determining array.
+The old LII(1.65) inclusion controls the printed old pair map, not an
+arbitrarily chosen K_r. The second preparation must either verify (5)
+for the new source representation or retain an exact residual and
+prove its own bound. This note does not discard such a residual.
+
+All scalar, reference, physical-mask and completion companions must
+use the same new representation. At degree two the raw row is
+r_new+p_new q_new, not just the mixed connected term. A complete
+neutral Ward dictionary must share its common near read before its
+linear localizer. Therefore this real identity alone does not prove
+the requested neutral old-proper decay or a full boundary-entry sum.
+
+The next complex input check has a narrower form than a changed-read
+comparison theorem. LI190 defines one U=exp(i eta A') barU on its
+DECLARED carrier, with barU real. If the WHOLE new D0 plus all boundary
+and averaging reads is covered by that admitted domain, barU is
+r-regular there, and sup|A'|<=a/ell_r with a in the allowed fixed
+small range, B98(159)--(164), Proposition6, gives local j-data changes
+of size C a ell_j/ell_r for j<=r, in the corresponding native gauges.
+One would then compare U(B_r(D0),M'U) to the REAL LOCAL MINIMUM
+U(B_r(D0),M'barU), using CMP102 Proposition9. It is not a comparison
+of that minimum directly to arbitrary barU. This offers a concrete
+route to the complex local minimum and its proper-r response norms.
+The unproved step is the literal WHOLE-D0+collar admission and its
+proper-r relative bounds on every occupied substitution, with all LI
+L0 factors and margins retained. LII(1.65) on its printed carrier
+does not itself enlarge that carrier to the new box. Admission of
+the resulting F_i pair/current and subsequent source localizers
+remains part of (5). No whole-column estimate is claimed here.
+
+PRIMARY LOCATORS (original workspace read only)
+Root: evidence/inherited/original-workspace
+work/package/work/turn114_primary/B98_full.txt:
+ printed23--24, (42)--(43), block locality and gauge covariance.
+work/package/work/turn125_primary/b109_full.txt:
+ printed252--254, (0.4)--(0.12); printed273--278,
+ (3.18)--(3.27), (3.38)--(3.42).
+work/package/work/turn111_primary/B119_page_14.txt and page_15.txt:
+ printed256--257, (2.11)--(2.15), graded local tower and join.
+work/package/work/admission_sources/cmp102_variational_primary.txt:
+ printed277--279, (1)--(9), incident convention, constraints,
+ critical-orbit uniqueness, and complete virtual plaquette reads.
+work/package/work/turn60_large_I/page_05.txt: printed179 double-prime arrays.
+work/package/work/turn62_large_II/page_19.txt: printed373, (1.61).

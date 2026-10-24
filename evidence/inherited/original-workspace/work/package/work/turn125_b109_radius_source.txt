@@ -1,0 +1,253 @@
+TURN125 -- A QUANTITATIVE DIRECT-SLOT RADIUS FROM ORIGINAL B109(3.13)
+source102, 21 October 2026. Existing TURN125 producers and frozen files unchanged.
+
+RESULT
+
+The supplied original B109 makes the selected substitution explicit.
+Its direct field, relative-potential/gradient and independent-current
+conditions admit a strong-field radius bounded below by a fixed
+constant times their actual available margins. For the half-radius
+base pair in B109(3.13), and its actual old-input indices j<=k,
+this yields r_direct>=c min(alpha0,alpha1).
+
+This is NOT a lower bound for the full alpha2 of(3.14): the
+reconstructed-minimum tests(iv) have not been included. The result
+isolates the direct part of that missing radius estimate. All norms
+are in one admitted representative and on complete finite stencils.
+
+1. ORIGINAL FORMULAS AND NORMALIZATION
+
+Supplied primary: [supplied PDFs]/balaban9.pdf, genuine
+CMP109(1987),249--301, 54 PDF pages. Original pages personally viewed:
+ PDF SHA256 1C2D2E500FD1E6A1A7981FED259CC2354EBCF64E473FD564BFC3F2C4D7DFBE2A.
+ work/turn125_primary/B109-source-09.png (printed257),
+ work/turn125_primary/B109-source-24.png (printed272),
+ work/turn125_primary/B109-source-25.png (printed273),
+ work/turn125_primary/B109-source-14.png (printed262),
+ work/turn125_primary/B109-source-15.png (printed263).
+
+The literal selected function is
+
+ E^(j)(X, exp(i xi A)U,
+       theta^3 J+Delta_U^xi A-P1 A+F1(U,A)),              (1.1)
+ xi=L^-j, theta=L^(j-1)eta=(eta/L)/xi.                  (1.2)
+
+The xi convention is printed257; the fine mesh of U_(k+1) is
+eta/L, while eta=L^-k. Formula(1.2) therefore agrees exactly with
+B109(3.12)--(3.13). P1 denotes the native operator in that display,
+not the Lie-algebra projection. Its strong ball is
+
+ r=max{||A||,||P1 A||,||nabla_U^xi A||,
+                                      ||Delta_U^xi A||}. (1.3)
+
+The base pair is on U_j^c(X,alpha0/2,alpha1/2,alpha0).
+The current allowance is therefore alpha0, not alpha0/2. In the
+ordinary old-input use, eta=L^-k and j<=k, hence
+
+                         theta<=L^-1<1.                (1.4)
+
+This exact dilation supplies a current margin. If one instead
+chooses an index for which theta=1, the current margin must be
+retained explicitly; a nonzero uniform margin cannot be invented.
+
+The passage after(3.17) confirms that only the strong field and
+variation bounds are used for this part of the scalar argument.
+The old domain U_j^c remains in(3.16). Condition(iv), printed262,
+tests the actual reconstructed minima on the inset X-tilde^-2.
+The direct theorem below does not discard that condition.
+
+2. LOCAL CURRENT REMAINDER, WITH THE POWERS OF xi CANCELLED FIRST
+
+For this task the gauge group is SU(2) and its complexification.
+Use an operator matrix norm and the fixed finite-dimensional Lie
+norm. At complex data every inverse transport is the holomorphic
+inverse, not the Hermitian adjoint of a varying complex matrix.
+
+Assume 0<xi<=1 and, on the complete required plaquette/derivative
+stencils,
+
+ ||partial U-I||<=a0 xi^2,
+ ||U_b||,||U_b^-1||<=exp(xi a1_cap),
+ ||A||<=r, ||nabla_U^xi A||<=v, xi r<=r_cap.             (2.1)
+
+The caps are fixed sufficiently small constants. The link bounds
+hold in a representative U=exp(i xi A0) Ubar with real unitary
+Ubar and ||A0||<=a1_cap. No smallness of Jphys(U) is assumed.
+
+Original gauge paper CMP99(1985),75--102, printed83--85,
+(1.43)--(1.54), is supplied as balaban7.pdf. Fresh pixels viewed:
+ work/turn125_primary/B99-radius-10.png and -11.png.
+In unit physical scale, the remainder in(1.54), after dividing by
+xi^2, is bounded by
+
+                       C[a0 r+r v+r^3].                 (2.2)
+
+The mechanism is essential to uniformity in xi, so it is recorded
+explicitly rather than taking an absolute derivative of a product:
+
+ (a) The terms involving background plaquette defect in(1.43)
+     contain xi^2 a0, and changing the divergence transport inserts
+     an additional xi A before the derivative xi^-1. They cost
+     C a0 r after the current normalization xi^-2.
+ (b) The quadratic plaquette term V2 is rewritten by(1.49)--(1.50)
+     into the leading commutator [A_mu,A_nu] and terms with explicit
+     xi factors. The covariant discrete product rule(1.52) gives
+     C r v, including shifted gradients. In terms such as xi v^2,
+     the elementary bound xi v<=C r on a fixed stencil reduces
+     this to the same C r v. One must perform this algebra before
+     taking suprema.
+ (c) The remaining third-order plaquette product is O((xi r)^3).
+     The divergence contributes xi^-1 and current normalization
+     contributes xi^-2, leaving C r^3. Higher orders are dominated
+     by the same expression on the fixed cap.
+
+These are finite analytic matrix identities. The equality(1.49)
+explicitly holds for complex Lie-algebra A. For complex U, the
+same product/transport identities hold with inverse transports;
+each finite path changes constants by at most exp(C xi a1_cap).
+Thus (2.2) holds for the holomorphic extension with a different
+fixed C. This is an estimate of the algebraic terms, not an
+identity-theorem extension of an estimate known only for real A.
+
+PROJECTED CURRENT. For SU(2), extend Im holomorphically by
+Im_alg P=(P-P^-1)/(2i) on SL(2,C). Cayley-Hamilton gives
+Im_alg P=pi0(P)/i, where pi0 removes the trace. Conjugation and
+the algebraic covariant divergence commute with pi0. Applying
+pi0/i to the raw matrix expansion therefore gives precisely the
+projected current expansion B109(3.11), with the same bound up to
+a fixed projection constant. In particular no extra derivative or
+inverse xi appears from taking the actual Lie-algebra current.
+
+Finally the exact covariant Hodge identity is
+
+ c_U^*c_U+d_U R d_U^*=Delta_U^xi-P1+E_curv(U),          (2.3)
+
+where c is the bond-to-plaquette derivative and d the scalar gauge
+derivative. Each coefficient of E_curv is a finite transported
+plaquette commutator divided by xi^2. Therefore
+
+                    ||E_curv(U)A||<=C a0 r.             (2.4)
+
+On the physical Landau family the gauge term vanishes before
+introducing the selected continuation. The continuation then uses
+Delta-P1 for arbitrary strong A, exactly as in(1.1). Combining
+(2.2),(2.4), its F1 has the uniform bound
+
+                 ||F1(U,A)||<=C[a0 r+r v+r^3].           (2.5)
+
+For r from(1.3), v<=r, so
+
+ ||J_sel-theta^3 J||
+    <=2r+C(a0 r+r^2+r^3)<=C_J r,                       (2.6)
+
+for fixed upper caps on a0,r. C_J is independent of xi, j, volume
+and the number of old dates. Equation(2.6) is a statement about
+the SELECTED independent-current slot. It does not identify it
+with the physical current for arbitrary non-Landau A.
+
+3. DIRECT FIELD AND RELATIVE-POTENTIAL SLOTS
+
+In the same representative let
+
+ U=exp(i xi A0)Ubar,
+ max{||A0||,||nabla_Ubar^xi A0||}<=b1,
+
+with real Ubar satisfying its original curvature and gauge-cube
+tests. The product with exp(i xi A) keeps Ubar unchanged. The new
+relative potential is the principal BCH expression
+
+ A0_new=(i xi)^-1 log[exp(i xi A)exp(i xi A0)].           (3.1)
+
+On fixed small caps it satisfies
+
+ ||A0_new-A0||+||nabla_Ubar^xi(A0_new-A0)||<=C_B r.      (3.2)
+
+Here is the uniform-spacing justification. Write the difference
+as Psi_xi(A,A0), which is analytic in the two matrices, covariant
+under conjugation and vanishes at A=0. Its derivative in A is
+bounded uniformly, and its derivative in A0 is O(xi||A||), by the
+convergent two-variable BCH series. Applying the covariant discrete
+difference and telescoping these two arguments costs
+C||nabla_Ubar A||+C xi r||nabla_Ubar A0||. Also
+nabla_Ubar A-nabla_U A is bounded by C b1 r, since the difference
+of their transports is O(xi b1) before division by xi. These bounds
+prove(3.2) without a xi^-1 loss. All paths and first-difference
+stencils are part of the stated read.
+
+The plaquette product expansion, equivalently the first-order part
+of the same B99(1.21)--(1.22),(1.47), gives
+
+ xi^-2 ||partial(exp(i xi A)U)-partial U||
+                    <=C(r+r^2+a0 xi r)<=C_K r.           (3.3)
+
+The linear oriented plaquette sum is xi^2 c_U A, with finite
+background-curvature corrections; its quadratic products have
+factor xi^2. Thus (3.3) also follows before applying any absolute
+xi^-1 derivative. The unchanged Ubar continues to meet its real
+gauge-cube tests. Consequently (3.2)--(3.3) control the direct
+parts(i)--(iii) of the target domain in the original representative.
+No norm-preserving arbitrary complex gauge transformation is used.
+
+4. AN EXPLICIT MARGIN THEOREM
+
+Let the target direct allowances be kappa_target for normalized
+complex curvature, a1_target for relative potential and its first
+gradient, and j_target for the independent current. Suppose the
+unchanged real Ubar already meets the target real-field conditions.
+Define the positive margins
+
+ m_K=kappa_target-xi^-2||partial U-I||,
+ m_B=a1_target-max{||A0||,||nabla_Ubar A0||},
+ m_J=j_target-theta^3||J||.                              (4.1)
+
+With the fixed constants from(2.6),(3.2),(3.3), it suffices that
+
+ r<=min{r_cap, m_K/(2C_K), m_B/(2C_B), m_J/(2C_J)}.      (4.2)
+
+The factor2 keeps strict positive margins. All expressions are
+holomorphic on that strong ball and the displayed bounds hold
+uniformly on it. This theorem only concerns the direct slots.
+
+For the actual homogeneous base of(3.13), its curvature and
+relative-potential bounds are alpha0/2 and alpha1/2. By(1.4),
+the input current ||J||<=alpha0 gives
+
+              m_J>=(1-L^-3)alpha0.
+
+Therefore one may choose, for fixed upper native caps,
+
+                   r_direct=c min(alpha0,alpha1),       (4.3)
+
+where c>0 depends only on the fixed local conventions and L, not
+on xi,j,X or volume. This is the requested quantitative direct
+strong-field radius. The inverse of this radius has only the
+explicit inverse-margin cost; there is no hidden fine-mesh power.
+
+If selected running radii in one matched homogeneous top patch are
+alpha_nu=C_nu g_i ell_i^Q and r=C_in g_i ell_i^p0, then the direct
+image comparison costs C ell_i^(p0-Q), after the actual date and
+dilation are matched. The strict Q>p0 hierarchy pays that ratio.
+This does not by itself place a mixed old scalar in its full domain.
+
+5. WHAT THE DIRECT THEOREM DOES NOT CLAIM
+
+The all-n reconstructed tests(iv) in B109(1.15)--(1.16) and the
+mixed B119 counterparts involve actual regional minima and their
+currents, with insets or copied collars appropriate to each paper.
+They are not among(4.1). Thus (4.3) must NOT be relabeled
+alpha2>=c min(alpha0,alpha1) for the FULL old scalar.
+
+B109(1.17) provides a separate sufficient direct-to-reconstructed
+statement on more strongly shrunken homogeneous domains. Applying
+it to the same old scalar requires its exact constants, complete
+gauge-cube/read hypotheses and actual reconstructed family; it is
+not a consequence of the current estimate above. In particular the
+half-radius base in(3.13) is not automatically small enough for that
+separate sufficient criterion merely because a fixed B3 exists.
+
+The new estimate does not assert absolute root-summed localization,
+an arbitrary mixed-history radius, old-A holomorphy, or control of
+all inherited E/R/B contributions. It supplies the local direct
+radius in the reduced proof obligation of the earlier TURN125
+registered-current and substitution notes. Their exact source
+normalization and complete mixed-source bookkeeping are unchanged.

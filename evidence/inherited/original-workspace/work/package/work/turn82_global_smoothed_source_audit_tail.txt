@@ -1,0 +1,127 @@
+TURN82 -- INDEPENDENT AUDIT OF GLOBAL HS SOURCE SMOOTHING
+20 October 2026. tail47.
+
+VERDICT: PASS at the finite-regulator, actual-law scope stated in the
+producer. All sections read; the exact Gaussian identities (2.3),
+(2.5), (4A.1), the uniform local-incidence bounds, the normalized
+source jets, and the all-fixed-order operator-jet consequence were
+checked in detail. No mathematical repair requested.
+
+AUDITED PRODUCER
+work/turn82_global_smoothed_source_history.txt
+SHA256 91A3185DCAF5572F3650CBAC1248A93C93E9BBB3B0FF97AEF9B6E2AEFE8FC93D
+
+RELATED PREVIOUSLY AUDITED INPUTS
+work/turn82_auxiliary_channel_gauge.txt
+SHA256 49DE7E782B8F5DE226848252D74EC6518632E74F015BE715EC31A66D695FB89E
+work/turn81_external_source_history.txt
+SHA256 8BB6A6B1FAE6FEE3340AAAEBD8C1E154A8E096E71AD051F506FCE55940ED534B
+
+1. Exact normalized complex kernel.
+
+The complexification is of the real Gaussian coordinates, with
+bilinear rather than Hermitian squares in its density. This is
+essential. Integrating the modulus first over R gives
+exp(|Im d+(Im L)G|^2). The modulus of the G factor contributes
+exp(|Im m|^2) and a real Gaussian G=Re m+Y, Cov(Y)=I/2.
+Writing A=Im L and v=Im d+A Re m, completion gives exactly
+
+ exp(|Im m|^2) det(I-A^T A)^(-1/2)
+              exp(v^T(I-AA^T)^(-1)v).
+
+This verifies (2.3), including the determinant exponent and all
+factors of two. The assumption ||A||op<1 is the requisite absolute
+integrability condition. The trace bound on the log determinant is
+||A||HS^2/[2(1-eta^2)]; no ambient dimension multiplier is omitted.
+
+The complex integral itself is exactly one: each shifted R Gaussian
+integrates to one at fixed real G, and then the shifted G Gaussian
+does so. Absolute integrability permits Fubini. Thus (2.5) is an
+actual normalization identity; no complex auxiliary partition
+denominator has been assumed nonzero.
+
+2. Volume-independent bounds and holomorphy.
+
+The m and d means carry sqrt(beta), while each L block has only two
+outputs and depends on its second path link. Uniform bounds on
+matrix products/inverses and first derivatives on a fixed exponential
+chart give the stated local Lipschitz estimates. Squaring these
+estimates costs only the finite plaquette/link incidence. In the
+term (Im L)Re m, each m block is O(sqrt(beta)); it does not bring the
+norm of the complete extensive mean vector into an operator bound.
+This verifies (3.1) and hence the total Hilbert-norm estimate (3.2).
+
+On a compact smaller domain, the Schur complement of the real
+Gaussian precision is bounded below. Polynomial derivative factors
+are absorbed by a further fixed margin. Bounded measurable functions
+of REAL auxiliaries therefore yield genuinely holomorphic integrals.
+No analytic extension of C_s itself in auxiliary variables is used.
+
+3. Relative L2 calculation and fixed-order derivatives.
+
+For Y~N(0,I/2), a complex mean shift Delta has density ratio
+exp(2Y dot Delta-Delta dot Delta). Its squared modulus has integral
+exp(2||Delta||^2) and shifts the real Gaussian mean by 2 Re Delta.
+First applying this identity to R at fixed G, then to G, yields
+exactly (4A.1), including its shifted mean and Hermitian norms.
+
+Delta n=Delta d+Delta L G. Stacking sqrt(2) times its real and
+imaginary parts gives another ordinary real Gaussian quadratic
+integral. Delta L has operator norm O(||z||infinity), squared
+Hilbert--Schmidt norm O(||z||2^2), and its shifted mean has squared
+norm O(beta||z||2^2). The local-incidence argument remains valid
+with m(0)+2 Re Delta m. A fixed smaller radius yields (4A.2).
+
+Strong L2 holomorphy and vector-valued Cauchy give (4A.3), with
+constants depending on the FIXED derivative order. Exact kernel
+normalization makes each positive-order density derivative mean
+zero. Subtracting E_kappaU CF before pairing with that derivative
+gives (4A.4) for the multilinear operator norm. Taking the supremum
+over directions introduces no sum over coordinate tuples.
+
+The variance identity (4A.5) is the actual C/P conditional identity.
+Substitution F_n=P^n F and positivity 0<=P<=I give the spectral
+factor lambda^(2n+1)(1-lambda), bounded by 1/(2n+2), proving (4A.6).
+A finite convex mixture retains its choice label in the positive
+augmentation, so the same argument applies to the reflected
+symmetrization. No commutation of the separate channels is needed.
+
+4. Complete source package and exact reads.
+
+For real auxiliaries C_s is the conditional expectation of the
+ORIGINAL exp(sum s_i B_i). Therefore |C_s-1|<=exp(R_s)-1. Combining
+this with integral kappa_z=1 proves the sharper second bound (4.2)
+and the explicit canonical zero-free log domain (4.3). At zero
+source the mixed jet is P(B_i B_j), including repeated labels;
+its logarithmic mixed jet has the subtraction in (4.5).
+Stationarity proves (4.6) with the original Wilson normalization.
+
+Further real P rounds retain the same bounded source package, so
+only the last smoothing step is used for its complex extension;
+there is no repeated radius multiplication. This does not make P
+multiplicative.
+
+All auxiliary blocks outside the complete plaquette star of the
+original read integrate to one. The retained source depends on the
+corresponding exact original-link collar, with no hidden whole-volume
+coordinate factor. Repeated rounds enlarge that read. The separate
+buffered OS result requires the WHOLE source package and all of its
+reads to remain in the stated half.
+
+5. Scope retained.
+
+The theorem gives an actual original-link germ for a smoothed
+bounded observable, not a continuation of the interacting auxiliary
+marginal. The radius c/sqrt(beta+1) is a total Hilbert radius. On a
+growing read, equal per-link imaginary coordinates have to shrink
+with the square root of the read size. Fixed-order multilinear
+operator norms are not strong coefficient-sum polymer norms.
+
+The original source generating function and reflected buffered
+forms are preserved in their respective exact senses; pointwise
+observable products, native RG background domains, spatial source
+norms, continuum convergence, and a nonzero physical channel are
+not thereby established. Canonical beta h_p sources require their
+actual growing magnitude. The producer makes all these limitations
+explicit. No continuum Yang--Mills existence claim is certified.
+

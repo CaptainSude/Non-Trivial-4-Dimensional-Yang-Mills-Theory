@@ -1,0 +1,209 @@
+\section{The problem and the origin of the construction}
+\label{sec:introduction}
+
+The objective is a nontrivial four-dimensional quantum Yang--Mills theory on
+\(\RR^4\), initially for gauge group \(SU(2)\). The intended construction
+starts with the positive Wilson lattice measure, removes the lattice cutoff
+along a controlled weak-coupling trajectory, and constructs local
+gauge-invariant quantum fields. The problem is to carry the \emph{actual}
+measure, its normalization, and its observables through these limits. A
+Gaussian comparison, an effective action on a small-field chart, or a
+finite-dimensional space of ultraviolet symbols is not by itself that
+construction.
+
+This work is a continuation of the public project of Levent Alpoge and
+Ethan Sussman, \emph{Yang--Mills LLM experiment} \cite{Upstream}. Their
+deposited material develops Ba{\l}aban's renormalization-group programme,
+action-density source estimates, a scalar reconstruction route, and a
+reflection-positivity approach to continuous rotations. Those starting
+ideas belong to that project and to the cited constructive field theory
+literature. The examined snapshot is the commit
+\begin{center}\small\path{e392ef45013a581664bab76b90867170b30fe10e}.\end{center}
+Its README reports an apparent argument on \(\RR^4\); we do not recast it
+as merely a finite-volume proposal. The displayed hypotheses and the
+narrower observable conclusions nevertheless have to be checked
+individually. In particular, a public existence claim does not discharge
+an unverified domain or observable estimate in the continuation.
+
+The continuation develops explicit local constructions, measure-matching
+identities, source transport estimates, and algebraic tests of whether a
+scalar construction can recover the Yang--Mills observable algebra. The
+latest improvements concern local adjusted-average right inverses,
+physical currents, complex-domain margins, dated source transport, and
+the oriented cubic curvature sector. The paper presents these as
+mathematical statements with their premises. It does not assert a
+completed continuum Yang--Mills existence theorem.
+
+\subsection{The precise target}
+
+Write \(\mathfrak g=\mathfrak{su}(2)\). A successful endpoint includes a
+Hilbert space \(\HH\), a vacuum \(\Omega\), a strongly continuous
+positive-energy representation of the Poincar\'e group, and a compatible
+family of local operator-valued tempered distributions corresponding to
+gauge-invariant polynomials in the curvature and its covariant
+derivatives. The fields must have the prescribed tensor transformation
+laws, adjoints, derivative identities, and Yang--Mills short-distance
+normalization. A nonzero positive-energy vacuum excitation supplies a
+nontriviality witness. This fixes the meaning of existence used here;
+it is stronger than constructing a scalar field whose two-point function
+resembles a free curvature square. The relation to the customary
+Yang--Mills problem is discussed in \cite{JaffeWitten}.
+
+We distinguish three tasks. First, construct a nontrivial scalar sector
+from the action density. Second, construct and identify the full local
+observable hierarchy in that sector or in a verified extension of it.
+Third, prove a spectral gap. The third task is separate and is not solved
+by the results below. Nor do the special \(SU(2)\) invariant-theory
+arguments establish the construction for every compact simple group.
+
+\subsection{Lattice conventions and normalization}
+
+On a finite oriented periodic lattice \(\Lambda\) of spacing \(\eta\),
+assign \(U_e\in SU(2)\) to each positively oriented edge, with
+\(U_{\bar e}=U_e^{-1}\). Haar measure is normalized to one. For an
+unoriented plaquette set \(\mathcal P\), counted once,
+\begin{equation}
+ A_\Lambda(U)=\sum_{p\in\mathcal P}
+       (1-\operatorname{Re}\tr_N U(\partial p)),\qquad
+ d\mu_{\Lambda,g}=Z_{\Lambda,g}^{-1}e^{-g^{-2}A_\Lambda(U)}\prod_e dU_e,
+ \quad \tr_N 1=1. \label{eq:wilson}
+\end{equation}
+Numerical beta coefficients depend on this choice, on plaquette counting,
+and on the normalization of the continuum Maxwell form. Every comparison
+below retains its stated convention. In the cubic algebra it is convenient
+instead to use Hermitian generators \(t_a=\sigma_a/2\) and the ordinary
+matrix trace \(\Tr(t_at_b)=\delta_{ab}/2\); then
+\(\tr_N=\Tr/2\). These traces must not be silently interchanged. With
+this Wilson plaquette convention the standard bare canonical coupling
+satisfies \(g_{\rm can}=2g_{\rm W}\), equivalently
+\(\beta=g_{\rm W}^{-2}=4g_{\rm can}^{-2}\). The later quoted
+\(8g/Q^2\) cubic coefficient uses \(g=g_{\rm can}\), not
+\(g_{\rm W}\). Its application also requires the running source's field
+normalization. A local section's declared coupling convention therefore
+governs its numerical coefficients.
+
+For local lattice action-density observables \(O_i\), define
+\begin{equation}
+ Z(z)=\int e^{-g^{-2}A_\Lambda(U)+\sum_i z_iO_i(U)}dU,
+ \quad \partial_{z_1}\partial_{z_2}\log Z(0)
+       =\Cov_{\mu_{\Lambda,g}}(O_1,O_2). \label{eq:sources}
+\end{equation}
+This identity fixes the normalization of marked descendants. Source
+derivatives act on the full expression, including extracted scalar terms
+and the partition denominator. A vacuum contribution which is independent
+of the field may still depend on \(z\); its derivatives cannot be deleted.
+
+We use \(g\) for the running coupling, \(\gamma=g^{-2}\) for its inverse
+square when that coordinate is appropriate, \(b\) for an analytic
+background radius, and \(T\) for a retained Gaussian fluctuation window.
+The commonly used inner radius is \(b=cg\log\gamma\), with
+\(g\ll b\), and an inner window may be chosen
+\(T=(\log\gamma)^t\), \(1/2<t<1\). Outer preparation radii and windows
+are different quantities. A fixed blocking factor is denoted by \(L\);
+\(q\) counts a fixed number of primitive steps. Constants depending on
+\(L,q\) are allowed; dependence on ultraviolet depth, volume, or birth age
+is not allowed in a claim of uniformity. A scale ratio \(h\leq1\) is
+always identified at its use. It is not an additional small coupling.
+
+\subsection{Status conventions}
+
+There are three kinds of statements in this manuscript.
+\begin{enumerate}
+ \item An \emph{exact statement} is a finite-dimensional identity,
+ an elementary analytic implication, or an algebraic calculation with
+ all its mathematical hypotheses stated here.
+ \item A \emph{source-relative statement} uses a specified estimate for
+ Ba{\l}aban's maps, or a regular-kernel moment/locality package. Its proof
+ establishes the stated implication, but does not reprove the imported
+ package on every mixed large-field history.
+ \item A \emph{conditional continuum statement} specifies the missing
+ uniform estimates and proves what follows from them. Its conclusion
+ is not an established property of the Wilson continuum limit until
+ those premises are verified for the actual recursion.
+\end{enumerate}
+These distinctions concern logical scope, not confidence labels. A proof
+of an implication is useful only when its antecedent is kept visible.
+Repeated checks of a notebook do not replace an independent verification
+of a source hypothesis. The companion records counterexamples and
+superseded statements; the present paper uses the final audited scope.
+
+\section{Architecture of the existence argument}
+\label{sec:architecture}
+
+\subsection{The four connected constructions}
+
+The first construction is local and variational. One controls constrained
+minima, their gauge representatives, physical currents, Gaussian
+fluctuations, and the complete reduced measure. It supplies a well-defined
+homogeneous renormalization step and identifies its leading running
+coefficient. The local calculation is useful only after its constraint,
+gauge, determinant, cutoff, and observable conventions match the
+corresponding source integral.
+
+The second construction is a full-history source estimate. A localized
+insertion is born at a specified scale and is transported through every
+later regular and large-field operation. Four-dimensional root counting
+costs \(h^{-4}\); a curvature-square insertion has neutral scaling
+\(h^4\). Their product is only order one. Improvement therefore comes
+from a verified cancellation, a positive extra power of \(h\), or the
+actual smallness of its birth. It cannot be obtained by forgetting old
+roots or replacing a birth date by a later scale.
+
+The third construction converts source estimates into scalar continuum
+objects. Positivity is taken from the original Wilson measure. Copying
+and reflection arguments must use one normalized denominator and one
+state. Continuum rotations, uniform growth in the number of insertions,
+and the passage from Euclidean forms to operators are separate steps.
+
+The fourth construction enlarges the observable family. Scalar fusion
+has enough Gaussian quadratic symbols to span all 21 curvature-pair
+directions. It cannot, at Gaussian order, produce the color-oriented
+dimension-six sector. An interaction-sensitive cubic calculation and
+an actual operator remainder estimate are required. Even the 21-field
+construction needs continuous tensor covariance and a relative Gram
+bound in the limiting theory.
+
+\subsection{What is currently proved, and what is still a premise}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.23\linewidth}>{\raggedright\arraybackslash}p{.40\linewidth}>{\raggedright\arraybackslash}p{.29\linewidth}@{}}
+\toprule
+Part & Supported conclusion & Remaining attachment \\
+\midrule\endhead
+Local regular recursion & Constraint/measure identities, local analytic
+response, homogeneous coupling and drift reductions & Uniform matching
+to the complete mixed-history density \\
+Physical current & Local adjusted-average inverse and current bound in
+one admitted determining hierarchy & Admission of every modified
+intrinsic base on its complete collar \\
+Dated source calculus & Conditional summation, phase cancellation,
+copying and normalized-pressure implications & Full all-spectator
+first-contact estimate for the literal histories \\
+Scalar reconstruction & Positivity, growth, slab and operator reductions
+under their stated source/rotation inputs & Application to one controlled
+continuum hierarchy and a nontrivial vacuum phase \\
+Quadratic and cubic symbols & Exact 21-dimensional span; oriented cubic
+algebra; fixed-\(q\) parity and first-order expansion & Actual relative
+Gram, long-prefix cubic transport and uniform remainders \\
+Full observable theory & A sufficient common-Hilbert-space completion
+criterion & Tensor covariance, higher jets, OPE and stress-tensor
+normalization \\
+\bottomrule
+\end{longtable}
+
+The sharpest current source question is formulated in
+Section~\ref{sec:admission}. It concerns preparation-changed datum slots,
+not an unspecified need for ``better estimates.'' Solving it would unlock
+an important branch of the source argument, but it would not automatically
+prove the full observable hierarchy or continuous tensor covariance.
+
+\subsection{Conventions for the accompanying record}
+
+The main paper consolidates the results that participate in this route.
+Proofs of elementary reductions are included; longer local constructions
+are also preserved in the numbered notebooks. The accompanying archive
+contains the mathematical research notes, proof fragments, correction
+records, and computational checks, with relative paths and SHA-256
+hashes. Filenames quoted below are locators into that archive. The
+research companion contains the parked branches and negative tests.
+The original upstream papers are identified by version and links rather
+than silently merged into the continuation's authorship or claims.

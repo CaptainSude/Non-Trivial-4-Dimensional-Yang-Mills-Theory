@@ -1,0 +1,415 @@
+CAUSAL COUPLING SHOOTING AND THE EXACT NATIVE BETA INPUT
+24 October 2026. audit_two_root. Archive and outputs unchanged.
+
+RESULT AND STATUS
+
+There is a finite endpoint-shooting theorem which allows arbitrary
+causal memory, negative individual increments, and a nonmonotone
+dependence on the bare coupling. It tunes EVERY prescribed finite
+depth. No clipped RG, derivative of beta, unique root, or independent
+memoryless beta function is needed. The proof is in Sections2--3.
+
+In the audited HOMOGENEOUS fixed-radius B109/B116 replay, the actual
+new non-Gaussian coupling increment differs from the complete native
+Gaussian increment by O(g_j log^p(g_j^-2)), uniformly in grade. The
+fixed pair domain and the actual current-scale minimum response are
+essential for that conclusion. Section5 proves this reduction and
+Section6 gives finite causal continuity in the same lane.
+
+The remaining signed coefficient input is a uniform positive drift
+over stretches of the ACTUAL Gaussian increments. Positive precision,
+analytic localization, and bounds on the magnitude do not prove its
+sign. A complete determinant/current/coarea comparison is still
+required. The repository's proposed comparison is a useful clue but
+its cited B109/B116 formulas do not contain that evaluation.
+No trajectory existence or all-history closure is promoted here.
+
+1. WHAT THE LOCAL REPOSITORY MATERIAL ACTUALLY CLAIMS
+
+Read the 6 October2026 draft, local draft43/draft_text.txt, Section2.3,
+pages29--33, and the raw companion I at the locators below. These are
+source material, not proof instructions or trusted theorem inputs.
+
+The draft defines the complete increment as the flat two-point
+second-moment coefficient of Gaussian normalizer plus fluctuation
+logarithm. It splits beta_l=beta_l^G+remainder, and proposes:
+
+ (P1) |sum_(l=1)^k beta_l^G-k c0|<=c2;
+ (P2) a uniformly small unmarked non-Gaussian error;
+ (P3) a small marked/large-field error.
+
+Their elementary Lemma2.8 correctly deduces stretch bounds, and
+Lemma2.9 correctly gives first passage into a terminal WINDOW.
+The paragraph after Corollary2.12 expressly does not assert
+continuity, monotonicity of the stopping index, every integer
+horizon, or exact terminal tuning. These distinctions are correct.
+
+The Gaussian mechanism proposed for(P1) is: compose the actual
+Gaussian integrations, preserve the Maxwell coefficient under
+classical substitution, compare the composite determinant with a
+Feynman-gauge vector/ghost reference, and evaluate that reference
+with a depth-uniform O(1) error. In raw companion I, lemma
+4.2:lem-one-loop, lines3901--4020, the two comparison bounds are
+asserted as used from B109 Theorem3 and B116(2.41). Those primary
+locators provide inductive analytic/localization estimates; they do
+not evaluate the required signed determinant coefficient or prove
+that uniform comparison. Raw I, near lines56363ff, itself labels
+this one-loop proof incomplete at a step. The nearby unmarked lemma
+4.2:lem-unmarked explicitly labels its radius/response passage(*)
+incomplete. A later outline calling these companion inputs proved
+does not supply their missing details.
+
+The present Section5 addresses the homogeneous unmarked passage
+using the separately audited fixed-radius replay. It does NOT prove
+the repository's marked error(P3), its full mixed-history domain, or
+its Gaussian comparison(P1).
+
+An older handoff notebook already contains a CONDITIONAL clipped
+shooting theorem for multiples of a block length. It uses a different
+projected local-extraction envelope and an unproved determinant
+drift. The theorem below instead uses the actual weak causal family,
+needs no off-trajectory clipping, and covers every integer horizon.
+It does not import that notebook's native matching assumptions.
+
+2. FINITE SHOOTING FROM NO LARGE RECOVERY
+
+Let a>0 be the inverse-coupling weak threshold. For j=0,1,... let
+
+ x_(j+1)=x_j-b_(j+1)(x_0,...,x_j)                       (1)
+
+be a causal recursion. The functions b_(j+1) are continuous on the
+closed admissible history cone [a,infinity)^(j+1). It suffices that
+they are continuous on the generated history family and have a
+continuous one-step continuation at every finite boundary history
+whose inputs are still >=a. Only genuine histories are used below.
+The dependence may include a recursively propagated action state;
+continuous finite-step state maps give the same proof by induction.
+
+Assume a uniform B>=0 such that b_(j+1)<=B whenever the inputs to
+that step are admissible. Assume also a uniform recovery bound C>=0:
+
+ x_j<=x_i+C for every i<j whose steps have admissible inputs. (2)
+
+The last output x_j need not be >=a for this assumption. Alternatively
+it is enough that(2) extends continuously to boundary histories.
+These assumptions concern a single family of actual step maps, not
+different favorable beta choices made for different bare parameters.
+
+THEOREM. For every N>=0 and target X>a+C, some initial t=x_0
+generates N genuine admissible steps, x_N=X and all x_j>a. One may
+choose t<=X+BN, and the chosen path has x_j>=X-C for every j<N.
+No assertion of uniqueness or continuity of the chosen root in N
+or X is made.
+
+Proof for N>=1. Let U_N be the set of t>a for which the first N
+INPUTS x_0,...,x_(N-1) exist and are strictly greater than a.
+Causal continuity makes U_N open in(a,infinity). It contains the
+ray t>a+BN: induction using b<=B gives x_j>=t-jB>a for j<N.
+Let(t_*,infinity) be its unbounded connected component, allowing
+t_*=a. The finite output x_N(t) is continuous on this interval.
+
+At t_* the limits of the first N inputs are defined successively
+using continuity on the closed admissible histories. To spell out
+why this is not a compactness assumption on an infinite action
+space: x_0 tends to t_*; if the first j inputs and their recursively
+constructed states have finite limits, continuity of the next
+finite step gives the next limits. All input limits are >=a.
+If every input limit were >a, local continuity would extend the
+same component to the left, contradicting its definition. Thus some
+input x_l(t_*)=a with l<N, including l=0 when t_*=a.
+
+The boundary version of(2) gives x_N(t_*)<=a+C<X. At
+t_+=X+BN, the upper drop bound gives x_N(t_+)>=X and all its
+inputs are >a; t_+ is in the unbounded component because the whole
+ray above a+BN is. The intermediate value theorem on[t_*,t_+]
+therefore supplies a root with t>t_*. Its first N inputs are >a and
+its last output is X>a, so every step is original and admissible.
+Applying(2) between j and N gives x_j>=X-C>a. N=0 is immediate.
+
+Notice what is minimal here. Endpoint existence itself requires a
+uniform bound on possible RECOVERY after an encounter with the
+threshold, not necessarily a positive average drift. With b=0 it
+still holds, but it yields no ultraviolet weakening of the bare g.
+
+3. SIGNED STRETCH DRIFT AND ALL-DEPTH ULTRAVIOLET TUNING
+
+Suppose more quantitatively that for some lambda>0,C>=0,B<infinity
+every admissible generated stretch obeys
+
+ lambda(j-i)-C <= x_i-x_j <= B(j-i),     0<=i<j.        (3)
+
+The upper one-step inequality and(2) follow. For every N and
+X>a+C, the root of Section2 obeys the exact bounds
+
+ X+lambda(N-j)-C <= x_j <= X+B(N-j),  0<=j<=N,         (4)
+
+with x_N=X and x_j>a. In particular
+
+ X+lambda N-C <= x_0 <= X+BN.                          (5)
+
+For g_j=x_j^-1/2 this tunes the bare coupling to a fixed terminal
+g=X^-1/2 at every depth and gives g_0 of order N^-1/2. Formula(4),
+not a claimed sign of each increment, keeps every earlier coupling
+within the same weak interval. An individual step can increase x.
+The endpoint map t->x_N(t) can oscillate; only continuity was used.
+The maps may depend on N as a fixed regulator parameter, provided
+the premises hold with the same constants for each N. No automatic
+compatibility between those different finite constructions follows.
+
+Continuity cannot simply be omitted. For N=1 and target X well
+above a, take b_1(t)=2 for t<X+3/2 and b_1(t)=1 for t>=X+3/2.
+All increments lie in[1,2] and satisfy positive drift, but t-b_1(t)
+jumps from values below X-1/2 to values at least X+1/2. There is no
+root with x_1=X. Discrete changes of an ACTUAL cutoff prescription
+must therefore be treated, not hidden behind a formal beta series.
+
+A convenient sufficient coefficient input is
+
+ b_j=d_j+e_j, |d_j|<=B_G, |e_j|<=epsilon,
+ sum_(l=i+1)^j d_l >= c_G(j-i)-C_G, c_G>epsilon.       (6)
+
+Then(3) holds with lambda=c_G-epsilon, C=C_G and
+B=B_G+epsilon. The d_j can depend on grade and individual d_j
+can be negative. The stronger repository estimate
+|sum_(1)^k d_j-kc_G|<=C_0 gives C_G=2C_0, but is not necessary.
+A uniform positive average on fixed-length Gaussian blocks also
+suffices after retaining the bounded endpoint fragments: for every
+aligned block of q dates with sum>=b_*>0 and |d_j|<=B_G,
+one may take c_G=b_*/q and C_G=2b_*+2q B_G. The constants are
+fixed BEFORE the weak floor, and the terminal margin includes C_G.
+
+4. ACTUAL HOMOGENEOUS INCREMENT AND ITS GAUSSIAN PART
+
+Fix the exact homogeneous ordinary B109/B116 construction: complete
+periodic regular geometry, its original success products, actual
+current-corrected precision/averaged gauge, actual constraint/pivot
+Jacobian, and the same completed Wilson marginal extraction.
+No retained large-field owner or mixed boundary term is included
+by this declaration. The running physical cut is
+
+ R_j=A1[log(g_j^-2)]^p, epsilon_j=g_j R_j, p>1/2.       (7)
+
+All non-coupling localization parameters are fixed in advance.
+The source-zero coefficient/minimum extension is the audited
+homogeneous_fixed_radius_reference_producer_20261024. Its fixed
+pair radius is an analytic extension; equality to a positive law
+is asserted only on the original admitted real subset. The full
+running-cut replay keeps g_j in the bad-bond Gaussian bound before
+the optional replacement by a fixed gamma.
+
+B109 printed260--261 equations(1.3)--(1.6) separates the explicit
+Gaussian normalization from the remaining one-step effective action.
+B116 printed21, after(2.41), first bounds the connected fluctuation
+logarithm by C epsilon_j with positive carrier decay and then ADDS
+log Z^(j)(U)-log Z^(j)(1) with a bounded absolute carrier norm.
+Denote these literal summands by V_(j+1) and G_(j+1), respectively:
+
+ E_new=G_(j+1)+V_(j+1),
+ beta_(j+1)=Bcal(E_new),  d_(j+1)=Bcal(G_(j+1)).       (8)
+
+Bcal is the SAME infinite-lattice flat two-point second-moment
+functional of B109(1.22),(5.42), including its original color/trace
+normalization and physical minimum pullback. It is linear. Vacuum
+and parameter-only constants have zero Bcal, but remain in the
+original raw mass. No replacement normalizer is introduced.
+
+G is the COMPLETE native Gaussian expression, not a standalone
+transverse vector determinant chosen for convenience. The current
+constraint correction, averaged gauge, actual free coordinates and
+any Gaussian-order coarea factor must stay in its exact allocation.
+No additional large-field contribution is silently included in(8).
+
+5. UNIFORM NON-GAUSSIAN ERROR FROM THE REGISTERED FIXED TUBE
+
+Let ||.||_(kappa,rho) denote the rooted positive carrier norm on the
+fixed spare independent-pair tube used by the homogeneous replay.
+That replay and B116(2.41) give, uniformly in j and weak histories,
+
+ ||V_(j+1)||_(kappa,rho)<=C epsilon_j,
+ ||G_(j+1)||_(kappa,rho)<=C_Gauss.                     (9)
+
+There is a fixed constant C_beta such that
+
+                  |Bcal(F)|<=C_beta ||F||_(kappa,rho). (10)
+
+Here is the derivative/root justification, not an appeal to a
+shrinking coefficient cap. Each complete coefficient has two
+physical background derivatives bounded by its own positive cap
+times fixed inverse radii; its physical current and minimum chain
+are included in the same joint tube. The uniform current-scale
+first/second minimum response attaches the two external bond roots
+with exponential arms. Cauchy may also differentiate the first
+rooted response on the same spare tube. Preserve a fixed part of
+the complete carrier tree for the two roots, then sum the original
+coefficient root and its remaining positive tree envelope. The flat
+two-point tensor is consequently bounded by
+C ||F|| exp[-mu|u|], with constants independent of j. Its moment
+sum sum_u |u|^2 exp[-mu|u|] is finite in four dimensions. This proves
+(10), with the actual B109 normalization absorbed only in C_beta.
+It is the already registered mixed-root/fixed-reference mechanism,
+not Cauchy on an extensive scalar cap or on B119's shrinking radii.
+
+Linearity of(8) now proves the useful native reduction
+
+ |beta_(j+1)-d_(j+1)|<=C epsilon_j,
+ |d_(j+1)|<=B_G,                                      (11)
+
+on the declared homogeneous lane. In particular
+delta(gamma):=C sup_(0<g<=gamma) A1 g[log(g^-2)]^p ->0.
+The error is uniform in old age because the completed inherited
+action/date census was already paid in the fixed-reference replay.
+It is not the sum of O(epsilon) errors over all old dates inside a
+single new increment. The sum over the CURRENT stretch remains
+at most delta(gamma) times its length, as required in(6).
+
+This result repairs a precise restricted version of the repository's
+unmarked radius gate. It does not justify that argument on arbitrary
+mixed B119 histories, nor control the repository's beta^R. If the
+fixed-tube replay is unavailable for a proposed prescription, (11)
+reverts to a conditional assertion for that prescription.
+
+6. FINITE CAUSAL CONTINUITY ON THIS HOMOGENEOUS LANE
+
+Fix a finite number of steps and a compact set of positive real
+coupling histories whose couplings do not exceed the weak ceiling.
+Keep the actual continuous radii(7) and all auxiliary constants
+fixed. Each current free integral can be changed to a fixed unit
+product by x=R_j u. Its density, Jacobian and inherited finite
+coefficients vary continuously with the positive couplings. The
+complete real normalization is positive. At any fixed finite step
+and regulator it therefore stays nonzero in a sufficiently small
+real-parameter neighborhood. The gauge/minimum implicit maps use
+the common strict tube already established; they do not acquire a
+new branch merely by changing the real coupling.
+
+For coefficient families one may apply the same reasoning to each
+fixed localized integral/decoupling term. Products, finite sums and
+the consistent logarithmic/connected expansion preserve continuity.
+The common rooted carrier majorants of(9), with the fixed derivative
+reserve used in(10), dominate the infinite sums locally uniformly
+on that compact coupling set. Dominated convergence gives continuity
+of the current beta coefficient. This argument is inductive in a
+FINITE history length and supplies continuity at the closed weak
+threshold after choosing the ceiling strictly inside the proven
+common cap. It needs no modulus uniform in depth, no derivative in
+g, and no continuity at g=0.
+
+Thus the actual homogeneous recursion has the continuity needed
+by Section2 on every admissible finite history. The construction
+of beta on the infinite lattice uses the same locally uniform
+carrier sums; it does not require an infinite-volume normalized
+probability measure. No theorem about a discontinuous rounded
+waiting schedule or moving mixed-history catalogue is included.
+If an auxiliary rounded decomposition is used, its effect must
+cancel in the same exact scalar family before invoking this proof;
+otherwise the unproved continuity remains an additional gate.
+
+7. THE SINGLE SIGNED GAUSSIAN INPUT THAT STILL REMAINS
+
+It would now suffice to prove, for the EXACT d_j in(8), fixed
+c_G>0,C_G<infinity such that
+
+             sum_(l=i+1)^j d_l>=c_G(j-i)-C_G           (12)
+
+uniformly in starting grade i and length j-i. Choose gamma so
+delta(gamma)<c_G/2. Equations(11),(12) give(3), while Section6 gives
+continuity. Sections2--3 then tune every depth to any fixed
+X>gamma^-2+C_G and retain all raw scalar allocations. No individual
+Gaussian sign or exact one-loop asymptotic is necessary for this
+finite tuning consequence.
+
+The determinant localization itself proves boundedness and analytic
+root structure, not(12). At finite dimension the exact calculation
+that must be evaluated can be written without dropping any channel.
+If the native Gaussian integral is
+Z_j^G(theta)=a_j(theta)(2pi)^(m/2)det D_j(theta)^(-1/2),
+with the ACTUAL Gaussian-order prefactor a_j, then
+
+ partial_qr log Z_j^G
+ =partial_qr log a_j
+  +one half Tr[D_j^-1 D_(j,r) D_j^-1 D_(j,q)]
+  -one half Tr[D_j^-1 D_(j,qr)].                        (13)
+
+All physical minimum/constraint second jets belong to D_(j,qr);
+they are not removed by writing a formal transverse propagator.
+Applying the actual moment functional to(13), followed by a uniform
+native infinite-volume limit, gives d_j. Formula(13) is an exact
+computable producer, but its two terms have no immediate positive
+sign. Field-independent determinants/volumes cancel only under the
+specified flat subtraction.
+
+Positive Gaussian curvature cannot replace the calculation: a local
+precision D(U)=exp(lambda h_p(U))I remains positive on real fields
+and analytic with uniform local bounds for either sufficiently small
+sign of lambda. Its Gaussian logarithm is a multiple of
+-lambda h_p(U), so its quadratic curvature coefficient changes sign.
+Euclidean averaging of this example preserves that conclusion.
+This is a diagnostic of the insufficiency of qualitative bounds,
+not a counterexample to the actual Wilson precision.
+
+The proposed native route to(12) is still useful: prove the exact
+Gaussian/coarea cocycle, identify the preserved marginal coefficient
+under the actual classical minimum maps, and compare the complete
+composite determinant to a correctly normalized vector/ghost
+reference with a depth-uniform O(1) error. A reference logarithm
+with positive slope then yields(12). But gauge and coarse-constraint
+factors, possible zero modes and physical minimum jets cannot be
+dropped. A per-step O(1) comparison would accumulate O(j-i), which
+may swamp the positive slope; the needed comparison must be small
+per step or bounded for the whole stretch. B116's absolute carrier
+norm alone does not distinguish those two statements.
+
+The exact universal one-loop coefficient is a stronger objective
+than(12). A fixed-block positive average, with controlled endpoint
+pieces, is enough for finite tuning. This identifies a smaller
+native target without claiming it has been evaluated.
+
+A concrete local lead is the archived 17 October determinant-flow
+notebook and actual_positive_beta_assembly_fragment.tex. They retain
+vector, scalar/ghost and coarse factors and give a conditional
+heat-kernel comparison with bounded endpoint errors. Their actual
+classical-kernel/vertex hypotheses and finite-regulator matching are
+a separate package. The favorable internal audit is not an audit
+that those hypotheses hold for the present B109 Gaussian family.
+This potential bridge should be checked before importing its slope.
+
+8. AUDIT LOCATORS AND LIMITS
+
+Repository local files read:
+work/handoff/original-workspace/work/package/work/draft43/draft_text.txt,
+Section2.3--2.5, especially Definition2.6, P1--P3, Lemmas2.8--2.9,
+Theorem2.11 and the paragraph after Corollary2.12;
+work/handoff/original-workspace/work/package/work/sussman/
+theorem_0_complete_account_raw_I.tex, lemma4.2:lem-one-loop,
+lemma4.2:lem-unmarked and the discussion near line56363.
+These are frozen local materials; no claim about a newer online
+revision or missing companion result is made.
+
+Primary files read:
+B109 full text, printed260--261 (1.3)--(1.6), printed263--264
+beta definition/induction, printed292--298(5.1)--(5.42).
+The final paragraph printed298 explicitly says beta_j also depends
+on all PRECEDING couplings; a memoryless interpretation is false.
+B116 primary text, printed20--21(2.38)--(2.41) and the final
+Gaussian-log addendum. The original running-g Gaussian tail must
+be retained before the optional common-ceiling relaxation.
+
+Internal proved/audited inputs:
+homogeneous_fixed_radius_reference_producer_20261024 and its audits;
+native_rate_allocation_and_reference_status_20261024;
+second_success_mixed_third_source_row_20261024 (the finite complete
+root/physical pullback mechanism, extended homogeneously by the
+fixed-reference producer). No source-amplitude theorem is used.
+
+The older finite_trajectory_shooting_research note in the archived
+17 October notebook was read only for comparison of logical scope.
+Its separate local extraction model is not substituted for the
+native Gaussian increment defined here.
+
+Established here: continuous-causal shooting theorem, its weaker
+no-large-recovery version, exact all-depth bounds given signed
+stretch drift, and the uniform homogeneous non-Gaussian reduction
+and finite continuity from the registered replay. Still missing:
+the signed native Gaussian coefficient estimate(12), mixed-history
+analogs when relevant, and subsequent original-source/continuum
+requirements. The existence goal remains open.

@@ -1,0 +1,593 @@
+TRANSFER-MATRIX WITNESS AND AN ORIGINAL WILSON SLAB ESTIMATE -- TURN64
+20 October 2026. tail47.
+
+RESULT
+
+There is an exact finite-period alternative to comparing a reflected
+observable with a Gaussian law at a fixed macroscopic separation.
+For a real bounded gauge-invariant slice observable F of the ORIGINAL
+SU2 Wilson field, put
+
+ v_N=Var_W(F_0),
+ d_N=(1/2) E_W[(F_1-F_0)^2].
+
+Here1 denotes ONE temporal lattice step a_t, and the same normalized
+periodic Wilson law is used throughout. The positive transfer matrix
+gives, for integer1<=m<=N,
+
+ Cov_W(F_0,F_m) >= v_N (1-d_N/v_N)^m.                  (0.1)
+
+Consequently a cutoff-uniform lower bound v_N>=v_*>0 and upper bound
+d_N<=C a_t would imply a positive centered reflection correlation
+at fixed physical separation. No Gaussian comparison and no temporal
+ground-state limit is needed for this statement.
+
+This note also proves a model-specific, fully normalized original-law
+estimate, not just this sufficient criterion. For any specified set S
+of temporal plaquettes in ONE time slab, with Wilson coefficients
+beta_e>0, let h(W)=1-Tr(W)/2. Then
+
+ E_W exp[r sum_(e in S) beta_e h(W_e)]
+                  <= (1-r)^(-3|S|/2),   0<=r<1.       (0.2)
+
+It holds at arbitrary finite spatial volume and temporal period with
+the time-homogeneous spatial action, and passes to its fixed-spacing
+periodic Gibbs limits. All temporal links, the gauge projection and
+the complete original partition denominator are retained.
+Section6A strengthens this to arbitrary temporal slabs by Schatten
+Holder and to arbitrary four-dimensional plaquette sets by a symmetric
+four-axis decomposition:
+
+ E_W exp[s sum_(p in B) beta_p h(W_p)]
+                  <=(1-2s)^(-3|B|/4),   0<=s<1/2.     (0.3)
+
+Here the original couplings are homogeneous (or constant by plaquette
+orientation) on a periodic four-dimensional lattice. Arbitrary
+exterior conditioning is not covered.
+
+The new estimate controls kinetic plaquette fluctuations. It does NOT
+yet prove d_N=O(a_t) for the physically normalized flowed probe, or
+v_N>=v_* along the tuned ultraviolet sequence. The exact finite-isotropic
+Wilson Hamiltonian is a logarithm of the transfer matrix, not a local
+electric Laplacian. Substituting the Kogut--Susskind differential form
+without a temporal-continuum comparison would miss this distinction.
+
+1. SOURCE INPUT AND RELATION TO EARLIER NOTES
+
+Primary transfer source:
+M. Luscher, Construction of a selfadjoint, strictly positive transfer
+matrix for Euclidean lattice gauge theories, CMP54(1977),283--292,
+ https://doi.org/10.1007/BF01614090
+ https://scispace.com/pdf/construction-of-a-selfadjoint-strictly-positive-transfer-4o5m61jpdw.pdf
+Author/institute copy, also inspected previously:
+ https://bib-pubdb1.desy.de/record/396349/files/7611148.pdf?version=1
+
+The pure-gauge specialization of SectionII.A, equations(9)--(10),
+uses multiplication by spatial link functions. SectionII.B,
+equations(17),(20)--(23), Proposition1 on printed p288, supplies the
+transfer factorization and positive character coefficients.
+SectionII.C, equations(24)--(26), identifies Euclidean correlations
+with transfer traces. The self-adjoint logarithm need not be bounded
+above; strict positivity is not a uniform positive spectral floor.
+
+I read spectral_reconstruction_producer_turn36, the transfer
+factorization in tensor_energy_reconstruction_turn37, and
+bounded_witness_limits_turn56. They distinguish vacuum estimates
+from arbitrary-state energy bounds and retain the ground-energy
+offset in bare-potential domination. They do not give the finite-
+period adjacent-increment criterion or the one-slab source bound
+proved here. The old positive_energy_derivative_witness note requires
+already attached separated source estimates and is not used as such
+an attachment.
+
+For the differential-Hamiltonian distinction only:
+M. Creutz, Gauge fixing, the transfer matrix, and confinement on a
+lattice, PRD15(1977),1128,
+ https://doi.org/10.1103/PhysRevD.15.1128
+Its primary abstract explicitly obtains the Kogut--Susskind
+Hamiltonian by taking the temporal lattice spacing to zero.
+No cutoff-uniform isotropic Hamiltonian comparison is imported.
+The needed finite-SU2 kernel, spectral inequality and source bound
+are derived directly below.
+
+2. EXACT SU2 TRANSFER KERNEL AND PARTITION NORMALIZATION
+
+Fix a finite spatial lattice with oriented spatial edge set E,
+and N>=4 periodic time slices. All Haar measures are normalized.
+Let a_s,a_t be the spatial and temporal spacings. At each time
+the spatial action V(U) is the SAME real bounded gauge-invariant
+function; the ordinary nonnegative Wilson spatial plaquette action
+is the intended example. Allow spatially inhomogeneous temporal
+coefficients beta_e>0, constant from slab to slab.
+
+For W in SU2 define
+
+ h(W)=1-Tr(W)/2,
+ c(beta)=integral_SU2 exp[-beta h(W)]dW
+        =2 exp(-beta) I_1(beta)/beta,
+ q_beta(W)=exp[-beta h(W)]/c(beta).                    (2.1)
+
+I_n is the modified Bessel function. Write
+H_kin=L2(SU2^E,dU), P for the orthogonal projection obtained by
+averaging the site gauge group, and H_phys=P H_kin.
+Let C be product convolution with the q_beta_e and
+M(U)=exp[-V(U)/2]. Both commute with P. On H_phys set
+
+                         T=M C M.                     (2.2)
+
+Equivalently on the full space use M C P M. Its positive kernel is
+
+ K(U,V)=M(U)M(V) integral dg
+          product_(e=(x,y)) q_beta_e[U_e g_y V_e^-1 g_x^-1].
+                                                               (2.3)
+
+The g_x are precisely the temporal links in this slab (with the
+orientation convention displayed). Multiplying N kernels and taking
+the trace assigns each spatial layer its full exp[-V] factor and
+integrates every temporal link once. Therefore the literal original
+partition function satisfies
+
+ Z_W= [product_(e in E)c(beta_e)]^N Tr_phys(T^N).        (2.4)
+
+Gauge Haar volume is1. No extra gauge-volume or vacuum factor is
+suppressed. Gauge-invariant slice insertions are multiplication
+operators on H_phys, and their normalized transfer traces equal
+their original Wilson expectations; the scalar in(2.4) cancels.
+
+For completeness, in spin j with dimension d=2j+1, the eigenvalue
+of one-link convolution is
+
+                       r_d(beta)=I_d(beta)/I_1(beta).  (2.5)
+
+To check the normalization, SU2 class Haar measure is
+(2/pi)sin^2(theta)dtheta, Tr(W)/2=cos(theta), and
+chi_j=sin(d theta)/sin(theta). Thus
+ integral exp(beta cos theta)chi_j dW
+     =I_(d-1)(beta)-I_(d+1)(beta)=2d I_d(beta)/beta.
+Divide by d times2 I_1(beta)/beta to obtain(2.5).
+The Bessel series makes every I_d(beta)>0. Normalized convolution
+is a self-adjoint positive contraction. Its trace is finite;
+for example sum_d d^2 r_d(beta)=q_beta(I)<infinity.
+The finite product C is positive trace class, and multiplication
+by bounded M and projection P preserve these properties.
+On H_phys, T has no kernel because M is invertible at this finite
+volume and C is strictly positive. Its eigenvalues lambda_i are
+positive, with possible accumulation only at0.
+
+Let lambda_0=||T|| and define the EXACT vacuum-normalized Hamiltonian
+
+              H= -a_t^-1 log(T/lambda_0).               (2.6)
+
+It is nonnegative, self-adjoint and may be unbounded. The overall
+normalization in(2.4) shifts an unnormalized Hamiltonian by a scalar;
+it changes neither(2.6) nor any normalized correlation. The finite
+period corresponds to inverse temperature N a_t. One should not
+replace its trace state by a ground vector without taking that
+additional limit.
+
+3. FINITE-PERIOD SPECTRAL INEQUALITY FOR THE ACTUAL LAW
+
+Let F be any real bounded gauge-invariant slice function. Let
+mu_N=E_W F and A=F-mu_N. Put Z_T=Tr T^N and
+
+ G_N(m)=Z_T^-1 Tr(T^(N-m) A T^m A),   0<=m<=N.         (3.1)
+
+Then G_N(0)=v_N and G_N(m)=Cov_W(F_0,F_m). In an orthonormal
+eigenbasis of T,
+
+ G_N(m)=Z_T^-1 sum_(i,j)
+           lambda_i^N |A_ij|^2 (lambda_j/lambda_i)^m.   (3.2)
+
+All weights are nonnegative. If v_N>0, divide these weights by
+v_N to obtain a probability measure. Jensen's inequality for
+x^m, m>=1, proves
+
+                G_N(m)>=v_N [G_N(1)/v_N]^m.            (3.3)
+
+The countable spectral sums are legitimate: bounded F gives finite
+correlations for0<=m<=N; Jensen may also be obtained by finite
+truncation and passage to the probability measure. The ratios
+lambda_j/lambda_i may exceed1. This causes no problem; no false
+contraction assumption on a thermal Liouville spectrum is used.
+
+Stationarity of the original periodic law gives
+
+ d_N=v_N-G_N(1)
+    =(1/2)E_W[(F_1-F_0)^2],    0<=d_N<=v_N.            (3.4)
+
+The upper bound uses G_N(1)>=0 from(3.2), not just the classical
+Cauchy--Schwarz inequality. Equations(3.3)--(3.4) prove(0.1).
+This exact finite-period result applies directly to the literal
+spatially flowed magnetic bounded function of TURN63: it is still
+a multiplication operator on the ORIGINAL slice.
+
+The same d_N is the following completely normalized bridge integral:
+
+ d_N=(2Z_T)^-1 integral dU dV
+        [F(U)-F(V)]^2 K(U,V) K^(N-1)(V,U).             (3.5)
+
+It also has the exact double-commutator expression
+
+ d_N=(2Z_T)^-1 Tr[T^(N-1)[F,[F,T]]].                   (3.6)
+
+Indeed the kernel of[F,[F,T]] is(F(U)-F(V))^2 K(U,V);
+or expand the commutators and use cyclicity. No division by a
+small history component or an unknown local reference mass occurs.
+
+4. PHYSICAL-TIME CONSEQUENCE, AND WHAT COUNTS AS ENERGY
+
+Suppose along an actual sequence of Wilson regulators and volumes
+
+                  v_N>=v_*>0,       d_N<=C a_t,        (4.1)
+
+for one specified physical observable family. Assume the temporal
+period contains the desired separation m a_t. For
+a_t<=v_*/(2C), logarithmic concavity estimates give
+
+ G_N(m)>=v_* exp[-2C m a_t/v_*].                        (4.2)
+
+For a probe at physical time tau and its reflection, the separation
+is approximately2tau, so this bounds its centered OS norm below by
+a fixed positive number. If those observable laws and reflection
+forms pass to a compatible limit, this is a nonzero vacuum-orthogonal
+state. It does not by itself prove local algebra, nonabelian
+interaction, Euclidean covariance or the rest of YM4 existence.
+It also does not exclude variance in an additional zero-energy
+sector if the limiting vacuum is degenerate. A propagating-state
+claim needs a separate positive-energy or nonzero-momentum witness.
+
+A stronger energy premise is available if it can actually be proved.
+In the zero-temperature ground state Omega, set psi=A Omega and
+E_H=<psi,H psi>, interpreted as a form. For finite E_H,
+
+ <psi,exp(-tH)psi> >= v exp[-t E_H/v],   v=||psi||^2.   (4.3)
+
+This is Jensen for the spectral probability measure of H on psi.
+The energy equals (1/2)<Omega,[F,[H,F]]Omega> when the
+commutator is defined by the corresponding quadratic form.
+No ground-energy scalar survives that double commutator.
+
+At finite temperature set rho_N=exp(-N a_t H)/Tr exp(-N a_t H)
+and define the physical-time extension
+g_N(t)=Tr[exp(-(N a_t-t)H) A exp(-tH) A]/Tr exp(-N a_t H).
+Thus g_N(m a_t)=G_N(m), with no extra vacuum scalar.
+The analogous form is
+E_H=(1/2)Tr(rho_N [F,[H,F]])=-g_N'(0), provided the
+absolute first spectral moment is finite. The same spectral Jensen
+proof permits signed energy differences and gives the analogous
+bound on0<=t<=N a_t.
+
+It is important that
+
+                       d_N/a_t <= E_H                 (4.4)
+
+under that stronger premise, NOT the reverse. The inequality follows
+from1-exp(-a_t x)<=a_t x, including signed thermal energy differences.
+One cannot bound the logarithmic Hamiltonian energy merely by the
+discrete Dirichlet form. The finite-period theorem needs only d_N;
+it therefore avoids this unnecessary domain/upper-energy requirement.
+
+Variance alone is insufficient, even with a positive transfer matrix.
+For a stationary two-state chain take eigenvalues1 and
+r_a=exp(-a^q),0<q<1, and centered F=+/-1. Then v=1,
+d_a=1-r_a->0, but at physical separation t,
+G_a(t)=r_a^(floor(t/a))->0.
+This tests an inference, not the Wilson law. It shows that qualitative
+smallness of an adjacent increment is weaker than the required scale.
+
+5. A NEW EXACT ONE-SLAB ORIGINAL WILSON SOURCE BOUND
+
+For any real nu>-1/2, the integral representation
+
+ I_nu(beta)=constant_nu beta^nu
+       integral_(-1)^1 exp(beta x)(1-x^2)^(nu-1/2)dx
+
+and its derivative recurrence imply
+I_(nu+1)/I_nu=E_(nu,beta) x. Differentiation gives
+
+       d/d beta [I_(nu+1)/I_nu]=Var_(nu,beta)(x)>0.    (5.1)
+
+Hence r_d(beta)=I_d/I_1, the product of adjacent ratios from1
+through d-1, is increasing in beta. Equation(2.5) proves the
+Loewner order of central convolution operators
+
+                     C_(beta-t)<=C_beta, 0<=t<beta.    (5.2)
+
+For a source t_e on specified temporal plaquettes in ONE slab,
+its literal kernel is
+
+ exp[t_e h(W)]q_beta_e(W)
+       =[c(beta_e-t_e)/c(beta_e)] q_(beta_e-t_e)(W).
+
+Tensor products preserve the order between positive operators.
+The unchanged spatial multiplication factors and physical projection
+therefore give
+
+ 0<=T_mark<=R_S T,
+ R_S=product_(e in S)c(beta_e-t_e)/c(beta_e).            (5.3)
+
+The rest of the time circle is the positive operator T^(N-1).
+Multiplying in trace preserves this order:
+
+ E_W exp[sum_(e in S)t_e h(W_e)]
+  =Tr(T_mark T^(N-1))/Tr T^N <=R_S.                    (5.4)
+
+This is the ORIGINAL normalized finite-volume Wilson law, not a
+selected weak-field sector. The gauge averaging in(2.3) is inside
+T_mark and is preserved exactly; spatial potentials need not be
+small. Time homogeneity of the unmarked remainder is used.
+
+There is an explicit gamma bound for R_S. Under normalized q_beta,
+u=h(W) has density proportional to
+
+      u^(1/2) exp(-beta u)(2-u)^(1/2) 1_(0<u<2).
+
+This is a Gamma(shape3/2,rate beta) distribution tilted by the
+nonnegative decreasing function w(u)=(2-u)^(1/2)1_(u<2).
+For any increasing phi and independent identically distributed U,V,
+
+ 2 Cov(phi(U),w(U))
+      =E[(phi(U)-phi(V))(w(U)-w(V))]<=0.
+
+Thus its tilted mean of phi is at most its gamma mean. For
+phi(u)=exp(tu),0<=t<beta, this yields
+
+ c(beta-t)/c(beta)<= (1-t/beta)^(-3/2).                 (5.5)
+
+Taking t_e=r beta_e proves(0.2).
+
+For a first derivative at zero, (5.4) gives
+
+ E_W h(W_e)<=1-I_2(beta_e)/I_1(beta_e)
+                   <=min(1,3/(2beta_e)).               (5.6)
+
+The mean bound also follows directly from the gamma tilt.
+An independent exact check is the Riccati equation
+r'=1-r^2-3r/beta for r=I_2/I_1. For beta>=3/2 the barrier
+b=1-3/(2beta) starts below r and satisfies
+1-b^2-3b/beta=9/(4beta^2)>b'=3/(2beta^2).
+For beta<=3/2 the bound is immediate from r>0.
+
+Higher mixed moment coefficients are NOT inferred by differentiating
+the inequality(5.4). Such an inference is not generally valid.
+The real-source inequality gives Chernoff estimates directly instead.
+
+6. CONSEQUENCES AND EXACT SCOPE OF THE SLAB ESTIMATE
+
+Let k=|S| and Y_S=sum_(e in S)beta_e h(W_e). For x>=0,
+the gamma Chernoff bound gives
+
+ P_W[Y_S>=(3k/2)+sqrt(3k x)+x] <=exp(-x).               (6.1)
+
+For example,
+-log(1-r)-r<=r^2/[2(1-r)] applied to(0.2) proves this
+usual sub-gamma estimate by exponential Markov optimization.
+For T>3/2 one may also keep the optimized exact expression:
+
+ P_W[h(W_e)>=T/beta_e for EVERY e in S]
+ <=exp{-k[T-3/2-(3/2)log(2T/3)]}.                     (6.2)
+
+This follows by inclusion in Y_S>=kT and choosing
+r=1-3/(2T). It is a genuine unconditional specified-set
+rare-plaquette bound on a single temporal slab. It does not assert
+Bernoulli independence, conditional domination after arbitrary
+events, or an all-date native-history bound.
+
+All constants are independent of spatial volume, N and the spatial
+Wilson coupling. Fixed finite local sets S and their bounded fixed-
+spacing source functions pass to any periodic Gibbs subsequential
+limit. No identification with a native auxiliary first-class label
+is made. A bounded test G satisfies the immediate positive-insertion
+bound |E[G 1_event]|<=||G|| P(event).
+
+The one-slab ORDER proof cannot simply be repeated after arbitrary
+other temporal sources: their remaining transfer product need not
+be self-adjoint positive. The following Schatten argument resolves
+that particular problem. Arbitrary exterior conditioning still need
+not retain either required trace structure.
+
+6A. ALL SLABS AND ALL PLAQUETTES: A STRONGER ORIGINAL-LAW BOUND
+
+Root proposed the all-slab argument during this derivation; I checked
+it independently. Consider different sources0<=t_(j,e)<beta_e on
+every temporal slab j. After extracting their scalar factors from
+(5.3), the remaining positive physical operators are
+
+ T_j=M C_(beta-t_j) M,       0<=T_j<=T.
+
+The gauge projection is retained as in Section2. Their product
+need not be self-adjoint, but generalized Schatten Holder gives
+
+ |Tr(T_1...T_N)|<=product_j [Tr(T_j^N)]^(1/N)
+                         <=Tr(T^N).                   (6.3)
+
+The second step uses eigenvalue-by-eigenvalue monotonicity of
+positive compact operators under T_j<=T. It does NOT assert the
+false general operator inequality T_j^N<=T^N. All these operators
+are trace class. The kernel product trace is nonnegative, so its
+absolute value causes no loss. Restoring the extracted factors proves
+
+ E_W exp[sum_(j,e)t_(j,e)h(W_(j,e))]
+       <=product_(j,e)(1-t_(j,e)/beta_e)^(-3/2)          (6.4)
+
+for arbitrary plaquettes temporal with respect to the chosen axis.
+There is no factor growing with N. This is an unconditioned
+original-law identity and bound, not a stochastic domination claim.
+
+Now take a periodic four-dimensional Wilson lattice with couplings
+constant by orientation, so every axis admits the time-homogeneous
+base transfer construction. Let B be any specified plaquette set,
+and Y=sum_(p in B)beta_p h(W_p). For mu=0,1,2,3 let Y_mu
+be the same sum over plaquettes having mu as one of their two axes.
+Each plaquette belongs to exactly TWO stars, and
+
+                          Y=(1/2)sum_mu Y_mu.
+
+Apply ordinary probability Holder with four factors, then(6.4)
+using mu as the time direction in its own factor:
+
+ E_W exp(sY)
+ <=product_mu [E_W exp(2sY_mu)]^(1/4)
+ <=(1-2s)^[-(3/8)sum_mu |B_mu|]
+  =(1-2s)^(-3|B|/4).                                  (6.5)
+
+This proves(0.3). The same proof gives the inhomogeneous source bound
+
+ E_W exp[sum_(p in B)t_p h(W_p)]
+       <=product_(p in B)(1-2t_p/beta_p)^(-3/4),
+                         0<=t_p<beta_p/2.              (6.6)
+
+The SOURCES may be inhomogeneous. The BASE coupling/geometry premise
+is still the one explicitly stated above. Equation(6.6) is an exact
+bound on the corresponding complete original partition ratio.
+
+For k=|B| and x>=0, gamma Chernoff now gives
+
+ P_W[Y>=3k/2+sqrt(6kx)+2x]<=exp(-x).                   (6.7)
+
+In particular for T>3/2,
+
+ P_W[beta_p h(W_p)>=T for EVERY p in B]
+ <=exp{-k[T/2-3/4-(3/4)log(2T/3)]}.                   (6.8)
+
+These statements are volume independent and apply to arbitrary
+specified microscopic plaquette sets, not just a single slab.
+They are not bounds on every generated-scale native region, nor
+on a renormalized magnetic observable's variance or time increment.
+Their extension to fixed-spacing periodic Gibbs limits follows as
+in Section6. No mixed-moment coefficient comparison or arbitrary
+conditional-law domination is inferred.
+
+7. EXACT GRADIENT/PLAQUETTE REDUCTION OF THE ADJACENT INCREMENT
+
+One can now connect the slab energy to d_N, but the estimate shows
+precisely why an extra physical smoothing estimate is still needed.
+
+Keep U,V and the actual temporal links g in the joint integral(3.5).
+Gauge invariance gives F(V)=F(V^g). Choose shortest logarithms
+V_e^g=U_e exp(X_e) with X_e=i x_e.sigma/2, |x_e|<=2pi.
+The endpoint distance satisfies
+
+                   |x_e|^2<=2pi^2 h(W_e).              (7.1)
+
+Indeed h=1-cos(|x_e|/2) and1-cos z>=2z^2/pi^2 on[0,pi].
+Use the simultaneous geodesic U_r,e=U_e exp(rX_e).
+For any positive deterministic weights w_e, Cauchy--Schwarz gives
+
+ d_N <=pi^2 E_W{
+    [sum_e w_e h(W_e)]
+    integral_0^1 sum_e w_e^-1 |grad_e F(U_r)|^2 dr }.   (7.2)
+
+The expectation includes the actual two slices and temporal links.
+The intermediate U_r is not assigned the original equilibrium law.
+Its gradient factor cannot be replaced by a vacuum mean or declared
+independent of the temporal plaquette energies.
+
+If deterministic global link-gradient bounds |grad_e F|<=L_e
+are available, Minkowski, (7.1) and (5.6) give the simpler bound
+
+ d_N <=pi^2 [sum_e L_e sqrt(mu(beta_e))]^2,
+ mu(beta)=1-I_2(beta)/I_1(beta)<=3/(2beta).              (7.3)
+
+These are actual finite-Wilson consequences with no new probabilistic
+comparison premise. They often do not have the needed ultraviolet
+scale. At isotropic beta=4/g_a^2, even a fixed local Lipschitz F
+only obtains a generic d_N=O(g_a^2) bound from(7.3), which is
+much weaker than O(a) along logarithmic weak coupling.
+For the physically normalized flowed probe, generic finite-ODE
+gradient estimates contain exp(C s/a^2) and are worse.
+This diagnoses this upper bound, not the true increment.
+
+The useful target is a joint quadratic influence/temporal-increment
+estimate preserving cancellation. Replacing it by an absolute
+sum of all link oscillations loses the desired scale.
+
+8. WHY THE DIFFERENTIAL DIRICHLET IDENTITY IS NOT AUTOMATIC HERE
+
+For a genuinely differential finite-spatial-lattice Hamiltonian
+
+ H_diff=kappa sum_(e,c)(-D_(e,c)^2)+V-E_0,
+
+with left-invariant derivatives normalized by
+exp(i theta sigma_c/2), multiplication by real F gives the exact
+identity
+
+ (1/2)[F,[H_diff,F]]=kappa sum_(e,c)|D_(e,c)F|^2.       (8.1)
+
+It follows by the product rule; V and E_0 commute with F.
+Consequently in its ground state
+E_H=kappa E_(Omega^2) sum|DF|^2, with the analogous thermal
+identity when its traces exist. For the conventional SU2
+Kogut--Susskind normalization, kappa=g_H^2/(2a_s).
+
+At finite temporal spacing the EXACT Wilson electric logarithm,
+even before the spatial multiplication factors, instead has spectrum
+
+      a_t^-1 log[I_1(beta_t)/I_(2j+1)(beta_t)].         (8.2)
+
+For fixed j and beta_t large this is
+2j(j+1)/(a_t beta_t)+O(1/(a_t beta_t^2)).
+With beta_t=4a_s/(g_H^2 a_t) it approaches the Casimir coefficient
+g_H^2 j(j+1)/(2a_s). This fixed-spin asymptotic is not uniform over
+the unbounded representation spectrum. Moreover -log(MCM) is not
+-log C+V when the factors do not commute.
+
+Thus(8.1) is a valid possible auxiliary route only after an actual
+Hamiltonian limit/comparison and matching of the observable. It is
+not an exact formula for the finite isotropic Wilson H in(2.6).
+The finite-period discrete criterion(0.1) avoids requiring it.
+
+9. THE FREE FLOWED PROBE MEETS THE NEW TARGET, AT ITS OWN SCOPE
+
+For the canonical three-color magnetic process from TURN63,
+c_s(t)=(6pi^2)^-1 integral k^3 exp(-2sk^2-tk)dk,
+v_s=c_s(0), and mu_s=3sqrt(pi)/(4sqrt(2s)).
+Set B(t)=exp[-|X_s(t)|^2/(2v_s)]. Then
+
+ v_B=Var B(0)=3^(-3/2)-1/8>0,
+ E[B(0)B(t)]=[4-(c_s(t)/v_s)^2]^(-3/2).
+
+Because |c_s'(t)|<=v_s mu_s,
+
+ d_B(t)=(1/2)E[(B(t)-B(0))^2]
+        <=3 mu_s 3^(-5/2) t=mu_s t/(3sqrt(3)).         (9.1)
+
+Equality holds for its derivative at0. This verifies the variance
+and linear-time increment scales in the actual free benchmark,
+without requiring its correlation at a distant time to be compared
+first. The free lattice calculation in TURN63 gives corresponding
+uniform bounds in its isotropic regime a_t=a_s=a at small a and
+fixed s; it remains a FREE input.
+
+For the original compact-link radial flowed F, finite flow is a
+diffeomorphism of its finite product group (the smooth vector field
+is complete in both time directions). On a nondegenerate spatial
+plaquette graph F is therefore nonconstant. Strict positivity of
+the finite Wilson density gives v_N>0 at each fixed regulator.
+It gives no cutoff-uniform v_*.
+
+In particular, the bare Gaussian law with coupling g_a and a fixed
+physical divisor g_* has the collapsed variance noted in TURN63.
+The new spectral argument does not circumvent physical calibration.
+It replaces the old two distant Gaussian comparisons by different,
+potentially more local, original-law estimates(4.1).
+
+10. NEXT ACTION AND OPEN CLAIMS
+
+The exact useful target is now:
+
+  (a) a nonzero lower variance for the SAME physically normalized
+      bounded slice probe under the original tuned Wilson measures;
+  (b) E_W[(F_1-F_0)^2]<=2C a_t, uniformly in the intended volumes.
+
+The actual one-slab source/energy estimate(0.2) is available for
+attempting(b), with the exact joint gradient formula(7.2).
+It is stronger and more specific than invoking positivity alone,
+but the generic bound(7.3) does not close(b).
+The native partition/count estimates do not presently supply either
+the physical variance floor or that quadratic flow-increment bound.
+
+Even after(a)--(b), convergence/identification of the original
+observable family and the rest of the continuum reconstruction
+remain necessary. No full Yang--Mills existence proof, mass gap,
+or interacting nontriviality theorem is claimed by this note.

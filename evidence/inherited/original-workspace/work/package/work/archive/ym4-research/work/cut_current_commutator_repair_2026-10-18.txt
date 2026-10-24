@@ -1,0 +1,57 @@
+Exact covariant lattice commutator at Raw I111650 (*)
+18 October 2026; minimal_route
+
+This fills only the coefficient-count step in Raw I Lemma
+4.25:lem-cut-layer-partner. It does not prove the background layer
+theorem, the mixed-scale cover hypotheses, or global carrier entry.
+
+Write h=eta, (T_mu B)(x)=R_{x,mu} B(x+h e_mu), and
+T_mu^-1 B(x)=R_{x-h e_mu,mu}^-1 B(x-h e_mu). Then
+nabla_mu=(T_mu-I)/h and nabla_mu^*=(T_mu^-1-I)/h.
+Use the invariant bilinear Lie-algebra pairing, so these are indeed
+transpose operators even for the stated complex adjoint transport.
+Let tau bound both transports, a_mu=partial_mu f and
+b_mu=partial_mu^- f. All products by scalar functions act at the
+basepoint. Exact operator identities give
+
+ [nabla_mu^* nabla_mu,f] B
+ = -(partial_mu^- partial_mu f) B
+   - a_mu nabla_mu B - b_mu T_mu^-1 nabla_mu B.             (1)
+
+For distinct mu,nu the product rule gives
+
+ [nabla_mu^* nabla_nu,f] B
+ = a_nu nabla_mu^* T_nu B
+   -(partial_mu^- partial_nu f) T_mu^-1 T_nu B
+   -b_mu T_mu^-1 nabla_nu B.                              (2)
+
+The potentially troublesome first term uses the exact identity
+
+ nabla_mu^* T_nu B
+ = -T_mu^-1 nabla_mu B
+   +T_mu^-1 nabla_nu B - nabla_nu B.                      (3)
+
+No commutation of T_mu and T_nu, and no differentiation of the
+transport coefficients, has occurred. Identity (3) follows by
+substituting T_nu=I+h nabla_nu and T_mu^-1-I
+=-h T_mu^-1 nabla_mu. Its gradient bound is (1+2tau)||nabla B||.
+
+For the nu component of D_W^*D_W, each mu!=nu contributes
+nabla_mu^* nabla_mu B_nu - nabla_mu^* nabla_nu B_mu.
+Consequently (1) costs (1+tau)s_1 ||nabla B||+s_2||B||;
+(2) costs (1+3tau)s_1||nabla B||+tau^2 s_2||B||.
+The total per mu is therefore
+
+ (2+4tau)s_1||nabla B||+(1+tau^2)s_2||B||.
+
+Every field value and covariant gradient used is based at x or x-h e_mu;
+the transported field value in (2) is at x-h e_mu+h e_nu. All lie in
+the stated Chebyshev-one stencil. Backward scalar differences are
+forward differences at x-h e_mu, also inside that stencil.
+
+Since tau<=5/4, 1+tau^2 <= 2+4tau. Summing over d-1 choices gives
+exactly c_d=(2+4tau)(d-1), the coefficient asserted at the starred
+step. The subsequent cutoff-difference and scale-comparison argument
+then yields the printed c_zeta=2c_d, under its stated cover and collar
+hypotheses. This calculation is valid for arbitrary noncommuting
+transport matrices with the given inverse-norm bound.

@@ -1,0 +1,403 @@
+AN EXACT POSITIVE PHYSICAL SECTOR FROM THE PROJECTED PRODUCT WINDOW
+19 October 2026. TURN48.
+Root producer. Independently reviewed at the stated conditional scope;
+see projected_product_sector_audit_turn48.txt.
+
+RESULT AND CHANGE OF ROUTE
+
+The color-ball auxiliary integral of TURN46--47 can itself be realized
+as an EXACT positive weighted sector of the original conditional fiber
+measure. Its physical window is an average over redundant NORMAL Gaussian
+coordinates. It lies between zero and one, is fixed when sources vary,
+and is supported inside the actual weak constrained chart. This removes
+the need to compare that selected sector with a total-energy or excess-
+energy window. In particular its analytic continuation has no whole-box
+comparison remainder D to transport to the next scale.
+
+This is a different, explicitly specified regular sector. It does not
+prove that the omitted complementary sector is negligible, or identify
+the full Wilson measure with the selected sector. The point is to choose
+an exact positive sector whose analytic local formula is already known,
+rather than demand a comparison to a less convenient cutoff.
+
+The baseline coupling, covariance, saddle, chart and window remain fixed
+as the physical source varies. Consequently the constant physical source
+produces the quadratic form xi^t P xi, NOT the full ambient norm xi^t xi.
+The dummy normal Gaussian energy is never sourced. A smaller but explicit
+constant-source disc and its first two precise cumulants are proved below.
+
+1. PRECISE LOCAL INPUTS
+
+Use the complete first-step geometry, original ordinary constraint and
+retained exterior of gauge_localization_turn46 and the directly coarse-
+data covariant catalogues of carrierwise_gauge_transport_turn47. Write u
+for the independent framed coarse/exterior data on their fixed coherent
+weak product tube. At real u, let U_*(u) be the actual constrained saddle.
+Its moving tangent space T_u is the kernel of the physical derivative Q_u,
+of dimension d. It lies in the ambient chord color space X of dimension
+m=q n_ch, where q is the fixed Lie-algebra dimension. Let P_u be its
+orthogonal projection at real u, and its analytic bilinear continuation
+at complex u.
+
+The actual constrained chart is
+
+ U_u(b)=exp(c_u(b))U_*(u),   b in T_u,
+ c_u(b)=b+E_u tau_u(b),   tau_u(b)=O(b^2).
+
+This chart has an injective fixed small SUP domain and its full coarea
+factor J_u(b)>0 on real data. The incoming coupling-free physical action
+on the chart is f_u(b), with
+
+ f_u(b)=s(u)+(1/2)b^t H_u b+r_u(b),   r_u(b)=O(b^3),
+ J_*(u)=J_u(0),    H_u>0 on T_u.
+
+H_u is the constrained Hessian in the actual relative tangent chart.
+Put K_u=H_u^(-1/2)P_u, extended by zero on T_u^perp. At real u,
+K_u^t H_u K_u=P_u. The complete leading factor is
+
+       A0(u)=J_*(u)[det_(T_u) H_u]^(-1/2).
+
+All fixed Haar-volume factors are included in J_*. The constant d and
+rank m-d are fixed on this branch. The fixed-radius, volume-independent
+carrier catalogues for P,K,c,log(J/J_*) and r are inputs from TURN47.
+In particular ||K||_(sup->sup) is uniformly bounded. Their algebraic
+covariance acts by independent orthogonal adjoint rotations at chord
+color blocks, when the coarse/exterior frames are transformed jointly.
+
+Fix g>0 and a color-ball threshold Tcut>=1 with g Tcut^3 sufficiently
+small. They are BASELINE parameters, not functions of any inserted source.
+Let C_T be the product of full q-dimensional color balls |xi_i|<=Tcut,
+and let c_T=Pr(|Z_q|<=Tcut). The total ambient cutoff mass is c_T^n_ch.
+
+2. THE WINDOW IS A REAL FUNCTION ON THE PHYSICAL FIBER
+
+For real admitted u and b in the injective chart, define
+
+ a_u(b)=g^(-1) H_u^(1/2)b in T_u,
+ W_u(b)=integral_(T_u^perp) 1_(C_T)(a_u(b)+eta) d gamma_(T_u^perp)(eta).
+                                                               (2.1)
+
+Here gamma_(T_u^perp) is the normalized standard Euclidean Gaussian on
+the actual real normal subspace. For a zero-dimensional normal subspace
+it is unit mass at zero. Set W_u=0 elsewhere on the real constrained
+fiber. This last convention selects the declared chart branch and is
+part of the definition; no complete-fiber coverage claim is required.
+
+The weight is measurable and 0<=W_u<=1. If its integrand is nonzero,
+xi=a_u(b)+eta is in C_T and
+
+                    b=g K_u xi.                                (2.2)
+
+Thus ||b||infinity<=C g Tcut. Choose g Tcut small enough that this image
+lies strictly inside the injective chart. The support is then separated
+from its chart boundary, uniformly in the number of sites. No Euclidean
+norm of order sqrt(m)gTcut is required: this is the existing SUP chart,
+not the smaller Euclidean Morse chart.
+
+For real compatible gauge changes, P,H,K transform by block orthogonal
+conjugation and the chart transforms covariantly. The Gaussian normal
+subspace is transported isometrically, and every full color ball is
+preserved. Hence
+
+                  W_(u^h)(R_h b)=W_u(b)                          (2.3)
+
+on the compatible weak branch. The same definition can be placed on its
+proved real gauge saturation using these overlap identities. One must
+retain the original quotient/branch conventions and cannot infer a new
+global orbit domain from a local Ward identity alone. This is the same
+compatible gauge scope as the actual local construction in TURN47.
+
+W depends on the unmarked g, chart and Hessian. It has NO source parameter.
+There is no need to evaluate W, its indicator, or a real normal subspace
+at complex data. The fixed-ambient integral below defines the continuation.
+
+3. EXACT GAUSSIAN DISINTEGRATION AND COMPLETE NORMALIZATION
+
+For a physical source observable A_u(b), first define the real selected
+fiber integral
+
+ a_W(u;zeta)=integral_(T_u) exp[-f_u(b)/g^2+zeta A_u(b)]
+                                      J_u(b) W_u(b) db.          (3.1)
+
+The chart convention of Section2 is understood. All charged action terms
+and boundary coarea factors remain their actual original values. Sources
+may also be a finite sum of original plaquette insertions.
+
+Change variables b=g H_u^(-1/2)a on T_u. The Euclidean Jacobian is
+g^d[det_T H_u]^(-1/2). Insert (2.1), and use the orthogonal decomposition
+xi=a+eta of a standard ambient Gaussian. Since the phase and J depend on
+a only through K_u xi, the result is EXACTLY
+
+ a_W(u;zeta)=e^(-s(u)/g^2) A0(u)(2 pi g^2)^(d/2) c_T^n_ch
+   E_(mu_T) exp[V_g(xi,u)+zeta A_u(g K_u xi)],                    (3.2)
+
+where mu_T is the product of normalized ambient color-ball Gaussians and
+
+ V_g=-r_u(gK_u xi)/g^2+log[J_u(gK_u xi)/J_*(u)].                 (3.3)
+
+In deriving this identity, e^(-|a|^2/2) supplies the PHYSICAL quadratic
+Gaussian and e^(-|eta|^2/2) comes solely from the definition of W. Both
+normalizations are retained. The normal dimension is m-d, whereas the
+leading power in (3.2) is d/2 and the product cutoff power is n_ch.
+Interchanging these three quantities would change the physical density.
+
+Equation(3.2) is the existing TURN47 auxiliary integral, now with an
+explicit exact positive real-sector interpretation at the fixed baseline
+g. It has no additive or multiplicative comparison tail. In particular
+it does not equal a_E or an excess-window a_exc unless that separate
+identity is proved; those older windows are not being redefined silently.
+
+For complex u, use the SAME real ambient product domain and analytic
+P,K,c,J,f in (3.2). Fixed-dimensional parameter integration and the
+established uniform cluster theorem give its analytic continuation and
+nonzero logarithmic factor on the fixed weak tube. No moving sharp
+complex integration domain and no energy-wedge restriction occurs.
+
+For real u, sources differentiate (3.1), and hence insert the literal
+physical A. The continuation is fixed by equality to this positive real
+sector. Appending an unrelated normalized auxiliary reference would not
+give this identity: here W changes the ORIGINAL fiber measure itself.
+
+4. THE CONSTANT PHYSICAL ACTION SOURCE AT FIXED WINDOW
+
+Take A=f, and put t=g^2 zeta. For fixed u,g,Tcut define
+
+ V_(g,t)(xi,u)=t xi^t P_u xi/2
+              -(1-t) r_u(gK_u xi)/g^2
+              +log[J_u(gK_u xi)/J_*(u)].                       (4.1)
+
+Then the exact normalized source logarithm is
+
+ L_W(u,zeta)=zeta s(u)+F(g,t,u)-F(g,0,u),
+ F(g,t,u)=log E_(mu_T) exp[V_(g,t)(xi,u)].                       (4.2)
+
+The first term in (4.1) is t xi^t P_u xi/2. Replacing it by t|xi|^2/2
+would source the dummy normal energy and give the wrong observable.
+Replacing g by (g^-2-zeta)^(-1/2) inside the window would likewise change
+the real measure in (3.1). Neither replacement is made.
+
+The P catalogue gives a connected quadratic-potential catalogue with
+rooted bounded-variable norm C |t| Tcut^2. The remainder and Jacobian
+catalogues give C |g| Tcut^3 on a smaller common g-disc, as in TURN47.
+Consequently the same bounded-potential cluster argument applies on
+
+       |g| Tcut^3<c0,      |t| Tcut^2<c1,                       (4.3)
+
+with all constants independent of volume. One splits each operator
+carrier's two xi indices into its connected support and retains the
+color contraction; the rooted any-leg estimate pays the background
+reads exactly as in TURN47. A harmless fixed exponent reserve is used.
+
+Every resulting scalar carrier is gauge invariant. At fixed source and
+g order, the xi polynomial degree is finite, so complex gauge consistency
+follows from invariant color-ball moments as in TURN47. At g=0,
+
+               F0(t,u)=log E_(mu_T) exp[t xi^t P_u xi/2].        (4.4)
+
+The full F is even in g because (g,xi)->(-g,-xi) preserves the phase,
+Jacobian and product measure. Its difference Q(g,t)=F(g,t)-F0(t) has
+zero constant and first g coefficients. Cauchy on a g-disc c/Tcut^3,
+with a fixed reserved fraction, therefore gives
+
+            ||Q(g,t,.)||_kappa<=C g^2 Tcut^6.                  (4.5)
+
+For n>=1, differentiating on the t-disc c/Tcut^2 and multiplying by
+g^(2n) gives
+
+ ||partial_zeta^n Q(g,g^2 zeta,.)|_(zeta=0)||_kappa
+                  <=n! C^n g^(2n+2) Tcut^(2n+6).              (4.6)
+
+Thus the selected exact source disc is at least c/(g^2 Tcut^2).
+This is smaller than the older total-window disc c/g^2; it is an explicit
+polylogarithmic loss when Tcut is logarithmic. The previous larger disc
+is NOT automatically inherited by a different physical window.
+
+5. THE FIRST TWO GAUSSIAN SOURCE TERMS ARE EXPLICIT
+
+For one normalized q-dimensional truncated Gaussian Z, put
+
+ v_T=E|Z|^2/q,
+ mu_T4=E|Z|^4/[q(q+2)],
+ kappa_T=mu_T4-v_T^2.                                          (5.1)
+
+The symbol mu_T4 is a fourth-moment scalar, distinct from the product
+measure mu_T. Orthogonal invariance gives
+
+ E Z_a Z_b=v_T delta_ab,
+ E Z_a Z_b Z_c Z_d=mu_T4(delta_ab delta_cd+
+                              delta_ac delta_bd+delta_ad delta_bc).
+
+Different chord color blocks are independent. Since P^t=P, P^2=P and
+Tr P=d, direct contraction proves
+
+ partial_t F0(0,u)=v_T d/2,                                    (5.2)
+
+ partial_t^2 F0(0,u)=v_T^2 d/2
+       +(kappa_T/4) sum_i[(Tr P_(ii))^2+2 Tr(P_(ii)^2)].         (5.3)
+
+The first term is EXACTLY datum independent, including when the tangent
+space moves. Formula(5.3) follows by expanding Var(xi^tPxi)/4: its
+Gaussian pairings give (v_T^2/2)Tr P^2, and its only non-Gaussian fourth
+cumulants have all four indices in a single ambient color block i.
+
+This constancy initially concerns the TOTAL first coefficient; it does
+not assert that each initial cluster carrier has constant derivative.
+For an explicit equivalent family, replace each F0_X(t) by
+F0_X(t)-t partial_t F0_X(0), and retain t v_T d/2 separately as its exact
+vacuum term. Coefficient Cauchy bounds on a reserved t-disc preserve the
+local norm. The dimension d=m-rank Q has its literal fine-minus-coarse
+coordinate count, so its constant can be assigned to those coordinate
+blocks if a local vacuum bookkeeping convention is wanted. Similarly,
+the second coefficient can be replaced by (5.3)'s explicit projection-
+block catalogue plus the retained vacuum constant, subtracting the old
+second coefficient and adding the equal total. Thus the improved marked
+FIELD bounds below have actual equivalent carrier representatives; they
+are not inferred from untracked cancellation of a total scalar.
+
+For fixed q and Tcut>=1, ordinary Gaussian radial tail estimates give
+
+ |v_T-1|+|mu_T4-1|+|kappa_T|<=C_q exp(-c_q Tcut^2).             (5.4)
+
+The normalized ball mass is bounded below by its positive Tcut=1 value;
+polynomial tail factors are absorbed by a smaller c_q. This is an exact
+moment estimate, not a whole-volume probability estimate.
+
+The field-dependent family in (5.3) has rooted carrier norm at most
+C exp(-c Tcut^2). Indeed each diagonal P block has the TURN47 matrix
+carrier expansion; multiply two such expansions and mark the common
+operator root or a background read. The existing row/column and marked-
+walk bounds control the scalar rooted norm. Color traces are invariant.
+
+Combining (4.2), (4.6), (5.2)--(5.3) gives the ACTUAL selected-law mean
+and variance of the physical f:
+
+ E_W^u f=s(u)+g^2 v_T d/2+g^2 partial_t Q(g,0,u),              (5.5)
+
+ Var_W^u(f)=g^4 {v_T^2 d/2
+       +(kappa_T/4)sum_i[(Tr P_(ii))^2+2Tr(P_(ii)^2)]
+       +partial_t^2 Q(g,0,u)}.                               (5.6)
+
+The local field-dependent correction to the mean has norm O(g^4 Tcut^8).
+The corresponding variance correction has norm
+O(g^4 exp(-c Tcut^2)+g^6 Tcut^10). The Gaussian dimension/source-only
+terms in (5.5)--(5.6) are retained, not renamed as a coarse field term.
+
+Choosing Tcut^2>=A log(1/g), with a sufficiently large fixed A, makes
+the non-Gaussian truncated-Gaussian second mark smaller than any specified
+power of g while keeping gTcut^3 small. This does not estimate the full
+omitted physical sector; it only controls the displayed moment defect.
+
+For higher source derivatives, (4.3) gives finite factorial local bounds
+with powers of Tcut. No all-order exponentially small replacement of F0
+by -(d/2)log(1-t) is asserted without a separate uniform local Gaussian
+cutoff theorem. Only the first two marks are explicitly improved here.
+
+6. INHERITED INTERACTIONS, ORIGINAL SOURCES AND ITERATION SCOPE
+
+An incoming exact density may contain an additional amplitude
+exp E_u(b;zeta), including previously generated quantum terms and the
+complete transported original source. Insert that SAME amplitude in
+(3.1) and (3.2). Gaussian disintegration is unchanged. When its actual
+composed carrier norm meets the already specified cluster hypotheses,
+it is part of the exact logarithm, with every source and vacuum factor
+retained. One must not replace that inherited source by a new source
+on the current classical action alone.
+
+At each chosen integration step, W_j is fixed from the unmarked baseline
+parameters and declared chart. Repeated integration with these weights
+is, by Fubini, the exact original density multiplied by the product of
+the specified W_j along the actual coarse trajectory. The physical
+source remains the original insertion throughout. The sector is positive
+on real data and has a complementary weight 1-product_j W_j. No signed
+localized histories are made into probabilities by this observation.
+Here the already declared measurable coarse maps are used wherever
+needed. Equivalently, define the selected weight through the admitted
+injective charts and set it to zero outside their images; any measurable
+completion of a coarse statistic outside that zero-weight region leaves
+this selected sector unchanged. This does not identify different
+completions when treating the full complementary measure.
+
+If one extracts a source-dependent coupling from the logarithm, this is
+an algebraic refactorization of the SAME density. It does not authorize
+recomputing W_j at that shifted coupling while differentiating a source.
+Doing so would introduce additional window derivatives and change the
+observable. The fixed-window source dependence in (4.1) is retained.
+
+The benefit is concrete: within an attached uniform local quantum class,
+there is no actual-versus-auxiliary comparison D to transport, and no
+inherited total-energy wedge created by this choice of physical sector.
+The same fixed weak sup tube is available wherever that class's actual
+chart/covariance/catalogue bounds are uniform. This does not prove those
+bounds for all generated actions; it uses them at each admitted step.
+
+It also does not estimate the complementary sector in the original law,
+prove a uniformly controlled multiscale history representation, construct
+the running-coupling trajectory, or produce a nonzero separated continuum
+witness. Those are still required for the requested Yang--Mills theory.
+
+7. AN EXACT POSITIVE ONE-STEP HISTORY LAW WITH THE ORIGINAL SOURCE
+
+There is a useful exact completion of the selected-sector identity. Let
+mu be the ORIGINAL finite-regulator real probability law, before any
+selected-sector weighting, and let A(U) be an original observable with
+the exponential moments in use. For its direct scalar-fiber identification
+below take the gauge-invariant physical observables of this programme. On
+the admitted chart branch write its data and fiber coordinate as u(U),
+b(U). Conditionally on U, append just the normalized normal Gaussian
+eta in T_(u(U))^perp, and put
+
+ xi=g^-1 H_(u(U))^(1/2)b(U)+eta,
+ ell_i=1_(|xi_i|<=Tcut).
+
+Outside that admitted branch use a single cemetery label and no normal
+draw. The resulting joint law is a probability measure with marginal
+mu, because each appended conditional kernel has mass one. It is a real
+positive pre-localization law, not a law on signed cluster coefficients.
+
+For every label array ell, define the finite source measure
+
+ Z_ell(zeta)=E_mu E_eta[1_(admitted branch) 1_(labels=ell)
+                                             exp(zeta A(U))],
+ Z_cemetery(zeta)=E_mu[1_(outside branch) exp(zeta A(U))].
+
+Then exactly
+
+ Z_cemetery(zeta)+sum_ell Z_ell(zeta)=E_mu exp(zeta A(U)).       (7.1)
+
+For the all-good label, integrating eta gives W_u(b). Its unnormalized
+conditional coarse NUMERATOR is precisely (3.2). The probability
+subdensity under normalized mu divides this numerator by the SAME
+original conditional/global Wilson normalizer and retains every fixed
+exterior factor; it is not normalized by its own selected-sector mass.
+All original action/source and coarea/vacuum factors remain. For a
+gauge-noninvariant A, (7.1) is still valid but one must retain its actual
+G0 orbit-source amplitude instead of writing it as a scalar A_u(b).
+This identifies the CONTROLLED all-good
+Gaussian formula with an actual positive history component of the
+original law. It is a more specific dictionary than merely appending
+an arbitrary normalized reference draw.
+
+Sources tilt A(U) in (7.1). They do not tilt the dummy normal energy or
+replace A by a reference-draw observable. With A=0, summing the labels
+leaves the marginal unchanged; with the actual A, (7.1) retains its
+original nonconstant source generating function. These are compatible
+facts, not a construction of an original source by normalized auxiliary
+tilting alone.
+
+The same identity can be iterated for a finite sequence of specified
+admission/chart choices and mass-one normal draws; conditional Fubini
+then gives a complete positive chronological label law. All original
+fields or determining data needed by later choices must be retained in
+that state. On a nonadmitted branch one can stop and assign the terminal
+cemetery label. This yields an exact partition, not a bound on that
+branch. A path consisting entirely of admitted all-good choices is the
+selected sequential sector of Section6.
+
+No estimate for the bad-label components or the cemetery component is
+deduced from their positivity or the all-good cluster theorem. Their
+control, locality after elimination, actual physical source scaling,
+and continuum consequences are the substantial remaining tasks. This
+new positive law is also not declared identical to every native Bałaban
+R operation. Its definitions and its exact source identity are explicit.
+
+END OF PRODUCER NOTE

@@ -1,0 +1,377 @@
+EXACT MULTILEVEL BLOCK COMPILATION FOR ORIGINAL WILSON SOURCES
+23 October 2026. New finite original-law locality constructor.
+Independent finite proof/scope review: block_skeleton_independent_audit
+_20261023.txt. No uniform boundary or continuum estimate is claimed.
+
+RESULT
+
+For the actual SU(2) Wilson measure and the original coherently weighted
+Wilson-energy sources, there is an explicit finite nested conditional
+hierarchy in which every arriving source is its EXACT compiled conditional
+mean and has a geometrically bounded boundary read. The conditional mixed
+covariance is identically zero until one integrated block meets BOTH
+original source supports. This is a nonempty original-source class with
+all normalization and source-mask factors explicit, not a replacement by
+a newly selected static near source.
+
+The kernels constructed here are block-interior conditionals of the
+original Wilson law. They are not identified with Balaban's B119 ordinary
+or LII reset kernels. They provide an alternative exact covariance/source
+decomposition for the same original observables. No uniform bound on the
+remaining coarse-source variance, boundary mixing, continuum limit or
+interacting theory is proved.
+
+1. ORIGINAL LAW, ORIGINAL SOURCES, AND DETERMINISTIC BLOCKS
+
+Use a finite four-dimensional periodic lattice of spacing a, with at
+least four sites in each direction, normalized independent SU(2) link
+Haar measures, and
+
+ h_p(U)=1-(1/2)Tr U_p in [0,2],
+ dmu=Z^(-1) exp[-t sum_p h_p(U)] product_l dU_l, t>=0.
+
+For two fixed actual source profiles put
+
+ O_f=c_f sum_p f_p h_p,          O_g=c_g sum_p g_p h_p.       (1)
+
+The source weights are the original deterministic coherent plaquette
+weights, including their actual sampling collar; no new current-grid
+sampling or a^4 factor is inserted. The original c_f,c_g calibrations
+stay explicit. The argument permits any finite deterministic real or
+complex weights; real weights give the sharp elementary oscillation
+bound below. There are no random source selectors or RG history masks
+in this class.
+
+Choose deterministic nested cubical partitions with side lengths
+m_0=1, m_1,...,m_J in fine-lattice units, each m_(j+1) an integer
+multiple of m_j. For simplicity the periods are multiples of all m_j,
+with at least two level-J blocks in each periodic direction. This is a
+nonempty class at every arbitrarily fine compatible lattice. More general
+rectangular nested partitions work with their actual diameters retained.
+Write ell_j=m_j a. A fixed common grid origin suffices; no field or source
+value chooses a boundary.
+
+For a level-j block B define I_j(B) to be the original links both of
+whose endpoints are STRICTLY inside B. Put
+
+ I_j=disjoint union_B I_j(B),      S_j=all links minus I_j.    (2)
+
+Thus S_j consists of links with an endpoint on the level-j cubical
+grid boundary; S_0 is the full original link set and
+
+                         S_(j+1) subset S_j.
+
+Every elementary plaquette contains interior links of at most ONE
+level-j block. To see this, a plaquette crossing a grid hyperplane has
+all its links incident to that hyperplane in S_j; any other interior
+links are on only one side of it. Unit plaquettes cannot cross two
+parallel grid hyperplanes when m_j>=2. The m_0=1 case has no interior
+links. The same reasoning applies at intersections of hyperplanes.
+
+Let P_j(B) be plaquettes containing at least one link of I_j(B), and
+let P_j^S contain the remaining plaquettes (all links in S_j). These
+sets partition the ORIGINAL plaquettes without repetition. Each
+p in P_j(B) lies in the closed geometric cube B. Define the complete
+boundary read
+
+ partial_j B = {links in S_j occurring in a p in P_j(B)}.     (3)
+
+It lies in the closed cube and includes the necessary boundary-to-
+interior spokes. It is not merely the tangential boundary links.
+
+2. EXACT BLOCK CONDITIONALS, INCLUDING THEIR NORMALIZERS
+
+For fixed skeleton U_(S_j)=v define
+
+ H_j,B(u;v)=sum_(p in P_j(B)) h_p(u,v),
+ Z_j,B(v)=integral_(SU(2)^I_j(B)) exp[-t H_j,B(u;v)] du,
+ Q_j,B(v,du)=Z_j,B(v)^(-1) exp[-t H_j,B(u;v)] du.          (4)
+
+Here du is the ORIGINAL product Haar measure, and Z_j,B reads only
+partial_j B. It is finite and strictly positive for every boundary:
+exp[-2t|P_j(B)|]<=Z_j,B<=1. This elementary lower bound is used ONLY
+to establish definition, never as a purported useful volume-uniform
+estimate for the source.
+
+The exact conditional law of all interior links, given S_j, is
+the product of the Q_j,B. Their boundary reads may overlap; those
+shared coordinates are HELD and do not spoil conditional independence.
+Gauge fixing, an empty-branch replacement and a new reference law are
+unnecessary. This follows directly by splitting the original plaquette
+action according to P_j^S and the P_j(B).
+
+The actual skeleton marginal is therefore
+
+ dmu_j(v)=Z^(-1) exp[-t sum_(p in P_j^S)h_p(v)]
+                         product_B Z_j,B(v) dHaar_(S_j)(v). (5)
+
+Each block mass occurs ONCE. The same global Z is retained. Equation
+(5) is generally correlated; the product of local masses does not
+make the skeleton links independent.
+
+3. COMPILED SOURCES HAVE AN EXACT FINITE SPATIAL READ
+
+Write O_f=O_f,j^S+sum_B O_f,j,B using the same plaquette partition,
+with ORIGINAL f_p and c_f in each part. Define
+
+ f_j(v)=E_mu[O_f | U_(S_j)=v]
+       =O_f,j^S(v)+sum_B Q_j,B O_f,j,B(v).                (6)
+
+This is the actual compiled mean, including the full local conditional
+normalizer in (4). It is not an evaluation at a zero-noise field or a
+minimum. A direct finite definition of every local source term is
+
+ Q_j,B O_f,j,B
+   = d/ds log Z_j,B(s;v)|_(s=0),
+
+ Z_j,B(s;v)=integral exp[-t H_j,B+s O_f,j,B]du.            (7)
+
+The derivative is legitimate on compact integration space at finite
+cutoff. The physical normalization remains Z_j,B(0;v). No global
+source-zero-free complex partition assertion is used; finite formal
+jets or differentiation at real zero suffice.
+
+Let K_f be the union of full geometric plaquettes with f_p!=0. An
+explicit complete read of f_j is
+
+ R_j(f)= {links of p in P_j^S with f_p!=0}
+          union union_(B:P_j(B) meets supp(f)) partial_j B.  (8)
+
+It follows pointwise that v=v' on R_j(f) implies f_j(v)=f_j(v').
+Every read in (8) is within L-infinity distance at most ell_j from K_f;
+for Euclidean distance the corresponding block diameter is 2ell_j.
+No fine-depth factor enters this physical radius.
+
+The number of retained coordinates is NOT uniformly bounded. For a
+cube of side m>=2, its boundary/spoke link count is at most
+
+ 4[m(m+1)^3-(m-2)(m-1)^3] <= C(m+1)^3.                  (9)
+
+Hence |R_j(f)| is bounded by C(m_j+1)^3 times the number of source-
+touched blocks, plus the actual skeleton-source plaquette reads. This
+is the explicit spatial/read cost. At fixed physical ell_j it can
+grow like a^(-3); it is not a finite collection of Balaban coarse
+variables or a uniform analytic norm.
+
+There is no nonempty-source matching gap here: (6) applies to EVERY
+nonzero original coherent profile, including profiles supported in
+two disjoint physical boxes. It follows from the original Wilson
+action and its actual source, before any retired-source catalogue.
+
+4. AN EXACT NORMALIZED RECURSIVE CONSTRUCTOR
+
+Let T_j,B=S_j intersect I_(j+1)(B) be the fine-skeleton links internal
+to one level-(j+1) block B. Condition the level-j marginal on S_(j+1).
+Different T_j,B are independent under that conditional law.
+
+Here is its complete unnormalized density, rather than an implicit
+appeal to a conditional measure. Put
+
+ R_j,B^P=P_(j+1)(B) intersect P_j^S,
+ W_j,B(w;v)=exp[-t sum_(p in R_j,B^P) h_p(w,v)]
+                 product_(b level-j block inside B) Z_j,b(w,v),
+
+ K_j,B(v,dw)=W_j,B(w;v) dHaar_(T_j,B)(w) / Z_(j+1),B(v). (10)
+
+Indeed P_(j+1)(B) is the disjoint union of R_j,B^P and the P_j(b)
+of its fine subblocks. Fubini gives the EXACT normalization
+
+       integral W_j,B(w;v) dw = Z_(j+1),B(v).             (11)
+
+The original action on P_(j+1)^S is held outside. Every fine subblock
+mass in (10) is integrated once, and every source-zero plaquette is
+present once. There is no inverse probability of a survival event.
+
+Define F_j=product_B K_j,B, acting on level-j tests and producing
+level-(j+1) tests. Equations (5),(10),(11) imply
+
+ mu_(j+1)F_j=mu_j,              F_j f_j=f_(j+1).          (12)
+
+Thus (6) is CLOSED UNDER EVERY FINITE STEP of this deterministic
+hierarchy. This is a genuine compiled-source locality statement with
+its actual state-dependent normalizers. Its read grows from (8) at
+level j to (8) at level j+1. No static source replacement or class
+qualification of an opaque conditional mean is involved.
+
+5. THE MIXED ROW VANISHES UNTIL THE ORIGINAL SUPPORTS JOIN
+
+For fixed j+1, decompose the level-j means according to their ORIGINAL
+plaquettes in the coarse partition:
+
+ f_j=O_f,(j+1)^S+sum_B f_j,B,
+ f_j,B=E_mu[O_f,(j+1),B | S_j],                          (13)
+
+and analogously for g. Formula (6) shows that f_j,B reads only T_j,B
+and the HELD boundary partial_(j+1) B. In particular it is identically
+zero if no original f-weighted plaquette belongs to P_(j+1)(B).
+
+Conditional independence under (10) gives the exact identity
+
+ C_j:=F_j(f_j g_j)-(F_j f_j)(F_j g_j)
+      =sum_B Cov_(K_j,B)(f_j,B,g_j,B).                    (14)
+
+Cross-block terms vanish even when the two local functions share held
+boundary links. Each summand of (14) is zero unless that coarse block
+contains original plaquettes from BOTH source supports. Therefore
+
+ no B with P_(j+1)(B) meeting supp(f) AND supp(g)
+                         ==> C_j=0 POINTWISE.            (15)
+
+In particular dist_infinity(K_f,K_g)>ell_(j+1) suffices. In Euclidean
+distance, dist_2(K_f,K_g)>2ell_(j+1) suffices. These distances use the
+actual weighted plaquette supports including any source-sampling
+collars, not only the nominal continuum support points.
+
+The actual total-covariance telescope is
+
+ Cov_mu(O_f,O_g)=sum_(j=0)^(J-1) mu_(j+1) C_j
+                              +Cov_(mu_J)(f_J,g_J).      (16)
+
+All early terms excluded by (15) vanish exactly, regardless of the
+individual source variances. This is an exact merging-scale covariance
+decomposition. It retains the terminal covariance and does not replace
+it by an estimate for a fresh near row. One may equivalently eliminate
+directly to any level k with blocks smaller than the separation and get
+
+                   Cov_mu(O_f,O_g)=Cov_(mu_k)(f_k,g_k).   (17)
+
+The covariance in (17) can be taken after subtracting each deterministic
+mean, but no local or global variance bound follows just from doing so.
+
+6. RAW SOURCE JETS, LOCAL CONTACTS, AND THEIR EXACT SUPPORT
+
+At a fixed level j, introduce two affine ORIGINAL log-source marks:
+
+ Z_j,B(s,u;v)=integral exp[-tH_j,B+sO_f,j,B+uO_g,j,B]du_B.
+
+The exact conditional source germ is
+
+ E[exp(sO_f+uO_g)|S_j]
+ =exp(sO_f,j^S+uO_g,j^S)
+                  product_B Z_j,B(s,u;v)/Z_j,B(0,0;v).  (18)
+
+Its first rows are f_j,g_j. Its logarithmic mixed row is
+
+ h_j(v)=sum_B Cov_(Q_j,B)(O_f,j,B,O_g,j,B).               (19)
+
+Thus the raw mixed row is h_j+f_j g_j, with no second copy of the
+product. From (12),(18) one recovers exactly
+
+ h_(j+1)=F_j h_j+C_j.                                   (20)
+
+Every block in (19) must meet both original source supports. If no
+such block exists, h_j is identically zero. Independent contacts in
+a different initial source would have to be inserted explicitly in
+(18); none is manufactured or discarded for the original affine
+Wilson source. The same formal-log argument at any fixed higher order
+shows that a conditional connected block cumulant involving several
+marks vanishes unless ONE block meets every participating original
+source support. This is finite exact support, not a higher-moment bound.
+
+The scalar part can be separated in an equally exact way. Fix a single
+deterministic boundary reference v_B^* for each block, for example all
+its boundary links equal to the identity. Replacing the local first
+row (7) by
+
+ d/ds log[Z_j,B(s;v)/Z_j,B(s;v_B^*)]|_0
+
+subtracts a deterministic scalar only. It preserves every connected
+covariance. It does NOT show that the remaining boundary-dependent
+source is uniformly bounded, and this optional subtraction is not
+silently performed in (6),(14), or (16).
+
+7. EXPLICIT FINITE BOUNDS AND THE REMAINING ANALYTIC TARGET
+
+For real source weights, the oscillation of O_f,j,B is at most
+2|c_f| sum_(p in P_j(B))|f_p|. Conditional averaging does not enlarge
+this interval. Hence the coarse-block terms in (14) obey the valid
+but usually very crude bound
+
+ |Cov_(K_j,B)(f_j,B,g_j,B)|
+ <= |c_f c_g| [sum_(p in P_(j+1)(B))|f_p|]
+                  [sum_(p in P_(j+1)(B))|g_p|].          (21)
+
+For complex weights, replace the interval estimate by the elementary
+sup/variance bound and its corresponding fixed factor. Equation (21)
+keeps the actual original plaquette count. No new normalization or
+contraction removes its a dependence. The induced boundary factors
+Z_j,B are highly nontrivial functions and need not be weak interactions
+under arbitrary boundary conditions.
+
+The proved gain is that microscopic conditional variances and contacts
+at scales below separation are NEVER paid against the other source:
+they are exactly absent from (16). The next sufficient analytic input
+is a bound on the surviving LOCAL block-boundary source functions and
+their actual boundary law, or a separation-sensitive response/mixing
+bound for the kernels (10), with their real coordinate count and full
+normalizers. Root's fixed-geometry projected-score estimate could be
+applied only after its own supported measure/Hessian hypotheses have
+been matched to these compact block kernels; no such match is asserted.
+
+The archive's B119 distinguished numerator/exclusion expansion offers
+a different method for estimating normalized local source response.
+Its one-ordinary theorem retains the full source/constraint/cutoff/old-
+record word and an actual hole debt. That machinery has NOT here been
+identified with (10), nor has the needed geometry-changing next-reset
+comparison been proved. The present exact construction establishes a
+nonempty original-law spatially local compiled source family; it does
+not grant it those native positive-word norms by analogy.
+
+8. A FULLY MATCHED BOUNDARY RESPONSE INTERFACE FOR THIS SOURCE CLASS
+
+Unlike the counterfactual geometry-changing native reset comparison,
+the block conditional (4) has one fixed compact Haar integration domain
+for EVERY real boundary field. Let v(s) vary a set D of boundary links
+smoothly, with fixed block, original plaquette assignment and profiles.
+Differentiation under this finite bounded integral gives exactly
+
+ d/ds[Q_j,B(v(s)) O_f,j,B(v(s))]
+   =Q_j,B dot O_f,j,B
+                 -t Cov_(Q_j,B)(O_f,j,B, dot H_j,B).      (22)
+
+The score dot H_j,B is the literal sum of derivatives of the original
+plaquettes in P_j(B) incident to D. The centered covariance includes
+the derivative of the exact Z_j,B; no partition-denominator response
+is omitted. If the f-weighted plaquettes miss D, the direct source
+term is ZERO. The remaining response is a source-to-boundary mixed
+correlation under this specific original block law, with no moving
+cuts, constraints, private histories or unmatched source extension.
+
+For one boundary link l with velocity X=(d v_l/ds)v_l^(-1), choose the
+standard fixed SU(2) Lie-algebra norm. Each incident plaquette obeys
+|dot h_p|<=C||X||, and at most six original plaquettes are incident.
+For real weights the elementary oscillation/Cauchy bound therefore
+gives the explicit finite estimate
+
+ |d/ds Q_j,B O_f,j,B|
+ <= C |c_f| ||X|| [sum_(p in P_j(B), p contains l)|f_p|
+                            +t sum_(p in P_j(B))|f_p|].  (23)
+
+Sum the right side over varied links for a general D and integrate
+along a real boundary path. This proves ordinary finite boundary
+continuity with a cost local to the actual block, uniformly in the
+surrounding volume. It is intentionally not advertised as a useful
+cutoff-uniform bound: its source plaquette count and t remain visible.
+
+An improvement replacing the second sum in (23) by a calibrated
+source-to-D spatial kernel for the ACTUAL covariance in (22) is a
+concrete remaining analytic target. The coordinates, source, action,
+normalizer, support and direct-derivative term are all fixed here.
+One does not need to establish that an arbitrary compiled B or neutral
+prefix secretly belongs to this class before using that target.
+
+READ INPUTS AND SCOPE COMPARISON
+outputs/YM4-current-checkpoint-20261023.txt;
+outputs/YM4-Wilson-variance-and-locality-20261023.txt, Section 3F;
+work/handoff/continuation-workspace/work/
+ fresh_mixed_local_cylinder_reset_column_20261023.txt;
+ one_ordinary_marked_kernel_response_20261023.txt;
+ neutral_prefix_one_ordinary_numerator_transfer_20261023.txt;
+ neutral_prefix_localized_first_reset_20261023.txt;
+ two_near_sources_conditional_connected_reset_20261023.txt.
+
+The proofs (2)--(20) use only the original Wilson action's finite-range
+plaquette factorization, compact Haar integration, and exact conditional
+expectation identities. They therefore require none of the unproved
+native compiled-prefix closure hypotheses. Their tradeoff is the large
+retained microscopic boundary state made explicit in (9).

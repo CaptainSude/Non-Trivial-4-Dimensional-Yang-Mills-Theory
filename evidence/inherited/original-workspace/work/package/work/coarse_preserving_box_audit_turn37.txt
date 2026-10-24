@@ -1,0 +1,217 @@
+COARSE-PRESERVING BOX REPLACEMENT: INDEPENDENT AUDIT
+19 October 2026. public_argument_audit. Turn37.
+
+STATUS
+
+PASS after reading the saved
+coarse_preserving_box_replacement_turn37.txt, Sections1--10.
+The positive-disintegration bridge is mathematically valid.
+The result preserves the joint exterior and specified coarse data
+exactly, while allowing a small exceptional set of coarse fibers. It
+does not prove a uniform estimate on every native constrained fiber.
+
+1. EXACT PRODUCT DISINTEGRATION
+
+Use the actual bare positive law and separated cores of the annealed
+box note. All spaces are finite products of compact groups or standard
+Borel measurable images. Let omega be the full fixed exterior, and
+
+  mu(domega,du)=mu_X(domega) product_i Q_i^omega(du_i),
+  Y_i=A_i(omega,u_i).
+
+Each A_i may read the common exterior but must read no other active
+interior. Write lambda_i^omega for its pushforward and K_i^(omega,y_i)
+for a jointly measurable regular conditional kernel. Then, for
+mu_X-a.e. omega and product lambda_i^omega-a.e. y,
+
+  mu(domega,dy,du)
+   =mu_X(domega) product_i[lambda_i^omega(dy_i)
+                           K_i^(omega,y_i)(du_i)].          (1.1)
+
+Each K_i is supported on its fiber almost everywhere. This factorization
+follows from the original conditional product and locality of the maps;
+it does not assume smooth fibers, a coarea formula, or independent
+unconditional coarse data. Null fibers can be assigned arbitrary kernels
+without affecting any assertion. A datum reading two active interiors
+would invalidate the displayed product and must instead be grouped.
+
+Let B_i be the exterior-measurable bad-boundary event and W_i the
+measurable original good window. On B_i^c set
+
+  p_i(omega,y_i)=K_i^(omega,y_i)(W_i^c).
+
+The original conditional tail gives the precise, sufficient estimate
+
+       integral p_i d lambda_i^omega <= alpha on B_i^c.    (1.2)
+
+No inference p_i<=alpha for individual fibers is legitimate.
+
+2. REPLACEMENT AND NORMALIZATION
+
+Fix 0<theta<1. Call a fiber active when B_i^c and p_i<=theta.
+On active fibers replace K_i by K_i(.|W_i); leave all other fibers
+unchanged. The denominator 1-p_i is then at least 1-theta. Consequently
+the resulting law nu has density, relative to the SAME original law,
+
+     dnu/dmu = product_i R_i,
+     R_i=1_Wi/(1-p_i) on active fibers, and R_i=1 otherwise.
+
+For almost every (omega,y), integral K_i R_i=1. Thus nu has exactly
+the original joint law of (omega,Y_1,...,Y_m). This also preserves the
+raw partition mass if the operation is applied to the original
+unnormalized density. No boundary- or coarse-data-dependent normalizer
+has been deleted: the factors (1-p_i)^-1 remain in the density.
+
+The statement is equality of measures. It does not define a uniquely
+preferred kernel at every exceptional datum, nor claim analytic
+dependence of these kernels on coarse data.
+
+3. COUPLING: TWO DIFFERENT CONDITIONING LEVELS
+
+On each active fiber use the exact mixture
+
+ K_i=(1-p_i) K_i(.|W_i)+p_i K_i(.|W_i^c).
+
+It couples the old and new interiors so that a discrepancy mark D_i
+has probability p_i; all inactive fibers have D_i=0. The unused bad
+kernel at p_i=0 can be chosen arbitrarily. Given (omega,y), the marks
+can be chosen independent across i and dominated by independent
+Bernoulli(theta) marks.
+
+After integrating y, conditional on omega the local data still factor
+by (1.1), and the discrepancy probabilities are
+
+  1_(B_i^c) integral p_i 1_(p_i<=theta) d lambda_i^omega
+  <= alpha.
+
+Thus independent Bernoulli(alpha) domination is available jointly with
+the exterior AFTER coarse-data integration. It is not in general
+available jointly with the revealed Y. This distinction is essential,
+not merely a choice of proof.
+
+For any selected set A of interiors, retaining omega and all Y in both
+laws, the exact total variation distance is
+
+  E_[omega,Y][1-product_(i in A)(1-1_active_i p_i)]
+  <= |A| alpha.                                           (3.1)
+
+Indeed on each conditioned fiber the new product law is the old product
+law conditioned on the active windows. The same calculation gives
+
+ D(nu||mu)=E_[omega,Y] sum_i 1_active_i[-log(1-p_i)]
+          <= |A| alpha/(1-theta)                         (3.2)
+
+when only interiors in A are replaced. The direction of entropy matters.
+
+4. UNCONTROLLED MARKS AND JOINT PROBABILITIES
+
+Let F_i=B_i^c intersect {p_i>theta} be the bad-fiber mark. On a good
+boundary, F_i and D_i are disjoint. Their conditional probability,
+after integrating the coarse datum, is bounded using the POINTWISE
+inequality
+
+   1_(p>theta)+p 1_(p<=theta) <= p/theta.
+
+Hence it is at most alpha/theta. Given omega, these local marks are
+independent across the distinct cores. If the original reflected
+bad-boundary events obey mu(intersection_(i in J) B_i)<=beta^|J|,
+expanding by their chosen subset proves
+
+ P(B_i OR F_i OR D_i for every i in A)
+             <= (beta+alpha/theta)^|A|.                  (4.1)
+
+The saved producer proves the sharper bound: with
+eta=min(1,alpha/theta), its exterior-conditional mark parameter is
+at most eta+(1-eta)1_Bi. Expansion with the same boundary-array estimate
+therefore gives
+
+     P(all uncontrolled in A)
+          <= [beta+(1-beta)eta]^|A|.                      (4.2)
+
+This sharper argument passes and is optimal from these hypotheses.
+The saved producer also correctly proves that replacement's ACTUAL
+window defect has parameter beta+(1-beta)alpha, since its remaining
+window mass on a good boundary is E[p 1_(p>theta)]. That mass plus
+the removed discrepancy mass equals the original E[p] exactly.
+
+This proof does not assert
+independence or an iid domination theorem for the full uncontrolled
+marks. It asserts their joint inclusion bound. Their connected-cluster
+estimate then follows by the same bounded-degree animal count as in
+the bare annealed note.
+
+There is no need to add a second alpha term to (4.1); the elementary
+inequality already includes the active-fiber discrepancy. Conversely,
+using beta+alpha for the BAD-FIBER mark alone would generally be false.
+
+5. NATIVE RELEVANCE AND EXACT LIMIT
+
+The construction allows arbitrary measurable local coarse observations,
+including nonlinear maps and singular fibers. It therefore genuinely
+improves an unconstrained replacement: chosen coarse data and exterior
+observables have exactly the SAME law, and bad fibers are left intact.
+It does not approximate a hard constraint by a soft one.
+
+The domain of the assertion remains the original bare joint measure.
+Identification with a published native T or R kernel requires that
+kernel to be the SAME positive disintegration, including branch flags,
+gauge conventions, Jacobians and retained normalization factors. Native
+read slots extending into other active interiors must be put in the
+conditioning sigma-field or grouped before the product claim. Merely
+sharing a block-average formula is not a full joint-law identification.
+
+In particular, the hard-fiber counterexample in
+polylog_box_native_matching_turn37, Section3, is consistent with this
+result: it simply lies in a bad fiber. The new result avoids requiring
+all fibers to be good. It does not prove the constrained-minimum,
+complex-chart, source-derivative or global-fiber-gap estimates listed
+in that note. An a.e. positive disintegration estimate cannot be
+promoted to an analytic estimate at every prescribed native datum.
+
+The saved producer's Section8 keeps the necessary branch qualifications:
+total Borel completion of a partially defined average is allowed, but
+an extra invalid-branch exclusion needs its own probability bound if
+it is counted as uncontrolled. A finite retained multiplier has its
+integral preserved; no weighted rarity estimate follows from that
+identity. A singular delta or a selected null fiber is not thereby
+identified. The original-law conditional product is not inferred for
+later effective actions.
+
+A finite-width collar containing the complete reads of a specified
+first ordinary average is a plausible additional bare event. Its
+separate geometry/branch-validity proof can refine this statement. No
+general native validity conclusion is needed or assumed for the
+disintegration theorem itself.
+
+6. PHYSICAL-VOLUME LIMIT OF THE TV ESTIMATE
+
+The exact coarse and exterior law preservation is GLOBAL, for all
+chosen coarse variables in the finite lattice. Generic bounded fine
+observables instead use the estimate |A|alpha; convergence for them
+requires |A|alpha -> 0 or a sharper observable-specific bound.
+
+In particular, under an asymptotically free relation
+g^2 comparable to 1/log(1/a_uv), the available
+alpha=exp[-c(log(1/g))^p] is only stretched exponential in log log(1/a_uv).
+A fixed physical region contains order a_uv^-4/R^4 boxes when R is
+polylog(1/g). The displayed |A|alpha bound need not tend to zero there.
+The volume-uniform joint-inclusion/cluster estimates remain valid;
+they must not be relabelled total-variation convergence on that region.
+
+7. FINAL FILE-LEVEL VERDICT
+
+All substantive formulas in the saved producer pass: a.e. parameterized
+disintegration and product proof; joint coarse-law preservation; frozen
+idempotent local kernels; conditional theta versus annealed alpha
+couplings; sharp joint mark parameter; removed-plus-retained mass
+identity; exact TV and directed entropy. The arbitrary-frequency binary
+example correctly excludes a native derivative/holomorphic-domain
+inference from small fiber probabilities alone. Gauge covariance is
+claimed at the measure level with the right equivariance hypothesis,
+not for a uniquely chosen RCP on every exceptional datum.
+
+No correction to its mathematics was needed. The additional physical-
+volume caveat above limits an inference, not the stated theorem. No
+reflection positivity of nu, all-scale conditional law, or uniform
+native analytic jets is established.
+

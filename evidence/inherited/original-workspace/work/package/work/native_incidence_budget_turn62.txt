@@ -1,0 +1,468 @@
+NATIVE RELATIVE-INCIDENCE EXPONENT AND RAW MASS BUDGET -- TURN62
+20 October 2026. tail47.
+
+RESULT
+
+The decay-exponent requirement exposed in TURN61 is compatible with
+the primary parameter hierarchy. Kappa is not a universal small
+physical mass: the native theorem permits an arbitrarily large
+FIXED localization exponent, with the localization block size M
+chosen afterward and the weak-coupling floor chosen last.
+
+This does not mean one may increase kappa while keeping an already
+fixed construction, its M, or its analytic domains unchanged.
+Nor does small alpha compensate an insufficient exponential decay
+rate. Both distinctions are essential.
+
+There are two quantitative deductions:
+
+ (A) On the cubic touching graph the TURN61 counting and cube
+     conversion constants can be sharpened. A sufficient exponent
+     threshold in d=4 falls from about21030 to about1124. Either
+     finite threshold is compatible with the source's parameter
+     order.
+
+ (B) A component in a current box of side100 M R_k occupies
+     O(R_k^d) M-cells. Its geometric candidate entropy and the
+     insertion cost are therefore at most exp(C_* R_k^d).
+     The actual raw mass exp[-a0 p0(g_k)] pays them when the
+     threshold exponent p exceeds d r, with R_k of order
+     (log g_k^-2)^r. This is a numerical budget for the actual
+     raw mass, not yet the unchanged-measure/removal identity.
+
+No frozen TURN61 file is modified. The complete native insertion
+attachment and the nontrivial YM4 continuum construction remain open.
+
+1. PRIMARY PARAMETER FREEDOM, WITH ITS ORDER
+
+The following indexed primary statements were read directly.
+Items[A]--[C] retain that indexed-source status. For[D] the
+user subsequently supplied the readable original PDF
+[supplied PDFs]/balaban2.pdf (4030232 bytes).
+Printed pp376,377,379,387,389 were independently checked
+as rendered page images in work/turn62_large_II.
+
+[A] T. Balaban, Renormalization group approach to lattice gauge
+    field theories I, CMP109(1987),249--301:
+ https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+
+Printed p263, Eq.(1.18), gives the localized exp[-kappa d_j(X)]
+bound for M>=M(kappa), followed by a sufficiently small weak
+range. Printed p264, Theorem3, states the order explicitly:
+kappa>=kappa_0, M>=M(kappa), and couplings in the resulting weak
+interval. Its analytic radii depend on M, and the final weak
+constant depends on the other constants.
+
+[B] T. Balaban, Convergent renormalization expansions for lattice
+    gauge theories, CMP119(1988),243--285:
+ https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+
+Printed p260, after(2.31), states arbitrary-large choices of the
+large-field power and localization exponent, with the other
+parameters fixed appropriately as in[A]. Printed p262, before
+Theorem1, retains the stronger new-birth exponent, for example
+(1+4 beta)kappa, before R. Thus kappa here is not fixed by a
+small continuum spectral gap. The initial block hierarchy on
+p245 permits M to be chosen much larger than the earlier fixed
+blocks.
+
+[C] T. Balaban, Renormalization group approach II: Cluster
+    expansions, CMP116(1988),1--22:
+ https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-4penm4k7hc.pdf
+
+The mechanism is visible in the proof. Printed p5, near(1.11),
+the decoupling contour exp(kappa_1) is controlled by taking M
+large compared with kappa_1. Printed pp9 and20 retain choices
+of kappa_1 large compared with kappa and L kappa. Factors such
+as exp(C kappa_1) then appear in fixed constants; small field
+radii and weak-coupling restrictions are imposed afterward.
+The final pp20--21 argument explicitly uses sufficiently
+large kappa and sufficiently small interaction amplitude.
+
+[D] T. Balaban, Large field renormalization II,
+    CMP122(1989),355--392:
+ https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+
+Printed pp376--377,(1.66)--(1.68), retain (1+2 beta)kappa in
+the noninterior relative bound, with alpha made small by the
+weak floor. Printed p389 explicitly uses large kappa and then
+absorbs the fixed per-component cost2 kappa(100R_k)^d into
+p0(g_k), in the step leading to(1.95). The relative metric
+(1.67) charges the complete ordinary tree length.
+
+These are accepted published theorem/proof inputs; this note
+does not independently re-prove every native analytic module.
+They do resolve the specific parameter-freedom question.
+
+2. SHARPER CUBIC GRAPH COUNT
+
+Use the touching graph of a periodic or finite rectangular
+cubic grid in dimension d. Its degree is at most
+
+                 D=3^d-1.
+
+Let Z be fixed and let admissible C include every component
+of Z it meets whole, with R=C\Z nonempty. The graph metric
+d_Z(C) is the minimum number of edges of an ordinary tree
+inside C spanning R, exactly as in TURN61.
+
+There are two improved finite constants.
+
+2A. At most J=2^d distinct retained components neighbor any
+one outside cube.
+
+The neighboring cube offsets lie in{-1,0,1}^d. Partition
+these offsets into2^d sets by choosing, coordinatewise,
+either{-1,0} or{1}. Each resulting set is a clique for
+touching adjacency. Two vertices from different connected
+components of Z cannot lie in the same clique. The central
+cube, if included in the offset partition, is outside Z
+and is ignored. Thus at most J distinct components meet
+the neighbors of a fixed outside vertex.
+
+Consequently at most J|R| components can neighbor R.
+
+2B. The number of embedded rooted trees with m edges is
+at most(4D)^m.
+
+Order each vertex's neighbors once. Encode a tree by the
+rooted ordered tree shape from its ordered depth-first
+traversal and by the ambient neighbor index for each
+downward edge. There are at most4^m rooted ordered shapes
+and D^m downward edge choices. Invalid embeddings only
+overcount. Return edges are already determined.
+
+Choose R among the m+1 tree vertices and choose the
+included retained components among its at most J|R|
+neighbors. The same injective reconstruction as TURN61 gives
+
+ #{C: x in C\Z, d_Z(C)=m} <= B A^m,                      (2.1)
+ B=2^(J+1),             A=4D B.
+
+Therefore, for h>log A,
+
+ sum_(C: x in C\Z) exp[-h d_Z(C)]
+                  <= K_graph(h):=B/(1-A exp(-h)).       (2.2)
+
+For a fixed component X, the incident bound remains
+K_graph(h)|partial_out X|. The improved J also implies
+that at most J|R| retained components need encoding; it
+does not make the boundary of a distinguished large X
+uniformly bounded.
+
+2C. Native face connectivity and the touching-tree auxiliary.
+
+An additional primary check is necessary here. B109 printed
+p257 defines localization domains by chains of cubes sharing
+a (d-1)-dimensional face. This is stronger than connectivity
+in the touching graph. The geometric proof above is stated
+first in the single touching graph; its native use must not
+silently redefine components.
+
+Use two graphs on the same M-cubes. Let G_f be the face graph,
+of degree D_f=2d, and G_t the touching graph, of degree D_t=3^d-1.
+Assume C is G_f-connected and includes whole G_f-components
+of Z. Choose the minimizing tree spanning R inside C using
+G_t edges, as supplied by the continuous-tree conversion.
+Every included G_f-component of Z must meet R across a FACE:
+take a G_f path in C from that component to R; different
+G_f-components of Z cannot be directly face-adjacent.
+There are therefore at most D_f|R| candidate components.
+
+The ordered-tree count is still(4D_t)^m. The reconstruction
+from R and the chosen whole G_f-components is unchanged.
+The resulting bound has B_f=2^(D_f+1), A_f=4D_t B_f.
+Since D_f<=2^d for every d>=1, the larger B,A in(2.1)
+remain valid without change. A distinguished retained X
+has a FACE boundary root, which is also a touching boundary
+root, so the earlier boundary bound remains safe.
+
+Thus Sections3--6 may use exactly the displayed conservative
+constants for either the single-graph touching convention,
+or the source face-connected convention with this explicit
+two-graph proof. No assertion equating the two component
+decompositions is needed. If a different raw-component
+convention is used, its whole-component and adjacency
+dictionary must still be identified.
+
+3. SHARPER CONTINUOUS-TREE CONVERSION
+
+Let ell be the length of a finite rectifiable tree inside
+the domain which meets every required outside M-cube.
+Its depth-first traversal has length2ell.
+
+For any r<M/2, samples at traversal spacing r give at most
+1+2ell/r balls of radius r covering the tree. Every such
+ball meets at most2^d closed grid cubes: its projection on
+each coordinate axis has length strictly smaller than M.
+The C-cubes meeting the tree form a connected touching graph
+and include every outside cube. Hence
+
+ d_Z(C) <= J(1+2ell/r)-1.
+
+Let r increase to M/2 and then take the infimum over trees.
+With d_cont=ell_min/M, this proves
+
+ d_Z(C) <= (J-1)+c_d d_cont(C),       c_d=4J.             (3.1)
+
+The argument for a possible nonattained infimum uses
+approximating trees. Periodic grids use periodic touching
+adjacency; repeated offset representatives only decrease
+the count.
+
+For any nu>0,
+
+ exp[-nu d_cont(C)]
+   <=exp[nu(J-1)/c_d] exp[-(nu/c_d)d_Z(C)].              (3.2)
+
+Thus a sufficient continuum relative-exponent condition is
+
+                         nu>c_d log A.                 (3.3)
+
+A corresponding explicit incident constant is
+
+ K_cont(nu)=exp[nu(J-1)/c_d] K_graph(nu/c_d).             (3.4)
+
+These constants are deliberately not optimized. They are
+finite and independent of volume and retained-component size.
+
+For d=4, D=80, J=16, c_d=64,
+ B=131072, A=41943040.
+Thus c_d log A is approximately1123.3. The older safe
+conversion required4*3^4 log(80^2*2^81), about21030.
+The numerical improvement is useful, but the fundamental
+point is that BOTH are fixed thresholds.
+
+For example, a fixed native kappa>=2048 already exceeds
+the sharpened threshold when nu=kappa; one must also meet
+the source's other lower thresholds. Its actual noninterior
+bound has nu=(1+2 beta)kappa, so discarding that extra factor
+is safe for this estimate.
+
+If kappa is prescribed below the threshold, small alpha
+does not make the geometric series converge. No such
+compensation is asserted.
+
+4. A CONSISTENT ONCE-ONLY CHOICE
+
+Use the following order, at the accepted primary input scope:
+
+ 1. Fix dimension and block rescaling L as required by the
+    native construction. Choose kappa above its existing
+    restrictions and above the finite incidence threshold,
+    with a strict fixed margin.
+
+ 2. Choose the decoupling-contour constant kappa_1 and the
+    localization block M to meet the native restrictions.
+    In particular M must exceed M(kappa) and the required
+    multiples of kappa_1. M2 and earlier blocks retain their
+    prescribed hierarchy.
+
+ 3. Fix the auxiliary analytic radii and threshold powers.
+    The published weak interval is then reduced so that
+    the actual alpha in(1.68) satisfies, for example,
+
+          alpha K_cont(kappa) C_col<=1.                 (4.1)
+
+    Its smallness is available only AFTER the fixed
+    exponent/geometry choices. Here C_col is the fixed
+    geometric constant for the actual insertion collar,
+    including the extra neighborhood in Section6.
+
+ 4. Reduce the weak floor further for the raw-energy/census
+    inequality in Section6 and all earlier native conditions.
+
+The possibly very large constants in(3.4) are paid by a
+smaller but fixed weak interval. No parameter is varied with
+total volume or ultraviolet depth. No per-step exponent loss
+or repeated choice of kappa is involved in this incidence
+application.
+
+This ordering is not an assertion that a previously fixed
+M or prescribed weak endpoint already realizes the new
+threshold. A theorem relying on those earlier numerical
+choices must state that they were chosen to satisfy this
+additional fixed requirement.
+
+5. RAW GEOMETRY, NOT THE REFERENCE BOX
+
+The readable Large-I PDF supplied by the user, printed p177,
+defines eligible current components X by containment in a
+cube of side100 M R_k and a maturity condition on their
+preceding history:
+ [supplied PDFs]/balaban.pdf.
+
+At the CURRENT k lattice, X therefore occupies at most
+C_box R_k^d cubes of side M, with a fixed dimensional
+C_box. Write n_M(X) for this M-cell count. The same is
+true after any fixed-width M-cell collar, with a changed
+fixed constant.
+
+The Gaussian reference integration in Large-II printed
+pp357--358 instead uses Lambda in a box of side100M
+at its reference scale. Its O(M^d) Gaussian volume is
+not the current raw carrier volume. It cannot replace
+the O(R_k^d) count above.
+
+For one fixed current M-cell x, any eligible X containing
+x lies in a box about x of side at most200 M R_k plus
+a bounded cell correction. There are at most
+
+                  exp(C_geom R_k^d)                    (5.1)
+
+possible geometric M-cell subsets X, by simply counting
+all subsets in that box. Requiring connectedness,
+rectangularity, maturity or the native coarser grid
+only reduces this count.
+
+This is a geometry census. Every additional outer type
+label must be included if it is not already part of the
+raw measure. A fixed finite number of types per occupied
+cell merely changes C_geom. An unbounded unaccounted
+history-label multiplicity is not covered by(5.1).
+
+In the native raw operator, internal domain histories
+are already summed/integrated in T'_k(X); they must not
+be counted again as separate geometric candidates when
+using the complete bound for T'_k(X)1. This prime is
+literal in the newly readable source(1.71),(1.89).
+
+6. THE MASS TIMES INSERTION-COST ESTIMATE
+
+At fixed admitted real outer data, the positive raw
+component measure represented by T'_k(X) has mass
+nu_X(1)=T'_k(X)1. The source's complete-history estimate
+Large-II(1.89), printed p387, supplies
+
+                   nu_X(1)<=exp[-a0 P_k],               (6.1)
+                   P_k=p0(g_k),
+
+with a fixed positive a0 (the source displays the
+stronger coefficient2/(1+beta0)). This is the raw
+measure with its original scalar factors and history
+sums, not a normalized probability measure and not a
+bound obtained after dropping an interaction still
+read by that measure. Applying it to a differently
+defined nu_X would require identifying that measure.
+
+If the actual present/removed comparison has been
+matched, Sections2--4 give
+
+ b(X)<=alpha K_cont(kappa)
+            (|partial_out X|+|N_1(Xplus)|)
+                                <=C_ins R_k^d.          (6.2)
+
+For a fixed-width M-cell enlargement the parentheses
+are at most C_col n_M(X). More generally the actual
+prescribed collar only needs to fit a box of side
+C M R_k; then they are directly at most C_col R_k^d.
+This includes the newly allowed interaction-domain
+labels treated in native_potential_matching_turn62.txt.
+The former(D+1)n_M(X) shortcut for an unchanged domain
+list is not used when those new collar-pinned labels
+are present.
+
+Combining(5.1), (6.1) and(6.2), for geometric labels
+with all remaining multiplicity included in the census,
+
+ sup_x sum_(X contains x) nu_X(1) exp[b(X)]
+       <=exp[-a0 P_k+C_* R_k^d].                        (6.3)
+
+This is exactly the numerical quantity required in
+TURN61's positive insertion theorem. It uses the same
+raw mass once; no component denominator is inverted.
+
+Let t=log(g^-2). If
+ P(g)=A0 t^p,
+ t^r<=R(g)<L t^r,
+and p>d r, then
+
+ C_* R(g)^d/P(g)
+        <=(C_* L^d/A0)t^(d r-p) ->0.                    (6.4)
+
+Hence one fixed sufficiently weak floor gives
+
+ sup_x sum_(X contains x) nu_X(1) exp[b(X)]
+                         <=exp[-a0 P_k/2].              (6.5)
+
+This is uniform over all dates with couplings under
+that floor. The rounding of R to a power of L is
+explicitly included in(6.4).
+
+The raw-history future-reserve requirements must also
+hold. This section does not replace those stronger
+requirements by p>d r. For d=4, B119 p246 already
+requires a power exceeding5r, and the later full
+history census imposes its own further choices.
+The additional local incidence cost is of orderR^d,
+so it is compatible with, rather than a substitute
+for, that stronger threshold hierarchy.
+
+The published p389 step leading to(1.95), now checked
+visually, explicitly requires
+
+ -2(1+beta0)^(-1)P_k+1+2 kappa(100R_k)^d
+                                      <=-(3/2)P_k.     (6.6)
+
+It takes beta0=1/7 as an example, reducing this to
+-(1/4)P_k+1+2 kappa(100R_k)^d<=0. These exact constants
+confirm the units and ordering above. The following
+published(1.96) is a more structured native activity
+census. I use the deliberately coarser subset census
+in(5.1), with the complete mass and its history sum
+retained once, and infer no removal identity from the
+published global majorization.
+
+If a raw component family is instead allowed arbitrarily
+large carriers, the stronger spatial factor mentioned
+after(1.89) must be used with its actual carrier norm
+and candidate census. The bounded-eligible-component
+calculation(6.3) is not an automatic estimate for that
+different family.
+
+7. PRECISE CONSEQUENCE AND REMAINING GATE
+
+At accepted native analytic/raw-mass premises, the
+incidence summability and bounded-component mass/census
+budgets can be fixed simultaneously before volume and
+UV depth. There is no identified quantitative conflict
+between their required exponents.
+
+This resolves a NUMERICAL premise of the insertion
+route. It does not prove hereditary admissibility,
+identity of surviving private measures, equality of
+off-X functions, or invariance of positive outer
+factors under native insertion/removal. Those source
+identities remain the separate essential attachment.
+
+The counts use current polymer M-cells. Their number
+in a fixed physical continuum region grows as the
+mesh is removed. Neither(6.5) nor the large fixed
+kappa supplies the missing continuum physical
+observable bound or a nontrivial YM4 limit.
+
+8. INDEPENDENT CHECK AND SOURCE STATUS
+
+history47 independently checked Sections2--3: the
+2^d neighboring-component bound, the(4D)^m tree count,
+and the strict-radius cube conversion all pass.
+In particular strict r<M/2 is needed before taking
+the limit; a radius exactly M/2 can touch extra cubes.
+The subsequently added Section2C records the source's
+face-connectivity convention and proves the two-graph
+variant explicitly; it does not alter those constants.
+
+The direct Large-II image checks confirm:
+ - p376(1.67): full ordinary tree length in Y, scaled by M;
+ - p377(1.68): exponent(1+2 beta)kappa and arbitrarily
+   small alpha at sufficiently small gamma;
+ - p379 after(1.72): the private history sum acts on
+   the interaction exponential;
+ - p387(1.89): the primed complete operator mass and
+   coefficient2/(1+beta0);
+ - p389(1.94)--(1.96): sufficiently large kappa and
+   the exact per-component absorption(6.6).
+
+These checks strengthen the source evidence for this
+numeric attachment. They do not by themselves identify
+surviving measures or interactions after erasing X.

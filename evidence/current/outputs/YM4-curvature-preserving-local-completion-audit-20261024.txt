@@ -1,0 +1,294 @@
+INDEPENDENT AUDIT: CURVATURE-PRESERVING LOCAL COMPLETION
+24 October 2026. audit_two_root. Archive and outputs unchanged.
+
+STATUS
+
+Scoped PASS after independent geometric proof and final readback of
+the parent producer, including its native auxiliary-law and exact
+original-gauge application. No mathematical correction is requested.
+This is a real, filled, nonwrapping coarse-box construction and a
+homogeneous native minimum attachment. It is not a construction of the
+full Yang--Mills theory, an assertion about all large-field records, or
+an identification of a new auxiliary minimum with an old random field.
+
+1. PRECISE BOX AND TREE CONVENTIONS
+
+Use coarse lattice units. Translate the root to 0 and write
+
+  C_R = {x in Z^4: |x_j| <= R for j=1,...,4}.
+
+The input includes every unoriented edge with both endpoints in C_2R
+and every plaquette contained there. The cube must fit without torus
+identifications. Any native convention including incident edges needs
+one additional complete lattice collar; this is a fixed enlargement,
+not an inference from incomplete plaquette data.
+
+For each x use the path P(x) that first traverses coordinate 1 from
+0 to x_1, then coordinate 2, then 3, then 4. Traversals are signed, so
+negative coordinates cause no change of definition. These paths form
+one tree: the parent of a nonzero x is obtained by subtracting the
+sign of its highest-index nonzero coordinate in that coordinate.
+Every parent decreases the l1 distance to 0. Hence there are no cycles,
+all vertices reach 0, and the root path is exactly P(x).
+
+Every prefix of P(x) lies in each centered cube containing x. Thus
+the restrictions of this SINGLE infinite coordinate tree to nested
+centered cubes agree. One must keep the same root and coordinate order;
+independently chosen trees on different cubes need not agree.
+
+Let G(x) be the ordered input parallel transport along P(x), and put
+
+  V^can(x,y) = G(x) V(x,y) G(y)^(-1).
+
+All tree edges are identity. The proof does not suppose that the input
+links, input tree transport, or a chosen initial gauge are small.
+
+2. THE LINEAR STRIP BOUND, INCLUDING SIGNED COORDINATES
+
+Fix a positive edge e=(x,x+e_j) contained in C_2R. The paths P(x)e and
+P(x+e_j) have the same part in coordinates less than j. Their remaining
+discrepancy is precisely moving ONE e_j step past the signed coordinate
+segments k=j+1,...,4. One plaquette swap moves it past one such step.
+It follows that the based loop P(x)eP(x+e_j)^(-1) can be filled with
+
+  N(e) <= sum_{k>j} |x_k| <= 2(4-j)R <= 6R
+
+plaquettes. These are width-one strips, not the full rectangles between
+arbitrary root paths. For j=4 the number is zero, consistently with the
+tree structure.
+
+This argument also covers x_j<0 and the edge from -1 to 0. After the
+higher-coordinate segments have been crossed, the final positive j
+step cancels the last negative j step in P(x), giving P(x+e_j).
+Negative higher coordinates merely reverse the corresponding strip.
+All strip coordinates lie between 0 and the two edge endpoints, hence
+all plaquettes used are contained in the filled input cube. Reverse
+edges follow by inversion. This verifies boundary compatibility of the
+area estimate rather than presuming an infinite-field extension.
+
+Each plaquette swap expresses the loop transport as a product of
+unitary conjugates of input plaquette transports or their inverses.
+If every input plaquette satisfies ||V(dp)-1|| <= delta, telescoping
+the unitary product gives
+
+  ||V^can(e)-1|| <= N(e) delta <= 6R delta.                 (1)
+
+For a fixed sufficiently small matrix-log neighborhood, (1) implies
+
+  V^can(e)=exp(i A_e),   ||A_e|| <= C R delta,
+  A_{-e}=-A_e.                                           (2)
+
+The hypothesis R^2 delta <= c, R>=2, with c fixed sufficiently small,
+is more than enough to place every edge in this log neighborhood.
+The constants depend on the fixed group/norm and dimension, not R.
+
+3. CURL AND CUTOFF ESTIMATE
+
+Let a plaquette have oriented edge logarithms A_1,...,A_4, with signs
+included by reversing the appropriate edges. For four small matrices,
+the elementary BCH estimate gives
+
+  ||log(exp(iA_1)...exp(iA_4))-i sum_l A_l||
+      <= C (max_l ||A_l||)^2.
+
+The first logarithm is bounded by C delta, because the actual
+canonical plaquette is a unitary conjugate of an input plaquette.
+Consequently the additive curl, in the single canonical matrix frame,
+obeys
+
+  ||dA(p)|| <= C(delta+R^2 delta^2).                       (3)
+
+Choose a fixed smooth one-variable function equal to 1 on [-1,1]
+and 0 off (-3/2,3/2). The product of its four coordinate factors,
+evaluated at the midpoint of each edge divided by R, defines an
+unoriented scalar chi_e. Then chi=1 on edges in C_R, chi=0 in a full
+outer collar of C_2R, and any two edges of one plaquette satisfy
+
+  |chi_e-chi_f| <= C/R.
+
+Set B_e=chi_e A_e on the input edges and B_e=0 elsewhere, and define
+Vhat_e=exp(i B_e). For any plaquette wholly within C_2R, choose one
+of its edge cutoffs chi_* and write exactly
+
+  dB(p)=chi_* dA(p)+sum_{e in dp} sign(e)(chi_e-chi_*) A_e.
+
+The second term is at most C R^(-1) R delta = C delta. Applying
+the same FOUR-edge BCH bound to B gives
+
+  ||Vhat(dp)-1|| <= C(delta+R^2 delta^2) <= C' delta.       (4)
+
+For a plaquette crossing the outer boundary all of its possible
+nonzero B edges lie in the zero collar and are in fact zero. Thus
+(4) also holds across the extension seam and outside the input cube.
+The definition is exactly the canonical input on all inner C_R
+edges, and exactly identity outside the cutoff support. There is no
+uncontrolled seam plaquette. Small fixed boxes can be treated by one
+fixed enlargement; it is enough to state the theorem for R>=2.
+
+The condition R^2 delta<=c is substantive: the elementary proof pays
+the noncommutative quadratic BCH term. It is not justified to remove
+this condition by calling the cutoff a gauge transformation.
+
+4. ROOT GAUGE EQUIVARIANCE AND WHAT IS PRESERVED
+
+For a real input gauge u defined on the filled box,
+
+  G_{V^u}(x)=u(0)G_V(x)u(x)^(-1),
+  (V^u)^can(e)=u(0)V^can(e)u(0)^(-1).
+
+The small principal log and the fixed scalar cutoff commute with
+constant conjugation. Hence the completed field obeys exactly
+
+  Vhat(V^u)=u(0)Vhat(V)u(0)^(-1)                           (5)
+
+on the whole completed lattice. This is root-frame covariance.
+Gauge-invariant observables supported on complete inner reads are
+unchanged by passage from V to V^can. They are not asserted unchanged
+by replacing the old global field or old minimum with Vhat outside
+the protected read. For two radii, the canonical fields agree on
+their common input, but the cutoff completions need not agree in
+their transition annuli.
+
+The construction is pointwise on a held datum. It does not use the
+field-dependent map V -> V^can as a measure-preserving change of
+outer integration variables. No outer Haar Jacobian or orbit-volume
+cancellation is inferred from (5).
+
+5. NATIVE MINIMUM ATTACHMENT: PRIMARY READBACK
+
+Primary files read for this audit:
+
+  work/handoff/original-workspace/work/package/work/
+    admission_sources/cmp102_variational_primary.txt
+  work/handoff/original-workspace/work/package/work/
+    turn125_primary/b109_full.txt
+
+CMP102 printed278 equation (7) is a PLAQUETTE regularity hypothesis
+on the determining configuration. Its seam convention uses mixed
+averages when the determining array has several grades. Here the
+attachment is homogeneous, so (7) is simply the complete coarse
+plaquette bound. Equation (2) defines the fine strong class, including
+curvature and the action-current expression with the native scale
+factors. Printed279 Theorem1 yields a minimal orbit in that class
+with parameter B3*epsilon_1, unique within the stated larger regular
+class. B3 depends on fixed d,L, not the cube radius or volume.
+
+Take epsilon_1=C' delta, after increasing C' slightly to turn the
+weak inequality (4) into the theorem's strict admission. If C'delta
+is below the fixed threshold, Theorem1 applies to the global completed
+homogeneous determining field Vhat. It supplies a new physical minimum
+U_k(Vhat) and its native current with strong parameter C delta.
+The fine curvature carries its original xi^2 factor, and the current
+must be stated in its native dimensionless normalization. It is NOT
+obtained by applying a finite-difference estimate directly to the
+cutoff coarse logs.
+
+B109 printed260 (1.1)--(1.2) makes this homogeneous specialization
+explicit: coarse curvature below the appropriate fixed multiple of
+epsilon_0 implies the physical minimum belongs to U_k(epsilon_0),
+whose current is J=D_U^* xi^(-2) pi Im(dU) in that paper's conventions.
+This is why raw completed coarse link logarithms O(R delta) are
+compatible with fine curvature/current O(delta). The variational
+theorem does not require a global coarse-link bound O(delta).
+
+B109 printed253--254 (0.5)--(0.12) specifies the covariant local
+averages; printed254 states that the earlier regularity results apply
+to its modified averaged-contour convention. This supplies the
+correspondence between the CMP variational formulation and the native
+B109 homogeneous minimum, rather than replacing its coarse map by an
+arbitrary average.
+
+If admission of the REAL independent-pair class is also needed,
+B109 printed262 defines conditions (i)--(iv), and printed263 explicitly
+shows that sufficiently smaller (i)--(iii) constants imply the nested
+condition (iv), using CMP102 Proposition9. It then identifies physical
+minimal configurations with sufficiently small curvature as examples.
+Thus the new physical pair is an admitted real pair after a fixed
+constant shrinkage. A larger uniform complex tube, a specific
+source coefficient radius, and a complete old-history comparison are
+separate assertions; none is proved by (4) alone.
+
+6. LIMITS OF THIS AUDIT
+
+The proof requires filled plaquette information throughout the input
+box and a nonwrapping coordinate realization. It does not repair a
+missing mixed determining seam or supply control on torus holonomies
+when the cube wraps. It is for real compact-group input; arbitrary
+complex input has no unitary product estimate (1) without additional
+bounds. It proves a new homogeneous completion and minimum, not that
+the physical original law lies in this event with high probability,
+not equality to the old random/noisy source image, and not an
+all-history or continuum theorem.
+
+FINAL PRODUCER READBACK
+
+Read work/curvature_preserving_local_completion_20261024.txt in full,
+including Sections3--5, against the current endpoint-action and
+endpoint-physical-source producers and their imported certificates.
+
+Section3 does not stop at the curvature-to-minimum theorem. It imports
+the actual first soft-gauge gap (obtained by the fixed-block conversion
+of the native hard-AX gap), complete current-corrected primitive, and
+the first-bare local-force/large-product mean. These are the established
+first-bare inputs in first_bare_endpoint_action_comparison_20261024
+Sections1--5; they apply on gS<=epsilon_cap after a fixed regularity
+shrink. Local coefficient charts may be chosen in fixed-size unitary
+packet gauges; spatial scalar weights commute with the resulting
+orthogonal color changes. No global raw-link-small interpolation is
+needed for this first-bare auxiliary gap. The extension remains an
+auxiliary same-form product law, not a newly proved original-mask
+admission or a replacement for original exterior mass.
+
+The protected raw fine-link chart has a direct proof. Averaged-axial
+endpoint contours have mean identity. Pairwise contour differences
+are bounded by a fixed number of fine plaquettes, so each such contour
+is O(delta) from identity. Internal edges are compared using these
+contours. A crossing edge, closed by them, is O(delta) from the actual
+coarse average by B109(0.12). On the fixed source packet the canonical
+coarse-edge bound from Section2 is C_packet delta, independent of the
+outer completion radius. This is precisely the chart required by the
+source-compatible private-pivot constructor, with all of its complete
+physical read and unused-pivot hypotheses retained.
+
+For Section4, the parent applies a coarse tree gauge first and lifts
+it constantly on each fine block. This is the correct symmetry. The
+native averaged endpoint contours then transform by conjugation at
+the block center, the coarse average transforms at its two coarse
+endpoints, and the regular averaged-axial representative transforms
+accordingly by uniqueness. The linear constraint, private-pivot and
+nonlinear small inverse maps intertwine the corresponding adjoint
+maps. These act orthogonally on each ORIGINAL free color ball with
+Jacobian one. The complete Haar/gauge/coarea and source-zero scalars
+are transformed together. B109 printed265 and269 (2.2)--(2.3),(2.16)
+and the B119 printed250 paragraph following(1.17), read previously
+and recorded in native_block_constant_gauge_patch_20261024, support
+this exact block-lift covariance. Arbitrary fine-gauge invariance of
+an already fixed noise cut is neither assumed nor needed.
+
+The original gauged endpoint and Vhat_R agree on Q_R, including all
+required source/constraint/collar reads after the fixed R0 allowance.
+The original endpoint retains its actual prior/success admission;
+the auxiliary endpoint has just the independently verified minimum,
+complete-action, product-gap and containing-tail inputs. Both thus
+fit first_bare_endpoint_source_marginal_20261024, including its exact
+original exterior marginal and the auxiliary source-preserving local
+ratio. With epsilon_cmp=Cdelta and S=Kr, its lambda_D is bounded by
+C P_I (r/g)delta exp(-kappa D), hence by C P_I r^2 exp(-kappa D)
+when delta<=C0 gr. Its NOISE-cylinder exterior comparison contributes
+C sqrt(|B|) exp(-nu D), absorbed in the displayed fixed-read price.
+The additive cut-tail term is retained. This checks equation(8),
+without comparing raw endpoint masses or differentiating a bounded
+Borel physical source. The stronger source read, not mere membership
+of some physical links in an informal box, is essential.
+
+Section5 uses two completed auxiliary endpoints which exactly agree
+on the smaller inner cube; the same endpoint theorem is applicable.
+The rare term is absorbed only for the finite window n<=sigma r^2
+with kappa' sigma<=c_r/2. The exact telescoping leaves one terminal
+error T_V f-F_N, rather than N accumulated errors. Constants are
+annihilated by every difference coefficient. Both N^2 delta<=c_*
+and nonwrapping of the largest complete cube are explicit. For
+delta=O(gr), N=O(r^2), their smallness reduces to g r^5->0 in the
+registered logarithmic weak-coupling regime. No fixed-g infinite
+neighborhood limit, analytic-source output, or all-history summation
+is inferred. These limitations are part of this scoped PASS.

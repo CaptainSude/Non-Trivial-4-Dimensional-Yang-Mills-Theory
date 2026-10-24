@@ -1,0 +1,389 @@
+AN AMBIENT LOCAL CONSTRAINT CHART AND A STABLE ANALYTIC REFERENCE
+19 October 2026. admission_proof. Turn42.
+
+RESULT
+
+There is a concrete finite-g reference beyond the classical saddle and
+leading determinant. For every FIXED integer p>=1, the exact first-step
+constraint chart yields an entire polynomial fluctuation interaction,
+with exponentially weighted connected coefficient kernels and a positive
+degree-(2p+2) stabilizer. It is integrable under the actual constrained
+Gaussian AND under its positive forest covariance weakenings. On real
+weak data its normalized law approximates the intrinsic energy-window
+reference with error
+
+ C_p N g^(2p) + C exp[C N-c g^(2a-2)]
+                  + C exp[C N-c(Lambda^2-S_min/g^2)],   (0.1)
+
+where 0<a<1 is fixed, N<=C_L R^4, and N g^a is sufficiently small.
+Thus every polylogarithmic box is allowed. The last term is the ACTUAL
+energy-window tail, not an artificial fixed-chart exp(-c/g^2) tail.
+Increasing the window constant once for a chosen p makes it pay any
+specified fixed power of g. All Gaussian and Haar/coarea normalizers are
+retained.
+
+This proves an actual stable analytic approximate reference at each fixed
+order, not a convergent all-order expansion or an iteration-invariant
+Yang--Mills interaction class. It does not assert gauge covariance of a
+finite Taylor truncation under nonlinear changes between coarse frames.
+
+1. EXACT INPUTS AND FIXED GEOMETRY
+
+Use the audited first bare ordinary-average geometry of turns39--41:
+fixed fine crossing/exterior links; all free links with both endpoints
+in the block cube; all incident coarse rows and their complete finite-L
+reads; the local G0 forest fixing coarse roots and geometric boundary
+vertices. L and the group are fixed. All constants below may depend on
+them. N bounds the number of fine chord, coarse and plaquette coordinates.
+
+The flat ordinary derivative Q has a compact simultaneous right inverse
+E, with bounded row and column sums. The projection
+
+                   P=I-EQ                             (1.1)
+
+has finite range and bounded row/column sums. It is not claimed orthogonal.
+Set K=ker Q with its induced Euclidean measure. The original ordinary
+map F_e(x), relative to the explicit free-identity/fixed-e anchor, is
+holomorphic on a common sup ball; its rows have bounded finite reads and
+geometric absolute Taylor bounds. Haar factors are nonzero there. The
+actual G0 quotient and coarea are those of the preceding notes, not a
+new gauge-fixing prescription.
+
+For weak real framed data u=(v,e), let x_*(u),lambda_*(u) be the actual
+fiber minimum and its multiplier, and B_*=P x_*. In the declared weak
+polylogarithmic regime the global low-energy argument identifies it with
+the local KKT branch. The uniform constrained gap and exponential KKT
+inverse are proved in gaussian_coarse_kernel_turn40 and
+local_saddle_and_prefactor_turn40. The entire energy-window support has
+the exact local fiber formula of intrinsic_energy_framed_reference41.
+
+We use a smaller common complex sup ball for u about the identity. The
+analytic saddle and fixed-order bounds extend there by the already proved
+weighted Neumann/implicit construction. The word 'minimum' applies on its
+real subset; complex saddles are merely the analytic critical branch.
+
+2. AN EXACT AMBIENT EXTENSION OF THE NONLINEAR FIBER CHART
+
+For b in the FULL fine chord space, solve
+
+ x(b,u)=x_*(u)+P b+E tau(b,u),
+ F_e(x(b,u))=F_e(x_*(u)),       tau(0,u)=0.             (2.1)
+
+Let A_*=DF_e(x_*)E. On the common ball A_* is close to I in a weighted
+row/column norm. Its inverse has an exponentially weighted kernel. The
+implicit equation is explicitly
+
+ tau=-A_*^-1 DF_e(x_*)P b
+      -A_*^-1 [F_e(x_*+P b+E tau)-F_e(x_*)
+                            -DF_e(x_*)(P b+E tau)].   (2.2)
+
+For ||b||_infinity<r_0 this is a uniform analytic contraction after
+separating its displayed linear term. r_0 is independent of N. On b in K,
+P b=b, and (2.1) is exactly the original fiber parameterization with
+B=B_*+b. Off K it is an explicitly chosen analytic extension; it is not
+another integration variable or an altered coarse constraint.
+
+For completeness, the positive spatial coefficient estimate follows
+directly from (2.2). Retain all input and output legs in the weighted
+tree norm of analytic_tree_norm_turn41. The maps P,E,DF and A_*^-1 have
+bounded one-leg weighted sums, and the local nonlinear rows have common
+geometric Taylor bounds. Every coefficient in the implicit recursion is
+a tree contraction. Its norm is bounded by the corresponding product,
+because the tree can be rooted at ANY external leg. The scalar majorant
+
+ w(t)=a t+k C^2(w+t)^2/[1-C(w+t)]
+
+therefore bounds the recursion on a common radius. This proves a common
+geometric bound on the absolute coefficient tensors of x(b,u), including
+their physical positions, with one reserved exponential fraction for
+tree-hull assignment. No separate radius or constant is chosen for each
+source order. This is the same elementary tree argument as the saddle
+theorem, applied to the literal LOCAL constraint equation (2.2).
+
+Define on this ambient ball
+
+ f(b,u)=S_e(x(b,u)),
+ ell(b,u)=log J(b,u),
+ J=c_E j_C(x)/[j_J(v) det(DF_e(x)E)].                  (2.3)
+
+The determinant branch is the one fixed by its positive real center.
+The constant c_E and the field-independent output Haar factor are kept.
+They do not enter derivatives in b. At real u, J>0 on the chart.
+
+The action has local vertices composed with (2.1). The determinant
+logarithm is treated by its convergent local matrix series. A marked
+trace coefficient is a cycle; open one bounded inverse edge and apply
+the same any-leg tree contraction bound. Thus f-f(0) and ell-ell(0)
+have exponentially weighted, connected Taylor kernels on the same
+common ball. The vacuum constants f(0),ell(0) remain separate; an
+unmarked trace is extensive and is not falsely assigned a rooted bound.
+
+In particular write the homogeneous polynomials, including Taylor
+factorials in their definition,
+
+ f(b,u)=s(u)+q_u(b)+sum_(d>=3) F_d(b,u),
+ q_u(b)=.5 b^T H_u b,
+ ell(b,u)-ell(0,u)=sum_(d>=1) L_d(b,u).                (2.4)
+
+The first field derivative of f is zero: x(b,u) lies in the same fiber
+and x_* is constrained critical. On K, H_u is the exact constrained
+Hessian in B coordinates and satisfies cI<=H_u<=CI for real u.
+The coefficient bounds imply, for real or complex ambient b,
+
+ |F_d(b,u)|+|L_d(b,u)|<=C^d sum_i |b_i|^d.             (2.5)
+
+Proof of this useful scalar consequence: apply weighted AM--GM to every
+absolute monomial, |b_i1...b_id|<=d^-1 sum_a |b_ia|^d, and then sum
+coefficients with each selected leg fixed. The any-leg positive bound
+is precisely what removes a factor N here. Tail versions of (2.5)
+hold on a smaller fixed sup ball with geometric constants.
+
+3. THE GAUSSIAN CAN BE REDUNDANT; ITS INTERPOLATIONS NEED NOT LIE IN K
+
+On K the actual Gaussian covariance is the inverse of H_u restricted
+to K, embedded into the ambient space. It is positive semidefinite and
+singular in the normal directions. Its kernel is exponentially decaying
+with uniform row/column bounds. One way to see the latter is to use the
+physical constrained covariance of the nonlinear KKT matrix and apply P
+on both sides: B=P x exactly. P has finite range. No long orthonormal
+basis of K is needed.
+
+Fix the identity-data Gaussian C_0 on K. For u in a sufficiently small
+common complex ball, H_u-H_0 is small in operator norm and in the same
+weighted coefficient norm. On real data the quadratic adjustment can
+either be included in the interaction against C_0 or integrated into
+the exact H_u Gaussian; these descriptions retain the determinant ratio.
+
+There is a real trap here. A covariance forest weakening usually leaves
+K. For example C=[[1,1],[1,1]] is supported on x_1=x_2. Replacing its
+off-diagonal entries by t gives C_t=[[1,t],[t,1]], and
+(1,-1)C_t(1,-1)^T=2(1-t). Thus an interaction defined ONLY on ker Q
+cannot simply be inserted into a weakened Gaussian expectation.
+
+Equation (2.1) resolves this at the level needed for a Gaussian forest
+formula. It defines the interaction on the redundant ambient variables,
+and agrees with the physical fiber at the undeformed covariance.
+For any positive-semidefinite forest multiplier T with diagonal1,
+C_T=C_0 circle T is positive semidefinite and
+
+                  ||C_T||_op<=||C_0||_op.             (3.1)
+
+Indeed 0<=C_0<=||C_0||I and the Schur map by T preserves this order
+and fixes I. Its Gaussian can be degenerate; polynomial integration
+and finite-order interpolation identities remain meaningful. It is not
+asserted that these auxiliary Gaussians are constrained physical laws.
+
+4. A GLOBALLY STABLE ENTIRE POLYNOMIAL INTERACTION
+
+Fix p>=1. Take the exact polynomials of (2.4) through degrees 2p+1
+in f and 2p-1 in ell. With xi=b/g define
+
+ V_(p,g)(xi,u)=.5 xi^T(H_u-H_0)xi
+      +sum_(d=3)^(2p+1) g^(d-2) F_d(xi,u)
+      -sum_(d=1)^(2p-1) g^d L_d(xi,u)
+      +D_p g^(2p) sum_i xi_i^(2p+2).                 (4.1)
+
+Homogeneity identifies this with the corresponding truncated action
+at b=gxi, divided by g^2, and the truncated log density. The stabilizer
+is diagonal in the local ambient chord coordinates. It is entire, real
+and positive on real xi, and has a one-site carrier. All other terms
+retain their actual exponentially weighted tree kernels from Section2.
+No compact holomorphic cutoff is asserted or used.
+
+There are constants D_p<infinity and g_p>0, independent of N, and a
+smaller common complex data ball, such that for real xi and g<=g_p
+
+ Re V_(p,g)(xi,u)>=-kappa ||xi||_2^2-C_p g^2 N,
+                  2 kappa ||C_0||_op<1.              (4.2)
+
+Proof. Choose kappa sufficiently small first. Small data pay the
+quadratic H_u-H_0 term. For each scalar t>=0 and the finite higher-degree
+coefficient sum in (2.5), choose D_p so that
+
+ sum_(d=3)^(2p+1) C^d t^d
+   +sum_(d=3)^(2p-1) C^d t^d
+       <=(kappa/4)t^2+(D_p/2)t^(2p+2).               (4.3)
+
+Such a finite constant exists: near zero the left side is o(t^2),
+while at infinity the rightmost degree dominates. The quadratic Haar
+term carries g^2 and is paid by choosing g_p small. Its linear term
+satisfies g^2 C sum_i|b_i| <=(kappa/4)||b||^2+C_p g^4N.
+Apply (4.3) to each |b_i|, absorb the harmless g^2 coefficients, divide
+by g^2, and increase D_p once. This proves (4.2), also for complex u
+because (2.5) bounds the absolute coefficient values on the common ball.
+For real u, V is real. Constants may grow with p; no all-p estimate is
+hidden in this finite construction.
+
+It follows that exp(-V_(p,g)) is integrable under EVERY C_T of (3.1),
+uniformly in its interpolation parameters at finite volume. In fact
+
+ integral exp[-Re V_(p,g)] dgamma_(C_T)
+ <=exp(C_p g^2N) det(I-2kappa C_T)^(-1/2)
+ <=exp(C_p' N).                                      (4.4)
+
+Zero eigenvalues contribute1 to the determinant. Complex datum
+derivatives on a smaller ball are legitimate by domination and Cauchy;
+the finite polynomial field degree and its positive highest term also
+give direct domination on compact data sets. This supplies an actual
+analytic partition VALUE on a common data ball. It does NOT prove it
+zero-free there, nor that its connected logarithm has a convergent
+volume-uniform polymer expansion. Equation(4.4) is a stability bound,
+not that missing connected estimate.
+
+5. ACTUAL NORMALIZED APPROXIMATION ON EVERY POLYLOG BOX
+
+Fix real weak u. Let mu_chart be the exact positive law in the SAME
+fixed small convex K-domain D0 with density exp[-f(b,u)/g^2]J(b,u),
+centered at B_* and expressed as xi=b/g. There is no energy cutoff in
+mu_chart. The fixed domain contains B_* in a common inner margin; its
+boundary is far from the saddle. Let mu_p be the globally normalized
+law exp[-V_(p,g)] dgamma_(C_0). Its overall unnormalized density is
+
+ exp[-s/g^2] J_* (2pi g^2)^(dim K/2)
+                    det(H_0|K)^(-1/2) times its expectation. (5.1)
+
+Thus all vacuum, Jacobian and Gaussian factors can be restored exactly.
+Using H_u instead merely transfers the exact determinant ratio.
+
+Fix 0<a<1, r_g=g^a, and suppose N r_g is sufficiently small. Let
+C_g={||b||_infinity<=r_g}. This intermediate event is used for the
+estimate only; it is not part of the polynomial reference law.
+On C_g, both exact and polynomial densities relative to the H_u Gaussian
+are sandwiched by a quadratic perturbation O(r_g)||xi||^2 and a factor
+exp[O(N r_g)]. Indeed the nonlinear action starts at degree3, so (2.5)
+gives |f-s-q|<=C r_g||b||^2; the corresponding finite polynomial obeys
+the same bound, including its stabilizer for fixed p. The log-density
+sum is bounded by C N r_g. Gaussian determinant comparison and the
+uniform covariance bound therefore give normalization ratios bounded
+above and below by fixed constants, tending to1 when N r_g->0.
+
+The missing Gaussian mass of C_g is at most C N exp[-c r_g^2/g^2].
+Outside C_g, exact constrained convexity on D0 and the complete bounded
+log-J ratio give a bound C exp[C N-c r_g^2/g^2]. For mu_p the global
+stability proof can leave a positive quadratic margin, giving the SAME
+form of bound. This controls the entire complement, including outside
+D0 for the polynomial law. No formal local Taylor estimate is applied
+there.
+
+On C_g the difference of the two log densities satisfies the actual
+Taylor remainder estimate
+
+ |U_exact-U_p|
+ <=C_p g^(2p) sum_i (|xi_i|^(2p+2)+|xi_i|^(2p)),       (5.2)
+
+where the stabilizer is included in U_p. Integrate
+|exp(-U_exact)-exp(-U_p)|<=|U_exact-U_p|exp[-min(U_exact,U_p)]
+using the common slightly weakened H_u Gaussian. Each fixed-coordinate
+moment is uniformly bounded; summing i costs N, not a fresh volume per
+Taylor factor. The determinant cost is exp(C N r_g), bounded here.
+Division by the positive normalizers and the elementary normalized-density
+inequality yield
+
+ TV(mu_chart,mu_p)
+ <=C_p N g^(2p)+C_p exp[C_p N-c_p g^(2a-2)].           (5.3)
+
+TV is sup-event distance. Constants absorb fixed factors2. The argument
+is uniform in the declared real weak data and all positions. For every
+polylogarithmic N, N g^a->0 and the second term is smaller than every
+power of g. This is stronger than a comparison carrying exp(CN) in
+front of the central Taylor error. The shrinking intermediate radius,
+not a claim of globally small interaction, is what removes that cost.
+
+The same proof gives a weighted version for any common measurable test
+obeying |G(xi)|<=A(1+||xi||_2)^k, k fixed:
+
+ |E_chart G-E_p G|
+ <=A C_(p,k) (N+1)^(k/2+1) g^(2p)
+       +A C_(p,k)(N+1)^(k/2) exp[C_(p,k)N-c_(p,k)g^(2a-2)]. (5.4)
+
+Use Gaussian moments in the central integral and reserve half the tail
+exponent for polynomial weights. Normalization terms use the same
+moments; they are not discarded. A physical mark outside the chart must
+have an explicitly chosen extension or polynomial approximation before
+applying (5.4). No engineering coefficient is absorbed into A.
+
+6. THE INTRINSIC ENERGY WINDOW AND THE TWO DIFFERENT TAILS
+
+Let mu_E be the actual intrinsic-window reference of turn41 on the SAME
+weak real fiber. Its weight in mu_chart is
+psi(f/(g^2 Lambda^2)). Write E_*=Lambda^2-s/g^2>0.
+The upper Hessian bound gives f-s<=C||b||^2 on D0. Hence a nonzero
+deficit implies ||xi||^2>=c E_*. The lower Hessian bound, complete
+log-J ratio and the already bounded positive normalization give
+
+ epsilon_E=E_chart[1-psi(f/(g^2Lambda^2))]
+            <=min{1,C exp(CN-c E_*)}.                 (6.1)
+
+Since mu_E is this weighted probability normalized by 1-epsilon_E,
+TV(mu_E,mu_chart)<=epsilon_E. Combining with (5.3) proves (0.1).
+Weighted versions follow by the same tail-moment argument and the exact
+normalization identity of energy_window_marked_transfer41.
+
+The turn41 Lambda includes S_min/g^2<=C N Z^2 and a chosen multiple
+of N+ell. For any fixed p,k, that multiple can be selected ONCE so
+(6.1) is below a desired fixed power of g, while all supported fields
+remain in the same chart because g Lambda is polylogarithmically small.
+If the original window is kept unchanged, retain (6.1) exactly instead
+of claiming an arbitrarily high error order.
+
+The artificial fixed-chart boundary is an exp(CN-c/g^2) phenomenon.
+Removing the shrinking ENERGY window is only an exp(CN-c E_*)
+phenomenon. These estimates are not interchangeable. No data derivative
+of psi is taken in this comparison, and psi is not made holomorphic.
+
+7. WHAT THIS CONSTRUCTIVE REFERENCE SUPPLIES AND DOES NOT SUPPLY
+
+Supplied at the stated first bare step:
+
+ * An exact holomorphic ambient extension of the local nonlinear
+   constraint chart, agreeing with the physical kerQ fiber.
+ * A positive exponentially decaying Gaussian covariance in redundant
+   ambient variables, with explicit treatment of forest weakenings that
+   leave kerQ.
+ * For each fixed p, an entire interaction with actual connected
+   coefficient kernels and a volume-independent stability construction,
+   on one common weak-data ball, uniformly over those Gaussian weakenings.
+ * An actual normalized approximation to the original intrinsic-window
+   reference, with arbitrarily high FIXED power accuracy on polylog boxes
+   after its stated tail allowance. Bare-law omitted marks are separately
+   controlled by energy_window_marked_transfer41; no conditional law is
+   silently replaced by that annealed bound.
+
+Still missing is the convergent connected Gaussian forest/cluster bound
+for the COMPLETE finite-g logarithm in the needed local analytic norm,
+with normalized source derivatives and a reusable nonzero background
+domain. Stability (4.4) alone does not prove it. In particular constants
+D_p,C_p need not be controlled as p grows; choosing p separately at every
+source arity is not an all-arity VALUE theorem. A finite Taylor reference
+also need not transform exactly under nonlinear coarse gauge changes,
+even though the underlying intrinsic-window measure is gauge invariant.
+The construction is a local weak-framed reference, not an asserted global
+gauge-invariant replacement action.
+
+The ambient interaction is an auxiliary extension, not an independent
+unconstrained physical field model. Complete determinants and vacuum
+factors remain in (5.1), and eventual contact/source cancellations must
+be performed for the actual normalized quantities. No arbitrary exterior,
+later effective measure, recurrent mixed-history domain or all-scale
+Yang--Mills conclusion follows from this one-step result.
+
+8. BOUNDED CHECK OF THE COMPLEMENTARY ANALYTIC MORSE ROUTE
+
+The proposed exact finite-box route of the public audit is geometrically
+compatible with this note. On K the uniform gap permits the analytic
+principal square root of
+Hbar(b,u)=2 integral_0^1(1-t) f_BB(B_*+tb,u) dt.
+Its derivative bounds in a FIXED small complex l2 ball are volume
+independent: the spectrum stays away from zero and the local higher
+action derivatives have uniform operator multilinear bounds. The map
+y=Hbar(b,u)^(1/2)b has derivative H_*^(1/2)+O(||b||_2), and hence a
+uniform local inverse. The entire energy-window support has
+||b||_2<=C g Lambda, so it lies in this ball in the polylog regime.
+
+This validates the local change of variables, not an unproved
+holomorphic composition with psi. A radial TOTAL-ENERGY variable can
+instead keep psi fixed on a real energy interval; its moving lower
+limit must be handled using the plateau and the normalized Laplace
+calculation. The quantitative relative error and resulting complex
+radius are the subject of that separate producer. None is assumed
+in the independent stable-polynomial proof above.

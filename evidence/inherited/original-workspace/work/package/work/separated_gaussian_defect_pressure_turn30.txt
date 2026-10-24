@@ -1,0 +1,191 @@
+SEPARATED GAUSSIAN ACTION DEFECTS: A CONTACT-FREE COMPARISON THEOREM
+19 October 2026. Root mathematical calculation for the strategic reset.
+
+This is a free Gaussian theorem, not an interacting Yang--Mills theorem.
+Its purpose is to test a weaker target than ordinary local F^2 moments
+or a complete norm for every source descendant. It proves that the target
+can remain finite at the correct dimension-four normalization even where
+the ordinary variance diverges. Determinant identities used below are
+standard; no claim of novelty in the literature is made.
+
+1. FINITE GAUSSIAN SETUP
+
+Let Y be a finite real centered Gaussian vector with covariance C>=0,
+||C||<=1. A singular C is permitted. Let f,h be nonnegative diagonal
+weights with DISJOINT supports and max(||f||,||h||)<=M. Write
+
+ X=sqrt(f)Y,  W=sqrt(h)Y,
+ A=Cov(X), B=Cov(W), D=Cov(X,W).
+
+Delete zero-weight coordinates. Their joint covariance is
+
+                     [ A   D ]
+              Ctilde=[       ],       ||Ctilde||<=M.
+                     [ D*  B ]
+
+The bound follows by writing Ctilde=R C R*, where R*R=f+h<=M I.
+Define Z(s,t)=E exp(s||X||^2+t||W||^2) and the cross-pressure
+
+ G(s,t)=log Z(s,t)-log Z(s,0)-log Z(0,t).               (1.1)
+
+Take the analytic logarithm equal to zero at (0,0). Centering either
+quadratic source changes only a single-variable term and leaves G fixed.
+The same is true of arbitrary additive source-vacuum counterterms
+e(s)+e'(t). This algebra does not remove field-dependent counterterms.
+
+2. EXACT DETERMINANT AND UNIFORM BOUND
+
+For |s|,|t|<=rho with rho M<1/4, Gaussian integration and a block Schur
+complement give
+
+ exp G(s,t)=det(I-K(s,t))^(-1/2),
+ K(s,t)=4st (I-2tB)^(-1) D* (I-2sA)^(-1) D.          (2.1)
+
+This derivation does not introduce square roots of complex s or t.
+Put q=2rho M and kappa=q/(1-q)<1. Then
+
+ ||K|| <= kappa^2,
+ ||K||_1 <= 4|st| (1-q)^(-2) ||D||_HS^2.
+
+Consequently the trace series is absolutely convergent and
+
+ G(s,t)=(1/2) sum_(n>=1) Tr(K^n)/n,
+ |G(s,t)| <= [2|st|/(1-4rho M)] ||D||_HS^2.          (2.2)
+
+Indeed |Tr K^n|<=||K||_1 ||K||^(n-1), and
+(1-q)^2(1-kappa^2)=1-2q=1-4rho M.
+
+For real s,t>=0, K is similar to H*H, where
+
+ H=2 sqrt(st) (I-2sA)^(-1/2) D (I-2tB)^(-1/2).
+
+The trace series is then nonnegative. Both inverse diagonal blocks
+are >=I, so Tr K>=4st||D||_HS^2. Hence
+
+ 2st||D||_HS^2 <= G(s,t)
+              <= [2st/(1-4rho M)]||D||_HS^2.          (2.3)
+
+In particular a nonzero off-diagonal covariance gives a strictly
+positive cross-pressure. Also
+
+             partial_s partial_t G(0,0)=2||D||_HS^2. (2.4)
+
+Neither bound contains Tr A, Tr B, Tr A^2 or Tr B^2. Those are precisely
+the potentially divergent one-region terms that spoiled an ordinary
+L2 estimate of a dimension-four quadratic source in turn29.
+
+3. A PRECISE LIMIT CRITERION
+
+Suppose the cutoff spaces are embedded into fixed real Hilbert spaces,
+and the following hold:
+
+ (i) A_a,B_a converge strongly to A,B, are self-adjoint, and their norms
+     are uniformly <=M;
+ (ii) D_a converges to D in Hilbert--Schmidt norm;
+ (iii) the full covariance block norm is uniformly <=M.
+
+Then G_a(s,t) converges locally uniformly on rho M<1/4 to (2.1), with
+the Fredholm determinant of the trace-class K. To prove this, use the
+uniform Neumann series for the two diagonal resolvents. Strongly
+convergent bounded operators multiply Hilbert--Schmidt convergent
+operators in Hilbert--Schmidt norm; the product of the two resulting
+Hilbert--Schmidt factors converges in trace norm. The trace series
+above has a uniformly summable tail. Finite partial sums converge,
+which proves both the limit and local uniformity on smaller polydiscs.
+
+This is a theorem with explicit operator convergence hypotheses, not
+an assertion that arbitrary approximate covariance kernels satisfy them.
+For an independent continuum test, start directly with the bounded
+continuum curvature projection and compress it by finite-rank projections
+on the two support Hilbert spaces. Strong diagonal and Hilbert--Schmidt
+off-diagonal convergence then follow directly. This gives the continuum
+cross determinant without an unproved lattice-to-continuum interchange.
+
+4. WHY FOUR-DIMENSIONAL MAXWELL CURVATURE FITS THE CROSS NORM
+
+For the cutoff Maxwell curvature in turn29, C is the orthogonal
+projection onto exact lattice two-forms. In the continuum on R^4 its
+Fourier multiplier, away from p=0, is
+
+                  P(p)= (p wedge)(i_p)/|p|^2
+
+on two-forms. It is an orthogonal projection of operator norm one.
+Its kernel off the diagonal is a finite tensor combination of second
+derivatives of the Laplace Green function, bounded by C|x-y|^-4.
+There is also a distributional diagonal contribution, which has no
+effect between disjoint supports.
+
+For smooth f,h with compact supports at distance d>0,
+
+ D=sqrt(f) P sqrt(h),
+ ||D||_HS^2=integral f(x)h(y)|P(x,y)|_HS^2 dx dy
+             <= C d^-8 ||f||_1 ||h||_1 < infinity.   (4.1)
+
+Choose regions and components for which the off-diagonal kernel is
+not zero; then this norm is strictly positive. The exact determinant
+theorem therefore supplies a finite and nonconstant separated defect
+pressure. It does not require the same-region Wick square to be an
+ordinary square-integrable Euclidean random variable.
+
+For the canonical lattice discretization, the corresponding sufficient
+kernel input is the usual off-diagonal scaling
+C_a(p,q)=a^4 P(x_p,x_q)+o(a^4) on separated compact sets, with the
+uniform bound C a^4 d^-4, together with strong projection convergence.
+These imply the hypotheses in Section3 by Riemann sums and dominated
+convergence. The finite-rank continuum compression above already proves
+the free comparison independently of that discretization lemma; a new
+Yang--Mills argument may not assume its interacting counterpart.
+
+The source Q_a(f)=sum_p f_p(Y_p^2-C_pp) has ordinary variance comparable
+to a^-4 for nonnegative f, as proved in turn29. Equations(2.2)--(4.1)
+show that its cross-pressure has a different, finite scale. An a^2
+rescaling that would kill the separated physical signal is unnecessary.
+
+5. RELATION TO REFLECTION POSITIVITY
+
+For a reflection-positive law and a positive-half source F, let h be
+its reflected partner. The normalized half observable
+
+                  V_t=exp(tF)/E exp(tF)
+
+has centered reflected norm
+
+                <Theta(V_t-1)(V_t-1)>=exp G(t,t)-1.  (5.1)
+
+The free theorem gives upper and positive lower bounds for this norm
+when D is nonzero. It is consistent with divergent ordinary L2 norms;
+the two pairings are different. The exact RP/conditional-boundary
+argument and its four-real-pressure refinement are in
+reflection_pressure_route_turn30.txt.
+
+Finite cutoff V_t is a legitimate local function. Convergence of this
+one reflected pairing does not alone reconstruct a local quantum field
+theory. A common compatible family of mixed products, translation and
+rotation regularity, and the requisite nontriviality/identification
+remain necessary. No Gaussian comparison can establish a nonabelian
+interaction by itself.
+
+6. A DIFFERENT YANG--MILLS PRODUCER TO TEST
+
+For the actual Wilson measure, consider the same cross-pressure with
+two separated local scalar coupling deformations. Seek a uniform bound
+on that ENTIRE difference, with local one-region vacuum contributions
+cancelled BEFORE taking absolute values. The scalar deformation should
+use the controlled running-coupling coordinate, rather than an arbitrary
+21-component tensor calibration.
+
+This target concerns only contributions communicating between regions.
+It may permit a smaller proof than propagating a strong analytic norm
+for every geometry-labelled one-source descendant. That possibility is
+not a deduction from source-free ultraviolet stability. Local coupling
+renormalization, interface effects, and source-dependent field terms
+still have to be controlled. Nor does the cross ratio manufacture a
+nonzero lower bound; one needs an actual interacting comparison or a
+boundary-response estimate.
+
+The public repository's E(w)+log h representation already embodies
+local vacuum cancellation and its scalar coupling normalization. This
+note is a useful explicit free benchmark and a weaker-target formulation,
+not a claim to have supplied that representation's missing proof inputs.
+
+No complete four-dimensional Yang--Mills existence theorem is asserted.

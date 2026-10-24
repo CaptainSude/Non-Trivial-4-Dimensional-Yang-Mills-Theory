@@ -1,0 +1,139 @@
+TURN83 -- POSITIVE PROBE AND VOLUME-TRANSFER OUTLINES: SCOPE AND USE
+20 October 2026. Root review. Companion to the RRO1 audit.
+
+The reviewed repository commit is
+8f5c5efc249ef7ff2f1b80cca4fbbf5766de8dee (2026-10-20T22:46:21Z).
+The newly added PRO1, RRO1 and VTO1 outlines are real additions since
+the preceding source review. The QED3_slop directory is now QED3.
+The README manuscript entries still say to be added; the outlines'
+references to written PRM1/RRM1/VTM1 drafts do not make those complete
+proofs available for inspection. Green boxes record draft status, not
+independent certification. No claim of a completed YM4 proof follows.
+
+Files were downloaded by history47, verified against Git blob hashes,
+and retained unchanged with SHA256 in the source manifest. Root read
+PRO1's theorem, model, response, dilation, comparison and polarization
+sections, and VTO1's component theorem, reference transfer, moment
+passage and invariant-expectation lemma. Critical formulas on PRO1 p5
+and VTO1 p11 were rendered with Poppler and inspected visually. The
+companion RRO1 audit includes its own rendered-page checks.
+
+1. PRO1: WHAT ITS POSITIVE PROBE DOES
+
+The construction is for a massive doubled THREE-dimensional free Dirac
+operator and a real Abelian connection. Its stated large-mass expansion
+is, with S_M=(M+gamma.dot partial)^-1 and a smooth compact vector field,
+
+ q_(4,M)(a)=-1/4 Tr(S_M i gamma.dot a)^4
+          =(240 pi M^5)^-1 int |curl a|^4 + O_a(M^-7).    (1.1)
+
+The full remainder proof is assigned to the unavailable PRM1. The
+outline specifies a mass derivative, a five-propagator diagonal,
+local gauge cancellation and a constant-field heat-kernel coefficient.
+Its displayed derivative leading coefficient -1/(48 pi M^6) is
+consistent with differentiating (1.1). This consistency check does
+not verify the complete trace or remainder argument.
+
+The dilation consequence CAN be checked directly, conditional on (1.1).
+For a_l(x)=l a(x/l), unitary dilation sends the inverse to l S_(Ml)
+and the multiplication operator to l i gamma.dot a. Their product
+therefore gains l^2 and its fourth trace gains l^8. Since the ordinary
+fourth log derivative is b=24q_4, it follows that
+
+ b(f_l)=l^3/(10 pi M^5) int |curl a|^4 + O_a(l M^-7).
+
+For a fixed nonzero seed curvature, this is positive for sufficiently
+large l. The seed is chosen before the interacting comparison; a
+positive reference coefficient is not itself a comparison estimate.
+
+The chamber approximation is a separate branch. It retains the
+positive free mass, its precise 192-component regulator, antiperiodic
+spinors, source sampling and all phase contact terms. The claimed
+mesh comparison has error O(eta^(1/4)); the volume error is Yukawa
+exponential. The second coefficient needs the cancellation of a
+two-vertex term with its contact term before either is bounded.
+Ordinary and logarithmic coefficients obey c4=b_ch+3 c2^2; only the
+combination c4-3 c2^2 is compared with the continuum fourth log trace.
+
+Useful YM4 lesson: select a concrete positive physical reference
+signal and compare the EXACT normalized cumulant, keeping contacts.
+Limitation: a linear Abelian field-strength probe and its fermion
+determinant are not the non-Abelian pure-gauge observables in our
+project. No valid substitution turns (1.1) into a positive SU(2) YM4
+continuum channel. Even a nonzero local composite cumulant would need
+its relation to a nonzero reflected physical state established.
+
+2. VTO1: WHAT THE COMPONENT ARGUMENT REQUIRES
+
+The component conclusion is conditional on a prescribed continuum
+parent law, moment convergence along the SAME sequence, uniform
+products of translated Wick errors at every finite collection of
+distinct points, and component Gaussian domination. The last input is
+explicitly separate. A positive fourth cumulant of a mixture alone
+does not imply that its components have positive fourth cumulants.
+Likewise a diagonal subsequence may not silently replace the parent.
+
+The general lemma on p11 is independently checkable. Let T_y be a
+probability-preserving Z^d action and G real in every finite Lp. Suppose
+for every finite distinct y_1,...,y_J,
+
+             |E prod_(a=1)^J T_(y_a) G| <= u^J.         (2.1)
+
+The absolute value is present in the rendered statement; text
+extraction can omit it. For this conclusion, just the upper bound
+for even J would in fact suffice. Let Q_n be a cube with N=n^d sites,
+and A_n=N^-1 sum_(y in Q_n) T_y G. In E A_n^J, the distinct-index
+terms contribute at most u^J. At most binomial(J,2) N^(J-1) tuples
+have a repeated index. Holder bounds the absolute expectation of each
+such term by ||G||_J^J. Thus, for even J,
+
+ E|A_n|^J <= u^J + binomial(J,2) N^-1 ||G||_J^J.
+
+The L2 mean ergodic theorem gives A_n -> E[G|I_Zd] in L2. An almost
+sure subsequence and Fatou imply ||E[G|I_Zd]||_J<=u for every even J.
+Let J increase to obtain |E[G|I_Zd]|<=u almost surely. If this is a
+restriction of an R^d action, I_Rd is contained in I_Zd and the tower
+property gives the same conclusion for E[G|I_Rd]. This needs no
+assumption that the lattice subaction is ergodic. Identifying that
+conditional expectation with expectations under ergodic components
+requires the stipulated disintegration.
+
+The lemma is a useful general interface; it supplies no missing
+finite-regulator product estimate. VTO1 obtains the latter through
+model-specific flux, reference-response and pressure-defect inputs.
+Its small-charge error must survive the normalization loss before the
+component argument is applied. Those QED3 inputs have not been proved
+for our non-Abelian four-dimensional Wilson construction.
+
+3. COMBINED CONSEQUENCE FOR THIS PROJECT
+
+The three new outlines sharpen the architecture:
+
+ (i) an exact ORIGINAL sourced identity, including scalar terms;
+ (ii) a normalized connected response bound with each source support;
+ (iii) a positive reference signal and a controlled comparison error;
+ (iv) full-law volume/moment passage preserving the chosen parent;
+ (v) a separate argument identifying a nonzero physical continuum
+     channel, and the required reconstruction hypotheses.
+
+They do not remove these obligations. RRO1 explicitly imports the
+source-dependent Borel identity and supported operator derivatives.
+The TURN83 native calculation supplies only a one-primitive part of
+(ii). The TURN83 HS theorem supplies a complete initial conditional
+source family, not (iv) or a full-history version of (ii).
+
+The useful narrowing is to the exact integrated first and mixed source
+coefficients at the first large-field entry, retaining all external
+tests and original source anchors. A finite two-jet formulation is
+enough for that covariance gate and is weaker than an entire-source
+holomorphy theorem. It still has to be proved on the actual continued
+native domain. No newly inaccessible paper has been identified as a
+necessary missing input; the current obstruction is mathematical.
+
+PRIMARY SOURCES AT THE REVIEWED COMMIT
+
+https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/blob/8f5c5efc249ef7ff2f1b80cca4fbbf5766de8dee/QED3/Positive%20probes%20and%20free%20response%20(PR1)/PRO1.pdf
+https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/blob/8f5c5efc249ef7ff2f1b80cca4fbbf5766de8dee/QED3/Reference%20response%20(RR1)/RRO1.pdf
+https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/blob/8f5c5efc249ef7ff2f1b80cca4fbbf5766de8dee/QED3/Volume%20transfer%20(VT1)/VTO1.pdf
+
+No full model-specific proof from the absent manuscripts was imported.

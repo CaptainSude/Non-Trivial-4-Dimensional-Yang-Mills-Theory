@@ -1,0 +1,179 @@
+INDEPENDENT AUDIT: REAL WHOLE-PRODUCT MINIMUM CONTINUATION
+24 October 2026. audit_two_root. No archive/output edits.
+
+FILE AND VERDICT
+
+Audited work/original_cavity_real_prefix_whole_product_20261024.txt,
+the separate addendum retaining Section9/equations(25)--(29).
+SCOPED PASS for its auxiliary REAL physical-map continuation on the
+whole product of the original free-noise balls, with the stated fixed
+small terminal curvature cap and uniformly small physical noise caps.
+
+This is separate from my earlier Sections1--8 audit of
+original_cavity_real_prefix_minimum_tower_20261024.txt. The new result
+adds a full-matrix current estimate and a descending admission proof.
+It does not prove that original history predicates are one throughout
+the product, that every terminal fiber has positive original mass, or
+that the family is a joint complex independent-pair source domain.
+
+1. PRIMARY FULL-MATRIX CURRENT AND EXACT SCALE
+
+I independently read CMP102 printed278--279, (2),(7), Theorem1, and
+printed305--309, SectionG/Proposition9. I inspected the printed308
+image, not only its OCR. The fourth entry of(190) is
+
+ D_U^eta* D_U^eta partial_B H(B),
+
+with U the fixed reference background of the relative minimum chart.
+It is not merely a bound for the projected physical current. Its
+output factor is (L^j eta)^-3; its input density is (L^j' eta)^-4.
+In the homogeneous grade-j comparison eta=eta_j=L^-j and j'=j, so
+both factors are one. Summing its exponential kernel over determining
+bonds has a volume- and grade-independent constant. The determining
+lattice has unit cells in these coordinates.
+
+In one comparison keep W_(j+1) fixed and write H(B) in the relative
+Landau chart around that field. Since H(0)=0, integration along
+s B'_j gives
+
+ ||H|| + ||nabla_eta H|| + ||D_U^eta*D_U^eta H||
+                                             <= C delta_j.
+
+No derivative of a moving reference operator is missing: U is held
+fixed within this integral. The reference changes only between grades,
+where the same uniform estimate is applied afresh. This differs from
+differentiating a formula with U=U_j(v_j(s)) inside the operator.
+
+I also independently inspected B99, Gauge Fixing on a Lattice,
+printed84--86, (1.43)--(1.54), including the printed85 image. Equation
+(1.54) is a FULL MATRIX identity before any traceless/Lie-algebra
+projection. With U1=exp(i eta H), its leading difference is
+
+ D_(U1U)^eta* partial(U1U) - D_U^eta* partial U
+                         = i eta^2 D_U^eta*D_U^eta H + remainder.
+
+In homogeneous units the displayed remainder is bounded by
+
+ C eta^2 [ ||H|| ||nabla_eta H|| + ||H||^3
+                                      + alpha0 ||H|| ].
+
+The background curvature cap alpha0 is fixed and small. Thus this is
+O(eta^2 delta_j). The algebra, including the commutator and discrete
+product-rule terms in(1.49)--(1.53), is precisely what prevents a loss
+of one mesh power. A separate estimate of unrelated plaquette terms
+would not suffice.
+
+The native divergence D^eta* contains eta^-1. The divergence in(25)
+uses the original unit-lattice stencil, so D_unit*=eta D^eta*.
+Multiplying the COMPLETE identity by eta yields
+
+ jmath(W_j) <= jmath(W_(j+1)) + C eta_j^3 delta_j.
+
+The old term has coefficient ONE. Under a real return gauge the full
+matrix divergence is conjugated at its base vertex; its norm is
+unchanged. Different real return gauges at different grades therefore
+introduce no multiplicative loss. For j=0 the fixed finite unit-lattice
+stencil and the direct physical reconstruction give the same bound
+with eta_0=1. No depth-zero variational response theorem is needed.
+
+This verifies(26), including the scalar/trace component needed by the
+native regularity test. A bound only for the projected J would not
+justify this step.
+
+2. BOTH REGULARITY QUANTITIES AND THE DESCENDING INDUCTION
+
+CMP102(2) bounds fine plaquette distance by a constant times eta^2
+and its eta-scaled full divergence by a constant times eta^2 in the
+homogeneous case. In the original unit convention these are exactly
+the eta^2 curvature and eta^3 current bounds used here. The terminal
+estimate(27) follows from Theorem1 in those same units.
+
+Multiplying(28) by L^(2j) and L^(3j), respectively, gives geometric
+series with ratios L^-2 and L^-3. Thus(29) follows with constants
+independent of t. Choose the reserved variational chart first, then
+choose a_core and delta_* so that these two bounds lie strictly inside
+its margins. The fixed response, averaging, reconstruction, and
+uniqueness constants are paid in this single choice. There is no
+stepwise multiplication by the theorem's B3.
+
+At a descending step, W_(j+1) is already a regular critical original-
+Wilson configuration. The literal constraint composition implies
+that it is critical on the finer fiber with datum c_j=M_j W_(j+1).
+This is the fiber argument of the audited main note, not a claim
+of global minimization among rough configurations. The two inductive
+bounds put this field in the common grade-j regular uniqueness class.
+
+B98 Proposition2, (52)--(54), applies at the partial scale j and
+bounds the curvature of c_j by 2 L^(2j) K_(j+1). It is a uniform
+statement about the actual recursive average, rather than j separate
+one-step estimates. With the chosen reserves c_j is admissible.
+CMP102 existence and regular critical-orbit uniqueness then identify
+U_j(c_j) with W_(j+1) in the matched gauge convention.
+
+The entire determining-data segment exp(i s B'_j)c_j is covered by
+the fixed relative tube and the elementary coarse-plaquette bound
+in main(9). At an intermediate s it need not satisfy the next average
+constraint or a physical history mask. It is only the path on which
+the already valid variational response is integrated. The endpoint
+constructs W_j and the curvature/current increments reproduce exactly
+K_j,J_j, closing the induction. The case j=0 is direct and harmless.
+
+3. ORIGINAL NOISE BALLS AND CURRENT PRIVATE PIVOTS
+
+I reread B109 printed267--268 and B116 printed6, (1.19)--(1.20).
+The actual current private-pivot map has
+
+ B'_j = g_j C_j x_j - h_j Dtilde_j(g_j C_j x_j),
+
+with Dtilde beginning quadratically, L Q h=I, and C_j the free-
+coordinate embedding after the current delta constraints are solved.
+B116 explicitly bounds its physical sup norm by C g_j ||x_j||.
+These are current local constraint coefficients with uniform bounds
+on the fixed regular family, not repeated products of minimum
+inverse operators. The complete solved pivots are included.
+
+Consequently every x_j in the ORIGINAL ball g_j||x_j||<=delta_j
+is covered when delta_j<=delta_*; no extra truncation of that ball
+is used. The maps remain genuine solutions of the current ordinary
+constraint. Their local analytic branches are used only to construct
+these real maps. This does not establish an arbitrary independent-
+current continuation, a carrierwise pair condition(iv), or admission
+of source weakening/response contours.
+
+4. LAW AND SOURCE SCOPE
+
+The added theorem establishes the underlying real physical maps on
+the product. Original indicators can vanish there. The exact original
+law is still the restriction with all original predicates and weights;
+the raw-transfer/normalizer identity in main(22)--(23) is unchanged.
+No continuation of the full effective density outside its original
+admitted set, nor any lower bound on a selected history mass, follows
+from the existence of these physical maps alone.
+
+If main(19) also holds, its pointwise real cavity cap now holds on
+the whole auxiliary product, hence on any original-history part of
+it. For a positive terminal original mass the normalized value bound
+then follows from positivity, retaining the exact denominator. This
+still concerns the original raw cavity observable in the numerator;
+it does not identify individual history numerators with an eliminated
+cavity event when those histories read the cavity interior.
+
+Flat source scalars, existing mixed contacts, and complementary
+records remain exactly as in the main note. No complex norm estimate
+follows from a real positive expectation. The four complex/localizer
+and generated-catalogue gates listed in main Section8 remain open.
+No all-history admission, uniform source RG closure, or continuum
+conclusion is included in this audit.
+
+PRIMARY FILES READ
+
+work/handoff/original-workspace/work/package/work/admission_sources/
+  cmp102_variational_primary.txt and cmp102_p308.png.
+work/handoff/original-workspace/work/package/work/turn117_B99_gauge_primary/
+  B99_gauge_full.txt.
+work/handoff/original-workspace/work/package/work/turn125_primary/
+  B99-radius-11.png and b109_full.txt.
+work/handoff/original-workspace/work/package/work/turn124_b116_primary/
+  page_06.txt.
+The main audit records the B98 primary readback and exact finite
+constraint/gauge conventions inherited here.

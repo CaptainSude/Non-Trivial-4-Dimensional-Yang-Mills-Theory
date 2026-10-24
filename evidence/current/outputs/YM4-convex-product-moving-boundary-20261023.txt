@@ -1,0 +1,417 @@
+CONVEX PRODUCT CUTOFFS: UNIFORM LOCAL TAILS AND MOVING-BOUNDARY RESPONSE
+23 October 2026. Root finite proof. Source archive unchanged.
+
+RESULT AND SCOPE
+
+A complete weakly nonlinear, centered massive finite-dimensional law
+can be restricted to arbitrary sitewise convex sets containing a large
+centered ball without losing uniform local tail control. The proof uses
+sequential conditioning and a spatially summable conditional-mean
+response. It never divides by the probability that ALL cuts pass.
+It also gives a normalized, spatially local estimate for moving cutoff
+boundaries. These results apply to the first full-Omega law reconstructed
+in first_full_omega_mixture_domain_20261023.txt, including ALL its current
+success/failure atoms. They do not sum the earlier Omega records, prove
+regularity of the next effective action, or close a later reset history.
+
+1. PRECISE FINITE HYPOTHESES
+
+Let I be a finite lattice index set with metric d and fixed block dimension
+m. Assume V_nu=sup_i sum_j exp[-nu d(i,j)] is bounded independently of I,
+including its torus convention. Fix R>=r>=2, R/r<=C_radius. Let H be C^2
+on a neighborhood of the CLOSED product B_R^I, and decompose
+
+             H(x)=1/2 x^T D x+P(x),       D=D^T.               (1)
+
+Additive constants are immaterial. For H_s=1/2 x^T D x+sP, 0<=s<=1,
+require the following pointwise bounds on this WHOLE product:
+
+ H_s'' >= c0 I;
+ Re <z,W H_s'' W^-1 z> >= c_nu |z|^2;
+ sup_i sum_j exp[nu d(i,j)] ||(H_s'')_ij|| <= M_nu,
+ sup_j sum_i exp[nu d(i,j)] ||(H_s'')_ij|| <= M_nu;             (2)
+                       sup_i |grad_i P|<=b.                   (3)
+
+Here c0,c_nu>0 and W is ANY positive site-block scalar weight whose log
+is nu-Lipschitz. Bounds also apply to principal restrictions; (2) for
+the full matrices implies these restricted bounds by zero extension.
+A slightly smaller nu may be chosen once to secure strict constants.
+No arbitrary retained exterior force is allowed in (1),(3): it would
+enter P and must meet (3). This is why the complete first full-Omega
+integration, which integrates ALL its current noise, is useful.
+
+Every factor K_i is a closed convex body satisfying
+
+                       B_r subset K_i subset B_R.            (4)
+
+Define Q_K by the EXACT density Z_K^-1 1_(product K_i) exp[-H].
+Its normalizer need not be close to that on B_R^I. Constants below
+depend only on m,c0,c_nu,M_nu,nu,V_nu,C_radius, never on |I|.
+
+2. WHY THE WEIGHTED COVARIANCE TOOLS SURVIVE THESE CUTS
+
+The earlier convex-product covariance proof works for the factors (4),
+not only for round balls. For smooth convex factors solve the scalar
+Neumann Poisson problem for the full log-concave law. Its differentiated
+equation is (L tensor 1+H'') grad u=grad G. On a product boundary the
+second fundamental form acts only inside the boundary site's coordinate
+block and is nonnegative. A site-scalar W preserves its normal/tangent
+subspaces and commutes with that boundary form. The weighted integration
+by parts thus has the same nonnegative boundary term. Taking its real
+part and using (2) gives
+
+ |Cov_Q(F,G)| <= c_nu^-1
+                ||W^-1 grad F||_L2(Q) ||W grad G||_L2(Q).      (5)
+
+With W=1 the ordinary Poincare bound uses c0^-1. Approximate each convex
+factor by smooth convex bodies and pass to the normalized finite
+integrals; all constants are unchanged. Product corners cause no extra
+negative boundary term. The same argument applies after fixing any
+subset of blocks, since the remaining domain is a convex product and
+its action has a principal Hessian. An arbitrary affine tilt of H also
+preserves (2). These are structural facts about these particular laws,
+not an assertion that arbitrary conditioning preserves covariance bounds.
+
+For later use let F depend only on x_S and b_F=osc(F)/2. Projecting a
+smooth G onto x_S, differentiating its complementary conditional ratio,
+and applying (5) gives the bounded-local consumer
+
+ |Cov_Q(F,G)| <= b_F C_loc/sqrt(c0)
+            ||exp[-nu d(.,S)] grad G||_L2(Q),
+                      C_loc=1+M_nu/c_nu.                      (6)
+
+Indeed the gradient of E[G|x_S] is E[grad_S G] minus the complementary
+covariance with H'_S. The two terms are bounded by 1 and M_nu/c_nu
+times the weighted full gradient norm; Poincare and sd(F)<=b_F finish.
+This slightly enlarged constant avoids optimizing the previous square
+root constant. No derivative of bounded F is required.
+
+3. CONDITIONAL MEANS AND SINGLE-CUT CHANGES
+
+Hold every factor except the one at j fixed and integrate the complement
+conditional on x_j=z. For a unit coordinate direction at i!=j,
+
+ D_v E[x_i|x_j=z] = -Cov_(I\{j})(x_i, v dot H'_j).             (7)
+
+The weighted column bound in (2) and (5), centered at i, give
+
+ Lip_z E[x_i|x_j=z] <= A exp[-nu d(i,j)],
+                      A=max(1,M_nu/c_nu).                     (8)
+
+The formula for i=j is the identity map and obeys (8). Fixed color
+dimension factors may enlarge A. The entire z domain B_R is convex,
+so integrating this derivative gives oscillation at most
+2 A R exp[-nu d(i,j)]. This remains valid when all the OTHER factors
+are already arbitrary sets (4).
+
+If j is still unrestricted, let E={x_j in K_j} and p=Q(E)>0. For any
+integrable conditional mean h(z), exact conditioning gives
+
+ Q(h|E)-Qh=(1-p)[Q(h|E)-Q(h|E^c)].                             (9)
+
+If p=1 the change is zero. Combining (8),(9) yields
+
+ |Q(x_i|E)-Q x_i| <= 2 A R exp[-nu d(i,j)] Q(E^c).             (10)
+
+No inverse p occurs. This identity is valid even if the probability of
+the intersection of all previously imposed cuts is extremely small.
+
+For bounded local F, if j is outside S, apply (6) on the complementary
+law to H'_j and use the weighted column bound in (2). This gives
+
+ Lip_z E[F|x_j=z] <= C b_F exp[-nu d(j,S)]
+
+with C=C_loc M_nu/sqrt(c0). If j lies in S use its trivial oscillation
+2b_F. Consequently, since R>=1, in either case
+
+ osc_z E[F|x_j=z] <= C_F b_F R exp[-nu d(j,S)],                 (11)
+
+where C_F is fixed independently of F,S,I. Measurable bounded tests
+are admitted by the conditional-ratio proof/approximation. In later
+moving-domain applications the actual original trace is smooth anyway.
+
+4. VOLUME-UNIFORM MEAN BOOTSTRAP
+
+First put EVERY factor equal to B_R and interpolate H_s. At s=0 the
+domain and Gaussian density are invariant under x -> -x, so every
+block mean is zero, even when D has off-diagonal couplings. By (5),(3),
+
+ |d_s E_s x_i| = |Cov_s(x_i,P)| <= C_mean b,
+       C_mean=c_nu^-1 [sup_i sum_j exp(-2nu d(i,j))]^(1/2),    (12)
+
+up to the fixed color conversion. Thus the baseline mean is at most
+C_mean b. Require
+
+                         C_mean b <= r/8.                     (13)
+
+For every product domain and any block linear direction v, affine tilts
+preserve Hessian >=c0. Applying Poincare to the tilted log moment
+generating function and integrating twice proves
+
+ Q exp[t v dot (x_i-Qx_i)] <= exp[t^2 |v|^2/(2c0)].            (14)
+
+In particular, if |Qx_i|<=r/4, a union over m orthonormal directions
+gives
+
+ Q(|x_i|>=r/2) <= epsilon_r,
+                  epsilon_r=2m exp[-c0 r^2/(32m)].             (15)
+
+Order I arbitrarily. Starting from the baseline, replace B_R by K_j
+once at each site. If all current means have norm at most r/4, (15)
+applies. A new bad event x_j notin K_j is contained in {|x_j|>=r},
+so its probability is at most epsilon_r. Summing (10) over the cuts
+already imposed gives, for EVERY output block i,
+
+ |mean_i - baseline_mean_i| <= 2 A R epsilon_r V_nu.           (16)
+
+Assume also
+
+                      2 A R epsilon_r V_nu <= r/8.            (17)
+
+Induction now proves the required mean bound at every intermediate
+stage, and hence at the final arbitrary product (4). There is no
+circular use of the final tail: each step uses only the previous
+stage, and (16),(17) prove that the next stage stays admissible.
+
+It follows that EVERY such product satisfies (15), uniformly in volume
+and in its shape. This includes a comparison in which some factors
+are native success balls and others are actual old SU(2) intersections.
+
+As a useful separate corollary, (9),(11),(15), summed over the sites,
+give for any bounded local F
+
+ |Q_K F-Q_(B_R^I) F| <= C b_F R epsilon_r |S|.                 (18)
+
+Here sum_j exp[-nu d(j,S)]<=|S| V_nu. Comparing two arbitrary product
+cuts through B_R costs twice this constant. This is local total-
+variation control after taking the supremum over tests. It does not
+assert total variation control of the full high-dimensional laws.
+
+5. NORMALIZED RADIAL BOUNDARY PRESSURE
+
+Because K_j contains B_r, it has a radial function q_j(n) in [r,R]
+for n on the unit sphere. Convexity and a common inner ball imply the
+needed Lipschitz regularity of q_j. For smooth H, set
+
+ B_j = Z_K^-1 integral_(product K_i,i!=j) dy integral_(sphere)
+       q_j(n)^(m-1) exp[-H(q_j(n)n,y)] dn.                    (19)
+
+This is RADIAL pressure; no surface-normal conversion is being omitted.
+The derivative of a radial-domain integral is naturally expressed with
+this density and the radial boundary speed.
+
+By the unweighted row bound and (3),
+
+ sup_(x in B_R^I) |grad_j H(x)| <= M_nu R+b =: G.              (20)
+
+Choose delta=min(r/2,1/(1+G)). In the interior radial shell
+q_j(n)-delta <= u <= q_j(n), the Jacobian u^(m-1) is at least
+2^(-(m-1)) q_j(n)^(m-1), and exp[-H(un,y)] is at least
+e^-1 exp[-H(q_j(n)n,y)]. Hence its normalized probability is at least
+c_m delta B_j. The shell lies in {|x_j|>=r/2}, whose FULL Q_K
+probability is bounded by (15). Therefore
+
+                 B_j <= C_m delta^-1 epsilon_r
+                           <= C_boundary R epsilon_r.        (21)
+
+The last step uses r>=2, (13), R/r bounded, and fixed Hessian constants.
+There is no claim of a uniform tail conditional on arbitrary y; only
+the full normalized marginal tail from Section4 is needed. No global
+partition function lower bound or sum of all surface areas enters.
+
+6. EXACT MOVING-DOMAIN IDENTITY AND ITS LOCAL BOUND
+
+Let t vary on a finite interval. H_t and F_t are C1 on the fixed
+containing product, with uniform hypotheses (1)--(4),(13),(17).
+Let each q_j(t,n) be Lipschitz in t, uniformly in n. The actual K_j(t)
+can have moving intersection corners. Define
+
+                p(t)=Q_(K(t),H_t) F_t,      S_t=dot H_t.
+
+Finite radial-coordinate integration and the ordinary Leibniz rule,
+applied a.e. in t and n, give
+
+ dot p = Q dot F-Cov_Q(F,S_t)
+  +sum_j Z^-1 integral dy integral dn q_j^(m-1) exp[-H(q_j n,y)]
+                              [F(q_j n,y)-QF] dot q_j.        (22)
+
+This is the derivative of the ORIGINAL normalized ratio. The final
+term includes the boundary contribution to the denominator. Additive
+background constants in H cancel only in the covariance; their outer
+mass is not removed. Since I is finite and the factors have a uniform
+inner ball, the quotient is absolutely continuous; the a.e. identity
+integrates along the entire admitted path. Smooth approximation is an
+alternative, but a nonexistent globally smooth active center is not.
+
+For each j the radial speed is independent of the OTHER noise y.
+Conditioning those coordinates therefore replaces F(q_j n,y) by
+h_F(q_j n)=E[F|x_j=q_j n]. Its difference from QF is bounded by its
+oscillation over K_j; this is at most (11). Using (21),
+
+ |boundary contribution|
+ <= C b_F R^2 epsilon_r
+                  sum_j exp[-nu d(j,S)] sup_n |dot q_j(n)|.   (23)
+
+For j in S the sharper factor is R epsilon_r, but (23) suffices.
+Combining (6) with (22),(23) yields the complete local response
+
+ |dot p| <= Q|dot F| + b_F C_loc/sqrt(c0)
+                        ||exp[-nu d(.,S)] grad_x dot H||_L2
+       + C b_F R^2 epsilon_r
+                    sum_j exp[-nu d(j,S)] sup_n |dot q_j|.    (24)
+
+All terms act on the same actual Q, with all current cut factors.
+
+7. ACTUAL FIRST FULL-OMEGA APPLICATION
+
+Use the exact native law and geometry in
+first_full_omega_mixture_domain_20261023.txt. Fix the first coarse
+physical data beta and the outer record Omega1=full torus. Sum ALL
+current (1.18) success/failure records and integrate ALL their current
+variables, including former retained ones, after undoing exterior
+switches in BOTH law and source. The resulting conditional law is
+
+ Q_Omega,beta(dA) = Z_Omega(beta)^-1 1_(product K_b(beta))
+                                    exp[-H0(A;beta)] dA,
+ H0=1/2 <A,C*Delta1 C A>-v(g0 C A)+g0^-2 V(g0 C A).            (25)
+
+Every old factor is the exact free-bond SU(2) intersection
+ ||exp(i g0 A_b) U1(b) U_(1,D)(b)^-1 -1||<2delta0,
+with native pivots deleted. Nonlinear straightening changes only those
+pivots. Put rho=2 arcsin(delta0). Native minimum comparison on the
+specified first near-flat family gives
+ |log[U_(1,D) U1^-1]|<=theta rho, with fixed theta<1/2.
+The exact trigonometric geometry proved in the domain note gives
+
+ B_((1-theta)rho/g0) subset K_b(beta)
+                  subset B_((1+theta)rho/g0),                (26)
+
+and convexity. In the domain note's fixed norm convention choose
+r=delta0/g0 and R=4r, containing all factors and native success balls
+with a strict outer margin, reducing delta0 if needed. If another
+native matrix norm is used, apply its fixed SU(2) conversion to r,R;
+the statements use r comparable to delta0/g0 and a fixed R/r.
+Require the usual spare analytic cap on 4R and the shrinking physical
+minimum margins; a fixed analytic chart alone is not that admission.
+
+At this literal first step there is no inherited E/R/B, variable
+coupling increment, or held current exterior. The complete primitive
+positive bound, already registered on 4R, is
+
+ sup_b sum_(X reads b) exp[kappa d(X)] sup|P_0,X|
+                                             <= C g0(R+R^3).
+
+One noise Cauchy estimate, with fixed color conversion, gives
+
+                       sup_b |grad_b P0|<=C g0(1+R^2).       (27)
+
+Two noise derivatives give its complete weighted Hessian perturbation
+O(g0(R+R^-1)). The actual first quadratic form has the registered
+weighted positive gap. Thus (2) holds throughout the interpolation
+D0+sP0 once the weak floor is fixed. Equations (13),(17) follow from
+g0 R small, r large, and R/r fixed. The full Jacobian and all physical
+constraint/current terms remain in P0 and D0.
+
+This verifies the hypotheses of Sections1--6 for the ACTUAL full
+first-current mixture (25), not an auxiliary success-only law.
+It also proves local cut comparison (18) between that law and the
+first all-success law, with the SAME original reconstructed source
+and complete action. The normalization of either whole law may be
+exponentially small compared with the unconstrained Gaussian; it is
+irrelevant to this local estimate.
+
+The native radial-response calculation retains BOTH local and global
+minimum derivatives. B119(1.2),(1.3) register the local comparison
+minimum on its actual finite domain and copy each coarse datum only
+through a fixed-L input collar. CMP102(190), in the same one-step
+representatives and complete return frames, then gives, for some mu>0,
+
+ sup_n |dot q_b(n)| <= (C_L/g0)
+                  sum_q exp[-mu d1(b,q)] |dot beta_q|.        (28)
+
+The radial factor is the minimum of the exact one-center boundaries;
+it is Lipschitz and (28) holds a.e., also across active-center changes.
+No derivative smallness is inferred merely from small center values.
+
+Choose 0<eta<min(nu,mu), with fixed conversion of one-step metrics.
+Exponential convolution and Cauchy--Schwarz give
+
+ sum_b exp[-nu d(b,S)] sup_n|dot q_b(n)|
+ <= (C_L/g0) sqrt(|S|)
+                   ||exp[-eta d1(.,S)] dot beta||_2.          (29)
+
+For example first bound the convolution by C exp[-eta' d1(q,S)]
+for eta<eta'<min(nu,mu); its remaining square sum is bounded by
+C|S|. All index measures here are first-step lattice sums, with fixed
+L volume factors absorbed, not unbounded mixed historical grades.
+
+8. ORIGINAL PLAQUETTE SOURCE AFTER THE FULL CURRENT MIXTURE
+
+Use the literal original source
+ F_p(A;beta)=c_a f_p [1-Tr U_p(A;beta)/2], alpha_p=|c_a f_p|,
+ U=exp(i[g0 C A-h_piv Dtilde(g0 C A)]) U1. Its complete free read S_p
+and direct fine-background read have fixed L-dependent size. Keep all
+four links, pivot corrections and the original calibration. Its real
+oscillation and its spare-chart analytic bound are C alpha_p.
+
+The independently checked first-step background producer gives, in a
+fixed spare background chart of physical radius rho_*,
+
+ ||exp[-eta d(.,S_p)] grad_A dot H0||_2
+   <= C_L rho_*^-1 B0(R)
+                  ||exp[-eta d1(.,S_p)] dot beta||_2,
+       B0(R)=C[R+g0(1+R^2)].                                 (30)
+
+Its off-physical independent-coefficient extension subtracts the ENTIRE
+linear jet which vanishes along the physical critical graph; variation
+of C and J is included. It agrees with the complete physical H0 along
+the whole path. Enlarging the noise cap to this fixed multiple R and
+changing the convex factor shapes does not alter its pointwise
+derivative proof. The direct reconstructed-source term obeys the
+same weighted tangent estimate with C_L alpha_p/rho_*.
+
+Apply (24),(29),(30) to p_Omega,p(beta)=Q_Omega,beta F_p. For a
+coarse tangent supported on T, the result, a.e. along an admitted path,
+is
+
+ |D p_Omega,p[dot beta_T]|
+ <= L_p^Omega exp[-eta dist1(S_p,T)] ||dot beta_T||_2,
+ L_p^Omega=C_L alpha_p {
+       rho_*^-1 [1+C_loc B0(R)/sqrt(c0)]
+                      + g0^-1 R^2 epsilon_r }.              (31)
+
+The fixed |S_p| conversion is in C_L. The weighted-tangent form before
+the last separation extraction is equally valid. This is a locally
+Lipschitz response, not an unproved analytic dependence of the cut law.
+If r grows like log(1/g0)^p with p>1/2, the explicit tail in epsilon_r
+beats g0^-1. The registered corrected physical-cutoff hierarchy has
+r=A1(log gamma0)^p0 with p0>1/2 (it admits 1/2<s<p0 for its fixed
+inner core), so the boundary term is in fact smaller than any fixed
+power of g0 after one weak floor. Equation(31) retains the term
+explicitly and does not require that asymptotic simplification.
+
+At fixed beta the same convex-product law and (6) also give the usual
+bounded-local two-source covariance decay. It includes current failure
+regions automatically. These are conditional source estimates in the
+full-Omega sector and preserve the complete contact contribution.
+
+9. WHAT THIS DOES NOT CLOSE
+
+The exact outer full-Omega mass remains
+ J_Omega(beta) exp[-g0^-2 Action(U1)] Z_Omega(beta). Other Omega
+records and their original mass remain. A normalized current mixture
+has been handled in this specific sector, not the entire native law.
+
+The moving intersections can have true corners as beta varies. Estimate
+(31) is not a uniform second-derivative theorem for log Z_Omega, and
+does not by itself put the NEXT effective action in the same smooth
+weighted-Hessian class. Thus replacing the first all-success normalizer
+in the prior two-step proof by Z_Omega is not yet justified. The exact
+new next law must first be matched and its complete coercivity proved.
+
+At later births, held histories and current exterior may shift means
+by O(R), and inherited action channels may fail (3). The mean bootstrap
+cannot be transplanted there by suppressing a linear force or changing
+centers without retaining the translated masks and compensator.
+No continuum construction, nontriviality, or interaction conclusion
+follows from this finite first-step advance alone.

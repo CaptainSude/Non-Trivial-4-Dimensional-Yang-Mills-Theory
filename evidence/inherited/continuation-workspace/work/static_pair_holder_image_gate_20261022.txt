@@ -1,0 +1,220 @@
+STATIC PAIR CURRENT, FIELD REGULARITY, AND THE ACTUAL RESET IMAGE
+22 October 2026. New v20 independent audit; frozen v19 notes unchanged.
+Status: proved domain distinction and conditional finite-composition lemma.
+No assertion here that a generic domain countertest is an actual reset image.
+
+RESULT
+
+The cubic COMPOSITE current identified in
+static_split_actual_current_identification_20261022.txt is useful to the
+pair Ward estimate. It does not, merely by being small, give an elliptic
+equation or a Holder estimate for the first component on all independent-
+pair/localizer contours. B109272 explicitly explains this distinction.
+
+This does NOT require rejecting the direct static route. A proper-scale
+regular base plus a fixed finite number of compatible, covariantly
+C1,alpha responses suffices. CMP102(190) and B116(1.11)--(1.21) provide
+precisely useful response norms when their actual background, tower,
+frame and scale have been matched. The remaining native task is that
+matching on the complete actual split read, not a new elliptic theorem
+for every pair in LI(1.64)--(1.69).
+
+1. WHAT THE DOMAIN DOES AND DOES NOT SAY
+
+B109261--263 (1.8)--(1.16) separates the physical current
+
+       J_phys(U)=D_U^* xi^(-2) pi Im partial U
+
+from a new independent variable J. The U clauses bound curvature and
+first derivatives in a local gauge; the J clause bounds this independent
+variable. The additional U_p,J_p tests refer to separately constructed
+local minima. They do not identify J with J_phys(U).
+
+The paragraph on printed263 gives a useful check: sufficiently smaller
+constants in the first three conditions imply the derived tests as well.
+Consequently those tests are not a hidden Holder condition on raw U.
+The same distinction survives the mixed-grade LI spaces. LII(1.65)
+certifies membership of its COMPOSITE OLD PAIR in those spaces. That
+membership controls the current component, but it is not a field PDE.
+
+A compact domain countertest illustrates the exact missing implication.
+In a homogeneous r-scale box choose a fixed Cartan matrix T and, on a
+successively finer lattice, take
+
+       A_2(x)=c delta sin(x_1/delta) T,  A_mu=0 otherwise,
+       U=exp(i eta A),                 J=0.                (1)
+
+Use wavelengths resolved by the lattice and take c smaller than the
+domain constants. Uniformly in delta, |A|<=c delta and |nabla A|<=C c;
+the curvature is O(c). Thus the small-constant criterion above admits
+the pair, including its derived-minimum tests. But curvature oscillates
+by order c across distance O(delta); its alpha-Holder seminorm grows
+like c delta^(-alpha). No gauge can remove this Cartan curvature
+oscillation. The same calculation with finite differences gives the
+lattice example. In born-i coordinates, epsilon=L^{-(r-i)}, it reads
+
+       A_2(x)=c epsilon delta sin(epsilon x_1/delta) T,
+       |nabla A|=O(c epsilon^2),
+       [nabla A]_alpha ~ c epsilon^(2+alpha) delta^(-alpha).
+
+This disproves a uniform C1,alpha inference from the domain inequalities.
+It is NOT a counterexample to the actual Phi image, which has additional
+minimum/response structure. Its physical current is not the independent
+J=0 in (1), so it also does not contradict regularity for a physical
+minimum with a correctly matched current equation.
+
+2. THE PRIMARY CURRENT ALGEBRA EXPLAINS WHY AN ELLIPTIC SHORTCUT FAILS
+
+B109272 (3.11) has, in its own normalized units,
+
+ J_phys(exp(i xi A) U)=J_phys(U)+D_U^* D_U A+F(U,A).       (2)
+
+For the original response H, the Landau condition R D_U^* H=0 allows
+replacement of D^*D by D^*D+D R D^*. The paper rewrites this as
+Delta_U-P_1 plus a lower local operator. Its canonical independent-pair
+substitution (3.13) is therefore
+
+ J_can,out=s^3 J+Delta_U A-P_1 A+F_1(U,A).               (3)
+
+With the same operators and lower terms, subtraction of (2) from (3)
+exhibits the missing quantity schematically but exactly at this one
+substitution:
+
+ J_can,out-J_phys,out
+    =s^3 (J-J_phys,in)+D_U R D_U^* A.                   (4)
+
+Here J_phys,in is in the input current units, and s^3 is exactly the
+unit conversion in B109(3.12); all other terms are in output units.
+Formula (4) is simply the operator replacement stated immediately
+before (3.13), not a newly asserted identity between independent inputs.
+
+Most decisively, B109272 says that later localized terms have the
+required covariant-Laplacian bounds, while the corresponding D^*D
+bounds need not hold. It gives this as the reason for introducing J.
+Thus one cannot use the small canonical J alone to control the physical
+Euler current of the localized field. Nor may one assume every H(s)
+satisfies the original Landau equation on the complex localization
+circles. The same issue can occur at successive nested substitutions.
+
+CMP102297--300 derives its regularity through criticality, the Landau
+condition, and the equations (127)--(143). In particular the discussion
+after (143) says the regularity equation does not itself imply the
+Landau condition used in deriving it. Section F then applies these
+facts to actual critical configurations with matching determining data.
+This is more information than arbitrary independent-pair admission.
+
+3. A SUFFICIENT FINITE-COMPOSITION LEMMA
+
+Fix 0<alpha<1, a branch of a complete read, and the born-i units. Let
+epsilon=L^{-(r-i)}<=1. Work on a common branch frame, including a fixed
+read collar, on every parameter value of the actual complex contours.
+Suppose a base field admits a potential A_0 with
+
+ |A_0|<=C epsilon,
+ |nabla A_0|<=C epsilon^2,
+ [nabla A_0]_alpha<=C epsilon^(2+alpha).                 (5)
+
+Suppose the actual field is obtained by m relative exponential factors,
+with m bounded independently of scales, each expressed in this same
+compatible frame. Assume for every relative potential H_l
+
+ |H_l|<=C_l epsilon,
+ |nabla H_l|<=C_l epsilon^2,
+ [nabla H_l]_alpha<=C_l epsilon^(2+alpha).               (6)
+
+The logarithms are taken in a single small analytic neighborhood. Then
+the final product has a potential A_fin satisfying (5), with a constant
+depending on the finite m, alpha, and the stated C_l, but not on r-i or
+the fine lattice mesh.
+
+Proof. The matrix product and its small logarithm are analytic functions
+of the finitely many potentials. Their first two derivatives are
+bounded on that neighborhood. The chain rule gives the first-gradient
+bound. Interpolation of the zeroth and first bounds gives
+[A_0]_alpha+[H_l]_alpha<=C epsilon^(1+alpha). In the Holder difference
+of the first derivative of the analytic product, the direct gradient
+differences have size epsilon^(2+alpha); variation of the product's
+Jacobian contributes at most epsilon^(1+alpha) epsilon^2. Since
+epsilon<=1, this is no larger. The same estimates hold for finite
+differences, with their bounded shifted product factors. This proves
+the claim. Small xi factors in exp(i xi H_l) only improve the bounds.
+
+An equivalent practical hypothesis replaces (6) by covariant C1,alpha
+bounds relative to the ACTUAL intermediate background. Once earlier
+factors have (5), conversion to the common frame changes a covariant
+gradient by products of a connection of order epsilon and H_l of order
+epsilon. Their Holder differences are order epsilon^(2+alpha), by the
+same interpolation. This gives (6) inductively. This equivalence requires
+the covariant norms to use compatible transports and the same branch
+read; it is not an inference from unrelated gauges.
+
+Gauge returns must be handled by their actual covariance identities:
+pull every response back to the chosen base frame, retaining its native
+bounds there, or prove the required bounds for the composed return
+gauge. A gauge-invariant coefficient allows evaluation in a common
+representative. It does not imply that separately chosen good gauges
+for several factors are compatible or that an arbitrary complex gauge
+has bounded conjugation norm. No derivative of an uncontrolled gauge
+return is silently discarded in this lemma.
+
+Piecewise application is legitimate on each branch with its complete
+collar. The interface assumptions of the separately audited
+piecewise_neutral_Ward_interface_20261022.txt still have to be supplied;
+this lemma does not turn a branch estimate into a global one.
+
+4. WHAT THE NATIVE RESPONSE RESULTS ALREADY PROVIDE
+
+CMP102308 (190) explicitly includes the functional derivative of H,
+its covariant gradient, a Holder difference of that gradient, and its
+second-order bounds, with actual local grade factors. Proposition9 on
+309 states the analytic extension and the same estimates for admitted
+external configurations.
+
+B1163 permits replacement of the propagators by operators having the
+same regularity bounds. B1165 (1.11) retains all the cited operator
+norms on the complex s circles. B1166 (1.15)--(1.18) carries all
+admissible norms through the nonlinear fixed point; (1.21) and the
+following paragraph on7 use them to retain the near-response norms
+(B1093.31). All these assertions are uniform over the stated input
+pair domain. This is a constructive route to (6) and does not require
+equating canonical and physical currents of the localized response.
+
+The unresolved matching is specific. On each actual split branch one
+must identify the base minimum/tower, its regularity scale on the whole
+read, and the backgrounds relative to which the finite nested responses
+have the norms just cited. One must also identify the common gauge and
+check that its return identities hold on the occupied complex contours.
+A generic current-grade domain inclusion does not change an old
+determining stratum into a homogeneous proper-r minimum. Conversely,
+once this actual base/response match is provided, the composition lemma
+above supplies the field estimate without any new physical-current
+identity for H(s).
+
+5. SCOPE OF THE CURRENT CONCLUSION
+
+The v19 cubic-current conclusion remains intact. The deficient
+inference is ONLY: cubic independent composite J plus pair-domain
+membership implies field Holder regularity. No actual Phi counterexample
+has been constructed, and no impossibility of the direct static proof
+is asserted. A direct native image proof using (5)--(6), or a separately
+justified static near re-extension, remains available in principle.
+
+The public cached raw-II Remark5.2:rem-no-holder-bound and its subsequent
+smoothed-core lemma were read as corroborating source pointers. The
+primary conclusions here use B109/CMP102/B116 directly. Defining a core
+at an additional whole-slot box minimum is an additional evaluation;
+its regularity does not by itself identify it with the unsmoothed static
+coefficient.
+
+PRIMARY READBACK
+
+B109261--263 (1.8)--(1.16), small-constant criterion;272 (3.10)--(3.14).
+CMP102297--300 (127)--(143);300--305 SectionF;308 (190),309 Proposition9.
+B1163 (1.5)--(1.7);5--7 (1.11)--(1.23).
+LI190--191 (1.64)--(1.69), and LII375 (1.65), as traced in the separately
+audited v19 current-identification addendum.
+
+Local primary files: original work/package/work/turn125_primary/
+b109_full.txt and B109-original-24.png; admission_sources/
+cmp102_variational_primary.txt; turn124_b116_primary/page_03.txt through
+page_07.txt. Originals were not modified.

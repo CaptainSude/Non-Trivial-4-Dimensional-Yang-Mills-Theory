@@ -1,0 +1,96 @@
+FOCUSED AUDIT: TWO-REFERENCE PRESSURE TRANSFER AND CUTOFF DIAGNOSTIC
+20 October 2026. TURN50. tail47.
+
+Producer read: work/qeo_full_measure_bridge_turn50.txt, especially
+Sections 4--5. Source comparison: QEO1.pdf, PDF pp.105--106 (T17),
+at commit 3ef16f9f8ba0bfdc26fd7d4f7114d44bf9ebe5eb.
+
+VERDICT
+
+PASS for the displayed dimension-independent transfer implication and
+the precisely scoped quadratic-reference cutoff diagnostic. No new
+full-YM4 trace, pressure, complement, or observable estimate is supplied
+by this audit.
+
+1. EXACT TRACE HYPOTHESES
+
+For each direction, with every other side fixed, the hypothesis is the
+EXACT identity Z_s(O)=Tr[A^(s_mu/2)] for a positive A independent of
+s_mu. Positive unsourced transfer operators alone do not give this
+identity for arbitrary reflected marked numerators; the producer
+explicitly requires it, as well as the separate chessboard estimate.
+
+For the positive eigenvalue sequence of A, its l^p norm decreases with
+p and log sum a_k^p is convex. Finiteness at the smaller indicated
+power suffices for the larger powers. Thus log Z_s(O)/N_s decreases
+when one side increases, and log Z_s(1) is separately convex on the
+permitted even counts. There is no unwanted rank factor.
+
+All volumes must use the same local action and parameters. A side-
+dependent retuning would generally destroy the common-A hypothesis.
+
+2. THE UNIFORM OUTER-VOLUME DENOMINATOR BOUND
+
+Let t_mu=s_mu/s0, f(t)=log Z_s(1), and
+
+  h(t)=(product_mu t_mu) f(1)-f(t).
+
+Root-density monotonicity gives h>=0 when all t_mu>=1, including the
+endpoint h(1,hat t) needed below. Separate convexity of f makes h
+separately concave. For permitted counts with t>=j>=2,
+
+  h(j,hat t)
+    >=[(j-1)/(t-1)]h(t,hat t)
+       +[(t-j)/(t-1)]h(1,hat t).
+
+Rearranging and dropping the nonnegative endpoint proves
+h(t,hat t)<=[(t-1)/(j-1)]h(j,hat t). This uses only convexity between
+the THREE permitted side counts; no continuum-size partition function
+or interpolation hypothesis is needed.
+
+Iteration in all directions yields
+
+  h(t)<=D_j product_mu[(t_mu-1)/(j-1)],
+  D_j=j^d log Z_ref(1)-log Z_(j ref)(1)>=0.
+
+Divide by N_ref product t_mu and use (t_mu-1)/t_mu<=1 to get
+
+  log Z_s(1)/N_s
+    >=log Z_ref(1)/N_ref-D_j/[(j-1)^d N_ref].
+
+Subtract this from the numerator root-density upper bound and apply
+the assumed chessboard inequality. The stated product bound with
+exp(delta_j)||O||_ref follows. Its constant is independent of the
+outer volume once D_j is controlled. A zero numerator can be handled
+directly by positive trace monotonicity, as stated by the producer.
+
+3. THE CURRENT CUTOFF OBSTRUCTION IS CORRECTLY LIMITED
+
+For n fixed-ratio steps, the recorded tuned inverse coupling obeys
+g_0^-2 of order n, and the CURRENT sufficient cluster admission
+g_0 T_0^3<=c permits only T_0^2<=C n^(1/3).
+
+A scalar component of a standard fixed-color Gaussian supplies
+1-c_T>=c(T+1)^-1 exp(-T^2/2) for T>=1, by integration on
+[T,T+1/T]. For T<1 a fixed positive tail is stronger. Thus an
+exponential row count m_n>=c R^(4n) gives
+
+  m_n(1-c_(T_0)) -> infinity,
+  c_(T_0)^m_n -> 0.
+
+The flat projected-product Gaussian selected numerator has exactly
+that mass relative to the unrestricted quadratic reference; inclusion
+in the declared chart needs the usual small gT support margin.
+It is not the probability under a separately normalized weak chart
+or the full interacting compact Wilson law. The producer states
+these distinctions explicitly.
+
+The pure product-model pressure contribution m log c_T cancels
+exactly between a reference and its j^d cover at the same threshold
+and parameters. Hence the calculation obstructs a proposed near-one
+GLOBAL all-good comparison within the current certified cutoff
+range. It does not obstruct a common-pressure argument with spatially
+organized bad histories, nor prove such an argument.
+
+The pressure-transfer theorem and this diagnostic retain the intended
+scope. No correction was requested.

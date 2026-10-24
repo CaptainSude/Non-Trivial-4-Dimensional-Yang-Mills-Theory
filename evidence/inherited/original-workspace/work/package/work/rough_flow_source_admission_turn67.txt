@@ -1,0 +1,139 @@
+ROUGH INITIAL DATA: SOURCE ADMISSION AND THE EQUAL-TIME DIMENSION
+TURN67. 20 October 2026. Root calculation and source check.
+
+STATUS
+
+This note checks an available theorem against the proposed spatial
+flow input. It does not prove failure of the Yang--Mills flow or of
+the construction. The theorem checked does not supply the missing
+physical nonlinear derivative estimate.
+
+1. PRIMARY SOURCE AND EXACT ADMISSION
+
+Ilya Chevyrev and Hora Mirsajjadi, "Local well-posedness of subcritical
+non-linear heat equations with Gaussian initial data," arXiv:2410.11638,
+version2 (21 August 2025), Assumption1.1 and Theorem1.2, pages2--3:
+ https://arxiv.org/pdf/2410.11638
+ https://doi.org/10.1016/j.jfa.2025.111160
+
+Their theorem treats stationary centered Gaussian initial data in
+spatial dimension n>=2 with even covariance C(x)=C(-x) and bounds
+|D^k C(x)|<=K |x|^(2-d-|k|), |k|<=1, for a fractional parameter
+2<d<4. This parameter need not equal n. The heat equation has the
+specified bilinear A,DA and cubic A terms, with the allowed lower
+order polynomial terms. It proves convergence of mollified nonlinear heat
+solutions up to a positive random time, with inverse-time moments.
+The critical endpoint d=4 is excluded. The discussion explains that
+equation-specific structure would be needed there.
+
+The theorem also requires Gaussianity. We have not proved the stated
+covariance hypotheses or an appropriate non-Gaussian extension for
+the interacting Hamiltonian ground law. These are separate issues
+from the endpoint discussed next.
+
+2. OWN FREE EQUAL-TIME CALCULATION
+
+Take one canonically normalized free scalar component as the
+ultraviolet scaling diagnostic. Integrating the four-dimensional
+massless covariance in the Euclidean frequency gives
+
+ int_R (dk0/(2pi)) [k0^2+|k|^2]^-1 =1/(2|k|).
+
+In three spatial dimensions its inverse Fourier transform is
+
+ C(x)=1/(4pi^2 |x|^2), x!=0.
+
+One direct calculation inserts a radial regulator exp(-epsilon |k|):
+
+ C_epsilon(x)
+  =[1/(4pi^2 |x|)] int_0^infinity exp(-epsilon r)
+                                      sin(r |x|) dr
+  =1/[4pi^2(epsilon^2+|x|^2)].
+
+Letting epsilon tend to zero proves the displayed formula away
+from the origin, and the distributional limit is the same.
+For transverse free Maxwell components the matrix projector changes
+the angular tensor, while the homogeneity remains degree-2. For
+example the spatial trace has rank factor2 and exactly the scalar
+homogeneity above. Removing infrared modes on a torus does not
+change this short-distance exponent.
+
+Thus the equal-time free ultraviolet benchmark corresponds to
+fractional d=4, even though the spatial slice has dimension3.
+It cannot be admitted to Theorem1.2 merely by calling the slice
+three dimensional. Indeed for every epsilon>0,
+
+ |x|^-2 / |x|^(-2+epsilon)=|x|^-epsilon ->infinity.
+
+A fixed logarithmic weakening does not repair this power admission:
+for any p>=0 and epsilon>0,
+
+ [|x|^-2 / log(1/|x|)^p] / |x|^(-2+epsilon)
+       = |x|^-epsilon / log(1/|x|)^p ->infinity.
+
+This comparison is an elementary test of the theorem's hypothesis,
+not an assertion of the exact interacting short-distance covariance.
+We have not replaced the interacting measure by this free law.
+
+3. OWN HEAT-SMOOTHING DIAGNOSTIC
+
+For the same scalar component, smoothing both factors by spatial
+heat time s>0 gives at one point
+
+ C_s(0)
+  =int_(R^3) [d^3k/(2pi)^3] exp(-2s |k|^2)/(2|k|)
+  =[1/(4pi^2)]int_0^infinity r exp(-2s r^2)dr
+  =1/(16pi^2 s).
+
+The bare small-time integral of this quantity is logarithmically
+divergent. This identifies a critical scale in a prospective
+nonlinear estimate. It does not calculate all nonlinear diagrams,
+their gauge cancellations, renormalizations, or their final sum.
+In particular it is not a proof that the actual gauge-invariant
+flowed observable diverges.
+
+Replacing the free multiplier by |k|^(-1-2epsilon), epsilon>0,
+would change the fractional dimension to4-2epsilon. Such a
+replacement changes the input. Uniform estimates as epsilon goes
+to zero, and gauge compatibility of a corresponding construction,
+would still have to be proved.
+
+4. CONSEQUENCE FOR THE ACTIVE PROOF
+
+The finite-spatial flow and the new actual ground-law action moment
+bounds are unaffected by this source check. What remains unavailable
+is an imported continuum theorem that automatically supplies
+
+ E_(Omega_a^2)|grad_U F_(a,s)|^2 <= C a/g_a^2
+
+for a physically calibrated nonlinear magnetic probe at a fixed
+positive physical flow time s. A critical probabilistic estimate
+using the actual gauge structure, or a different family of physical
+observables such as separated renormalized composites, remains
+necessary. Neither option is claimed established here.
+
+Independent internal check: history47 verified both Fourier constants,
+the fractional-dimension distinction, and the primary theorem
+admission. The even-covariance, n>=2, and equation-class precisions
+requested in that check have been incorporated.
+
+5. PUBLIC REPOSITORY REFRESH
+
+The saved API evidence is work/remote67/report.json, with the
+corresponding head and tree responses in that directory.
+
+ethanwsussman/Yang--Mills-LLM-experiment:
+ cf596e69629e0da2e25e33ab8cafc507c023a1de
+ 2026-10-20T12:28:35Z
+ "Update LPO1 to the revised infinite-lattice outline"
+ 16 files; no added, removed, or changed files relative to TURN64.
+
+CaptainSude/towards-proving-existence-of-YM4:
+ bf484466e1e5091de6770c671f7411f8f93b9c87
+ 2026-10-18T15:05:59Z
+ "Publish YM4 paper, companion, sources and complete research archive"
+ 18 files.
+
+No uninspected private argument or unpublished completion is used
+as a theorem. Both user-supplied Bałaban PDFs were already admitted
+in earlier work; the present difficulty is not a missing download.

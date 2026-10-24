@@ -1,0 +1,174 @@
+TURN89 -- A DIRECT FINITE-WILSON ROUTE TO THE MISSING NONZERO CHANNEL
+20 October 2026. Mathematical research record.
+
+The nontrivial continuum Yang--Mills existence proof is NOT complete.
+This pass proves a more usable sufficient criterion for a positive-energy
+scalar sector, on the original finite Wilson sequence. It also proves a
+same-law conditional-noise estimate. Neither result supplies a uniform
+lower bound or the remaining local Yang--Mills field construction.
+
+The public QED3 material inspected in TURN88 does not provide that lower
+bound for four-dimensional nonabelian Wilson theory. Its source identities
+and parameter scalings must retain their stated models and hypotheses.
+The prior repository check, at head2a42da2e0677948ea48fbfe7126b94be5e884f79,
+remains the last check; no new repository refresh is claimed this turn.
+No absent or inaccessible paper is being treated as the present blocker.
+
+1. The new estimate worth pursuing
+
+Keep the original bounded slice probe phi_a(t) in[0,1], with the physical
+spatial Wilson-flow time, fixed spatial smear and fixed observable
+parameters from TURN88. The scalar's parameter g_* is not an identified
+renormalized coupling. Put n_a a approximately L>0 and define
+
+ G_a=(1/n_a) sum_(k=0)^(n_a-1) phi_a(k)
+                  -(1/n_a) sum_(k=n_a)^(2n_a-1) phi_a(k).
+
+The sufficient inequality is now entirely an ordinary original-law
+real-source curvature:
+
+ liminf_(a->0) Var_(full Wilson)(G_a)>0.                    TARGET
+
+The full law, its original normalizer, and a common cutoff/volume sequence
+are essential. The TARGET is not equal-time variance. It averages over a
+fixed physical duration and subtracts the next equally long average.
+
+If TARGET holds, choose v>0 strictly below its liminf, so Var(G_a)>=v
+eventually. For n_a>=4/v, the exact finite Wilson
+transfer spectrum has positive-pair mass at least v/4 in the physical band
+
+ epsilon=v/(8L),  Lambda=max{2epsilon,8/(Lv)}.
+
+After translating G_a to start at T0>0 and keeping T0+2L below the opposite
+reflection plane with a fixed physical buffer, its original reflected
+norm is at least
+
+ (v/4) exp[-2(T0+L)Lambda] (1-exp(-L epsilon))^2 >0.
+
+In these finite formulas L means the ACTUAL L_a=n_a a and T0 the actual
+lattice translation time. Uniform constants for L_a in[L_min,L_max] and
+T0,a<=T0,max are instead obtained by taking
+ epsilon=v/(8L_max), Lambda=max{2epsilon,8/(L_min v)},
+and the norm floor
+ (v/4)exp[-2(T0,max+L_max)Lambda](1-exp(-L_min epsilon))^2.
+The companion proof retains the actual finite mesh. At high energy the averaging kernel has an
+explicit2/n_a contact remainder; it is not silently discarded. At low
+energy its kernel is at most8LE. The backward finite-period variance
+term is nonpositive, while the backward reflected-norm term is positive.
+Those opposite signs make the finite-period implication rigorous.
+
+Thus TARGET would produce a positive-energy scalar state in the common
+infinite-time RP limit. It annihilates the entire zero-energy subspace,
+not just one chosen finite-volume vacuum. It would not by itself produce
+a local nonabelian YM4 field theory. TARGET remains UNPROVED.
+
+2. No extra ground-state order of limits for this reduction
+
+For actual physical transfer eigenvalues lambda_i>0, temporal period N,
+spacing a and P=Na, introduce the positive thermal pair measure
+
+ mu_a=Z_N^(-1) sum_(lambda_i>lambda_j)
+       lambda_i^N |Phi_ij|^2 delta_(a^-1 log(lambda_i/lambda_j)).
+
+Its mass is at most Var(phi)<=1/4. It is a measure of positive energy
+DIFFERENCES, not the spectral measure of a nonnegative thermal generator.
+
+For a positive normalized time profile in[T0,T1] and time shift
+delta_a in[delta_min,D], the forward kernel is
+ K_a(E)=[sum_k w_k exp(-akE)](1-exp(-delta_a E)).
+Exact spectral pairing expresses the original boundary correlation and
+reflected norm as int K_a mu_a and int K_a^2 mu_a with backward terms.
+Their errors satisfy, respectively,
+
+ 0<=kappa_a^+-kappa_a<=D/[4e(P-T1-D)],
+ 0<=N_a-N_a^+<=D^2/[e^2(P-2T1-2D)^2].
+
+These are uniform in spatial volume, cutoff, coupling and transfer gap.
+When P_a->infinity they vanish along the same simultaneous regulator
+sequence. No prior ground-state limit at each spatial cutoff is needed.
+Uniform positive kappa_a or N_a is equivalent to positive mu_a mass in
+some fixed band0<epsilon<Lambda<infinity. The measure can be extracted
+against continuous kernels vanishing at both zero and infinity.
+None of these equivalences proves its positive mass.
+
+3. What the exact auxiliary representation contributes
+
+The exact two-Hubbard--Stratonovich joint has the original Wilson marginal
+mu and the interacting auxiliary marginal nu. Conditional on the complete
+real auxiliary record xi, the original links have independent tilted
+Haar laws. Let m_t=E[phi_t|xi] and epsilon_phi=E Var(phi_t|xi).
+Different original time slices have disjoint original spatial links, so
+
+ Var_mu G_a = Var_nu[(1/n_a)sum_first m_t-(1/n_a)sum_second m_t]
+                                              +2epsilon_phi/n_a,
+ 0<=2epsilon_phi/n_a<=1/(2n_a).
+
+For every real source s the log partition functions also differ by at
+most s^2/(4n_a), with the original one larger. This follows from exact
+conditional independence and the bounded-variable exponential estimate;
+no auxiliary Gaussian approximation or derivative interchange is used.
+
+Consequently TARGET is equivalent to a positive limiting variance of the
+same time-averaged CONDITIONAL MEANS under the full interacting nu.
+All independent conditional link noise is paid by the vanishing contact
+term. A useful calculation must therefore control this correlated mean
+channel. Concentration of the individual conditional link laws is not
+a lower bound on it.
+
+A new quadratic estimate for that conditional noise is also available:
+
+ E_nu Var(B|xi) <=20 A_beta E_mu sum_e |D_e B|^2,
+ A_beta=(1+2beta)^(-1)+min{1,192 exp(-beta/3200)}.
+
+Here D is the Pauli/2 product gradient, and the right side is under the
+ORIGINAL Wilson law. The proof combines an explicit Poincare inequality
+for a tilted S3 law with the earlier current tail uniform conditional on
+EVERY original U. This is a squared-gradient sum without the spatial
+volume loss in an absolute linkwise sum. Nevertheless, for adjacent
+original slices its exact physical form is
+
+ E_mu(phi_1-phi_0)^2/2
+       =epsilon_phi+E_nu(m_1-m_0)^2/2.
+
+The last correlated increment has not been bounded. The gradient theorem
+does not replace physical time by the auxiliary sampling algorithm.
+
+4. The original native-RG source issue remains
+
+The original signed boundary correlation is exactly
+ Z^(-1) int w_B G Z_+ Z_F dB.
+Its original boundary measure and opposite-half factor stay in the row.
+On a completed positive old-record lift, normalized new reference kernels
+cancel from a passive original moment. A new reference covariance alone
+cannot create its leading term. Replacing an old source by a current
+proxy keeps the actual source difference and unfinished continuation.
+
+The direct Bałaban-source check this turn also rules out treating the
+first eligible R component as merely a bare weak-collar event: eligibility
+already carries earlier RG history. The retained bare-collar probability
+does not bound all those native history predicates. This is a scope check,
+not a new no-go theorem or a proof that a native estimate is impossible.
+
+5. Outstanding mathematical work
+
+The present finite-source lower bound is still missing. The Gaussian
+boundary comparison from TURN88 is another sufficient route, and remains
+unproved; it is not made mandatory by this pass. Neither strict finite
+positivity, upper action moments, nor the conditional current estimates
+gives a uniform positive TARGET.
+
+Even after such a lower bound, the task still requires a common continuum
+and volume construction of the intended local gauge-invariant observables,
+physical scale/coupling matching and nonabelian interaction, Euclidean
+rotations, full joint source and contact/separated-point control, and
+the appropriate reconstruction. Fixed spatial-flow scalars select a time
+direction and are spatially nonlocal. A nonzero scalar law alone does
+not meet the user's Yang--Mills goal.
+
+This turn's progress is the removal of an unnecessary spectral limit
+ordering and a precise finite-law variance consumer, together with a
+same-law quadratic noise estimate. It is not an existence proof, and
+does not justify describing the remaining work as merely presentation.
+
+Detailed proofs follow in this report. Independent reviews certify only
+the displayed finite results and conditional implications, not full YM4.

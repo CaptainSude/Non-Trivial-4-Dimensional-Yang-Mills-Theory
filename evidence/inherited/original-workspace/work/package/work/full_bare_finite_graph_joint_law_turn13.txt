@@ -1,0 +1,422 @@
+THE FULL BARE FINITE-GRAPH WILSON JOINT LAW
+19 October 2026. Fixed-graph theorem; no refinement or volume uniformity.
+
+0. PRECISE RESULT AND SCOPE
+
+Let K be a finite connected cubical complex whose two-skeleton is simply
+connected. A finite rectangular box with its plaquettes has this property.
+Use free boundary conditions: every graph link is integrated, and gauge
+transformations are allowed at every vertex. Fix one vertex and a spanning
+tree only to give an exact rooted gauge parametrization. Let G be a compact
+connected semisimple Lie group and rho a faithful finite-dimensional unitary
+representation. Normalize each link Haar measure to have mass one.
+
+The full Wilson probability law, including all configurations outside any
+small coordinate window, has a unique zero-action point in the rooted tree
+quotient. Its Hessian there is strictly positive. Consequently, for this
+FIXED graph,
+
+ Z(g) = c_K g^n (1+O_K(g)),
+ n=(number of edges-number of vertices+1) dim(G),       (0.1)
+
+and its complete compact-space distance from the identity has a Gaussian
+tail on scale g. Fixed normalized polynomial marks have bounded moments,
+exponentially small marked chart-complement tails, and Gaussian limiting
+Gram matrices. A finite reference family with linearly independent leading
+polynomials therefore has a uniformly invertible Gram matrix for small g.
+
+This is a JOINT law of all the rooted link variables, not the fluctuation
+law conditional on an already specified coarse datum. No fine-refinement,
+large-volume, all-history, continuum, or physical-field-rank conclusion is
+included. Rooted quotient dimension n is the REAL dimension: if m denotes
+the number of non-tree edges, the denominator is g^(m dim G), not g^m.
+
+1. EXACT ROOTED TREE GAUGE AND PRODUCT HAAR
+
+Choose one orientation for each unoriented edge. For an edge e=(v,w), use
+
+ (h.U)_e = h_v U_e h_w^(-1).
+
+Choose a root r and orient the spanning tree away from r, reversing edge
+variables when necessary. Define k_r=1 and, recursively on tree edges,
+
+ k_w=k_v U_(v,w).
+
+Then W_e=k_v U_e k_w^(-1) equals 1 on every tree edge. The remaining W_e,
+one for each non-tree edge, are unrestricted elements of G. Conversely,
+
+ U_e=k_v^(-1) W_e k_w,       W_e=1 for tree edges.      (1.1)
+
+Thus the full link space is smoothly and bijectively parametrized by
+G^(|V|-1) times G^m. The Jacobian statement is exact, with no local chart:
+
+ product_e dU_e = product_(v!=r) dk_v product_(e notin T) dW_e. (1.2)
+
+For tree variables this follows successively from left/right Haar
+invariance; conditional on those variables, every chord change in (1.1)
+also preserves Haar. Inversion on a reversed oriented edge preserves Haar.
+
+Every plaquette product changes by conjugation, so the action is independent
+of k. Integration over the k variables gives exactly one. In particular
+the full partition function and every gauge-invariant moment equal their
+integrals on the compact smooth rooted space
+
+                         X=G^m.                     (1.3)
+
+The quotient by gauge transformations with h_r=1 is free and is exactly X.
+The additional root gauge acts on all W_e by simultaneous conjugation.
+We DO NOT divide by that possibly singular orbit space. For physical
+observables we retain simultaneous-conjugation invariance on X. This does
+not produce a null Hessian at the identity: the conjugation orbit of the
+identity tuple is a single point.
+
+2. THE UNIQUE ZERO AND THE ROLE OF TOPOLOGY/FAITHFULNESS
+
+Write d_rho=dim rho and define
+
+ v(u)=d_rho-Re Tr rho(u),
+ S(W)=sum_(plaquettes p) v(W_p).                       (2.1)
+
+Fixed strictly positive plaquette weights may be included throughout.
+For a unitary matrix, each eigenvalue has real part at most one; equality
+of their total real part with d_rho forces every eigenvalue to be one.
+Thus
+
+ v(u)>=0,       v(u)=0 iff rho(u)=I iff u=1.           (2.2)
+
+Faithfulness is used in the last implication, including on the center.
+At zero action EVERY plaquette holonomy is therefore the identity in G.
+
+To see that every chord is then the identity in tree gauge, use the usual
+explicit presentation of the fundamental group of a finite cell complex:
+after collapsing the spanning tree, the chord loops generate pi_1, and
+the attaching loops of the two-cells give its relations. A flat link
+assignment defines a homomorphism pi_1(K)->G by path-ordered products;
+backtracking and each plaquette homotopy preserve the product. Since
+pi_1(K)=0, every based loop product is 1. The chord coordinates are exactly
+these based fundamental-loop products in the tree frame. Hence
+
+                    S(W)=0 iff W=1_X.                (2.3)
+
+This argument does not require G itself to be simply connected. No
+nontrivial bundle is introduced by this model: its variables are globally
+specified finite graph links. Conversely, nontrivial spatial cycles can
+carry zero-action global holonomy. A nonfaithful rho can permit nonidentity
+plaquette holonomies in ker rho. Neither situation is covered by (2.3).
+
+3. THE TREE-SLICE HESSIAN IS POSITIVE
+
+Use the positive invariant inner product on the Lie algebra
+
+ <X,Y>_rho=-Re Tr(d rho(X) d rho(Y)).                  (3.1)
+
+Faithfulness makes d rho injective, so this is positive definite. Put
+W_e=exp(x_e) on chords and x_e=0 on tree edges. For small x, the first
+variation of the logarithm of a plaquette is the signed ordinary coboundary
+
+ (d_1 x)_p=sum_(e in boundary p) incidence(p,e) x_e.
+
+Taylor expansion of the exact matrix product in (2.1) gives
+
+ S(exp x)=1/2 sum_p |(d_1 x)_p|_rho^2 + O_K(|x|^3)
+         =1/2 <x,H x> + O_K(|x|^3).                  (3.2)
+
+Here H is the Hessian on the non-tree coordinates, with the inner product
+in (3.1) on each chord. There is no replacement by an infinite-volume or
+nearest-neighbor inverse.
+
+If d_1 x=0, the Lie-algebra-valued closed one-cochain x is exact: integrate
+x along paths from the root. The result is path independent because its
+sum around every plaquette is zero and pi_1(K)=0. Thus x=d_0 a, with a_r=0.
+Since x vanishes on the spanning tree, a is identically zero. Hence x=0.
+Therefore H is a strictly positive finite matrix:
+
+                  0<lambda_K I<=H<=Lambda_K I.       (3.3)
+
+Choose a fixed simultaneous exponential chart B_(2r) in the chord Lie
+algebra, small enough that the coordinate map is injective, its image is
+conjugation invariant, and
+
+ c_K I <= D^2 S(exp x) <= C_K I       (|x|<2r).        (3.4)
+
+In particular c'_K |x|^2<=S(exp x)<=C'_K |x|^2 there.
+The pullback of product Haar is j(x) dx, with j smooth, positive and
+bounded above/below on this chart, and j(0)>0. All constants in this
+paragraph may depend on K, its chosen tree, G and rho.
+
+4. THE FULL NORMALIZER, NOT A WINDOW NORMALIZER
+
+Define on the COMPLETE compact rooted space
+
+ Z(g)=int_X exp[-S(W)/g^2] dW,
+ mu_g(dW)=Z(g)^(-1) exp[-S(W)/g^2] dW.                (4.1)
+
+By compactness and (2.3), the complement of any fixed neighborhood O of
+1_X has a strictly positive action gap:
+
+             Delta_O=min_(W notin O) S(W)>0.         (4.2)
+
+Take O=exp B_r. The integral over O is at most C_K g^n by (3.4) and the
+Haar bounds. The remaining integral is at most exp[-Delta_O/g^2]. For a
+lower bound integrate only |x|<=g, for g<=r: its Haar volume is at least
+c_K g^n and its action is at most C_K g^2. Thus, for 0<g<=g_0,
+
+                  c_K g^n<=Z(g)<=C_K g^n.            (4.3)
+
+In particular the normalized complement estimate, with its denominator,
+is explicitly
+
+ mu_g(X\O)<=C_K g^(-n) exp[-Delta_O/g^2].             (4.4)
+
+It is incorrect to drop the factor g^(-n) before proving (4.3); it is
+harmless after that proof, being absorbable into half the fixed action
+gap. If m=0, the rooted space is a point and the conclusions have their
+trivial n=0 interpretation.
+
+For the asymptotic constant, rescale x=g y in O. With H from (3.2),
+
+ Z(g)/g^n -> c_K^0=j(0)(2pi)^(n/2)(det H)^(-1/2).     (4.5)
+
+Indeed both S(g y)/g^2 and y.Hy/2 are bounded below by c|y|^2 on |g y|<r,
+and their difference has absolute value at most C g |y|^3. For nonnegative
+A,B bounded below by c|y|^2,
+
+ |exp(-A)-exp(-B)|<=|A-B| exp[-min(A,B)].
+
+Together with |j(g y)-j(0)|<=C g |y|, this gives an integrable O(g) error
+after multiplication by any FIXED polynomial weight in y. The excluded
+Gaussian tail and the compact complement in (4.4) are exponentially small.
+This proves (0.1) with the explicit constant in (4.5).
+
+5. GLOBAL GAUSSIAN AND MARKED TAILS
+
+Choose a bi-invariant Riemannian metric on G and its product metric on X;
+let d(W)=dist_X(W,1_X). It is invariant under simultaneous conjugation.
+By (3.4), chart comparability, (2.3), and compactness away from 1_X, there
+is a FIXED c_*>0 such that
+
+                      S(W)>=c_* d(W)^2              (5.1)
+
+on the whole compact space. This is not a global Hessian-convexity claim.
+On d(W)>=t, split the Boltzmann factor into equal halves and use (5.1):
+
+ mu_g(d>=t)
+ <= exp[-c_* t^2/(2g^2)] Z(sqrt(2)g)/Z(g)
+ <= C_K exp[-c_* t^2/(2g^2)]                         (5.2)
+
+for g small enough that both couplings lie in (4.3). This bound includes
+all chart-complement configurations without altering their law.
+
+Integrating (5.2), or using Cauchy-Schwarz and the resulting moments,
+gives for every fixed k<infinity
+
+ E_mu (1+d/g)^k <= C_(K,k),
+ E_mu [(1+d/g)^k 1_(d>=t)]
+       <= C_(K,k) exp[-c_* t^2/(4g^2)].               (5.3)
+
+Thus every mark satisfying |M_g(W)|<=A(1+d(W)/g)^k has the corresponding
+normalized marked tail. Any fixed smooth R which vanishes to order d_0
+at 1_X satisfies |R(W)|<=C_R d(W)^(d_0) globally: use Taylor locally and
+boundedness with d bounded away from zero outside the chart. Consequently
+g^(-d_0)R is covered by (5.3). Products of a fixed finite number of such
+marks are also covered, with the sum of their degrees.
+
+For a mark known only to satisfy a global bound A g^(-D), (4.4) instead
+gives the explicit full complement estimate
+
+ E_mu[|M_g| 1_(X\O)]
+ <= C_K A g^(-D-n) exp[-Delta_O/g^2].                 (5.4)
+
+For any fixed D this is smaller than every prescribed power of g. The
+degree is fixed before taking g small; no all-degree uniform bound is
+being asserted.
+
+6. WEIGHTED GAUSSIAN LIMITS AND FINITE GRAM INVERTIBILITY
+
+Let Y_g=log(W)/g on O and set Y_g=0 on its complement. The latter convention
+is only a way to discuss a probability pushforward, not a change to mu_g.
+Let gamma_H be the centered Gaussian on R^n with covariance H^(-1).
+The estimate used in (4.5), normalization by the full Z(g), and (4.4)
+show that for every fixed k,
+
+ int (1+|y|^k) |d Law(Y_g)-d gamma_H|(y) <= C_(K,k) g. (6.1)
+
+The absolute measure includes the small atom at zero contributed by the
+chart complement. Equation (6.1) is a weighted total-variation statement,
+not just weak convergence.
+
+Let R_1,...,R_d be fixed smooth functions on X. Suppose R_a vanishes to
+order d_a, and in the chart
+
+ R_a(exp x)=P_a(x)+O(|x|^(d_a+1)),                    (6.2)
+
+where P_a is homogeneous of degree d_a. Allow R_0=P_0=1,d_0=0 when a
+constant reference is wanted. Put F_(a,g)=g^(-d_a) R_a. Taylor's theorem,
+the global marked bounds and (6.1) yield, for every fixed finite product,
+
+ E_mu product_a F_(a,g)^(k_a)
+  =E_gamma product_a P_a(Y)^(k_a)+O_(K,R,k)(g).         (6.3)
+
+The same statement holds with complex conjugates. One may first compare
+F_(a,g) to P_a(Y_g) in each fixed L^p: the chart remainder is bounded by
+C g |Y_g|^(d_a+1), and the complement has the bound (5.4). Then apply
+Holder and (6.1). This proves (6.3) without discarding any measure sector.
+
+In particular, for the full Hermitian Gram matrix
+
+ G_g(a,b)=E_mu conjugate(F_(a,g)) F_(b,g),
+ G_0(a,b)=E_gamma conjugate(P_a(Y)) P_b(Y),
+
+one has ||G_g-G_0||<=C g. If the polynomials P_a are linearly independent,
+G_0 is strictly positive: a nonzero polynomial cannot vanish almost
+everywhere for a Gaussian with positive density on R^n. Hence for small g
+
+        1/2 lambda_min(G_0) I<=G_g<=C I.              (6.4)
+
+For centered references use P_a-E_gamma P_a; the analogous covariance
+claim requires independence MODULO constants. All identities/contact
+coefficients and centering constants must be retained. A zero leading
+polynomial, a Bianchi relation, or another actual linear relation cannot
+be removed by calling the formal labels independent.
+
+7. EXACT GLOBAL GAUGE-INVARIANT REFERENCE FUNCTIONS
+
+The finite reference family in Section6 need not be an arbitrary gauge-
+coordinate family. Let P_a be any specified homogeneous polynomial in
+the chord Lie-algebra coordinates invariant under simultaneous Ad(G).
+Choose a smooth Ad-invariant cutoff chi supported in exp B_r and equal
+to one on exp B_(r/2). Define exactly on X
+
+ R_a(W)=chi(W) P_a(log W),                            (7.1)
+
+extended by zero outside the chart. It is globally smooth because the
+cutoff has compact support strictly inside the chart, and it has precisely
+the prescribed leading polynomial. On the original link configuration,
+each W_e is the based Wilson-loop holonomy associated with the tree and
+that chord. Under the FULL gauge group these loops conjugate together at
+the root. Therefore (7.1) is an exact gauge-invariant smooth function of
+based loop holonomies, not merely an infinitesimal invariant.
+
+The cutoff can be chosen from the invariant product norm of the logarithms.
+Neither its support nor a product link-coordinate window is silently
+declared gauge invariant before tree reduction; the globally defined
+function (7.1) itself is invariant. The measure remains the FULL Wilson
+measure; chi belongs only to the chosen observable.
+
+This realizes every fixed independent invariant polynomial family as
+finite global reference functions with the Gram bound (6.4). It does not
+claim that these functions are already the desired continuum differential
+polynomials, that their number is uniform in refinement, or that any
+particular formal list of continuum fields has independent leading
+polynomials on this graph. Those are separate matching questions.
+
+8. WHY THIS IS A JOINT-LAW ATTACHMENT
+
+For each fixed g>0, (4.1) is an actual probability law on all of X. Every
+finite family of the global functions (7.1), and every product thereof,
+is integrable and has its ordinary full joint moments under that same
+law. Since each function is bounded for fixed g, the joint moment-
+generating function is entire in finitely many source parameters.
+
+Any genuinely defined measurable coarse map q on X supplies the actual
+joint law (id,q)_*mu_g and its coarse marginal q_*mu_g. Conditional laws
+are disintegrations of this joint law, rather than replacements for it.
+There is no claim here that a locally defined block logarithm has already
+been extended to a physical global q.
+
+If such a q is smooth near 1_X, has q(1_X)=1, and in compatible local
+coordinates obeys log q(exp x)=Qx+O(|x|^2), define Z_g=log q(W)/g when
+q(W) lies in a chosen bounded coarse logarithm chart, and Z_g=0 otherwise.
+This is only a bookkeeping random coordinate; neither q nor mu_g changes.
+Continuity near 1_X makes the omitted event a subset of a fixed fine
+chart complement, so it has an exponential bound. The same estimates give
+Z_g-QY_g=O(g) in every fixed L^p and hence the finite joint Gaussian limit
+(Y_g,Z_g)->(Y,QY), in distribution and in every fixed polynomial moment.
+No joint TOTAL-VARIATION claim is made for a nonlinear q: its graph and
+the limiting linear graph can support mutually singular joint measures.
+If Q is surjective the limiting
+coarse covariance Q H^(-1) Q^T is positive. This observation is limited
+to a fixed, actually specified map and fixed graph. It supplies neither
+an iterated source construction nor uniform control of q as the graph
+is refined.
+
+A concrete exact q is provided by compatible_tree_bare_block_map_turn13.txt:
+embed a coarse graph by internally disjoint fine edge paths, lift its
+spanning tree, remove one fine edge from each coarse-chord path, and extend
+the remaining embedded tree to a fine spanning tree. In these compatible
+quotients, each coarse chord holonomy is exactly the corresponding selected
+fine chord variable. Thus q is a GLOBAL coordinate projection G^m->G^m_c,
+and its logarithm is the surjective linear projection Q. The original full
+Wilson density is then a genuine joint density in selected and unselected
+variables. This supplies an explicit fixed-graph example of the preceding
+joint-law statement, rather than an unspecified conditional fiber.
+
+9. BOUNDARY, TOPOLOGY, AND REFINEMENT LIMITATIONS
+
+(a) Free boundary means all graph links are integrated. If exterior links
+are frozen and gauge transformations must be 1 on fixed vertices, the
+rooted tree argument must preserve every frozen link and its holonomy.
+It cannot gauge-transform frozen exterior data. With compatible identity
+data on a connected fixed boundary subcomplex, the corresponding relative
+flat problem can have the same uniqueness: H^1(K,B)=0 when K is simply
+connected and B is connected. Disconnected frozen root components can
+leave continuous relative flat transports. We have not included arbitrary
+boundary data in the theorem.
+
+(b) Small nonzero fixed boundary data would require a boundary-dependent
+minimizer and tails centered there. Fixed nonzero boundary data cannot be
+treated as lying in an identity-centered shrinking O(g) window. Frustrated
+boundary holonomy may eliminate zero-action configurations altogether.
+
+(c) A periodic box has harmonic/global holonomy modes. They must be retained
+or separately fixed; (3.3) on the stated coordinates would fail. Faithful
+rho eliminates invisible central plaquettes, not topological global modes.
+
+(d) lambda_K, the chart radius, the action gap, and every moment/Gram
+constant may deteriorate with K. Compactness alone has no uniform content
+when the number of fine links grows. In particular path-holonomy blocking
+is not a substitute for native volume averaging and its matched precision:
+the compatible-tree construction just described permits choosing a coarse
+chord whose path has M fine links. Put exp(theta H/M) on those links and
+identity on all other links. Every other coarse edge remains identity;
+a coarse plaquette containing the chord has nonidentity holonomy
+exp(+/-theta H). At most 6M fine plaquettes change in four dimensions,
+each by O(theta^2/M^2), so the total action is O(theta^2/M). This is a
+gauge-invariant nonflat coarse datum, not a gauge-dependent open-path
+claim. It is proved explicitly in Section7 of the compatible-tree note.
+Thus fixed-graph Laplace bounds cannot establish uniform prior-refinement
+coarse coercivity for this map.
+
+(e) The argument is a bare positive Wilson-law theorem. A signed large-field
+history is not this law, and a retained fluctuation integral at an already
+fixed coarse value is not the joint law constructed here. Adding inherited
+interactions, constraints, exact blocked action, or source-dependent chart
+factors requires a new theorem controlling their WHOLE compact law.
+
+10. WHAT HAS ACTUALLY BEEN ESTABLISHED
+
+All statements above follow from exact finite Haar disintegration, the
+faithful Wilson action, elementary cellular topology and finite-dimensional
+Laplace estimates proved here. The proof does not import an unverified
+Yang--Mills renormalization estimate. It supplies a complete fixed-graph
+bare joint source law with controlled small-g local coordinates AND their
+original compact complement. The substantive next attachment is to compare
+an actual blocked joint law, its low reference matrix and its native source
+norms uniformly along refinement; this theorem does not assert that step.
+
+11. INDEPENDENT AUDIT STATUS
+
+The parent read the complete proof and passed its fixed free-boundary,
+simply connected graph scope, including the full normalizer, global marked
+tails and weighted Gaussian/Gram bounds. The public-argument agent
+independently checked the exact rooted quotient, residual conjugation,
+faithful unique-zero argument, Hessian positivity, g^n denominator, global
+S>=c d^2 bound, partition-ratio tail and Gram proof, and likewise passed
+them. Their shared clarification about defining the coarse logarithmic
+random coordinate off its local chart has been incorporated in Section8.
+
+The source-audit agent separately confirmed the topology/Hessian argument
+and the fixed-boundary cautions: pi_1(G) does not obstruct the globally
+defined finite-link argument; disconnected frozen boundary components
+can retain relative flat transports. No audit promotes these results to
+uniform fine-refinement constants or a full renormalized joint law.

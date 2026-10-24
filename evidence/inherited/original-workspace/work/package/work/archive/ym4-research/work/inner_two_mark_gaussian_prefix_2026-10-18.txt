@@ -1,0 +1,353 @@
+INNER HOMOGENEOUS ONE/TWO-MARK GAUSSIAN COMPARISON
+18 October 2026. Working proof for the admitted INNER homogeneous prefix.
+Outer annuli, source derivatives of R-operations, and the endpoint integral
+are separate. They are not identified by freezing unmarked correction terms.
+
+1. EXACT OPERATOR AND ALREADY AUDITED INPUTS
+
+Fix a macro length q, L=ell^q, the actual real couplings, the actual gauge
+normalizations, and the independent retained INNER windows. The operator is
+the raw q-kernel of raw_q_block_cluster_response, Sections 1--5 and 9, with
+the actual source-free input state. Any source-free intermediate output
+factor is kept in that raw integral. Its conditional expectation is the
+ratio of this raw integral with and without the distinguished insertions.
+It is not a product with changing conditional denominators omitted.
+
+For the present prefix, all source-dependent annular and R derivatives are
+set aside as explicit error births. In particular, a frozen unmarked h_r
+does not identify the derivative of the marked outer kernel. This theorem
+compares the inner marked kernels only.
+
+The inputs used below are specific proved constructions in the current
+working notes:
+ (a) The actual raw q-chart and its same-exponent support preparation,
+     fixed physical grouping, q-species Gaussian majorant and normalizers
+     from raw_q_block_cluster_response. The geometric chart has a fixed
+     complex radius independent of g,b; the noise window has gT<<b.
+ (b) The source connected expansion with finitely many distinguished
+     polynomial-growth marks from complex_marked_gaussian_response,
+     Sections 2--4, and local_two_source_susceptibility, Section 2. It
+     includes all normalized denominators and moments of any fixed total
+     degree. No marked polynomial is independently exponentiated.
+ (c) The actual inherited physical interaction has norm <=K b^2 on the
+     admitted old ball. The complete q-law, after static values and its
+     quadratic Gaussian AT THE STATIC BACKGROUND B are extracted, has
+           V_g=g O+g^2 R,
+     O odd of degree <=3, R of polynomial growth degree <=4, with bounded
+     localized coefficient norms. This is the fixed-radius geometric
+     expansion plus the inherited-interaction Taylor bound; real coupling
+     ratios over fixed q add only O(g^2) quadratic terms. Centered retained
+     windows are even under simultaneous reversal of all noises.
+     The covariance in this assertion is C_B. It is not the flat C_0:
+     C_B-C_0=O(b) is kept in the geometric background comparison below.
+     No claim V_g=g O+g^2 R about the flat Gaussian is made at nonzero B.
+     For clarity, the inherited E contribution is NOT O(g^2) at nonzero
+     B. Its first noise derivative is g DE(P(B))[Cx]=O(g b |x|), and
+     belongs to g O. Cauchy with the fixed fractional b-margin gives
+     D^r E=O(b^(2-r)); thus the even second term is O(g^2|x|^2), the
+     odd cubic is O(g^3 b^-1|x|^3), and the exact fourth-order remainder
+     is O(g^4 b^-2|x|^4). The cubic can also be included in g O, with
+     coefficient O(g^2/b), uniformly bounded when g/b is small; the
+     fourth remainder is part of g^2 R since (g/b)^2 is bounded.
+     This is a Taylor expansion in the ONE joint noise-amplitude
+     variable, on g|x|<c b; it does not claim an entire polynomial E.
+     The remainder has polynomial GROWTH on the retained set. Every
+     distinguished remainder stays on its retained conditioning set,
+     so the finite-degree Gaussian moment proof applies to it without
+     evaluating E outside that set or exponentiating a cubic alone.
+ (d) Whole externally rooted gauge-invariant physical marks have the
+     uniform direct-prefix neutral transport proved in
+     externally_rooted_physical_mark_transport, Sections 1--5. Its dated
+     prefix identity is the actual classical semigroup in Section 6;
+     constants are not multiplied once per age.
+ (e) A rooted quadratic form Q satisfying the linear gauge Ward identity
+     has the covariant Wilson-loop completion C(Q) constructed in
+     rooted_quadratic_covariant_completion. It has exactly quadratic jet Q,
+     norm <=C ||Q|| b^2, and ||C(Q)-Q||<=C ||Q|| b^3. Its geometric analytic
+     radius is fixed. It is a whole invariant functional, not an auxiliary
+     reference-covariant link-mass function.
+
+Fix all working support/cardinality exponents first. The q-preparation
+compresses old carriers and supplies a larger intermediate exponent. Spend
+one fixed reserve on connected clusters/moments, one on quadratic-jet
+extraction and completion, and retain the working exponent at output.
+Increase q once as in (a). This is a same-working-norm statement; repeatedly
+applying the smaller-radius primitive theorem would not prove it.
+
+The Gaussian references use a SEPARATE stronger kernel reserve. They are
+not defined by taking the Hessian of a previously completed output and
+repeating its loss of exponent. A first reference is the direct linear
+stationary transport of the original rooted S_M quadratic density.
+The uniform complete C1 exponential H_M kernel and the linear Ward
+identity give its rooted h^4 bound in a fixed stronger kernel norm:
+subtract the constant connection by one linear gauge, use the complete
+spatial difference H_M(x)-H_M(z), and spend a fixed diameter polynomial.
+For a mixed reference birth the two first references and the localized
+Gaussian covariance join their supports with the same stronger tree
+reserve. Its subsequent transport is again one direct linear prefix.
+The B,Q sums below therefore bound these stronger quadratic kernels
+uniformly. Choose that reference exponent below the H/covariance decay
+rate but above the fixed exponent required by the Wilson-loop completion.
+Completion then lands in the interacting working norm at every date;
+the free reference itself is always kept in its stronger kernel form.
+
+2. TWO LABELS RETAIN THEIR CONNECTING EXPONENTIAL
+
+For supported distinguished coefficients A_H and B_K, keep H,K in the
+retained conditioning set. In the normalized connected logarithm, a term
+with both nilpotent labels has a connected union joining H to K. Its source
+majorant contains exp(-kappa length(tree)). Use half of the unused tree
+reserve to pay dist(H,K); sum the remaining weighted connected union as in
+the one-root proof. All Gaussian moment factors are fixed-degree polynomials
+of its carrier size and are paid by another fixed part of the reserve.
+The result, before summing the two distinguished supports, is
+
+ ||Cov(A_H,B_K)||_out
+       <=C alpha_H beta_K exp[-kappa' dist(H,K)].          (2.1)
+
+The same proof works for every fixed cumulant used below: retain a tree
+joining its distinguished supports. Interpolating unmarked V_g adds a
+rooted coefficient family with bounded norm; summing its support preserves
+the exponential between the two external distinguished labels. It does
+not introduce an ambient-volume factor.
+
+If a distinguished old carrier contains external label z, its propagated
+carrier is rooted near hz, h=L^-1. Distances from its internal field slots
+to hz cost at most h times its old diameter. The input diameter reserve
+pays these terms, so (2.1) gives the same connecting kernel between the
+two external output roots. Regrouping strict coefficients never discards
+the external labels. This is the extra content beyond an unweighted
+fixed-degree cumulant estimate.
+
+For broad packet sums this is exactly the overlap B_j of
+broad_packet_connected_witness, Section 2. The one-root and two-root
+coefficient profiles therefore remain available after the source expansion.
+
+3. EXACT FIRST AND MIXED DERIVATIVES
+
+Let A_j(W)(B) denote the normalized inner q-expectation of W evaluated
+on the actual oldest retained field at output B. Let
+B_j(W_1,W_2)=Cov_j(W_1,W_2). A source log density has the local expansion
+
+ X(z_1,z_2)=X(0)+z_1 W_1+z_2 W_2+z_1 z_2 W_12+... .
+
+Direct differentiation of the ratio gives, exactly,
+
+ W_a^+ = A_j(W_a),
+ W_12^+ = A_j(W_12)+B_j(W_1,W_2).                       (3.1)
+
+Subtract the value at B=0 from each output and keep that value in the
+corresponding scalar source-vacuum ledger. Write Pi F=F-F(0). Thus the
+nonvacuum maps are Pi applied to (3.1), while the mixed vacuum increment is
+
+           [A_j(W_12)+B_j(W_1,W_2)](0).                 (3.2)
+
+Source-free prefactors cancel in these ratios or remain in their exact
+base law. Source-dependent prefactors do NOT cancel unless their
+derivatives have explicitly been included in W_a,W_12 or the tail births.
+
+The exact physical output is gauge invariant when the complete input is.
+For an external label z, or pair z_1,z_2, the whole corresponding derivative
+of the invariant generating action retains that property. Its strict
+coefficients need only be constant-color averaged. Subtracting their
+constants and constant-color averaging kills their first field jets without
+altering the whole vacuum-subtracted scalar. This is the output class
+needed for (d); no nonlinear gauge invariance of individual coefficients
+on localization contours is asserted.
+
+4. ONE-STEP ANALYTIC ESTIMATES WITH THE CORRECT WEIGHTS
+
+Use a fixed block and suppress its index. Let mu_a=||W_a||<=M_a b^2,
+mu_12=||W_12||<=M_12 g^2 b^2. The exact supported Taylor formula is
+
+ Delta W_a := W_a(P(B)+noise)-W_a(P(B))
+      = g L_a + g^2 Q_a + (g^3/b) C_a + (g^4/b^2) D_a,   (4.1)
+
+where L_a is odd linear, Q_a even quadratic, C_a odd cubic, and D_a has
+degree-four growth. Their coefficient bounds are respectively
+C M_a b, C M_a, C M_a, C M_a. The notation in (4.1) denotes the actual
+nonlinear chart Taylor expansion, not addition of link logarithms. The
+radius margin is supplied by (a). All coefficients retain their external
+root, analytic background norm, and complete support families.
+
+The normalized interpolation d<t F>/dt=Cov_t(F,V_g), and its cumulant
+versions, are applied only for 0<=t<=1 to the original stable V_g. For
+example an odd Gaussian covariance is zero at t=0 and gains a g after one
+interpolation. An even covariance differentiated against the odd O has
+zero initial value and gains a second g after one more interpolation.
+The degree ceiling is finite (at most 11 for the displayed covariance
+comparisons), so input (b) applies with constants independent of T.
+
+These formulas give
+
+ ||Pi(A(W)-W(P))|| <= C (g/b)^2 ||W||,                  (4.2)
+ ||B(W_1,W_2)|| <= C g^2 b^2 M_1 M_2.                 (4.3)
+
+The second bound is the FULL-background size. At B=0 all L_a vanish
+because the first jets of the whole marks vanish. Its vacuum instead
+starts at g^4. Constant-color preparation permits use of this statement
+coefficientwise. Likewise
+
+ |A(W_12)(0)| <= C g^4 M_12.                           (4.4)
+
+The same estimates hold with the external joining kernel in (2.1).
+For (4.2), the odd g L term needs one interpolation and costs O(g^2 M b);
+the quadratic remainder costs O(g^2 M). This is bounded by its stated
+right side. For (4.3), subtracting static values in the covariance leaves
+two increments; their leading product has size g^2 b^2, and the remaining
+terms have additional g/b factors. Equations (4.4) and the flat g^4
+covariance use the zero first jets. Normalization is already built into
+each identity; a bound on unnormalized numerators would not suffice.
+
+5. MATCH TO COMPLETED GAUSSIAN QUADRATIC MARKS
+
+Let H be the actual linear stationary prefix at zero background and Cx its
+flat centered Gaussian fluctuation, in the source trace/coarea normalization. For rooted quadratic
+forms Q_1,Q_2,Q_12 define
+
+ Q_a^+ = Q_a(HB),
+ L_a^G(B,x)=D Q_a(HB)[Cx],
+ Q_12^+ = Q_12(HB)+Cov_G(L_1^G(B,x),L_2^G(B,x)),        (5.1)
+
+and the mixed scalar Gaussian increment
+
+ c_12^G = g^4 [ E_G Q_12(Cx)
+                         +Cov_G(Q_1(Cx),Q_2(Cx)) ].     (5.2)
+
+Here the mixed nonvacuum reference is g^2 C(Q_12). With varying real g_j,
+use the corresponding explicit ratios in (5.1)--(5.2), or compare all g_j
+to one reference g_* as below. These are identities for quadratic Gaussian
+marks, including the mixed conditional response. They are not obtained by
+dropping the second derivative of the effective action.
+
+The forms in (5.1) have the linear gauge Ward identity. H maps coarse
+linear gradients to the corresponding fine gauge gradients; Q_a kills
+those gradients. Therefore L_a^G vanishes for a pure-gauge background, and
+the mixed quadratic term does too. Completion (e) consequently applies
+to every reference form in this recursion.
+
+For each fixed q,
+
+ ||C(Q_a)(P(B))-C(Q_a^+)|| <= C M_a b^3.                 (5.3)
+
+Both functions are genuine invariant whole marks and have the SAME
+quadratic jet. Their cubic remainder bound follows from the fixed
+geometric analyticity of P and C(Q), not from Cauchy on a shrinking b-ball.
+The same statement applies to a mixed completed mark, with extra g^2.
+
+For the completed pair, the full-background leading Gaussian covariance
+g^2 Cov_G(L_1,L_2) has quadratic jet
+g^2 Cov_G(L_1^G,L_2^G). Its difference from the completion of that jet is
+O(g^2 b^3 M_1M_2). Indeed all mark completions, geometric chart coefficients,
+and the static Gaussian covariance are analytic on a fixed geometric ball;
+the remainder in their B expansion starts at degree three. The exact
+non-Gaussian corrections have relative size
+
+                    eta=C[(g/b)^2+g^2+e^-cT^2].        (5.4)
+
+To verify (5.4): the even leading pair g^2 Cov(L_1,L_2) changes only by
+O(g^4 b^2) after the two parity interpolations; the odd g^3 L--Q pair gains
+an extra g; Q--Q and L--C terms cost O(g^4). Dividing by g^2 b^2 gives
+the asserted bound. At B=0 the leading g^4 Q--Q term has exactly the
+parity comparison of local_two_source_susceptibility, Section 3A.
+The retained-window removal is its connected cutoff-only tail estimate.
+Keeping the retained Gaussian instead omits that last comparison.
+
+Write now
+
+ W_a=C(Q_a)+R_a,            ||R_a||<=e_a b^2,
+ W_12=g^2 C(Q_12)+R_12,     ||R_12||<=e_12 g^2 b^2.     (5.5)
+
+The residuals are genuine invariant whole marks; this is the reason for
+using completion instead of subtracting a noninvariant bare polynomial.
+The bilinear covariance bound (4.3) handles every term containing an R_a,
+with size C g^2 b^2(e_1 M_2+M_1 e_2+e_1e_2) and the joining kernel.
+Its flat vacuum size is the same coefficient times g^4. The one-mark
+estimates handle R_12. The remaining errors from (5.3)--(5.4) have relative
+size C(b+eta), in the first/mixed weights of (5.5), and in the g^4 vacuum
+weight. Thus the residual output belongs to the SAME invariant analytic
+class, with both source labels retained.
+
+6. FINITE-PREFIX SUM AND WHAT HAS ACTUALLY BEEN ESTABLISHED
+
+Consider N=O(log gamma_*) admitted macro steps, with bounded real coupling
+increments, b_j comparable to g_j(log gamma_j)^s, and gamma_j comparable
+to gamma_*. Let epsilon_0 bound the initial completed-Gaussian residuals.
+The direct-prefix classical identity and whole-age estimate (d) give a
+variation-of-constants expansion with one direct classical transport from
+each quantum/completion error birth to the final scale. A fixed static
+constant is not iterated N times. Discrete Gronwall then gives first-mark
+relative error
+
+       C epsilon_* ,   epsilon_*=epsilon_0+
+                         C sum_{j<N}(b_j+eta_j).        (6.1)
+
+For amplitude-one broad packets, the actual connected mixed births have
+the overlap B_j proved in broad_packet_connected_witness. Their transported
+mass Q_j is (3.2) of that note. Equations (4.3)--(5.5) and the same
+variation-of-constants expansion bound the sum of mixed vacuum errors by
+
+                         C g_*^4 epsilon_* .           (6.2)
+
+The geometric sums sum B_j and sum Q_j are finite. A second convolution
+of Q_j can add an age factor to its L^-4 late tail, but that factor is
+summable: sum_{n>=0}(1+n)L^-4n<infinity. At the endpoint it changes R_N^4
+only by a fixed polynomial in N. No factor rho^8 or rho^-8 occurs in (6.2).
+
+Comparing the Gaussian reference with fixed coupling g_* costs an
+additional O(N/gamma_*) in (6.2): the independent Gaussian band covariances
+have uniform relative precision changes O(N/gamma_*), and their rooted
+mixed sums are the same finite B,Q sums. One may retain the varying
+Gaussian reference instead until this final comparison.
+
+Since N=O(log gamma_*), sum_j(b_j+eta_j) tends to zero when s>1/2
+(and the retained tail is negligible). The rough retained-window analytic
+alternative eta~(gT/b)^2 also suffices when 2(s-t)>1. The moment proof above
+does not insert a T^2 into the natural mixed norm g^2 b^2.
+
+This proves the INNER homogeneous finite-prefix comparison from the actual
+kernel/source inputs (a)--(e), including same-family normalization, analytic
+support reserves, invariant residual closure, two-root connection and every
+mixed vacuum birth. It does not yet prove that a specified original Wilson
+observable has the required initial marked bounds, or bound the omitted
+outer/R marked births, or the final full endpoint expectation. Those are
+precisely the three remaining interfaces for turning (6.2) and the positive
+free packet covariance into an actual Wilson OS witness. The state-selection
+and diagonal-reflection issue for continuous rotations is independent of
+this inner comparison.
+
+7. INDEPENDENT CHECK OF THE FREE ENDPOINT AND MAXWELL NORMALIZATION
+
+The exact operator/affine and Fourier estimates in
+broad_packet_actual_gaussian_2026-10-18 were independently checked
+against the earlier flat Schauder, covariance and Maxwell-gap identities.
+In particular R kills the constant divergence of an affine connection;
+the exponential inverse identities extend to polynomial-growth fields;
+and the minimizing lift therefore reproduces affine curvature exactly.
+This identifies the LOCAL fine energy vertex, not merely its total
+action. The uniform remainder O(|x-y|^-5) gives the O(rho^-1) packet
+covariance error.
+
+The independent note gaussian_finite_prefix_infrared_remainder also
+passes audit. With the SAME dated action, exact Gaussian conditioning
+gives K_hi=K-J; the endpoint curvature contribution obeys |J|<=C h^4,
+where h=L^-N. The full curvature covariance on the separated packets
+is O(rho^-4). Wick's identity then bounds their difference by
+
+                    C g^4 [R_N^4+R_N^8], R_N=h rho.
+
+An equivalent verification uses the marked ledger here. On compatible
+cubic tori, after removal of the harmonic mode, q_M>=d*d gives a
+uniform diagonal bound for [q_M+d d*]^-1: the four-dimensional sum of
+|d(p)|^-2 is bounded uniformly in the side length. The thermodynamic
+integral has the same bound. The endpoint mixed quadratic coefficient
+has size g^2 times Q_N=O(R_N^4); its expectation is O(g^4 R_N^4).
+Fixed-degree Wick bounds the endpoint covariance of the two first
+quadratic coefficients by O(g^4 R_N^8). This explicitly retains the
+mixed conditional mark; omitting it would be incorrect.
+
+Consequently the finite Gaussian vacuum sum used in Section 6 has
+the positive full Maxwell packet limit with error
+O(g^4[rho^-1+R_N^4+R_N^8]), in addition to the stated finite-window
+coupling error. This closes the free infrared-conditioning interface.
+It does not apply a Gaussian estimate to the interacting endpoint.

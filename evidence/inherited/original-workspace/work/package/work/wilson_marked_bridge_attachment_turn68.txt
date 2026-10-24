@@ -1,0 +1,337 @@
+ORIGINAL WILSON ATTACHMENT OF SOURCE-WEIGHTED BAD BRIDGES
+TURN68. 20 October 2026. Root derivation; submitted for audit.
+
+RESULT
+
+The Hamiltonian marked-bridge theorem has a literal original
+finite-Wilson realization along a suitable temporal diagonal.
+The bridge event may use the ENTIRE finite periodic time board,
+not only a prescribed finite observation window. Its centered
+physical magnetic source contribution tends to zero at separated
+supports at fixed physical spatial volume, or when the explicitly
+retained boundary-cell count has an admitted polynomial growth
+bound. Section6A extends the selectable-diagonal conclusion to
+arbitrary finite spatial volumes by allowing a volume-dependent
+time buffer. This result concerns the same time-averaged magnetic
+action cells as the Hamiltonian theorem.
+
+The proof does not transfer isotropic native RG estimates to an
+anisotropic model. It uses the established actual Wilson temporal
+limit, bounded magnetic source moments, and a finite-window
+escape-event reduction. It does not bound the complementary
+regular-field covariance.
+
+1. REGULATORS AND ADMITTED INPUTS
+
+Take a countable sequence of finite periodic spatial SU2 lattices
+with spacings a->0, couplings g_a>0, and fixed spatial tile sides
+l_i>=2. Retain the even spatial periods and dyadic tile counts
+of hamiltonian_spacetime_moments_turn68.txt. Put V=l_1l_2l_3,
+c=9V/2, C=exp(c). The ground action cells are
+
+ X_(b,j)=(a g_a^2)^-1 int_(ja)^((j+1)a) S_b^cl(U_s) ds.
+
+The proved joint ground-law bound is
+
+ log E exp(sum t_c X_c)<=c sum t_c,    0<=t_c<=2.       (1.1)
+
+Fix touching adjacency, with degree D<=80 and duplicate neighbors
+removed. Its graph steps change the time-cell index by at most1.
+The argument applies to any specified local adjacency with that
+property and the same uniform degree bound.
+
+At a fixed spatial regulator, the original anisotropic Wilson
+transfer construction has beta_time=4a/(g_a^2 delta) and
+beta_space=4delta/(g_a^2a). Its normalized trace and positive
+ground transfer limit are those proved in TURN66.
+
+The additive-source theorem in separated_source_attachment_turn68
+gives convergence of all finite joint moments of bounded magnetic
+time-integrals, first making delta small and then the original
+finite time period large. All observables used below are gauge
+invariant multiplication sources at a fixed spatial regulator.
+
+2. A SINGLE THRESHOLD WITH THE REQUIRED CONTINUITY
+
+Choose a number R0>c+log D. A real-valued random variable has
+at most countably many atoms. There are only countably many
+spatial regulators in the chosen sequence and countably many
+ground action cells at each regulator. Therefore one can choose
+
+ R in (R0,R0+1)
+
+such that
+
+          P_ground,a(X_c=R)=0                         (2.1)
+
+for every cell at every chosen spatial regulator.
+
+Set q=exp(c-R). Then Dq<1 uniformly. This is an existence
+choice of threshold, not an assumed density theorem for
+time-integrated actions. It does not require uniform control
+of the probability of a thin interval around R.
+
+For any finite cell set, a Boolean event made from comparisons
+X_c>=R is continuous in the finite vector except on the union
+of its threshold hyperplanes. By(2.1), that union has zero
+limiting ground-law probability.
+
+3. SOURCES AND A BUFFERED OBSERVATION SLAB
+
+Take two real bounded compact spacetime profiles f_+,f_-, continuous
+or bounded piecewise continuous in time, with disjoint physical
+supports at strictly positive distance in
+the periodic spatial geometry. Their suprema M_+,M_- are
+uniformly bounded. At every cutoff assign each spatial
+plaquette to one containing closed spatial tile.
+
+Their ground integrated magnetic insertions are
+
+ Q_+=4/(ag_a^2) int sum_p f_+(s,p)h_p(U_s) ds,
+ Q_-=4/(ag_a^2) int sum_p f_-(s,p)h_p(U_s) ds.
+
+Let A_+,A_- be the cells reading these source profiles. For
+sufficiently small a they are disjoint, and
+
+ |A_+|,|A_-|<=K a^-4,   dist_G(A_+,A_-)>=d0/a          (3.1)
+
+with d0>0 after decreasing it to account for cell widths.
+Constants are measured in fixed physical units.
+
+Choose a finite time slab Lambda_a consisting of ALL spatial
+tiles and a finite interval of time cells. It contains both
+source supports and a fixed positive physical time buffer
+around them. Its two endpoint time layers form a boundary
+cell set B_a. The buffer can be chosen such that
+
+ dist_G(A_+,B_a)>=b0/a,       b0>0.                    (3.2)
+
+Let N_+,N_-,N_B denote these three cell counts. The source
+counts have the bound in(3.1). At fixed physical spatial
+volume, N_B<=K_B a^-3.
+
+If the spatial volume also grows along the sequence, retain
+N_B in the bound below. The stated a^-15 simplification
+requires fixed spatial volume or a corresponding polynomial
+volume bound. The theorem does not conceal a whole-volume
+boundary count.
+
+Within the finite induced graph on Lambda_a define two events:
+
+ E_in: a bad-cell path joins A_+ to A_-;
+ E_exit: a bad-cell path joins A_+ to B_a.
+
+Both events depend on finitely many action cells. They may
+be described using finitely many self-avoiding paths, and
+are Boolean functions of X_c>=R.
+
+4. SOURCE-WEIGHTED GROUND BOUNDS FOR THE TWO FINITE EVENTS
+
+Define W=|(Q_+-EQ_+)(Q_--EQ_-)|. The source-mark estimate in
+spacetime_marked_bridges_turn68.txt, including arbitrary
+distinct source marks outside a prescribed bad path, gives
+
+ E[W 1_E_in]
+ <=16 M_+M_-(C+c)^2 N_+^2 N_-^2
+          q(Dq)^(d0/a)/(1-Dq).                        (4.1)
+
+The same argument with path starts in A_+ and ends in B_a gives
+
+ E[W 1_E_exit]
+ <=16 M_+M_-(C+c)^2 N_+^2 N_- N_B
+          q(Dq)^(b0/a)/(1-Dq).                        (4.2)
+
+Indeed, expand the two centered sources into N_+N_- distinct
+marked pairs. For each such pair sum the prescribed-path
+bound over N_+N_B possible start/boundary endpoints. The
+marks need not lie on that path. The graph distance lower
+bound and the self-avoiding path sum are unchanged.
+
+At fixed physical spatial volume the prefactors are at most
+order a^-16 and a^-15, respectively. All expectations and
+source means in this section use the same actual Hamiltonian
+ground law.
+
+5. CONVERGENCE OF THE FINITE EVENT-WEIGHTED STATISTICS
+
+Fix ONE spatial regulator a for this paragraph. Restrict temporal
+meshes to delta_m=a/m, with m->infinity, so each action cell
+contains an exact integer number of temporal mesh intervals.
+Use the literal left-sampled original Wilson observables
+
+ X_c^(delta)=(delta/(ag_a^2)) sum_(time steps in I_c) S_b^cl(U_j),
+ Q_+^(delta)=4delta/(ag_a^2) sum_(j,p) f_+(j delta,p)h_p(U_j),
+
+and similarly for Q_-^(delta). Cell endpoints and source
+windows may be rounded as in the additive-source theorem.
+For continuous or bounded piecewise continuous time profiles,
+this is precisely the temporal approximation of the stated
+magnetic integrals.
+
+The finite vector consisting of all X_c, c in Lambda_a,
+and Q_+,Q_- has uniformly bounded support at this FIXED a.
+For example, h_p<=2 and the total time length in each cell
+is a. Divergence of this bound as a->0 is allowed.
+
+For each m choose a finite original period N_m AFTER delta_m,
+long enough that the first m mixed moments of this finite
+vector agree with its ground-chain moments to a tolerance
+tending to zero. The finite list can include every monomial
+of total degree at most m. The period may be constrained to
+be a multiple of2m and to contain Lambda_a without wraparound.
+It can also satisfy N_m delta_m->infinity.
+
+The established source theorem and compact support imply that
+the resulting finite-period Wilson vector converges in law
+to the actual continuous-time ground vector. One direct proof
+uses convergence of all polynomial moments, polynomial density
+on the common compact box, and uniform bounds. Alternatively
+one may use the locally uniform joint moment generators.
+
+By(2.1), both event boundaries have zero measure for the
+limiting vector. Consequently bounded weighted versions of
+their indicators have convergent expectations. In particular,
+with ORIGINAL finite-period centering,
+
+ W_delta,N =
+ |(Q_+^(delta)-E_delta,N Q_+^(delta))
+  (Q_-^(delta)-E_delta,N Q_-^(delta))|,
+
+we have along this fixed-a finite-period diagonal
+
+ E_delta,N[W_delta,N 1_E_in^(delta)] -> E[W1_E_in],
+ E_delta,N[W_delta,N 1_E_exit^(delta)] -> E[W1_E_exit]. (5.1)
+
+The changing source means converge by the same first-moment
+theorem and change these bounded weights uniformly on the
+fixed-a compact box.
+
+There is no need to prove atomlessness at every intermediate
+temporal mesh. We apply convergence in law of the final
+finite-period diagonal directly to the limiting continuity
+sets. The countable threshold choice only concerns that limit.
+
+6. WHY THIS CONTROLS BRIDGES ON THE ENTIRE FINITE TIME CIRCLE
+
+For the finite original Wilson regulator, partition the complete
+periodic time direction into cells of length a. This is possible
+because N is a multiple of m when delta=a/m. Take the original
+period large enough that Lambda_a is embedded without identifying
+its two boundary layers or its external neighboring layers.
+
+Let E_full^(delta,N) be the event of ANY bad-cell path on this
+whole periodic board joining A_+ to A_-. A self-avoiding witness
+path either stays inside Lambda_a, or has a first exit from it.
+In the latter case the segment from its A_+ endpoint to the
+last cell before that exit lies inside Lambda_a and ends in
+B_a. Local touching adjacency cannot skip this boundary.
+Thus the following pointwise implication is exact:
+
+ E_full^(delta,N) subset
+             E_in^(delta) union E_exit^(delta).       (6.1)
+
+This step handles paths that make a long detour through the
+rest of the time circle. It does not assert that they are
+statistically independent of the observed slab.
+
+Multiplying(6.1) by the nonnegative original centered weight
+W_delta,N gives a bound by the two finite-window expectations
+in(5.1). For each spatial a and any prescribed epsilon_a>0,
+choose delta_a and then N_a along Section5's approximating
+sequence so their summed error is at most epsilon_a.
+Then, on the literal ORIGINAL finite Wilson law,
+
+ E_delta_a,N_a[W_delta_a,N_a 1_E_full]
+ <=16 M_+M_-(C+c)^2 q/(1-Dq)
+    [N_+^2 N_-^2 (Dq)^(d0/a)
+      +N_+^2 N_- N_B (Dq)^(b0/a)] + epsilon_a.         (6.2)
+
+One may impose delta_a<=a^2 and a physical time period
+N_a delta_a->infinity at the same time. Extra finite lists
+of source jets can be included in the same choices.
+
+At fixed physical spatial volume, setting
+eta=Dq<1 and k=min(d0,b0)|log eta|>0 gives
+
+ E_delta_a,N_a[W_delta_a,N_a 1_E_full]
+                   <=K a^-16 exp(-k/a)+epsilon_a.      (6.3)
+
+The temporal approximation error can be chosen arbitrarily
+small at each a, including epsilon_a<=exp(-k/a).
+No uniform temporal convergence rate is claimed.
+
+Polynomial or logarithmic multiplicative calibrations may
+be included in the fixed-a source list and error budget, and
+are absorbed by the exponential bound if their sizes have
+the stipulated polynomial/logarithmic upper estimates.
+General unknown operator mixing is not covered.
+
+6A. AN ADAPTIVE TIME BUFFER REMOVES THE SPATIAL-VOLUME RESTRICTION
+
+For the existential temporal diagonal, one can improve the
+preceding fixed-volume version. The number N_B of cells on
+the two temporal boundary layers depends on the finite spatial
+board, not on the duration of Lambda_a. Let eta=Dq<1 and choose
+an integer buffer distance
+
+ k_a >= d0/a + log(max(1,N_B))/|log eta|.               (6.4)
+
+Enlarge the observation time slab so that the graph distance
+from A_+ to its two boundary layers is at least k_a. One extra
+time-cell margin absorbs integer rounding. All spatial tiles
+remain included. Then
+
+                   N_B eta^k_a<=eta^(d0/a).            (6.5)
+
+The exit term in(6.2) is consequently bounded by the same
+constant times
+
+                   N_+^2 N_- eta^(d0/a),
+
+whose polynomial prefactor is only O(a^-12) for the fixed
+compact source supports. The inside term remains O(a^-16).
+Thus a bound K a^-16 exp(-k/a)+epsilon_a holds on ANY countable
+sequence of finite spatial volumes, provided the fixed source
+geometry retains(3.1).
+
+For each a the enlarged slab still contains finitely many
+cells. The threshold choice covered all time cells from the
+start, and the moment-convergence/continuity argument applies
+unchanged to this larger finite vector. Choose delta and the
+finite temporal period only after this slab has been chosen.
+
+This extension does not give a uniform estimate at a prescribed
+physical time period or buffer size. Its period may depend on
+the spatial volume through(6.4), and its required temporal mesh
+can be arbitrarily fine. It also does not establish a compatible
+infinite-spatial-volume local theory. It proves precisely the
+source-weighted bad-bridge bound on the selectable original
+finite-regulator diagonal.
+
+7. WHAT HAS AND HAS NOT BEEN ATTACHED
+
+Equation(6.2) is a statement about original finite anisotropic
+Wilson measures, including their actual denominator, original
+source means, and all paths on the finite time circle.
+Gauge-invariant action/source words in the full Hamiltonian
+ground process agree with those in the physical ground sector.
+No equality of gauge-coordinate path laws at finite temperature
+is needed.
+
+The theorem applies to a temporal diagonal that can be selected
+after each spatial regulator. It is not a uniform estimate for
+every relationship between spatial and temporal lattice spacings.
+It is not an assertion about the original isotropic cutoff
+family, or an admission of Bałaban's isotropic expansion on the
+chosen anisotropic family.
+
+The source-weighted contribution of the simple time-averaged
+bad-action bridge event is now attached to the original Wilson
+regularization. The event is still not a native history
+predicate and does not prohibit short temporal spikes.
+
+The complementary centered covariance, physical operator
+renormalization, selection of a running coupling, compatible
+continuum limits, full Euclidean symmetry and a nonzero
+physical limit remain unproved. Suppression of this explicitly
+specified contribution does not by itself prove YM4 existence.

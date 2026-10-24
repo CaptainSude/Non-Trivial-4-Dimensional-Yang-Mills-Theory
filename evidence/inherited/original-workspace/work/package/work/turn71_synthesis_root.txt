@@ -1,0 +1,233 @@
+FULL-MEASURE SOURCE COMPARISON AND SUBSEQUENTIAL LIMITS
+TURN71. 20 October 2026.
+
+THE NONTRIVIAL FOUR-DIMENSIONAL YANG--MILLS EXISTENCE PROOF IS NOT COMPLETE.
+
+The new arguments narrow two obligations without asserting the missing
+model-specific estimates. A common subsequential selected hierarchy can
+be constructed from the retained bounds. Transferring its correlations
+to the full Wilson measure is exactly a mixed selection-source
+susceptibility problem. Rare-event probabilities do not solve it.
+
+This report distinguishes:
+ (a) consequences of the recorded TURN70 selected estimates;
+ (b) exact identities for the original finite-regulator law;
+ (c) conditional spectral/reconstruction consumers whose full-law
+     hypotheses have not been established.
+
+The complete derivations and independent internal audits are appended.
+These audits are not external peer review of the entire prior archive.
+
+1. WHAT CAN NOW BE CONSTRUCTED FROM THE SELECTED ESTIMATES
+
+Fix ONE selected cutoff family, one physical torus and terminal mesh,
+and the coherent sources from its finite-dimensional terminal vertex
+profile space admitted by TURN70. At a fixed physical resolution r,
+define the centered conditional mean
+
+ Y_(a,r)(f) = E_sel,a[F_a(f)-E_sel,a F_a(f) | coarse record through r].
+
+Resolution increases with r. The fixed-resolution source range bound
+puts Y_(a,r)(f) in a compact interval independent of the ultraviolet
+cutoff a. Its interval can grow with r; this is not a uniform bound
+as r tends to infinity.
+
+Retain these conditional means for a basis of the finite terminal
+profile space. Their compact boxes at the countably many resolutions
+give a single subsequential joint law. Identified compact coarse-link
+tuples may optionally be retained too; compactness of every auxiliary
+record or continuity of a gauge section is not assumed. Every finite-
+cutoff martingale identity passes against continuous cylinder tests,
+and then against bounded measurable tests. Thus the limiting hierarchy
+retains consistent conditional expectations with respect to its
+retained coordinates. All profiles on this fixed grid follow by
+linearity from the same basis extraction.
+
+The separated fine-scale remainder from TURN70 tends uniformly to zero.
+Consequently, for its admitted separated coherent profiles,
+
+ lim_(a along subsequence) Cov_sel,a(F_a(f),F_a(h))
+       = lim_(r->infinity) E[Y_r(f)Y_r(h)].
+
+This is a stronger conclusion than extracting unrelated scalar
+correlation limits. A cross-cutoff Cauchy theorem or uniqueness of the
+limit is unnecessary for this subsequential construction.
+
+Its limitations are material:
+
+ - the hierarchy is for the SAME selected law at each cutoff;
+ - changing terminal restrictions or the selected law for different
+   observables would require a new compatibility proof;
+ - appended conditional means need not be deterministic functions of
+   the limiting coarse field, without an additional continuity input;
+ - no same-support uniform L2 bound or final random composite field
+   follows from off-diagonal estimates;
+ - the hierarchy can be trivial;
+ - selected positivity and reflection invariance do not supply
+   reflection positivity or full Euclidean symmetry.
+
+Thus this is a limited selected-sector existence result, not a
+four-dimensional Yang--Mills quantum field theory.
+
+2. THE EXACT MISSING FULL-LAW CORRECTION
+
+The selected construction already records a source-independent weight
+0<=w<=1 against the original law, with its prescribed mass-one auxiliary
+extension if needed. Write P for that augmented original probability
+law, F,H for observables of the ORIGINAL field, and p=E_P w>0.
+
+Under real source tilt define
+
+ p(s,t)= E_P[w exp(sF+tH)] / E_P[exp(sF+tH)].
+
+Keep the window w frozen. Direct differentiation gives
+
+ Cov_full(F,H)
+    = Cov_sel(F,H) - partial_s partial_t log p(s,t)|_0.       (2.1)
+
+Equivalently, only the connected part
+
+ log p(s,t)-log p(s,0)-log p(0,t)+log p(0,0)
+
+matters. Its source-independent and one-source terms cancel.
+The extensive value of log p(0,0) is not itself the obstruction.
+Indeed an independent all-good selection can have exponentially small
+probability and change no physical correlation.
+
+For a product of successive frozen selections, log p telescopes into
+the sum of the logarithms of the actual successive acceptance weights
+under earlier selections and the original source tilt. Hence a
+summable localized bound on their mixed source derivatives would
+suffice for an upper-bound transfer.
+
+This is an exact reduction, NOT an estimate of the correction.
+It retains the unboundedly many omitted histories through p(s,t).
+It also retains the covariance of conditional means under the full
+coarse law. No native R-history completion is inferred from the
+auxiliary positive completion of the selected measure.
+
+3. A PROPOSED SHORTCUT IS DEFINITIVELY INSUFFICIENT
+
+The full-law bad-bridge estimate from TURN68 suppresses a marked
+contribution on a particular rare event. It does not estimate the
+no-bridge contribution or (2.1)'s selection susceptibility.
+Moreover that result and TURN70 concern different regulator families
+whose source-preserving comparison is still unproved.
+
+Even if a common-law identification were added, the inference would
+remain invalid on those probabilistic premises alone. The appended
+finite counterexample is reflection positive. Conditional on a shared
+coarse variable, its reflected halves and rare flags are independent.
+Every specified set of bad flags has exponentially small probability,
+and a spanning bad bridge is exponentially rare.
+
+All-good selection nevertheless changes the distribution of the
+coarse variable. The selected separated covariance tends to zero
+while the original covariance stays positive. A symmetric version
+keeps both endpoint means exactly zero throughout. With an explicitly
+stated polynomial source rescaling, the original covariance can even
+diverge while both the selected covariance and the marked bad-bridge
+contribution vanish.
+
+This is not a Yang--Mills counterexample. It proves that the existing
+forms of the probability estimates cannot replace the missing
+connected-source control. The regular coarse communication must be
+estimated using additional structure of the actual model.
+
+4. A WEAKER CONVERGENCE REQUIREMENT AND A DYNAMIC NONTRIVIALITY TEST
+
+For an actual physical Hamiltonian observable, let rho_a be its positive
+centered spectral measure. Fix a positive time-window width delta and
+write
+
+ R_a(t)=integral exp(-2tE)[(1-exp(-delta E))/E]^2 rho_a(dE).
+
+At zero energy the bracket is delta. This is the reflected norm of
+the positive-time integrated insertion at each admitted finite
+regulator.
+
+If R_a(t0)<=M at one earlier positive time, then the finite measures
+
+ nu_a(dE)=exp(-2t0 E)[(1-exp(-delta E))/E]^2 rho_a(dE)
+
+have a weakly convergent subsequence on [0,infinity]. Every R_a(t)
+and all of its time derivatives converge on the SAME subsequence
+locally uniformly for t>t0. Mass at infinity is harmless at these
+strictly later times. This result requires no full-sequence
+convergence, but the required full-law upper bound is still missing.
+
+A later positive norm alone does not exclude a merely static
+zero-energy mixture. A sufficient stronger dynamic witness is
+
+ R_a(t1)-R_a(t1+s)>=m>0,   t1>t0, s>0.
+
+This and the earlier upper bound put a uniform positive amount of
+spectral mass in a fixed interval [epsilon,Lambda] contained in
+(0,infinity). The appended proof gives explicit constants. Its
+subsequential limit therefore has positive-energy spectral weight.
+This is an alternative sufficient check to using a separate
+clustering/unique-vacuum argument; it is not imposed as the only
+possible route.
+
+For the actual fixed-spatial magnetic slab source with original
+unsourced ground endpoints, the exact relation is
+
+ R_a(t)=(1/2)Delta_delta^2 partial_z^2 K_a(2t,0).
+
+Thus the needed difference is expressed at finitely many matched
+slab lengths. Affine-in-time scalar terms cancel; arbitrary mixed
+source remainders do not. For the global logarithmic coupling source
+and its specified magnetic observable the factor is 1/8. Local
+coupling profiles retain the energy-current correction.
+
+No estimates M,m uniform in the spatial cutoff were established
+for the required full Yang--Mills family. This spectral theorem is
+a precise consumer of such estimates, not their substitute.
+
+5. CURRENT PUBLIC SOURCES
+
+The public repositories were checked afresh. Both inspected main
+branches are unchanged:
+
+ Ethan Sussman / Levent Alpoge:
+ cf596e69629e0da2e25e33ab8cafc507c023a1de
+ https://github.com/ethanwsussman/Yang--Mills-LLM-experiment
+
+ CaptainSude:
+ bf484466e1e5091de6770c671f7411f8f93b9c87
+ https://github.com/CaptainSude/towards-proving-existence-of-YM4
+
+The upstream raw-II original-source lemma, label 8.21:lem-source,
+lines 145173--145213 of that pinned revision, still explicitly
+has an outstanding proof. Its positive torus two-point consequence
+assumes the relative witness estimate, continuum limits and an
+unfinished continuum-kernel input. It cannot supply those premises.
+No unpublished completion has been used.
+
+The LP1 outline concerns infinite-volume lattice positivity at fixed
+spacing. The RP1 outline assumes an already existing continuum field
+with moment bounds. Neither supplies this project's missing full-law
+continuum source estimates. Exact version and locator evidence is
+retained in the appended primary-source review.
+
+6. WHAT STILL PREVENTS COMPLETION
+
+The full nontrivial YM4 existence proof still needs:
+
+ - a bound on the actual full-law connected source correction, or
+   an independent original-law correlation estimate;
+ - physical source calibration and compatible local observables,
+   including their mixed products;
+ - a nonzero surviving physical witness, with control of vacuum
+   components or a direct positive-energy test;
+ - a common continuum limit with the required positivity, symmetries,
+   local structure and reconstruction hypotheses.
+
+The new selected hierarchy does not discharge these original-law
+obligations. The exact source identity identifies where the first
+missing estimate must enter. The two counterexamples prevent replacing
+it or nontriviality by weaker information that permits trivial limits.
+
+The goal remains active and incomplete. No complete existence proof
+is claimed, and no additional inaccessible paper is currently needed
+to state or work on these remaining mathematical estimates.

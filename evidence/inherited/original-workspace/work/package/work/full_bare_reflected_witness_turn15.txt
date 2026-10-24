@@ -1,0 +1,288 @@
+AN EXPLICIT REFLECTED WITNESS IN THE FULL FIXED BARE WILSON LAW
+19 October 2026. Fixed graph, free boundary, no prior-refinement claim.
+
+0. RESULT
+
+There is an exact gauge-invariant observable supported strictly on the
+positive side of a reflecting four-dimensional box for which the FULL
+bare Wilson measure has a strictly positive centered reflected Gram.
+Use the box
+
+              K={-1,0,1} x {0,1}^3,
+
+with every nearest-neighbor edge and every elementary plaquette. All
+edges are integrated with Haar probability; boundary conditions are
+free. Reflect time t to -t. Choose any spatial plaquette p_+ at t=1,
+and let p_- be its reflected plaquette at t=-1.
+
+For G compact connected semisimple, faithful unitary representation rho,
+and
+
+ s(u)=dim(rho)-Re Tr rho(u),
+ S(U)=sum_p s(U_p),           dmu_g=Z(g)^(-1)e^(-S/g^2)dU,
+
+put q_(+,g)=g^(-2)s(U_(p_+)) and
+
+                 F_g=q_(+,g)-E_mu_g q_(+,g).
+
+This is a real gauge-invariant function of only the four positive-side
+plaquette links; its centering constant adds no field read. With
+Theta F=conjugate(F o theta),
+
+ E_mu_g[(Theta F_g) F_g]
+       = (dim G)/2 (37/1890)^2 + O_K,G,rho(g).           (0.1)
+
+Consequently it is at least (dim G)(37/1890)^2/4 for sufficiently small
+g. For SU(2) in its fundamental representation, the leading constant is
+
+                         1369/2381400.
+
+All configurations of the compact Wilson measure occur in (0.1), not
+only its perturbative window. The error and the smallness threshold are
+fixed-graph quantities. This result does not give the same witness for
+the native RT state or for a growing/refining graph.
+
+1. RELATION TO THE EXISTING GAUSSIAN WITNESS
+
+broad_packet_actual_gaussian_2026-10-18.txt already constructs a positive
+reflected Maxwell energy witness for the actual homogeneous classical
+Gaussian, with a broad-packet comparison. The Wick mechanism is the same
+one used here. The present additional attachment is different: it uses
+an explicit SMALL finite graph with free boundary, computes its exact
+Gaussian cross-covariance, and applies the complete compact-space law
+of full_bare_finite_graph_joint_law_turn13.txt. No infrared or thermodynamic
+comparison, no imposed conditional-average constraint, and no unestimated
+endpoint contribution remain in this fixed-graph calculation.
+
+The warning in rp_conditional_nontriviality_audit_2026-10-18.txt is retained:
+a positive conditional Gaussian vacuum can be canceled by mixed and
+endpoint terms. Here the Gaussian comparison is of the ENTIRE bare law,
+so it is not that invalid conditional inference.
+
+2. EXACT GRAPH, GAUGE, AND REFLECTION
+
+The graph has 24 vertices, 52 edges and 42 plaquettes. Its cubical
+two-skeleton is simply connected. Choose the root on t=0. A fine spanning
+tree consists of all 16 time edges and any seven-edge spanning tree of
+the spatial three-cube at t=0. These 23 edges connect every vertex and
+have no cycle. The remaining 29 chord variables parametrize G^29.
+
+The tree can be oriented away from the root and is reflection invariant
+as an unoriented set. Exact rooted tree gauge sets all its links to one;
+Haar disintegration is product Haar on the 29 chords times product Haar
+on the 23 site gauge variables. Residual root gauge acts by simultaneous
+conjugation and is NOT divided out as a singular quotient.
+
+Faithfulness of rho makes s(u)=0 exactly at u=1. Simple connectedness
+then makes the zero-action point in the rooted quotient unique. Its
+Hessian is positive; there are no flat torus holonomy modes. These are
+exactly the hypotheses of the turn13 full-law theorem, with
+n=29 dim G real quotient coordinates.
+
+The observable remains the original local plaquette function when using
+this gauge. We do not introduce a cutoff depending on all tree chords:
+that would obscure strict positive-half support.
+
+For completeness, reflection positivity is direct on this graph. Let
+sigma be the twelve spatial links at t=0, x the remaining positive-half
+links and y the negative-half links. The Wilson action is
+
+ S(U)=S_0(sigma)+S_+(x,sigma)+S_+(theta y,sigma).
+
+Every plaquette lies in the fixed plane or one closed half; no plaquette
+joins t=-1 directly to t=1. Product Haar therefore yields
+
+ E_mu[(Theta H)H]
+   =Z^-1 int d sigma e^(-S_0/g^2)
+                  |int dx e^(-S_+(x,sigma)/g^2)H(x,sigma)|^2 >=0.
+
+Thus both the law and the observable have the exact required reflection
+and support conventions. No assertion about RP of a gauge-fixed density
+is needed; the displayed identity is on the original link space.
+
+3. THE GAUSSIAN QUOTIENT AND ITS SPATIAL MODES
+
+Use the invariant Lie inner product
+
+             <X,Y>_rho=-Re Tr(d rho(X)d rho(Y)).
+
+Choose a real orthonormal color basis. In the tree chart U=exp(g a),
+the leading action is
+
+       (1/2)sum_p |(d_1 a)_p|_rho^2.
+
+Each color is an independent copy of the same real Maxwell Gaussian.
+All time links are tree links and hence have a=0. Write A_t in R^12
+for the spatial edge field of the unit three-cube at time t. The remaining
+linear gauge condition sets the chosen spatial tree at t=0 to zero.
+The quadratic action per color is
+
+ (1/2) sum_(t=-1,0,1) ||D A_t||^2
+       +(1/2)||A_0-A_-1||^2+(1/2)||A_1-A_0||^2,        (3.1)
+
+where D:R^12 -> R^6 is the oriented spatial curl.
+
+For computing curls one may instead quotient the common spatial-gradient
+mode orthogonally. This is just a linear change of gauge with constant
+Jacobian; curvature expectations are unchanged. The spatial gradient
+and its orthogonal complement decouple in (3.1). On the latter,
+K_s=D^T D is positive. Therefore no inverse on a gauge nullspace is used.
+
+Order the spatial faces as xy(z=0), xz(y=0), yz(x=0), xy(z=1),
+xz(y=1), yz(x=1), with their ordinary positive orientations. Then
+
+ C=D D^T =
+ [ 4  1 -1  0 -1  1 ]
+ [ 1  4  1 -1  0 -1 ]
+ [-1  1  4  1 -1  0 ]
+ [ 0 -1  1  4  1 -1 ]
+ [-1  0 -1  1  4  1 ]
+ [ 1 -1  0 -1  1  4 ].                               (3.2)
+
+Its characteristic polynomial is z(z-4)^3(z-6)^2. Direct multiplication
+also gives C(C-4I)(C-6I)=0, with kernel dimension one, the oriented
+cube Bianchi relation. Cube symmetry is transitive on the unoriented
+faces, and acts by signed permutations in this orientation convention.
+Consequently every diagonal entry of the spectral projector E_4 is
+3/6=1/2, and every diagonal entry of E_6 is 2/6=1/3.
+
+4. EXACT CROSS CURVATURE COVARIANCE
+
+The three-time-site free-boundary Laplacian is
+
+                    [ 1 -1  0 ]
+              L_t = [-1  2 -1 ].
+                    [ 0 -1  1 ]
+
+For each spatial positive eigenvalue lambda, inversion of the 3x3
+matrix gives
+
+ [(L_t+lambda I)^(-1)]_(-1,+1)
+                    =1/[lambda(lambda+1)(lambda+3)].   (4.1)
+
+This follows by the (1,3) cofactor, which equals one, and determinant
+lambda(lambda+1)(lambda+3). Applying D in both spatial slots multiplies
+this eigenvalue by lambda. Thus the six-by-six cross covariance of the
+spatial curls at times -1 and +1 is
+
+            K_-+ = (1/35) E_4 + (1/63) E_6.            (4.2)
+
+For ANY fixed face p, its corresponding diagonal entry is
+
+ k=E_G[(D A_-1)_p (D A_1)_p]
+       =(1/2)(1/35)+(1/3)(1/63)
+       =1/70+1/189=37/1890>0.                          (4.3)
+
+All quantities here are real, per orthonormal color component, and use
+the SAME action normalization as the Wilson Taylor expansion. The spatial
+plaquette orientation is preserved by time reflection. Even if an
+opposite orientation were chosen on one half, the energy calculation
+below contains k^2 and is unchanged.
+
+The exact rational matrix calculation was also independently checked
+by constructing D from its edge incidences; no floating-point estimate
+enters (3.2)--(4.3).
+
+5. WICK ENERGY GRAM AND FULL-LAW CENTERING
+
+Let f_(+,a), f_(-,a) be the two Gaussian curls in color a. Their colors
+are independent, with E f_(-,a) f_(+,b)=delta_ab k. The leading polynomial
+of q_(+,g) is
+
+                 P_+=(1/2)sum_(a=1)^(dim G) f_(+,a)^2.
+
+For centered real Gaussian variables, Cov(X^2,Y^2)=2(E XY)^2. Hence
+
+ Cov_G(P_-,P_+)=(dim G)/2 k^2 =:kappa_0>0.             (5.1)
+
+The full turn13 weighted moment theorem applies to the two GLOBAL
+smooth gauge-invariant plaquette functions R_+=s(U_p+) and R_-=s(U_p-).
+Each vanishes to order two at the unique rooted zero and has quadratic
+jet P_+ or P_-. It gives, under the full normalized compact law,
+
+ E_mu q_(+,g)=E_G P_++O(g),
+ E_mu q_(-,g)=E_G P_-+O(g),
+ E_mu[q_(-,g) q_(+,g)]=E_G[P_-P_+]+O(g).              (5.2)
+
+The Gaussian means and the full normalized means are uniformly bounded
+for this fixed graph. Subtracting their products therefore changes the
+answer by only O(g). Reflection invariance identifies the two actual
+means. Equations (5.1)--(5.2) prove (0.1) with the EXACT full-law
+centering, rather than centering by a Gaussian or partial-history mean.
+
+For clarity about excluded regions: the turn13 proof controls them by
+g^(-29 dim G-D) exp[-Delta/g^2] for a fixed degree-D normalized mark.
+The two-mark product here has D=4. This is smaller than O(g), after the
+full normalizer Z(g)~c g^(29 dim G) is proved. Nothing outside the chart
+has been discarded or assigned a favorable sign.
+
+6. WHAT WOULD TRANSFER THIS TO A TERMINAL RT STATE
+
+The theorem supplies a bare fixed-graph witness. It does NOT identify
+the native stopped state with this bare Wilson law. In particular:
+
+ (i) the regulator, boundary convention, action and coupling must match;
+ (ii) the full RT state can contain retained or healed histories;
+ (iii) the lower stability branch need not have this bare precision;
+ (iv) the source insertion must be the actual transported observable;
+ (v) RP and strict positive-half support of that transported algebra
+     require their own verification.
+
+An actual complete-law FINITE MOMENT comparison would suffice. Write
+nu_g for the bare reference law above and F_g for its centered mark.
+For a reflection-invariant terminal law mu on the same observable
+algebra, if
+
+ |E_mu[(Theta F_g)F_g]-E_nu[(Theta F_g)F_g]|<=epsilon,
+                         |E_mu F_g|<=epsilon,
+
+then its correctly recentered reflected Gram is at least
+
+                       kappa_0-O(g)-epsilon-epsilon^2.
+
+Only these particular complete moments are needed; no claim that every
+history is separately rare is logically necessary. However scalar
+pressure/stability bounds do not furnish this comparison.
+
+Another sufficient interface is REFLECTION-FORM domination:
+
+ int (Theta H)H dmu >= alpha int (Theta H)H dnu_g
+                        for all H in span{1,q_(+,g)}.   (6.1)
+
+Apply it to H=q_(+,g)-E_mu q_(+,g). The reference expression is its
+centered reflected Gram plus the nonnegative squared difference of
+means. Thus (6.1) supplies at least alpha(kappa_0-O(g)). Full RP order
+is more than needed; the displayed two-dimensional form order suffices.
+
+Ordinary measure minorization is NOT (6.1), since (Theta H)H need not
+be pointwise nonnegative. An exact finite counterexample makes this
+distinction clear. Let x,y=+/-1 be the two reflected halves, let mu be
+the uniform independent law, and let dnu_a=(1+a xy)dmu, 0<a<1.
+Both are RP. Pointwise, mu>=(1+a)^(-1)nu_a. Nevertheless
+
+ E_mu xy=0,                  E_nu_a xy=a>0.
+
+Thus even ordinary measure domination BY AN RP reference, together
+with RP of the target, does not transfer a centered reflected witness.
+The conditional box minorization of turn14 is weaker still: product
+Haar on strictly disjoint halves has zero centered reflected Gram.
+
+The abstract reflected-channel ledger of turn14 would transfer a
+terminal witness backward if its actual channel and complete source
+support hypotheses and small cumulative signed-defect bound hold.
+This note supplies a terminal witness only when its law is the bare
+fixed-graph law above, or when an additional comparison such as (6.1)
+has been established. It does not silently fill the RT-law interface.
+
+7. NO UNIFORM UV OR THERMODYNAMIC CONCLUSION
+
+The graph, tree, Hessian gap, action complement gap and the number of
+coordinates have been fixed before taking g small. Their constants may
+deteriorate under subdivision or volume growth. There are no torus
+zero modes because the graph is a free contractible box; replacing it
+by a torus would change that argument. The path-holonomy precision
+obstruction of turn13 remains valid and is not evaded by this witness.
+
+This is a complete fixed bare reflected-correlation theorem. It is not
+a construction of continuum fields, an RT terminal-law theorem, or a
+proof of nontrivial YM4 existence.

@@ -1,0 +1,305 @@
+LOCAL NONLINEAR SADDLE RESPONSE AND THE COMPLETE LEADING PREFACTOR
+19 October 2026. public_argument_audit. Turn40 companion.
+
+RESULT
+
+The fixed-L KKT gap of gaussian_coarse_kernel_turn40 extends to the local
+nonlinear constrained saddle at uniformly small data. The minimizing fine
+field and its Lagrange multiplier have sup bounds independent of enclosing
+volume, and their first and second datum derivatives have exponential
+anchored kernels. This improves the R^2 sup bound obtained by the earlier
+Euclidean argument. On the weak-data polylogarithmic regime in which the
+prior low-energy coverage proof applies, this is the genuine compact-fiber
+minimum; small sup data alone is not claimed to prove global uniqueness
+on arbitrarily large boxes.
+
+The exact complete Gaussian prefactor also has a useful invariant formula.
+The constraint-coordinate determinant and the tangent Hessian determinant
+combine into the determinant of the LOCAL nonlinear saddle matrix. Its
+inverse is uniformly exponential. The first derivative and the spatial
+Hessian of the leading vacuum prefactor are therefore uniformly local.
+This is a theorem about the classical minimum and its full leading
+Haar/coarea Gaussian prefactor, not the full finite-g effective action,
+an arbitrary selected conditional law, or a repeated RG construction.
+
+1. SPACES, PARAMETERS AND LOCALITY PREMISES ALREADY PROVED
+
+Use the same complete fixed-crossing box, block-local G0 forest, ordinary
+first-L averaging rows and exterior strip as gaussian_coarse_kernel_turn40
+and constrained_effective_action_turn40. L and the compact group SU(N_c)
+are fixed. X is the fine chord coordinate space, Y the COMPLETE framed
+coarse data space. At the identity, H is the Wilson Hessian, Q=DF_0(0),
+and QE=I for the proved finite-range right inverse E.
+
+Let e denote the retained-link logarithms in the fixed exterior frame.
+Use the actual relative logarithmic ordinary map F_e(x). Its rows have
+bounded read and uniformly bounded local analytic jets. The Wilson action
+S_e(x) is the sum of all plaquettes reading a free edge. The coarse datum
+is v. If coarse chord parameters q are used instead, retain the actual
+local formula v=v(q,e) from the specified coarse forest section. Setting
+forest edges to identity is a coordinate insertion; no long, datum-varying
+coarse gauge restoration is made here.
+
+Every variable and parameter coordinate is assigned its actual fine/coarse
+location. At fixed L the operator graphs have bounded degree and polynomial
+volume growth, uniformly including their finitely many boundary types.
+Derivatives with respect to a retained-edge parameter read only the local
+action/constraint rows involving that edge. The relative-coordinate datum
+conversion v(q,e) has the same bounded local-read property. All constants
+below can depend on these fixed local conventions.
+
+The flat saddle matrix
+
+                  M0=[H Q^t; Q 0]                     (1.1)
+
+has a uniformly bounded inverse in counting l2 and exponentially weighted
+row and column norms, by the independent local-cochain/KKT theorem. In
+particular ||M0^-1||_(infty->infty)<=C_L. This stronger norm follows from
+the proved exponential kernel and bounded lattice growth; it is not an
+inference from l2 invertibility alone.
+
+2. VOLUME-INDEPENDENT SUP NORM SADDLE
+
+Write z=(x,lambda), and define the exact stationarity/constraint map
+
+ G(z;v,e)=(grad_x S_e(x)+DF_e(x)^t lambda,
+                                      F_e(x)-v).       (2.1)
+
+At the identity G(0;0,0)=0 and D_zG(0;0,0)=M0. Its full Jacobian is
+
+ M(z,e)=[ L(x,lambda,e)  DF_e(x)^t;
+                         DF_e(x)       0 ],
+ L=S_e''(x)+sum_a lambda_a F_e,a''(x).                 (2.2)
+
+The multiplier term is essential. It has bounded range and norm because
+the multiplier enters locally. On a sup ball of radius epsilon, including
+e, the finite local jet bounds give
+
+ ||M(z,e)-M0||_row + ||M(z,e)-M0||_column
+                                  <=C_L epsilon,      (2.3)
+ ||G(0;v,e)||_infty<=C_L (||v||_infty+||e||_infty).
+
+The transpose in (2.2) requires bounded column incidence as well as row
+incidence, both available for the actual finite-read action/constraint.
+
+Set R(z;u)=G(z;u)-G(0;u)-M0 z, with u=(v,e), and solve
+
+ z=-M0^-1 G(0;u)-M0^-1 R(z;u).                        (2.4)
+
+Choose the fixed z-ball radius sufficiently small that the Lipschitz
+constant of the second term is below1/2, and then choose a fixed data
+radius delta so that the first term maps the ball into its inner half.
+The contraction theorem proves a unique branch z_*(u) there, satisfying
+
+ ||x_*(u)||_infty+||lambda_*(u)||_infty
+                   <=C_L (||v||_infty+||e||_infty),    (2.5)
+
+with constants independent of R. The branch is real analytic, by the same
+analytic fixed-point equation. The nearby constraint Jacobian remains
+surjective. Its tangent Hessian is positive, by the constrained convexity
+proof in constrained_effective_action Section3 (equivalently continuity
+from the uniform gap, retaining the multiplier term).
+
+Thus x_* is the unique local constrained minimum in the original small
+chart. To identify it with the GLOBAL compact-fiber minimum, use the
+separate low-energy coverage argument of constrained_effective_action
+Section4. In particular, for ||q||,||e||<=gZ with R,Z fixed powers of
+log(1/g), its requirement gR^3Z small holds. The global minimizing branch
+there is the same local branch by uniqueness. No statement that arbitrary
+fixed small data imply global uniqueness for all volumes is needed.
+
+The nonlinear chart variables also improve: since B=(I-EQ)x, the actual
+saddle satisfies ||B_*||_infty<=C_L||(v,e)||_infty. This is compatible with
+the larger fixed integration window already used; the window need not be
+shrunk and the old good event need not be changed.
+
+3. LOCALITY OF THE EXACT DATUM RESPONSE
+
+At the saddle put M_*=M(z_*,e). It is symmetric at real data, finite range,
+and by (2.3) a small perturbation of M0 in l2 norm as well as row/column
+norms. Its spectrum therefore remains uniformly away from zero. The same
+finite-propagation series as in gaussian_coarse_kernel Section4 gives
+
+ |(M_*^-1)_(a,b)|<=C_L exp[-m_L dist(a,b)],             (3.1)
+
+and uniformly bounded exponentially weighted row and column sums. This
+argument applies directly in (x,lambda) variables; no nonlocal projected
+hard-window covariance formula is being used.
+
+For a coordinate datum u_r, implicit differentiation gives
+
+                  z_r=-M_*^-1 G_r.                    (3.2)
+
+G_r, with z held fixed, has a bounded local footprint about r. Hence
+
+                   |(z_r)_a|<=C_L e^-m_L dist(a,r).    (3.3)
+
+For two parameters,
+
+ z_rs=-M_*^-1{G_zz[z_r,z_s]+G_zr z_s+G_zs z_r+G_rs}.   (3.4)
+
+All partial tensors on the right have bounded local coefficients. Define
+the three-root tree distance tau(a,r,s) as the minimum total length of a
+tree connecting those sites (bounded read enlargements are absorbed into
+the constants). Products of (3.3), convolution with (3.1), and an unused
+exponential fraction give
+
+                |(z_rs)_a|<=C_L e^-m'_L tau(a,r,s).    (3.5)
+
+Finite-dimensional local sums are bounded independently of the box:
+select the connecting tree, extract part of its exponential, and sum the
+remaining tree kernels by their uniform l1 norms. The same induction gives
+anchored tree decay at every FIXED derivative order, with order-dependent
+constants. No common all-arity factorial estimate is asserted.
+
+4. EXACT CLASSICAL COARSE HESSIAN
+
+First keep e fixed and use the COMPLETE framed v as datum. The envelope
+identity and the sign convention of (2.1) give
+
+ D_v S_min=-lambda_*,
+ D_v^2 S_min=-(M_*^-1)_(lambda,lambda).                 (4.1)
+
+Indeed grad S=-DF^t lambda and DF x_v=I. Differentiating G with respect
+to v gives z_v=M_*^-1(0,I). Thus the signs in (4.1) follow directly.
+The exact nonlinear classical coarse Hessian is exponentially local
+uniformly on the data ball. At identity this is the positive semidefinite
+coarse precision of the Gaussian theorem; no inverse coarse covariance
+decay is inferred.
+
+If q is used, the actual datum conversion must be differentiated:
+
+ S_min,qr = -v_q^t (M_*^-1)_(lambda,lambda) v_r
+                         -lambda_* dot v_qr.           (4.2)
+
+Here v_q and v_r denote its first derivatives, and v_qr its second
+derivative. The last term is local and must not be omitted at nonzero
+exterior/datum. Explicit derivatives of S_e and F_e enter for exterior
+parameters; they are local vertices, so (3.3)--(3.5) prove the corresponding
+joint Hessian locality without pretending they vanish.
+
+5. EXACT COAREA/TANGENT DETERMINANT IDENTITY
+
+At a fixed saddle use the original coordinates x=B+E t, with B represented
+in an orthonormal basis U of ker Q. Let
+
+ A=DF_e(x_*) E,
+ T=D_B x=U-E A^-1 DF_e(x_*)U,
+ H_*=D_B^2[S_e(x(B))]|_(B_*)=T^t L T.                 (5.1)
+
+The equality for H_* includes constraint curvature. Since
+DF D_B^2x+F''[T,T]=0 and grad S=-DF^t lambda, its second term is
++lambda dot F''[T,T], exactly the multiplier term of L in (2.2).
+
+Let c_E=|det[U,E]|, the original constant coordinate volume factor, and
+form the square n-by-n change of variables
+
+                    Bmat=[T, E A^-1].                 (5.2)
+
+Then DF Bmat=[0,I] and |det Bmat|=c_E/det A on the chosen positive real
+branch. Apply the congruence diag(Bmat,I) to M_*. In variables consisting
+of tangent, constraint and multiplier, its lower constraint/multiplier
+block has the off-diagonal identity. Elimination gives
+
+ det M_* (det Bmat)^2 =(-1)^m det H_*,  m=dim Y.
+
+Consequently
+
+ c_E^2/[ (det A)^2 det H_* ]
+                         =1/[(-1)^m det M_*].          (5.3)
+
+The inertia is n positive and m negative eigenvalues: H_* is positive on
+the tangent and DF is surjective. Thus (-1)^m det M_*>0 throughout this
+small branch, and the real logarithm below is unambiguous.
+
+The COMPLETE prefactor of the constrained Laplace formula therefore is
+
+ J(B_*;q,e)/sqrt(det H_*)
+   = j_C(x_*) / {j_J(v) sqrt[(-1)^m det M_*]}.           (5.4)
+
+This retains the actual coarse Haar factor j_J and the fine chord Haar
+factor j_C. It removes the auxiliary E-dependence by an exact identity,
+not by discarding a determinant. At the flat point it agrees with the
+Gaussian factor det(QQ^t)^-1/2 det(H_N)^-1/2.
+
+6. LOCALITY OF THE COMPLETE LEADING VACUUM PREFACTOR
+
+Define, retaining any source-independent additive constant,
+
+ V1(q,e)=(1/2)log[(-1)^m det M_*]
+                         -log j_C(x_*)+log j_J(v).     (6.1)
+
+This is exactly the field-dependent leading prefactor term in
+-log a_e(q), in addition to S_min/g^2 and the explicit Gaussian volume
+constant. At nonzero q,e the entire matrix M_* is used.
+
+For any two local datum coordinates r,s,
+
+ D_rs log[(-1)^m det M_*]
+   =Tr(M_*^-1 M_*,rs
+                     -M_*^-1 M_*,r M_*^-1 M_*,s).      (6.2)
+
+Although M_* is finite range, its DATA derivatives need not have compact
+support: x_* and lambda_* respond exponentially. Equations(3.3)--(3.5)
+give precisely the needed replacement. M_*,r has a bounded finite-range
+matrix stencil with coefficients decaying exponentially from r; M_*,rs
+has that stencil with a three-root tree weight about r,s. These bounds
+include all explicit exterior derivatives as well as the implicit saddle
+responses.
+
+In the first trace of (6.2), the matrix indices of M_*,rs are nearby.
+Sum its tree weight over this local vertex and use bounded M_*^-1 entries.
+In the second trace, the two inverse kernels connect the two derivative
+vertices; sum the resulting connected exponential graph. Both are bounded
+by C_L exp[-m''_L dist(r,s)] after reducing the exponent. The same argument
+gives a uniform bound for the first derivative of the trace logarithm.
+No extensive trace is bounded merely by its dimension: the marked anchors
+are retained before summing.
+
+For the Haar terms, write log j_C(x_*) as a sum of its local link functions.
+Its second derivative consists of h''(x_*) x_r x_s and h'(x_*) x_rs.
+Equations(3.3)--(3.5) give the same exponential bound after the link sum.
+The original log j_J(v) is local in the specified datum coordinates and
+has bounded local derivatives. Hence
+
+ |D_r V1|<=C_L,
+ |D_rs V1|<=C_L exp[-m''_L dist(r,s)],
+ sup_r sum_s exp[m'''_L dist(r,s)] |D_rs V1|<=C_L.       (6.3)
+
+An extensive constant V1(0,0) can be retained in the vacuum normalization;
+it is not present in its marked derivative bounds. This proves spatial
+locality of the COMPLETE leading determinant/Haar contribution, without
+separately bounding a coordinate Jacobian and a tangent determinant in
+incompatible gauges.
+
+7. RELATION TO THE ACTUAL FINITE-g EFFECTIVE ACTION
+
+In the real weak-data/polylog regime of constrained_effective_action40,
+the exact positive numerator satisfies
+
+ -log a_e(q)=S_min(q,e)/g^2+V1(q,e)
+               -(dim ker Q)/2 log(2pi g^2)-log(1+Err).  (7.1)
+
+This companion proves volume-independent classical response and the
+leading prefactor locality in (7.1). It does NOT infer local derivative
+bounds for log(1+Err) from its scalar value bound. The actual finite-g
+spatial two-source theorem in spatial_fluctuation_route40 is a separate
+fixed-order argument at q=0,e=I; its sublogarithmic absorption cannot be
+silently extended to arbitrary nonzero datum or repeated effective steps.
+
+The determinant identity is coordinate exact on this known branch. It
+does not turn an exceptional coarse fiber into a chosen regular conditional
+law, remove missing compact branches, establish a physical-scale source
+norm, or identify the full interacting coarse action with a nearest-neighbor
+Wilson action. Those distinctions survive the genuine locality gains here.
+
+SOURCE STATUS
+
+The ordinary finite-read map and endpoint covariance are the directly
+read B109(0.8),(0.11),(0.12) inputs recorded in constrained_effective_action40:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+The local forest, right inverse and exact coarea are the audited turn39
+finite-lattice constructions. The uniform Gaussian saddle inverse is
+gaussian_coarse_kernel_turn40. All nonlinear contraction, response and
+determinant arguments in Sections2--6 are given explicitly above; no new
+published nonperturbative source theorem is imported.

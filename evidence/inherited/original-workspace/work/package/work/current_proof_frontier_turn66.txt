@@ -1,0 +1,299 @@
+CURRENT PROOF FRONTIER -- TURN66 -- 20 OCTOBER 2026
+
+THE COMPLETE NONTRIVIAL YM4 CONTINUUM EXISTENCE PROOF HAS NOT BEEN OBTAINED.
+This turn is PROGRESS, not completion. The full goal stays active.
+
+Authoritative new report:
+ outputs/yang-mills-controlled-temporal-limit.txt
+Detailed producer/audit provenance:
+ work/turn66_output_manifest.json
+Previous frontier retained:
+ work/current_proof_frontier_turn65.txt
+Previous outputs remain unchanged except this current-status file.
+
+The user-supplied complete Bałaban Large-I and Large-II papers have
+already been incorporated. Large-II is not waiting for a download.
+The present gap is mathematical, not lack of that PDF.
+
+1. NEW CONTROLLED FIXED-SPATIAL TEMPORAL LIMIT
+
+Fix a finite SU2 spatial graph, Pauli/2 metric, K=-Delta,
+kappa>0, smooth bounded physical V>=0, and gauge projection P.
+For actual temporal spacing delta set
+
+ beta_delta=2/(kappa delta), M_delta=exp(-delta V/2),
+ T_delta=M_delta Q_beta_delta P M_delta.
+
+The original finite-period Wilson normalizer is exactly
+c(beta_delta)^(N|E|)Tr_phys T_delta^N.
+Let lambda_delta,Omega_delta be the leading physical eigenpair.
+For H=kappa K+V, ground pair E0,Omega, the proof gives
+
+ Omega_delta->Omega in L2,
+ -log(lambda_delta)/delta->E0,
+ (T_delta/lambda_delta)^floor(t/delta)
+                         ->exp[-t(H-E0)] strongly,
+
+and for every fixed real smooth gauge-invariant F,
+
+ d_delta(F)/delta ->kappa E_(Omega^2)|grad F|^2,
+ d_delta(F)=E_delta[(F1-F0)^2]/2.
+
+The delta-indexed expectations and eigenpairs are actual Wilson
+ground-state quantities; H, E0 and Omega are their proved limits.
+The electric bound B_delta=(I-Q_delta)/delta<=kappa K
+gives core convergence. Spin monotonicity gives ground-state
+spectral-tail compactness at a fixed graph.
+The exact AM--GM defect is controlled by
+h q_beta<=C beta^-1 q_(beta/2) and strong ground-state convergence.
+No uniform derivative estimate on Omega_delta is assumed.
+
+For each spatial cutoff a, choose delta_a sufficiently small,
+then a sufficiently large finite temporal period N_a. This
+approximates any specified finite collection of means, variances,
+fixed-time correlations and adjacent quotients to a prescribed
+tolerance. One may also impose delta_a<=a^2 and N_a delta_a->infinity.
+No convergence rate uniform in a or exchange of limits is claimed.
+
+2. DIRECT HAMILTONIAN WEAK-ENERGY ESTIMATE
+
+On a finite cubic spatial torus with n sites take
+
+ H_a=g_a^2 K/(2a)+4 S_sp/(g_a^2 a).
+
+The product trial vector psi_t=product_e [exp(tu0,e/2)/sqrt Z(t)]
+has per-edge kinetic<=3t/16 and per-plaquette magnetic<=6/t.
+The full elliptic ground state is uniquely positive and gauge
+invariant, so this noninvariant trial bounds the physical E0.
+With3n edges and3n plaquettes, t=16/g_a^2 gives
+
+ E0(a)<=9n/a,
+ E_(Omega_a^2) S_sp <=(9/4)n g_a^2,
+ <Omega_a,K Omega_a> <=18n/g_a^2.
+
+Cubic symmetry gives E h_p<=3g_a^2/4 per spatial plaquette.
+The actual spatial flow -4a^-2 grad S_sp also satisfies
+
+ E S_sp(U_s)<=(9/4)n g_a^2,
+ E int_0^s |grad S_sp(U_r)|^2 dr <=(9/16)n a^2 g_a^2.
+
+These are action and current-action derivative bounds. They
+do not bound the initial-field derivative of the flowed probe.
+They also do not provide a physical variance lower bound.
+
+The actual matching Wilson couplings are
+
+ beta_time=4a/(g_a^2 delta), beta_space=4delta/(g_a^2 a).
+
+At delta=a they agree with4/g_a^2, but this proof fixes a and
+sends delta to0. It does NOT identify the finite isotropic
+-log T with the differential Hamiltonian. Isotropic Bałaban
+admissions and running-coupling identifications cannot be copied
+to this anisotropic sequence without proof.
+
+3. PRECISE PHYSICAL CONSUMER -- BOTH HYPOTHESES STILL OPEN
+
+For the SAME physical original/Hamiltonian observable F_a set
+
+ v_a=Var_(Omega_a^2)(F_a),
+ D_a=g_a^2 E_(Omega_a^2)|grad F_a|^2/(2a).
+
+The exact ground-state form and spectral Jensen give
+
+ Cov(F_a(0),F_a(t))>=v_a exp(-t D_a/v_a).
+
+A uniform v_a>=v_*>0 and D_a<=C would preserve a nonzero
+fixed-time reflected witness in a compatible spatial limit.
+BOTH physical hypotheses remain unproved for the calibrated
+nonlinear magnetic observable. In unscaled Pauli/2 link
+coordinates the derivative target is E|grad F_a|^2=O(a/g_a^2).
+
+Even these two estimates alone would not give a local continuum
+algebra, spatial rotations, full Euclidean symmetry, unique vacuum,
+positive excitation energy, or the required Yang--Mills identity.
+No replacement of the full goal by a spatial lattice theory is made.
+
+4. NEW THIN-LOOP VARIANCE AND REFLECTION COLLAPSE
+
+In the original finite four-dimensional Wilson law, a simple-edge
+loop of length l has m>=l/19 selected edges sharing no action
+plaquette. Given every other original link, their exact laws
+factor into tilted SU2 Haar laws with strengths<=6beta.
+Fundamental and adjoint coefficients contract by
+exp[-c/(1+beta)] per selected edge.
+
+For W=Tr U(loop)/2 and eta=exp[-cm/(1+beta)],
+
+ |E(W|exterior)|<=eta,
+ |E(W^2|exterior)-1/4|<=3eta/4.
+
+For fixed physical loop length and a(1+beta_a)->0,
+Var(W_a)->1/4. But any bounded exterior-measurable H has
+|Cov(H,W)|<=2||H||infinity eta. Adjacent and separated reflected
+copies omit the selected edges. Consequently
+
+ d(W_a)->1/4,
+ centered separated reflected covariance ->0.
+
+Thus physical-size ordinary variance is not by itself a
+nontrivial continuum witness. This theorem does not cover
+flowed, thick, averaged or source-renormalized loops.
+The optional full conditional Haar convergence pays the factor
+(1+beta)^(3/4); its stronger sufficient condition is recorded
+separately from the first-two-moment condition.
+
+5. NEW NONLINEAR CONSUMERS AND THEIR PRECISE LIMITATIONS
+
+Every smooth finite-lattice physical observable has a finite
+ambient Fourier representation nu. The original one-slab
+characteristic comparison gives
+
+ d(F)<=H_beta(nu)^2/2,
+ H_beta(nu)=int sqrt[2(1-exp(-sum |b_e|^2/(2beta_e)))] |nu|(db).
+
+Gauge averaging gives Var_mu(F)<=C beta_max H_beta(nu)^2
+under EVERY probability mu. Using this norm alone to certify
+d=O(a) collapses variance when a beta_max->0.
+This is a limitation of the sufficient bound, not a theorem
+that small ACTUAL increments force small variance.
+
+The uniform operator inequality [F,[F,T]]<=C T fails for
+the actual finite Wilson transfer matrix, already for the
+physical bounded plaquette F=chi_spin1(W_p)/3. The physical
+character basis has electric eigenvalues
+[I_(n+1)(beta)/I_1(beta)]^4. Its relative Jacobi row potential
+is asymptotic to(16/9)(2/beta)^8 n^7, and suitable sine
+packets give unbounded positive relative forms. Congruence
+by the actual bounded invertible Wilson M transports the
+obstruction without altering the potential.
+The packets are not the actual positive thermal remainder;
+state-dependent estimates remain possible.
+
+For the actual nonlinear flowed radial magnetic probe, an
+explicit smooth Cartan background has true gradient squared
+source norm comparable to a/beta. Its independent center-gauge
+orbit has relative covering entropy log M>=c a^-3.
+Thus a uniform derivative net with log M=O(beta) fails on
+logarithmic coupling sequences.
+No positive Wilson mass for the spread class is proved, so
+this does not exclude a controlled original-law remainder.
+Adaptive frame fixing does not inherit the centered source
+bound: a present edge fixed to identity makes the scalar
+aligned increment a positive-mean plaquette energy.
+
+6. RETAINED EXACT SOURCE AND ENERGY RESULTS
+
+TURN65: original finite SU2 Wilson law, time-independent
+bounded physical spatial potential and fixed beta_e>0,
+
+ E exp[sum_(j,e)b_(j,e).Delta_(j,e)]
+       <=exp[sum_(j,e)|b_(j,e)|^2/(2beta_e)]
+
+for deterministic coefficients on all temporal slabs.
+Delta uses the actual temporal-link alignment.
+The proof uses exact Gaussian Fourier factors, physical
+compression and Schatten Holder. No tilted operator is
+assumed to commute with the gauge projection.
+The characteristic LOWER comparison is one slab only.
+
+For a finite class of M deterministic scalar sources with
+variance proxies<=sigma^2,
+E max|Z_r|^2<=2sigma^2[log(2M)+1].
+A pathwise difference bound with an actual remainder R gives
+d(F)<=2sigma^2[log(2M)+1]+E|R|^2.
+The physical attachment and remainder remain unproved.
+
+TURN64 full finite-period original energy theorem remains
+
+ E exp[sum_B s_p beta_p h_p]
+       <=product_B(1-2s_p)^(-3/4), 0<=s_p<1/2.
+
+Its homogeneous/orientation-dependent finite-volume scope
+is unchanged; arbitrary exterior and effective-RG laws are
+not covered. Its proof has no thermodynamic-first boundary
+error. The physical temporal reflection criterion remains
+Cov(F0,F_m)>=v(1-d/v)^m for the same real bounded F.
+
+The microscopic F_beta=exp(-t beta h_p) has actual variance
+and adjacent increment floors. Its positive ultraviolet
+spectral contribution does not exclude a residual low-energy
+piece. The NEW thin-loop result above does exclude separated
+reflection weight for that particular thin-loop family.
+
+7. RETAINED NONLINEAR FLOW LIMITATIONS
+
+TURN65's exact plaquette Hessian contains a negative
+sqrt(h_p) term. Its tangent estimate retains the correlated
+quantity E[rho_e(U_s)|J_s,e|^2]; it cannot be factorized.
+Initial energy control alone certifies small critical
+curvature only on physically shrinking boxes along a
+logarithmic weak-coupling sequence.
+
+The homogeneous noncommuting example gives a radial-probe
+unit Hessian asymptotic to C/(a sqrt(beta)) on a microscopic
+plaquette-small set. It is a deterministic obstruction to
+a uniform pointwise Hessian bound, not an averaged Wilson
+divergence.
+
+Under the ORIGINAL isotropic Wilson law, the specified coherent
+energy window containing that example has probability<=exp(-c n),
+while the global Hessian bound is<=Ca^-8 exp(Cs/a^2). Its
+Wilson-averaged contribution tends to zero on a fixed physical
+three-torus. The conditional-density proof of that probability
+bound has not been transferred to the Hamiltonian law Omega_a^2.
+This window DOES NOT exhaust large-derivative fields.
+
+8. RETAINED NATIVE BAŁABAN SCOPE
+
+Large-I's exact admitted positive replacement retains the
+old marginal through dJ(e,x,xi,y)=d tau(e,x,xi)q_e(dy).
+The old/inverse-gauge variables are not silently discarded.
+Large-II supplies a positive normalized fixed-coarse reference
+at its actual analytic and running-trajectory admissions.
+Its coercivity does not identify that reference with the
+old-current conditional law.
+
+NEW explicit check: a nonconstant current-loop test centered
+under q_e has positive q_e variance but zero conditional
+expectation given all original variables at that chronology.
+Marginal preservation plus reference nondegeneracy therefore
+does not automatically yield the original physical variance.
+
+TURN62 first-class erasure/count and TURN64 success-weighted
+all-birth estimates remain at their recorded admissions.
+At the complete pre-redraw record, with births J_D and
+success probability p_D,
+sum omega_D J_D p_D=E[sum omega_D I_D^+ |pre].
+The robust p_D>=kappa ledger is controlled as recorded.
+The low-reference-success second-class ledger remains open.
+Product-odds upgrades require the full complete-read admission.
+No all-history physical transport or all-scale unreplaced
+original block mass has been inferred.
+
+9. REMAINING WORK AND SOURCE PROVENANCE
+
+The primary target is a normalized original-observable theorem
+that simultaneously preserves physical fluctuations and controls
+their time dependence. The temporal-limit gradient identity is
+one proved consumer; it still needs the actual spatial estimates.
+The native route still needs an original-field transport or
+comparison theorem, not merely reference coercivity.
+No complete compatible continuum construction has been proved.
+
+Primary temporal-limit context checked:
+Creutz, Phys. Rev. D15(1977),1128,
+https://doi.org/10.1103/PhysRevD.15.1128
+No unread spatial-continuum theorem is imported from it.
+The thin-loop proof has classical Simon--Yaffe perimeter-law
+context, with every quantitative consequence used here derived
+in its producer note.
+
+No new Ethan/Sussman repository refresh was performed this turn.
+Latest verified tree remains work/remote64 at commit
+cf596e69629e0da2e25e33ab8cafc507c023a1de.
+No unpublished completion is treated as a theorem.
+
+Internal producer audits are included in the report.
+They are not external peer review.
+The objective remains a valid nontrivial four-dimensional
+Yang--Mills continuum theory, and it remains incomplete.

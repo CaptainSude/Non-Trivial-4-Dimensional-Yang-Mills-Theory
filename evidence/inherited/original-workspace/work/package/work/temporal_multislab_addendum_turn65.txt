@@ -1,0 +1,286 @@
+DETERMINISTIC SOURCES ON ALL TEMPORAL SLABS -- TURN65 ADDENDUM
+20 October 2026. tail47.
+
+RESULT
+
+The single-slab restriction in temporal_quadratic_increment_turn65.txt
+can be removed for its real exponential sources by a different
+operator argument. The frozen single-slab producer is not edited.
+
+In the SAME original finite periodic SU2 Wilson model and quaternion
+normalization, let j=0,...,N-1 label all temporal slabs. Let
+
+ Delta_(j,e)=u_(j,e)-(u_(j+1,e))^(h_j)
+
+be the quaternion difference after alignment by the ACTUAL temporal
+links h_j on that slab. The last time index is periodic. For any
+deterministic real vectors b_(j,e) in R^4,
+
+ E_W exp[sum_(j,e) b_(j,e).Delta_(j,e)]
+       <= exp[(1/2)sum_(j,e)|b_(j,e)|^2/beta_e].       (0.1)
+
+The complete original partition function is in the denominator.
+There is no factor depending additionally on N or on the volume.
+The spatial action and temporal Wilson coefficients must be
+time independent, as in the preceding theorem. Sources may vary
+arbitrarily with j and e, and may vanish on any subset.
+
+A finite-family corollary in Section5 allows a field-dependent
+selection from a proved finite deterministic source family, at the
+explicit logarithmic cardinality cost. This does not identify the
+actual nonlinear flow Jacobian with such a family.
+
+1. SETTING AND THE EXACT GAUSSIAN FEATURE MAP
+
+Use precisely Section1 of temporal_quadratic_increment_turn65.txt:
+normalized SU2 and site Haar measures, finite ordinary periodic
+spatial graph, N>=4, real bounded gauge-invariant V_sp independent
+of time, M=exp[-V_sp/2], and beta_e>0 independent of time.
+All the statements below include the ordinary orientation-dependent
+Wilson action.
+
+Write X=(S^3)^E in its quaternion embedding in R^(4|E|), and let
+dmu be the product of normalized slice Haar measures. The electric
+kernel is
+
+ Q(u,v)=product_e c(beta_e)^-1
+                exp[-beta_e|u_e-v_e|^2/2],
+ c(beta)=2 exp[-beta]I_1(beta)/beta.                   (1.1)
+
+On the ambient Fourier space define the positive finite measure
+
+ dnu(xi)=product_e [
+   c(beta_e)^-1 (2 pi beta_e)^-2
+   exp[-|xi_e|^2/(2 beta_e)] d^4xi_e ].
+
+Let F:L2(X,dmu)->L2(dnu) be the integral operator
+
+ (F f)(xi)=int_X exp[-i sum_e xi_e.u_e]f(u)dmu(u).
+
+It is Hilbert--Schmidt because nu has finite total mass and the
+kernel has modulus1. Fourier inversion gives the EXACT identity
+
+ F* F=Q.                                             (1.2)
+
+In particular all c(beta_e) factors in the normalized Wilson
+kernel are retained in nu. There is no approximation by an ambient
+Gaussian probability law on the link variables.
+
+For b_j=(b_(j,e)), put
+
+ B_j=sum_e |b_(j,e)|^2/beta_e,
+ (U_j f)(xi)=exp[-i sum_e b_(j,e).xi_e/beta_e] f(xi).
+
+U_j is unitary. Completing the square in the ambient Gaussian
+Fourier integral proves
+
+ Q_(exp,j)(u,v)
+   :=Q(u,v)exp[sum_e b_(j,e).(u_e-v_e)]
+    =exp[B_j/2](F* U_j F)(u,v).                       (1.3)
+
+The marked operator Q_(exp,j) generally is neither self-adjoint
+nor gauge invariant. Its kernel is positive for real b_j. Only
+the unitary factorization(1.3), not a Loewner order for this
+nonsymmetric operator, will be used.
+
+2. ALL THE GAUGE PROJECTIONS IN THE ACTUAL SOURCED TRACE
+
+Let P be the orthogonal spatial gauge projection. M and Q commute
+with P, but Q_(exp,j) need not. The unmarked full-space transfer
+operator is
+
+ T=M Q P M=P T P.
+
+It restricts to the actual physical transfer operator. The
+original partition function is
+
+ Z_W=[product_e c(beta_e)]^N Tr_phys(T^N).             (2.1)
+
+Integrating the temporal links on slab j gives the exact marked
+operator
+
+ K_j=M Q_(exp,j) P M=C_j P,
+ C_j=M Q_(exp,j) M.                                  (2.2)
+
+This follows by writing its kernel as the integral over h_j of
+Q_(exp,j)(U_j,U_(j+1)^(h_j)), with the same half spatial factors
+as in the unmarked Wilson trace. In particular the source uses
+the actual aligned difference on that slab, not an independently
+chosen pair of current gauge representatives.
+
+The sourced partition numerator is
+
+ [product_e c(beta_e)]^N Tr(K_0...K_(N-1)).
+
+Here multiple noninvariant insertions cause no lost projection:
+K_j P=K_j. In the decomposition H=P H plus (I-P)H, each K_j has
+block form
+
+ [ a_j  0 ]
+ [ c_j  0 ].
+
+Consequently
+
+ Tr(K_0...K_(N-1))
+     =Tr_phys[(P C_0 P)...(P C_(N-1) P)].              (2.3)
+
+All products are trace class at finite volume. The block identity
+can equivalently be obtained by cyclicity and insertion of the
+already present P's. It does not assert source commutation.
+No extra gauge-volume factor is introduced by these normalized
+orthogonal projections.
+
+3. SCHATTEN HOLDER AND EXACT DENOMINATOR CANCELLATION
+
+Set A=F M P, as an operator from the full slice space into the
+Fourier space, or restrict its domain to the physical subspace.
+Then
+
+ A* A=P M Q M P=T,
+ P C_j P=exp[B_j/2] A* U_j A.                        (3.1)
+
+For the Schatten norm with exponent N, Holder gives
+
+ ||A* U_j A||_N
+   <=||A*||_(2N) ||U_j A||_(2N)
+   = ||A||_(2N)^2
+   =(Tr_phys T^N)^(1/N).                             (3.2)
+
+The equality uses unitarity of U_j. A is Hilbert--Schmidt, so
+all these norms are finite. No positivity of A*U_jA, no
+commutation between marked factors, and no monotonicity of
+operator powers is being assumed.
+
+Applying the N-factor Schatten trace inequality to(2.3) yields
+
+ |Tr(K_0...K_(N-1))|
+   <=exp[(1/2)sum_j B_j] Tr_phys(T^N).                (3.3)
+
+For real b_j the left trace is the nonnegative actual source
+integral. Divide by(2.1), cancelling the same factors c(beta_e)
+and the exact physical trace. This proves(0.1).
+
+The proof uses a common M and common unmarked Q for all slabs.
+It does not give the same normalized ratio for arbitrary
+time-dependent spatial actions by simply applying Holder to
+different unmarked operators.
+
+The single-slab characteristic-function LOWER bound in the frozen
+producer does not follow on multiple slabs from this norm
+argument. No such multi-slab lower bound is claimed.
+
+4. CONSEQUENCES AND SOURCE SCOPE
+
+For
+
+ Z_b=sum_(j,e) b_(j,e).Delta_(j,e),
+ sigma_b^2=sum_(j,e)|b_(j,e)|^2/beta_e,
+
+the bound holds with b replaced by t b for every real t. Since
+all variables are bounded at finite volume, comparison at0
+gives
+
+ E Z_b=0,
+ E Z_b^2<=sigma_b^2,
+ Pr(|Z_b|>=r)<=2 exp[-r^2/(2 sigma_b^2)]               (4.1)
+
+for sigma_b>0. When sigma_b=0, Z_b=0. The second derivative
+comparison is valid because the constant and linear terms agree;
+no higher mixed moment coefficient is inferred from the
+moment-generating inequality.
+
+For deterministic matrices A_(j,e):R^4->R^r, applying(4.1) to
+their rows gives
+
+ E |sum_(j,e) A_(j,e)Delta_(j,e)|^2
+       <=sum_(j,e)||A_(j,e)||_HS^2/beta_e.             (4.2)
+
+The sources may be chosen as deterministic functions of lattice
+spacing, coupling, or the finite geometry. They must be fixed
+before drawing the gauge field. In particular they are not the
+random derivative of a nonlinear spatially flowed field.
+
+For any fixed finite source support, these estimates pass to a
+fixed-spacing local weak limit of the periodic Wilson laws:
+the source is a bounded continuous function of finitely many
+spatial and temporal original links. This does not supply a
+continuum physical-coordinate interpretation.
+
+The ambient increments and sources are generally gauge variant;
+they are still well-defined original integrals. The exact
+gauge-invariant ridge construction and its variance-collapse
+limitation remain as stated in the frozen one-slab producer.
+No physical nontriviality conclusion follows merely from(4.2).
+
+5. A FINITE DETERMINISTIC FAMILY CAN HANDLE A RANDOM SELECTION
+
+Let b^(r), r=1,...,L, be a specified finite family of deterministic
+source arrays, each with sigma_(b^(r))^2<=sigma^2. Their random
+variables Z_r may be arbitrarily correlated. Equation(4.1) and
+the union bound imply
+
+ Pr(max_(1<=r<=L)|Z_r|^2>u)
+   <=min[1,2L exp[-u/(2 sigma^2)]].
+
+Integrating this bound at the splitting point
+u0=2 sigma^2 log(2L) gives
+
+ E max_r |Z_r|^2
+        <=2 sigma^2[log(2L)+1].                      (5.1)
+
+It follows for ANY measurable field-dependent selection r(omega)
+that
+
+ E |Z_(r(omega))|^2
+        <=2 sigma^2[log(2L)+1].                      (5.2)
+
+No independence between the selection and the increments is
+required. The same conclusion applies to a random linear
+combination sum_r alpha_r(omega)Z_r if
+sum_r |alpha_r(omega)|<=1 pointwise.
+
+Suppose a real bounded physical slice observable satisfies the
+ACTUAL pathwise estimate
+
+ |F_1-F_0|<=max_r |Z_r|+|R|                           (5.3)
+
+under the original Wilson law, with an explicitly controlled
+remainder R. Then (a+b)^2<=2a^2+2b^2 proves
+
+ d_N(F):=(1/2)E(F_1-F_0)^2
+       <=2 sigma^2[log(2L)+1]+E|R|^2.                (5.4)
+
+This is a concrete consumer of the original-law source theorem,
+not an assumed conditional Gaussian law for random derivatives.
+
+For example, IF a magnetic observable admitted(5.3) with
+sigma^2<=C a/beta, log(2L)<=C' beta, and E|R|^2<=C'' a,
+then(5.4) would prove d_N(F)=O(a), with physical parameters fixed.
+Such a finite deterministic description of the actual nonlinear
+magnetic Jacobian, and such a remainder estimate, have NOT been
+proved here. An uncontrolled continuum supremum cannot replace
+the explicit finite family in(5.1).
+
+Even a proved increment estimate would still need the separate
+cutoff-uniform lower variance to invoke TURN64's nontrivial
+reflection witness.
+
+6. RELATION TO THE FROZEN PRODUCER AND FINAL STATUS
+
+The new ingredient is the full Fourier phase factorization
+Q_exp=exp[B/2]F*UF. The earlier single-slab argument used only
+its self-adjoint cosine/cosh consequences. The phase factor
+and Schatten norms permit all the temporal slabs simultaneously,
+even though each source separately fails to commute with P.
+
+The only primary transfer-matrix import is the one explicitly
+listed and checked in Section1 of the frozen producer:
+Luscher, CMP54(1977),283--292, DOI10.1007/BF01614090.
+The Gaussian feature factorization, projection bookkeeping,
+Schatten estimate, and finite-family consumer are proved above.
+
+This is a finite-volume original-law source theorem, not a
+replacement of -log T by an electric differential Hamiltonian.
+The nonlinear physical-observable attachment, its lower
+variance, and the nontrivial YM4 continuum existence proof
+remain unresolved.

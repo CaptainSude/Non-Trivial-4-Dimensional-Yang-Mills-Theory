@@ -1,0 +1,383 @@
+FIXED-CUT MARGINAL CLOSURE OF THE BOUNDED-INTERACTION INTERFACE
+24 October 2026. audit_two_root. Finite theorem and native scope.
+Archive and outputs unchanged.
+
+RESULT
+
+The bounded-interaction spatial consumer admits an exact finite
+marginalization interface. Integrating any chosen subset of the SAME
+independent coordinates needs no weighted Hessian of the resulting
+nonsmooth marginal. Its reference measure retains the three conditional
+mixing/moment properties actually used in the consumer. Its correction
+has an exact local value expansion with a controlled small norm.
+
+This is a genuine closure statement for fixed-coordinate elimination,
+including a partial integration of the actual Q1^Omega fiber already
+matched in full_omega_next_coarse_law. It is NOT an automatic third
+nonlinear constrained RG step. The resulting source response is initially
+in the hybrid metric, not an ordinary derivative with a new coupling
+gain. The displayed interaction bound is not a contraction, and repeated
+generic localizations spend spatial rate. No ultraviolet-depth-uniform
+iteration follows from this note.
+
+1. THE THREE REFERENCE PROPERTIES, WITH NO OUTPUT HESSIAN
+
+Use a fixed finite four-dimensional cubic torus and a product of compact
+convex coordinate sets K_i in fixed dimension. The initial reference nu
+has the complete weighted-convex action and conditional estimates of
+full_omega_spatial_consumer_20261023, Sections1--2. Write the coordinate
+set as I disjoint-union Y. Integrate I and retain y in K_Y.
+
+The proof of that consumer uses the following properties of a reference
+law, uniformly for every update set B and every exterior configuration:
+
+ (A1) joint protected marginal TV under one changed exterior block j:
+      TV((nu_B^eta)_S,(nu_B^eta')_S)
+                 <=min(1,C s exp[-nu d(j,S)]),
+      for EVERY S subset B, s=|eta_j-eta'_j|;
+
+ (A2) |nu_B^eta x_i-nu_B^eta' x_i|
+                 <=C s exp[-nu d(i,j)];
+
+ (A3) nu_B^eta |x_i-nu_B^eta x_i|^2<=sigma^2.
+
+The weighted Hessian is a sufficient producer of (A1)--(A3), not an
+additional ingredient in the subsequent block-coupling proof.
+
+Let nu_Y be the EXACT marginal of nu. If B subset Y is updated and
+Y\B is fixed, its conditional law is the B marginal of the original
+reference law with I union B free. Thus apply the original estimates
+with free set I union B and protected set S subset B. Its coordinate
+means and variances are exactly those of the same original conditional.
+Consequently nu_Y satisfies (A1)--(A3) with the SAME constants and
+spatial rate. The size of the eliminated set does not enter.
+
+This argument applies after ANY finite succession of coordinate
+eliminations: the final reference is the corresponding original
+marginal, by Fubini. It never differentiates a marginal Hamiltonian or
+asserts weighted accretivity of a Schur complement or singular Hessian.
+
+The block-consumer proof also applies to an arbitrary remaining subset
+of the lattice. Use update sets B_z=Y intersect cube_ell(z), allowing
+repeated sets and empty updates. Each retained site belongs to exactly
+N translated cubes, as before. Every birth-cost bound only decreases
+when coordinates are omitted, and the same N identical-condition erasures
+remain. This includes disconnected retained sets. For the usual small
+cubic tori use a whole-volume update; its size is bounded by the fixed
+block size. No arbitrary retained-subset regularity is required.
+
+2. A PERTURBED CONDITIONAL BOUNDARY COMPARISON
+
+Let mu be the EXACT normalized tilt of nu by a real interaction
+
+ V=C_V+sum_X psi_X,   v_X=osc(psi_X),
+ delta=sup_i sum_(X contains i) exp[kappa diam X] v_X<delta_*.
+                                                               (1)
+
+Constants may be extracted so 0<=psi_X<=v_X; C_V retains the exact
+extracted scalar. The finite-volume absolute sum of v_X is finite.
+All partial or fractional insertions of these terms satisfy (1).
+
+Fix y,y' differing only at j in Y, and let mu_I^y,mu_I^y' be their
+conditional laws on the eliminated coordinates I. Put s=|y_j-y'_j|.
+For a bounded F depending on internal S subset I, the block mechanism
+gives the normalized conditional comparison
+
+ |mu_I^y F-mu_I^y' F|
+ <=C_ell osc(F) (1+s) exp[-lambda d(j,S)].                    (2)
+
+Its right side may always be capped by osc(F). The proof is useful:
+it does not assume smoothness of psi or differentiate a posterior ratio.
+
+Use the block generator L_y on I, with the actual mu_I^y conditionals,
+and its semigroup P_t^y. Set w_i=exp[-lambda d(i,S)]. The previous
+coupling theorem gives
+
+ Lip_(d_w)(P_t^y F)<=exp(-gamma t) Lip_(d_w)F,
+ gamma>=N/2,   d_i(u,v)=1_(u!=v)+|u-v|.                      (3)
+
+The exact comparison identity is
+
+ mu_I^y F-mu_I^y' F
+   =integral_0^infinity mu_I^y'[(L_y-L_y')P_t^y F]dt.          (4)
+
+It follows by differentiating mu_I^y' P_t^y F and using invariance of
+mu_I^y' for L_y'. All finite conditional normalizers remain in the two
+heat-bath kernels. The finite-run convergence and measurable coupling
+arguments are precisely those used for the original consumer.
+
+For cubes not containing the external site j, reuse the near/far block
+couplings from that proof. Their total weighted output cost is at most
+C N w_j(1+s). There are at most N additional translated cubes containing
+j; their actual update set is cube intersect I, so j itself is excluded.
+For these, use an arbitrary coupling of the two block laws. Their
+coordinate means differ by at most C s exp[-nu d(i,j)]+C delta N,
+and their centered coordinate second moments are uniformly bounded
+by the small bounded block tilt. Thus each such cube costs at most
+C N w_j(1+s), because delta N<=1 and its weights are within a fixed
+factor of w_j. Together,
+
+ sum_B coupling E sum_(i in B) w_i d_i(X_i,Y_i)
+                              <=C N^2 w_j(1+s).              (5)
+
+Insert (5),(3) into (4) and use Lip_(d_w)F<=osc(F). This proves (2),
+with fixed C_ell. The same proof gives for any internal profile
+a_i^F<=A exp[-nu_F d(i,P)]
+
+ |mu_I^y F-mu_I^y' F|
+                 <=C A(1+s)exp[-lambda' d(j,P)],              (6)
+
+with lambda' below the consumer and source rates. If F also depends
+on y, its direct change is added separately. These estimates are in
+the hybrid metric: the factor 1+s does NOT vanish as s tends to zero.
+
+3. EXACT SEQUENTIAL NORMALIZER INCREMENTS
+
+Write a reference density as exp[-H_0(x,y)] on the same product cut,
+and enumerate the interaction terms in any fixed deterministic order.
+The finite-volume reference and perturbed conditional integrals are
+
+ Z_0(y)=integral_(K_I) exp[-H_0(x,y)]dx,
+ Z_l(y)=integral_(K_I) exp[-H_0(x,y)-sum_(k<=l)psi_k(x,y)]dx.
+
+The exact correction to the retained marginal is
+
+ L(y)=-C_V+log Z_final(y)-log Z_0(y),
+ dmu_Y/dnu_Y=exp[L(y)]/nu_Y(exp L).                           (7)
+
+The integrals in (7) are raw finite masses, not independently normalized
+substitutes. Define the insertion increment
+
+ ell_l(y)=log Z_l(y)-log Z_(l-1)(y).
+
+Interpolating ONLY the coefficient of psi_l gives the exact identity
+
+ ell_l(y)=-integral_0^1 mu_(l,t),I^y psi_l dt,
+                    -v_l<=ell_l(y)<=0,                      (8)
+
+where mu_(l,t) has all preceding insertions and t psi_l. No division by
+an exponentially small global event is used. Its interaction norm is
+still <=delta, so (2) applies uniformly in l,t and all exterior y.
+
+If j is outside the ORIGINAL joint read X_l of psi_l, changing y_j
+does not change the inserted function itself. Apply (2) to its internal
+read X_l intersect I, integrate t, and cap by v_l. If that internal
+read is empty, the increment has no such remote dependence. For j in
+X_l, use its direct oscillation bound v_l. In either case,
+
+ |ell_l(y)-ell_l(y')|
+ <=min(v_l,C_ell v_l(1+s)exp[-lambda d(j,X_l)]).              (9)
+
+All cuts remain fixed. This is an endpoint normalized-law estimate
+for merely bounded measurable local insertions, rather than a formal
+derivative of their normalized expectations.
+
+4. SUPPORTED EFFECTIVE INTERACTIONS ON THE RETAINED COORDINATES
+
+Fix one actual point y* in K_Y and let D=max_(j in Y)diam(K_j), finite.
+For each original X=X_l set
+
+ A_(X,n)=Y intersect {j:d(j,X)<=n},
+ y^(X,n)=y on A_(X,n), and y* elsewhere;
+ y^(X,-1)=y*.
+
+The support is deliberately built around the ORIGINAL complete read X,
+including its eliminated coordinates. Define
+
+ Psi_(l,n)(y_(A_(X_l,n)))
+       =ell_l(y^(X_l,n))-ell_l(y^(X_l,n-1)).                  (10)
+
+Stop once the finite torus is covered. Coordinate replacement stays in
+the original product K_Y. Hence the identities are exact:
+
+ L(y)=C_eff+sum_(l,n) Psi_(l,n)(y_(A_(X_l,n))),
+ C_eff=L(y*).                                                (11)
+
+The scalar C_eff is the actual retained-reference value of the raw
+normalizer ratio. It may be extensive and may depend on any still-held
+outer data. It cancels only when normalizing this particular mu_Y;
+the corresponding outer mass must still contain exp C_eff. Nothing
+has reset a partition function to one in the original positive law.
+
+For n>=1, change the nth shell one coordinate at a time and use (9):
+
+ ||Psi_(l,n)||_infinity
+ <=C v_l(1+D)|X_l|(1+n)^(d-1)exp(-lambda n).                  (12)
+
+For n=0 use ||Psi_(l,0)||<=v_l. Empty supports give zero increments.
+The crude geometric bounds suffice:
+
+ |A_(X,n)|<=C|X|(1+n)^d,
+ diam A_(X,n)<=diam X+2n.
+
+For any fixed polynomial power p>=0 and
+0<kappa'<min(kappa,lambda/2), with strict exponent reserve, (12) gives
+
+ sup_(j in Y) sum_((l,n):j in A_(X_l,n))
+       |A_(X_l,n)|^p exp[kappa' diam A_(X_l,n)]
+                                      osc(Psi_(l,n))
+                         <=C_(p,kappa,kappa',ell)(1+D)delta. (13)
+
+To check the incidence sum, j in A_(X,n) implies some i in X lies in
+B_n(j). Sum the original interaction bound at these at most C(1+n)^d
+sites. Powers |X|^(p+1) are absorbed by the spare kappa-kappa' in the
+original diameter weight, since |X|<=C(1+diam X)^d on this lattice.
+The remaining n sum has a fixed polynomial factor times
+exp[-(lambda-2kappa')n]. It converges uniformly in volume.
+
+Thus (11) is an exact local value expansion of the marginal correction,
+small whenever C(1+D)delta is below the next fixed threshold. It does
+not claim exponential decay in support VOLUME, nor smoothness of Psi.
+Its dependence on D is explicit. The previous consumer's cutoff-free
+constants do not make this newly produced interaction norm cutoff-free.
+
+5. WHAT CAN BE REPEATED WITHOUT A NEW WEIGHTED HESSIAN
+
+Combine (A1)--(A3) for nu_Y with (11)--(13). If the displayed norm is
+sufficiently small, apply the bounded-interaction consumer directly to
+
+            mu_Y proportional exp[sum Psi_(l,n)] nu_Y.
+
+The sign is immaterial for the oscillation norm. Its new reference is
+the exact marginal nu_Y, which inherits (A1)--(A3); no claim about a
+weighted Hessian of its effective action is required.
+
+For any FIXED finite number of successive coordinate eliminations this
+provides a finite interface, with explicit norm losses and reserved
+spatial rates. The raw scalar factors in (11) multiply in the actual
+outer masses. They must be retained even when they cancel inside a
+conditional expectation.
+
+There is also a useful representation alternative: keep the ORIGINAL
+reference/interaction and all previously eliminated variables latent.
+Any final conditional on a subset of its original coordinates is then
+covered directly by (2),(6), with the original constants and no repeated
+relocalization. This is an exact Fubini representation. It must not be
+confused with reinstating a source-normalized posterior or reopening a
+performed physical reset; the latent representation has to be chosen
+as a representation of the same original positive integral throughout.
+
+Neither observation is a scale-uniform RG theorem. The estimate
+delta_new<=C(1+D)delta is not a contraction. Repeated generic shell
+localization also decreases the available exponent. An initially
+super-polynomially small delta in g does not control an arbitrary number
+of losses or supply a uniform bound as the ultraviolet depth diverges.
+
+6. ACTUAL PARTIAL INTEGRATION OF THE MATCHED FULL-MIXTURE FIBER
+
+At fixed admitted outer V2, the preceding native note supplies the exact
+law on all current independent coordinates x1:
+
+ dQ1^Omega/dQ1^s
+  =exp[L0(beta(Phi1(x1;V2)))]/Q1^s exp[L0(beta(Phi1))],
+ L0=log Z_Omega-log Z_success.                                (14)
+
+Its small interaction is the pulled-back expansion proved in
+full_omega_local_interaction_20261024. Keep its scalar convention and
+the complete second-success reference premise exactly as registered;
+compiled_source is separately auditing the producer of that premise.
+No result about that premise is supplied here.
+
+Choose ANY deterministic subset I of these actual x1 free coordinates
+and retain Y. They have the native fixed product cut K1. Equations
+(7)--(13) now apply to the ACTUAL partial conditional and marginal of
+Q1^Omega, with D<=C delta1/g1. This is a nonempty physical use of the
+finite theorem, not an arbitrary toy probability law. At this first
+profile the input delta beats every fixed polynomial cutoff cost, so
+one such further fixed-coordinate integration retains smallness.
+
+For the actual first source mean
+F(x1)=p_(Omega,p)(Phi1(x1;V2)), the proven coordinate profile is
+a_i^F<=C g1 L_p^Omega exp[-nu_F d(i,P)]. The exact partially compiled
+source M_p(y)=Q1^Omega[F|x1,Y=y] therefore satisfies, for a single
+retained coordinate change y_j to y'_j,
+
+ |M_p(y)-M_p(y')|
+ <=C g1 L_p^Omega (1+|y_j-y'_j|)
+                                      exp[-lambda' d(j,P)]. (15)
+
+The direct retained-coordinate variation of F is included. Formula(15)
+is a spatial HYBRID finite-difference profile. It is not an ordinary
+Lipschitz derivative bound: dividing it by |y_j-y'_j| is invalid. If one
+uses only arbitrary endpoint oscillations, its price is at most
+C g1 L_p^Omega(1+D), not a fresh next-scale coupling gain.
+
+For a pair, every partially integrated conditional covariance/contact
+is retained by the exact total-covariance identity. Merely propagating
+M_p,M_q does not replace the earlier conditional contact from (32) of
+the consumer. The actual first Omega restriction, alternative second
+event, V2 indicator and outer probability are unchanged by this partial
+integration, and their complementary sectors remain outstanding.
+
+7. PRECISE OBSTRUCTION TO ORDINARY FIRST-DERIVATIVE CLOSURE
+
+A small oscillation interaction alone cannot give ordinary parameter
+derivative bounds. Already on a fixed one-variable strongly convex
+reference, choose a bounded nonconstant h(x) and
+
+       V(x,y)=delta sin(y/epsilon) h(x).
+
+It has uniformly small bounded-interaction norm. But the normalized
+expectation of h has derivative of order delta/epsilon at parameters
+where cos(y/epsilon)=1 and the reference variance of h is positive.
+The simpler delta 1_(y>0)h(x) even gives a discontinuity. This is not a
+claim about the native ratio, which is Lipschitz. It demonstrates the
+missing implication: a VALUE norm does not control a localized SCORE.
+
+The known first ratio has a localized first-background bound for each
+ell_b. Its shell coefficients Psi_(b,n) have small value tails, but
+the naive derivative bound obtained by differentiating both truncated
+ell_b terms does not decay in n for a nearby derivative coordinate.
+Summing those derivative bounds over all n is therefore not licensed.
+One needs a mixed local response, a suitable finite-difference modulus,
+or another exact score representation before asserting the original
+ordinary derivative profile after a new background variation.
+
+8. THE ACTUAL NEXT NONLINEAR CONSTRAINED STEP IS A DISTINCT MATCH
+
+The argument above integrates a subset of the SAME x1 coordinates.
+An actual next RG step instead integrates all x1, varies a determining
+field V2, then rewrites V2=Phi2(x2;V3) with new gauges, constraints,
+Jacobians, minimum maps and possibly new approximate masks. Those
+operations do not identify x2 with a subset Y of x1.
+
+For that step one must prove, on its ENTIRE admitted new product cut:
+
+ (i) the exact new raw-mass/normalizer ratio, including every inherited
+     scalar, current constraint factor, old contact and outer indicator;
+
+ (ii) one admissible Cartesian determining-data family supporting the
+      endpoint comparisons, with actual reconstruction/minimum response;
+
+ (iii) a localized parameter RESPONSE for the complete new reference
+       and the nonsmooth correction, sufficient to generate new local
+       ratio values or source arms with their physical scale factors;
+
+ (iv) smallness and spatial-rate accounting that survives the intended
+      number of scales, rather than only one finite comparison.
+
+The current second product success-size cut is fixed under this note.
+Adding its current failure domains would change that assertion and
+requires its own actual moving-mask analysis; earlier Omega records
+are not supplied by the first full-Omega integration. Small continuity
+at flat data is not whole-cut physical admission.
+
+The concrete advance is (A1)--(A3) inheritance, the exact endpoint
+comparison (2), and the marginal value expansion (11)--(13). The next
+genuine bottleneck is a scale-compatible background/constraint response
+and contraction/source gain for the actual new coordinates. Re-demanding
+a weighted Hessian of the nonsmooth mixture is unnecessary for this
+fixed-cut coordinate interface, but deleting that demand does not by
+itself establish the nonlinear scale-change interface.
+
+SUBSEQUENT REFERENCE REGISTRATION, 24 OCTOBER 2026
+
+The complete second-success reference premise cited in Section6 is now
+registered by second_success_hessian_status_20261024 and independently
+checked by second_success_hessian_audit_20261024 and root. Its final
+first-Q_s soft-gap insertion was read back. Consequently the actual
+partial-coordinate application (14)--(15) has that reference input on
+the same whole-cut two-level sector. The general theorem still needs
+its stated initial reference properties. This registration supplies
+neither a new nonlinear Phi2 match nor an ordinary source derivative,
+scale contraction, outer-sector sum or depth-uniform iteration.

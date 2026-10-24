@@ -1,0 +1,124 @@
+ROOT REVIEW: ORIGINAL GAUSSIAN TO THE FOUR SOFT FACTORS
+24 October 2026. Scoped review of native_gaussian_soft_reduction_20261024.
+
+Verdict: the finite determinant calculation and its fixed-depth native
+coefficient passage pass the checks below, conditional on the explicitly
+registered native classical, averaging and affine-jet inputs. This is
+not a certification of the entire inherited corpus or continuum proof.
+
+1. RESIDUAL AND THE ACTUAL CONDITIONAL HESSIAN
+
+Write R=S-s composed with f at the actual minimum section u, with
+f u=I and s=S u. Envelope stationarity gives DS=C^T lambda. Thus
+DR=0 all along u, not just R=0. Its second derivative is precisely
+Hcal=S''-lambda f''-C^T q C. Differentiating DR(u)=0 gives Hcal H=0.
+Since R is invariant under the current gauge group and DR=0, its
+Hessian also kills D. This argument retains both current corrections;
+it does not incorrectly require the coarse Hessian q to kill D_c off
+shell. For v=v0+HCv, v0 in ker C, its quadratic form is the original
+conditional Lagrangian form on v0. The native constrained propagator,
+not uniqueness of a minimum alone, supplies its strictly positive
+quotient by the based gauge kernel.
+
+2. RECONSTRUCTION OF THE ORIGINAL DELTA INTEGRAL
+
+On a real locus where D and D_c are injective, use x=Uz+D lambda,
+with orthonormal horizontal frame U and ALL site coordinates lambda.
+The source Jacobian is sqrt(det G). Decomposing the target into its
+horizontal frame U_c and D_c coordinates gives Jacobian sqrt(det G_c).
+Because CD=D_c r, the coarse delta fixes the center variables lambda_c
+with coefficient I and constrains A z=0. The possible vertical part of
+CUz merely translates lambda_c; it creates no determinant. The contour
+gauge fixes the remaining based variables with coefficient -I. Its
+Gaussian factor is the original normalized Haar gauge factor, since
+the exact group insertion has a field-independent integral. This
+leaves exactly sqrt(det G/det G_c), rather than an additional orbit
+volume, multiplying the physical constrained Gaussian.
+
+The projected section H U_c is a right inverse J_h of A killed by
+Hperp. Hence Qperp J_h=a A^T and A Qperp^-1 A^T=a^-1 I. Gaussian
+integration with the delta consequently contributes
+a^(h_c/2) det(Qperp)^-1/2, with the original dimension-dependent
+constant. Squaring gives producer(10). This calculation starts from
+the delta, so its inverse private pivot is already present. Inserting
+another pivot or Haar orbit factor would double count it.
+
+3. INDEPENDENT BLOCK DETERMINANT CHECK
+
+In the fine orthonormal vertical frame D G^-1/2, the columns D V
+become G^1/2 V. The vertical part of Cbar is D_c B G^-1/2. The
+two corresponding subspaces are orthogonal, because B V=0. The
+DPD^T block contributes det(V^T G V)=det G_B. On its complement
+the a Cbar^T Cbar block contributes
+a^(s_c) det G_c det(B G^-1 B^T). Eliminating its horizontal cross
+row leaves Hperp+a A^T A, since U_c^T Cbar U=A. Therefore
+
+ det Q_B=a^(s_c) det G_B det G_c
+                   det(B G^-1 B^T) det Qperp.
+
+Completing V by W=B^T(BB^T)^-1/2 and applying the inverse Schur
+identity gives det(BG^-1B^T)=det(BB^T)det G_B/det G. Combining with
+the original integral yields
+
+ I_act=c_nat a^(n_c/2) det G_B det(BB^T)^(1/2) det Q_B^-1/2.
+
+In particular the ghost has power one, and the target dimension is
+n_c, not just h_c. Neither the auxiliary shear nor this computation
+changes the averaging constraint or the original pushforward measure.
+In d4, BB^T=K^-4 I and mu=K^-1 imply
+det G_B det(BB^T)^(1/2)=det(P G P+mu^2 Pi). This cancellation is exact.
+
+4. FLAT FIELD AND COMPLEX CONTINUATION
+
+Two small SU(2) cycle holonomies with nonparallel Lie axes have zero
+common infinitesimal centralizer. They can be realized arbitrarily
+near the identity on a fixed compatible torus. Hence D_c is injective
+on a nonempty full-dimensional real open set. CD=D_c r and parallel
+transport from a center imply injectivity of the fine D at its actual
+minimum. No assertion about a free full group quotient is needed.
+
+The formula is not separately evaluated with det G or det G_c at
+flatness. The original free-pivot Gaussian, Ghat and Q_B are positive
+there and analytic on a common fixed-regulator germ. Positivity fixes
+their branches; equality on the injective real open set then extends
+to the connected germ. The coarse Schur producer separately supplies
+the quantitative K-uniform flat comparison. This avoids a singular
+massless logarithm and does not demand a uniform inverse on the
+injective locus. The discrete center adds no linear Jacobian factor.
+
+5. TWO SCHUR IDENTITIES AND THE NATIVE AFFINE ATTACHMENT
+
+In the orthonormal [V,J] scalar frame the upper block of T is G_B.
+Jacobi's identity gives det Ghat=det T det(mu^2 J^T T^-1 J).
+Vsoft=Q_B+(DJ)(DJ)^T gives
+det Q_B=det Vsoft det(I-J^T D^T Vsoft^-1 DJ).
+Both positive identities extend with the same analytic branches.
+Thus the normalized scalar ledger is exactly
+
+ N0[log det T-(1/2)log det V+log det M-(1/2)log det S].
+
+I checked the distinction between this native on-section identity
+and its explicit physical-source family. The latter has the same
+two affine jets by the registered multiplier/current theorem; it is
+not asserted equal on arbitrary off-shell fields. Differentiated
+inverse identities preserve this affine equality in the coarse Schur
+factor. The actual scalar moving maps are retained directly.
+
+6. INFINITE COEFFICIENTS AND SCOPE
+
+The corrected Section8 does not infer convergence from locality.
+It chooses a compatible jointly convergent subsequence of fixed-grade
+classical/constraint/gauge/source kernels. Flat gaps, weighted inverse
+identities and dominated rooted moments preserve the identities on
+that subsequence. The original full Gaussian coefficient has the
+native B109 limit; every such right-hand side equals that same
+coefficient. Uniform estimates may therefore be applied without
+uniqueness of each structural kernel or a varying-depth limit swap.
+The physical affine fields are polynomial tests of these coefficients,
+not unbounded backgrounds inserted into the finite analytic domain.
+
+This review accepts the exact native four-factor identification in
+its stated scope. Quantitative coarse estimates, heat bands, Wilson
+normalization, signed drift and positive-coupling tuning each require
+their separate proofs. No equality of sharp success windows, full
+mixed-history measure, continuum state, or interaction is inferred.

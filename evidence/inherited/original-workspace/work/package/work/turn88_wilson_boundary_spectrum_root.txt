@@ -1,0 +1,251 @@
+TURN88 -- THE FILTERED BOUNDARY COEFFICIENT IN THE ACTUAL WILSON LAW
+20 October 2026. Root derivation. Finite positivity, not a uniform floor.
+
+RESULT
+
+For the SAME spatially smeared flowed radial observable on the boundary
+and in the positive half, the temporal-difference boundary coefficient
+is strictly positive at every finite nondegenerate Wilson regulator with
+beta>0. This follows from the actual positive Wilson transfer spectrum,
+including the original normalization. No Gaussian comparison or native
+reference law is used for this finite statement.
+
+The statement does NOT give a lower bound surviving a->0. Its exact
+ground-limit representation makes the remaining requirement precise:
+the original observable must retain spectral mass in a fixed finite,
+strictly positive PHYSICAL energy band. Existing bare/current/reference
+variance bounds do not establish that requirement.
+
+The time filter, spectral-band logic and original transfer construction
+are retained mechanisms from TURN65--67/82. The new attachment here is
+to the particular bounded flowed scalar and the one-mark boundary
+coefficient of TURN88, including a finite-period strict-sign proof.
+
+1. ACTUAL TRANSFER AND ORIGINAL NORMALIZATION
+
+Fix a finite nondegenerate spatial SU(2) torus, temporal spacing a>0,
+even temporal period N, and homogeneous beta>0. Let X be the product
+of spatial link groups, with normalized Haar measure. P is normalized
+site-gauge averaging, V the full spatial Wilson action of one slice,
+M=exp(-V/2), and Q product convolution by the normalized temporal kernel
+
+ q_beta(U)=exp[-beta(1-Tr U/2)]/c(beta),
+ c(beta)=2 exp(-beta)I_1(beta)/beta.
+
+The actual transfer is T=M Q P M. On H_phys=P L2(X), it is M Q M.
+The complete Wilson normalization is
+
+                 Z_W=c(beta)^(N|E|) Tr_phys(T^N).       (1.1)
+
+This dictionary was reread in turn82_physical_translation_gauge.txt
+Section1 and controlled_temporal_limit_turn66.txt Section1. No temporal
+continuum limit or differential electric Hamiltonian is used below.
+
+The one-link convolution eigenvalues are I_(2j+1)(beta)/I_1(beta)>0.
+Consequently T is positive trace class and injective on H_phys. Its
+gauge-averaged real kernel is strictly positive, and M is positive and
+invertible at this fixed finite volume. Positivity improvement gives a
+simple largest eigenvalue lambda0>0 and a strictly positive normalized
+ground vector Omega0. Write the physical spectrum, with multiplicities,
+
+               lambda0>lambda1>=lambda2>=...>0.         (1.2)
+
+The possible nonphysical kernel of P is excluded throughout. No lower
+bound on lambda1/lambda0 or on any physical gap uniform in a is inferred.
+
+2. MATCHED SPATIAL OBSERVABLE AND ITS NONCONSTANCY
+
+Use the exact finite spatial Wilson flow Phi_s of TURN63, separately on
+each original time slice, at a fixed physical s>0. For the flowed
+12-plaquette P_s=p0 I+i p.sigma set
+
+ b_a(x;U)=exp[-h|2p(P_s(x;U))/(g_*a^2)|^2],
+ phi_a(U)=sum_x psi_(a,x) b_a(x;U),
+ psi_(a,x)>=0, sum_x psi_(a,x)=1.                       (2.1)
+
+Here psi are the exact spatial cell weights of a fixed nonnegative
+unit-integral spatial test. The parameters h,g_*,s are fixed physical
+observable parameters. phi is real, smooth, gauge invariant and in[0,1].
+
+phi is nonconstant on X at every fixed regulator. Indeed the final
+configuration with all links1 has phi=1. Choose a noncentral plaquette
+at a site carrying a positive weight; such a configuration exists on
+a nondegenerate torus, by a small single-link perturbation. Its phi<1.
+The finite spatial flow is a diffeomorphism of X: its smooth autonomous
+vector field is complete in both time directions on the compact
+manifold, and Phi_-s is its inverse. Both chosen final configurations
+therefore have initial preimages. This proves nonconstancy of phi as
+an ORIGINAL-link observable even when s/a^2 is very large. It does not
+give a uniform modulus or any quantitative probability of the preimages.
+
+Let Phi be multiplication by phi on H_phys, and set Phi_ij=(Omega_i,
+Phi Omega_j). Since Omega0 is strictly positive on all X, nonconstancy
+implies Phi Omega0 is not proportional to Omega0. Hence
+
+                    some j>0 has |Phi_0j|^2>0.         (2.2)
+
+This gives only a positive finite-regulator ground variance. It is not
+the absent physical spectral-band lower bound.
+
+3. EXACT FINITE-PERIOD BOUNDARY COEFFICIENT
+
+Let phi_k denote the same spatial function of the original slice at
+time k. For 0<=k<=N,
+
+ E_W[phi_k phi_0]
+  =Tr(T^(N-k) Phi T^k Phi)/Tr(T^N)
+  =Z_T^-1 sum_(i,j)lambda_i^(N-k)lambda_j^k |Phi_ij|^2,
+ Z_T=Tr(T^N).                                          (3.1)
+
+The prefactor in (1.1) cancels at this SAME source-free normalization.
+The spectral sums are absolutely convergent. For example the terms are
+nonnegative and the two-insertion trace is bounded by ||phi||infty^2
+Tr(T^N), by Schatten Holder (also at endpoint k=0 directly).
+
+Choose an integer d>=1 and k such that 2k+d<N. Pair terms i<j, ordered
+with lambda_i>=lambda_j, and put r=lambda_j/lambda_i in(0,1]. The paired
+numerator difference between k and k+d is exactly
+
+ lambda_i^N |Phi_ij|^2
+             (1-r^d)(r^k-r^(N-k-d)).                  (3.2)
+
+It is nonnegative; it is strictly positive when r<1 and Phi_ij!=0.
+The diagonal and equal-eigenvalue pairs cancel. By (2.2), at least one
+pair i=0,j>0 is strictly positive. Thus
+
+             E_W[(phi_k-phi_(k+d))phi_0]>0.            (3.3)
+
+The means of the two terms are identical by stationarity, so this is
+also their covariance with phi_0. For positive-half use impose the
+stronger geometric restriction 0<k<k+d<N/2, with physical buffers.
+The sign formula (3.2) itself only needs 2k+d<N.
+
+Now take nonnegative time weights w_(a,k) summing to1, from cell
+integrals of a fixed time profile supported in[T-eta,T+eta], and let
+d=d_a have delta_a=a d_a->delta>0. All weighted k and k+d_a stay in
+the positive half. Set
+
+ O_a=sum_k w_(a,k) phi_k,
+ F_a=sum_k w_(a,k)(phi_k-phi_(k+d_a)),
+ G_a=phi_0,
+ kappa_(a,N)=E_W[F_a G_a].                              (3.4)
+
+Then |F_a|<=1, E F_a=0, 0<=G_a<=1, and
+
+                       kappa_(a,N)>0                  (3.5)
+
+at every fixed regulator. This is the factorized spacetime test
+f(t,x)=w(t)psi(x), which can be chosen within the small-smear conditions
+of the companion free benchmark. Using different spatial tests at the
+boundary and in the half would not give |Phi_ij|^2 and is not claimed
+by this proof.
+
+For reference, the actual positive ground-pair contribution is
+
+ (lambda0^N/Z_T) sum_(j>0)|Phi_0j|^2 (1-r_j^d)
+                 sum_k w_(a,k)(r_j^k-r_j^(N-k-d)).     (3.6)
+
+It lower-bounds (3.4); no scale-independent lower bound on any factor
+in (3.6) has been proved. All other thermal pair contributions are
+nonnegative in the declared time range. This finite thermal pairing
+does NOT identify its two-sided energy-difference generator with H>=0
+acting on thermal OS vectors; that distinction of TURN82 remains.
+
+4. ORIGINAL REFLECTION LOWER BOUND, WITHOUT A BOUNDARY LIMIT
+
+For the even-period site reflection, let B consist of BOTH original
+fixed spatial slices. The exact original half-product disintegration
+in TURN75 gives
+
+ N_(a,N)=E_W[(Theta F_a)F_a]
+              =||E_W[F_a|B]||_(L2(pi))^2.              (4.1)
+
+G_a is B-measurable because spatial flow stays on slice0. Since E F_a=0,
+Cauchy--Schwarz yields
+
+ kappa_(a,N)^2<=N_(a,N) Var_W(G_a)<=N_(a,N)/4,
+                   N_(a,N)>=4kappa_(a,N)^2>0.          (4.2)
+
+This uses the complete original boundary marginal pi, not a new native
+reference boundary. It remains valid after keeping any positive auxiliary
+history and then completely integrating it out. A strictly positive
+finite norm need not survive removal of the cutoff.
+
+Only F_a and its reflected product must pass to the intended smeared
+scalar limit. G_a is a finite-cutoff witness in (4.2); no convergence
+of a boundary time-point evaluation is needed to transfer a UNIFORM
+bound on its right side. This is why a boundary test can help estimate
+the norm without enlarging the continuum point-evaluation requirements.
+
+5. THE ACTUAL PHYSICAL SPECTRAL REQUIREMENT
+
+Take N->infinity FIRST at a fixed finite spatial regulator. The simple
+Perron eigenvalue gives the genuine original Wilson ground limit. Define
+the exact isotropic transfer logarithm and the bounded-observable measure
+
+ H_a=-a^-1 log(T/lambda0)>=0,
+ E_j=-a^-1 log(lambda_j/lambda0)>0 for j>0,
+ rho_a=sum_(j>0)|Phi_0j|^2 delta_(E_j),
+ rho_a([0,infinity))=Var_(Omega0^2)(phi_a)<=1/4.         (5.1)
+
+No Kogut--Susskind differential approximation is involved. At each fixed
+regulator the mean is centered by removing j=0. For actual physical
+time weights let L_a(E)=sum_k w_(a,k) exp(-a k E). Then
+
+ kappa_a=int L_a(E)(1-exp(-delta_a E)) rho_a(dE),
+ N_a=int L_a(E)^2(1-exp(-delta_a E))^2 rho_a(dE).        (5.2)
+
+The first identity is the limit of (3.1)--(3.4); the second is the
+reflected norm of the temporal difference. Both are positive at each
+fixed regulator, and (4.2) follows again from spectral Cauchy--Schwarz.
+
+Assume all physical time supports lie in[T0,T1], 0<T0<T1<infinity, and
+delta_a in[delta_min,delta_max] with 0<delta_min<=delta_max<infinity.
+These are true for the declared fixed physical profiles at small a.
+There is an exact equivalence of useful UNIFORM requirements:
+
+ (A) kappa_a>=c>0 for all sufficiently small a;
+ (B) some fixed 0<epsilon<Lambda<infinity and b>0 satisfy
+                    rho_a([epsilon,Lambda])>=b.        (5.3)
+
+For (B)->(A), the positive kernel on that band is at least
+ exp(-T1 Lambda)(1-exp(-delta_min epsilon)), so take c equal to
+that factor times b.
+
+For (A)->(B), necessarily c<=1/4. Choose
+ epsilon=c/delta_max,
+ Lambda=max{2epsilon, T0^-1 log(1/c)}.
+The contribution from E<epsilon is at most delta_max epsilon/4=c/4.
+The contribution from E>Lambda is at most exp(-T0 Lambda)/4<=c/4.
+Thus the middle contribution is at least c/2. Its integrand is at most1,
+so rho_a([epsilon,Lambda])>=c/2. Endpoints can be included harmlessly.
+
+The same implication works for positive liminf by choosing a smaller
+eventual c. It characterizes what the proposed source comparison must
+prove; neither (A) nor (B) is established here as a->0. An ordinary
+variance lower bound supplies only the total mass of rho_a and cannot
+prevent that mass escaping to zero or infinite physical energy. The
+actual thin-loop examples in TURN66--67 demonstrate this distinction
+inside the original Wilson theory for a different observable family.
+
+6. CONSTRUCTION SCOPE
+
+The actual finite sign is useful: the proposed boundary coefficient is
+not zero by a gauge symmetry or by a temporal cancellation. It also has
+an explicit positive free benchmark in the companion source note. Its
+physical lower bound is still a genuine interacting requirement.
+
+An infinite-time limit can be taken at each fixed spatial cutoff using
+the exact transfer construction above. This does not establish an
+admissible uniform Bałaban source comparison on the resulting sequence,
+nor O(4) symmetry, removal of spatial flow, local YM identification,
+nonabelian interaction, a mass gap, or the full continuum reconstruction.
+The later scalar OS positive-energy implication remains a milestone
+within the full goal, not a replacement for it.
+
+Inputs reread: work/turn82_physical_translation_gauge.txt Section1;
+work/controlled_temporal_limit_turn66.txt Section1;
+work/spatial_flow_probe_turn63.txt Section1;
+work/turn75_full_law_tail.txt Sections1--2;
+work/temporal_filter_physical_probe_turn67.txt Sections1--2.
+No new external theorem or uniform original-law lower bound is imported.

@@ -1,0 +1,293 @@
+TURN96 -- EXACT INTEGRATED SU(2) BOUNDARY CURRENTS
+21 October 2026. mixed96. Scoped calculation for root; no frontier edit.
+
+RESULT
+
+The one-sided real response idea has a concrete smallest Wilson test.
+Integrating raw links DOES cancel a motion of the marked plaquette that
+is merely a change of Haar coordinates. The cancellation transfers the
+response to the exterior staple score. That score is generally nonzero,
+even after integrating all the raw links and contracting all gauge
+indices. Two exact formulas below distinguish these statements.
+
+The two-raw-link model is an actual finite Wilson conditional fiber,
+not an arbitrary positive surrogate. It matches the noncommuting raw
+plaquette geometry in turn96_old_holonomy.txt. Its nonzero first response
+is proved by an exact Taylor coefficient, not numerical evidence. It is
+NOT asserted to be an admitted first-R history at a chosen native scale.
+It therefore supplies a concrete test of a proposed cancellation, not a
+counterexample to a native theorem or a uniform original mixed estimate.
+
+1. ONE-LINK FIBER: MARK AND WEIGHT SCORE TOGETHER
+
+Use the real quaternion realization SU(2)=S^3. Condition the original
+finite Wilson law on all links except e. If its six oriented staples
+are v_1,...,v_6 in S^3, put v=sum v_p, s=|v|, r=beta s, n=v/s.
+The exact conditional density is
+
+ q_v(du)=z(r)^(-1) exp(beta u.v) du,
+ z(r)=2 I_1(r)/r,     E u=m(r)n,     m(r)=I_2(r)/I_1(r).
+
+At r=0 use z=1,m=0. The coupling-free complete star source is
+S_e=6-u.v. Therefore
+
+                  E_q S_e=6-s m(beta s).                (1.1)
+
+For any differentiable physical exterior variation v(t), including
+the change of the normalized conditional density, this gives
+
+ d E_q S_e=-(m(r)+r m'(r)) ds.                           (1.2)
+
+Equivalently, direct differentiation gives
+ E_q dot S_e+beta Cov_q(S_e,u.dot v).
+The equality with (1.2) keeps the weight score; it is not differentiation
+of the mark at a fixed conditional law. Here m'(r)=Var_q(n.u)>0 for
+finite r, so both terms have a definite, computable combination.
+
+A common gauge rotation of all the staples has ds=0, and (1.2) vanishes.
+A genuine relative exterior variation need not have ds=0. For example
+take five staples equal to I and the sixth exp(i alpha sigma_3). Then
+s=(26+10 cos alpha)^(1/2) and
+
+ d_alpha E S_e=5 sin(alpha) (m(r)+r m'(r))/s >0
+                                            for 0<alpha<pi.    (1.3)
+
+The six opposite parallel links generating these staples can be chosen
+independently on a sufficiently large ordinary four-dimensional lattice;
+set the transverse links of their plaquettes to I. Other plaquettes
+involve only the fixed exterior and drop from this conditional law.
+Thus (1.3) is an actual Wilson boundary current. Gauge averaging changes
+the staple frames, not the scalar s, and does not remove it.
+
+There is a beta-independent finite bound in this constant-star channel:
+
+                  |d E S_e| <= (5/2) |dot v|.            (1.4)
+
+Proof. The spherical radial coordinate y=1-n.u has density proportional
+to exp(-r y) y^(1/2)(2-y)^(1/2), 0<y<2. It is a Gamma(shape 3/2,
+rate r) density tilted by a decreasing nonnegative factor, so
+E y<=3/(2r), hence m>=1-3/(2r). Integration of the spherical radial
+density, or differentiation of z, gives
+ m'=1-m^2-3m/r. For r>=3/2, the last expression is decreasing as a
+function of m>=0, and substitution of 1-3/(2r) gives
+ r m'<=9/(4r)<=3/2. For r<=3/2 use Var(n.u)<=1, giving r m'<=3/2.
+Together with 0<=m<=1 this proves (1.4). The r=0 endpoint follows by
+continuity. No native Gaussian approximation is used.
+
+For a weighted star w=sum f_p v_p the exact mean is
+sum f_p-m(r)n.w. Its derivative also contains dot w and the transverse
+derivative of n. The protected combination (1.2) applies when w=v (or
+a fixed scalar multiple). It does not bound a general weighted mark on
+arbitrarily balanced raw staple data merely by invoking stationarity.
+
+2. TWO RAW LINKS: AN EXACT CHANGE-OF-VARIABLES CANCELLATION
+
+Let Q,R in SU(2) be opposite parallel links, with R oriented so their
+common plaquette is
+
+ P_t=Q V_t R V_t^(-1),        V_t=exp(eta t T),
+ h_t=1-Tr(P_t)/2,             T=i sigma_3.
+
+Let A,B be fixed SU(2) exterior staple matrices. The conditional law is
+
+ d nu_t(Q,R)=Z_t^(-1) exp{ beta Tr(P_t)/2
+                      +kappa Tr(AQ)/2+lambda Tr(BR)/2 } dQ dR. (2.1)
+
+This is a realizable Wilson fiber with the SAME homogeneous beta on
+all plaquettes. Each raw link has five other oriented staples. Choose
+their sums to be (kappa/beta) A and (lambda/beta) B. Such sums are
+available for |kappa|,|lambda|<=2 beta: negative signs are absorbed in
+A or B. For the positive amplitudes, three group elements can form
+an equilateral quaternion triple summing to zero, while the remaining
+pair can be chosen with sum c A for every 0<=c<=2. For example multiply
+the pair cos(theta) I+sin(theta) C and -cos(theta) I+sin(theta) C
+by suitable unit quaternions, with C^2=-I. All ten opposite parallel
+exterior links are distinct. The two transverse common-plaquette links
+are V_t, and no other Q/R plaquette reads them. Terms containing only
+exterior links are conditional constants.
+
+Change variables R'=V_t R V_t^(-1). Haar measure is unchanged, the
+marked h becomes the FIXED h(QR'), and only the exterior B staple moves:
+
+ B_t=V_t B V_t^(-1),
+ d nu'_t proportional to exp{ beta Tr(QR')/2
+                        +kappa Tr(AQ)/2+lambda Tr(B_t R')/2 }.
+
+Consequently the exact normalized response is
+
+ d_t E_{nu_t} h_t |0
+       = (lambda eta/2) Cov_{nu'_0}( h(QR'), Tr([T,B]R') ). (2.2)
+
+In the original variables the same derivative is
+ E dot h-beta Cov(h,dot h), with the other factors fixed. Equation(2.2)
+is its precise Haar integration-by-parts cancellation. The beta-weight
+score and the moving-mark derivative cannot be bounded separately and
+then declared canceled. They combine into the exterior-staple torque.
+If lambda=0, or [T,B]=0, the full response vanishes exactly.
+
+All traces in (2.1)-(2.2) are closed after the exterior staples are
+included. An average over a common gauge frame conjugates T,B,R'
+together and leaves the scalar score Tr([T,B]R') unchanged. The fact
+that a bare adjoint vector has zero Haar mean does not zero this scalar.
+
+3. THE REMAINING INTEGRATED TORQUE IS GENUINELY NONZERO
+
+The nonzero response can be established without evaluating the whole
+two-link integral. At kappa=lambda=0 write S=QR'. Then S has the central
+Wilson law q_beta and Q is independent Haar. Schur orthogonality gives
+
+ int dQ Tr(AQ) Tr(B_t Q^(-1)S) = Tr(A S B_t)/2.
+
+Since E S=m(beta) I, expansion at the zero exterior-staple amplitudes
+gives the EXACT mixed Taylor coefficient
+
+ d_kappa d_lambda log Z_t |_(0,0)
+                      = m(beta) Tr(A B_t)/8.             (3.1)
+
+Single first coefficients vanish. Also
+ E h_t=1-d_beta log Z_t, with kappa,lambda held fixed. Therefore
+
+ d_kappa d_lambda d_t E h_t |_(0,0,0)
+                  = -m'(beta) eta Tr(A[T,B])/8.          (3.2)
+
+Take A=i sigma_1, B=i sigma_2, T=i sigma_3. Then
+Tr(A B_t)=-2 sin(2 eta t), and (3.2) equals
+
+                         eta m'(beta)/2 >0.             (3.3)
+
+For kappa=lambda=epsilon, analyticity of the compact group integral and
+its positive real denominator implies
+
+ d_t E h_t |0=eta epsilon^2 m'(beta)/2+O_beta(eta epsilon^4). (3.4)
+
+The absence of odd total powers follows from (Q,R')->(-Q,-R'), which
+leaves QR' fixed and changes both staple scores' signs. At either
+kappa=0 or lambda=0 the t dependence is identically absent. Thus for
+each beta>0 and eta>0 the derivative is strictly positive for all
+sufficiently small epsilon>0. This is an actual integrated scalar
+boundary current, not merely a pointwise noncommuting trace derivative.
+
+At large beta, m'(beta)~3/(2 beta^2). This also follows without importing
+a Bessel asymptotic: beta(1-n.u) converges, with its first two moments,
+to a Gamma(shape 3/2,rate 1) law by the radial density in Section1 and
+dominated convergence after rescaling. The coefficient in (3.3) thus
+has a beta^(-2) gain. The following direct estimate gives that same
+order uniformly for bounded exterior-staple amplitudes; it does not
+control arbitrary native surroundings with amplitudes of order beta.
+
+3A. A UNIFORM REAL BOUND FOR THIS INTEGRATED TWO-LINK CURRENT
+
+For every fixed K<infinity there is C_K<infinity such that, for
+beta>=max(1,K/2), |kappa|,|lambda|<=K, all A,B in SU(2), and every real t,
+
+          |d_t E_{nu_t} h_t|
+                <=C_K |eta| |kappa lambda| beta^(-2).    (3.5)
+
+This is a bound on the fully normalized actual fiber (2.1). It needs
+no analytic norm of a raw source and no small-source Taylor truncation.
+The K/2 threshold ensures the explicitly proved Wilson realization
+|kappa|,|lambda|<=2 beta. The same analytic integral estimate holds for
+all beta>=1, but values outside that realizability range are not being
+called a six-plaquette homogeneous Wilson conditional fiber here.
+
+Proof. After the above Haar change write S=QR', with c=Tr(S)/2.
+Under the central Wilson law its scalar coordinate has density
+proportional to exp(beta c)(1-c^2)^(1/2), -1<c<1. Integrate Q and the
+direction of the vector part of S to form the positive radial weight
+k_t(c). In the quaternion decomposition of B_t Q^(-1), write a for
+its scalar part, so the vector part has length (1-a^2)^(1/2). The
+directional integral is exactly
+
+ k_t(c)=int dQ exp[kappa Tr(AQ)/2] exp(lambda a c)
+             F(lambda^2 (1-a^2)(1-c^2)),
+ F(x)=sinh(sqrt(x))/sqrt(x)=sum_(n>=0) x^n/(2n+1)!.       (3.6)
+
+Its endpoint values follow by the series. Possible conventions for the
+quaternion vector sign disappear in this directional integral. In
+particular exp(-2K)<=k_t(c)<=exp(2K). The functions F,F',F'' are bounded
+on [0,K^2]. Also |d_t a|<=2|eta|. Direct differentiation of (3.6) yields
+uniform bounds for k, d_c k, d_t k and d_c d_t k. Every t derivative
+contains at least one lambda. At kappa=0, integration of Q makes k_t
+independent of t. Subtract that zero derivative BEFORE taking absolute
+values, using |exp(kappa Tr(AQ)/2)-1|<=|kappa| exp(K). Hence
+
+ |d_t k_t(c)|+|d_c d_t k_t(c)|<=C_K |eta| |kappa lambda|,
+ |d_c k_t(c)|<=C_K,
+ Lip_c[d_t log k_t(c)]<=C_K |eta| |kappa lambda|.          (3.7)
+
+The normalized radial law is q_beta(dc) k_t(c)/q_beta(k_t), and
+ h=1-c. Its exact derivative is Cov(h,d_t log k_t(c)). For any random
+variable X and L-Lipschitz function b, the independent-copy identity
+gives |Cov(X,b(X))|<=L Var(X). Thus (3.7) bounds the response by
+C_K |eta kappa lambda| Var_{nu_t}(h).
+
+The density ratio of this radial law to q_beta is at most exp(4K).
+Centering first at the q_beta mean gives
+ Var_{nu_t}(h)<=exp(4K) Var_{q_beta}(h)=exp(4K)m'(beta).
+The elementary bound from Section1 implies
+m'(beta)<=9/(4 beta^2) for beta>=1: for 1<=beta<=3/2 use variance<=1;
+above 3/2 use its Bessel-identity calculation. This proves (3.5).
+
+The use of radial angular integration is essential to this bound. A
+pointwise estimate of the moving raw commutator has order |eta|, and
+a separate absolute estimate of its beta weight score can be worse.
+The normalized integrated response instead has the order in (3.5).
+For kappa or lambda of order beta, the constants just proved can grow
+exponentially with beta. Claiming (3.5) uniformly for those data would
+be unjustified. The full native boundary-score attachment remains open.
+
+4. CONSEQUENCE FOR THE ACTUAL MIXED SOURCE GATE
+
+These computations support a one-sided approach: keep the rough old
+mark under its positive integration and estimate the response of the
+complete distant regular source through the boundary scores. Such an
+approach need not first prove that the old mark belongs to an analytic
+own-field class.
+
+They also identify what cannot be omitted. The raw integration generally
+leaves a scalar boundary current. In the complete native expression the
+corresponding current includes all remaining interaction, constraint,
+coarea, cut, old-record and continuation scores. For the desired
+Cov(R_f,H_rest), it is the decay of the actual response connecting that
+current to the distant original H_rest that must be bounded. Equations
+(1.4) and (2.2) do not give its physical source-cell census or its decay
+through the later history. The native erasure theorem is an integrated
+catalogue comparison, so it does not itself identify a field-local
+boundary path to which these calculations can be applied.
+
+No arbitrary future-test requirement is introduced here. A useful
+next target is the literal boundary score contracted with ONE actual
+regular energy insertion on the first restarted branch, with its
+conditional normalizer. The two-link calculation is a verification
+example for that target: it must reproduce (2.2) and the positive
+coefficient (3.3), rather than assert that all first currents vanish.
+
+AUDIT
+
+Proved here: exact one-link old-source mean/current and bound (1.1)-(1.4);
+exact two-link moving-mark/weight cancellation (2.2); exact nonzero mixed
+Taylor coefficient (3.1)-(3.3), its finite-beta positivity consequence,
+and the cutoff-coupling bound (3.5) for bounded exterior-staple sums.
+Original Wilson conditional realizability was checked using distinct
+parallel exterior links and the sums of their five remaining staples.
+Not proved: attachment of this test to a fully admitted native history;
+the full normalized mixed source estimate; arbitrary-wait source locality;
+physical UV summability, nontriviality, or a continuum construction.
+
+Prior work read to avoid duplication: frontier95, TURN78 live-source
+history, TURN83 restarted two-jet target, TURN70 selected covariance,
+TURN81 real-source route, TURN85 full-Wilson profile identities, TURN87
+real future-test modulus. TURN85 already has general Haar divergence and
+changed-link identities; the new content is their explicit application
+to a MOVING exterior conditional law and to this TWO-RAW-LINK integrated
+commutator, including the nonzero coefficient. A targeted web search
+found no usable weak-coupling plaquette covariance theorem; no external
+result from that search is used in the proofs above.
+
+Independent TURN96 audits: holonomy96 checked the Haar trace ordering,
+the sign and factor in (3.3), the distinct-link conditional realization,
+the even Taylor remainder, and the whole radial proof of Section3A.
+Root independently checked Section3A. Both requested the Wilson amplitude
+scope correction; it is incorporated in beta>=max(1,K/2). Root reports
+an independent sharper one-link Lipschitz constant1; (1.4) is retained
+as a correct weaker self-contained bound, not a claim of optimality.

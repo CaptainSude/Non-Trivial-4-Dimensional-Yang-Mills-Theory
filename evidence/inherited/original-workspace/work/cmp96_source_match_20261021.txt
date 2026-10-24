@@ -1,0 +1,161 @@
+CMP96 ORIGINAL-SOURCE MATCH FOR TURN126(4.1)
+21 October 2026. Addendum to mixed_geometry_20261021.txt.
+
+STATUS UPDATE
+
+The user supplied the original missing article. Its scanned pages now
+resolve the metric definition and the precise native counting estimate.
+The earlier source-unavailability limitation is no longer current.
+This addendum verifies and proves the polynomial Schur consequence;
+it does not certify the other steps of the nonlinear minimum argument.
+
+Original: work/primary/balaban-cmp96-II.pdf, 28 pages.
+T. Balaban, Propagators and Renormalization Transformations for Lattice
+Gauge Theories. II, Commun. Math. Phys.96 (1984),223--250.
+DOI: https://doi.org/10.1007/BF01240221
+Inspected primary images: cmp96-09.png (printed231), -10.png (232),
+-11.png (233), and -12.png (234). Also checked the full extraction and
+CMP102 original printed308 image for the consumer's exact decay rate.
+
+1. EXACT METRIC AND ENDPOINTS
+
+CMP96(2.45) sets B=union_(j=0)^k Lambda_j and identifies determining
+vertices with their blocks. Formula(2.46), printed231, is
+
+ d(y,y')=inf_Gamma sum_j (L^j eta)^(-1)
+                         |Gamma intersect B^j(Lambda_j)|.
+
+The infimum is over its admissible contours: the portion inside
+B^j(Lambda_j) consists of bonds of the corresponding grade-j lattice.
+Thus the direct lower bounds in mixed_geometry_20261021 are indeed
+bounds for the native metric, not a guessed age metric.
+
+The same paragraph extends the metric to fine points by block projection:
+
+ d(x,x')=d(y^j(x),y^(j')(x'))
+   when x in B^j(Lambda_j), x' in B^(j')(Lambda_(j')).
+
+Consequently a fine-point Euclidean comparison needs bounded endpoint
+offsets: |x-x'| <= s[d(x,x')+C_d] in a truncated geometry with all
+scales <=s. A bare |x-x'|<=s d(x,x') would be false for two distinct
+points in the same block, since their extended d is zero. TURN126's
+use of 1+d already accommodates this correction.
+
+B99 propagators, printed397, refers to CMP96(2.36). The original scan
+confirms the relevant metric is (2.46); cite the latter explicitly.
+
+2. EXACT NATIVE LEMMA AND CONSTANT CONVENTIONS
+
+The ordinary physical distance in this paper is the l1 distance
+(printed223). The geometric gap is (L^j eta)^(-1)
+dist(Omega_j^c,Omega_(j+1))>RM, equation(2.2), printed224.
+
+On printed233, the paper defines
+
+ c0(u)=sum_(z in Z) exp[-u delta0 |z|].
+
+The factor delta0 is part of c0's definition. Omitting it changes
+the parameter condition. For 0<alpha<1, condition(2.59) is
+
+ (alpha delta0 RM)/4 > 2d log c0(alpha/2)+1.           (A)
+
+Lemma2.1, printed234, equations(2.60)--(2.63), includes
+
+ sup_(y in B) sum_(y' in B) exp[-alpha delta0 d(y,y')]
+        <=c1(alpha),
+ c1(alpha)=12 [c0(alpha/2)]^d.                         (B)
+
+Its grade-cost inequality(2.60) is
+
+ d(y,y') >= RM max{|j-j'|-1,0}, y in Lambda_j,
+                                      y' in Lambda_(j').
+
+The triangle inequality is proved explicitly at(2.54), printed233.
+Thus the polynomial-moment deduction below uses primary statements,
+including their actual refinement-independent counting measure.
+
+The summation in(B) is over determining vertices, one per native block,
+not over every fine site inside each block. This is exactly why density
+cancellation does not eliminate an additional fine-site multiplicity.
+
+3. CMP102 CONSUMER: THE AVAILABLE DECAY IS delta0/8
+
+CMP102 original printed308, equation(190), shows
+
+ |delta H_mu(B,x)/delta B_nu(y')|, and its specified output jets,
+   <= C [a_j^(-1),a_j^(-2),...,a_j^(-3),a_j^(-3)]
+          a_(j')^(-d) exp[-delta0 d(y,y')/8],
+
+for x in Delta(y), y in Lambda_j and y' in Lambda_(j').
+Here y' is literally the root of the component B_nu(y'). This avoids
+silently replacing every incident-bond endpoint by an unqualified
+geometric point. Orient each incident bond from an endpoint in its
+defining Lambda_j; the finitely many orientations give only a factor
+at most 2d (times fixed matrix-coordinate constants). If another bond
+orientation is used, its reversal/transport must be retained explicitly.
+The sum need not be enlarged to all fine sites.
+
+CMP96 equation(2.69), printed235, explicitly gives the mixed scalar
+product sum_j sum_(y in Lambda_j) a_j^d lambda(y)lambda'(y).
+This verifies the input measure corresponding to density a_j^(-d).
+The component-kernel convention therefore leaves a counting sum over
+the actual determining roots after multiplication by this measure.
+
+4. POLYNOMIAL SCHUR CONSEQUENCE, WITH EXPLICIT GAP CHOICE
+
+Let x0,y0 be determining roots in the common top patch, with
+d(x0,y0)<=D. Set beta=delta0/8, the literal rate in CMP102(190).
+For a determining root z,
+
+ 1+d(y0,z) <= (1+D)(1+d(x0,z)).
+
+Let K_delta=sup_(t>=0) (1+t)^2 exp[-delta0 t/16], which is finite.
+Then
+
+ exp[-delta0 d(x0,z)/8] (1+d(y0,z))^2
+   <= (1+D)^2 K_delta exp[-delta0 d(x0,z)/16].
+
+Apply Lemma2.1 with alpha=1/16. Its sufficient geometric condition is
+
+            delta0 R M1/64
+                 > 2d log c0(1/32)+1,                   (C)
+
+where M in the CMP96 gap is M1 in the B99/CMP102 geometry, NOT the
+later M-cell carrier size in B109. Under(C),
+
+ sum_c a_(q(c))^d a_(q(c))^(-d)
+       exp[-delta0 d(x0,c)/8] (1+d(y0,c))^2
+   <= 2d (1+D)^2 K_delta 12[c0(1/32)]^d,                (D)
+
+up to the fixed matrix-coordinate norm factor. This is the precise
+uniform top-output estimate required in TURN126(4.1). It actually
+inherits the native lemma's all-output property whenever d(x0,y0)<=D;
+the subsequent nonlinear argument uses it only on its homogeneous
+top patch.
+
+Condition(C) must be recorded at the initial choice of native geometric
+constants. Merely satisfying(2.59) at alpha=1/2 does not automatically
+justify spending a smaller rate alpha=1/16. One may enlarge the fixed
+native gap threshold R1 before choosing the later B109 carrier M, then
+fix that geometry for the construction. Equivalently, if existing fixed
+constants already satisfy(C), no change is needed. No cutoff-dependent
+choice is introduced.
+
+5. LOCALIZATION / DOMAIN SCOPE
+
+CMP96 includes the grade0 complement in its full-lattice partition;
+B99's Dirichlet variant starts with a possibly smaller Omega0. The
+remaining determining roots form a subset of the corresponding full
+grade0-completed geometry. Thus counting over the completion gives
+an upper bound; if contour paths are restricted by the Dirichlet
+domain, distances increase and the exponential sum only decreases.
+One must keep the actual metric convention used in the kernel, rather
+than assigning zero length outside Omega0.
+
+No independent proof of CMP102(190) is supplied by this addendum.
+CMP102 itself formulates its detailed nonlinear second-derivative
+decay estimate(189) after explaining that the lengthy differentiation
+is not printed. Using its Proposition9/(190) is a declared published
+analytic input. The geometric implication(190)->TURN126(4.1), including
+the polynomial moment and the native measure, is now explicitly
+matched to original sources and quantitatively justified under(C).

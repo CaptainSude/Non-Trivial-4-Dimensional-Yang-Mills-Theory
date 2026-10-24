@@ -1,0 +1,172 @@
+TWO MOMENT CANCELLATIONS FOR A PROTECTED CUBIC PROFILE
+19 October 2026. Root. Turn34.
+
+This note proves a kernel lemma and explains its conditional relevance
+to the exact protected SU(2) cubic symmetry sector checked in
+protected_cubic_hypercubic_audit_turn34. It does not establish the required
+complete native kernel, an h^6/h^7 bound, or a continuum cubic field.
+
+1. AN ELEMENTARY SIGNED-KERNEL LEMMA
+
+Let K(y,z) be a linear-map-valued discrete kernel from a fixed source
+component to a finite-dimensional quadratic output space. The measure
+in the z sum includes its ACTUAL physical quadrature and any shifted
+source lattice. Suppose the entire source set and its weights are
+invariant under z->2y-z, and the complete kernel satisfies
+
+ sum_z K(y,z)=0,
+ K(y,2y-z)=K(y,z),
+ sum_z ||K(y,z)|| |z-y|^2 <= M_y < infinity.             (1.1)
+
+Also assume absolute summability, or a common symmetric summation with
+the corresponding first and second moments absolutely summable.
+Then for a scalar C^2 profile f on the convex hull of the reads,
+
+ ||sum_z K(y,z) f(z)|| <= (M_y/2) ||D^2 f||_infty.       (1.2)
+
+Proof. Evenness makes sum_z K(y,z)(z-y)=0 by pairing the terms.
+The zero moment removes f(y). Taylor's integral identity gives
+
+ f(z)-f(y)-Df(y)(z-y)
+  =integral_0^1 (1-t) D^2f(y+t(z-y))[z-y,z-y] dt.
+
+Insert that identity before taking absolute values and use (1.1).
+This proves (1.2) for Banach-valued output as well. A centered integral
+kernel has the identical proof. A finite periodic lattice can be used
+inside a nonwrapping chart, or with a separately justified periodic
+Taylor convention; arbitrary displacement representatives cannot be
+substituted silently.
+
+An analogous C^(1,theta) estimate costs the (1+theta)-moment. If only
+the zero moment is known, the stronger second-order claim is false:
+K=delta_(y+e)-delta_y has zero sum but acts nontrivially on linear f.
+Evenness, or an independently proved first-moment identity, is needed.
+
+2. WHY THE PROTECTED CUBIC IS A CANDIDATE
+
+For distinct axes i,j,k,l use color vectors for SU(2) curvature and set
+
+ X_ij;kl = det(F_ik,F_kl,F_lj)-det(F_il,F_lk,F_kj).       (2.1)
+
+Its exact hypercubic properties are checked in the companion note:
+it is odd under swapping i and j and has reflection character
+epsilon_i epsilon_j. Every quadratic curvature polynomial with that
+reflection character is a linear combination of
+Tr(F_ik F_jk) and Tr(F_il F_jl), both even under that swap. Thus an
+equivariant COMPLETE homogeneous linear transport has zero universal
+quadratic extraction on this source sector.
+
+If that transport has a translation-covariant pointed source kernel
+K(y,z) for its extracted low response, the constant-profile conclusion
+is precisely the first identity in (1.1). This requires the whole
+coefficient, including its static/feed/reference companions. It does
+not mean a single fixed-geometry polymer has a zero quadratic part.
+
+Full coordinate inversion -I fixes every curvature two-form component
+and hence both (2.1) and all quadratic curvature components. Therefore
+an exactly same-centered inversion-covariant source kernel is even in
+z-y. This gives the second identity in (1.1). A compatible centered
+clover/read convention and the COMPLETE transformed pivot/geometry
+catalogue are essential. If an individual near box or a surviving
+large-field history breaks that covariance, the conclusion does not
+apply to it without its missing/boundary comparison.
+
+The existing exponential carrier estimates suggest that a second
+physical moment can be paid with a reserved exponent. But this note
+does not infer a complete quadratic extraction kernel from a scalar
+norm of the homogeneous output. The original kernel must preserve
+source points, physical masses, all current reads and the actual old
+carrier metrics before its sums. For MR_i carriers, the physical
+factor is MR_i r_i, not an invented r_i reach.
+
+3. ENGINEERING MEANING AND THE REMAINING CHANNELS
+
+Suppose such a regular one-leg kernel at physical scale r has a
+positive second-moment bound
+
+ sum_z ||K(y,z)|| (|z-y|/r)^2 <= B_r.                    (3.1)
+
+Then (1.2) gives C r^2 B_r ||D^2 f||. A dimension-six cubic insertion
+in four dimensions has an r^(-2) engineering source coefficient at
+that scale. The product is consequently C B_r ||D^2 f||, rather than
+an artificial r^(-1) loss from using only a first difference.
+
+This is a cancellation of a power-counting loss. It is not convergence
+of the remaining sum over RG dates. The bound B_r can contain coupling
+powers, and even B_r proportional to g_r^2 need not be summable toward
+the ultraviolet without the appropriate renormalization/calibration.
+Second-derivative profile terms represent dimension-six descendants
+of quadratic fields. They must be retained in the finite engineering-
+dimension source frame and treated with their exact identities; they
+are not declared zero because the constant-profile quadratic coefficient
+vanishes. Possible total derivatives must likewise be handled as local
+observable identities, not removed from a variable-profile source.
+
+The symmetry statement is linear in the protected source. Products of
+two such sources can transform in a quadratic sector and can generate
+quadratic contacts. The explicit Gaussian contact in
+loop_word_source_bridge_turn34 already demonstrates the general issue.
+Separate-point joining may pay physical short-scale powers, but the
+full original mixed contact and outer conditional mean still matter.
+
+4. WHAT WOULD BE NEEDED NEXT
+
+An implementation would prove (1.1) and (3.1) for the complete native
+one-leg output on its original complex background/current domains,
+identify the dimension-six descendants and its finite source frame,
+and preserve the same matched identities through boundary and R
+comparisons. A sharper high-remainder preparation would need its own
+finite Taylor/Ward calculation. None follows merely from Pi X=0.
+
+The exact gain proved here is the signed-kernel Taylor lemma. The
+protected cubic gives a concrete candidate for its two cancellations,
+not an already constructed new Yang--Mills observable.
+
+5. AN EXPLICIT NONZERO FREE REFERENCE CHECK
+
+The algebraic tensor is also a nonzero Gaussian Wick observable, not
+merely a nonzero polynomial on unrestricted classical data. This can
+be checked at separated points without any coincident moment bound.
+Take three independent free Maxwell colors with potential covariance
+delta_ab delta_mn D(x), D(x)=1/(4 pi^2 |x|^2). Differentiate to form
+the curvature covariance; no gauge-dependent potential is used as the
+observable. On the positive time axis x=(t,0,0,0), t>0, set
+
+ E_i=F_0i, B_1=F_23, B_2=F_31, B_3=F_12,
+ c=1/(pi^2 t^4).
+
+Direct differentiation gives, for color indices a,b,
+
+ <E_i^a(x) E_j^b(0)>=-c delta_ij delta_ab,
+ <B_i^a(x) B_j^b(0)>= c delta_ij delta_ab,
+ <E_i^a(x) B_j^b(0)>=0.                                  (5.1)
+
+For example -partial_0^2 D-partial_i^2 D=-4/(4pi^2 t^4);
+for a spatial F_ij the corresponding two spatial derivatives give
++4/(4pi^2 t^4). These signs are required by time reflection.
+
+The explicit component is
+
+ T23=det(E2,B2,B1)-det(E3,B3,B1).
+
+Interpret each cubic as its Gaussian Wick polynomial. Every possible
+internal contraction is zero by the color epsilon; at separated
+points the remaining three cross-contractions give 3!=6 times the
+product of the three species covariances. The mixed term between the
+two determinants is zero on this axis, because its E2-E3 cross
+covariance is zero and E-B covariances vanish. Therefore
+
+                    <T23(x) T23(0)>=-12 c^3.             (5.2)
+
+Time reflection sends this pseudo-tensor component to -T23. Its
+reflection-paired two-point value is consequently +12c^3. Small
+nonnegative smooth test bumps supported near a fixed positive time
+retain a strictly positive reflected quadratic form by continuity
+away from the coincident diagonal.
+
+This supplies an explicit FREE reference witness only. It proves
+neither a uniform refinement comparison for the original constrained
+RG covariance nor survival of this field in the interacting limit.
+It is not a substitute for the native one-leg, descendant and mixed-
+history estimates stated above, and a nonzero free composite does
+not identify a nonabelian Yang--Mills theory.

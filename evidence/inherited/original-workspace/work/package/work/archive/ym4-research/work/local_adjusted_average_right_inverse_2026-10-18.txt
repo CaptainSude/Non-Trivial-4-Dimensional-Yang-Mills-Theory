@@ -1,0 +1,293 @@
+LOCAL ADJUSTED-AVERAGE RIGHT INVERSE; SAME-FAMILY SCOPE
+18 October 2026. Constrained-fiber independent derivation.
+
+This proves a local alternative to the global q0 current estimate. It
+does not prove weak C1 admission of the intrinsic minima in CMP122-II
+(1.61)--(1.64). That admission is still needed on the finite patch used
+below. All statements about the current are at a REAL intrinsic minimum.
+
+1. Normalization and uniform-block finite matrix.
+
+Let r=M eta, M=L^j, be an averaging scale. Q^M is normalized as an
+average of the fine potential in physical units: the linear coarse link
+ANGLE is r Q^M A. Thus the fine/coarse inner products carry eta^d and
+r^d, respectively. We use the actual adjusted averaging of CMP98,
+(124)--(125), composed as (89)--(92), not unadjusted path averaging.
+
+At the trivial background, repeated flat block averaging telescopes to
+the M-scale straight-string average. On variations in one r-block P,
+the only nonzero rows in direction mu are the incoming and outgoing
+mu-bonds incident to P. In normalized coordinates of P their two weights
+are t_M and 1-t_M, where t_M=(k+1)/M, up to interchanging their names or
+shifting k by one according to the centered-block convention. Explicitly,
+their contribution is
+
+ M^{-d} sum_{x in P} (t_M(x_mu),1-t_M(x_mu)) A_mu(x).
+
+For clarity this identity also follows by the generating polynomial:
+the transverse factor is the M-point uniform average and the longitudinal
+factor is its convolution with itself. Composition of L-step factors
+gives the same M-point factors, because M is a power of L.
+
+Choose two nonnegative smooth longitudinal bumps, one supported near
+1/3 and one near2/3, and a transverse bump supported away from every
+face. Their discrete masses are normalized to fixed positive constants.
+For M>=M0 the two longitudinal first moments lie in disjoint fixed
+intervals. The resulting 2 by2 moment matrix has determinant bounded
+away from zero, uniformly in M. Its inverse and the discrete C1 norms
+of the resulting two shapes are bounded uniformly in M. Tensor each
+shape with every Lie-algebra basis vector, and repeat for mu=1,...,d.
+The resulting map Psi_P from 2d dim(g) row values to fine fields obeys
+
+ Q_flat Psi_P = I on all incident r-rows,
+ ||Psi_P v||_infty + r ||partial Psi_P v||_infty <= C |v|.       (1)
+
+Its support is strictly inside P, a fixed fraction of r from its faces.
+Rows not incident to P vanish EXACTLY. One may fix L>=M0 once; finite
+small M exceptions can instead be handled by finite discrete matrices.
+The raw j=0 identity is dealt with separately, not by a continuum bump.
+
+Now assume the real background W admits ONE regular gauge with
+
+ r ||A_W||_infty + r^2 ||partial A_W||_infty <= a
+
+on the full endpoint-block footprint of these incident rows. In that
+gauge, after the harmless fixed row endpoint-frame identifications,
+
+ ||Q_W^M Psi_P-I|| <= C a,                                     (2)
+
+uniformly in M. This is the finite-dimensional version of the adjusted
+averaging comparison: CMP98(124) gives the fixed-step curvature error;
+at intermediate scale s it is O_L(a(s/r)^2), while comparison of real
+parallel frames costs O_L(a s/r). Both sums over s=L^p eta are geometric.
+Products of the norms remain bounded. The exact endpoint-block support
+is CMP98 p31, after(91); no Neumann correction is allowed to spread
+outside those blocks.
+
+For a<1/(2C), invert the FINITE matrix in(2):
+
+ E_P = Psi_P (Q_W^M Psi_P)^{-1}.
+
+Then Q_W^M E_P=I on the incident rows, all other r-rows vanish, and(1)
+holds with partial replaced by the W-covariant difference. The inverse
+acts on finitely many constant coefficients, so it does not enlarge
+support or introduce derivatives of an inverse kernel. Choose one
+endpoint owner block for each coarse bond and take the corresponding
+column of E_P. These columns give Q_W E=I in a uniform region, with
+uniform bounded overlap and range O(r).
+
+2. Why the naive one-block graded extension is false.
+
+A block P of tier j immediately outside Omega_{j+1} can be read by a
+retained tier-(j+1) row. At the flat background Q_{j+1}=Q_step Q_j on
+variations in P. Consequently prescribing all incident j-row outputs
+can force a nonzero (j+1)-output. No matrix inverse using only variations
+in P can in general prescribe that j-output AND independently set the
+coarser output to zero. Adjacent-tier incidence alone is not a proof
+of a one-block right inverse.
+
+3. Exact two-tier triangular repair.
+
+Use the literal terminal convention: a retained j-row has an endpoint
+in the retained j-sites; every read is contained in its TWO endpoint
+j-blocks. The Omega_j are unions of complete aligned j-blocks (indeed
+of the source's larger fixed L-power cubes). All blocks and endpoint
+conventions in this paragraph belong to the SAME determining family.
+
+For a desired retained j-row choose an endpoint j-block P in
+Omega_j\Omega_{j+1}. Build the column E_P^0 of Section1, controlling
+ALL incident j-rows, including any rows not retained in the mixed
+family. Choose its core distance from every face greater than the
+largest endpoint-block footprint of a tier j-1 row; a fixed sufficiently
+large L makes this compatible with the two interior bumps. Hence no
+lower retained row reads its support. The source separation excludes
+tiers j+2 and higher. Only tier j+1 outputs may remain.
+
+If a retained (j+1)-row reads the core of P, one endpoint (j+1)-block
+contains P and is outside Omega_{j+1}. Since the row is retained, its
+other endpoint block P' is inside Omega_{j+1}. This is an exact crossing
+edge: it follows from endpoint-block locality, not a neighborhood
+estimate. The Omega_{j+2} gap keeps P' and a fixed enlargement outside
+Omega_{j+2}. There are only a fixed number of such crossing rows.
+
+For each residual crossing row c, use the uniform construction in its
+INSIDE (j+1)-block P'. The bubble core is farther than C r_j from every
+face of P', so no retained j-row or finer row reads it. The hierarchy
+gap excludes (j+2)-rows: it suffices that R M_source>C_fp L with a fixed
+footprint constant. These inequalities are compatible with the source
+choice of a large fixed separation. Its column E_{P',c} controls every
+incident (j+1)-row exactly, and consequently has no other retained output.
+
+Set
+
+ E_cj = E_P^0 - sum_{c at tier j+1} E_{P',c} (Q E_P^0)(c).       (3)
+
+This is a finite triangular correction, not an iteration. Every
+retained output is now zero except the prescribed j-row. Support is
+within distance C L r_j of P; at most a fixed number of j+1 blocks
+is used. Norm and covariant derivative bounds are C_L and C_L/r_j.
+The proof needs weak C1 gauges on this COMPLETE finite two-tier patch.
+It does not infer them from C1 on P alone. Adjacent-tier changes of
+units cost fixed powers of L; choose the weak ceiling after these
+constants. For a raw j=0 row use its fine-bond column first and the
+same higher-tier correction; the elementary bound is then C/eta.
+
+More precisely, EACH bubble needs ONE regular gauge on its full
+incident-row footprint, including the neighboring endpoint blocks.
+Unrelated good gauges on separate blocks do not imply the finite
+matrix comparison(2). An admitted full source class cube can supply
+the common gauge. Every column and the additional one-fine-step
+collar needed by D_W must also lie in the variational FREE domain.
+No boundary condition is changed by this construction.
+
+This geometry was independently checked by minimal_route, specifically
+using the exact two-endpoint-block support and aligned-domain identity.
+It is not asserted for a determining family which fails those hypotheses.
+
+4. Local current consequence with the physical transpose.
+
+Let W be an actual real constrained critical point. The source
+stationarity identity says Jphys annihilates ker Q, so Jphys=Q^*lambda
+for some coarse multiplier. For a local column E_c v with Q E_c v equal
+to v at c and zero elsewhere, integration by parts gives
+
+ r_c^d <lambda(c),v>
+   = <Jphys,E_c v>_fine = <F_W,D_W E_c v>_fine.                 (4)
+
+The column has support volume at most C_L r_c^d and covariant derivative
+at most C_L/r_c. Therefore
+
+ |lambda(c)| <= C_L r_c^{-1} sup_{support E_c} |F_W|.
+
+The physical transpose Q^* carries the coarse/fine measure ratio. Its
+uniform sup bound is proved by FIXED-L composition, as detailed in
+Section6 below; one must not assign an M^{-d} bound to an isolated
+adjustment connector. Exact adjacent-tier incidence and bounded row
+overlap then give, at a fine bond of local tier r,
+
+ |Jphys(b)| <= C_L r^{-1} sup_{finite two-tier collar} |F_W|.    (5)
+
+With curvature at most C a/r^2 there, this is C_L a/r^3. No derivative
+of F, no preexisting physical-current bound and no q0 estimate is used.
+This is local: arbitrary bad geometry far outside the finite collar
+does not enter(4). It does require the exact stationarity/adjusted-Q
+identity and the stated full weak-C1 collar for W.
+
+The observation bond can read columns of tiers n-1,n,n+1. Each column
+may in turn use its next-tier correction. Thus the final observation
+collar has radius at most C L^2 r_n, still fixed in L and independent
+of refinement depth; it is not literally confined to two tiers relative
+to the observation. Stationarity and(5) apply on FREE fine bonds only.
+They do not bound the current on a fixed Dirichlet boundary; columns
+or their D_W collars touching such a boundary are excluded unless the
+corresponding variational boundary statement is separately supplied.
+
+5. Source-admission consequence and limitation.
+
+The join formula transcribed from CMP119(2.13)--(2.14), Raw I92519--33,
+replaces old blocks by finer blocks only in a graded boundary collar.
+It is not a literal intersection of two complete nonlinear constraint
+families. Neither this refinement fact nor local right inverses prove
+that every mixed datum in CMP122-II(1.61)--(1.64) comes from one admitted
+field on the entire new collar. That remains a distinct task.
+
+A useful exact admission test is available: start with one admitted
+real tower V0 satisfying CMP102(7), including its seams. A uniformly
+small relative coarse-link perturbation V V0^{-1} preserves(7), with
+the fixed enlarged constant transcribed at Raw I16779--85; complex
+relative logarithms enter the source polydisc(172). Thus one need not
+prove an exact nonlinear refinement identity if that SAME-reference
+bound is verified on every actual modified datum slot.
+
+Bare Y2 subset Y3 and the fact that Y3' intersects the boundary of Y2
+do not put the entire Y2 seam in Y3^0: attachment on one face leaves
+the opposite face unchanged. A possible weaker test is to reference
+the preceding full admitted field E4. Boundary slots in the next
+minimum are its averages already. For interior slots supplied as M(U),
+one must show they are constraints retained by E4's baseline minimum,
+so their difference is only the small localized H/gauge perturbation.
+The artificial-boundary monotonicity helps where the underlying old
+towers agree. Preparation cuts and Lambda-fill interfaces still need
+their literal constraint/gauge identities; this note does not assert
+them from final U'_k membership.
+
+6. Adversarial support, transpose and gauge-tangent audit.
+
+(a) The adjusted operator, not just its straight-string part, has the
+asserted support. The pinned quotation of CMP98 p31 after(91), at Raw
+I24396--24413, expressly states that the FULL nonlinear kth adjusted
+average at c depends only on fine bonds in B^k(c_-) union B^k(c_+).
+Therefore differentiation at W has that exact support. In(124) the
+within-block mean/contour corrections and central crossing string do
+not add a third endpoint block. Iterated normalization does not change
+this statement: it is the operation covered by the quoted kth-order
+locality assertion. I found no adjustment path escaping these blocks.
+
+At flat background this also validates the finite 2d-row construction:
+the physical derivative of the nonlinear adjusted mean is the source
+Q, whose main term is(125), and every correction in(124) vanishes.
+The two longitudinal moment weights include BOTH adjacent rows. A
+single outgoing-row convention would miss the incoming constraint.
+
+(b) The fixed-dimensional perturbation is uniform in refinement, not
+in L. On one common regular gauge at final scale r, at spacing s the
+real parallel-frame error is O_L(a s/r), and the fixed-step correction
+in(124) is O_L(a(s/r)^2). The latter is the explicit source estimate
+transcribed at Raw I25169--25174, using intermediate averaged-curvature
+control from CMP98 Proposition2. Sum these errors over s=L^p eta.
+Both sums converge geometrically, and the product of 1+error is bounded.
+Applying the telescoped difference to the uniformly bounded finite
+bump map proves(2). No inverse over all fine coordinates is taken.
+
+For the transpose, each FIXED-L step includes the physical factor L^d.
+The straight-string transpose has sup norm at most1: its two adjacent
+row contributions have total scalar mass1 at a fixed fine bond. Real
+parallel transports are isometries. All connector/root-bond terms have
+fixed incidence at this step, so their physical transpose has norm
+at most C_L a(s/r)^2, even if an individual connector is concentrated.
+Consequently
+
+ ||(Q_W^M)^*|| <= product_s [1+C_L a(s/r)^2] <= exp(C'_L a).
+
+This avoids the false shortcut of bounding each M-scale connector
+coefficient by C M^{-d}. Transposes of the fixed-step compositions use
+the intermediate physical measures, so no uncancelled L^{dj} remains.
+Restricting to the actual mixed terminal rows only removes terms; the
+adjacent-tier incidence argument then gives the bound used in(5).
+
+(c) Stationarity does not require the columns E_c themselves to obey an
+axial gauge condition. CMP102(178), as transcribed at Raw I15765--68,
+states <delta A',J>=0 for ALL delta A' with Q(U_k)delta A'=0. There is
+no additional R D* delta A'=0 condition in that test class. The source
+constraint-linearizing coordinate is L(A')=A'-H D(A'), with
+D(A')=O(|A'|^2) (Raw I13996--14000), hence D L(0)=I. Thus the J in
+that first variation is the physical current, not a different gradient
+introduced by a linear gauge projection. The displayed gauge condition
+R D* A'_1=0 characterizes the chosen solution; it does not narrow the
+stationarity test class in(178).
+
+Once this annihilation is available on the FREE ambient bond space,
+finite-dimensional duality gives J=Q^*lambda there. Equation(4) may then
+pair that identity against any free E_c; E_c is not a tangent vector
+to ker Q and is not gauge-corrected. In particular, no nonlocal axial
+projection is inserted into E_c, and its r^{-1} derivative estimate
+is unchanged. If a different mixed problem supplies stationarity only
+on ker Q intersect a fixed axial slice, the identity J=Q^*lambda must
+first be justified by its actual gauge-orbit/boundary construction;
+the local inverse alone does not supply it. For an intrinsic problem
+to which CMP102(178) applies, this is already the asserted source test.
+
+(d) The graded repair uses the actual complete endpoint-block convention,
+not a larger vague neighborhood bound. An outside owner block can be
+read by a retained next-tier row only if that row crosses to an inside
+endpoint block. The correction's deep core excludes the finer rows;
+the next admitted gap excludes higher rows. I found no further
+geometric obstruction under these conventions. The one-block graded
+construction in Section2 remains false, so the correction cannot be
+omitted. The complete free-domain and one-common-gauge collars stated
+in Sections3--4 remain necessary, particularly at a Dirichlet boundary.
+
+Source-access precision: the CMP98 and CMP102 passages in this audit
+were checked in the pinned Raw I transcriptions. A fresh primary PDF
+for these two passages was not recovered in this pass. No conclusion
+here verifies the unresolved mixed-minimum admission of Section5.

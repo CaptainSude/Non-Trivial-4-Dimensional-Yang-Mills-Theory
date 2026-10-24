@@ -1,0 +1,129 @@
+INDEPENDENT AUDIT: EXACT ORIGINAL-WILSON BLOCK SKELETON
+23 October 2026.
+Producer: work/compiled_spatial_progress_20261023.txt.
+Reviewer: connected_energy, independently of the producer's author.
+
+VERDICT
+
+Scoped PASS. I checked Sections 1--8, including the geometric partition,
+complete induced normalizer, compiled-source read, exact vanishing
+criterion, mixed-contact recursion and finite boundary response.
+No mathematical correction is required at the stated finite scope.
+This is internal review, not a continuum Yang--Mills validation.
+
+1. GEOMETRY AND PLAQUETTE ASSIGNMENT
+
+The aligned nested block partitions have integer side lengths, each
+dividing the next, with compatible periodic sides. A link strictly
+interior to a fine block is strictly interior to its unique containing
+coarse block. Hence I_j is a subset of I_(j+1), giving the stated
+nested skeletons S_(j+1) subset S_j. The requirement of at least two
+top-level blocks per periodic direction permits ordinary local lifts
+of every block and avoids a self-wrapping block convention.
+
+An elementary plaquette containing an interior link of B lies in the
+closed cube B. It cannot contain an interior link of a different
+same-level block: its unit coordinate intervals are adjacent to a grid
+hyperplane or inside a single grid strip, and any links reaching the
+hyperplane have a boundary endpoint. This remains valid at intersections
+of grid hyperplanes. At m_0=1 there are no interior links. At m=2 the
+strict definition also gives no interior links; an identity step there
+is harmless. No positivity or nonemptiness of each interior was used.
+
+Thus the sets P_j(B) and P_j^S form a disjoint exhaustive partition of
+the ORIGINAL plaquettes. The boundary read includes spokes as well as
+tangential links. A closed m-cube has 4m(m+1)^3 links and its strict
+interior has 4(m-2)(m-1)^3 links for m>=2, so the stated O((m+1)^3)
+bound is correct. It is only a read-count bound, not a uniform norm.
+
+2. ACTUAL CONDITIONAL FACTORIZATION AND NORMALIZATION
+
+Fixing S_j leaves no action plaquette containing interiors of two
+different blocks. The original product Haar measure and action
+therefore factor into the product of (4)'s normalized block kernels.
+Shared boundary links are held coordinates; they do not spoil this
+conditional independence. The skeleton marginal (5) consequently
+contains the original global Z, the held skeleton action, and each
+block mass Z_j,B once. It need not be an independent-link law.
+
+At the recursive step, every fine block is contained in exactly one
+coarse block. The identity
+
+ P_(j+1)(B) = [P_(j+1)(B) intersect P_j^S]
+                  disjoint-union union_(b inside B) P_j(b)
+
+follows from the same original-plaquette partition. The removed fine
+skeleton links are exactly T_j,B=S_j intersect I_(j+1)(B). Integrating
+their Haar coordinates together with the already integrated fine
+interiors is exactly the full coarse interior integral. Fubini thus
+proves integral W_j,B=Z_(j+1),B, including all fine masses and all
+original plaquette factors once. No extra field-dependent ratio or
+survival conditioning is missing. This validates (10)--(12).
+
+3. COMPILED SOURCE LOCALITY AND ITS PROVENANCE
+
+Conditional expectation of the original source splits according to
+the same plaquette partition. Formula (6) retains both the direct
+skeleton plaquettes and each fully normalized interior source mean.
+Every original f_p and c_f stays unchanged. A fine block source mean
+uses only its own complete boundary read, because both its numerator
+and denominator have that read. Formula (8) is therefore an exact
+pointwise read, within one block diameter of the original plaquette
+support, not a claimed fresh static source representation.
+
+For (13), split by the ORIGINAL coarse plaquette partition before
+conditioning on S_j. Every resulting fine-block term and direct fine-
+skeleton plaquette inside a given coarse B reads only T_j,B and held
+partial_(j+1)B. If the original source has no weighted plaquette in
+P_(j+1)(B), that source piece is exactly zero. A boundary value cannot
+create a source piece assigned to a block with no original mark.
+
+Conditional independence now proves (14). Distinct blocks' fluctuating
+pieces have zero covariance even when they share a held boundary read.
+Therefore the conditional mixed row vanishes unless one integrated
+coarse block contains original plaquettes from both source supports.
+The distance conditions in (15) are sufficient because a four-cube
+has L-infinity diameter ell and Euclidean diameter 2ell.
+
+4. TOTAL COVARIANCE AND SOURCE CONTACTS
+
+The actual marginals and kernels established in Section 2 justify the
+ordinary total-covariance telescope (16), with its terminal covariance
+retained. In particular early vanishing is exact and requires no
+estimate of either source's self-variance.
+
+The conditional source germ (18) is the product of actual normalized
+block partition functions and the held affine skeleton source. Its
+logarithmic first derivatives are f_j,g_j, and its mixed derivative is
+the sum of block conditional covariances in (19). The raw mixed row is
+h_j+f_j g_j. Applying F_j to that raw row gives precisely
+h_(j+1)=F_j h_j+C_j. No product or independent contact has been counted
+twice. Initial affine original log sources have h_0=0.
+
+At any higher fixed order, the logarithm of the product is a sum of
+block logarithms. A mixed block derivative is zero if that block lacks
+any participating original mark. This proves the stated exact support
+rule, without asserting any useful bound on the surviving cumulant.
+
+5. ELEMENTARY BOUNDS, RESPONSE AND LIMITATIONS
+
+For real plaquette weights, h_p in [0,2] puts the original block source
+in a deterministic interval of width at most 2|c_f| sum|f_p|.
+Conditional expectation preserves that interval. The half-oscillation
+variance bound therefore gives (21) with the displayed constant. It
+retains the original plaquette count and does not become cutoff uniform.
+
+The block integral has a fixed compact Haar domain for every boundary.
+Differentiating its exact ratio gives (22), including the derivative
+of its normalization. Only plaquettes incident to a changed boundary
+link contribute to dot H; there are at most six. Their group derivatives
+are uniformly bounded by a fixed Lie-algebra norm times the link speed.
+The direct source derivative plus the oscillation covariance bound
+therefore gives (23), with its explicit t and source-count costs.
+
+The producer correctly does not identify these block conditionals with
+Balaban's ordinary/reset kernels. Nor does it claim bounded microscopic
+boundary dimension, weak effective boundary interactions, a uniform
+coarse-source variance, or a native weighted-Hessian theorem for the
+induced compact kernels. Those are substantial analytic inputs still
+needed to turn this exact finite decomposition into a continuum result.

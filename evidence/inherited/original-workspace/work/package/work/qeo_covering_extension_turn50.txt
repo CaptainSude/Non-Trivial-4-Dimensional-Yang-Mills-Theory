@@ -1,0 +1,197 @@
+FROM QEO1'S FINITE COVERING ARGUMENT TO A SPATIALLY WEIGHTED CRITERION
+20 October 2026. TURN50. Root producer.
+
+SOURCE AND STATUS
+
+QEO1.pdf, public commit 3ef16f9f8ba0bfdc26fd7d4f7114d44bf9ebe5eb,
+QED3_slop/QEO1.pdf, B6 on PDF page 9, states a finite algebraic
+covering estimate. Root read its full statement and proof outline,
+including the rendered page. The argument is valid and is proved
+below. A support-weighted variant is then proved independently.
+
+These are finite algebraic implications. The required normalized
+source factorization and complement bounds have NOT been established
+for the full nonabelian YM4 measure. The existing weak-chart label
+probabilities do not supply them.
+
+1. THE COMMON ALGEBRA
+
+Let I={1,...,N}, p>=1, r>0, and work in
+
+ J=C[t_1,...,t_N]/(t_1^(p+1),...,t_N^(p+1)).
+
+Use the coefficient norm ||P||_r=sum_alpha |P_alpha| r^|alpha|.
+Truncation deletes terms, so this norm is submultiplicative.
+For each c let phi_c depend only on t_c and ||phi_c||_r<=A, A>=1.
+Let ell_c be a one-variable linear functional satisfying
+
+ ell_c(phi_c)=0, |ell_c(t_c^j)|<=D r^j, 0<=j<=p.
+
+The tensor functional ell=otimes_c ell_c obeys
+|ell(P)|<=D^N ||P||_r.
+
+Assume the EXACT identity in J
+
+ Phi=(product_c phi_c)
+          integral product_(nonempty S subset I)(1+k_S(omega;t)) dnu(omega)
+      + L.                                                    (1.1)
+
+The finite complex measure nu has total variation at most one and
+does not depend on t. Each k_S depends only on variables in S.
+All coefficient functions are measurable and have the specified
+uniform majorants. The remainder obeys ||L||_r<=lambda^N.
+
+Expanding the product, any term indexed by a family F of error sets
+with union F different from I is annihilated: an uncovered variable c
+appears only in its untouched factor phi_c. Multiplication followed by
+coordinatewise jet truncation does not alter this observation.
+
+This is the covering cancellation. It uses neither positivity nor
+independence of the cell variables. It does require the full
+factorization (1.1), the support statement, and the tensor functional.
+
+2. CHECK OF QEO1 B6
+
+Suppose 0<s<1, kappa>0,
+
+ ||k_{c}||_r<=kappa,
+ ||k_S||_r<=kappa^N for |S|>=2,
+ N kappa^(1-s)<=1/2.
+
+The last condition implies kappa<1. Give a singleton cost one and a
+larger set cost N. Every covering family has total cost at least N.
+Put a=kappa^(1-s). Extract kappa^(sN) from each covering term and
+sum the remaining costs over ALL families. The bound is
+
+ |ell(Phi-L)|
+   <=D^N A^N kappa^(sN)(1+a)^N(1+a^N)^(2^N-1-N).
+
+For N=1 the logarithm of the last product is at most a<=1/2.
+For N>=2 it is at most
+
+ N a+(2^N-1-N)a^N
+   <=1/2+(2a)^N
+   <=1/2+N^-N<=3/4<1.
+
+Thus the product is at most exp(1), as asserted in the paper.
+Adding |ell(L)|<=(D lambda)^N and taking N-th roots gives the
+slightly sharper intermediate estimate
+
+ |ell(Phi)|^(1/N)<=D[A exp(1/N)kappa^s+lambda],
+
+and hence the displayed B6 bound with exp(1) in place of exp(1/N).
+The case D=0 is immediate.
+
+The condition N kappa^(1-s)<=1/2 cannot be suppressed. In QEO1 the
+reference cell count is chosen with the charge; a separate chessboard
+transfer is then needed to obtain arbitrary distinct-product orders.
+B6 alone is not a uniform theorem for all N at a fixed kappa.
+
+3. A SUPPORT-WEIGHTED VERSION, UNIFORM IN THE NUMBER OF CELLS
+
+Retain (1.1). Suppose 0<kappa<=1 and 0<theta<1. Let a_S>=0 satisfy
+
+ ||k_S(omega)||_r <= kappa^|S| a_S,
+ sup_(c in I) sum_(S contains c) kappa^((1-theta)|S|) a_S <= B, (3.1)
+
+uniformly in omega. B is independent of N and of the chosen finite
+cell set. Then
+
+           |ell(Phi)|^(1/N)
+                  <=D[A exp(B)kappa^theta+lambda].            (3.2)
+
+Proof. A covering family has sum_(S in F)|S|>=N. Its norm is bounded by
+
+ kappa^(theta N)
+       product_(S in F)[kappa^((1-theta)|S|)a_S].
+
+Sum over all families, using 1+x<=exp(x):
+
+ sum_F product_(S in F)[kappa^((1-theta)|S|)a_S]
+  = product_S[1+kappa^((1-theta)|S|)a_S]
+  <= exp(sum_S kappa^((1-theta)|S|)a_S)
+  <= exp(NB).
+
+The final inequality follows by summing (3.1) over c: every nonempty
+set is counted |S|>=1 times. Multiply by D^N A^N, integrate against
+the total variation of nu, add (D lambda)^N, and take roots.
+For nonnegative x,y, (x^N+y^N)^(1/N)<=x+y. This proves (3.2).
+
+No number-of-cells smallness condition is needed. The replacement is
+the substantive local support summability (3.1).
+
+Example of an adequate geometric input. Suppose only connected sets
+on a fixed bounded-degree cell graph occur, each has a_S<=C0^|S|,
+and the number of connected sets of size k containing a cell is at
+most Cgraph^k. If q=C0 Cgraph kappa^(1-theta)<1, then
+
+ B<=sum_(k>=1)q^k=q/(1-q).
+
+More general exponentially decaying spanning-tree majorants can be
+used directly in (3.1). No such geometric majorant follows merely
+from the cardinality of a defect set.
+
+4. THE EXACT SOURCE OBSERVABLE REQUIRED
+
+For p>=4, suppose X_c are real random variables with the requisite
+joint moments and define the NORMALIZED finite jet
+
+ Phi(t)=[ E exp(g^-1 sum_c t_c X_c
+                       -v/(2g^2) sum_c t_c^2) ]_(degree<=p per cell).
+
+With only finite moments this notation means: truncate the formal
+exponential coordinatewise FIRST, and then take its coefficientwise
+expectation. An untruncated exponential moment is not required.
+If all joint exponential moments exist, it also is the actual
+generating function's indicated Taylor jet.
+
+If phi_c(0)=1 and c_{m,c}=phi_c^(m)(0), set
+ell_c=(partial_(t_c)^m-c_{m,c}) evaluated at zero, m=2 or 4.
+Then ell_c(phi_c)=0 and
+
+ ell(Phi)=E product_c[g^-m H_m(X_c;v)-c_{m,c}],
+ H_2(x;v)=x^2-v,
+ H_4(x;v)=x^4-6vx^2+3v^2.
+
+One may take D at least max_c(|c_{m,c}|,m! r^-m).
+This follows by differentiating a separate source variable for each
+cell. A single constant source obtained by setting all t_c equal
+does not recover this tensor functional or its full coefficient norm.
+
+The denominator defining E is the actual full partition function
+at the SAME bare parameters. A source-dependent normalization or
+an independently retuned cell reference changes Phi. A complement
+estimate must control L in this same normalized jet, not just its
+zero-source mass.
+
+5. WHY TURN49 DOES NOT ALREADY MEET THE CRITERION
+
+The exact weak-chart defect ratios obey
+
+ Z_exact(S)/Z_allgood <= z^|S|.
+
+They are scalar positive weights with no proven local factorization.
+If one tries to treat ALL subsets as error supports with a_S=1,
+the rooted sum in (3.1) is, with x=kappa^(1-theta),
+
+ sum_(S contains c) x^|S|=x(1+x)^(N-1),
+
+which is unbounded in N. Thus cardinality suppression alone cannot
+provide the local norm required by (3.2).
+
+Writing exact set weights as algebraic set cumulants does not repair
+this: those cumulants can join widely separated cells and carry
+factorial combinatorial factors. They need a separate connected
+spatial estimate. The existing three-bit counterexample also rules
+out replacing the missing factorization by Bernoulli domination.
+
+The TURN49 original-action source theorem supplies a SINGLE constant
+source class along selected finite histories. It supplies neither
+the independent cell-source jet in Section 4 nor the full-law
+remainder L in (1.1).
+
+Therefore (3.2) is a rigorous, dimension-independent target for a
+future source-localized large-field/cluster argument. It is not an
+additional assumed property of our current Yang--Mills density.
+
+END OF NOTE

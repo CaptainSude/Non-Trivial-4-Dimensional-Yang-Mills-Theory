@@ -1,0 +1,54 @@
+FOCUSED INDEPENDENT AUDIT: MARKED SPACETIME BRIDGES -- TURN68
+20 October 2026. history47.
+
+Reviewed work/spacetime_marked_bridges_turn68.txt, Sections1--6.
+Final producer SHA256:
+A2F4FC210090BFD683C5D92BC70EE0480A3869D86229530445FAD2E62E018269
+Verdict: PASS at its stated cell geometry and actual ground-law MGF.
+
+The polynomial estimate x^m<=m!e^x and the bad-cell estimate
+1_(x>=R)<=e^(x-R) spend at most two units on any cell, even
+when it is both marked and bad. The MGF consequently gives
+exactly product(m_j!) exp(c_V|J|) exp[(c_V-R)|A|].
+No independence or conditional event estimate enters.
+
+Differentiating the cell MGF at zero gives E X_c<=c_V. Expanding
+(X_i+c_V)(X_j+c_V) for distinct marks therefore gives the
+constant (exp(c_V)+c_V)^2 times q^|A|. For coincident marks the
+factor2! is required and the producer explicitly retains it.
+
+A connection of two fixed vertices has a finite self-avoiding
+path witness. At most D^m paths with m edges start at one
+endpoint. Summing q^(m+1) for m>=distance gives exactly
+q(Dq)^distance/(1-Dq). The same moment estimate applies when
+the two marked cells are outside that witness path.
+
+The physical source decomposition has the exact factor4:
+X_c already includes the time integral divided by ag^2.
+There is no omitted a^-4 factor in one cell source. A compact
+physical support contains O(a^-4) cells when Delta=a and the
+spatial tile side counts are fixed.
+
+The endpoint-connected bound costs |A+||A-|. The whole-covariance
+bridge event adds a separate pair of possible path endpoints,
+so |A+|^2|A-|^2 is the correct conservative count. All source
+centering terms are retained. At fixed positive physical
+separation, graph distance is at least c/a, and Dq<=eta<1
+therefore dominates the a^-16 count and every admitted fixed
+additional polynomial/logarithmic source normalization.
+
+These estimates are for the original Hamiltonian ground process
+with its actual normalizer. They control a specified signed
+covariance contribution, not a positive OS norm. They neither
+identify action cells with native history predicates nor estimate
+the no-bridge part of the covariance.
+
+The events concern magnetic action averaged over a time interval
+of length a. They permit shorter spikes and say nothing here
+about pointwise temporal electric curvature or flow derivatives.
+The producer states all of these necessary limitations.
+
+The final producer explicitly says distinct marked cells and
+uses periodic/nonwrapping source separation. Those clarifications
+were verified in the hash above.
+No mathematical or scope correction requested. Audit frozen.

@@ -1,0 +1,96 @@
+TURN82 -- INDEPENDENT AUDIT OF ORIGINAL-LAW HS SMOOTHING AND OS CHANNEL
+20 October 2026. history47.
+
+Producer: work/turn82_auxiliary_channel_gauge.txt
+SHA256 49DE7E782B8F5DE226848252D74EC6518632E74F015BE715EC31A66D695FB89E.
+Reviewed complete Sections1--8, including the final nonmultiplicativity
+and source-package Section6A. VERDICT: PASS. No correction requested.
+
+1. Exact law and forms
+The conditional Gaussian lift and conditional original product-Haar law
+are the same normalized two-HS joint representation proved in TURN81.
+With C=E[.|xi], P=C*C is a positive selfadjoint stationary contraction.
+The identities for D_HS, the direction D_HS<=D_HB, and both elementary
+spectral maxima are correct. In the heatbath comparison the condition
+(xi,U_not e) refines U_not e, so integrated conditional variance decreases;
+no independence of the interacting auxiliary marginal is assumed.
+
+2. Weighted noise
+Two independent tilted-S3 samples have mean squared chord distance
+2(1-c(r)^2). Combining the bounded coordinate influences with product
+Efron--Stein gives precisely the factor1-c(r)^2 per edge, with no extra2.
+The covariance bound Tr Cov<=4/(1+r), followed by the actual tail estimate,
+gives(3.3)--(3.5). The convention qualification and distinction between
+ordinary conditional noise and a reflected physical channel are retained.
+
+3. Exact score and Fisher constant
+At fixed REAL auxiliary record the score is the sum of the G score and
+the conditional R scores. The derivative of n_h holds G fixed. The
+cross terms with every R score vanish by conditional centering of W_h;
+this remains true though its coefficient depends on G. Standard complex
+variance1 gives Var(2Re<Z,A>)=2||A||_F^2.
+
+In the Pauli/2 metric ||D_vU||_F^2=|v|^2/2. Four contributions to the
+plaquette mean give ||D_vm_p||^2<=beta/2 sum_(e in p)|v_e|^2, hence the
+G part contributes at most6beta per edge. For the R part,
+||G D_vV^dagger||_F^2=|v|^2||G||_F^2/4 exactly, since multiplication by
+the corresponding su2 tangent has scalar squared norm. Therefore
+2E||D n_h||^2<=beta|v_U|^2/2+(4+2beta)|v_V|^2.
+There are six half-path incidences per edge in total. Bounding all by
+the larger coefficient gives12beta+24. The total18beta+24 is correct,
+uniform in EVERY real U and in volume. Dagger traversals preserve it.
+
+The Fisher inequality is an operator bound on the full tangent space.
+Taking the supremum of one directional estimate gives the squared full
+gradient; summing independent coordinate bounds would incorrectly add
+a dimension factor. The exact integrated conditional variance equals
+<F,P(I-P)F>. This proves the stated derivative consumer, including its
+constant and its applicability without an input influence/Jacobian bound.
+
+4. Iteration and exact original OS quotient
+Applying the same Fisher inequality to P^nF gives the spectral factor
+lambda^(2n+1)(1-lambda), with maximum stated in Section5. Positivity of P,
+not a gap or uniform mixing theorem, is sufficient.
+
+If F reads S, every auxiliary current it uses is generated from the
+original links in the same incident plaquettes. Thus one round has
+exact read H(S), and iteration has H^n(S). Gauge invariance is preserved
+by the actual joint law. Reflection symmetrization with LINEAR geometric
+R and Pbar=(P+RPR)/2 is positive, stationary, selfadjoint and reflection
+commuting. Its augmented convention label is independent of U; averaging
+the two Fisher forms gives the same constant. No auxiliary-label RP is
+claimed or needed.
+
+For disjoint complete ORIGINAL reads, conditional product independence
+gives E[(CF)(CH)]=E[FH] for real F,H. This is valid even when their
+auxiliary stars overlap. In complex notation the first factor carries
+the usual conjugation. Consequently <RK,Pbar F-F>=0 for every positive
+K whenever F and Pbar F have positive-half reads. Choosing K equal to
+the difference is permitted then, and original Wilson RP makes that
+difference OS-null. Buffered induction preserves the actual OS quotient
+vectors, centered means and Gram matrices. It does not assume positivity
+of the reflected form on all auxiliary-label functions.
+
+5. Scaling and limitations
+One plaquette-star extends temporal reads by at most one lattice unit.
+For a fixed physical buffer d at BOTH fixed slices, n=floor(d/(4a)) is
+therefore permissible for small a, and the averaged gradient bound is
+O((beta+1)a/d). The field after these rounds reads a genuine time block.
+The producer correctly excludes inference of a one-spatial-slice
+Hamiltonian Dirichlet bound or of physical-time spectral control from
+this algorithmic parameter.
+
+Section6A is essential and correct: the retained source is Pbar^n exp
+(sum s_i B_i), whose jets are Pbar^n of the original products. Pbar is
+not multiplicative, and OS-nullness is not declared to be a pointwise
+product ideal. The bounded nonlinear flowed probe is eligible as an
+input without a free-field approximation; its nonzero continuum OS norm
+and calibration are still unproved. No scope inflation found.
+
+Companion improvement, not needed to validate this producer: the direct
+Gaussian continuation in work/turn82_global_smoothed_source_history.txt
+supplies an original-link Hilbert complex domain for the same complete
+source package and all fixed-order coordinate operator-jet analogues of
+the Fisher consumer. It preserves all of the above scope distinctions.
+
+No producer, authoritative output or status file was modified.

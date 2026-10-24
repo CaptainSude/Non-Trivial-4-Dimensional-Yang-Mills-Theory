@@ -1,0 +1,158 @@
+TURN75 -- THE MARGINAL SEQUENCE WITH FINITE-PERIOD CLASSICAL LEAKAGE
+20 October 2026. Root calculation. Conditional sequence theorem.
+
+PURPOSE AND SCOPE
+
+TURN70 proves contraction after projecting the output neutral, and
+P_out T P_in=P_out T because the chosen classical reference transports
+exactly. This identity DOES NOT prove beta_out T=beta_in on all inputs.
+TURN74's sequence lemma explicitly assumed the stronger identity.
+Here we remove that unnecessary exactness assumption. This is a precise
+extension of that conditional lemma, not a full original-law source bound.
+
+Work at fixed q-block endpoints if that is where the actual native
+same-radius source norm is available. No bounded same-radius primitive
+map is assumed merely to interpolate between endpoints. Scalar vacua
+are removed only from this coefficient norm, with their actual source
+coefficients retained in the separate exact ledger.
+
+1. ASSUMPTIONS AT THE ENDPOINTS
+
+Let V_j be normed spaces with uniformly bounded beta_j:V_j->C,
+S_j in V_j, beta_j S_j=1, and P_j=I-S_j beta_j. Put N_j=ker beta_j.
+All constants below include the fixed norms of these objects. Suppose
+the actual linear one-mark map has
+
+ L_j S_j = S_(j+1)+B_j,
+ L_j u = T_j u+D_j u,                           u in N_j,
+ T_j S_j=S_(j+1),
+ ||P_(j+1)T_j|N_j|| <= kappa < 1,
+ ||D_j|| <= C g_j^2,
+ ||B_j|| <= C g_j^2,
+ |beta_(j+1)B_j| <= C[g_j^4+epsilon_j g_j^2],
+ |beta_(j+1)T_j u| <= C epsilon_j ||u||.           (1.1)
+
+The epsilons are nonnegative. They are finite-period errors, not a
+declaration that every masked/raw/boundary coefficient has an epsilon
+Ward defect. A native Gaussian-window birth g_j^2 tau_j can be included
+in (1.1) by adding tau_j to epsilon_j, or absorbed in g_j^4 when
+tau_j<=C g_j^2. All couplings, windows and unmarked bodies are frozen
+when defining L_j. The birth assumption and projection contraction
+have to hold for the SAME prepared source family.
+
+Assume g_j^-2=gamma_j>=Gamma and choose Gamma so large that
+r:=kappa+C/Gamma<1. If the inequality is strict with any smaller
+uniform r, fix that r once. Also require the convolution bound
+
+ sum_(i<j) r^(j-1-i)g_i^2 <= C_g g_j^2.           (1.2)
+
+Monotone g_i<=g_j suffices. Alternatively bounded SIGNED increments
+|gamma_(j+1)-gamma_j|<=D suffice when
+r(1+D/Gamma)<1, by the calculation in TURN74 Section3. At q-block
+endpoints D and the forcing constants already include that fixed q.
+
+2. EXACT RECURRENCE AND PROOF
+
+Write X_j=alpha_j S_j+u_j with u_j in N_j. Put
+
+ A_j=P_(j+1)(T_j+D_j)|N_j,
+ f_j=P_(j+1)B_j,
+ b_j=beta_(j+1)B_j,
+ ell_j=beta_(j+1)(T_j+D_j)|N_j.
+
+Then the two exact equations are
+
+ u_(j+1)=A_j u_j+alpha_j f_j,
+ alpha_(j+1)=alpha_j+b_j alpha_j+ell_j u_j.        (2.1)
+
+In particular ||A_j||<=r, ||f_j||<=Cg_j^2, and
+||ell_j||<=C(epsilon_j+g_j^2). No invariant neutral subspace for T_j
+has been assumed. Repeated output projection is part of A_j.
+
+Let U_0=||u_0|| and M_j=max_(i<=j)|alpha_i|. Variation of constants,
+(1.2), and (2.1) give
+
+ ||u_j|| <= r^j U_0+C g_j^2 M_j.                 (2.2)
+
+Substitute this bound into the alpha equation BEFORE Gronwall. With
+
+ a_j=g_j^4+epsilon_j g_j^2,
+ h_j=(g_j^2+epsilon_j)r^j,
+
+one obtains
+
+ M_(j+1) <= (1+C a_j)M_j+C h_j U_0.
+
+Writing A_N=sum_(j<N)a_j and H_N=sum_(j<N)h_j yields
+
+ M_N <= exp(C A_N)[|alpha_0|+C U_0 H_N],           (2.3)
+ ||u_N|| <= r^N U_0+C g_N^2 exp(C A_N)
+                                  [|alpha_0|+C U_0 H_N].
+
+For alpha_0=1,u_0=0, summing the absolute alpha increments also gives
+
+ |alpha_N-1| <= C exp(C A_N) A_N.                 (2.4)
+
+This is noncircular: contraction and (1.2) precede any marginal bound.
+The exact finite-period leakage appears multiplied by the small
+neutral amplitude g_j^2. Deleting it would give a stronger statement
+not justified by the projected intertwining identity alone.
+
+3. ACTUAL BACKWARD PERIODS DO NOT COST N TIMES AN ENDPOINT ERROR
+
+Let the fixed endpoint scale ratio be L>1, and suppose the periods
+are Q_j=L^(N-j)Q_end. A block-output error of the form
+
+ epsilon_j <= E exp[-c Q_(j+1)]                  (3.1)
+
+has uniformly summable date weights. Indeed write s=N-1-j. Since
+L^s>=1+s(L-1),
+
+ sum_(j<N)epsilon_j
+ <= E sum_(s>=0)exp[-c L^s Q_end]
+ <= E exp[-c Q_end]/[1-exp(-c(L-1)Q_end)].        (3.2)
+
+Choose Q_end above a fixed positive lower bound. The denominator in
+(3.2) is then bounded away from zero, and
+
+ sum_(j<N)epsilon_j g_j^2 <= C E Gamma^-1 exp[-c Q_end]. (3.3)
+
+If also gamma_j>=G+d(N-j), G,d>0, then
+sum_(j<N)g_j^4<=1/(dG). Consequently the rate in (2.3) is at most
+
+ A_N <= 1/(dG)+C E G^-1 exp[-c Q_end].           (3.4)
+
+The initial-transient quantity satisfies
+H_N<=1/[Gamma(1-r)]+sum epsilon_j, a sufficient depth-uniform bound.
+
+For the fine prefix j<N-m, m>=0, its period contribution obeys
+
+ sum_(j<N-m)epsilon_j g_j^2
+ <= C E [G+d(m+1)]^-1 exp[-c L^m Q_end],         (3.5)
+
+where the denominator from the geometric bound is bounded by the same
+fixed constant as in (3.2). Its g^4 contribution is at most
+1/[d(G+dm)]. These are coefficient-tail statements. They do not compare
+different regulated observable laws or supply a continuum limit.
+
+4. REQUIRED NATIVE ATTACHMENT
+
+The classical error should be established on the actual finite-period
+Maxwell prescription with the reference normalization retained. The
+bound expected from finite lifted Ward identities is
+C_(L,J)b^-2 exp[-c_(L,J)Q_(j+1)] times the source norm. Fixed b,L,J
+are absorbed in E, not silently allowed to depend on depth.
+
+Even with that classical estimate, (1.1) still requires the actual
+same-radius fixed-core quantum map and the small physical marginal
+birth. A q-fold normalized kernel cannot be replaced by a selected
+Gaussian law to meet that requirement. Running-domain tags, inherited
+boundary/null differences, tensor/profile low modes and raw histories
+need their own coupled transport. They are not members of V_j merely
+because their amplitudes are small.
+
+Finally, alpha bounded away from zero is a statement about a source
+coefficient. It is NOT a reflected covariance floor, positive energy,
+interaction, or a nontrivial continuum Yang--Mills theory. All exact
+one/two-source scalars and the final outer conditional means remain
+required in the separate full-law construction.

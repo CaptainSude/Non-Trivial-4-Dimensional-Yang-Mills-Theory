@@ -1,0 +1,280 @@
+S0 REFLECTION HILBERT SPACES AND COMMON CORES
+18 October 2026. Independent working proof; no probability-space L2.
+
+STATUS CORRECTION: coordinate RP is inherited from the periodic Wilson
+family, but diagonal RP of that SAME infinite-volume state has NOT
+been proved. RawIII79931--79978 explicitly identifies it as an extra
+unproved assumption. The local diagonal Wilson-weight factorization
+on an infinite lattice/free symmetric box does not by itself pass to
+straight periodic-torus limits. Sections3 and6 are therefore conditional
+on diagonal RP in the actual limiting hierarchy; the direct planar
+cone proof closes the functional-analytic implication, not that state-
+selection input. See work/diagonal_torus_state_audit_2026-10-18.txt.
+
+INPUT. S_n are translation-invariant, symmetric, real continuous
+functionals on the Schwartz subspace flat on ALL full four-dimensional
+collision diagonals, with a finite-order Schwartz bound for each n.
+They arise as limits of the actual full centered Wilson moments on
+compact tests off those diagonals. For each stated mirror e, finite
+lattice RP passes to those tests. Diagonal RP is an input that must
+have been established at the lattice mirrors; it is not inferred here
+from coordinate RP. Put S_0=1.
+
+1. USE THE FULL POSITIVE-HALFSPACE VECTOR DOMAIN
+
+Let D_e be the finite sequences F=(F_0,...,F_N), with each F_n smooth
+compactly supported where all e.x_i>0 and x_i!=x_j. No ordering of
+e.x_i and no separation of the two-dimensional planar projections
+is imposed. Define
+
+ (F,G)_e=sum_nm S_{n+m}(theta_e conjugate/reverse(F_n) tensor G_m).
+
+Each reflected tensor is off full collisions: internally by its own
+support, and across the two groups by the strict halfspace margin.
+The finite-lattice polynomial RP limit therefore gives (F,F)_e>=0.
+The same local tensor approximation used for separated tests applies
+on these compact off-collision supports. Complete D_e modulo its
+null space to obtain H_e. Vacuum Omega=(1,0,...) has norm1. Thus H_e
+is nonzero, but a nonvacuum state is NOT guaranteed by these inputs.
+
+D_e is a vector domain, not an ordinary polynomial algebra. Multiplying
+two internally collision-flat test tensors can create cross-collisions
+within the resulting positive-halfspace word. Even F_1 tensor F_1 is
+not collision-flat if F_1 is nonzero. Products are available when their
+complete supports are disjoint, giving a partial test algebra. No
+Euclidean E[|F|^2] for a composite F is used in this construction.
+
+Cutoffs at infinity, at the halfspace boundary and at FULL collision
+diagonals approximate the corresponding flat Schwartz positive test
+space. This does NOT authorize cutting out equal-time or equal-planar-
+projection hypersurfaces. They contain many points off full collisions;
+a function nonzero there cannot be approximated in Schwartz topology
+by functions vanishing on neighborhoods of those hypersurfaces.
+
+2. TRANSLATIONS AND CONTRACTIVITY FROM POLYNOMIAL GROWTH
+
+For a perpendicular to e, common translation U_e(a) of every argument
+preserves D_e. Translation invariance of S gives an isometry, with
+inverse U_e(-a), hence a strongly continuous unitary group on H_e.
+For t>=0, common translation T_e(t) by t e preserves D_e and obeys
+
+ (T_e(t)F,G)_e=(F,T_e(t)G)_e,
+ ||T_e(t)F||_e^2=(F,T_e(2t)F)_e.                       (2.1)
+
+Cauchy--Schwarz for the positive form gives
+
+ ||T_e(t)F||_e <= ||F||_e^(1-2^-m)
+                    ||T_e(2^m t)F||_e^(2^-m).       (2.2)
+
+For fixed F the defining reflected tensors remain collision-flat at
+all t>=0. Their Schwartz seminorms grow at most polynomially in t,
+so ||T_e(s)F||_e<=C_F(1+s)^M_F. Taking m->infinity in(2.2) proves
+||T_e(t)F||_e<=||F||_e. If F is null, already the first inequality
+in(2.1) shows T_e(t)F is null. Thus T_e descends to a contraction.
+Continuity of translated tests proves strong continuity at zero.
+Its symmetry gives a nonnegative selfadjoint generator H_e:
+T_e(t)=exp(-tH_e). This elementary construction does not invoke the
+uncorrected OS-I reconstruction theorem or full Euclidean rotations.
+
+Spatial translations commute with T_e on the test domain and hence
+on H_e. Their selfadjoint generators P_e strongly commute with H_e,
+so the joint spectral measure of (H_e,P_e) exists, with H_e>=0.
+No spectral inequality relating H_e and P_e follows yet.
+
+3. AN ACUTE-ANGLE COMMON DOMAIN IS DENSE, WITHOUT EXTRA CUTOFFS
+
+Take normals e,n with e.n>0 and set D_en=D_e intersect D_n as literal
+test sequences. For every F in D_e there exists t_F such that
+T_e(t)F is in D_en for all t>=t_F: all supports are compact and
+n.(x+t e) increases strictly with t. Suppose v in H_e is orthogonal
+to the image of D_en. Then
+
+ z -> (v,exp(-z H_e)[F])_e
+
+is holomorphic on Re z>0 and vanishes on the real interval t>t_F.
+The identity theorem makes it zero everywhere in that half-plane;
+strong continuity at t=0 gives (v,[F])_e=0. Since D_e defines H_e,
+v=0. Hence D_en is dense in H_e. Interchanging e,n proves density
+in H_n as well. This is a Hilbert-norm argument, not a claimed
+Schwartz density of a geometrically restricted subspace.
+
+More generally, if e.n_l>0 for a FINITE set of normals, their common
+positive-halfspace domain is dense in H_e by the same proof. Thus
+for e=e_0 and n_+=(e_0+e_1)/sqrt2, n_-=(e_0-e_1)/sqrt2, one common
+domain is dense in H_e0 and lies in both diagonal positive domains.
+Pairwise D_e0,n+ and D_e0,n- are each dense also in the corresponding
+diagonal Hilbert space. Density of the triple intersection in a
+diagonal Hilbert space is NOT asserted: n+.n-=0, so the stated proof
+does not apply. Nor does it apply to arbitrary orthogonal normals.
+
+4. OPERATOR-CORE STRENGTHENING IN THE COORDINATE HILBERT SPACE
+
+Test translation derivatives keep D_e inside itself, so D_e consists
+of smooth vectors for H_e and all spatial generators. It is a joint
+core for A_mk=(1+H_e)^m(1+|P_e|^2)^k. One direct proof uses their
+commuting resolvent powers. These are integrals of T_e(t) and spatial
+unitaries with integrable scalar kernels. Applied to a vector of D_e,
+truncate the integrals and approximate them by finite sums of such
+translates, which remain in D_e. Differentiating up to the indicated
+fixed orders gives convergence in the A_mk graph norm. The inverse
+A_mk^-1 maps the dense set D_e densely onto Dom(A_mk) in graph norm,
+which proves the core assertion. Equivalently, make the truncation
+first for a fixed smooth F so all required derivatives are bounded.
+
+The acute common domain is a core in the SAME graph norm. If v is
+orthogonal to it in Dom(A_mk) with inner product
+(F,G)_graph=(F,G)+(A_mk F,A_mk G), then for F in D_e the function
+(v,T_e(z)F)_graph is holomorphic on Re z>0, because A_mk commutes
+with T_e and T_e is holomorphic in that graph space. It vanishes
+for all sufficiently large real z, hence for all positive z. Taking
+z down to zero and using the preceding D_e core property gives v=0.
+Thus common positive-halfspace tests form a common core for every
+fixed polynomial in the coordinate generators H_e,P_e. This also
+applies to the finite diagonal-normal intersection in H_e0.
+
+The literal common test domain is not invariant under EVERY spatial
+translation: such a translation may leave a diagonal positive halfspace.
+The coordinate representation itself is translation invariant. If an
+invariant operator core is wanted, the joint compact-spectral-support
+vectors give one, but their representation as literal finite test
+polynomials is not claimed. To transfer an inequality proved on the
+literal common core to a closed coordinate operator, graph density is
+the relevant property, not a fictitious invariant test algebra.
+
+5. WHAT STILL MUST BE SHOWN FOR A SPECTRAL CONE
+
+The identity on D_en does not define an isometry between H_e and H_n.
+Their reflection forms differ, even in a fully Euclidean theory.
+Their null spaces need not agree from the inputs stated here. Thus
+one cannot identify H_n with a linear combination of H_e and P_e
+merely because the test-function domain is shared and dense.
+
+The proven core is sufficient for a separately derived identity or
+closed quadratic-form inequality involving the COORDINATE operators,
+for example H_e+/-P_1>=0 on D_e0,n+/-. Once such an actual identity
+or inequality is proved, the core result extends it by closure and
+the joint spectral theorem gives the corresponding cone. Diagonal
+reflection positivity by itself has not been converted into that
+coordinate-generator inequality by the present argument. That
+analytic/inter-frame comparison is the remaining step assigned to
+the spectral-cone route, not a hidden common-core hypothesis.
+
+Finally, nontriviality of the excited Hilbert space is separate.
+The sequence S_0=1, S_n=0 for n>=1 obeys every estimate and positivity
+used here but produces only the vacuum. A lower bound for an actual
+reflection norm or equivalent nonzero limiting correlation remains
+necessary; no amount of dense-core bookkeeping supplies it.
+
+Primary context: Osterwalder--Schrader I, CMP31(1973), pp83--112,
+https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/Axioms-for-Euclidean-Greens-functions/cmp/1103858969.pdf
+The corrected full reconstruction statement is in OS II, CMP42(1975),
+https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-42/issue-3/Axioms-for-Euclidean-Greens-functions-II-with-an-Appendix-by/cmp/1103899050.pdf
+Only the elementary positive-form/semigroup argument is used here;
+no reconstruction theorem is invoked without its remaining axioms.
+
+
+6. THE DIRECT TWO-SPECTRAL-MEASURE COMPARISON CLOSES THE PLANAR CONE
+
+This section supplies the comparison left open in Section5. It is a
+literal adaptation of YM_Rotation_Invariance_simplified, Section3.3,
+PDF pages5--6, to the full-collision test-vector spaces above. The
+ordinary Euclidean L2 bound is unnecessary: finite diagonal RP norms
+of two specific test polynomials suffice. No identification of the two
+Hilbert spaces, no common Hilbert core, and no point-field product is
+used. The inputs remain those stated at the beginning, including RP
+and invariance at the diagonal mirror t+x=0.
+
+Let e=e0 and n=(e0+e1)/sqrt2. Take any finite polynomial test sequence
+A in D_e. For a sufficiently large L all arguments in every component
+of A lie in B={0<t<L, |x|<L}; the other coordinates remain in a compact
+set. Let R_0,R_d be the LINEAR pullbacks of the coordinate and diagonal
+reflections, and J_0,J_d their compositions with complex conjugation.
+Reversal of word order can be included as usual and is immaterial by
+permutation symmetry. Put b=L(e0+e1)/2 and
+
+ A1=R_d tau_-b R_0 A,       A2=tau_(2Le0-b) A.
+
+Before the final R_d, the t+x coordinate in the first expression is
+-t+x-L<0; in A2 it is t+x+L>0. Hence A1,A2 lie in D_n. Reflection and
+translation preserve all internal full-collision exclusions. Their
+diagonal reflection norms are finite, with no uniform bound in A
+required.
+
+For a,c>=0 define the SAME distributional pairing
+
+ G(a,c)=S[(J_0 A) tau_(2Le0+a(e0+e1)+c(e0-e1)) A].    (6.1)
+
+Every tensor in this finite polynomial pairing is admissible: the
+two groups are strictly separated in coordinate time, while each
+group is already off its own full collisions. The coordinate joint
+spectral measure in [A], denoted rho>=0, gives
+
+ G(a,c)=integral exp(-2L omega) exp(-a z-c conjugate(z)) d rho,
+                    z=omega-i p, omega>=0.           (6.2)
+
+Translate the complete test tensor in (6.1) by -b. Since
+J_d A1=tau_-b J_0 A, this is precisely the diagonal pairing of A1 with
+tau_(sqrt2 a n+sqrt2 c n_perp) A2, where n_perp=(e0-e1)/sqrt2.
+The diagonal spectral representation therefore gives
+
+ G(a,c)=integral exp(-a omega'+i c p') d rho', omega'>=0. (6.3)
+
+The factors sqrt2 are absorbed into omega',p'. The mixed spectral
+measure satisfies
+
+             ||rho'||TV <= ||A1||_n ||A2||_n=:C_A<infinity. (6.4)
+
+Indeed, sum the absolute matrix elements of the mutually orthogonal
+joint spectral projections over a finite partition and apply Cauchy--
+Schwarz. This is the only bound on the second Hilbert space needed.
+
+For h in L1(0,infinity), let F(z)=integral_0^infinity h(a)e^-az da.
+Integrate (6.2)--(6.3) against h(a)conjugate(h(c)). Finite measure and
+L1 norms justify Fubini. Positivity of rho and (6.4) yield
+
+ integral exp(-2L omega)|F(omega-i p)|^2 d rho
+       <= C_A sup_(r>=0)|F(r)| sup_(s real)|F(i s)|.   (6.5)
+
+For epsilon=+1 or -1 and j>=1 use the exact original probes
+
+ F_j(z)=exp(-j) z^(1-4i epsilon j/pi)(1+z)^-3,
+ F_j(0)=0, principal powers on Re z>0.                (6.6)
+
+The first factor exp(-j) is a scalar, NOT exp(-j z). To check these
+are L1 Laplace transforms, write nu=1-4i epsilon j/pi and
+z^nu(1+z)^-3=[1-(1+z)^-1]^nu (1+z)^-(3-nu).
+The first factor is the transform of the finite complex measure
+
+ delta_0+sum_(k>=1)(-1)^k binom(nu,k)
+                         a^(k-1)e^-a/(k-1)! da;
+
+its coefficients are O_nu(k^-2). The second is the transform of
+a^(2-nu)e^-a/Gamma(3-nu), an L1 function. Their convolution, times
+exp(-j), is h_j. Integrability is needed for each j separately, not
+uniformly. Continuity extends the transform identity to Re z=0.
+
+For Re z>=0, |z||1+z|^-3<=1. Consequently the two suprema on the
+right of (6.5) are at most e^-j and e^j, respectively. Their product
+is at most1. On epsilon arg z>=pi/4+eta, eta>0,
+
+ |F_j(z)|^2 >= exp(8 eta j/pi)|z|^2|1+z|^-6.
+
+Equation(6.5) implies that the rho integral over this sector of the
+strictly positive weight e^-2Lomega |z|^2|1+z|^-6 is at most
+C_A exp(-8 eta j/pi). Sending j to infinity, then taking both signs
+and a countable eta down to0, excludes exactly |p|>omega. Thus the
+coordinate spectral projection of {omega<|p|} annihilates [A]. Every
+A in the defining compact D_e admits such an L, and their images are
+dense by construction. The projection therefore vanishes identically:
+
+                         H_e0 >= |P_1|.             (6.7)
+
+This is the PLANAR spectral cone needed for the (e0,e1) rotation
+argument. Repeating in other available coordinate planes gives
+H>=|P_i| separately. These separate inequalities alone do NOT imply
+H>=sqrt(P_1^2+P_2^2+P_3^2); the full Euclidean momentum cone needs the
+corresponding additional directions or an established spatial rotation
+symmetry. The planar operator extension is already valid:
+exp(-z_t H+i z_x P_1) is contractive when Re z_t>=|Im z_x| and is
+operator-norm holomorphic on the strict inequality. This follows
+directly from the joint spectral theorem and (6.7).

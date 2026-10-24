@@ -1,0 +1,411 @@
+FREE CURVATURE RE-ENTRY AFTER A SMOOTHED BLOCK
+19 October 2026. Exact homogeneous theorem; compact-boundary and
+actual-blocked-precision scopes are separated below.
+
+RESULT
+
+For the homogeneous sharp straight-string/box average, fine spacing
+eta=1/R and coarse spacing one, there is a coarse-translation-covariant
+operator K_(R,T) from coarse plaquette cochains to fine plaquette
+cochains such that
+
+             d_eta exp(-T P_eta) H_R = K_(R,T) d_c.         (0.1)
+
+Here P_eta=d_eta^*d_eta on potentials, T>0 is fixed in coarse physical
+units, and H_R is the actual flat constrained minimizing extension.
+For every finite k, K_(R,T) has an exponentially weighted coarse-cell
+kernel norm into fine physical C^k, uniformly in R. It therefore gives
+the missing FREE curvature-slot source-space re-entry after heat.
+The factorization does not divide by the massless Laplacian.
+
+A periodic analytic Koszul division proves the algebraic factorization.
+There are two safe ways to retain derivatives: divide in physical cell
+L2 and then apply fine heat, or divide on overlapping physical output
+patches and glue with smooth weights. Direct division in a single
+Bloch-twisted C^k cell space is not justified; Section 4 explains why.
+
+For later RG steps the relevant stationary precision is the actual
+blocked precision q_i, not automatically P_eta. Section 8 incorporates
+the independently checked matched_free_precision_heat_turn9 theorem
+for the homogeneous blocked family. No replacement of q_i by the
+nearest-neighbor Wilson precision is made.
+
+1. COCHAIN AND NORM CONVENTIONS
+
+Use forward cochains anchored at their lower-left lattice site. At
+coarse momentum p, put
+
+ delta_mu(p)=exp(i p_mu)-1,
+ (d_c B)_(mu nu)=delta_mu B_nu-delta_nu B_mu,  mu<nu.
+
+Fine derivatives include eta^-1, and the physical fine-cell norm is
+eta^4 sum_(x in cell) |v(x)|^2. Colors are independent copies in this
+free theorem. Other centered/cochain phase conventions are obtained
+by fixed shift matrices; these preserve the estimates.
+
+Let Q_R be the homogeneous ordinary flat straight-string average and
+let H_R satisfy Q_R H_R=I and minimize ||d_eta A||^2. The established
+flat symbol theorem gives a periodic reconstructed symbol
+
+ A_R(p)=d_eta H_R(p): C^4 -> physical cell L2(two-cochains),
+
+holomorphic and bounded on a strip |Im p_mu|<rho with rho and the
+bound independent of R. This is the CURL statement in
+archive/ym4-research/work/flat_minimizer_locality_research.md,
+Sections 4--6 and 8. It is independent of the minimizing gauge because
+all minimizing representatives have the same curvature. The explicit
+source-gauge version in Section 10 has the same curl.
+
+In kernel notation an estimate into a full fixed physical collar means
+
+ sup_(x in cell c) sum_z exp(kappa |z-c|_1)
+                    |D_eta^alpha K(x,z)| <= C_alpha.       (1.1)
+
+All finite differences crossing a coarse-cell face are included. The
+constants may depend on alpha,T and the fixed strip, but not on R,
+the volume, or the number of earlier blockings.
+
+2. EXACT GAUGE ANNIHILATION, INCLUDING ZERO MOMENTUM
+
+The ordinary average obeys the chain identity
+
+                       Q_R d_eta=d_c Q_R^(0),
+
+with the scalar block average on the right. A coarse gradient therefore
+has a zero-energy fine lift. Every minimizing extension has zero curl
+on that input. Thus
+
+                        A_R(p) delta(p)=0.                 (2.1)
+
+The identity first holds on real momenta and extends holomorphically.
+Fine Maxwell heat fixes gradients, and
+
+ d_eta exp(-T P_eta)=exp(-T Delta_eta^(2)) d_eta,             (2.2)
+
+where Delta_eta^(2)=d_eta d_eta^*+d_eta^*d_eta is the componentwise
+positive cochain Laplacian. Hence the heat-smoothed map has the same
+annihilation property.
+
+At p=0, H_R maps a constant coarse one-form to a constant fine
+one-form, so A_R(0)=0. This also follows from the first Taylor
+coefficients of (2.1). A harmonic one-form on a periodic torus is
+therefore killed exactly; no inverse zero mode has to be selected.
+
+3. PERIODIC ANALYTIC KOSZUL DIVISION
+
+Here is a bounded factorization usable with Banach-valued outputs.
+Let a=(a_1,...,a_d) be a row of holomorphic, 2pi-periodic functions on
+a fixed complex strip, taking values in a Banach space V, and assume
+
+                       sum_j a_j delta_j=0.                (3.1)
+
+Then there are antisymmetric k_(ij)=-k_(ji), holomorphic and periodic
+on a fixed smaller strip, with
+
+               a_j=sum_i k_(ij) delta_i,                  (3.2)
+               ||k||_(rho') <= C_(d,rho-rho') ||a||_rho.
+
+Explicit recursion. In dimension one (3.1) forces a_1=0. For d>1,
+restrict p_d=0. Apply the (d-1)-dimensional recursion to the first
+d-1 components, obtaining k'_(ij)(p_1,...,p_(d-1)). For j<d set
+
+ b_j=a_j-sum_(i<d) k'_(ij) delta_i,
+ c_j=b_j/(exp(i p_d)-1),
+ k_(ij)=k'_(ij) for i,j<d,
+ k_(dj)=c_j,       k_(jd)=-c_j.                            (3.3)
+
+Each b_j vanishes when p_d=0, so c_j is holomorphic. The original
+identity gives a_d=-sum_(j<d)c_j delta_j, proving (3.2). Antisymmetry
+then gives, for every B,
+
+                  sum_j a_j B_j=sum_(i<j) k_(ij)(d_c B)_(ij).
+
+Uniform division bound. For a periodic f vanishing at p_d=0, divide
+by exp(i p_d)-1. On a fixed neighborhood of p_d=0, Cauchy's derivative
+bound and the integral formula for f give a quotient bounded by
+C(rho-rho')^-1||f||. Outside that neighborhood the denominator is
+bounded away from zero on a chosen smaller strip. Representing real
+p_d in [-pi,pi] covers one period. All norms are Banach-valued, and
+the finite recursion uses finitely many strip losses depending only
+on d. There is no alias-count or R-dependent constant.
+
+This is a periodic Laurent/Koszul homotopy. It avoids the expression
+a d_c^*/|delta|^2, whose apparent singularity on the complex null
+cone would not be controlled by a real transverse estimate.
+
+4. HOMOGENEOUS CONSTRUCTION AND THE CELL-SEAM ISSUE
+
+Apply Section 3 to the columns of A_R with V equal to physical
+fine-cell L2(two-cochains). The reconstructed symbol is genuinely
+periodic: a shift of coarse p permutes fine aliases and is compensated
+by the integer fine-coordinate reconstruction, as proved in Section 8
+of the archived locality note. Obtain K_R^0 with
+
+                      d_eta H_R=K_R^0 d_c.                (4.1)
+
+Fourier contour shifting on a further fixed strip gives
+
+ ||K_R^0(c,z)||_(C^6 -> L2(cell c))
+                    <= C exp[-rho_1 |c-z|_1].             (4.2)
+
+The operator is defined on the GLOBAL fine lattice by its coarse-cell
+kernel. It need not have uniformly bounded fine derivatives; it can
+have cell-face seams. Define instead
+
+              K_(R,T)=exp(-T Delta_eta^(2)) K_R^0.          (4.3)
+
+Equations (2.2) and (4.1) prove (0.1) exactly.
+
+Why heat repairs the norm. For fixed T>0, the fine heat kernel has
+uniform exponentially weighted physical L2-to-C^k bounds between
+coarse cells. One direct proof shifts the fine Fourier contour by a
+fixed physical imaginary vector. Its derivative multiplier has size
+|u|^k, while
+
+ |exp[-T P_eta(p+i v)]|
+                  <= exp[-c T |u(real p)|^2+C T |v|^2].
+
+The physically normalized Fourier integral of any fixed polynomial
+times this Gaussian is uniformly finite for 0<eta<=1. Contour shifting
+gives exponential cell off-diagonal decay. Convolve this block estimate
+with (4.2), sacrificing a fixed part of the exponent. This proves
+(1.1) for every finite k, including differences across cell boundaries.
+
+A tempting but invalid shortcut would apply the recursion directly to
+a one-cell Bloch C^k norm. Evaluating p_d=0 changes the boundary twist
+of that fine cell. Subtracting the two symbols can then make a jump
+under the ORIGINAL twist, whose first fine difference costs eta^-1.
+The L2 construction followed by GLOBAL fine heat avoids this issue.
+
+5. A GENERAL PATCH VERSION, INCLUDING NON-WILSON PRECISIONS
+
+There is a second construction which does not require the scalar heat
+commutation (2.2). Let A be a coarse-translation-covariant map from
+coarse one-forms to fine two-cochains. Assume:
+
+ (a) A d_c=0;
+ (b) on every fixed physical output patch W, its input Fourier symbol
+     is periodic and holomorphic on a common strip with a uniform
+     norm into the ORDINARY physical C^k(W), including the full patch
+     collar; this holds for every desired finite k;
+ (c) these patch bounds are uniform in R and under coarse translation.
+
+Then A=K d_c with the weighted derivative estimate (1.1).
+
+Proof. Choose a smooth coarse-scale partition of unity
+sum_c chi(x-c)=1, with each chi supported inside a fixed physical
+patch W+c, bounded overlap, and bounded physical derivatives of every
+fixed finite order. Sample it on the fine lattice. On W+c use the
+symbol
+
+                   A_c(p;x)=sum_z A(x,z) exp[i p.(z-c)].
+
+The target is now functions on a FULL output patch, not a twisted
+cell quotient. Apply the recursion (3.3) in C^k(W+c). It commutes
+with physical output differences and gives a kernel K^c there.
+Define
+
+                        K(x,z)=sum_c chi(x-c) K^c(x,z).    (5.1)
+
+Only finitely many terms occur for each x. Every local factorization
+equals A on its patch, so K d_c=A exactly. Leibniz' rule, fixed overlap,
+and the analytic strip bounds give (1.1). Coarse translation covariance
+holds because both the patches and their deterministic homotopy are
+translated together. The partition creates no artificial cell-face
+jump. Its derivatives are on the fixed coarse scale.
+
+This theorem also explains why a full-patch formulation is sufficient
+for a general actual precision. It does not assume that an arbitrary
+transverse precision commutes with the fine Laplacian.
+
+For the homogeneous Maxwell map A=d_eta exp(-T P_eta)H_R, the needed
+patch bounds follow directly from the established alias-L2 estimate:
+
+ sup_p sum_l ||H_(R,l)(p)||^2 <= C,
+ |u_l|^k exp[-T Re P_l] <= polynomial_(k)(|l|) exp(-cT|l|^2).
+
+Cauchy--Schwarz in the aliases gives all physical derivative sup norms
+on any fixed patch, with constants uniform in R. Fine reconstruction
+on the whole patch retains the actual phases on both sides of every
+coarse face. This is also an independent proof of the hypothesis used
+in the patch construction.
+
+6. RE-ENTRY OF THE FREE n-SLOT KERNEL SPACE
+
+The intertwiner does more than bound a polynomial on smooth fields.
+It returns it to a positively normed curvature-kernel space.
+
+Let the old rooted source have n curvature slots and kernel J_x(y),
+where y=(y_1,...,y_n) are fine integer offsets. Suppose its complete
+slot moments of total degree <r vanish at every x. Write the output
+fine curvature as
+
+ f(x)=sum_(z,A) K_(R,T)(x,z)_A F_c(z)_A,
+                         F_c=d_c B.
+
+Define the transported kernel by substituting this expression in
+EVERY slot, keeping all tensor indices. Group fine roots x into a
+coarse cell c only after that substitution; any old root mask remains
+a multiplier of its whole root and is never differentiated.
+
+The key is the Banach-valued version of the rootwise Taylor estimate.
+For fixed root c use the tensor product of the weighted l1_z spaces
+with weights exp[kappa sum_a |z_a-c|]. Equation (1.1) bounds every
+physical difference of the product
+
+       tensor_product_a K_(R,T)(x+eta y_a,z_a)
+
+in this norm. Along the discrete Taylor paths the bound changes by at
+most exp[C kappa eta sum_a |y_a|], because the centers of the kernel
+weights have moved by those physical distances. Complete moment
+cancellation removes the Taylor polynomial. Therefore
+
+ ||J'_(single root x)||_(weighted l1 in all z slots)
+ <= C_(n,r,T) eta^r
+    sum_y ||J_x(y)|| (sum_a |y_a|)^r
+                              exp[C kappa eta sum_a |y_a|]. (6.1)
+
+For r=0 omit the power and the Taylor step. The discrete Taylor formula
+uses Newton polynomials and forward/backward integer paths; its
+polynomial span through order r-1 is the same as that of the stated
+moments. Thus no continuum interpolation with an uncontrolled spatial
+tail is being assumed.
+
+Choose kappa small compared with the original fine-offset exponential
+decay. The right side of (6.1) is bounded by the original exponential
+kernel norm with a constant depending only on n,r,T and the fixed
+decay reserve, uniformly in R. Restoring eta^(2n), summing at most
+C eta^-4 fine roots in a coarse cell, and multiplying by R^(D-4)
+gives
+
+       ||J'_c||_kappa
+             <= C_(n,r,T) R^(D-2n-r) sup_x ||J_x||_old.     (6.2)
+
+This is an ACTUAL output kernel norm, not only a physical field-value
+bound. With r=max(0,D-2n+1), it is O(R^-1). The bounded Newton projector
+of free_multileg_flow_moment_bound_turn8 Section 5 can now be applied
+on the COARSE output lattice, producing the next curvature-slot high
+kernel and its exact finite low-reference remainder.
+
+The source root may be arbitrarily masked in (6.1)--(6.2). There is no
+integration by parts in the root. Constants are fixed for each finite
+n,D before selecting the block ratio R. Overcomplete curvature
+references and Bianchi-null directions still require honest quotient
+bookkeeping if a physical independent low-coordinate matrix is wanted.
+
+7. BIANCHI, HARMONIC SECTORS, AND COMPACT BOUNDARIES
+
+Bianchi. K is defined on all coarse two-cochains, but (0.1) is asserted
+on F_c=d_c B. Different Koszul homotopies may differ on two-cochains
+outside this exact subspace. No bounded inverse curl is being asserted.
+On exact inputs the output is an exact fine curvature automatically.
+One need not require K to map arbitrary nonclosed inputs to closed
+ones. On a finite periodic torus, closed two-cochains also have a
+harmonic flux sector. That finite-dimensional sector is separate from
+the globally periodic-potential sector and must be specified if used.
+
+Harmonic potentials. Constant coarse one-forms have zero output
+curvature exactly, as Section 2 shows. The construction therefore has
+no obstruction from them and no gauge choice at p=0. Exact finite-volume
+operators are obtained by periodizing the exponential infinite-lattice
+kernel, with uniform bounds using periodic distance.
+
+Compact flow with matched exterior. Fix an active fine box K and its
+full Wilson action collar K^+, and let
+
+                   E_T^K=exp[-T M_K P_eta].
+
+Take ALL initial/fixed exterior values from the SAME global H_R B.
+Then A^K=d_eta E_T^K H_R still annihilates coarse gradients: P_eta
+kills their fine-gradient lifts even where M_K changes. On a protected
+interior K0, the finite-box curvature energy and interior heat argument
+from free_finite_ratio_Langevin_prototype_turn7 Section 4 give uniform
+C^k(K0) bounds on each fixed complex input strip. The original H_R
+exponential kernel bounds control the complete initial collar.
+
+Apply the patch Koszul theorem on K0, with the active box fixed before
+the factorization. It gives an exact protected-interior curvature
+intertwiner, exponentially local in the coarse input, with constants
+depending on T and the fixed buffer but not eta. The complete action
+collar stays part of the source's read carrier. Heat is not claimed to
+have finite propagation.
+
+Independent boundary data. The preceding statement is false if one
+discards independent exterior slots and asks for a function of interior
+coarse curvature alone. A transverse one-dimensional reduction already
+shows this: on [-1,1], fix a_2(-1)=a_2(1)=1 and constrain its block
+mean to zero. The constrained energy minimum is
+a_2(x)=3x^2/2-1/2, with nonzero F_12=3x, even though the sole interior
+mean datum is zero. The discrete version is the analogous quadratic
+spline. Finite-time compact flow has a boundary-forced contribution.
+Such a problem needs the full boundary lift/term, not (0.1) with an
+interior B and missing exterior. No fine boundary term is being dropped
+in the matched-exterior theorem.
+
+8. THE ACTUAL BLOCKED GAUSSIAN LAW AT LATER STEPS
+
+At a later free RG stage the datum covariance is generally the blocked
+Maxwell covariance, with precision q_i. A stationary OU replacement
+for that law must use q_i (or a proved compatible mobility). Exact Wick
+intertwining cannot be justified by substituting a nearest-neighbor
+Wilson precision just because both have the same low-momentum limit.
+
+The re-entry theorem itself has a clean abstraction. Let H_(i,R) be
+the ACTUAL constrained extension for the current covariance and set
+
+               A_(i,R,T)=d_eta exp(-T p_i) H_(i,R),
+
+where p_i is expressed in FINAL physical units (p_i=R^2 q_i when
+q_i is the symbol in old unit-link coordinates).
+
+If it has gauge annihilation and the common-strip, complete physical
+patch C^k bounds of Section 5, uniformly in i,R, then the same explicit
+Koszul/partition construction gives a uniformly local curvature
+intertwiner and the kernel re-entry estimate (6.2). No further special
+nearest-neighbor identity is needed for that implication.
+
+For the EXACT homogeneous blocked Maxwell family, that input is now
+proved in matched_free_precision_heat_turn9.txt and was independently
+checked for this note. The essential details are:
+
+ (i) The explicit blocked Feynman covariance is diag(D_mu/P0), with
+     D_mu uniformly above and below zero on real momenta. Minimizing
+     its inverse quadratic form modulo coarse gradients gives
+     c lambda_c Pi_T <= q_M <= C lambda_c Pi_T.
+
+ (ii) G_M=q_M+delta delta^* is uniformly elliptic on real momenta and
+     uniformly holomorphic on a fixed strip. Since it is Hermitian
+     on the real torus, the linear term of G_M(xi+i zeta) is
+     anti-Hermitian. The uniform second derivative bound therefore
+     gives Re G_M(xi+i zeta)>=c lambda_c(xi)-C|zeta|^2.
+     An energy estimate for its matrix ODE yields, without any
+     normality assumption,
+       ||exp[-T R^2 G_M((p+2pi l)/R)]||
+                  <=exp[C T rho^2-cT|Re p+2pi l|^2].
+     The gauge term does not change the curvature of the evolution.
+
+ (iii) For the specified normalized flat straight-string averages,
+     Q_R Q_M=Q_(MR) exactly on aligned grids: both the scalar
+     start-box filter and the directional-string filter telescope
+     separately. Thus H_(M,R)=Q_M H_(MR) is the ACTUAL between-stage
+     constrained minimizing lift. Physical Jensen/counting bounds
+     for Q_M and the original H_(MR) alias estimate give its uniform
+     L2 bound on the same coarse strip. Any conditional-mean gauge
+     difference is a fine gradient and is killed by curvature.
+
+The heat alias estimate in (ii), multiplied by this L2 input bound,
+proves every fixed full-patch output C^k bound uniformly in M,R.
+Section 5 therefore applies to A_(M,R,T), and Section 6 gives genuine
+curvature-kernel re-entry for the matched successive FREE measures.
+
+These checks require the literal flat nested averaging convention.
+They do not prove a comparable semigroup identity for nonlinear
+path-ordered averaging. A compact active-region version for the
+nonlocal q_M precision also remains separate: its full exterior
+interaction tail and its boundary smoothing must be retained, as
+the matched-precision note explicitly states. Global Fourier
+locality alone does not make that compact flow finite-range.
+
+This remains a free curvature-polynomial/Wick-kernel result. It is not
+an interacting Wilson-score theorem, an independent-current analytic
+extension, or a proof of the full local Yang--Mills observable hierarchy.

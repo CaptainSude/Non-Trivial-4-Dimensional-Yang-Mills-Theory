@@ -1,0 +1,184 @@
+INITIAL SOURCE MARK: POINTED VERSUS SMALL HOMOGENEOUS REPRESENTATIVES
+18 October 2026. Working audit and exact reanchoring estimate.
+
+1. THE ISSUE AND THE TWO INPUT NORMS
+
+Constant_source_shift Section7 proves a small physical strict (or quotient)
+norm for the TOTAL homogeneous tangent E'_s. The original source instead
+weights the pointed coefficients by f(z). Equality of the two unweighted
+totals alone does not permit assigning the small norm to these pointed
+coefficients. The missing elementary operation is a bounded reanchoring
+of the zero-total difference. The fixed spatial/cardinality reserves in
+the source/physical seed construction are essential for this operation.
+
+Use current unit cells at scale s and write a=a_s, b=b_s. On the physical
+background ball, let A_{z,H} be the actual pointed homogeneous tangent
+coefficients, vacuum subtracted. The prepared original extensions and
+their summable age bounds give a fixed original ceiling E_src; scalar
+source Cauchy has a fixed radius. The degree-two physical seed theorem
+then gives the rooted strict bound
+
+                     ||A|| <= C E_src b^2/a^2.             (1.1)
+
+All constants depending on the fixed scalar-source margin are included
+in C. The completed pointed bracket E_i-E_i(I)-beta_i A(h_z) is used
+coherently as in one_run_source_gradient_closure Section9. This is not
+the rough direct extension of an old irrelevant interaction. The old
+prepared irrelevant age factors make the sum defining A finite at
+the current scale. The derivative of the static R history may be kept
+separately with its already proved small bound, or included in (1.1).
+
+Choose a strict representative B_H of the SAME total homogeneous
+tangent with the stronger fixed reserve needed below and
+
+                     ||B|| <= C b^2/gamma_s+small_R b^2.  (1.2)
+
+If the available statement is a quotient bound, choose a representative
+within twice its infimum; translation-covariant choices can be obtained
+by the existing equivariant averaging procedure. No pointwise equality
+of A_{z,H} and B_H is assumed. Assign B_H an anchor c_H in its carrier.
+Retain z explicitly in A's carrier, adjoining a bounded-length rooted
+tree if needed; its exponential rooted reserve pays this operation.
+
+2. LINEAR REANCHORING LEMMA
+
+Let D_{H} be a strict, vacuum-subtracted scalar family with
+sum_H D_H(A_H)=0 for every finite-support field A. Each H carries an
+anchor c_H in H. Suppose its absolute norm has exp(a|H|) cardinality
+weight and a reserve of log 3+epsilon over the target norm; alternatively
+retain the indicated cardinality reserve and one spatial diameter
+reserve. For a scalar profile f of Lipschitz constant lambda,
+
+          sum_H f(c_H)D_H(A_H)                            (2.1)
+
+has a strict representation of norm at most C lambda ||D||_reserved.
+It vanishes identically for constant f.
+
+Proof. For S subset H form the complete-cell Mobius component
+
+ D_{H,S}(A_S)=sum_(T subset S)(-1)^(|S|-|T|)D_H(A_T),
+
+where all other field slots are set to zero. Then ||D_{H,S}|| is at
+most 2^|S| ||D_H|| and D_H=sum_S D_{H,S}; S empty vanishes. For fixed
+nonempty S, applying the finite difference in its slots to the zero
+total evaluated on fields supported in S gives
+
+                     sum_(H contains S)D_{H,S}=0.         (2.2)
+
+The interchange is justified by absolute local summability. Fix c_S
+in S. Subtract f(c_S) times(2.2) to rewrite(2.1) exactly as
+
+ sum_(S nonempty) sum_(H contains S)
+                     [f(c_H)-f(c_S)]D_{H,S}(A_S).         (2.3)
+
+Retain carrier H, even though actual field support is S. The profile
+difference is at most lambda diam(H), and sum_(S subset H)2^|S|=3^|H|.
+The stated reserve pays both factors. This proof counts complete
+current cells, not fine coordinates. It applies on finite tori, then
+passes to local limits by the same estimates.
+
+Different anchor labels attached to the same H are retained as
+separate summands; (2.2) sums them too. Thus it applies directly to
+the difference of A_{z,H} and B_H, which need not have the same
+anchor assignment.
+
+If the input families have no field-linear terms coefficientwise,
+neither does(2.3). Constant-color averaging supplies that property
+without increasing the norm. No field-radius Cauchy loss occurs in
+this linear reanchoring step.
+
+3. THE ACTUAL BROAD-PACKET RESIDUAL NORM
+
+Apply Section2 to the difference of the physical representatives
+A and B. The actual pointed homogeneous first mark satisfies
+
+ sum_(z,H) f(z) A_{z,H}
+       =sum_H f(c_H) B_H + D_f,
+ ||D_f|| <=C Lip(f)[E_src b^2/a^2+b^2/gamma_s+small_R b^2]. (3.1)
+
+The first term on the right has norm at most ||f||_infinity times
+(1.2). Add the actual source-gradient first derivative from
+local_two_source_susceptibility Section1, whose norm is
+C E_src(b/a)^2 Lip(f). The actual Wilson leading insertion is
+Gamma'_s sum_p f(p) a_p(U_M); its coarse-anchor replacement costs
+O(Lip(f)) with its separate fixed localized Wilson norm. Consequently
+for ||f||_infinity<=C and Lip(f)<=C/rho,
+
+ ||actual first mark - Gamma'_s fine Wilson energy(f)||
+    <= C b^2[gamma_s^-1+E_src/(a_s^2 rho)+small_R+rho^-1]. (3.2)
+
+The density exponent has a minus sign in front of Gamma A; reversing
+the convention for the observable reverses both leading first marks
+and leaves their covariance unchanged. Equation(3.2) should be used
+with that sign fixed in the consuming note.
+
+This proves the physical STRICT-FAMILY norm estimate, and avoids the
+false inference from a small total to an arbitrary pointed family.
+The equality is at the actual scalar-functional level.
+
+The packet profile envelope is retained by(2.3): a nonzero term reads
+one anchor in or within its carrier diameter of supp f; otherwise both
+profile values vanish. Enlarging the support by R costs the original
+exp(-kappa R) tail. No ambient volume factor is introduced. This is
+the same near-support plus exponentially small tail envelope used
+by the broad-packet overlap sums.
+
+4. GAUGE-INVARIANCE SCOPE: A REAL INTERFACE TO CHECK
+
+The COMPLETE residual in(3.2) is gauge invariant: it is the actual
+source derivative minus the actual gauge-invariant weighted Wilson
+energy. However, neither B_H nor the Mobius pieces in(2.3) need be
+individually gauge invariant. The construction retains constant-color
+invariance and zero first jets coefficientwise, which is sufficient
+for the seed and Cauchy norm estimates above.
+
+It does NOT by itself construct a family of separately invariant
+point-rooted residuals of size(3.2). A transport theorem requiring
+such separate point-rooted invariance cannot consume(3.2) merely by
+relabeling its carriers. A whole-packet invariant transport theorem
+that keeps the proven profile envelope can consume it. Alternatively
+one needs an invariant localization/reanchoring theorem with the
+same bounds. This distinction is explicit; no claim about that next
+interface is hidden in the norm proof.
+
+5. MIXED INITIAL TERMS: SOURCE CHI COSTS ARE PAID BY SEPARATION
+
+For two disjoint amplitude-one profiles with separation c rho, every
+actual mixed local coefficient of the sourced state has a connected
+source carrier reading both supports. Pointwise homogeneous terms
+depending on a single w(z) have zero mixed derivative because
+f_1(z)f_2(z)=0. The remaining localized coefficients retain their
+connecting exponential, giving exp(-c' rho) after the fixed tree sum.
+
+At witness scale s, the local source class has supremum radius O(r)
+and Lipschitz radius O(r chi_s), chi_s=ell^(-(N-s)/2). The profile
+directions have Lipschitz size O(1/rho). A simultaneous two-source
+polydisc of radius
+
+                    c r min(1,chi_s rho)                  (5.1)
+
+therefore stays in the source class. Mixed Cauchy costs at most
+C_r max(1,chi_s^-2 rho^-2). Additional fixed field Cauchy factors,
+packet root counts, and fixed source-history losses are polynomial
+in gamma_s and rho, or fixed powers of chi_s^-1. Keeping them
+explicit gives the safe form
+
+       C gamma_s^C rho^C exp[-c rho+C(N-s)] .             (5.2)
+
+The past positive drift and bounded primitive oscillations imply
+gamma_s>=Gamma_*+c_0(N-s)-C_0, so N-s<=C(1+gamma_s).
+With rho=gamma_s^B, B>1, (5.2) is at most exp(-c'' gamma_s^B)
+for all sufficiently large gamma_s. It beats every fixed inverse
+power of gamma_s, including the g_s^4 scalar covariance normalization
+and g_s^2 b_s^2 mixed nonvacuum normalization. Thus the exponentially
+small mixed INITIAL scalar/nonvacuum terms remain negligible after
+the actual source-class costs; treating those Cauchy costs as constants
+would have been unjustified.
+
+Old dated carriers can be summed before this conclusion: in current
+units an old carrier spanning the two supports has length at least
+c rho ell^(s-i), while its source-radius and root-count losses grow
+only exponentially/polynomially in s-i with fixed exponents. The
+original tree reserve pays this sum and retains exp(-c' rho). Boundary
+histories still require their opened-history localization theorem;
+they are not automatically covered by a uniform-interior bulk bound.

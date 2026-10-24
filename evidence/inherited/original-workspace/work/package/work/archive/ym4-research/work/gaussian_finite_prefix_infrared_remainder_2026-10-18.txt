@@ -1,0 +1,117 @@
+GAUSSIAN FINITE PREFIX: THE OMITTED INFRARED COVARIANCE
+18 October 2026. Working calculation for the actual classical Gaussian.
+This is not a bound on the interacting endpoint measure.
+
+1. PRECISE INPUTS AND THE SPLITTING
+
+Use the notation and uniform estimates of
+broad_packet_actual_gaussian_2026-10-18.txt. At current refinement M,
+the Gaussian action is the actual constrained Wilson Hessian q_M,
+on the quotient by gradients. Its curvature covariance is gauge
+independent. All couplings in the present calculation are fixed at one
+value g; finite-window changes are a separate perturbation.
+
+Take N admitted classical block steps of ratio L and set h=L^-N.
+The exact Gaussian conditional decomposition is
+
+             A = A_hi + H_(M,L^N) B,                    (1.1)
+
+where the two summands are independent centered Gaussian fields on
+the physical quotient. The endpoint precision is q_(ML^N), with the
+usual four-dimensional rescaling. This follows by completing the
+square under the actual linear block constraint: the conditional mean
+is the stationary extension, and its action is the constrained minimum.
+The dated classical semigroup identifies this extension with the
+one-step direct extension of the SAME underlying fine action. Resetting
+the Wilson action at each intermediate coarse lattice would not give
+this identity.
+
+Remove the common factor g^2 from all curvature covariances. Let K be
+the full current curvature covariance and J the covariance of the
+endpoint contribution in (1.1). Then
+
+                       K_hi = K-J.                     (1.2)
+
+The cumulative scalar coefficient obtained by integrating all N
+Gaussian bands, keeping every mixed source vacuum, and setting the
+remaining coarse field equal to zero is exactly the connected
+covariance of the quadratic energy of A_hi. This is Gaussian
+conditional integration of the original generating function at B=0.
+It is not the sum of isolated band-energy variances with the mixed
+terms discarded.
+
+2. A UNIFORM POINTWISE BOUND ON THE LOW-PASS CURVATURE
+
+In endpoint units, the fine lift at refinement ML^N has curvature
+symbol F_(ML^N)(p;u)=O(|p|) at small momentum and a uniformly bounded
+symbol elsewhere. Its gauge-fixed coarse covariance is O(|p|^-2)
+at small momentum and uniformly bounded elsewhere. Thus
+
+  integral_T4 ||F_(ML^N) C_(ML^N) F_(ML^N)^*|| dp <= C,  (2.1)
+
+uniformly in M,N and in the relative fine positions u. Cauchy--Schwarz
+for the positive Gaussian covariance gives the same bound between
+any two positions, including different within-cell positions. This
+uses the full curvature operator; no pointwise bound on a longitudinal
+potential or a choice of singular gauge is needed.
+
+Physical curvature has scaling degree two. Returning to initial
+current units multiplies each endpoint curvature by h^2. Therefore
+
+                          |J(x,y)| <= C h^4.           (2.2)
+
+The factor is exact dimensional rescaling of the minimizing lift,
+not a conjecture about decay of an interacting endpoint correlation.
+The uniform full-Gaussian estimate already proved gives, for separated
+positions at distance comparable to rho,
+
+                          |K(x,y)| <= C rho^-4.        (2.3)
+
+The argument is in the thermodynamic Gaussian. In a finite torus
+one must keep its harmonic convention and compatible side lengths;
+no unproved volume-uniform inverse at its zero mode is required here.
+
+3. TWO SEPARATED AMPLITUDE-ONE PACKETS
+
+Let f(x/rho), k(x/rho) have fixed smooth compact supports separated
+by c rho, each of diameter O(rho). They need not be nonnegative.
+Include the actual fine eta^4 cell weights in each energy. Their
+weighted pair count is O(rho^8), uniformly in eta=M^-1<=1.
+
+Wick's rule expresses their energy cross covariance as a fixed color
+and trace factor times the integral/sum of f k times the contraction
+of two copies of the curvature covariance. By (1.2), its full-minus-
+high-pass difference consists of KJ, JK, and -JJ contractions.
+Equations (2.2)--(2.3) give the absolute bound
+
+ |Cov_full(E_f,E_k)-Cov_hi(E_f,E_k)|
+       <= C_f,k g^4 rho^8 [rho^-4 h^4+h^8]
+       <= C_f,k g^4 [R_N^4+R_N^8],   R_N=h rho.         (3.1)
+
+This proof does not require K_hi or the separated energy covariance
+to be entrywise positive. Matrix contractions are bounded in a fixed
+finite-dimensional norm. True centering does not change a covariance.
+
+Combining with the actual broad-packet Maxwell comparison yields
+
+  g^-4 Cov_hi(E_f,E_k)
+     = K_Maxwell(f,k)+O_f,k(rho^-1+R_N^4+R_N^8).         (3.2)
+
+The insertion tangent Gamma'_s multiplies both marks and hence its
+square multiplies (3.1)--(3.2). If varying real couplings in the N
+bands are compared to one common g, retain the already separately
+proved O(N/gamma) error; it is not part of the exact identity (1.1).
+
+4. SCOPE
+
+The scalar Gaussian reference for a finite prefix can now be compared
+to the positive full Maxwell packet without assuming that the final
+conditional-average constraint has no effect. Its explicit omitted
+infrared error is O(g^4 R_N^4) when R_N<=1.
+
+This closes only the FREE infrared-conditioning interface. The
+interacting endpoint first and mixed marks, their original-domain
+admission, the normalized bad-component contribution, and the sharp
+initial gauge-invariant marked comparison remain separate questions.
+In particular, (2.1) cannot be applied to the interacting final field
+merely because its action is close on a small analytic ball.

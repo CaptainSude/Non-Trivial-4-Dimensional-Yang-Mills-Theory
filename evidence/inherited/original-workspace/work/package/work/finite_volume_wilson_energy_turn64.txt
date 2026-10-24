@@ -1,0 +1,294 @@
+FINITE-VOLUME ORIGINAL WILSON ENERGY DOMINATION -- TURN64
+20 October 2026. Root derivation; based on the independently derived
+one-slab transfer calculation in transfer_matrix_witness_turn64.txt.
+
+RESULT AND SCOPE
+
+For the SU(2) Wilson measure on any nondegenerate finite periodic
+four-dimensional rectangular lattice, with positive homogeneous
+plaquette coupling beta and normalized link Haar measures, put
+
+ h(U)=1-(1/2)Tr U,   h_p=h(U_p).
+
+For every finite plaquette set B and arbitrary numbers 0<=s_p<1/2,
+
+ E_beta exp[sum_(p in B) s_p beta h_p]
+              <= product_(p in B)(1-2s_p)^(-3/4).       (0.1)
+
+In particular
+
+ E_beta exp[(beta/4)sum_(p in B)h_p] <=2^(3|B|/4).      (0.2)
+
+This is a bound under the FULL original finite Wilson probability
+measure, with its exact partition normalization. There is no
+thermodynamic-limit-first qualification or log(beta)/L surface term.
+It does not assert a conditional bound after fixing arbitrary exterior
+links, a bound for an effective RG density, or physical continuum
+correlation control.
+
+TURN39 already proved an arbitrary-plaquette-set exponential bound
+after a periodic thermodynamic limit, using partition estimates and
+chessboard inequalities. The new improvement is the finite-volume
+scope and explicit constants. The proof below is independent of those
+partition estimates and uses positive transfer operators and Schatten
+Holder. It does not assume operator powers preserve Loewner order.
+
+All periods can, for definiteness, be taken at least4. This avoids
+degenerate short periodic cells and suffices for the intended limits.
+The same proof allows positive couplings depending only on plaquette
+orientation, replacing beta by beta_p throughout.
+
+1. A SINGLE SU(2) LINK
+
+Write W=cos(theta)I+i sin(theta)n.sigma, 0<=theta<=pi.
+For central functions normalized Haar integration is
+
+ integral f(W)dW=(2/pi)integral_0^pi f(theta)sin^2(theta)dtheta.
+
+Set
+
+ c(beta)=integral exp[-beta h(W)]dW
+         =2 exp(-beta) I_1(beta)/beta,
+ q_beta(W)=exp[-beta h(W)]/c(beta).                    (1.1)
+
+The value at beta=0 is its continuous limit c(0)=1.
+On the spin-j representation, of dimension d=2j+1, convolution
+by q_beta has scalar eigenvalue
+
+ lambda_d(beta)=I_d(beta)/I_1(beta), d=1,2,... .        (1.2)
+
+Indeed the character is sin(d theta)/sin(theta), so its integral
+against exp(beta cos theta) is I_(d-1)-I_(d+1)=2d I_d/beta.
+Dividing by the representation dimension and by the integral
+2I_1/beta gives (1.2).
+
+These eigenvalues are positive and nondecreasing in beta. To check
+monotonicity without importing a ratio bound, let
+
+ Z_nu(beta)=integral_(-1)^1
+                   exp(beta x)(1-x^2)^(nu-1/2)dx.
+
+For nu>=1, the integral representation of I_nu gives
+
+ d/d beta log Z_nu=I_(nu+1)/I_nu,
+ d/d beta [I_(nu+1)/I_nu]=Var_(nu,beta)(x)>0.           (1.3)
+
+Here the variance is for the displayed normalized positive integral.
+The identity for the first derivative also follows by integration
+by parts or the recurrence I_nu'=I_(nu+1)+(nu/beta)I_nu.
+For d>1, lambda_d is the product of these increasing positive
+ratios for nu=1,...,d-1; lambda_1=1. Hence, as positive operators,
+
+                0<=Q_(beta-t)<=Q_beta, 0<=t<beta.      (1.4)
+
+This is spectral/operator domination, not pointwise domination
+of the two normalized kernels.
+
+2. A SHARP ELEMENTARY ENERGY MOMENT BOUND
+
+Under the normalized q_beta law, u=h(W)=1-cos(theta) has density
+proportional to
+
+             u^(1/2) exp(-beta u) (2-u)^(1/2) 1_[0,2](u).
+
+It is a Gamma(shape3/2, rate beta) law tilted by the decreasing
+nonnegative function w(u)=(2-u)^(1/2)1_[0,2](u).
+For any increasing integrable phi and this decreasing w,
+
+ E_gamma(phi w)<=E_gamma(phi)E_gamma(w).               (2.1)
+
+For example, average
+(phi(u)-phi(v))(w(u)-w(v))<=0 over two independent gamma variables.
+Thus, for 0<=t<beta,
+
+ c(beta-t)/c(beta)=E_(q_beta) exp(t h)
+                       <=(1-t/beta)^(-3/2).            (2.2)
+
+The same argument for phi(u)=u gives E_(q_beta)h<=3/(2beta).
+No small-beta or large-beta approximation is used.
+
+3. EXACT TRANSFER REPRESENTATION
+
+Choose one coordinate as time and let its period be N. On a spatial
+slice let E_s be the set of positively oriented spatial links.
+Let H_phys be the gauge-invariant subspace of L2(SU(2)^(E_s),dHaar).
+Let P be the normalized slice-gauge averaging projection.
+
+With spatial plaquette action V_s, put M=exp(-V_s/2). It is a
+bounded strictly positive multiplication operator preserving H_phys.
+Let Q be the tensor product over spatial links of the convolution
+operators Q_beta from Section1. Each factor is invariant under
+simultaneous site gauge transformations of its two endpoint fields:
+centrality of q_beta proves this even with link-dependent beta.
+Thus Q commutes with P, and on H_phys
+
+                         T=M Q M.                     (3.1)
+
+Equivalently one may write P M Q M P on the full slice space.
+T is positive, self-adjoint and trace class: the smooth compact-group
+convolution has rapidly decaying Peter--Weyl eigenvalues, and M,P are
+bounded. At positive beta it is injective on H_phys.
+
+Integrating temporal links supplies the projection P. The exact
+periodic Wilson partition function is
+
+              Z_beta=c(beta)^(N |E_s|) Tr_phys(T^N).    (3.2)
+
+No ground-state limit or informal temporal gauge fixing is needed.
+Normalized gauge averages have mass one. With orientation-dependent
+couplings the scalar factor is the product of the corresponding c's.
+
+Now insert arbitrary temporal-plaquette factors exp(t_(j,e)h_(j,e)),
+0<=t_(j,e)<beta, allowing DIFFERENT selected links and source strengths
+on EVERY slab j=1,...,N. The source changes just that plaquette's
+coefficient to beta-t_(j,e). Define
+
+ Q_j=tensor_e Q_(beta-t_(j,e)),   T_j=M Q_j M,
+
+with t=0 at unmarked links. By the common Peter--Weyl diagonalization
+of Q_j,Q and (1.4), followed by restriction and sandwiching,
+
+                         0<=T_j<=T.                   (3.3)
+
+The normalized expectation of all these temporal insertions is
+exactly
+
+ product_(j,e) [c(beta-t_(j,e))/c(beta)]
+               * Tr(T_1 T_2 ... T_N)/Tr(T^N).          (3.4)
+
+The trace numerator is nonnegative because it represents the
+original positive Wilson integral with the indicated real insertions.
+The different T_j need not commute.
+
+4. THE ARBITRARY-SLAB STEP
+
+Generalized Schatten Holder gives
+
+ |Tr(T_1 ... T_N)|
+        <= product_j ||T_j||_N
+         = product_j [Tr(T_j^N)]^(1/N).                (4.1)
+
+For positive compact operators, (3.3) implies eigenvalue-by-eigenvalue
+domination by the min--max principle. Therefore
+
+                         Tr(T_j^N)<=Tr(T^N).           (4.2)
+
+We do NOT claim T_j^N<=T^N as an operator: powers need not preserve
+operator order. It is the ordered eigenvalue sum that is used.
+Equations(4.1)--(4.2) show that the trace ratio in(3.4) is at most1.
+Combining with(2.2) gives the full original-law bound
+
+ E_beta exp[sum_(all selected temporal p) s_p beta h_p]
+             <= product_p (1-s_p)^(-3/2), 0<=s_p<1.   (4.3)
+
+This covers arbitrary temporal plaquettes on arbitrary slabs; there
+is no penalty proportional to the number of slabs. The one-slab
+argument alone would not justify successive replacements inside
+a trace with an arbitrary nonpositive remainder. Schatten Holder
+is what permits the simultaneous comparison here.
+
+5. ALL PLAQUETTE ORIENTATIONS IN FOUR DIMENSIONS
+
+Use all FOUR temporal orientation stars. Let B_mu contain every
+marked plaquette having direction mu as one of its two directions,
+for mu=0,1,2,3. Each plaquette occurs in exactly two stars. Write
+
+ Y_mu=sum_(p in B_mu) s_p beta h_p.
+
+The homogeneous original Wilson law has a transfer representation
+in each of these directions on the same rectangular periodic lattice.
+Equal side lengths or rotational invariance of the finite box are
+unnecessary; the transfer time periods can differ.
+
+Since sum_B s_p beta h_p=(1/2)sum_mu Y_mu, ordinary four-factor
+Holder gives
+
+ E exp[sum_B s_p beta h_p]
+ <= product_(mu=0)^3 {E exp[2Y_mu]}^(1/4).
+
+Each factor is bounded by(4.3) with sources2s_p. Each plaquette
+occurs in two factors, so its total exponent is
+2*(-3/2)/4=-3/4. This proves(0.1); s_p=1/4 proves(0.2).
+No phase-dependent partition pressure or chessboard dissemination
+has been used. These overlapping orientation stars are not independent
+laws. The symmetric cover, suggested independently by tail47, improves
+the earlier three-disjoint-star bound (1-3s_p)^(-1/2).
+
+6. CONSEQUENCES FOR THE ORIGINAL LAW
+
+6.1 Specified simultaneous microscopic bad plaquettes.
+
+For thresholds u_p>0, exponential Markov and(0.1) imply
+
+ P(beta h_p>=u_p for every p in B)
+ <= product_p inf_(0<=s<1/2)
+                         exp(-s u_p)(1-2s)^(-3/4).     (6.1)
+
+For u_p>3/2 the minimizing s is (1/2)(1-3/(2u_p)),
+and the factor is
+
+                 exp(-u_p/2+3/4)(2u_p/3)^(3/4).       (6.2)
+
+For u_p<=3/2 use the bound1. If all plaquettes belong to a single
+time-direction star, (4.3) gives the stronger corresponding
+Gamma(3/2,1) Chernoff bound.
+
+6.2 Previously admitted local energy events, now at finite volume.
+
+Suppose k selected bad-core events have finite plaquette footprints
+D_i of size<=C R^4, with overlap multiplicity<=m_0, and the deterministic
+geometric implication
+
+          event_i => sum_(p in D_i)h_p>=c R^(-52).
+
+Then on their joint event the UNION B has
+sum_B h_p>=(c/m_0)k R^(-52) and |B|<=CkR^4.
+Consequently (0.2) proves
+
+ P(all k events)
+       <=exp[k(C'R^4-c' beta R^(-52))].                (6.3)
+
+The geometric implication is exactly an additional hypothesis;
+the exponent52 is inherited from the previously proved local-gauge
+criterion and is not rederived here. The gain over TURN39 is that
+the probability inequality now holds before the thermodynamic limit,
+uniformly in every allowed periodic volume and beta>0.
+
+6.3 Fixed microscopic insertions.
+
+A gauge-invariant fixed-stencil bilinear with |Y|<=C beta sum_D h_p
+has uniform exponential moments and factorial absolute moments by
+(0.1). The same holds for finitely many such marks of bounded footprint
+overlap. Physical inverse powers of a remain in Y if its definition
+contains them; this theorem does not remove those factors.
+
+6.4 Infinite-volume limits.
+
+At fixed beta the local exponential is bounded and continuous on
+the compact link configuration space. The estimates pass to every
+local subsequential limit of the periodic Wilson measures under
+consideration. Their constants already hold before that limit.
+They also hold along simultaneous sequences of beta and volume;
+no relation such as log(beta)/L being bounded is needed for them.
+Identifying physical continuum observables still requires separate
+estimates and limiting constructions.
+
+7. WHAT THIS DOES NOT PROVE
+
+An upper microscopic energy bound gives neither a positive variance
+at fixed physical scale nor a bound of order a on the adjacent-time
+increment of a proposed physical observable.
+
+The transfer-matrix witness criterion in the companion note reduces
+one nontriviality task to those two original-law estimates. The present
+bound supplies kinetic-plaquette control that can be used in its
+increment estimates, but not the necessary nonlinear smoothing
+sensitivity or physical variance lower bound.
+
+Likewise the derived-minimum tests in native chi_k depend on more
+than raw plaquette energies; their complete source definitions and
+the actual current/effective law must be kept. A finite bare Wilson
+bound cannot be relabeled as a bound for every native RG history.
+
+The full nontrivial four-dimensional Yang--Mills existence proof
+remains incomplete.

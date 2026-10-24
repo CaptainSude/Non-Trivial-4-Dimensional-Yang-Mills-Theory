@@ -1,0 +1,418 @@
+FINITE-TIME COUPLING SOURCES AND SEPARATED MAGNETIC STATES -- TURN67
+20 October 2026. tail47.
+
+RESULT
+
+There is an exact useful bridge for the ACTUAL finite-spatial
+Hamiltonian, not just an abstract spectral criterion.
+
+Let gamma=g^-2, H_gamma=K/(2a gamma)+4gamma S_sp/a,
+E(gamma) its ground energy, and Q_gamma=4gamma S_sp/a its total
+magnetic-energy multiplication operator. At a fixed spatial lattice,
+write chi_Q=int_0^infinity Cov(Q(0),Q(t))dt. Then
+
+ chi_Q=[E-gamma E'-gamma^2 E'']/8.                       (0.1)
+
+Equivalently, in log coupling tau=log gamma,
+
+                    E_tautau=E-8chi_Q.
+
+The E term is essential: it is the second derivative of the kinetic
+and magnetic operator, not an omitted normalization/contact term.
+
+This inverse-energy moment alone does NOT force a fixed-time physical
+correlation. Sections2--3 prove the identity and the precise failure.
+
+A stronger exact source identity retains finite-time information.
+Keep the unsourced ground vector Omega fixed and set
+
+ K_gamma(T,tau)
+   =log <Omega,exp[-T(H_(gamma exp(tau))-E(gamma))]Omega>.
+
+For a time increment delta>0, define
+Delta_delta^2 f(T)=f(T+2delta)-2f(T+delta)+f(T).
+Then
+
+ (1/8)Delta_delta^2 [partial_tau^2 K_gamma(T,0)]
+   = ||int_(T/2)^(T/2+delta) Q_centered(s)ds||OS^2.     (0.2)
+
+This is a positive separated quantity. The second finite difference
+cancels both the linear vacuum/contact contribution and the bulk
+susceptibility. It measures a finite-time remainder that is lost if
+one keeps only the asymptotic source pressure.
+
+No cutoff-uniform estimate for the right side is proved here.
+The exact identity gives a more specific next source target. Its
+global spatial source must also be localized/renormalized before
+it can construct the required local continuum algebra.
+
+SCOPE AND INPUT
+
+The actual Hamiltonian and its normalization come from
+controlled_temporal_limit_turn66.txt. The positive smooth unique
+ground state and common elliptic operator domain are at a FIXED
+finite spatial graph, a>0 and gamma>0. The ground-state transform,
+spectral measure and physical-source issues are as in
+temporal_filter_physical_probe_turn67.txt.
+
+All identities below are derived directly. No perturbative
+flow-finiteness assertion or uninspected continuum theorem is used.
+
+1. BOUNDED MAGNETIC SOURCE AT FIXED SPATIAL REGULATOR
+
+Let H be the actual finite-spatial Hamiltonian, E0 its simple ground
+energy, Omega its positive normalized ground vector, A=H-E0.
+Let Q be a real smooth gauge-invariant multiplication operator.
+It is bounded at this fixed regulator, even when its bound diverges
+along a physical-cutoff sequence. Put q=Q-<Omega,Q Omega>.
+Its positive centered spectral measure is
+
+ rho_Q(B)=||1_B(A)q Omega||^2,
+ C_Q(t)=<q Omega,exp(-tA)q Omega>
+       =int_(0,infinity) exp(-tE)rho_Q(dE).              (1.1)
+
+There is no atom at zero because the ground state is simple and
+q is centered. At every fixed regulator the next eigenvalue is
+strictly positive; no uniform lower bound on it is assumed.
+
+Perturb H(lambda)=H+lambda Q. Analytic perturbation near zero is
+valid because Q is bounded and the ground eigenvalue is isolated.
+Choose the differentiable eigenvector gauge
+<Omega,partial_lambda Omega>=0. Differentiating the eigenvalue
+equation and projecting off Omega gives
+
+ partial_lambda Omega=-A_perp^-1 q Omega,
+ E0'(0)=<Q>,
+ E0''(0)=-2<q Omega,A_perp^-1 q Omega>
+        =-2 int_0^infinity C_Q(t)dt.                   (1.2)
+
+In particular the action-source susceptibility measures
+int E^-1 rho_Q(dE), not the positive-time Laplace transform
+int exp(-tE)rho_Q(dE). Their difference matters when the spectral
+measure and its ultraviolet mass vary with the regulator.
+
+For completeness the fidelity derivative is the distinct moment
+
+ ||partial_lambda Omega||^2=int E^-2 rho_Q(dE).          (1.3)
+
+It is not determined by(1.2).
+
+2. EXACT ACTUAL COUPLING IDENTITY, INCLUDING THE KINETIC TERM
+
+At fixed a and spatial graph write
+
+ T_gamma=K/(2a gamma),   Q_gamma=4gamma S_sp/a,
+ H_gamma=T_gamma+Q_gamma.
+
+For tau near0, H_(gamma exp(tau))=exp(-tau)T_gamma+
+exp(tau)Q_gamma. This is an analytic elliptic family on the common
+operator domain H^2 of the compact product group. The isolated
+ground branch and its derivatives are therefore well defined.
+Use primes in tau temporarily. At tau=0,
+
+ H'=Q_gamma-T_gamma=2Q_gamma-H_gamma,
+ H''=H_gamma.                                         (2.1)
+
+The centered vector of H' is EXACTLY
+
+ (H'-E')Omega=2(Q_gamma-<Q_gamma>)Omega.                (2.2)
+
+This uses H_gamma Omega=E Omega. It is an equality on the ground
+vector, not the operator identity H'=2Q_gamma-E.
+
+The second eigenvalue derivative contains its second-operator
+derivative:
+
+ E''=<H''>-2<(H'-E')Omega,A_perp^-1(H'-E')Omega>
+     =E-8 int E_spectral^-1 rho_Q(dE_spectral).         (2.3)
+
+Returning to gamma derivatives, partial_tau^2 E=
+gamma E_gamma'+gamma^2 E_gamma'', which proves(0.1).
+
+An equivalent direct check is
+
+ H_gamma'=-K/(2a gamma^2)+4S_sp/a,
+ H_gamma''=K/(a gamma^3),
+ (H_gamma'-E_gamma')Omega=(8/a)(S_sp-<S_sp>)Omega.
+
+The identity E-gamma E_gamma'= <K>/(a gamma) gives the same
+constant1/8. In particular no factor4 or kinetic contribution
+has disappeared in passing from a coupling source to a magnetic
+observable.
+
+For a nontrivial plaquette action Q is nonconstant and Omega is
+strictly positive. Thus chi_Q>0 at every fixed regulator. Neither
+this strict positivity nor(0.1) is a uniform physical lower bound.
+Q here is spatially global. A constant coupling source probes
+the zero external spatial-momentum insertion; it does not by
+itself control arbitrary local spatial test functions.
+
+3. WHY THE STATIC SUSCEPTIBILITY DOES NOT GIVE A TIME-SEPARATED FLOOR
+
+This failure can be realized by positive finite-state Markov
+Hamiltonians. These examples are NOT nonabelian Wilson models;
+they disprove the proposed inference from spectral susceptibility
+and reflection positivity alone.
+
+On two configuration points let
+
+ H_E=(E/2)[[1,-1],[-1,1]],    Omega=(1,1)/sqrt(2),
+ Q_s=diag(s,-s).
+
+The heat kernel is positivity preserving and the ground-state
+process is stationary and reversible. Its centered spectral
+measure is s^2 delta_E. Thus
+
+ C_Q(t)=s^2 exp(-Et),       chi_Q=s^2/E.
+
+The exact sourced ground energy is
+E(lambda)=E/2-sqrt(E^2/4+lambda^2s^2).
+
+UV example: E=M->infinity and s^2=M. The susceptibility is1,
+while C_Q(t)->0 at every fixed t>0. Unbounded calibrated
+composite insertions allow precisely the logical possibility
+of a growing equal-time norm; no uniform operator bound excludes it.
+
+IR example: E=epsilon->0 and s^2=epsilon. Again chi_Q=1,
+but both the equal-time norm and every fixed-time covariance
+vanish. Here Q is uniformly bounded. Inverse-energy weight can
+come from a vanishing amount of arbitrarily soft spectral mass.
+
+Even a simultaneous uniform variance floor and bound do not repair
+the susceptibility criterion. Take a product of the preceding
+two-state chains with energies epsilon and M, where0<epsilon<1<M.
+Set
+
+ w_l=epsilon(M-1)/(M-epsilon),
+ w_h=M(1-epsilon)/(M-epsilon),       w_l+w_h=1,
+ Q=sqrt(w_l) Z_1+sqrt(w_h) Z_2.
+
+Its norm is at most sqrt(2), variance is EXACTLY1, and
+
+ chi_Q=w_l/epsilon+w_h/M=1,
+ C_Q(t)=w_l exp(-epsilon t)+w_h exp(-Mt)->0.             (3.1)
+
+The normalized ground vector is strictly positive, and the
+stationary reversible path law is reflection positive: conditioning
+on the reflection-plane state factors the two halves.
+This preserves all the stated positivity hypotheses. It does not
+preserve additional locality/dynamical estimates particular to YM.
+
+A possible extra condition is a fidelity bound. For example, if
+I_0=int rho<=V, I_1=int E^-1rho>=c>0, and I_2=int E^-2rho<=G,
+then choose epsilon=c/(4G), Lambda=4V/c. The susceptibility below
+epsilon is at most epsilon G and above Lambda at most V/Lambda.
+At least c/2 remains between them, giving
+
+ C_Q(2t)>= [c^2/(8G)] exp[-8tV/c].                     (3.2)
+
+The interval is nonempty because Cauchy--Schwarz gives
+c^2<=I_0 I_2<=VG. This is a precise additional possibility, not
+an estimate presently proved for the physical YM insertion.
+In particular(1.3) cannot be silently inferred from(1.2).
+
+4. FINITE-TIME SLAB SOURCE: EXACT NORMALIZER AND SUSCEPTIBILITY
+
+For a fixed multiplication Q define
+
+ Z_Q(T,lambda)=<Omega,exp[-T(H-lambda Q-E0)]Omega>,
+ K_Q(T,lambda)=log Z_Q(T,lambda).
+
+Z_Q(T,0)=1. The ground vector on BOTH ends is kept equal to the
+unsourced Omega; it is not replaced by Omega_lambda.
+The real source has the exact stationary ground-process meaning
+
+ Z_Q(T,lambda)=E_pi exp[lambda int_0^T Q(X_s)ds].         (4.1)
+
+This is the finite compact-ground Feynman--Kac identity. It also
+follows directly by time-ordered Duhamel expansion. All moments
+are finite at each regulator because Q is bounded there.
+
+Let J_Q(T)=partial_lambda^2 K_Q(T,0). Centering within the log
+and stationarity give
+
+ J_Q(T)=2 int_0^T (T-s) C_Q(s)ds
+       =2 int [T/E-(1-exp(-TE))/E^2]rho_Q(dE).          (4.2)
+
+At fixed regulator, J_Q(T)/T->2chi_Q as T->infinity.
+The limit keeps only the coefficient of T.
+
+For actual finite-temperature/time-period operators the corresponding
+normalized quantity is
+
+ Tr[exp(-(B-T)H) exp(-T(H-lambda Q))]/Tr exp(-BH),
+                                                      B>=T.
+
+At fixed graph it tends to(4.1) as B->infinity. This keeps the
+complete original partition denominator. The controlled temporal
+limit realizes fixed real source VALUES and finite products of
+these slabs by actual anisotropic Wilson kernels at fixed spatial
+regulator. Convergence of the source SECOND DERIVATIVES, especially
+with regulator-dependent scalar normalizations, requires a separate
+uniform analytic/differentiation estimate. No interchange of those
+source derivatives with the temporal limit is used or proved here.
+The identities in this note are exact Hamiltonian identities.
+No uniform passage in the spatial cutoff, source size, or period
+is inferred here.
+
+5. THREE TIME LENGTHS EXTRACT A POSITIVE REFLECTED NORM
+
+Define the local positive-time path insertion
+
+ B_(t,delta)=int_t^(t+delta) q(X_s)ds,     t,delta>0.
+
+Stationarity and ground-state reflection positivity give
+
+ R_Q(t,delta)=||B_(t,delta)||OS^2
+   =int_t^(t+delta)ds int_t^(t+delta)dr C_Q(s+r)
+   =int exp(-2tE)[(1-exp(-delta E))/E]^2rho_Q(dE).       (5.1)
+
+Direct substitution in(4.2) yields the exact identity
+
+ R_Q(T/2,delta)=(1/2)Delta_delta^2 J_Q(T), T>0.         (5.2)
+
+Every term linear or constant in T cancels. In particular the
+bulk2Tchi_Q does not give the answer. Keeping only the infinite-time
+source pressure loses precisely the positive finite-time remainder
+needed for this state.
+
+The elementary bounds
+
+ delta^2 C_Q(2t+2delta)<=R_Q(t,delta)<=delta^2 C_Q(2t)
+
+are useful checks of support and dimensions. More directly,
+the energy of the filtered window vector is
+
+ D_window(t,delta)
+   =int E exp(-2tE)[(1-exp(-delta E))/E]^2rho_Q(dE).
+
+For0<s<t,
+
+ D_window(t,delta)<=R_Q(t-s,delta)/(2 e s).              (5.3)
+
+Thus a LOWER bound for R_Q(t,delta) and an UPPER bound for
+R_Q(t-s,delta), at fixed positive times, give a nonzero OS
+vector with bounded energy. They need not bound C_Q(0).
+The insertion still has its original spatial support and positive
+time-half support. No locality claim for its conditional slice
+representative is necessary.
+
+This suggests an actual source target with literal normalizers:
+bound a positive second finite difference of the finite-slab
+susceptibility from below, and a slightly earlier such difference
+from above. This is stronger information than a bulk vacuum scalar.
+
+6. THE SAME FINITE DIFFERENCE FOR THE ACTUAL LOG-COUPLING SOURCE
+
+Use K_gamma(T,tau) in(0.2), again with the unsourced ground endpoints.
+For complex tau near0, the real part of exp(-tau) is positive.
+The fixed-graph operator is therefore the sectorial Laplacian
+exp(-tau)T_gamma plus a bounded analytic multiplication potential.
+Its heat semigroup and the displayed ground matrix element are
+holomorphic there for every fixed T>0. That matrix element equals1
+at tau=0, so it has a nonvanishing neighborhood and a unique local
+log with K_gamma(T,0)=0. No radius uniform in a, graph size, or T
+is asserted. The analogous assertion for the bounded Q slab source
+follows from its entire Duhamel expansion and the same nonvanishing
+argument at zero.
+
+For a differentiable operator source H(tau), Duhamel differentiation
+and subtraction of the squared first derivative give
+
+ partial_tau^2 log<Omega,exp[-T(H(tau)-E0)]Omega>|0
+  =2 int_0^T (T-s) C_(H')(s)ds-T <H''>.                (6.1)
+
+All coefficients refer to the original unsourced law. The last term
+is the operator's second derivative, and must be retained. For the
+present analytic elliptic family the calculation is legitimate on
+the smooth ground vector. The two H' insertions reduce to the bounded
+centered Q vector by(2.2), so their spectral integrals are finite.
+
+For log coupling, H''=H and C_(H')(s)=4 C_Q(s). Consequently
+
+ partial_tau^2 K_gamma(T,0)=4 J_Q(T)-T E0.               (6.2)
+
+Taking Delta_delta^2 cancels the explicit kinetic/contact term and
+using(5.2) proves
+
+ Delta_delta^2 partial_tau^2 K_gamma(T,0)
+                         =8 R_Q(T/2,delta)>=0.         (6.3)
+
+This establishes(0.2) with the exact factor8.
+It does not assert the stronger and generally false equality of
+coupling-source and magnetic-source functionals at finite tau.
+Only this second-order identity at the original law is claimed.
+
+Its scalar-normalization behavior is exact. Replacing the whole
+source family by H(tau)+b(tau)I, with the unsourced subtraction
+also changed by b(0), changes K_gamma(T,tau) by
+-T[b(tau)-b(0)]. Thus(6.3) is unchanged by this MATCHED scalar
+shift. The static identity(0.1), written in terms of E alone,
+does require the stated H=T+Q normalization: with E_new=E+b its
+numerator is E_new-E_new,tau tau-b+b_tau tau. Scalar factors not known
+to have this common affine-in-T form cannot be silently discarded.
+
+Likewise it does not identify a previously recorded native/source
+normalization with K_gamma. Any proposed attachment must retain
+the literal temporal-kernel scalar factors, the sourced coupling
+on the actual time slabs, and the SAME unsourced boundary state
+or its controlled finite-period realization.
+
+7. CONTACT TERMS AND PRECISE NEXT SCOPE
+
+For bare composite insertions along a cutoff sequence, J_Q(T) can
+diverge badly even if separated R_Q(t,delta) has a finite limit.
+Equation(5.2) is exact BEFORE taking that limit. Divergent pieces
+affine in T cancel, but one may not subtract or discard other
+remainders merely by calling them contact terms. The three source
+values must be matched in the same regulator and normalization.
+
+There is a concrete error requirement. If at the THREE required
+time lengths one actually proves
+
+ J_a(s)=A_a s+B_a+R_*(s)+e_a(s),       |e_a(s)|<=epsilon,
+
+then
+
+ |R_a(T/2,delta)-(1/2)Delta_delta^2 R_*(T)|<=2epsilon.  (7.1)
+
+The constants A_a,B_a may diverge; their exact cancellation does
+not enlarge the error. For the log-coupling curvature in(6.3),
+the corresponding factor is epsilon/2 because the norm uses1/8.
+These are sufficient quantitative remainder statements, not
+decompositions asserted to hold for the current model.
+
+If instead the controlled remainder is in the source LOG functional
+before two source derivatives, a common holomorphic disc must be
+retained. On |z|<=r, sup|e_a(s,z)|<=epsilon gives
+|partial_z^2 e_a(s,0)|<=2epsilon/r^2 by Cauchy. The resulting norm
+error is at most4epsilon/r^2 for a magnetic slab source, and
+epsilon/r^2 for the log-coupling slab source. A shrinking source
+disc therefore cannot be ignored. Existence of that common
+holomorphic normalized log, including its nonvanishing premise,
+is an additional source estimate, not supplied by the algebra here.
+
+For the global coupling source, (6.3) uses a spatially global
+magnetic-energy insertion. Construction of local physical fields
+still needs independent spatial profiles, composite mixing and
+normalization, and compatible mixed insertions. Scalar vacuum
+bookkeeping is not automatically a theorem about those profiles.
+
+The free positive-time magnetic-energy calculation in
+temporal_filter_physical_probe_turn67.txt, Section7, shows the
+window norm can be finite and nonzero while ordinary equal-time
+variance diverges. It supplies no estimate for the interacting law.
+
+The new actionable distinction is therefore:
+
+ * static/vacuum coupling curvature: exact inverse-energy moment
+   with the kinetic second-derivative contribution retained;
+
+ * finite-slab source curvature at three matched lengths: an exact
+   positive separated OS norm, with a slightly earlier upper bound
+   supplying its energy control.
+
+The latter is the actual source information needed for this route.
+It has not yet been bounded uniformly for the renormalized YM
+insertion. No nontrivial continuum theory is inferred from these
+identities alone.

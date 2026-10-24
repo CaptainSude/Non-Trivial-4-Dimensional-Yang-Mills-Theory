@@ -1,0 +1,1142 @@
+TWO PERIODIC REFERENCE VOLUMES AND ONE BARE COUPLING
+20 October 2026. TURN51. history47. Focused audit completed; frozen.
+
+STATUS AND SCOPE
+
+This note proves two unconditional consequences of the already stated
+TURN48--49 selected-map premises:
+
+ (A) normalized restriction along a periodic cover is a canonical
+     contraction between the finite activity quotients;
+ (B) the actual baseline-coupling response of the selected normalized
+     quantum map is O(g^4) per unit change of gamma=g^-2.
+
+It then gives the precise stable comparison argument which turns an
+exponentially small one-step cover commutator into a common bare
+coupling with bounded weak endpoints on BOTH volumes, uniformly in
+the number of steps. The finite beta_N mismatch and beta T leakage
+are retained. No differentiability of a shooting selection is assumed.
+
+Section6 identifies the precise primitive dependencies and the
+stronger norm missing from the printed TURN48 conclusion. NEW
+Section8 supplies that strengthening: cut the inherited core by
+TOTAL unrolled length, resum it as a common local analytic function,
+and Taylor expand only in the exponentially small decorated tail.
+Together with decorated_cluster_cover_turn51.txt this proves (5.1)
+at the same retained classical/chart premises, with all constants
+chosen once. The focused independent audit of this attachment,
+including Sections9--10 and the weaker-input scalar-response budget,
+is recorded in common_bare_cover_audit_turn51.txt. It is not an
+archive-wide certification of the retained classical/chart premises.
+
+The selected-sector comparison does not identify the FULL partition
+functions or control discarded histories. Section10 supplies the
+actual raw one-step scalar inputs for the causal accumulated-vacuum
+comparison; a terminal selected partition identity/control and full
+source/vacuum pressure remain separate. All underlying classical/chart
+premises and the compact SIMPLE color scope of TURN49 remain in force.
+
+1. FIXED GEOMETRY AND ONCE-FIXED CARRIER WEIGHTS
+
+Use the actual homogeneous periodic projected-product maps, with the
+same primitive average, macro ratio R, grouping J, field radius b,
+and fixed color-ball cutoff T. At stage r of n steps the smaller
+current period is N_r=N_end R^(n-r), and the larger is j N_r,
+where j>=2 is an integer cover. Fine/coarse labels include the
+same orientation and fixed-R internal cell components.
+
+Choose a strong carrier exponent a0>0 for the actual amplitude
+induction and a strictly weaker a1>0 for trajectory comparisons.
+Choose also an auxiliary a2 with 0<a2<a1 for the raw scalar-response
+estimate of Section10. Its core/tail estimate has INPUT reserve a1
+and OUTPUT reserve a2; it never requires a difference family at a0.
+The a2 output is used only to bound a scalar per cell and is never
+fed back into the trajectory induction. All three weights are fixed
+before n, N_end, j and the bare coupling. The existing finite
+classical contraction theorem is available separately at either
+fixed exponent. Choose J and one sufficiently large finite block q,
+and then b, to meet both sets of fixed constants. The same q can
+also be chosen to meet TURN49's positive-block-drift theorem.
+
+At either volume write the actual quotient-valued recursion as
+
+ Q_r(g,e)=T_r e+G_r(g,e),
+ d_r=beta_(r+1) Q_r(g_r,e_r),
+ gamma_(r+1)=gamma_r-d_r,
+ e_(r+1)=P_(r+1) Q_r(g_r,e_r),     P=I-S beta.        (1.1)
+
+Here G=Dphys+F and F is the connected ambient expectation, at zero
+physical source. The base action S, classical T and beta depend on
+M_r and current period, but not on gamma. The selected window DOES
+depend on its real baseline g; changing gamma in (1.1) changes the
+actual selected family. This is not the frozen-window source
+variation from constant_original_source_trajectory_turn49.txt.
+
+All raw constants still obey the exact separate TURN49 update.
+They are not part of the quotient norm used here.
+
+2. CANONICAL COVER RESTRICTION ON THE FINITE QUOTIENT
+
+Let pi:Lambda_(jN)->Lambda_N be the covering projection. For a
+small-period field w let iota w be its periodic repetition. For
+any normalized total Phi define
+
+          C_N Phi(w)=j^-4 Phi(iota w).                (2.1)
+
+This is well defined on the quotient by equality of normalized
+totals on the whole b polydisc: iota preserves the sup radius.
+It preserves reality and all total local gauge/spatial identities.
+
+There is a direct carrier representative. Given E_X on the large
+torus, set
+
+ E'_Y(w_Y)=j^-4 sum_(X:pi X=Y) E_X(w_(pi X)),          (2.2)
+
+with repeated arguments identified, and with constants normalized
+only after summing the total. A connected X projects to a connected
+Y, even when edges or vertices become identified. It has |Y|<=|X|.
+For any small-torus root i,
+
+ sum_(Y contains i) e^(a|Y|)||E'_Y||_b
+ <=j^-4 sum_(x in pi^-1{i}) sum_(X contains x)
+                                      e^(a|X|)||E_X||_b
+ <=||E||_(jN;a,b).                                    (2.3)
+
+Counting X several times when it contains several lifts of i is
+an upper bound, not a missing multiplicity. There are exactly j^4
+root lifts. Thus C_N is a contraction at BOTH a0 and a1, also after
+taking the infimum over representatives. No choice of compatible
+near-minimal representatives across volumes is needed.
+
+For a translation-invariant total one may first average its carrier
+representative over the finite translation group. This leaves the
+total unchanged and does not increase the rooted norm. It provides
+translation-covariant coefficients for the comparison of diagrams.
+
+3. THE ACTUAL BASELINE RESPONSE IS SUMMABLE
+
+The uniform joint analytic family proved for TURN49's constant-source
+module is F_r(g,t,E) on fixed product parameter discs, with values in
+the same finite quotient and constants independent of volume/depth.
+Set t=0. For EVERY admissible inherited E,
+
+           F_r(0,0,E)=0,
+           F_r(-g,0,E)=F_r(g,0,E).                   (3.1)
+
+The first identity holds since every inherited fluctuation difference
+vanishes at g=0. The second is the exact change xi->-xi in the fixed
+ambient product balls. It does not require E to be even as a field
+functional. Analytic division therefore gives
+
+           F_r(g,0,E)=g^2 H_r(g,E),                 (3.2)
+
+where H and its g derivative are uniformly bounded on a fixed
+smaller g disc and inherited-input ball. These are quotient-valued
+bounds; a norm constant can depend on the once-fixed b,T,R,J.
+
+For positive gamma with g=gamma^-1/2 in that smaller disc,
+
+ d_gamma F_r(g,0,E)
+     =-g^4 H_r(g,E)-(g^5/2) partial_g H_r(g,E).      (3.3)
+
+Consequently, in either once-fixed comparison norm,
+
+ ||G_r(gamma,E)-G_r(gamma',E)||
+   <=C b^2 [min(gamma,gamma')]^-2 |gamma-gamma'|.   (3.4)
+
+Here and below the notation G(gamma,E) means G(gamma^-1/2,E).
+The b^2 in (3.4) is a normalization convention: all fixed inverse
+powers of b are included in C. Dphys is independent of gamma.
+
+This argument uses the ACTUAL analytic baseline-g family. Its
+Gaussian factors g^d, cutoff masses and raw log constants can have
+much larger derivatives; they disappear from the normalized field
+class and are not being estimated by (3.4).
+
+Joint holomorphy on the quotient does not require a continuously
+chosen minimizing representative. The Taylor multilinear maps
+descend because changing an input by a null family changes only
+its raw constant. Uniform Cauchy/polarization bounds then give the
+same quotient-valued power series. This is the same descent already
+used in the TURN48 Wiener quotient argument.
+
+The already proved inherited-input Lipschitz bound suffices:
+
+ ||G_r(gamma,E)-G_r(gamma,E')||
+                     <=nu_r ||E-E'||, nu_r<=C g_r T/b. (3.5)
+
+In fact (3.2) and Cauchy in E give O(g_r^2) at a strict fixed
+E-margin, but no improved input estimate is needed below.
+
+4. FINITE BETA MISMATCH UNDER A COVER
+
+This section uses ONLY connected-carrier locality and the actual
+finite beta definition, not a quantum cover commutator.
+
+The finite-volume functional is the transverse quadratic moment
+of the symmetric short lift divided by the corresponding moment
+of the actual reference. The cutoff is floor(N/16). The reference
+denominators satisfy b_(S,N)=1+O(exp(-cN)), by exact periodization
+of the flat homogeneous q_M kernel.
+
+For a translation-invariant large-volume total E with strong norm,
+the Hessian of C_N E is the relative periodization of the large
+Hessian from period jN to period N. This follows by differentiating
+(2.1): the j^4 choices of the first root cancel its prefactor, and
+the second argument runs over the relative image classes.
+
+For relative displacements of length <N/32, the short-lift second
+moments agree, except for images whose original displacement is
+at least cN. All other contributions to the difference are tails
+of the two second moments. Cauchy in field coordinates and the
+connected carrier bound give the exponential second-moment bound;
+the fixed polynomial displacement factor is absorbed by reducing
+the spatial exponent. The same estimate holds for q_M and its
+two normalization denominators, which are bounded below by1/2.
+Thus
+
+ |beta_N(C_N E)-beta_(jN)(E)|
+          <=C b^-2 ||E||_(jN;a0,b) exp(-cN).         (4.1)
+
+Constants are uniform in the cover integer j. The large short lift
+only needs to be cut further at N/32 for the comparison; its
+discarded larger annulus is covered by its own exponential tail.
+No equality beta_N C_N=beta_(jN) is asserted.
+
+For an extracted large activity e^+ put
+
+ rho_r=beta_(N_r)(C_(N_r)e_r^+),
+ ehat_r=P_(N_r) C_(N_r)e_r^+,
+ gammahat_r=gamma_r^+-rho_r.                          (4.2)
+
+Then rho_r=O(exp(-cN_r)) in the actual O(b^2) envelope. Provided
+C_N S_(jN)=S_N, the restricted normalized effective density is
+EXACTLY -gammahat_r S_(N_r)+ehat_r. This correction prevents a
+finite-extraction mismatch from being silently called zero.
+
+5. STABLE TWO-VOLUME RESPONSE: THE EXACT SUFFICIENT COMMUTATOR
+
+The needed additional map comparison, at the strong input ceiling,
+is
+
+ C_N S_(jN)=S_N,
+ C_(N_out) T^+ = T C_(N_in),
+ ||C_(N_out) G^+(gamma,E)-G(gamma,C_(N_in)E)||_(a1,b)
+                                      <=b^2 epsilon_r,
+ epsilon_r<=C(1+N_out)^p exp(-c N_out).              (5.1)
+
+It is a comparison of the ACTUAL selected normalized maps on the
+two tori, at the same baseline gamma and inherited normalized input.
+It is not a pressure assumption or a comparison of independently
+chosen universal representatives. Section6 describes the proposed
+derivation and exactly what must be checked.
+
+Using (4.2), the first two equalities in (5.1), and the scalar
+extraction identities gives the following perturbed SMALL-volume
+recursion, with no omitted marginal leakage:
+
+ gammahat_(r+1)
+   =gammahat_r-beta_(r+1)[T ehat_r+G(gammahat_r,ehat_r)]
+                                                     +u_r,
+ ehat_(r+1)
+   =P_(r+1)[T ehat_r+G(gammahat_r,ehat_r)]+v_r,
+
+                     |u_r|+b^-2||v_r||<=C epsilon'_r, (5.2)
+ epsilon'_r=epsilon_r+exp(-cN_r)+exp(-cN_(r+1)).
+
+To verify this, write C e_r^+=ehat_r+rho_r S_r and
+gamma_r^+=gammahat_r+rho_r. The classical term rho_r S_(r+1)
+cancels the shift of gamma exactly. The remaining difference
+between G(gamma_r^+,ehat_r+rho_r S_r) and
+G(gammahat_r,ehat_r) is bounded by (3.4),(3.5).
+The output rho_(r+1) is already incorporated in gammahat_(r+1);
+it is not counted a second time. Bounded beta and P control (5.2).
+
+Now compare (5.2) with a small-volume actual tuned trajectory
+(gamma_r,e_r), using the same bare inverse coupling and e_0=0.
+Let
+
+ a_r=|gammahat_r-gamma_r|, h_r=b^-2||ehat_r-e_r||_(a1,b).
+
+As long as a_r<=1 and the strict common input margins hold, the
+finite-difference estimates give
+
+ delta e_(r+1)=A_r delta e_r
+                  +small_Lipschitz_term
+                  +O(b^2 gamma_r^-2 a_r)+v_r,
+ |(gammahat_(r+1)-gamma_(r+1))
+                   -(gammahat_r-gamma_r)|
+                  <=C h_r+C gamma_r^-2 a_r+C epsilon'_r. (5.3)
+
+A_r=P T is the actual SMALL-volume classical evolution. Its fixed
+q-block contraction, perturbed by the small uniform nu in (3.5),
+gives a block contraction theta<1 and bounded intermediate growth.
+Variation of constants and the geometric block convolution imply,
+for every finite prefix starting with zero difference,
+
+ sum_r h_r
+       <=C sum_r[gamma_r^-2 a_r+epsilon'_r].          (5.4)
+
+In particular beta T delta e has been paid by the h_r sum; it has
+not been set to zero. Summing the scalar equation in (5.3) now yields
+
+ A_max<=C S_n A_max+C E_n,
+ S_n=sum_(r<n) gamma_r^-2,
+ E_n=sum_(r<n) epsilon'_r.                            (5.5)
+
+The tuned trajectory's positive q-block decrement gives the already
+proved, length-independent bound
+
+ S_n<=q[Gamma0^-2+(B_- Gamma0)^-1],
+                  Gamma0=Gamma_*-q D_abs.           (5.6)
+
+Increase the ONCE-fixed terminal Gamma_* so C S_n<=1/2.
+Since N_r grows geometrically going toward the ultraviolet,
+
+ E_n<=C'(1+N_end)^p' exp(-c' N_end),                 (5.7)
+
+uniformly in n and j. The elementary proof is the same convergent
+series estimate as TURN50: fixed powers of R^k and k are dominated
+by exp(-c N_end R^k).
+
+Choose the ONCE-fixed terminal period N_end large enough that the
+right side of (5.7), multiplied by the constants in (5.5), is
+strictly below the bootstrap margins. Then
+
+ sup_r |gammahat_r-gamma_r|+sum_r h_r
+              <=C''(1+N_end)^p' exp(-c'N_end).        (5.8)
+
+The actual gamma_r^+ differs from gammahat_r only by rho_r, so it
+obeys the same estimate after adjusting C''.
+
+EXISTENCE WITHOUT ASSUMING THE SECOND TRAJECTORY ALREADY STAYS WEAK.
+Construct its auxiliary recursion with g_eval=max(gamma^+,Gamma_w)^-1/2,
+just as in TURN49. This always gives an admissible activity history.
+Run the comparison until a first bootstrap violation. On that prefix,
+gamma^+ differs from the known weak small-volume trajectory by the
+strict bound (5.8), while the latter stays at least Gamma_*-qD_abs.
+Choose that lower bound above Gamma_w by a fixed margin. Clipping is
+therefore inactive throughout the prefix, and (5.8) excludes the first
+violation. Finite induction proves the complete trajectory is actual.
+No differentiable dependence of the selected shooting root is used.
+
+CONCLUSION CONDITIONAL ON (5.1).
+Choose the bare inverse coupling furnished by the smaller-volume
+TURN49 shooting theorem, with terminal gamma_n=Gamma_*.
+The SAME bare value on the j-fold cover has an admitted actual
+selected trajectory, and
+
+             |gamma_n^+-Gamma_*|
+                <=C''(1+N_end)^p' exp(-c'N_end).
+
+All intermediate baselines remain weak. The estimate is uniform in
+the ultraviolet depth; the larger volume is not retuned. This is
+stronger than the elementary common choice gamma_bare=O(n) which
+merely keeps both finite histories weak while allowing their
+terminal inverse couplings to separate by O(n).
+
+6. ATTACHING THE LOCAL COVER COMMUTATOR: WHAT IS AVAILABLE
+
+The following named sources were inspected, not inferred from a
+generic locality slogan.
+
+6.1 Flat primitive periodization.
+
+* flat_covariance_limit_research.md Section7: q_M is EXACTLY the
+  same infinite symbol sampled at the finite momentum grid;
+  equation(7.2) proves exact inverse periodization for the actual
+  homogeneous retained operators. Oriented incidences are retained.
+* flat_minimizer_locality_research.md Sections8,10: H and its
+  source-gauge variant reconstruct from the same symbols; finite
+  kernels are exact periodizations, including the complete cell
+  regularity norms used in the nonlinear fixed point.
+* flat_full_inverse_research.md Section8: the full inverse is the
+  exact sampled Bloch inverse, with absolutely convergent image sum.
+* flat_constrained_schauder_research.md Sections4,6: the COMPLETE
+  reconstructed C and C S_jet^t kernels periodize exactly, in the
+  cell operator norms. This is not an absolute sum of singular
+  fine-coordinate differentiated kernels.
+
+The combined flat contour/ordinary constraint of TURN48 has the
+same finite-range rows at both compatible volumes. At fixed R
+its symbols Qtilde_0 are the same trigonometric matrix functions.
+Thus (Qtilde_0 Qtilde_0^t)^-1, P_0 and the augmented physical
+precision P_0 Hfull_0 P_0+I-P_0 have common symbols. The actual
+uniform gap in periodic_excess_macro_attachment_turn48.txt Section3
+implies their resolvent and positive square-root branches agree
+with the sampled same symbols. This follows fiberwise: the
+identities are algebraic or holomorphic functional calculus at
+each real momentum. Holomorphic strip bounds give absolutely
+summable image kernels. Coarea's flat determinant itself is a
+global scalar; its field-dependent log ratio is handled below,
+and the scalar is NOT silently compared in the field quotient.
+
+6.2 The nonlinear classical branch.
+
+classical_local_vertex_bounds_research.md Sections3--6 supplies
+uniform finite-current-range nonlinear Wilson, corrected-average
+and physical-adjoint vertices, on complete cell spaces. The maps
+are literal periodizations of the same local formulas. The smooth
+partition is obtained from a fixed translated bump and has this
+same property, counting all repeated incidences.
+
+classical_support_localization_research.md Section4 gives the
+convergent analytic fixed-point tree series for those vertices and
+the flat primitives in6.1. Picard iteration from the singleton
+source is canonical and commutes with repetition of a smaller
+periodic field. Uniqueness identifies its evaluation with the
+actual corrected minimizer. The ordinary representative is then
+the explicit transfer in ordinary_constraint_transfer_fragment.tex:
+the cumulative local ordinary/corrected gauges and the fixed-bump
+point extension also commute with periodic repetition.
+
+It follows that the actual ordinary minimizer, and therefore its
+fixed prefix P_(M,R), commute with repetition. The Wilson action
+sum repeats j^4 times. Thus the first two equalities in (5.1)
+hold as real germs and, by continuation, on their common b domain.
+Gauge equivalence would already suffice for T acting on invariant
+totals; it need not hold coefficient by coefficient.
+
+6.3 Interface diagnosis, now discharged by Sections8--9.
+
+TURN48's periodic_excess_macro_attachment Section8 gives strict
+joint families for P,K,c,J,U_pre, with both datum and xi reads,
+and then the bounded-potential connected logarithm. Its printed
+norm uses periodic Steiner length of the FINAL reads. A graph can
+have zero such diameter but contain a winding loop. Consequently
+that final norm by itself does NOT prove the last line of (5.1).
+Assigning a shortest connecting path to an already periodized
+matrix entry does not repair this loss.
+
+The following identifies the stronger statement absent from that
+printed conclusion. Sections8--9 below prove it for the actual
+construction at the retained structural premises.
+
+UNROLLING RULE.
+Before multiplying a flat kernel entry, expand it as
+
+          K_N(x,y)=sum_(z in Z4) K_infty(x-y+Nz).
+
+Retain z on that edge and its full lifted length. For a local
+nonlinear vertex, retain a fixed tree joining all its cell slots
+within its known dependency radius. For an inherited connected
+carrier retain a rooted spanning tree in its actual old carrier.
+For traces retain closed walks, including their winding displacement.
+Do not erase these labels when identical final supports are grouped.
+
+MAJORANT NEEDED.
+The positive absolute diagram majorant should remain convergent
+after multiplication by exp(sigma L_graph), where L_graph is the
+SUM of these edge/tree lengths, with sigma>0 fixed independently
+of M,N,j. Its output still has carrier exponent a1 and radius b.
+This is stronger than exp(sigma tau(final reads)).
+
+The local estimates suggest the following direct construction.
+Choose sigma below a fixed fraction of every available flat
+exponent. The unrolled row sum is then
+
+ sup_x sum_(y mod N,z) exp[sigma|x-y+Nz|]
+                                  ||K_infty(x-y+Nz)|| <=C,
+
+by the infinite weighted kernel bound. Complete fine-cell operator
+norms, rather than fine-coordinate coefficient sums, are used here.
+A local vertex of arity m and radius r0 receives at most the factor
+exp(sigma r0 m); this changes its analytic generating radius by a
+fixed factor. The fixed-point contraction is preserved by a ONCE
+smaller field ball. Neumann/root/log-determinant series receive
+the same multiplied edge norms; their perturbation radius is
+decreased once so their geometric ratios remain below1.
+
+For an inherited carrier H, a spanning-tree length is at most
+CJ|H|. Choose sigma CJ below a fixed part of a0-a1. This pays
+its new length factor from the strong input exponent. The
+core/tail composition argument must retain the unrolled paths,
+not merely their final endpoints. Its all-arity Cauchy factor
+(1-t)^(-D|H|) is paid from another fixed part of the same reserve,
+using the strict old-field margin. For the connected logarithm,
+the ordinary cluster bound is reapplied with these strengthened
+positive vertex majorants and a strict smallness margin. Products
+multiply length weights because lengths add before any grouping.
+
+These observations isolate the required inherited core/tail
+verification at the SAME comparison exponent a1 and field radius b.
+The printed TURN48 result controls final typed reads and does not
+state that stronger ungrouped norm. Section8 supplies the verification,
+and Section9 verifies exact periodization of the combined physical
+kernels. Thus this diagnosis is not an additional pending interface.
+
+6.4 Consequence of the unrolled majorant proved in Sections8--9.
+
+First truncate inherited carriers at |H|<cN/J, with c small.
+Their connected lifts are unique. The remaining inherited tail
+has a1 norm at most C exp[-c(a0-a1)N/J] times its a0 norm.
+This follows directly by retaining the SAME carrier and paying
+e^((a1-a0)|H|); projecting it through C_N only decreases the norm.
+The inherited-input comparison (3.5) controls its effect.
+
+Average the retained input family over translations as in Section2.
+After projection each short local coefficient is precisely the
+same function of its lifted fields. No universal infinite input
+representative is needed; the common short functions can depend
+on the large torus and its actual history.
+
+Now restrict large-output backgrounds to repeated small ones.
+Every unrolled connected diagram of total length <c'N has a
+unique root-fixed lift, no nonzero winding, and no identification
+of two distinct xi read sites under the small-period projection.
+It evaluates to exactly the same coefficient on both sides:
+the local rules agree, and the color-ball Gaussian moments are
+the same product moments on these distinct coordinates.
+Root translation has j^4 lifts, cancelled by (2.1). Symmetry
+factors do not change because the short graph has no deck
+identification. Constants are anchored only after this equality.
+
+Every unmatched graph has either a long retained image edge,
+a winding path/closed walk, or two distinct xi sites identified
+modulo N. In each case its declared connected path length is
+at least c'N. The strengthened positive rooted majorant bounds
+the sum of both unmatched tails by C exp(-sigma c'N), in the
+OUTPUT a1 norm, with no factor of the total number of cells.
+This proves the last line of (5.1), including the determinant
+field term, using the stronger norm statement established in8--9.
+
+7. WHAT THIS PASS DOES AND DOES NOT RESOLVE
+
+The earlier finite quotient construction is NOT intrinsically an
+obstruction to comparing covers. Formula(2.2) gives the required
+canonical map, with explicit multiplicities, and formula(4.1)
+controls its mismatch with the finite Maxwell extraction.
+
+The marginal direction is NOT intrinsically an accumulating O(g^2)
+error. Uniform even-g analyticity gives the actual O(g^4) baseline
+response. Stable block convolution makes the irrelevant response
+summable, and the scalar leakage is then summable too. This
+supplies a genuine quantitative response theorem without a
+differentiable shooting prescription.
+
+The interface identified in Section6 is not implied by the old
+printed final-read norm. The new proof in Section8 below addresses
+it directly; that proof, rather than the weaker printed norm, is
+needed to attach the conclusion of Section5.
+
+Finally, selected maps at two volumes use their own baseline
+windows. Their field-dependent comparison does not compare the
+FULL original normalization. Section10 incorporates the flat
+determinant constants, Gaussian g^d factors, cutoff masses and
+representative vacuum shifts into the selected raw one-step
+comparison. A terminal selected partition identity/control and all
+complementary histories remain necessary for a full common-pressure
+proof. That pressure operation is strictly larger than this bridge.
+
+8. NEW: A LENGTH-TRUNCATED CORE PROVES THE INHERITED INTERFACE
+
+This section completes the re-estimate proposed in6.3. Its companion
+decorated_cluster_cover_turn51.txt proves the connected-log step
+with multiplicities and actual path lengths. That companion was
+independently checked by history47: its positive overlap/tree and
+pinned-cluster estimates retain the claimed additive length weight
+at their explicitly stated primitive hypotheses.
+
+8.1 A decorated Banach algebra for the actual primitive construction.
+
+Keep a separate label for each flat image edge, local Taylor vertex
+and analytic tree term before grouping by final supports. A label
+D records a finite connected graph through its output leg(s), all
+typed external reads, and every internal vertex connection. Let
+L(D) be the sum of the selected lifted edge lengths, counting
+repetitions, together with fixed local stars joining vertex slots.
+Local zero-length self-connections are allowed. A finite-range
+vertex with m slots can be assigned a star of length <=r0 m.
+
+For complete-field families use
+
+ sup_i sum_D exp[kappa0 L(D)+A|reads(D)|]
+                    max_complete_output ||f_(i,D)||.             (8.1)
+
+For matrices use row AND column sums and retain both legs.
+For scalar traces use the arbitrary-background-root marked norm,
+as in TURN48. All norms are taken before the positive sum.
+These are absolute Banach sums of bounded holomorphic coefficient
+functions; coincident labels are not identified until evaluation.
+
+For the physical slice R is fixed. Choose its working kappa0
+strictly below every applicable flat infinite-kernel decay
+exponent. Its choice relative to the PRE-R classical exponent
+and physical/current length units is made explicit in8.2.
+Section6.1 supplies
+
+ sup_i sum_(j mod N,z)
+   exp[kappa0 |i-j+Nz|] ||K_infty(i-j+Nz)|| <=C_K,                 (8.2)
+
+also for the complete cell operators containing derivatives.
+This is a sum of whole CELL operator norms. No absolute sum of
+singular fine-coordinate coefficients has been introduced.
+
+The proof of the classical support fixed point now works with
+L rather than final Steiner length: when two decorations are
+multiplied, their graphs are glued and their declared lengths
+ADD. Thus the weight of the product is the product of weights.
+A local vertex of arity m costs exp(kappa0 r0 m); its mixed-slot
+analytic majorant remains geometric, with a changed fixed radius.
+The positive fixed-point inequality is literally
+
+       U<=C_K e^A b+Phi_kappa0(U), Phi_kappa0=O(U^2).
+
+Choose a strict contraction ball once. Picard iteration then
+converges in (8.1), with norm C_A b, uniformly in M and period.
+It reconstructs the same actual branch by the already proved
+uniqueness theorem. Loops or repeated labels never improve its
+majorant: their lengths were paid before support identification.
+
+Nonflat inverse, root and chart constructions have the same
+property. At each resolvent point their Neumann ratio in (8.1)
+is bounded by C_K C_pert b; reduce b once to make this <=1/4.
+The fixed spectral contour has bounded total variation. Analytic
+roots follow by its functional calculus. A log-determinant ratio
+has trace series sum_(m>=1) (-1)^(m+1) Tr(A^-1 B)^m/m.
+Its rooted absolute sum and any one marked-background sum are
+bounded by a geometric series, possibly with a factor m, because
+the ratio is <1/4. Closed walks keep all image lengths. The field-
+independent flat determinant is omitted ONLY from this normalized
+ratio and remains a raw scalar in the separate density identity.
+The canonical implicit chart has the identical positive analytic
+tree proof. This proves decorated catalogues for P,K,c,J and all
+base nonlinear potential terms, with their actual image labels.
+
+8.2 The pre-gauge factor 1/R survives BEFORE choosing R.
+
+This is the domain issue that cannot be repaired just by decreasing
+b after R has been fixed. FIRST use a classical exponent kappa_cl
+in NEXT physical-unit cells, fixed before R. Apply the decorated
+fixed-point argument above to the classical subsystem alone in
+those physical units. Use pregauge_holder_prefix_research.md
+Section4, with its complete physical-cell output norm. Its local
+prefix vertex coefficients have
+
+                 v_m<=K c^m,
+
+where K,c are independent of endpoint R, old depth M and volume.
+The conversion to actual link ANGLES gives the overall h=1/R.
+Apply precisely that local-vertex proof to the decorated corrected
+minimizer. Multiplying by its PHYSICAL local star lengths replaces
+c by c exp(kappa_cl r0). Its positive substitution sum is bounded by
+sum_(m>=1) K(c C_A b)^m; after one smaller primitive radius,
+
+       ||a_p||_decorated <=C'_A b/R,                              (8.3)
+
+with C'_A fixed BEFORE R. The ordinary gauge transfer and smooth
+cell reconstruction are the same finite-range analytic maps used
+in that prefix proof, so they add only the same bounded local stars.
+No sum over the R^4 output coordinates is taken; the complete-output
+maximum is inside the coefficient norm.
+
+Choose R>=16 C'_A once. Only AFTER this choice convert all decorated
+graphs to OLD current-unit lengths, used below for the slice,
+inherited hulls and the comparison period. One next physical unit
+has R old current units. Fixed collar/star conventions give
+L_current<=C_unit R L_physical with a fixed convention constant;
+short local endpoint connections can be included in the original
+stars. Choose
+
+ kappa0<=kappa_cl/(C_unit R)
+
+and below the slice-kernel exponents now available at that fixed R.
+Thus exp(kappa0 L_current)<=exp(kappa_cl L_physical), and the
+constant C'_A/R in(8.3) is UNCHANGED. We have not estimated it by
+an uncontrolled C(R)/R. Every later ell0, hull length CJ|H| and
+tail length uses these old current units, with fixed R conventions
+included in C_h,C_l. Comparing to the output period changes a
+decay exponent by a fixed factor R only.
+
+Then choose the later grouping J and final small b within all
+previously required domains. This preserves the actual common
+old-field margin in the decorated positive norm.
+
+For the full fluctuating old field, on the same auxiliary lambda
+disc as TURN48, the just constructed catalogues satisfy
+
+ ||f_lambda-a_p||_decorated<=C_R |lambda g|T,
+ ||f_lambda||_decorated<=b/4
+       for |lambda|<Lstar=b/(16 C_R |g|T).                         (8.4)
+
+Constants and norm conversions can enlarge16. All coefficient
+differences in the first estimate vanish at lambda=0, by Cauchy
+or the exact substitution b_phys=lambda g K xi.
+
+8.3 The corrected core/tail split.
+
+Set ell0=c0 log(J+2), with c0 fixed large, and take J large enough
+that ell0<J. In EACH decorated output component define
+
+ c_lambda=sum_(D:L(D)<=ell0) f_(lambda,D),
+ d_lambda=sum_(D:L(D)>ell0) f_(lambda,D).                           (8.5)
+
+This differs from the old split by far final reads. It also sends
+a long INTERNAL loop with nearby endpoints into the tail.
+
+The core has actual dependency radius <=ell0, because every read
+is connected to the output by a path whose length is <=L(D).
+It is a bounded holomorphic function with norm <=b/4, by the
+positive partial-family estimate in(8.4). Its coefficients are
+EXACTLY common under covering lifts when N>8ell0, since every
+retained graph has length <=ell0 and hence cannot wind or identify
+two distinct reads. All retained diagrams may be resummed into
+this ONE local analytic function. This resummation is legitimate
+by normal convergence and keeps its full field dependence.
+
+The tail in the weaker kappa0/2 length norm satisfies
+
+             ||d_lambda||_(kappa0/2)
+                     <=(b/4) exp(-kappa0 ell0/2).                 (8.6)
+
+The same estimate holds with the input fixed cardinality reserves.
+After the fixed block regrouping allow the known factor C J^4.
+It remains exponentially small in ell0.
+
+Keeping the core as an analytic function is essential. An absolute
+Taylor expansion of E_H at ZERO would cost roughly
+(1-C'_A/R)^(-D(J)|H|), which need not fit any fixed input reserve.
+The construction below never makes that expansion.
+
+8.4 Exact inherited composition with explicit fixed budgets.
+
+Let H be an actual connected old carrier, k=|H|, and
+e_H=||E_H||_b. There are at most D(J)k scalar old coordinates.
+For their full local cores c_lambda, expand ONLY in d_lambda:
+
+ E_H(c_lambda+d_lambda)
+   =sum_(nu in N^(D(J)k))
+           [partial^nu E_H(c_lambda)/nu!] d_lambda^nu.           (8.7)
+
+All cores stay within b/4. Cauchy on the radius-b/2 coordinate
+polydisc about that core gives
+
+ |partial^nu E_H(c_lambda)/nu!|
+                           <=e_H (2/b)^|nu|.                    (8.8)
+
+Each coefficient in(8.8) retains its full analytic dependence on
+the cores. It reads a fixed ell0-halo of H, which is a connected
+carrier after a fixed enlargement. Since ell0<J, the enlarged
+J-cell cardinality is <=C_h k. Choose a spanning hull through it
+of current-unit length <=C_l J k. C_h,C_l are fixed geometric
+constants, independent of J once ell0<J and all fixed-R collars
+have been included.
+
+Resum these local cores as primitive vertices and give each such
+coefficient its declared hull length. The derivative coefficient
+does NOT require a separate hull for every Taylor coordinate:
+the same full H-halo contains every core read. Add the actual
+decorated graph of each tail occurrence. This gives a connected
+output carrier containing every read and all joining paths,
+including the original H even if some of its variables are unused.
+
+Choose a1 and a positive final length exponent sigma once so
+
+ C_h(a1+3delta)+sigma C_l J <=a0/4,
+ sigma+C_h'(a1+3delta)/J+delta'/J <=kappa0/4.                     (8.9)
+
+Here delta,delta'>0 are fixed rooted/cluster reserves. One can
+first take a1,delta sufficiently small compared with a0/C_h,
+then select J, and finally sigma sufficiently small. Enlarging
+J can satisfy the second inequality; sigma is not required to
+remain fixed while J is still being selected. Every parameter
+is fixed before the trajectory is run.
+
+The first budget pays the primitive core hull from the strong
+incoming cardinality reserve. The second pays the carrier sites
+and rerooting along tail graphs from their kappa0/2 length
+weight, while retaining sigma times their FULL image lengths.
+An edge of current-unit length l meets at most C(1+l/J) J-cells;
+fixed endpoint/collar costs are included in C_h,C_h'.
+
+Let
+
+ t_J=C J^4 exp(-kappa0 ell0/2).
+
+By(8.6)--(8.8) the sum of the scalar tail powers is exactly bounded
+by
+
+ sum_nu t_J^|nu|=(1-t_J)^(-D(J)k)
+              =exp[alpha_J k],
+ alpha_J=D(J) log(1/(1-t_J)).                                    (8.10)
+
+Choose c0 large enough that D(J)J^4 exp(-kappa0 ell0/2) tends to
+zero, and then choose the SAME J large enough that
+
+                    alpha_J<=min(a0,a1)/4.
+
+D(J) grows by a fixed polynomial in J in the actual scheme.
+No estimate uniform in Taylor degree has been replaced by
+an unproved |H|^m bound.
+
+There are two finite reserve budgets. The main trajectory estimate
+uses incoming a0 and outgoing a1 as in(8.9). The raw scalar-response
+estimate repeats this construction with incoming a1 and outgoing
+a2: choose its own positive delta_2,delta'_2 and final length weight
+sigma_2 so
+
+ C_h(a2+3delta_2)+sigma_2 C_l J <=a1/4,
+ sigma_2+C_h'(a2+3delta_2)/J+delta'_2/J <=kappa0/4.
+
+Choose a2,delta_2 small relative to a1/C_h, and J large enough for
+BOTH budgets and the displayed alpha_J bound. The final positive
+length weights may be decreased to their minimum. The remaining
+a1/2 reserve pays rerooting in this second estimate exactly as the
+a0/2 reserve does below. These are simultaneous fixed choices, not
+successive losses of the trajectory norm.
+
+The remaining a0/2 reserve pays the finite rerooting factors.
+More explicitly, if an output root z lies on a tail graph,
+insert exp[-delta' dist(z,H)/J] and charge the inverse factor
+to that graph's length. Its sum over H is bounded by
+
+ sum_i exp[-delta' dist(z,i)/J]
+       sum_(H contains i) exp(a0|H|)e_H <=C_J ||E||_(a0,b).
+
+If z lies on the core halo, the same inequality holds with the
+fixed halo collar and a changed C_J. This is exactly the anchored
+estimate of quantum_activity_transport_research.md Section4,
+with the core hull included and with FULL tail lengths instead
+of a minimizing tree through their final reads.
+
+Consequently(8.7) is an absolutely convergent decorated inherited
+catalogue at output a1+3delta and final length weight sigma,
+uniform in M,N and the number of steps. Its constant may depend
+on the ONCE-fixed J,R,T,b and exponents, as permitted.
+
+For the centered inherited potential use the SAME decorations
+and the SAME length cutoff at every lambda. Subtract each
+coefficient's value at lambda=0. The uniform analytic estimate
+on |lambda|<Lstar and Banach-valued Cauchy give
+
+ ||E(f_1)-E(f_0)||_decorated
+                     <=C ||E||_(a0,b) |g|T/b.                    (8.11)
+
+This has the required quantum small factor. It is not a claim
+that the full background E(f_0) is small. The zero-th Taylor
+term in(8.7) remains a bounded LOCAL analytic function; no
+dimension-dependent absolute expansion of it is performed.
+
+8.5 Common local rules after the core resummation.
+
+In the cover comparison, discard inherited H with k>=cN/J,
+using the strong-to-weak tail already estimated in6.4. For the
+remaining H, its core halo has a unique lift when c is small
+and N>8ell0. The resummed core functions agree exactly on that
+lift. The short diagrams defining each core had no winding,
+and their coefficient equality is proved before resummation.
+Thus treating the core as a new local primitive does not merely
+assume a global finite-volume coefficient is local.
+
+Tail occurrences retain their complete image graphs. Each
+coefficient in(8.7) therefore consists of a common lifted local
+core rule plus explicit long-path insertions. A short collection
+of these NEW primitive objects has exact cover matching.
+Long old-carrier hulls and loops receive their length charge.
+This is sufficient for Section3 of the companion cluster proof;
+one need not retain the internally resummed short core diagrams
+as separate labels forever.
+
+8.6 Completing (5.1) and its parameter order.
+
+The base remainder and log coarea ratio have decorated norms
+O(|g|T^3) on fixed common domains by8.1. The inherited quantum
+increment has(8.11). Decrease the real weak ceiling g_w once
+so their sum meets the strict positive cluster margin in
+decorated_cluster_cover_turn51.txt, at a1 and sigma.
+That theorem proves the fluctuation cover commutator with
+C exp(-cN) in the SAME output radius b and comparison norm.
+The leading normalized determinant has the separate decorated
+trace series in8.1 and the same cover cancellation. Their sum
+is the G commutator in(5.1).
+
+The complete order is: classical physical-unit exponent and strong
+input reserve; decorated classical radius and constants; R large
+for(8.3); working current-unit kappa0 as specified in8.2;
+comparison exponent a1 and auxiliary scalar-output exponent a2
+with their separate positive cluster reserves; sufficiently large
+J with ell0=c0 log(J+2) meeting both budgets and
+alpha_J<=min(a0,a1)/4; final length weights satisfying(8.9) and
+its a1-to-a2 counterpart; a fixed classical
+block q valid for both carrier weights; final b within the
+finitely many stated domains; g_w small for all cluster/input
+budgets; terminal Gamma_* large for(5.6); N_end large for the
+cover and bootstrap margins. No field-radius or exponent loss
+is repeated at successive stages. The actual amplitudes are
+always controlled at the original strong weight a0; only the
+difference is measured at a1. The scalar-only a2 estimate is never
+iterated. The weak ceiling g_w meets the strict cluster margins
+for both finite budgets.
+
+At these retained structural premises, (5.1) is now supplied by
+the actual canonical selected construction, rather than added
+as an unexplained compatibility assumption. Sections4--5 prove
+the claimed common-bare-coupling bridge for the TWO selected
+reference volumes. It remains entirely distinct from a common
+FULL-law pressure estimate or native Bałaban-map attachment.
+
+9. EXACT BLOCH PERIODIZATION OF THE COMBINED PHYSICAL KERNELS
+
+This supplies a detailed check of the functional-calculus step in6.1.
+It does not infer equality of kernels from their decay.
+
+Group the old current links into the fixed R-blocks of the actual
+ordinary/contour geometry. Each cell has a fixed finite fiber of
+link coordinates; its dimension depends on R and the color group,
+not on M or periodic volume. Ordinary output rows and all nonroot
+contour rows form another fixed cell fiber. The flat combined map
+Q0 is the SAME finite-range matrix on the infinite block lattice.
+Its finite-torus operator is obtained by sampling its matrix
+trigonometric symbol Q0(p), because the literal ordinary and
+contour rows have the same translated formulas and oriented
+incidence multiplicities on every compatible torus.
+
+The old homogeneous action Hessian q_M is the exact periodization
+in flat_covariance_limit_research.md Section7. Regrouping into
+R-cells yields a matrix symbol L_M(p), and the actual finite
+Hessian is its sampling. At the flat field DS_M=0. Full row rank
+of Q0 makes the stationary constraint multiplier zero, so this
+flat L_M is also the actual ambient constrained Lagrange Hessian.
+It is not an unconstrained replacement at nonflat backgrounds.
+
+For real p define
+
+ B(p)=Q0(p)Q0(p)^*,
+ E0(p)=Q0(p)^* B(p)^-1,
+ P0(p)=I-E0(p)Q0(p),
+ A_M(p)=P0(p)L_M(p)P0(p)+I-P0(p).                              (9.1)
+
+The finite-regulator right inverse in TURN48 Section3 supplies
+B(p)>=c_R I at every allowed finite momentum, uniformly in the
+period and M. Since the union of compatible momentum grids is
+dense and Q0(p) is continuous, this holds at EVERY real p.
+The same density argument applies to the physical gap: on
+ran P0(p), the actual Hessian is >=h_R I, uniformly in M.
+Equivalently one may use continuity of the lowest eigenvalue of
+the augmented A_M. The finite-period inequalities thus imply
+
+ min(h_R,1)I<=A_M(p)<=max(C_R,1)I                              (9.2)
+
+at every real p. This argument never tries to invert L_M on
+its gauge-null directions. They are handled by the physical
+projection and the identity on its complement.
+
+For complex p, replace the adjoint symbol by the analytic
+transpose Q0^sharp(z)=Q0(-z)^t in a real coordinate basis.
+At real z this equals Q0(z)^*. The flat q_M symbol has the
+already proved M-uniform analytic strip and bounds. Consequently
+B(z), E0(z), P0(z), A_M(z) are analytic on a smaller strip fixed
+at R, with M-uniform bounds. To see invertibility uniformly,
+choose the strip so each complex matrix differs from its value
+at Re z by less than a fixed fraction of the real gap in(9.2).
+A Neumann estimate then bounds the resolvents on one fixed
+contour surrounding the positive interval in(9.2).
+
+Holomorphic functional calculus on this contour gives common
+analytic periodic matrix symbols
+
+                  A_M(z)^(-1/2), A_M(z)^(1/2).
+
+The branch is the positive one on real momenta. Their Fourier
+coefficients have uniform exponential matrix norm decay by
+contour shifting. Fixed-R fiber norm conversions are harmless;
+there is no growing M-dimensional coordinate sum.
+
+Finite Fourier transformation block-diagonalizes the ACTUAL
+finite operators Q_N,L_(M,N),P_N and A_(M,N). Algebraic inverse
+and functional calculus commute with this finite block
+diagonalization. Hence their blocks are EXACTLY the values
+of the above common symbols on the finite momentum grid.
+Fourier inversion and absolute convergence give, for example,
+
+ [A_(M,N)^(-1/2)](x,y)
+     =sum_(z in Z4) [A_M,infty^(-1/2)](x-y+N_block z).          (9.3)
+
+The same identity holds for E0, P0, their products and the
+inverse/root kernels. N_block is the period in R-block units.
+Returning to current units multiplies lengths by the fixed R,
+as explicitly budgeted in8.2.
+
+Since A_M acts as the physical H_M on ran P0 and as I on its
+orthogonal complement,
+
+             H_M^(-1/2)P0=A_M^(-1/2)P0.                       (9.4)
+
+Thus(9.3) is the exact periodization of the ACTUAL whitening K,
+not merely of a convenient full-space positive approximation.
+No choice of a varying basis for ker Q0 enters this identity.
+
+For the flat complete coarea/Hessian factor one also has
+
+ det_(ker Q0) H_M=det A_M,
+ J_*=h0^(n_e-n_c-n_s) det(Q0Q0^t)^(-1/2).                      (9.5)
+
+Every ordinary and contour row is retained. The counts n_e,
+n_c,n_s are the literal per-cell periodic counts; no global
+gauge-zero-mode determinant has been inserted or removed.
+The flat logarithm therefore consists of the explicit Haar
+cell constant and minus one half the traces of log B and
+log A_M. Both are common gapped Bloch symbols. Their field-
+dependent variations are the decorated trace series in8.1.
+Their flat raw constants require the separate scalar analysis
+in causal_cover_error_and_vacuum_turn51.txt.
+
+10. ACTUAL RAW STEP SCALARS: VERIFICATION OF THE CAUSAL NOTE'S INPUTS
+
+This verifies assumptions(i)--(iii) of
+causal_cover_error_and_vacuum_turn51.txt for the ACTUAL selected
+step at the same premises. It does not assert a terminal selected
+partition identity or a bound on a full Wilson normalizer.
+
+10.1 Fix the normalized TOTAL, not an arbitrary raw constant.
+
+At each stage choose the represented raw inherited total with
+e(I)=0. One may subtract each representative coefficient's value
+at I, costing at most a factor2 in its carrier norm. The existing
+strict family margins accommodate this fixed factor. No choice
+of representative then changes the TOTAL function e: it is the
+canonical normalized total defining the quotient.
+
+At flat output, V_p(0)=I and S_(r+1)(0)=0. Hence
+
+                (T_r e)(0)=0, Dphys_r(0)=0.
+
+Let Fraw_r(g,e;w) be the raw logarithm of the normalized ambient
+product-ball expectation, BEFORE subtracting its value at w=0.
+Its dependence on e is through e(U_pre)-e(V_p), so it is invariant
+under a raw constant shift of e even before output normalization.
+Thus Fraw(g,e;0) is a well-defined scalar of the input quotient.
+
+The exact one-step scalar increment is
+
+ v_r(gamma,e)
+    =log A0_r(0)+(d_r/2)log(2pi/gamma)
+                     +n_(e,r)log c_T+Fraw_r(gamma^-1/2,e;0).
+                                                                  (10.1)
+
+Indeed subtracting beta times S and selecting the next normalized
+activity both give functions vanishing at0. The remaining extraction
+constant is exactly Fraw(g,e;0). Arbitrary vacuum shifts of two
+different near-minimal representatives have therefore not been
+silently identified.
+
+10.2 Every elementary prefactor has the required common cell form.
+
+Per output R-cell, with the literal root-fixed contour convention,
+
+ n_e=4R^4, n_c=4, n_s=R^4-1,
+                 d=q(n_e-n_c-n_s)=3q(R^4-1).
+
+Multiply these counts by the number of output cells. All periodic
+geometric incidences are included; there is no isolated global
+constraint or omitted constant gauge mode in these counts.
+Consequently the log(2pi/gamma), log c_T and log h0 contributions
+are EXACT common per-cell constants at the same gamma.
+Their gamma derivative per cell is bounded by C_R/gamma.
+
+The remaining flat determinant logarithm is, by(9.5),
+
+        -(1/2)Tr log(Q0 Q0^t)-(1/2)Tr log A_M.
+
+Section9 proves actual finite Bloch sampling and a common strip
+with spectrum uniformly separated from the logarithm's cut.
+Thus the principal trace-log symbols have uniformly exponentially
+decaying Fourier coefficients. The finite trace per output cell
+is the common zeroth Fourier coefficient plus O(exp(-cN_out)),
+by Fourier-grid averaging. This is precisely the argument in
+Section3 of causal_cover_error_and_vacuum_turn51.txt, now with
+the COMPLETE physical coarea and constraint row ranks verified.
+These determinant terms are independent of gamma and e.
+
+10.3 The raw connected logarithm has a per-cell response bound.
+
+The companion decorated cluster theorem concerns the RAW connected
+logarithm, including its constant-in-w coefficients. It does not
+discard these coefficients as a field quotient. Its actual
+primitive construction in Section8 likewise retains them.
+Therefore the short-lift cancellation proves the SAME-INPUT
+raw cover comparison for Fraw, before evaluating w=0.
+
+For the inherited response, compare two small input classes using
+a near-minimal representative D of their difference at the weaker
+comparison exponent a1. The base representative can be chosen
+inside the strict a1 family ceiling. The exact increment
+
+             D(U_pre)-D(V_p)
+
+is unchanged by any representative constant. Repeat the exact
+core/tail argument of8.4 with incoming reserve a1, outgoing reserve
+a2, and the second fixed budget specified there. The SAME J obeys
+alpha_J<=min(a0,a1)/4. Its arity, core hull, tail length and rerooting
+costs are paid from a1; no a0 bound on D is used. The actual
+same-domain inherited estimate therefore gives an a2 rooted
+potential norm at most C(gT/b)||D||_(a1,b). Insert an auxiliary
+scalar parameter in this increment inside the common strict
+cluster margin.
+The connected-log Cauchy estimate, in its RAW rooted coefficient
+norm, gives
+
+ ||Fraw(g,e)-Fraw(g,e')||_(rooted,a2)
+                        <=C(gT/b)||e-e'||_(a1,b).                (10.2)
+
+This argument takes place before subtracting a vacuum coefficient.
+It is the same two-input cluster proof as TURN49's quotient bound,
+with its raw coefficients retained; it requires no bounded linear
+section of the quotient and no field-radius enlargement.
+Take the infimum through the near-minimal difference representatives.
+
+For any rooted scalar carrier family,
+
+ |sum_X F_X(0)|/V_out
+   <=V_out^-1 sum_i sum_(X contains i) ||F_X||/|X|
+   <=sup_i sum_(X contains i)||F_X||.
+
+The unweighted rooted sum is bounded by the a2 weighted rooted norm.
+Thus(10.2) is a per-cell scalar bound with no growing volume factor.
+The analytic RAW family also satisfies Fraw(0,e)=0 and is even
+in g, for every fixed admissible e. Analytic division and the same
+Cauchy estimate as Section3 therefore give
+
+ V_out^-1 |partial_gamma Fraw(gamma^-1/2,e;0)|
+                                                     <=C gamma^-2.
+                                                                  (10.3)
+
+The cluster bound used here is uniform on the weaker a1 input
+family as well as on the actual stronger a0 envelope, with output
+reserve a2 for this scalar estimate. This is the second finite
+parameter budget fixed in Sections1 and8. The difference family
+need not be bounded at a0, and a2 is not used as the input norm
+of any later trajectory step.
+
+10.4 The three scalar hypotheses are now satisfied for the step.
+
+Combining10.2--10.3 and the flat prefactors gives
+
+ |vbar_r(gamma,e)-vbar_r(gamma',e')|
+ <=C[1/min(gamma,gamma')+min(gamma,gamma')^-2]
+                                          |gamma-gamma'|
+              +C(g_w T/b)||e-e'||_(a1,b),                       (10.4)
+
+with constants independent of M, period and trajectory length.
+This is stronger than the polynomial-loss bound(2.2) of the
+causal note. The same-input cover bound(2.1) there follows from
+the exact elementary cell constants, the two trace-log estimates,
+and the RAW decorated cluster comparison above.
+
+Finally ||rho S||_(a1,b)<=C b^2|rho|. Applying(10.4) to
+e->e+rho S and gamma->gamma+rho gives the finite-extraction
+shift bound(iii). No exact invariance of the window under this
+simultaneous shift is asserted or needed.
+
+The causal prefix profile in the companion note now applies to
+these actual raw selected step scalars. In particular their
+summed two-cover scalar defect is bounded independently of the
+ultraviolet depth, with size at most j^4 C exp(-cN_end) after
+fixed polynomial factors are absorbed in c.
+
+This last statement is about the accumulated RAW STEP FACTORS.
+A complete selected partition also has a terminal integral and
+an exact terminal-domain identity, which have not been established
+by this section. Restoring all omitted histories is an additional
+problem. No full partition pressure or continuum conclusion is
+claimed from the scalar-step comparison.

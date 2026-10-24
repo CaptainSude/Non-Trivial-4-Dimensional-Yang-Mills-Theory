@@ -1,0 +1,327 @@
+TURN81 -- ORIGINAL COUPLING DEFORMATIONS AND REAL SOURCE JETS
+20 October 2026. gauge47. No continuum or full analytic-source closure claim.
+
+RESULT
+For an admitted finite positive native representation with the ORIGINAL
+Wilson marginal, freeze all maps, cutoffs, reference kernels and choice
+rules at source zero. Original canonical plaquette jets then have a
+depth-independent real Lp transport bound. Their martingale innovations
+have a globally bounded squared sum, so their mixed contributions cannot
+incur a genuine multiplicative loss at every RG step in this real norm.
+This is an exact original-law consequence, not a selected-window result.
+
+The norm is too weak to conclude spatial locality, a uniform physical
+source limit, or nonzero separated response. Its terminal conditional
+covariance remains. It does not provide the complex background domains
+needed by the native supported analytic catalogue. Differentiating a
+source-retuned construction does not bypass this gap: it introduces
+cut/coordinate/normalizer responses whose cancellations are only global
+unless separately localized. Section4 gives the exact adaptive constrained
+saddle response and a two-profile oscillation bound for Wilson action.
+
+1. SOURCE AND ACTUAL-POSITIVE-REPRESENTATION SCOPE
+
+Use SU(2), normalized Haar, periods at least4, homogeneous beta>0:
+  S(U)=beta sum_p h_p(U), h_p=1-Tr U_p/2 in[0,2].
+For deterministic real profiles f,k on original plaquettes set
+  F=beta sum_p f_p h_p, H=beta sum_p k_p h_p,
+  W_f=sum_p|f_p|, W_k=sum_p|k_p|.                              (1.1)
+The plus-source generating function is
+  Z(s,t)/Z(0,0)=E exp(sF+tH).
+It corresponds to beta_p=beta(1-s f_p-t k_p). Using the proposed
+beta(1+s f+t k) changes the first derivative signs, not the mixed
+covariance. For |s| ||f||infinity+|t| ||k||infinity<1/2 and real s,t,
+all microscopic plaquette coefficients stay positive. This does NOT
+by itself prove a source-deformed native RG input class.
+
+At a finite regulator, the original group integral is entire in s,t.
+That fact concerns SOURCE variables and says nothing about holomorphy
+of an inverse record in complex native background/current variables.
+Tail47's separate TURN81 note treats this distinction quantitatively.
+
+The positive augmentation used below is the actual source-zero native
+integration/choice process BEFORE signed connected logarithms. Retain
+every discrete label and passive original record needed by later reads.
+For basic R, Large-I(1.100) is old integration times the normalized
+reference q; the original observable stays in the OLD integral. This
+identity was inspected in TURN60 and written choicewise in
+turn74_native_transport_history.txt Sections1--4. An admitted complete
+finite T/R prefix defines a positive joint path law with the original
+Wilson marginal. This is the provenance of the conditional expectations.
+No selected kernel is identified with a full conditional. No sign-definite
+measure is assigned to individual Mayer/connected coefficients.
+
+The statements are uniform in the number of steps of such an admitted
+finite prefix. They do not establish existence of an otherwise unadmitted
+prefix or a missing all-history analytic source norm.
+
+2. AN ACTUAL ORIGINAL-LAW Lp BUDGET
+
+TURN64 finite_volume_wilson_energy_turn64.txt proves for the SAME full law
+  E exp(sum_p t_p beta h_p)<=prod_p(1-2t_p)^(-3/4), 0<=t_p<1/2.
+In particular E exp(beta h_p/4)<=2^(3/4). For integer r>=1,
+  E(beta h_p)^r <= 4^r r! 2^(3/4),
+  ||F||_r <= C_r W_f,
+  C_r=4(r!2^(3/4))^(1/r)<=4r 2^(3/(4r)).                    (2.1)
+The first inequality is x^r<=r!4^r exp(x/4); the second is Minkowski.
+No conditional exterior-energy inequality is used. Expectations on the
+augmented law equal these original expectations for original functions.
+
+Let G_j be a decreasing sequence of complete retained sigma-algebras,
+G_0 containing the original field, formed from the tail of the positive
+RG path. A complete source-free Markov state may identify E(F|G_j) with
+its current-state conditional mean; otherwise retain the full tail.
+Discarding needed choice/record labels is not part of this assertion.
+Define the four normalized raw jets
+  1, X_j=E(F|G_j), Y_j=E(H|G_j), V_j=E(FH|G_j),
+and mixed logarithmic jet Z_j=V_j-X_jY_j. Then
+  ||X_j||_r<=C_r W_f,
+  ||V_j||_r<=C_(2r)^2 W_f W_k,
+  ||Z_j||_r<=2 C_(2r)^2 W_f W_k.                            (2.2)
+These follow from conditional Jensen, Holder and (2.1). The normalized
+notation describes conditional expectations; it does not authorize
+division of a tiny raw component mass in an analytic estimate.
+
+Every scalar coefficient remains. At source zero the exact conditional
+generating function is E(exp(sF+tH)|G_j); no source-dependent reference
+normalizer has been silently substituted. Eq(2.2) is a real estimate
+on the original sourced variables, not a fresh reference observable.
+
+3. DEPTH-INDEPENDENT MIXED INNOVATION BUDGET
+
+Put d_j^F=X_j-X_(j+1), d_j^H=Y_j-Y_(j+1). Reverse-martingale
+orthogonality gives
+  sum_(j<n) E|d_j^F|^2=Var(F)-Var(X_n)<=Var(F),               (3.1)
+and similarly for H. The raw/log recursion is exactly
+  Z_(j+1)=E(Z_j|G_(j+1))
+                   +E(d_j^F d_j^H|G_(j+1)), Z_0=0.         (3.2)
+Indeed expand V_j=Z_j+X_jY_j and take the next conditional expectation;
+both single d terms vanish. Hence
+  Cov(F,H)=sum_(j<n) E(d_j^F d_j^H)+Cov(X_n,Y_n).            (3.3)
+By Cauchy--Schwarz in the joint (date,probability) space,
+  sum_(j<n) E|d_j^F d_j^H|
+     <=sqrt[Var(F)Var(H)]
+     <=32*2^(3/4) W_f W_k.                                 (3.4)
+The terminal term is retained, not included in the sum and then forgotten.
+Eq(3.1) follows either by telescoping conditional Pythagoras or by
+orthogonality of distinct innovations. Thus the real full source jets do
+not intrinsically grow by a product of inverse analytic radii with depth.
+Those products in analytic estimates measure the strength of the target
+norm/domain, not growth of these actual real random variables.
+
+This advances the precise real consumer while leaving the spatial issue
+exposed. For separated source supports there is no distance in (3.4).
+The full covariance can be carried by Cov(X_n,Y_n); an identity for the
+innovation sum cannot set it to zero. Neither the upper bound nor source
+entireness yields a positive lower bound for a reflection norm.
+
+Physical normalization is substantial. For a fixed physical support and
+f_p a sampled O(1) profile, W_f is O(a^-4), so (3.4) is O(a^-8) for two
+such sources. Multiplying f_p by a^4 makes this particular estimate
+bounded, but changes the observable by a^4; it is not a renormalization
+theorem for the canonical integrated action. Subtracting deterministic
+vacua leaves (3.1)--(3.4)'s covariances unchanged and does not create a
+spatial improvement. TURN70's selected martingale identity and TURN74's
+four-jet recursion already supply the algebra; the present additional
+consumer is the genuine full-Wilson Lp/squared-sum budget with its exact
+normalization and limits.
+
+4. SOURCE-RETUNED SADDLES: THE ENVELOPE THEOREM DOES NOT KILL TWO MARKS
+
+Fix an actual finite Wilson conditional with its exterior links and coarse
+constraint held fixed. Work on a smooth constrained physical gauge slice
+near a stable minimum U*, removing gauge-null directions. Let
+  S0(U)=sum_(p touching free links) h_p(U),
+  S_f(U)=sum_p f_p h_p(U), S_k similarly.
+All action plaquettes touching these variables, including crossing
+plaquettes, are included. Suppose U* is a nondegenerate constrained
+minimum of S0, with physical Hessian A>=kappa Id>0. This hypothesis
+is local to this admitted saddle; no uniform all-history gap is inferred.
+Use local intrinsic coordinates on the fixed constraint manifold.
+
+Let U(s,t) be the nearby constrained stationary point of
+S0+s S_f+t S_k and m(s,t)=beta[S0+s S_f+t S_k](U(s,t)).
+Differentiating stationarity gives
+  U_s=-A^-1 grad S_f, U_t=-A^-1 grad S_k at zero,
+  m_s=beta S_f(U*),
+  m_st=-beta <grad S_f,A^-1 grad S_k>.                      (4.1)
+The first equality for m_s is the envelope theorem. The final term is
+the mandatory response of the constrained minimum, not an error removable
+by gauge invariance. In particular m_ss<=0. The gradients are physical
+tangent gradients; pure gauge directions vanish for every f, but the
+physical gradient generally does not.
+
+For any constants c_f,c_k, constrained stationarity gives EXACTLY
+  grad S_f=sum_p(f_p-c_f)grad h_p,                          (4.2)
+and similarly for k. Thus complete constant profiles have zero saddle
+motion, while varying profiles have a controlled oscillation response.
+This cancellation fails for an arbitrarily masked partial action unless
+the missing crossing terms are also retained.
+
+Here is a concrete Wilson bound with explicit normalization. Give each
+SU(2) link the orthonormal left generators i sigma_a/2. On a link in one
+nondegenerate plaquette,
+  |grad_link h_p|^2=h_p(2-h_p)/4.
+A link belongs to at most z=2(d-1) action plaquettes. Cauchy on each link,
+summation over the four distinct edges and orthogonal tangent projection
+therefore give
+  |grad S_f|^2<=2z sum_p(f_p-c_f)^2 h_p.                   (4.3)
+In d=4, 2z=12. Combining (4.1)--(4.3),
+  |m_st|<=12 beta/kappa
+       [sum_p(f_p-c_f)^2 h_p(U*)]^(1/2)
+       [sum_p(k_p-c_k)^2 h_p(U*)]^(1/2).                  (4.4)
+If the COMPLETE constrained-action plaquette set lies in a region of
+physical diameter ell and both profiles are Lipschitz there, choose
+constants at one point. This gives the product ell^2 Lip(f)Lip(k),
+times 12 beta S0(U*)/kappa. A small source support alone is not that
+diameter hypothesis after global constant subtraction. This is an
+actual finite conditional classical
+estimate at its stated saddle, including adaptive fixed exterior data.
+It is not a cutoff-uniform bound on kappa^-1 or the minimum's action,
+and it does not control determinant/fluctuation/source-scalar terms.
+
+It refines the proposed deformation test without repeating an off-pair
+rank assertion: every object in(4.1) is on the physical constrained slice.
+The native soft-gauge precision is not inserted into S_f. A sourced
+gauge-fixed parametrization may compute the same answer but must retain
+its Jacobian and gauge/constraint normalization. For full variable
+couplings or a different reference action, their actual Hessian replaces
+A; it cannot be identified with a homogeneous Gaussian by notation.
+
+4A. SEPARATED PROFILES: THE PRECISE CONSTRAINED-INVERSE INPUT
+
+Let P be the orthogonal projection from ambient free-link tangent vectors
+onto the physical constrained tangent at U*, and extend the inverse by
+  G=P A^-1 P.
+Its link-to-link entries are 3-by-3 matrices in orthonormal link frames.
+For the ambient force g_f(e)=sum_(p containing e) f_p grad_e h_p,
+  m_st=-beta <g_f,G g_k>.                                  (4.5)
+The ambient force retains its literal source support. Applying P first
+and then declaring its result local would in general be incorrect.
+
+Suppose this ACTUAL constrained inverse, on the complete determining
+row geometry, has
+  ||G(e,e')||op<=C_G exp[-mu d(e,e')],
+  B_(mu/2)=sup_e sum_e' exp[-mu d(e,e')/2]<infinity,          (4.6)
+with the intended volume-uniform constants. Assume d is symmetric.
+For D=dist(supp g_f,supp g_k), entrywise splitting of the exponential
+and the row/column Schur bound yield
+  |m_st|<=beta C_G B_(mu/2) exp[-mu D/2] ||g_f||2 ||g_k||2
+    <=12 beta C_G B_(mu/2) exp[-mu D/2]
+          [sum_p f_p^2 h_p]^(1/2)[sum_p k_p^2 h_p]^(1/2).  (4.7)
+Indeed every pair in the restricted kernel has d>=D, leaving the
+summable exp[-mu d/2] after taking out exp[-mu D/2]. The same Cauchy
+calculation as(4.3), without the tangent projection, gives the second
+line. No translation invariance or equality of boundary conditions is
+required. Empty force support gives zero directly.
+
+The support in(4.7) is the complete force support. For a pulled-back
+original source it includes its reconstructed field/frame/constraint
+reads, rather than just the nominal plaquette or source-anchor set.
+One may use the better of(4.4) and(4.7). One may not subtract a global
+constant from f and simultaneously retain its old compact support.
+Eq(4.6) is an explicit physical inverse premise: positivity alone, a
+different soft-gauge precision, or the abstract TURN80 inverse-square-
+root lemma does not establish it for every native adaptive history.
+
+4B. BLOCKWISE CONSTANTS LEAVE AN EXACT CONSTRAINT-ROW RESPONSE
+
+There is a useful physical-saddle identity making the boundary issue
+explicit. Write Q for the derivative of the actual defining constraints,
+including any slice constraints needed so that the tangent is ker Q.
+At a regular constrained point, stationarity gives
+  g_1=grad_ambient S0=Q*lambda,
+and G Q*=0. Redundant rows may be removed, or any multiplier solving
+this equality may be used. All rows and their complete footprints remain.
+
+Choose arbitrary scalar link values c_e and constraint-row values d_a;
+let C,D be their diagonal multiplication operators. Define
+  r_f(e)=sum_(p containing e)(f_p-c_e) grad_e h_p,
+  b_f=r_f+(C Q*-Q*D)lambda.                                (4.8)
+Then the exact equalities
+  g_f=C g_1+r_f=Q*D lambda+b_f,
+  G g_f=G b_f,
+  m_st=-beta <b_f,G b_k>                                  (4.9)
+follow, with separate choices C,D for each profile. The row contribution
+at (e,a) in(4.8) is (c_e-d_a)Q*_(e,a)lambda_a. It is not legitimate to
+drop it because a profile is constant on a proper interior subregion.
+
+For a complete constant source, choose all c_e=d_a equal to that same
+constant. Both r_f and the commutator vanish, recovering(4.2). For a
+piecewise constant source, r_f is supported where an action plaquette
+and its edge weight differ, and the second term is supported on every
+actual constraint-row footprint where c_e differs from its row value.
+If a constraint row is extended, that entire footprint is present; no
+automatic thin-boundary assertion follows. The multiplier is the actual
+physical constraint current and is retained. The estimate leading to
+(4.7) also applies to b_f,b_k if their complete supports and norms are
+controlled, but does not supply these controls by itself.
+
+This is a finite classical admission/response calculation, not a native
+off-pair representative substitution. TURN69's regular_source_transport
+and TURN74 regular_source_gauge Section3 already retain the varying-
+profile first noise jet and its physical row-sum cancellation; TURN70
+invariant_source_relocalization Section9 also retains weighted constraint
+commutators. The additional statement here is the exact moving-minimum
+susceptibility(4.1), its quantitative Wilson bound, and the explicit
+physical inverse/complete-row input needed to make it spatially local.
+It is not a new proof of the older constant-source Ward cancellation.
+
+5. MOVING CUTS AND MOVING REFERENCES: WHAT CANCELS EXACTLY
+
+Let chi_h(s,t;U) be a real source-dependent partition of unity of the
+ORIGINAL integrand. For plus sources,
+  partial_st[chi_h(s,t;U) exp(sF+tH)] at zero
+     =chi_h FH+(partial_s chi_h)H+(partial_t chi_h)F
+                                      +partial_st chi_h.    (5.1)
+Summing over the COMPLETE h family kills the last three contributions,
+since sum_h chi_h=1 pointwise and F,H do not depend on the artificial
+label. It does not kill them branchwise or in an incomplete regular/raw
+subfamily. Hard characteristic cuts require distributional boundary
+terms or an equivalent exact domain calculation. Rounded hierarchy
+parameters need not even depend differentiably on the source.
+
+A source-dependent coordinate change likewise has a Jacobian/divergence
+response; a branch with boundary has its corresponding flux. Exact
+integration on the complete original compact group cancels artificial
+coordinate dependence, but a localized estimate must exhibit the same
+cancellation with its supports. The envelope theorem for the minimum
+does not cancel these terms or the mixed term(4.1).
+
+If a reference q_(s,t)(dy) is normalized for every source,
+  integral q_(s,t)=1,
+then its first and mixed derivatives integrate to zero when no y-dependent
+future factor is present. A later y-dependent history predicate or source
+read prevents pulling that zero through the integral. Its score and
+mixed score must then stay in the actual branch formula. Freezing q and
+the cuts avoids these artificial derivatives entirely, but leaves the
+original old conditional source; it does not turn it into a current
+reference-field observable.
+
+6. CONCLUSION FOR THE PROPOSED SOURCE-SLOT ROUTE
+
+One can define finite source jets directly in the original action and
+propagate them on the fixed full real construction. Sections2--3 prove
+that their real Lp size and total innovation energy need no repeated
+analytic continuation loss. This supplies a legitimate alternative
+TARGET NORM for further work, and a consistency check on any analytic
+source construction. It needs no complex evaluation of a smooth real
+switch for these real identities.
+
+To use this route for separated physical correlations one still needs
+an actual spatially localized consumer of that Lp information (or a
+state-sensitive low-energy/channel estimate), plus terminal covariance
+control and physical calibration. To feed the current native connected
+analytic catalogue, one instead needs the simultaneous background/current
+source admission and charged reads left at TURN79. Source-variable
+holomorphy and real Lp contraction do not imply that stronger norm.
+
+Allowing the maps to follow beta_p(s,t) trades inverse-record questions
+for the explicit moving-minimum, determinant, reference and cut responses
+above. Uniform actual inhomogeneous native family admission and localized
+cancellation would be needed to make that alternative quantitative. No
+such all-history theorem follows from the published homogeneous maps or
+from the already proved constant-action Gaussian rank cancellation.
+
+No prior files were modified. Latest TURN79 frontier, rather than the
+stale TURN78 work/current_proof_frontier.txt alias, was used for scope.

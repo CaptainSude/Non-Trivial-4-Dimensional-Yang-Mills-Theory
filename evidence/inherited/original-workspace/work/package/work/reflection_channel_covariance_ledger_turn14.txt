@@ -1,0 +1,206 @@
+REFLECTED CORRELATIONS UNDER POSITIVE CHANNELS: ONLY SHARED NOISE ENTERS
+19 October 2026. Root finite-probability theorem; native attachment open.
+
+PURPOSE
+
+The ordinary covariance budget in positive_channel_innovation_ledger_turn14
+can be unnecessarily strong for a quantum nontriviality witness. A refill
+can create large ordinary variances independently in the two reflected
+halves while creating NO correlation across their separating plane. The
+correct consumer for an Osterwalder--Schrader (OS) witness is the reflected
+cross-covariance. This note proves its exact ledger and a quantitative
+criterion which pays only shared refill noise. No property of the actual
+Balaban R is assumed without attachment.
+
+1. EXACT REFLECTION LEDGER
+
+Let X_0,...,X_N be actual probability-valued Markov states with transition
+kernels K_j and laws mu_j. Each space has an involution theta_j. Suppose
+K_j intertwines these involutions: K_j(f o theta_(j+1))=(K_j f) o theta_j.
+Define the antilinear reflected function Theta_j f=conjugate(f o theta_j).
+The kernels are real probability kernels, so K_j Theta_(j+1)=Theta_j K_j.
+Assume mu_0 is reflection invariant; then every mu_j is reflection invariant.
+
+For a finite vector F_N of complex L2 terminal observables, set
+
+ F_j=K_j F_(j+1),
+ G_j[a,b]=E_mu_j[(Theta_j F_j^a) F_j^b].                    (1.1)
+
+All G_j are Hermitian, but need not be positive before RP is proved.
+The exact conditional product identity gives
+
+ G_N=G_0+sum_j E_j,                                        (1.2)
+ E_j[a,b]=E_mu_j { K_j[(Theta_(j+1) F_(j+1)^a) F_(j+1)^b]
+                  -(Theta_j F_j^a) F_j^b }.                (1.3)
+
+Proof: integrate the first term against mu_j to obtain G_(j+1), and
+the second to obtain G_j, then telescope. Unlike ordinary innovation
+covariances, E_j need NOT be positive semidefinite. They are Hermitian
+after integration because both adjacent G matrices are Hermitian.
+
+For a fixed unit coefficient vector c, put f_j=sum_a c_a F_j^a.
+Then c*E_j c is the integrated conditional cross-covariance of
+f_(j+1) o theta_(j+1) and f_(j+1), using complex covariance
+Cov(A,B)=E[conjugate(A)B]-conjugate(E A)E B. A bound
+
+ sup_(|c|=1) sum_j |c*E_j c| <= epsilon                      (1.4)
+
+implies ||sum_j E_j||_op<=epsilon. Hence a terminal reflected Gram
+G_N>=c_* I transfers to G_0>=(c_*-epsilon) I. To interpret this as
+an OS witness for the original field, the backward observables F_0
+must actually belong to its positive-half algebra, and X_0 must contain
+no auxiliary random seed hidden before the ledger starts. Otherwise
+the extra initial disintegration is an additional channel and defect.
+This bound controls only the integrated finite reflected Gram. These
+signed cross-defects do not have the pointwise positive structure used
+to obtain the ordinary ledger's L1 product-defect estimate.
+
+Centering is compatible: the means are constant along the chain, so
+subtract the terminal means at every date. This removes the vacuum
+constant direction. An ordinary L2 Gram floor is NOT a hypothesis
+G_N>=c_* I; Section6 gives the simplest obstruction.
+
+2. PRODUCT REFILLS GIVE A SHARED-INFLUENCE BOUND
+
+Fix the COMPLETE input x and a deterministic selection of refill blocks.
+Suppose the output noises Y_1,...,Y_m are independent under K(x,.).
+Let osc_i f be the supremum of |f(y)-f(y')| when only Y_i is changed.
+For real f,h one has
+
+ |Cov_K(f,h)| <= (1/4) sum_i (osc_i f)(osc_i h).               (2.1)
+
+Proof: expose the independent variables in a fixed order and use their
+Doob martingale differences d_i f,d_i h. Cross-dates are orthogonal,
+so Cov(f,h)=sum_i E[d_i f d_i h]. At fixed prior variables, the function
+of Y_i obtained by averaging later variables has range at most osc_i f.
+Its conditional variance is at most (osc_i f)^2/4. Conditional Cauchy--
+Schwarz gives the product bound and summation proves (2.1).
+
+For complex f,h, a safe version is
+
+ |Cov_K(f,h)| <= (1/2) sum_i (osc_i f)(osc_i h).               (2.2)
+
+Indeed Var_C(Z)=E|Z-EZ|^2=(1/2)E|Z-Z'|^2 is at most one half the
+squared diameter, followed by the same Doob argument. No sharp complex
+constant is needed here. Apply (2.1) to real reference spans, or (2.2)
+to a complex reference span, with h=f and the first argument f o theta.
+
+Only noises affecting BOTH reflected source functions contribute. In
+particular, if f reads a set S_+ and f o theta reads S_-, a refill block
+which meets at most one read set has a zero product in (2.1)/(2.2).
+If every block has diameter smaller than dist(S_+,S_-), and the output
+read sets are literal link sets, all conditional cross-covariances vanish.
+The two ordinary conditional variances can nevertheless be large.
+Here changing noise Y_i must change ONLY its stated complete output
+block. Independent seeds followed by a nonlocal reconstruction do not
+automatically meet this locality condition.
+
+These are the actual BACKWARD functions f_(j+1), not fresh bare source
+functions at each date. Their full reads include long kernels, selection
+data, normalization data and carriers. Geometric separation of only the
+nominal source centers is insufficient.
+
+3. RANDOM GEOMETRY AND INTERACTING REFILLS
+
+If a random label L chooses the blocks or refill laws, total covariance is
+
+ Cov(f,h|x)=E_L Cov(f,h|x,L)
+             +Cov_L(E[f|x,L], E[h|x,L]).                      (3.1)
+
+The second term can couple opposite halves even when every conditional
+block is small. A shared coin choosing whether each half is refilled
+provides a simple example. Either retain this term or expose L as its
+own actual transition. Conditioning it away is invalid.
+
+Likewise, a factorization of retained integration symbols before
+interactions are multiplied does not prove product conditional output
+laws. For an interacting refill, (1.2) remains exact, while (2.1) must
+be replaced by a proved covariance inequality for that actual kernel.
+Its sequential disintegration can have enlarged reads and cannot be
+treated as independent small blocks by notation.
+
+4. EXACT HALF-ALGEBRA CRITERION: RP AND AN OS ISOMETRY
+
+For one transition let A_+^out and A_+^in be its output and input
+positive-half algebras. Assume three actual properties:
+ (a) reflection intertwining as above;
+ (b) K maps A_+^out into A_+^in (including ALL input reads);
+ (c) K[(Theta f)h]=(Theta Kf)(Kh) for f,h in A_+^out.
+
+Property(c) follows if the reflected output halves are conditionally
+independent given the input; shared boundary variables must then be
+deterministic at this conditioning or included in a correct boundary
+formulation. It does not follow merely from reflection covariance.
+
+If the input law is RP, then
+
+ E_(mu K)[(Theta f)f]=E_mu[(Theta Kf)(Kf)]>=0.                 (4.1)
+
+Thus the output is RP. The backward map K induces an isometry from
+the output OS quotient into the input OS completion. Null vectors map
+to null vectors by equality of norms. It can erase independent noise
+as ordinary random variables while preserving all reflected norms.
+This is a sufficient construction criterion, not a claim that all
+RP-preserving maps must satisfy (a)--(c).
+
+If (c) is only approximate, (1.2)--(1.4) control a FIXED finite Gram
+matrix. They do not by themselves prove positivity on the entire
+positive-half algebra. Original bare Wilson RP can supply the ambient
+positive form if property(b) and original observable identification
+hold; a witness can then be transported within that already positive
+form. If property(b) fails, the algebra assignment remains a separate
+error even when the scalar covariance defect happens to vanish.
+
+5. PURE GAUGE RANDOMIZATION HAS ZERO DEFECT ON INVARIANT SOURCES
+
+There is one useful case requiring no spatial independence at all. If
+a kernel changes a field only within its gauge orbit, then Kf=f and
+K(fh)=fh for gauge-invariant f,h. All ordinary and reflected product
+defects are exactly zero on invariant sources, even if the random gauge
+choice uses shared randomness across the reflection plane. Reflection
+of an invariant function is invariant for the usual reflected gauge
+action. Pure gauge fixing/restoration can therefore be handled on the
+gauge quotient or as a zero-defect substep.
+
+This remains applicable to BACKWARD functions only if later channels
+preserve gauge invariance. It does not identify a physical large-field
+refill with a gauge transformation: a refill that changes plaquette
+conjugacy classes is not orbit preserving. Integration-only equivalence
+of two gauge-slice formulas also requires a correct joint/quotient
+dictionary before it supplies any non-gauge replacement kernel.
+The source must be an actual function of the orbit on the COMPLETE
+state. Gauge invariance of its field argument does not erase dependence
+on an auxiliary label changed by the same substep; such label changes
+must be retained unless the observable is also constant under them.
+
+6. WHY THE CURRENT MINORIZATION IS NOT THE TERMINAL WITNESS
+
+Let the two reflected halves be independent identically distributed
+compact variables under product Haar. Any nonconstant centered real
+function f of the positive half has E|f|^2>0, and the full measure has
+a positive density lower bound. Nevertheless
+
+ E[(Theta f)f]=conjugate(E f)E f=0.                           (6.1)
+
+The state is RP but the strictly half-supported centered functions are
+OS null. Therefore the fixed-volume minorization of the RT law proves
+ordinary coarse randomness only. It must not be promoted to a positive
+reflected Gram matrix. Ordinary positivity order mu>=alpha nu also
+does not imply RP order of the remainder mu-alpha nu.
+
+7. REVISED NATIVE TARGET
+
+For a nontrivial OS witness it is sufficient to establish:
+ - a terminal centered separated reflected Gram lower bound;
+ - actual positive-half support of its backward original-field sources;
+ - a small complete sum of their shared-noise defects (1.3), or the
+   exact half-algebra factorization in Section4.
+
+This can be weaker than controlling the TOTAL innovation covariance
+from every refill. Small independent refills remote from the opposite
+read contribute exactly zero; only shared noise, crossing components,
+and selection correlations require estimates. Native source long tails
+and changing histories may still create those connections. No inspected
+primary theorem currently supplies their required bound or the terminal
+reflected witness. This is a narrower testable target, not a completed
+continuum existence or nontriviality theorem.

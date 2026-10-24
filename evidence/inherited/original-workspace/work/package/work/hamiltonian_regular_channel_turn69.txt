@@ -1,0 +1,410 @@
+THE ACTUAL LOCAL ENERGY CURRENT AT SEPARATED TIMES -- TURN69
+20 October 2026. gauge47. Submitted for independent focused audit.
+
+RESULT AND SCOPE
+
+This note uses the actual finite-spatial SU2 ground state. It does
+not substitute a Gaussian state, a native reference law, or a
+selected weak history.
+
+There are three concrete conclusions.
+
+1. The localized energy remainder of TURN68 has an exact projected
+   current representation in the weighted one-form Laplacian of
+   the actual ground law. Its separated-time norm is an explicitly
+   identified inverse-energy current norm. The known local action
+   estimates control its unweighted current norm, but do not
+   control that inverse-energy norm.
+
+2. The actual first-moment bounds do remove the high-energy part
+   of both the magnetic source and the energy remainder at fixed
+   positive separation. Energies above a sufficiently large
+   multiple of log(1/a) contribute a quantity tending to zero.
+   Thus the outstanding estimate is located in a definite
+   growing low-energy band, not in the unrestricted spectral tail.
+
+3. A commuting, deterministic color displacement gives an actual
+   separated force bound with favorable constants. Its vector is,
+   however, annihilated by the physical Gauss projection. Turning
+   it into a physical field-dependent displacement adds a kinetic
+   commutator. Dropping that commutator would be an invalid Ward
+   argument.
+
+These results neither establish a uniform separated magnetic
+correlation bound nor a nonzero continuum OS norm. They identify
+the actual operator and spectral band which remain to be controlled.
+
+1. ACTUAL HAMILTONIAN AND THE LOCAL CURRENT
+
+Work on a finite nondegenerate periodic cubic spatial lattice.
+The link manifold is M=SU2^E with the product Pauli/2 metric and
+normalized product Haar measure. Let
+
+ H=kappa K+vS,   K=-Delta,   kappa=g^2/(2a),
+ v=4/(g^2 a),    S=sum_p h_p,   h_p=1-Tr U_p/2.
+
+Its normalized ground state Omega is smooth and strictly positive.
+Write E0 for its energy, A=H-E0 and mu=Omega^2 dU. Uniqueness
+implies that Omega is gauge invariant. Multiplication by Omega is
+a unitary map from L2(mu) to L2(dU), and
+
+ L=Omega^-1 A Omega=kappa d_mu^* d,                    (1.1)
+ D(F)=<F,L F>_mu=kappa ||dF||_mu^2.                    (1.2)
+
+Here d is the exterior derivative on scalar functions and d_mu^*
+its adjoint for the weighted Riemannian volume mu. All statements
+are first made at fixed graph, a and g. A fixed-graph spectral gap
+above constants exists by compact ellipticity; no uniform gap is
+asserted.
+
+For real plaquette weights f_p define
+
+ eta_e=(1/4) sum_(p incident e) f_p,
+ Q_f=v sum_p f_p h_p,
+ H_f=kappa sum_e eta_e K_e+Q_f,
+ q_f=Q_f-<Q_f>,
+ r_f=Omega^-1(H_f-<H_f>)Omega.                         (1.3)
+
+Every edge has four incident spatial plaquettes. Both q_f and r_f
+are real, centered, smooth and gauge invariant. The function r_f
+can read the ground state globally; local differential support
+of H_f is not finite support for this quotient.
+
+Define the real local one-form j_f by its edge components
+
+ (j_f)_e=sum_(p incident e)(f_p-eta_e) d_e h_p.          (1.4)
+
+The actual ground equation and Haar integration by parts give
+
+ <dF,dr_f>_mu=v<dF,j_f>_mu                            (1.5)
+
+for every smooth real F. For completeness,
+
+ [H,H_f]=kappa v sum_(e,p)(f_p-eta_e)[K_e,h_p],
+ A(r_f Omega)=[H,H_f]Omega,
+ <F Omega,[K_e,h_p]Omega>=<d_eF,d_e h_p>_mu.
+
+In the last identity the two terms containing d_e Omega cancel
+exactly. Thus (1.5) has no omitted score term.
+
+Let P_ex be the orthogonal projection in L2(mu;T*M) onto the
+closed space of exact one-forms. This space is closed at a fixed
+compact graph by the scalar Poincare inequality. Equation (1.5)
+is precisely
+
+                         dr_f=v P_ex j_f.             (1.6)
+
+The current vanishes for a constant profile. This is the exact
+conservation cancellation retained in all subsequent formulas.
+
+2. THE WEIGHTED ONE-FORM OPERATOR AND THE COVARIANCE IDENTITY
+
+Let
+
+                 L1=kappa(d d_mu^*+d_mu^* d)           (2.1)
+
+on one-forms, with the usual closed quadratic-form realization.
+The two occurrences of d in (2.1) act between the appropriate
+form degrees. It is a nonnegative elliptic operator. Its exact
+subspace is reducing, and
+
+                  dL=L1d,   P_ex L1=L1 P_ex.          (2.2)
+
+On the exact subspace there is no zero mode. Inverse powers below
+always mean inverses on that subspace. No estimate on the full
+one-form harmonic subspace is required.
+
+For a real centered smooth F put
+
+ C_F(t)=<F,e^(-tL)F>_mu,   t>=0.
+
+At fixed graph, spectral calculus and (2.2) give
+
+ C_F(t)=kappa<dF,L1^-1 e^(-tL1)dF>_mu.                 (2.3)
+
+One direct proof differentiates C_F(s):
+
+ -C_F'(s)=kappa<dF,e^(-sL1)dF>_mu,
+
+then integrates from s=t to infinity. Centering removes the
+constant mode, and the fixed-graph gap justifies the integral.
+There is no passage to a continuum limit in this proof.
+
+For the local energy quotient, (1.6) therefore gives the exact
+actual-law formula
+
+ C_(r_f)(t)=kappa v^2
+   <P_ex j_f,L1^-1 e^(-tL1)P_ex j_f>_mu.              (2.4)
+
+The positive-time window norm of a centered F is
+
+ R_F(t,d)=<F,e^(-2tL)
+                   [(1-e^(-dL))/L]^2 F>_mu,
+                      t>0, d>0.                      (2.5)
+
+It equals the reflected covariance of the centered time integral
+over [t,t+d] in the stationary ground process. Applying (2.3) to
+the spectral multiplier in (2.5) yields
+
+ R_(r_f)(t,d)=kappa v^2
+   <P_ex j_f,
+      L1^-3 e^(-2tL1)(1-e^(-dL1))^2 P_ex j_f>_mu.     (2.6)
+
+At low energy the multiplier in (2.6) behaves as d^2/E. Thus
+replacing the factor (1-e^(-dE)) by its trivial upper bound1
+would obscure the correct low-energy inverse power. Formula
+(2.6), not an unweighted norm of j_f, is the exact consumer.
+
+These are configuration-space weighted Hodge formulas. Calling
+L1^-1 a spatial inverse Laplacian, or replacing its spectral
+variable by spatial momentum, would require a further theorem.
+
+3. WHICH GROUND-STATE TERM A SPATIAL COMPARISON MUST CONTROL
+
+The local Weitzenbock expression for (2.1) is
+
+ L1=kappa[weighted rough Laplacian
+                    +Ric-2 Hess(log Omega)].         (3.1)
+
+For the Pauli/2 metric on each SU2 factor, Ric=(1/2) times the
+metric. The weighted rough Laplacian contains the drift from
+mu; (3.1) is not an assertion that its displayed zeroth-order
+part is nonnegative pointwise. The complete operator is
+nonnegative by (2.1).
+
+The precise coefficient is the Hessian of the ACTUAL ground
+logarithm. It is not the Hessian of the bare Wilson action.
+The exact ground equation only gives the scalar trace relation
+
+ kappa[Delta log Omega+|d log Omega|^2]=vS-E0.          (3.2)
+
+Neither (3.2) nor the integrated Fisher estimate controls the
+matrix Hess(log Omega) as a quadratic form on the projected
+current. No such matrix estimate is imported here.
+
+There is a simple normalization check in the harmonic physical
+sector. Write U_e=exp(i theta_e.sigma/2) and remove the flat
+gauge modes. To quadratic order S=|d_sp theta|^2/8. If
+L_sp=d_sp^*d_sp on that sector, the harmonic Hamiltonian is
+
+ H_harm=(g^2/(2a))(-Delta_theta)
+                    +(1/(2g^2a))<theta,L_sp theta>.
+
+Its ground amplitude is proportional to
+
+ exp[-<theta,sqrt(L_sp)theta>/(2g^2)].
+
+Consequently -2 Hess log Omega_harm=2sqrt(L_sp)/g^2,
+and its multiplication by kappa is sqrt(L_sp)/a. The
+ground-state frequency is the square root of the spatial
+quadratic kernel. Substituting the bare kernel into (3.1)
+already gives the wrong operator in this elementary limit.
+This is an operator-dictionary check, not a nonlinear
+approximation theorem.
+
+A useful actual target can now be stated without an abstract
+measure change: estimate the exact-subspace kernel in (2.6),
+with the actual mu and its actual projection P_ex, on currents
+(1.4). Such a bound must account for the ground-state Hessian
+or otherwise control this same resolvent/semigroup. Pointwise
+Wilson curvature estimates alone do not perform that step.
+
+4. AN ACTUAL SEPARATED-TIME HIGH-ENERGY ESTIMATE
+
+The previous current calculation and the actual ground action
+bound give, on the cubic lattice,
+
+ B_r:=D(r_f)
+       <=(12/a^3) sum_(e,p incident)|f_p-eta_e|^2,
+ B_q:=D(q_f)
+       <=(48/a^3) sum_p f_p^2.                        (4.1)
+
+This uses E_mu h_p<=3g^2/4 and
+|d_e h_p|^2=(2h_p-h_p^2)/4<=h_p/2. Thus (4.1) is a
+bound for the actual ground law, independent of any unproved
+small-field conditional estimate.
+
+For any centered F with D(F)<=B_F let rho_F be its positive
+spectral measure for L. Then int E rho_F(dE)<=B_F. For Lambda>0,
+
+ C_F^(>Lambda)(t)
+ :=int_(E>Lambda) e^(-tE)rho_F(dE)
+ <=B_F e^(-tLambda)/Lambda,                          (4.2)
+
+ R_F^(>Lambda)(t,d)
+ :=int_(E>Lambda)e^(-2tE)
+                 [(1-e^(-dE))/E]^2rho_F(dE)
+ <=B_F e^(-2tLambda)/Lambda^3.                        (4.3)
+
+Both inequalities follow by factoring E rho_F and taking the
+supremum of the remaining decreasing positive multiplier.
+They require neither a spectral gap nor a Gaussian comparison.
+
+For fixed smooth physical profiles and fixed physical spatial
+support, (4.1) gives B_q=O(a^-6) and B_r=O(a^-4).
+Fix a reference length a0 and t,d>0. For any p>6, choose
+
+ Lambda_a=(p/(2t)) log(a0/a),  0<a<a0.                (4.4)
+
+Then (4.3) tends to zero for BOTH q_f and r_f. The magnetic
+bound is O(a^(p-6)/log(a0/a)^3), up to constants with the
+fixed dimensions restored; the current bound is stronger.
+For the covariance (4.2), the choice
+Lambda_a=(p/t)log(a0/a), p>6, has the analogous property.
+
+This is a genuine removal of the large-energy contribution
+at positive physical separation. It does not bound the
+remaining band 0<E<=Lambda_a, whose upper endpoint still
+grows as a decreases. In particular,
+
+ kappa v^2
+ <Pj_f,1_(0,Lambda_a](L1)
+ L1^-3 e^(-2tL1)(1-e^(-dL1))^2Pj_f>_mu              (4.5)
+
+remains uncontrolled by (4.1). No uniform upper bound, lower
+bound, or smallness of (4.5) is claimed.
+
+For a local log-coupling source, the derivative vector is
+b_f=2q_f-r_f. By the Hilbert norm represented by (2.5),
+
+ |sqrt(R_(b_f))-2sqrt(R_(q_f))|<=sqrt(R_(r_f)).        (4.6)
+
+The ultraviolet tail of the error in (4.6) is now controlled.
+Its low-energy part cannot be discarded. Global f=1 has
+j_f=r_f=0 exactly and is the special case in which the
+magnetic factor8 source identity needs no correction.
+
+5. AN EXACT FORCE WARD ESTIMATE AND ITS PHYSICAL PROJECTION
+
+There is another actual dynamical identity worth testing
+before interpreting a force estimate as a scalar witness.
+Let w_e be deterministic Lie-algebra vectors and set
+
+ D_w=sum_e w_e.d_e^L.
+
+This is a skew-adjoint derivation for product Haar. Since each
+link Laplacian is a bi-invariant Casimir,
+
+ [K,D_w]=0,
+ A D_w Omega=[H,D_w]Omega=-(D_w V)Omega,
+ V=vS.                                               (5.1)
+
+Both D_w Omega and (D_w V)Omega are orthogonal to Omega.
+The existing actual local kinetic budget and independent
+site-gauge averaging give
+
+ ||D_w Omega||^2 <=18 g^-2 sum_e |w_e|^2.              (5.2)
+
+For clarity, the score is -2D_w Omega/Omega; its square
+expectation is at most72g^-2 sum|w|^2. Cross terms at
+different initial vertices vanish by adjoint averaging.
+The three outgoing links at one vertex are handled by
+Cauchy--Schwarz. These are the same exact estimates as
+TURN67, now used in the ground equation.
+
+Using max_(E>=0) E^2 exp(-tE)=4/(exp(2)t^2), (5.1)
+and (5.2) prove, for every t>0,
+
+ <(D_w V)Omega,e^(-tA)(D_w V)Omega>
+ <=[72/(exp(2)t^2 g^2)] sum_e |w_e|^2.               (5.3)
+
+There is also the exact force sum rule
+
+ <D_w Omega,A D_w Omega>
+                 =(1/2)E_mu D_w^2 V>=0.              (5.4)
+
+Indeed Haar integration by parts gives
+E D_w^2V=-2<D_w Omega,(D_wV)Omega>, and (5.1)
+then proves (5.4). For a nondegenerate plaquette,
+|D_w^2h_p|<=(sum_(e in p)|w_e|)^2/4
+          <=sum_(e in p)|w_e|^2.
+Four plaquettes meet a spatial edge, so (5.4) is also at most
+2v sum|w_e|^2=8(g^2a)^-1 sum|w_e|^2. The favorable
+t-dependent bound (5.3) uses the score norm, not this
+more divergent first-moment bound.
+
+However, if P_G is normalized local gauge averaging,
+
+                    P_G D_w Omega=0.                 (5.5)
+
+Each left derivative of Omega transforms in the adjoint
+representation at the initial vertex; the fixed numerical
+coefficient w_e supplies no compensating transforming
+factor. Haar adjoint averaging is zero. As A commutes with
+P_G, (5.1) implies
+
+                   P_G (D_wV)Omega=0.                (5.6)
+
+Thus (5.3) is a charged-sector estimate. Its physical
+Gauss-projected correlation is identically zero. Summing
+color indices in an unprojected two-point function does
+not turn the single-time insertion into a physical
+operator. A compensating transport or an equivariant
+field-dependent coefficient would change the insertion.
+
+For a smooth field-dependent equivariant vector field W,
+the exact replacement for (5.1) is
+
+ A W Omega=kappa[K,W]Omega-(WV)Omega.                 (5.7)
+
+In general [K,W] is nonzero; it contains derivatives of W
+and terms acting on Omega. It cannot be removed by gauge
+invariance. The physical current in Sections1--4 is an
+example where actual integration by parts handles such
+structure, but leaves the projected inverse-energy norm.
+We have not bounded the corresponding term in (5.7)
+uniformly for a physical coarse displacement.
+
+6. WHAT IS AND IS NOT CLOSED
+
+The analysis has used the actual spatial Hamiltonian in
+two distinct ways: a commutator produces the exact local
+current (1.5), and the weighted Hodge intertwining gives
+the precise separated-time representation (2.6). The
+proved actual first spectral moments then remove an
+explicit high-energy band. No additional concentration
+axiom was substituted.
+
+The outstanding regular-channel question is now:
+control the projected actual current resolvent (4.5),
+and obtain a nonzero separated magnetic spectral mass
+on a fixed physical energy range. The available action
+MGFs, Fisher estimate, and scalar ground equation do
+not provide the required matrix or resolvent estimate.
+No impossibility for the actual SU2 ground state is
+asserted; only the proposed shortcuts in Sections3
+and5 are excluded by their exact operator identities.
+
+In particular, this note does not complete the full-law
+separated-source estimate, the continuum calibration
+of the spatial-flow observable, or the YM4 existence
+proof. The high-energy removal is compatible with,
+but does not prove, a nonzero low-energy limit.
+
+7. PRIMARY CONTEXT AND RETAINED INPUTS
+
+The general weighted one-form covariance method is described in
+Jon Johnsen, "On the spectral properties of Witten-Laplacians,
+their range projections and Brascamp--Lieb's inequality",
+Integral Equations and Operator Theory36(2000),288--324;
+author's arXiv version:
+https://arxiv.org/pdf/1703.10011
+See equations(1.2), (1.3), (1.7)--(1.14). Its range-projection
+and inverse-operator qualifications matter. Here Sections1--2
+derive the needed compact-manifold identities directly; the
+paper is not imported as a uniform YM estimate.
+
+Actual project inputs:
+ - hamiltonian_energy_turn66.txt: ground-state energy and
+   local electric/magnetic budgets.
+ - physical_variance_uncertainty_turn67.txt: actual deterministic
+   shift score, gauge cancellation and the limitations of the
+   energy budget for a physical variance floor.
+ - hamiltonian_source_control_turn68.txt: local source/current
+   identity, its exact constants and the local electric term.
+ - hamiltonian_spacetime_moments_turn68.txt: actual positive
+   source moments, retained separately from this dynamical step.
+
+No earlier conditional native activity admission, isotropic
+Wilson thin-loop estimate, or Gaussian calibration is used to
+replace a statement about the actual Hamiltonian ground law.

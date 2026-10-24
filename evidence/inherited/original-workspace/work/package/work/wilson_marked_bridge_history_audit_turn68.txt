@@ -1,0 +1,157 @@
+INDEPENDENT AUDIT: ORIGINAL WILSON MARKED-BRIDGE ATTACHMENT -- TURN68
+20 October 2026. history47.
+
+Reviewed work/wilson_marked_bridge_attachment_turn68.txt, Sections1--7,
+including the added Section6A.
+Final producer SHA256:
+9DA411C81CB399488013C215975A21695F833E0782998A545F49C24BFE76BEE9
+
+Verdict: PASS. The explicit time-profile regularity used for literal
+left-sampled convergence is now stated at the start of Section3.
+
+1. THE ACTUAL SOURCE LAWS AND ORDER OF LIMITS
+
+The temporal Wilson coefficients are correct:
+ beta_time=4a/(g^2 delta), beta_space=4delta/(g^2a).
+At each fixed spatial regulator, the additive-source theorem applies
+to the actual gauge-invariant magnetic path observables and retains
+the original finite Wilson trace denominator.
+
+The Hamiltonian moment bound was proved using the full thermal
+product-group trace. Its ground state equals the physical ground
+state. Gauge-invariant multiplication words and their ground
+semigroups therefore agree with the physical-sector ground words
+obtained from original Wilson transfer matrices. No equality of
+finite-temperature gauge-coordinate path laws is required.
+
+The proof first fixes the spatial lattice. It then makes the
+temporal mesh small and chooses a large finite time period. No
+uniform temporal convergence rate, nor an interchange with the
+spatial continuum limit, is asserted.
+
+2. ONE GENERIC THRESHOLD
+
+There are countably many chosen spatial regulators and countably
+many cells at each regulator. Each limiting action variable has
+at most countably many atoms. Their union is countable, so one
+R in (R0,R0+1), R0>c+log D, can avoid them all.
+
+Every finite Boolean threshold event then has boundary contained
+in finitely many sets {X_c=R}, of limiting probability zero.
+No atomlessness or uniform small-interval estimate is needed.
+In particular no condition is imposed on intermediate Wilson
+mesh laws at the threshold.
+
+3. COMPACT-SUPPORT MOMENT ARGUMENT
+
+At fixed a, the vector of all action cells in Lambda_a and the two
+source integrals has a deterministic compact bound independent
+of sufficiently fine delta and of the original period.
+
+For delta_m=a/m, choose N_m an even multiple of m approximating
+all mixed moments of total degree at most m of the corresponding
+ground chain, with error tending to zero. This is a finite list
+at each m. Ground dominance of the finite transfer trace permits
+this choice along the multiples, and permits any further lower
+bound on N_m delta_m.
+
+For every fixed polynomial degree, the ground-chain moments tend
+to the Hamiltonian moments as delta_m tends to zero. Thus the
+final finite-period vectors have all polynomial moments converging.
+Polynomial density on the common compact box proves weak
+convergence. One does not need a rate for moment order increasing
+with m.
+
+For a bounded continuous weight times either finite event indicator,
+the discontinuity set has limiting measure zero, so expectations
+converge. The actual Wilson source means also converge. Replacing
+limiting source means by these original finite-period means changes
+the centered absolute product uniformly on the compact box.
+This justifies (5.1), including its source-weighted form.
+
+The literal left-sampling argument needs the stated continuous or
+bounded piecewise-continuous temporal profiles. Arbitrary bounded
+measurable profiles need a different approximation prescription,
+such as cell averages; they must not be silently covered by a
+Riemann-sum assertion.
+
+4. FINITE-WINDOW ESCAPE REDUCTION
+
+Lambda_a contains the complete spatial board and one finite
+interval of time cells. It is embedded as a proper arc of the
+periodic time board, with distinct boundary and outer neighboring
+layers. Thus it has no spatial exit.
+
+A finite whole-period bad path from A+ to A- either stays in
+Lambda_a or has a first exit. Before that exit it is a path
+inside Lambda_a ending in its inner temporal boundary layer.
+Touching adjacency changes the time-cell index by at most one,
+so it cannot skip that layer.
+
+This proves the exact pointwise inclusion (6.1). It handles all
+long detours around the time circle using only finite-window
+events. There is no attempt to apply portmanteau directly to a
+growing whole-period event.
+
+5. MARKS, COUNTS AND SCALING
+
+The centered source decomposition costs N+ N- distinct marked
+cell pairs. For the in-slab event, summing over possible path
+endpoints adds N+ N-, giving N+^2 N-^2.
+
+For escape, path endpoints belong to A+ and B_a, giving the
+factor N+^2 N- N_B. The marked-path theorem explicitly permits
+source marks not lying on the witness path, which is essential.
+
+At fixed physical spatial volume, the respective counts are
+O(a^-16) and O(a^-15). The positive support separation and time
+buffer give graph distances at least d0/a and b0/a. Hence both
+are dominated by exp(-k/a) when Dq<1. The producer correctly
+retains N_B when physical spatial volume is allowed to grow.
+
+The transfer error can be chosen below any prescribed epsilon_a
+at each a. The conditions delta_a<=a^2, an even full period of
+whole a-cells, and a diverging physical period are compatible
+with the same approximation. They require no uniform rate.
+
+6. SCOPE
+
+The conclusion concerns the literal original anisotropic finite
+Wilson measures on a chosen temporal diagonal, all paths on
+their entire time circles, and source means in those same laws.
+It is stronger than an event estimate only in the limiting
+Hamiltonian process.
+
+It does not hold here uniformly over arbitrary anisotropies and
+does not attach the isotropic native RG expansion to this family.
+The event controls time-averaged magnetic action cells, not
+pointwise electric curvature or complete native history decisions.
+The regular/no-bridge covariance remains uncontrolled.
+
+7. ADAPTIVE BUFFER EXTENSION
+
+Section6A is also valid. The number of boundary cells is twice
+the number of spatial tiles, independent of the observation slab
+duration. Choose an integer buffer at least
+
+ d0/a+log(max(1,N_B))/|log eta|,   eta=Dq<1.
+
+Then N_B eta^buffer<=eta^(d0/a). The exit prefactor reduces
+to N+^2 N-, which is O(a^-12) for the fixed compact source
+supports. The inside count remains O(a^-16).
+
+At each spatial regulator the enlarged slab remains finite.
+The threshold choice already avoided atoms at EVERY time cell,
+so it remains applicable even though the enlarged slab depends
+on R and on the spatial volume. The finite-vector approximation
+can be chosen afterward with an arbitrarily large time period.
+
+Hence the selectable-diagonal conclusion extends to arbitrary
+finite spatial volume sequences that retain the stated compact
+source count and separation. It does not become a uniform
+prescribed-period estimate or a construction of a compatible
+infinite-volume law. Those restrictions are explicit.
+
+All requested clarifications are verified in the final hash.
+No further mathematical or scope correction is requested.
+Audit frozen.

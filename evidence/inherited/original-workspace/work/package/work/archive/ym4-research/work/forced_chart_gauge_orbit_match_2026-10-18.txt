@@ -1,0 +1,395 @@
+FORCED CHART: EXACT GAUGE CURVES AND PHYSICAL CURRENT MATCHING
+18 October 2026. Working proof for independent audit.
+
+Scope. This is a real-endpoint argument on ONE eligible determining hierarchy.
+The scalar and bond primitive operators, uniform analytic averaging estimates,
+and true-pair Ward reduction are the explicit package of Raw I4.5. No nearby
+nonlinear minimizer is assumed. Eligibility of later mixed hierarchies is a
+separate question. In particular this proof does not supply an absent geometry
+theorem. The nonlinear mean/axialization dictionary in Section 2 is the point
+that must be checked against the exact averaging convention being consumed.
+
+1. NOTATION, PRIMITIVE INPUTS, AND STATEMENT
+
+Use d for the covariant SITE-to-bond derivative at the fixed real carrier W,
+and d* for its adjoint. This distinguishes the gauge derivative from the
+bond-to-plaquette derivative in the physical current. Put
+
+ Delta_s=d*d, G'=(Delta_s+Q'^* a' Q')^-1,
+ T=Q'G'^2Q'^*, C=T^-1,
+ R=I-G'Q'^* C Q'G', S=G'^2Q'^* C.                    (1)
+
+All pairings and adjoints use the source lattice measures; scale multipliers
+are included in a'. These are the scalar primitives in Raw I13545ff and the
+explicit formulas I23930--23962, quoting CMP99b(3.18)--(3.25). At a real W,
+G' is self-adjoint and R is an orthogonal projection. Elementary algebra gives
+
+ Q'G'R=0, R G'Q'^*=0, Q'S=I,
+ R Delta_s G'R=R, R Delta_s S=-R Q'^* a'.             (2)
+
+The last identity is important: no second derivative estimate for S is needed.
+
+The scalar weak norm is
+
+ ||lambda||_g = |lambda|_(0)+|nabla_W lambda|_(-1),
+
+and the source norm for a scalar u is |u|_(-2). The actual primitive kernel
+bounds, composed in the same weighted kernel algebra, give constants K_G,K_S,
+K_Q,K_R, independent of depth and volume, such that
+
+ ||G'R u||_g <= K_G |u|_(-2),
+ ||S v||_g <= K_S |v|_coarse,
+ |R Q'^*a'v|_(-2) <= K_Q |v|_coarse,
+ |R u|_(-2) <= K_R |u|_(-2).                         (3)
+
+Here |v|_coarse is the supremum of the dimensionless scalar datum over the
+determining sites. The S bound uses the EXISTING scalar inverse-block kernel
+C=(Q'G'^2Q'^*)^-1, not the bond inverse q_0. It follows by composing its order
+-4 kernel with G'^2Q'^*, of order +4, and differentiating the left G' once.
+This is one explicit place where that scalar primitive belongs to the input.
+
+Let J=Jphys(W) be small in the actual source current norm. The true-pair
+reduction Raw I15541--15674 gives H^J=H and
+
+ R d*H=0, L(P)=P-H D(P),
+ Sphys(exp(i eta L(P))W)
+   =Sphys(W)+<J,P>+1/2<P,(Delta-Theta)P>+V(P).       (4)
+
+L is the averaging linearization of I13982--14084. It is locally invertible
+on a fixed smaller field ball because L'=I-H D'(P)=I+O(N(P)). Its exact identity is
+
+ Q_j(W;eta L(P))=ell_j Q_j P                         (5)
+
+on every determining layer. The nonlinear Q_j on the left is the source's
+adjusted average, not an ordinary average silently substituted for it.
+
+Consider the forced fixed point of forced_global_chart_2026-10-18.txt with
+real b and real forcing f satisfying
+
+ f-J in range Q*.                                   (6)
+
+At sigma=1, the claim is that this fixed point P satisfies
+
+ R d*P=0, R d*L(P)=0,
+
+and is a constrained critical point of the actual action (4). Consequently
+its bounded current companion is the actual physical current increment.
+The assertion is uniform for sufficiently small |b|+|f|, with ceilings fixed
+by the primitive constants. Equality extends to complex b by holomorphy.
+
+2. EXACT CONSTRAINT-PRESERVING GAUGE CURVES
+
+The nonlinear constraint is dealt with before using a linearized gauge
+identity. Mean-one gauge functions are not assumed to form a subgroup.
+
+Let A=L(P), and let v_A be the mean-normalized hierarchical axial normalizer
+used to define Q_j(W;eta A). The exact source definitions are CMP98(58)--(63),
+(77)--(81), and (88)--(92), reproduced in Raw I24239--24380. At one level, with
+R_x=Ad W(Gamma_yx), the normalization operation is
+
+ m_W(v)(y)=v(y) exp[ sum_x w_x log(v(y)^-1 R_x v(x)) ],
+ sum_x w_x=1.                                      (7)
+
+The weights are the normalized block counting weights. Higher means are
+composed with the source averaged backgrounds, exactly as CMP98(78)--(80).
+Write N_W(v) for the collection of these means on the determining layers.
+The zeroth mean is v itself on the raw layer. Thus N_W(v_A)=1.
+
+The recursive construction is literal: at one stage the tree equations give
+R_x v(x)=v(y)(R_{W,y}V_1)(Gamma_yx); the mean-one equation fixes v(y) by (62).
+At the next stage lift the coarse gauge k covariantly constantly down each
+previous block. This lift has R_x k_lift(x)=k(y), and (7) gives exactly
+m_W(k_lift v)=k m_W(v). Hence the successive normalized axializations compose
+to a global v_A with the stated higher mean conditions. This uses the source
+tree lifts, not an assertion that the mean operation is a homomorphism.
+
+For a small site field lambda define
+
+ n_A(lambda)=(1/i) log N_W(v_A exp(-i lambda)).       (8)
+
+This is a finite-dimensional real analytic map near zero, and n_A(0)=0.
+Its logarithms are the same near-identity branches as the source averages.
+If n_A(lambda)=0 and u=exp(i lambda), then v_A u^-1 is an admissible normalized
+axializer of (exp(i eta A)W)^u, because
+
+ ((exp(i eta A)W)^u)^(v_A u^-1)
+                  =(exp(i eta A)W)^(v_A).           (9)
+
+The right member is precisely the same hierarchical axial representative.
+Uniqueness of the small normalized axializer, which follows directly from
+the recursive formulas (60)--(63),(86)--(87), identifies the normalizer on
+the left. Therefore ALL adjusted averages in (5) are unchanged. If A(lambda)
+is the local logarithm of the gauge transformed field relative to W, then
+
+ P(lambda)=L^-1(A(lambda)),   QP(lambda)=QP.          (10)
+
+The scalar functions in (8) are fixed to one on the Dirichlet exterior.
+On the raw layer, (8) forces u=1. These conditions preserve the source boundary
+data. No ordinary/adjusted averaging substitution has occurred.
+
+3. UNIFORM FIRST DERIVATIVE OF THE NORMALIZATION MAP
+
+Put K_A=-Dn_A(0). Then
+
+ K_0=Q',   |(K_A-Q')lambda|_coarse
+                 <= K_m N(A)|lambda|_(0).           (11)
+
+Here is the explicit estimate behind the second assertion, including its
+depth dependence. For one mean in (7), write
+
+ X_x=log[v(y)^-1 R_x v(x)], Z=sum_x w_x X_x,
+ J_r(X)=(1-exp(-ad_X))/ad_X.
+
+For the right variation v(x,t)=v(x) exp(t zeta(x)), its right logarithmic
+derivative at the output is exactly
+
+ Ad(exp(-Z)) zeta(y)
+ + J_r(Z) sum_x w_x J_r(X_x)^-1
+       [ R_x zeta(x)-Ad(exp(-X_x))zeta(y) ].         (12)
+
+At X_x=0 this is sum_x w_x R_x zeta(x). On a fixed small logarithm ball,
+J_r, its inverse, and Ad exp are analytic with uniformly bounded derivatives.
+Subtracting their values at zero in (12) therefore gives operator row-sum
+error at most C max_x|X_x|, measured from site sup norm to output norm.
+The bound does not count the number of sites in the block, since sum w_x=1.
+
+The identification of the increments at a general W needs care. Here is the
+exact recursion, with W held fixed. Put W_p=ordinary-average^p(W), V_0=exp(i eta A),
+and let V_{p+1} be the ADJUSTED one-step average of V_p relative to W_p, namely
+CMP98(63),(89)--(91), reproduced at Raw I24282--24355. Let s_p be the mean-one
+tree axializer of V_p W_p relative to W_p. Equation (60) says
+
+ s_p(y)^-1 Ad W_p(Gamma_yx) s_p(x)
+                   =(R_{W_p,y}V_p)(Gamma_yx).       (12a)
+
+Write v^(p) for the first p successive means of the full fine-lattice
+normalizer v_A, with v^(0)=v_A. Recursive axialization and the covariantly
+constant tree lift give v^(p)=k_lift s_p, where k is the normalizer still to be
+performed on the next lattice. Indeed m_{W_p}(k_lift s_p)=k, since m_{W_p}(s_p)=1.
+As Ad W_p(Gamma_yx) k_lift(x)=k(y), the k factors cancel EXACTLY in
+v^(p)(y)^-1 Ad W_p(Gamma_yx) v^(p)(x). Thus the X_x at stage p in the derivative
+of the composed mean is precisely the logarithm of (12a). No background
+Wilson loop occurs alone in this expression. In particular V_p=1, s_p=1 and
+X_x=0 at A=0, for every eligible W, even when W has nonzero curvature.
+
+The required generic-background amplitude estimate is explicitly recorded
+in Raw I16539--16555 and I17677--17687, invoking CMP98 Proposition 6 and
+(159),(161),(163),(164). The latter passage applies to exp(i eta A')U with
+U G-valued, not just to U=1. In units in which this determining n-block has
+side one, let r_p=ell_p/ell_n and a=ell_n sup|A|. The cited level estimates
+give a stage-p relative logarithm O(a r_p). The intermediate conjugating
+factors from (159) obey, by (163), O(a sum_{q<p} L r_q)=O(a r_p), so passing
+between the ordinary relative form and the adjusted form in (92) preserves
+this bound. All background conjugations are isometries because W is real.
+The estimates are local on the blocks and contours read by these operations;
+the eligible determining family supplies those blocks and their collars.
+
+For additional clarity about relative products, if an averaged bond is
+U_p(c)=exp(i B_p(c)) W_p(c), then along an oriented contour Gamma,
+
+ U_p(Gamma) W_p(Gamma)^-1
+    =product_{c in Gamma} exp(i Ad W_p(Gamma_before_c) B_p(c)),
+
+with the corresponding transported negative logarithm on a reversed bond.
+Its logarithm is bounded by C sum_c |B_p(c)| on the common small ball. The
+unitary W_p factors cancel in this exact product; a term depending only on
+the curvature or holonomy of W cannot survive. The adjusted contour (12a)
+is the same relative-product construction with V_p in place of exp(i B_p).
+
+The contour at stage p has at most dL stage-p bonds. Consequently
+
+ max |X_x^(p)| <= C N(A) L ell_p/ell_n,  0<=p<n.    (13)
+
+Indeed the whole nested contour lies in that determining block, on which
+|A| <= C N(A)/ell_n; the preceding generic-background estimate reads
+|log V_p| <= C ell_p sup|A|.
+For the original compatible nested hierarchy, B^n(y) is contained in Omega_n;
+points belonging to a still coarser layer have an even stronger field bound.
+Thus this supremum estimate does not assume the block avoids coarser layers.
+The fixed C allows the adjacent-scale comparison at a declared boundary
+collar. Raw I17792--17825 gives the base-1 version of this geometric contour
+argument; it is NOT the citation for its generic-W averaging input. That
+input is the explicitly generic statement at I17677--17687 just identified.
+Eligibility requires these contours and their collars to belong to the
+declared determining family; it is not supplied by (13).
+
+Compose (12) over the n stages. Each unperturbed stage is a normalized
+average of isometries, of norm at most one. If eps_p is the right member
+of (13), the product differs from the unperturbed product by at most
+
+ exp(C sum_p eps_p)-1 <= C' N(A),
+
+because sum_{p<n} L ell_p/ell_n <= L/(L-1). The unperturbed product is
+precisely the source Q'_n, with the nested background transports in
+CMP99b(3.18)--(3.19), reproduced at Raw I23906--23922. This proves (11).
+It does NOT replace a product of n equal O(N(A)) errors by a constant: the
+geometrically shrinking contour lengths in (13) are the needed mechanism.
+
+Only this derivative has a uniform estimate. For the argument below, local
+existence of each gauge curve is finite-dimensional. No depth-uniform radius
+for an arbitrary nonlinear gauge-mean ball is needed or asserted.
+
+4. CORRECTION OF THE GAUGE TANGENT AND EXACT LOCAL CURVES
+
+Let u be any real site field in range R, and put lambda_0=G'u. Then Q'lambda_0=0.
+By (3),(11),
+
+ ||K_A S-I|| <= K_m K_S N(A).
+
+If K_m K_S N(A)<=1/2, K_AS is invertible, with inverse norm at most two. Apply
+the finite-dimensional analytic implicit-function theorem to
+
+ n_A(t lambda_0+S alpha(t))=0,  alpha(0)=0.           (14)
+
+Its derivative in alpha is -K_AS. Hence an exact local real analytic curve
+exists. Its tangent is lambda_u=lambda_0+S alpha_u, where
+
+ alpha_u=-(K_AS)^-1 K_A lambda_0,
+ |alpha_u|_coarse <= 2K_m K_G N(A)|u|_(-2),
+ ||lambda_u||_g <= K_G(1+2K_S K_m N(A))|u|_(-2).     (15)
+
+The identities (9)--(10) apply to this exact curve. Its parameter interval
+may depend on the finite regulator and u. This causes no loss in stationary
+variation: a derivative at zero is all that will be used. In particular no
+uniform bound for every mixed second derivative of G'u is being presumed.
+
+5. THE GAUGE-FIXING DERIVATIVE IS ONTO
+
+The exact infinitesimal gauge variation of the bond potential is obtained
+by differentiating
+
+ exp(i eta A(t)(b))
+ =exp(i lambda(t)(b_-)) exp(i eta A(b))
+                         exp(-i Ad W(b) lambda(t)(b_+)).
+
+It has the form
+
+ dot A=-d lambda_u+C_A lambda_u,                    (16)
+
+where C_0=0 and the convergent BCH derivative gives
+
+ |d* C_A lambda|_(-2) <= K_c N(A)||lambda||_g.        (17)
+
+For clarity, C_A lambda is a local analytic function of eta A and the two
+endpoint values of lambda, divided by eta, whose value at A=0 vanishes.
+Every term therefore has at least one A and one lambda, with no negative
+power of eta. Taking the covariant divergence differences one of those
+factors. The resulting terms contain only A,nabla A,lambda,nabla lambda;
+their scaled orders are respectively -1,-2,0,-1. Summing the absolutely
+convergent derivative series on a smaller fixed logarithm ball proves (17).
+No second derivative of A or lambda occurs in this remainder.
+
+By (4), R d*L(P)=R d*P identically in P, so along the exact curve (10),
+
+ d/dt [R d*P(t)] at zero =R d*dot A.
+
+Use (2), (15)--(17) to obtain
+
+ R d*dot A=-u+R Q'^*a' alpha_u+R d*C_A lambda_u
+          =(-I+E_A)u,                              (18)
+
+with
+
+ ||E_A||_{range R,(-2)->range R,(-2)}
+ <= [2K_Q K_m K_G
+      +K_R K_c K_G(1+2K_S K_m N(A))] N(A).          (19)
+
+All output terms lie in range R. Choose the field ceiling so that the right
+side of (19) is at most 1/2, in addition to the ceiling before (14). Then (18)
+is onto range R, and its inverse has norm at most two. Equivalently
+
+ |R d*dot A|_(-2) >= (1/2)|u|_(-2).                 (20)
+
+This is the required uniform co-norm estimate. The only apparent second-order
+term in the correction has been evaluated by the exact identity R Delta_s S
+in (2), rather than estimated by an unsupported scalar Hessian bound.
+
+6. THE FORCED FIXED POINT IS PHYSICAL
+
+The forced fixed-point equation gives, for every delta P with Q delta P=0,
+
+ <delta P, f+(Delta_a-Theta)P+V'(P)>=0.              (21)
+
+The Q*aQ term vanishes against these variations, and f-J=Q*z contributes
+<Q delta P,z>=0. Equations (4),(21) thus say that P is stationary, on QP fixed,
+for the genuine finite-dimensional functional
+
+ Sphys(exp(i eta L(P))W)+1/2 <P,d R d*P>.
+
+For the exact gauge curves of Sections 2--4 the physical action is constant,
+by ordinary gauge invariance with the preserved boundary data. Since R is
+an orthogonal projection at real W, stationarity gives
+
+ <R d*P, R d*dot P>=0                              (22)
+
+for every u in range R. By (18)--(20), the second entry ranges over all of
+range R. Taking it equal to R d*P shows R d*P=0. By (4), R d*L(P)=0 too.
+Returning to (21) removes the gauge-fixing term and proves criticality of the
+actual constrained action. No prior critical point or minimizing configuration
+has entered the proof.
+
+The exact defect formula (4.4) in forced_global_chart_2026-10-18.txt is
+
+ K_f-[D_W*D_W L(P)+F(W,L(P))]
+ =d R d*L(P)+k_J(Lambda H D(P))
+                        +Lambda^T m_J(Lambda H D(P)),
+
+where Lambda=G'R d* and D_W in this display is the bond-to-plaquette derivative.
+Both terms vanish: R d*L(P)=0 and R d*H=0. Thus
+
+ J+K_f=Jphys(exp(i eta L(P))W).                     (23)
+
+All terms are holomorphic in b on the common small complex data ball. They
+agree for real b in a real open ball, hence (23) holds for complex b as well.
+The same reasoning covers a holomorphic forcing representative f=J+Q*z(b).
+At sigma=1 both the chart and current depend only on f modulo range Q*, since
+GQ*=0 and P0^TQ*=0. At complex sigma that annihilation is not asserted; the
+chosen representative defines the analytic extension actually used.
+
+An equivalent and directly usable forcing criterion is
+
+ T0(f-J)=0,  T0=P0G0,                              (24)
+
+because Delta_a T0=P0^T and ker(P0^T)=range Q*. Conversely T0Q*=0.
+Thus no explicit multiplier z has to be reconstructed. Equality (24) makes
+both Gf=GJ and P0^Tf=P0^TJ, and therefore the forced field and the substituted
+current agree exactly with their full-current counterparts at sigma=1.
+
+For the actual source cut, CMP122-II pp370--371, (1.54)--(1.55), states the
+equality of the constrained Green operator applied to the original current
+and to its cut representative (the bracket defining calJ3). When that source
+operator is identified with this layer's T0, its published identity is exactly
+(24), so this proof needs only the cut representative. The operator/determining-
+family identification must be literal. The primary PDF is
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf.
+The parent agent reopened that passage; its OCR is partly corrupt, and this
+note does not claim a new visual verification of the full displayed bracket.
+
+7. EXACT DEPENDENCY AND LIMITS
+
+The new argument is gauge-orbit stationarity plus the explicit onto estimate
+(19). It needs the already identified scalar inverse-block primitive C, its
+weak kernel bounds, the uniform regular-background averaging bound used in
+(13), the exact normalized axializer/adjusted-average dictionary, and the
+true-pair identity R d*H=0. It does not need an existing nonlinear minimizer,
+a graph norm for the forced field, or a uniform second derivative of G'u.
+
+The source dictionary in Sections 2--3 is stated explicitly so it can be
+audited. If a consumer uses a DIFFERENT block map or a different gauge
+normalization from CMP98(58)--(92), (9) alone is not enough: equality of its
+actual data must be checked. The theorem applies to the adjusted Q_j of
+Raw I13999--14003, for which that axialization is its definition.
+
+For general determining families, the required nested contour/collar and
+primitive-operator eligibility remain external geometry premises. Establishing
+them is not an algebraic consequence of this physical matching argument.
+
+Primary sources: Ba\l{}aban, Averaging operations for lattice gauge theories,
+CMP98 (1985),17--51, DOI10.1007/BF01211042; Propagators for lattice gauge
+theories in a background field, CMP99 (1985),389--434, DOI10.1007/BF01240355;
+The variational problem and background fields in renormalization group method
+for lattice gauge theories, CMP102 (1985),277--309, DOI10.1007/BF01229381.
+The exact displayed formulas used here were read in the pinned Raw I
+reproduction at the line ranges identified above. Original CMP102 publisher
+PDF requests returned a subscription preview, and the local file named
+cmp102b_original.pdf is HTML; no original-page inspection is claimed.

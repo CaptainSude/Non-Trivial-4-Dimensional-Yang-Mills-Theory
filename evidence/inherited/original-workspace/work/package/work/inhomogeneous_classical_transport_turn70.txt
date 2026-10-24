@@ -1,0 +1,301 @@
+DIRECT CLASSICAL TRANSPORT OF INDIVIDUALLY INVARIANT CARRIERS
+TURN70. history47. 20 October 2026.
+
+STATUS
+
+This proves a fixed-domain direct-endpoint bound for a specified invariant
+carrier subclass, using the complete classical prefix theorem already
+recorded in the project. It does not identify that subclass with the
+near-minimal representatives of the quantum quotient. The output is an
+ordinary analytic carrier family with invariant TOTAL; individual output
+coefficients are not asserted invariant. Consequently this theorem alone
+does not close the quantum recursion.
+
+The separate scalar-source augmented Ward route being developed this turn
+may avoid this representative issue. Section 8 isolates its quadratic
+transport requirement; it is not silently imported into the theorem below.
+
+1. INPUTS AND PRECISE GAUGE SCOPE
+
+Use dimension four, a compact semisimple group, and compatible periodic
+lattices. The primitive ratio is fixed. The endpoint ratio L is an arbitrary
+admissible power, not a newly chosen primitive ratio. M denotes preceding
+depth. Old carriers H are connected sets of J-current cells, k=|H|.
+The final cells have side JL in old current units. Their projection has
+fiber L^4. Scalar link-angle domains have radius b.
+
+Each input E_H is holomorphic on its complete original link/read domain and
+bounded there by e_H. It is invariant under local gauge transformations
+along any path for which all those read links remain in that domain.
+The reads include every link needed for this invariance. Global color
+conjugations are included. This is the ordinary individually invariant
+carrier hypothesis, not invariance of the sum alone, and not invariance
+only under a smaller boundary-fixed subgroup that excludes the path used
+below. If a native typed carrier has only that smaller invariance, the
+theorem requires a separate identification of its allowed gauge paths.
+
+Normalize E_H by subtracting E_H(0). This costs at most two in norm; retain
+the vacuum sum separately. Write the normalized function again as E_H.
+The input bound is
+
+  sup_i sum_(H contains i) exp(a |H|) e_H <= epsilon.       (1.1)
+
+Global color invariance and semisimplicity imply DE_H(0)=0: the derivative
+at each link is an invariant linear functional on the Lie algebra.
+Thus every normalized E_H has a full first-order zero.
+
+The actual direct pre-gauge ordinary prefix a_(M,L)(w) supplies:
+
+ (P1) A(w)=L a_(M,L)(w) is bounded in complete physical C^(1,alpha)
+      norm by C_A b on each fixed final-unit collar.
+ (P2) It has a coherent strict support expansion in that complete norm,
+      with arbitrary prescribed finite cardinal reserve and a positive
+      spatial exponent, bounded by C_A b. The bound is taken before
+      counting output coordinates; C_A and its radius are independent
+      of M,L and compatible volume.
+ (P3) The complete total is the actual ordinary classical map. Equality
+      of its successive endpoint substitutions follows from the
+      classical semigroup theorem for gauge-invariant totals.
+
+These are the results of pregauge_holder_prefix_research §§3–4 and
+classical_background_semigroup_research. The construction below is an
+explicit new consumer of P1–P2. It does not replace their admitted
+ordinary-minimum/coherent-domain hypotheses by mere power counting.
+
+2. STATEMENT AND ONE-TIME PARAMETER CHOICES
+
+Fix a>0. Choose the classical cardinal reserve to pay the output exponent
+and one fixed rerooting exponent. Choose a sufficiently large fixed J and
+then b>0 below the complete-prefix radius and a fixed group chart radius.
+There are L0,C<infinity, independent of M,L and volume, such that for every
+admissible L>=L0 one can construct connected analytic output carriers with
+
+  sum_K (T_(M,L)E)_K(w_K) = sum_H E_H(a_(M,L)(w)|H),
+  ||T_(M,L)E||_(a,b) <= C epsilon.                         (2.1)
+
+The SAME a,b work for all endpoint powers L>=L0. In particular the radius
+is not reduced by a factor L at each successive endpoint.
+
+Here is a permissible order. First fix the target support/reroot reserves;
+obtain the constants in P2. Then choose J to convert the final-unit
+spatial exponent to the desired J-cell support weight. Choose a finite
+C0>4e C_A and a small c>0 with C C0 c<1/8 and C C0 c^2<1/8.
+Take b small enough that rho=C0 b stays inside a fixed complete-field
+holonomy chart and below the auxiliary bounds used in Section 3.
+Finally enlarge L0 for the compression and ordinary composition bounds
+in Section 5. All choices are independent of the eventual L.
+
+3. SMALL CARRIERS: ACTUAL PATHS AND THE L^-4 GAIN
+
+Call H small if J k<=c L. Lift it locally to the ordinary integer lattice.
+A connected J-cell set has diameter at most C J k. Choose a root and, by a
+spanning tree of its CELLS followed by fixed within-cell paths, paths P_v
+from the root to each read vertex. Their lengths are at most C J k.
+This does not use a fine-vertex spanning tree of length O(J^4 k).
+
+For any physical complete field A with ||A||_(C1)<rho, put U_e=exp(i A_e/L).
+The current plaquette holonomies obey
+
+  ||U_p-I|| <= C(rho+rho^2)/L^2.                          (3.1)
+
+This follows directly by multiplying four exponentials: first differences
+of A over current distance 1 are O(rho/L), while commutators contribute
+O(rho^2/L^2). All constants hold for complex fields on the stated ball.
+
+Let g_v be the ordered holonomy of P_v, in the convention that the
+transformed edge is g_u U_e g_v^-1. Each transformed read link is the
+holonomy of a based loop of length at most C J k. The loop is contractible
+in the chosen local lift. Commuting coordinate steps and cancelling inverse
+pairs expresses it as a product of at most C(Jk)^2 conjugated plaquettes.
+The conjugator lengths are O(Jk); all paths and plaquettes lie in a box of
+diameter O(Jk), hence in one fixed final-unit collar.
+
+For completeness, the product bound pays the norms of those conjugators
+by exp[C rho Jk/L] and the accumulated plaquette errors by
+exp[C rho (Jk/L)^2]. Both are uniformly bounded in this split. Therefore
+the logarithms z_e of all transformed read links satisfy
+
+  ||z||_infinity <= C rho (Jk)^2/L^2.                    (3.2)
+
+This is a retained-path estimate: the actual path and filling data have
+not been discarded just because the final endpoints are close.
+
+The holonomies g_v have logarithms B_v with
+||B_v||<=C rho Jk/L. Along g_v(t)=exp(t B_v), 0<=t<=1,
+the transformed read-link logarithms are at most C rho Jk/L.
+The choices in Section 2 keep the entire path inside the ORIGINAL b-ball.
+Thus the individual invariance of E_H licenses this gauge transformation.
+The same statement for complex A follows from local holomorphic gauge
+invariance, or by continuation from the open real field chart.
+
+Since E_H(0)=DE_H(0)=0, radial Schwarz on its original product ball gives
+|E_H(z)|<=e_H (||z||_infinity/b)^2. Hence the scalar Banach functional
+
+  F_H(A)=E_H(exp(i A/L)|H)
+
+is holomorphic for ||A||_(C1)<rho and has the stronger bound
+
+  ||F_H||_rho <= C e_H J^4 k^4/L^4.                     (3.3)
+
+The use of gauge invariance in proving (3.3) does not change F_H itself.
+In particular it is not a substitution of different gauges into an
+arbitrary null family. The estimate is for an individually invariant
+input coefficient.
+
+There is no factor D(J)k from expanding individual fine field coordinates:
+F_H is one scalar analytic functional of one COMPLETE local field.
+The loops fill O((Jk)^2) fine plaquettes, but their final physical collar
+has bounded diameter. Its read support is that collar, not a sum over
+independent fine output variables.
+
+4. SMALL-CARRIER SUPPORTED COMPOSITION AND REROOTING
+
+Expand F_H in complete-field homogeneous multilinear coefficients.
+Cauchy and polarization give the n-th coefficient bound
+
+  C e_H J^4 k^4/L^4 * (e/rho)^n.
+
+Substitute the strict complete-field family of A(w) from P2. Its weighted
+sum is at most C_A b. As e C_A b/rho=e C_A/C0<1/4, the supported series
+converges normally. Each union of supports is connected by the declared
+rooted trees and retains the original collar and every field read.
+
+Here are the fixed geometric weight costs. For a fixed collection of
+final-unit collars, the joined J-cell tree obeys the projection estimate
+
+  T_macro <= (2/J)[tau(collar roots)+sum tau(root union X)]
+               +4[n0+sum |X|].                         (4.1)
+
+The number n0 of collar roots needed here is fixed. Choose the unit
+spatial exponent so that 2(a+nu)/J is below it and the classical cardinal
+reserve at least 4(a+nu). Then exp(a|K|), as well as the rerooting
+factor exp[-nu dist(z,pi_L root(H))], is paid in the same series.
+Consequently the contribution of one small H at output root z is bounded
+by
+
+  C e_H J^4 k^4 L^-4
+                exp[-nu dist(z,pi_L root(H))].          (4.2)
+
+Choose one input-cell root for H. Sum (4.2), using (1.1) and
+sup_k k^4 exp(-a k)<infinity. There are L^4 old J-cell roots over one
+output J-cell, up to a harmless fixed boundary convention. The output
+root convolution is bounded by its infinite-lattice exponential sum.
+The L^4 root count cancels L^-4 exactly:
+
+  ||T E_small||_(a,b) <= C epsilon.                     (4.3)
+
+All constants may depend on the fixed J,a,nu and chart parameters.
+They do not depend on L,M or periodic volume.
+
+5. LARGE CARRIERS: A FIXED-RADIUS COMPOSITION BOUND
+
+For k>cL/J, the input tail has the weaker-exponent bound
+
+  ||E_large||_(a/2,b) <= exp[-a cL/(2J)] epsilon.        (5.1)
+
+Use the ordinary core/tail composition of
+high_jet_background_transport_research §§2–3 at lambda=1.
+Its domain condition is simply C_A b/L<b/8. The condition b<=r_A/Lstar
+in that note was used to obtain a LARGE auxiliary lambda-disc for a
+fifth-order Schwarz argument. That argument is not used here and imposes
+no L-dependent loss on b.
+
+More explicitly, the core halo K0(H) has
+|K0(H)|<=c0+c1(L)k with c1(L)=O(1/L).
+The supported tail divided by the fixed Cauchy margin b/2 has norm
+
+  t <= C J^4 L^-1 exp[-kappa0 ell_tail/2].
+
+The coordinate multiindex sum is exactly (1-t)^(-D(J) k).
+Choose one fixed ell_tail<=J and enlarge L0 until
+
+  (a+nu)c1(L)<=a/4,
+  D(J) log(1/(1-t))<=a/4
+
+for every L>=L0. Thus the incoming a/2 pays the output a and the full
+arity cost. The same fixed rerooting calculation gives
+
+  ||T E_large||_(a,b)
+      <= C L^4 exp[-a cL/(2J)] epsilon.                 (5.2)
+
+The right side is uniformly bounded in L>=L0. This proves (2.1) together
+with (4.3). No coefficientwise high-jet hypothesis was used for this tail.
+
+6. PERIODICITY, VACUUM, AND REPEATED USE
+
+Small-carrier loops are constructed in a local lift of diameter O(cL).
+Take the minimum final period larger than the fixed collar diameter.
+Then all these paths and fillings admit that lift. A coordinate seam
+crossing alone is harmless. A genuinely winding input carrier has size
+at least c' L/J and belongs to the large-carrier estimate, after reducing
+c if necessary. P2 uses periodic coherent supports; its root sums are
+bounded by the same infinite-lattice exponential convolution.
+
+The omitted sum_H E_H(0) is an exact vacuum, not zero or an error.
+Equation (2.1) concerns normalized germs; restore this scalar for raw
+partition/source identities.
+
+The same a,b admit all direct endpoints L, including L=R^q for arbitrary
+q. The actual semigroup identifies the TOTAL endpoint functional for
+successive classical steps. However the construction of Sections 4–5
+does not make every output carrier invariant. Therefore an iterated
+argument must either retain the original individually invariant family
+and evaluate the direct endpoint, or prove an invariant representative
+theorem for the intervening quantum corrections.
+
+7. THE REPRESENTATIVE OBSTRUCTION IS NOT REMOVED
+
+The ordinary activity quotient minimizes over families with the same
+invariant total. It does not require every coefficient to be invariant.
+The proof in Section 3 cannot be applied to such a minimizing family.
+A different gauge path for each H does not preserve a null TOTAL.
+
+Likewise the TURN69 local source cancellation supplies a small ordinary
+family, but individual coordinate derivative terms need not be invariant.
+The companion invariant_source_relocalization_turn70 gives a legitimate
+two-background invariant identity; removing its second background is
+another operation and is not accomplished by setting it to I.
+Its Section 9 additionally gives a direct covariant-projector repair
+for the actual leading newborn source, at its explicit Q/Hessian inputs.
+That special repair does not by itself make this theorem's supported
+output coefficients invariant or supply arbitrary quotient representatives.
+
+Thus the new theorem is a bounded endpoint consumer on a real, useful
+subclass. It is not a proof that the all-scale physical-source recursion
+has a bounded propagator in its current quotient.
+
+8. AUGMENTED SCALAR SOURCE: THE PRECISE NEXT ADAPTATION
+
+A neutral scalar leg f can be retained as part of a jointly covariant
+source-field module. Nested tensor piecewise-linear interpolation I_L
+has exact composition and sup contraction. Retaining that leg avoids
+choosing a noncovariant modulation of arbitrary null representatives.
+
+The homogeneous quadratic spatial-transport proof must nevertheless be
+adapted. Its integration by parts transfers a difference onto the first
+field. With a source factor f(x), that operation also differentiates f.
+One cannot quote the old final formula unchanged.
+
+A sufficient direct replacement is a source-rooted factorization
+
+  K2(p,q)=sum_(rho,tau) d_rho(p) B_(rho,tau)(p,q) d_tau(q),
+
+with independent field momenta, exponential coefficient norm, and
+B(0,0)=0 (plus the relevant higher moment vanishing). Each difference
+then acts on a field before source summation; no integration by parts
+through f is needed. On the actual prefix, both field differences have
+size O(b L^-2), and cancellation of the constant B moment leaves one
+Hölder difference at gain L^-alpha. The source-root sum contributes
+L^4, so this yields the desired L^-alpha remainder bound.
+
+This paragraph identifies the required factorization and scaling; it
+does not prove that the augmented Ward identities produce it with the
+correct lattice phases and fixed exponential norm. Root is treating
+that algebra separately. Cubic and quartic anchored Taylor expansions
+have no analogous integration-by-parts issue: the scalar source can
+remain attached to their common root while the field moment cancellations
+are applied, provided the augmented kernel's moments are actually known.
+
+Neither this direct endpoint theorem nor a future augmented contraction
+would by itself prove the full native mixed-history source attachment,
+the original-law separated limit, or a nonzero physical covariance.

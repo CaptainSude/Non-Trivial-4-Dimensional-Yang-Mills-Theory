@@ -1,0 +1,118 @@
+TURN82 -- INDEPENDENT AUDIT OF GLOBAL ORIGINAL-LINK SOURCE SMOOTHING
+20 October 2026. gauge47.
+
+Producer: work/turn82_global_smoothed_source_history.txt
+SHA256: 91A3185DCAF5572F3650CBAC1248A93C93E9BBB3B0FF97AEF9B6E2AEFE8FC93D
+
+VERDICT: PASS. I read the complete producer and independently checked
+the real-coordinate continuation, both exact Gaussian integrations,
+the dimension-free incidence bounds, the normalized source family,
+and all-fixed-order averaged operator jets. No repair requested.
+
+1. REALIFICATION AND EXACT TOTAL VARIATION
+
+Every complex matrix is first identified with its eight real Gaussian
+coordinates. Extending each such real coordinate gives holomorphic
+complex means; the square in(2.1) is consequently bilinear. Formula(1.4)
+is a valid realification: both M(z) and overline(M(bar z)) are
+holomorphic, and their sum/difference agree with the physical real and
+imaginary matrix entries on real z. A physical matrix's ordinary
+imaginary entries are not confused with the imaginary part of this
+complexified R8 vector.
+
+For a complex real-coordinate mean w, integrating the modulus of the
+normalized exp[-(x-w)^2] density gives exp(|Im w|^2). After the R
+integration, write G=Re m+Y with Y~N(0,I/2). The remaining factor is
+exp(|Im m|^2) E exp(|A Y+v|^2), with A,v exactly(2.2).
+Completing this real square gives determinant(I-A^T A)^(-1/2) and
+v^T(I-AA^T)^(-1)v. Thus(2.3) has the correct precision, determinant
+power and mean term. Bounding eigenvalues by eta^2 yields(2.4) with
+the factor1/2 on the Hilbert--Schmidt term. No Gaussian dimension
+factor is missing.
+
+The complex kernel integrates to1: at each fixed real G the shifted
+R Gaussian has mass1, and then so does the shifted G Gaussian.
+The proved absolute integrability makes this order legitimate. This
+is stronger than merely continuing an unnormalized numerator.
+
+2. LOCALITY AND UNIFORMITY OF THE COMPLEX DOMAIN
+
+Each m_p is sqrt(beta) times a fixed four-link expression; d_h reads
+one link, and L_h reads its second half-path link. Imaginary variation
+along x+i t y is bounded by the corresponding finite first-derivative
+norm times the local sum of |y_e|. The two-output-per-plaquette block
+structure bounds ||Im L||_op by C max_e|y_e|. Squaring and summing its
+finite blocks bounds ||Im L||_HS^2 by C sum_e|y_e|^2. The same bounded
+incidence argument controls |Im m|^2 and the mean term |Im d+A Re m|^2
+by C beta sum|y|^2. These estimates are uniform in arbitrary real U^0;
+no weak-field property is used.
+
+It follows that the total-variation bound is exp[C(beta+1)||Im z||^2]
+on the fixed local chart, and is uniformly bounded on the stated
+Hilbert ball r/sqrt(beta+1). A fixed margin in ||Im L||_op supplies
+Gaussian domination for parameter derivatives. This permits a bounded
+MEASURABLE function of the REAL auxiliaries to remain unevaluated at
+complex records. Holomorphy of that conditional function is unnecessary.
+
+3. COMPLETE SOURCE AND NORMALIZER
+
+The bounds on C_s and C_s-1 are uniform for all real auxiliaries.
+Combining them with kappa_z's exact mass1 proves(4.2), including its
+second line. Condition(4.3) puts H inside a disk about1 and hence
+defines the canonical normalized logarithm. The background domain
+and source domain are simultaneous. The same Wilson partition and
+conditional product normalizers are retained.
+
+The jets in(4.5) are correct: the mixed raw derivative is P(B_i B_j),
+not (PB_i)(PB_j), and the logarithmic derivative includes their
+difference. This also covers repeated marks. Stationarity yields(4.6)
+for the exact original source generating function. Cauchy yields the
+directional bound, with polarization required for general multilinear
+directions as stated. It does not yield a coefficient-sum norm for free.
+
+4. THE RELATIVE-L2 FORMULA AND ITERATED OPERATOR JETS
+
+For Y~N(0,I/2), the complex Gaussian mean-shift ratio is
+exp(2Y.Delta-Delta.Delta). Squaring its modulus tilts Y by
+2Re Delta and leaves exactly exp(2||Delta||^2). Apply this first to
+the R innovation with G held fixed, and then to the G innovation.
+The result is precisely(4A.1), including the shifted mean
+m(0)+2Re Delta m and the factor2 in the remaining exponent.
+
+Writing sqrt2(Re Delta n,Im Delta n) as a real stacked affine map
+allows the same determinant calculation. Its linear operator norm is
+O(||z||_infinity), squared Hilbert--Schmidt norm O(||z||_2^2), and
+shifted mean square O(beta||z||_2^2), again by local incidence.
+This proves(4A.2) on a smaller fixed chart and supplies the necessary
+L2 domination, not merely a TV bound. Holomorphic L2-valued Cauchy
+then proves(4A.3). The zero mean of every derivative follows from
+the exact mass1 identity.
+
+Subtracting the single scalar PF(U) before applying the L2 bound
+gives(4A.4) for every direction tuple; taking the supremum yields the
+operator norm without summing coordinate tuples. The conditional
+variance integrated over the original law equals
+<F,P(I-P)F>, as in(4A.5). Applying this with P^nF and maximizing
+lambda^(2n+1)(1-lambda) verifies the denominator2n+2 in(4A.6).
+The derivatives are explicitly Frechet jets in the local exponential
+coordinates, not an unqualified identification with all covariant
+tensor derivatives. The constants depend on the fixed derivative
+order, not volume or source-read cardinality.
+
+A source-independent finite convention label preserves the same
+identities and uniform bounds for the reflected mixture. For iterated
+sources, the inner REAL Markov iterates retain e^R_s and e^R_s-1 sup
+bounds; the outermost smoothing step therefore uses the same complex
+ball. This is not repeated complex-domain composition. Actual spatial
+and temporal support still grows by the declared collars.
+
+5. SCOPE
+
+This supplies an actual original-link analytic germ for every bounded
+probe without a safe-current restriction, plus averaged fixed-order
+operator-jet bounds. It does not continue the interacting nu measure,
+make P multiplicative, supply a fixed per-link radius on an arbitrarily
+large physical support, establish a native strong polymer norm, or
+prove a nonzero continuum channel. The producer states each distinction.
+
+Producer unchanged. Audit frozen against the hash above.

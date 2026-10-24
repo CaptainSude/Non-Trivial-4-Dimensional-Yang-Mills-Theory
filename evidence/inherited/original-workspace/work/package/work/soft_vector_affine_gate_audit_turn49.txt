@@ -1,0 +1,245 @@
+INDEPENDENT AUDIT: EXACT SOFT FACTORIZATION AND ACTUAL AFFINE JETS
+20 October 2026. TURN49. tail47 focused audit for root and gauge47.
+
+VERDICT: PASS for the precise gate reviewed here. The four-factor
+identity is the actual normalized classical leading determinant, and
+the auxiliary soft vector has its actual first two affine on-shell
+jets. No bare-Hessian replacement, detached point-pinned ghost limit,
+or continuously varying periodic flux is needed for these statements.
+
+This audit does not independently re-prove the later heat comparison
+or its numerical logarithmic coefficient. Those are separate modules.
+It verifies the exact algebra and stationary-jet interface needed
+before their conclusions can be attached to the new physical A0.
+
+FILES READ DIRECTLY
+
+* soft_vector_coarse_reduction_research.txt, all; primary focus 1--3,6.
+* physical_quotient_localization_research.txt, 1--6.
+* soft_scalar_coarse_reduction_research.txt, 1--3.
+* constant_cartan_curvature_research.md, all.
+* cartan_determinant_moment_fragment.tex, through its actual probe.
+* The soft-vector provenance/rotation audits, cartan-trace provenance
+  audit, and after_notebook33_state, as corroborating history rather
+  than substitutes for the displayed proofs.
+
+These files are in work/archive/ym4-research/work/. The operative
+effective-action jet proof is the cdmom EFFECTIVE SECTION in the TeX
+fragment. The earlier research note flags that interface as needing
+checking; the later fragment supplies it explicitly.
+
+1. ACTUAL RESIDUAL HESSIAN: WHAT IS AND IS NOT DROPPED
+
+At the actual constrained stationary field let F be the literal
+ordinary composed constraint, C its left-relative differential, and
+let q be the actual coarse minimum Hessian. The local residual
+ s(U)-s_eff(F(U))
+is zero and stationary on the minimizing section. Its Hessian is
+
+ H_res = s'' - lambda.F'' - C^t q C.
+
+Thus the multiplier-curvature term and coarse Hessian term have their
+actual signs and coordinates. The local minimum comparison gives
+H_res>=0. Gauge invariance of the residual and its zero first derivative
+give H_res D=0 for the ALL-site generator D. Differentiating its zero
+value/current along the minimizing section also gives H_res Hlift=0.
+On ker C, H_res agrees with the constrained Lagrangian Hessian L.
+The only null directions there are the admitted root-fixed gauge
+directions, under the established physical gap premise.
+
+This verifies that the starting operator is not a bare Wilson Hessian
+or an uncorrected action Hessian. The soft-factorization algebra retains
+the full residual until the separately justified affine specialization.
+
+2. MEAN-ZERO DETERMINANT NORMALIZATION
+
+The actual moving-reference identities are
+ C-Cbar=D_c Z,  Cbar D=D_c B,  BB^t=K^-4 I.
+Every scalar row B is supported in its own K-block, with entries
+K^-4 times adjoint transports; the exact Gram identity uses the
+invariant transpose, not complex conjugate transpose. Hence
+ J=K^2 B^t is an isometry, Pi=JJ^t, and P=I-Pi projects onto ker B.
+
+I checked the quotient calculation in PQL Section3. On the real open
+set where full fine/coarse gauge generators are injective, split the
+vertical coordinates and apply Jacobi to the pair (ker B,ran B^t).
+The actual retained amplitude is
+
+ I_act=a^(n_c/2) det G_B sqrt(det BB^t)/sqrt(det Q_B),
+ G_B=V_B^t D^tD V_B,
+ Q_B=H_res+D P D^t+a Cbar^t Cbar.
+
+The power of det G_B is ONE, not one half; the Gram factor has a
+positive one-half power. The corrected tangent differs by a coarse
+gradient, removed by a unit-determinant shear of the coupled gauge
+variables. This does not assert equality of corrected and ordinary
+nonlinear Haar pushforwards.
+
+Since BB^t is exactly constant, and
+ Ghat=P D^tD P+mu^2 Pi,  mu=K^-1,
+ det Ghat=(mu^2)^(dim coarse scalar space) det G_B,
+normalization by the flat value gives exactly
+
+ D_actual=N_0[logdet Ghat-(1/2)logdet Q_B].             (2.1)
+
+The a and Gram/complement factors cancel only because they are
+background independent. The physical Haar factors of the original
+amplitude are also background independent at this leading comparison.
+They remain in the unnormalized finite physical density.
+
+At flatness the injective-open-set derivation is continued JOINTLY
+through the gapped expression (2.1). This is legitimate: irreducible
+coarse holonomies provide nonempty real injective open sets arbitrarily
+near flatness for the stated semisimple group, and the actual leading
+amplitude and final gapped determinants have compatible analytic germs.
+No separate massless based determinant is evaluated at flatness.
+
+3. THE TWO SOFT COMPLETIONS AND THEIR SIGNS
+
+Put Delta=D^tD and T_s=Delta+mu^2 Pi. In the orthogonal splitting
+(V_B,J), its upper block is G_B. Jacobi gives
+ det G_B=det T_s det(J^t T_s^-1 J).
+Therefore with M_s=mu^2 J^t T_s^-1 J,
+
+ det Ghat=det T_s det M_s.                            (3.1)
+
+The vector completion is
+ V=Q_B+(DJ)(DJ)^t=H_res+DD^t+a Cbar^t Cbar,
+ S=I-J^tD^t V^-1DJ.
+Woodbury and the determinant lemma give exactly
+
+ S=(I+J^tD^t Q_B^-1DJ)^-1,
+ det Q_B=det V det S.                                (3.2)
+
+Combining (2.1),(3.1),(3.2) yields
+
+ D_actual=N_0[logdet T_s-(1/2)logdet V
+                         +logdet M_s-(1/2)logdet S]. (3.3)
+
+In particular the vector coarse sign is MINUS one half. All four
+matrices are positive at flatness and have normalized holomorphic
+determinant branches near it at fixed K. The scalar and vector coarse
+fibers each have one fixed color space per final site. There is no
+lost K power or extra coarse determinant.
+
+As a normalization check, at K=1, H_res=0 and P=0, hence Q_B=aI and
+Ghat=I. The soft factors cancel to a background-independent amplitude,
+as required for a step with no eliminated physical directions.
+
+The point-pinned contour gauge's small spectral scale is never
+replaced separately by a mass K^-2. It has already been removed by
+the exact coupled quotient/mean-zero identity before (3.1)--(3.3).
+
+4. FLAT POSITIVITY OF THE VECTOR COARSE FACTOR
+
+With T0=D0J0, the established mean-zero form comparison gives
+ T0T0^t<=D0D0^t<=Delta_1<=C_Delta Q_B,0.
+Therefore ||Q_B,0^-1/2 T0||^2<=C_Delta, and (3.2) implies
+
+ (1+C_Delta)^-1 I<=S0<=I.
+
+This is a real uniform spectral estimate, not a rank argument. The
+positive update preserves the flat gap of Q_B. At flatness q D_c=0,
+so the coarse-gradient difference between C and Cbar drops out and
+
+ V0=q_M+D0D0^t+A_K^t(aI-q_MK)A_K.
+
+For a>=R_q+1, q_M>=d^t d gives V0>=Delta_1+A_K^tA_K. Together
+with the gap this gives the lower comparison by Delta_1+mu^2 I.
+On the specified infinite structural kernels, the zero constant and
+linear momentum jets plus uniform second moments give q_M<=C Delta_1.
+The ANGLE average has counting norm ||A_K||<=K^-1 in d=4, so its
+coarse term is O(mu^2). This checks the upper comparison in its
+stated infinite/explicit-periodization scope. It does not identify
+arbitrary finite winding kernels with periodizations.
+
+5. THE ACTUAL AFFINE STATIONARY-JET GATE
+
+The commuting affine field has constant Cartan plaquettes. Opposite
+incident plaquette sine currents cancel as a full Lie-algebra-valued
+identity, including against non-Cartan variations. Thus it is locally
+Wilson stationary, not merely stationary along its one-parameter path.
+
+The selected contour mean requires only endpoint and conjugation
+covariance here. A Cartan tuple has a Cartan-valued mean; factoring
+out the common exp(i r.A(y)) leaves a within-block factor independent
+of y. That factor cancels between the two endpoint contours in the
+ordinary path product. Centered averaging removes the remaining term
+linear in r. Consequently the LITERAL composed ordinary map sends
+fine affine curvature F to K^2 F. No direct-K mean is substituted.
+
+The actual root contour gauge preserves both the constraint and the
+Wilson Euler equation. Its finite-order coefficients grow polynomially
+in the block center. Exponentially summable stationary inverses and
+rooted mixed Taylor kernels act on polynomial-growth inputs by absolute
+summation. Their inverse identities remain valid there, so the retained
+stationary recursion has a unique polynomial solution at each degree.
+This identifies the explicit candidate with the actual branch jets at
+each fixed endpoint, without evaluating a bounded-field analytic map
+at a nonzero unbounded affine configuration.
+
+For effective S_M the later cdmom fragment supplies the needed extra
+argument. First fix the finite bare endpoint M. The explicit Wilson
+candidate has zero FULL target multiplier. The actual envelope identity
+identifies that whole multiplier with D_left S_M; it does not identify
+only its contraction with the affine path. Thus
+
+ D_left S_M(U_aff(t))=O(t^3)
+
+in every current component. Next fix K, root the current affine field
+by the actual direct-K gauge, and use the local gauge identities
+extended to polynomial jets. Its effective current still vanishes
+through degree two. Apply the retained stationary uniqueness at this
+fixed K to identify the actual next branch and obtain
+
+ lambda_(M,K)(t)=O(t^3).                               (5.1)
+
+The same bare-endpoint argument gives D_left S_(MK)=O(t^3) on the
+coarse affine probe. Differentiating its gauge Ward identity gives
+ q(t)D_c(t)=O(t^3), with the action-current coordinate terms retained
+before using that vanishing. Therefore, through degree two,
+
+ lambda.F''=0,
+ C^t q C=Cbar^t q Cbar.
+
+For the second identity expand C=Cbar+D_cZ. Each difference term
+contains qD_c or its transpose, and is O(t^3). Inserting this into
+the actual residual completion proves
+
+ V= S_M''+DD^t+Cbar^t(aI-S_(MK)'')Cbar +O(t^3).       (5.2)
+
+This is precisely Vtilde in the soft-vector note. Analytic inversion
+then gives the same first two jets for its coarse S factor. S_M''
+has NOT become the bare Wilson Hessian for M>1. The argument removes
+only the displayed multiplier and coarse-gradient corrections on this
+special on-shell probe.
+
+The degree-two determinant coefficient needs only these first two
+operator jets, so equality modulo O(t^3) is sufficient. Gauge removal
+inside each diagonal color log trace is by its actual conjugation
+identity; polynomial growth is paid by the rooted exponential kernels.
+
+6. LIMITS AND CONSEQUENCE FOR THE NEW PHYSICAL A0
+
+The polynomial uniqueness argument fixes each endpoint when using
+its inverse. It asserts no one-shot fine inverse uniform in M or K.
+After the finite identities are established, the separately uniform
+current-coordinate mixed kernels at fixed K allow their polynomial
+moments to pass to the chosen varying-M structural system. The affine
+probe is not a continuous nonzero flux family on a fixed periodic torus,
+and arbitrary finite winding normalizations remain separate.
+
+Provided gauge47's exact physical/retained leading-amplitude bridge is
+completed with the same ordinary constraint, contour and Haar/coarea
+conventions, (3.3) is consequently the correct archived determinant to
+attach to N_0 log A0_new. The finite-T projected window at g=0 adds only
+the datum-independent ambient mass c_T^n; it cannot change that leading
+field coefficient. This last statement concerns the baseline classical
+leading determinant, with every inherited amplitude retained separately.
+
+No fault was found in this exact-algebra/affine-jet gate. A numerical
+positive drift coefficient still requires the separately audited soft
+scalar/vector heat comparisons, their normalization convention, and
+the correct finite-to-local extraction interface. A full quantum
+trajectory and complementary-history bounds do not follow merely from
+passing this gate.

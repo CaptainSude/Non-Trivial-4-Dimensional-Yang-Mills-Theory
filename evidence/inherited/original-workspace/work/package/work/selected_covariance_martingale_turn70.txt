@@ -1,0 +1,336 @@
+EXACT SELECTED PATH LAW AND SEPARATED COVARIANCE DECOMPOSITION
+TURN70. tail47. 20 October 2026. Submitted for independent audit.
+
+RESULT
+
+For the actual finite homogeneous selected trajectory, the one-mark
+source is a reverse conditional mean of the ORIGINAL insertion.
+The law of total covariance can therefore be iterated exactly:
+
+ Cov_sel(F_f,F_h)
+   =sum_(j=0)^(n-1) E_sel Cov_(K_j)
+                         (X_j(f_j),X_j(h_j))
+      +Cov_(nu_n)(X_n(f_n),X_n(h_n)).                 (R1)
+
+All source-only constants cancel from these covariances. The raw
+partition constants must nevertheless be retained in identifying
+the selected path law and its kernels.
+
+This avoids transporting a two-mark effective potential through
+all subsequent scales. It does NOT avoid estimating the one-step
+connected conditional covariance. A strong two-mark cluster bound
+for that covariance, together with the new uniform one-mark norm,
+gives an actual ultraviolet-uniform SELECTED-regulator upper bound
+for separated fixed physical interpolated profiles. The terminal
+covariance is bounded directly in the strong marked norm.
+
+The selected law here is the normalized positive sector already
+identified in projected_product_sector_turn48 Sections 3,6,7 and
+the periodic bridge. It is not a new Markov law chosen to improve
+correlations. Its selected mass can be small. No comparison with
+the full Wilson covariance, reflection positivity of the selected
+law, nonzero lower bound or continuum calibration is proved.
+
+1. THE ACTUAL POSITIVE FIBERS AND COMPLETE NORMALIZERS
+
+Fix one admitted finite unsourced selected trajectory with n steps,
+the canonical cubic geometry admitted in selected_scalar_source_induction_
+turn70, and all baseline parameters/windows frozen. Let S_j denote the
+real state space at stage j. The full current variable, including every
+geometric datum needed by the next REGULAR selected step, is retained.
+We suppress its chart coordinates in the notation.
+
+Write lambda_j for its actual reference measure. It includes the
+declared Haar/coarea/gauge-slice convention; it is not replaced by
+Euclidean Lebesgue measure without its Jacobian.
+
+Let q_j(du|v) be the positive WEIGHTED COAREA fiber kernel of the
+actual step from u in S_j to v in S_(j+1). It includes the admitted
+branch and projected-product weight W_j. It need not have mass one.
+The phase and incoming inherited density are not counted twice:
+q_j is defined so that the actual incoming raw density rho_j obeys
+
+       rho_(j+1)(v)=int rho_j(u) q_j(du|v).            (1.1)
+
+Here rho_j includes its complete accumulated vacuum factor. When
+(1.1) is expressed in ambient Gaussian coordinates, its leading
+action, A0, physical Gaussian power and product-ball mass are
+exactly those of TURN48 (3.2):
+
+       exp[-s(v)/g_j^2] A0(v)
+                    (2pi g_j^2)^(d_j/2) c_T^(n_ch,j).
+
+They cannot be discarded by replacing q_j with just the normalized
+ambient product Gaussian. The physical dimension d_j, the normal
+dimension and n_ch,j are distinct, as in that source identity.
+
+Let chi_n(v) be the ACTUAL terminal weak-domain restriction, and let
+
+  Z_sel=int chi_n(v) rho_n(v) lambda_n(dv),  0<Z_sel<infinity.
+  nu_n(dv)=Z_sel^-1 chi_n(v)rho_n(v)lambda_n(dv).       (1.2)
+
+The terminal reference measure and restriction must be the ones used
+in the literal finite selected regulator. If only a local density
+germ has been constructed and no terminal integration specified,
+(1.2) still has to be specified before claiming a probability theorem.
+A restriction to a declared nonempty real weak terminal domain is
+legitimate precisely as the corresponding additional coarse-state
+restriction of the original positive sector. It is not an arbitrary
+ground-state or Gaussian replacement.
+
+For example the common real weak chart with an open neighborhood of
+identity has positive finite selected mass at a finite regulator:
+the Wilson density is positive, the coarea charts are admitted, and
+the projected-product weight is positive on a smaller open set.
+No lower bound uniform in depth or volume is asserted.
+
+Where rho_(j+1)>0 define
+
+  K_j(du|v)=rho_j(u)q_j(du|v)/rho_(j+1)(v).            (1.3)
+
+Values on zero-mass states are immaterial. These are normalized
+probability kernels. Define the backward path law by nu_n followed
+by K_(n-1),...,K_0. Its density telescopes EXACTLY:
+
+  nu_n(du_n) prod_j K_j(du_j|u_(j+1))
+   =Z_sel^-1 chi_n(u_n)lambda_n(du_n)
+                           rho_0(u_0) prod_j q_j(du_j|u_(j+1)).
+                                                               (1.4)
+
+Every raw factor in (1.1) is required for this equality.
+
+TURN48 identifies the right side, after the already admitted
+coarse-fiber reconstruction and any normalized dummy normal draws
+are integrated, with the original density multiplied by the
+specified product of W_j and the terminal restriction. Thus (1.4)
+is the existing selected sector with its own explicitly stated
+normalizer. Its mass under the original Wilson law is Z_sel/Z_0,
+not one. No uniform lower bound on that ratio is used below.
+
+The selected regular kernels have this state-local composition.
+Future retained private histories which still read an eliminated
+u_j would invalidate (1.3) as their complete conditional law unless
+those reads were appended to the state. The present one-mark norm
+theorem has not supplied such an enlarged native-history theorem.
+
+2. ONE ORIGINAL SOURCE AT EVERY STAGE
+
+Choose real vertex profiles f_n,h_n on a fixed final physical grid.
+Let F and H be their continuous tensor multilinear interpolants.
+On every finer grid set
+
+          f_j=I_(R^(n-j)) f_n,   h_j=I_(R^(n-j)) h_n. (2.1)
+
+These are samples of the SAME F,H, not new samplings chosen
+independently at successive RG steps. The bare source is exactly
+I_(R^n)f_n, and its fine plaquette weights are the four-corner
+averages from regular_source_modulation_turn70.
+
+For different ultraviolet depths with the same terminal grid and
+same f_n, this still defines the same physical multilinear F.
+No comparison with another smooth test function is needed for
+this exact source identity.
+
+Let F_f(u_0),F_h(u_0) be the corresponding literal weighted ORIGINAL
+Wilson actions. Define raw one-mark conditional means recursively:
+
+  X_0(f_0,u_0)=F_f(u_0),
+  X_(j+1)(f_(j+1),v)
+       =int X_j(f_j,u) K_j(du|v).                    (2.2)
+
+This is exactly the derivative at zero of the raw sourced density
+in (1.1). Differentiating uses the same numerator and denominator,
+with all windows fixed. Equation (2.2) is the selected one-mark
+map L_j^src, not an insertion of a freshly chosen coarse action.
+
+Algebraic extraction writes X_j as a normalized field functional
+plus a deterministic scalar linear in f_j. The scalars may grow
+with volume/depth and remain in the raw source ledger. For
+conditional covariance they can be subtracted freely.
+Do not replace the raw recursion (2.2) by a recursion setting
+those raw constants to zero and then claim it is pointwise exact.
+
+3. REVERSE MARTINGALE PROOF
+
+On (1.4) let G_j be the sigma-field generated by u_j,...,u_n.
+These form a decreasing sequence. Kernel factorization gives
+
+  X_j(f_j,u_j)=E_sel[F_f(u_0)|G_j].
+
+The finite original Wilson actions are bounded at a finite
+regulator, so all needed second moments exist. More general
+insertions would require their actual second-moment hypothesis.
+
+Define the increments
+  D_j^f=X_j(f_j,u_j)-X_(j+1)(f_(j+1),u_(j+1)).
+
+Then E[D_j^f|G_(j+1)]=0. Increments at distinct dates, and each
+increment against the terminal variable, are orthogonal. Expanding
+F_f=X_n(f_n)+sum_j D_j^f, and likewise F_h, gives
+
+ Cov_sel(F_f,F_h)
+  =sum_j E_sel[D_j^f D_j^h]
+                            +Cov_(nu_n)(X_n(f_n),X_n(h_n)).
+
+Conditioning the increment product on G_(j+1) gives precisely
+Cov_(K_j)(X_j(f_j),X_j(h_j)). This proves (R1).
+For complex profiles the bilinear identity still holds; absolute
+bounds can use the corresponding Hermitian second moments.
+
+The positivity used here is the actual path law, not positivity
+of signed cluster activities. It is not necessary that every
+localized conditional-covariance coefficient have either sign.
+
+4. EXACT IDENTIFICATION OF THE LOCAL TWO-MARK OBJECT
+
+At fixed v consider the physical source generating function
+
+  log int exp[s X_j(f_j,u)+t X_j(h_j,u)] K_j(du|v).
+
+Its mixed derivative at s=t=0 is exactly
+
+  C_j(f_(j+1),h_(j+1);v)
+          =Cov_(K_j)(X_j(f_j),X_j(h_j)).              (4.1)
+
+The two source profiles inside the incoming functionals are
+I_R f_(j+1),I_R h_(j+1). The terms X_j(f_j,V_j(v)) subtracted
+in the centered inherited increment are constant on this fiber.
+They have zero mixed source derivative. Thus (4.1) is exactly
+the inherited two-direction derivative D_E^2 F_j,RAW at the
+unsourced baseline, evaluated on the controlled one-mark classes.
+Here F_j,RAW is the actual raw logarithm, INCLUDING its field-
+independent part. Replacing this derivative by its normalized
+field quotient would incorrectly discard a generally nonzero
+conditional covariance. At zero auxiliary g the raw logarithm
+is zero for every inherited E, and it is even in g; those
+identities support a raw O(g^2) bound when its complete marked
+catalogue is estimated.
+
+This is a ONE-STEP conditional covariance. An effective two-source
+functional generated at earlier dates is not being omitted from
+an RG recursion: the martingale identity accounts for it by its
+expectation at its date of creation. Its full later transport is
+replaced by a genuine expectation under the positive selected
+path law. A uniform sup bound in v can therefore be applied
+without any additional transport norm growth.
+
+A scalar bound on the total one-mark norm alone would not give
+the spatially connected bound required next. The controlled
+connected two-mark catalogue is a separate analytic input.
+
+5. CONSUMER OF A CONNECTED STRONG TWO-MARK BOUND
+
+Here is the precise sufficient input, supplied by the companion
+selected_connected_covariance_turn70 Sections 1--3 at the same
+admitted selected catalogue hypotheses. Suppose, at the SAME
+fixed margins, (4.1) has a complete connected output catalogue
+
+ C_j(f,h;v)=sum_(Y,z,z') f_z h_z' C_(j;Y,z,z')(v)
+
+whose carriers contain both source roots and all field reads,
+including the raw scalar coefficients, and
+
+ sup_i sum_(Y contains i)e^(a|Y|)
+                  sum_(z,z' in Y)||C_(j;Y,z,z')||_b
+        <= C g_j^2 ||X_j||_src^2.                    (5.1)
+
+The two-mark exponent a can be the once-fixed weaker exponent a2
+of that companion theorem. These covariance families are not fed
+back as inputs, so this consumes no new exponent at successive dates.
+
+The source labels z,z' are on the OUTPUT grid after I_R. Its
+physical spacing is ell_(j+1). If another notation uses input
+spacing ell_j, the fixed R factor must be retained in constants.
+
+The selected one-mark induction proves ||X_j||_src<=C_X uniformly
+in depth on the admitted trajectories. Suppose the ACTUAL
+continuous interpolant supports satisfy
+
+             dist(supp F,supp H)>=d>0                (5.2)
+
+in the torus geometry or a common nonwrapping embedding.
+It suffices to separate the terminal nodal supports beyond their
+fixed interpolation collars, but merely separating the nodal
+sets without this qualification is not enough.
+
+Each nonzero term in (5.1) then has
+|Y|>=c d/ell_(j+1), with the fixed J/collar constants included.
+Root at a source cell meeting either profile. Using the smaller
+of the two source-cell counts N_f,j+1 and N_h,j+1 gives
+
+ sup_v |C_j(f_(j+1),h_(j+1);v)|
+   <= C g_j^2 C_X^2 ||F||infinity ||H||infinity
+       min(N_f,j+1,N_h,j+1) exp[-c d/ell_(j+1)].      (5.3)
+
+There is no product of the two source-volume counts. Both source
+labels were already summed in the marked rooted norm.
+All terminal states and intermediate coarse states used in the
+expectation must lie in the actual real domain on which (5.1)
+holds, as ensured by the specified selected trajectory.
+
+For profiles in fixed compact physical boxes,
+N_f,j+1<=C_F ell_(j+1)^(-4), after allowing a fixed
+maximal spacing ell_* and its finite collar. Hence
+
+ sum_j E_sel |C_j|
+  <= C_{F,H} C_X^2 g_*^2
+             sum_(r>=0) ell_*^-4 R^(4r)
+                          exp[-(c d/ell_*)R^r] <infinity.       (5.4)
+
+This bound is uniform in the initial ultraviolet depth. The
+subseries r>=r_0 tends to zero as r_0 tends to infinity.
+No summability of sum_j g_j^2 is used. The separation exponential,
+not the small coupling by itself, pays the four-dimensional
+source-root count.
+
+6. TERMINAL COVARIANCE WITHOUT AN EXTENSIVE NORMALIZER LOSS
+
+Take an arbitrarily near-minimal strong marked representative of
+X_n with norm C_X. Its normalized total Phi_n(f,v) subtracts the
+coefficient values at identity. Rooting at each source vertex gives
+
+        sup_v |Phi_n(f,v)|<=2 C_X ||f||_(l1).          (6.1)
+
+The microscopic vertex count per fixed J-cell is already a fixed
+convention in the norm; alternatively it can be included in C_X.
+Subtracting the true mean can only reduce the L2 error relative
+to any constant. Cauchy--Schwarz therefore gives
+
+ |Cov_(nu_n)(X_n(f_n),X_n(h_n))|
+       <=4 C_X^2 ||f_n||_(l1)||h_n||_(l1).            (6.2)
+
+The raw source constants cancel, and nu_n has mass one.
+No estimate of Z_sel^-1 by exp(C volume) is needed. For fixed
+compact terminal profiles these l1 norms are independent of
+the total torus volume, provided the common admitted geometry
+and domains are present.
+
+Combining (5.4) and (6.2) gives an actual selected-regulator
+upper bound when the one-step input (5.1) is proved. Equation
+(R1), its normalizer and its source chronology are unconditional
+within the stated finite selected path construction.
+
+7. EXACT LIMITATIONS
+
+The upper bound is for the literal weighted original action with
+the stated source normalization. Multiplying it by a cutoff-dependent
+operator renormalization multiplies these estimates accordingly.
+A physical composite calibration, including any required subtraction
+or multiplicative renormalization, remains to be supplied.
+
+The bound does not show that covariances at different UV depths
+converge. It only controls the finely born contribution inside
+each regulator and bounds the terminal term. Comparing the
+terminal laws and source classes across regulators is separate.
+
+The terminal covariance may vanish, and signed separated local
+contributions may cancel. There is no nonzero lower bound.
+The selected conditioning/window construction is not shown here
+to preserve reflection positivity, even though its symmetry
+and real positivity were admitted. Reflection-invariant selection
+alone would not imply reflection positivity.
+
+Finally, Z_sel/Z_0 need not be bounded below. A covariance estimate
+in this normalized selected sector is not an estimate in the full
+Wilson law. Complementary histories and their original-source
+transport remain outside this theorem.

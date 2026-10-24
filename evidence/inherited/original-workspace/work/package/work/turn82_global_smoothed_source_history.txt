@@ -1,0 +1,357 @@
+TURN82 -- GLOBAL ORIGINAL-LINK HOLOMORPHY OF THE EXACT HS SOURCE CHANNEL
+20 October 2026. history47. Finite-regulator theorem.
+
+RESULT
+The exact two-HS Gibbs channel smooths EVERY bounded measurable original
+observable to a holomorphic function of the ORIGINAL link coordinates,
+on a complex Hilbert ball of radius c/sqrt(beta+1) about every real
+configuration. The operator norm there is bounded independently of
+volume and of the original observable's number of reads. A stronger
+bound depends only on the squared imaginary coordinate norm. There is
+no restriction to a safe auxiliary-current event: the conditional source
+is evaluated only at REAL auxiliary records. All source products and
+normalizers are retained. This is a new finite-scale consumer of the
+known exact two-HS representation, not a new Yang--Mills measure or a
+continuum source-transport theorem.
+
+1. EXACT ORIGINAL-LAW CHANNEL AND REAL COORDINATES
+
+Use the finite nondegenerate four-dimensional SU(2) lattice and literal
+Wilson law mu_beta of turn81_external_source_history.txt. Its exact
+positive augmentation has, conditionally on the complete original U,
+
+ G_p=m_p(U)+Z_p,       m_p=sqrt(beta)(A_p+B_p)/2,
+ R_h=d_h(U)+G_p V_h^dagger+W_h,  d_h=sqrt(beta)U_h/2,    (1.1)
+
+where h=(U_h,V_h) is one of the two paths in p, and all Z_p,W_h are
+independent standard complex 2x2 Gaussian matrices. Their four complex
+entries have variance1. The auxiliary marginal is the actual interacting
+zero-link law nu_beta, including its literal normalization D_beta.
+Conditionally on REAL xi=(G,R), the original links have the normalized
+product tilted-Haar law k_xi from TURN81. Define
+
+ (CB)(xi)=E[B(U)|xi],       (Kf)(U)=E[f(xi)|U],
+ P=KC.                                                       (1.2)
+
+Thus P1=1, ||PB||_infinity<=||B||_infinity, mu_beta P=mu_beta,
+and P is positive self-adjoint on L2(mu_beta). These are actual-law
+identities, not properties of an approximate reference distribution.
+
+Identify each complex matrix with its eight REAL coordinates. Then its
+Gaussian density is pi^-4 exp(-x dot x), and each real coordinate has
+variance1/2. All complexifications below are of these real coordinates.
+In particular, no conjugation or Re operation is applied to a complex
+link parameter and then called holomorphic.
+
+Fix ANY real original configuration U^0 and write
+
+ U_e(z)=exp(i sum_{a=1}^3 z_{e,a} sigma_a/2) U_e^0,
+                  z_e in C^3.                              (1.3)
+
+Real coordinates z give SU(2) links. Extend every real coordinate of
+m_p,d_h and of the real-linear map G -> G V_h^dagger analytically in z.
+The dagger in a group expression is extended by the appropriate inverse;
+the real and imaginary matrix entries in (1.1) are each extended as real
+analytic functions. Equivalently, for a matrix-valued analytic extension
+M(z), its real-coordinate extensions are
+
+ [M(z)+overline(M(bar z))]/2,
+ [M(z)-overline(M(bar z))]/(2i).                            (1.4)
+
+The bar in M(bar z) acts also on the fixed REAL-coordinate coefficients
+as indicated; the two expressions are holomorphic. This convention is
+important: for example Im m(z) below means the imaginary part of its
+complexified R8 coordinate vector, not the ordinary imaginary matrix
+entries of the physical complex matrix m(U).
+
+Collect the relevant coordinates into real Euclidean spaces. Write
+
+ n(z,G)=d(z)+L(z)G.                                        (1.5)
+
+Each plaquette block of L has two outputs, one per half-path; at real z
+each output is right multiplication by a unitary matrix. L is block
+diagonal in p. Its coefficients at complex z are holomorphic.
+
+2. AN EXACT GAUSSIAN TOTAL-VARIATION FORMULA
+
+For complex means define the complex kernel on REAL auxiliary variables
+
+ kappa_z(G,R)=pi^[-(d_G+d_R)/2]
+   exp[-(G-m(z)) dot (G-m(z))
+       -(R-d(z)-L(z)G) dot (R-d(z)-L(z)G)].                (2.1)
+
+The dot here is the BILINEAR extension of the real Euclidean square.
+It is not the Hermitian square. For real z this is exactly (1.1).
+Set
+
+ mu=Re m(z),  a=Im m(z),  A=Im L(z),
+ v=Im d(z)+A mu.                                          (2.2)
+
+Here mu,a,A,v are ordinary real vectors/matrices. If ||A||_op<1, direct
+integration, first over R and then over G, gives
+
+ integral |kappa_z| dG dR
+  = exp(|a|^2) det(I-A^T A)^(-1/2)
+           exp[v^T (I-AA^T)^(-1) v].                     (2.3)
+
+Indeed integral |pi^-d/2 exp[-(x-w)^2]| dx=exp(|Im w|^2).
+After the R integral, G=mu+Y with density pi^-d_G/2 exp(-|Y|^2),
+and one integrates exp(|AY+v|^2). Completing this REAL Gaussian square
+gives (2.3); the determinant is over the G coordinates. Thus, if
+||A||_op<=eta<1,
+
+ log integral |kappa_z|
+ <= |a|^2 + |v|^2/(1-eta^2)
+                    + ||A||_HS^2/[2(1-eta^2)].            (2.4)
+
+The determinant estimate uses -log(1-t)<=t/(1-eta^2) for
+0<=t<=eta^2. There is no dimension prefactor hidden in (2.4).
+
+Also, exactly,
+
+                    integral kappa_z dG dR=1.             (2.5)
+
+For each fixed real G the complex shifted R-Gaussian integrates to1;
+the remaining shifted G-Gaussian also integrates to1. Absolute
+integrability from (2.3) justifies this order and the equality. Equation
+(2.5) is the source-zero normalizer on the complex domain. We do not
+divide by an unverified complex partition function.
+
+3. LOCAL INCIDENCE BOUNDS AND THE VOLUME-INDEPENDENT DOMAIN
+
+There are numerical constants r_0,C depending only on the fixed local
+path convention and maximal plaquette incidence, not on volume, beta,
+U^0 or the source reads, such that on |Re z_e|<=r_0 and
+|Im z_e|<=r_0 for every relevant link,
+
+ ||Im L(z)||_op <= C ||Im z||_infinity,
+ ||Im L(z)||_HS^2 <= C sum_e |Im z_e|^2,
+ |Im m(z)|^2+|Im d(z)+(Im L(z))Re m(z)|^2
+                         <= C beta sum_e |Im z_e|^2.      (3.1)
+
+Here and below coordinate norms are the Euclidean norms on the three
+Pauli/2 coordinates per independent link. To prove (3.1), compare each
+local function along x+i t y, 0<=t<=1, to its REAL value at x=Re z.
+All local matrix products, inverses and their first derivatives have
+fixed bounds on this fixed chart. Each m_p has a sqrt(beta) factor and
+reads four links, so its imaginary norm is at most
+C sqrt(beta) sum_{e in p}|y_e|. Also |Re m_p|<=C sqrt(beta).
+Each d_h reads one link. Each output block L_h reads only the second
+path link, so ||Im L_h||_op+||Im L_h||_HS<=C|y_(second h)|.
+Since there are two outputs per p, the block-diagonal operator bound
+is controlled by the largest such link coordinate. Squaring and
+summing costs only the bounded local incidences (six plaquettes per
+link in d=4), proving all three assertions. The same argument covers
+reflected path conventions and link inversions, with a fixed constant.
+
+Shrink r_0 once so C||Im z||_infinity<=1/2. Equations (2.4),(3.1) give
+
+       ||kappa_z||_TV <= exp[C_0(beta+1)||Im z||_2^2].     (3.2)
+
+The constants are independent of the total number of coordinates.
+The real part is harmless on the indicated real chart: it changes the
+positive reference means. In particular, a complex Hilbert ball
+
+        ||z||_2 < r/sqrt(beta+1),       0<r<=r_0,          (3.3)
+
+about EVERY real U^0 has ||kappa_z||_TV<=exp(C_0 r^2).
+One can reset the real center at any other real configuration; no
+small-Wilson-action or large-current assumption is used anywhere.
+
+Holomorphy is genuine. On a compact subdomain with ||Im L||_op<1,
+integrating the absolute R-Gaussian leaves a positive G precision
+bounded away from zero. All coordinate derivatives introduce finite
+Gaussian polynomials, still dominated after a fixed further margin.
+Fubini/Morera or dominated differentiation therefore proves
+holomorphy when (2.1) is integrated against ANY bounded measurable
+function of the REAL auxiliaries. That function need not have a
+complex continuation of its own.
+
+4. THE COMPLETE NORMALIZED SOURCE FAMILY
+
+Let B_1,...,B_m be arbitrary measurable ORIGINAL observables with
+0<=B_i<=1, and R_s=sum_i |s_i|. For real auxiliaries put
+
+ C_s(xi)=E_kxi exp(sum_i s_i B_i),
+ H(s,z)=integral kappa_z(xi) C_s(xi) dxi.                  (4.1)
+
+For real z this is P exp(sum s_i B_i)(U(z)). Uniformly in real xi,
+|C_s|<=e^R_s and |C_s-1|<=e^R_s-1. Equations (2.5),(3.2) now imply
+
+ |H(s,z)| <= exp[C_0(beta+1)||Im z||^2+R_s],
+ |H(s,z)-1| <= exp[C_0(beta+1)||Im z||^2](e^R_s-1).        (4.2)
+
+This function is jointly holomorphic in the original complex link
+coordinates and in all source parameters. On (3.3), the canonical
+logarithm with log H(0,z)=0 exists whenever
+
+              exp(C_0 r^2)(e^R_s-1)<1.                   (4.3)
+
+There its absolute value is bounded by minus the logarithm of1 minus
+the left side of (4.3). Thus a fixed source-parameter neighborhood
+and an original-link Hilbert radius c/sqrt(beta+1) hold simultaneously,
+with no discarded scalar factor, no auxiliary bad event and no
+current-zero exclusion.
+
+For general ||B||_infinity<=1, PB has the same background bound.
+Cauchy gives, for a unit Hilbert direction h,
+
+ |D_h^k PB(U^0)| <= k! exp(C_0 r^2)
+                            [sqrt(beta+1)/r]^k.          (4.4)
+
+Fixed-order multilinear derivatives follow by polarization; one may
+use k^k instead of k! with the same product of directional norms.
+This is an operator-jet estimate, not an all-arity coefficient-sum
+Wiener norm or a strong polymer source norm.
+
+The source family is essential. At source zero,
+
+ partial_i H=PB_i,
+ partial_i partial_j H=P(B_i B_j),
+ partial_i partial_j log H=P(B_i B_j)-(PB_i)(PB_j).       (4.5)
+
+Replacing H by exp(sum s_i PB_i) loses its actual mixed conditional
+terms. Stationarity gives the exact ORIGINAL generating function
+
+       E_mu H(s,0;U^0=U)=E_mu exp(sum_i s_i B_i).         (4.6)
+
+It is the same Wilson law and the same original observables. This
+identity is not a source-dependent change of beta or of the action.
+
+4A. RELATIVE L2 DENSITY, ALL FIXED JETS, AND ITERATED SMOOTHING
+
+At the same real center U^0 write kappa_0 for the actual probability
+kernel and Lambda_z=kappa_z/kappa_0 on its real auxiliary space. Put
+Delta m=m(z)-m(0) and Delta n(G)=n(z,G)-n(0,G). Gaussian square
+completion gives the exact identity
+
+ E_kappa0 |Lambda_z|^2
+  = exp(2||Delta m||^2)
+      E_{G~N(m(0)+2Re Delta m,I/2)} exp(2||Delta n(G)||^2).
+                                                               (4A.1)
+
+The norms on the right are HERMITIAN norms of the complexified real
+coordinate vectors. To check constants, for Y~N(0,I/2) a mean shift
+Delta has density ratio exp(2Y dot Delta-Delta dot Delta). Its squared
+modulus tilts Y by 2Re Delta and leaves exp(2||Delta||^2). Apply this
+first to each R shift at fixed G, then to the G shift.
+
+Now Delta n=Delta d+Delta L G. Replace the complex vector Delta n by
+the stacked real vector sqrt(2)(Re Delta n,Im Delta n). The same
+determinant formula as(2.3) applies. Local incidence, now comparing z
+to0, gives operator norm O(||z||_infinity), squared Hilbert--Schmidt
+norm O(||z||_2^2), and squared shifted mean O(beta||z||_2^2).
+Possibly shrinking r_0 and increasing a numerical C_1,
+
+       E_kappa0 |Lambda_z|^2
+                    <=exp[C_1(beta+1)||z||_2^2].          (4A.2)
+
+This is an L2 bound for the ACTUAL normalized density ratio, not just
+an unnormalized source numerator. The map z -> Lambda_z is holomorphic
+with values in L2(kappa_0) on the indicated Hilbert ball. For example,
+Gaussian domination on a slightly larger compact ball proves weak
+holomorphy and the locally uniform L2 bound proves strong holomorphy.
+Vector-valued Cauchy and polarization therefore give, for each fixed k,
+
+ ||D^k Lambda_0[v_1,...,v_k]||_L2(kappa0)
+       <=C_k(beta+1)^(k/2) product_i||v_i||_2,
+ E_kappa0 D^k Lambda_0[v_1,...,v_k]=0,        k>=1.        (4A.3)
+
+The second identity follows by differentiating the exact normalization
+(2.5). All derivatives here are Frechet jets in the local exponential
+coordinates(1.3), not yet covariant tensor derivatives.
+
+For a real bounded original F, use (PF)(U)=E_kappaU CF. Subtracting its
+conditional mean before applying(4A.3) gives the pointwise bound
+
+ ||D^k PF(U)||_op^2
+        <=C_k(beta+1)^k Var_kappaU(CF).                   (4A.4)
+
+The operator norm is the supremum over unit Hilbert directions in every
+slot; there is no sum over all coordinate k-tuples. P is positive
+self-adjoint, and the exact conditional variance identity is
+
+ E_mu Var_kappaU(CF)
+       =||CF||_L2(nu)^2-||PF||_L2(mu)^2
+       =<F,P(I-P)F>_mu.                                  (4A.5)
+
+For F_n=P^n F, the spectral theorem consequently gives
+
+ E_mu ||D^k P^(n+1)F||_op^2
+  <=C_k(beta+1)^k <F,P^(2n+1)(I-P)F>_mu
+  <=C_k(beta+1)^k Var_mu(F)/(2n+2),        n>=0.           (4A.6)
+
+We used lambda^(2n+1)(1-lambda)<=1/(2n+2) for 0<=lambda<=1;
+constant components have zero contribution. Constants C_k may change
+between lines, but depend only on k and the fixed local incidence.
+The same statements hold for a finite convex mixture of reflected
+channels by retaining its independent choice label in the joint law.
+
+There is also no repeated complex-radius loss for P^n exp(sum s_i B_i)
+with n>=1: P^(n-1) exp(sum s_i B_i) and its difference from1 obey the
+same real sup bounds e^R_s and e^R_s-1, so the LAST smoothing step
+proves(4.2)--(4.3) on the same ball. Its read set can nevertheless grow
+by n halos. Equations(4A.4)--(4A.6) are actual original-law derivative
+estimates; they do not imply any fixed coefficient-sum polymer norm
+or preservation of a physical channel after its buffer is exhausted.
+
+5. EXACT FINITE READS, GAUGE COVARIANCE AND REFLECTION
+
+If the B_i read only original links in S, C_s depends only on J_e for
+e in S. Include the COMPLETE plaquette auxiliary blocks (G_p and both
+R_h) for every p incident to S. This contains every auxiliary read of
+those currents and is closed under their conditional generation(1.1).
+All other blocks in (2.1) integrate to1. Therefore H(s,z) depends only
+on the original links in the union of these plaquettes, an exact fixed
+plaquette-star enlargement N(S). In (3.2)--(4.4) the coordinate sum
+may be restricted to N(S). No unnecessary whole-volume factor arises.
+
+For a spatially flowed observable whose original read is an entire
+finite spatial slice, N(S) remains that large set with its fixed
+collar. This theorem does not turn flow into finite spatial support.
+
+The full real joint law is gauge covariant, so P preserves gauge
+invariance. The holomorphic germ is its unique local continuation;
+there is no gauge fixing in the argument. If a path convention is
+not reflection covariant, use the reflected pair of channels and
+their average Pbar=(P+mathcal R P mathcal R)/2. The same estimates
+hold by the triangle inequality, using the union of the two fixed
+halos; Pbar1=1 and mu Pbar=mu. For complex-valued observables,
+mathcal R is the LINEAR geometric reflection and OS conjugation is
+applied separately in the form E[overline(mathcal R F)H].
+
+The exact OS-null buffered-round statement is proved separately in
+turn82_auxiliary_channel_gauge.txt: it requires all original and
+auxiliary reads, including the enlarged star, to remain strictly in
+the relevant half. We import no stronger assertion here. In
+particular P is not an algebra homomorphism; (4.5) must be retained.
+
+6. ACTUAL GAIN AND REMAINING SCALING
+
+This avoids the prior need to evaluate C_s at COMPLEX auxiliary
+variables: C_s stays bounded on its complete REAL auxiliary space.
+Consequently it works at small, zero and arbitrarily large currents.
+It smooths even a discontinuous bounded original B and gives a
+common analytic germ centered at every real original configuration.
+
+The beta and read scaling remain explicit. On N relevant links with
+equal imaginary angle size epsilon, (3.2) costs
+exp[C(beta+1)N epsilon^2]. A volume-independent bound therefore
+allows epsilon of order 1/sqrt[(beta+1)N], not a fixed per-link radius
+for an arbitrarily large physical read. For a fixed number of link
+directions the radius is of order beta^-1/2. This is stronger than a
+total-l1 budget but is not automatically the native fixed polymer
+background domain. Repeated P rounds have to retain their enlarged
+reads; the present theorem alone supplies no all-scale source norm.
+
+For canonical sources beta h_p the observable bound itself grows
+with beta. One may apply the theorem to a specified bounded physical
+probe (for example a bounded function of a magnetic energy) exactly,
+but cannot silently replace beta h_p by a unit-bounded observable or
+claim the same source-parameter radius for an unbounded family.
+
+The interacting auxiliary law has not been continued or bounded by
+a Gaussian. No correlation decay, continuum Cauchy property, physical
+variance lower bound or positive-energy nontriviality follows merely
+from the conditional smoothing estimate. It is a concrete actual-law
+initial-source domain, with exact normalization and mixed contacts.

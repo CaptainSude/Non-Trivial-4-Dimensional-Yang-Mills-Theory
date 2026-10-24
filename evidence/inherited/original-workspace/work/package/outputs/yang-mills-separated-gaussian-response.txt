@@ -1,0 +1,353 @@
+YANG--MILLS RESEARCH: SEPARATED GAUSSIAN MIXED RESPONSE
+21 October 2026. TURN105. A reference-model theorem only.
+
+The three-color Gaussian curvature reference now has a common complex
+domain for normalized two-region responses and uniform bounds on
+every fixed mixed derivative at positive physical separation. The
+Schur determinant calculation resums complete within-region source
+inverses before estimating the cross-region Hilbert--Schmidt kernel.
+Its off-diagonal bound pays the entire four-dimensional lattice
+source count, even when diagonal filtered energy variance diverges.
+
+This is not an estimate for the interacting Wilson measure. Matching
+the latter's quadratic Taylor coefficient does not transfer the
+Gaussian determinant identity. The exact proof and independent audit
+follow. The audit's recorded producer hash refers to the pre-admission
+copy; later edits only update status and clarify that the diagonal
+variance asymptotic is for continuous physical profiles at the stated
+filter. Final file hashes are recorded in the TURN105 manifest.
+
+Supplementary numerical check: 36 finite positive-contraction cases,
+including singular covariances and signed profiles, satisfy the exact
+Schur identity to maximum absolute error 1.42e-15 and all stated bounds.
+This is a sanity check of algebra, not a replacement for the proof.
+
+
+========================================================================
+PROOF: UNIFORM SEPARATED GAUSSIAN RESPONSE
+========================================================================
+
+TURN105 -- SEPARATED GAUSSIAN ENERGY RESPONSES HAVE A UNIFORM ANALYTIC DOMAIN
+21 October 2026. Root derivation; independently audited by literature102.
+Admitted exclusively for the Gaussian reference model stated below.
+
+SCOPE
+
+This is a theorem for the three-color exact-curvature Gaussian reference
+model, not for the original interacting Wilson measure. It strengthens
+TURN103's separated second-moment benchmark to all mixed source jets
+on a cutoff-independent complex domain. Its proof retains the complete
+quadratic source kernel and resums each source region exactly before
+estimating the interaction between regions. It does not assume a bound
+on either region's diagonal energy variance.
+
+1. FINITE-DIMENSIONAL STATEMENT
+
+Let C be a real symmetric positive contraction on a finite real Hilbert
+space H. Allow C to be singular. Let Y^1,Y^2,Y^3 be independent centered
+Gaussian vectors with covariance C. Decompose H=H_A+H_B+H_O orthogonally.
+Let W_f and W_g be real symmetric operators supported respectively in
+H_A and H_B, with F=||W_f|| and G=||W_g||. Thus W_f W_g=0. In the lattice
+application they are multiplication by real, possibly signed profiles.
+Define centered quadratic variables
+
+ X_f = (1/2) sum_(c=1)^3 [<Y^c,W_f Y^c>-Tr(C W_f)],
+ X_g = (1/2) sum_(c=1)^3 [<Y^c,W_g Y^c>-Tr(C W_g)].
+
+Let Z(s,t)=E exp(sX_f+tX_g). For |s|F+|t|G<1, the real part of
+the Gaussian quadratic form is strictly positive on the underlying
+standard Gaussian variables, so the integral and its analytic logarithm
+are well defined. Put
+
+ W(s,t)=log Z(s,t)-log Z(s,0)-log Z(0,t),
+
+with the branches zero at the origin. Then, writing C_AB=P_A C P_B,
+
+ |W(s,t)| <= (3/2) |st| F G
+                 /(1-|s|F-|t|G) ||C_AB||_HS^2.             (1.1)
+
+This bound contains no Tr(C_AA^2), no Tr(C_BB^2), and no dimension of H.
+If either profile is zero, all statements reduce to W=0.
+
+For p,q>=1, Cauchy's formula on |s|=1/(4F), |t|=1/(4G) gives
+
+ |partial_s^p partial_t^q W(0,0)|
+ <=(3/16) p! q! (4F)^p (4G)^q ||C_AB||_HS^2.              (1.2)
+
+In particular the exact second jet is
+
+ partial_s partial_t W(0,0)
+    =(3/2) Tr(W_f C_AB W_g C_BA).                         (1.3)
+
+The trace in (1.3) is on H_A with the evident restrictions of W_f,W_g.
+For multiplication operators this is (3/2)sum_(p in A,q in B)
+f_p g_q C(p,q)^2. It can have either sign for signed f,g.
+
+2. EXACT RESUMMATION OF THE QUADRATIC KERNEL
+
+First work with uncentered quadratic variables; the scalar linear
+centering cancels identically from W. Gaussian integration gives
+
+ E exp[(1/2)sum_c <Y^c,(sW_f+tW_g)Y^c>]
+   =det(I-C^(1/2)(sW_f+tW_g)C^(1/2))^(-3/2).
+
+For singular C this follows by writing Y=C^(1/2)z for a standard
+Gaussian z. The identity det(I-AB)=det(I-BA), followed by eliminating
+H_O, reduces its determinant to
+
+ det [[I-s C_AA W_f,       -t C_AB W_g],
+      [-s C_BA W_f,       I-t C_BB W_g]].
+
+Let A_s=I-s C_AA W_f and B_t=I-t C_BB W_g. Their inverses have norms
+at most (1-|s|F)^(-1) and (1-|t|G)^(-1), by their Neumann series.
+The exact Schur determinant identity yields
+
+ exp W(s,t)=det(I-T(s,t))^(-3/2),
+ T(s,t)=st B_t^(-1) C_BA W_f A_s^(-1) C_AB W_g.            (2.1)
+
+This determinant is on H_B. Both within-region source kernels have
+been kept in their full inverses. They have not been replaced by
+their values at zero source or estimated by a divergent trace.
+
+Write alpha=|s|F, gamma=|t|G. Since ||C_AB||<=1,
+
+ ||T|| <= alpha gamma/[(1-alpha)(1-gamma)] =:q<1,
+ ||T||_1 <= alpha gamma/[(1-alpha)(1-gamma)] ||C_AB||_HS^2.
+
+The trace norm estimate uses ||RST||_1<=||R||_HS||S|| ||T||_HS
+after grouping the two off-diagonal covariance factors; all other
+factors are bounded operators. Consequently the absolutely convergent
+series
+
+ W=(3/2) sum_(n>=1) Tr(T^n)/n
+
+has absolute value at most (3/2)||T||_1/(1-q). Substituting q and
+using (1-alpha)(1-gamma)-alpha gamma=1-alpha-gamma proves (1.1).
+On the stated Cauchy circles its bound is (3/16)||C_AB||_HS^2,
+which proves (1.2). Expanding (2.1) to order st proves (1.3).
+These are exact finite-dimensional identities for every C in the class.
+
+3. APPLICATION TO FOUR-DIMENSIONAL LATTICE CURVATURE
+
+Use the unit periodic four-torus, spacing a=1/N, with six plaquette
+directions and three independent colors. Let Delta_N have symbol
+lambda_N(k)=4 sum_mu sin^2(k_mu/2). Let
+
+ P_N(k)=d_1(k)d_1(k)^*/lambda_N(k), k!=0; P_N(0)=0.
+
+This is the orthogonal projection onto exact plaquette two-forms.
+For any s_N>=0 put C_N=exp(-s_N Delta_N)P_N. It is a real symmetric
+positive contraction, including all orientation components. If original
+Gaussian curvature F has covariance beta^(-1)P_N, the variables in
+section 1 are the centered energies of sqrt(beta) exp[-s_N Delta_N/2]F.
+At s_N=N^2/log(N)^2 they coincide with the TURN103 filtered energy
+variables P^0_(t_a/2) X_(a,f), t_a=1/[beta a^2 log(1/a)^2].
+
+Let f,g be bounded real profiles whose physical supports have periodic
+distance at least delta>0. The actual four-link/plaquette-center offsets
+are bounded in lattice units and do not affect fixed positive physical
+separation for sufficiently large N. Let A_N,B_N contain the respective
+plaquette roots; |A_N|,|B_N|<=6N^4.
+
+For the filter s_N=N^2/log(N)^2, TURN103's differentiated periodic
+heat-kernel estimate proves
+
+ |C_N(p,q)|<=C_delta N^(-4), p in A_N, q in B_N.            (3.1)
+
+All direction entries obey this bound. Thus
+
+ ||(C_N)_(A_N B_N)||_HS^2<=C_delta.                        (3.2)
+
+The full N^8 pair count is paid by the square N^(-8) kernel bound.
+Sections 1--2 therefore prove a source domain independent of N and
+beta for the normalized mixed response, together with uniform bounds
+on every fixed mixed derivative. The one-region variances can diverge:
+for continuous physical f at the stated filter, TURN103 gives their
+leading growth (9/(128pi^2))log(N)^4 integral f^2.
+There is no contradiction because that variance is not in (1.1).
+
+For completeness (3.1) also holds for unfiltered P_N and uniformly
+for all s_N>=0. The representation is
+
+ C_N=d_1 d_1^* integral_(s_N)^infinity
+                              [exp(-u Delta_N)-Pi_0] du.
+
+For 1<=u<=N^2, each second difference of the scalar heat kernel is
+bounded by C u^(-3) exp[-c r/sqrt(u)], with periodic distance r.
+For u>=N^2 it is bounded by C N^(-6) exp[-c u/N^2]. These are proved
+in TURN103 by contour shift and the nonzero Fourier sum respectively.
+Integrating their absolute values from 1 to infinity at r>=c_delta N
+gives C_delta N^(-4). For 0<=u<=1 a fixed imaginary Fourier shift
+gives C exp(-c r) for second differences at separated indices; its
+periodic image sum has the same form, with uniform constants. Its
+integral is exponentially small in N. Integrating over any subinterval
+[s_N,infinity) is bounded by the complete absolute integral. This
+proves the stated uniform extension, with zero modes explicitly removed.
+
+4. WHAT THE ESTIMATE DOES AND DOES NOT REQUIRE
+
+The source domain in (1.1) controls the normalized TWO-REGION response.
+The unnormalized generating functions can grow exponentially with the
+number of sites. Their logarithms and their diagonal energy variances
+need not have limits. No probabilistic law for all unrenormalized
+composite energies is inferred from a finite mixed ratio.
+
+The structural input doing the work is the exact Gaussian determinant,
+the positive-contraction covariance, and the Hilbert--Schmidt estimate
+between separated supports. A pointwise small-curvature expansion of
+the Wilson law supplies none of these identities for its interacting
+source response. In particular (1.1) cannot be transferred merely by
+matching the quadratic Taylor coefficient of the Wilson action.
+
+The complete inverses A_s and B_t show why deleting only a scalar
+one-source vacuum term is not a replacement for transporting the full
+quadratic source kernel. All repeated source insertions within each
+region are resummed before the cross-region trace is bounded. This is
+a concrete reference calculation for the actual source transport task.
+
+The first two-source Wilson estimate must still retain its generated
+quadratic/marginal kernels and bound the signed connected nonlinear
+defect. The lattice Gaussian benchmark proves that a uniform separated
+mixed-response domain is compatible with diverging diagonal contact
+fluctuations; it does not prove the required interacting domain, the
+continuum hierarchy, or nonabelian identification.
+
+
+
+========================================================================
+INDEPENDENT AUDIT
+========================================================================
+
+TURN105 -- INDEPENDENT AUDIT OF THE GAUSSIAN MIXED RESPONSE
+21 October 2026. literature102.
+
+AUDITED FILE
+ work/turn105_gaussian_mixed_response.txt
+ SHA256 BCDA720DFD6618D70E201DA23419EF160DE7733B0431BB4D728E02B9E8CBCCFF
+
+VERDICT: PASS at its expressly Gaussian scope. No mathematical correction
+is needed. This does not admit an original-Wilson source estimate.
+
+1. COMPLEX INTEGRABILITY, INCLUDING SINGULAR C
+
+Set M=sW_f+tW_g and Y=C^(1/2)z with z standard real Gaussian. Since
+W_f,W_g are real symmetric, Re(C^(1/2)MC^(1/2)) is real symmetric and
+has norm at most alpha+gamma, alpha=|s|F, gamma=|t|G. Thus I minus this
+real part is positive definite for alpha+gamma<1. Gaussian integration
+is locally dominated on this domain. Moreover ||C^(1/2)MC^(1/2)||<1,
+so its determinant has the analytic logarithm fixed by the convergent
+trace-log series at zero. No inverse of C is required. This validates
+the singular-covariance case as well as signed profiles and complex
+source parameters. A zero profile gives W=0 as stated.
+
+Each of the three colors contributes a determinant exponent -1/2;
+the total exponent is -3/2. The centering is the linear scalar
+-(3/2)Tr(CM) in log Z and cancels exactly from the mixed response.
+
+2. SCHUR FACTOR ORDER AND SIGNS
+
+After det(I-AB)=det(I-BA), I-CM has third block column (0,0,I) in
+H_A+H_B+H_O. Its determinant is therefore the stated 2x2 determinant.
+The lower Schur complement is
+
+ B_t - st C_BA W_f A_s^(-1) C_AB W_g
+ = B_t[I-st B_t^(-1)C_BA W_f A_s^(-1)C_AB W_g].
+
+This gives exactly the T in (2.1); no commuting of W_f with C_AA or
+of W_g with C_BB is used. The signs give +st in T and consequently
+-(3/2)log det(I-T) in W. The identities agree at zero and continue
+analytically throughout alpha+gamma<1, where ||T||<1. Thus the
+fractional determinant power has an unambiguous specified branch.
+
+The two off-diagonal factors can be bounded in Hilbert--Schmidt norm:
+
+ ||B_t^(-1) C_BA [W_f A_s^(-1)] C_AB W_g||_1
+ <= F G ||C_AB||_HS^2 /[(1-alpha)(1-gamma)].
+
+The operator norm bound q=alpha gamma/[(1-alpha)(1-gamma)]<1 follows
+from ||C_AB||<=1. The inequality |Tr(T^n)|<=||T||_1||T||^(n-1)
+and 1/n<=1 yield (1.1) with denominator 1-alpha-gamma. This estimate
+does not contain any diagonal Hilbert--Schmidt norms.
+
+3. CAUCHY CONSTANT AND SECOND JET
+
+At alpha=gamma=1/4, the right side of (1.1) is
+ (3/2)(1/16)/(1/2) ||C_AB||_HS^2=(3/16)||C_AB||_HS^2.
+The closed product of the two Cauchy circles lies strictly within the
+analytic domain. Multiplication by p!q!(4F)^p(4G)^q gives (1.2).
+For the coefficient st, A_s^(-1),B_t^(-1) may be replaced by I and
+all powers T^n with n>=2 have total order at least four. Hence
+ partial_s partial_t W(0,0)=(3/2)Tr(W_f C_AB W_g C_BA).
+This independently agrees with the Wick covariance of three centered
+quadratic forms, each carrying the factor 1/2. Signed profiles can
+give a signed trace; the proof does not introduce association.
+
+4. CURVATURE SYMBOL AND SEMIGROUP NORMALIZATION
+
+For nonzero Fourier mode, d_1d_1^*/lambda_N is the rank-three
+orthogonal projection onto exact two-forms. P_N(0)=0 removes the
+harmonic modes. Thus C_N=e^(-s_N Delta_N)P_N is a real symmetric
+positive contraction for all s_N>=0; Fourier complex phases merely
+encode the real cochain operator.
+
+If Cov(F)=beta^(-1)P_N, then sqrt(beta)e^(-s_N Delta_N/2)F has
+covariance C_N. The Gaussian OU conditional mean at time r is
+e^(-beta r Delta_N)F. Setting r=t_a/2 gives s_N=beta t_a=N^2/log(N)^2,
+which is exactly the TURN103 normalization. Centering remains the
+centering for this smoothed covariance. No extra beta or factor two
+is missing.
+
+5. OFF-DIAGONAL ESTIMATE, INCLUDING s_N=0
+
+The zero-mode-subtracted integral is well-defined componentwise on
+two-forms, and d_1d_1^* annihilates the componentwise constant mode.
+Each matrix entry of its differentiated heat kernel is a fixed finite
+sum of translated second differences of the scalar heat kernel.
+
+The TURN103 proof of the middle and large time bounds is valid: for
+1<=u<=N^2, shift an infinite-lattice Fourier coordinate by i eta with
+eta of order u^(-1/2), gaining spatial exponential decay while the two
+difference factors give u^(-1). The four-dimensional integral gives
+u^(-2). Periodizing has a uniformly bounded image sum since
+N/sqrt(u)>=1. For u>=N^2 the nonzero Fourier sum is bounded by
+C N^(-6)exp(-cu/N^2).
+
+For the added interval 0<=u<=1, take instead a fixed nonzero imaginary
+shift. The difference factors and exp[-u lambda(k+i eta)] are uniformly
+bounded on the compact contour. This gives C exp(-c|x|) on Z^4.
+The periodic image sum retains C exp(-c' r), uniformly for N>=4.
+This is a legitimate extension even at u=0; second differences of
+the delta kernel have finite support and are zero at the separated
+indices once N is sufficiently large.
+
+At r>=c_delta N, integrate the three intervals. The first contributes
+C exp(-c_delta N). In the middle interval v=r/sqrt(u) gives at most
+C r^(-4) integral_0^infinity v^3 e^(-cv)dv. The last interval gives
+C N^(-4). Therefore every entry is bounded by C_delta N^(-4)
+uniformly for the integral over ANY [s_N,infinity), s_N>=0. The finite
+cochain translations only decrease r by a constant and are absorbed
+for sufficiently large N at fixed positive physical separation.
+
+There are at most 6N^4 roots in each support. Squaring the entry
+bound and summing pays the entire N^8 pair count, proving (3.2).
+The constants may depend on physical separation, as required.
+
+6. SCOPE CHECK
+
+The claim is a uniform normalized two-region analytic response for a
+particular Gaussian curvature law. It neither bounds the diagonal
+energy variance nor asserts that the single-region generating
+functions converge. It uses the exact Gaussian determinant, not just
+the quadratic Taylor coefficient of a nonlinear Wilson action. The
+file correctly keeps interacting attachment, contact-compatible
+hierarchy, and physical non-Abelian identification outside its claim.
+
+ADMISSION READBACK
+
+During the synthesis audit, the diagonal variance asymptotic was
+explicitly qualified to continuous physical profiles at the stated
+filter, while the separated bound retains its bounded-profile scope.
+This is the precise scope of the cited TURN103 theorem. The amended
+producer SHA256 is
+52C5D9729C0C9B61C734C0B5DF00FC35FB5EB46726BAD5FD003F731959137212.
+The mathematical proof above is otherwise unchanged and remains PASS.

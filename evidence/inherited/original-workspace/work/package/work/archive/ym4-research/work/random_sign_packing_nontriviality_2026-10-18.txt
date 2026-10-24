@@ -1,0 +1,301 @@
+RANDOM-SIGN PACKING OF THE EXACT SOURCE REMAINDER
+18 October 2026. Working proof. Relative to the existing one-run source
+producer and regular two-source Gaussian comparison, not a full YM4 theorem.
+
+1. THE COMMON SOURCE FUNCTION AND ITS FIXED-CELL BOUND
+
+Fix the final weak stopping band [Gamma_*,Gamma_*+C_q] FIRST. Keep one
+source-free trajectory, its frozen maps/thresholds/reference denominators,
+and the common local vacuum family of one_run_source_gradient_closure,
+Section16. At a finite regulator put
+
+ h(v)=exp[-E_UV(v)] Z(v)/Z(0),    h(0)=1.                 (1)
+
+Every coefficient in E_UV is a function of the weight values before
+choosing any profile decomposition. In particular this is ONE h, not
+separately normalized functions for different packets. Its polarized
+second derivative at zero is the bilinear form
+
+ B_h(f,g)=D^2 h(0)[f,g]-Dh(0)[f]Dh(0)[g].               (2)
+
+The identity
+
+ Cov_bare(O(f),O(g))=D^2 E_UV(0)[f,g]+B_h(f,g)          (3)
+
+is exact. Equation(2) requires no zero-free disk for h. One may call it
+the second logarithmic germ at zero because h(0)=1; no logarithm is used
+away from that germ.
+
+Choose one fixed compatible chessboard cell C, enlarged once if necessary,
+and an interior subcube C_0 a FIXED positive distance d_0 from its faces.
+For every complex weight v supported in C_0 with
+
+ ||v||_infty+Lip_endpoint(v)<=c r_*,                    (4)
+
+the existing source/chessboard consumer gives |h(v)|<=Q_*. Here r_*>0
+and Q_*<infinity depend on the fixed terminal band, cell, source geometry
+and source majorants, but not on the number of separate pieces of v,
+their signs, UV depth, or total torus volume.
+
+This last independence is essential. Apply chessboard to the whole source
+in ONE occupied cell. Do not apply a many-profile inequality and multiply
+its constant by the number of pieces. For the face remainder, root every
+carrier meeting the source and the cell boundary at a source hit in C_0.
+At localization length a its anchor count is at most C(1+a^-4), while its
+tree length is at least c d_0/a-C. Hence its scale sum is bounded by
+
+ C sum_a (1+a^-4) exp[-c d_0/a]<infinity.               (5)
+
+The finitely many a comparable to or above d_0 have a fixed contribution.
+The same bound handles fixed enlargements and sufficiently small bare
+mesh. It depends on the enclosing cell and its outer buffer, not on the
+total number or total boundary area of the pieces inside C_0. The bulk
+vacuum cancellation uses the common family(1), exactly as in Section16.
+
+2. PACKING AND THE EXACT RADEMACHER IDENTITY
+
+Let (f_R,g_R) be one fixed-shape pair of amplitude-one smooth profiles,
+with each diameter and their mutual separation comparable to R. The two
+shapes are reflected copies, with compact disjoint supports. For R small
+one can choose m>=c_pack R^-4 bare-lattice translations t_i such that all
+2m supports of
+
+ f_i(x)=f_R(x-t_i),    g_i(x)=g_R(x-t_i)                 (6)
+
+are pairwise disjoint and lie in C_0. Use boxes of side C_shape R; if
+the bare mesh is sufficiently smaller than R, rounding their centers to
+the bare mesh preserves the support margins and the bound on m.
+
+For independent signs epsilon_i in {-1,1}, put
+
+ F_epsilon=sum_i epsilon_i f_i,
+ G_epsilon=sum_i epsilon_i g_i.                         (7)
+
+Disjointness and the fixed profile shapes give
+
+ ||F_epsilon||_infty+||G_epsilon||_infty<=C,
+ Lip(F_epsilon)+Lip(G_epsilon)<=C/R,                   (8)
+
+uniformly in m and the signs. In particular v=z_1 F_epsilon+z_2 G_epsilon
+obeys(4) on |z_a|<d_R=c_0 r_* R, with c_0 fixed sufficiently small.
+All earlier source classes are also satisfied: at endpoint-relative
+length a<=1, the ratio of the scale-a Lipschitz norm to chi_a=sqrt(a)
+is at most C sqrt(a)/R<=C/R.
+
+Cauchy applied directly to h gives
+
+ |B_h(F_epsilon,G_epsilon)|
+ <=(Q_*+Q_*^2)d_R^-2.                                (9)
+
+Bilinearity and E(epsilon_i epsilon_l)=1_{i=l} imply EXACTLY
+
+ E_epsilon B_h(F_epsilon,G_epsilon)=sum_i B_h(f_i,g_i).
+
+The bare periodic Wilson measure is translation invariant, so all the
+bare covariances in(3) for (f_i,g_i) equal the same number C_bare(R).
+No translation covariance of the fixed RG scaffold or of E_UV is used.
+Writing c_i=D^2 E_UV(0)[f_i,g_i], equations(3),(9) give
+
+ |C_bare(R)-m^-1 sum_i c_i| <= C_* R^2,                (10)
+ C_* = C (Q_*+Q_*^2) r_*^-2 / c_pack.
+
+This controls the ENTIRE normalized endpoint remainder, including every
+surviving-history coefficient and all denominator cross terms. It does
+not estimate a bad-event probability, an individual component ratio, or
+the sign of any large-field term. The exact common source function and
+the averaging of its complete logarithmic second germ do the work.
+
+3. LOCAL RE-TERMINALIZATION OF A UNIVERSAL VACUUM BIRTH
+
+The following interface is checked separately in the late-universal-
+vacuum audit. It is recorded here to make the combined argument explicit.
+
+The universal birth e_j(X;v) dated at its COMPLETED endpoint j depends
+only on the actual source-free prefix through j. Regular maps and
+localizations are causal. The large-field preparation at endpoint j
+uses past levels h+1,...,j; it does not integrate j+1,...,j+N. All
+reference choices and the homogeneous scalar disc remain fixed.
+Re-terminating the proof at j changes chi_i and the allowable source
+radius, not the coefficient function or its original birth date.
+
+Section15.4 therefore permits an explicit radius
+
+ r(j)=c(1+gamma_j)^-d                                  (11)
+
+for a fixed finite d, chosen as the maximum of all fixed polynomial
+source-admission losses. If one retains the stronger original R-slot
+condition r E_src g^-C_b<=g^P, choose d>=(P+C_b)/2. This only changes
+the later fixed exponent A. Section16.2 gives
+
+ |e_j(X;v)|<=C_e exp[-kappa_e d_j(X)]                  (12)
+
+on the local W_j for the shortened run, where chi_j=1. Remaining fixed
+geometric/logarithmic costs can be absorbed into a finite polynomial
+of gamma_j. This is an analytic estimate for the SAME e_j; it is not
+a new sourced trajectory or a different source normalization.
+
+In this note ell is the PRIMITIVE spatial scale. The sum below includes
+EVERY primitive vacuum birth, not merely q-block endpoints. Let
+a_j=ell^{j-N} in endpoint units, R_j=R_N/a_j, and use the packed
+profiles(6). At date j their scale-j source norm is at most
+C max(1,R_j^-1), uniformly in m and the signs. Hence Cauchy for(12)
+on |z_a|<c r(j) min(1,R_j) bounds its mixed coefficient by
+
+ C r(j)^-2 max(1,R_j^-2) exp[-kappa_e d_j(X)].          (13)
+
+There are at most C a_j^-4 anchors in the fixed enclosing endpoint
+cell. Carriers extending outside that cell are counted by rooting at a
+source hit and summing their retained exponential tree reserve. Divide
+the sign-averaged sum by m>=cR_N^-4. Since
+R_N^4 a_j^-4=R_j^4, for every late scale with R_j<=1,
+
+ |m^-1 sum_i D^2 E_j(0)[f_i,g_i]|
+ <=C(1+gamma_j)^D R_j^2.                              (14)
+
+The sign average is taken BEFORE the absolute value; cross-pair mixed
+coefficients disappear. No estimate for an individual late pair is
+needed. One may use a direct localized derivative bound instead, but
+the packed proof needs only the original local analytic majorant.
+
+If gamma_j<=C gamma_s on the remaining weak trajectory and t_0 is a
+date after packet scale, then the geometric decrease of R_j gives
+
+ |m^-1 sum_i sum_{j>=t_0} D^2 E_j(0)[f_i,g_i]|
+ <= C gamma_s^D R_{t_0}^2.                            (15)
+
+No factor N-s occurs. In particular this step does not propagate a
+marked norm through the entire long trajectory and does not require
+sum_j eta_j to be small there. Static vacua already extracted at earlier
+births are not counted again.
+
+4. PARAMETER ORDER AND THE NONZERO COVARIANCE
+
+Fix all source geometry, q, source/lifetime powers and analytic reserves.
+Fix a sufficiently weak final band Gamma_* so the established source-free
+and source induction holds. Fix r_*, the compatible cell and Q_* there.
+Determine the finite exponent D in(14). These choices precede the
+witness coupling and the very small endpoint profiles.
+
+Choose a witness band [Gamma_w,Gamma_w+C_q] and a broad pair at witness
+scale s of width/separation rho=Gamma_w^B, FIXED throughout that band.
+Here B pays the previously fixed burn-in and initial gradient-profile
+errors. In estimates gamma_s and Gamma_w are comparable; rho is never
+allowed to vary with the regulator inside that band. The early regular
+comparison is used only up
+to t_0 with
+
+ t_0-s=ceil(log_ell rho)+ceil(A log_ell Gamma_w)+O(1),
+ R_{t_0}<=C Gamma_w^-A.                               (16)
+
+Choose A>(D+2)/2, with a fixed extra strict margin, and also larger than
+the previously fixed exponent A_good needed by the early GOOD-sector
+endpoint estimate. Round to an aligned q-block comparison endpoint;
+finitely many primitive phases affect only fixed constants. All couplings in this
+prefix remain comparable to gamma_s. The existing regular two-source
+comparison, INCLUDING the genuine universal healed/annular coefficients,
+gives uniformly over the translated pairs
+
+ c_i,early=q_s^2 g_s^4 K_Maxwell(f,theta f)+o(g_s^4),  (17)
+
+where |q_s|>=q_*>0 and the chosen fixed profile pair has
+K_Maxwell(f,theta f)>0. The uniformity in position relative to the
+scaffold must be retained: exact bare translation covariance alone
+does not imply translation covariance of c_i,early. The established
+rooted and profile-approximation estimates supply that uniformity;
+the independent translated-prefix audit checks this particular use.
+
+The remaining evolution is allowed to be MUCH longer. Bounded primitive
+increments, positive q-block drift, and the fixed final band imply
+
+ N-s>=c gamma_s-C,
+ R_N=rho ell^{-(N-s)}<=C Gamma_w^B exp[-c' Gamma_w].    (18)
+
+The matching upper bound N-s<=C gamma_s+C ensures a finite number of
+possible scale offsets when gamma_s is chosen in a fixed witness band.
+Equation(15) and the choice of A make all LATE universal coefficients
+o(g_s^4). Equation(10) and(18), with the FIXED C_*, make the complete
+normalized endpoint remainder o(g_s^4). Combining them with(17) yields
+
+ Cov_bare(O(f_R),O(theta f_R))
+ =q_s^2 g_s^4 K_Maxwell(f,theta f)+o(g_s^4)>0.          (19)
+
+Here equality means the displayed uniform error estimate, not exact
+Gaussian equality. First choose the witness band sufficiently weak and
+large to make this error less than (q_*^2/2)g_s^4 K_Maxwell. THEN keep
+that band and the physical profiles fixed while removing UV and volume
+regulators. One can choose s by first passage into that fixed witness
+band. Its possible offsets N-s form a finite set, so a subsequence has
+constant offset; the endpoint profiles are then fixed separated compact
+tests. An alternative is to prescribe one sufficiently large fixed
+offset and use the uniform weak-trajectory bounds at that date.
+
+The packing contains a huge but FINITE number of profiles after this
+choice. All bounds are independent of that count. Taking the continuum
+subsequence for this one fixed pair preserves its strictly positive
+connected covariance. No claim about diagonal reflection positivity or
+continuous rotation invariance is made by this argument.
+
+An exact corollary concerns the earlier t_0 endpoint ledger. There,
+endpoint_original_tube_neutral(12) reads
+
+ C_bare=c_early,original+G_t0+L12^(t0),
+
+where G_t0 is the COMPLETE good-sector expression, including its
+normalized first-mark covariance, and L12^(t0) contains all live-history
+terms and cross covariances. The choice A>A_good gives G_t0=o(g_s^4).
+The uniform early comparison gives
+avg_i c_early,i-c_early,original=o(g_s^4). Equations(10),(15) therefore
+imply L12^(t0)=o(g_s^4) for THIS witness. This is a bound on the full
+signed normalized remainder obtained by exact longer continuation; it
+does not give absolute componentwise estimates, conditional fill bounds,
+or general large-field probabilities.
+
+5. SCOPE OF THE CONCLUSION
+
+The new exact consumer calculation is(2)--(10). The new late-tail
+calculation is(11)--(15), conditional only on the SAME causal universal
+birth formula and its re-terminated source-class estimate, not on any
+normalized large-field probability or arbitrary boundary quotient.
+Combined with the already developed regular early-prefix comparison,
+these formulas remove the previously isolated normalized large-field
+obstruction to this particular nontriviality witness.
+
+They do not independently prove the original one-run source producer,
+the sharp regular marked theorem, or the Gaussian normalization inputs.
+Those remain explicit imported modules with their working proofs. The
+present result is a nontriviality implication of those modules and the
+existing compactness construction, not a completed four-dimensional
+Yang--Mills existence proof or a mass-gap argument.
+
+6. INDEPENDENT TRANSLATION, CONSTANT, AND LIMIT AUDITS
+
+The separate working proof reterminalized_universal_scalar_tail,
+Sections2--5, independently verifies the causal completed-birth
+convention, the fixed homogeneous scalar disc R_*, quantitative
+polynomial r(j), and the scale-by-scale averaged estimate(14).
+Its Section7 independently checked(2)--(10), including the h1*h2 term.
+
+The independent random_sign_packing_independent_audit, Sections4--5,
+checks the position uniformity needed in(17), as follows. Translating
+the test changes its scalar weights on the SAME invariant root family.
+Tensor-hat interpolation on that unchanged grid has a uniform error
+C mesh/rho; the root stabilizer/burn-in applies to the unweighted
+family. Profile-gradient bounds use only sup/Lipschitz norms and
+separation. Rooted static R deletion does not require scaffold
+translation covariance. The Gaussian fine-position and quadrature
+bounds are uniform in the grid phase. Consequently arbitrary
+bare-lattice translates retain one early-comparison error constant;
+there is no loss in packing density from a large scaffold period.
+
+That audit also checks the fixed-offset continuum passage and exact
+bare reflection of plaquette energies. The original pair remains a
+pair about plane zero; individual packed pairs may have different
+translated reflection planes because their complete bare covariances
+are identified only after restoring E_UV. No diagonal reflection or
+isometric identification of different RP Hilbert spaces is used.
+
+The pre-witness mixed bound exp[-c rho+C(N-s)] is included in the
+early input. Since N-s<=C(1+Gamma_w) and rho=Gamma_w^B with B>1,
+it is negligible uniformly along the fixed-band continuum sequence.
+Convergence of gamma_s or q_s is unnecessary for the strictly positive
+lower bound; their uniform band bounds and |q_s|>=q_* suffice.

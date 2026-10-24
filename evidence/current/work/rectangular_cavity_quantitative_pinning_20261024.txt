@@ -1,0 +1,373 @@
+RECTANGULAR ORIGINAL WILSON CAVITIES: QUANTITATIVE PINNING AND THE IMAGE LIMIT
+24 October 2026. connected_energy. Scratch producer; independently scoped PASS.
+No archive/output changes. This is not an all-scale source-admission theorem.
+
+STATUS AND RESULT
+
+The exact internal Haar gauge fixing used for the fixed 560-link cavity
+extends to every nonwrapping four-dimensional rectangular vertex box.
+An explicit, deliberately inefficient filling estimate gives nonlinear
+pinning c R^-4 times the largest remaining link displacement squared,
+and a reduced flat Hessian gap c R^-8. Both estimates allow arbitrary
+plaquette occurrence multiplicity in the filling.
+
+Keeping the dimension in the contour estimates gives one conservative
+zero-free regime: boundary complex radius c R^-60 and beta>=C R^80.
+The Gaussian error is RELATIVE to the exact leading Gaussian coefficient,
+not an absolute fixed-dimensional error followed by an exponentially
+costly division. A raw interior mark forcing energy tau^2/2 consequently
+has a rare tube of radius c min(R^-60,tau R^-6), with logarithmic entropy
+O(R^4 log beta). These exponents are proved sufficient below and are not
+optimized. Independent review, including the relative contour constants
+and both final clarifications, is saved in
+ work/rectangular_cavity_quantitative_pinning_audit_20261024.txt.
+This audit does not promote the result to an all-scale source theorem.
+
+The sufficient tube shrinks with R. For a mark of native size tau~epsilon0,
+fitting the unchanged first noise delta0=(A1/A0)epsilon0 into this tube
+would require a hierarchy growing at least as R^6, besides any map price.
+The available fixed hierarchy therefore does not close arbitrary growing
+cavities by this estimate. Energy beating entropy alone does not repair
+that complex-image problem.
+
+Earlier fixed-geometry inputs, for context rather than a uniformity claim:
+ work/enlarged_cavity_gauge_pinned_tube_20261024.txt;
+ work/cavity_patch_complement_exterior_witness_20261024.txt;
+ work/pinned_plaquette_cavity_enlarged_tube_20261024.txt.
+The quantitative proof here supplies the additional geometry dependence.
+
+1. ORIGINAL CAVITY AND AN EXACT ROOTED GAUGE FOREST
+
+Let D=product_(mu=1)^4 {0,...,n_mu}, n_mu>=2, be a nonwrapping box, and
+R=max_mu(n_mu+2). Let K contain all nearest-neighbor links with both
+endpoints in D. Let B contain EVERY exterior link in a plaquette meeting
+K. Hold B at y and integrate K with normalized SU(2) Haar. Write
+
+ H(U;y)=sum_(q meeting K) h_q(U,y),
+ h^hol(W)=1-(Tr W+Tr W^-1)/4,
+ Z(y)=integral exp[-beta H(U;y)]dU.                         (1)
+
+For real SU(2), h(W)=||W-I||op^2/2. beta is the ORIGINAL Wilson parameter,
+beta=C_W/g0^2, with its fixed trace convention. The original exterior
+mass is Z_full^-1 exp[-beta H_out] Z(y)dy. It is never replaced below.
+
+There are
+
+ E=|K|=sum_mu n_mu product_(nu!=mu)(n_nu+1),
+ v_int=product_mu(n_mu-1),
+ M=E-v_int, d=3M,                                        (2)
+
+and all these counts, and |B|, are at most C R^4. At each strict interior
+vertex v select the edge (v-e4,v). These edges form disjoint vertical
+line forests, rooted at the boundary x4=0. Each path has length at most R.
+
+Set the gauge to identity at all boundary and outside vertices. Along a
+forest path define gamma_v recursively so that
+
+              V_xy=gamma_x U_xy gamma_y^-1
+
+is I on each selected edge. The selected links and the gamma_v variables
+are in triangular bijection by group multiplication. Conditional on
+them, every remaining link change is a left/right Haar translation.
+Consequently the product-Haar change is exact, and each of the v_int
+normalized gauge integrals is exactly1. The reduced integral has M
+SU(2) variables with selected links set to I. There is no determinant,
+gauge-volume constant, or extra beta power from this transformation.
+
+Every interior vertex has all its incident links inside K; hence this
+gauge does not alter y. The COMPLETE crossing-plaquette action is
+invariant. The same equality holds for complex y near I by algebraic
+trace invariance. A source times a fixed interior mark is preserved if
+that complete marked insertion is gauge invariant. Arbitrary noninvariant
+Borel insertions require their transformed gauge-variable dependence and
+are not included in the reduced marked statement below.
+
+2. UNIQUE FLAT MINIMUM AND FILLING WITH MULTIPLICITY RETAINED
+
+At y=I, H>=0. If H=0, all internal plaquettes are flat. Coordinate path
+swaps on the filled box give a vertex pure gauge. Every boundary-tangent
+edge has an outward plaquette whose other three links are held at I.
+That plaquette is in (1), so every boundary-tangent edge is I. The boundary
+graph is connected. The vertex gauge is therefore constant on the entire
+boundary; the rooted forest then forces the same constant at every
+interior vertex. The unique reduced zero-action configuration is V=I.
+Constant conjugation fixes this point and gives no nonzero zero mode.
+
+Here is a quantitative version that does not assume a good gauge-fixing
+condition number. For a remaining link e, close e by its endpoint forest
+paths to the boundary, followed by an exterior path joining their boundary
+endpoints. A boundary endpoint itself needs no forest path. The exterior
+path can be constructed in the expanded box product[-1,n_mu+1]: step
+outward through a boundary normal, keep that coordinate outside while
+moving the others to -1, then move it to -1. Join through the common
+exterior corner. Every link of this path is outside K and is I at flat y.
+The closed loop has length <=C R and holonomy V_e or V_e^-1.
+Any additional exterior links needed just for this flat filling, beyond
+the original B, are assigned identity for the geometric argument. They
+are not extra held or integrated variables in the original cavity law.
+
+An ordered-coordinate contraction fills such a loop with at most C R^2
+plaquette OCCURRENCES. For example, replace each edge by its two root
+paths and commute coordinate segments; each root path has length <=C R,
+and there are <=C R original loop edges. All faces stay in the expanded
+rectangular box. A face not meeting K is all exterior and is I; every
+other face is included in (1).
+
+Use the nonabelian plaquette product along this filling, with unitary
+transport conjugations. Telescoping products and the operator norm give
+
+ ||V_e-I|| <= sum_occ ||U_q-I||
+           <= C R^2 max_(q meeting K)||U_q-I||
+           <= C R^2 (sum_(q meeting K)||U_q-I||^2)^(1/2).
+
+In particular
+
+       H(V;I)>=c R^-4 max_e ||V_e-I||^2.                 (3)
+
+This uses the number of occurrences, not the number of distinct faces.
+Equivalently, Cauchy followed by max multiplicity <=C R^2 gives the same
+loss. No bounded-occurrence claim is being used. A sharper filling may
+improve powers, but is unnecessary for the present result.
+
+In reduced Pauli coordinates V_e=exp(i A_e), let Q be the flat Hessian,
+so H(A;0)=A^T Q A/2+O(A^3). Differentiating (3) on every ray gives
+
+ A^T Q A>=c R^-4 max_e |A_e|^2,
+             c R^-8 I <= Q <= C I.                     (4)
+
+For the lower spectral bound sum the first inequality over at most C R^4
+remaining links. The upper bound follows from the bounded incidence of
+links in plaquettes. The constants absorb the fixed three color entries.
+This supplies both linearized positivity and a global nonlinear gap.
+
+3. LOCAL ANALYTIC DERIVATIVE BOUNDS WITH DIMENSION SHOWN
+
+Use y_b=exp(i z_b), and per-link sup norms for z and A. On a fixed small
+complex log chart the reduced action is still a sum of elementary Wilson
+plaquettes with some links set to I. It is not a new nonlocal action.
+Every term reads at most four links and every variable has bounded
+incidence, independently of R. It follows directly by differentiating
+the group products that
+
+ ||H_AA(A,z)-Q||op <=C (||A||infty+||z||infty),
+ ||H_A(0,z)||2 <=C R^2 ||z||infty,
+ |H(0,z)| <=C R^4 ||z||infty^2.                         (5)
+
+The second bound conservatively counts all O(R^4) rows. The last bound
+uses the vanished joint first jet at flat fields. The third-order Taylor
+remainder about a nearby complex stationary point obeys
+
+ |T3(u,z)| <=C sum_e |u_e|^3
+           <=C ||u||infty ||u||2^2.                    (6)
+
+Mixed adjacent-link monomials are reduced to the displayed sum by Young's
+inequality and bounded incidence. These are pointwise estimates at the
+actual nonuniform u, not sup-radius estimates substituted after integration.
+
+The product Haar density is J(A)=product_e j(A_e), analytic on this chart,
+with J(0)=(2pi^2)^-M in Pauli coordinates. Its logarithm is a sum of local
+even functions with bounded derivatives and zero first jet at0. Globally
+on real reduced links and complex boundary parameters in a fixed chart,
+
+ |H(V;z)-H(V;0)|<=C R^4 ||z||infty,
+ Re H(V;u+i v)>=H(V;u)-C R^4 ||v||infty^2.              (7)
+
+The second statement follows by reality on the real locus: the first
+imaginary variation is purely imaginary. It remains valid for rough V.
+
+4. A SMALL POLYNOMIAL STATIONARY TUBE
+
+Fix small absolute constants and choose
+
+ a=c_a R^-16,       rho=c_rho R^-60,
+                         beta>=C_beta R^80.            (8)
+
+The central real logarithm cube has halfwidth a in each scalar color
+coordinate. These exponents have substantial spare room.
+
+The contraction based on Q^-1 and (5) gives a unique small holomorphic
+stationary branch A_*(z), for ||z||infty<rho, with
+
+ ||A_*(z)||2<=C R^10 ||z||infty,
+ e_*(z):=H(A_*,z),       |e_*(z)|<=C R^12 ||z||infty^2.  (9)
+
+Indeed ||Q^-1||<=C R^8, the force at0 is C R^2 rho, and the derivative
+of the nonlinear fixed-point correction is <=C R^18 rho. For the action
+bound retain b=H_A(0,z). The stationary equation implies
+
+ A_*^T Q A_*=-b.A_*+
+       O((||A_*||infty+||z||infty)||A_*||2^2).
+
+Thus the quadratic term is estimated using b.A_*, which costs
+C R^12 ||z||infty^2, rather than the crude C R^20 ||z||infty^2.
+The nonlinear error costs at most C R^30 ||z||infty^3 and is smaller
+on (8). This establishes the pointwise bound in (9), also on every
+smaller marked tube in Section6. Also
+
+ D(z)=H_AA(A_*,z),
+ ||Q^-1/2(D-Q)Q^-1/2||op<=C R^18 rho.                  (10)
+
+Multiplication by the dimension costs at most C R^22 rho, which is small.
+Thus the Gaussian determinants of D, Re D and Q are relatively comparable
+by exp(C R^22 rho), an absolute bounded factor. In particular no C^d loss
+is introduced by comparing the complex and positive Gaussians. The branch
+of det D^(-1/2) is continued from positive Q. Likewise J(A_*)/J(0) is
+bounded above and below by absolute constants using the local Haar logs.
+
+5. RELATIVE CONTOUR ESTIMATE; NO EXPONENTIAL LOSS IN THE CENTRAL ERROR
+
+Define the actual leading coefficient
+
+       L_R(z)=(2pi)^(d/2) J(A_*(z)) det D(z)^(-1/2).
+
+At0, and within the tube up to absolute factors,
+
+ exp[-C R^4] <= |L_R(z)| <= exp[C R^4 log R].             (11)
+
+The lower bound uses Q<=C I and the exact normalized Haar constant; the
+upper uses (4). These are extensive entropy estimates, not polynomial
+absolute prefactors.
+
+Split the ORIGINAL compact reduced integral into its central real cube
+and complement. Translate the central contour by A_* one coordinate at
+a time. On the translated cube, write A=A_*+u and use
+
+             H=e_*+u^T D u/2+T3(u,z).
+
+The cubic and Haar errors are estimated relative to the normalized
+Gaussian, not as absolute integrals. On this cube
+
+ |T3|<=C a ||u||2^2 <=C(a/lambda) u^T Q u,
+ lambda=c R^-8,     d a/lambda <=C R^-4.                (12)
+
+After reducing c_a, the exponential remainder is dominated by a Gaussian
+whose relative determinant inflation is bounded: (1-Ca/lambda)^(-d/2)
+is O(1). Under that normalized Gaussian, after v=sqrt(beta)u,
+
+ sum_e E|v_e|^3 <= C M lambda^-3/2 <=C R^16.
+
+Therefore the RELATIVE cubic error is <=C R^16 beta^-1/2. The local Haar
+log gives relative errors bounded, conservatively, by
+
+             C R^12/beta + C R^18 rho/sqrt(beta).
+
+These estimates follow by the same Gaussian domination: sum E|u_e|^2 is
+C R^12/beta, and the linear Haar term contains the small A_* factor.
+The normalized Gaussian tail outside the cube is bounded by
+
+                 C R^4 exp[-c beta R^-40],              (13)
+
+using the coordinate variance <=C beta^-1 R^8 and a=c_a R^-16.
+The determinant comparison (10) makes (13) relative to the complex
+Gaussian as well. All central error bounds are thus polynomial in R.
+
+For the compact complement, (3) gives the real flat action gap
+c R^-4 a^2=c R^-36. The real boundary perturbation in (7) is at most
+C R^4 rho, much smaller. On any connecting side prism, one real scalar
+coordinate remains at least a/2 in magnitude, since ||A_*||2<<a. Its
+real part has the same gap. The imaginary shift changes the real action
+by at most C(R^20 rho^2+R^4 rho^2), again negligible; the first imaginary
+variation vanishes in real part. The factor exp(beta e_*) also costs much
+less than that gap by (9).
+
+There are at most d side pieces. Their coordinate Haar bounds and volume
+can conservatively be bounded by exp(C R^4). The compact complement has
+normalized Haar mass at most1. Dividing THESE errors by the leading
+beta^-d/2 L_R costs the displayed entropy, giving a relative bound
+
+            exp[C R^4 log(beta R)-c beta R^-36].         (14)
+
+Even the weaker exponent R^-40 would suffice for (8). We do not absorb
+the entropy in a purported fixed-dimensional constant.
+
+Combining the contour identity and these estimates gives the EQUALITY
+
+ Z(y(z))=exp[-beta e_*(z)] beta^-d/2 L_R(z)(1+E_R,beta(z)),
+
+ |E_R,beta| <=C[R^16/sqrt(beta)+R^12/beta
+                +R^18 rho/sqrt(beta)+R^4 exp(-c beta R^-40)]
+              +exp[C R^4 log(beta R)-c beta R^-36].      (15)
+
+Choose the absolute C_beta large and c_a,c_rho small. For every R>=4,
+beta>=C_beta R^80 makes the right side <=1/4. For example the central
+cubic bound is O(R^-24), and beta R^-40 dominates R^4 log(beta R) at
+the floor and thereafter. The ORIGINAL Z is consequently zero-free on
+the stated polynomial tube, with the original power beta^-3M/2 and all
+exact gauge scalars retained. No event-conditioned partition function
+has been declared zero-free.
+
+6. RAW RARE INTERIOR COEFFICIENTS AND THEIR ENTROPY
+
+Let M_bad be a fixed gauge-invariant Borel mark whose complete read is
+inside K and which forces
+
+            H(V;y(u))>=tau^2/2                         (16)
+
+for every real boundary u. Specified completely internal plaquette
+witnesses give this directly. Let F be bounded, |F|<=A, with the complete
+marked insertion gauge invariant and boundary independent. Consider
+the ORIGINAL raw coefficient
+
+ b(z)=Z(y(z))^-1 integral F(V)1_Mbad(V)
+                                      exp[-beta H(V;y(z))]dV.
+
+The numerator is kept on real variables; its discontinuous mark is NEVER
+shifted by the contour argument. Equations(7),(16) bound its modulus by
+A exp[-beta tau^2/2+C beta R^4 ||Im z||infty^2]. Together with (9),(11),(15)
+this proves, on the smaller tube
+
+ rho_bad=c min(R^-60,tau R^-6),
+
+       |b(z)|<=A exp[C R^4] beta^(3M/2)
+                                      exp[-beta tau^2/4]. (17)
+
+The inverse denominator's stationary value costs C beta R^12 rho_bad^2,
+which is why tau R^-6 is sufficient. The logarithm of the prefactor is
+O(R^4 log beta), with the exact reduced dimension retained. It is not an
+absolute polynomial prefactor uniform in the number of links.
+
+The same assertion applies to raw mixed insertions with their actual
+amplitude and the SAME mark, hence one rare factor. Original scalar,
+raw-mixed and connected subtraction terms are not dropped. In the full
+measure the exterior marginal remains the exact Z(y) from(1); (15) is
+only an estimate of it, not a substitution into that marginal.
+
+7. WHAT THIS DOES AND DOES NOT PAY IN THE NATIVE SOURCE PROBLEM
+
+For a fixed number of native bad witnesses, tau is a fixed multiple of
+epsilon0. With beta=C_W/g0^2 and epsilon0~g0(log g0^-2)^p0, the energy
+exponent is of order (log beta)^(2p0). The entropy in(17) can be absorbed
+only while, for instance,
+
+              R^4 log beta << (log beta)^(2p0),          (18)
+
+besides the very conservative beta>=C R^80 requirement. This is a possible
+polylogarithmic growth range, not an arbitrary-cluster theorem. If n
+distinct witnesses force tau^2>=c n epsilon0^2, replace the right side
+of(18) by n(log beta)^(2p0); the actual distinct-witness/overlap geometry
+must still be proved before using that count.
+
+More decisively, the original native first cut is
+
+              delta0=(A1/A0)epsilon0.
+
+On a source map with per-edge image bound C_map(R) delta0, the sufficient
+marked tube in(17) would require
+
+ C_map(R) delta0 <= c epsilon0 R^-6,
+ or A0/A1 >= C C_map(R) R^6,                             (19)
+
+and the R^-60 cap can be more restrictive. A fixed hierarchy does not
+certify (19) for unbounded R even if C_map were constant. For n<=C R^4
+witnesses, tau~sqrt(n)epsilon0 improves this sufficient radius at most
+to C epsilon0 R^-4; it still shrinks. Further complete-read and pair-map
+costs can only strengthen the requirement unless sharper estimates are
+proved.
+
+This is a limitation of the sufficient pinning/contour bounds derived
+here, NOT a proof that growing-cavity admission is impossible. It shows
+precisely why a large-deviation estimate beating extensive entropy is
+not by itself the missing source-domain theorem. No whole-history map,
+renormalization of the original calibration, microscopic-root census,
+or all-scale closure is asserted. The fixed enlarged-cavity deliverable
+remains a separate fixed-geometry result with its own fixed hierarchy.

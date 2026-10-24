@@ -1,0 +1,194 @@
+INDEPENDENT AUDIT: ELECTRIC/COUPLING SOURCE TEMPORAL ATTACHMENT
+TURN69. 20 October 2026. tail47.
+
+Producer read in full:
+ work/electric_source_temporal_limit_turn69.txt
+ SHA256 4D2179CB5FD871D5A083CBC19837ED83AFC837E3841FB0BDB9C553677F9D23CD
+
+Verdict: PASS at its stated fixed finite spatial regulator and ordered
+temporal/period limit. No mathematical repair requested. The independent
+checks below address the new argument, rather than re-certifying the
+entire retained temporal/Hamiltonian archive.
+
+1. UNIFORM COMPLEX FOURIER ERROR
+
+For beta in Re beta>=eta|beta|, compare
+exp[beta(cos theta-1)] with exp(-beta theta^2/2) on the REAL
+integration contour. On a fixed sufficiently small interval,
+0<=cos theta-1+theta^2/2<=theta^4/24 and the integral formula
+for the exponential difference gives
+
+ |difference| <= C|beta| theta^4 exp(-c_eta|beta|theta^2).
+
+Its L1 norm is O_eta(|beta|^-3/2). The remaining original
+interval and the full-line Gaussian tail contribute exponentially
+small L1 errors. The Fourier multiplier exp(-i nu theta) has
+absolute value1 for every real theta and integer nu, so the
+error is uniform even at arbitrarily large spin.
+
+Multiplication by sqrt(beta) produces the claimed ADDITIVE
+O(1/|beta|) bracket error. No forbidden relative estimate is
+used where exp[-nu^2/(2beta)] is tiny.
+
+The nu=1 bracket tends uniformly to1 and is zero-free for
+large beta in the sector. Since Re(1/beta)>0, the Gaussian
+ratio exp[-(nu^2-1)/(2beta)] has modulus at most1 for nu>=1.
+Division therefore gives (1.2)--(1.3), uniformly in all spins.
+The c(beta) coefficient sqrt(2/pi) beta^-3/2 is correct.
+The square-root/log branches are consistently chosen in the
+right sector, continuing their positive-real values.
+
+2. ACTUAL TRANSFER FAMILY AND THE CONVERGENCE ARGUMENT
+
+The normalized SU2 electric eigenvalue is I_(2j+1)/I_1.
+With beta_e=2/(delta kappa_e), its fixed-spin leading term is
+exp[-delta kappa_e j(j+1)], in the Pauli/2 convention.
+Thus the coefficients and factors2 are correct.
+
+The central convolution on an edge commutes with both endpoint
+gauge actions. The magnetic plaquette potential is gauge invariant.
+Consequently restriction to the physical sector is legitimate;
+there is no noninvariant-source/P commutation shortcut.
+
+The electric norm is <=1+Cdelta per link. A finite number of links,
+and magnetic multiplication bounded by exp(Cdelta), give the
+stability bound exp(C n delta). This constant may depend on the
+entire fixed spatial graph.
+
+An O(delta) uniform operator error alone would not prove convergence
+over O(1/delta) steps. The producer correctly uses it only for
+stability. Real-source convergence follows separately from the
+retained real temporal theorem, or the stated common-core
+consistency/contraction argument. Positive real, possibly
+edge-dependent coefficients do not alter that argument.
+
+With unsourced endpoints Omega_delta,lambda_delta, the scalar
+functions are uniformly bounded on a complex source disc and
+converge on a real interval. Montel/Vitali and the identity theorem
+give convergence throughout smaller discs. The smooth unsourced
+ground vectors converge strongly; no complex or sourced ground
+vector is asserted to be positive or required to converge.
+
+For several source variables, uniqueness on a real product interval
+follows successively in each variable. The same norm bounds apply
+to finite products of different sourced slabs. The holomorphic
+elliptic family has a common fixed-graph operator domain, so its
+semigroup matrix element agrees with this unique extension.
+
+The common logarithm disc is valid: a bound M on radius r and
+F(0)=1 give |F(z)-1|<=M|z|/(r-|z|). The chosen radius
+r/(4M+1) gives <=1/4. Nothing here yields a spatially uniform
+radius or a quantitative spatial convergence rate.
+
+3. ORIGINAL WILSON SCALAR AND FINITE PERIOD
+
+The unnormalized temporal convolution is c(beta) times its
+normalized convolution. Replacing n time intervals therefore
+produces exactly
+
+ exp[n sum_e log(c(beta_e(z))/c(beta_e(0)))].
+
+The c branch is zero-free on the admitted disc by the same
+Bessel asymptotic. All Haar and gauge normalizations are
+source independent.
+
+The modified transfer factor is M_z Q_z P M_z. At an interface,
+the spatial factor is M_z M_0, not either full squared factor.
+Hence the original action has half the changed spatial coefficient
+on each boundary slice and the full changed coefficient on each
+interior slice. The producer keeps precisely these weights.
+There is no additional source-dependent boundary scalar.
+
+For fixed delta, S=T_0/lambda has positive spectrum in[0,1],
+simple ground projection Pi, and finite heat traces at positive
+integer powers. Writing S^(N-n)=Pi+R, R>=0, gives
+
+ |Tr(W R)|<=||W|| Tr R.
+
+The denominator correction is bounded by the same Tr R because
+Tr S^N-1<=Tr S^(N-n)-1. This proves the stated 2M trace remainder.
+It is uniform on the fixed source disc. Choosing N after delta
+therefore transfers all prescribed jets to literal finite Wilson
+expectations, with the deterministic source scalar explicitly
+removed or canceled.
+
+The source scalar need not converge separately: for multiplicative
+beta it is -(3|E|/2)z+O(delta) per interval. Additive gamma sources
+have higher nonzero derivatives. All are affine in the number n
+of sourced intervals and cancel EXACTLY in the second length
+difference at the same delta and same finite period.
+
+4. DERIVATIVES, REFLECTION WINDOWS AND NUMERICAL FACTORS
+
+At fixed graph the unsourced ground state is smooth. Hence H'_0 Omega
+and H''_0 Omega exist, and the fixed-endpoint Duhamel curvature is
+
+ J(T)=2 int_0^T(T-s)<B,e^-sA B>ds-T<Omega,H''_0 Omega>,
+ B=(H'_0-<H'_0>)Omega.
+
+Taking the second length difference cancels the contact term and
+gives (5.4), with its factor1/2 and square
+[(1-e^-dE)/E]^2 correct. This is a finite-time spectral window,
+not just an integrated susceptibility.
+
+For an explicit original-lattice check, index time intervals by
+j in Z, so their centers are (j+1/2)delta. Reflection in the
+site plane0 sends j to -j-1. For even n, the positive interval
+window j=n/2,...,n/2+h-1 has reflected pair differences
+
+ r=n+1,...,n+2h-1
+
+with multiplicity h-|r-n-h|. Its centered reflected norm is
+exactly half the second n-length difference of the slab
+variance. For nonlinear source parametrization, the expected
+second derivative of the action is a sum of identical
+single-interval expectations, hence affine in n and cancels.
+
+On a periodic time circle one keeps circular covariances.
+The usual nonwrapping separated interpretation is valid, for
+example, with N>=2n+2h; the ordered period selection permits
+this. The producer's explicit parity/nonwrapping requirement
+is necessary and sufficient for the scope claimed here.
+
+For additive inverse coupling,
+
+ H_gamma=K/(2a gamma)+4gamma S/a,
+ H'_gamma=(2Q_gamma-H_gamma)/gamma.
+
+On the ground vector its centered part is
+2(Q_gamma/gamma-<Q_gamma/gamma>)Omega. Thus the factor1/8
+in (6.1) is correct, and the original full-action reflected
+window tends to four times the magnetic Q_*=4S/a window norm.
+The final notation explicitly differentiates z in gamma+z and
+holds the baseline Omega,E0 and endpoints fixed. This precision
+was verified after the original F3CBDB...174C9 version; it
+does not change the mathematical identity audited here.
+The interval derivative
+
+ (4a/delta)sum h_temporal
+      +(2delta/a)[S(U_j)+S(U_(j+1))]
+
+has exactly the anisotropic Wilson coefficients and the
+two half spatial endpoint weights.
+
+For local logarithmic coupling profiles the derivative vector
+is instead (2q_f-r_f)Omega. The producer retains r_f and its
+possible globally dependent ground quotient; it does not
+promote the global factor8 identity to a local magnetic one.
+
+5. SCOPE
+
+This is a real new attachment: finite-spatial electric/coupling
+source derivatives now pass from original anisotropic Wilson
+measures to the retained Hamiltonian window identities. The
+uniform complex-spin estimate resolves the particular
+derivative-limit gap left by bounded magnetic sources.
+
+It gives no spatially uniform source norm, nonzero continuum
+window, local continuum observable algebra, or identification
+with the isotropic Bałaban flow. Arbitrarily cutoff-dependent
+normalizations can be handled only by the ordered temporal
+choice for a prescribed finite list, not by an asserted
+uniform spatial rate. These limitations are explicit.
+
+PASS at the recorded scope.

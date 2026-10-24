@@ -1,0 +1,1472 @@
+ONE-RUN LOCAL SOURCE CLASS: RESTRICTION AND REPRESENTATIVE CHANGES
+18 October 2026. Working calculations on the literal-source one-run producer.
+Sections15--16 give the finite-loss closure and consumer ledger;
+Section18 supplies the operative fine-carrier R-type input repair
+for the mixed-history step, replacing the standalone L1/L3 import.
+no claim of complete continuum Yang--Mills existence is made.
+
+Normalization update. The literal source E0 in B109(1.18) is a fixed
+finite ceiling, not asserted to be arbitrarily small. In the final
+bootstrap of Sections12--14 retain a fixed E_src>=max(1,E0) and the
+explicit small local SOURCE radius r: the V birth budget is
+K r E_src chi_i. Earlier exploratory budgets written K E0 chi_i are
+to be read with this small source prefactor restored in that final
+application. Raw homogeneous determinant vacua are never claimed small.
+
+1. EXACT SOURCE CLASSES AND THE USEFUL GAIN
+
+Use Raw II Definition 5.1:def-weight-classes (approximately lines 2723--2791),
+with primitive scale ell, terminal depth K and fixed lambda_*=(40M)^-1:
+
+ chi_j=ell^{-(K-j)/2}, l_j=r lambda_* chi_j,
+ r_j=r[1+(1/4) sum_{i=j}^K chi_i].
+
+W_j(X) consists of |w|<r_j and Lip_j(w)<l_j on the stated one-layer
+enlargement. The original proof gives W_k subset W_j and
+r_j-r_k>=10M l_j for every j<k. These are full local complex source
+classes, not the one-dimensional constant-source diagonal.
+
+Put L=ell^q and k=j+q. For w in W_k,
+
+ Lip_j(w)<L^-1/2 l_j,          chi_k=L^1/2 chi_j.          (1.1)
+
+If a Banach-valued holomorphic activity V_X is bounded by n_X on W_j(X)
+and V_X(z)=0 for EVERY constant weight z, the same one-variable Schwarz
+argument as Raw II Lemma5.2:lem-weight-freezing gives
+
+ ||V_X(w)|| <= 2 n_X L^-1/2 [1+diam_j(X^+)/(10M)].       (1.2)
+
+The proof is valid in a Banach activity space: apply each norm-one linear
+functional, or directly use the vector Cauchy formula. It uses the actual
+affine disc w(c)+sigma(w-w(c)); no independent-history scalar disc is used.
+Large supports, for which this disc has radius less than one, use the
+trivial 2 n_X bound. Thus (1.2) remains valid without a support-size cutoff.
+
+For a family with one spare spatial/tree or cardinality exponent, the
+diameter in (1.2) is paid by that reserve. If its input norm is
+K chi_j a_j, its restricted norm is at most C K chi_j L^-1/2 a_j.
+A neutral classical transport constant C_neu independent of L would
+therefore give, after division by chi_k a_k,
+
+ K_out <= C_neu C L^-1 (a_j/a_k) K.                    (1.3)
+
+This is stronger than the gain from increasing chi alone. It applies only
+to a family already bounded on the FULL W_j; it does not derive that bound
+from homogeneous-source estimates.
+
+2. A COHERENT CHANGE OF HOMOGENEOUS REPRESENTATIVE
+
+Here is a precise way to control the ambiguity in anchoring a homogeneous
+interaction. Fix a current cell lattice and its complete cell field slots.
+Let A_H(B_H,z), B_H(B_H,z) be connected, vacuum-subtracted strict families,
+holomorphic for |z|<R. Assume their scalar totals coincide for every
+constant z and every sufficiently small finite-support field B. Put
+D_H=A_H-B_H. Let c_H be an anchor in H. Work with a target norm
+sup_x sum_{H contains x} exp(a|H|)||.|| and assume the input families have
+the reserve a+log(3)+epsilon, epsilon>0, uniformly on |z|<R.
+Let |w|<=R_0<R, with fixed margin m=R-R_0.
+
+PROPOSITION. The anchored difference
+
+       sum_H D_H(B_H,w(c_H))                            (2.1)
+
+has a strict connected activity representation bounded by
+
+ C_epsilon m^-1 Lip(w)
+       ( ||A||_{a+log(3)+epsilon}+||B||_{same} ).        (2.2)
+
+Distances and Lip here use the same current cell units. Its total vanishes
+for constant w. The bound also holds with a separate exponential spatial
+weight, paying the single diameter factor from that weight instead.
+
+Proof. For S subset H define the anchored/Mobius component
+
+ D_{H,S}(B_S,z)=sum_{T subset S}(-1)^{|S|-|T|}D_H(B_T,z),
+
+where all cell slots outside T are zero. Then D_H=sum_{S subset H}D_{H,S},
+||D_{H,S}||<=2^{|S|}||D_H||, and the empty component is zero. Each
+D_{H,S} vanishes when any slot of S is zero. For any fixed nonempty S,
+apply the finite difference in exactly the slots S to the equality of
+the two total interactions, evaluated on fields supported in S. Absolute
+local summability permits interchange with the H sum and gives
+
+             sum_{H contains S}D_{H,S}(B_S,z)=0.         (2.3)
+
+Choose a deterministic c_S in S. The left side of (2.1) therefore equals
+
+ sum_{S nonempty} sum_{H contains S}
+  [D_{H,S}(B_S,w(c_H))-D_{H,S}(B_S,w(c_S))].            (2.4)
+
+All terms in (2.4) may retain carrier H, even though their actual field
+support is S. The segment between the two source values stays in the
+|z|<=R_0 disc. Cauchy on its m-neighborhood gives the difference bound
+2^{|S|}m^-1||D_H|| Lip(w) diam(H), up to a fixed contour constant.
+Summing over S costs sum_{S subset H}2^{|S|}=3^{|H|}. Connectedness gives
+diam(H)<=C|H|, and the epsilon reserve pays this factor. This proves
+(2.2), equality and local normal convergence. The proof uses complete
+cell slots and no fine-coordinate dimension count. QED.
+
+One may first prove this on finite tori, then pass to compact-field
+limits using the same absolute estimates. The canonical anchor c_S
+does not have to preserve lattice symmetry. Source support is explicitly
+H, including both source evaluation anchors.
+
+CAUTION. The bound is in the norm of BOTH representatives. If the literal
+gauge-invariant source representative is bounded only by a small fixed E0,
+while a quotient representative is bounded by K b_j^2, (2.2) gives
+O(Lip(w) E0), not O(Lip(w) b_j^2). A small quotient norm alone cannot
+remove this distinction. Also (2.4) does NOT make its individual pieces
+gauge invariant; a separate invariant realization or total Ward argument
+is required before using a theorem that needs piecewise invariance.
+
+3. TWO POSSIBLE SIZES FOR THE GRADIENT SECTOR
+
+A natural but stronger class is
+
+        ||V_j||_{W_j,b_j} <= K_V chi_j b_j^2.            (3.1)
+
+The homogeneous core has ||E_j^hom||<=K b_j^2, with scalar-source
+holomorphy on a fixed disc strictly larger than all |w|<=r_j. At a fixed
+q endpoint b_{j+q}/b_j=1+O_q(g_j^2). A forcing proportional to
+Lip_j(w)b_j^2 is compatible with (3.1). However (3.1) additionally needs
+a b_j^2-bounded gauge-invariant representative, or an equally strong
+invariant total-family transport statement. The quotient contraction
+alone does not currently establish that representative bound.
+
+The weaker class
+
+        ||V_j||_{W_j,b_j} <= K_V chi_j E0               (3.2)
+
+may be sufficient for the primary source consumer. E0 is the fixed small
+regular interaction ceiling in the source cluster proof. No Maxwell
+coefficient is extracted from V: V(constant)=0, so all scalar homogeneous
+couplings remain those of the established constant-source run. On a
+retained chart with inner fluctuation size g T and radius b_j, the
+whole-family analytic fluctuation estimate has the form
+
+ ||V(PB+noise)-V(PB)|| <= C_q (g T/b_j)||V||.             (3.3)
+
+This estimate needs small absolute prepared norm, not a b_j^2 input.
+Thus (3.2), with a sufficiently small K_V E0, remains compatible with
+the same cluster smallness threshold; the inverse-log factor in (3.3)
+tends to zero. The normalized b_j^-2 Hessian may be large, but the
+fluctuation Hessian contains g^2 and hence has size at most
+C E0 g^2/b_j^2, which is inverse-logarithmically small. This is only an
+analytic/Cauchy consistency check, not an assertion that generic real
+convexity replaces the full complex source cluster theorem.
+
+The elementary recursion would be
+
+ K_{V,out} <= (C_neu/L + C_q delta_j/L + o(1))K_V
+              + C_q/L + small R/tail terms,             (3.4)
+
+after choosing fixed q and source smallness reserves. The constants
+attached to the forcing depend on which invariant representative is
+used. One must not increase q after choosing a q-dependent source
+geometry or silently assume C_neu uniform from a fixed-q crude map.
+
+4. HOW CONSTANT VANISHING IS MAINTAINED EXACTLY
+
+Use the frozen source-free field maps, cutoffs, Haar/gauge/pivot factors
+and R reference denominators. For each finite source-free history the
+actual local activity operation is a holomorphic operation of w once
+the full local source class is admitted. At every output carrier H,
+subtract its evaluation at the constant source w(c_H), using EXACTLY
+the same history, frozen factors and vacuum convention. Its remainder
+then vanishes identically on all constant profiles. This statement is
+algebraic, independent of the size estimate.
+
+When identifying the subtracted output with the chosen homogeneous
+family, its scalar total agrees with the constant-source recursion.
+If the two support assignments differ, Section2 is the necessary
+anchoring correction; it cannot simply be discarded as a null family
+once different carriers evaluate different w(c_H).
+
+Vacuum terms require the same convention: subtract each field activity
+at B=0 and place its source-dependent scalar in the vacuum ledger.
+The difference of two coherently normalized maps then still vanishes
+at constant w. Merely dropping a source-dependent determinant or a
+reference denominator would change this identity. The exact q raw
+kernel ledger and actual-state annulus h_j identities established in
+raw_q_block_cluster_response_2026-10-18.txt retain those factors.
+
+5. ACTUAL PRIMARY OPERATIONS AND THE REMAINING INTERFACE
+
+The primary CMP119 localized E extensions after (2.27) are gauge
+invariant in the independent (U,J) source variables. R shares these
+properties after (2.30); the boundary class after (2.42) permits the
+component-resummed relative exterior decay used in our tagged proof.
+Raw II also distinguishes a boundary unit invariant jointly with live
+exterior fields from an ordinary unit invariant in its own field alone
+(5.2:def-sites-units). Those are different hypotheses and must remain so.
+
+For literal source-local gauge-invariant pieces, a neutral classical
+transport theorem can exploit a local comparison gauge: old-unit
+potential and current should obey A^g=O(poly(diam X)L^-2 b),
+J^g=O(L^-3 b). Color invariance then removes the first joint derivative,
+and degree two gives L^-4, canceling the four-dimensional anchor count.
+This is being proved separately by constrained_fiber; it is not supplied
+by the translation-invariant quotient contraction already on file.
+
+On the original source analytic domains, the source-free preparation,
+localization and large-field replacement maps do not acquire new
+minimizers or new domains merely because a passive w is inserted. Their
+published one-run estimates can carry a full uniformly bounded w-class
+by the parameter-lifting fact in one_cutoff_source_window_audit. The
+tagged Wilson-source boundary proof in constant_source_shift Section3A
+still explicitly imports the original component-boundary transport on
+each tagged carrier. Its endpoint q>=1 suppression is not a replacement
+for that transport estimate.
+
+Thus the neutral invariant-family estimate and coherent representative
+control are the immediate mathematical interfaces. Once these are
+available in the same source-prepared norm, (1.2)--(1.3) provide a genuine
+small factor for the FULL gradient sector, while the source parameter
+lifting, retained-noise cluster bound and tagged boundary budget are
+applied on their original domains. The repository's stronger one-run
+preparatory-window/datum theorem is not silently imported or claimed.
+
+No full one-run source producer, continuum rotation theorem or YM4
+existence theorem is concluded in this note.
+
+6. PREFERRED LEDGER: DO NOT CHANGE THE INVARIANT REPRESENTATIVE
+
+The larger class (3.2) permits a cleaner choice. Keep the LITERAL original
+source E^hom_X(z), bounded by E0 on its original independent-pair domain,
+in every anchor substitution. Use the improved K b_j^2 quotient
+representative only inside the homogeneous scalar-flow proof; do not put
+that representative into the inhomogeneous density. Define each V_X as
+the actual literal localized coefficient minus the corresponding literal
+homogeneous coefficient at w(c_X). Source localization choices and frozen
+history conventions must be identical in the two coefficients.
+
+Each difference then retains the primary per-term gauge invariance. The
+Mobius correction of Section2 is unnecessary for this ledger. At constant
+w it is exactly zero, so the already proved homogeneous running coupling
+is unchanged. A local marginal tensor in V at variable w remains in V;
+there is no extra pointwise coupling extraction that could feed back into
+the homogeneous scalar recursion.
+
+The homogeneous source disc may be fixed first, say |z|<R_*, and the
+observable source radius r chosen below R_*/8. Homogeneous coefficient
+Cauchy then costs O(R_*^-1), while their local source differences carry
+Lip_j(w)=O(r chi_j). Thus an arbitrarily small fixed r can pay the gradient
+forcing relative to the E0 source potential ceiling. This choice is made
+before the final weak-coupling threshold.
+
+There is an IMPORTANT SCALE CORRECTION. An output-cell anchor can be
+O(L) OLD cell units from an input anchor after a q step. Consequently
+the forcing from reanchoring homogeneous coefficients is generally only
+
+           O(chi_{j+q} E0),                             (6.1)
+
+after output carrier summation, not O(chi_j L^-1/2 E0).
+The latter is the valid gain for an OLD constant-vanishing activity on
+its own source support, as in (1.2). A fixed q forcing constant in (6.1)
+can be paid by a sufficiently small source radius r and an appropriate
+fixed V budget. A C_q forcing constant need not decrease with q.
+
+Field-independent source Gaussian and Haar/determinant terms belong in
+the coherent vacuum counterterm. They may carry the entire anchor volume
+L^4; no neutral field-jet estimate is asserted for them. The neutral
+estimate is applied only after this exact field-independent subtraction.
+
+7. EXACT REENTRY ISSUE, AND A STATIC-HISTORY ALTERNATIVE
+
+The present neutral classical construction consumes the literal source
+independent-(U,J) norm but initially produces a strict PHYSICAL coarse
+field norm. Such a bound does not by itself control the next step's
+chosen independent-(U,J) extension, nor arbitrary complex decouplings.
+This is a real interface, not remedied by finite-cutoff holomorphy or
+knowledge on the physical minimizing graph.
+
+A possible way to avoid repeated reentry is to keep V as a birth
+history, exactly as the static R history in CMP119(2.30):
+
+       V_{<=k}(U;w)=sum_{i<=k}[V^(i)(U;w)-V^(i)(I;w)]. (7.1)
+
+Each birth is stored on its original source domain with bound
+C E0 chi_i exp(-kappa d_i(X)). Its classical zero-noise pullback stays
+in (7.1); only its fluctuation difference contributes to a new birth.
+The exact logarithmic interpolation in CMP119(3.26)--(3.29) permits
+this bookkeeping without a new inverse normalizer. On p276 the paper
+treats R as E except for omitting the second coupling renormalization;
+pp277--278, (3.44)--(3.47), retain the distinguished inserted term in
+the normalized numerator/denominator cluster expansion.
+
+The prospective quantitative estimate is an original-source-norm bound
+for the localized old-history fluctuation family,
+
+  ||sum_{i<=k}[V^(i)(U_fluct;w)-V^(i)(U_background;w)]||_prepared
+      <= C delta_k E0 sum_{i<=k} chi_i P(k-i),           (7.2)
+
+where delta_k tends to zero and P is a fixed polynomial, or any fixed
+sub-exponential age factor slower than ell^{(k-i)/2}. Then
+sum_i chi_i P(k-i)<=C_P chi_k, yielding a small Volterra feedback.
+This would require no repeated transport of a newly chosen quotient
+representative and no scalar counterterm for V.
+
+However, (7.2) is NOT inferred from the phrase 'treated in exactly the
+same way'. It must be established on the actual source (3.43) domains.
+Naive differentiated Cauchy estimates can leave powers of g_i^-1; the
+old-scale gauge/curvature normalization and the fluctuation factors must
+cancel or pay them. The existing g_i^kappa R proof can absorb such powers
+by its birth suppression, whereas chi_i alone cannot absorb an arbitrary
+g_k^-m loss from the newest birth. Thus that source preparation step is
+the exact estimate to test before declaring the static-history variant
+closed.
+
+8. A CONCRETE SOURCE GEOMETRY INPUT IS VERIFIED
+
+The uniform interior/nonuniform boundary split does not leave an
+unrecorded global axial/reference box. Here are the exact primary steps.
+
+B116(1.9)--(1.10), pp4--5, first decouples the propagator walks outside
+the central box Pi^4. Setting the complement parameters to zero separates
+the nonlinear fixed-point equations into connected components. A term
+can depend only on the component Y0 containing Pi^4. Extra disconnected
+components are annihilated by their decoupling derivatives. At the start
+of p5 the paper identifies dependence on U,J restricted to that component.
+
+For the near-field renormalization construction the auxiliary classical
+reference box Pi0 is also present. The paragraph after (1.25), p7,
+defines the full localization carrier as Y=Y0 union Pi0. It expressly
+removes conditions outside Y because the resulting term does not depend
+on those variables. Every term with that same Y is then placed on the
+common independent-pair space
+
+        U^c_{k+1}(Y,(1+beta)alpha0,(1+beta)alpha1,alpha0).
+
+The far-field terms use the same conclusion on p9 immediately after
+(1.32); the source restriction and Cauchy contours are part of that
+construction. This is stronger than merely knowing the scalar term is
+local on a physical minimizing graph.
+
+CMP119 p276, the paragraph following (3.43), then states that localized
+terms whose carriers Y lie inside Lambda_{k+1} satisfy the earlier
+lemmas with the uniform domain, while the remaining terms use (3.43)
+and contribute to the boundary family. Because the definition of Y
+already includes Pi0, the test Y subset Lambda_{k+1} also tests the
+entire auxiliary reference box. There is no permission to discard Pi0
+before making that test.
+
+Consequently a passive w insertion, whose source read set is included
+in the same union carrier before localization, has the following exact
+scope distinction: all-regular interior coefficients can use the original
+uniform independent-pair tube; a walk, source read set or auxiliary box
+crossing the nonuniform region is retained in the boundary carrier.
+This verifies the geometry needed to ATTEMPT the interior birth-history
+estimate (7.2), rather than assuming a uniform extension for a mixed
+carrier. It does not by itself establish the small factor or the age
+sum in (7.2).
+
+Primary references:
+B109, CMP109 (1987)249--301, doi:10.1007/BF01215223,
+especially (3.13)--(3.17),(3.24)--(3.37).
+B116, CMP116 (1988)1--22, doi:10.1007/BF01239022,
+especially (1.9)--(1.25),(1.30)--(1.36).
+B119, CMP119 (1988)243--285, doi:10.1007/BF01217741,
+especially (2.27),(2.30)--(2.31), and (3.26)--(3.47).
+
+9. POINTED HOMOGENEOUS FORCING: EXACT CANCELLATION AND SIGN
+
+The preferred anchors are the pointed variables z ALREADY present in
+CMP119(2.26)--(2.27), not an unrelated chosen anchor of each X. Write
+
+ E_i(U,z;s)=sum_{X contains z} E_i(X,U,z;s),
+ F_i(U,z;s)=E_i(U,z;s)-E_i(I,z;s)-beta_i(s) A(h_z,U),   (9.1)
+
+on a uniform interior. The scalar s is common to the entire X sum at
+fixed z. Source (3.61)--(3.67) is precisely the pointed cancellation for
+(9.1). The proof first splits X into a near family inside the reference
+cube and a far family. Its (3.48) pays the far terms, then (3.56)--(3.57)
+completes the near quadratic coefficient to the whole-lattice sum at z.
+The completion error is irrelevant. Only then is covariance used to
+identify beta_i(s), and (3.65)--(3.67) cancels it with A(h_z,U).
+
+Therefore one may evaluate (9.1) at s=w(z). The completed pointed family
+is still the SAME family for that scalar value; multiplying its already
+renormalized expression by source-scalar divided differences does not
+undo the cancellation. Uniform scalar-source Cauchy estimates are taken
+before restricting to s=w(z), on a fixed scalar disc with fixed margin.
+The source's irrelevant age factor h^{5-beta}, followed by its h^-4
+anchor count, is summable on its PREPARED reconstructed extension,
+specified next. This is not an irrelevant bound for direct dilation of
+an arbitrary rough independent pair in the old source domain.
+
+The distinction is essential. B109(3.24)--(3.28) replaces the outer U by
+the local minimizer U_{k+1}(Pi0,M'(U)), and then evaluates the old E_i
+on the reconstructed pair U_i(Pi0,exp iB), J_i(Pi0,exp iB). The source
+explicitly notes, before(3.36), that the expansion(3.34) has U,A only;
+the independent outer J enters the retained response A=H_k(B'), whose
+all-admissible-norm bound is already available. At zero noise this
+response is zero. Lemma4/(3.53) proves the required analytic inclusion
+on the full OUTER target tube. B119 p280 invokes precisely these
+formulas for its pointed proof, with zero noise for Theorem2 and with
+the retained response for its fluctuation expressions.
+
+Define the prepared extension of F_i by substituting this SAME
+reconstructed pair into the ENTIRE bracket E_i-E_i(I)-beta_i A(h_z).
+In particular its Wilson term is reconstructed too. Mixing reconstructed
+E_i with the direct rough-U Wilson counterterm would destroy the
+cancellation and is not allowed. The equality with the original density
+is required on the physical minimizing graph, where the source identities
+give it. Off that graph this is the original analytic extension choice,
+not an assertion that every other extension coincides with it.
+
+On this extension the current radius dependence is harmless. The fifth
+order remainder in B109(3.54) is bounded by E0 h^5(a_k/a_i)^5. The finite
+Ward spatial-replacement errors in Section4 use only finitely many field
+jets (orders at most five), each a_i^{-n} paired with reconstructed field
+factors a_k^n, and the C1-Holder gain(4.17)--(4.18). They therefore yield
+E0 h^{5-beta} P(a_k/a_i) for a fixed finite polynomial P. In the common-q
+hierarchy this ratio grows at most polynomially in the age. The factor
+h^{1-beta} remaining after the anchor sum makes the full age sum finite.
+Fixed scalar-source Cauchy introduces no inverse field-radius power.
+Keep the same prepared extension choices for both the full source
+family and its constant-source restriction: their difference then
+vanishes on the constant diagonal as an analytic function, not merely
+on the physical graph. The resulting NEW V birth is an original-domain
+invariant function, available to the separate neutral history theorem.
+
+The source proof explicitly includes U_k depending on the retained
+fluctuation (p279); the paragraph after (3.66) obtains those expressions
+by differentiation in the fluctuation amplitude. It invokes the actual
+B109 preliminary analytic extensions for near and far terms. For a
+mixed history the reference cube and every X completion tail retain
+their original carriers: a crossing carrier is boundary. For
+z not in Lambda_i^0 one cannot replace h_z phi_i by h_z; that difference
+is also retained in the boundary ledger. In particular one must not
+discard boundary X terms first and then use the infinite Maxwell
+coefficient on the resulting incomplete sum.
+
+Here is the exact coupling identity in the density sign convention.
+Let a_p(U) be the plaquette action, sum_z h_z(p)=1, and
+Gamma_i(s)=Gamma_{i-1}(s)-beta_i(s). Then
+
+ -sum_p Gamma_{i-1}(w(p)) a_p(U)+sum_z E_i(U,z;w(z))
+ =-sum_p Gamma_i(w(p))a_p(U)+sum_z F_i(U,z;w(z))
+   +sum_z E_i(I,z;w(z))+D_i(U;w),                       (9.2)
+
+where
+
+ D_i(U;w)=sum_{p,z}h_z(p)
+                 [beta_i(w(z))-beta_i(w(p))]a_p(U).   (9.3)
+
+This verifies the sign of the new gradient Wilson birth. With phi_i
+present replace h_z by h_z phi_i in this algebra and retain the original
+transition/boundary terms. The support of h_z is fixed in level-i units.
+Thus beta_i holomorphic on a fixed scalar disc gives
+|beta_i(w(z))-beta_i(w(p))|<=C Lip_i(w) dist_i(z,p).
+Its original-tube activity norm is bounded by C chi_i times the small
+local Wilson action bound, hence by C chi_i E0 at weak coupling.
+It is individually gauge invariant and vanishes for every constant w.
+
+Reanchoring the old pointed F_i to an output anchor costs source
+Lip_k(w) times the FULL output carrier diameter in level-k units.
+The summable old-age factor of F_i pays the age sum; the spatial reserve
+pays this diameter. The result is O(chi_k E0), with a fixed primitive
+step constant, rather than a sum of one marginal constant for each
+past scale. This is why pointed counterterm coherence is necessary.
+
+The scalar sum of E_i(I,z;w(z)) in (9.2) is kept as a source vacuum
+counterterm. If the actual output coefficient differs from the anchored
+one, its value at U=I is also placed in that same ledger before defining
+V_i. Mixed source derivatives of these scalars are not discarded.
+Neutral field-dependent estimates never apply to them.
+
+10. LARGE NOISE DISC AND THE OLD-V PREPARATION TARGET
+
+The following argument identifies exactly where the source factor g
+must be used. Let alpha0,k, alpha1,k=A alpha0,k have a fixed ratio A,
+as in Raw II(5.1:eq-analyticity-spaces-a). Fix the source constants first.
+The original retained source chart of B116(1.17)--(1.22) satisfies
+
+ ||H_k(s,B'(t g_k B))||_source-admissible <= C |t| g_k T
+       for |B|<=T, |s(Delta)|<=exp(kappa1).             (10.1)
+
+The norm includes the projection, derivative and Laplacian quantities
+needed by B109(3.13)--(3.14), not only the potential supremum. All
+normalizations and covariance decouplings remain those of the source.
+Take |t|<=R_t=c alpha0,k/(g_k T), where c reserves the fixed source
+domain margin. The exact current extension (B109(3.13)) uses the
+independent current plus the controlled linear graph-norm term and the
+local nonlinear correction. Hence the same estimates that establish
+B109(3.36) and B116(1.34) put the composed pair in the admitted target
+tube uniformly in this t disc; this must be applied to its FULL original
+carrier, as in Section8, never to a smaller apparent physical support.
+
+For OLD static birth i, the neutral full-tube estimate of
+neutral_inhomogeneous_classical_transport_2026-10-18.txt Section8 gives
+on that tube a bound of the form
+
+        A_i h^4 m_ik^-2 P(diam X),
+ h=ell^{i-k},  m_ik=min(1,alpha0,i/alpha0,k).           (10.2)
+
+For the finitely many most recent ages not satisfying h<=c m_ik, use
+the original near-field source preparation on its fixed finite scale
+interval; the resulting finite constant is retained. The issue is not
+silently settled by extrapolating a small-h estimate to h=1.
+
+Let G_i(t) denote the actual composed birth at amplitude t. Apply
+Cauchy to G_i(t)-G_i(0) on |t|<R_t, not separately to its current and
+potential jets. For R_t>=2, the norm of its difference at t=1 is at most
+2/R_t times the bound(10.2). The source decoupling Cauchy contours are
+independent of t; the same factor passes through their absolute sums.
+Reblocking cancels h^4 against h^-4 anchors. Source tree reserve pays
+P(diam X) exactly once in the direct birth-to-current estimate. Thus
+the old-history contribution is bounded by
+
+ C (g_k T/alpha0,k) sum_{i<=k} A_i m_ik^-2.             (10.3)
+
+In the common-q hierarchy alpha0,i=C gamma_i^-1/2(log gamma_i)^q,
+bounded primitive inverse-coupling increments imply, for gamma>e^{2q},
+
+ m_ik^-2 <= C[1+D(k-i)/gamma_k].                        (10.4)
+
+This follows by monotonicity of gamma^-1(log gamma)^{2q} and
+gamma_i<=gamma_k+D(k-i). Setting A_i=K E0 chi_i gives
+sum_i A_i m_ik^-2<=C K E0 chi_k, a geometric age sum. For the auxiliary
+inner cutoff T=(log gamma_k)^t with t<q,
+delta_k=g_k T/alpha0,k tends to zero. Equations(10.3)--(10.4) are exactly
+the desired Volterra coefficient; they leave no free g_i^-m factor.
+
+Scope of this calculation: the FULL original-tube neutral bound and
+the original retained chart inclusion are needed on every complex
+decoupling contour. A physical-graph bound alone is insufficient. The
+small fixed-age cases use the source's original near-field inclusion,
+not the large-age neutral dilation. The original source preparation
+must be retained if an alternative chart lacks those graph-norm bounds.
+
+11. THE R-GRADIENT CANNOT BE DROPPED: A TAGGED MOMENT
+
+A mere g_i^P bound for a source-dependent R birth does not imply a
+chi_i g_i^P bound for its difference from an anchored homogeneous birth.
+At the early end of a long run chi_i can be much smaller than any such
+power. Keep an R-gradient mark through the boundary history before a
+component is healed.
+
+For a connected union Z of M R_i cubes,
+
+ diam_i(Z)<=C M R_i[1+d'_i(Z)].                         (11.1)
+
+Indeed connect every cube by a spanning tree; two cube centers are at
+distance at most the length of the tree path, and endpoints add at most
+two cube diameters. The single-cube term in (11.1) is essential. A
+resummed carrier H containing Z has an additional exterior-tree length;
+its diameter is controlled by the sum of that length and diam_i(Z).
+
+The relative exterior norm alone does not pay diam_i(Z). The original
+component suppression does: the lifetime budget
+M^d R_i^{d+1}[1+d'_i(Z)] of CMP122-II(1.79)--(1.88) dominates (11.1).
+After reblocking to a later scale k, old component diameters acquire
+the favorable factor ell^{i-k}. For unions/mergers use the connecting
+tree plus the sum of the component diameters. The same union carriers
+are already present in the source expansion; this adds no new history
+sum. Retain a fixed exponential reserve before summing to pay ONE
+marked diameter. The elementary bound x exp(-a x)<=C_a exp(-a x/2)
+is sufficient, including products of the old and exterior costs.
+
+To obtain a source-gradient gain, fix w and compare the local input
+activities with the same activities at the carrier's constant source.
+Mark their DIFFERENCES directly by a scalar tau; do not enlarge w
+outside its admitted W_j. Homogeneous coefficient differences use the
+fixed scalar-source Cauchy disc and cost Lip_k(w) diam_k(H). Inherited
+V^(i) differences cost chi_i, whose ratio to chi_k is summable. On a
+fixed local carrier the whole difference therefore has size at most
+C chi_k(1+diam_k H) times the admitted input budget. Scale tau up to
+a fixed fraction of the reciprocal of that quantity. The source
+operator majorants, with a reserved input-class and coercivity margin,
+then give the SAME bad-field suppression on that scalar disc. Cauchy
+extracts the factor C chi_k(1+diam_k H), and the preceding moment
+estimate pays the diameter.
+
+For a healed bulk cluster the original unnormalized T-operator count
+is at least one (CMP122-II(1.95)--(1.100)). Its remaining suppression
+therefore gives chi_k g_k^P, with any prescribed fixed P after adjusting
+the source reserve. Surviving components retain a boundary-gradient
+mark rather than being assigned this bulk estimate. Neither a new
+complex large-field denominator nor a history polydisc is introduced.
+
+The quantitative use of this last paragraph has an explicit interface:
+the marked local inputs must remain in the ORIGINAL component-boundary
+class on the enlarged tau disc, including pointed regular terms and
+their coherent counterterms. The existing one-run source component
+operator estimates then apply by their absolute majorants. Attaching
+a formal tag without checking that input-class margin is not sufficient.
+
+12. ONE HISTORY DISC: THE COMPONENT ESTIMATE IS COEFFICIENT-CLASS UNIFORM
+
+This section supplies that input-class check for the one-run induction.
+It replaces any reading of Section11 as an iteration of one-step source
+Lipschitz estimates. There is ONE complex parameter for a complete
+connected endpoint carrier, and no factor C raised to its lifetime.
+
+The primary proof has the required uniformity. CMP122-II pp375--376,
+after(1.65), first places each old coefficient on the original new local
+analytic domain. The estimates(1.66)--(1.69) then use its localized norm,
+its indicated renormalization cancellations, and its full carrier. On
+p379,(1.71) integrates the accumulated component terms from ALL earlier
+steps in one unnormalized operator. In bounding that operator, the
+paragraph after(1.75), p380, bounds V, vacuum counterterms and reference
+normalizations by a fixed cost per old domain. The real Wilson and
+Gaussian factors supply the positive reserve. Formula(1.79) is explicitly
+a product over the successive history domains, and(1.80)--(1.88) bounds
+that entire product by a geometric lifetime/merger induction. Finally
+(1.92) invokes only the localized interaction bound(1.68), the absolute
+operator estimate(1.73), and(1.89). It does not divide by intermediate
+component partition functions or require that the coefficients be
+recomputed by an RG operation at each complex parameter value.
+
+Consequently these estimates are uniform for any coefficient family
+satisfying those SAME analytic-domain, carrier, counterterm-cancellation,
+and coercivity bounds, with fixed reserved constants. This is a direct
+extension of the displayed absolute-majorant proof, not an additional
+claim that the statement of Theorem1 itself asserts arbitrary histories.
+In particular (1.74)--(1.75), which use a nonzero component normalizer,
+are not used in this extension.
+
+Fix now the endpoint scale k, one actual connected complete history
+carrier H, a profile w in W_k, and a point c_H of H. Open its entire
+unnormalized T ancestry down to the original homogeneous coefficients
+and actual bulk gradient births. Surviving boundary expressions are
+shorthand for this same opened history, not independent inputs with an
+assumed recursively stable gradient norm. All localizations have already
+occurred, so every read point and every old replacement component is
+retained in H. Set s=w(c_H) and
+
+       q_H=r chi_k(1+diam_k H).
+
+Compare the actual coefficient history evaluated at this FIXED w with
+the history at constant s. The comparison is affine in the coefficient
+VALUES; it never evaluates an activity at a fictitious profile w_tau.
+For every pointed homogeneous coefficient use
+
+ C_{i,tau}(z)=C_i(s)+tau[C_i(w(z))-C_i(s)].             (12.1)
+
+Here C denotes the entire coherent coefficient collection, including
+the Wilson coefficient Gamma, its beta differences, the pointed regular
+term and its vacuum. In particular interpolate Gamma_i and beta_i at
+the SAME read point, giving exactly
+
+ Gamma_{i,tau}(z)=Gamma_{i-1,tau}(z)-beta_{i,tau}(z).  (12.2)
+
+The pointed E-beta A-vacuum identity of Section9 therefore remains an
+identity throughout the disc. All transition/cutoff terms retain their
+original carriers. The variables defining the reference minimizers,
+the real reference inverses, and characteristic thresholds stay frozen.
+Vacuum coefficients are interpolated coherently and bounded by their
+original component debit; they are not erased.
+
+For any read point in H, the profile variation is at most
+C r chi_k diam_k H. Scalar-source Cauchy on the fixed larger constant
+source disc bounds the homogeneous coefficient differences by C q_H
+times their original coefficient norms. The same assertion holds for
+their pointed renormalized combinations, because that subtraction is
+performed before Cauchy and before assigning w(z). Coercivity-sensitive
+Wilson differences have absolute size C q_H in inverse coupling; on
+the tau disc below this becomes a fixed small constant relative to the
+weak inverse coupling. For frozen R reference replacements, keep the
+exact tagged Wilson difference of constant_source_shift Section3A;
+its inverse normalizer remains unchanged.
+
+At each original birth i, let V_i(w) be the actual constant-vanishing
+gradient coefficient, with its original dated domain and a bound
+K r E_src chi_i. Here E_src is a FIXED finite majorant for the literal
+homogeneous families; it need not be small. Interpolate the birth as
+tau V_i(w), using V_i(s)=0. On
+
+       |tau| <= R_H = c/[(1+K)q_H],                  (12.3)
+
+the total fractional input charge satisfies
+
+ sum_{i<=k} |tau| K r chi_i
+ <= C c K/[(1+K)(1+diam_k H)]
+ <= C c.                                            (12.4)
+
+For old own-field-invariant terms, the required summation is made in
+their ACTUAL regular layer n, as the primary proof does immediately
+before(1.59), not globally in the final scale k. Put h_in=ell^{i-n}.
+The neutral factor h_in^4 m_in^-2 cancels the old-anchor multiplicity
+inside that layer, and the remaining age sum is
+
+ sum_{i<=n}|tau|K r E_src chi_i m_in^-2
+ <=C c E_src chi_n/[chi_k(1+diam_k H)] <=C c E_src.    (12.4a)
+
+Mixed core terms must therefore be charged to the literal own-scale
+debit sum_n |Gamma_n^n intersect Y| in(1.69). They must NOT be charged
+to the final component Z_k counted at every finer i-mesh. Live exterior
+terms stay in the opened original boundary history and are not subjected
+to the own-field neutral/color argument. The remaining exterior
+localization interface is identified immediately below; the scalar
+estimate(12.4) by itself is not a proof of that spatial resummation.
+All source scalar radii and source tree exponents retain fixed margins.
+Choose c after these fixed constants, including E_src, so that
+(12.1)--(12.4) consume only the reserved fraction of the original
+input bounds. No change of the source's literal E0 is required.
+
+Once the exterior localization interface below is checked, this verifies
+the input class on ONE whole-history tau disc. It applies
+simultaneously to each original domain debit. It neither repeatedly
+renormalizes a perturbed density nor multiplies a one-step Lipschitz
+constant along the history. Complex tau causes no new positivity claim:
+absolute values bound the admitted complex coefficients, while the
+remaining real Wilson/Gaussian weight retains its coercive fraction.
+
+Let F_H(tau) be the connected endpoint coefficient produced by the
+original absolute cluster construction from this interpolated history.
+It is holomorphic and has its usual bound M_H on the disc(12.3), with
+fixed weakened constants. If R_H>=2, Cauchy's formula gives
+
+       |F_H(1)-F_H(0)| <= 2 M_H/R_H
+                         <= C(1+K)q_H M_H.           (12.5)
+
+If R_H<2, both actual endpoint histories are already admitted, so
+their individual majorants give |F_H(1)-F_H(0)|<=2M_H. This is again
+bounded by C(1+K)q_H M_H. No analytic interpolation outside an admitted
+disc is needed in this large-carrier case. In both cases one retained
+tree/lifetime reserve pays (1+diam_k H), using Section11. The resulting
+rooted family bound is C(1+K)r chi_k times the ordinary endpoint bound.
+
+For a healed bulk carrier the endpoint contains at least one eliminated
+component, and(1.95)--(1.100) provide the additional small birth factor.
+Hence its new source-gradient birth is bounded by
+
+       C(1+K) r chi_k g_k^P exp(-kappa' d_k(H)),      (12.6)
+
+for any prescribed fixed P after the original source parameters and
+weak threshold are chosen. The surviving components retain the same
+gradient tag in the boundary class and do not acquire the bulk claim.
+
+For closing the induction one need not impose(12.6) as a separate
+persistent R-gradient hypothesis. Retain the ordinary full R bound
+g_i^P in its original ledger and place its constant-vanishing difference
+in the common V_i budget K r chi_i E_src, with its R-origin carrier tag. The
+new contribution(12.6) to that budget has coefficient
+C(1+K)g_k^P/E_src, which is small at weak coupling. This uses the
+intersection of two valid bounds and avoids a spurious recurrence
+K_R<=C K_R with no small factor.
+
+Scope: the coefficient-history uniformity of the ORIGINAL unnormalized
+component operator is proved from its input majorants. The extension
+from the original E/R input majorants to the new V class additionally
+requires the following explicitly isolated exterior estimate. It does
+not certify alternative raw-layer maps,
+an input activity outside its dated analytic domain, or a relative norm
+for arbitrary changes of old determining data. The regular-field
+producer still has to supply those dated input bounds at every birth;
+Sections8--10 and the original-tube neutral lemma address that separate
+regular-field step.
+
+PRELIMINARY LOSS-FREE EXTERIOR INTERFACE (superseded by the sufficient
+finite-loss statement in Section15). Replace a source vacuum-subtracted
+R-style birth amplitude g_i^kappa0 by a nonnegative amplitude nu_i.
+A sufficient history condition should be
+
+ sup_n sum_{i<=n}nu_i P(m_in^-1) <=epsilon,             (12.7)
+
+for a fixed finite polynomial P. The proposed direct proof is: retain
+the original layer assignment z in Omega_n\Omega_{n+1} before(1.59);
+apply neutral h_in^4 transport on the corresponding original prepared
+collar; sum old anchors and i using(12.7); and retain ALL the first
+connection/random-walk factors in(1.66). The source's remaining spatial
+sum then gives epsilon times the exterior bound(1.68), while exceptional
+terms give epsilon times the own-scale debit(1.69). For tau-amplified
+gradient births (12.7) follows from(12.4a), also for any fixed P.
+
+The point not to omit is neutral transport on those particular complex
+prepared layer collars while the original first-connection factors are
+retained. The homogeneous/full-tube neutral lemma by itself does not
+assert this for arbitrary mixed-scale replacements. The relevant maps
+must be the literal ones in(1.59)--(1.65), for which the primary paper
+states its analytic inclusion and localization bounds. There is no
+generic inference from merely attaching a source carrier tag.
+
+13. THE ORIGINAL OUTER CUTOFF SUFFICES IN THE SOURCE TUBE
+
+Raw II Definition5.1:def-analyticity-spaces, specifically
+(5.1:eq-analyticity-spaces-a), makes the explicit fixed choice
+
+ q_rad=q0=q1 >= p0+(1+d+d beta_pr)r_pr+1.
+
+For d=4 and beta_pr<=1/2, q_rad>=p0+7r_pr+1 is sufficient.
+The source radius is a_k=C0 g_k(log gamma_k)^q_rad, whereas the actual
+retained independent fluctuation cutoff is
+T_outer=A1(log gamma_k)^p0. Hence the large-disc bound of Section10
+holds directly with the ORIGINAL retained cutoff and
+
+ delta_src,k = C g_k T_outer/a_k
+             = C'(log gamma_k)^{p0-q_rad} -> 0.       (13.1)
+
+There is no inner/outer cutoff replacement in this one-run source
+producer and therefore no new annular source-gradient term to transport.
+The homogeneous small-b coupling-flow proof remains a different use of
+the auxiliary inner cutoff and is unchanged.
+
+This parameter choice is compatible with the checked primary conditions:
+B119(2.28) allows fixed exponents q0,q1>1; B109 below(3.37) requires a
+fixed large ratio C1/C0; and(3.49)--(3.52) requires the response radius
+to be a fixed small multiple of a_k. In B122-II p379 the complex-extension
+cost is g_k times fixed powers of the logarithms, the cutoff and R_k,
+so any fixed larger q_rad is paid by taking the weak threshold later.
+All geometric, source-exponent and amplitude constants are fixed BEFORE
+that threshold. No limit q_rad->infinity during the induction is used.
+
+14. PRIMITIVE ONE-RUN V BOOTSTRAP AND ITS NONCIRCULAR ORDER
+
+This section records the exact closure using the exterior layer transfer.
+The initially proposed loss-free statement(12.7) is superseded by the
+finite-loss proof and endpoint-admission repair in Section15. The final
+parameter order is the one in that section. Nothing here upgrades a
+physical-only bound or treats the scalar recurrence as a substitute
+for the source preparation/component input.
+
+Fix a finite source-free weak trajectory and a final index N. Its
+geometry, replacement maps, reference inverses, all cutoffs, and actual
+primitive couplings are frozen. All primitive couplings, including the
+phases between positive-drift blocks, are assumed to exceed the already
+chosen weak floor. The following source induction does not retune them.
+Its pointwise homogeneous coefficients are the established constant-
+source functions Gamma_i(s), beta_i(s), E_i(s), R_i(s), holomorphic on
+one fixed scalar disc |s|<R_* with fixed margins, on precisely these
+source-free reference geometries. In particular the homogeneous shifts
+of Gamma_i are bounded uniformly in i. Choose the local source radius
+r so that every W_j scalar value lies a fixed distance inside that disc.
+
+Use the full local complex source classes W_j, not their diagonal and
+not a disc of independently varied old histories. A current profile in
+W_{j+1} restricts to W_i on every old complete source carrier i<=j;
+all its read points are retained when forming the new carrier. The
+radial and Lipschitz margins stated in Section1 supply this restriction.
+The constants below are uniform in N, j, the history and volume.
+
+Inductive hypothesis through primitive step j: for every birth i<=j
+there is an own-field-invariant, original-domain analytic family V_i,
+defined on the FULL W_i and its dated field tube, such that
+
+ V_i(U,w_const)=0 identically on that tube,
+ V_i(I,w)=0,
+ ||V_i|| <= K r E_src chi_i.                                (14.1)
+
+Its history is retained statically. Terms originating as a difference
+of R births keep their R-origin carriers, and their underlying full R
+coefficient continues to obey the separate ordinary g_i^P bound.
+Surviving boundary terms are opened to their complete unnormalized
+ancestry when estimating them; no recursive boundary-gradient bound
+is an additional hypothesis. At the initial lattice the exact Wilson
+source is the pointwise homogeneous Wilson coefficient, so V_0=0.
+
+At step j->j+1 restrict the already constructed inputs to W_{j+1}.
+The regular old V history has static prepared norm at most
+C_hist K r E_src chi_{j+1}. Sections10 and13 give its fluctuation difference
+norm at most
+
+ C_fl delta_j K r E_src chi_{j+1},
+ delta_j=C g_j T_outer,j / alpha0,j+1.                  (14.2)
+
+The finitely young cases use their literal dated domains and the fixed
+current-slot margin; old cases use neutral direct transport. Their
+constants are part of C_hist and C_fl. No positivity at the not-yet-
+constructed next source step is used. Radius comparison between j and
+j+1 uses the SOURCE-FREE bounded primitive inverse-coupling increments.
+
+Use the canonical source localization at this step and subtract the
+constant-source expression at its SAME output anchor, with identical
+prepared extensions. There are three contributions to the new birth.
+
+ (a) The anchored homogeneous forcing. Its norm is bounded by
+     C_for r E_src chi_{j+1}. It includes the pointwise Gamma/beta Wilson
+     defect(9.3), the completed pointed E reanchoring errors, and the
+     local source variation in the current fluctuation operation.
+     Fixed scalar-source Cauchy is applied to the coherent homogeneous
+     coefficients. Old pointed regular terms use the reconstructed
+     irrelevant estimate of Section9, not a direct rough-field estimate.
+     The full source carrier diameter is paid by its exponential reserve.
+     An output anchor can be one current block away, so no stronger
+     chi_j ell^{-1/2} forcing bound is claimed.
+
+     For clarity the inhomogeneous Wilson input at the present step
+     needs no new chart. With the constant coefficient at the output
+     anchor as reference, the local difference of Gamma_j is bounded
+     by C Lip_{j+1}(w) times the complete carrier diameter. On the
+     original retained chart the analytic plaquette action per current
+     cell is at most C(alpha0,j+g_j T_outer,j)^2 (fixed source powers
+     from geometry are included in the constant/logarithmic ceiling).
+     Thus the extra Wilson vertex is at most C r chi_{j+1} alpha0,j^2
+     after spending one diameter reserve. Its vacuum and quadratic
+     normalization differences have at most the same bound, or the
+     smaller C r chi_{j+1} g_j^2 fixed-logarithm bound. At a sufficiently
+     weak floor these are <=C r chi_{j+1} E_src. All retained Jacobians,
+     gauge insertions and reference inverses are the frozen original
+     ones; their constant-source dependence, if carried in a coefficient
+     representation, is subtracted with the same convention.
+
+ (b) The response to old bulk V insertions. The source whole-family
+     marked cluster Lipschitz estimate, applied to(14.2), gives
+     C_reg delta_j K r E_src chi_{j+1}. The unperturbed normalized cluster
+     ratio is controlled on the fixed admitted prepared interaction
+     ball. No per-age repeated operator norm is multiplied.
+
+ (c) Components healed in this step. The ONE whole-history disc of
+     Section18, with the fine-carrier R-type input extension, gives
+     C_lf(1+K) r chi_{j+1} g_j^P. The full R coefficient retains its
+     ordinary bound; only its constant-vanishing difference is entered
+     into V_{j+1}. Surviving components retain their original boundary
+     ancestry and are not counted as bulk births.
+
+     This clause requires at least one genuine large-field T in the
+     completed ancestry. A regular R'' renewal from B119p279 has no
+     such fresh suppression. Its source-gradient contribution is
+     included in the old-history regular response of (b), with its
+     exact original R-origin label and dated norm. No R'' term is
+     promoted to a fresh exp[-p0] seed.
+
+Vacuum subtraction is performed only after these exact expressions
+are formed: put their value at U=I in the source vacuum ledger and
+define V_{j+1} as the remainder. This costs at most a fixed factor two
+in the displayed norms, already included in the constants. The old
+homogeneous vacuum counterterms and their pointed/interpolation
+identities are retained exactly. Their ultraviolet volume scaling is
+not subject to the neutral h^4 argument. In particular no mixed source
+derivative of a vacuum coefficient is thrown away.
+
+Consequently the precise sufficient closure inequality is
+
+ K_next <= C_for + C_reg delta_j K
+                    + C_lf (g_j^P/E_src)(1+K).           (14.3)
+
+All constants are fixed before choosing the weak floor and do not
+depend on K once the prepared inputs lie in their reserved class.
+Here is an explicit noncircular choice. First choose the required fixed
+large-field power P>0, all source geometry/cutoff/spatial/lifetime
+constants, and q_rad satisfying Section13 and the primary restrictions.
+Define the analytic estimates on a fixed larger prepared-action ball;
+this determines C_for, C_reg, C_lf and C_hist. Then set
+
+        K=max(1,4 C_for).
+
+Keep E_src fixed: take it at least one and larger than the literal
+homogeneous coefficient ceiling and the fixed analytic coefficient
+constants. The source B109(1.18) asserts a fixed E0; it does not assert
+that this literal representative ceiling may be chosen arbitrarily
+small. In particular raw determinant vacuum terms need not be small.
+Choose r sufficiently small that C_hist K r E_src lies inside the
+fixed source prepared-action margin and every W_j value lies inside
+the fixed scalar disc R_*. All constants above are obtained on the
+larger fixed disc and prepared-action class and are uniform for these
+smaller r. The inhomogeneous Lipschitz bound itself contains r, so
+this restriction supplies a real amplitude gain, not a relabelling
+of a fixed input norm.
+
+Finally increase the weak floor Gamma so that throughout the weak
+trajectory
+
+ C_reg sup_j delta_j <=1/4,
+ C_lf sup_j g_j^P/E_src <= K/[4(1+K)].                  (14.4)
+
+The first is possible by q_rad>p0, the second by fixed P>0. Also impose
+all earlier source ceilings, finite-young radius comparisons and frozen
+complex-Wilson coercivity margins at this same final choice of Gamma.
+Then(14.3) gives K_next<=3K/4<K. The starting condition V_0=0 and this
+strict margin prove(14.1) at EVERY primitive prefix by ordinary finite
+induction. No future source estimate, arbitrary-history coupling disc,
+or exact terminal shooting is assumed in this step.
+
+For the boundary history estimate use q_H=r chi_k(1+diam_k H) and
+nu_i=|tau|K r E_src chi_i. Its lifetime-disc constant c is chosen
+after E_src, so the amplified whole-history action still lies inside
+the fixed component reserve. The healed bound contains r chi_k g^P;
+dividing by the birth budget r E_src chi_k gives exactly g^P/E_src
+in(14.3), without an unwanted inverse power of r. The homogeneous
+vacua remain in their exact ledger throughout and are never required
+to obey the small gradient budget. If the nonvacuum forcing has a
+bound O(alpha0,j^2), the final weak threshold makes it <=C E_src.
+The fixed scalar source disc is not shrunk at each age.
+
+Holomorphy follows at the coefficient level: every finite local map is
+holomorphic on the ORIGINAL field/source domains, and the absolute
+cluster/tree bounds just used are locally uniform there. They permit
+termwise Cauchy integrals and locally uniform history sums. The full
+source and constant-source coefficients use the same maps, cutoffs,
+normalizers and extension choices. Therefore their difference vanishes
+for constant w as an analytic function on the entire output tube.
+Gauge invariance is preserved by these operations and the source is
+gauge inert. No new scalar Maxwell coefficient is extracted from V;
+its constant restriction is zero, while variable-source local marginal
+terms remain in this gradient sector.
+
+Status of(14.3): its closure algebra, primitive-prefix logic and canonical
+constant-vanishing/vacuum treatment are proved. Section15 supplies the
+sufficient finite-loss version of the original-domain component transfer
+and corrects the parameter order to choose r after the fixed stopping
+band. This uses the published source analytic/operator estimates and
+the independently checked near-image/current, neutral, and boundary
+majorant calculations. These are internal mathematical audits, not an
+external certification. The statement does not establish continuous
+rotations, nontrivial continuum limits, or the full existence theorem.
+
+
+15. FINITE BOUNDARY POWER RESERVE AND FIXED-STOP SOURCE RADIUS
+
+This section replaces the loss-free version of the mixed-layer interface
+in Section12. The regular V transport and its delta_src gain are NOT
+weakened. Only an opened large-field component history is allowed the
+finite inverse-radius losses described here.
+
+The original estimates do not require an optimized relative response
+bound a_n exp(-sigma d). Use instead the literal whole-composite
+Cauchy estimate on the prepared n-layer domain. The neutral h_in^4
+bound is applied on a fixed fractional contour in that n-domain; a
+first connected response is extracted by Cauchy on a radius c a_n.
+This can cost a_n^-1. In the component localization there are the four
+response replacements(1.51),(1.54),(1.57),(1.58), followed by the three
+local replacements(1.61)--(1.63). Their number is fixed. All further
+walk/decoupling derivatives are taken on the original fixed s-polydiscs
+of the bounded WHOLE composite, as in(1.65)--(1.66); they do not create
+a new inverse field radius for every edge of a localization tree.
+Thus it suffices to retain a fixed finite loss g_n^-C_b, with C_b not
+optimized, together with a fixed polynomial in the age. Powers of
+logarithms and of a_n^-1 are absorbed into this fixed C_b. The current
+slot is included in the same whole-composite contour, not differentiated
+separately after the field bound has been used.
+
+The primary scope of this assertion is the actual near images and their
+stencils/gauge neighborhoods in B109(3.13)--(3.17), the current companion
+after(3.24), B119 p276, and B122-II p372(1.59) and p375(1.65). It is not
+an assertion that the entire mixed carrier Pi0 is one homogeneous tube.
+The far case keeps the old domain and spends an old-carrier tail for
+h_in^4; the first-connection factor of(1.66) is kept separately. B119
+p263(2.44)--(2.46) confirms that the R-style proof is only marginal and
+can retain finite coupling-power losses; the displayed loss 6 there
+is NOT identified with the present local C_b, because it also includes
+age summation. This argument needs no claimed exact value of C_b.
+
+For a general vacuum-subtracted own-invariant birth family of amplitude
+nu_i the sufficient mixed-layer charge is consequently
+
+ B_n = sum_{i<=n} nu_i g_i^-C_b P(n-i)m_in^-2,
+ B_* = sup_n B_n.                                    (15.1)
+
+The original spatial resummation gives C B_* times the exterior bound
+(1.68), and the exceptional core terms cost C sum_n B_n|Gamma_n^n cap Y|
+in(1.69). Here the original own-n volume is essential. The independent
+audits of the near prepared-image domain and current companion are
+used at precisely this point; the remaining spatial sum is the original
+(1.66)--(1.69), applied to the substituted amplitude(15.1).
+
+Let k be the endpoint of a complete history H, and retain q_H=r chi_k
+(1+diam_k H). Replace(12.3) by
+
+ R_H = c g_k^C_b / [(1+K)q_H].                         (15.2)
+
+Bounded primitive inverse-coupling increments imply
+
+ g_i^-C_b <= C g_k^-C_b (1+k-i)^(C_b/2)
+
+on the weak trajectory (the floor is fixed). With nu_i=|tau|K r E_src
+chi_i, and chi_i/chi_k=ell^{-(k-i)/2}, all polynomial age factors in
+(15.1) are summable. Thus on(15.2), B_*<=Cc E_src, uniformly in the UV
+depth, component lifetime and volume. Fix c after E_src and the source
+majorant margins. The one coherent disc still avoids any C^lifetime.
+
+Endpoint Cauchy now gives C(1+K) r chi_k g_k^-C_b times the ordinary
+endpoint majorant after one diameter reserve. Choose the original healed
+birth suppression with exponent P+C_b (and fixed extra logarithmic
+reserves). Its product is C(1+K)r chi_k g_k^P, exactly(12.6). If R_H<2,
+use the two individually admitted endpoint majorants; R_H<2 implies
+the same bound with the g_k^-C_b factor. Surviving boundary histories
+retain their ancestry; no persistent small bulk-gradient norm is
+asserted for them. This is why paying a boundary power is legitimate,
+whereas paying it in every regular V step would destroy(14.3).
+
+There is a necessary endpoint-admission refinement to Section14. The
+actual tau=1 histories must themselves fit(15.1); the disc proof does
+not establish that automatically when R_H<1. Fix the final stopping
+coupling in a compact weak band gamma_N in[Gamma_*,Gamma_*+C_q]. Then
+
+ sup_{i<=N} chi_i g_i^-C_b
+ <=C(1+Gamma_*)^(C_b/2),                              (15.3)
+
+because gamma_i<=gamma_N+D(N-i) and exponential chi_i beats the fixed
+age polynomial. This permits ONE source radius r>0 independent of UV
+depth and volume, chosen so that
+
+ C K r E_src (1+Gamma_*)^(C_b/2) < source reserve.      (15.4)
+
+The correct noncircular parameter order is therefore: choose geometry,
+source powers including P+C_b, the fixed larger scalar/prepared classes,
+and K; choose the weak stopping band Gamma_* to meet the delta_src and
+g^P estimates; FINALLY choose r to meet(15.4), the regular margin and
+the fixed scalar-disc containment. Reducing r can only improve the
+coercivity restrictions. No claim is made that the same r works as the
+terminal inverse coupling tends arbitrarily to infinity. A fixed weak
+stopping band is precisely the one used by the first-passage continuum
+sequence and by the fixed-scale correlation consumer.
+
+With this replacement the normalized birth recurrence(14.3) is unchanged.
+The final step still uses full W_j radii and every primitive prefix;
+only the boundary analytic-disc reserve and the parameter order have
+changed. The finite C_b argument was independently checked in
+boundary_history_gradient_independent_audit_2026-10-18, including the
+fixed s-polydisc distinction and the tau=1 endpoint repair. It does not
+assert the unnecessarily stronger relative response a_n exp(-sigma d)
+bound, and remains specifically an application of the original
+whole-composite localization estimates.
+
+
+16. AUDIT OF THE EXACT SOURCE CONSUMER INTERFACE
+
+The consumer is Sections6--9 of sourced_hierarchy_growth_audit_2026-10-18
+and the four properties plus floor at RawII60692--60758. It needs a
+common family e_j(X;v), not merely a bound on nonvacuum gradient births.
+The following ledger identifies each required property and the input
+from this one-run construction. Its dependency is the literal source
+preparation/component majorants, including the finite-loss refinement
+in Section15 and the earlier constant-source fixed-disc construction.
+It does NOT invoke the raw relative/preparatory-window hypotheses.
+
+(i) Exact normalization and coherent vacuum family. A GLOBAL source
+vacuum factor may be extracted only from the universal homogeneous
+interior coefficient families. Use the universal regular E birth,
+healed bulk R birth, and own-invariant V birth defined by their whole-
+lattice production formula. Localized terms whose COMPLETE reference
+carrier stays inside the current regular region equal restrictions of
+these universal functions: B119 p276 separates exactly these original
+interior terms, and pp278--279 identify their whole-lattice E/R''
+coefficients. B122-II(1.98)--(1.100) gives the corresponding universal
+healed R' family. Full source-carrier localization and identical source
+extension choices preserve this restriction identity for V. Any carrier
+that still reads an exterior/nonuniform history remains a boundary
+coefficient and is not included in the universal birth family.
+
+For each universal birth take its field-independent value with the
+SAME localization and anchor rule, including its Gaussian/gauge scalar
+normalizations and pointed E(I;v), R(I;v), V(I;v) counterterms. Denote
+this universal local vacuum coefficient by e^(j)(X;v), and set
+
+ e_j(X;v)=e^(j)(X;v)-e^(j)(X;0),
+ E_UV(v)=sum_{j,X in full lattice}e_j(X;v),
+ Z(v)=exp(E_UV(v)) Z_tilde(v).                         (16.1)
+
+On a particular density history only the permitted interior X occur.
+Add and subtract the missing universal vacuum terms to obtain(16.1)
+exactly. The missing-region compensations keep their original birth
+scale and component carrier and are charged to the original boundary/
+lifetime debit, as in the source vacuum convention. A field-independent
+term that depends on an actual boundary history stays inside its T
+operator/component coefficient; it cannot be factored as part of one
+history-independent E_UV. Its source dependence is retained exactly.
+Thus this convention does not erase boundary vacua and does not
+mistake a sum of history-specific scalar terms for a global scalar.
+
+The underlying bare Z includes the usual SOURCE-FREE scalar vacuum
+normalization; this is the E in RawII60372. It cancels from Z(v)/Z(0).
+One must not apply the last-scale stability floor to an unnormalized
+bare Haar integral whose bulk vacuum energy has not been removed.
+The signs in(16.1) follow from the density exponent -Gamma A+E+R:
+positive universal field-independent log terms are factored as
+exp(E_UV). No mixed source derivative is omitted. In particular one
+cannot replace E_UV(v) by independently renormalized single-profile
+terms when applying the full-moment consumer.
+
+(ii) Locality and holomorphy. Define every coefficient from the weight
+values themselves before choosing a representation v=sum z_i f_i.
+The source-free maps, thresholds and reference inverses do not read v.
+Every old coefficient read by an operation already has its complete
+source carrier. The source support of a product/cluster is the union
+of those carriers and all explicitly read pointed Wilson plaquettes;
+keep that union in the original localized carrier. Thus e_j(X;v)
+reads only the bare plaquette barycentres in X^+ (or a fixed enlargement
+of X, which is relabelled as X and paid by the fixed geometric reserve).
+It vanishes if v is zero at all these read points. The domain is the
+FULL W_j(X), with the nested radial/Lipschitz margins, not just constant
+profiles. Local maps and the uniformly absolutely convergent expansions
+are holomorphic there, so e_j is holomorphic on every finite source
+norm ball and consistent under deleting sources or restricting to an
+axis. No comparison of two cutoff systems is needed for these facts.
+
+(iii) The local vacuum bound. The source-free logarithmic normalizers
+are removed by the difference in(16.1). Their remaining common-shift
+pieces are uniformly bounded: log((gamma+zeta)/gamma)=O(zeta/gamma)
+on the fixed homogeneous scalar disc, with the dimension per anchor
+fixed. The literal local homogeneous vacuum coefficients have the
+fixed source majorant E_src on that disc after this explicit logarithm
+is accounted for. The regular gradient vacuum is bounded by the same
+local majorant as its complete pre-subtraction cluster coefficient,
+namely C r E_src chi_j (and C delta_src K r E_src chi_j for old V
+responses). Healed component vacuum terms obey the source g_j^P tree
+bound; their gradients obey Section15. Static inherited vacua are
+recorded at their original birth and are not counted again at every
+later scale. Consequently, after a fixed spatial reserve is spent,
+
+ |e_j(X;v)|<=C_e exp[-kappa_e d_j(X)]                  (16.2)
+
+on W_j(X), with C_e and admissible kappa_e uniform in j, UV depth,
+torus volume and number of source profiles. Here r<=r_0 is fixed by
+the terminal weak band. The proof does not require raw vacuum terms
+themselves to be O(b_j^2), or the literal E_src to tend to zero.
+
+(iv) Absolute last-scale stability. After extracting EXACTLY(16.1),
+the original action bounds B119(2.43)--(2.49), followed by its absolute
+integration/combinatorial argument for(2.50), apply with reserved
+constants. Pointwise homogeneous renormalized regular terms have the
+original prepared irrelevant bound; own-field V histories have the
+neutral chi age sum. For mixed components use the actual own-scale
+volume debit and the finite-loss endpoint admission(15.3)--(15.4).
+The retained real Wilson/Gaussian weight has its original coercive
+fraction since the source shift has bounded real part of size O(r).
+Frozen R reference inverse factors are already in the opened source
+operator; no new complex inverse partition function is introduced.
+Each term is estimated by its modulus, so this is an upper bound for
+complex v and requires no complex probability measure. One obtains
+
+ |Z_tilde(v)|<=exp(C_+ V_stop).                        (16.3)
+
+Here V_stop is the number of sites in the FIXED final unit lattice,
+not the number of bare plaquettes. Constants can depend on the fixed
+weak stopping band and r but not on UV depth or total torus volume.
+At v=0, E_UV(0)=0 exactly and the original positive source-free lower
+bound gives
+
+ Z_tilde(0)=Z(0)>=exp(-C_- V_stop).                    (16.4)
+
+The one-run producer therefore supplies the same normalization required
+by RawII's (S),(F), conditional only on its explicitly listed source
+input proofs, not a normalized local-boundary comparison theorem.
+
+(v) Covariance/reality and a fixed chessboard cell. The construction
+must retain the original symmetric localizations/averages and choose
+the pointed partition and anchor assignments covariantly. Complex
+conjugation of the finite formulas conjugates v; the real-at-zero
+analytic logarithm/cluster convention preserves this property.
+B119(2.32) gives covariance of R families under transformations
+preserving their MR_j partition, NOT arbitrary bare translations of
+one fixed scaffold. This is enough for the chessboard reflection step.
+Indeed source R_j is a rounded power of ell bounded by a fixed
+logarithmic function of gamma_j. In final units its cell side is
+M R_j ell^{j-N}. Bounded primitive increments and a fixed terminal
+band imply a uniform upper bound for all these sides, because
+ell^{-(N-j)} beats every fixed power of log(gamma_N+D(N-j)). The
+nested power-of-ell partitions therefore have a fixed common multiple
+ell_cell, independent of UV depth, source order and torus volume.
+Choose the chessboard cells with that side (or a fixed larger multiple),
+aligned to the original scaffold. Their face reflections and cell
+translations preserve all the relevant source partitions. Periodized
+reflected weights still belong to the same W_N by their Lipschitz
+bound and vanishing at faces. The same coefficient functions in(16.1)
+are evaluated on these weights, so the interior vacuum cancellation
+in the chessboard inequality is exact.
+
+For the small-piece good-shift argument, translate ONLY the source
+tuple by an admissible bare-lattice vector and compute its counterterms
+on this same fixed scaffold. After restoring the raw centered Wilson
+moment, use the exact translation invariance of the bare Wilson
+measure to identify the original tuple. It is unnecessary and generally
+incorrect to identify the two UV-subtracted functions h before this
+restoration. No arbitrary-translation covariance of e_j is asserted.
+
+Conclusion of this interface audit: (16.1)--(16.4), full local source
+holomorphy and compatible reflection covariance are exactly the inputs
+used by the improved full-centered-moment consumer. No relative
+old-datum/preparatory-window theorem, normalized boundary denominator
+estimate, or two-cutoff difference theorem remains in that consumer.
+This is a logical interface check; it does not replace the original
+source component/preparation estimates on which Sections12--15 rely.
+Nor does it prove continuum uniqueness, continuous rotations, a
+nonzero limiting connected correlation, or a mass gap.
+
+
+17. PLANAR PACKET MOMENTS: THE SOURCE CLASS GIVES EXPONENT 7/2
+
+This is a real separated-packet consequence of the source consumer,
+not a complex angular-tube theorem. It corrects a tempting scale count:
+W_j allows Lip_j(w)<=r lambda_* chi_j with chi_j=sqrt(a_j^phys) up
+to fixed M, so the local source norm uses sqrt(a), not a, times the
+physical Lipschitz norm. Here a is a spatial localization length; it
+must not be confused with the field radius alpha0,j of earlier sections.
+
+Split R^4=R^2_parallel x R^2_transverse. Fix a compactly supported
+C1 transverse f and a compactly supported C1 planar mollifier phi.
+Let
+
+ f_{z,delta}(x,y)=delta^-2 phi((x-z)/delta) f(y),
+
+with 0<delta<=delta0. Consider distinct planar centres such that the
+planar packet supports are separated by at least c_sep delta. The
+number of profiles and their bounded transverse support are fixed
+while delta decreases. The bare spacing is <=c delta. These hypotheses
+are essential: no diagonal or repeated-source moment is asserted.
+The full sharp norm satisfies ||f_{z,delta}||_sharp<=C_f delta^-3.
+
+For a localized vacuum coefficient at physical cell size a<=O(1),
+restriction to its complete carrier belongs to W_j after division by
+
+ M_a=C_f max(delta^-2, sqrt(a)delta^-3).               (17.1)
+
+Indeed the supremum is O(delta^-2), and Lip_j is the physical
+Lipschitz constant times a (fixed M factors are harmless); division
+by chi_j~sqrt(a) gives the second term of(17.1). Local source Cauchy
+on W_j therefore bounds an m-source mixed derivative of e_j by
+
+ C_e (C m M_a/r)^m exp(-kappa_e d_j(X)).              (17.2)
+
+The same statement applies to every subset of the profiles. A nonzero
+mixed derivative with m>=2 has a carrier meeting at least two planar
+packets, hence a retained tree factor exp(-c delta/a), with a fixed
+adjustment for a comparable to delta. Anchor it at the first packet.
+The number of cells meeting this packet and the fixed transverse
+support is bounded by
+
+ C_f delta^2 a^-4       for a<=delta,
+ C_f a^-2               for delta<=a<=1.             (17.3)
+
+This is the product of two thin planar lengths O(delta) and two fixed
+transverse lengths. The one-layer and plaquette enlargements change
+only constants since epsilon<=c delta and a>=M epsilon. The usual
+source tree sum pays the remaining carrier entropy.
+
+For a<=delta use M_a^m<=C^m[delta^-2m+a^(m/2)delta^-3m]. Summing the
+geometric scales with the factor exp(-c delta/a) gives
+
+ sum_{a<=delta}delta^2 a^-4 M_a^m exp(-c delta/a)
+ <=C^m[delta^(-2m-2)+delta^(-5m/2-2)].                (17.4)
+
+For completeness, put a=delta ell^-l up to a bounded initial ratio.
+For any exponent nu>=-4, the sum of ell^(-l nu)exp(-c ell^l)
+converges; when nu=m/2-4 grows positive, it is bounded by the same
+constant. Thus the constants here can be taken exponential in m,
+besides the explicit m^m in(17.2), not an unexamined superfactorial.
+
+For a>=delta, M_a<=C sqrt(a)delta^-3, so the coarse contribution is
+
+ C^m delta^-3m sum_{delta<=a<=1} a^(m/2-2).           (17.5)
+
+It is respectively O(delta^-7), O(delta^-19/2),
+O(delta^-12[1+log(1/delta)]) for m=2,3,4, and O(delta^-3m) for m>=5.
+All fine and coarse cases are bounded by C^m delta^(-7m/2), since
+5m/2+2<=7m/2 for m>=2, and the m=4 logarithm has two unused powers.
+Scales above one are a finite fixed stopping range and obey the same
+weaker envelope. Thus each mixed UV block satisfies
+
+ |partial_S E_UV(0)| <=(C_f m/r)^m delta^(-7m/2),
+                     m=|S|>=2.                     (17.6)
+
+The ultraviolet-subtracted h=e^-E_UV Z/Z(0), and its true-mean-centred
+version h_c, have ordinary Cauchy bounds C_{n,f}delta^-3n at fixed n.
+To make this uniform in the total volume use the existing chessboard
+consumer with fixed cells large enough for the bounded supports of
+these n packets; cell size and its modulus constant depend on n and f,
+but not delta. A good common bare-lattice translation exists as in the
+consumer. Supports remain inside fixed-radius balls, so no new delta
+loss enters that modulus estimate. The subtraction of the residual
+means of h uses its singleton Cauchy estimate of the same delta^-3 size.
+
+Restore the mixed UV terms by the exact square-free identity(7) in
+sourced_hierarchy_growth_audit. Each set partition has UV blocks of
+size>=2 obeying(17.6) and a possible h_c block obeying delta^-3 per
+source. Their exponents add to at most 7n/2. Hence
+
+ |< product_{l=1}^n [O(f_{z_l,delta})-<O(f_{z_l,delta})>]|
+ <= C_{n,f,phi,c_sep} delta^(-7n/2).                 (17.7)
+
+The same estimate holds along any continuum subsequence on these
+separated packets. No contact terms are chosen or discarded: each
+mixed UV coefficient is restored, and only exact one-point means are
+subtracted. The exponent 7/2 is strictly less than four. The improved
+value 3+epsilon does not follow from the literal W_j norm by the
+simpler count because that would replace sqrt(a) by a in(17.1).
+
+This establishes only a real separated-smearing estimate, with the
+source-producer dependencies from Section16. It does not establish
+pointwise planar fields, a holomorphic rotation tube, a rotation-current
+identity, or the far-sphere angular flux condition. Any such consumer
+must be checked against the precise packet statement(17.7), rather
+than identifying it with a stronger pointwise or complex bound.
+
+18. OPERATIVE MIXED-HISTORY REPAIR BY THE ORIGINAL SMALL-R BUDGET
+
+The exact proof and source trace are recorded in
+work/source_producer_adversarial_trace_2026-10-18.txt, Sections4--7.
+This paragraph specifies how that result is used here. It supersedes
+the use of the stronger standalone L1/L3 near-map statement in the
+mixed-history part of Sections12 and15. It does not change the
+separate original-tube regular neutral estimate or its delta response.
+
+Keep every V birth in the literal own-invariant pointed representative
+of Sections6,8,9: z in Lambda_i^(0), z in X subset Lambda_i, with its
+original independent-(U,J) domain and complete source/current read
+carrier. Do not require X itself to lie in Lambda_i-minus-one. Keep
+all existing boundary/missing terms as their exact opened ancestry.
+In particular never replace X by its MR_i hull; that operation could
+destroy its exponential fixed-M carrier bound.
+
+The published small-R preparation estimate extends to these fine
+INPUT carriers. B119p283 obtains its R marginal estimate by stopping
+the arbitrary-E-domain argument at(3.49), with any z in X. It uses
+own gauge invariance and the analytic norm, not Euclidean covariance
+or an MR minimum support size. B122-II(1.59)--(1.69) applies the same
+composite maps and fixed-M domain sums to E and R; the existing
+E-domain entropy majorant already includes these carriers. Retain
+the ORIGINAL R composite estimate on its simultaneous complex
+contours, rather than deriving it from separate real near bounds
+and decay statements. The new healed OUTPUT R' still has its
+original MR_k carrier convention. This is a narrow extension of
+the proof's input family, not a statement that V belongs to the
+published native R output class.
+
+Fix an original admissible R exponent kappa_R at least its stability
+threshold (take >=8 and any larger fixed source threshold), before
+all geometry and the weak floor. Put native homogeneous R in one
+reserved fraction of that bound. For the actual whole-history
+interpolation with endpoint k and carrier H use
+
+ |tau| <= c g_k^kappa_R /
+       [(1+K) r E_src chi_k (1+diam_k H)].             (18.1)
+
+The geometric chi factor and bounded coupling increments give
+sup_{i<=k}(chi_i/chi_k)(g_k/g_i)^kappa_R<infinity.
+After summing allowed pointed roots using a fixed spatial reserve,
+ALL amplified V_i input majorants therefore obey
+
+            A_i(extra)<=c_0 g_i^kappa_R.              (18.2)
+
+Every weighted age/domain sum in the original R proof is dominated
+term by term by c_0 times its original admitted sum. This verifies
+aggregate admission, not just one activity at a time. There are no
+independent history discs and no C raised to the lifetime. Coherent
+homogeneous Gamma/beta/E/vacuum differences on(18.1) consume only
+the other fixed input reserves; their exact cancellation identities
+are maintained. Source-free inverse reference normalizers remain
+fixed. History-dependent vacuum compensation is charged to the
+original old-domain debit, never extracted as a universal constant.
+
+The genuine healed estimate B122-II(1.97)--(1.100) then gives, after
+the ONE Cauchy estimate,
+
+ C(1+K)r E_src chi_k g_k^{-kappa_R}
+                           exp[-c p0(g_k)]            (18.3)
+
+in the rooted output norm. A fixed spatial/lifetime reserve pays
+the carrier diameter. Since the original fixed p0 exponent is
+greater than one, (18.3) is <=C(1+K)r E_src chi_k g_k^P
+for any required fixed P after choosing the weak floor. Only
+genuinely healed histories with a large-field T use this estimate;
+regular R'' propagation remains clause14(b).
+
+For a history disc of radius below two, admit tau=0,1 separately.
+Choose r after the compact terminal weak band so that
+sup_i r E_src chi_i g_i^{-kappa_R} is inside the reserved R budget;
+bounded primitive increments make this supremum ultraviolet-uniform.
+The two endpoint bounds give the same inverse-radius estimate.
+
+Thus, with fixed constants absorbing E_src, the primitive closure is
+
+ K_next<=C_for+C_reg delta_src K+C_heal g^P(1+K).
+
+Choose K, then the weak band to make both feedback terms small,
+then r to fit the scalar and whole-history margins. The full local
+source domains, analyticity, constant-source vanishing and universal
+vacuum conventions of Sections14--16 are unchanged. The original
+published preparation/localization/lifetime results remain imported
+mathematical inputs; the untraced stronger standalone L1/L3 operator
+claim is not needed in this application.

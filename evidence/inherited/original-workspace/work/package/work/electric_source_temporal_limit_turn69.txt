@@ -1,0 +1,430 @@
+FULL COUPLING SOURCE JETS THROUGH THE ACTUAL WILSON TEMPORAL LIMIT
+TURN69. 20 October 2026. Root derivation; submitted for audit.
+
+RESULT AND SCOPE
+
+At a fixed finite spatial SU2 regulator, the temporal source-jet
+attachment extends from bounded magnetic multiplications to analytic
+changes of BOTH the electric and magnetic couplings. The original
+Wilson source normalizer is retained explicitly. Its divergent
+temporal contribution is exactly affine in slab length and cancels
+from the second length difference.
+
+The proof uses a uniform ADDITIVE complex-Bessel estimate, rather
+than an invalid complex-probability bound or a uniform relative
+large-spin asymptotic. The estimate gives stable transfer powers
+on a common complex source disc. Real temporal convergence and
+holomorphic compactness then give every fixed source derivative.
+
+This closes the fixed-spatial electric/coupling derivative gate
+left open in TURN68. It does not give any estimate uniform in
+spatial cutoff, an isotropic-to-anisotropic RG theorem, or a
+nontrivial continuum correlation.
+
+1. UNIFORM COMPLEX-BESSEL ELECTRIC STABILITY
+
+Fix eta>0 and consider complex beta with
+Re beta>=eta|beta| and |beta| large. Let the square root use the
+branch positive on the positive axis. For every integer nu>=0,
+
+ I_nu(beta)=e^beta/(sqrt(2pi beta))
+       [exp(-nu^2/(2beta))+epsilon_nu(beta)],
+ sup_(nu>=0)|epsilon_nu(beta)|<=C_eta/|beta|.            (1.1)
+
+The error is ADDITIVE inside the brackets, uniformly in nu.
+It is not a relative error against the possibly tiny Gaussian
+factor at large nu.
+
+PROOF. The exact integer Fourier formula is
+
+ e^-beta I_nu(beta)
+ =(1/(2pi)) int_(-pi)^pi
+           exp[beta(cos theta-1)] exp(-i nu theta)dtheta.
+
+For real theta near0, put d(theta)=cos theta-1+theta^2/2.
+Then 0<=d(theta)<=theta^4/24. Using the integral formula for
+e^(beta d)-1 and taking a fixed sufficiently small theta0 gives
+
+ |exp[beta(cos theta-1)]-exp(-beta theta^2/2)|
+       <=C |beta| theta^4 exp(-c_eta |beta|theta^2)
+
+on |theta|<=theta0. Its integral is O_eta(|beta|^-3/2).
+Outside that interval the original integrand and the Gaussian
+tails have exponentially small L1 norm. Because
+|exp(-i nu theta)|=1 on the real integration line, the same
+absolute error is uniform in every integer nu.
+
+The full real-line Gaussian Fourier integral is exactly
+
+ int_R exp(-beta theta^2/2-i nu theta)dtheta
+       =sqrt(2pi/beta) exp(-nu^2/(2beta)).
+
+Multiplying the L1 error by sqrt(beta) proves(1.1).
+
+For large |beta|, the nu=1 bracket in(1.1) is bounded away
+from zero. Also Re(1/beta)>0. Dividing by that bracket yields
+
+ sup_(nu>=1) |I_nu(beta)/I_1(beta)
+           -exp[-(nu^2-1)/(2beta)]|<=C_eta/|beta|,      (1.2)
+
+and hence
+
+                  sup_(nu>=1)|I_nu(beta)/I_1(beta)|
+                                 <=1+C_eta/|beta|.    (1.3)
+
+The normalized one-link SU2 Wilson convolution has precisely
+the spin-j eigenvalue I_(2j+1)(beta)/I_1(beta), by the retained
+Peter--Weyl/character computation. This identity extends
+holomorphically wherever its denominator is nonzero.
+Thus its L2 operator norm is bounded by(1.3).
+
+It also follows that
+
+ c(beta)=2e^-beta I_1(beta)/beta
+        =sqrt(2/pi) beta^-3/2 [1+O_eta(|beta|^-1)]      (1.4)
+
+is nonzero in this sector for sufficiently large |beta|.
+All source discs below are chosen so that this condition holds.
+
+2. ANALYTIC ELECTRIC AND MAGNETIC FAMILIES ON A FIXED GRAPH
+
+Fix a finite spatial graph X=SU(2)^E, its physical gauge-invariant
+Hilbert space, and baseline positive coefficients kappa_e(0),
+v_p(0). In a complex disc |z|<=r let kappa_e(z),v_p(z) be
+holomorphic, real and positive for real z near0, and satisfy
+
+ Re kappa_e(z)>0,
+ beta_e(delta,z)=2/[delta kappa_e(z)]
+     in a fixed right sector with |beta_e|>=c/delta.    (2.1)
+
+For the potential V_z=sum_p v_p(z)h_p, it is enough to have
+a uniform finite bound on its negative real part. Shrinking
+the disc around positive v_p(0) makes Re V_z>=0 if desired.
+All constants in this note may depend on this FIXED graph.
+
+Define
+
+ H_z=sum_e kappa_e(z)K_e+V_z,
+ M_delta,z=exp(-delta V_z/2),
+ Q_delta,z=product_e q_(beta_e(delta,z))*,
+ T_delta,z=M_delta,z Q_delta,z P M_delta,z.             (2.2)
+
+P is the normalized Gauss projection. Each central edge
+convolution and each gauge-invariant potential preserves the
+physical sector, so P is harmless there.
+
+From(1.3), each electric factor has norm at most1+Cdelta.
+There are finitely many links. Including the two magnetic
+multipliers gives
+
+                 ||T_delta,z||<=exp(Cdelta),          (2.3)
+
+uniformly on the closed source disc for small delta.
+Consequently
+
+            ||T_delta,z^n||<=exp(Cn delta).            (2.4)
+
+These are complex OPERATOR bounds, not bounds on the total
+variation of a complex one-step path weight. The latter
+would give a fixed loss per step and would not prove(2.4).
+
+The kernels are holomorphic in z and their electric denominators
+are nonzero by(1.4). Their locally bounded operator families,
+products and fixed-vector matrix elements are holomorphic.
+
+For each real z near0, the real temporal theorem applies with
+these coefficients:
+
+       T_delta,z^floor(T/delta) -> exp(-T H_z)
+
+strongly, uniformly for T in compact intervals. For completeness,
+its generator verification is unchanged: on smooth physical
+vectors the product electric derivative is sum kappa_e(z)K_e,
+the magnetic derivative is V_z, and the real transfer products
+are contractions. The finite Peter--Weyl core and contraction
+product theorem give the stated convergence. No sourced
+ground-state limit is required here.
+
+3. FIXED UNSOURCED ENDPOINTS AND ALL SOURCE JETS
+
+Let lambda_delta,Omega_delta be the ground pair of T_delta,0;
+let E0,Omega be the ground pair of H_0. The retained theorem
+gives Omega_delta->Omega and
+-delta^-1 log lambda_delta->E0.
+
+For n=n(delta) with n delta->T define
+
+ F_delta,n(z)=lambda_delta^-n
+                 <Omega_delta,T_delta,z^n Omega_delta>.
+
+F_delta,n(0)=1. Equation(2.4) and the baseline eigenvalue
+limit bound this holomorphic family uniformly on a fixed
+disc at each fixed spatial regulator and bounded T.
+For real z it converges to
+
+ F_T(z)=<Omega,exp[-T(H_z-E0)]Omega>.                  (3.1)
+
+The locally bounded scalar holomorphic family has a unique
+holomorphic limit: any convergent subsequence agrees on the
+real interval, hence throughout the disc by the identity
+theorem. Holomorphic compactness therefore gives locally
+uniform convergence of the full family. Equivalently this
+is the scalar Vitali argument.
+
+The operator H_z is an analytic elliptic sectorial family on
+the common fixed-graph domain D(K). Its holomorphic semigroup
+matrix element supplies the same extension in(3.1).
+Alternatively the preceding unique holomorphic extension
+already defines the source function needed for the jets.
+
+Cauchy's formula proves convergence of EVERY fixed z derivative.
+For finitely many source parameters the same boundedness and
+successive one-variable uniqueness give convergence on smaller
+polydiscs and of all fixed mixed derivatives.
+
+Products of finitely many differently sourced time slabs are
+handled identically. For real parameters their finite transfer
+words converge strongly, and their complex operator norms are
+bounded by(2.4) for the total duration. This permits distinct
+sources in reflected positive and negative time windows.
+
+At z=0 every F equals1. If |F|<=M on |z|<=r, Cauchy's coefficient
+estimate gives
+
+ |F(z)-1|<=M |z|/(r-|z|).
+
+On |z|<=r/(4M+1) all values lie in |w-1|<=1/4.
+The canonical logarithms and every fixed log derivative thus
+converge there as well. This is a common temporal source disc
+at the FIXED spatial regulator; its radius is not asserted
+uniform as a->0.
+
+4. ORIGINAL FINITE WILSON SOURCE NORMALIZER
+
+Set S_delta=T_delta,0/lambda_delta and
+W_delta,n(z)=(T_delta,z/lambda_delta)^n.
+For an original finite time period N>n, define
+
+ F_delta,N,n(z)
+ =Tr_phys[W_delta,n(z)S_delta^(N-n)]/Tr_phys S_delta^N.
+                                                               (4.1)
+
+The original Wilson source expectation is EXACTLY
+
+ Z_orig,delta,N,n(z)
+ =exp[n L_delta(z)] F_delta,N,n(z),
+
+ L_delta(z)=sum_e log[c(beta_e(delta,z))
+                              /c(beta_e(delta,0))].    (4.2)
+
+Each logarithm is the branch vanishing at z=0. The source
+uses n modified transfer intervals and the symmetric spatial
+weights at their two boundaries. Thus the spatial action has
+half the new weight on each boundary slice and the full new
+weight on each interior slice. Temporal plaquette coefficients
+are changed on exactly those n intervals.
+
+Equation(4.2) does not discard the original electric scalar.
+It isolates it explicitly. There are no extra source-dependent
+Gauss or Haar normalizers. Baseline factors on all unmodified
+intervals remain those of the original Wilson measure.
+
+For |z| on a fixed smaller disc, (2.4) bounds ||W_delta,n(z)||
+by a constant M for n delta in the finite duration list.
+The positive baseline spectral remainder gives
+
+ sup_z |F_delta,N,n(z)-F_delta,n(z)|
+             <=2M[Tr S_delta^(N-n)-1].                (4.3)
+
+The proof is the trace-norm ground-projection argument of
+TURN68: subtract its rank-one projection in S_delta^(N-n),
+then retain the denominator Tr S_delta^N>=1. Its additional
+error is no larger because baseline eigenvalues lie in[0,1].
+
+Choose N AFTER delta, along any required cofinal integer
+period class. The remainder tends to zero uniformly on the
+source disc. This proves finite original Wilson realization
+of every prescribed renormalized source jet.
+
+The normalizer term nL_delta(z) generally diverges as
+delta->0 at fixed physical slab length. For example, for
+beta_e(delta,z)=beta_e(delta,0)exp(z),
+
+                   L_delta(z)=-(3|E|/2)z+O(delta)
+
+on a fixed small disc. For additive inverse coupling it has
+nonzero higher derivatives as well. None is omitted.
+
+5. EXACT REMOVAL OF THE TEMPORAL SCALAR BY LENGTH DIFFERENCES
+
+At the SAME baseline finite period N compare slab lengths
+n,n+h,n+2h, with N>n+2h. Since nL_delta(z) is exactly linear
+in n,
+
+ Delta_h^2 log Z_orig,delta,N,n(z)
+                  =Delta_h^2 log F_delta,N,n(z).       (5.1)
+
+This cancellation is exact at finite cutoff, before any
+derivative or limit. It holds for every fixed source jet.
+Take n delta->T, h delta->d, with T,d>0. The source theorem
+then gives
+
+ partial_z^m Delta_h^2 log Z_orig,delta,N,n(0)
+                    ->partial_z^m Delta_d^2 log F_T(0) (5.2)
+
+after the ordered period selection.
+
+Thus the source-dependent temporal electric vacuum term is
+not an obstruction to the separated slab observable. It
+cancels by its literal length dependence. This is stronger
+than knowing only unsourced partition convergence.
+
+For real analytic H_z put
+
+ B=(H'_0-<H'_0>)Omega,   A=H_0-E0,
+ C_B(s)=<B,exp(-sA)B>.
+
+At a fixed regulator Omega is smooth, so the differential
+operator insertions on it are well defined. Fixed-endpoint
+Duhamel differentiation gives
+
+ J(T):=partial_z^2 log F_T(0)
+   =2 int_0^T (T-s) C_B(s)ds -T<H''_0>.               (5.3)
+
+Both the scalar in(4.2) and the contact term in(5.3) cancel
+from the second length difference. Consequently
+
+ (1/2)Delta_d^2 J(T)
+   =int exp(-TE)[(1-exp(-dE))/E]^2 rho_B(dE).          (5.4)
+
+Here rho_B is the spectral measure of the centered vector B.
+It has no ground atom. The continuous value of the bracket
+at E=0 is understood.
+
+The original source need not be linear in z. Its second
+derivative also contains the expectation of the literal
+second action derivative. Translation invariance makes that
+term exactly affine in n, so(5.1) removes it. The remaining
+second difference is the triangular sum of actual centered
+first-source-derivative covariances.
+
+Temporal transition sources live at interval centers, rather
+than on a single time slice. Choose the appropriate parity
+of n so their two reflected windows fit an admitted original
+reflection plane, and take the period long enough to avoid
+the periodic-image ambiguity described in TURN68. Their
+centered reflected norm has the limit in(5.4).
+
+6. GLOBAL ADDITIVE INVERSE COUPLING: AN UNSCALED ACTION CANDIDATE
+
+For the cubic Hamiltonian write gamma=g^-2 and
+
+ H_gamma=K/(2a gamma)+4gamma S/a
+        =T_kin+Q_gamma.
+
+Take the additive source parameter z so the family is
+H_(gamma+z). It is admitted on a fixed small complex disc
+around z=0 at each fixed a,g. The original temporal source
+changes beta_time=4a(gamma+z)/delta and
+beta_space=4delta(gamma+z)/a. It inserts the FULL scalar
+Wilson action with the frozen anisotropic geometric weights.
+
+Its single-interval first action derivative is exactly
+
+ Y_j=(4a/delta)sum_e h_temporal(e,j)
+                    +(2delta/a)[S(U_j)+S(U_(j+1))].
+
+Summing n such intervals gives the full new slab action,
+including the two half-weighted spatial endpoints.
+The source expectation is E_orig exp[-z sum_j Y_j].
+This is not a magnetic-only insertion.
+
+The Hamiltonian derivatives satisfy
+
+ H'_gamma=(Q_gamma-T_kin)/gamma=(2Q_gamma-H_gamma)/gamma,
+ H''_gamma=2T_kin/gamma^2.
+
+Define the magnetic multiplication
+
+                       Q_*=Q_gamma/gamma=4S/a,
+
+and its centered q_*. Then B=2q_*Omega. Hence the exact
+and now temporally attached relation is
+
+ R_Q*(T/2,d)
+       =(1/8)Delta_d^2 partial_z^2 log F_T(z)|_(z=0). (6.1)
+
+Here z changes only the sourced coefficient gamma+z. The
+baseline ground vector, baseline energy and endpoint state
+are frozen. This is not a derivative of those baseline data.
+
+Equivalently the original FULL-action centered reflected
+window has limiting squared norm4 R_Q*(T/2,d).
+The minus sign of the original first source derivative
+does not change this quadratic norm.
+
+The scalar source for an unscaled original action, or its
+fixed physical-scale multiple, is therefore a legitimate
+candidate. A factor gamma_0 multiplying that source is
+not forced merely by choosing an observable. Any actual
+continuum calibration and nonzero physical limit still
+have to be proved; this note does not assert a trace-anomaly
+operator identity or use a perturbative beta function.
+
+7. LOCAL COUPLING SOURCES: THE ELECTRIC REMAINDER IS ATTACHED TOO
+
+Take real numerical weights f_p and
+eta_e=(1/4)sum_(p incident e)f_p on a cubic spatial torus.
+The local family from TURN68 is
+
+ H_f^loc(z)=kappa sum_e exp(-z eta_e)K_e
+                         +v sum_p exp(z f_p)h_p.
+
+It satisfies Section2 on a small fixed-graph disc. Therefore
+all its finite-window jets have the original Wilson
+realization proved above, with electric normalizer
+
+ sum_e log[c(beta_e,0 exp(z eta_e))/c(beta_e,0)]
+
+per modified interval.
+
+With r_f Omega=(H_f-<H_f>)Omega and q_f=Q_f-<Q_f>,
+the retained exact derivative vector is
+
+                         B=(2q_f-r_f)Omega.
+
+The second time difference of the ORIGINAL Wilson coupling
+source curvature thus converges to twice the spectral
+window norm of B, as in(5.4). The ground quotient r_f is
+still not itself a prescribed local Wilson multiplication.
+What has been attached is this full electric-magnetic
+combination generated by the actual coupling deformation.
+
+The known bound
+
+ D(r_f)<=12a^-3 sum_(e,p incident)(f_p-eta_e)^2
+
+does not discard r_f or control its low-energy spectral
+mass. No magnetic-only identity is inferred for a local f.
+
+8. CONSEQUENCE AND REMAINING REQUIREMENTS
+
+For any countable spatial regulator sequence, one may choose
+delta and then a finite period to approximate a finite
+increasing list of these coupling-source jets, mixed
+windows and length differences to prescribed tolerances.
+All normalizers, endpoint weights and source contact
+operators are retained. A spatially uniform temporal
+rate is unnecessary for this ordered construction.
+
+The new theorem closes a precise source-attachment gate.
+It does not supply the spatially uniform connected source
+estimate, a nonzero separated covariance, a calibrated
+local operator algebra, or Euclidean rotation symmetry.
+It does not show that Bałaban's isotropic native expansion
+applies to this anisotropic family.
+
+In particular, uniform coupling-source analyticity at each
+fixed spatial regulator is not a uniform continuum source
+disc. The full nontrivial YM4 existence proof remains open
+in this project.

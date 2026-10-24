@@ -1,0 +1,275 @@
+THE SOURCE GAUSSIAN CAN BE MATCHED AT A FINITE GERM
+17 October 2026. Follow-up to published_density_minimal_route.txt.
+Research argument for independent checking; no published files edited.
+
+MAIN FINDING
+
+There is a substantially narrower bridge than full finite-g intertwining.
+Choose the same primitive ratio, mean, contour family and Wilson convention.
+The constrained CLASSICAL actions then agree as finite-regulator germs by
+the source's uniqueness of the regular critical orbit. The normalized
+Gaussian leading amplitudes agree by the common finite constrained Laplace
+integral. A different admissible real window does not change that amplitude.
+
+This matches the complete Gaussian correction, including its pivot/coarea
+factor. It does NOT identify the positive-g recursion or its non-Gaussian
+remainder. The source's own remainder theorem, with its precise parameter
+order and fixed-domain extraction, is the remaining scalar interface.
+
+1. MATCH THE ACTUAL PRIMITIVE MAP, NOT JUST ITS DIFFERENTIAL
+
+Fix an odd L satisfying the source's size restrictions (CMP109 uses L>11).
+Set our primitive ell=L and, for this comparison only, s=1 and R=L.
+Use identical centered blocks, positively oriented independent bonds,
+coordinate-order shortest paths with their multiplicities, reference
+center strings, logarithm branch, and one identical admissible group mean.
+
+Our Notebook27 equations cmg-contour and cmg-ordinary are literally the
+choice CMP109 (0.11),(0.12), pp253--254:
+
+ P_L(V;y,x)=M({V(Gamma):Gamma in G_L(y,x)}),
+ U_x=P_L(V;y,x) V([x,x+Le_mu]) P_L(V;y+Le_mu,x+Le_mu)^(-1),
+ F_L(V)(c)=exp[L^(-d) sum_(x in B_L(y)) log(U_x R_c^(-1))] R_c.
+
+Choose the local mean by the same implicit equation (0.10), or use the
+same other admissible mean on both sides. CMP109 permits that choice.
+With these choices there is NO nonlinear averaging mismatch: F_L is
+identical, hence its j-fold iterate is identical. This would not be true
+merely from matching its linearized average, and would not identify a
+direct L^q average with F_L^q. Our long-ratio map is the latter.
+
+The source action (0.2), p252, uses normalized trace tr(1)=1. Match one
+unoriented plaquette per square and the coupling outside the action. In
+d=4 its mesh prefactor is 1. Counting-coordinate changes are fixed linear
+changes whose determinant factors must be retained, then cancel in the
+identity-normalized amplitude. The quadratic form, not a matrix written
+with an unmatched inner product, is the object being compared.
+
+2. THE CLASSICAL ACTION IDENTITY HAS A SHORT PROOF
+
+Fix a finite compatible periodic regulator and old refinement M=L^k.
+Let U_O(V) be our Notebook15 ordinary constrained minimizer and define
+S_M^O(V)=A(U_O(V)). Let S_M^B(V)=A(U_B(V)) be the source homogeneous
+minimum action for exactly the same iterated average and Wilson action.
+
+Use as an explicit published input the source variational theorem:
+the regular constrained problem has one critical orbit, which is its
+minimum orbit. CMP109 (1.1), p260, restates this and refers to Theorem1
+of Balaban, CMP102 (1985), 277--309, DOI10.1007/BF01229381.
+
+Claim: S_M^O=S_M^B as real analytic germs at V=1 on this finite regulator.
+
+Proof. Our U_O(V) is analytic, U_O(1)=1, and satisfies the same ordinary
+constraint exactly. At any fixed finite regulator, all of the source's
+regularity tests (including scaled current tests) are continuous functions
+of finitely many link variables in their logarithm charts. They vanish at
+the identity. Thus after shrinking V's real neighborhood, U_O(V) belongs
+to the source's strict regularity domain. No uniform-in-M radius is claimed.
+
+Our minimum lies in the INTERIOR of its physical potential comparison
+ball. Consequently its derivative vanishes in every tangent direction
+to the same finite-dimensional constraint fiber: a sufficiently small
+variation in any fixed finite tangent direction remains in that ball.
+It is therefore a regular constrained critical point in the source sense.
+The source uniqueness theorem identifies its critical orbit with U_B(V).
+Gauge invariance of A gives equality of action values. Both action germs
+are analytic, so equality on the real neighborhood identifies their
+holomorphic germs and all derivatives at the identity. QED.
+
+Equivalent proof: shrink until each minimum is an admissible competitor
+for the other's minimum problem, then compare the two action values in
+both directions. The critical-orbit proof above needs fewer representative
+choices and makes the role of the source regularity domain explicit.
+
+This does not prove uniform source regularity for our minimizer on its
+entire common ball. Such a result is unnecessary for this germ identity.
+It would be necessary for many finite-g source-domain transfers.
+
+3. OUTER SADDLES AND THE COMPLETE CONSTRAINED GAUSSIAN
+
+For small coarse W, consider the common one-step fiber F_L(V)=W with
+phase S_M(V), where S_M is the common germ from Section2. The source's
+stationary phase is CMP109 (2.2); its saddle is (2.3), p265. Our Notebook27
+cmi-current-minimum and cmi-rooted-background give the same constrained
+critical orbit, with contour-zero representative.
+
+The source uses the averaged-contour exponential gauge fixing from
+(0.14)--(0.16). With the same contour mean and strength it is exactly our
+G_L(V)=sum_(y,x!=y) [1-Re tr P_L(V;y,x)]. The source's additional contour
+restriction is one near its zero saddle. Thus the phases, constraints,
+and contour-zero local saddles agree after a finite germ shrink.
+
+For clarity the intrinsic finite Gaussian data are these. At V_*(W), use
+left-relative coordinates x. All Lie algebra coordinates below are
+orthonormal for the same normalized-trace metric, and all transposes refer
+to that metric. The gauge strength is included in T. In nonorthonormal
+coordinates T^T T must instead be T^* G_tau T, with its metric determinant
+also retained in the density. Put
+
+  f(x)=log(F_L(exp(ix)V_*)W^(-1))/i,  C=f'(0),
+  s(x)=S_M(exp(ix)V_*),  s'(0)=C^T lambda,
+  H=s''(0)-sum_c lambda_c f_c''(0).
+
+Let C_p be an invertible selected pivot block and K_0 the exact linear
+retained insertion with CK_0=0. Let T be the derivative of the contour
+logarithms. The reduced precision and leading amplitude are
+
+  A_T=K_0^T(H+T^T T)K_0,
+  a_M,L(W)=|det C_p(W)|^(-1) det A_T(W)^(-1/2).
+
+The normalized logarithmic correction is
+
+  D_M,L(W)=log[a_M,L(W)/a_M,L(1)].                 (G1)
+
+The constraint-current term in H is essential. Source CMP109 (1.5) and
+(2.7)--(2.11) explicitly retain the corresponding nonlinear-constraint
+current contribution. Ignoring it would create a genuine operator mismatch.
+
+Source CMP109 (2.10)--(2.12), pp267--268, eliminates the same constrained
+variables before defining the Gaussian covariance. Its COMPLETE Gaussian
+normalization therefore includes the coarea/pivot density. Equation(G1)
+must be compared with the total g^0 normalization of that derivation, not
+an isolated displayed determinant stripped of its delta normalization.
+
+4. EXACT FINITE-GERM LEADING-AMPLITUDE IDENTITY
+
+Let I_B(W,g) be the source zero-inherited-interaction one-step integral
+localized to its stationary branch, and I_O(W,g) our corresponding
+one-step local integral. Remove their common classical phase. For either
+scheme a finite-dimensional Laplace expansion yields
+
+  lim_(g->0) exp[(S_ML(W)-S_ML(1))/g^2]
+                 I_sigma(W,g)/I_sigma(1,g)
+       =a_M,L(W)/a_M,L(1), sigma=B,O.             (G2)
+
+Here every source cutoff must be one in a fixed neighborhood of the saddle,
+or its rescaled domain must exhaust the Gaussian fiber. CMP109's choice
+(2.9) has this property: using fresh symbols to avoid the source's reuse,
+the original relative variable x is straightened as x=psi(B), then B=g xi,
+so x=g xi+O(g^2|xi|^2). The fixed original retained cutoff |x_b|<epsilon_1
+therefore exhausts the scaled Gaussian domain. Straightening changes only
+pivot bonds, so retained coordinates in fact coincide.
+Our product cutoff has T(g)->infinity and gT(g)^3->0. The extra source
+gauge restriction also contains a neighborhood of its gauge-zero saddle.
+
+One may prove(G2) on a smaller fixed tube with positive phase gap away from
+the nondegenerate saddle and then use the retained-coordinate Gaussian
+estimate. This is a fixed-regulator Laplace statement. It neither exchanges
+the g->0 limit with infinite volume nor supplies a volume-uniform Laplace
+error. The identity of the resulting analytic finite amplitude germs is
+exact and does not require such a uniform error.
+
+At the saddle, left-relative Haar densities have j(0)=1, the normalized
+straightening Jacobian is 1, and the remaining density is the pivot factor.
+Target Haar in a relative coordinate at W contributes its fixed density at
+the identity, not j(log W). Gauge normalizations, Haar constants, powers of
+g, and (2pi) factors are independent of W and cancel in the ratios.
+
+If different gauge strengths or admissible contour gauges are retained,
+our Notebook32 dgb-gauge-lemma gives the same quotient amplitude after its
+orbit Jacobian is included. More globally the exact compact based-gauge
+insertion has normalization independent of W. Thus gauge choice is not
+an extra one-loop coefficient when all factors are tracked.
+
+Equations(G1)--(G2) prove the finite-germ identity
+
+  D_M,L^B = D_M,L^O.                             (G3)
+
+This is a mathematical bridge from common primitive data and the published
+classical uniqueness input. It does not rely on an informal universality
+claim, nor assert I_B=I_O at positive coupling. Equality of analytic germs
+implies equality of every finite zero-background derivative. It is not
+necessary to differentiate a nonsmooth cutoff or a global error term.
+
+5. WHAT THIS DOES AND DOES NOT TRANSFER TO BETA
+
+The source beta is defined by its thermodynamic Hessian moment, CMP109
+(1.20)--(1.22). Our finite short-lift beta is a different finite convention.
+Therefore(G3) first identifies finite Hessian kernels. Pass these kernels
+to a common infinite structural system, using the actual exponential
+moment bounds. Only THEN identify their infinite Maxwell functionals after
+fixing the same normalized trace and polarization convention.
+
+Our Notebook32 cocycle applies to the iterated F_L map, hence it applies
+to the source leading amplitudes identified in(G3). Notebook37's actual
+coefficient theorem is available for K=L^q at fixed primitive ell=L:
+
+  beta(D_M,L^q)=22 alpha_g q log L + O(1),
+
+with its stated uniform structural hypotheses. This yields a positive
+Gaussian q-block for sufficiently large fixed q once the source infinite
+kernel is identified with the same finite-germ limit. No use of our
+finite-g amplitude induction with R=L is required. Our quantum induction
+may have needed s>1; that is immaterial to this Gaussian-only comparison.
+
+The remaining infinite-kernel check is concrete: source beta must use the
+limit of the same finite homogeneous Gaussian kernels, with matching
+volume/old-depth conventions. Pointwise finite-germ equality plus uniform
+Hessian moment tails gives equality of the limiting moments; equality of
+names or a finite nonuniform continuity claim does not.
+
+The actual limit argument can be short. Fix M and q first, and take one
+common cofinal periodic family. Equation(G3) makes every finite Hessian
+kernel identical. The source thermodynamic limit, when taken as defined
+in (1.20)--(1.22), is therefore a structural limit of the identical kernels.
+Our exponential second-moment tails justify the Maxwell moment passage.
+The Notebook37 bound holds in every such structural system with the same
+constant independent of M, so the resulting source estimate is uniform
+in M, even though the equality-of-germs radii were not. No exchange of a
+nonuniform Laplace limit with an infinite-volume limit is used: first
+identify the exact finite Gaussian germs, then pass their kernels.
+
+For normalization, write the infinite quadratic kernel as
+Pi_(mu nu)(p)=b[delta_(mu nu) sum_rho d_rho(-p)d_rho(p)
+                  -d_mu(-p)d_nu(p)]+higher spatial order.
+Then the source -partial_mu partial_nu Pi_(mu nu)(0) equals b for mu!=nu.
+On a constant-curvature Cartan probe with tr(H^2)=1, the corresponding
+quadratic density is (b/2)t^2, so our 2[t^2] convention also equals b.
+This comparison uses the quadratic form with the normalized trace; no
+unidentified color or orientation multiplier is absorbed into b.
+
+6. THE SMALL REMAINING OPERATOR INTERFACE
+
+The comparison now reduces to the source's actual decomposition
+
+  beta_j^B = beta_j^(Gaussian) + beta_j^(nonGaussian).
+
+The second term is NOT the full inherited E evaluated at the outer saddle;
+that transported term is removed in defining the new increment. It is the
+new normalized fluctuation logarithm after inherited subtraction, including
+cutoff-only activity. The paper's own fixed-cutoff source construction
+must be distinguished from the later complete-density construction with
+logarithmic retained cutoffs. CMP116 (2.41) is the fixed-cutoff norm input,
+not our product-ball norm. The later cutoff is independent of background
+after pivot elimination, so a direct threshold variant of CMP116 is a
+concrete option; see source_full_density_cutoff_crosswalk.txt. Its actual
+full-density inherited state also reads old R terms. A theorem about the
+autonomous zero-R small-field recurrence does not yet identify that state.
+
+To close positive block drift it remains to establish explicitly
+
+  |beta_j^(nonGaussian)| <= C_ext A_rem epsilon_1,
+
+uniformly in old depth and every source state/history needed by shooting,
+where C_ext and A_rem are fixed before epsilon_1 is made small. This needs
+the source's localized analytic remainder on a fixed (U,J) neighborhood and
+the first response into every slot used by that remainder. Our previously
+proved Cauchy/moment extraction lemma supplies the abstract implication
+once those source constants are matched. Its radius must not shrink with
+epsilon_1 so quickly that C_ext epsilon_1 ceases to be small.
+
+The direct Gaussian germ identity removes the need to prove a full nonlinear
+conjugacy of the positive-g recursions. It also removes gauge and primitive
+cutoff equality as obstacles at Gaussian order. What remains is an exact
+source-domain extraction/uniformity check and the compatibility of the
+source homogeneous coefficients with its completed full-density scheme.
+
+EVIDENCE LIMIT
+
+The CMP109 passages were reread from the primary article copy linked in
+published_density_minimal_route.txt, including (0.2),(0.10)--(0.12),
+(0.14)--(0.20), (1.1),(1.4)--(1.5), and (2.1)--(2.15). The CMP102 theorem
+is taken as the published classical input restated in CMP109; its original
+PDF endpoint was inaccessible in this pass. The exact operator normalization
+is proved through the common integral and coordinate invariance above, not
+by guessing OCR-missing powers in the source determinant formula.

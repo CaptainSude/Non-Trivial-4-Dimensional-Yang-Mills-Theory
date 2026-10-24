@@ -1,0 +1,287 @@
+ACTUAL CLASSICAL GAUSSIAN: BROAD-PACKET MAXWELL LIMIT
+18 October 2026. Working proof. Homogeneous ordinary SU(2) branch.
+
+Result. Let the current coarse lattice have spacing one and let
+eta=M^-1, M=L^j, be the underlying fine spacing. Take the full massless
+coarse Gaussian whose physical quadratic action is the Hessian q_M
+of the actual ordinary constrained Wilson minimum S_M. Evaluate the
+quadratic fine Wilson energy on that Gaussian's minimizing fine lift.
+For fixed smooth compactly supported f,h with separated supports,
+
+ Cov_G(E_M(f(./rho)),E_M(h(./rho)))
+       = K_Maxwell(f,h)+O_f,h(rho^-1),          rho->infinity, (0.1)
+
+uniformly in M. The trace/color normalization is the same on both
+sides. In particular the positive reflected Maxwell witness remains
+bounded below for rho sufficiently large, uniformly through fine
+refinement. This is the covariance of the LOW-PASS MINIMIZING FIELD,
+not an assertion that it equals the unconditioned fine Gaussian.
+
+The result uses already proved localized flat-extension and actual
+classical-action identities listed below. It concerns the full coarse
+Gaussian after the thermodynamic limit. An additional imposed large
+scale conditional-average constraint would require its own infrared
+error estimate; it must not be silently included in (0.1).
+
+1. EXACT EXISTING INPUTS AND NORMALIZATIONS
+
+Fine physical potentials are defined by U_b=exp(i eta A_b), fine
+pairings carry eta^4, and the Wilson quadratic action is
+
+                 (1/2)||d_eta A||_(2,eta)^2.               (1.1)
+
+Use the normalized straight-string block average
+
+ (Q_M A)_mu(z)=M^-5 sum_(x in centered M-block at z)
+                               sum_(r=0)^(M-1) A_mu(x+r eta e_mu).
+
+The actual ordinary flat constraint differs by a coarse gradient.
+The energy infima agree, and their minimizing curvatures agree. The
+first assertion is proved in flat_maxwell_gap_research.md Section4.2;
+the second follows by correcting a feasible lift by a fine gradient
+and using strict convexity of the squared curl on the quotient: two
+minimizers in the SAME corrected feasible class have the same curl.
+
+Let H_M be the corrected flat minimizing extension. Existing inputs:
+
+(i) Q_M H_M=I, R D^T H_M=0 and
+    K H_M=Q_M^T q_M, K=d_eta^T d_eta;
+    flat_constrained_schauder_research.md (1.2),(2.5).
+    There q_aux=q_M+a_pen I.
+
+(ii) H_M has an exponentially localized complete C1 kernel:
+
+ ||H_M(.,b)||_(C1(collar z))<=C exp(-kappa dist(z,b)),       (1.2)
+
+    uniformly in M and the fine point in the collar. This is the
+    localized extension estimate (3.2) in that same note. It includes
+    physical first differences; no count of M^4 raw slots is made.
+
+(iii) The actual action Hessian is precisely the variational q_M,
+      with uniform exponential coarse kernel and midpoint symbol
+
+ q_M,mid(p)=|p|^2 I-p p^T+O(|p|^4).                       (1.3)
+
+    flat_covariance_decay_research.md Sections2--6,10 proves the
+    exact alias formula, its normalization, and uniform analyticity.
+    classical_coarse_action_research.md identifies it with S_M''(0).
+    The variational curvature contraction also gives
+
+                q_M(p)>=|d_c(p)|^2 I-d_c(p)d_c(p)^*.       (1.4)
+
+All Lie/color inner products are the fixed normalized trace metric.
+At flatness color components are independent copies. The coefficient
+of (1.1), not an inferred determinant normalization, fixes the free
+covariance normalization.
+
+2. CONSTANT AND AFFINE REPRODUCTION OF THE FINE CURVATURE
+
+This step fixes the density vertex, rather than merely its total
+action. In midpoint convention let the coarse affine datum be
+
+ B_mu(z)=c_mu+sum_nu T_(mu nu)(z_nu+delta_(mu nu)/2).
+
+The fine affine candidate is
+
+ A_mu(x)=c_mu+sum_nu T_(mu nu)(x_nu+eta delta_(mu nu)/2).
+
+The centered base-block mean is zero. The mean longitudinal string
+position is (1-eta)/2. Therefore Q_M A=B exactly. Its physical curl
+is the constant T_(nu mu)-T_(mu nu), and K A=0. Its physical scalar
+divergence D^T A is constant. The source scalar projection R kills
+constants: from its explicit definition
+
+ R=I-G'Q_0^T(Q_0(G')^2Q_0^T)^-1 Q_0G',
+
+Q_0 1=Q_0^T 1=1 and G'1=(a'_pen)^-1 1 give R1=0.
+Thus this affine candidate is already in the source flat gauge.
+
+The exponential kernel of q_M and its zero/first moments, following
+from (1.3), give q_M B=0 for every affine B. Consequently
+
+ A_0 A=Q_M^T a_pen B,
+ H_M B=G_0 Q_M^T(q_M+a_pen I)B
+      =G_0 A_0 A=A.                                      (2.1)
+
+These are polynomial extensions of linear operator identities, not
+evaluations of the nonlinear small-field map on an unbounded field.
+At each fixed M, the exponentially localized G_0,H_M,q_M and scalar
+projection kernels act on polynomial-growth fields; their inverse
+identities extend by absolute convergence. For instance
+(1+|y|)^k <=(1+|x|)^k(1+|x-y|)^k, and the last factor is paid by
+exponential decay. Finite differences cause no difficulty. This
+justifies G_0 A_0 A=A in (2.1), with no finite-torus affine/seam claim.
+
+By the ordinary/corrected gauge comparison in Section1, (2.1)
+identifies the curvature of the actual ordinary lift as well.
+In particular constant coarse potentials have zero lifted curvature.
+
+3. UNIFORM FINE-CURVATURE BLOCH SYMBOL
+
+Index each fine plaquette by its containing unit cell z, a relative
+fine position u in that cell, and orientation alpha=(mu,nu). Assign
+plaquettes at interfaces by any fixed consistent rule. Their relative
+positions lie in a bounded set independently of M. Equation(1.2)
+gives a uniformly exponentially summable kernel for
+
+             F_M(z,u,alpha)=(d_eta H_M B)_(z,u,alpha).
+
+Its Fourier symbol F_M(p;u) from the coarse midpoint components B is
+uniformly analytic near the real momentum torus, with all fixed
+derivative bounds independent of M and u. Constant and affine
+reproduction prove
+
+ F_M(0;u)=0,
+ F_M(p;u)=i C(p)+O(|p|^2),
+ [C(p)v]_(mu nu)=p_mu v_nu-p_nu v_mu.                    (3.1)
+
+The remainder and its differentiated bounds are uniform. Midpoint
+phases do not change the first coefficient because the zeroth one
+vanishes. Equation(3.1) is the needed local density normalization;
+the total action symbol alone would not have identified it.
+
+Coarse gradient inputs have zero lifted curl. Indeed a feasible fine
+gradient has zero energy, and the minimizing curl therefore vanishes.
+Hence F_M(p;u)d_c(p)=0 exactly. All curvature correlations below are
+independent of the choice of coarse gauge fixing.
+
+4. THE FULL COARSE GAUSSIAN AND ITS LONG-DISTANCE CURVATURE
+
+Choose for convenience the positive coarse gauge-fixed covariance
+
+       C_M(p)=[q_M(p)+d_c(p)d_c(p)^*]^-1, p!=0.           (4.1)
+
+In the midpoint basis the denominator is
+|p|^2 I+O(|p|^4). Equation(1.4) bounds it below by
+|d_c(p)|^2 I, and the uniform analytic q_M bounds its derivatives.
+Consequently, for every fixed multiindex beta and 0<|p|<p_*,
+
+ ||partial^beta C_M(p)|| <= C_beta |p|^(-2-|beta|),
+ ||partial^beta[C_M(p)-|p|^-2 I]|| <= C_beta |p|^(-|beta|).
+                                                               (4.2)
+
+For example the second bound follows from
+C_M-|p|^-2 I=-|p|^-2 [q_M+d_c d_c^*-|p|^2I] C_M
+and differentiated inverse identities. Away from zero all derivatives
+are uniformly bounded. In four dimensions C_M is locally integrable,
+so it defines the infinite-volume Gaussian. Constants on finite tori
+may be fixed to zero; lifted curl annihilates the harmonic sector.
+
+The covariance between two lifted fine curvatures has Bloch symbol
+
+ K_M(p;u,v)=F_M(p;u) C_M(p) F_M(-p;v)^T.                 (4.3)
+
+This is the actual low-pass minimizing-field covariance. It is not
+the full fine Feynman covariance. The same object can be expressed
+by the alias formula: with P_r, Omega_r and q_M as in the flat
+covariance note, its fine alias blocks are
+
+ d_r P_r^-1 Omega_r^* q_M Omega_s P_s^-1 d_s^*.           (4.4)
+
+The q_M in (4.4), rather than W_M^-1 alone, removes the coarse
+gradient direction. Using only the unprojected Feynman conditional
+mean would give the wrong fine-curvature covariance in general.
+
+Equations(3.1),(4.2) imply
+
+ K_M(p;u,v)=C(p) C(p)^T/|p|^2+R_M(p;u,v),
+ ||partial^beta R_M(p;u,v)||<=C_beta |p|^(1-|beta|).        (4.5)
+
+The first term is the continuum Maxwell curvature covariance symbol
+in the normalization(1.1). Matrix/color signs from the two factors i
+cancel. The full symbol(4.3) is periodic in the fixed cell labels;
+any midpoint quasiperiodic phases cancel in it.
+
+Here is the Fourier decay argument, including its uniform remainder.
+Take a fixed smooth cutoff near p=0 and a dyadic partition there. On
+an annulus |p|~r, (4.5) gives the L1 derivative bound C_N r^(5-N).
+For |z|=R>=1, the pieces with r<=R^-1 sum directly to C R^-5.
+On r>R^-1 integrate by parts N>5 times in a coordinate with
+|z_mu|>=R/2; the bound is C_N R^-N r^(5-N), whose dyadic sum is
+C R^-5. The part away from zero is a smooth periodic symbol and
+has faster than any fixed power decay. Finally the inverse transform
+of the cutoff homogeneous leading symbol differs, away from z=0,
+from the continuum homogeneous distribution by a rapidly decreasing
+function: every derivative of order N>4 of its high-frequency
+complement is integrable, and integration by parts applies there.
+Thus
+
+ K_M(z;u,v)=K_Maxwell(z)+O((1+|z|)^-5), |z|>=1,           (4.6)
+ |K_M(z;u,v)|<=C(1+|z|)^-4,
+
+uniformly M,u,v. If actual fine positions x=z+u, y=z'+v are used,
+replace the leading K_Maxwell(z-z') by K_Maxwell(x-y): their
+arguments differ by O(1), and its derivative is O(|z-z'|^-5).
+The same error remains. The contact part of the homogeneous Fourier
+distribution is irrelevant because the two packets are separated.
+
+5. FINE ENERGY, WICK CONTRACTION, AND UNIFORM QUADRATURE
+
+For a coarse Gaussian B of covariance C_M define the quadratic
+fine energy smeared by f_rho(x)=f(x/rho) as
+
+ E_M(f_rho)=(1/2) eta^4 sum_(fine x) f(x/rho)
+                           sum_(alpha,color) F_M(x,alpha,color)^2.
+                                                               (5.1)
+
+The same formula with subtraction of the mean defines the centered
+energy; its cross covariance is unchanged. Fine plaquette centers
+or tails can be used consistently, with an O(eta/rho) error in the
+test function. Wick's identity gives
+
+ Cov(E_M(f_rho),E_M(h_rho))
+  =(dim g/2) eta^8 sum_(x,y) f(x/rho)h(y/rho)
+                         sum_(alpha,beta) K_M(x,y)_(alpha beta)^2.
+                                                               (5.2)
+
+The trace metric determines dim g=3 for the present SU(2) convention.
+Because the supports of f,h are separated, all contributing distances
+are at least c rho and at most C rho. Equation(4.6) therefore changes
+each squared curvature factor by O(rho^-9). The weighted number of
+fine pairs is O(rho^8), uniformly eta<=1. Hence the integrated error
+is O(rho^-1).
+
+The leading continuum kernel has homogeneity -8. Substitute x=rho X,
+y=rho Y in the continuum double integral; the rho^8 volume factor
+cancels. In the rescaled variables, the fine Riemann-sum mesh is
+eta/rho<=rho^-1. The integrand is smooth and supported a fixed
+positive distance from its diagonal, so standard cellwise first
+derivative estimates bound the quadrature error by C eta/rho.
+Combining the two errors proves(0.1).
+
+If the actual source replaces f(p/rho) by a nearby coarse anchor
+sum_z h_z(p)f(z/rho), with sum_z h_z(p)=1, uniformly bounded absolute
+overlap, and |p-z|<=C on each support, the test-function error is
+O(rho^-1). The same separated-kernel bound in(5.2) gives another
+O(rho^-1) integrated covariance error. Thus either actual fine
+plaquette weighting or its admitted local anchoring has the same
+limit. The exact source convention is the Wilson term
+-sum_p Gamma_j(w(p)) a_p(U), with the pointed partition h_z used
+for extraction; it is not an arbitrary total-action localization.
+
+6. COUPLING AND WITNESS CONSEQUENCE
+
+If the physical Gaussian field has covariance gamma_s^-1 C_M and
+the leading source insertion is Gamma'_s times(5.1), its covariance
+is (Gamma'_s/gamma_s)^2 times the expression in(0.1). Thus
+
+ [gamma_s/Gamma'_s]^2 Cov_G(actual leading marks)
+                 =K_Maxwell(f,h)+O_f,h(rho^-1).            (6.1)
+
+This normalization presumes Gamma'_s!=0; otherwise state the
+unfactored identity. The source-tangent argument is responsible for
+controlling Gamma'_s, not the present Gaussian proof.
+
+For h=theta f with the already chosen nonnegative separated witness,
+K_Maxwell(f,theta f)>0 by the existing continuum Wick benchmark.
+Therefore rho=gamma_s^B, with any fixed B>0, makes the normalized
+lattice/averaging error O(gamma_s^-B), uniformly in the old refinement
+M. Near/far packet ratios converge with the same rate for any fixed
+pair of separated shapes. No continuum Wick positivity proof is
+being replaced or strengthened here.
+
+This closes the full-Gaussian lattice/low-pass normalization step
+relative to the proved flat H_M and ordinary-action inputs. The
+comparison to the actual interacting sourced state, infrared final
+conditioning if retained, and its endpoint integration are distinct
+steps and are not conclusions of(6.1).

@@ -1,0 +1,551 @@
+REGULAR PHYSICAL SOURCE TRANSPORT -- TURN69
+20 October 2026
+Status: proved extensions at the stated selected-map/classical inputs;
+submitted for independent audit. This is not full-history source closure.
+
+The authoritative starting point is current_proof_frontier.txt (TURN68).
+The nontrivial continuum YM4 existence proof remains incomplete.
+
+RESULT
+
+The actual fixed-window selected integration has a stronger local
+one-mark estimate than the native g^(-P) Cauchy estimate. For the literal
+weighted FULL coupling-free action, its quantum one-mark birth obeys
+
+  ||B_j(f)||_weak
+    <= C g_j^4 ||f||_infinity
+       + C g_j^2 ell_j^alpha [f]_(C^alpha),  0<alpha<=1.       (R1)
+
+Here ell_j is the physical current-cell length. All baseline windows,
+covariances, charts and couplings stay fixed under the source. The
+field-independent source term is retained separately. The estimate is
+uniform in preceding homogeneous classical depth and compatible volume,
+at the precise classical and strict-catalogue inputs already used in
+TURN47--51. It is a source for the actual action on the admitted selected
+branch, not a source for an auxiliary normal Gaussian.
+
+The order-g_j^2 term contains the weighted source's generally NONZERO
+linear jet at the constrained saddle. Its cancellation for f=1 is proved
+before localizing a variable profile. For a sharp slab, this term instead
+has an exponential distance-to-interface bound.
+
+The birth bounds in (R1) are ultraviolet summable on the actual selected
+weak trajectories. Also the inherited one-mark quantum derivative is
+O(g_j^2), on one fixed strict input margin, with no g_j^(-P) factor.
+These are proved local estimates. They do not yet imply that a spatially
+varying marked source remains bounded after all subsequent classical
+and quantum transports: the existing contractive extracted space has
+translation and hypercubic invariance. Section 8 identifies this remaining
+interface without using that contraction outside its hypotheses.
+
+1. EXACT MAP AND SOURCE
+
+Imports, with their original scope retained:
+
+* projected_product_sector_turn48.txt, Sections 1--4 and 6:
+  the positive selected weight on the actual relative constrained fiber,
+  and its exact fixed-ambient-product representation;
+* constant_original_source_trajectory_turn49.txt, Sections 1--3:
+  fixed joint analytic discs in auxiliary g, source t and inherited E,
+  and the exact constant-action rank cancellation;
+* carrierwise_gauge_transport_turn47.txt, Section 5:
+  actual physical plaquette marks on the strict covariant catalogue;
+* common_bare_two_volume_turn51.txt, Sections 8--9:
+  complete read/path labels and fixed decorated locality budgets;
+* archived pregauge_holder_prefix_research.md, Sections 2--4,
+  classical_background_semigroup_research.md, Sections 1--3:
+  the actual ordinary classical minimizer/prefix, complete-field
+  localization and the gauge-invariant scalar composition identity.
+
+These imports are the previously stated selected classical/chart
+modules. Nothing here turns them into a theorem about all native R/B
+histories or about an anisotropic Wilson continuum diagonal.
+
+At one step suppress j. Let w be admitted coarse/background data,
+U_g(w,xi) the actual field in the relative fiber chart with b=gK_w xi,
+and V(w)=U_0(w,xi) its constrained saddle. The fixed ambient measure
+mu_T is the normalized product of full color balls; it is symmetric
+under xi -> -xi and has covariance v_T times the identity per block.
+The exact normalized fluctuation expectation is
+
+  <F>_(g,E,w)
+     = E_muT[F exp V_g,E(w,xi)] / E_muT[exp V_g,E(w,xi)].       (1.1)
+
+The exponent includes the full classical remainder, coarea increment
+and inherited difference, exactly as in TURN49 (1.2). Its g=0 value
+is zero, and V_(-g,E)(xi)=V_(g,E)(-xi). All baseline quantities in
+this definition are frozen when physical sources are differentiated.
+
+Use a density decomposition S_M(U)=sum_p h_(M,p)(U) of the actual
+coupling-free current reference. For M=1 these are the physical
+plaquette terms. For earlier microscopic labels p at depth M, the
+definition is
+
+  h_(M,p)(U)=h_p(U_M(U)),                              (1.2)
+
+where U_M is the same ordinary constrained minimizer used to define
+S_M. This is a classical pullback of a literal original plaquette;
+it is not a newly chosen current plaquette. Section 2 gives its
+uniform local bounds. The label retains the physical location x_p.
+
+For a scalar profile f, the same in every plaquette orientation, set
+
+  S_(M,f)=sum_p f(x_p)h_(M,p),
+  J_f(g,w,xi)=S_(M,f)(U_g(w,xi))-S_(M,f)(V(w)).
+
+The one-mark quantum correction is
+
+  B_g,E(f)(w)
+    = d_s log E_muT exp[V_g,E+s J_f] |_(s=0)
+    = <J_f>_(g,E,w).                                  (1.3)
+
+The complete one-mark output is S_(M,f)(V)+B_g,E(f).
+The classical term is not replaced by f times the next reference.
+Constants B_g,E(f)(0) are not removed from the actual density.
+The norm below concerns the exact normalized field class
+B_g,E(f)(w)-B_g,E(f)(0).
+
+For f=1, S_(M,1)=S_M, so this is exactly the constant physical
+action source used in TURN49, at its derivative at zero.
+An orientation-dependent magnetic-only source is not covered by
+this particular constant-source cancellation.
+
+2. CLASSICAL DEPTH DOES NOT COST M^4 IN THE DENSITY INPUT
+
+Here is the direct source-density admission, rather than an assumption
+that S_(M,f) has the same finite-range form as S_M.
+
+In physical current units put eta=M^(-1). The imported ordinary
+minimizer has a coherent complete-field C^(1,alpha) bound on a fixed
+complex datum ball, independent of M. Its fine links are exp(i eta A).
+For every fine plaquette p, the elementary product formula and
+first-difference bound give
+
+  ||U_p-I|| <= C eta^2 (||A||_(C^1)+||A||_(C^1)^2).
+
+For SU2 (and for the fixed traced semisimple action convention), the
+linear trace of the plaquette logarithm is zero. Thus, on a sufficiently
+small fixed complete-field ball,
+
+  |h_p(U)| <= C eta^4 ||A||_(C^1)^2.                  (2.1)
+
+This is a complex analytic estimate as well as a real estimate.
+For example write U_p=exp Z_p, Tr Z_p=0; the trace series begins with
+Z_p^2, and ||Z_p||<=C eta^2||A||_(C^1). It holds on a fixed C^1 ball,
+so its Banach Taylor coefficients inherit the eta^4 factor by Cauchy
+on that fixed ball. The local plaquette evaluation reads a bounded
+number of fine links in its physical current-cell collar.
+
+Compose these local Banach coefficients with the imported complete
+minimizer support family, keeping p and its current-cell root in every
+carrier. The same geometric multilinear series as in the classical
+support construction is convergent on one smaller fixed datum radius.
+For any once-fixed admissible output reserves one obtains
+
+  sup_x sum_(p rooted in x) sum_(X contains x)
+          exp(a |X|) ||h_(M,p;X)||_b <= C b^2.        (2.2)
+
+Indeed the per-p bound is C M^(-4)b^2, and at most C M^4 fine
+plaquettes have roots in one current cell. The dimension-four factors
+cancel. Rooted source labels count actual fine plaquette multiplicity;
+they are not silently collapsed before this estimate.
+For the output-rooted norm used below, retain a fixed spatial
+exponential reserve joining the source root to every declared read.
+Rerooting at an arbitrary output cell sums exp(-c distance) over
+current cells, a volume-independent constant. It introduces no new
+sum over the M^4 fine labels after their factor has already canceled.
+
+The full read support is inherited from the complete-field family;
+it includes the root of p and every background variable read.
+Consequently multiplying each density by f(x_p) gives the same bound
+times ||f||_infinity. Fixed relative derivatives and the subsequent
+relative-chart composition are admitted with the same fixed margins.
+This proof uses the actual homogeneous classical minimizer input. It
+does not assert that an arbitrary quantum-renormalized effective action
+has such a decomposition into positive microscopic densities.
+
+The classical semigroup identity implies
+
+  T_j S_(M_j,f) = S_(M_(j+1),f)                      (2.3)
+
+as gauge-invariant scalar germs on their specified common domains:
+both evaluate the same original weighted action on gauge-equivalent
+ordinary minimizers. This identity is exact also for nonconstant f,
+because each original plaquette term is gauge invariant. It is a
+classical identity, not a semigroup identity for fluctuation integrals.
+
+3. THE ACTUAL ORDER-g^2 COEFFICIENT, INCLUDING THE FIRST JET
+
+On fixed sufficiently small product discs in (g,s,E), the marked
+connected expansion for (1.3) is uniformly analytic and local.
+Only a fixed s disc is needed. In fact J_f=O(g) in the occupied-support
+norm, with constant C||f||, so this disc requires no independent-source
+radius growing like g^(-2). In particular we do not use TURN47's large
+source disc on an inadmissibly large background ball.
+
+Every marked diagram retains its source label p and all its field,
+fluctuation, chart and path reads. Product-ball reflection gives
+
+  B_(-g,E)(f)=B_(g,E)(f),       B_(0,E)(f)=0.
+
+Uniform analytic division on a fixed smaller g disc gives exact
+source-rooted families
+
+  B_g,E(f)=g^2 A_E(f)+g^4 C_g,E(f),                   (3.1)
+
+with rooted bounds
+
+  ||A_E(f)||_strong + ||C_g,E(f)||_strong
+                       <= C ||f||_infinity.         (3.2)
+
+Here and below source-only constants remain in their raw carriers.
+This is an estimate of a linear one-mark response; it is not a
+bound for arbitrary finite variable-profile sources.
+
+The coefficient A_E is explicitly accessible. Write the ordinary
+analytic Taylor expansions (coefficients include their factorials)
+
+  J_f(g)=g J_(f,1)+g^2 J_(f,2)+O(g^3),
+  V_g,E=g V_(1,E)+O(g^2).
+
+Both first coefficients are odd in xi and hence have mean zero.
+Expanding the SAME numerator and denominator in (1.3) gives
+
+  A_E(f)=E_muT J_(f,2)+E_muT[J_(f,1)V_(1,E)].         (3.3)
+
+The second term is essential. For a weighted action its constrained
+saddle first derivative need not vanish. Coarea and inherited linear
+increments in V_(1,E) are included, as is the cubic-action contribution.
+Replacing A_E(f) by a weighted Gaussian Hessian trace alone would
+generally give the wrong result.
+
+For f=1, constrained stationarity of the actual FULL action gives
+J_(1,1)=0. Its exact Hessian gives
+
+  J_(1,2)=xi^t P_w xi/2,
+  A_E(1)=v_T Tr P_w/2=v_T d/2.                       (3.4)
+
+The rank d is fixed on the admitted branch. This is independent of w
+and of E. Thus A_E(1) is exactly a vacuum term. No conditional Gaussian
+approximation is used.
+
+4. LOCALIZING A CONSTANT CANCELLATION: AN EXACT DERIVATIVE IDENTITY
+
+We give the norm argument because cancellation of a total does not
+mean cancellation of its original individual carriers.
+
+Write A_E(f)=sum_(p,X) f(x_p) A_(p,X)(w|X), with complete source roots
+in X and the bound (3.2) at radius b_s and exponent a_s. Let b_w<b_s,
+a_w<a_s be fixed once. Each cell has at most D scalar coordinates.
+For a field coordinate q, let x_q be its physical cell location and
+write f_q=f(x_q), with no dependence on its color or link index.
+The summed derivative of (3.4) is exactly zero:
+
+                  sum_(p,X) partial_q A_(p,X)(w)=0.   (4.1)
+
+Absolute normal convergence licenses differentiating and rearranging.
+Integrating along the straight segment tw, 0<=t<=1, gives
+
+ A_E(f)(w)-A_E(f)(0)
+  =sum_(p,X) sum_(q in X) [f(x_p)-f_q]
+                    int_0^1 w_q partial_q A_(p,X)(tw)dt.       (4.2)
+
+To check the subtraction, sum its extra term first at fixed q and use
+(4.1). This is an exact representative identity, not a choice of a
+position-dependent vacuum subtraction. The true vacuum remains
+sum_(p,X)f(x_p)A_(p,X)(0).
+
+Cauchy at the fixed radius margin gives, for each coordinate,
+
+ ||int_0^1 w_q partial_q A_(p,X)(tw)dt||_(b_w)
+          <= [b_w/(b_s-b_w)] ||A_(p,X)||_(b_s).        (4.3)
+
+A connected complete carrier in the current J-cell graph satisfies
+
+ |x_p-x_q| <= C J ell |X|,
+
+with shortest consistent physical distance on a compatible torus.
+The fixed macrostep/grouping may make the output read-cell spacing
+a fixed multiple of ell; that factor is included in C J, not treated
+as a depth-independent equality of fine and coarse length units.
+Thus for 0<alpha<=1, (4.2)--(4.3), D|X| coordinates, and
+sup_(k>=1) k^(1+alpha) exp[-(a_s-a_w)k]<infinity imply
+
+ ||A_E(f)-A_E(f)(0)||_(a_w,b_w)
+                    <= C ell^alpha [f]_(C^alpha).    (4.4)
+
+This proves (R1) after retaining the g^4 remainder from (3.1).
+The strong baseline and its source-rooted birth catalogue are available
+at b_s,a_s at EVERY step. b_w,a_w are chosen once for the marked output.
+This argument does not spend b_s-b_w anew on an inherited marked input.
+It therefore does not hide a succession of smaller source radii.
+
+Individual summands in (4.2) need not be gauge invariant. Their exact
+total is the gauge-invariant physical mark minus its scalar constant.
+Any later argument requiring individually invariant representatives
+must still supply those; (4.2) does not assert them.
+
+5. SHARP SLABS AND THE ULTRAVIOLET SUM
+
+For a bounded piecewise constant profile, a nonzero difference in
+(4.2) requires a carrier joining two profile regions. If I_f is the
+union of their interfaces, a carrier contributing to the rooted norm
+at x must then have |X|>=c dist(x,I_f)/(J ell), up to a fixed cell
+collar. A further fixed exponent reserve gives the rooted bound
+
+ ||A_E(f)||_(weak;root x), modulo its vacuum
+       <= C ||f||_infinity
+                    exp[-c dist(x,I_f)/ell].          (5.1)
+
+The coefficient is not literally zero away from the interface;
+complete classical and covariance reads have exponential tails.
+The conclusion applies to the order-g^2 field-dependent coefficient.
+The order-g^4 bulk remainder is still present.
+
+For a smooth profile suppose ell_j=ell_* L^(j-n), L>1, and
+gamma_j=g_j^(-2)>=Gamma+b(n-j). Then
+
+ sum_j g_j^4 <= Gamma^(-2)+(b Gamma)^(-1),
+ sum_j g_j^2 ell_j^alpha
+       <= ell_*^alpha/[Gamma(1-L^(-alpha))].           (5.2)
+
+The first follows by the integral test; the second by discarding
+the positive b(n-j) in the denominator and summing a geometric series.
+For the actual q-block trajectory of TURN49, its stated
+Gamma0+B_- floor((n-j)/q) lower bound gives the same conclusion
+with fixed q-dependent constants. In particular
+
+ sum_j ||B_j(f)||_weak
+  <= C ||f|| [Gamma^(-2)+(b Gamma)^(-1)]
+       +C ell_*^alpha [f]_(C^alpha)/Gamma.             (5.3)
+
+These are sums of BIRTH norms. They do not omit the future transports
+which appear in the exact sourced recursion in Section 8.
+
+For a fixed positive distance from a sharp interface, the sum of
+g_j^2 exp[-c dist/ell_j] is likewise ultraviolet summable and its
+fine-scale tail tends to zero. At an interface root (5.1) only gives
+O(g_j^2); no uniform sum over indefinitely many scales is claimed
+there. A sharp slab requires its interface/source class to be kept
+or its exact translated local terms canceled as in TURN68, with
+periodic images or the stated alias-free restrictions retained.
+
+6. A SECOND NEW FIXED-NORM ESTIMATE: INHERITED ONE-MARK RESPONSE
+
+On a strict fixed input ball in E and at t=0, the actual selected
+quantum map satisfies
+
+  F_j(0,E)=0,    F_j(-g,E)=F_j(g,E).
+
+Consequently F_j(g,E)=g^2 H_j(g,E), with H uniformly analytic on
+smaller fixed product discs. This was already observed in TURN51
+Section 3; we use the sharper consequence explicitly for marks.
+Cauchy in the Banach input direction u at a fixed E-margin epsilon_*
+gives
+
+  ||D_E F_j(g,E)[u]|| <= C g^2 epsilon_*^(-1)||u||.     (6.1)
+
+The radius, carrier norm and epsilon_* are fixed before the weak
+coupling ceiling. The constant does not depend on j or on history
+length. This is not the native g^(-P) disc argument, and it does not
+require u to be even as a field function.
+
+For this linear response one may use the same weak b_w,a_w space at
+every step, provided the actual fixed-radius selected input map on
+that space is used. The baseline can be restricted from its stronger
+domain. Its strict margin must be kept when differentiating.
+This local analytic statement extends to the full inhomogeneous
+carrier space: the occupied-support, core/tail composition and
+connected-log proofs sum absolute carrier norms and make no use
+of translation or hypercubic symmetry of the inserted E or u.
+The equality-of-total quotient descent likewise uses only equality
+of the two finite analytic totals. Thus (6.1) does not borrow the
+symmetry-dependent extracted contraction discussed in Section 8.
+
+The Gaussian determinant/coarea factors independent of E do not
+contribute to (6.1). Source vacuum response is kept separately; the
+bound displayed is on the normalized field class.
+
+7. MIXED BIRTHS AT FINE SCALES RETAIN THEIR SEPARATION
+
+There is also a direct selected two-mark consequence, useful for
+separated physical profiles. Use
+
+  L(g,s,t)=log E_muT exp[V_g,E+s J_f+t J_h].
+
+Keep both original source roots in every connected marked diagram.
+The mixed coefficient d_s d_t L|_0 is even in g and zero at g=0.
+The fixed marked cluster majorant and one g-division therefore give
+an O(g^2) bound with the full connected read support. If the physical
+supports of f,h have distance d>0, that support has current length
+at least c d/ell. Paying one fixed length reserve yields, per source
+root and with the corresponding finite source-root sum,
+
+  |mixed birth| <= C g^2 ||f|| ||h|| exp[-c d/ell].     (7.1)
+
+This statement includes raw scalar mixed births; it does not discard
+them as vacuum. In a fixed physical source region with O(ell^(-4))
+current roots, the bound is C ell^(-4)g^2 exp[-c d/ell].
+Its ultraviolet sum is finite and its fine-scale tail vanishes.
+The conclusion concerns two marks which first meet in THIS connected
+integration. It does not bound marks transported separately until
+their current separation is O(1). That distinction is exactly the
+one retained in TURN68.
+
+7A. THE LEADING MIXED BIRTH HAS TWO PROFILE DIFFERENCES
+
+The leading g^2 coefficient in Section 7 can be computed without
+any external-field quotient. Write its linear first jet as
+
+  J_(f,1)=sum_r xi_r . l_(f,r)(w),
+  l_(f,r)=sum_p f(x_p)L_(p,r)(w).
+
+Here r is an ambient color-block coordinate; L_(p,r) is the
+literal first derivative of h_(M,p)(U_g) with respect to g xi_r
+at zero. It contains the actual K and chart derivative. Constrained
+stationarity of the FULL action implies
+
+                  sum_p L_(p,r)(w)=0                 (7A.1)
+
+for every r, not merely after integration. Choose a physical cell
+location x_r for that block. Therefore
+
+  l_(f,r)=sum_p [f(x_p)-f(x_r)] L_(p,r).
+
+The source and fluctuation roots are retained in the same derivative
+catalogue. A fixed length reserve and the profile modulus yield
+an ell^alpha [f]_(C^alpha) factor in its rooted coefficient norm.
+No external-field radius contraction or vacuum subtraction is
+needed for (7A.1).
+
+Since V_0=0 and both first jets have zero product-ball mean, the
+mixed connected logarithm has the exact expansion
+
+ d_s d_t L(g,0,0)
+    =g^2 C_2(f,h)+g^4 C_4(g;f,h),
+ C_2(f,h)=E_muT[J_(f,1)J_(h,1)]
+          =v_T sum_r l_(f,r) . l_(h,r).               (7A.2)
+
+The fixed one-mark catalogues and a fixed connected-product reserve
+give, in the raw scalar/field carrier norm,
+
+ ||C_2(f,h)|| <= C ell^(alpha+beta)
+                         [f]_(C^alpha)[h]_(C^beta),
+ ||C_4(g;f,h)|| <= C ||f||_infinity ||h||_infinity.    (7A.3)
+
+When the two source supports have distance d, each connected
+contraction still meets both supports. After the subtraction,
+p itself need not lie in supp(f), but a nonzero f(x_p)-f(x_r)
+requires p OR r to do so; similarly the other difference requires
+its p-label OR r to lie in supp(h). The complete connected
+carrier contains these points. Disjoint supports prevent r alone
+from witnessing both. A further fixed reserve therefore keeps
+exp(-c d/ell) in both bounds. If either profile is constant,
+C_2 is identically zero. This is a cancellation of the ACTUAL
+raw mixed coefficient, including its scalar part.
+
+It does not eliminate all coincident-source vacuum divergences.
+For instance a four-dimensional total root count ell^(-4) can
+outgrow the ell^2 gain from two Lipschitz profiles when no positive
+separation is available. Nor does (7A.2) control separately
+propagated marks at their later common physical scale.
+
+8. WHAT HAS NOT BEEN PROVED BY SUMMING (5.3)
+
+Let Q_j(f) be the exact one-mark source field after j selected
+integrations, initialized by the original weighted action. Write
+
+  Q_j(f)=S_(M_j,f)+u_j(f),    u_0=0.
+
+Differentiating the SAME finite selected map gives the exact linear
+recursion, with scalar constants filed separately,
+
+  u_(j+1) = T_j u_j + D_E F_j(g_j,E_j)[u_j] + B_j(f).  (8.1)
+
+In particular (5.3) is not by itself a bound on u_n.
+The existing finite_quantum_induction theorem and TURN49 source
+contraction use the quotient whose TOTALS are translation, hypercubic,
+color and gauge invariant, with a single scalar reference extraction.
+A nonconstant f breaks the first two symmetries. Applying its
+q-step contraction to u_j(f) would be an unsupported step.
+
+The exact classical identity (2.3) solves transport of the leading
+weighted classical action, but does not by itself supply a bounded
+classical propagator for EVERY generated inhomogeneous quantum error.
+Nor does a small finite quotient representative of a constant-source
+total automatically give a locally modulated representative with
+the same gauge identities and norm.
+
+A plausible sharper organization compares Q_j(f) with a local
+modulation of TURN49's bounded constant-source solution. Complete
+read locality would give a commutator proportional to ell_j[f];
+a bounded inhomogeneous classical propagator plus (6.1) would then
+permit geometric scale gains to beat its polynomial quantum growth.
+This note has NOT established that propagator/modulation theorem.
+It would require a fixed spatially varying marginal/jet space and
+controlled changes of its density representatives, or a direct
+equivalent norm. This is a specific missing norm interface, not a
+new Cauchy-source loss in the local birth calculation.
+
+For the complete native map there is a further independent admission:
+its old-source/history formula must have the corresponding uniform
+joint analytic and complete-read bounds on its actual mixed domains.
+TURN53 gives an admitted mark with a g^P source radius and dated
+large-field accounting. It does not already assert the fixed product
+g,E discs used in Sections 3 and 6. No selected branch has been
+replaced by the full original Wilson law in this note.
+
+9. CALIBRATION: THE BARE CANONICAL ACTION IS NOT THE ONLY CANDIDATE
+
+The source here is exp[zeta S_(0,f)], for the coupling-free original
+action. Multiplying it by a fixed finite physical-scale coefficient
+gamma_R changes the constants in the one-mark bounds, not their UV
+powers. In particular this is not forced to be gamma_0 S_(0,f), whose
+coefficient grows with the UV cutoff.
+
+For the CONSTANT source the exact TURN49 result gives, on its admitted
+selected trajectory,
+
+  alpha_j'(0)=1+O(sum_l g_l^4),                       (9.1)
+
+and the corresponding irrelevant one-mark response is summable.
+Thus that constant classical coefficient does not vanish when the
+weak terminal floor is sufficiently large. This does not give a
+variance lower bound or a separated two-point function.
+
+An O(1) coefficient for the geometric F^2 density is compatible with
+the usual perturbative trace-anomaly normalization, since a beta
+function beginning at order g^3 is divided by g^3 in that convention.
+No anomaly identity, beta coefficient, nonperturbative composite
+renormalization, or identification with the actual anisotropic
+Hamiltonian source is assumed here. Unscaled S_(0,f) is simply a
+well-defined original gauge-invariant candidate to be tested.
+
+10. PRIMARY LITERATURE CHECK: WHAT THE WARD RESULTS SUPPLY
+
+Del Debbio--Patella--Rago, "Space-time symmetries and the Yang-Mills
+gradient flow", arXiv:1306.1173:
+ https://arxiv.org/html/1306.1173v1
+The introduction and Sections 3, 5, 6 distinguish continuum regulated
+Ward identities from lattice identities requiring EMT coefficient
+tuning. Section 2 explicitly places Sections 3--5 and 7 in dimensional
+regularization; Section 6 treats the lattice. Flowed probes remove
+the contact terms in their Ward-renormalization program. These are
+useful operator identities/renormalization conditions; they do not
+state the native complete-history Banach estimate needed in (8.1)
+or prove our cutoff-uniform separated source bound.
+
+Giusti--Pepe, "Energy-momentum tensor on the lattice: non-perturbative
+renormalization in Yang--Mills theory", arXiv:1503.07042:
+ https://arxiv.org/abs/1503.07042
+The paper imposes Ward identities associated with continuum Poincare
+symmetry and determines lattice EMT coefficients using shifted
+temporal boundaries, including numerical SU3 calculations. It is not
+a constructive existence theorem for the required continuum law,
+nor an all-history source norm theorem for this program.
+
+Therefore there is no justified shortcut here from the phrase
+"conserved energy-momentum tensor" to uniform local source control.
+The concrete advance is the actual fixed-window physical-mark
+calculation (3.3), its exact profile cancellation (4.2), and the
+fixed-norm powers (R1), (6.1), (7.1), with every limitation above.

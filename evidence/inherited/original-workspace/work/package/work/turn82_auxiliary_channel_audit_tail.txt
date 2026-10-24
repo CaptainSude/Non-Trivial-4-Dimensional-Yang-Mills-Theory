@@ -1,0 +1,132 @@
+TURN82. INDEPENDENT AUDIT OF ORIGINAL-LAW HS SMOOTHING
+20 October 2026. tail47.
+
+VERDICT: PASS at the stated finite-regulator, exact-augmentation and
+buffered-original-read scope.
+
+Producer: work/turn82_auxiliary_channel_gauge.txt
+SHA256: 49DE7E782B8F5DE226848252D74EC6518632E74F015BE715EC31A66D695FB89E
+
+The full producer was read. The final revision explicitly uses the
+LINEAR coordinate-reflection pullback R, with conjugation in the L2
+inner product. This resolves the only notation clarification requested
+during review. The later Section6A source-package amendment was also
+read and checked; it changes no numerical estimate. No change to the
+mathematical constants was needed.
+
+1. Actual operator and heatbath comparison.
+
+The adjoint C* follows from the common positive original/auxiliary
+joint law, so P=C*C is a positive selfadjoint stationary Markov
+contraction. Conditional independence of U,U' given xi proves (2.2).
+Product Efron--Stein at fixed xi, followed by total conditional variance
+given U_(not e), gives exactly D_HS<=D_HB with the stated summed
+rate-one heatbath convention. The inequality direction is correct;
+it does not bound D_HB from above by D_HS. The elementary spectral
+maximum in (2.4) and subtraction of the constant component are valid.
+
+The influence estimate (3.3) uses pair resampling of one link and
+E|q-q'|^2=2 Tr Cov(q). Its coefficient4/(1+r) follows from the exact
+S3 covariance bounds. The actual-current inverse moment then gives
+(3.5) under the original interacting law. It does not suppose that
+the currents or links are independent before conditioning on xi.
+
+2. The complete Fisher score and absence of a volume factor.
+
+Differentiate the triangular conditional Gaussian density at fixed
+(G,R), not at fixed innovations. Its score is precisely (4.1).
+Conditional on G, every W score has mean zero. This kills the cross
+term with the Z score even though D_U n depends on G, and kills the
+cross terms between distinct W variables. The remaining Z terms have
+independent centered Gaussian innovations and deterministic D_U m.
+The identity Var(2 Re<Z,A>)=2||A||_F^2 therefore gives (4.2).
+
+In the Pauli/2 metric, each differentiated link contribution has norm
+|v_e|/sqrt2. Four-term Cauchy gives
+||D_v m_p||^2<=beta sum_(e in p)|v_e|^2/2.
+The Fisher factor2 and six incident plaquettes produce 6beta per link.
+For n_h, the fixed-G second-link derivative has squared norm
+|v_V|^2||G||^2/4. Applying the two-term square bound before averaging
+gives (beta/2)|v_U|^2+(4+2beta)|v_V|^2 in (4.3).
+At most six incidences per link therefore contribute12beta+24.
+Together these prove the full operator inequality
+I_U(v)<=(18beta+24)||v||^2, uniformly in the original U.
+No dimension or volume factor is missing.
+
+For bounded F, CF is fixed as a function of xi while differentiating
+the conditional density. Gaussian moment domination on the compact
+original manifold justifies the differentiation and smoothness.
+Cauchy--Schwarz for a SINGLE arbitrary unit tangent, followed by the
+Fisher operator bound, gives the full gradient norm (4.6). Summing
+separate coordinate bounds would be wasteful and is not used. The
+integrated conditional variance is exactly
+||CF||^2-||PF||^2=<F,P(I-P)F>, proving (4.7).
+
+3. Iteration and reflection symmetrization.
+
+The spectral factor for the (n+1)st iterate is x^(2n+1)(1-x).
+Its maximum and the denominator2n+2 in (5.1) are correct. For real
+F the same bound uses Var(F); constants have zero gradient and zero
+form. This argument needs no uniform mixing estimate.
+
+Because the original Wilson law is reflection invariant, R is a
+selfadjoint unitary pullback. Pbar=(P+RPR)/2 is again positive,
+selfadjoint, stationary and Markov, and commutes with R. Its common
+positive augmentation adds a U-independent convention label. Thus
+it is another Cbar* Cbar, and its Fisher information is the average
+of the two convention-specific informations. The same estimates
+follow with unchanged constants. No reflection positivity for every
+function of the convention label is asserted or needed.
+
+4. Complete read collars and the OS-null argument.
+
+For an original read set S, the currents entering CF require only
+auxiliaries in plaquettes incident to S. Generating precisely those
+auxiliaries requires only original links in those same plaquettes.
+This proves the deterministic collar H(S), including correlations
+between G and R; it is not a nominal-root locality statement.
+The reflected convention has the same collar.
+
+For disjoint ORIGINAL link read sets, conditioning on xi gives
+E[FH|xi]=(CF)(CH). Hence (6.3) is exact even when the auxiliary stars
+overlap. For strict positive-half F and Pbar F, the read of RK is
+disjoint from that of F for any positive-half K. Applying (6.3) to
+RK and F proves (6.4). Choosing K=Pbar F-F is allowed because this
+difference still belongs to the positive-half algebra. Original
+Wilson RP then makes it OS-null, and Cauchy--Schwarz in that form
+preserves all the reflected Gram entries under buffered iteration.
+Stationarity preserves the centering exactly.
+
+The final linear R convention puts the complex conjugation precisely
+once into the OS form. The real proof and its stated sesquilinear
+extension are consistent. No auxiliary-label RP or equality with a
+freshly drawn coarse field is hidden here.
+
+5. Nonmultiplicativity and the complete source package.
+
+The added Section6A is correct: Pbar(F^2)-(Pbar F)^2 is the conditional
+variance under the full update kernel. A pointwise-product ideal for
+OS-null functions does not follow. The correct smoothed finite-source
+family is Pbar^n exp(sum s_i B_i); differentiation retains Pbar^n of
+each original product, with repeated marks. Applying the same buffered
+read argument to that whole function and its jets preserves their
+reflected forms. It does not identify those jets with products of
+the individual smoothed probes. No new observable algebra or complex
+original-background domain is inferred.
+
+6. Physical scaling and limitations.
+
+One plaquette collar enlarges the temporal read by at most one lattice
+spacing. A complete read initially at distance d from BOTH fixed
+slices retains a fixed margin for n=floor(d/(4a)) at sufficiently
+small a. Using (5.1) with index n-1 gives an upper bound proportional
+to (beta+1)/n, hence C(beta+1)a/d in (6.6). The floor causes no issue
+once d/(4a)>=2. The output remains bounded and gauge invariant.
+
+The output reads a four-dimensional time block. The gradient is the
+original isotropic configuration-space gradient, not a one-slice
+ground-state Dirichlet form. Algorithmic iterations and spectral
+parameters are not physical time or energy. Preserving an unknown
+OS vector does not prove that it is nonzero or has a continuum limit.
+Sections7--8 retain each of these necessary distinctions. This audit
+does not certify a continuum Yang--Mills existence argument.

@@ -1,0 +1,510 @@
+THE FIRST CONNECTED INTERACTING COEFFICIENT IN A GROWING WILSON BOX
+19 October 2026. admission_proof. Turn39.
+
+RESULT
+
+For the actual identity-Dirichlet Wilson box of turn38, the Gaussian
+comparison can be expanded one order further with its full compact
+normalizer retained. At every fixed real source-derivative order N,
+
+ p_g(t)=p_G(t)+g^2[L_2(t)-L_2(0)]
+                   +O_{C^N}(g^4 R^{12N+72}),           (0.1)
+
+uniformly for R<=C[log(1/g)]^b in the same fixed coercive source range.
+The coefficient L_2 is explicit. Its mixed second derivative is a sum
+of seven Gaussian connected cumulants, including cubic/quartic source
+jets and the Haar term. Every term has a finite connected Wick expansion
+with the ACTUAL vertex locations and at most five propagator edges.
+No product of disconnected source expectations is being estimated as
+a connected contribution.
+
+This is a genuine interacting finite-box statement, not a formal
+expansion with an unspecified remainder. It does NOT yet bound that
+connected spatial kernel uniformly at fixed physical separation. The
+known forest-coordinate gap alone gives an ineffective length scale
+of order R^4, and absolute local loop contractions can have logarithmic
+growth even for a Gaussian covariance with bounded diagonal and
+four-dimensional
+massless decay. The exact local vacuum, quadratic-contraction and
+source-mixing ledger is identified below; its gauge/Ward combination
+and physical-scale renormalization have not been replaced by a claim
+that each diagram is summable on its own.
+
+1. SAME ACTUAL LAW, SOURCES, AND GEOMETRIC CONSTANTS
+
+Use polylog_box_real_source_comparison_turn38 without changing its
+law or gauge quotient. Boundary links are identity. Let
+
+ S_t(U)=S(U)-sum_a t_a R_a(U),
+ I_g(t)=integral exp[-S_t(U)/g^2] dU,
+ p_g(t)=log[I_g(t)/I_g(0)].
+
+The fixed finite source family consists of real gauge-invariant local
+functions with bounded word lengths/read overlap, zero constant and
+first field jets, and |sum t_a R_a|<=rho S for a fixed rho<1. It includes
+the literal common-root curvature bilinears of turn38. Profiles can
+depend on R within their stated uniform coefficient bound. They are
+not arbitrary calibrated effective sources with an unbounded coefficient.
+
+In forest logarithms x=gz, write the homogeneous field Taylor jets
+
+ S_t(exp(gz))/g^2
+       =Q_t(z)+g V_{3,t}(z)+g^2 V_{4,t}(z)
+                   +g^3 V_{5,t}(z)+O(g^4|z|^6),        (1.1)
+
+where anti-Hermitian Lie coordinates are used; exp(ix) in Hermitian
+coordinates is the same convention. Q_t=z^tH_tz/2. A source has jets
+
+       g^{-2}R_a(exp(gz))=P_a+g A_a+g^2 B_a
+                                  +g^3 R_{a,5}+O(g^4|z|^6).
+
+Thus P_a,A_a,B_a have degrees2,3,4 and
+Q_t=Q_0-sum t_a P_a, V_{3,t}=V_3-sum t_a A_a,
+V_{4,t}=V_4-sum t_a B_a. Let E_t and kappa_t be expectation and ordinary
+joint cumulant in the normalized Gaussian with covariance C_t=H_t^{-1}.
+Use the SAME real t-dependent covariance in every term.
+
+All finite Taylor orders used here have constants independent of R:
+each local word has bounded derivatives and only bounded overlap.
+The established estimates are
+
+ n<=CR^4,  cR^{-8}I<=H_t<=CI,
+ E_t|z|^q<=C_q R^{6q},
+ S_t>=cR^{-20} outside a fixed product chart of radius cR^{-8}.
+
+The product exponential-Haar density is denoted j(x). Its logarithm is
+
+       log[j(gz)/j(0)]=g^2 J_2(z)+O(g^4|z|^4).         (1.2)
+
+There is no linear or cubic term. With the usual real determinant on
+the Lie algebra,
+
+       J_2(z)= (1/24) sum_e Tr_ad[(ad z_e)^2].          (1.3)
+
+It is negative semidefinite for compact anti-Hermitian coordinates.
+Formula(1.3) follows from
+log[(1-e^{-A})/A]=-A/2+A^2/24+O(A^4) and Tr(ad z)=0.
+Alternatively J_2 can simply be kept as the exact quadratic Haar jet;
+the subsequent argument is independent of a choice of Lie metric.
+
+2. THE ACTUAL ORDER-g^2 PRESSURE AND A QUANTIFIED REMAINDER
+
+Define
+
+ L_2(t)=E_t[J_2-V_{4,t}]
+                       +(1/2)kappa_t(V_{3,t},V_{3,t}). (2.1)
+
+The second cumulant equals the second moment because the cubic is odd.
+Then, for each fixed N, the error in (0.1) satisfies
+
+ max_{|alpha|<=N} sup_t
+ |partial_t^alpha{p_g-p_G-g^2[L_2(t)-L_2(0)]}|
+                          <=C_N g^4 R^{12N+72}.       (2.2)
+
+PROOF. Use the same symmetric mesoscopic ball as turn38,
+
+       |z|<=A_N R^6 sqrt(log(1/g)+log(2+R)).
+
+For small g in the polylogarithmic R range, this lies inside the chart
+after scaling by g and g|z|^3 is uniformly small. Taylor expand the
+scaled integrand through order g^3. Its order-g coefficient is -V_3,
+and its order-g^2 coefficient is J_2-V_4+V_3^2/2. The order-g^3
+coefficient is
+
+       -V_5+V_3 V_4-V_3^3/6-J_2 V_3,                 (2.3)
+
+which is odd. Both odd coefficients integrate to zero against the
+even Gaussian over that symmetric ball.
+
+After k source derivatives, the source insertions have their own
+Taylor expansions through order g^3. Every total odd power of g has
+odd polynomial parity. The remaining absolute error is bounded by
+C_N g^4[1+|z|^{2k+12}], using g|z|^3<=c. Gaussian integration costs
+at most C_N g^4R^{12k+72}. Differentiating the integral coefficient
+at g^2 gives exactly partial^alpha[J_t L_2(t)], where
+J_t=integral exp(-Q_t)dz; the cubic and quartic source contacts are
+therefore included, not omitted by differentiating only the Gaussian.
+
+Both complements are retained exactly as in the turn38 proof. The
+chart outside the mesoscopic ball has exponent
+
+ CR^4 log(2+R)+2k log(1/g)+C_k log(2+R)-cR^{-8}B^2.
+
+Choose A_N larger so its normalized contribution is <=g^6. The
+full compact complement has exponent
+
+ CR^4[log(1/g)+log(2+R)]+2k log(1/g)
+                         +C_k log(2+R)-cg^{-2}R^{-20},
+
+and is also <=g^6. These bounds include g^{-n}, Haar factors and all
+raw differentiated marks; there is no discarded outside-chart law.
+The missing Gaussian polynomial tails obey the same estimate.
+
+It follows that the actual relative normalizer is
+
+ I_g(t)/(g^n j(0)J_t)=1+g^2L_2(t)+r_g(t),
+ |partial^alpha r_g(t)|<=C_Ng^4R^{12|alpha|+72}.
+
+The normalized Gaussian derivative/partition bounds give
+|partial^alpha L_2|<=C_NR^{12|alpha|+36}. Since g^2R^{36} tends to zero,
+expanding the real logarithm retains (2.2): the square of the first
+correction has size g^4R^{72}, and differentiation distributes total
+order |alpha| without increasing the additional +72. Subtract the
+value at t=0. This proves the claimed actual-law expansion.
+
+No constant is asserted uniform in N in this real-contour argument.
+Section8 gives a stronger common-radius consequence from the separately
+proved complex contour construction; it is not needed for (2.2).
+
+3. THE COMPLETE CONNECTED COVARIANCE CORRECTION
+
+At t=0 abbreviate V_3=T, V_4=V, and kappa=kappa_0. Then
+
+ Cov_W(g^{-2}R_a,g^{-2}R_b)
+     =kappa(P_a,P_b)+g^2 K^{(2)}_{ab}
+                                  +O(g^4R^{96}),       (3.1)
+
+where the EXPLICIT coefficient is
+
+ K^{(2)}_{ab}=
+   kappa(A_a,A_b)
+  +kappa(B_a,P_b)+kappa(B_b,P_a)
+  -kappa(A_a,T,P_b)-kappa(A_b,T,P_a)
+  +kappa(J_2-V,P_a,P_b)
+  +(1/2)kappa(T,T,P_a,P_b).                            (3.2)
+
+Proof: for any t-dependent Gaussian polynomial F,
+partial_a E_t F=E_t partial_a F+kappa_t(F,P_a).
+The analogous derivative of a cumulant differentiates each argument
+and appends P_a. Apply these exact identities twice to (2.1), using
+partial_a T_t=-A_a and partial_a(J_2-V_t)=B_a. This gives (3.2).
+
+All seven terms are needed. Keeping only the interaction insertion
+kappa(J_2-V,Pa,Pb)+(1/2)kappa(T,T,Pa,Pb) would miss the nonlinear
+observable's own cubic/quartic corrections. Replacing the last
+cumulant by E[T^2 Pa Pb] would reintroduce disconnected vacuum pieces.
+Equation(3.2) is already normalized and centered under the actual law
+through its derivation from log I_g.
+
+For separated two-source pressure, subtract both one-support pressures
+as in turn30. Any counterterm e_a(s)+e_b(t) cancels exactly. Its order
+g^2 mixed coefficient is still (3.2); no spatial cancellation is bought
+merely by naming these single-support terms vacuum subtractions.
+
+4. EXPLICIT LOCAL WILSON VERTICES
+
+For a plaquette with oriented anti-Hermitian link variables Z_1,...,Z_4,
+fixed forest links contribute zero. Define F_0=C_0=D_0=0 and update
+for each successive Z=Z_l:
+
+ F_l=F_{l-1}+Z,
+ C_l=C_{l-1}+(1/2)[F_{l-1},Z],
+ D_l=D_{l-1}+(1/2)[C_{l-1},Z]
+       +(1/12)[F_{l-1},[F_{l-1},Z]]
+       +(1/12)[Z,[Z,F_{l-1}]].                        (4.1)
+
+The logarithm of product_l exp(gZ_l) is gF_4+g^2C_4+g^3D_4+O(g^4).
+With inner product <X,Y>=-Re tau(XY), the plaquette vertices are
+
+ Q_p=(1/2)<F_4,F_4>,
+ T_p=<F_4,C_4>,
+ V_p=(1/2)<C_4,C_4>+<F_4,D_4>
+                                      -(1/24)Re tau(F_4^4). (4.2)
+
+Thus T=sum_p T_p and V=sum_p V_p. A scalar plaquette profile has
+P_a=sum f_{a,p}Q_p, A_a=sum f_{a,p}T_p and B_a=sum f_{a,p}V_p.
+For transported clover bilinears the same finite word expansion gives
+their jets on their COMPLETE fixed read, including the transport links.
+
+Equations(4.1)-(4.2) give an explicit finite algorithm for every tensor
+coefficient in (3.2). Neither the old bare minimum Hessian nor a source
+renormalization constant has been substituted for a missing vertex.
+
+5. SPATIAL KERNEL: CONNECTED WICK GRAPHS BEFORE ANY COLLAPSE
+
+Resolve each source and action into its local vertices, retaining their
+positions and original read sets E_v. Write the coordinate covariance
+as C(e,a;f,b), with link and color indices. For homogeneous polynomial
+vertices F_1,...,F_m of degrees d_1,...,d_m, the Gaussian cumulant is
+
+ kappa(F_1,...,F_m)
+  =sum_{P: pairing of all legs, connected on vertices1,...,m}
+       contraction of [coefficient tensors of the F_i]
+                       with product_{(l,l') in P} C(l,l'). (5.1)
+
+Internal self-pairings are allowed; connectivity refers to the graph
+after contracting each polynomial to a labeled vertex. Formula(5.1)
+follows by Wick's rule and the set-partition formula for cumulants:
+a pairing with more than one connected component has total coefficient
+zero in that formula; a connected pairing has coefficient one.
+
+In (3.2) the largest degree list is (3,3,2,2), so every term has at
+most ten legs and five propagators. There are at most 9!!=945 pairings
+before color/read multiplicities, which are fixed for these local
+vertices. Every surviving term contains a connected path joining the
+two marked source vertices. This is the precise spatial gain retained
+by the coefficient; it is lost if each cumulant is bounded by separate
+ordinary moments.
+
+For an explicit positive majorant, put
+
+ c(v,w)=max_{e in E_v,f in E_w} ||C(e;f)||color,
+
+and replace each covariance in (5.1) by c(v,w) and each finite vertex
+tensor by its absolute coefficient bound. Sum the action vertex
+positions only AFTER this replacement. This gives a finite, computable
+connected kernel K_conn(x,y) with
+
+ |K^{(2)}_{ab}|<=C sum_{x,y}|f_a(x)f_b(y)| K_conn(x,y). (5.2)
+
+The kernel includes three-edge direct-source diagrams and the
+three-edge diagram with one integrated quadratic Haar vertex;
+four-edge diagrams contain either a quartic action vertex or a cubic
+action vertex together with a cubic source vertex. Five-edge diagrams
+contain two cubic action vertices. The degree lists in (3.2) specify
+all of them without ambiguity. Source tensors
+with several local read types are summed over those finite types.
+
+This is NOT a proof that K_conn has the physical summable bound wanted
+in the continuum problem. C is the actual FOREST-coordinate covariance.
+Its coefficientwise absolute values need not inherit the good separated
+curvature-projection kernel of the Gaussian leading term. Ward/derivative
+cancellations must be performed before an inappropriate absolute bound.
+
+6. EXACT LOCAL SUBTRACTIONS AND WHAT RENORMALIZATION STILL REQUIRES
+
+Let Delta_C=sum_{a,b} C_ab partial_a partial_b. Gaussian normal ordering
+gives, for each quartic vertex F_4,
+
+ F_4=:F_4:_C+(1/2):Delta_C F_4:_C
+                              +(1/8)Delta_C^2 F_4.    (6.1)
+
+These are respectively its quartic remainder, a quadratic local
+contraction, and a scalar vacuum. For a cubic vertex,
+
+                    F_3=:F_3:_C+(1/2)Delta_C F_3.
+
+The Wilson cubic in (4.2) has the Lie structure tensor f_abc. The
+quadratic action and the stated color-invariant sources have covariance
+diagonal in color. Contracting any two of the cubic's color indices
+therefore gives zero; Delta_C T_p=0. The same observation applies to
+the cubic of a literal transported clover bilinear, whose degree-three
+terms are inner products with one Lie commutator. It is not a claim
+about an arbitrary analytic cubic source.
+
+Consequently the one-vertex local ledger contains the Haar quadratic
+J_2, the quadratic and scalar contractions of V_p, and the analogous
+quadratic/scalar contacts from B_a. The two-cubic term retains its
+connected two-vertex contractions. They cannot all be replaced by one
+single-support vacuum number. Equation(6.1) is an exact finite-cutoff
+decomposition, with every local coefficient computable from C on the
+complete read.
+
+In particular an individual local quadratic contraction in forest
+coordinates may look like an A^2 term. It is NOT an independently
+allowed gauge-theory counterterm. Showing its cancellation/reassembly
+with the Haar and two-cubic terms into gauge-invariant curvature
+kinetic/mixing terms requires the corresponding complete Ward analysis.
+The finite21 curvature algebra identifies the possible dimension-four
+tensor mixing once that native/gauge-invariant extraction is justified;
+it does not itself prove the needed spatial estimate for (3.2).
+
+A declared finite mixing R_a->R_a+g^2 sum_c Z_ac R_c changes (3.2) by
+
+ sum_c Z_ac kappa(P_c,P_b)+sum_c Z_bc kappa(P_a,P_c).   (6.2)
+
+A declared scalar source counterterm changes it by its mixed second
+derivative. These are the exact calibration/contact slots. No choice
+of Z or large-volume limit is inferred from the diagram formula alone.
+
+7. USEFUL SCALE OF THE RIGOROUS REMAINDER; SHARP REMAINING GAP
+
+For any fixed polylogarithmic R(g), the g^4R^{96} error in (3.1) tends
+to zero faster than g^2 times every fixed power of R. Hence (3.2)
+identifies the actual first interacting correction in that regime,
+not merely a coefficient at each separately fixed graph. The same
+statement holds after summing a fixed polynomial number of source
+pairs: for O(R^4) local source positions the completely unspecialized
+pairwise remainder sums to at most Cg^4R^{104}. This is useful on the
+growing bare box; it does not reach a fixed physical box under AF.
+
+The available Hessian data alone cannot turn (5.2) into a physically
+summable bound. For a finite-range positive matrix with spectrum
+[cR^{-8},C], polynomial approximation to its inverse only gives an
+off-diagonal length of order R^4 (the inverse square root of the gap).
+That exceeds the box diameter. The conclusion supplies no useful
+uniform separation estimate within this box.
+
+There is also a concrete test against treating bounded variances and
+massless decay as enough for every absolute loop sum. The kernel
+
+                       c(x,y)=1/(1+|x-y|^2)
+
+on Z^4 is positive definite: it is the positive mixture
+integral_0^infty e^{-t} exp[-t|x-y|^2]dt of Gaussian positive-definite
+kernels. Its diagonal is one, but
+
+            sum_{1<=|v|<=R} c(0,v)^2 is comparable to log R.
+
+Indeed the shell count is order r^3 and the squared kernel is order
+r^{-4}. Thus an absolute two-line loop can retain a logarithmic
+volume dependence. This is a Gaussian analytic countertest, not a
+calculation of a YM divergence or a denial of a Ward cancellation.
+
+The smallest remaining interacting spatial assertion is a bound for
+the COMPLETE combination (3.2), after its specified local vacuum and
+mixing subtractions, retaining at least the separated curvature/source
+cross-kernel factor. A new bound on its separate absolute moments does
+not supply that. The compact-law remainder is already quantified here;
+the pending work is this actual connected/gauge-compatible kernel
+estimate, and its extension beyond the polylogarithmic bare geometry.
+
+No total-volume-uniform local Schwinger bound, full continuum hierarchy,
+or Yang--Mills existence conclusion is claimed.
+
+8. COMPLEX VALUE IMPROVEMENT: ONE-LOOP SUBTRACTION AND A SUMMABLE
+   SCALE REMAINDER
+
+The independent contour construction in
+polylog_box_complex_contour_turn39 now supplies a common complex l1
+source ball for the same actual identity-Dirichlet law, for EVERY fixed
+polylogarithmic growth R<=C_R[log(1/g)]^b. This section extends its local
+Taylor estimate by two powers. In addition to that note's hypotheses,
+require uniform local holomorphic Taylor bounds through order SIX.
+Literal fixed-word plaquette and transported-clover sources have them;
+a source class specified only through fourth derivatives has not been
+silently upgraded.
+
+On a fixed complex l1 ball ||t||_1<=rho define L_2(t) by the analytic
+continuation of (2.1). Gaussian expectation here means polynomial
+contraction with C_t=H_t^{-1}, not a positive complex probability.
+Then the actual compact pressure satisfies the VALUE estimate
+
+ sup_(||t||_1<=rho)
+ |p_g(t)-p_G(t)-g^2[L_2(t)-L_2(0)]|
+                                      <=C g^4 R^72.   (8.1)
+
+All constants and the small-g threshold are independent of the number
+of source labels and of a later derivative order, when the uniform
+source-class norm and the l1 budget are fixed. The identity remains a
+critical point for every t because the source first jets vanish.
+
+PROOF. Use the contour note's matrices
+
+ T_s=H_0^{-1/2}(I-sM)^{-1/2},
+ M=H_0^{-1/2}(sum t_a H_a)H_0^{-1/2},
+ ||M||<1/4,
+
+and the real ball |w|<=B=A R^2 sqrt(ell+log(2+R)). Its final contour
+is x=gT_1 w, where T_1^t H_t T_1=I and T_1 T_1^t=C_t. The normalizing
+Jacobian cancels J_t exactly. Also ||T_s||<=CR^4, so
+g|T_s w|^3=o(1) uniformly on the whole chain. All fixed Taylor orders
+have uniform constants by the complete finite-read/overlap assumption
+and the source l1 budget.
+
+Set z=T_1w. The integrand divided by its standard Gaussian and j(0)
+has the expansion
+
+ 1-gV_{3,t}(z)
+ +g^2[J_2(z)-V_{4,t}(z)+V_{3,t}(z)^2/2]
+ +g^3[-V_{5,t}+V_{3,t}V_{4,t}-V_{3,t}^3/6-J_2V_{3,t}](z)
+ +E_4(t,w),
+
+ |E_4(t,w)|<=C g^4(1+|T_1w|^12).                    (8.2)
+
+For example the action's sixth-order remainder contributes g^4|z|^6;
+the fourth exponential remainder contributes g^4|z|^12; Haar's
+fourth-order remainder contributes g^4(|z|^4+|z|^8). Cross products
+fit the same polynomial, using g|z|^3<=c. This explains why no hidden
+seventh/eighth field derivative or source-label count enters (8.2).
+
+The g and g^3 polynomials are odd in REAL w even when T_1 is complex,
+so their integrals over the symmetric ball are exactly zero. Standard
+Gaussian moments give E|T_1W|^12<=CR^72. Extending the g^2 polynomial
+to the full real Gaussian gives precisely L_2(t), since T_1T_1^t=C_t.
+
+Choose the contour note's fixed A large enough to bound the lateral
+chain, real chart complement, original compact complement, and the
+Gaussian polynomial tails by g^6 in relative normalization. That
+choice is independent of source order: only the fixed polynomial
+degree12 in this VALUE proof is being estimated. The determinant
+comparison exp(Cn) remains confined to those tails. Thus
+
+ I_g(t)/(g^n j(0)J_t)=1+g^2L_2(t)+r_4(t),
+           |L_2(t)|<=CR^36, |r_4(t)|<=Cg^4R^72.
+
+This representation also proves zero-freeness when g is small. Taking
+the logarithm uses |g^2L_2+r_4|<1/2; its quadratic error is g^4R^72.
+Subtract the same expression at t=0 to obtain (8.1). All integrals
+outside the local contour remain the original compact-law integrals.
+
+Consequently, on a fixed inner source ball and in any N specified
+directions of the uniform source class, allowing repetitions,
+
+ |D^N{p_g-p_G-g^2[L_2(t)-L_2(0)]}[v_1,...,v_N]|
+                         <=C C_1^N N! g^4R^72.       (8.3)
+
+Introduce one independent parameter per direction with radius
+rho/(2N), reserve half the source budget at the center, and use Cauchy.
+The bound N^N<=e^N N! yields (8.3). This is a common-value theorem,
+not a sum of separately proved fixed-N real estimates. In particular
+(3.1) has the stronger remainder Cg^4R^72, and a completely crude sum
+over O(R^8) local source pairs costs at most Cg^4R^80. The actual
+spatial coefficient (3.2) is unchanged.
+
+One useful consequence is genuinely summable in the SCALE index.
+If c/j<=g_j^2<=C/j and R_j<=C_R[log(1/g_j)]^b, then
+
+ sum_(j>=J) g_j^4 R_j^72
+                    <=C J^{-1}(1+log J)^{72b}.       (8.4)
+
+Hence after retaining the explicit g_j^2 L_2 coefficient, the error
+at every fixed source derivative order is summable over this sequence
+of bare box comparisons. The unremoved g_j^2 coefficient is of order
+1/j times its geometry-dependent size and is NOT summable by this
+argument. Nor has L_2 been identified with an allowed local effective
+action or a local observable counterterm. Equation(8.4) concerns one
+bounded-profile comparison per scale; it has no physical carrier
+census, arbitrary exterior, or source transport between scales.
+
+This extension does not apply to arbitrary even Borel gates: those
+were legal in the real-contour parity theorem, but are not holomorphic
+functions on the contour deformation. Their turn38 theorem is unchanged.
+
+AUDIT RECORD. Root independently checked (3.2), the BCH and Haar
+coefficients, and the connected Wick ledger; the real order-g^4
+argument has been sent to the public_argument_audit peer. Admission
+independently checked the root contour's matrix order, lateral volume
+factor and both original real complements before applying it above.
+These are internal mathematical checks, not external certification.
+
+9. AN EXACT COMPACT ONE-PLAQUETTE CHECK OF THE SIGNS
+
+As a separate normalization check, take one independent SU(2) plaquette
+U=exp(i x.sigma/2) with action h(U)=1-Tr(U)/2 and Haar measure. This
+is not the multi-plaquette box's spatial estimate. In x=gz coordinates,
+
+ Q=|z|^2/8,       T=0,       V=-|z|^4/384,
+ J_2=-|z|^2/12,   C=4 I_3.
+
+The Gaussian moments E|z|^2=12 and E|z|^4=240 give
+
+                 L_2(0)=-1+240/384=-3/8.
+
+For the literal action source R=h, all action jets are multiplied by
+1-t while the covariance is C_t=C/(1-t). Thus every term of (2.1)
+scales as (1-t)^{-1}, including the Haar term, and
+
+ p_g(t)=-(3/2)log(1-t)
+       -(3g^2/8)[(1-t)^{-1}-1]+O(g^4).
+
+In particular the actual centered compact-law variance is
+
+              Var_W(g^{-2}h)=3/2-(3/4)g^2+O(g^4).
+
+This checks the Haar sign, the positive -V contribution, and both
+source derivatives of the coefficient against a fully specified
+compact law. It also illustrates why the first interacting correction
+cannot be assumed nonnegative merely from positivity of the measure.
+Its use here is an explicit coefficient test, not a substitute for the
+connected spatial-kernel bound in Section7.

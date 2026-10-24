@@ -1,0 +1,304 @@
+CONDITIONAL PRODUCT-BALL CONTOUR: EXACT IDENTITY AND LOCAL GAUSSIAN BOUND
+24 October 2026. Root. Finite lemma; native attachment is a separate task.
+
+Independently reviewed in conditional_product_contour_audit_20261024.txt.
+The native first-step attachment is proved separately in
+local_conditional_analytic_native_20261024.txt and its native audit.
+
+PURPOSE AND SCOPE
+
+The previous local pre-Q1 result leaves a conditional Gaussian mean of
+order r at the retained boundary. An absolute-value estimate on the
+unshifted real contour can charge its imaginary part on every occupied
+ordinary coefficient. The following product-chain identity removes that
+particular loss. After the shift, only explicitly selected surface
+coordinates have a residual complex displacement. Their cost is paid
+by their own large radius. No small probability of a global cutoff event
+and no division by a conditional good-event mass is used.
+
+The exact identity is elementary and finite dimensional. Its estimate
+is for a localized Gaussian integral with a specified occupied read.
+It is NOT, by itself, a connected cluster theorem, a zero-free theorem,
+an own-field support theorem, or a theorem about arbitrary P0/P1 fibers.
+Native localization of the mean and shifted interactions remains a
+separate obligation. The companion native note addresses that matching.
+
+1. ONE BALL, THEN THE PRODUCT
+
+Let B_R be the real Euclidean ball in R^m, m=3 for a free SU(2) bond.
+Let mu in C^m and let f be holomorphic on a neighborhood of
+{y+t mu: y in closure(B_R), 0<=t<=1}. Lebesgue integration of the
+holomorphic volume form on each translated ball has the real-coordinate
+parametrization shown below. Differentiating under the finite integral
+and applying the real divergence theorem to the complex vector mu f
+gives the EXACT identity
+
+ I_R f = T_mu f - S_mu f,
+ I_R f = integral_(B_R) f(y) dy,
+ T_mu f = integral_(B_R) f(y+mu) dy,
+ S_mu f = integral_0^1 integral_(sphere_R)
+                          f(y+t mu) (mu dot n(y)) dS(y) dt.       (1)
+
+Indeed d/dt integral f(y+t mu)dy equals the sphere integral in (1).
+The dot product is bilinear; no conjugation or absolute value enters
+the identity. Thus both translated terms remain holomorphic in mu and
+in any other parameter for which the indicated corridors stay admitted.
+The vector mu can depend on external parameters but must not depend
+on the integration variable y in this operation.
+
+For a finite set I of coordinate blocks and a vector mu=(mu_b), apply
+(1) to each block. The operators for different blocks commute. Hence
+
+ integral_(product B_R) f(A)dA
+ = sum_(S subset I) (-1)^|S|
+        [product_(b notin S) T_(mu_b)]
+        [product_(b in S) S_(mu_b)] f.                         (2)
+
+In the term S, write A=y+mu-v, where
+
+ v_b=0 for b notin S,
+ v_b=(1-t_b)mu_b for b in S,
+ y_b in B_R for b notin S, y_b in sphere_R for b in S.          (3)
+
+In particular A-mu=y-v is REAL at every block not in S. A single
+simultaneous global homotopy would not have this property: at its
+intermediate time the residual imaginary mean would occur at all
+unmarked coordinates. Product expansion (2) is essential.
+
+2. CONDITIONAL GAUSSIAN FACTOR, WITH ITS RAW SCALAR
+
+Let D be complex symmetric with uniformly positive Hermitian part,
+Re D >= lambda I, and ||D||<=Lambda. For a linear term b write
+
+ mu=-D^(-1)b,
+ (1/2)A^T D A+b^T A
+       =(1/2)(A-mu)^T D(A-mu)-(1/2)b^T D^(-1)b.              (4)
+
+All transposes in (4) are bilinear. The analytic Gaussian normalizer is
+
+ G(D)=(2pi)^(m|I|/2) det(D)^(-1/2),                          (5)
+
+with the branch obtained by continuation from positive real D in the
+accretive domain. For h(A)=A^TDA/2+b^TA-V(A), its cutoff integral is
+
+ Z=G(D) exp[b^TD^(-1)b/2] sum_S (-1)^|S| J_S,              (6)
+
+where J_S is (2) applied to the NORMALIZED centered Gaussian density
+times exp[V], with centered variable (3). If desired, exp[V(mu)] can
+be factored out and V(mu+y-v)-V(mu) used in J_S. This is an exact
+algebraic operation. Both exp[V(mu)] and the scalar in (6) remain in
+the raw outer measure. They may have boundary-size logarithms and are
+not asserted to be small. The determinant also stays in that measure.
+
+In the actual conditional fiber D=D_CC and b=D_CB z, while the
+baseline subtraction H0(0,z) is already retained in its outer measure.
+Formula (6) does not authorize discarding or counting that baseline
+twice. The convention for V must be the complete native first action.
+
+3. LOCAL GAUSSIAN MARGINAL, WITHOUT A VOLUME LOSS
+
+For the estimate now assume that, after the relevant Mayer and exterior
+cutoff expansions, a term has a complete occupied read Y containing S.
+Every variable outside Y is integrated over its FULL centered real
+Gaussian contour, and the remaining insertion depends on coordinates
+in Y. This is an explicit premise, not an assertion about a still
+truncated exterior. It is the place at which the native occupied-body
+construction must be matched.
+
+Integrate the complement exactly. The normalized marginal on Y has
+covariance C_Y=(D^(-1))_(YY) and precision Q_Y=C_Y^(-1). It is analytic
+with the consistent Gaussian branch. Uniform bounds follow directly:
+
+ Re D^(-1) = D^(-*) (Re D) D^(-1) >= lambda Lambda^(-2) I,
+ ||D^(-1)||<=lambda^(-1),
+ Re C_Y>=lambda Lambda^(-2) I, ||C_Y||<=lambda^(-1),
+ Re Q_Y>=q_- I, ||Q_Y||<=q_+,
+ q_-=lambda^3/Lambda^2, q_+=Lambda^2/lambda.                 (7)
+
+The conservative constants in (7) suffice. In particular the absolute
+Gaussian normalization is at most a fixed constant to power m|Y|.
+There is NO determinant loss proportional to the entire volume |I|.
+Taking absolute values before marginalizing a fully centered exterior
+could introduce precisely that unnecessary volume loss.
+
+Let the remaining supported insertion F(w), w=A-mu, satisfy
+
+ |F(w)|<=M_F exp[a ||w||^2],   0<=a<=q_-/16,                (8)
+
+on the real/complex integration pieces actually used. This is a
+pointwise growth premise and includes all allocated interaction tilts.
+It does not assert that an arbitrary nonlinear native interaction
+satisfies (8). At the literal bare step a uniform local supremum bound
+can give (8) with a=0; its native proof is separate.
+
+For real y and the displacement v in (3),
+
+ Re[(y-v)^T Q_Y(y-v)]
+ >= (q_-/2)||y||^2-C_Q||v||^2,
+ C_Q=2q_+^2/q_-+q_+.                                      (9)
+
+This follows by expansion and Young's inequality, with the last
+quadratic term bounded below by -q_+||v||^2. Combining (8),(9) gives
+
+ |exp[-w^TQ_Yw/2] F(w)|
+ <= M_F exp[-c||y||^2+C_1 sum_(b in S)|mu_b|^2],
+ c=q_-/8, C_1=C_Q/2+q_-/8.                               (10)
+
+Only the selected set S occurs in the positive exponent.
+
+4. SURFACE ACTIVITY AND THE SAME GAUSSIAN BUDGET
+
+For b in S, the surface Jacobian in (1) is at most |mu_b| and
+the sphere measure is |sphere_1| R^(m-1). Extend the other y integrals
+to all real space in the bound (10). Including the marginal determinant
+and all fixed dimensional constants gives
+
+ |J_(Y,S)(F)|
+ <= M_F C_0^|Y| product_(b in S)
+        [|mu_b| R^(m-1) exp(-cR^2+C_1|mu_b|^2)].            (11)
+
+Here J_(Y,S) denotes the localized normalized mixed-contour integral,
+including its t integrals and surface Jacobians. Some nonselected
+variables may still have upper cutoffs; dropping those in the bound
+only improves the right side. The exact equality in Section3 requires
+full real integration only OUTSIDE Y.
+
+If native bad-cutoff marks P are also present, keep them disjoint from
+S and inside the full occupied Y. They impose |y_b|>R at real blocks.
+The same factorized Gaussian bound (10), with a fixed rate reserve,
+gives an extra factor
+
+             C(1+R)^m exp(-c R^2/2)                       (12)
+
+for each b in P. Both (11),(12) use the SAME quadratic estimate (10);
+no coordinate is charged a second Gaussian tilt. Overlapping geometric
+read cubes do not duplicate actual block labels. The native support
+enlargement and counting must still be paid in a cluster application.
+
+Suppose uniformly |mu_b|<=M r, set R=K r, and choose the FIXED K so
+c K^2>=2C_1 M^2, with a strict reserve. Then, for all sufficiently
+large r, each bracket in (11) is bounded by
+
+                 exp[-c K^2 r^2/4].                       (13)
+
+The factor M r (K r)^(m-1) has been paid by the remaining exponential.
+If mu_b=0 the surface contribution is exactly zero. A sharper bound
+retains |mu_b| in (11), hence any proved spatial decay of mu_b from
+the retained boundary. For r proportional to (log g^-2)^p, p>1/2,
+the factor in (13) is smaller than every fixed power of g r^k for
+each fixed k and any prescribed positive power, at a weak floor.
+
+5. HOLOMORPHIC PARAMETERS, SOURCES, AND NATIVE DOMAIN OBLIGATIONS
+
+The identities (1)--(6) contain mu, never Re mu or Im mu, and are
+holomorphic identities on their admitted corridors. Real/imaginary
+parts occur only in estimates. One may therefore differentiate an
+original source insertion exp[s O_p(A)+t O_q(A)] under these finite
+integrals whenever the original source and physical reconstruction
+are holomorphic there. No source-dependent scalar is dropped. First
+and mixed logarithmic jets require a separate nonvanishing/log theorem;
+they do NOT follow just from (11).
+
+For the guarded first fiber, |z_b|<=3r on its needed boundary read.
+A uniform exponentially weighted inverse and mixed row for the complete
+D imply |mu_b|<=M r (and boundary decay). The active radius K r may
+replace4r only after rechecking ALL affected prior curvature/gauge
+masks, pivot charts and sources. The complex corridor needs the larger
+physical radius g(K+M)r. K,M are fixed before the weak floor; because
+g r tends to0 this is compatible with a fixed small analytic chart,
+provided its complete native reads and independent-pair tests match.
+
+The following native obligations cannot be replaced by (11). Their
+first-step matching is checked in the separate native note and audit:
+
+* the complete cancelled bare primitive, shifted by the ACTUAL mean,
+  must have the required small interaction bound on the whole corridor;
+* all coefficient localizers must localize mu, the quadratic scalar,
+  the determinant and the shifted primitive consistently; their
+  decoupled expressions must factor over disconnected components;
+* every surface mark must be counted as an elementary occupied object,
+  with its full mean/background read and the available spatial decay;
+* the resulting connected expansion must be normally convergent on
+  one fixed complex pair domain before claiming a zero-free logarithm;
+* outer guards, P0/P1 records and original-source densities remain in
+  the actual measure, not in a normalized artificial replacement.
+
+The finite lemma resolves the specific imaginary-mean Gaussian penalty.
+It does not certify those further interfaces or the continuum theory.
+
+6. REFINEMENT: A SMALL VOLUME LOSS INSTEAD OF C_0 TO BODY SIZE
+
+The crude constant C_0^|Y| in (11) is insufficient if a native
+implementation enlarges the real body to a long background carrier.
+For example, a carrier cube of side M can have O(M^4) noise variables,
+while its walk weight decays on a length of order M. A fixed positive
+constant per noise variable cannot simply be absorbed by that walk.
+The following refinement preserves the SMALL per-volume loss used in
+the native Gaussian account.
+
+Assume in addition that the actual normalized marginal precision has
+
+ Q_Y=A+iB, A,B real symmetric,
+ q_- I<=A, ||Q_Y||<=q_+, ||B||<=C_rho rho,                    (14)
+
+where rho is a freely small perturbation/contour budget, uniform in Y.
+For example D=D_real+E, with D_real positive and real and ||E||<=rho,
+implies (14) by the resolvent identity, principal restriction and a
+second inversion, using (7). In a native localized Gaussian one must
+check (14) for the ACTUAL quadratic being integrated; it cannot be
+inferred just from smallness of the undeformed physical background.
+
+Choose tau>0 and a>=0 with tau+2a<q_-/4. The growth premise (8) and
+Young's inequality with this SMALL tau give
+
+ |exp[-(y-v)^T Q_Y(y-v)/2] F(y-v)|
+ <=M_F exp[-y^T A_t y/2+C_(tau,a)||v||^2],
+ A_t=A-2(tau+2a)I,
+ C_(tau,a)=q_+^2/(4tau)+q_+/2+2a.                           (15)
+
+The imaginary displacement is still confined to S. The exact absolute
+normalization ratio between Q_Y and the real tilted Gaussian A_t is
+
+ |det Q_Y|^(1/2)/(det A_t)^(1/2)
+ <=exp[C(rho^2+tau+a)|Y|].                                 (16)
+
+To verify the rho^2 factor, put T=A^(-1/2)BA^(-1/2). It is REAL
+symmetric. Then
+ |det Q_Y|^(1/2)/(det A)^(1/2)
+ =product_j(1+lambda_j(T)^2)^(1/4)
+ <=exp[Tr(T^2)/4]<=exp[C rho^2 |Y|].
+The remaining positive determinant ratio A/A_t is bounded by
+exp[C(tau+a)|Y|] by its eigenvalues and the fixed lower gap.
+
+Now integrate every unmarked coordinate in Y exactly in the positive
+Gaussian with precision A_t, rather than bounding its normalization
+coordinate by coordinate. Its marginal on T_mark=S union P has
+precision with eigenvalues bounded above and below by fixed constants.
+Its density is therefore at most C^|T_mark| exp[-c||y_T_mark||^2].
+The existing surface/tail integrations yield
+
+ |J_(Y,S,P)(F)|
+ <=M_F exp[C(rho^2+tau+a)|Y|]
+   product_(b in S)[C |mu_b| R^(m-1)
+                         exp(-cR^2+C_(tau,a)|mu_b|^2)]
+   product_(b in P)[C(1+R)^m exp(-cR^2)].                   (17)
+
+Here S and P are disjoint actual block labels. The arbitrary body Y
+has only the freely SMALL per-volume loss in (17). Constants per mark
+can be paid by their rare weights. This includes S=P=empty, where
+the bound has no spurious fixed constant per integrated coordinate.
+
+The native budget order can now be respected: fix geometry/walk
+reserves, choose rho,tau,a sufficiently small for its allowed
+per-volume Gaussian loss, then choose fixed K so
+cK^2>2 C_(tau,a) M^2 for |mu_b|<=M r, and only then take the weak
+floor. Since K is fixed, polynomial surface factors are still paid
+by exp(-c' r^2), and the larger complex physical corridor still
+shrinks like g r. No second tilt is used on a marked coordinate.
+
+If the native localized body/exterior quadratic differs from its
+published Gaussian reference, it must first be normalized by its
+OWN determinant. Its determinant ratio to that reference must be
+retained and bounded by the existing small per-volume comparison.
+Only then can (17) be applied. Merely treating an imperfectly
+localized inverse identity as exact would be invalid.

@@ -1,0 +1,156 @@
+CURRENT PROOF FRONTIER -- TURN96 -- 21 OCTOBER 2026
+
+Current result: finite original-Wilson source and boundary-response
+theorems, proved and independently audited. The full cutoff-uniform
+separated-source bound, positive continuum response, and nontrivial
+continuum YM4 construction remain unproved. No mass-gap claim is made.
+The tools goal record was null at the start of this turn; no tools goal
+status was changed. The user objective continues in the conversation.
+
+USER-FACING PROOFS
+ outputs/yang-mills-real-source-reduction.txt
+ outputs/yang-mills-integrated-boundary-response.txt
+Strategic reference retained:
+ outputs/yang-mills-proof-reassessment.txt
+Prior frozen frontier:
+ work/current_proof_frontier_turn95.txt
+
+1. EXACT ORIGINAL-WILSON CONDITIONAL SOURCE
+
+Finite periodic 4D SU(2), periods>=4, beta>0, original positive Wilson law.
+For a link e let v_p in S^3 be its six oriented exterior staples,
+V=sum v_p, r=|V|, D=6-r, m(s)=I2(s)/I1(s), g(s)=s m(s).
+The true normalized conditional mean of the constant-star action is
+
+ A_beta(V)=6-r m(beta r)=6[1-m(6beta)]+T_beta(D),
+ T_beta(D)=6m(6beta)-(6-D)m(beta(6-D)).
+
+New globally proved bounds:
+ m(6beta)D <= T_beta(D) <= D,
+ 0 <= D-T_beta(D) <= D/(4beta),
+ |A_beta(V')-A_beta(V)| <= |V'-V|.
+
+They hold at ALL real exteriors, including V=0. The proof establishes
+0<g'<1 and g''>0 by the exact Bessel Riccati equation and first-contact
+arguments. Gamma radial domination gives 1-m(s)<=3/(2s).
+The Lipschitz estimate already includes the weight score and normalizer;
+it is not a bound on the moving mark alone.
+
+D is the exact conditional minimum of the six-plaquette energy and
+ D=2/(6+r) sum_(p<p') [1-v_p dot v_p'].
+Thus it is a nonnegative local exterior-loop function. D itself is
+nonsmooth at V=0; the EXACT T_beta(D) and profile-corrected insertion
+are smooth there. Keep the exact functions in subsequent differentiation.
+
+2. INHOMOGENEOUS PROFILE, QUADRATIC JET, FULL ORIGINAL COVARIANCE
+
+Put qbar_e=(1/6)sum_(p incident e)q_p, omega_e=max|q_p-qbar_e|,
+delta_p=1-(V/r) dot v_p, with the continuous complete expression at r=0.
+The flat-value-subtracted conditional source is exactly
+
+ H_(beta,q,e)=qbar_e T_beta(D_e)
+              +m(beta r_e) sum_p(q_p-qbar_e)delta_p.
+
+Its error from qbar_e D_e is at most
+ [|qbar_e|/(4beta)+omega_e]D_e.
+There is no standalone per-link error, but this does not by itself give
+a uniform covariance estimate. For nonnegative profiles H is nonnegative;
+no sign of connected covariance is inferred.
+
+Near a flat staple configuration let x_p be the three tangent coordinates,
+xbar=(1/6)sum x_p. The actual quadratic jet is
+ (1/2)sum_p [qbar_e g'(6beta)+m(6beta)(q_p-qbar_e)]|x_p-xbar|^2.
+The baseline conditional minimum has quadratic form
+ (1/2)sum_p |x_p-xbar|^2, the one-link quadratic Schur complement.
+Since g'(6beta)=1-O(beta^-2), the constant-profile correction is
+O(beta^-2). The inhomogeneous coefficient correction is at most
+C beta^-2 |qbar|+(4beta)^-1 omega for beta>=1. This is NOT an all-history
+source-marginal theorem or a typical-field continuum scaling assertion.
+
+Define D_(beta,q)=(1/4)sum_e H_(beta,q,e). For F measurable outside
+EVERY original q-source edge,
+ Cov(F,S_q)=Cov(F,D_(beta,q)),
+ E S_q=[1-m(6beta)]sum_p q_p+E D_(beta,q).
+The scalar is the conditional flat-exterior value, not E S_q.
+If original source-link supports are disjoint use F=S_f. If the complete
+enlarged read of D_(beta,q) avoids the f-source edges, then exactly
+ Cov(S_f,S_q)=Cov(D_(beta,f),D_(beta,q)).
+Every identity is in the unchanged original Wilson law. They are sums
+of separate conditional identities, not independent overlapping updates.
+
+History-owned R_f is not automatically exterior measurable: its ownership,
+class and deciding labels can read e. Nor is the displayed kernel the
+conditional kernel after fixing arbitrary native indicators. Therefore
+the TURN95 one-raw/one-regular gap has not been retroactively closed.
+
+3. ACTUAL TWO-RAW-LINK INTEGRATED BOUNDARY CURRENT
+
+In the homogeneous-Wilson realizable fiber
+ nu_t proportional exp[beta Tr(Q V_t R V_t^-1)/2
+                      +kappa Tr(AQ)/2+lambda Tr(BR)/2] dQ dR,
+ V_t=exp(eta t T), h_t=1-Tr(QV_tRV_t^-1)/2,
+the Haar substitution R'=V_t R V_t^-1 gives EXACTLY
+ d_t E h_t|0=(lambda eta/2) Cov(h(QR'),Tr([T,B]R')).
+
+For A=i sigma1,B=i sigma2,T=i sigma3 the mixed kappa/lambda coefficient
+of this derivative at zero is eta m'(beta)/2>0. Integrating raw fields
+does not erase all first boundary responses.
+
+New quantitative bound, for |kappa|,|lambda|<=K fixed and
+beta>=max(1,K/2):
+ |d_t E h_t| <= C_K |eta kappa lambda| beta^-2.
+Exact angular integration gives a radial weight with c-Lipschitz score
+O_K(|eta kappa lambda|); a density comparison bounds its energy variance
+by exp(4K)m'(beta)<=C_K beta^-2. Complete normalization is retained.
+Constants are NOT uniform when effective staple amplitudes are O(beta).
+No identification with a particular admitted native history is made.
+
+4. TWO PRECISE RESTRICTIONS ON THE NEXT TARGET
+
+Live raw pointwise grading: Q=i sigma1,R=i sigma2,T=i sigma3 give
+ h(Q exp(eta t T) R exp(-eta t T))=1+sin(2eta t).
+Closed gauge invariance and a flat regular background alone therefore
+do not give a dimension-four response while raw links are held fixed.
+The exact source has an adjoint boundary current; it must be integrated
+with the weight score. This is a local-premises test, not a native-history
+counterexample.
+
+Normalized complex source: six actual exterior staples
+ {exp(t i sigma3),-I,I,-I,I,-I}
+give z_beta(t)=2I1(2beta sin(t/2))/(2beta sin(t/2)). It has zeros at
+ t=2i asinh(j_(1,1)/(2beta))=O(beta^-1).
+The normalized conditional star source has a pole there. Thus real
+boundedness does not yield a uniform c beta^-1/2 complex neighborhood
+over arbitrary raw exterior data. The unnormalized marked integrals
+remain entire. This does not disprove a more restricted native domain.
+
+5. NEXT WORK AND PRESERVED RESULTS
+
+The current minimal attachment is a bound on the actual generated source
+and boundary-score response through a complete native block, including
+its changed action, constraints, continuation and full normalizer. A direct
+original-law block construction is also legitimate but must control its
+own generated action/source class. The single-link formula cannot be
+reused unchanged after decimation or for a general transformed source.
+
+The crucial physical sum and a positive separated continuum response
+remain open. Compatible local hierarchy/contact renormalization,
+physical calibration, non-Abelian identification, full Euclidean symmetry,
+continuum/volume limits and vacuum properties remain required for YM4.
+Do not add mass gap, universality of every regulator, or a common ordinary
+S' law for all composites as prerequisites for this initial existence task.
+
+Preserve TURN70 selected one-mark closure/contraction and selected
+separated covariance; TURN74 physical-graph versus independent-pair
+distinction; TURN78 real raw-owner estimate and its unpaid full complex
+bridge; TURN83 native regular primitive envelope; TURN95 source c0=1,
+first-healing common-owner exclusion, and undecided native-RP audit.
+TURN93 entropy/flow witness and raw-heat exclusion remain separate.
+No new paper was needed or requested for the finite calculations here.
+
+PRODUCERS AND AUDIT
+ work/turn96_pressure_route.txt
+ work/turn96_mixed_response.txt
+ work/turn96_old_holonomy.txt
+ work/turn96_link_reduction_audit.txt
+ work/turn96_manifest.json records exact delivered versions and hashes.

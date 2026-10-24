@@ -1,0 +1,288 @@
+TURN82 -- QUADRATIC CURRENT BUDGETS FOR EXACT SU(2) CONDITIONAL SOURCES
+20 October 2026. history47. Independent-current kernel theorem.
+
+RESULT
+The exact bounded conditional source from TURN81 has a substantially
+larger quantitative domain than its total-l1 estimate suggested. Absorb
+every real current change into the positive base. The normalized complex
+kernel then has total variation bounded by exp(C sum_e v_e), where
+v_e is the EXACT variance of the imaginary linear current on link e,
+provided each v_e stays below a fixed number less than2. On S3,
+  v_e <= |b_e,perp|^2/(1+r_e)
+                       +4|b_e,parallel|^2/(1+r_e)^2,
+and also v_e<=|b_e|^2/4. This gives dimension-independent bounds on
+weighted complex l2 balls and on every fixed derivative order there.
+
+A Bessel-product refinement proves the SHARP uniform one-link zero-free
+strip |Im current|<j_(1,1), the first positive zero of J_1. More generally,
+if |b_e|^2<=eta(r_e^2+j_(1,1)^2), eta<1, the total variation is at most
+  exp{[2(1-eta)]^-1 sum_e |b_e|^2/(1+r_e)}.
+The first bound can be stronger for longitudinal perturbations.
+
+These are exact estimates for the independent tilted-Haar kernels
+conditioned on the REAL two-HS auxiliary variables. They do not make
+the interacting zero-link marginal nu a Gaussian law, supply a uniform
+complex domain in all auxiliary coordinates, or prove a continuum
+source bound. The literal original source/denominator and overlapping
+read contacts remain those of TURN81.
+
+1. EXACT CONDITIONAL SETUP AND REAL SHIFTS
+
+Read work/turn81_bounded_probe_audit_tail.txt Section4A and
+work/turn81_external_source_history.txt Sections3--6. The actual two-HS
+law gives independent original SU(2) links conditioned on real (G,R):
+  k_a(dq)=product_e exp(a_e dot q_e)/Z(a_e) dω(q_e),
+  q_e in S3, a_e in R4, Z(a)=integral_S3 exp(a dot q)dω(q). (1.1)
+The real four-vector a is the quaternion-linear part of
+Re Tr J_e^dagger U_e. Complexification below is of this REAL-LINEAR
+coordinate function, not a new antiholomorphic Re/conjugation operation.
+The complementary real components of J do not couple to SU(2).
+
+Fix the finite ORIGINAL link set S read by all probes. Links outside S
+integrate to one. For a complex perturbation zeta_e=u_e+i b_e, u_e,b_e
+real, set c_e=a_e+u_e, r_e=|c_e|. There is no smallness requirement on u:
+it is absorbed exactly into the real positive product base k_c. The
+normalized complex kernel is
+  k_(c+ib)(dq)=k_c(dq) exp(i sum_e b_e dot q_e)/D_c(b),
+  D_c(b)=product_e phi_(c_e)(b_e),
+  phi_c(b)=E_(k_c) exp(i b dot q).                         (1.2)
+Where D is nonzero, this is a mass-one complex measure, and exactly
+  ||k_(c+ib)||_TV=1/|D_c(b)|.                              (1.3)
+For every bounded measurable original B, its normalized conditional
+mean m_B(c+ib)=integral B dk_(c+ib) therefore has absolute value at most
+||B||infinity/|D|. B need not have an analytic extension in q.
+
+2. THE EXACT S3 COVARIANCE AND ITS UNIFORM BOUNDS
+
+For r>=0 write Z(r)=Z(r n), |n|=1, and
+  c(r)=d log Z(r)/dr=E_r(n dot q).
+We distinguish this scalar c(r) from the vector c_e. Direct spherical
+integration or the even moment series gives
+  Z(r)=2 I_1(r)/r, Z(0)=1,
+  c(r)=I_2(r)/I_1(r) for r>0,
+  c(r)=r/4-r^3/96+O(r^5) at zero.                         (2.1)
+All subsequent covariance facts have the following elementary proof.
+Put x=n dot q. Its density is proportional to e^(r x)sqrt(1-x^2)
+on[-1,1]. Integrating the derivative of
+e^(r x)(1-x^2)^(3/2) yields
+  r E_r(1-x^2)=3 E_r x=3c(r).
+The exact longitudinal/transverse decomposition is consequently
+  Cov_r(q)=c'(r) n n^T + w(r)(Id-n n^T),
+  w(r)=c(r)/r, w(0)=c'(0)=1/4,
+  c'(r)=1-c(r)^2-3c(r)/r>0.                              (2.2)
+The strict positivity is also the variance of x under a positive density.
+
+We prove c'(r)<=w(r) without an asymptotic claim. Define
+  b(r)=r/(sqrt(r^2+4)+2).
+It solves b^2+4b/r=1. Its series is r/4-r^3/64+O(r^5), so c>b
+near zero. At any positive crossing c=b the Riccati equation gives
+  c'=b/r, b'=2/[sqrt(r^2+4)(sqrt(r^2+4)+2)],
+and c'-b'>0. Hence c cannot first cross downward through b. Therefore
+  c'(r)-w(r)=1-c(r)^2-4c(r)/r<=0.                         (2.3)
+This also proves w'(r)<=0 and w(r)<=w(0)=1/4.
+Since c'>0, the Riccati equation gives
+  c(r)<r/[3/2+sqrt(r^2+9/4)],
+  w(r)<=1/(1+r).                                         (2.4)
+The last inequality uses sqrt(r^2+9/4)>=r and 3/2>=1.
+Thus Cov_r(q)<=w(r)Id<=min(1/4,1/(1+r))Id.
+
+For a useful sharper longitudinal estimate, let y=1-x. Its density is
+a Gamma(shape3/2,rate r) density tilted by the decreasing nonnegative
+function sqrt(2-y)1_(y<2). An increasing function and a decreasing
+function have nonpositive covariance under any probability law (use
+two independent copies). Therefore E_r y<=3/(2r), and
+c(r)>=1-3/(2r). For r>=3/2 insert this lower bound in the decreasing
+right side of the Riccati equation to obtain c'(r)<=9/(4r^2).
+For r<3/2 the already proved1/4 bound suffices. In particular, globally,
+  c'(r)<=min(1/4,9/(4r^2))<=4/(1+r)^2.                   (2.5)
+The last comparison splits at r=3. The r=0 statement is by continuity.
+No uniform covariance lower bound is inferred from these upper bounds.
+
+For b=b_parallel n+b_perp, the exact scalar variance is
+  v_c(b):=Var_c(b dot q)
+      =c'(r)b_parallel^2+w(r)|b_perp|^2.                  (2.6)
+It is at most |b|^2/4 and at most
+  4 b_parallel^2/(1+r)^2+|b_perp|^2/(1+r).
+At r=0 use v=|b|^2/4 without choosing a preferred direction.
+
+3. ELEMENTARY VARIANCE TUBE AND NORMALIZED SOURCE LOGS
+
+For a real random X with EX=0,
+  |E exp(iX)-1|<=E X^2/2,
+because |e^(ix)-1-ix|<=x^2/2. Applying this to
+X=b dot(q-Eq) gives
+  |phi_c(b)|>=1-v_c(b)/2.                                 (3.1)
+Let 0<v_*<2 be fixed and assume v_e:=v_(c_e)(b_e)<=v_*.
+Set V=sum_e v_e and
+  C_*= -log(1-v_*/2)/v_*.
+Since -log(1-v/2)/v is increasing on(0,2), equations(1.2)--(3.1) imply
+  D_c(b) ne 0,
+  ||k_(c+ib)||_TV<=exp(C_* V).                            (3.2)
+This bound uses the sum of squares, with the exact anisotropic
+covariance weights(2.6). For example |b_e|<sqrt(8) for each e already
+gives a uniform one-link zero-free strip; Section4 improves its width.
+The existence of the normalized kernel is independent of how large V
+is, although its uniform bounded-observable norm grows with V.
+
+Let B_i be arbitrary original measurable probes with 0<=B_i<=1,
+each reading S. Define R=sum_i|z_i| and the COMPLETE conditional source
+  C(z;c+ib)=integral exp(sum_i z_i B_i(q)) dk_(c+ib)(q).
+Then
+  |C(z;c+ib)|<=exp(R+C_*V),
+  |C(z;c+ib)-1|<=exp(C_*V)(e^R-1).                        (3.3)
+The second estimate uses the exact normalization C(0)=1 before taking
+absolute values. Whenever exp(C_*V)(e^R-1)<1 there is the canonical
+source logarithm, with
+  |log C|<=-log[1-exp(C_*V)(e^R-1)].                      (3.4)
+The logarithm is zero at z=0 and holomorphic jointly wherever this
+strict bound holds. The defining integrals are entire before division;
+their nonzero denominator and the disk around1 justify that assertion.
+For V bounded by a fixed constant this supplies a fixed source radius,
+regardless of the number of read links. It does not replace the complete
+conditional covariance by a product of conditional means when probes
+share original links.
+
+4. SHARP UNIFORM STRIP AND A BESSEL-PRODUCT QUADRATIC BOUND
+
+Here we use one explicitly identified classical special-function input:
+the Bessel product J_1(z)=(z/2)product_(m>=1)(1-z^2/j_(1,m)^2),
+and the reality of its nonzero zeros. Both are recorded in NIST DLMF
+10.21(i),(iii), especially10.21.15:
+  https://dlmf.nist.gov/10.21#i
+  https://dlmf.nist.gov/10.21.E15
+The modified-Bessel series is DLMF10.25.2:
+  https://dlmf.nist.gov/10.25.E2
+No lattice or source estimate is imported from these identities.
+
+For a complex four-vector z, analytic continuation of the spherical
+moment series gives the single-valued entire formula
+  Z(z)=sum_(k>=0)(z dot z/4)^k/[k!(k+1)!]
+      =product_(m>=1)(1+(z dot z)/j_(1,m)^2).             (4.1)
+The dot product is bilinear, not Hermitian. Thus all zeros satisfy
+  z dot z=-j_(1,m)^2.
+For z=c+ib, this means simultaneously
+  c dot b=0, |b|^2=|c|^2+j_(1,m)^2.                      (4.2)
+Hence Z has NO zero when |Im z|<j_(1,1), uniformly over all real
+parts. This uniform strip is sharp: c=0 and |b|=j_(1,1) give a zero.
+An arbitrary normalized bounded-probe integral can have a genuine pole
+there; for example B=(1+n dot q)/2 has a nonzero numerator at the first
+zero along z=i j_(1,1)n, because the nonzero J_1 zero is simple.
+
+For quantitative bounds assume, link by link,
+  |b|^2<=eta(r^2+j_(1,1)^2), 0<=eta<1.                   (4.3)
+Each factor of the normalized product in(4.1) obeys
+  |1+(-|b|^2+2i c dot b)/(r^2+j_(1,m)^2)|
+       >=1-|b|^2/(r^2+j_(1,m)^2)>0.
+Taking logarithms, using -log(1-x)<=x/(1-eta), and differentiating
+the positive real product yields
+  sum_m 1/(r^2+j_(1,m)^2)=c(r)/(2r)=w(r)/2.
+All products and derivatives converge locally; at r=0 use the limit.
+Therefore
+  1/|phi_c(b)|<=exp[|b|^2 w(r)/(2(1-eta))].              (4.4)
+For the full conditional product, let
+  Q_w=sum_e w(r_e)|b_e|^2,
+  Q=sum_e |b_e|^2/(1+r_e).
+Then
+  ||k_(c+ib)||_TV<=exp[Q_w/(2(1-eta))]
+                  <=exp[Q/(2(1-eta))].                  (4.5)
+The exact mean-phase is irrelevant to total variation. Equations
+(3.3)--(3.4) hold with the exponent in(4.5) in place of C_*V.
+
+For any fixed rho<j_(1,1), the uniform per-link strip |b_e|<=rho
+has eta<=rho^2/j_(1,1)^2 and thus the desired bound
+exp(C_rho sum_e |b_e|^2/(1+|a_e+Re zeta_e|)). There is also the weaker
+but immediate exp(C_rho sum_e |Im zeta_e|^2) estimate. The variance
+bound(3.2) remains preferable when b is mostly longitudinal and r large.
+These alternatives should not be conflated: (4.5) permits larger
+transverse imaginary values, whereas(3.2) can spend a much smaller
+longitudinal budget.
+
+5. A FIXED REAL-CENTER WEIGHTED HILBERT BALL AND DERIVATIVES
+
+The previous bounds depend on the absorbed real parts. A useful fixed
+complex neighborhood of a prescribed real a is obtained by defining
+  ||zeta||_a^2=sum_e |zeta_e|^2/(1+|a_e|).
+Here |zeta_e| is the Hermitian complex Euclidean norm. If
+||zeta||_a<=rho<=1/2, then individually
+  |Re zeta_e|<=rho sqrt(1+|a_e|)<=rho(1+|a_e|),
+  1+|a_e+Re zeta_e|>=(1-rho)(1+|a_e|).
+Consequently the total exact variance obeys
+  V<=rho^2/(1-rho)<=2rho^2<=1/2.                         (5.1)
+Choose v_*=1/2 in(3.2); its constant is2 log(4/3)<2/3. Hence
+  ||k_(a+zeta)||_TV<=exp[2rho^2/(3(1-rho))]
+                       <=exp(4rho^2/3).                 (5.2)
+In particular every bounded original m_B is holomorphic on this
+weighted complex l2 ball and has norm at most exp(4rho^2/3)||B||infinity.
+For bounded probes, a common source condition such as
+  exp(1/3)(e^R-1)<1
+provides a zero-free source logarithm on the entire rho<=1/2 ball.
+
+These are dimension-independent Banach-space Cauchy inputs. For a unit
+direction v in ||.||_a, ordinary one-variable Cauchy gives
+  |D^m m_B(a)[v,...,v]|<=m! rho^-m exp(4rho^2/3)||B||infinity.
+Polarization gives a corresponding multilinear operator bound with
+the fixed-order factor m^m replacing m!. Radius may be decreased
+strictly before applying Cauchy. This is a fixed-order directional/
+operator-jet estimate; it does NOT assert an unweighted coefficient-sum
+bound over arbitrarily many separate current labels. Mixed source jets
+are controlled on the simultaneous current/source domain by the same
+argument, with all conditional mixed scalars retained.
+
+5A. EXACT FIRST AND SECOND REAL-CURRENT JETS
+
+For 0<=B<=1 and real current directions h,k, put
+X_h=sum_e h_e dot(q_e-E_a q_e). Independence gives
+  V_a(h)=E_a X_h^2=sum_e v_(a_e)(h_e).
+Differentiating the exact normalized product integral yields
+  D_h m_B=Cov_a(B,X_h),
+  D_h D_k m_B=E_a[(B-E_a B)X_h X_k].                      (5.3)
+The second line is the complete mixed cumulant, including derivatives
+of the normalizer. Consequently
+  |D_h m_B|<=sqrt(V_a(h))/2,
+  |D_h D_k m_B|<=sqrt[V_a(h)V_a(k)].                      (5.4)
+Use Var(B)<=1/4 in the first inequality and |B-E B|<=1 plus
+Cauchy--Schwarz in the second. These bounds are independent of the
+number of read links and do not use Cauchy estimates. They control
+directions in the exact current covariance metric. They do not give
+a sum over arbitrary current labels for free, or control derivatives
+of the interacting nu marginal.
+
+6. THE ACTUAL GAIN AND THE REMAINING SCALING
+
+For N comparable read links with real current size r and imaginary
+perturbation size epsilon, (4.5) costs order N epsilon^2/(1+r),
+instead of the TURN81 l1 cost N epsilon. A bounded norm therefore allows
+epsilon of order sqrt((1+r)/N), subject to the stated per-link domain;
+at weak real currents this is N^-1/2 rather than N^-1. At strong
+currents r comparable to beta it is sqrt(beta/N). Longitudinal
+perturbations can have the better variance budget of order
+N epsilon^2/(1+r)^2 by(2.6). None of this gives a bounded norm for
+arbitrary fixed perturbations on an increasing number of weak-current
+links. Already at a=0, identical imaginary shifts t n produce the
+denominator [2J_1(t)/t]^N, whose inverse grows exponentially in N for
+fixed small nonzero t. This is the exact complex-measure operator norm.
+
+In the actual HS representation the currents are
+  J_e=sum_(first incidences) sqrt(beta)R_h
+                 +sum_(second incidences)2R_h^dagger G_p.
+Thus a complex change of auxiliaries has current increments bounded by
+the local sums of sqrt(beta)|delta R|, |G||delta R|,
+|R||delta G| and |delta R||delta G|, with fixed quaternion-projection
+constants. Complexification here again means continuation of their
+real coordinate polynomials. The auxiliaries are unbounded. A uniform
+current-weighted ball is therefore not a uniform unweighted auxiliary
+ball on all real records. Actual lower-current and Gaussian-moment
+estimates can be relevant to averaging this consumer, but must be
+proved for the interacting nu and on the intended read family.
+
+The source identity for an original bounded probe remains
+  E_mu exp(sum z_i B_i)=E_nu C(z;J(G,R)).
+The full normalizer of nu is unchanged. Current-tube control of the
+conditional integrand does not prove that the deformed interacting
+nu integral has the same complex locality, or identify a new native
+RG map. Covariance between distant probes can reside entirely in the
+conditional means as functions of nu. Neither their bounded norm nor
+the sharp one-link strip supplies a nonzero reflected signal, a spatial
+decay estimate for nu, or a continuum limit.
+
+No authoritative output or prior note was modified.

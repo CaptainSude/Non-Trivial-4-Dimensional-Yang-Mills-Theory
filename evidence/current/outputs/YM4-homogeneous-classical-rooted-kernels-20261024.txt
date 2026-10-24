@@ -1,0 +1,286 @@
+UNIFORM ROOTED CLASSICAL MINIMUM KERNELS THROUGH DEGREE FOUR
+24 October 2026. compiled_source. Native homogeneous finite-jet result.
+Independent review requested. Archive and outputs unchanged.
+
+RESULT AND EXACT SCOPE
+
+Let eta=L^-m and S_m(V)=A_eta(U_m(V)), where U_m is the ACTUAL
+homogeneous classical minimum of the original Wilson action with
+its literal nested native averages prescribed by V on the current
+unit lattice. Use the original trace normalization and action
+
+ A_eta(U)=eta^(d-4) sum_p h(U(partial p)),
+ h(U)=1-Re tr(U), tr(1)=1, d=4.                              (1)
+
+About every real homogeneous regular current field V0 in a fixed
+strict small-curvature class, choose a fixed reserved native allowance
+e_* above that class and below the primary ceiling. On a fixed smaller
+relative complex coarse tube V(B)=exp(iB)V0, independent of m and
+volume, S_m has action-rooted Taylor kernels through degree4 (indeed
+through any prescribed fixed degree P, e.g.5) with uniform exponential
+root sums. The conclusion includes the complete nonlinear physical
+minimum; it is not a derivative bound for a quantum fluctuation action.
+
+Partition fine plaquettes into current unit-cell packets P_a, with a
+fixed convention for orientations and boundary crossings. Write
+S_m(B)=sum_a s_(m,a)(B). For scalar color coordinates q_1,...,q_p of
+B and 1<=p<=P, there are fixed C_p,nu_p>0 such that
+
+ |partial_(q_1)...partial_(q_p) s_(m,a)(B)|
+              <= C_p exp[-nu_p sum_j d(a,q_j)],               (2)
+
+uniformly on a smaller spare complex tube. All distances are in the
+homogeneous current lattice and use the periodic distance if needed.
+In particular for some fixed kappa>0,
+
+ sup_a sum_(q_1,...,q_p) exp[kappa tree(a,q_1,...,q_p)]
+        |partial_(q_1)...partial_(q_p) s_(m,a)| <= C_p,         (3)
+
+and the corresponding full-action kernel rooted at one external
+coordinate obeys
+
+ sup_(q_1) sum_(q_2,...,q_p) exp[kappa tree(q_1,...,q_p)]
+        |partial_(q_1)...partial_(q_p) S_m| <= C_p.            (4)
+
+For p=1, (4) means a uniform single-coordinate derivative bound, not
+a bound on the extensive scalar S_m itself. Constants may depend on
+fixed L, group, color norm, e_* and P, but not m, eta or volume.
+The action-root anchor is retained until AFTER the fine plaquette
+census; this prevents an artificial eta^-4 loss.
+
+This establishes the finite-jet portion of Gaussian bridge7(a).
+It does NOT establish the archive's heat ellipticity, its additional
+double-zero/vertex identities, classical Maxwell-extractor transport,
+composite determinant identification, signed beta drift, or regulator
+passage. Those require their own matched statements.
+
+1. PRIMARY SCALE LEDGER: WHY THE HOMOGENEOUS RESPONSE HAS NO eta LOSS
+
+Primary files:
+ work/handoff/original-workspace/work/package/work/admission_sources/
+ cmp102_variational_primary.txt and cmp102_p278,p281,p308,p309.png.
+Read CMP102 printed278(2),(5),(7),279 Theorem1,281(19)--(21),
+305(172)--(180),307--308(182)--(190),309 Proposition9.
+B109 printed253--254 transfers the actual averaged-contour convention;
+printed256(0.21) and260(1.1) identify the literal homogeneous phase.
+
+In the homogeneous depth-m array, all determining cells have grade m:
+A_j is empty for j<m and A_m is the current lattice. The fine spacing
+is eta=L^-m, so L^m eta=1. The native regularity condition (2) therefore
+says for the real base minimum U0=U_m(V0)
+
+ |U0(partial p)-1| <= C e_* eta^2.                            (5)
+
+The physical current has its native bounded current-scale cap as well;
+it is part of the admissibility required by the theorem. It has not
+been set to zero.
+
+Proposition9 expands the minimum about this arbitrary regular V0,
+using V(B)=exp(iB)V0 and a fixed reference U0. In the native relative
+Landau representation it is
+
+       U_tilde(B)=exp[i eta H(B)] U0.                         (6)
+
+It is gauge equivalent to the actual axial minimum, by the stated
+analytic return. The Wilson action and each plaquette trace are gauge
+invariant, so they may be evaluated using (6). We never identify this
+relative gauge change with an invariance of a sharp fluctuation cut;
+no such cut enters the classical phase (1).
+
+Reserve e_* once, independently of the attained curvature of V0.
+Theorem1 uniqueness identifies the same real minimum if a larger proof
+allowance is used. SectionG(172), Proposition9 and (19) give a complex
+sup tube ||B||<rho with rho=c e_* and uniform bounds
+
+          |H(B)|+|nabla_U0 H(B)| <= C e_*.                    (7)
+
+Here the covariant gradient is the actual eta-scaled difference
+operator in the primary norm; it includes its factor eta^-1.
+This distinction is essential below.
+
+The first two entries of the printed(190) are the connection and its
+covariant first-gradient response. For x in the packet anchored at a,
+and coarse bond/color coordinate q anchored at q, they give
+
+ |partial_q H(B,x)|+|nabla_U0 partial_q H(B,x)|
+                             <= C exp[-mu d(a,q)].            (8)
+
+There is no suppressed factor eta^-d in (8). In (190), the output
+powers are (L^j eta)^-1 and (L^j eta)^-2, and the input functional-
+derivative density is (L^(j')eta)^-d. Here j=j'=m, so ALL three are
+one. The current coarse cell volume is one, hence these functional
+kernel entries are the ordinary coarse-coordinate partial derivatives
+used in (2). Color and orientation conventions contribute fixed
+constants only. The homogeneous native distance reduces to current
+lattice distance up to the fixed block/packet conventions. No mixed-
+grade metric or retained rough region is covered by this simplification.
+
+The response estimate holds uniformly on a smaller COMPLEX tube, as
+Proposition9 states for (182),(190). Merely having (8) at real B would
+not justify the Cauchy argument below. The fixed real packet frames
+are unitary, and their transports preserve the base norms. No global
+near-identity logarithm of U0 is needed.
+
+2. FINE PLAQUETTE VALUE AND FIRST RESPONSE KEEP eta^2
+
+For an oriented fine plaquette p, let P_p(B)=U_tilde(B)(partial p),
+expressed at its chosen base vertex in the fixed U0 frame. Define
+K_p(B)=(1/i)log P_p(B) on the small principal branch. Its complete
+four-link and transported-gradient read is assigned to a current
+packet a; moving to its fixed collar only changes constants.
+
+The primary finite product identity is CMP102 printed282(24)--(25):
+in its transported plaquette convention the signed first-order sum
+is EXACTLY eta (D_U0 H)(p). The BCH form is printed283(34). Thus the
+following cancellation is part of the literal native eta convention,
+not an assumed continuum replacement of a discrete difference.
+
+We claim uniformly on the complex tube
+
+ |K_p(B)|<=C eta^2,
+ |partial_q K_p(B)|<=C eta^2 exp[-mu1 d(a,q)].                 (9)
+
+Here is the finite product argument that supplies the crucial factor.
+Transport the four relative link fields eta H around p to its fixed
+base vertex using U0. The plaquette is a product of four exponentials
+of signed transported eta H, followed by U0(partial p). The signed
+sum of their unscaled fields is bounded by
+
+ C eta |nabla_U0 H| + C|U0(partial p)-1||H|.
+
+The difference between the exponential product and identity is its
+linear signed sum times eta plus an O(eta^2|H|^2) remainder. Together
+with (5),(7), this bounds P_p(B)-1 by C eta^2. The same calculation
+differentiated ONCE replaces one H by partial_q H: its signed linear
+sum costs eta |nabla_U0 partial_q H|, and every nonlinear term has at
+least two eta factors and one partial_q H. Equations(7),(8) then give
+
+ |partial_q P_p(B)|<=C eta^2 exp[-mu1 d(a,q)].
+
+All U0 transports are fixed while differentiating B. A possible
+transport around the complete plaquette contributes its already
+bounded (5) and is smaller. The derivative of the principal logarithm
+is uniformly bounded on this fixed small holonomy neighborhood, so
+(9) follows. This proof works for complex H by the same convergent
+finite product/Taylor identities. It does not appeal to positivity
+of a complex measure.
+
+Using only |partial_q H| would give an erroneous O(eta) estimate.
+The covariant gradient entry in (190), with its eta^-1 convention,
+is exactly what produces the second eta. Conversely no raw gauge
+return derivative is needed: the trace is already evaluated in (6).
+We do not assert that the untraced K_p has the same kernel in every
+parameter-dependent gauge.
+
+3. HIGHER RESPONSES: CAUCHY, SYMMETRY AND THE ROOTED ARMS
+
+Fix P=4 or5. Keep a fixed spare fraction of rho so all required
+coordinate disks remain in the SAME native complex tube. Apply
+coordinatewise Cauchy to the second estimate in (9), taking up to
+p-1 additional derivatives. For every chosen index j among the p
+external coordinates, mixed-derivative symmetry gives
+
+ |partial_(q_1)...partial_(q_p) K_p|
+   <= C_p eta^2 rho^(1-p) exp[-mu1 d(a,q_j)].                 (10)
+
+Repeated coordinate/color indices are allowed; their factorial
+Cauchy price is absorbed in C_p for fixed P. Since (10) holds for
+EACH j, take the minimum of its right-hand sides. The inequality
+max_j d_j >= (1/p)sum_j d_j proves
+
+ |D_(q_1,...,q_p) K_p|
+   <= C'_p eta^2 exp[-(mu1/p)sum_j d(a,q_j)].                 (11)
+
+The fixed inverse rho powers are retained in C'_p and are independent
+of depth. This is not an inference of joint root decay from a final
+summed row: the complete action-root a is kept in (9)--(11) before any
+external or fine-root sum. For p=0 use the value bound in (9).
+
+4. WILSON'S QUADRATIC ZERO GIVES eta^4 FOR EVERY FIXED JET
+
+Use the holomorphic continuation of the REAL Wilson plaquette
+function, for example
+
+ h^C(exp(iK))=1-1/2 tr[exp(iK)+exp(-iK)].                     (12)
+
+It agrees with 1-Re tr(U) on real unitary U, with the original
+normalized trace. For SU(2) the equivalent holomorphic trace formula
+has the same value. On the Lie-algebra principal-log branch the
+linear trace term vanishes; in (12) the even form makes the
+quadratic zero explicit. Thus
+
+ |h^C(exp(iK))|<=C|K|^2,
+ |D_K h^C|<=C|K|, and |D_K^l h^C|<=C_l for l>=2             (13)
+
+on the fixed small branch. These are finite analytic identities of
+the original plaquette action, not a Ward theorem for a new source.
+
+Apply the finite multivariable chain rule to a pth B derivative of
+h^C(exp(iK_p(B))). A term with ONE derivative block contains D_K h
+and D_B^p K, hence has two eta^2 factors by (9),(11). A term with two
+or more derivative blocks contains at least two derivatives of K,
+and again has at least eta^4. Since eta<=1, higher numbers of blocks
+are smaller. Each block retains its subset of external roots; taking
+a common rate no larger than mu1/P leaves
+
+ |partial_(q_1)...partial_(q_p) h(P_p(B))|
+ <= C_p eta^4 exp[-nu sum_j d(a,q_j)],  1<=p<=P,              (14)
+
+with some fixed nu>0. The value bound has the same eta^4 factor.
+The connection/current nonlinearities are included in the actual
+H(B); none has been replaced by a linear blocked Maxwell field.
+
+5. FINE DENSITY CANCELLATION AND THE CURRENT ROOT CENSUS
+
+Assign every fine plaquette to one current unit cell a, with its
+orientation and a fixed boundary convention. There are at most
+C eta^-4 such plaquettes per current cell in d=4. Their complete
+four-link packets lie in a fixed current collar, so the exponential
+in (14) is uniform over the packet up to a fixed constant. Multiplying
+by the action factor eta^(d-4)=1 and summing FIRST within P_a gives
+
+ eta^0 times C eta^-4 times C_p eta^4 = C'_p.
+
+This proves (2). No new fine lattice root is counted after this sum.
+The action scalar is extensive, but its current-root contribution and
+all the stated rooted jets are uniformly bounded. This is precisely
+the distinction required by bridge7(a).
+
+For (3), the minimal connecting tree length is at most the sum of the
+p star distances d(a,q_j). Reserve a fixed fraction of nu and sum
+the remaining exponential in each q_j. Uniform bounded lattice
+density gives a finite constant in current units, including on finite
+periodic tori with their periodic metric. For (4), keep q_1 fixed,
+sum the original action root a using its remaining exponential arm
+to q_1, then sum q_2,...,q_p. A further fixed exponent sacrifice pays
+the tree weight in (4). These operations have no ambient-volume
+factor and no eta dependence.
+
+6. WHAT THIS NATIVE INPUT CLOSES AND WHAT IT DOES NOT
+
+This supplies uniform rooted CLASSICAL Taylor kernels through degree4,
+with a genuine fixed spare relative complex coarse radius, for the
+homogeneous phase S_m=A_eta(U_m(V)). In particular it fills this
+specific classical-kernel item in native_gaussian_coarea_cocycle_and_
+beta_bridge_20261024 Section7(a). The same argument can be repeated
+for any preassigned fixed degree, with its stated factorial/radius
+constants; no uniform statement in derivative order is needed here.
+
+The result uses the current-scale homogeneous case of the exact
+primary theorem, the actual eta-normalized connection and covariant
+gradient response, and the original Wilson trace quadratic zero.
+It does not follow merely from the complete quantum Hessian bound
+or from a finite-dimensional minimum theorem without these scale
+factors. It also does not require a globally small raw-link field:
+the base is real unitary and only the native covariant packet
+regularity is used.
+
+The archive may demand additional classical structure: a particular
+Maxwell normalization, affine double zeros, heat-band ellipticity,
+precise vector/ghost/current vertices and their joint regulator
+comparison. None is obtained merely from (2)--(4). In particular
+extracting a positive signed Gaussian beta coefficient is still a
+separate calculation. No beta-extractor transport identity, finite-
+cutoff-to-infinite-lattice passage, mixed-array extension, all-history
+source closure or continuum Yang--Mills theorem is promoted.
+

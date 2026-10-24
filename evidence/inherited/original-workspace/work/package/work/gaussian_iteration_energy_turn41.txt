@@ -1,0 +1,323 @@
+GAUSSIAN ITERATION WITH THE LITERAL ORDINARY AVERAGES
+19 October 2026. balaban_inputs. Turn41 bounded constructive result.
+
+RESULT AND SCOPE
+
+There is a genuine Gaussian iteration input here. On compatible periodic
+full-block lattices, the effective Maxwell quadratic form after ANY number
+of ordinary averaging steps satisfies
+
+       ||d y||^2 <= q_M(y) <= C_d ||d y||^2,
+       C_d=(pi/2)^(2d+4),                 M=L^k.          (0.1)
+
+The constants are independent of M and volume. Successive Gaussian energy
+minimizations equal the direct total-M minimization. Thus (0.1) is NOT
+obtained by multiplying a one-step constant. It supplies a uniform gap on
+each next constrained, block-local forest fluctuation space.
+
+For the actual fixed-fine-crossing cube of turns39--40 there is also a
+direct-total-M bound
+
+       ||d y||^2 <= q_M^K(y) <= C_d' ||y||^2,           (0.2)
+
+with fixed L>=11 and constants independent of M and box size, on the full
+incident coarse-row set. The upper bound uses the already proved compact
+owner-block complete-star inverse; unlike an older incident-bond lift it
+does preserve frozen fine crossings. This weaker bound, combined with the
+lower bound and fixed-L local reconstruction, suffices for uniform spectral
+bounds on the next constrained Gaussian and its KKT matrix. It does not
+prove the curvature-relative upper bound in this boundary geometry.
+
+The inherited next state consists of ALL incident coarse rows, including
+variable crossing coarse rows. Freezing these rows afresh is a different
+conditional operation. Neither (0.1) nor (0.2) identifies a later interacting
+action, proves a uniform nonzero-background radius, or discards Gaussian
+determinants. Uniform spatial decay of the boundary hierarchy is also not
+deduced from spectral comparison alone.
+
+1. EXISTING INPUTS AND PRIMARY DICTIONARY
+
+This note reuses and sharpens, rather than replaces, the following audited
+archive proofs:
+
+ work/archive/ym4-research/work/flat_maxwell_gap_research.md, Sections2--6;
+ work/archive/ym4-research/work/flat_maxwell_lift_research.md, Section7;
+ work/archive/ym4-research/work/flat_covariance_source_research.md;
+ work/archive/ym4-research/work/flat_covariance_decay_research.md.
+
+For compact boundary-preserving ordinary right inverses the relevant input
+is work/compact_native_lift_independent_audit_turn16.txt, Sections3--4,
+and primary_reference_field_class_turn16.txt, Sections5 and7. The actual
+fixed-crossing first-step geometry and local gap were proved in
+native_interface_geometry_turn39.txt and gaussian_coarse_kernel_turn40.txt,
+with independent audits. The older flat_maxwell_boundary_research.md has
+a DIFFERENT incident-fine-edge convention and is not used to preserve
+fixed crossings here.
+
+Primary source reread this turn: Bałaban, Commun. Math. Phys.109 (1987)
+249--301, pp253--254, (0.8),(0.11),(0.12), defines the ordinary mean and
+its flat arithmetic derivative; p256, (0.21)--(0.22), identifies the
+constrained classical action; p265, (2.2)--(2.3), identifies its next
+minimum through the ordinary prefix. Public primary PDF:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+
+The estimates below are direct finite-dimensional/cochain proofs. The
+primary source fixes which average is meant; its nonlinear minimum theorem
+is not being substituted for a proof of these flat comparisons.
+
+2. NORMALIZATION AND THE TWO DIFFERENT LINEAR AVERAGES
+
+Use final spacing one, fine spacing eta=1/M, M odd. A fine potential A
+means U_b=exp(i eta A_b), while y is the final physical potential. Norms
+use eta^d on fine sites and counting measure on the final lattice. The
+fine differential d_eta includes division by eta. In d=4 this is exactly
+the quadratic Wilson action normalization under rescaling; colors simply
+tensor the following real scalar matrices.
+
+The normalized straight average is
+
+ (Q_M^st A)_mu(z)=M^(-d-1) sum_{u in centered M-block}
+                                  sum_{r=0}^{M-1} A_mu(Mz+u+r e_mu).
+
+Its two-form counterpart has two independent longitudinal sums and
+coefficient M^(-d-2). Discrete Stokes and column counting give EXACTLY
+
+ d_1 Q_M^st=Q_M^(2) d_eta,
+ ||Q_M^(2)F||_1 <= ||F||_eta.                           (2.1)
+
+The literal rooted ordinary derivative R_L differs from Q_L^st by a
+coarse gradient. Differentiated endpoint covariance gives
+
+ R_L d lambda=d_c(lambda restricted to coarse centers),
+ Q_L^st d lambda=d_c(block average of lambda).
+
+After k actual steps the chain-rule derivative R_M is the COMPOSITION of
+these one-step R_L maps, with physical scaling retained. Straight averages
+compose exactly: centered start digits and longitudinal string digits each
+have a unique base-L expansion. Induction therefore gives
+
+                   R_M A=Q_M^st A+d_1 Psi_M(A).         (2.2)
+
+One is not claiming R_M=Q_M^st. On a full periodic hierarchy their energy
+infima nevertheless agree: correct a straight-feasible field by a fine
+gradient with specified coarse-center values -Psi_M(A); conversely use
+the onto scalar block average to correct a rooted-feasible field. Fine
+curl is unchanged. No bound on that particular correcting potential or
+its support is needed for this equality of infima. Section6 uses a
+different, compact correction when boundary support matters.
+
+Define
+
+ q_M(y)=inf_{R_M A=y} ||d_eta A||_eta^2
+       =inf_{Q_M^st A=y} ||d_eta A||_eta^2.              (2.3)
+
+Equation(2.1) proves the lower half of (0.1). It also applies to R_M,
+either through (2.2) or by successive curvature contraction.
+
+3. CURVATURE-RELATIVE UPPER BOUND: THE MISSING SHARPENING
+
+On the coarse torus select k_nu in [-pi,pi] for each frequency. Embed
+this same physical frequency into the fine torus. With physical volume
+normalization its normalized Fourier mode has the same norm on the two
+lattices. The straight-average component multiplier on this lowest alias is
+
+ t_mu(k)=exp[i(M-1)k_mu/(2M)] r_M(k_mu) product_nu r_M(k_nu),
+ r_M(t)=sin(t/2)/(M sin(t/(2M))), r_M(0)=1.
+
+For every M and |t|<=pi,
+
+                  2/pi <= r_M(t) <=1.                 (3.1)
+
+Write delta_c,nu=e^(ik_nu)-1 and lambda_c=|delta_c|^2.
+For k!=0 split y=y_T+delta_c phi with delta_c^* y_T=0.
+The exterior-product identity gives
+
+              |d_c y|^2=lambda_c |y_T|^2.             (3.2)
+
+Lift ONLY y_T on the lowest alias by A_mu=y_T,mu/t_mu(k).
+Then Q_M^st A=y_T. Its fine derivative multiplier is
+delta_f,nu=M(e^(ik_nu/M)-1). Consequently
+
+ |d_eta A|^2 <= |delta_f|^2 |A|^2
+ <= |k|^2 (pi/2)^(2d+2)|y_T|^2
+ <= (pi/2)^(2d+4) lambda_c |y_T|^2.                    (3.3)
+
+Restore the discarded coarse gradient by a fine gradient whose scalar
+block average is phi. This costs zero curl energy. At k=0 use a constant
+fine potential for the harmonic coarse datum, again with zero energy.
+Thus harmonics are retained, not incorrectly called exact gradients.
+
+Sum(3.3) by Parseval. For a real input, taking the real part of a complex
+feasible lift preserves its real target and cannot increase energy; this
+also handles a chosen representative of a Nyquist frequency. Equations
+(2.3),(3.2),(3.3) prove(0.1) on every compatible finite torus. The argument
+also gives the corresponding infinite-lattice quadratic-form statement.
+
+This lift is global, not compact. The result is an energy comparison, not
+a local C1 lift or a boundary-domain claim. The earlier archive bound by
+C||y||^2 did not first remove the coarse gradient; that simple additional
+step is precisely what yields the curvature-relative upper bound.
+
+4. EXACT NESTING AND THE NEXT CONSTRAINED GAP
+
+For compatible successive full ordinary averages, elementary minimization
+over the intermediate datum gives
+
+ inf_{R_L y=z} q_M(y)
+   =inf_{R_L R_M A=z} ||d A||^2
+   =q_(ML)(z),                                        (4.1)
+
+after the usual physical relabeling. In d=4 there is no residual energy
+power under this relabeling. The first equality uses the ACTUAL composition
+and is valid before invoking its gradient relation to Q_(ML)^st.
+
+Fix the block-local forest for the NEXT fixed-L step. Let X_L be its chord
+space (forest entries zero), and Q_next the actual next ordinary derivative.
+The finite-patch reconstruction already proved for this geometry gives
+
+ ||a||^2 <= C_L (||d a||^2+||Q_next a||^2).             (4.2)
+
+It is a local exactness/endpoint-covariance statement. It holds on a torus
+with periodic multiplicities, and on the declared anchored boundary version
+when all exterior rows and outward plaquettes are retained. On ker Q_next,
+(0.1) and(4.2) imply
+
+                 q_M(a)>=c_L ||a||^2.                 (4.3)
+
+The upper bound is q_M<=C_d d^*d<=C_d' I. The next constraint has a fixed-L
+right inverse with bounded row and column sums. Hence the saddle matrix
+
+             [ J_L^* K_M J_L     Q_next^* ]
+             [ Q_next                0   ]             (4.4)
+
+is uniformly invertible in l2, by the same decomposition into ker Q_next
+and its right-inverse complement as turn40. J_L is simple chord insertion;
+no long global forest is applied to the local fluctuation coordinates.
+All constants in(4.3)--(4.4) are independent of M, step number and volume.
+
+This is a reusable Gaussian gap, with its exact total-refinement reason.
+It is stronger than repeatedly proving q_(j+1)>=c q_j and multiplying c.
+The coarse precision K_M itself remains massless: (0.1) has precisely the
+coarse gradient and harmonic null spaces on a torus. No uniform gap for
+K_M or exponential decay of its unconstrained inverse is asserted.
+
+5. GAUSSIAN NORMALIZATION AND QUOTIENT CONVENTIONS
+
+At each finite step, after quotienting gauges that fix the next coarse
+roots, ordinary Euclidean coarea gives a constraint factor
+
+    det(Q_next Q_next^*)^(-1/2)
+
+and the constrained fluctuation integral gives
+
+    (2pi g^2)^(dim ker Q_next/2)
+                  det(H_restricted)^(-1/2).
+
+These are independent of the prescribed datum in the FLAT Gaussian theory,
+but they are not one and must remain in the vacuum ledger. Exact Fubini
+with these measures gives the nested Gaussian pushforward; an action-only
+comparison does not justify deleting the constants.
+
+The full framed coarse variables have residual gauge directions. On a
+torus there are also harmonic modes. To call a Gaussian a probability,
+divide by the declared coarse gauge subgroup and fix or separately retain
+the harmonic sector. At finite compact level the normalized gauge Haar
+integrals were exactly one; an infinite linear gauge volume cannot stand
+in for that identity. Equations(0.1),(4.1) are quadratic-form statements
+on full framed variables and descend to any correctly specified quotient.
+
+6. THE FIXED-CROSSING CUBE: DIRECT TOTAL-M BOUNDS
+
+Take the ORIGINAL fine cube K, with crossing/outside edges fixed to zero
+at the tangent, and every plaquette reading a free edge in the action.
+Assume it is a union of complete total-M blocks. Retain J_M, ALL coarse
+rows with at least one active endpoint, including crossing coarse rows.
+Extend fine fields and coarse data by zero outside their declared sets.
+The two-endpoint-block footprint implies that rows outside J_M vanish.
+The complete global fine curl of the zero extension is exactly the actual
+conditional curl: any nonzero plaquette reads a free edge. Thus the global
+curvature contraction proves
+
+                    ||d y||^2 <= q_M^K(y).              (6.1)
+
+For the upper bound assign each incident row to one active endpoint block.
+The turn16 construction supplies, inside that owner block, a lift of its
+whole incident star which sets every other star entry to zero. Recall the
+actual ingredients, because support is decisive here:
+
+ * For N=M=2m+1 the incoming/outgoing longitudinal weights on a compact
+   owner-block field are (m-j)/M and (j+m+1)/M. Two smooth interior bumps
+   with separated normalized first moments give a uniformly invertible
+   2 by2 matrix. Transverse compact bumps give all 2d star directions.
+ * The bumps have uniform physical C2 norms for M=L^k>=L>=11 and vanish
+   before the block boundary. Thus all original fixed fine crossings stay
+   zero, even when the target coarse row is a crossing row.
+ * The iterated ordinary endpoint correction is d Psi_M with Psi_M
+   supported at that owner center for such a bump. A compact fine gauge
+   parameter taking the opposite center value cancels it; its derivative
+   has uniform physical C2 norm and the same strict interior support.
+
+There are at most 2d assigned directions per owner. Their physical block
+volumes are one, and their supports have uniformly bounded overlap. The
+sum E_M therefore obeys
+
+ R_M E_M=I,   ||d_eta E_M y||_eta^2 <= C_d' sum_{c in J_M}|y_c|^2.
+                                                               (6.2)
+
+This is the actual ordinary whole-star lift; it does not use the older
+one-sided incident-fine-edge lift which allowed forbidden crossings.
+It is unnecessary to project E_M into a long global fine forest before
+computing the variational energy. If a quotient representative is desired,
+the allowed fine gauge projection preserves the constraint and curl.
+
+Equations(6.1)--(6.2) prove(0.2). This argument has been written for M>=L;
+M=1 is the original field space itself, not an assertion that a fixed fine
+crossing is an independent variable at refinement one.
+
+For an aligned nested sequence define the intermediate state to be J_M,
+with its outside coarse rows zero, and apply the full next ordinary map.
+Then EXACTLY
+
+             inf_{R_L y=z} q_M^K(y)=q_(ML)^K(z).         (6.3)
+
+The inherited intermediate field space has free incident crossing rows.
+Using a next local forest rooted at the next centers and fixed exterior
+anchors, the same finite-patch proof of(4.2) applies: curl zero implies a
+local gradient, forest paths reduce its endpoint values to anchors, complete
+ordinary rows compare neighboring center values, and the fixed exterior
+strip compares boundary anchors. Only finitely many fixed-L patch types
+occur; bounded overlap gives row and column estimates. The compact
+next-star inverse is supported on a subset of these allowed variables.
+
+Consequently(6.1),(6.2),(4.2) give a next constrained gap and KKT inverse
+norm uniform in M and R, as in(4.3)--(4.4). The direct total-M upper bound
+is what prevents an accumulating upper constant here.
+
+This construction does NOT freeze the crossing rows at intermediate
+scales. If those values are conditioned separately, they become additional
+constraints and(6.3) must retain them. Dropping them or replacing the state
+by a new fixed-crossing box is not an identity. Similarly, nonaligned holes,
+partial coarse row sets, or independent fine boundary data added at later
+levels are not covered by this hierarchy.
+
+7. WHAT THE RESULT ADDS, AND THE REMAINING SPATIAL INPUT
+
+The periodic comparison(0.1) and exact nesting give uniform Gaussian energy
+ellipticity and next-fiber gaps for the literal successive ordinary maps.
+For the explicit anchored cube, (0.2) gives the corresponding spectral
+iteration input on the inherited incident-row state. These are genuine
+flat reference statements at arbitrary depth, not an interacting RG theorem.
+
+The archived homogeneous periodic symbol/locality proof additionally supplies
+uniform exponentially weighted kernels for K_M. With that separate input,
+the next KKT inverse has weighted decay by a small exponential conjugation
+and the just-proved uniform spectral inverse. For the fixed-crossing total
+hierarchy, (0.2) alone supplies no such weighted kernel estimate. The one-step
+turn40 proof used a finite-range original H; the generated K_M is nonlocal.
+Therefore its uniform boundary spatial estimates need an actual direct
+total-M propagator proof, not a repetition of the finite-range argument with
+an unrecorded growing interaction range.
+
+No finite-g Laplace error or its derivatives have been absorbed into K_M.
+Likewise the local one-loop saddle determinant and the exact Gaussian
+vacuum factors remain separate from the classical quadratic action.

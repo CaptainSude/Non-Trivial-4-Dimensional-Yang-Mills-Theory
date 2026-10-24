@@ -1,0 +1,294 @@
+LOCAL ANALYTIC COARSE-PARAMETER CARRIERS FROM REAL SPATIAL RESPONSE
+24 October 2026. Root derivation. Scoped mathematical and native-input
+reviews completed; the full native carrier attachment remains open.
+
+Terminology: the proved objects are an analytic coarse-parameter
+NEIGHBORHOOD expansion. The word carrier below does not assert the
+native connected-polymer shortest-tree norm. Section5 makes the
+finite gauge pullback and this distinction explicit.
+
+SCOPE
+
+This note gives the exact localization and complex interpolation step
+for the actual first-bare A of local_to_full_first_bare_projection_20261024.
+Its native real spatial response is established separately in
+local_full_projection_spatial_profile_20261024; sparse complex tubes
+are Section6 of the local-to-full result and its native audit.
+The carriers below use physical COARSE PARAMETER coordinates. They
+are not yet gauge-invariant independent-(U,J) Ward carriers. Freezing
+exterior coordinates is an auxiliary evaluation in the same admitted
+family, not a change to the original measure or source identity.
+
+1. THE TWO PRECISE INPUTS
+
+Fix one finite original first-success lattice and an admitted Cartesian
+real coarse-parameter box around zero. Let A(beta)=A_beta f and let P0
+be the complete local coarse footprint of its active/boundary/pivot reads.
+Take ||f||<=eta. The following two estimates have explicit native prices:
+
+ |partial_(beta_q) A(beta)|
+       <= eta C_birth exp[-mu d(q,P0)],                 (1)
+
+and for a finite set Gamma of complexified coordinates, with others
+held real, A is holomorphic and
+
+ |A|<=9 eta on a tube of radius rho_Gamma,
+ rho_Gamma >= min(actual spare margins,
+                 c g^2/[C_local+C(1+|Gamma|)]).          (2)
+
+For precision, (2) means that the stated minimum is an AVAILABLE
+choice of radius, with its fixed constants chosen conservatively;
+no unknown minimum is being asserted bounded below. All margins must
+come from the actual first family. C_birth is polynomial in inverse g
+and the fixed complete read/margins; it is independent of ambient volume.
+If a registered margin is smaller, retain it in all subsequent prices.
+
+The derivative in (1) is obtained by differentiating a fixed-domain
+conditional numerator, then the exact full normalization. It does not
+differentiate f at a complex or moving physical argument. In particular
+the separate native proof, rather than mere boundedness of A or of E,
+is required. A=T-E with a small C0 error alone would leave a distance-
+independent error floor and would NOT prove (1).
+
+2. EXACT FINITE TELESCOPING ON THE ORIGINAL CARTESIAN FAMILY
+
+Let B_n={q:d(q,P0)<=n}, n>=0, and let pi_n beta equal beta on B_n
+and zero outside it. These evaluations must lie in the SAME admitted
+real family for the whole line segments used below. Take n_max with
+B_(n_max) equal to the finite coarse lattice. Define
+
+ F_n(beta)=A(pi_n beta),
+ a_0=F_0, a_n=F_n-F_(n-1), n>=1.                       (3)
+
+Then exactly A=sum_(n=0)^n_max a_n. Each a_n depends only on beta|B_n.
+No original mass or source coefficient has changed. Also
+
+ a_n(0)=0 for n>=1,    a_0(0)=A(0),                    (4)
+
+so the quantum flat scalar is concentrated in a_0, not deleted.
+For a torus, distances and supports use its actual finite graph;
+the construction does not infer that its last read is contractible.
+
+By integrating (1) over the shell B_n minus B_(n-1), on any real
+inner box |beta_q|<=b with the required spare margin,
+
+ |a_n(beta)|<=eta C_birth b |B_n minus B_(n-1)| exp[-mu(n-1)]
+             <=eta C_1 (1+n)^d exp[-mu n].              (5)
+
+The factor in C_1 includes fixed P0 geometry and b; it is not the
+ambient volume. The same derivative integration shows directly that
+|A-F_n| is bounded by a polynomial times eta exp(-mu n), without
+counting all omitted coarse variables at their maximum volume.
+
+Both terms in (3) extend holomorphically when the coordinates B_n
+are complexified in the sparse tube (2). Taking nested available radii
+rho_n= min_(k<=n) rho_(B_k), their difference obeys
+
+              |a_n|<=18 eta.                           (6)
+
+This uniform bound alone is not a decaying carrier estimate. The
+following one-variable argument transfers (5) to a smaller complex
+tube without a loss depending on the dimension |B_n|.
+
+3. DIMENSION-FREE REAL-TO-COMPLEX TRANSFER
+
+Let h be holomorphic on a neighborhood of the upper half-disc
+D={t:|t|<2, Im t>0}, bounded there by M. Suppose |h(t)|<=epsilon
+on its real diameter [-2,2], with 0<epsilon<=M. The harmonic measure
+of that diameter at i is
+
+ omega=1-(4/pi) arctan(1/2)>0.                          (7)
+
+Indeed (2+t)/(2-t) sends D to the first quadrant, the diameter to
+its positive real side and the semicircle to its positive imaginary
+side. Their harmonic measures are 1-(2/pi)arg((2+t)/(2-t)) and its
+complement. Apply the maximum principle to subharmonic log|h|, using
+standard limiting arguments for zeros and the two corner points:
+
+                 |h(i)|<=M^(1-omega) epsilon^omega.     (8)
+
+For a target complex field beta=a+i v in B_n, both a and v have REAL
+components. Hold v fixed and set h(t)=a_n(a+t v). Require
+||v||_infinity<=rho_n/4, and that a has at least rho_n/2 spare margin
+inside the real box where (5) holds. For |t|<=2 the real part remains
+admitted and the imaginary part stays in the sparse complex tube.
+Thus h is holomorphic on a neighborhood of the half-disc, (6) gives
+M=18 eta, and (5) applies on its ENTIRE real diameter. If its right
+side exceeds M, use the already available real bound M instead.
+The construction uses one complex variable t regardless of |B_n|.
+For v=0 the real estimate suffices directly.
+
+Consequently, on this smaller coarse-parameter tube,
+
+ |a_n|<=18 eta min{1, [C_1(1+n)^d exp(-mu n)/18]^omega}
+       <=C eta C_1^omega (1+n)^(d omega) exp[-omega mu n], (9)
+
+with the trivial cap 18 eta retained when useful. After spending a
+fixed fraction of the exponential, the polynomial shell factor is
+summable. The change from mu to omega mu is fixed and independent of
+the number of parameters or the volume.
+
+4. CONSEQUENCES AND EXACT LIMITS
+
+Equation (9) is an analytic local-carrier decomposition in the actual
+physical coarse coordinates, with coefficients indexed by expanding
+source neighborhoods. At fixed derivative order k, Cauchy on a further
+smaller tube gives a price rho_n^-k. If the registered margins and
+rho_n^-1 grow only polynomially in n and inverse g, this adds only
+a polynomial carrier/birth price; the exponential spatial sum survives.
+Any nonpolynomial margin loss must instead be retained and checked.
+
+This establishes finite-volume coefficient estimates uniform in the
+ambient volume, wherever the inputs (1),(2) have that uniform scope.
+It does not by itself prove convergence of coefficients as the torus
+grows; that requires a boundary-condition comparison. Nor does the
+decreasing sequence rho_n imply a positive common tube for the entire
+infinite sum. The finite identities and summable real bounds remain
+valid without making such a global holomorphy claim.
+
+Finally the operation pi_n is generally not equivariant under local
+gauge transformations. Individual a_n therefore do NOT inherit a
+gauge Ward identity merely because a separate invariant version of
+A exists. Deterministic tree canonicalization has an exact finite
+gauge law, but applying different gauges to different coefficients
+requires a matched reconstruction/admission argument to preserve
+telescoping. An independent native background/current-pair extension
+is also not supplied by beta-holomorphy. These are the remaining
+attachment requirements; they cannot be replaced by (9).
+
+5. COMPATIBLE NESTED TREE GAUGES: EXACT FINITE INVARIANT EXPANSION
+
+This section is a finite conditional consequence of Sections1--4 and
+the actual first-success block-lift covariance. It assumes the incoming
+physical source is gauge invariant and that the complete datum is
+transformed, including every defining geometry/reference read. No
+fresh local zero extension is substituted for that transformed datum.
+
+First replace A by its normalized average over CONSTANT color rotations:
+
+ A_bar(beta)=integral_(SU(2)) A(Ad(v)beta) dv.
+
+Take color-norm boxes and their fixed smaller complex Euclidean tubes
+so those rotations preserve the domains. If the original coordinate
+description uses component polydiscs, the fixed color conversion is
+retained. The sparse bound (2) and response (1) survive, with harmless
+fixed color factors. This average is holomorphic by uniform domination.
+Since the actual T is invariant under these rotations,
+
+ T=A_bar+E_bar,  E_bar=integral E_(Ad(v)beta) dv,
+
+with the same rare real error and A_bar1=1,E_bar1=0. The original
+C_out Z_beta is unchanged. The operation pi_n commutes with constant
+color rotation. Hence every F_n and a_n constructed from A_bar is
+constant-color invariant. Full local-gauge averaging of raw A is not
+being used: its original Cartesian chart need not contain that orbit.
+
+Choose the nested edge neighborhoods with the following exact path
+property. There is one root o and one spanning tree T of the COMPLETE
+finite coarse graph such that every root-to-vertex path needed for an
+edge of B_n lies within B_n. Include endpoint/incident reads explicitly.
+One construction starts from a fixed connected hull of P0 with its
+own tree, and attaches each new vertex along a fixed predecessor of
+smaller graph distance from that hull. Use the associated nested
+induced edge neighborhoods and a fixed incidence closure. Fixed seed
+and stencil allowances change the shell estimates only by their
+declared geometry constants and bounded shifts of n. If the original
+B_n does not have this property, use this compatible family from the
+start of Section2; unrelated gauges chosen separately do not suffice.
+
+Let C_n(V) be the tree-gauged coarse field on B_n, using those fixed
+root paths. If P_y is the root-to-y transport, then
+
+ C_n(V)_e=P_(e_-)(V) V_e P_(e_+)(V)^-1.
+
+For n>=1 its restriction to B_(n-1) is EXACTLY C_(n-1)(V). Under any
+real vertex gauge u,
+
+ C_n(V^u)=Ad(u(o)) C_n(V).
+
+On the patch where the principal logs of all required C_n lie inside
+the real boxes with the margins of Section3, set
+
+ b_n(V)=a_n(log C_n(V)/i).                              (13)
+
+Each b_n is gauge invariant and reads only B_n with its specified
+root paths. The common root and the restriction identity imply
+
+ sum_(n=0)^n_max b_n(V)
+      =A_bar(log C_T(V)/i).                             (14)
+
+Indeed a_n=F_n-F_(n-1), and both terms evaluate the SAME canonical
+coordinates on B_(n-1). This is an exact telescoping identity, not a
+claim that an arbitrary independent gauge projection preserves a sum.
+
+On the common complete canonical admission patch, the native coarse
+gauge with its block-constant fine lift gives
+
+ T_V f=sum_n b_n(V)+E_can(V),
+ E_can(V)=integral E_(Ad(v)log C_T(V)/i) f dv.            (15)
+
+Thus the same rare real remainder bound is retained. This uses the
+SAME complete physical outer datum and its actual orbit covariance;
+it does not compare T at a different auxiliary extension. All original
+mass, chart/certificate indicators, their complements, flat constants
+and raw contacts stay at their original places. A field-dependent
+tree gauge is applied pointwise, not as an outer Haar change of
+variables. The common admission patch can be stricter than the raw
+Cartesian box; its probability is not supplied by this construction.
+
+Let ell_n bound the paths in B_n. At a real unitary field in the strict
+canonical patch, the product/log map has first variation bounded by
+C(1+ell_n). For complex physical variations of size s, the product
+norms cost exp[C ell_n s]. Shrink s so this factor is bounded and so
+the canonical image stays within the smaller tube used in(9). An
+available tube for b_n therefore has radius
+
+ sigma_n=c min(rho_n,spare canonical real margin)/(1+ell_n). (16)
+
+Its holomorphic norm has exactly the decay in(9), for n>=1; b_0 has
+its separate <=9 eta cap. At any fixed derivative order this adds a
+polynomial path price when ell_n and the declared inverse margins
+are polynomial in n. The estimates are coefficientwise; decreasing
+sigma_n is not a common positive-radius tube for an infinite sum.
+
+The exact flat values are b_n(1)=0 for n>=1 and b_0(1)=A_bar(0).
+Constant-color invariance kills the first colored derivative at flat.
+On a filled contractible neighborhood the tree/curl identity gives
+the usual flat gauge Ward identities with the actual filling-area
+price. On a torus or a neighborhood with holes, tree gauge still has
+the identities above, but winding/harmonic variables remain and are
+not bounded by curvature alone. Wrapping terms must be retained in
+their actual separate lane; no contractible filling is asserted for
+them. Boundary vertex gauges act on all their incident supplied
+reads, rather than on a truncated list of physical arguments.
+
+There is an essential norm limitation. In four dimensions a filled
+radius-n neighborhood has O(n^4) cells; the shortest connected tree
+visiting that entire localization set can have length of order n^4.
+The amplitude exp(-c n) in(9) controls DIAMETER localization, not an
+exp(kappa tree-length) norm for that set. A polynomial sparse-tube or
+tree-gauge price does not bridge this difference. The expansion is
+useful as a finite analytic neighborhood expansion, but is not yet
+the native Balaban polymer coefficient theorem. It still needs a
+more economical complete-read expansion or a separately proved
+consumer for this neighborhood class.
+
+Nor does physical coarse beta holomorphy establish a bounded
+independent-(U,J) extension on the native pair domain. The actual
+off-graph action/chart, compatible read, current dependence and
+complex norm would need separate registration. The invariant finite
+decomposition (15) closes neither that gate nor repeated source
+transport, original complement census or an all-depth Ward gain.
+
+Related full finite construction and joint retained-boundary variant:
+work/invariant_analytic_projection_feasibility_20261024.txt.
+
+READBACK AND AUDITS
+
+The spatial input is proved in local_full_projection_spatial_profile_20261024
+and checked in its focused audit. The sparse complex input is registered
+in local_to_full_first_bare_projection_native_audit_20261024. The independent
+half-disc/telescoping review is analytic_annular_interpolation_audit_20261024.
+The root readback of those inputs and the added nested gauge section is
+local_projection_spatial_and_sparse_root_audit_20261024. All are scoped
+passes with the declared first-success and complete-domain qualifications.

@@ -1,0 +1,109 @@
+TEMPORAL FILTER AND PHYSICAL COMPOSITE AUDIT -- TURN67
+20 October 2026. gauge47. Final PASS at the stated scope.
+
+Reviewed producer:
+work/temporal_filter_physical_probe_turn67.txt
+SHA256 E22B36A80CB172E5AF87DD4FEA555B022EC311089518BE9FB6B6B8C94D74532F.
+All sections read. Requested focus: Sections3--4 and7.
+
+1. PRIVATE-LOOP NONLINEAR PROCESSING
+
+The conditional Haar L1 estimate is used against a bounded test
+of one holonomy, with all other holonomies and the exterior test
+fixed after conditioning outside its private edge set. Replacing
+that holonomy by an independent Haar integration leaves a bounded
+test of the remaining holonomies in the SAME original expectation.
+Iterating adds the errors; it does not assert independence of the
+private edge variables under the original law. The hypotheses that
+private sets are disjoint and are unread by all other loops and Z
+are essential and explicitly retained.
+
+With c the product-Haar expectation of Phi, both the mean error
+and the reflected mixed error are at most sum epsilon_j. Since
+the reflected read avoids the positive private edges and
+E Theta B=conjugate(EB), the centered OS norm is at most twice
+that sum. RP supplies nonnegativity only. Numerical rescaling
+inside a bounded nonlinear Phi does not change the bound.
+
+For m_j>=c/a, beta=O(log(1/a)) and polynomially many loops, the
+full sum tends to zero. The result is correctly limited to the
+actual isotropic law with the private-read hypotheses. It is
+not transferred to the differential Hamiltonian ground law,
+thick/flowed loops, or unbounded growing-norm insertions.
+
+2. ACTUAL PHASE ENERGY AND ITS FREE NORMALIZATION CHECK
+
+The weighted spatial action satisfies
+|grad sum w_p h_p|^2<=8 sum w_p^2 h_p:
+each edge has four contributions, each squared gradient is
+at most h_p/2, and each plaquette has four edges. The actual
+cubic ground-law bound E h_p<=3g^2/4 and kappa=g^2/(2a)
+therefore give exactly
+
+ D(exp(i t sum w_p h_p))<=3t^2g^4 a^-1 sum w_p^2.
+
+The weights a^2 f/g^2 are a^3/4 times the canonical action-density
+insertion 4 sum f(h-Eh)/(g^2a). This attenuation is explicitly
+identified; a uniform energy bound alone does not calibrate it.
+
+In the free quadratic Hamiltonian, Pauli/2 coordinates give
+curvature covariance C=(g^2/2)|d| on its transverse range,
+with ||C||<=sqrt(3)g^2. Wick contraction for h_quad=|curl theta|^2/8
+is (1/32)Tr(WCWC). Including three color copies yields
+Var_free<=9g^4 sum w_p^2/32. The signed-weight Hilbert--Schmidt
+bound is valid. The phase variance bound t^2 Var(f_w) follows
+from the Lipschitz inequality using two independent copies.
+No free upper bound on the interacting variance is inferred.
+
+3. FILTER IDENTITIES, SUPPORT, AND THE COMPOSITE ALTERNATIVE
+
+The exact spectral bounds in Sections1--2 are correct, including
+D(P_tF)<=Var(F)/(2et), the bounded signed-filter estimate, and
+the distinction between the exact finite-spacing transfer
+logarithm and the temporal-limit differential Hamiltonian.
+
+The strong-coupling support example uses an isolated simple
+ground eigenvalue of K plus a bounded analytic perturbation.
+K W_p=3W_p gives log Omega=(epsilon/3)sum W_p+O(epsilon^2).
+An adjacent plaquette contributes a nonconstant shared-edge
+gradient contraction +/-a.b/4 depending on its exclusive
+opposite edge. On the stated sufficiently large cubic graph
+that exclusive edge has no competing first-order term sharing
+an edge with p. This is a valid actual finite-model obstruction
+to strict support preservation, with no weak-coupling extension.
+The fixed-cube tree-gauge conclusion keeps its cube-dependent
+constant and excludes growing or physically rescaled probes.
+
+For an unbounded centered insertion finite at each regulator,
+the inequality
+D(P_t Q)<=C_Q(t)/(et), Var(P_tQ)=C_Q(2t)
+retains one exponential spectral factor instead of substituting
+the divergent equal-time norm. The normalized separated-source
+input is genuinely different from a one-point energy estimate.
+Its actual interacting attachment is explicitly unproved.
+
+4. POSITIVE-TIME FREE MAXWELL CONSTANT
+
+For f in C_c^infinity(R^3), f>=0 and f not identically zero,
+the rank-two transverse projector gives
+
+ int sum_ij |C_t,ij(x)|^2 dx
+  = [1/(4pi^2)]int_0^infinity p^4 exp(-2tp) dp
+  =3/(16pi^2t^5).
+
+The q/2 Wick factor for Q=(1/2)sum_c,i int f :B_i^c squared:
+therefore yields
+C_Q(t)<=3q||f||_2^2/(32pi^2t^5).
+The convolution is absolutely controlled for this stated test.
+Strict positivity follows from the nonzero covariance at zero,
+its continuity, and positive mass of close pairs under f(x)f(y).
+The filtered energy constant is consequently
+3q||f||_2^2/(32e pi^2t_0^6), as displayed.
+
+The author implemented the requested test-function precision:
+compact support alone was strengthened to C_c^infinity.
+No other repair was needed.
+
+The free positive-time OS vector does not establish the interacting
+normalized separated-source estimate, physical renormalization,
+mixed-insertion compatibility, or the complete YM4 continuum theory.

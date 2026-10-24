@@ -1,0 +1,252 @@
+TURN88 -- WHAT THE ACTUAL TRANSFER FORM CAN CONSUME FOR THE FLOWED SCALAR
+gauge47. 20 October 2026. Companion calculation; no old files changed.
+
+DECISION
+
+The exact Wilson transfer/Dirichlet form and the available temporal
+plaquette MGF do give a quantitative adjacent-slice bound for the declared
+flowed scalar. It involves the scalar's derivatives along the ACTUAL
+original Wilson slab's geodesic interpolation. Those intermediate laws
+are not the Wilson slice marginal. This is an explicit finite original-law
+consumer, but its l1 influence input is too strong already for a free
+point-probe diagnostic. It must NOT become a mandatory physical target.
+The exact correlated square before Holder/Minkowski is the relevant
+weaker consumer.
+
+Even a successful upper bound on that Dirichlet form would not itself
+supply positive physical-band mass. The old variance-plus-increment
+criterion first needs a variance floor, and a time-filtered coefficient
+needs a nonzero spectral response away from zero. No available unmarked
+energy inequality supplies those lower bounds for the physically
+calibrated spatial-flow scalar. This conclusion uses the actual transfer
+form, not a generic countermodel.
+
+1. EXACT NORMALIZED WILSON SLAB, WITH THE GAUGE LINKS RETAINED
+
+Use the finite nondegenerate periodic Wilson lattice with beta>0 and
+time-homogeneous spatial potential. For simplicity the temporal coupling
+is the same beta on every link. The construction and original denominator
+are established in transfer_matrix_witness_turn64.txt Sections2--3:
+ T=M C_beta P M on the physical Hilbert space,
+ M=exp(-V_sp/2), C_beta=product convolution by q_beta,
+ q_beta(W)=exp[-beta h(W)]/c(beta),
+ Z_W=c(beta)^(N|E_sp|) Tr_phys T^N.                     (1.1)
+P is the site-gauge projection, equivalently the integral of the temporal
+links in a slab. Both copies of M and that projection are indispensable.
+
+Let (U,V,g) be the two neighboring spatial fields and the temporal links
+between them, with the marginal of the FULL normalized original Wilson
+law, including the entire rest of the time circle. The gauge-transformed
+field V^g can be chosen so that the temporal plaquette at spatial edge e
+is U_e(V^g_e)^(-1), up to a conjugation/inversion that leaves h invariant.
+For a real smooth gauge-invariant slice function F define
+ d_N(F)=(1/2) E_W [F(V)-F(U)]^2.
+Then exactly
+ d_N(F)=Tr(T^(N-1)[F,[F,T]])/(2 Tr T^N).                (1.2)
+In kernel notation the complete positive slab weight is
+ K(U,V)K^(N-1)(V,U)/(Tr T^N), with its temporal-gauge variables retained
+before integrating them out. It is not the independent product q_beta
+conditional on arbitrary U or V; the remainder of the circle remains.
+
+Choose the principal logarithm, except on the measure-zero antipodal
+set, and put
+ X_e=log(V^g_e U_e^(-1)), U_e(v)=exp(vX_e)U_e, 0<=v<=1.
+In the Pauli/2 metric, if eigenangle theta is in[0,pi], then
+ |X_e|^2=4theta^2<=2pi^2(1-cos theta)
+                       =2pi^2 h_temporal,e.           (1.3)
+The inequality follows from sin(theta/2)>=theta/pi.
+Gauge invariance gives F(V)=F(V^g), so this path compares the actual
+source at both endpoints. No temporal gauge fixing of the whole torus
+or new normalization is required.
+
+2. A FINITE ORIGINAL-LAW INFLUENCE INEQUALITY
+
+The exact derivative formula is
+ F(V)-F(U)=integral_0^1 sum_e <grad_e F(U(v)),X_e> dv,   (2.1)
+where gradients are left-trivialized in the same metric. In particular
+the Dirichlet form is the expectation of the square of this integral;
+all cross-link and density correlations remain in that square.
+
+The original one-slab theorem of TURN64 gives
+ E_W exp(t beta h_temporal,e)<=(1-t)^(-3/2), 0<=t<1.
+For any real p>=1, use x^p<=(2p/e)^p exp(x/2), x>=0, to obtain
+ ||beta h_temporal,e||_Lp
+                         <=(2p/e) 2^(3/(2p)).         (2.2)
+This is exponential Markov domination, not differentiation of an MGF
+inequality to assert domination of higher moments. Combining(1.3),(2.2),
+ ||X_e||_L(2p)^2
+                  <=[4pi^2 p/(e beta)]2^(3/(2p)).      (2.3)
+All these expectations are under the same FULL original slab law.
+
+Take p>1 and q=p/(p-1). Define the actual path influence
+ A_q(F)=integral_0^1 sum_e
+                  ||grad_e F(U(v))||_L(2q,Wilson slab) dv.
+Minkowski in(2.1) and Holder for each edge yield
+ d_N(F)<= [2pi^2 p/(e beta)]2^(3/(2p)) A_q(F)^2.        (2.4)
+This bound is valid at every finite regulator for the smooth finite
+spatial-flow scalar, any convex spatial average of it, and any other
+smooth gauge-invariant slice F. It does not require a selected history
+or conditional independence. For example p=q=2 gives the explicit
+coefficient (4pi^2/e)2^(3/4)/beta times A_2(F)^2.
+
+The formal sufficient condition furnished by this bound would be
+ A_q(F)^2<=C beta a_t                                  (2.5)
+which would give d_N(F)=O(a_t) in the ORIGINAL Wilson law. Section2A
+shows that the l1 sum can make this an inappropriate research target:
+it loses a full spatial volume factor in a free point-probe example.
+The exact square in(2.1) could exploit correlations that(2.4) discards.
+No estimate of(2.5) is asserted. In particular(2.3) controls the temporal
+innovation, not its product with the random source derivative.
+
+For the point radial probe the terminal derivative is O(a_s^-2), and
+its nonlinear pullback is the adjoint Y in
+turn88_spatial_flow_influence_gauge.txt Section5. The actual temporal
+path here changes the full initial spatial configuration. Neither its
+intermediate law nor its weighted adjoint can be replaced by an
+independent Gaussian, a product link law, or the unflowed Wilson slice
+law. The pointwise energy-sublevel modulus fails by that note's exact
+finite-pair construction, while the known coherent-window suppression
+shows that this failure alone does not decide the annealed A_q.
+
+2A. THE L1 CONSUMER LOSES THREE POWERS ALREADY IN A FREE POINT TEST
+
+This paragraph tests the bound, not the original nonlinear Wilson law.
+Consider the linear spatial Maxwell flow on a fixed cubic physical torus
+of side L, with one color curvature at a POINT. Remove harmonic potential
+zero modes when defining the Gaussian; the curl annihilates them. For link coordinates
+theta_e, use a normalization g_c>0 and write
+ X_c=sum_e l_e theta_e^c,
+ l_(y,2)=[H_(s,a)(y+a e1)-H_(s,a)(y)]/(g_c a^2),
+ l_(y,1)=-[H_(s,a)(y+a e2)-H_(s,a)(y)]/(g_c a^2),        (2A.1)
+with harmless changes of orientation/basepoint. H_(s,a) is the normalized
+lattice heat kernel. These are the exact coefficients of lattice curl
+after heat flow; longitudinal gauge components cancel. If K_s^L is the
+physical periodic heat kernel, then uniformly in y,
+ l_(y,2)=(a^2/g_c)[partial_1 K_s^L(y)+o(1)],
+ l_(y,1)=-(a^2/g_c)[partial_2 K_s^L(y)+o(1)].            (2A.2)
+The same convergence holds for Riemann sums of absolute values and squares.
+For justification, H_(s,a)/a^3 has the torus Fourier coefficients
+exp[-s lambda_a(k)], lambda_a(k)=4a^-2 sum_i sin^2(a k_i/2).
+On the Brillouin zone lambda_a(k)>=(4/pi^2)|k|^2, and the difference
+multiplier divided by a is at most |k_i|. Summable Gaussian Fourier
+majorants give the uniform convergence in(2A.2), including the tails.
+
+Both following constants are strictly positive at finite s,L:
+ C1=int (|partial_1 K_s^L|+|partial_2 K_s^L|),
+ C2=int (|partial_1 K_s^L|^2+|partial_2 K_s^L|^2).
+Thus
+ sum_e |l_e|=[C1+o(1)]/(g_c a),
+ sum_e l_e^2=[C2+o(1)]a/g_c^2.                          (2A.3)
+No norm comparison with a hidden dimension constant is being used.
+
+For the three-color bounded radial POINT probe B=exp(-alpha|X|^2),
+ each link gradient has norm
+ |grad_e B|=|l_e| Z(X),
+ Z(X)=2alpha |X|exp(-alpha|X|^2).                        (2A.4)
+The random radial factor is the SAME at every edge. In a calibrated
+Gaussian reference whose flowed component variance tends to v>0, its
+L^(2q) norm tends to a strictly positive finite constant. On the linear
+interpolation between adjacent free time slices, the covariance of X(v)
+converges to that same variance uniformly in v in[0,1], since the
+positive-s flow covariance is continuous at temporal separation0.
+Consequently the analogue of A_q has square of order1/(g_c^2 a^2),
+whereas E sum_e |grad_e B|^2 is of order a/g_c^2. The ratio is a^-3.
+In the customary normalization beta g_c^2 comparable to1, the proposed
+condition(2.5) would ask beta/a^2 to be O(beta a), which is false.
+
+That customary running normalization is NOT a license to change the
+fixed g_* in our original source. For the literal fixed-g_* source in
+an uncalibrated bare Gaussian with g_a^2 comparable to1/beta, instead
+put g_c=g_* in(2A.1) and X=(g_a/g_*)Z_can. As g_a->0,
+ ||Z(X)||_L(2q) is comparable to g_a/g_*.
+Then A_q^2 is of order g_a^2/(g_*^4 a^2), and the squared-gradient
+sum is of order g_a^2 a/g_*^4. The SAME volume-factor loss remains.
+For logarithmic beta this A_q still violates(2.5): its ratio to beta a
+is of order1/(beta^2 g_*^4 a^3). This bare Gaussian is precisely the
+degenerating calibration discussed in TURN63; it is not an original-law
+prediction or a candidate nonzero reference channel.
+
+This exact diagnostic is for the radial point function. Our current
+boundary-channel source is a FIXED SPATIALLY SMEARED phi. Its link
+derivative is a sum over different output points with different random
+radial factors. No lower bound of type(2A.4) for that entire smear has
+been proved here. Therefore this section does not assert impossibility
+of(2.5) for that phi; it demonstrates that(2.4) can be grossly wasteful
+already in the simplest fixed-scale flowed source. The next step should
+retain the correlated square or actual conditional innovations, rather
+than impose the l1 bound as a necessary interface.
+
+3. WHY THIS STILL DOES NOT GIVE A PHYSICAL-BAND LOWER BOUND
+
+For F centered in the same finite-period law, write v_N=Var_W F and
+G_N(m)=Cov_W(F_0,F_m). The exact spectral expansion of T gives
+ d_N=v_N-G_N(1),
+ G_N(m)>=v_N(1-d_N/v_N)^m, 1<=m<=N.                    (3.1)
+The Jensen statement is for v_N>0; constant F is trivial. This is the
+OLD TURN64 theorem. Thus a uniform v_N>0 together
+with(2.5) would give a separated norm floor. Both required source
+estimates remain unproved for the fixed physical spatial-flow scalar.
+The action MGF and flow dissipation are upper energy estimates. They
+contain no lower variance estimate for this bounded nonlinear source.
+
+Moreover, even(3.1) does not exclude spectral weight converging to zero
+energy. The concrete filtered target in turn88_filtered_probe_tail.txt
+is the norm of (1-exp(-delta H))v after an infinite-time stationary
+scalar reconstruction. Its lower bound requires a nonzero difference
+response. An upper bound on d_N cannot supply that lower response.
+The explicit Gaussian filter benchmark is a reference calculation,
+not an original-Wilson spectral lower bound.
+
+At finite thermal period the exact spectral ratios lambda_j/lambda_i
+in(3.1) may exceed1; their logarithms are energy differences of both
+signs. One may use(3.1) directly, but must not replace them by a positive
+vacuum Hamiltonian without the additional infinite-time limit. The
+buffer lemma of TURN82 bounds physical translation derivatives of an
+ALREADY existing OS vector from above. It cannot create its norm.
+
+4. THE DIFFERENTIAL GROUND-STATE FORM IS A DIFFERENT EXACT CONSUMER
+
+The controlled temporal limit at FIXED spatial lattice yields
+ H_a=[g^2/(2a_s)]K+[4/(g^2 a_s)]S_sp,
+ with positive ground state Omega_a. In that actual law the exact
+ground-state transform gives, for a smooth slice F,
+ <(F-EF)Omega,(H_a-E0)(F-EF)Omega>
+                   =[g^2/(2a_s)] E_(Omega^2)|grad F|^2. (4.1)
+Hence a uniformly bounded physical first energy moment would follow
+from E_(Omega^2)|grad F|^2=O(a_s/g^2). This is the old explicit target
+of TURN65--69. The proved action/Fisher estimates in
+hamiltonian_energy_turn66.txt bound E S_sp and the score of Omega;
+they do not bound the source-dependent gradient on the right of(4.1).
+
+The exact isotropic finite-Wilson Hamiltonian is -a_t^-1 log(T/lambda0),
+not the differential operator in(4.1). Even where a logarithmic energy
+form exists in the actual GROUND limit, its centered spectral measure rho
+gives d_ground/a_t=int(1-exp(-a_t E))/a_t d rho(E)
+<=int E d rho(E)=E_H, not the reverse. This is explicitly a ground-state
+statement; a finite thermal form would require its own energy-difference
+moment assumptions. Thus no upper Hamiltonian energy bound follows by
+dividing an arbitrary discrete Dirichlet upper bound by a_t. Conversely a proved
+ground-state form upper bound still requires a variance floor to yield
+a nonzero separated state and further calibration to exclude zero energy.
+
+These are distinct SAME-law consumers. Transferring the old Omega^2
+energy theorem to an isotropic Wilson slice, or inserting an isotropic
+Wilson expectation into(4.1), would silently replace the measure.
+
+5. EXACT CURRENT CONCLUSION
+
+The available original energy estimate does something concrete: it
+controls every temporal X_e moment in(2.3), and therefore gives the
+valid but potentially wasteful bridge-weighted bound(2.4). Section2A
+shows why its l1 sufficient condition is not the recommended target.
+What the energy estimate does not
+control is precisely the random derivative of the fixed flowed scalar
+on that bridge, nor its equal-time or filtered reflected variance.
+
+No generic counterexample is needed for this diagnosis: the full
+normalized transfer kernel displays the residual circle factor, the
+exact form displays the marked gradient, and the physical filter
+displays the missing nonzero spectral coefficient. A direct lower bound
+on that one coefficient could bypass the sufficient derivative norm
+altogether. No original-law physical-band lower bound has been proved
+in this note.

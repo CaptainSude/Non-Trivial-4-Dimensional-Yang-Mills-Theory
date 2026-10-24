@@ -1,0 +1,171 @@
+BOUNDARY CURVATURE ADMISSION FOR THE FIXED-BLOCK SOURCE COMPARISON
+TURN72. gauge47. 20 October 2026.
+
+STATUS AND PROVENANCE
+
+This short consequence attaches the new nonlinear mixed-source
+comparison in turn72_dirichlet_wilson_root.txt to a gauge-invariant
+boundary-curvature condition on a fixed four-dimensional rectangle.
+It does not introduce a new bare coercivity theorem.
+
+The stronger quantitative bare-box tail theorem and an exterior
+collar with an original-law probability estimate already appear in
+polylog_box_conditional_tail_turn37.txt and
+polylog_box_collar_turn37.txt. Their polylogarithmic constants,
+collar action cost and first ordinary-average admission must be
+credited separately. Nothing below upgrades their native/history
+scope or supplies a probability estimate for the present event.
+
+1. THE BOUNDARY TREE AND ITS FINITE FILLINGS
+
+Let B be a fixed nondegenerate rectangular cubical four-dimensional
+box, with all boundary-subcomplex edges fixed by the conditional
+exterior. Let E_boundary and P_boundary be its boundary edges and
+plaquettes. The boundary is a cubical subdivision of S^3.
+
+Choose a root o and a deterministic spanning tree T_boundary of
+the boundary edge graph. For each remaining boundary edge e=(u,v),
+its fundamental loop is the rooted tree path from o to u, followed
+by e and the reversed tree path from o to v.
+
+The boundary TWO-skeleton is simply connected. One direct
+justification is that every loop contracts in S^3, and a relative
+cellular approximation of its contracting disk uses only cells
+of dimension at most two. Equivalently, attaching the boundary
+three-cells does not change the fundamental group. Consequently
+each of the finitely many fundamental edge loops is a product
+of conjugates of boundary plaquette words and their inverses,
+after cancellation of reversed adjacent edges.
+
+Choose one such finite filling for each edge, once and for all,
+and let A_B be the largest number of plaquette words in a chosen
+filling, enlarged to at least one. Repetitions, orientations and
+connecting paths are part of that fixed filling. Only finiteness
+at this fixed box is asserted; no bound uniform in its side length
+is obtained from this argument.
+
+For the bi-invariant operator distance on SU(2),
+
+ ||UV-I|| <= ||U-I||+||V-I||,
+ ||WUW^-1-I||=||U-I||,
+ ||U^-1-I||=||U-I||.
+
+The word identity therefore proves the exact global estimate
+
+ ||Hol(loop_e)-I||
+       <= A_B max_(p in P_boundary)||U_p-I||.             (1.1)
+
+This requires no smallness of the connecting transports.
+
+2. A GAUGE-INVARIANT EXTERIOR EVENT
+
+Define
+
+ E_boundary(delta)
+   ={max_(p in P_boundary)||U_p-I||<=delta}.              (2.1)
+
+This is an exterior-measurable gauge-invariant event. In SU(2),
+||U_p-I||^2=2h(U_p), so it is equivalently a condition on the
+nonnegative boundary plaquette actions.
+
+Gauge the boundary tree to identity, based at o. Each boundary
+chord becomes the holonomy of its fundamental loop, up to the
+irrelevant orientation convention. Thus (1.1) gives
+
+ max_(e in E_boundary)||U_e^tree-I|| <= A_B delta.         (2.2)
+
+For delta<=delta_*/A_B, with delta_* the weak-boundary radius in
+the fixed-block source theorem, the entire boundary tuple belongs
+to that theorem's admitted weak neighborhood.
+
+There is no residual flat-holonomy exception. The boundary S^3
+has trivial fundamental group, unlike a toroidal boundary. Nor
+is an obstruction from pi_3(SU(2)) relevant: the transformation
+here is an arbitrary map on finitely many vertices, not a required
+continuous extension of a prescribed smooth boundary map.
+It may be extended to interior vertices by any fixed values.
+
+For comparison, the same argument works on the S^2 boundary of
+a three-dimensional box. It need not work from boundary
+plaquettes alone for a two-dimensional box, whose boundary is
+a circle with no two-cells. The present statement is in d=4.
+
+3. EXACT CONDITIONAL LAW AND THE WINDOW CONVENTION
+
+Conditional on the complete exterior, the chosen boundary gauge
+is deterministic. Extend it to the interior vertices and make
+the corresponding product-Haar change of the free links.
+Every plaquette term involving a free edge is retained in the
+same conditional action. Gauge invariance therefore transports
+the exact original Wilson conditional measure to the small
+boundary data in (2.2), with no normalizing factor.
+
+Then apply the interior anchored forest gauge of the Dirichlet
+theorem, which is identity on all boundary vertices. It leaves
+the small boundary tuple unchanged. The union of this forest
+and T_boundary is a spanning tree of the whole box.
+
+This combined construction also describes the original-coordinate
+selection unambiguously. Its trees and all auxiliary conventions
+must be frozen before source differentiation. A gauge change of
+the original links changes the complete rooted representative
+by the single conjugation at o. Accordingly:
+
+ - gauge-invariant sources have exactly their original values;
+ - a centered metric window is automatically invariant;
+ - the projected product window is invariant if its chart,
+   whitening and ambient embedding transform covariantly, with
+   the resulting frame changes preserving its color balls.
+
+The last property is a requirement on the actual window
+convention. Arbitrary coordinate axes or an arbitrary embedding
+cannot be declared covariant. With a fixed measurable convention
+one still obtains a definite source-independent selection and
+the conditional comparison for that selection, but gauge
+invariance should only be claimed after the preceding residual
+conjugation check. No equality between different tree-window
+laws is asserted.
+
+The unique weak-boundary minimizer is transported by the same
+conjugation whenever the chosen coordinates are equivariant.
+Its uniqueness follows from the fixed-block theorem, not from
+a separate minimizer choice here.
+
+4. THE NEW SOURCE CONSEQUENCE AND ITS LIMIT
+
+Let F,H be the same original smooth gauge-invariant block
+observables on both sides, and let w be the fixed projected
+window transported by Section3. On E_boundary(delta), the
+Dirichlet theorem gives
+
+ |Cov_original(F,H | exterior)
+       -Cov_selected(F,H | exterior)|
+ <= C_B [g a_F+g^2 b_F][g a_H+g^2 b_H] exp(-c_B T^2),    (4.1)
+
+with its original definitions of the first derivatives at the
+actual minimizer and the global Hessian bounds. The constants
+are uniform in the exterior subject to (2.1) at this fixed box.
+They remain dependent on the box and the frozen conventions.
+
+For a fixed weighted plaquette-action source F=sum_p f_p h(U_p),
+the first derivative vanishes at the flat boundary minimizer.
+Analytic dependence of the admitted minimizer and smoothness
+of the source give a_F<=C_(B,f)delta on (2.1), with A_B absorbed
+in the fixed constant. Thus for two such sources,
+
+ |Cov_original(F,H | exterior)
+       -Cov_selected(F,H | exterior)|
+ <= C_(B,f,h) [g delta+g^2]^2 exp(-c_B T^2).              (4.2)
+
+For the canonical rescaling F/g^2,H/g^2, this is
+C_(B,f,h)(1+delta/g)^2 exp(-c_B T^2). A general weak curvature
+threshold is not silently replaced by delta=O(g).
+
+This is a transport of the new two-source conditional estimate,
+not a new annealed or native all-history theorem. One must still
+bound the complement of (2.1), identify the actual constrained
+coarse fibers if those are used, and retain the exterior mean
+and covariance contributions in a full-law comparison.
+The TURN37 collar notes provide stronger bare first-scale
+ingredients of a different declared scope; their existence
+does not itself settle these source and history attachments.

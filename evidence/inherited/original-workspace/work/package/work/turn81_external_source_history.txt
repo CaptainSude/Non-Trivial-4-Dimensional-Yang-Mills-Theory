@@ -1,0 +1,277 @@
+TURN81 -- EXACT ORIGINAL WILSON SOURCES THROUGH PLAQUETTE GAUSSIANS
+20 October 2026. history47. Finite-scale theorem and limitations.
+
+RESULT
+There is an exact full-original-law source representation that does not
+evaluate an inverse RG record on complex backgrounds. A first
+Hubbard--Stratonovich (HS) transformation replaces each ORIGINAL canonical
+plaquette source by an explicit function of the squared norm of a complex
+2x2 Gaussian auxiliary field. Its determinant factor, scalar exponential,
+literal Wilson partition function, and coincident-plaquette contact terms
+are all retained. A second HS transformation integrates every compact
+link exactly, giving the same source family on a positive zero-link
+auxiliary measure.
+
+This is an adaptation of the known plaquette HS construction, not a new
+decoupling method. The useful addition here is the complete original
+source dictionary and its precise obstruction to a simple Gaussian
+domination argument: the canonical radial auxiliary variance grows as
+4 beta+O(1), and the resulting zero-link density is actually nonconvex for
+beta>4 along an explicit direction. Neither fact rules out more refined
+estimates. In particular the auxiliary conditional noise is not a
+physical variance witness. The same source family and contacts must be
+used when testing any proposed continuum or reflection-positive consumer.
+
+1. ORIGINAL LAW, CONVENTIONS, AND PROVENANCE
+
+Use a finite nondegenerate periodic hypercubic SU(2) lattice, with periods
+at least4 for the TURN64 energy estimate used below. Every independent
+oriented link is integrated with normalized Haar measure. Write
+  h_p(U)=1-Re Tr U_p/2 in[0,2], E_p=beta h_p, beta>0,
+  Z_beta=integral exp(-sum_p E_p) dU,
+  mu_beta(dU)=Z_beta^-1 exp(-sum_p E_p)dU.                 (1.1)
+All identities through Section5 hold on any finite graph with the stated
+plaquette path decomposition. No selected sector, reference redraw, or
+thermodynamic limit is introduced.
+
+For a plaquette based at x with positive directions mu,nu, choose paths
+  A_p=U_(x,mu) U_(x+mu,nu),
+  B_p=U_(x,nu) U_(x+nu,mu), U_p=A_p B_p^dagger.           (1.2)
+Both A_p and B_p run from x to z=x+mu+nu. Thus
+  ||A_p+B_p||_F^2=8-4h_p.                                (1.3)
+The standard complex matrix Gaussian is
+  gamma_1(dG)=pi^-4 exp(-||G||_F^2)d^8G.
+Its four complex entries have E|G_ab|^2=1. Direct completion of squares
+gives, for a fixed complex matrix X and real c,
+  integral exp(c Re Tr G^dagger X) gamma_1(dG)
+       =exp(c^2||X||_F^2/4).                             (1.4)
+
+Primary provenance, independently inspected in the actual PDF:
+Vairinhos and de Forcrand, "Lattice gauge theory without link variables,"
+JHEP12(2014)038, arXiv:1409.8442, pp2--3, equations(7)--(25), gives the
+two HS steps and exact zero-link representation. The paper attributes
+the first plaquette split to Fabricius--Haan. Its Gaussian convention
+differs from gamma_1; equations below are proved directly in our convention.
+  https://arxiv.org/pdf/1409.8442
+  https://cds.cern.ch/record/1951631/files/arXiv%3A1409.8442.pdf
+Local copy: work/turn81_sources/Vairinhos_deForcrand_1409.8442.pdf.
+Actual pages2--3 viewed as work/turn81_sources/HS-2.png and HS-3.png.
+The Fabricius--Haan original article was not read in full; no additional
+theorem is imported from it.
+
+2. FIRST HS TRANSFORM AND A POSITIVE ORIGINAL-LAW LIFT
+
+Equations(1.3)--(1.4) give the literal identity
+  exp(-beta h_p)=exp(-2beta)
+     integral exp(sqrt(beta) Re Tr G_p^dagger(A_p+B_p))
+                      gamma_1(dG_p).                    (2.1)
+Consequently the following probability measure has U marginal exactly
+mu_beta:
+  J_beta(dU,dG)=Z_beta^-1 exp(-2beta|P|)dU
+      product_p gamma_1(dG_p)
+      exp[sum_p sqrt(beta) Re Tr G_p^dagger(A_p+B_p)].    (2.2)
+The conditional G_p given the COMPLETE original U are independent, with
+  G_p=m_p(U)+Z_p,
+  m_p=sqrt(beta)(A_p+B_p)/2,
+  ||m_p||_F^2=beta(2-h_p)=2beta-E_p, Z_p~gamma_1.         (2.3)
+This is an explicit positive augmentation, with no inverse RG record.
+
+Gauge covariance is literal. Under the original gauge transformation,
+A_p,B_p and G_p transform as g_x (.) g_z^-1. The Frobenius norm, Gaussian
+measure and coupling in(2.2) are invariant. The chosen path convention
+can be transported under lattice symmetries, including reflections;
+it should not be silently fixed asymmetrically when claiming such a
+symmetry. Reflection-positive half-local assertions require the kernel
+to read only the corresponding original half, as in the separate root
+OS-quotient argument. No such assertion follows merely from positivity.
+
+3. FULL ORIGINAL SOURCE FAMILY, INCLUDING ITS NORMALIZER
+
+Set r_p=||G_p||_F^2. For Re t<1, direct Gaussian integration gives
+  E[exp(t r_p)|U]=(1-t)^-4
+             exp[t(2beta-E_p)/(1-t)].                    (3.1)
+For Re s<1 take t=-s/(1-s). Define
+  T_beta(s,r)=exp(2beta s)(1-s)^-4
+                         exp[-s r/(1-s)].               (3.2)
+Then, exactly and pointwise in the original real U,
+  E[T_beta(s,r_p)|U]=exp(s E_p).                          (3.3)
+For an arbitrary finite plaquette source array s=(s_p), conditional
+independence gives the FULL normalized source identity
+  M_beta(s):=E_mu exp(sum_p s_p E_p)
+     = exp(sum_p 2beta s_p) product_p(1-s_p)^-4
+          E_J exp[-sum_p s_p r_p/(1-s_p)].                (3.4)
+This expectation uses the SAME source-zero probability J_beta and its
+literal Z_beta. None of its scalar factors can be discarded. Near zero,
+the log version contains sum_p[2beta s_p-4 log(1-s_p)] plus the logarithm
+of the last expectation. The branch of log is the one at zero.
+
+The literal auxiliary integral is absolutely convergent and holomorphic
+on Re s_p<1 for every p: its Gaussian precision has real part
+Re[1/(1-s_p)]>0, and the remaining fixed-U linear coefficients are bounded.
+Compactness of U also proves local domination after U integration. The
+left side of(3.4) is entire on all of C^|P|. Continuing it beyond that
+half-plane does not assert absolute convergence of the displayed
+auxiliary integral there. At every finite regulator Z_beta>0.
+
+For plus sources F_f=sum_p f_p E_p and F_k=sum_p k_p E_p, put
+s_p=z f_p+w k_p. This retains the complete original canonical calibration.
+For the alternative fixed physical reference gamma_R sum_p f_p h_p,
+one must instead set s_p=z gamma_R f_p/beta. The factor beta has not
+disappeared: changing this substitution changes the observable. This
+dictionary therefore applies to both earlier calibration discussions
+without declaring them equivalent or assuming a trace-anomaly identity.
+
+4. EXACT JETS AND THE COINCIDENT CONTACT TERM
+
+Let Y_p=2beta+4-r_p. Differentiating(3.2) gives
+  T'_beta(0,r_p)=Y_p,
+  T''_beta(0,r_p)=Y_p^2+4-2r_p.                           (4.1)
+Therefore
+  E[Y_p|U]=E_p,
+  E[Y_p^2+4-2r_p|U]=E_p^2.                              (4.2)
+All higher finite jets are obtained by differentiating the same T.
+Distinct plaquettes multiply their T factors; repeated derivatives at
+one plaquette act on its SINGLE T factor. Replacing every source by Y
+and then taking arbitrary powers loses(4.1)'s contact subtraction.
+
+For real profiles f,k, define R_f=sum_p f_p r_p. Total covariance and
+the conditional independence in(2.3) yield
+  Cov_mu(F_f,F_k)
+    =Cov_J(R_f,R_k)
+           -sum_p f_p k_p E_mu[4+4beta-2E_p]              (4.3)
+    =Cov_J(R_f,R_k)+4 sum_p f_p k_p-2 E_J R_(fk).
+For DISJOINT plaquette supports the contact vanishes. This identifies
+their mixed original covariance exactly with an auxiliary radial mixed
+covariance, but supplies no decay or positive lower bound for it.
+The equality concerns the actual original law, not a conditional
+reference covariance. It includes vacuum/scalar response automatically.
+
+5. SECOND HS TRANSFORM: EXACT ZERO-LINK SOURCE REPRESENTATION
+
+There are two half-paths h=(U_h,V_h) per plaquette, A_p and B_p. Introduce
+one further standard complex matrix R_h for each half-path. The identity
+  ||sqrt(beta)U_h/2+G_p V_h^dagger||_F^2
+     =beta/2+r_p+sqrt(beta) Re Tr G_p^dagger U_h V_h
+gives
+  exp[sqrt(beta) Re Tr G_p^dagger U_h V_h]
+   =exp(-beta/2-r_p)
+      integral gamma_1(dR_h)
+        exp Re Tr R_h^dagger[sqrt(beta) U_h+2G_p V_h^dagger]. (5.1)
+The conditional R_h given G,U is CN with mean
+sqrt(beta)U_h/2+G_p V_h^dagger. Every original link now appears only
+linearly. Write its complete coefficient J_e as the sum of
+  sqrt(beta) R_h       when e is the first link U_h,
+  2 R_h^dagger G_p     when e is the second link V_h.      (5.2)
+Indeed Re Tr R_h^dagger G_p V_h^dagger
+equals Re Tr G_p^dagger R_h V_h. The positive oriented convention(1.2)
+makes all these links original positive links. Other conventions require
+the corresponding inversion/conjugation, not a changed identity.
+
+Let
+  I(J)=integral_SU(2) exp(Re Tr J^dagger U)dU>0,
+  gamma_3(dG)=(3/pi)^4 exp(-3||G||_F^2)d^8G,
+  D_beta=integral product_p gamma_3(dG_p)
+                product_h gamma_1(dR_h) product_e I(J_e).
+The two occurrences exp(-r_p) in(5.1), together with gamma_1(G_p),
+produce 3^-4 gamma_3(G_p). All constants are consequently
+  Z_beta=exp(-3beta|P|)3^(-4|P|)D_beta.                   (5.3)
+This is finite and strictly positive by the exact previous identities.
+The auxiliary law nu_beta is D_beta^-1 times the integrand defining
+D_beta. Its G marginal is the same G marginal as J_beta. Therefore
+  M_beta(s)=exp(sum_p2beta s_p)product_p(1-s_p)^-4
+       [integral product gamma_3(G)gamma_1(R)
+          product_e I(J_e) exp(-sum_p s_p r_p/(1-s_p))]
+       /D_beta.                                         (5.4)
+Both numerator and denominator use the SAME beta and the SAME J_e.
+No hidden retuning of the link kernel or removal of D_beta occurs.
+
+For completeness, identify a real four-vector a(J) by
+Re Tr J^dagger U=a(J) dot q for U=q0 I+i sum_a q_a sigma_a.
+Then I(J)=2 I_1(|a|)/|a|, with value1 at zero understood by its power
+series. This merely evaluates the one-link compact integral. Equations
+(5.1)--(5.4) do not require a Bessel asymptotic or a saddle approximation.
+
+6. WHAT THE AUXILIARY LAW DOES NOT AUTOMATICALLY CONTROL
+
+The conditional moments of r_p are
+  E[r_p|U]=4+2beta-E_p,
+  Var(r_p|U)=4+4beta-2E_p.                                (6.1)
+TURN64's actual finite-volume Wilson energy estimate gives
+  E_mu E_p<=3/2,
+  E_mu exp(E_p/4)<=2^(3/4),
+  E_mu E_p^2<=C_2:=32*2^(3/4).
+Thus the SAME full auxiliary law satisfies
+  Var_nu(r_p)=Var_mu(E_p)+4+4beta-2 E_mu E_p,
+  4beta+1<=Var_nu(r_p)<=4beta+4+C_2.                      (6.2)
+This rules out a beta-uniform sub-Gaussian variance constant for the
+unrescaled centered radial auxiliary, and a beta-uniform absolute bound
+for its centered MGF on a fixed complex disk: Cauchy's second-derivative
+estimate would contradict(6.2). It does NOT show that physical canonical
+energy fluctuations grow. The contact in(4.3) cancels precisely this
+conditional Gaussian noise. It is also not a physical OS-norm witness;
+conditional noises can be null in an induced reflection quotient.
+
+There is an additional exact failure of a naive globally convex
+Gaussian-potential argument. Relative to Lebesgue measure the zero-link
+density has potential
+  V_aux=3 sum_p||G_p||^2+sum_h||R_h||^2-sum_e log I(J_e)+constant.
+Take all G=0 and all R=0 except one R_h=t I. Only its first link has
+J_e=sqrt(beta)t I. Consequently
+  V_aux(t)=2t^2-log I(sqrt(beta)t I)+constant,
+  V_aux''(0)=4-beta.                                    (6.3)
+The last equality uses Haar Var(Re Tr U)=1. Hence this ACTUAL transformed
+Wilson density is nonconvex for beta>4. No positive uniform Hessian
+bound relative to this unmodified Gaussian reference is available.
+This example neither disproves a different domination/cluster method
+nor identifies the transformed law with a free Gaussian law.
+
+7. OTHER ORIGINAL PROBES AND COMPACT-GROUP SHIFTS
+
+For any bounded original gauge-invariant probe Phi(U), including a fixed
+finite-lattice flowed probe, its normalized source E_mu exp(z Phi) is
+already entire. The transformations above preserve it exactly by keeping
+  E[exp(z Phi(U)) | G,R]
+in the zero-link integral. The remaining U conditional factorizes by
+links, but a flowed Phi can read many links. Replacing this conditional
+source by exp(z E[Phi|G,R]) is false; its mixed jet retains the conditional
+covariance. The simple formula(3.2) is special to the plaquette energy.
+No uniform locality or complex auxiliary-domain norm for the flowed
+conditional source has been proved here.
+
+For comparison, an arbitrary smooth vector field V on the original
+compact link manifold satisfies the exact integration-by-parts identity
+  E_mu[(div V-V S_beta)F]=-E_mu[VF].                      (7.1)
+Transporting the WHOLE action and Haar Jacobian by the flow of V leaves
+Z_beta unchanged. Its score is not the original plaquette source unless
+one separately solves an appropriate mu-dependent divergence/Poisson
+equation. Dropping V S_beta or the Jacobian drops real terms. Earlier
+TURN45/69 force/Fisher work already studies these issues; (7.1) is not
+a new uniform source estimate. Likewise the four-partition and pressure
+comparison identities in TURN30/31 are not replaced by a new estimate
+merely by making the source external.
+
+8. EXACT GAIN AND REMAINING MATHEMATICAL TARGET
+
+Equations(3.4),(4.3),(5.4) provide a full-law non-Abelian finite-scale
+source representation, with no old-record inverse or native complex
+switch evaluation. They retain every original action link, denominator,
+source calibration and mixed contact. They can be applied before any
+native RG split. This is a concrete alternative input for investigating
+actual original correlations, rather than a formal source substitution
+inside a selected component.
+
+What is still required is a useful uniform estimate on the INTERACTING
+auxiliary source functional (or its strict-half OS quotient) after the
+explicit contacts. At separated plaquettes this means controlling the
+connected radial covariance under nu_beta, not under gamma_3. The link
+factors I(J_e) remain the entire original interaction. Neither independent
+conditional Gaussian noises, compact original links, exact HS algebra,
+nor the known zero-link representation proves the necessary cutoff-
+uniform spatial control, a nonzero physical lower bound, or convergence.
+
+This note changes no original action, supplies no new native all-history
+analytic admission, and does not assert a Yang--Mills continuum theorem.
+It is compatible with the separate root proof that conditional auxiliary
+noise is OS-null under an actual reflected half-local lift.
+
+No prior files or authoritative outputs were changed.

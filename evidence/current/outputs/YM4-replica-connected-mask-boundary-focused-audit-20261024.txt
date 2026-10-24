@@ -1,0 +1,161 @@
+REPLICA CONNECTED MASK COMPARISON: INDEPENDENT FOCUSED AUDIT
+24 October 2026. audit_two_root. No archive/output edits.
+
+FILE AND VERDICT
+
+Read replica_connected_mask_boundary_20261024.txt in full. Scoped
+PASS for its finite Sections1--5, including the boundary-only
+comparison with all interior masks retained. No correction needed.
+Sections6--8 were also read for compatibility with the already
+audited first-fiber inputs; their stated conditional native use is
+consistent with those inputs and keeps the original normalizers.
+
+This audit does not reprove the imported complete reference weighted
+covariance theorem, joint mask rarity, or the remote-defect local
+chart construction. Those are explicit hypotheses here. It checks
+the new connected algebra and the way the claimed boundary response
+consumes them, rather than treating a PASS label as a premise.
+
+1. EXACT TWO-REPLICA ALGEBRA AND RARITY
+
+Writing dF=F(x)-F(y), direct expansion gives
+
+ E[a(x)a(y)dF dG]
+ =2 nu(a)nu(aFG)-2 nu(aF)nu(aG).
+
+Dividing by 2nu(a)^2 is precisely Cov_(nu(.|a)) (F,G).
+The identity a(x)a(y)=product_j(1-R_j), with
+R_j=1_{E_j(x) OR E_j(y)}, is pointwise exact. For a selected
+J, assign each failure label to one replica. There are 2^|J|
+assignments; independence of the replicas and the original joint
+rarity bound give E product_J R_j <=(2rho)^|J|. This argument
+does not ask for rarity under a conditioned or masked law.
+
+The stated finite condition u=N sqrt(2rho)<=1/4 ensures the actual
+normalizing probabilities are bounded below by 3/4 (for N>=1 it
+already forces rho<=1/32). The raw denominator is retained in
+the identities, rather than replaced by a product of local masses.
+
+2. THE SPATIAL CANCELLATION IS REAL
+
+For v(i)=d(i,P), the v-image of each selected complete read is
+contained in a single interval of length at most d0. Intersecting
+these intervals with [0,D], their union has length at most j d0
+and its complement has at most j+1 components. Hence a gap of
+length at least (D-jd0)_+/(j+1) exists. Reads outside [0,D] lie on
+the corresponding side; no connectedness assumption on a read is
+needed beyond its diameter bound.
+
+The near factor dF product_near R and far factor dG product_far R
+are EACH antisymmetric under simultaneous exchange of the complete
+replicas. Their means vanish individually. Thus the term is exactly
+a covariance between separated actual coordinate reads. This is
+the necessary cancellation: there is no uncontrolled product of
+means hidden in the spatial estimate. Doubling the block dimension
+changes only fixed constants in the imported reference theorem.
+
+The gap bound and rarity bound combine by the elementary inequality
+min(A,B)<=sqrt(AB). The factor exp[(nu_*/2)d0] is fixed, not raised
+to the subset size. With q=sqrt(2rho), the result is
+
+ C osc(F)osc(G) q^j exp[-aD/(j+1)], a=nu_*/2.
+
+If no positive gap exists, D/(j+1)<=d0 and the same displayed bound
+follows with that fixed factor from the elementary covariance cap.
+Complex tests are covered by splitting real and imaginary parts at
+a fixed numerical cost; the scalar proof may be read as real.
+
+3. THE ALL-D NUMERICAL PROFILE AND SPATIAL SUM
+
+The finite binomial sum is bounded by
+S_u(D)=sum_(j>=0)u^j exp[-aD/(j+1)]/j!.
+For j>=1, j/2>=(j+1)/4, so
+
+ A j/2+aD/(j+1) >= A(j+1)/4+aD/(j+1)
+                         >=sqrt(aAD).
+
+The remaining exp(-Aj/2)/j! sums to exp(sqrt(u)); the j=0
+term instead contributes exp(-aD). This proves the stated bound
+with Phi_A(D)=min(aD,sqrt(aAD)), including arbitrarily large D.
+The u=0 case must be understood separately, as the note does.
+
+For the shell sum, assign each nonempty read a nearest site to P
+and then a nearest site of P. Bounded incidence controls how many
+reads can be assigned to one site. Pulling out half of the profile
+at the minimum distance leaves a fixed lattice-summable profile,
+since A>=log4. Thus the retained |P| factor is correct. No mask
+count or source-root density is silently discarded.
+
+4. BOUNDARY MASKS WITH INTERIOR MASKS STILL PRESENT
+
+The quotient identity in Section5 has the correct sign:
+
+ E[a(x)a(y)dF(b(x)-b(y))]
+ =2 nu(a)nu(abF)-2 nu(aF)nu(ab).
+
+It therefore equals 2nu(a)nu(ab) times the claimed difference.
+For j selected interior labels and k>=1 selected boundary labels,
+expanding the symmetric interior union events and taking either
+replica in the boundary bracket gives the bound
+2^(j+1)rho^(j+k)osc(F). Independence is invoked only between the
+two original reference replicas, never between overlapping masks.
+
+All boundary reads in a fixed K lie beyond radius D_K. Split only
+the interior intervals across a gap before D_K. The far bracket
+1_(E_K)(x)-1_(E_K)(y) is antisymmetric, and multiplication by the
+far symmetric interior events preserves that property. The near
+factor is likewise antisymmetric. The separated zero-mean proof
+therefore remains valid with every interior mask included in the
+finite expansion. Geometric-mean interpolation yields the stated
+q^(j+k) bound, since k>=1 absorbs the fixed factor from the rarity
+estimate.
+
+Assign each K to its nearest boundary label under a once-fixed
+ordering. Summing its remaining members costs at most
+(1+q)^(|B|-1); summing interior labels costs S_(|I|q)(D_K).
+Both are controlled by the TOTAL finite condition
+(|I|+|B|)q<=1/4. Using the weaker common A from that total count is
+valid. This proves the extra factor q and the sum over the actual
+changed boundary reads in (16).
+
+This is stronger than deleting all masks and using global total
+variation. In particular a near-source interior mask no longer
+destroys the boundary distance. The improvement is due to the
+exact replica antisymmetry, not an assumed connected expansion.
+
+5. NATIVE APPLICATION AND ITS PRECISE LIMITS
+
+On the stated first certificate, all active-reading Q1 decisions
+have first been reassembled, the local coarse reference is fixed,
+and D_C(z) consists of the original active-dependent P0 and gauge
+successes in the same containing chart. Their finite complete
+noise/pivot reads and uniform joint rarity are imported explicitly.
+
+Deleting just the boundary-reading masks leaves a fixed interior
+indicator a. Consequently the normalized z derivative under
+lambda_z=nu_z(.|a) is the ordinary covariance with the COMPLETE
+fixed-domain score. The x-independent H(0,z) cancels only inside
+that covariance and remains in the actual outer raw measure.
+The actual finite mixed-Hessian row gives score oscillation C S,
+and S=O(r) with fixed hierarchy ratios. Each boundary coordinate
+changes by at most 6r. Combining the finite masked covariance with
+the shell sum therefore gives the stated r^2 spatial term; the
+two boundary-mask comparisons give the separate q term.
+
+This use requires the uniform first action/rarity bounds on the
+whole auxiliary segment |z|<=3r, not merely at its supported
+endpoints. The note explicitly supplies that from the certified
+containing-product family and does not call auxiliary intermediate
+z values projections of original exterior records.
+
+The final inner covariance and boundary oscillation concern the
+original normalized first conditional mu_z. Further averaging uses
+its actual Z_D(z)dLambda, so the between-mean covariance is still
+present. Varying the local coarse reference is excluded. The
+bounded-source epsilon0^2 cap, original microscopic calibration,
+source count |P|, finite census Nq<=1/4, and loss to a stretched
+exponential at large distance all remain explicit.
+
+No local analytic activity, infinite-volume mask expansion,
+all-depth iteration, fourth-power aged source, or continuum
+Yang--Mills conclusion follows from this audit.

@@ -1,0 +1,324 @@
+SEPARATION-SENSITIVE CONSUMERS FOR BOUNDED SOURCE ERRORS
+23 October 2026. Finite derivation; scoped independent review PASS.
+Audit: work/local_response_consumer_audit_20261023.txt.
+Original handoff files unchanged. Full YM4 remains unproved.
+
+RESULT
+
+On the already matched real ordinary product-cut kernel, a bounded
+error with a genuine local coordinate read can be paired with a
+distant source without using the divergent variance of the complete
+original observable. No derivative of that local bounded error is
+needed. The key operation is to project the OTHER source onto the
+error's coordinate set before applying Poincare and the complete
+normalized score identity.
+
+The same argument proves exponential covariance decay for TWO bounded
+local measurable functions, and gives a weighted gradient arm after
+one ordinary integration of a strictly interior-local bounded error.
+An exact early-local / late-energy split then states which quantities
+are sufficient for the actual martingale remainder consumer.
+
+These results require real locality in the common free coordinates.
+A source label, ancestry anchor or bounded compiled-source cap is not
+that locality. Arbitrary reset branches and retained-history closing
+kernels are not turned into this ordinary kernel by these estimates.
+
+1. ACTUAL FINITE KERNEL AND NOTATION
+
+Fix a native ordinary geometric branch, background, old raw data,
+coupling and coordinate chart. The full-law matching note identifies
+the conditional law on its independent interior coordinates I as
+
+ dQ(x)=Z^-1 1_K(x) exp[-H(x)] dx,    K=product_(i in I) K_i.  (1)
+
+Each K_i is the native convex coordinate ball. H is the complete
+source-zero action, including the actual Gaussian precision and all
+P/B/E/R/variable-coupling channels, on their registered real slice.
+Assume the SAME full-law hypotheses already used in
+survivor_normalized_score_20261023, including the R lower profile:
+
+ H_II''>=c0 I, c0>0;
+ complete weighted Hessian row and column bound M_nu;
+ |Cov_Q(u,v)|<=c_nu^-1
+       ||W^-1 grad u||_L2(Q) ||W grad v||_L2(Q), c_nu>0,  (2)
+
+for block-scalar W with nu-Lipschitz log W. The same estimates hold
+for a principal coordinate subset conditioned on its complement,
+with unchanged constants: the cut remains a product, its Hessian is
+a principal restriction, and its absolute weighted rows/columns are
+no larger. All differentiation below holds on the common strict
+physical slice; the imported real extensions justify the hard-cut
+covariance estimate, without changing the actual density on K.
+
+For any coordinate subset P let d(i,P) be its native distance and
+write W_P(i)=exp[nu d(i,P)]. An empty source set is simply a constant
+and has zero covariance. Let
+
+ C_nu=sqrt(1+(M_nu/c_nu)^2),
+ K_nu=M_nu+M_nu^2/c_nu >= M_nu C_nu.                    (3)
+
+All statements are conditional on the complete held output state;
+uniform estimates can then be integrated against the actual output
+law. No outer law is replaced by a reference law.
+
+2. PROJECTED-MEAN GRADIENT LEMMA
+
+Take P subset I and J=I\P. For a smooth test g define
+
+                         h(x_P)=E_Q[g|x_P].              (4)
+
+The conditional law on J has a fixed product domain. For any vector
+v in the P coordinates, differentiation of its original normalized
+ratio gives
+
+ Dh[v]=E[partial_P g[v]|x_P]
+                -Cov_(Q(.|x_P))(g, partial_P H[v]).      (5)
+
+There is no moving-cut term. The second argument has J-gradient
+H_JP'' v. For any permitted W, weighted Schur gives
+
+ ||W_J H_JP'' v||_2 <= M_nu ||W_P v||_2.                 (6)
+
+Let A(x_P) and B(x_P) be the conditional L2 norms of
+W_P^-1 partial_P g and W_J^-1 grad_J g, respectively. Equations
+(2),(5),(6), duality in v and conditional Jensen imply pointwise
+
+             ||W_P^-1 grad_P h||_2 <= A+(M_nu/c_nu)B.
+
+Taking L2 over x_P and using Cauchy--Schwarz on the two components
+gives the useful complete bound
+
+ ||W_P^-1 grad_P h||_L2(Q)
+                         <= C_nu ||W^-1 grad g||_L2(Q). (7)
+
+Here W_P denotes the restriction of the selected weight W, not the
+particular distance weight until it is chosen. For W(i)=exp[nu d(i,P)],
+W equals one on P, so (7) becomes
+
+ ||grad_P h||_L2(Q)
+          <=C_nu ||exp[-nu d(.,P)] grad g||_L2(Q).       (8)
+
+The argument controls a vector norm, not a sum of componentwise
+suprema. There is no extra number-of-coordinates factor.
+
+3. ONE-SIDED LOCAL ERROR COVARIANCE: NO GRADIENT OF THE ERROR
+
+Let r be a bounded measurable function of x_P alone. Choose any
+constant r_0 with |r-r_0|<=b; for real r take b=osc(r)/2.
+Because r is P-measurable,
+
+                         Cov_Q(r,g)=Cov_Q(r,h).          (9)
+
+Apply Cauchy--Schwarz to r and h, and Poincare ONLY to h under Q.
+Using Var_Q(r)<=b^2, (8), and H''>=c0 I proves
+
+ |Cov_Q(r,g)| <= b C_nu/sqrt(c0)
+                     ||exp[-nu d(.,P)] grad g||_L2(Q).  (10)
+
+This is the central asymmetric consumer. The complete source's global
+variance is absent. The rough/local error never gets differentiated.
+For a source arm based at T with
+
+ L_g=||exp[nu d(.,T)]grad g||_L2(Q),
+
+the triangle inequality d(i,P)+d(i,T)>=d(P,T) gives directly
+
+ |Cov_Q(r,g)| <= b C_nu/sqrt(c0)
+                                      L_g exp[-nu d(P,T)]. (11)
+
+No smallness of the normalizer Z was used. A complete native source
+gradient estimate supplies L_g only when its actual current coordinate
+read and weighted arm have been proved. Its unweighted norm alone
+supplies (10) with no asserted separation.
+
+4. ONE ORDINARY INTEGRATION REGULARIZES A LOCAL BOUNDED ERROR
+
+Now expose retained current coordinates a in E, with fixed old data,
+and use the already matched law
+
+ Q_a(dx)=Z_a^-1 1_K(x) exp[-H_pre(x,psi(a))]dx.            (12)
+
+Let r(x_P) be a fixed bounded interior-local test, with |r-r_0|<=b.
+It has NO direct retained-coordinate read. Put m(a)=Q_a r. For a
+retained direction v, the exact score formula is
+
+ Dm[v]=-Cov_(Q_a)(r,S_v),
+ grad_x S_v=H_pre,IE'' Dpsi(a)v.                        (13)
+
+The chosen smooth native cutoff gives the bondwise bound
+||Dpsi-I||<=epsilon_sw=C_lambda exp(-R). It commutes with spatial
+weights. Applying (10) to S_v and then weighted Schur gives
+
+ |Dm[v]| <= b C_nu M_nu/sqrt(c0) (1+epsilon_sw)
+                             ||exp[-nu d(E,P)]v||_2.
+
+Duality therefore yields a genuine output source arm:
+
+ ||exp[nu d(E,P)]grad_a m||_2
+                 <= b K_nu/sqrt(c0) (1+epsilon_sw).     (14)
+
+This bound is uniform on the stated admitted retained-coordinate
+slice. It creates an arm for the conditional mean of a bounded local
+test, even if that test is discontinuous. It does not create an arm
+for a nonlocal compiled test from its cap alone.
+
+For a path supported in T, with the ENTIRE path and its switched
+image admitted, integrating (13)--(14) gives
+
+ |Q_a1 r-Q_a0 r| <= b K_nu/sqrt(c0) exp[-nu d(P,T)]
+                        integral ||Dpsi(a(t)) dot a(t)||_2 dt. (15)
+
+An explicit direct a-dependence of the source adds Q_a partial_a r.
+A bounded retained selector with a jump cannot be silently assigned
+that derivative. Background, older history, geometry and moving-cut
+changes also require their separate complete scores/domain terms.
+
+5. TWO BOUNDED LOCAL TESTS, WITH NO DERIVATIVES OF EITHER
+
+Let r(x_P),s(x_T) be real bounded measurable tests on DISJOINT actual
+coordinate sets, with |r-r_0|<=b_r and |s-s_0|<=b_s. Condition on x_T
+and set h(x_T)=E_Q[r|x_T]. Apply (15)'s infinitesimal bound to the
+principal conditional kernel on I\T, with T held and identity switch.
+It gives
+
+           ||grad_T h||_2 <= b_r K_nu/sqrt(c0)
+                                             exp[-nu d(P,T)].
+
+Apply full-law Poincare to h and Var(s)<=b_s^2. Exact projection as
+in (9) proves
+
+ |Cov_Q(r,s)| <= b_r b_s (K_nu/c0) exp[-nu d(P,T)].       (16)
+
+For overlapping sets use the elementary bound b_r b_s instead;
+the proof of (16) assumes no direct x_T read in r. The universal
+bound b_r b_s may also be combined with (16) by taking their minimum.
+For real tests b_r b_s=osc(r)osc(s)/4.
+
+This is a covariance statement for the actual fixed ordinary kernel,
+not a conditional covariance under an additional rare event. In
+particular literal local hard indicators are allowed. Their actual
+rarity can be combined with (16) without conditioning on the event
+or dividing by its probability. Such an event must first be matched
+to the current coordinate law; a removed-owner history event is not
+automatically one of these indicators.
+
+6. QUASILOCAL APPROXIMATION IS AN EXPLICIT, WEAKER INPUT
+
+For a bounded test r, let r_R be an actual P_R-measurable approximant,
+where P_R is the radius-R neighborhood of an original source seed P.
+Suppose
+
+ |r|,|r_R|<=A,       |r-r_R|<=eta_r(R)                  (17)
+
+on the complete actual fiber. Define s_S similarly with cap B and
+source seed T. Conditional projection E[r|x_(P_R)] is one possible
+choice: its cap is <=A, and (17) follows whenever the supremum of
+the difference of r over pairs agreeing on P_R is <=eta_r(R).
+This is a pointwise oscillation input, not an assumption on an
+unknown covariance.
+
+For disjoint P_R,T_S, combine (16) with bilinearity and the elementary
+variance bounds to obtain
+
+ |Cov_Q(r,s)|
+ <= A B(K_nu/c0) exp[-nu d(P_R,T_S)]
+                           +B eta_r(R)+A eta_s(S).       (18)
+
+Indeed subtract Cov(r_R,s_S) as Cov(r-r_R,s)+Cov(r_R,s-s_S).
+The errors are paid by their uniform caps, never by the variance of
+the entire summed physical observable. If eta_r,eta_s decay
+exponentially or stretched exponentially in the radius, choose
+R,S as fixed fractions of d(P,T) to retain the corresponding
+separation gain, with its actual source amplitudes.
+
+This can accept a native common-shell/local-response theorem AFTER
+its raw coordinate and same-law match has supplied (17). A geometry
+deletion truncation in a reset-component law is not automatically a
+coordinate-local approximant for (1). The source-centered seed,
+original selectors, all held/current slots and complete source
+normalization must be carried through that match.
+
+7. EXACT EARLY-LOCAL / LATE-ENERGY MARTINGALE CONSUMER
+
+Let F_e and mu_e be the original actual kernels and matching marginals.
+An error r_a is emitted once and then propagated homogeneously:
+r_(e+1)=F_e r_e. Let g be an actual conditional-mean source sequence.
+Choose any later ACTUAL stage tau, a<=tau<=T. Total covariance gives
+
+ Cov_mu_a(r_a,g_a)
+ =sum_(e=a)^(tau-1) mu_(e+1)Gamma_e(r_e,g_e)
+                                      +Cov_mu_tau(r_tau,g_tau). (19)
+
+The already proved energy lemma on the tail gives the stronger
+absolute-tail control
+
+ sum_(e=tau)^(T-1) mu_(e+1)|Gamma_e(r_e,g_e)|
+      +|Cov_mu_T(r_T,g_T)| <=sigma_tau(r_tau)sigma_tau(g_tau).
+
+Thus if |r_a|<=b and L_e is any genuinely proved bound on the early
+integrated absolute conditional covariance, then
+
+ sum_(e=a)^(T-1) mu_(e+1)|Gamma_e(r_e,g_e)|
+      +|Cov_mu_T(r_T,g_T)| <=sum_(e=a)^(tau-1)L_e
+                                             +b sigma_tau(g_tau). (20)
+
+At a matched ordinary stage L_e may be supplied by (10),(11),(16)
+or (18), summed over an EXACT admitted source decomposition before
+the actual output integration. At an independent-link elimination,
+the earlier original-Wilson locality theorem gives L_e=0 for the
+properly separated actual local pair. At a qualified physical reset,
+use the separately proved two-near-source connected bound when its
+actual source hypotheses match. Other stages retain their own terms.
+
+For finitely many errors delta_j emitted at a_j<=tau, actual linear
+transport and the triangle inequality give the corresponding bound
+with sum_j sum_(e=a_j)^(tau-1)L_(j,e) and
+
+                  [sum_j sigma_tau(r_tau^j)] sigma_tau(g_tau)
+              <= [sum_j ||delta_j||_infinity] sigma_tau(g_tau). (21)
+
+Each emission is counted once. There is no square-sum of injection
+variances without orthogonality. If emissions occur after tau, apply
+the same tail estimate from their own actual birth stages.
+
+Taking tau at a fixed physical coarse scale changes the needed norm
+from the divergent original sigma_a(g_a) to sigma_tau(g_tau). This
+is a weaker and potentially useful target, but it is not automatically
+bounded: the full state at tau can still carry old retained fine-scale
+data. Its actual variance or a further localized substitute must be
+proved. The coarse-scale name alone supplies no such theorem.
+
+8. WHAT THIS ADVANCES, AND WHAT IT DOES NOT
+
+The new gain is derivative-free spatial control of a bounded local
+error, obtained from the already matched full ordinary score and
+weighted Hessian estimates. Equation (14) also shows an explicit
+one-step mechanism creating a current-coordinate gradient arm.
+This is a concrete producer/consumer bridge, not an assumption that
+the desired mixed covariance is already small.
+
+For the surviving compiled defect, the fixed-record capture amplitude
+alone supplies neither exact locality nor (17). A retained ancestry
+anchor is not the full read of its conditional mean. Likewise a new
+baseline survival indicator may change the source's admitted law.
+The presently missing inputs are an actual local/approximate-local
+read for the emitted or propagated error on the stage being estimated,
+and either full continuation of that input or a genuinely bounded
+actual coarse-tail source norm. Y/q closing and independent contacts
+remain separate exact stages/rows.
+
+The position/date census must use the separation factor BEFORE source
+positions are collapsed into one full-observable norm. Once an actual
+pair bound of the form A_R A_S exp[-c dist_e(P_R,P_S)^beta] is obtained,
+the existing near-current census can be reused with its original
+calibrations and proper-grade window. Equations (10)--(21) alone do
+not prove that every compiled mixed source satisfies such a bound.
+
+READ INPUTS
+Current work: connected_energy_findings; source_energy_calibration;
+compiled_source_findings; survivor_normalized_score (all 20261023 where
+dated). Matched handoff ordinary input: full_birth_conditional_factor_match,
+inherited_boundary_reference, extended_birth_reference,
+switch_conditional_allocation (20261022). Source-position consumer:
+separated_near_current_source_covariance_census_20261023.

@@ -1,0 +1,473 @@
+NATIVE FIRST-STEP INTERFACE: FIXED CROSSINGS, COMPACT LIFTS, AND COAREA
+19 October 2026. balaban_inputs. Turn39.
+
+RESULT AND EXACT SCOPE
+
+Two pieces of the turn38 interface can be proved without assuming that
+the printed B109 corridor pivot remains free at a mixed boundary.
+
+(A) There is an exact bare conditional Wilson theorem when EVERY link
+crossing the active block-union boundary is fixed. The free variables
+are all links wholly inside that union, including its geometric boundary
+links. Its gauge group, action, polynomial gap, and normalized tail are
+specified below. Thus the incident-fine-exterior interpretation causes
+no obstruction to a bare polylogarithmic-box tail.
+
+(B) The ordinary first-L nonlinear average has a uniformly bounded
+right inverse supported in strict interiors of the active owner blocks.
+It fixes all crossing links, prescribes ALL affected coarse rows, and
+gives a genuine holomorphic coarea formula in an UNQUOTIENTED weak-link
+chart. The complete Wilson/Haar/coarea numerator in this chart has
+logarithmic datum derivative O_L(R^4/g^2). No native gauge determinant
+or corridor Jacobian is asserted equal to this new coordinate formula.
+
+The remaining coverage issue is real. A forest window is invariant
+under a large root-fixed fine gauge group, whereas a weak chart of every
+fine link contains an exponentially small fraction of such an orbit.
+Section7 gives an exact bound for that fraction. Consequently the new
+analytic numerator is not yet a reference carrying almost all of the
+conditional fiber mass. Neither a full native R kernel nor a continuum
+construction is claimed.
+
+1. PRIMARY DEFINITIONS AND WHAT THEY RESOLVE
+
+[V] Balaban, The Variational Problem and Background Fields in
+Renormalization Group Method for Lattice Gauge Theories, CMP102
+(1985)277--309. Primary PDF:
+https://backend.production.deepblue-documents.lib.umich.edu/server/api/core/bitstreams/458f3d2e-742f-431d-8c7e-14f4f8ad3c3f/content
+Local verified PDF/text: work/admission_sources/cmp102_variational_primary.*
+The page277 image was reread in this audit.
+
+[S] Balaban, Renormalization Group Approach to Lattice Gauge Field
+Theories I, CMP109(1987)249--301. Primary PDF:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+
+[C] Balaban, Renormalization Group Approach to Lattice Gauge Field
+Theories II, CMP116(1988)1--22. Primary PDF:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-4penm4k7hc.pdf
+
+[V]p277 defines nested aligned block domains, the fixed native gap,
+and Lambda_j=Omega_j^(j)\Omega_(j+1)^(j), equivalently its block union
+Omega_j\Omega_(j+1). The preceding convention associates a domain with
+incident bonds and plaquettes and applies it to other sets. Page278(3)
+fixes the corresponding averages; its discussion of (7) uses vertices
+of Lambda_j and lower-tier data to complete crossing plaquettes.
+[S]p251 states the continuous-set convention: lattice bond intervals
+and plaquette squares are selected by intersection with the continuous
+cube-union set. Thus taking the ANNULUS first can indeed retain a fine
+crossing bond. It is not safe to replace it silently by the difference
+of two already-incident bond sets.
+
+There is a notational caution. The compact gauge-stabilizer notation
+on [V]p278(4) must be interpreted with the actual fixed bonds: fixing a
+crossing link requires fixing its active endpoint too when the exterior
+endpoint is fixed. I do not use that abbreviated formula to license a
+gauge transformation which changes a fixed crossing link. The arguments
+below explicitly specify the edge set and its stabilizer, and therefore
+work for the stricter incident-annulus boundary convention. They also
+remain a legitimate additional conditioning of the original Wilson
+law if a different convention is used elsewhere. Integrating those
+extra retained links with their ORIGINAL marginal recovers the law;
+their values or weight are never replaced.
+
+There is also a convention-independent conclusion useful here. If
+Lambda0 is instead the difference of already-incident bond domains,
+the free set consists of bonds with at least one endpoint in the
+active K. Adding one outer vertex shell identifies that case exactly
+with the turn37 Dirichlet box. Its tail was already proved there.
+The compact lift in Section5 is admissible for BOTH free-edge sets.
+Thus neither reading requires the contested crossing corridor pivot;
+the two actual conditional laws have separate proved tail bounds.
+
+[S]pp253--254,(0.8),(0.11),(0.12), supply the ordinary group mean,
+its arithmetic derivative at identity, endpoint gauge covariance,
+and the two-endpoint-block read. [S]p267 uses a particular right inverse
+h on corridor edges b0(c); p268 eliminates those coordinates. [C]p12,
+(2.3), puts its cutoff on the remaining coordinates. If a selected
+b0(c) is fixed exterior, that particular elimination is unavailable.
+The construction in Section5 supplies a DIFFERENT exact lift, not an
+identity of the printed h or its associated measure factors.
+
+[V]Theorem1,p279 is a regular constrained-minimum/critical-orbit theorem,
+with mixed datum condition(7) and regularity class(2). It does not state
+a global compact-fiber gap. No such gap is imported below. The bare
+gap is proved directly. Identification of its constrained minimum with
+that native regular orbit still requires the actual regularity and
+determining-data hypotheses, including the entire fixed collar.
+
+2. AN EXACT CONDITIONAL GEOMETRY WITH FIXED CROSSINGS
+
+Work in fine lattice units, G=SU(N_c) with N_c fixed, d=4. Let K be a
+cube of vertices congruent to {0,...,R}^4 whose vertices form a union
+of COMPLETE ordinary L-blocks. A translation and R=qL-1 realize this;
+choose q compatible with the fixed native big-block alignment. L is
+fixed, odd, and at least11. Retain an exterior collar of fixed width
+C_L covering the native layer gap, all plaquettes used below, and all
+ordinary-average two-block footprints. Constants may depend on L and
+that fixed collar width, not R or the ambient lattice volume.
+
+Define the free edge set and its fixed complement by
+
+ E_K={e: BOTH endpoints of e lie in K},       e_fixed=E_K^c.   (2.1)
+
+Condition on every fixed link. Let S_e be the sum of Wilson plaquette
+actions h(U_p)=1-Re tau(U_p) over EVERY plaquette reading a free edge.
+It includes outward plaquettes with one free boundary-tangential edge.
+All omitted plaquettes are fixed constants and cancel from conditional
+normalizations. The exact conditional law is
+
+ dQ_e(U)=Z_e^-1 exp[-S_e(U)/g^2] product_(b in E_K) dU_b.     (2.2)
+
+This is a disintegration of the original law, not a changed boundary
+action. For separated cubes whose complete action reads are disjoint,
+these interiors are conditionally independent given all fixed links.
+
+Every geometric boundary vertex of K touches a fixed crossing link.
+Therefore use gauge transformations equal to1 at ALL such vertices
+and outside K. All strictly interior vertices are gauge active. Choose
+the axial forest from each interior vertex along negative e1 to its
+root on x1=0. Its edges have transverse coordinates in {1,...,R-1}
+and x1-tail 0,...,R-2. Do not include the top edge connecting to the
+second boundary anchor. Every forest component contains exactly one
+anchor; all other boundary vertices are isolated anchors.
+
+The triangular forest change of variables has product-Haar Jacobian1.
+It fixes every prescribed crossing link. The gauge variables integrate
+to1, leaving n<=C R^4 real chord coordinates. Boundary-tangential links
+are free CHORDS here. They must not be discarded or treated as fixed.
+
+3. LOOP FILLINGS, GAP, AND NORMALIZED TAIL
+
+Assume the fixed links on the complete local collar obey
+delta=max ||e_b-I||_tau. In forest gauge, the usual chord loop consists
+of the chord, its two forest paths, and a path on the geometric boundary
+of K. The first two paths contribute identity. Interior transverse
+chords give a strip of area at most R; a side-reaching chord uses the
+same strip and a side-face path. A top e1 chord is filled by an e1-e2
+rectangle of area at most R^2. The boundary connector length is O(R).
+
+Every edge of such a boundary connector is tangent to at least one
+face. Replace it by the other three edges of the adjacent OUTWARD
+plaquette. Those three edges are fixed: their endpoints lie outside K
+except for the two crossing endpoints. A boundary-tangential chord
+itself is treated by exactly this single outward plaquette. Attach the
+outward strips to the interior rectangle. The resulting connector
+uses only fixed links, has length O(R), and the filling has O(R^2)
+plaquettes, each with bounded multiplicity. Its added outward
+plaquettes all belong to S_e because each reads its free tangential
+edge. There is no uncharged action outside the conditional action.
+
+Nonabelian lattice Stokes, bi-invariance, and Cauchy--Schwarz give
+
+ max_chord ||y_b-I|| <= C R sqrt(S_e(y))+C R delta.          (3.1)
+
+The weaker CR^2 sqrt(S_e) version is enough below. At identity fixed
+data, linearization gives the curl inequality
+
+ ||x||_2^2 <= C R^6 ||d x||_2^2 <= C R^8 ||d x||_2^2,      (3.2)
+
+with the outward plaquettes included and forest/fixed variations zero.
+This proves positivity of the forest Hessian with lower bound cR^-8.
+There are no surviving boundary gauge modes: those vertices are fixed
+anchors. Conversely the largest Hessian eigenvalue is O(1).
+
+Each plaquette reads at most four link coordinates, and each link is
+in a bounded number of plaquettes. Thus on a fixed log chart
+
+ ||D^2 S_e(x)-D^2 S_I(0)||_(2->2)
+                         <=C(||x||_infty+delta).          (3.3)
+
+Choose r_R=cR^-8, delta<=c'R^-24. Equation(3.1) at e=I gives action
+at least cR^-20 outside ||x||_infty<r_R/4. Changing e changes S by at
+most CR^4 delta, while S_e(I)<=CR^4 delta^2. With c' small the global
+minimum lies in that chart. Strict convexity on ||x||_infty<2r_R makes
+it unique there and globally; its real analytic dependence on the
+fixed links follows from its nonsingular Hessian. Consequently
+
+ cR^-8 |x-x_*|^2 <= S_e(x)-S_min <= C|x-x_*|^2             (3.4)
+
+in the larger chart, and the complementary action gap is cR^-20.
+The gradient at zero is bounded by Cdelta per edge, hence
+
+                    ||x_*||_infty <= C R^10 delta.        (3.5)
+
+For g and gT below a fixed multiple of r_R, let W be the forest event
+||x-x_*||_infty<=gT. A Euclidean ball of radius g around x_* gives the
+denominator bound e^-S_min/g^2 g^n exp[-CR^4 log(2+R)]. Gaussian
+integration in the chart and compact Haar mass outside it give
+
+ Q_e(W^c) <= exp[CR^4 log(2+R)-cR^-8 T^2]
+          +exp[CR^4 log((2+R)/g)-cR^-20/g^2].             (3.6)
+
+Thus the complete proof of turn37 survives in this fixed-crossing
+geometry. Its conditional denominator is the ACTUAL Z_e. No vacuum
+factor or external weight is altered.
+
+4. THE COLLAR GAUGE ALSO USES ONLY FIXED LINKS
+
+The fixed-link graph in a one-or-more-layer exterior shell, together
+with its crossing edges into boundary vertices, is connected and has
+diameter O(R+C_L). This remains true after deleting every free
+boundary-tangential edge. An exterior vertex can travel along an
+outside coordinate face to a fixed outer corner in O(R+C_L) steps;
+a boundary vertex first takes one fixed outward crossing edge. A BFS
+tree of this ACTUAL fixed graph therefore has depth O(R+C_L).
+
+Its gauge depends only on conditioned links, so it is a legitimate
+choice of boundary frame before the interior integration. All tree
+links become identity; every remaining fixed-link value is a holonomy
+around a loop of length O(R+C_L). In the complete enlarged cube, a
+coordinate-tree filling bounds these loops by
+
+ d_fixed <= C(R+C_L)^2 sqrt(S_big).                        (4.1)
+
+Consequently d_fixed>delta implies S_big>=c delta^2 R^-4
+for R>=C_L. Applying the already proved bare, fixed-cell chessboard
+bound to this gauge-invariant fixed-link event gives
+
+ Prob(bad collar) <= exp[CR^4(1+ell)-c g^-2 delta^2 R^-4],
+                          ell=log(1/g).                  (4.2)
+
+This uses the complete enlarged-cell action before conditionalizing;
+it does not assume an arbitrary-boundary probability bound.
+With delta=c g R^-10 T, (3.5) makes the minimum O(gT), and
+
+ Prob(bad collar) <= exp[CR^4(1+ell)-cR^-24 T^2].          (4.3)
+
+For R<=C ell^b, T=ell^a, a>14b+1/2, both (4.3) and (3.6) are
+superpolynomially small in g. The collar cutoff satisfies delta<=cR^-24
+for small g. On the good collar and W all links of the FOREST
+representative are O(gT), and the fixed links are even smaller.
+
+The ordinary intrinsic group-mean/log branch is then valid on each
+complete first-L footprint. This does not make an original-frame
+open transport small, fix the original coarse root frames, or certify
+the printed gauge-fixing characteristic or a constrained-minimum chi0.
+
+5. AN ALTERNATIVE LIFT WHICH NEVER USES A CROSSING PIVOT
+
+Here no forest gauge is imposed. Work in a coherent weak fine-link
+frame on all active blocks and the full averaging collar. Let J_K be
+ALL ordinary coarse bonds with at least one active block endpoint.
+All other coarse rows read only fixed data, by [S](0.12).
+
+The flat derivative Q0 of the ordinary logarithmic first-L average
+has a compact right inverse for a COMPLETE star at an owner block.
+For clarity, the already audited turn16 proof is recalled. If
+L=2m+1 and a_mu is supported strictly inside that block, the outgoing
+and incoming straight-string weights for longitudinal tail j are
+
+                  (j+m+1)/L,            (m-j)/L.          (5.1)
+
+They sum to1. Two smooth nonnegative bumps with longitudinal support
+in (1/8,3/8) and (-3/8,-1/8), normalized discrete masses, and a compact
+transverse bump have a moment determinant bounded below. For every
+L>=11 the supports contain fine sites; constants may depend on fixed
+L. This prescribes the two incident rows per direction independently.
+Equation(5.1) uses the physical-current normalization of the flat
+average, with normalized fine-block counting. If Q0 instead maps fine
+link angles to coarse link angles as in (5.3), multiply that flat
+operator by L and divide its right inverse by L. L is fixed; this
+does not change any claimed uniformity or support.
+
+The ordinary derivative differs from this straight average by a
+coarse endpoint gradient d_c chi, with chi supported at the owner root.
+A compact fine gauge parameter equal to -chi at that root and zero
+before every block boundary cancels it, using Q0 d lambda=d_c lambda.
+Thus E_y prescribes all 2d oriented incident rows and vanishes in a
+neighborhood of the owner's block boundary. It preserves every fixed
+fine crossing link, even for a boundary owner block. This is the
+ordinary average, not a replacement by straight path decimation.
+
+Assign every row of J_K to ONE of its active endpoints. Feed its
+desired value to that owner's whole-star inverse, giving zero to all
+unassigned rows of the star. Sum the E_y. Their fine supports are
+disjoint block interiors, so
+
+ Q0 E=I on J_K,        ||E||_(infty->infty)<=C_L.          (5.2)
+
+The column overlap is bounded as well. Every nonassigned coarse row
+is zero, including outward rows not being varied. This is an exact
+simultaneous inverse, not a succession of coordinate inversions with
+a constant multiplied once per block.
+
+Let U_* be any sufficiently weak coherent link field, with its fixed
+exterior retained. Use relative logarithms
+
+ F_*(a)= (1/i)log[M(exp(i a)U_*) M(U_*)^-1] on J_K.         (5.3)
+
+Fixed finite-L products and the holomorphic group mean in [S] imply,
+on a sufficiently small sup ball,
+
+ ||D F_*(0)E-I||_infty <= C_L ||log U_*||_infty,
+ ||D^2 F_*||_(infty,infty->infty) <= C_L.                  (5.4)
+
+These are row-sum estimates independent of the number of blocks:
+each output row reads only its two finite endpoint blocks. They also
+hold for complex link fields on the indicated common branch. A
+Neumann inverse gives a uniform right inverse of DF_*(0). More
+concretely, for B in ker Q0, solve
+
+             F_*(B+E t)=v                                (5.5)
+
+by the contraction t=v-[F_*(B+Et)-t]. For sufficiently small fixed
+||B|| and ||v|| it is holomorphic, unique in the small t ball, real on
+real data, and ||D_v t||<=2. All links outside E_K remain EXACTLY
+fixed. All coarse data outside J_K remain EXACTLY unchanged. Both
+claims concern the original ordinary map and original link frames.
+
+This proves the needed first-L constraint-coordinate statement even
+when the printed corridor h cannot be used. It does not by itself
+prove that a native graded minimum or its gauge-fixed integration
+domain is the same coordinate chart.
+
+6. CHECKED COAREA NUMERATOR IN THE UNQUOTIENTED CHART
+
+This section is a new exact local calculation, not an assertion that
+the B109 gauge/FP factors have been checked. Choose the ordinary
+Lebesgue measure on ker Q0 and any fixed linear coordinates there.
+The linear isomorphism a=B+Et has a positive, constant Jacobian c_E.
+It can depend on R, but never on v, B, or the fine field.
+
+Let j_f(a) be the product exponential-coordinate Haar densities on
+the free fine links, and j_c(v) the corresponding product on J_K.
+These functions have nonzero holomorphic continuations on a fixed
+small Lie-algebra ball. The real constraint Haar delta in relative
+coarse coordinates is delta(F_*(a)-v)/j_c(v). Changing t to F_* gives
+the EXACT branch density on the fiber chart
+
+ w(v,B;e)= c_E exp[-S_e(exp(i a(v,B))U_*)/g^2]
+           j_f(a(v,B)) /
+           {j_c(v) det[D_t F_*(B+Et(v,B))]}.              (6.1)
+
+The determinant is positive at the real center with the chosen
+orientation and nonzero on the whole small complex ball, since the
+matrix differs from I by less than1/2 in operator infinity norm.
+There is no Faddeev--Popov distribution here: these are the original
+unquotiented fine Haar variables in a local link chart. Constant
+linear determinant factors cancel from normalized branch ratios.
+
+The Wilson action extends holomorphically by replacing Re tau U_p
+with [tau U_p+tau U_p^-1]/2. With g<=1, direct differentiation gives
+
+ sup_B |D_v log w(v,B;e)[h]| <= C_L R^4 g^-2 ||h||_infty.  (6.2)
+
+Here B ranges over ANY fixed compact positive-volume subset of the
+smaller kerQ0 ball, for example ||B||_infty<=gT' within that ball.
+Proof: (5.5) gives ||D_v a||<=C_L. There are O(R^4) action and Haar
+terms, each with bounded local derivative. For the determinant use
+tr(A^-1 D_v A), with ||A^-1||_infty<=2, ||D_v A||_infty<=C_L, and
+matrix dimension O(R^4). No trace estimate is obtained by summing an
+uncontrolled number of inverse columns. For exterior derivatives use
+the explicit reference U_*(e)=I on free links and e on fixed links,
+or hold the reference fixed in a specified chart. With that explicit
+choice, varying the complete weak fixed collar gives the same bound,
+with a changed fixed C_L: the reference has derivative norm1 and each
+average has fixed finite footprint. All such variations and their
+boundary dependence are retained; D_e is not set to zero.
+At fixed ORIGINAL Y one must also differentiate
+v=(1/i)log[Y M(U_*(e))^-1]. This has the same fixed-L bound for this
+reference and is included by the chain rule. For a DIFFERENT analytic
+anchor U_*(e), require a stated bound on its complete derivative; the
+constant then contains that bound. Arbitrary anchor dependence has
+no uniform derivative estimate. Holding only the relative coordinate
+fixed would also be a different derivative.
+
+At a real center v0,e0, w is positive. Set A(v,e)=integral w(v,B;e)dB
+over the SAME fixed B-domain. On radius r=c_L g^2/R^4, (6.2) gives
+
+ |A(v0+z,e0)/A(v0,e0)-1| <= exp(1/4)-1 <1/2.             (6.3)
+
+For a holomorphic test bounded by M on the complete chart, its
+normalized branch integral has each fixed-order datum derivative
+bounded by C_{p,L} M(R^4/g^2)^p. The proof uses (6.2) BEFORE integration
+and the real positive center, so it does not presume that the full
+coarse pushforward density is nonzero on a complex disk.
+
+This removes the formerly unspecified coarea/log-derivative input for
+THIS explicitly chosen numerator. It does not establish the same
+formula for the source's axial/Landau chart, its hard selectors, or
+the complete compact constrained fiber.
+
+7. THE PRECISE REMAINING GAUGE-ORBIT COVERAGE OBSTRUCTION
+
+The coordinates of Section6 preserve the original coarse frame.
+The forest used in Sections2--4 generally moves coarse root frames.
+One may not substitute its weak representative into (6.1) while
+pretending that the retained datum Y is unchanged. A pure gauge with
+large values at the coarse roots has S=0 and forest representative I,
+but its original framed coarse average can be a large pure gauge.
+It is therefore a good W configuration with no reason to lie in the
+small-v chart of Section6.
+
+Even for an intrinsically weak coarse datum there is a quantitative
+orbit-volume problem. Consider the subgroup of fine gauges equal to1
+on every boundary anchor AND every retained coarse root. It fixes
+the original exterior and every ordinary coarse datum by endpoint
+covariance. Choose a forest with one such anchor per component,
+covering all remaining vertices. Its gauge variables factor as
+normalized Haar, conditionally on all gauge-invariant quotient
+coordinates and on the retained coarse datum. This is the same exact
+triangular Haar argument as in Section2, with the larger anchor set.
+
+Let N_g be its number of gauge-active vertices and
+p_rho=Haar{V:||V-I||<rho}<1 for a fixed small rho. An event requiring
+EVERY fine link to lie in this weak ball requires, in particular,
+all N_g forest links to lie there. Their triangular gauge coordinates
+are independent Haar after conditioning on the quotient. Hence
+
+ Prob(all fine links weak | quotient, coarse datum)
+                              <= p_rho^(N_g).            (7.1)
+
+This is an almost-everywhere regular-conditional-probability assertion
+for the original bare law on the intrinsic ordinary-average branch,
+or with that gauge-invariant validity flag retained. It is not a
+density assertion at an exceptional null fiber. An extra noninvariant
+gauge-fixing weight would have to be included explicitly and would
+not be covered by the unweighted Haar-orbit argument.
+
+For a union of many fixed-L blocks N_g is of order R^4. Any branch
+numerator supported on the unquotiented weak-link chart inherits this
+bound relative to the full fiber mass wherever disintegration is
+defined. This is a gauge-volume effect; a large action penalty cannot
+repair it because the action and exact constraints are constant on
+these gauge orbits.
+
+Thus (6.3) is a normalized SMALL-CHART statement, not an almost-full
+fiber statement. A next exact construction must either divide out
+this precise root-fixed gauge subgroup with its complete measure,
+or integrate a normalized family of gauge translates of the chart.
+It must retain the coarse root frames and compare the resulting event
+with W. No estimate for that new numerator's full-fiber mass or all
+original hard selectors is proved here. The turn38 hard-window cusp
+also remains: analytic coarea does not make the ambient posterior
+P(W|Y) analytic.
+
+8. CONSEQUENCES FOR THE FIRST-STEP MATCHING PROBLEM
+
+The fixed-crossing geometric objection and lack of a boundary-compatible
+ordinary-average pivot are removed by Sections2--5. The exact first-L
+map, all exterior links, and every affected coarse row are retained.
+The new analytic branch numerator in Section6 has its actual Haar and
+constraint Jacobians and a polynomial normalized derivative bound.
+These are concrete additional results beyond the turn38 conditional
+chart criterion.
+
+What is NOT removed is the passage from a gauge-invariant high-mass
+forest event to this one weak-link chart, or identification of the
+printed B109/B116 integration measure with it. Equation(7.1) prevents
+inferring that passage from positivity or constraint analyticity.
+The original law is preserved throughout: all extra fixed links are
+conditioned variables with their original marginal, all coarse data
+refer to the original frames, and no good-fiber denominator has been
+replaced by an unnormalized numerator.
+
+Source provenance: Sections2--7 are explicit finite-lattice arguments.
+The primary papers supply the stated native geometry conventions and
+ordinary average. The compact flat-star algebra is rederived in
+Section5 and was independently audited in
+work/compact_native_lift_independent_audit_turn16.txt. The tail and
+collar arguments adapt work/polylog_box_conditional_tail_turn37.txt,
+work/polylog_box_geometry_audit_turn37.txt, and
+work/polylog_box_collar_turn37.txt to the DIFFERENT free-edge set(2.1).
+No reconstructed Raw claim is used as a primary theorem.

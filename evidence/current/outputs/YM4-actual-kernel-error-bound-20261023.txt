@@ -1,0 +1,319 @@
+ACTUAL-KERNEL ENERGY CONSUMER FOR COMPILED SOURCE REMAINDERS
+23 October 2026. New finite lemma; proof supplied below.
+Status: scoped independent audit PASS for the finite energy lemma
+and fixed-record first-capture consequence; see
+YM4-error-bound-audit-20261023.txt. This is internal review only.
+No handoff files or shared archives are changed. No continuum,
+calibration-uniform, spatial-decay or full YM4 conclusion is asserted.
+
+READ INPUTS
+  handoff/guide/milestone-and-frontier.txt;
+  handoff/continuation-workspace/work/
+    connected_covariance_actual_kernel_consumer_20261023.txt and audit;
+    immediate_near_defect_hybrid_suffix_and_input_gate_20261023.txt;
+    cost_tilted_owner_intensity_first_capture_20261023.txt;
+    retired_explicit_static_noisy_ordinary_segment_20261023.txt.
+All assertions about those producer bounds retain their stated scopes.
+Also read: handoff/original-workspace/work/package/work/
+selected_covariance_martingale_turn70.txt, Sections 1--3. That note
+already gives reverse-martingale increments and orthogonality for its
+selected law; the current actual-kernel note gives the original-law
+covariance identity. The advance here is their INHOMOGENEOUS EMISSION
+CONSUMER on the original actual kernels, including a fixed-record
+capture consequence. The martingale/variance algebra itself is standard.
+
+1. SETUP AND EXACT ENERGY IDENTITY
+
+Let E_b,...,E_T be the actual complete opened stage spaces. Let F_e be
+a normalized positive kernel from E_(e+1) to E_e with
+
+                    mu_(e+1) F_e = mu_e.                    (1)
+
+All mu are probabilities. Every row below is in the appropriate
+L2(mu_e); products are therefore integrable. Rows may be complex.
+Define bilinear covariance and Hermitian variance separately:
+
+ Gamma_e(u,v) = F_e(uv) - (F_e u)(F_e v),
+ V_e(u) = F_e|u|^2 - |F_e u|^2,
+ sigma_e(u)^2 = mu_e |u-mu_e u|^2.                         (2)
+
+The covariance in Gamma has NO complex conjugation, matching the
+source-jet convention. Positivity implies
+
+        |Gamma_e(u,v)| <= sqrt(V_e(u) V_e(v)).              (3)
+
+For an arbitrary stage sequence v=(v_b,...,v_T), not necessarily a
+conditional-mean sequence, define the spacetime energy seminorm
+
+ ||v||_E^2 = sum_(e=b)^(T-1) mu_(e+1) V_e(v_e)
+                                     + sigma_T(v_T)^2.    (4)
+
+This is an actual Hilbert seminorm: map v to the tuple of conditional
+fluctuations v_e(x)-F_e v_e(z) in
+L2(mu_(e+1)(dz)F_e(z,dx)), together with v_T-mu_T v_T.
+Its norm is (4), so Minkowski applies. No global path-space or
+conditional-independence construction is needed.
+
+If v_(e+1)=F_e v_e, the one-step variance decomposition is
+
+ sigma_e(v_e)^2 = mu_(e+1)V_e(v_e)+sigma_(e+1)(v_(e+1))^2.
+
+It telescopes to the exact identity
+
+                        ||v||_E = sigma_b(v_b).            (5)
+
+Thus the total energy includes the terminal variance; it is not lost
+when the conditional variances telescope. Identity (5) uses actual
+matching marginals. A hybrid/neutral suffix does not inherit (5) from
+mere absolute continuity or positivity.
+
+2. ONE EMISSION IS PAID ONCE THROUGH EVERY LATER COVARIANCE
+
+Let r_a be emitted at stage a, b<=a<=T. Set r_e=0 for e<a and
+r_(e+1)=F_e r_e for e>=a. Applying (5) to the tail gives
+
+                         ||r||_E = sigma_a(r_a).           (6)
+
+For any sequence v, (3), conditional integration, and Cauchy--Schwarz
+over the finite direct sum give
+
+ sum_e mu_(e+1)|Gamma_e(r_e,v_e)|
+                + |Cov_(mu_T)(r_T,v_T)| <= ||r||_E ||v||_E. (7)
+
+In particular, when g is an actual conditional-mean sequence,
+
+ sum_(e=a)^(T-1) mu_(e+1)|Gamma_e(r_e,g_e)|
+        + |Cov_(mu_T)(r_T,g_T)|
+              <= sigma_a(r_a) sigma_a(g_a)
+              <= sigma_a(r_a) sigma_b(g_b).                (8)
+
+The first inequality uses only the tail of g's energy, hence is
+slightly sharper than applying (7) with its full norm. This bound
+controls the integrated ABSOLUTE conditional covariance, not merely
+the absolute value of its signed integral. Its coefficient 1 is
+sharp: take r=g, real. Every conditional variance and terminal
+variance is nonnegative, and equality is (5).
+
+If |r_a|<=b_a on actual support, then sigma_a(r_a)<=b_a. The factor is
+b_a, not 2 b_a. For a real row known to lie in a deterministic interval
+of width w, sigma<=w/2. More generally |r_a|<=A and mu_a|r_a|<=eta
+give sigma_a(r_a)<=sqrt(A eta). The latter spends a square-root rarity
+gain. Constants, even large constants, have zero energy; centering
+before estimating can be materially better than an uncentered cap.
+
+3. ARBITRARY MOVING REFERENCE AND ALL MIXED REMAINDERS
+
+Let f_(e+1)=F_e f_e and g_(e+1)=F_e g_e be the actual source means.
+Choose any reference sequences s_e,t_e defined on the SAME complete
+actual stage states. They need not satisfy a source propagation rule.
+Set
+
+ r_e=f_e-s_e,       u_e=g_e-t_e,
+ delta_e=F_e s_e-s_(e+1),
+ eta_e=F_e t_e-t_(e+1).                                  (9)
+
+Then exactly
+
+ r_(e+1)=F_e r_e+delta_e,
+ u_(e+1)=F_e u_e+eta_e.                                  (10)
+
+For a>=b define P_(e:a)=F_(e-1)...F_a for e>a and identity for e=a.
+The discrete variation-of-constants formula is
+
+ r_e=P_(e:b)r_b + sum_(j=b)^(e-1)P_(e:j+1)delta_j.        (11)
+
+Each summand is viewed as zero before its own emission. Equations
+(6) and Minkowski give
+
+ ||r||_E <= B_f := sigma_b(r_b)
+                       + sum_(j=b)^(T-1)sigma_(j+1)(delta_j),
+ ||u||_E <= B_g := sigma_b(u_b)
+                       + sum_(j=b)^(T-1)sigma_(j+1)(eta_j). (12)
+
+For every e, exact bilinearity gives
+
+ Gamma_e(f_e,g_e)-Gamma_e(s_e,t_e)
+   =Gamma_e(r_e,g_e)+Gamma_e(f_e,u_e)-Gamma_e(r_e,u_e).    (13)
+
+The same identity holds for the terminal covariance. Applying (7)
+to each term and (5) to f,g proves
+
+ sum_e mu_(e+1)|Gamma_e(f_e,g_e)-Gamma_e(s_e,t_e)|
+ + |Cov_(mu_T)(f_T,g_T)-Cov_(mu_T)(s_T,t_T)|
+ <= B_f sigma_b(g_b)+sigma_b(f_b) B_g+B_f B_g.             (14)
+
+This directly estimates every mixed remainder created by the exact
+moving-reference decomposition, including remainder/remainder, and
+the terminal mismatch. It has no extra number-of-reset factor.
+At finite cutoff (14) is valid even when its right side is large.
+
+With
+
+ Q(s,t)=sum_e mu_(e+1)Gamma_e(s_e,t_e)
+                              +Cov_(mu_T)(s_T,t_T),
+
+the actual covariance Cov_(mu_b)(f_b,g_b)=Q(f,g) differs from Q(s,t)
+by at most the right side of (14). Q(s,t) is a comparison functional,
+not automatically the covariance of a separately propagated physical
+source. In particular its terminal term remains part of the target.
+
+Qualified near/near estimates can bound Gamma_e(s_e,t_e) only for
+reference summands actually satisfying their hypotheses on that
+opened stage. A selector depending on a branch being integrated, or
+an inserted survival-history event, is not silently qualified by (9).
+Record changes, mismatched reads and all ungated complements remain
+in the exact reference choice or in its residual/injections.
+
+4. SUMMING INJECTIONS: WHAT A VARIANCE BUDGET REALLY MEANS
+
+The sufficient budget in (12) is the sum of standard deviations,
+not the square root of the sum of variances. The latter needs extra
+orthogonality in the direct-sum Hilbert space in Section 1.
+
+Counterexample to an automatic squared budget: let the stage law be
+uniform X in {-1,+1}, with identity kernels for n dates and a final
+averaging kernel to a one-point state. Emit delta_j=X/sqrt(n) at each
+of the n prefinal dates. Then sum_j Var(delta_j)=1. All emitted tails
+are coherent, so the accumulated row at the final averaging step is
+sqrt(n)X. Its energy is sqrt(n), and its covariance with g=X at that
+step is sqrt(n). Thus no bound independent of n follows from the
+sum of emission variances alone. This is an abstract budget
+counterexample, not a lower bound for the YM model.
+
+If actual energy images of the emissions are pairwise orthogonal,
+Pythagoras does permit the squared budget. Such orthogonality must be
+proved for the emitted tails, including their terminal components;
+centering each emission separately does not prove it. Cancellations
+may alternatively be retained by estimating the combined residual
+energy directly before applying (14).
+
+For two collections of emissions delta_j and eta_k, the same argument
+also gives the pairwise tail bound
+
+ sum_e mu_(e+1)|Gamma_e(r_e,u_e)|+|Cov_T(r_T,u_T)|
+      <= (sum_j sigma_(j+1)(delta_j))
+                         (sum_k sigma_(k+1)(eta_k)),       (15)
+
+when initial residuals are zero. The more precise bound for a fixed
+pair starts at max(j+1,k+1), using their actually propagated variances
+there. Neither formulation supplies source-position decay.
+
+5. CONCRETE INPUTS ALREADY AVAILABLE IN THE HANDOFF
+
+(a) One supported immediate-near defect d_(e,R) with
+|d_(e,R)|<=C A_R exp[-c p0(g_e)] has the same variance bound on its
+actual output law. If it is emitted once and its exact suffix is
+actual, (8) controls all its later covariance interactions and its
+terminal covariance against an actual source. Its original A_R,
+preparation label and once-only entry are unchanged. The earlier
+hybrid-suffix scalar result is distinct; energy requires actual tails.
+
+(b) On the audited unchanged direct-static ordinary segment, the
+source-before-average emissions obey
+
+ |delta_(j,R)|<=C A_R epsilon_(m+1) 2^[-(j-m-1)], j>=b>=m+2.
+
+Their entire contribution to the standard-deviation budget is at most
+
+             C' A_R epsilon_(m+1) 2^[-(b-m-1)].            (16)
+
+Every such emission may thereafter be propagated through all future
+ACTUAL stages for energy purposes, even after the original static
+segment ends. The next read-change/reset recenter is a new emission
+with its own budget. Equation (16) does not restart the direct-static
+producer on a previously compiled row or on an unqualified array.
+
+(c) For the audited compiled-neutral capture sector choose the exact
+actual-suffix / neutral-prefix comparison. Put a_(e+1)=N_e a_e, with
+the actual admitted neutral compiled row a_e. Then its injection is
+
+          (F_e-N_e)a_e = D_cap,e a_e + D_surv,e a_e.       (17)
+
+This is a legitimate instance of (9)--(11). The capture producer gives
+for one fixed original record R, at native reset date e>=m,
+
+ |D_cap,e a_e|<=C_sigma A_R
+        exp[-sigma(e-m-C_slack)_+ - p0(g_e)/32].          (18)
+
+Use each native reset date at most once in its genuine ledger. With
+p_* the infimum of p0(g_e) on the dates under consideration,
+
+ sum_e sigma_(e+1)(D_cap,e a_e)
+      <= C'_sigma,C_slack A_R exp[-p_*/32],               (19)
+
+because sum_(n>=0)exp[-sigma(n-C_slack)_+] is finite. This is uniform
+in the number of future resets for that ONE record. No clock runs
+after capture: (19) pays the emission by the already proved stopped
+clock; (8) then uses energy, with no postcapture age claim.
+
+Consequently the full accumulated capture contribution has energy at
+most (19), and its covariance against an actual source g, summed over
+ALL later actual stages plus the terminal term, is at most (19) times
+sigma_b(g_b). This improves on separately paying every later mixed
+stage. It leaves the D_surv part of (17) completely present. The
+capture producer's compiled-neutral, unweighted, eligible-owner and
+fixed-record hypotheses remain mandatory.
+
+(d) A prior-reset recenter c_(e,R) bounded only by 2A_R contributes at
+most 2A_R at that emission. A sequence of such unstructured bounds
+does not give a summable B_f. If a recenter is a true scalar constant,
+its energy cost is zero, but the handoff has not established that.
+The actual-law centered L2 budget may be weaker than a sup-budget;
+it is still a new estimate where not already available.
+
+6. CONTACTS, CLOSING STAGES AND ENDPOINTS
+
+For an actual logarithmic jet with independent mixed row h, the exact
+update remains
+
+                 h_(e+1)=F_e h_e+Gamma_e(f_e,g_e).        (20)
+
+Thus its final logarithmic coefficient equals
+
+ mu_T h_T+Cov_T(f_T,g_T)
+                   =mu_b h_b+Cov_(mu_b)(f_b,g_b).         (21)
+
+Energy controls the covariance-generated part and its comparison via
+(14); it does not estimate the independent initial contact mu_b h_b.
+If additional independent mixed contacts k_e are emitted at stage
+e+1, replace (20) by h_next=Fh+Gamma+k_e. Equation (21) then acquires
+sum_e mu_(e+1)k_e on its right. A sufficient absolute contact budget
+is mu_b|h_b|+sum_e mu_(e+1)|k_e|, separately from (12).
+
+Equivalently, propagate a reference contact with the same actual F
+but reference covariance Gamma_e(s_e,t_e). The integrated difference
+of its generated contacts is bounded by the first term on the left
+of (14), plus any independently mismatched contact budget; terminal
+covariance comparison is the second term on that left. This is
+comparison bookkeeping, not a new exact physical first-source jet
+unless its injection corrections are also included.
+
+Every later Y-closing or q-closing kernel must be included as another
+actual stage in (1)--(4). The energy lemma holds after such an exact
+refinement, but an opened near-source estimate does not automatically
+bound the reference covariance at those closing stages. Similarly,
+(14) estimates the terminal mismatch, not the unknown reference
+terminal covariance itself. It cannot be dropped by naming it a
+contact or a scalar remainder.
+
+7. PRECISE ADVANCE AND REMAINING GATES
+
+This finite result removes a needless cost proportional to the number
+of later resets when a bounded or L2-budgeted source remainder has
+already been emitted. It supplies an exact consumer for mixed
+remainder terms, and a definite fixed-record capture budget (19).
+It also identifies a weaker possible next target: centered actual-law
+L2 summability of the moving-reference emissions, instead of proving
+that every compiled remainder is a new local static source.
+
+It does NOT produce: smallness of surviving compiled defects;
+summable reset recenter/read-switch budgets; a valid fresh-near
+representation of all references; spatial decay for their remainder
+crosses; summability over calibrated original roots/preparations;
+calibration-uniform source variances; bounds on much older proper
+layers or independent contacts; reference closing/terminal covariance
+control; continuum/volume limits, reconstruction or interaction.
+
+In particular a small fixed-record bound without separation decay
+cannot replace the spatial census needed for the continuum theory.
+All source/date sums and original A_R calibrations must remain visible.

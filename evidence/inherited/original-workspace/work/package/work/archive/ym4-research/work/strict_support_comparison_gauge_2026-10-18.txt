@@ -1,0 +1,198 @@
+STRICT SUPPORT OF THE SMALL COMPARISON GAUGE: WORKING DERIVATION
+18 October 2026. This is a proof calculation, not a publication artifact.
+
+Purpose: improve the scalar q-block domain gain in Notebook42 to a
+strict-support family bound. The fixed q is chosen before the field
+radius. All constants below may depend on q and the fixed grouping J,
+but not on preceding fine refinement or volume.
+
+Parameter order: fix the carrier exponent and J, then q, then the
+radius ceiling. Comparison operators do not require J to grow with q:
+an operator of range O(1) in an intermediate physical scale has range
+O(ell^-k) in final units. The multilevel range extensions sum a geometric
+series. Thus a common positive physical decay exponent survives; q may
+enlarge amplitudes and shrink the admissible radius. The direct-prefix
+constant C_a in (3) is uniform in the endpoint ratio. This avoids a
+circular choice J(q), followed by q depending on J.
+
+1. SUPPORT ALGEBRA INPUT AND ITS SCOPE
+
+Use the complete physical Banach fibers of cl-substitution: potentials
+X=C^(1,alpha), scalar forcing Y=C^alpha, gauge parameters Z=C^(2,alpha).
+For each output block, sum strict input-support coefficients with a
+connected carrier joining the output to the input slots. Norm the
+COMPLETE physical fiber before taking the weighted support sum. The
+weight is exp(a |carrier|); a physical tree-decay reserve can be retained.
+Products join carriers at their common output root. Linear propagation
+joins the input and output roots by a chosen lattice path.
+
+If ||K_xy|| between these complete local fibers is exponentially
+summable, the resulting lifted linear map is bounded after choosing J
+large enough that the path-cardinality weight costs less than its
+physical decay exponent. The already established cl-substitution proof
+applies, including smooth physical partitions of unity and their collars.
+No enumeration of fine coordinates is used. A scalar weighted norm
+alone would not prove this statement: complete localized operator bounds
+are required. The scalar operators here have them by the canceled-symbol
+and contour-shift arguments of ng-scalar-bounds, ng-biharmonic-bounds.
+
+The multilevel maps G_A-Q0 and b_j(U)-1 have bounded final-physical range,
+analytic coefficients, and a summable geometric spacing factor. Their
+lifted norms are analytic majorants with a fixed radius independent of
+fine refinement. The generator X_A-D is a local analytic multiplication/
+shift operator from Z to X with norm O(||A||_X). The apparent eta^-1
+cancels in eta^-1(Ad(exp(i eta A))-I); this cancellation is done BEFORE
+lifting. These are the same complete-fiber products as in ng-generator-
+bound, rather than entrywise bounds on a matrix of fine coordinates.
+
+Consequently the operations below lift by explicit Neumann series and
+products. This construction does not assert that every bounded analytic
+map has a localized lift.
+
+2. REMOVE THE RANGE-SPACE ISSUE BEFORE LIFTING
+
+Write F_A=G_A-Q0, Ts_A=(I+H_b F_A)^-1 and T=G'R0.
+The known identities are Q0 T=0 and R0 D^T D T=R0.
+Define on the WHOLE scalar space Y
+
+ N_A = R0 D^T [ (X_A-D) Ts_A T + D (Ts_A-I) T ] R0,
+ Z_A = (I+N_A)^-1.
+
+N_0=0 by its displayed expression, before any regrouping of supports.
+Its lifted norm is at most C_a ||A||_support on a fixed smaller ball.
+For C_a ||A||<1/2 the Neumann series for Z_A converges in the same
+support algebra. No support coefficient is required individually to
+belong to range R0. On scalar realization, N_A=R0 N_A R0, and I+N_A
+restricted to range R0 equals M_A=R0 D^T X_A Ts_A T.
+
+Put K(A)=X_A Ts_A T Z_A R0, P(A)=Ts_A T Z_A R0.
+Both have bounded analytic lifted operator norms, uniformly on a fixed
+small support ball. Scalar realization gives
+
+ R0 D^T K(A)y=y,   G_A P(A)y=0       for y in range R0.
+
+3. INTEGRABLE FORCING, WITHOUT A SUPPORTWISE CANCELLATION CLAIM
+
+For a small supported input family A_in, let y_in be its lifted linear
+image R0 D^T A_in. Solve directly in the support Banach space
+
+ dA/dt = -exp(-t) K(A)y_in,       A(0)=A_in.              (1)
+
+Choose a fixed operator-domain radius r and ||A_in|| small enough that
+||A_in||+C ||y_in||<r/2. Picard continuation and
+
+ ||A(t)-A_in|| <= C(1-exp(-t))||y_in||
+
+keep the solution in the domain for all t>=0. Equivalently set
+tau=1-exp(-t): a bounded analytic ODE on the fixed interval [0,1].
+Uniform Picard iteration gives analytic dependence on A_in; the endpoint
+is a strict supported family with norm at most C_a ||A_in||. The integral
+tail is at most C exp(-t)||A_in||, in the SUPPORT norm itself.
+
+Now realize the families as actual fields. The two scalar identities
+above give
+
+ R0 D^T A(t)=exp(-t)y_in,  G_A P(A)y_in=0.
+
+Thus (1) is exactly the constraint-preserving gauge flow ng-flow, since
+its instantaneous gauge generator is exp(-t)P(A(t))y_in. This verification
+takes place AFTER realization. It does not assume that the error identity
+holds for an arbitrary chosen support assignment.
+
+Integrating the corresponding group-valued gauge ODE in its unital local
+matrix algebra yields a strict supported endpoint g-1, and likewise its
+inverse, of norm <=C_a||A_in||. The generator has an integrable Z-norm,
+so differentiation in physical space and the complete Z fiber are
+included. At real inputs it is the actual unitary gauge. Complex inputs
+are the holomorphic continuation on the same small ball.
+
+4. TRANSFERS AND THE COMPARISON GAUGE
+
+The ordinary-to-corrected transfer solves
+ theta = omega - [K_induced(A,theta)-theta].
+Its bracket has zero theta differential at the joint origin and a
+localized analytic majorant: finite-physical-range multilevel averages,
+the supported H_b, and the local gauge action. The contraction therefore
+lifts on a smaller support ball exactly as cl-substitution. The reverse
+transfer uses the finite-range E_pt and the same multilevel b_j map.
+Both transfers have strict supported gauge endpoints O(||A||).
+
+Apply these transfers and (1) to the two same-graph minima in
+csg-comparisons. The rescaling between their physical norms costs only
+fixed q-dependent constants. Uniqueness on the flat slice identifies the
+real endpoints; analytic continuation identifies their germs. Composing
+the supported endpoint gauges, restricting them to current sites, and
+inverting in the local group algebra gives the actual comparison gauge
+gamma_(M,q)(w) of mrg-block-gain with a strict family
+
+ ||gamma_(M,q)-1||_support <= C_(q,a) b.                 (2)
+
+This uses the explicit comparison construction. Existence of an orbit
+relation by itself would not give (2).
+
+5. THE IMPORTANT ZERO-NOISE REPLACEMENT
+
+The exact retained q-chart and the SAME noise-independent gauge (2)
+give a strictly supported analytic map Bhat(w,t). On fixed larger
+background/noise balls its norm is <=K_q b+C_q rho. Analytic difference
+estimates in the noise Banach variable, on fixed fractional margins,
+give a strict family for Bhat(w,t)-Bhat(w,0) with norm <=C_(q,a)||t||.
+
+Scalar realization of Bhat(w,0) is EXACTLY the direct ordinary prefix
+a_(M,ell^q)(w). Represent the zero-noise part by that prefix's existing
+strict family, instead of retaining the possibly much larger family
+obtained by separately multiplying the comparison-gauge factors.
+Therefore one valid exact supported representation satisfies
+
+ ||Bhat||_support <= (C_a/ell^q)b_out+C_(q,a)rho.        (3)
+
+Choose q first so theta=C_a/ell^q is smaller than the fixed inverse
+polarization and complete-block substitution constants (in particular
+theta<1/16e), then the common fixed radius ceiling. Require the noise
+term C_(q,a)rho to obey the same smaller fractional bound relative to
+b_in, and b_out/b_in<2. A mere scalar one-quarter margin would not pay
+the Banach polarization factor in a full support substitution.
+Equation (3) gives a fixed fractional margin inside the input ball b_in.
+This is a strict-support estimate, stronger than scalar domain gain.
+For retained noise rho<=C g(log gamma)^p and b=c g(log gamma)^s,
+s>p makes this condition hold for all sufficiently large gamma.
+There is no uniformity assertion as q tends to infinity.
+
+6. COMPACT GAUGES AND INFINITE SCALAR IDENTITIES
+
+For compact coarse w, every nonzero coefficient of gamma(w)-1 meets
+supp(w). The retained physical tree reserve therefore gives exponential
+decay of gamma-1 and its physical differences away from supp(w). The
+same is true of each prefix potential. Truncating log gamma by smooth
+large-box cutoffs gives allowed compact gauges and convergence in l1
+of their transformed current fields to the exact gauge transform.
+On a sufficiently small germ all gauge paths stay in the input domain.
+The analytic-activity total is l1-Lipschitz on strict sub-balls, so its
+compact-gauge identity passes to this limit. Analytic continuation in a
+scalar multiple of w extends the endpoint scalar identity throughout
+the common ball on which both endpoint maps have a strict margin.
+
+Thus this construction addresses the extra infinite-gauge compatibility
+condition in aqb-descent-section for locally gauge-invariant totals.
+It does not by itself prove the quantum kernel identity, mixed-sector
+matching, positivity of a continuum limit, or existence of YM4.
+
+7. SAME-EXPONENT CARRIER COMPRESSION (INDEPENDENT ELEMENTARY LEMMA)
+
+For a connected input J-cell animal H, let pi_L H be its image in
+coarse cells of side L J. Then in dimension d
+
+ |pi_L H| <= 3^d [1+(|H|-1)/L].                         (4)
+
+Color coarse cells by their coordinates mod 3. In one color, selected
+points of H in distinct cells have lattice distance at least 2L.
+A depth-first tour of a spanning tree of H has length 2(|H|-1).
+Read the first visits to the selected points in tour order: each segment
+between consecutive selected points has length at least 2L. Hence that
+color contains at most 1+(|H|-1)/L selected cells. Sum over 3^d colors.
+
+At a fixed large L, (4) pays an output carrier exponent using only a
+fraction of the input exponent. Fixed polynomial attachment/mark factors
+in |H| can use another fraction. This supplies the elementary geometric
+reserve for a same-exponent q-block marked expansion; the actual cluster
+expansion and its new-carrier costs still have to be established.

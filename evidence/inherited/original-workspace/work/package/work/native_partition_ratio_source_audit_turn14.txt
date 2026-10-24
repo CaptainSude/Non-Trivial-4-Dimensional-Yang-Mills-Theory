@@ -1,0 +1,355 @@
+NATIVE PARTITION RATIO AND COARSE DENSITY: PRIMARY SOURCE AUDIT
+19 October 2026; turn 14; balaban_inputs
+
+Status, corrected after the gauge-slice audit in Section7. The primary result
+controls the COMPLETE effective object, not only individual histories.
+However the OCR does NOT certify that this object is a globally bounded Haar
+density. Gauge-slice delta measures survive in a native representation. The
+safe normalized consequence uses a positive-measure lower bound and an
+INTEGRATED upper bound. The stronger pointwise version in Section2 is now
+explicitly conditional; its L-infinity conclusion is not a source conclusion.
+No local relative-pressure estimate, all-history small polymer gas, or native
+observable Markov transport theorem is established by this audit.
+
+1. Primary evidence and exact transcription limits
+
+B119: T. Balaban, CMP119 (1988), 243--285, DOI 10.1007/BF01217741.
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+Primary PDF text was read, not a reconstructed archive argument.
+Source ledger (concise paraphrase): pp243--245, (0.1), distinguishes exact
+averaging T from R, which changes densities on large-field regions; the
+sequence is (RT)^k applied to Wilson weight with vacuum constant E. Page254
+places rho_k on the current lattice T^(k). Pages255,258, (2.3),(2.19)--(2.22),
+allow large components and factor retained integral operations by components,
+then chronologically; boundary terms carry remaining interactions. Page262
+defines the vacuum subtraction and states Theorem1 for the actual recursive
+couplings; its following remark allows the entire stated inductive class.
+Page259, (2.24), generates spatially varying couplings from geometric cutoffs.
+Pages263--264, (2.43)--(2.49), give action bounds used before integration and
+history summation. Corollary3, (2.50), has constants independent of eta and the
+torus but depending on the terminal coupling. Its displayed formula is not
+legibly recovered here. This is not a theorem for arbitrary local source
+perturbations merely because they are small in a different norm.
+
+B122-II: T. Balaban, CMP122 (1989), 355--392, DOI 10.1007/BF01238433.
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+Primary PDF text was read.
+Source ledger: Theorem1, p355, retains weak effective couplings as a
+hypothesis; (0.1) records stability. Relevant additional locators are
+p357 after(1.6), p378 before(1.71), pp379--380 (1.73)--(1.75), and
+pp389--392 (1.97)--(1.104). Section7 below corrects the earlier unsupported
+pointwise-Haar interpretation.
+
+B109: T. Balaban, CMP109 (1987), 249--301, DOI 10.1007/BF01215223.
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+Primary pp251--252 define the original torus and lattice spacings. Page256
+allows the stopping scale to be declared unit. Pages258--259, (0.30), identify
+the relevant volume in current-scale units and explicitly give uniformity in
+original epsilon at the terminal unit lattice. Theorem1 is the weak-coupling
+four-dimensional action theorem; its proof also applies in dimension three
+without the marginal coupling subtraction. The SU(2) trajectory theorem is
+separate.
+
+Transcription limitation. The web PDF OCR clearly gives the inequality's
+structure, but damages the characteristic-function and coupling subscripts.
+A search-index rendering writes the volume as |T_eta|. Screenshot tools
+returned a textual ImageDisplayed marker rather than image pixels; local PDF
+files are zero length or HTML placeholders. Accordingly this note does not
+claim an image-certified literal transcription of those subscripts, nor of
+B119(2.50). Below B_k(V), chi_k(V), and N_k denote the EXACT lower-action,
+characteristic, and volume quantities in the printed (0.1), to avoid replacing
+an uncertain symbol by a desired one. The stopped-unit interpretation is
+supported by B109's explicit terminal-uniformity statement; the final
+application should still record the literal volume convention once pixels
+are available. No claim rests on a reconstructed Raw-I quote.
+
+2. CONDITIONAL stronger lemma: normalized consequence of a Haar sandwich
+
+This section is elementary mathematics, not an extra theorem attributed to
+Balaban. After the correction in Section7, its pointwise upper hypothesis is
+NOT source-attached. On a fixed finite current lattice let H be product Haar
+measure on its links, or its corresponding normalized quotient measure. Let
+rho>=0 be the complete density, and suppose the printed bound reads
+
+  ell(V):=chi_k(V) exp[-B_k(V)-E_- N_k]
+       <= rho(V) <= u:=exp[E_+ N_k].                         (2.1)
+
+Assume I_k:=integral chi_k exp(-B_k) dH>0. Set Z=integral rho dH and
+mu(dV)=rho(V)dH/Z. Integration and division give the EXACT implications
+
+  exp(-E_- N_k) I_k <= Z <= exp(E_+ N_k),
+  exp[-B_k(V)-(E_-+E_+)N_k] chi_k(V)
+       <= dmu/dH(V) <= exp[(E_-+E_+)N_k]/I_k.               (2.2)
+
+In particular, for any measurable cylinder C of current variables,
+
+  mu(C) >= exp[-(E_-+E_+)N_k]
+           integral_C chi_k(V) exp[-B_k(V)] dH(V).           (2.3)
+
+Thus, under (2.1), no normalized rare-history estimate is needed for a cylinder
+floor at FIXED total stopped volume. To make the floor uniform in original
+UV refinement one must separately check, for the same density:
+  (a) N_k is bounded after stopping-scale rescaling;
+  (b) the terminal couplings lie in a fixed permitted range and E_++E_- is
+      correspondingly bounded;
+  (c) a fixed positive-Haar-measure set O is in {chi_k=1};
+  (d) sup_O B_k is bounded uniformly in the preceding refinement.
+If B_k=gamma_k A(U_k(V)), (d) is a bound for the actual minimizing background
+action, not automatically a bound for an unrelated coarse plaquette action.
+At fixed stopped coupling these are plausible native minimum inputs, but
+they should not be silently read out of the damaged formula.
+
+For bounded continuous functions f_1,...,f_r, (2.2) gives
+
+  integral |sum_a c_a f_a|^2 dmu
+    >= exp[-B_O-(E_-+E_+)N_k]
+        integral_O |sum_a c_a f_a|^2 dH.                    (2.4)
+
+If the restrictions f_a|O are linearly independent in L2(H|O), the finite
+Haar Gram matrix has a positive smallest eigenvalue. Equation(2.4) is then a
+uniform ordinary L2 Gram floor. For centered functions, use {1,f_1,...,f_r}
+and minimize the right side over the constant: independence modulo constants
+is the precise hypothesis. This establishes nondegenerate classical coarse
+randomness, not an Osterwalder--Schrader Gram floor.
+
+Under the EXTRA pointwise upper hypothesis, (2.2) gives weak-* compactness in L-infinity(H)
+for a fixed finite current graph. This is compactness of these coarse laws;
+it is neither projective consistency across stopping scales nor a continuum
+Yang--Mills construction.
+
+3. Why a volume bound is not the needed local ratio or energy tilt
+
+Common vacuum extraction is an exact scalar cancellation: multiplying rho
+by exp(-E_UV) does not change mu or a ratio of two integrals of THE SAME
+density. It does not cancel the error factors exp(+-E N) in an inequality.
+Nor may separately renormalized source theories be divided while dropping
+the source-dependent difference E_UV(t)-E_UV(0).
+
+A concrete counterexample isolates the limitation of volume-only bounds.
+Let a product probability space contain a coordinate x with H(x>=0)=1/2.
+For N>0 set rho_N=e^(CN) on x>=0 and e^(-CN) on x<0. Then
+
+  e^(-CN)<=rho_N<=e^(CN),
+  mu_N(x<0)=1/(1+e^(2CN)).                                  (3.1)
+
+The event depends on one coordinate, yet its normalized mass vanishes
+exponentially in TOTAL volume. The toy lower action is zero and chi=1, so
+even a global positive density floor of the form(2.1) cannot improve this
+logical implication. It does not contradict fixed-N conclusion(2.3).
+
+The upper side of (2.1) gives no surviving negative Wilson energy. For an
+energy tilt exp(lambda gamma S(V)), using it directly incurs
+u integral exp(lambda gamma S) dH. Compactness bounds S, but only gives the
+large gamma cost, not a small-coupling pressure estimate of order log gamma
+per stopped cell. The lower side cannot provide an upper numerator bound.
+One needs, for example, an admitted same-vacuum tilted-density theorem or
+a local connected-pressure estimate
+
+  log integral exp(F_K) rho dH - log integral rho dH
+       <= C |K|                                            (3.2)
+
+with the desired coupling dependence and the actual source F_K. No such
+general source statement was located in the cited theorem hypotheses.
+For a uniformly bounded F_K, the trivial bound by ||F_K||_infinity suffices;
+the difficulty concerns cutoff-dependent energies/renormalized sources.
+
+4. Positivity, history normalization, and observable identity
+
+The exact averaging step alone defines a positive deterministic pushforward
+of the preceding measure. The published full density after R is a different
+object from that unmodified pushforward. A formula for a current observable
+must use the observable's exact R transport before (2.3) or (2.4) can be
+identified with an observable of the original Wilson measure.
+
+Complex analytic or localized coefficients need not be positive. Bounds for
+their absolute sums are not bounds for probabilities of the history labels.
+Even for a positive unnormalized kernel K, the identity
+
+  Kf=(K1) [Kf/K1]                                          (4.1)
+
+shows why a small K1 does not give a small normalized operator. A local
+denominator comparison or an integrated rooted mass estimate is genuinely
+additional to an absolute kernel bound. The fixed-Y final expansion in the
+source does not supply a sum of all surviving history geometries in a small
+polymer norm at fixed exterior datum.
+
+Also a positive density sandwich alone cannot prove reflection positivity
+or quantum nontriviality. Product Haar measure itself has a positive density
+floor. For independent reflected halves, the OS norm of a centered observable
+supported strictly in one half is zero. An ordinary Gram floor such as(2.4)
+must not be substituted for a separated OS Gram floor.
+
+5. Exact innovation ledger: independence is unnecessary, locality is not
+
+This is a possible alternative CONSUMER, proved abstractly here. Suppose an
+actual positive construction has already been identified with a finite
+Markov chain X_0,...,X_J, with kernels K_j(X_j,dX_(j+1)). Given a terminal
+square-integrable f_J, define f_j=K_j f_(j+1). With the natural filtration,
+M_j=f_j(X_j) is the martingale E[f_J(X_J)|X_0,...,X_j]. Orthogonality gives
+
+  E|f_J(X_J)|^2-E|f_0(X_0)|^2
+    = sum_(j=0)^(J-1) E Var(f_(j+1)(X_(j+1))|X_j).          (5.1)
+
+All cross-covariances have analogous polarized identities. No conditional
+independence among spatial components is required for (5.1).
+
+If a kernel, for a given input x, changes only links in a set D_j(x), and
+the full possible output support is known, then for a real observable
+
+  Var_K(f|x) <= (osc_(D_j(x)) f)^2/4.                       (5.2)
+
+For a complex observable the safe bound by its squared oscillation also
+holds, or use (1/2) E|f(Y)-f(Y')|^2. This bound has no unknown denominator.
+But it must be summed for the ACTUAL backward observables f_(j+1), the
+actual supports, and the actual input law.
+
+If a random choice C selects the refill domain, conditioning on C incurs
+
+  Var(f(Y)|x)=E_C Var(f(Y)|x,C)
+                +Var_C(E[f(Y)|x,C]).                       (5.3)
+
+Dropping the second term is invalid. Auxiliary choices can be exposed as
+additional Markov steps, provided their own innovation is retained. Similarly,
+factorization of bare integration operators over disjoint domains does not
+imply conditional independence after multiplying by interactions joining
+those domains. Either keep the whole joint kernel or expose an exact
+sequential disintegration; the latter can have nonlocal conditional kernels.
+
+Primary-supported geometry conclusion: there are component-supported,
+chronologically ordered retained operations, and a bounded local primitive
+appears in II's denominator analysis. The evidence inspected does NOT
+identify the complete R as a product of independent fixed-size refills, nor
+bound the oscillations in (5.2). Its large-field sets are selected through
+multi-scale field tests and history geometry, rather than fixed in advance.
+The precise original positive Markov transition and selection sigma-field
+would have to be recovered from Part I or proved directly; positivity of a
+single real comparison integral is insufficient for that identification.
+
+6. Result usable by the parent argument (read with Section7 correction)
+
+Use the measure version (7.1)--(7.2) below for the source attachment; it yields
+the same LOWER cylinder/Gram bounds (2.3)--(2.4) once the current variable,
+lower-action/volume dictionary, and UV-uniform good cylinder are checked.
+Do not use (2.2)'s upper Radon--Nikodym bound or its L-infinity compactness.
+Retain the small-coupling trajectory hypothesis.
+This route genuinely bypasses normalized rarity of individual histories for
+ordinary coarse-state nondegeneracy.
+
+For an observable of the original Wilson theory, the next additional input
+is either an exact R observable transport with a summable innovation budget
+as in(5.1), or an independently proved relative/normalized observable bound.
+The source density theorem alone establishes neither. No completed YM4
+existence claim follows from this audit.
+
+7. ADDENDUM: singular gauge slices, the upper bound, and a conditional R kernel
+
+7A. What the primary prose resolves, and what it does not
+
+The first version overstated the OCR as a pointwise full-Haar upper bound.
+That assertion is withdrawn. B119 p264, immediately before Corollary3(2.50),
+explicitly describes bounding the INTEGRAL of rho_k in V_k. In B122-II p378,
+the first-class reverse Faddeev--Popov operation is explicitly an equivalence
+after integration in V_k, not equality of the densities. Second-class
+components retain gauge-fixing delta-functions. Pages391--392, (1.104), keep
+those factors in the resulting representation. Thus a literal global
+Haar-density interpretation needs a convention not supplied by damaged OCR.
+
+The notation rho_k dV_k may stand for a positive measure containing singular
+pieces. If a nonzero singular part M_s is supported on a Haar-null set A,
+then M_s(A)>0, whereas exp(E_+N)H(A)=0. A positive-measure upper bound
+M<=exp(E_+N)H is therefore impossible for that SAME representative. This is
+an exact incompatibility, not evidence that the source's stability theorem
+is false: either the upper member is integrated, or a different restored/
+quotient reference convention is in use. Actual pixels/full dictionary would
+be needed to decide the stronger reading of (0.1).
+
+The rigorous weaker consumer is straightforward. Let M be a positive finite
+measure, possibly singular, with
+
+  M(dV)>=ell(V)H(dV),      M(X)<=u,
+  ell=chi exp[-B-E_-N],    u=exp(E_+N).                      (7.1)
+
+Then mu=M/M(X) satisfies
+
+  mu(dV)>=ell(V)H(dV)/u.                                   (7.2)
+
+This gives all LOWER cylinder and ordinary Gram conclusions above, including
+centering by minimizing over constants. It gives no Haar upper density.
+Compactness at fixed graph instead follows from compactness of the group
+configuration space and weak compactness of probability measures. A fixed
+measure minorant passes to weak limits by testing nonnegative continuous
+functions. No absolute continuity conclusion is needed.
+
+Secondary provenance, not new primary certification: the reconstructed
+work/sussman/theorem_0_complete_account_raw_I.tex, lines157071--157100,
+explicitly posits positive reference normalizers, component replacement
+tau -> m_tau s, second-class singular reference laws, and the measure-lower/
+integrated-upper pair. Lines2576--2582 summarize the weaker statement.
+The reconstruction itself calls the source upper bound pointwise while
+declining to prove that version. Its label does not resolve the original
+reference convention. None of its component-kernel hypotheses is promoted
+here to a primary-verified assertion.
+
+7B. A precise positive replacement lemma, conditional on the literal rule
+
+There is no mathematical obstacle to a probability kernel having singular
+output. Let a branch have variables (e,x), where e is the COMPLETE retained
+exterior, and positive finite measure
+
+  tau(de,dx)=m(de) q_e(dx),   q_e a probability measure.
+
+Let s_e(dy) be a measurable probability reference law on the same component
+configuration space, possibly supported on a gauge slice. The rule
+
+  tau'(de,dy)=m(de) s_e(dy)                                  (7.3)
+
+is exactly the pushforward of tau by
+
+  K((e,x),d(e',y))=delta_e(de') s_e(dy).                     (7.4)
+
+Indeed integration against any bounded measurable F gives the same result
+on both sides. K is positive, K1=1, preserves the exterior, and discards x.
+This proves mass preservation and supplies the joint old/new law. It does
+NOT preserve a general component observable, nor a later nonlinear average.
+The reference may depend on a fixed current state law; then K=K_mu is still
+a legitimate kernel for that one prescribed evolution, not a single linear
+map on the space of all input laws.
+
+If the input is a finite/countable POSITIVE branch sum M=sum_h tau_h and each
+branch has (7.4), write w_h=d tau_h/dM. Then
+
+  K_M(v,dv')=sum_h w_h(v) K_h(v,dv')                         (7.5)
+
+is a probability kernel M-a.e., and M K_M=sum_h tau_h K_h.
+Equivalently keep h as an augmented state variable. This construction fails
+for a signed Mayer/log decomposition: its coefficients are not posterior
+probabilities. It also requires the actual branch rule and exterior to be
+specified before forgetting h. Arbitrarily coupling M to a same-mass output
+by independent sampling proves existence of some kernel, but supplies none
+of the source's locality or innovation estimates.
+
+7C. Gauge equivalence and the native attachment that remains open
+
+The primary reverse-gauge identity supplies equality against the admitted
+gauge-invariant integrated tests. It is not equality of arbitrary Borel
+measures on the unreduced link configuration space. There are two legitimate
+ways to formulate a kernel consumer:
+  * keep the literal slice/reference measures as measures on link space and
+    prove every replacement including gauge restoration as an actual kernel;
+  * pass to the gauge-orbit quotient and prove the kernels descend there,
+    with compatible exterior/boundary gauge groups and subsequent block maps.
+Randomizing a fixed slice by Haar gauge transformations preserves integrals
+of gauge-invariant functions, but changes its full link-space representative.
+One must retain that randomization as an operation, not equate representatives.
+
+What is primary-verified in this pass: exact T averaging; positive real
+comparison integrals; retained component factorization; the first/second
+class distinction and integration-only gauge equivalence; and integrated
+stability. What remains conditional: the literal original Part-I normalized
+reference rule on every branch; its measurability and complete exterior;
+positive pre-localization branch decomposition; preservation of the desired
+link-space law or precise quotient law through all gauge-equivalence steps;
+and any spatial innovation budget. The Part-I Euclid link again returned an
+interstitial and the DOI did not yield a readable PDF, so no new Part-I
+formula was certified. Section5's Markov ledger remains an abstract theorem
+whose native attachment requires exactly these items.

@@ -1,0 +1,433 @@
+SPATIAL-FLOW MAGNETIC PROBES WITH EXACT TIME SUPPORT -- TURN63
+20 October 2026. gauge47.
+
+RESULT AND SCOPE
+
+Spatial-only Wilson flow gives an exact finite-lattice original
+observable with positive-time support. A bounded radial function
+of ONE flowed magnetic plaquette needs no color-transport string.
+Its canonical free Maxwell benchmark has finite equal-time variance,
+an explicit positive reflected norm, and a cutoff-uniform free
+lattice approximation. Time averaging can be performed AFTER the
+radial function, without introducing temporal parallel transports.
+
+This narrows the old probe problem in two concrete ways: it removes
+time-boundary leakage from global four-dimensional flow, and removes
+the entire thin-connector issue from the simplest observable. It
+does not prove the nonlinear continuum flow on the original Wilson
+law, or its calibration at a fixed physical coupling.
+
+The latter qualification is substantive. With a fixed reference
+coupling g_*, the bare free law at g_a instead has a factor
+(g_a/g_*)^2 in its variance, and the reflected radial norm collapses
+as g_a tends to zero. A physical RG matching cannot be replaced by
+flat bare-field Taylor expansion.
+
+INPUTS AND PRIMARY SOURCES
+
+Read current_proof_frontier_turn62.txt and
+physical_probe_attachment_turn61.txt. The earlier spatial-flow
+regularity warning in outputs/yang-mills-loop-observable-route.txt
+Section6 remains in force.
+
+[S] K. Sakai and S. Sasaki, Glueball spectroscopy in lattice QCD
+using gradient flow, Phys. Rev. D107 (2023),034510,
+arXiv:2211.15176v2:
+ https://arxiv.org/pdf/2211.15176
+SectionII.B, PDFp4, equations(3)--(4), defines the flow using only
+spatial links and spatial plaquettes. The study is numerical
+spectroscopy, not a nonperturbative continuum existence proof.
+
+[C] S. Cao and S. Chatterjee, Yang--Mills heat flow with random
+distributional initial data, arXiv:2111.10652:
+ https://arxiv.org/pdf/2111.10652
+Theorem1.19 and Assumption(D), with the threshold also stated at
+the start of Section3.1, require a covariance exponent
+alpha>max(d-4/3,d/2). In d=3 this means alpha>5/3.
+The equal-time four-dimensional Gaussian potential has alpha=1.
+That theorem therefore does not provide the nonlinear continuum
+attachment here. No impossibility of a stronger theorem is inferred.
+
+All covariance and radial calculations below are derived directly.
+The canonical Gaussian reference and the original interacting
+measure are kept separate.
+
+1. EXACT FINITE-LATTICE SPATIAL FLOW
+
+Fix a finite spatial graph, either a periodic spatial torus or a
+box with only its internal spatial links and plaquettes. At each
+Euclidean lattice time t independently, let V_s(t) be Wilson
+gradient flow of those spatial links driven by their spatial
+plaquette action. Choose the normalization of flow time so its
+flat transverse linearization is exp(s Delta_space); physical
+flow time s corresponds to lattice time of order s/a^2.
+
+The vector field is smooth on a finite product of compact groups,
+so the real flow exists uniquely for every finite s. Gauge
+invariance of the spatial action and the product metric implies
+equivariance under arbitrary gauges g(t,x), independently at
+every time slice. Uniqueness also implies commutation with the
+reflection of the time labels and the corresponding spatial
+graph convention.
+
+Most importantly, V_s(t) reads ONLY the original spatial links
+at time t. It reads no original temporal link and no other time
+slice. There is spatial propagation within the chosen graph;
+there is no claim of finite spatial propagation.
+
+For SU(2), write the flowed oriented magnetic plaquette as
+
+ P_(12,s,a)(t,x)=p_0 I+i p.sigma.
+
+Choose a fixed positive normalization parameter g_*. Define
+
+ X_(s,a)(t,x)=2 p(P_(12,s,a)(t,x))/(g_* a^2),
+ B_(s,a)(t,x)=exp[-h |X_(s,a)(t,x)|^2],   h>0.            (1.1)
+
+Conjugation of the plaquette rotates p by the adjoint orthogonal
+action at its base vertex. Thus B is exactly gauge invariant,
+0<B<=1, and is a deterministic function of the ORIGINAL links.
+There is no logarithm, weak-field cut, or gauge selection in
+its definition. The parameter g_* specifies an observable;
+identifying it with a physical renormalized coupling is a later
+estimate, not part of this exact definition.
+
+On any original Wilson geometry admitting the time reflection,
+B at t>0 belongs to the positive-time algebra, and
+
+ E[(theta B)B]-(E B)^2 >=0.                              (1.2)
+
+The same holds for a positive normalized time average
+
+ O_a=sum_(t>0) w_a(t) B_(s,a)(t,x),  w_a(t)>=0,
+                         sum_t w_a(t)=1,                (1.3)
+
+with weights supported in [delta,T], delta>0. Reflection uses
+the reflected times, graph, and plaquettes. Equations(1.1)--(1.3)
+are finite-regulator statements, independent of a continuum
+flow theorem.
+
+A spatial box gives exact compact spatial support but changes
+the flow kernel at its boundary. A periodic spatial torus has
+no such boundary. The whole-space formulas below apply directly
+to the whole-space Gaussian reference, or after a justified
+large-torus limit. They are not silently substituted for a
+confined-box nonlinear flow.
+
+2. THE COLOR-SMEAR VARIANT AND AN IMPORTANT TIME ORDERING
+
+One can instead transport magnetic plaquette colors along
+SPATIAL paths from x_0 to x inside each time slice, using the
+same flowed links, and define
+
+ Y_a(t)=a^3 sum_x f(x)
+               Ad_(W_s(t;x_0,x)) X_(s,a)(t,x).           (2.1)
+
+For real smooth f this transforms by Ad g(t,x_0), so
+exp[-h |Y_a(t)|^2] is gauge invariant. Its positive weighted
+time average is again an original positive-half observable.
+
+It is generally WRONG to first form sum_t w_a(t)Y_a(t) and
+then take its color norm. The independent matrices g(t,x_0)
+rotate its summands differently. Restoring covariance of
+that alternative requires temporal parallel transport, whose
+UV analysis is a different problem. Taking the radial function
+at each time and averaging the resulting scalar avoids it.
+
+The point probe(1.1) is simpler still: it omits every connector.
+The variant(2.1) remains useful when a specified spatial
+color smear is needed, but its nonlinear marked comparison
+has more structure to control.
+
+3. CANONICAL MAGNETIC MAXWELL COVARIANCE
+
+Take n independent canonical Maxwell colors, n=3 for SU(2).
+The spatial transverse heat flow sends linear magnetic
+curvature F_12 to e^(s Delta_space)F_12. This statement is
+independent of the longitudinal gauge choice: the curl
+annihilates longitudinal modes.
+
+At a fixed spatial point, write X_s^b(t) for this canonical
+flowed curvature. Its covariance is
+
+ E[X_s^b(t) X_s^c(u)]=delta_bc c_s(|t-u|),
+
+ c_s(tau)=integral_R3 dk/(2pi)^3
+       [(k_1^2+k_2^2)/(2|k|)]
+             exp[-2s|k|^2-|k|tau]
+          =(1/(6pi^2)) integral_0^infinity
+                        k^3 exp[-2s k^2-tau k] dk.       (3.1)
+
+This follows by integrating
+1/(p_0^2+|k|^2) in p_0, giving exp(-|k|tau)/(2|k|),
+and then doing the angular average of k_1^2+k_2^2.
+In particular,
+
+                 v_s=c_s(0)=1/(48pi^2 s^2).             (3.2)
+
+It is finite already at equal time. Temporal smearing is
+not needed to cure a remaining free magnetic self-variance
+divergence at s>0.
+
+For the linearization of(2.1), the transports are identity
+at order zero. Replace the integrand in(3.1) by its product
+with |f_hat(k)|^2. The resulting v_(s,f) is finite, and
+c_(s,f)(tau)>0 for finite tau if f is nonzero. For a fixed
+smooth spatial f, v_(0,f) is also finite; the unsmoothed
+nonlinear transports, rather than this linear smear, caused
+the TURN61 line problem.
+
+For the point process, c_s(tau) is continuous and
+
+ 0<=v_s-c_s(tau)<=tau v_s mu_s,
+                 mu_s=3sqrt(pi)/(4sqrt(2s)).             (3.3)
+
+The value mu_s is the mean k under the probability density
+proportional to k^3 exp(-2s k^2). Gaussian moment estimates
+therefore give a version Holder-continuous in physical time
+with any exponent below1/2 on compact intervals. In particular
+the scalar time average below is a well-defined Gaussian
+random variable. Time differentiability is not asserted.
+
+This magnetic choice is material. Spatial smoothing of an
+electric component F_0i still leaves a p_0^2 numerator; its
+equal-time integral contains
+integral dp_0 p_0^2/(p_0^2+|k|^2)=infinity. At separated
+times one can separate contact terms and the reflection
+parity, but it is not the finite magnetic calculation above.
+
+4. EXPLICIT POSITIVE OS MARGIN
+
+Let b_s(t)=exp[-h |X_s(t)|^2]. The exact Gaussian formulas are
+
+ m_G=(1+2h v_s)^(-n/2),
+
+ E[b_s(-t)b_s(u)]
+  =[(1+2h v_s)^2-4h^2 c_s(t+u)^2]^(-n/2),  t,u>0.       (4.1)
+
+Use h=1/(2v_s), n=3, and r_s(tau)=c_s(tau)/v_s.
+Then m_G=2^(-3/2), and for a point at time T,
+
+ D_s(T)=(4-r_s(2T)^2)^(-3/2)-1/8
+                         >=3 r_s(2T)^2/64>0.            (4.2)
+
+Jensen's inequality applied to the k probability distribution
+gives
+
+ r_s(2T)>=exp[-2T mu_s]
+           =exp[-3sqrt(pi)T/(2sqrt(2s))].                (4.3)
+
+Thus the margin is quantitatively positive at every fixed
+s>0 and T>0. No estimate on the interacting law has entered.
+
+For a nonnegative h_time with integral1 supported in
+[delta,T], define O_G=integral h_time(t)b_s(t)dt. This
+uses a time weight distinct from the radial parameter h.
+By bounded Fubini,
+
+ D_G(h_time)=integral dt du h_time(t)h_time(u)
+       [(4-r_s(t+u)^2)^(-3/2)-1/8]
+                     >=3 r_s(2T)^2/64>0.                (4.4)
+
+The ordinary variance is finite because 0<O_G<=1.
+No comparison of colors at different times is present in
+this formula; the radial operation was already performed.
+For the spatial color-smear variant, the same formulas
+hold with v_s,c_s replaced by v_(s,f),c_(s,f).
+
+5. A DIRECT GAUSSIAN LATTICE CHECK
+
+For completeness, the flat infinite-time lattice Maxwell
+calculation has an exact cutoff formula. Let
+
+ hat k_i=(2/a)sin(a k_i/2),  omega_a(k)^2=sum_i hat k_i^2,
+ E_a(k)=(2/a)asinh(a omega_a(k)/2).
+
+Temporal Fourier integration of the lattice propagator gives
+
+ C_a(ma;k)=exp[-E_a(k)|ma|]
+                 /[omega_a(k)sqrt(4+a^2 omega_a(k)^2)].  (5.1)
+
+Thus the spatially flowed magnetic point covariance is
+
+ c_(s,a)(ma)=integral_BZ3 dk/(2pi)^3
+  (hat k_1^2+hat k_2^2) exp[-2s omega_a(k)^2]
+                         C_a(ma;k).                    (5.2)
+
+The zero spatial momentum does not contribute to curvature.
+The same formula is a spatial Fourier sum on a finite
+periodic torus. Plaquette phases cancel in the same-point
+curvature covariance.
+
+On the Brillouin zone,
+
+ (2/pi)|k|<=omega_a(k)<=|k|.
+
+Using sqrt(4+a^2 omega_a^2)>=2, the integrand is bounded by
+a fixed multiple of |k|exp[-8s|k|^2/pi^2]. Its R3 integral
+is finite and of order s^-2, uniformly in a. Dominated
+convergence gives
+
+ c_(s,a)(tau_a)->c_s(tau),  v_(s,a)->v_s                 (5.3)
+
+whenever tau_a is a lattice time tending to tau. Formula(4.1)
+then gives the same positive Gaussian radial limit, including
+time averages by bounded dominated convergence.
+
+This is an actual cutoff-uniform FREE calculation. It does
+not identify the nonlinear Wilson-flow observable with the
+linear Gaussian one. The detailed companion derivation is
+spatial_magnetic_gaussian_limit_turn63.txt, independently
+reviewed in spatial_magnetic_gaussian_audit_turn63.txt.
+It also gives the quantitative covariance discretization
+error O(a^2 s^-3+|T_a-T|s^-5/2) for a^2<=s.
+
+6. WHAT HAPPENS TO THE OLD LINE DIVERGENCE
+
+The point probe has no line. If using the transported
+variant, at the free transverse or spatially gauge-damped
+reference level the equal-time scalar heat covariance is
+
+ C_s^sp(x)=integral_R3 dk/(2pi)^3
+                      exp(ik.x-2s|k|^2)/(2|k|).
+
+For a straight segment of length L define the scalar bound
+I_s(L)=integral_0^L du integral_0^L dv C_s^sp((u-v)e_1).
+The kernel is nonnegative on that axis. For example, writing
+F_D for Dawson's positive integral,
+
+ C_s^sp(r e_1)
+  =F_D(r/(2sqrt(2s)))/(4pi^2 r sqrt(2s)).
+
+Its value at0 is1/(16pi^2 s), and it falls like
+1/(4pi^2 r^2) at infinity. Integrating along the full line,
+or setting k_1=0 in its Fourier transform, gives
+
+ integral_R C_s^sp(u e_1)du=1/(8sqrt(2pi s)).
+
+Consequently
+
+                  I_s(L)<=L/(8sqrt(2pi s)).             (6.1)
+
+The transverse matrix covariance is bounded by the scalar
+covariance as a positive Fourier quadratic form. Hence this
+also bounds the variance of a straight spatial transverse
+line integral. A general fixed rectifiable spatial path has
+the coarser bound L^2/(16pi^2 s).
+
+These estimates remove the L/a Gaussian self-contraction
+diagnostic at fixed physical s. They do not prove uniform
+nonabelian path-ordered transport estimates. The ungauge-damped
+flow leaves longitudinal potential modes unchanged; the
+statement is made in the transverse/gauge-damped reference,
+or for the complete invariant observable after a justified
+gauge argument, not for an isolated arbitrary open line in
+every gauge. No temporal line has been introduced.
+
+7. TWO PRECISE LIMITATIONS OF THE CALIBRATION
+
+7A. Bare and physical normalizations differ.
+
+Definition(1.1) uses a fixed g_*. If its input is a canonical
+free reference with U approximately exp(i g_* a A.sigma/2),
+its leading curvature is the X_s used above. If instead one
+uses the BARE free law with U approximately
+exp(i g_a a A.sigma/2), its linearized X is
+
+                         (g_a/g_*) X_s.
+
+Let rho_a=g_a/g_*. Its radial reflected covariance is then
+
+ [(1+2h rho_a^2 v_s)^2-4h^2 rho_a^4 c_s(2T)^2]^(-3/2)
+                 -(1+2h rho_a^2 v_s)^(-3).              (7.1)
+
+For fixed h,s,T it is O(rho_a^4) and tends to zero when
+g_a tends to zero. Thus a comparison with the fixed physical
+Maxwell benchmark cannot be obtained by simply linearizing
+the original law at its vanishing bare coupling. One needs
+the actual physical-scale RG calibration of this observable.
+Conversely, normalizing automatically by g_a changes the
+observable and does not prove that its nonlinear physical
+normalization is correct.
+
+7B. Removing the flow scale loses this pointwise margin.
+
+At fixed tau>0,
+
+ c_s(tau)->1/(pi^2 tau^4),   s->0,
+ r_s(tau)~48s^2/tau^4.
+
+With the normalization h=1/(2v_s), at reflected separation2T,
+
+ D_s(T)~27s^4/(64T^8),                 s->0.             (7.2)
+
+The positive margin is therefore a fixed-flow-scale margin.
+For time averages supported away from0 it similarly vanishes
+as O(s^4). This is not an objection to using fixed smearing
+scales as observables of a theory, but it rules out silently
+removing s while retaining a uniform point-probe lower bound.
+
+8. COMPARISON WITH CONFINED FOUR-DIMENSIONAL FLOW
+
+Both constructions are exact finite-regulator maps of the
+original links, and both give bounded gauge-invariant probes.
+The confined four-dimensional construction needs a whole
+spacetime box lying inside the positive half, including its
+chosen time boundaries. Spatial flow works independently at
+every time and needs no artificial positive-time boundary.
+Time translation and reflection act on the time labels in
+the evident way. Spatial box dependence can still remain.
+
+The linear magnetic spatial-flow benchmark has finite
+equal-time variance despite the absence of time smoothing.
+This is a genuine advantage for time-local observables.
+It is not a general claim that all spatially flowed
+composites have finite equal-time moments.
+
+The nonlinear initial-data problem has not disappeared.
+The equal-time four-dimensional potential has covariance
+1/(2|k|), so its ultraviolet spatial regularity is below
+order-1, and it fails the alpha>5/3 covariance hypothesis
+of[C]. The finite lattice ODE exists for every input, but
+at physical flow time s its basic derivative bound is only
+exp(C s/a^2). That bound is too weak for the desired native
+analytic/marked admission; it is not evidence that the
+actual flow necessarily has that instability.
+
+9. THE ACTUAL NEXT COMPARISON
+
+For the simplest point or time-averaged probe O_a, its one
+original expectation and its reflected product expectation
+must be transported separately through the native positive
+history representation. A reference redraw does not carry
+the old observable. The conditional two-point quantity is
+not generally the product of the two conditional one-point
+quantities.
+
+At fixed physical s, temporal support and normalization,
+the concrete desired estimates are only
+
+ |E_W O_a-m_G|<=epsilon,
+ |E_W[(theta O_a)O_a]-q_G|<=epsilon,                      (9.1)
+
+where q_G-m_G^2 is explicitly given in(4.2) or(4.4), after
+the matching of g_* has actually been established. Since
+both original and Gaussian tests lie in[0,1], these two
+estimates would give a reflected norm at least
+q_G-m_G^2-3epsilon.
+
+The TURN62 single-date auxiliary count can bound a
+specified positive bad-history contribution if that event
+is properly identified. It does not by itself control all
+fine-scale histories meeting this flow observable, or the
+nonlinear map on their complement. The rough initial-data
+and coupling-calibration failures above state concretely
+why(9.1) has not followed from the present estimates.
+
+The recommended minimal probe is therefore the pointwise
+spatially flowed magnetic radial observable, optionally
+averaged as a scalar over positive times. It has no string
+renormalization problem in its definition, exact time support,
+and an explicit uniform free reference. Its original-law
+nonlinear comparison remains open. No YM4 existence claim
+is made.

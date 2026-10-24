@@ -1,0 +1,1119 @@
+TURN89 -- A DIRECT FINITE-WILSON ROUTE TO THE MISSING NONZERO CHANNEL
+20 October 2026. Mathematical research record.
+
+The nontrivial continuum Yang--Mills existence proof is NOT complete.
+This pass proves a more usable sufficient criterion for a positive-energy
+scalar sector, on the original finite Wilson sequence. It also proves a
+same-law conditional-noise estimate. Neither result supplies a uniform
+lower bound or the remaining local Yang--Mills field construction.
+
+The public QED3 material inspected in TURN88 does not provide that lower
+bound for four-dimensional nonabelian Wilson theory. Its source identities
+and parameter scalings must retain their stated models and hypotheses.
+The prior repository check, at head2a42da2e0677948ea48fbfe7126b94be5e884f79,
+remains the last check; no new repository refresh is claimed this turn.
+No absent or inaccessible paper is being treated as the present blocker.
+
+1. The new estimate worth pursuing
+
+Keep the original bounded slice probe phi_a(t) in[0,1], with the physical
+spatial Wilson-flow time, fixed spatial smear and fixed observable
+parameters from TURN88. The scalar's parameter g_* is not an identified
+renormalized coupling. Put n_a a approximately L>0 and define
+
+ G_a=(1/n_a) sum_(k=0)^(n_a-1) phi_a(k)
+                  -(1/n_a) sum_(k=n_a)^(2n_a-1) phi_a(k).
+
+The sufficient inequality is now entirely an ordinary original-law
+real-source curvature:
+
+ liminf_(a->0) Var_(full Wilson)(G_a)>0.                    TARGET
+
+The full law, its original normalizer, and a common cutoff/volume sequence
+are essential. The TARGET is not equal-time variance. It averages over a
+fixed physical duration and subtracts the next equally long average.
+
+If TARGET holds, choose v>0 strictly below its liminf, so Var(G_a)>=v
+eventually. For n_a>=4/v, the exact finite Wilson
+transfer spectrum has positive-pair mass at least v/4 in the physical band
+
+ epsilon=v/(8L),  Lambda=max{2epsilon,8/(Lv)}.
+
+After translating G_a to start at T0>0 and keeping T0+2L below the opposite
+reflection plane with a fixed physical buffer, its original reflected
+norm is at least
+
+ (v/4) exp[-2(T0+L)Lambda] (1-exp(-L epsilon))^2 >0.
+
+In these finite formulas L means the ACTUAL L_a=n_a a and T0 the actual
+lattice translation time. Uniform constants for L_a in[L_min,L_max] and
+T0,a<=T0,max are instead obtained by taking
+ epsilon=v/(8L_max), Lambda=max{2epsilon,8/(L_min v)},
+and the norm floor
+ (v/4)exp[-2(T0,max+L_max)Lambda](1-exp(-L_min epsilon))^2.
+The companion proof retains the actual finite mesh. At high energy the averaging kernel has an
+explicit2/n_a contact remainder; it is not silently discarded. At low
+energy its kernel is at most8LE. The backward finite-period variance
+term is nonpositive, while the backward reflected-norm term is positive.
+Those opposite signs make the finite-period implication rigorous.
+
+Thus TARGET would produce a positive-energy scalar state in the common
+infinite-time RP limit. It annihilates the entire zero-energy subspace,
+not just one chosen finite-volume vacuum. It would not by itself produce
+a local nonabelian YM4 field theory. TARGET remains UNPROVED.
+
+2. No extra ground-state order of limits for this reduction
+
+For actual physical transfer eigenvalues lambda_i>0, temporal period N,
+spacing a and P=Na, introduce the positive thermal pair measure
+
+ mu_a=Z_N^(-1) sum_(lambda_i>lambda_j)
+       lambda_i^N |Phi_ij|^2 delta_(a^-1 log(lambda_i/lambda_j)).
+
+Its mass is at most Var(phi)<=1/4. It is a measure of positive energy
+DIFFERENCES, not the spectral measure of a nonnegative thermal generator.
+
+For a positive normalized time profile in[T0,T1] and time shift
+delta_a in[delta_min,D], the forward kernel is
+ K_a(E)=[sum_k w_k exp(-akE)](1-exp(-delta_a E)).
+Exact spectral pairing expresses the original boundary correlation and
+reflected norm as int K_a mu_a and int K_a^2 mu_a with backward terms.
+Their errors satisfy, respectively,
+
+ 0<=kappa_a^+-kappa_a<=D/[4e(P-T1-D)],
+ 0<=N_a-N_a^+<=D^2/[e^2(P-2T1-2D)^2].
+
+These are uniform in spatial volume, cutoff, coupling and transfer gap.
+When P_a->infinity they vanish along the same simultaneous regulator
+sequence. No prior ground-state limit at each spatial cutoff is needed.
+Uniform positive kappa_a or N_a is equivalent to positive mu_a mass in
+some fixed band0<epsilon<Lambda<infinity. The measure can be extracted
+against continuous kernels vanishing at both zero and infinity.
+None of these equivalences proves its positive mass.
+
+3. What the exact auxiliary representation contributes
+
+The exact two-Hubbard--Stratonovich joint has the original Wilson marginal
+mu and the interacting auxiliary marginal nu. Conditional on the complete
+real auxiliary record xi, the original links have independent tilted
+Haar laws. Let m_t=E[phi_t|xi] and epsilon_phi=E Var(phi_t|xi).
+Different original time slices have disjoint original spatial links, so
+
+ Var_mu G_a = Var_nu[(1/n_a)sum_first m_t-(1/n_a)sum_second m_t]
+                                              +2epsilon_phi/n_a,
+ 0<=2epsilon_phi/n_a<=1/(2n_a).
+
+For every real source s the log partition functions also differ by at
+most s^2/(4n_a), with the original one larger. This follows from exact
+conditional independence and the bounded-variable exponential estimate;
+no auxiliary Gaussian approximation or derivative interchange is used.
+
+Consequently TARGET is equivalent to a positive limiting variance of the
+same time-averaged CONDITIONAL MEANS under the full interacting nu.
+All independent conditional link noise is paid by the vanishing contact
+term. A useful calculation must therefore control this correlated mean
+channel. Concentration of the individual conditional link laws is not
+a lower bound on it.
+
+A new quadratic estimate for that conditional noise is also available:
+
+ E_nu Var(B|xi) <=20 A_beta E_mu sum_e |D_e B|^2,
+ A_beta=(1+2beta)^(-1)+min{1,192 exp(-beta/3200)}.
+
+Here D is the Pauli/2 product gradient, and the right side is under the
+ORIGINAL Wilson law. The proof combines an explicit Poincare inequality
+for a tilted S3 law with the earlier current tail uniform conditional on
+EVERY original U. This is a squared-gradient sum without the spatial
+volume loss in an absolute linkwise sum. Nevertheless, for adjacent
+original slices its exact physical form is
+
+ E_mu(phi_1-phi_0)^2/2
+       =epsilon_phi+E_nu(m_1-m_0)^2/2.
+
+The last correlated increment has not been bounded. The gradient theorem
+does not replace physical time by the auxiliary sampling algorithm.
+
+4. The original native-RG source issue remains
+
+The original signed boundary correlation is exactly
+ Z^(-1) int w_B G Z_+ Z_F dB.
+Its original boundary measure and opposite-half factor stay in the row.
+On a completed positive old-record lift, normalized new reference kernels
+cancel from a passive original moment. A new reference covariance alone
+cannot create its leading term. Replacing an old source by a current
+proxy keeps the actual source difference and unfinished continuation.
+
+The direct Bałaban-source check this turn also rules out treating the
+first eligible R component as merely a bare weak-collar event: eligibility
+already carries earlier RG history. The retained bare-collar probability
+does not bound all those native history predicates. This is a scope check,
+not a new no-go theorem or a proof that a native estimate is impossible.
+
+5. Outstanding mathematical work
+
+The present finite-source lower bound is still missing. The Gaussian
+boundary comparison from TURN88 is another sufficient route, and remains
+unproved; it is not made mandatory by this pass. Neither strict finite
+positivity, upper action moments, nor the conditional current estimates
+gives a uniform positive TARGET.
+
+Even after such a lower bound, the task still requires a common continuum
+and volume construction of the intended local gauge-invariant observables,
+physical scale/coupling matching and nonabelian interaction, Euclidean
+rotations, full joint source and contact/separated-point control, and
+the appropriate reconstruction. Fixed spatial-flow scalars select a time
+direction and are spatially nonlocal. A nonzero scalar law alone does
+not meet the user's Yang--Mills goal.
+
+This turn's progress is the removal of an unnecessary spectral limit
+ordering and a precise finite-law variance consumer, together with a
+same-law quadratic noise estimate. It is not an existence proof, and
+does not justify describing the remaining work as merely presentation.
+
+Detailed proofs follow in this report. Independent reviews certify only
+the displayed finite results and conditional implications, not full YM4.
+
+
+========================================================================
+
+TURN89 -- EXACT THERMAL PAIRING ON THE ORIGINAL WILSON SEQUENCE
+20 October 2026. Scope: a spectral reduction, NOT a YM4 existence proof.
+
+1. Setup and the distinction from TURN88
+
+Use the actual finite Wilson transfer operator T=M Q M on the physical
+(gauge-invariant) spatial Hilbert space, at positive Wilson coupling.
+It is positive, injective and compact; the powers used below are trace
+class. Write its eigenvalues lambda_i>0 and Z_N=Tr(T^N), for an even
+temporal period N. The temporal lattice spacing is a and the physical
+time circumference is P=Na. The spatial regulator may vary with a.
+
+Let Phi be multiplication by the SAME real gauge-invariant slice
+observable phi in [0,1] in both factors. In our application phi is the
+fixed nonnegative unit-mass spatial smear of the bounded spatial-flow
+observable in TURN88. The spectral argument needs only these properties.
+The thermal expectation is E_N. Center A=Phi-E_N(phi)I when discussing
+variance; its matrix elements between unequal eigenspaces equal Phi_ij.
+
+No limit N->infinity at a fixed spatial regulator is taken in this note.
+In particular, no uniform spectral gap or ground-state dominance is used.
+
+Define a finite positive measure on (0,infinity):
+
+ mu_(a,N) = Z_N^(-1) sum_(lambda_i>lambda_j)
+               lambda_i^N |Phi_ij|^2 delta_(E_ij),
+ E_ij = a^(-1) log(lambda_i/lambda_j)>0.                         (1)
+
+Each unequal-eigenvalue pair is counted once, with the larger eigenvalue
+first. Degenerate pairs do not enter. Formula (1) is invariant under
+basis changes within degenerate eigenspaces. Since its mass is a subset
+of the nonnegative terms in Tr(T^N A^2)/Z_N,
+
+                  mu_(a,N)((0,infinity)) <= Var_N(phi) <= 1/4. (2)
+
+This is a measure of positive ENERGY DIFFERENCES in a finite thermal
+trace. It is not an assertion that a finite thermal reconstruction has
+a nonnegative Hamiltonian with this spectral measure.
+
+2. Exact filtered boundary and reflected formulas
+
+Choose nonnegative weights w_k of sum one, with t_k=ak in [T0,T1],
+where T0>0 and T1 are fixed physical constants. Let d be a positive
+integer, delta_a=ad in [delta_min,D], with delta_min>0. Set
+
+ F=sum_k w_k [phi(k)-phi(k+d)],   G=phi(0),
+ kappa=E_N(FG),                  N_F=E_N((Theta F)F).
+
+All original reads of F must lie strictly in the chosen reflected half:
+in particular P>2(T1+D), with the buffers required by TURN88. Reflection
+is through time zero and the opposite fixed slice. Spatial flow stays
+within each original time slice. Stationarity gives E_N F=0.
+
+For E>0 put
+
+ L_-(E)=sum_k w_k exp(-t_k E),
+ L_+(E)=sum_k w_k exp(+t_k E),
+ K(E)=L_-(E)(1-exp(-delta_a E)).
+
+Then the following identities hold for the ORIGINAL finite Wilson law:
+
+ kappa = int (1-exp(-delta_a E))
+          [L_-(E)-exp(-(P-delta_a)E)L_+(E)] mu_(a,N)(dE),     (3)
+
+ N_F = int (1-exp(-delta_a E))^2
+          [L_-(E)^2+exp(-(P-2delta_a)E)L_+(E)^2]
+                                                   mu_(a,N)(dE). (4)
+
+Proof. For 0<=s<=N the two-point trace is
+ Z_N^(-1) sum_(i,j) lambda_i^(N-s) lambda_j^s |Phi_ij|^2.
+For a pair lambda_i>lambda_j set r=lambda_j/lambda_i=exp(-aE).
+The two directions give lambda_i^N(r^s+r^(N-s))|Phi_ij|^2/Z_N.
+The boundary difference at k,k+d is therefore
+ lambda_i^N(1-r^d)(r^k-r^(N-k-d))|Phi_ij|^2/Z_N.
+The reflected double difference at k,l is
+ lambda_i^N(1-r^d)^2[r^(k+l)+r^(N-k-l-2d)]|Phi_ij|^2/Z_N.
+Sum the nonnegative weights. Equal-eigenvalue terms cancel exactly.
+Each initial correlation is finite and bounded. Pair regrouping can
+also be justified by finite spectral truncation and the bounded trace
+form; the displayed paired kernels are nonnegative in the stated
+geometry, so the final sums converge monotonically. This proves (3)-(4).
+
+The conditional original-boundary product law from TURN88 still gives
+N_F>=4 kappa^2. Here (3) also gives kappa>=0 directly; strict positivity
+under the nonconstant-observable conditions remains the TURN88 result.
+
+3. Uniform control of the backward thermal terms
+
+Define positive forward quantities
+
+ kappa^+=int K(E)mu(dE),   N_F^+=int K(E)^2mu(dE).
+
+Let R1=P-T1-D and R2=P-2T1-2D. If both are positive, then
+
+ 0 <= kappa^+-kappa <= D/(4e R1),                            (5)
+ 0 <= N_F-N_F^+       <= D^2/(e^2 R2^2).                     (6)
+
+Indeed L_+<=exp(T1 E), 1-exp(-delta_a E)<=D E and mu mass<=1/4.
+The suprema of E exp(-R1 E) and E^2 exp(-R2 E) are respectively
+1/(eR1) and 4/(e^2 R2^2). No spectral gap occurs in these estimates.
+
+Consequently, on ANY simultaneous sequence of original finite Wilson
+regulators with P_a->infinity, the two backward errors tend to zero
+uniformly in the spatial volume, the spectrum and the cutoff. Coupling
+constants can vary with a. This removes the ground-FIRST order of limits
+from this particular spectral reduction; it does not establish the
+continuum Wilson law or interchange any unproved field limits.
+
+4. Equivalent quantitative target on a fixed physical band
+
+Keep T0,T1,delta_min,D fixed and P_a->infinity. A positive lower bound
+for kappa_a is equivalent to retaining positive mu_a mass on some fixed
+band [epsilon,Lambda] with 0<epsilon<Lambda<infinity. A positive lower
+bound for N_F,a is equivalent to the same property.
+
+Explicit forward direction: if kappa_a>=c>0, then kappa_a^+>=c. Since
+the total mass is at most 1/4, necessarily c<=1/4. Choose
+
+ epsilon=c/D,
+ Lambda=max{2epsilon, T0^(-1) log(1/c)}.
+
+The contributions to kappa_a^+ below epsilon and above Lambda are each
+at most c/4, because K<=D E and K<=exp(-T0 E). Since K<=1,
+
+                    mu_a([epsilon,Lambda]) >= c/2.           (7)
+
+Conversely if this band has mass at least b>0, then
+
+ kappa_a^+ >= b exp(-T1 Lambda)(1-exp(-delta_min epsilon)),    (8)
+ N_F,a^+ >= b exp(-2T1 Lambda)(1-exp(-delta_min epsilon))^2.   (9)
+
+Subtract (5) for kappa; (4) gives N_F>=N_F^+ with no subtraction.
+For the norm-to-band direction, (6) gives a positive lower bound on
+N_F^+ eventually whenever N_F has one, and K^2<=K gives kappa^+>=N_F^+.
+Apply the same low/high argument with a smaller positive constant.
+These implications use uniform floors, not merely strict positivity
+at each finite cutoff.
+
+At finite period there is also a direct boundary lower bound if
+P>=Pmin>2T1+D:
+
+ kappa >= b exp(-T1 Lambda)(1-exp(-delta_min epsilon))
+                    (1-exp(-(Pmin-2T1-D)epsilon)).           (10)
+
+For each time t the kernel in (3) is
+(1-exp(-delta_a E))exp(-tE)[1-exp(-(P-2t-delta_a)E)].
+This proves (10) by positivity. The stronger support requirement
+P>2(T1+D) is retained whenever F is used in the original reflected half.
+
+5. Subsequences and the bounded scalar limit
+
+If w_k are exact cell weights for a fixed nonnegative time profile of
+mass one supported in [T0,T1], and delta_a->delta>0, then K_a converges
+uniformly on E>=0 to
+ K_infinity(E)=(int w(t)exp(-tE)dt)(1-exp(-delta E)).
+The bound sup_(E>=0) E exp(-T0 E)=1/(eT0) controls cell-placement errors
+and the delta error. A harmless slightly smaller T0 handles boundary
+cells. The same holds for K_a^2. Both limiting kernels are continuous
+and vanish at zero and infinity.
+
+The mass bound gives a subsequence of mu_a converging weak-* on
+C_0((0,infinity)) to a finite positive Radon measure. Mass may disappear
+at zero or infinity. These two kernels see neither escaped component,
+so (3)-(6) identify the limits of the filtered correlations and norms
+with the integrals of K_infinity and K_infinity^2 against that measure.
+This extraction can be taken along the common bounded-scalar subsequence
+of TURN87. The physical-period divergence is essential for dropping
+the backward terms in this statement.
+
+When the infinite-time stationary reflection-positive scalar law and
+its strongly continuous semigroup are available as in TURN88, the
+filtered class is (I-exp(-delta H)) applied to a positive-time average.
+It annihilates the entire kernel of H. A surviving reflected norm
+therefore gives a genuinely positive-energy scalar sector. The thermal
+measure above is not thereby identified with a full local YM field
+spectral measure, and locality, Euclidean rotations, coupling matching,
+joint field/source estimates and YM reconstruction remain separate.
+
+6. What remains unproved
+
+No lower bound on mu_a([epsilon,Lambda]), kappa_a, N_F,a, or the ordinary
+variance criterion studied in the companion TURN89 note is proved here.
+The exact original source row still is
+ Z^(-1) int w_B G Z_+ Z_F dB,
+with the original boundary and opposite-half weights retained. Native
+unmarked bounds and a normalized new-slot reference replacement do not
+estimate that signed old-observable row. This note strengthens the
+consumer of a future quantitative estimate; it does not supply one.
+
+
+========================================================================
+
+TURN89 -- AN ORIGINAL THERMAL VARIANCE THAT DOES LOCATE POSITIVE ENERGY
+tail47. 20 October 2026 local. New finite consumer, not a variance floor.
+
+RESULT
+
+Ordinary equal-time variance does not ensure a physical reflected state.
+There is, however, a more specific original-law variance which does:
+the difference of two adjacent averages over a FIXED PHYSICAL time
+window. Averaging removes arbitrarily high energies, with an explicit
+finite-mesh contact remainder; taking the difference removes zero
+energy. A uniform lower bound on this ONE bounded real-source curvature
+forces a fixed positive finite spectral band and a reflected norm floor.
+
+The theorem below holds directly in the FINITE PERIODIC ORIGINAL Wilson
+law. It needs neither a Gaussian-law comparison nor a ground-state limit
+before the spatial cutoff is removed. It does NOT supply the required
+variance lower bound. The exact finite-Wilson positivity of TURN88 and
+available unmarked action/current bounds still do not supply that floor.
+
+1. ACTUAL SOURCE AND EXACT THERMAL PAIRED MEASURE
+
+Use the actual transfer of turn88_wilson_boundary_spectrum_root.txt:
+ T=M Q P M, Z_W=c(beta)^(N|E_sp|)Tr_phys T^N,
+with beta>0, even N, spacing a, and physical period B=Na. Work on the
+physical Hilbert space, where T is positive, injective and trace class.
+No substitution of a differential Hamiltonian for -log T is made.
+
+Let phi be the SAME real gauge-invariant spatial-slice function at every
+time, with 0<=phi<=1. In particular it may be the declared original
+spatially flowed radial scalar with fixed physical spatial smear and
+fixed s,h,g_* from TURN88. Its complete read stays on its own time slice;
+its spatial read is allowed to fill the declared spatial torus.
+Write Phi for its multiplication operator, and lambda_i>0 for the
+physical transfer eigenvalues, with an orthonormal eigenbasis.
+
+For each UNORDERED unequal-eigenvalue pair choose the ordering
+lambda_i>lambda_j, and set
+ E_ij=a^-1 log(lambda_i/lambda_j)>0,
+ mu_N=Z_T^-1 sum_(lambda_i>lambda_j)
+                  lambda_i^N |Phi_ij|^2 delta_(E_ij),
+ Z_T=Tr T^N.                                           (1.1)
+This is a positive finite measure of energy DIFFERENCES. Degenerate
+eigenspaces contribute only a time-constant term and are kept separately.
+Centering Phi by its actual thermal mean leaves all unequal-eigenvalue
+matrix elements unchanged. The nonnegative paired spectral expansion of
+its equal-time variance gives
+              mu_N((0,infinity))<=Var_W(phi)<=1/4.      (1.2)
+
+For integer 0<=k<=N the actual two-point function is
+ C_N(k):=E_W[phi_0 phi_k]
+   =D_N+int [exp(-akE)+exp(-(B-ak)E)]mu_N(dE),           (1.3)
+where D_N is the entire equal-eigenvalue contribution. This follows
+directly from Tr(T^(N-k)Phi T^k Phi)/Z_T, grouping the two orientations
+of each pair. All sums are absolutely convergent. No statement that the
+finite thermal measure is a vacuum spectral measure is being made.
+
+2. THE TWO ADJACENT PHYSICAL AVERAGES
+
+Choose n>=1 with 2n<=N and put L=na. Define
+ G_n=(1/n)sum_(k=0)^(n-1)phi_k
+                       -(1/n)sum_(k=n)^(2n-1)phi_k.    (2.1)
+Stationarity of the SAME original law gives E_W G_n=0, and |G_n|<=1.
+Thus its variance is exactly the normalized real-source curvature
+ V_n=partial_s^2 log E_W exp(sG_n)|_(s=0)=E_W G_n^2.
+The source radius |s|<log2 is uniform in every cutoff and volume. There
+is no beta prefactor and no replacement of g_* by a running coupling.
+
+For r>=0 define the polynomials
+ A_n(r)=n+2sum_(d=1)^(n-1)(n-d)r^d,
+ C_n(r)=sum_(i,j=0)^(n-1)r^(n+j-i),
+ w_n(r)=2[A_n(r)-C_n(r)]/n^2.                           (2.2)
+For r!=1,
+ C_n(r)=r(1-r^n)^2/(1-r)^2,
+with its continuous value n^2 at r=1. These are respectively the
+within-window covariance sum and the covariance between the two windows.
+Substitution of(1.3), with the zero total coefficient of G_n, gives
+ V_n=int [w_n(exp(-aE))+exp(-BE)w_n(exp(aE))]mu_N(dE).   (2.3)
+The D_N term cancels exactly. No contact term has been dropped.
+
+The BACKWARD correction in(2.3) is nonpositive. Indeed, for R>=1,
+ C_n(R)=nR^n+sum_(d=1)^(n-1)(n-d)[R^(n+d)+R^(n-d)].
+AM--GM gives R^(n+d)+R^(n-d)>=2R^n>=2R^d, so
+ C_n(R)>=A_n(R), and w_n(R)<=0. Consequently
+                 V_n<=int w_n(exp(-aE))mu_N(dE).       (2.4)
+This useful direction of inequality is special to this two-window
+filter; it is not asserted for an arbitrary sign-changing profile.
+
+3. THREE UNIFORM BOUNDS AND THE EXPLICIT CONTACT REMAINDER
+
+For 0<=r<=1, the matrix r^|i-j| is positive semidefinite (it is the
+covariance of a stationary real AR(1) chain; r=0,1 follow by limits).
+Hence w_n(r)>=0. Also A_n(r)<=n^2 and C_n(r)>=0, giving w_n(r)<=2.
+
+Let c_k=1/n for k<n and -1/n for n<=k<2n. Then sum c_k=0 and
+sum|c_k|=2. For r=exp(-aE), subtracting the constant kernel1 and using
+|exp(-E|t-s|)-1|<=E|t-s|, |t-s|<2L, proves
+                  w_n(exp(-aE))<=8LE.                  (3.1)
+At high energy, discard the nonnegative cross-window term and use
+ A_n(r)<=n[1+2r/(1-r)]. Since exp(aE)-1>=aE,
+                  w_n(exp(-aE))<=2/n+4/(LE).            (3.2)
+Thus, for every E>0,
+ 0<=w_n(exp(-aE))<=min{2,8LE,2/n+4/(LE)}.               (3.3)
+The limiting value at E=infinity is EXACTLY2/n, not zero at a fixed
+mesh. Physical averaging n=L/a->infinity is essential to the theorem.
+
+For orientation, at fixed x=LE the continuum filter is
+ w(x)=[4x-6+8exp(-x)-2exp(-2x)]/x^2,
+with w(x)~(4/3)x near0 and w(x)~4/x at infinity. The theorem uses the
+uniform finite bounds(3.3), not this asymptotic interchange.
+
+4. A FINITE ORIGINAL-LAW POSITIVE-BAND THEOREM
+
+Suppose for a specified regulator that
+                 V_n>=v>0,             n>=4/v.         (4.1)
+Put
+ epsilon=v/(8L),
+ Lambda=max{2epsilon,8/(Lv)}.                           (4.2)
+Equations(1.2),(3.1) bound the forward contribution below epsilon by
+8L epsilon/4=v/4. Above Lambda, (1.2),(3.2) bound it by
+1/(2n)+1/(L Lambda)<=v/8+v/8=v/4.
+By(2.4), the remaining forward contribution is at least v/2. Since
+w_n<=2, this proves
+                 mu_N([epsilon,Lambda])>=v/4.          (4.3)
+
+Everything in(4.1)--(4.3) concerns the SAME finite original Wilson law.
+No Perron limit, thermal mixing rate, uniform transfer gap, Gaussian
+comparison or native-source analytic extension has been assumed.
+The energy variable is the positive transfer eigenvalue difference
+in(1.1), not yet the spectrum of a limiting positive generator.
+
+If L_a lies in a fixed physical interval[L_min,L_max], replace epsilon
+by v/(8L_max), Lambda by max{2epsilon,8/(L_min v)}. The same proof works.
+Thus an actual lower bound along a joint cutoff/volume sequence locates
+a band independent of the regulator. The statement does not infer the
+premise from the strictly positive, possibly vanishing V_n at each cutoff.
+
+5. DIRECT FINITE REFLECTED NORM, WITH BOTH HALF BUFFERS
+
+Translate G_n by an integer t0>0 and write T0=a t0. Require
+             0<T0,              T0+2L<B/2,             (5.1)
+with fixed positive physical buffers along the intended sequence.
+Call this translated original positive-half observable F. Its complete
+read obeys(5.1) because phi reads only its own time slice; reflection
+acts on the whole spatial flow and the scalar is time-reflection even.
+E F=0, and site RP gives its actual reflected norm N_F=E_W[(Theta F)F].
+
+Define
+ L_-(E)=(1/n)sum_(k=0)^(n-1)exp[-(T0+ak)E],
+ L_+(E)=(1/n)sum_(k=0)^(n-1)exp[ (T0+ak)E].
+Applying(1.3) to the distances 2t0+i+j, now SUMS rather than absolute
+differences, gives the exact nonnegative formula
+ N_F=int (1-exp(-LE))^2
+       [L_-(E)^2+exp(-(B-2L)E)L_+(E)^2]mu_N(dE).       (5.2)
+Equal-eigenvalue terms again cancel. Since L_- >=exp[-(T0+L)E], the
+band conclusion(4.3) proves the explicit finite original lower bound
+ N_F >= (v/4)exp[-2(T0+L)Lambda]
+                         (1-exp(-L epsilon))^2 >0.     (5.3)
+For varying bounded T0,L use their upper bounds in the exponential and
+L_min in the filter. The backward term only helps this estimate.
+
+Under the already stated common-law bounded-scalar compactness and
+infinite-time RP/translation reconstruction, a uniform(5.3) passes to
+the fixed physical smear and produces positive energy: the limiting
+vector is a time-window average followed by I-exp(-LH), so it annihilates
+the ENTIRE ker H. No component ergodicity is required. Rectangular time
+windows are L1 test functions; bounded fields extend the smear map
+continuously from smooth tests. Smooth approximation can be made once
+with L1 error smaller than the explicit margin, if smooth profiles are
+preferred. Finite thermal energy differences are not called a vacuum
+Hamiltonian before that limit.
+
+This is a rigorously justified SPECIAL ordinary-variance consumer.
+Replacing G_n by phi_0, or by a single short time window whose physical
+width tends to zero, loses one of the two necessary spectral suppressions.
+
+6. MOMENTUM SELECTION: WHAT THE ACTUAL WILSON SPECTRUM DOES NOT GIVE
+
+On a finite spatial torus, spatial translations commute with T. The
+unique positive Perron vector is translation invariant. A nonzero
+spatial Fourier component of the slice probe, when nonzero as an
+operator, is therefore orthogonal to the finite-lattice vacuum and its
+ground-vector spectral measure lies in the corresponding momentum
+sector. This is an exact kinematic fact, not a uniform gap bound.
+
+It removes the ONE finite ground vector. It does not bound the physical
+energies in that sector away from0 as a changes, and does not prevent
+the surviving spectral weight from moving to arbitrarily high energy.
+Commutation of T with spatial translations imposes no lower estimate
+on their joint eigenvalues. The finite-thermal measure(1.1) is even more
+explicitly a measure of gaps between pairs; momentum transfer labels
+do not supply a quantitative bound on those energy differences.
+
+Hypercubic permutation symmetry does not silently fix this. Exchanging
+the time axis with a spatial axis changes the transfer slicing and
+rotates the flow/read hyperplane. The original time-slice flow is then
+time-extended. An isotropic multiplet of such probes has separate
+coordinate reflection statements, not an identified common operator
+inequality H>=|P_i|.
+
+The retained two-MIRROR theorem in the source/rotation audit does prove
+the planar cone from coordinate AND diagonal RP of the SAME local law,
+using a two-spectral-measure comparison, without assuming O(4). But
+coordinate site RP alone is not that theorem. The pure Wilson crossing
+plaquette Gram construction in lp1_ym4_transfer_turn55.txt Section3 is
+local; a diagonal cut on an ordinary periodic torus need not separate
+it, so same-state adapted-period/infinite-volume attachment remains.
+Moreover, on increasing spatial volumes the whole-slice flow has no
+verified complete read in a FIXED physical diagonal half/wedge: moving
+a whole finite slice far enough into such a wedge can require a buffer
+growing with that slice. Its infinite-volume version has spatial tails.
+A finite-box flow orbit has bounded complete reads that can be
+placed inside both wedges, but it is a distinct observable family and
+still needs a nonzero original norm plus the same-law mirror admission.
+No unverified diagonal-RP or O(4) premise is used in Sections1--5.
+
+7. AN EXACT SPATIAL REPLACEMENT OF THE VARIANCE TARGET, NOT ITS PROOF
+
+On an isotropic CUBIC four-torus, coordinate interchange0<->1 preserves
+the original Wilson probability law exactly. Let phi^(1) be the literal
+image of phi^(0)=phi under that interchange, including its spatial test,
+plaquette orientation and the plane on which its flow is performed.
+Let G_n^(1) be the same adjacent-average difference with translations
+now along coordinate1. Then
+                    Var_W G_n^(1)=Var_W G_n.            (7.1)
+Thus a lower bound on a spatial block-average contrast of this ROTATED
+family would suffice for(4.1). It is a legitimate bounded original-law
+real-source variance with the original normalizer, no reference redraw.
+
+However phi^(1) is not the old spatial-slice observable in the x0
+quantization: its flow now includes x0. Whole-hyperplane flow can read
+the entire original time circle. It cannot be inserted as the old
+positive-half phi or estimated using an old x0-slice variance theorem.
+Finite-box flow makes these reads compact but changes the family;
+there is no proved comparison between that family and the fixed
+whole-slice probe. Noncubic periods are also exchanged, so(7.1) is not
+a same-volume identity there without the stated geometry.
+
+8. WHAT CHANGES THE NEXT ESTIMATE, AND WHAT REMAINS MISSING
+
+The next sufficient estimate can be posed entirely as the real,
+normalized source curvature
+       partial_s^2 log E_(full Wilson) exp(sG_n)|0 >=v,
+for fixed physical window length, actual mesh weights and a single
+original regulator sequence. This is weaker in analytic requirements
+than a background-holomorphic source transport theorem. Both contact
+and outer covariance terms are part of this original variance.
+
+The known energy MGF, conditional HS current concentration and native
+unmarked upper bounds do not lower-bound this variance. Conditional
+noise lower bounds alone can average away like1/n and would fit exactly
+the disappearing contact remainder in(3.2). Strict finite positivity
+does not give v. The prior thin-loop collapse theorem is consistent
+with all these formulas; it predicts failure of(4.1) for that route.
+
+This theorem removes the need for a Gaussian comparison or a separate
+positive-band assumption IF the special variance floor is proved. It
+does not manufacture the floor or close the YM4 goal. A positive scalar
+channel still leaves the full gauge-invariant observable algebra,
+physical calibration and interaction, O(4) symmetry, local/source
+identification and the common continuum/volume reconstruction duties.
+
+RECHECKED RETAINED INPUTS
+current_proof_frontier_turn88.txt;
+temporal_filter_physical_probe_turn67.txt Sections1--3,6--7;
+turn71_spectral_subsequence_root.txt;
+turn82_physical_translation_gauge.txt;
+turn72_dirichlet_wilson_root.txt (its fixed weak-boundary block scope);
+turn88_wilson_boundary_spectrum_root.txt;
+turn88_filtered_probe_tail.txt;
+lp1_ym4_transfer_turn55.txt Section3;
+archive/ym4-research/work/s0_reflection_common_core_audit_2026-10-18.txt Section6.
+
+The identities and inequalities newly claimed here are proved above.
+No new literature claim or absent manuscript is imported.
+
+
+========================================================================
+
+TURN89 -- THE TIME-AVERAGED SOURCE UNDER THE EXACT HS DISINTEGRATION
+20 October 2026. A quantitative identity/consumer, not a variance floor.
+
+Use precisely the positive two-HS joint Pi(dU,dxi) and its two
+disintegrations from turn89_conditional_gradient_gauge.txt. The original
+U marginal is the finite Wilson law mu; xi has its full interacting
+marginal nu. Given xi all independent original links have a product
+tilted-Haar law. The original partition function is retained.
+
+Let phi_t in[0,1] be translates of the SAME spatial-slice observable.
+Different time slices use disjoint original spatial-link sets, even
+when their auxiliary currents use overlapping records. Thus the phi_t
+are conditionally independent given the ENTIRE xi. Spatial flow on a
+slice does not change this statement. Define
+
+ m_t(xi)=E[phi_t|xi],   v_t(xi)=Var(phi_t|xi),
+ G=sum_t c_t phi_t,    M=sum_t c_t m_t=C G,
+
+for finitely many distinct slices and deterministic real c_t. Conditional
+independence and total variance give the exact identity
+
+ Var_mu G = Var_nu M + E_nu sum_t c_t^2 v_t.                 (1)
+
+Since a variable in[0,1] has variance at most1/4,
+
+ 0<=Var_mu G-Var_nu M <=(1/4)sum_t c_t^2.                   (2)
+
+For the two adjacent n-slice averages from the companion tail note,
+c_t=+1/n on the first window and -1/n on the second. With the standard
+translation-covariant HS convention epsilon_phi=E_nu v_t is independent
+of t, and hence
+
+ Var_mu G_n-Var_nu(C G_n)=2 epsilon_phi/n <=1/(2n).          (3)
+
+This identity needs no gradient estimate and no lower-current event.
+If useful, the new gradient theorem additionally gives
+epsilon_phi<=20 A_beta E_mu |grad_sp phi|^2. For the macroscopic
+time-average target, however, the elementary bound in (3) already tends
+to zero whenever n a stays positive and a->0.
+
+There is also a uniform comparison of REAL source free energies. For
+every real s and every xi, a bounded variable X in an interval of length
+one obeys
+ 1<=E exp[s c(X-E X)]<=exp(s^2 c^2/8).
+One proof of the upper bound differentiates its log moment generating
+function twice: the second derivative is a variance under a real tilt,
+at most1/4 times c^2; its value and first derivative at zero vanish.
+The lower bound is Jensen. Apply this to the independent conditional
+slice variables and multiply. Since exp(sM)>0, integrating gives
+
+ 0<=log E_mu exp(sG)-log E_nu exp(sM)
+                                      <=(s^2/8)sum_t c_t^2. (4)
+
+For G_n the right side is s^2/(4n), uniformly for s in any fixed real
+bounded interval (indeed (4) holds for every real s). Both expectations
+are normalized by their true probability laws. No complex extension or
+differentiation of a mere o(1) bound is used: the curvature identity is
+the independently exact equation (1).
+
+Consequences for the new variance criterion are precise:
+
+* A regulator-independent lower bound v for Var_mu G_n implies
+  Var_nu(C G_n)>=v-1/(2n). Conversely a lower bound v for the latter
+  immediately implies the same lower bound for the former.
+  In particular along n->infinity their positive-liminf properties are
+  equivalent. The tail note then supplies a positive finite energy band
+  and a strictly positive reflected norm with physical half buffers.
+
+* Independent conditional link noise cannot be the surviving signal in
+  this macroscopic averaged variance: its entire contribution vanishes
+  at least as1/(2n). This is an exact statement about THIS original
+  disintegration and THIS filter, not a claim that conditional noise is
+  negligible for every observable or at equal time.
+
+* For any two observables of disjoint original spatial slices, their
+  ordinary product expectation is exactly the expectation under nu of
+  the product of their conditional means. In particular for a strictly
+  positive-half filter F whose original slices are disjoint from its
+  reflected slices,
+       E_mu[(Theta F)F]=E_nu[C(Theta F) C F].               (5)
+  This follows from conditional independence. A convention-specific
+  identity C Theta=Theta_aux C has NOT been assumed. Equation (5) does
+  not assert reflection positivity on arbitrary auxiliary functions or
+  replace a common-slice product C(phi^2) by (C phi)^2.
+
+What remains: m_t is a bounded conditional integral of the ORIGINAL
+nonlinear spatial-flow observable against its exact link product, but
+nu is the interacting auxiliary marginal containing ALL original
+temporal plaquettes through its exact density. It is not an independent
+Gaussian law, and the m_t are correlated under it. Equations (1)-(5)
+do not lower-bound that correlated variance. Their value is to isolate
+the one real source curvature which a useful auxiliary or native-RG
+calculation must actually estimate, with a quantified disappearing
+contact contribution. Full nontrivial continuum YM4 existence remains
+unproved.
+
+
+========================================================================
+
+TURN89 -- A SAME-ORIGINAL-LAW QUADRATIC NOISE BOUND, AND THE REMAINING TIME INCREMENT
+gauge47. 21 October 2026 UTC. New finite-regulator result only.
+
+RESULT AND DECISION
+
+For the exact two-Hubbard--Stratonovich augmentation of the original
+four-dimensional SU(2) Wilson law, the conditional link noise satisfies
+
+ E_nu Var(B | xi)
+   <= 20 A_beta E_W sum_e |D_e B|^2,
+ A_beta=(1+2beta)^(-1)+min(1,192 exp[-beta/3200]).        (0.1)
+
+Here D is the product Pauli/2 gradient and xi is the full REAL auxiliary
+record. The gradients on the right are evaluated under the ORIGINAL
+Wilson law, not a geodesic intermediate law or a selected law. In
+particular A_beta=O((1+beta)^(-1)), with an absolute, unoptimized constant.
+This improves the TURN82 deterministic chord-Lipschitz consumer to an
+annealed squared-gradient sum. It has no l1 sum over links and no hidden
+volume factor. It applies to the specified nonlinear spatial-flow smear
+at every fixed regulator without changing its physical normalization.
+
+This is a conditional-noise form, not the physical temporal form. For
+the same smooth slice observable phi on neighboring original slices,
+put m_t(xi)=E[phi_t | xi]. Conditional link independence gives the EXACT
+identity
+
+ d_W(phi):=E_W(phi_1-phi_0)^2/2
+   = E_nu Var(phi_0 | xi) + E_nu(m_1-m_0)^2/2.          (0.2)
+
+The second term is nonnegative and is not controlled by (0.1). It keeps
+the correlated temporal response of the actual interacting auxiliary
+marginal. Thus a conditional-current concentration argument cannot
+silently discard that term. In particular (0.1) is not a completed
+adjacent-slice estimate or a physical-band lower bound. This is an actual
+Wilson decomposition, not a countermodel with a changed potential.
+
+1. PRIOR INPUTS AND EXACT LAW
+
+I read current_proof_frontier_turn88_draft.txt and the four requested
+producers before making this calculation:
+
+ * temporal_quadratic_increment_turn65.txt: the deterministic aligned
+   increment sub-Gaussian theorem does not admit a random flowed
+   Jacobian; its gauge-averaged ridge certificate can collapse variance.
+ * spacetime_marked_bridges_turn68.txt: actual Hamiltonian path-law
+   moments suppress the bad-action-bridge part only.
+ * wilson_marked_bridge_attachment_turn68.txt: that attachment uses a
+   selectable anisotropic temporal diagonal, not the isotropic sequence.
+ * turn72_dirichlet_wilson_root.txt: fixed contractible boxes with weak
+   Dirichlet boundary admit a source-weighted cutoff comparison; its
+   constants are not growing-box or arbitrary-exterior estimates.
+
+None of these results supplies the last term in (0.2).
+
+The exact augmentation used below was already proved in
+turn81_external_source_history.txt Sections2,5 and retained in
+turn82_auxiliary_channel_gauge.txt Sections1--2. On a finite nondegenerate
+periodic four-dimensional lattice, with all periods at least4,
+
+ mu_beta(dU)=Z_beta^(-1) exp[-beta sum_p h_p(U)] dU,
+ h_p=1-Re Tr U_p/2, beta>0,
+
+and the joint positive probability is
+
+ Pi(dU,dxi)=mu_beta(dU) kappa_U(dxi)=nu(dxi) k_xi(dU).
+
+Given real xi=(G,R), ALL original independent links have the product law
+
+ k_xi(dU)=product_e k_(a_e)(dq_e),
+ k_a(dq)=Z(a)^(-1) exp(a.q) d omega_S3(q),
+ Re Tr J_e^dagger U_e=a_e.q_e.                          (1.1)
+
+The currents a_e need not be independent under nu. The exact original
+normalizer Z_beta is retained in Pi and in its two disintegrations.
+
+Use the standard translation-covariant three-first/three-second
+half-path convention. The existing explicit Gaussian-innovation proof
+in turn82_auxiliary_tails_tail.txt Sections2,4--5 gives, uniformly in
+EVERY real original configuration U,
+
+ P_(kappa_U)(|a_e|<2beta) <= p_beta,
+ p_beta=min(1,192 exp[-beta/3200]).                      (1.2)
+
+Consequently
+
+ E_(kappa_U)[(1+|a_e|)^(-1)] <= A_beta                 (1.3)
+
+for every U and e. Uniformity conditional on U, not just an auxiliary
+marginal tail, is essential when the source gradient depends on U.
+No small-action event or Gaussian approximation to nu is inserted.
+
+2. A UNIFORM ONE-LINK POINCARE INEQUALITY, WITH PROOF
+
+For every real smooth F on the unit sphere S3 and every a in R4,
+
+ Var_(k_a) F <= 5/(1+|a|) E_(k_a)|grad_S3 F|^2.         (2.1)
+
+Rotation reduces to a=r e0, r>=0. In polar coordinates
+ q=(cos theta, sin theta omega), theta in[0,pi], omega in S2,
+the theta density is proportional to
+
+ w_r(theta)=exp(r cos theta) sin^2 theta,
+
+and omega is uniform and independent of theta. The gradient energy is
+
+ E[|partial_theta F|^2 + sin^(-2)theta |grad_S2 F|^2].    (2.2)
+
+First suppose r>=1. The following square completion holds for every
+smooth radial coefficient f with the usual regular endpoint behavior:
+
+ 0 <= integral [f'-(r/5)sin theta f]^2 w_r dtheta
+    = integral {f'^2 +(3r/5)cos theta f^2
+                         -(4r^2/25)sin^2 theta f^2} w_r dtheta.
+
+Thus
+
+ integral f'^2 w_r >= integral [-(3r/5)cos theta
+                         +(4r^2/25)sin^2 theta] f^2 w_r. (2.3)
+
+The identity is integration by parts using
+ (sin theta w_r)'/w_r=3cos theta-r sin^2 theta.
+Boundary terms vanish; the inequalities extend by the quadratic-form
+closure. Decompose F=m(theta)+h(theta,omega), where the S2 average of h
+is zero at each theta. These two pieces are orthogonal both for variance
+and for the energy in (2.2).
+
+For h, the elementary unit-S2 Poincare inequality contributes angular
+energy at least 2 E[sin^(-2)theta h^2]. Apply (2.3) to h at each omega.
+The pointwise arithmetic-geometric-mean inequality gives
+
+ (4r^2/25)sin^2 theta + 2/sin^2 theta >= (4sqrt(2)/5)r.
+
+Since cos theta<=1, the energy of h is at least
+
+ [(4sqrt(2)-3)/5] r E h^2 >= (r/2) E h^2.              (2.4)
+
+For the radial mean m, consider the first nonconstant radial eigenfunction
+f of the selfadjoint weighted spherical Laplacian. Such an eigenfunction
+exists by compact ellipticity on S3, restricted to rotationally invariant
+functions; it is smooth at both poles. Its equation is
+
+ -f''-(2cot theta-r sin theta)f'=lambda f.
+
+For g=f', differentiation and weighted integration by parts give
+
+ lambda integral g^2 w_r
+   = integral [g'^2+(2/sin^2 theta+r cos theta)g^2] w_r. (2.5)
+
+Here g=O(theta) near0 and O(pi-theta) near pi, so the boundary terms
+vanish. Applying (2.3) to g and the same AM--GM bound yields
+
+ lambda >= [(4sqrt(2)-2)/5]r >= r/2.                   (2.6)
+
+The radial Rayleigh characterization therefore controls every centered
+m by 2/r times its radial energy. Together with (2.4), this proves
+ Var_(k_a) F <= (2/r) E|grad_S3 F|^2 when r>=1.
+
+For 0<=r<=1, the ratio of the maximum and minimum density relative to
+uniform S3 is exp(2r). Uniform unit-S3 has Poincare constant1/3. Using
+Var=inf_c E(F-c)^2 before comparing densities gives
+
+ Var_(k_a) F <= [exp(2r)/3] E|grad_S3 F|^2.
+
+Since (1+r)exp(2r)/3<=2exp(2)/3<5 on this interval and
+2(1+r)/r<=4 for r>=1, (2.1) follows. The same result holds for H1
+functions by smooth approximation. This proof does not invoke a
+uniform pointwise Bakry--Emery curvature bound, which is false near
+the south pole for large r.
+
+For the SU(2) metric in which i sigma_c/2 are orthonormal,
+ |grad_S3 F|^2=4 sum_(c=1)^3 |D_c F|^2. Therefore
+
+ Var_(k_a) F <= 20/(1+|a|) E_(k_a) sum_c |D_c F|^2.     (2.7)
+
+3. TENSORIZATION AND THE ORIGINAL-LAW ANNEALED CONSUMER
+
+Product tensorization at fixed xi gives, for every real smooth original
+observable B,
+
+ Var_(k_xi) B
+   <= 20 sum_e integral [|D_e B(U)|^2/(1+|a_e(xi)|)] k_xi(dU).
+                                                               (3.1)
+
+One proof is the usual conditional-variance/Efron--Stein inequality
+for independent coordinates, followed by (2.7) on each one-link
+conditional. Sum over ALL links actually read by B. No supremum of
+|D_e B| over the other links is taken. In particular the random
+orientation and magnitude of the gradient stay inside its square.
+
+Integrate (3.1) under nu, change disintegration using the SAME joint Pi,
+and apply (1.3):
+
+ E_nu Var_(k_xi) B
+  <=20 E_mu sum_e |D_e B(U)|^2
+                        E_(kappa_U)[(1+|a_e|)^(-1)]
+  <=20 A_beta E_mu sum_e |D_e B|^2.                    (3.2)
+
+This proves (0.1). The inequality would not follow from the unweighted
+marginal estimate E_nu(1+|a_e|)^(-1)<=A_beta alone. The conditional-on-U
+estimate is exactly what permits the source mark in (3.2).
+
+For example, (1+beta)A_beta<=1+192*3201 is an explicit crude absolute
+bound, since (1+beta)exp(-beta/3200)<=3201. More precisely,
+ beta A_beta -> 1/2 as beta->infinity. The constants here are deliberately
+not optimized; the exponential-tail proof has a large fixed threshold.
+
+With C B(xi)=E[B|xi] and P=C* C, this is the quadratic-form comparison
+
+ <B,(Id-P)B>_mu <=20 A_beta E_mu |grad B|^2.             (3.3)
+
+P is the actual positive stationary HS data-augmentation operator.
+Equation(3.3) is a comparison to the original weighted differential
+Dirichlet form. It is not a comparison of physical transfer Hamiltonians.
+The already proved TURN82 opposite-direction regularization estimate
+ E|grad P B|^2 <=(18beta+24)<B,P(Id-P)B>
+may be retained alongside it, but does not convert algorithmic time
+into physical time or manufacture a reflected lower bound.
+
+4. THE EXACT ADJACENT-SLICE SPLIT, INCLUDING ITS UNCONTROLLED TERM
+
+Let phi_t be translates of one real smooth gauge-invariant function of
+the spatial links on the original time slice t. It may depend on the
+ENTIRE spatial slice. In particular finite spatial Wilson flow followed
+by the fixed spatial smear is admitted. Adjacent slices have disjoint
+original link sets, even though their auxiliary current stars overlap.
+
+Given xi, (1.1) makes these original sets independent. Thus for t!=u,
+
+ E_mu(phi_t phi_u)=E_nu(m_t m_u),
+ m_t=C phi_t.                                           (4.1)
+
+The original and auxiliary means agree. Translation covariance of the
+standard convention gives a common noise variance
+ epsilon_phi=E_nu Var(phi_t|xi), and hence
+
+ Var_mu phi_t=Var_nu m_t+epsilon_phi,
+ Cov_mu(phi_t,phi_u)=Cov_nu(m_t,m_u), t!=u.              (4.2)
+
+Taking t=0,u=1 proves (0.2), equivalently
+
+ 0 <= d_W(phi)-d_nu(m) = epsilon_phi
+    <=20 A_beta E_mu |grad_sp phi|^2,
+ d_nu(m)=E_nu(m_1-m_0)^2/2.                             (4.3)
+
+The complete original Wilson denominator and all temporal plaquettes
+remain in nu. It is not an independent auxiliary Gaussian law. No RP
+claim for arbitrary auxiliary functions is needed for (4.1)--(4.3).
+
+Consequences for the proposed route are precise:
+
+ (a) If the currently unproved same-original-law gradient estimate
+     E_mu|grad_sp phi|^2<=C beta a_t were established, then the conditional
+     noise in (4.3) would be O(a_t), with the correct l2 rather than l1
+     spatial grading. This avoids the a_s^-3 loss diagnosed in TURN88.
+
+ (b) That estimate by itself would leave d_nu(m) unestimated. Small
+     conditional noise means that the auxiliary conditional mean retains
+     nearly all ordinary variance, and by (4.1) exactly all nonzero-lag
+     covariances. It does not force those covariances to vary slowly in
+     physical time. A bound d_nu(m)=O(a_t), or another actual direct
+     estimate of the original correlated square, is still needed.
+
+ (c) The equality in (4.3) is not a counterexample to a possible stronger
+     inequality specific to the true Wilson law. It identifies the
+     unbounded-in-this-proof term which an inference from auxiliary
+     concentration alone would have omitted. No actual annealed failure
+     for the flowed probe is claimed.
+
+For several distinct slices, the analogous entire conditional source
+factorizes given xi. Consequently all products and contacts within each
+slice are retained by C, while different-slice original moments are
+moments of the corresponding conditional means. Replacing C(B^2) by
+(CB)^2 would discard precisely the nonnegative noise term above.
+
+5. PHYSICAL SOURCE AND WHAT THIS DOES NOT ESTABLISH
+
+Keep the TURN88 observable literally:
+
+ b_(a,s)(t,x)=exp[-alpha |2p(P_12(Phi_s U_t;x))/(g_* a_s^2)|^2],
+ phi_a(t)=sum_x w_(a,x) b_(a,s)(t,x),
+ w_(a,x)>=0, sum_x w_(a,x)=1,
+
+with fixed physical s, alpha, g_*>0 and the same fixed spatial smear.
+Phi_s is the actual nonlinear spatial Wilson flow on that time slice.
+At every fixed finite regulator it is a smooth map, so (3.2),(4.3)
+apply without a source approximation or replacement of its current
+Jacobian by the free heat kernel. There is no factor beta or a_s^4
+silently added to this bounded source. All derivatives include the
+nonlinear flow and the declared normalization g_* a_s^2.
+
+The original marked-flow adjoint term isolated in TURN88 Section5
+still obstructs deriving E_mu|grad_sp phi_a|^2=O(beta a_t) from the
+unmarked action MGF and dissipation. This note does not estimate it.
+Even a successful adjacent-increment upper bound plus a variance floor
+would not alone establish the positive filtered physical-band mass
+specified in the current frontier: a component at zero energy must
+still be excluded by the filtered lower response.
+
+The full nontrivial YM4 goal, same-sequence physical calibration,
+observable-algebra/O(4) identification and continuum reconstruction
+remain open. This finite same-law quadratic comparison is a new input,
+not an existence theorem or a replacement of the original boundary row.
+
+
+========================================================================
+
+TURN89 -- FIRST-R SIGNED BOUNDARY ROW: SCOPED SOURCE CHECK
+history47. 21 October 2026. Read-only review of the current TURN88 frontier.
+
+VERDICT
+
+No new cutoff-uniform lower estimate for the original signed boundary row has been obtained from the retained first-R reference bounds. This note records the actual source-level reason and rejects a tempting bare-collar shortcut. It does not assert impossibility of such an estimate or supply another abstract source criterion. Research on this branch was paused at the parent's request for the independent finite-thermal spectral audit.
+
+1. THE LITERAL ROW SURVIVES THE FIRST R
+
+For the original fixed-slice field B, retain the original half integrals
+ Z_+(B)=int exp(-S_+)dU_+,
+ Z_F(B)=int F exp(-S_+)dU_+,
+ Z=int w_B Z_+^2 dB,
+ J=Z^-1 int w_B G Z_+ Z_F dB.
+Here F is the actual positive-half time difference of the bounded spatial-flow smear; G is the original bounded boundary smear. The opposite-half factor Z_+, w_B, and the original normalization Z are part of this row. E F=0 is global stationarity, not conditional centering on B or on one native component.
+
+Large-I printed194, (1.76), and printed201, (1.99)--(1.102), give the admitted fixed-choice joint
+             tau_e(dx,dxi) q_e(dy),    int q_e=1.
+The original source remains M_e(x,xi), with its earlier eliminated variables represented by the actual old raw coefficient when necessary. Completing the new classes and all normalized descendants eliminates q from this row. It does not turn M_e into the same source formula of y V_Lambda(e). This cancellation is valid on the complete finite positive old-record lift, conditional on original B, and not on an individually signed localized polymer coefficient.
+
+Consequently a calculation using only the new reference conditional mean or variance cannot generate the leading original J. If an old half source is replaced by a current proxy, the additional term is literally
+ int tau_e Q_e[(M_e-Mhat_e(y)) G_cont(x,xi,y)],
+where G_cont retains the boundary/opposite-half and any unfinished native factors in the appropriate complete factorization. It cannot be replaced by1 until those factors really are completed. The first-R algebra is already established in TURN87 after-switch and TURN88 positive-lift notes; no new theorem is claimed here.
+
+2. WHAT THE ACTUAL SMALL EXTERNAL EXPONENT DOES AND DOES NOT ESTIMATE
+
+Large-II printed379--380, (1.71)--(1.75), compares an actual raw operator with a positive real same-slot baseline by an exponent sigma. For supplied tests K_e,K_0 on that common internal domain the exact difference is
+ T_e K_e-T_0 K_0
+   =T_0[(exp(sigma)-1)K_0]+T_0[exp(sigma)(K_e-K_0)].
+The published scalar bound estimates the first term. It is useful for a bounded source whose same-slot identity and domain have already been supplied. It does not calculate the second term for the inherited original flow source, nor compare the original joint boundary law with a free boundary law. The original source also cannot be inserted a second time into a baseline which already contains its old mass or a remaining interaction factor.
+
+TURN83's actual complete-action primitive is stronger than an arbitrary fixed-slot statement at its own scope: constrained stationarity, the complete source-rooted linear kernels, even frozen noise windows, and finite fourth polynomial marks give the g^2 mixed response with double profile differences and its fourth-order remainder. That result starts from the SAME complete fine-action reference on one admitted homogeneous primitive. The old F here is a bounded nonlinear flowed observable with earlier scalar/effective/source records. It has not been identified with that primitive's complete action insertion. The h^4 per-plaquette grading therefore cannot simply be applied to this inherited M_e. This is a source identity issue before it is a numerical power-counting issue.
+
+3. WHY THE BARE COLLAR TAIL DOES NOT DISPOSE OF THE FIRST GENUINE R
+
+The initial suggestion was to bound every relevant first-R contribution by a superpolynomial bare Wilson weak-collar probability. A direct primary check rules out treating that suggestion as already attached.
+
+Large-I printed177 defines eligible R components by BOTH:
+ (i) size at most100 MR_k;
+ (ii) no fresh interior large-field regions during the preceding N RG steps, with the earlier contained regions obeying the size condition at their proper scales.
+The text also explains the accumulated ten-layer growth and the earlier rectangular regions. Printed179--180 then builds the actual determining data from that previous chronology. Thus the first eligible R is not just the first bare Wilson plaquette or collar test. It already carries regular integrations, raw records, and their actual cuts.
+
+The actual original-law theorem in polylog_box_collar_turn37.txt gives a small probability for a specified BARE weak collar and, on that event, control of the first ordinary averages with their complete footprints and common-frame links. Its stated exclusions include the native fluctuation chi test and later history predicates. polylog_box_native_matching_turn37.txt Section8 also retains the actual original numerical coarse datum and root gauges. Neither statement proves that an eligible first-R history event is contained in that bare bad event, or that the current source read has survived every previous replacement.
+
+For a TRUE complete original-lift event E and |F G|<=1, the useful real estimate |E_W[1_E F G]|<=P_W(E) is immediate. But it may only be applied to the very event whose original-lift probability has been bounded. The TURN62 first-class insertion census is not a count of every basic-R redraw; low-success second-class outcomes remain. No such relabelling has been made in this check.
+
+4. ALTERNATIVE COARSE PROBES: THE SPECIFIC REMAINING ATTACHMENT
+
+An actual forward original coarse read phi(C_a U_0) passes unchanged through regular fibers which retain that SAME read. Large-I printed194 explicitly removes interior average restrictions before the reference redraw, so it is not generally equal to phi(C_a U_current) after R. The exact old read can always be retained passively; its conditional coefficient then remains to be estimated. This is the already documented TURN63/66 distinction, not a new obstruction.
+
+One may instead DEFINE an original bounded observable by backward averaging an admitted terminal native test. This removes an inverse-record identity by changing the definition, but no physical lower bound follows. A reference-centered current test f_e-Q_e f_e has zero original pullback on each old record. An uncentered pullback may depend only on retained exterior data. Moreover, a local current test does not automatically yield an original positive-half observable, because the native global determining/minimum reads have not been proved to stay within that half. An actual same-half-local construction and a nonvanishing original boundary channel would still be required. No alternative probe with both properties was obtained here.
+
+5. PRECISE STATUS AND SOURCES READ
+
+The original signed coefficient remains a genuinely smaller target than all-future-test total variation. The current native input does not yet supply its nonzero leading term and cutoff-uniform error. This is a negative inventory finding, not a no-go theorem for Yang--Mills or for the bounded flowed probe.
+
+Read this turn:
+ work/current_proof_frontier.txt (TURN88);
+ work/turn83_integrated_two_jet_next_history.txt;
+ work/turn83_native_action_history.txt;
+ work/turn87_after_switch_comparison_history.txt;
+ work/turn88_positive_lift_scope_history.txt;
+ work/polylog_box_collar_turn37.txt;
+ work/polylog_box_native_matching_turn37.txt Section8;
+ supplied Large-I text work/turn60_large_I/page_03.txt (printed177), page_05.txt (179), page_06.txt (180).
+Exact first-R/raw comparison source locations were previously visually verified in the TURN87 and TURN88 source notes. No new inaccessible-source claim or public-repository refresh was needed. All frozen files and authoritative status/output files were left unchanged.

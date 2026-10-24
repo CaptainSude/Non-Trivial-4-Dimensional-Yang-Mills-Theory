@@ -1,0 +1,428 @@
+EXACT TWO-SOURCE GAUSSIAN SELECTION CORRECTION WITH COMPLETE LOCALITY
+TURN72. gauge47. 20 October 2026.
+
+STATUS
+
+This note proves an explicit, volume-uniform rooted correction for
+two affine-quadratic physical source polynomials under the full
+Gaussian reference and its fixed projected-product selection.
+It includes the generally nonzero first jets of varying sources.
+
+"Full Gaussian" below means the untruncated tangent/ambient Gaussian
+REFERENCE. It does not mean the full nonlinear Wilson law. The latter
+has further phase, coarea, domain and history contributions. They are
+not estimated by this Gaussian calculation.
+
+Source dictionary: projected_product_sector_turn48.txt Sections1-5;
+carrierwise_gauge_transport_turn47.txt Sections2-4; and the full source
+jets in invariant_source_relocalization_turn70.txt Section9.
+
+1. THE SAME PHYSICAL SOURCE ON BOTH SIDES
+
+Let the ambient chord space be X=direct-sum_(i in V) R^q, with fixed
+color dimension q and n=|V|. Write gamma for its product standard
+Gaussian probability law and mu_T for gamma conditioned on
+
+       C_T={|xi_i|<=T for every i},       T>=1.
+
+Thus mu_T is a product of normalized q-dimensional ball Gaussians.
+Its selected probability is c_T^n, where
+
+       c_T=P(|Z_q|<=T).
+
+At a real admitted background u, use the ACTUAL TURN48 constrained
+tangent space, physical Hessian and whitening:
+
+       P=P_u,       K=H_u^(-1/2)P_u,       b=g K xi.
+
+Their rank and dimensions are fixed on this branch. The averaged
+normal window W_u(b) in TURN48(2.1) gives exactly this selected law
+for the Gaussian physical tangent measure. Both its physical and
+dummy normal Gaussian factors are retained. In particular
+
+       E_(physical Gaussian at u) W_u = c_T^n,             (1.1)
+
+independently of u. This follows by the orthogonal decomposition
+xi=a+eta used in TURN48 Section3.
+
+For physical affine-quadratic functions on this tangent coordinate,
+write their ambient pullbacks as
+
+ F=c_F+g l_F^t xi+(g^2/2)xi^t A xi,
+ H=c_H+g l_H^t xi+(g^2/2)xi^t B xi,                         (1.2)
+
+where A,B are symmetric. If the physical source polynomial is
+c+a^t b+(1/2)b^t D b, then l=K^t a and A=K^t D K.
+In particular the physical pullbacks satisfy P l=l and P A P=A.
+The algebraic formulas below also hold for arbitrary symmetric
+ambient matrices, but that alone does not make them physical sources.
+For a source already expanded through its nonlinear constrained
+chart, D is its FULL second derivative in b, not a bare plaquette
+Hessian with the chart's second derivative omitted.
+
+All of g,T,K,P,c,l,A,B are held fixed under the two source
+differentiations. Both legs in the covariance are the same old
+physical source polynomials on the two sides of the comparison.
+No source is substituted on the dummy normal energy.
+
+The constants c_F,c_H are retained. They cancel from covariance at
+fixed u, but may depend on u and contribute to a later outer
+covariance; Section8 displays that contribution explicitly.
+
+2. EXACT RADIAL MOMENTS AND EXPLICIT EXPONENTIAL DEFECT
+
+Put
+
+ v=E_(mu_T)|xi_i|^2/q,
+ m4=E_(mu_T)|xi_i|^4/[q(q+2)],
+ kappa=m4-v^2,
+ a_q=2^(1-q/2)/Gamma(q/2).
+
+The radial Gaussian density is a_q r^(q-1)exp(-r^2/2).
+Let tau=P(|Z_q|>T). Integration by parts gives
+
+ E[|Z_q|^2 1_(|Z_q|>T)]
+       =q tau+a_q T^q exp(-T^2/2),
+
+ E[|Z_q|^4 1_(|Z_q|>T)]
+       =q(q+2)tau+a_q T^q(T^2+q+2)exp(-T^2/2).
+
+Subtract these from the full radial moments and divide by c_T.
+Consequently, with
+
+ d_T=1-v=a_q T^q exp(-T^2/2)/(q c_T),                       (2.1)
+
+we have the EXACT identities
+
+ m4=1-d_T(1+T^2/(q+2)),
+ kappa=d_T(1-T^2/(q+2))-d_T^2.                             (2.2)
+
+Since 0<=v<=1, 0<=d_T<=1. Hence
+
+ 0<=1-v^2<=2d_T,
+ |kappa|<=d_T(2+T^2/(q+2)).                                (2.3)
+
+For fixed q and T>=1, c_T>=c_1>0. In particular
+
+ d_T+|1-v^2|+|kappa|
+    <=C_q(1+T)^(q+2)exp(-T^2/2)
+    <=C'_q exp(-T^2/4).                                   (2.4)
+
+All constants are independent of the number of blocks. Equation(2.1),
+not a bound on c_T^n from below, is what controls the local defect.
+
+3. EXACT AFFINE-QUADRATIC COVARIANCE FORMULA
+
+Rotational invariance within each color block gives
+
+ E_T xi_(i,a)xi_(j,b)=v delta_(ij)delta_(ab).
+
+The fourth cumulant is zero unless all four block indices agree,
+and at a common block it is
+
+ kappa(delta_ab delta_cd+delta_ac delta_bd+delta_ad delta_bc).
+
+This follows from the radial fourth moment m4 and independence of
+distinct blocks. The law is invariant under xi->-xi, so the
+linear-quadratic covariance is zero. Thus
+
+ Cov_gamma(F,H)=g^2 l_F.l_H+(g^4/2)Tr(AB),                   (3.1)
+
+ Cov_T(F,H)
+  =g^2 v l_F.l_H+(g^4/2)v^2 Tr(AB)
+    +(g^4 kappa/4) sum_i[
+                  tr A_ii tr B_ii+2 tr(A_ii B_ii)].         (3.2)
+
+Here Tr is the full matrix trace and tr is the q-color block trace.
+The matrices need not commute with each other or with P.
+
+For clarity, the quadratic calculation expands
+E[(xi^t A xi)(xi^t B xi)]. The pairing
+E(xi_alpha xi_beta)E(xi_gamma xi_delta) cancels with the product
+of means. The other two Gaussian pairings each give v^2 Tr(AB).
+The same-block fourth cumulant gives the displayed diagonal term.
+Multiplication by g^4/4 proves(3.2). The linear term follows from
+the second moment, and parity disposes of both mixed terms.
+
+Therefore the desired EXACT correction is
+
+ Delta_T(F,H):=Cov_gamma(F,H)-Cov_T(F,H)
+   =g^2 d_T l_F.l_H
+    +(g^4/2)(1-v^2)Tr(AB)
+    -(g^4 kappa/4)sum_i[
+                 tr A_ii tr B_ii+2 tr(A_ii B_ii)].          (3.3)
+
+This is already an actual two-source computation, not a statement
+that a selection susceptibility would suffice if it were known.
+
+The corresponding means, needed to keep the normalization explicit,
+are
+
+ E_gamma F=c_F+(g^2/2)Tr A,
+ E_T F=c_F+(g^2 v/2)Tr A.                                 (3.4)
+
+If p(s,t) is the probability of C_T in the source-tilted full
+Gaussian reference, then exactly
+
+ p(s,t)=c_T^n E_T exp(sF+tH)/E_gamma exp(sF+tH),
+ partial_st log p(0,0)=-Delta_T(F,H).                       (3.5)
+
+The full Gaussian exponential is finite in a neighborhood where
+I-g^2(sA+tB)>0 for real sources; the bounded selected integral is
+finite for all real sources. These facts suffice for the derivatives.
+Equation(3.5) retains the exponentially small mass c_T^n and proves
+that it does not force a large connected source correction.
+
+There is also an exact real covariance ordering in this polynomial
+class. Let R have the radial distribution of the uniform ball of
+radius T. The ball Gaussian is its decreasing radial tilt
+exp(-R^2/2). For independent copies R,S,
+
+ (R^2-S^2)(exp(-R^2/2)-exp(-S^2/2))<=0.
+
+Taking expectations proves
+Cov(R^2,exp(-R^2/2))<=0. Therefore its tilted mean squared radius
+is at most the uniform-ball value q T^2/(q+2), or
+
+ v<=T^2/(q+2),       kappa=d_T[v-T^2/(q+2)]<=0.             (3.6)
+
+For real symmetric A, Tr A^2 and every tr(A_ii^2) are nonnegative.
+Equation(3.3) with F=H consequently gives Delta_T(F,F)>=0.
+Applying this to every real linear combination of finitely many
+affine-quadratic sources proves positive semidefiniteness of their
+full-minus-selected covariance matrix, and hence
+
+ |Delta_T(F,H)|^2<=Delta_T(F,F)Delta_T(H,H).                 (3.7)
+
+This order is only asserted for this Gaussian polynomial class.
+
+4. COMPLETE SOURCE CARRIERS AND A VOLUME-UNIFORM ROOTED BOUND
+
+Use a common finite cell graph containing the operator block locations,
+the old source anchors, and all background reads. Its metric is denoted
+d_G. A carrier X is a finite connected set. An operator coefficient
+assigned to X must depend only on background data in X and must include
+its operator legs and its source anchor.
+
+For two source families, expand for example
+
+ l_F(f)_i=sum_(x,X) f_x l_(x,X)(i),
+ A_F(f)_ij=sum_(x,X) f_x A_(x,X)(i,j).
+
+Every nonzero term has x,i in X, or x,i,j in X respectively.
+The source weights here are the actual declared interpolation of the
+old source; a different profile is not substituted after pullback.
+Use the uniform analytic supremum of each coefficient on the common
+admitted background tube in the following norms:
+
+ L_F =sup_z sum_(x,X containing z) e^(k|X|)
+                                      sum_i |l_(x,X)(i)|,
+ A_F =sup_z sum_(x,X containing z) e^(k|X|)
+                              sum_(i,j)||A_(x,X)(i,j)||op.  (4.1)
+
+Define L_H,A_H similarly. These are COMPLETE-root, strong
+coefficient-sum norms. Mere spatial decay of the total matrix does
+not imply them. If necessary symmetrize each matrix carrier by
+(A_X+A_X^t)/2; its complete support is unchanged and the entry-sum
+norm does not increase.
+
+Construct a two-source scalar catalogue for(3.3) by contracting one
+F carrier with one H carrier and assigning their union Z=X union Y.
+For the vector term the carriers share i. For Tr(AB) they share i,j.
+For the fourth-cumulant terms they share the common block i.
+Thus Z is connected and includes both source anchors and ALL reads.
+
+Let ||Delta_T||_(k;2src) be
+
+ sup_z sum_(x,y,Z containing z) e^(k|Z|)
+                         sup_background |Delta_(x,y,Z)|.
+
+Then
+
+ ||Delta_T||_(k;2src)
+  <=2 g^2 d_T L_F L_H
+    +g^4[ q(1-v^2)+(q^2+2q)|kappa|/2 ] A_F A_H             (4.2)
+  <=2 g^2 d_T L_F L_H
+    +g^4 q d_T(q+4+T^2/2) A_F A_H.
+
+PROOF. For a union containing z, assign the root to X or Y,
+overcounting harmlessly when both contain it. The weight of a union
+is at most the product of weights. If z is in X, sum the F carrier
+at z, and use the H norm rooted at the contracted index i. The
+opposite root assignment gives the factor2.
+
+For vectors use |l_i.m_i|<=|l_i||m_i|. For matrix contractions use
+
+ |tr(A_ij B_ji)|<=q||A_ij||op||B_ji||op,
+ |tr A_ii tr B_ii+2tr(A_iiB_ii)|
+       <=(q^2+2q)||A_ii||op||B_ii||op.
+
+The already included sums over operator legs in(4.1) pay all their
+choices. This yields respective factors 2,2q,2(q^2+2q).
+Multiplying by the three prefactors in(3.3) proves the first line
+of(4.2); equation(2.3) gives the second. There is no volume factor
+and no exponent loss in this bilinear contraction.
+
+In particular
+
+ ||Delta_T||_(k;2src)
+  <=C_q exp(-T^2/4)
+                  [g^2 L_F L_H+g^4 A_F A_H].                (4.3)
+
+The raw scalar coefficient, including its zero-background value,
+is INCLUDED in this norm. It has not been discarded as a vacuum.
+
+5. WHAT K PULLBACK COSTS
+
+Here is an explicit sufficient attachment of(4.1) to the actual
+whitening catalogues, rather than an inference from l2 boundedness.
+Let K=sum_X K_X, with complete connected read carriers, and define
+
+ M_e=max{
+   sup_i sum_(j,X) e^(k|X|)||K_X(i,j)||op,
+   sup_j sum_(i,X) e^(k|X|)||K_X(i,j)||op },
+
+ M_b=sup_z sum_(i,j,X containing z)
+                              e^(k|X|)||K_X(i,j)||op.       (5.1)
+
+The second norm includes roots internal to background reads and sums
+over BOTH operator legs. It is stronger than an ordinary row bound.
+Its marked-walk/marked-tree origin is the complete-root construction
+in TURN47 Section3 and the fixed further exponent reserve for the
+square root in Section4. These are retained input estimates on the
+proved coherent branch; an unmarked row/column estimate alone is not
+enough to claim them for a new action.
+
+If the physical first and second source tensors have norms L_phys
+and D_phys of the form(4.1), then direct carrier multiplication gives
+
+ ||K^t a||_(k;src) <=(M_e+M_b)L_phys,
+
+ ||K^t D K||_(k;src)
+                <=(M_e^2+2 M_b M_e)D_phys.                 (5.2)
+
+To verify these inequalities, locate a prescribed root in the physical
+source tensor or in a K factor. In the first case sum the K tails by
+their external row/column norms. In the second case sum that entire
+marked K by M_b, the attached source tensor using its leg-rooted
+subsum of(4.1), and the remaining K by M_e. This accounts for the
+two terms in the vector case and the three terms in the matrix case.
+Shared contracted legs keep every union connected.
+
+Consequently finite-read source tensors with bounded incidence, and
+the actual uniform complete-root K catalogues, give the required
+volume-uniform norms after pullback. General analytic source
+composition needs its corresponding complete supported first/second
+derivative catalogue; (5.2) does not manufacture that input.
+
+For the actual weighted Wilson source, TURN70 Section9 records its
+full first and second jets after chart composition and whitening.
+Those may be used directly in(4.1). The stationarity sum of first
+jets vanishes only for a CONSTANT source; a varying source must retain
+the g^2 d_T term in(3.3).
+
+6. SEPARATION, PROJECTION AND GAUGE SCOPE
+
+If f,h are supported in sets S_F,S_H at graph distance D, every
+nonzero contributing carrier Z contains a source anchor in each set.
+Connectedness implies |Z|>=D+1. Rooting at the source anchors on
+the smaller side therefore gives
+
+ |Delta_T(F(f),H(h))|
+  <=||f||infinity||h||infinity min(|S_F|,|S_H|)
+          exp[-k(D+1)] ||Delta_T||_(k;2src).                (6.1)
+
+For complete carriers in cells of physical size ell, this gives the
+usual exp[-c distance/ell] separation factor, together with one
+source-volume count. Fixed collars and the actual interpolated
+source supports must be included in that distance.
+
+Projection dependence has not disappeared. For the full constant
+physical action, the constrained first jet is zero and A=B=P.
+Since Tr P^2=rank P=d, equation(3.3) becomes
+
+ Delta_T
+  =(g^4/2)(1-v^2)d
+    -(g^4 kappa/4)sum_i[(tr P_ii)^2+2tr(P_ii^2)],           (6.2)
+
+which is precisely the untruncated-minus-selected version of
+TURN48(5.3). Replacing P by I would source the wrong normal modes.
+For general weighted sources A and B must both be kept; they cannot
+be replaced by a rank count. A constant source over the entire volume
+can have an extensive covariance despite the rooted norm being uniform.
+
+Under the actual compatible block-orthogonal frame changes,
+l_i transforms at its block and A_ij transforms at both legs.
+Every contraction in(3.3) is then invariant. With covariant input
+carriers the constructed scalar carriers are individually invariant.
+No Haar average on a weak angle ball or new global gauge domain is used.
+
+For analytic background coefficients the identities extend as
+bilinear holomorphic identities on the same admitted weak tube.
+Transpose, not complex conjugation, is used there. Their uniform
+supremum bounds are exactly the input norms in(4.1),(5.1).
+The probability interpretation is asserted on real backgrounds.
+No uniformity for a later generated action is inferred unless its
+same complete-support inputs have been proved.
+
+7. HOW SMALL THE GAUSSIAN SOURCE CORRECTION CAN BE
+
+Choose T^2=A log(1/g) for small g with A fixed. The explicit bound
+(2.4) is a power of g times a fixed logarithmic power; the weaker
+form(4.3) gives exp(-T^2/4)=g^(A/4).
+Thus any specified power suppression in this Gaussian rooted
+correction is obtained by a sufficiently large fixed A.
+At the same time g T^3 tends to zero, as required by the selected
+local construction.
+
+This conclusion concerns the connected correction per complete root,
+not the global probability c_T^n. That probability may tend to zero
+with volume even when(4.3) is very small. Equations(3.5) and(4.3)
+therefore provide a genuine quantitative example of the TURN71
+selection-susceptibility mechanism.
+
+8. OUTER BACKGROUND COVARIANCE AND THE NONLINEAR GAP
+
+Even within the Gaussian reference, a random background must be
+handled correctly. Let nu(du) be an outer law, with the same fixed n,
+g and T at every u. Equation(1.1) makes the zero-source selection
+probability c_T^n independent of u, so selection leaves nu unchanged.
+Write a(u)=Tr A(u), b(u)=Tr B(u). Total covariance and(3.4) give
+
+ Cov_(nu gamma)(F,H)-Cov_(nu mu_T)(F,H)
+  =E_nu Delta_T(F,H)
+    +(g^2 d_T/2)[Cov_nu(c_F,b)+Cov_nu(a,c_H)]
+    +(g^4/4)(1-v^2)Cov_nu(a,b).                            (8.1)
+
+This follows by expanding the two outer covariances of the means
+c_F+g^2 a/2 and c_F+g^2 v a/2, and similarly for H.
+Thus the uniform fiber correction cannot be renamed the whole
+two-point correction without treating these additional terms.
+No locality or mixing of nu is assumed or proved here.
+
+The nonlinear current fiber instead has the factor
+
+ exp[V_g(xi,u)],
+ V_g=-r_u(gK_u xi)/g^2+log[J_u(gK_u xi)/J_*(u)],
+
+and inherited source/activity contributions. The TURN48 catalogue
+controls this factor on the selected product domain. The untruncated
+Gaussian samples arbitrarily large xi, and may leave the chart where
+that physical expression is defined. Neither(3.3) nor local
+holomorphy supplies a full-domain definition, integrable majorant,
+or rare-tail marked cluster bound for this nonlinear weight.
+
+For an actual analytic physical source, (1.2) is its first two
+fluctuation jets unless the source is exactly affine-quadratic.
+Higher jets and V_g produce additional covariance coefficients.
+In particular, when first jets are nonzero the complete order-g^4
+nonlinear covariance includes more than the quadratic-polynomial
+Gaussian term. They have not been omitted from an asserted equality
+for the physical law: that equality is not claimed.
+
+What is proved here is the exact Gaussian reference susceptibility,
+including both old source legs, its first-jet term, the full physical
+projection, and a volume-uniform complete-carrier locality bound.
+Extending this estimate to the full nonlinear current measure,
+then to the original complementary histories and coarse law, remains
+the substantive next attachment.

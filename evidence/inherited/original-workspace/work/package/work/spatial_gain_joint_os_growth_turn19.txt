@@ -1,0 +1,303 @@
+SPATIAL GAIN, RUNNING FRAMES, AND JOINT OS GROWTH
+19 October 2026. Root research note. Full YM4 remains UNPROVED.
+
+Purpose. Quantify the genuinely joint error left AFTER local single-field
+renormalization. Treating every n-leg running matrix as arbitrary can give
+an artificial n-fold spectral-spread loss: the companion turn19 audit
+handles the tensor-product connection exactly. This note addresses a
+different object, a forcing term with n external legs. Its norm can still
+carry one inverse-frame factor per leg. A positive spatial power absorbs
+that loss with a FIXED factorial exponent in n. Superpolynomial smallness
+in the running coupling alone need not do so.
+
+These are proved analytic implications. The mixed-history YM forcing
+estimate to which they would apply has not been proved. In particular,
+do not substitute a conditional fluctuation cluster for a correlation in
+the unconditioned coarse state.
+
+1. AN ELEMENTARY SUM WITH THE NEEDED ARITY DEPENDENCE
+
+Fix c>0 and q>=0. There are C>0 and an integer K>=q such that, for every
+integer n>=1,
+
+ sum_(k>=0) (1+k)^(q n) exp(-c k) <= C^n (n!)^K.             (1.1)
+
+Choose any integer K>=q (K=0 is allowed when q=0). For K>=1, compare
+each summand to the integral over [k,k+1]:
+
+ (1+k)^(Kn) exp(-c k)
+ <= exp(c) integral_k^(k+1) (1+x)^(Kn) exp(-c x) dx.
+
+The total is at most exp(2c) c^(-Kn-1) (Kn)!. The multinomial
+inequality (Kn)! <= K^(Kn) (n!)^K proves (1.1), absorbing constants
+independent of n into C^n. The case K=0 is a geometric sum. No constant
+in (1.1) depends on n. The exact fractional Gamma estimate could improve
+K, but that improvement is unnecessary for OS growth.
+
+A shifted version follows from 1+j0+k <= (1+j0)(1+k):
+
+ sum_(k>=0) (1+j0+k)^(q n) exp(-c k)
+ <= C^n (n!)^K (1+j0)^(q n).                              (1.2)
+
+Fixed logarithmic factors per leg cause no difficulty. For any eta>0
+and v>=0, (1+log(1+j))^v <= C_(eta,v)(1+j)^eta.
+Raising this SINGLE-leg estimate to n costs only C_(eta,v)^n.
+
+2. A SEPARATED-SUPPORT CONVERGENCE THEOREM
+
+Let r_j=L^(-j), L>1, j>=0. Consider one fixed finite field frame and its
+complete, normalized n-point approximants G_(n,j). All components,
+subtractions, coupling normalizations and physical denominators are part
+of these approximants; their definition does not depend on n except for
+taking an n-point function. For separated test boxes let 0<d<=1 be their
+minimum separation and let
+
+ j_d=ceil(log_L(c0/d)), with c0>=1.
+
+Write Q_n(f) for the product of the required fixed-order local test norms.
+Assume, for every n>=1 and j>=j_d, that the SAME hierarchy satisfies
+
+ |G_(n,j+1)(f)-G_(n,j)(f)|
+ <= A^n (n!)^B (1+j)^(a n+b)
+       (1+log(1+j))^(v n+w)
+       (r_j/d)^delta d^(-s n-t) Q_n(f),                    (2.1)
+
+where delta>0; all constants A,B,a,b,v,w,s,t are fixed nonnegative
+numbers independent of n,j,d and the UV/volume regulators. Assume also
+the analogous initial bound at j_d without the factor (r_j/d)^delta:
+
+ |G_(n,j_d)(f)|
+ <= A^n (n!)^B (1+j_d)^(a n+b)
+       (1+log(1+j_d))^(v n+w) d^(-s n-t) Q_n(f).            (2.2)
+
+Then G_(n,j)(f) converges as j->infinity and, for every epsilon>0,
+
+ |G_n(f)| <= A_epsilon^n (n!)^(B+K)
+                d^(-(s+epsilon)n-t) Q_n(f),               (2.3)
+
+for a finite integer K independent of n. Thus the running frame changes
+only the fixed factorial exponent and an arbitrarily small fixed linear
+collision exponent. It does not demand an error epsilon_j^n.
+
+Proof. Since n>=1, replace a n+b by (a+b)n and v n+w by (v+w)n. Choose
+eta>0 and absorb the logarithm by the single-leg inequality in Section1.
+Set q=a+b+eta. For j=j_d+k,
+
+ (r_j/d)^delta <= c0^(-delta) exp[-delta(log L) k].
+
+Equations(1.1)--(1.2) sum the differences by a bound
+
+ C^n (n!)^(B+K) (1+j_d)^(q n) d^(-s n-t) Q_n(f).
+
+For every epsilon>0, (1+j_d)^q <= C_epsilon d^(-epsilon),
+because j_d grows only like log(1/d). This proves (2.3), also absorbing
+the initial term (2.2). The same argument proves absolute Cauchy
+convergence at each fixed n and separated configuration. For d>=1 use
+j_d=ceil(log_L c0) and the usual (1+d^-1) convention; no new short-distance
+loss occurs. The n=0 normalization is handled separately by G_0=1.
+
+This theorem is local in test configurations. Passing to S^0 requires the
+previously proved separated-box/Whitney assembly with linear derivative
+order and polynomial large-distance weights. If Q_n itself has TOTAL
+required derivative order O(n), the combined order remains O(n). An
+O(n) order in EACH of n slots would not meet this condition. Equation(2.3)
+alone does not supply
+missing derivative, infrared or partition-of-unity estimates. Reflection
+positivity, Euclidean covariance, compatibility of mixed words, clustering,
+and nontriviality are also separate requirements.
+
+3. WHY ONE-LEG MIXING AND JOINT FORCING ARE DIFFERENT
+
+If physical fields obey a genuine local running connection A(g), the
+connection on n separated insertions has the form sum_a A(g)_a. With
+S(g) acting in the one-leg frame, S(g)^(tensor n) transforms it exactly
+leg by leg. After conjugation by the corresponding free powers, an
+error sum_a E(g)_a has norm at most n ||E(g)||, not a bound obtained by
+applying the full n-leg spectral spread to an arbitrary error matrix.
+The turn19 full-hierarchy audit proves this explicitly.
+
+In contrast, a genuinely joint vector forcing e_(n,j) can satisfy only
+
+ ||(P_j^-1)^(tensor n) e_(n,j)||
+ <= ||P_j^-1||^n ||e_(n,j)||.
+
+For ||P_j^-1||<=C j^alpha(1+log j)^nu this gives precisely the
+polynomial and logarithmic losses appearing in (2.1). Section2 shows that
+a FIXED positive power of the physical scale ratio is enough to sum
+them for every n, with acceptable fixed-factorial growth. Increasing the
+number of insertions does not require an ever larger spatial power.
+
+At the one-step regular conditional level, such a spatial factor has a
+natural source. After extracting the exact conditional single-leg outputs,
+every connected fluctuation cluster in the residual partition contains
+at least two marked supports. If its localized tree length is at least
+c d/r_j and the ORIGINAL connected expansion retains a fixed exponential
+length reserve, then
+
+ exp[-c' d/r_j] <= C_delta (r_j/d)^delta                    (3.1)
+
+for any FIXED delta>0. The constant depends on delta, not n. Factoring
+one spatial reserve from a connected tree does not spend a reserve on
+every external leg. Marked polynomial moments can carry ordinary fixed
+factorial powers and remain compatible with Section2.
+
+Equation(3.1) is an exact numeric implication. The statements preceding
+it are hypotheses about the actual localized conditional expansion. In
+particular: a common fluctuating COARSE background can correlate distant
+supports with no exp[-c d/r_j] gain; original mixed large-field components
+can connect supports across dates; sharp conditional backgrounds can fail
+the local packet Taylor bound. The turn17 sharp-block example rules out
+silently treating those issues as solved by (3.1).
+
+3A. A WIDENING LOCALIZATION MESH AND RAW PACKET NORMALIZATIONS
+
+The physical localization range may be r_j R_j, rather than r_j, with
+R_j<=C_R(1+j)^b for fixed b>=0. This includes fixed polylogarithmic
+functions of 1/g_j when g_j^2 is comparable to 1/j. Do not erase this
+factor when reading a native tree metric. It is nevertheless harmless
+for the present summation if the ACTUAL joined coefficient has the
+exponential bound exp[-c d/(r_j R_j)].
+
+Fix D>=0, delta>0, and put p_n=D n+delta. For y>0,
+e^(-c y)<= (p_n/(c e))^(p_n) y^(-p_n). Consequently
+
+ r_j^(-Dn) e^[-c d/(r_j R_j)]
+ <= C^n(n!)^K0 d^(-Dn) (r_j/d)^delta R_j^(Dn+delta),    (3.2)
+
+for a fixed integer K0>=D+delta (enlarged if needed). The factorial
+bound follows from p_n<=K0 n and maximization/Stirling; constants
+depend on c,D,delta, never n,j,d. Since
+
+ R_j^(Dn+delta)<=C1^n (1+j)^[b(D+delta)n],
+
+the right side has exactly the shape of (2.1), with an additional fixed
+factorial exponent and linear collision/date powers. Hence Section2
+sums even RAW r_j^(-Dn) joint normalizations while retaining OS growth.
+The dimension/order D is fixed for the finite field frame; it is not
+allowed to grow with n. No n-dependent redefinition of packets occurs:
+p_n is only an exponent chosen in this numerical upper bound.
+
+This conclusion requires a connected path in the ORIGINAL absolute
+metric of physical scale r_j R_j. It supplies no such metric estimate
+for a normalized history operator or an uncharged component interior.
+
+4. SUPERPOLYNOMIAL COUPLING SMALLNESS IS NOT THE SAME INPUT
+
+If g_j^2 is comparable to 1/j, a fixed remainder g_j^p is comparable to
+j^(-p/2). The crude joint forcing estimate with j^(alpha n), alpha>0,
+is nonsummable for all sufficiently large n at any fixed p. This does
+not affect the tensorized homogeneous connection in Section3.
+
+Even an envelope smaller than EVERY fixed inverse power of j need not
+give fixed-factorial constants after summation. Fix a,c>0 and p>1, and set
+
+ W_n=sum_(j>=2) j^(a n) exp[-c(log j)^p].                    (4.1)
+
+Then log W_n is of order n^(p/(p-1)). In particular there are no fixed
+A,B with W_n<=A^n(n!)^B for every n.
+
+Proof of the obstruction. Put t_n=(a n/(c p))^(1/(p-1)) and choose an
+integer j_n nearest exp(t_n), increasing n if necessary. Its logarithm
+is t_n+o(1). The logarithm of this one summand is
+
+ a n log j_n-c(log j_n)^p
+   =(p-1)c t_n^p+o(n^(p/(p-1))).
+
+This lower bound grows faster than n log n. For completeness, an upper
+bound of the same order follows by comparison with the integral whose
+logarithmic variable t has exponent (a n+1)t-c t^p. Young's inequality
+bounds it by C n^(p/(p-1))-(c/2)t^p, leaving an integrable factor.
+The sum/integral comparison only changes fixed constants and the same
+exponent. Stirling's estimate then proves the claim.
+
+This is a limitation of that envelope, not a counterexample to the YM
+trajectory or to reconstruction. It says that an argument using native
+exp[-c(log g^-2)^p] tails and an unrelated per-leg running norm still
+has an arity problem. One must exploit extra locality/correlation
+structure, or obtain different order-dependent estimates. Flatness of
+test functions at external diagonals does not remove a large constant
+already present at a fixed separated configuration.
+
+An elementary probability realization confirms that the distinction is
+real. Normalize the weights exp[-c(log j)^p] on integers j>=2, and set
+X=j^a. The constant Euclidean random field phi(x)=X has moments W_n/W_0,
+is Euclidean invariant and reflection positive, and defines a tempered
+n-point distribution for each fixed n. To test S^0, choose n disjoint
+translated copies of one unit-integral compact Gevrey bump, with centers
+spaced two units apart on a line, and take their product F_n. This product
+vanishes near every collision diagonal. For every fixed linear seminorm
+order sn, p_(sn)(F_n)<=C_s^n(n!)^(B_s): the support radius is polynomial
+in n, and fixed Gevrey derivative bounds at TOTAL order O(n) have this
+growth. Yet G_n(F_n)=W_n/W_0. Thus no fixed-factorial E0' bound holds
+even on S^0. Identical overlapping bump products would not be a valid
+S^0 test for this argument. The field is nonclustering and is
+NOT a YM model. This example blocks an implication to our sufficient
+OS growth condition; it does NOT show that such growth is necessary
+for every possible reconstruction (the constant field can itself be
+represented as a multiplication operator).
+
+5. A FINITE-ORDER GEVREY FALLBACK, WITH COMPATIBILITY EXPLICIT
+
+Here is a second possible route for a genuinely joint remainder when
+Section2's positive spatial power is unavailable. It needs more input.
+Suppose an EXACT same-hierarchy difference has a decomposition
+
+ D_(n,j)=Q_(n,j)^(N)+R_(n,j)^(N)
+
+for every integer N>=0. Q contains all explicitly retained terms, with
+the same physical normalization and field definition. Suppose its
+calibrated sum has separately been bounded at the selected order, and
+the calibrated remainder satisfies
+
+ |R_(n,j)^(N)(F)|
+ <= C^(n+N) (n!)^B ((n+N)!)^s
+      (1+j)^(alpha n+tau-sigma N)
+      (1+log(1+j))^(nu n) p_(c n+d N)(F),                 (5.1)
+
+where sigma>0 and the other constants are fixed and nonnegative. Choose a fixed eta>0 to
+absorb the logarithm into C^n (1+j)^(eta n). For any fixed zeta>0, set
+
+ N(n)=ceil[((alpha+eta)n+tau+1+zeta)/sigma].
+
+Then N(n)<=K0 n for some fixed integer K0 (enlarge K0 for n=1), and
+the remaining date exponent is at most -1-zeta. Consequently
+
+ sum_j |R_(n,j)^(N(n))(F)|
+ <= C1^n (n!)^(B+s(1+K0)) p_((c+d K0)n)(F).               (5.2)
+
+Proof: sum the inverse date power, then use
+((1+K0)n)! <= (1+K0)^((1+K0)n)(n!)^(1+K0).
+
+Only finite Taylor orders are used; no convergence or Borel summability
+of the full perturbation series is needed. But (5.1) is an ACTUAL
+uniform remainder estimate with a fixed factorial exponent in N and n.
+Fixed-order theorems with unspecified C_N do not imply it. Nor does a
+bound on formal coefficients prove a bound on the remainder of the
+physical Wilson correlation. The moving-domain counterexamples from
+turn18 remain relevant.
+
+Most importantly, N(n) may change the PROOF of a correlation, not its
+DEFINITION. Defining a different field counterterm scheme for every n
+would destroy the common hierarchy, positivity and consistency. Retained
+Q terms cannot be discarded; their cancellation or summability must be
+established in the same physical hierarchy. If an order-N theorem is
+only valid beyond a date J_N, the missing early-date contribution also
+needs its own factorial-compatible bound. Equation(5.2) does not silently
+cover it.
+
+6. CONSEQUENCE FOR THE ACTIVE PRODUCER TASK
+
+The economical target is now local single-leg calibration plus a
+complete connected residual with a positive power of r_j/d, retaining
+one distinguished action remainder and all internal subtractions before
+absolute values. One-leg tensorization and Section2 avoid imposing
+high perturbative order just because an n-point function has many legs.
+The Gaussian complete angular construction already has an r^2 error;
+the one-step regular connected fluctuation expansion suggests another
+source of spatial gain for multi-leg corrections. Neither observation
+establishes the required interacting full-history input.
+
+This note changes which estimate should be sought. It does not prove
+the scalar continuum hierarchy, the full SU(2) observable family, their
+Yang--Mills short-distance matching, or nontriviality. Those remain
+part of the unchanged existence goal.

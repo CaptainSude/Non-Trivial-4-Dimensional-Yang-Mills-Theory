@@ -1,0 +1,289 @@
+REAL TWO-DATUM LAPLACE EXPANSION AND THE ACTUAL COARSE HESSIAN
+19 October 2026. admission_proof. Turn40 finite-lattice theorem.
+
+RESULT
+
+The positive saturated numerator of constrained_effective_action_turn40
+has a real C2 Laplace expansion in any two specified coarse FOREST CHORD
+coordinates, uniformly on its weak q,e family and on the SAME fixed
+enlarged fluctuation window. The proof differentiates the integral with a
+smooth centered cutoff and estimates the differentiated tail in the original
+B coordinates. It does not differentiate a previously proved value-only
+error. Combined with local_saddle_and_prefactor_turn40, this proves an actual
+exponentially local correction to the classical coarse Hessian on
+sublogarithmic, or sufficiently small logarithmic, boxes.
+
+This is the density of the explicit positive saturated quotient reference,
+normalized only as specified below. It is not a theorem for the full coarse
+marginal, a selected RCP at an exceptional fiber, arbitrary framed coarse
+coordinates, or repeated RG kernels.
+
+1. EXACT OBJECT AND THE PARAMETER FAMILY
+
+Retain the fixed-crossing geometry, block-local G0 forest, all ordinary
+coarse rows, fixed exterior strip, and complete coarea density from
+constrained_effective_action_turn40. Write
+
+ a_e(q)=integral_D exp[-f(B;q,e)/g^2] J(B;q,e) dB,
+ f(B;q,e)=S_e(x(B;q,e)),     ell(B;q,e)=log J(B;q,e).     (1.1)
+
+Here B belongs to the fixed linear space kerQ with induced Euclidean
+measure. D is the fixed sup window enlarged once in that note. q denotes
+the coarse chord angles in the FIXED forest section Y_s(q): it inserts
+identity on forest rows and exp(iq) on chord rows. The original relative
+datum v(q,e) and all its derivatives are retained. No datum-dependent long
+coarse gauge restoration is performed in (1.1).
+
+Let N<=C_LR^4 bound the total fine/coarse coordinate count and d=dim kerQ.
+Fix the family
+
+ ||q||_infinity, ||log e||_infinity <=gZ,
+ Z>=1,   R,Z,T bounded by fixed powers of ell_g=log(1/g). (1.2)
+
+Choose D using a slightly enlarged family, say the bound 2gZ, with the same
+fixed margins as before. In particular D has half-width
+
+ b_g=C_LgR^2(1+Z+RT+sqrt(ell_g)),
+
+with its constant chosen once. The previous requirement gR^3V_g small
+holds for sufficiently small g. Every saddle has a uniform interior margin
+and D contains all centered truncation balls used below. If complete old-W
+coverage is claimed, also impose Z>=C_LRT so the prescribed q family covers
+the earlier coarse-quotient window. Otherwise the analytic statement is
+restricted to (1.2) without discarding a probability outside it.
+
+All q derivatives below are real derivatives in one or two fixed unit
+coarse chord/color coordinates, including a repeated coordinate if desired.
+The constants are uniform over their locations, the remaining weak data,
+the enclosing volume, and g in the stated regime. Exterior e is held fixed
+in these derivatives. For d=0 the corresponding Laplace ratio is exactly1.
+
+2. MIXED CHART AND SADDLE DERIVATIVES
+
+Let B_*(q,e) be the actual constrained minimum from the prior theorem and
+H_*=f_BB(B_*;q,e). On the complete small chart,
+
+              c_L I<=H_*<=C_L I.                       (2.1)
+
+The finite-read action and ordinary map, the bounded row/column Neumann
+inverse of the constraint chart, and finite implicit differentiation give
+uniform Euclidean multilinear bounds on f derivatives of total orders
+2 through6. Its first derivative can instead cost C_L sqrt(N) epsilon;
+the original-coordinate tail estimate below permits that factor.
+For terms containing the action gradient, use its per-link sup bound paired
+with the l1 chart-derivative bound. This is the same estimate already used
+for the constraint-curvature term in the Hessian. Higher local products and
+implicit derivative partitions at these fixed orders add fixed constants,
+not a factor per block. The relative-coordinate map v(q,e) has bounded
+local derivatives and is included.
+
+The corresponding log-density derivatives through total order4 are bounded
+by C_LN in unit Euclidean directions. They include the trace derivatives of
+the constraint determinant and all fine/coarse Haar factors. A separate
+operator or per-link bound is used when available; C_LN suffices here.
+
+Differentiating f_B(B_*;q,e)=0 gives
+
+ B_*,u=-H_*^-1 f_Bu,
+ B_*,uv=-H_*^-1{f_Buv+f_BBu[B_*,v]+f_BBv[B_*,u]
+                              +f_BBB[B_*,u,B_*,v]}.    (2.2)
+
+Thus ||B_*,u||_2+||B_*,uv||_2<=C_L. These bounds do not require dividing
+by g or by the size of the datum ball. The first two datum derivatives of
+H_* have uniformly bounded operator norms. The first two total derivatives
+of the centered cubic action coefficient are uniformly bounded, and those
+of the centered linear/quadratic log-density coefficients cost at most C_LN.
+
+These statements also follow from the stronger anchored nonlinear KKT
+response in local_saddle_and_prefactor_turn40. Only their Euclidean bounds
+are needed for the Laplace error; its spatial conclusion is used separately
+in Section6.
+
+3. CENTERED CORE, WITH DERIVATIVES BEFORE ESTIMATION
+
+Set S_min=f(B_*;q,e), J_*=J(B_*;q,e),
+
+ Z_H=(2pi)^(d/2)/sqrt(det H_*),
+ R_g(q)=exp[S_min/g^2] a_e(q)/(g^d J_* Z_H).            (3.1)
+
+Choose a smooth even cutoff chi_A(xi), equal to1 for |xi|<=A and0 for
+|xi|>=2A, with first two Euclidean derivatives bounded by C/A and C/A^2.
+For example use a fixed smooth function of |xi|^2/A^2. Take
+
+                  A=C_*sqrt(N+ell_g+1),                (3.2)
+
+where C_* is fixed after derivative order2 has been selected. Its doubled
+ball fits inside D after B=B_*+gxi for EVERY datum in (1.2). The cutoff is
+independent of q in xi coordinates; there is no loss of window margin per
+derivative.
+
+Expand the CENTERED differences, rather than their large separate factors:
+
+ [f(B_*+gxi;q)-S_min]/g^2
+     = (1/2)xi^tH_*xi + (g/6)f_BBB(B_*;q)[xi^3]
+                              + O_C2(g^2|xi|^4),
+ ell(B_*+gxi;q)-ell(B_*;q)
+     = g ell_B(B_*;q)[xi] + O_C2(g^2N|xi|^2).           (3.3)
+
+The C2 symbol here means the two selected q derivatives with xi fixed.
+It follows from Section2 and Taylor's integral remainder. Thus relative
+to the normalized Gaussian G_q with covariance H_*^-1 the core integrand
+is
+
+ 1+g L_q(xi)+E_g(q,xi),
+ L_q=ell_B(B_*;q)[xi]-f_BBB(B_*;q)[xi^3]/6.             (3.4)
+
+On |xi|<=2A, g(A^3+NA) tends to zero in the polylogarithmic regime, and
+the remainder and its first two q derivatives are bounded by
+
+ C_Lg^2{ |xi|^4+N|xi|^2+(|xi|^3+N|xi|)^2 }.           (3.5)
+
+Enlarging the fixed numerical constant or adding lower-degree terms gives
+the same estimates. L_q and both its datum derivatives are ODD. For every
+q, the cutoff and G_q are even. Hence E_Gq[chi_A L_q]=0 identically as a
+function of q, so its first two q derivatives also vanish. No assumption
+that the full density or its nonzero-background logarithm is even is used.
+
+For completeness, differentiating the normalized Gaussian contributes
+
+ score_u(xi)=-1/2{xi^t H_*,u xi-Tr(H_*^-1 H_*,u)}.
+
+It is bounded by C_L(N+|xi|^2). The second derivative contributes an even
+polynomial bounded by C_L(1+N+|xi|^2)^2. These are the actual normalization
+derivatives; they cannot simply be omitted. Gaussian moments in (3.5),
+with these at most two scores, cost at most a fixed polynomial in N, for
+example C_L(1+N)^5. The Gaussian cutoff deficit and its derivatives are
+exponentially small at (3.2).
+
+4. THE TAIL IS DIFFERENTIATED ON THE ORIGINAL FIXED DOMAIN
+
+The remaining part of (3.1) is integrated over the ORIGINAL fixed D with
+the factor
+
+          1-chi_A((B-B_*(q))/g).
+
+There is no derivative of a hard moving domain. A cutoff derivative costs
+C_L/(gA), and a second derivative costs C_L[(gA)^-2+(gA)^-1], by (2.2).
+They are supported in the annulus A<=|B-B_*|/g<=2A. Derivatives of the
+centered phase at fixed B can cost g^-2, and two can cost g^-4. The finite
+chart bounds give at most an additional fixed polynomial in N. Derivatives
+of the prefactor ratio, J_*, and Z_H have the same fixed polynomial cost.
+
+The action is strongly convex throughout D:
+
+            f(B;q)-S_min(q)>=c_L|B-B_*|^2.
+
+The complete prefactor ratio and determinant normalization cost at most
+exp(C_LN), as in the previous Laplace proof. Consequently the tail and its
+first two q derivatives have the safe bound
+
+        C_Lg^-4(1+N)^C exp[C_LN-c_L A^2].               (4.1)
+
+Choose C_* once so (4.1)<=g^4; the polynomial in N can be absorbed in an
+additional fixed multiple of N in the exponent. The omitted Gaussian core
+tails with their scores satisfy the same bound. This keeps the original
+normalizer and window while paying all recentering derivatives. It neither
+uses a full-fiber probability estimate nor differentiates an RCP.
+
+5. REAL C2 RELATIVE FORMULA AND THE COMPLETE EFFECTIVE ACTION
+
+Combining the core and tail proves
+
+ a_e(q)=exp[-S_min/g^2] J_* (2pi g^2)^(d/2)
+                       (det H_*)^-1/2 [1+r_g(q)],       (5.1)
+
+with, for a deliberately conservative explicit polynomial,
+
+ max_(|alpha|<=2)|partial_q^alpha r_g|
+       <= C_Lg^2 P_g + C_Lg^4,
+ P_g=(1+R^2+sqrt(ell_g))^40.                            (5.2)
+
+The sharper moment count in Section3 is unnecessary. Constants may depend
+on the fixed polylogarithmic growth exponents and the fixed window margins.
+Z,T enter those margins and the small-chart threshold; the polynomial in
+(5.2) is already sufficient once (1.2) and the chart condition hold.
+In particular g^2P_g tends to zero. This is a derivative theorem proved
+from the integral, not a derivative of a scalar bound on an unspecified
+Err function.
+
+Set Gamma_g(q,e)=-g^2 log a_e(q), with its real positive logarithm. Define
+
+                  W=(1/2)log det H_* -log J_* .         (5.3)
+
+The exact determinant identity of local_saddle_and_prefactor_turn40 gives
+the equivalent coordinate-invariant expression on this specified quotient:
+
+ W=(1/2)log[(-1)^m det M_*]-log j_C(x_*)+log j_J(v),
+ M_*=[ S_e''+sum lambda_a F_e,a''   DF_e^t;
+                            DF_e                 0 ],
+ m=dim Y.                                             (5.4)
+
+Here stationarity is grad S_e+DF_e^t lambda=0. The constraint curvature
+is retained. The real determinant sign is fixed by inertia; c_E and the
+constraint-coordinate determinant cancel only by the exact congruence
+identity, not by dropping a measure factor. The Gaussian volume constant
+-(g^2d/2)log(2pi g^2) is retained in Gamma_g and is q-independent.
+
+Since g^2P_g is small, (5.2) controls the real C2 logarithm as well. For
+the two chosen coarse coordinates u,v,
+
+ |Gamma_g,uv-S_min,uv-g^2W_uv| <= C_L g^4 P_g.           (5.5)
+
+All lower-order signed vacuum terms are represented by the actual J_*,
+H_* and S_min in this expression. No source-dependent normalization is
+silently replaced by a constant.
+
+6. ACTUAL SPATIAL COROLLARY IN THE DECLARED COORDINATES
+
+The independently proved nonlinear KKT companion establishes, uniformly on
+this small-data branch,
+
+ |S_min,uv|+|W_uv| <= C_L exp[-m_L dist(u,v)].           (6.1)
+
+It retains the local contact from v(q,e) and the complete trace/Haar
+derivatives. Its proof uses the exponential inverse of the local nonlinear
+saddle matrix and anchored response kernels before summing trace vertices;
+it is not a dimension bound on the determinant. In the weak/polylog regime
+the local saddle is the actual global fiber minimum by the earlier coverage
+argument, so it is the same S_min as in (5.1).
+
+Equations(5.5)--(6.1) imply the actual positive-numerator estimate
+
+ |Gamma_g,uv-S_min,uv|
+       <=C_Lg^2 exp[-m_L dist(u,v)]+C_Lg^4P_g.           (6.2)
+
+Restrict R<=C ell_g^b for a fixed b<1. Every pair of the indicated indices
+has distance<=C_dR. For any fixed 0<m'<m_L,
+
+ g^4P_g/[g^2exp(-m'dist(u,v))]
+      <=exp[-2ell_g+log P_g+m'C_dR] ->0.               (6.3)
+
+Thus, uniformly over the weak data and all specified coordinate pairs,
+
+ |Gamma_g,uv-S_min,uv|<=C_Lg^2exp[-m'dist(u,v)].         (6.4)
+
+The same holds for R<=c ell_g when c is sufficiently small, for example
+m'C_dc<1. The polynomial factors from fixed polylogarithmic Z,T do not
+alter this absorption. The estimate does not extend by this proof to an
+arbitrary logarithmic coefficient, superlogarithmic boxes, or a fixed
+physical box under UV refinement.
+
+LOCALITY SCOPE IS ESSENTIAL. u,v are fixed coarse FOREST CHORD indices and
+Y_s(q) is the local coordinate insertion used throughout. Transforming an
+arbitrary framed coarse field y to q(y) uses long forest paths. Neither
+(6.1) nor (6.4) proves locality after that transformation, or a native
+gauge-invariant polymer norm. They concern the exact saturated quotient
+density in the specified coordinates. The theorem also does not identify
+the full coarse marginal or a later effective action, estimate omitted
+compact branches on every fiber, or control a renormalized physical
+observable. The actual exterior is retained throughout.
+
+PROOF INPUTS
+
+The complete chart/window/minimum are the audited constructive results in
+constrained_effective_action_turn40; the flat gap and exponential saddle
+inverse are in gaussian_coarse_kernel_turn40; the exact nonlinear response
+and complete prefactor identity/locality are in local_saddle_and_prefactor_
+turn40. Sections2--5 above prove the new real two-datum estimate directly.
+No external analytic-derivative theorem or differentiation of value-only
+Laplace errors is imported.

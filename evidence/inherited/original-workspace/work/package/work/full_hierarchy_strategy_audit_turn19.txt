@@ -1,0 +1,343 @@
+FULL-HIERARCHY STRATEGY AUDIT: TARGET, PRIMITIVE SEEDS, AND ARITY COST
+19 October 2026. Independent source check and mathematical scope audit.
+
+Main conclusions.
+1. The continuation ALREADY selects SU(2) as its initial existence target.
+   This is not a new reduction made to evade the SU(N>=3) C-odd obstruction.
+2. Adding explicit SU(2) quadratic and oriented cubic seeds is a legitimate
+   simpler source strategy. It avoids extracting a small interaction-only
+   cubic coefficient from scalar fusion, but not dimension-six source
+   normalization, mixing, or higher-jet/composite construction.
+3. A fixed finite primitive family does not generate all invariant jets by
+   ordinary products/derivatives. A controlled diagonal operation is still
+   needed. It may be proved in joint distribution topology; the common
+   smooth-energy-domain completion in the published project is sufficient,
+   not logically necessary.
+4. Independent n-leg calibration has exponential, not superfactorial, arity
+   cost. A separate exact tensor theorem is saved in
+   tensorized_leg_calibration_turn19.txt. Genuine joint forcing is the
+   remaining place where n-dependent powers can cause a growth problem.
+
+1. LATEST REPOSITORY CHECK AND WHAT IT ACTUALLY ADDS
+
+Read-only remote HEAD checks on 19 October 2026 returned:
+
+ upstream: 785a68fdeef78a1da854c4807fe1f17b597d05e7
+ project:  bf484466e1e5091de6770c671f7411f8f93b9c87
+
+Both agree with the local snapshots. There is no newer deposited result
+to import from these repositories in this check.
+https://github.com/ethanwsussman/Yang--Mills-LLM-experiment
+https://github.com/CaptainSude/towards-proving-existence-of-YM4
+
+The latest upstream manuscript, pp.3--6 and Remark1.3, states a conditional
+SU(2) action-density theorem. It explicitly excludes a full field hierarchy,
+the corrected OS growth conclusion, unconditional continuous rotations,
+vacuum uniqueness/clustering, and Wilson-loop/block-variable statements.
+Its p.151 Outlook points to the independent-grid factorial estimate and
+alternative two-point/chessboard arguments already represented in the
+archive. It does not present a new primitive-field completeness theorem.
+Locators: work/sussman_draft.txt lines109--280,1280--1338,10255ff.
+The README's broader apparent-existence announcement does not strengthen
+the displayed theorem.
+
+The project source/introduction.tex explicitly says initially SU(2), and
+defines its target using gauge-invariant curvature/covariant-jet fields.
+Its source/completion.tex already distinguishes symbol generation from
+renormalized coincident products. Thus the present strategy correction
+does not contradict that paper's stated scope; it replaces one stronger
+sufficient consumer by the turn18 joint-distribution alternative.
+
+2. WHICH EXISTENCE CLAIM IS BEING PURSUED?
+
+The primary comparison is Jaffe--Witten, Section4 p.6 and its footnote:
+https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf
+It asks for local operators associated with invariant curvature/jet
+polynomials, allowing renormalization mixing, and Yang--Mills ultraviolet
+behavior. The full Millennium problem additionally asks for every compact
+simple group and a positive mass gap. Our initial SU(2) existence goal is
+a substantive part, not that entire universal-group mass-gap statement.
+
+Four distinctions must survive the proof:
+
+ (a) A nontrivial scalar-sector QFT is a genuine theorem, but does not by
+     itself identify the full Yang--Mills observable content.
+ (b) A compatible local observable hierarchy with the right nonlinear
+     ultraviolet laws is the intended SU(2) existence endpoint.
+ (c) A unique invariant vacuum / clustering is different from uniqueness
+     of the infinite-volume cutoff limit. An existence construction may
+     select a subsequence and a phase; it need not classify all limits.
+ (d) A spectral gap is a further theorem. It is not implied by positive
+     energy, ultraviolet asymptotic freedom, or a nonzero reflected norm.
+
+Corrected OS reconstruction can construct the fields on a common
+polynomial domain from a compatible joint hierarchy with linear-order,
+fixed-factorial growth. It need not first prove all-weight heat bounds,
+affiliation with the scalar net, or strong operator convergence in that
+net. See os_reconstruction_scope_turn18 and
+fixed_arity_reconstruction_alternative_turn18. Conversely, reconstruction
+alone supplies none of the Yang--Mills labels, equations, UV calibration,
+or nonzero form factors. Those remain producer/identification work.
+
+Choosing a clustering phase also does not automatically preserve a
+previously averaged ultraviolet coefficient. That matching must either
+be phasewise/decomposable, or be independently retained in the selected
+phase. Uniqueness of the cyclic reconstruction for GIVEN correlations is
+not uniqueness of the physical phase.
+
+3. SU(2) REMOVES THE EXACT C-ODD NO-GO, NOT THE CUBIC TASK
+
+For SU(N>=3), charge conjugation fixes spacetime points, preserves the
+Wilson measure, and fixes the action density. A nonzero d_abc F^aF^bF^c
+is odd and cannot lie in its C-fixed scalar subnet. This is an exact
+internal-symmetry obstruction, recorded in the turn18 scope note.
+
+For SU(2), C is inner and d_abc=0. The actual oriented cubic is instead
+epsilon_abc F_A^a F_B^b F_C^c; it is C-even. The free colored-Maxwell
+reference has an extra improper-color O(3) symmetry fixing every dot
+product and reversing this cubic, but the interacting nonabelian action
+breaks that accidental symmetry. Therefore no exact C argument forbids
+interacting SU(2) scalar fusion from producing the cubic. It simply must
+detect and control an interaction-dependent coefficient if that route
+is used. The original scope already permits a direct independent source.
+
+4. AN EXACT FINITE PRIMITIVE LATTICE FAMILY
+
+Use Hermitian generators t_a=sigma_a/2 and ordinary matrix trace.
+At a vertex x choose the six oriented plaquettes based at x and set
+
+ B_A(U)=(U_(p_A)-U_(p_A)^dagger)/(2i),
+ Q_AB(U)=2 Tr[B_A B_B],                                  (4.1)
+ T_ABC(U)=-2i Tr[B_A [B_B,B_C]].                          (4.2)
+
+For SU(2), B_A is Hermitian and traceless. All factors transform by the
+same conjugation at x, so (4.1)--(4.2) are real gauge-invariant local
+functions. Their complete read has a fixed finite number of links.
+Reflected/orientation companions can be retained as part of the finite
+frame. These definitions are on the compact group itself, not only a
+weak-field gauge chart.
+
+Write B_A=b_A^a t_a. The exact trace identities give
+
+ Q_AB=b_A dot b_B,
+ T_ABC=b_A dot (b_B cross b_C).                           (4.3)
+
+Sign check: [t_b,t_c]=i epsilon_bcd t_d and Tr(t_a t_d)=delta_ad/2,
+so -2i Tr(t_a[t_b,t_c])=epsilon_bca=epsilon_abc. In contrast,
+Im Tr U_p vanishes identically for SU(2), as does the imaginary trace
+of every SU(2) word. The SU(N>=3) single-plaquette C-odd seed in the
+turn18 note is therefore NOT this SU(2) cubic. If curvature samples
+are based at different vertices, first transport each to x along its
+specified finite path. The common conjugation and leading sign are
+unchanged; the higher germ terms acquire the corresponding covariant
+derivatives. These are smooth-field germ statements, not uniform
+quantum-field estimates.
+
+For a smooth canonical curvature in the stated convention,
+U_(p_A)=exp(i a^2 g F_A+O(a^3)) and B_A=a^2 g F_A+...
+Thus the leading germs are a^4 g^2 times the dot product and a^6 g^3
+times the oriented triple. In particular the cubic seed has a nonzero
+three-color Gaussian form factor without an extra O(g) production
+coefficient. This is the concrete gain over extracting the cubic from
+two action-density parents and dividing their interaction coefficient.
+
+It does not cure the UV scaling cost. The integrated dimension-six
+normalization is a^4 sum_x times a^-6 g^-3 T(U), namely an a^-2 g^-3
+source multiplier before lower/contact renormalization. Native admission
+of a small local analytic invariant does not by itself control this
+growing normalized family.
+
+At one point the invariant polynomial ring of six SO(3) color vectors
+is generated by the 21 Q_AB and 20 T_ABC. Products of two triples reduce
+to mixed Gram determinants. A primary formulation is Domokos--Drensky,
+Theorems2.9--2.10/Corollary2.12:
+https://arxiv.org/abs/1912.08907
+https://real.mtak.hu/112597/2/1912.pdf
+
+This finite algebra fact is useful for choosing explicit source seeds.
+It is not a statement that the corresponding quantum fields may already
+be multiplied at the same point. The project's one-cubic-plus-quadratics
+symbolic span likewise uses contraction operations whose interacting
+diagonal limits still have to be constructed.
+
+5. WHY FINITE SEEDS ARE NOT AUTOMATIC FULL-JET COMPLETENESS
+
+There is a direct algebraic obstruction to finite differential generation.
+Let a finite collection of invariant polynomial generators have maximum
+engineering dimension D0. Expand a proposed identity to quadratic field
+degree around the zero connection. There are no invariant linear terms,
+so products of two nonconstant generators cannot contribute quadratically.
+Only ordinary derivatives of the original quadratic terms contribute.
+On two external momenta p,q, those derivatives multiply by p+q. Setting
+q=-p kills every proper descendant; the surviving relative momentum
+degree is bounded by D0.
+
+But invariant bilinears tr[(D_1^m F_12)(D_1^m F_12)] have arbitrarily
+high relative degree and nonzero linearized on-shell forward symbols.
+For example take complex null p=t(1,0,i,0), q=-p and transverse
+polarizations e_2 in the same Cartan color. The leading symbol is a
+nonzero multiple of t^(2m+2). Linearized EOM terms vanish on this test,
+and total derivatives vanish at p+q=0. Therefore sufficiently high m
+cannot arise from the finite family by ordinary polynomial operations.
+This is the existing exact argument in local_observable_ope_route_turn6,
+restated here to settle the proposed finite-seed shortcut.
+
+There are two valid ways forward, neither automatic:
+
+ (i) For every fixed engineering degree D, use the FINITE set of required
+     covariant-jet color vectors and their dot/triple invariants, and prove
+     a compatible joint construction as D increases.
+ (ii) Start with the small primitive family and prove renormalized
+     point-splitting/OPE limits that recover relative derivatives and
+     products, in the actual joint distribution topology.
+
+At the symbol level, the second is plausible: a single free contraction
+of Q(x)Q(y) produces a bilocal color dot product; its relative Taylor
+coefficients generate differentiated bilinears. A cubic gives oriented
+analogues. But a formal Wick-sector extraction is not an identity for
+the complete interacting product, whose higher-field sectors and lower
+subtractions must remain. The turn17 complete angular construction is
+a genuine partial example, not yet this all-label OPE theorem.
+
+Classical reconstruction of a color frame by inverting a nonzero Gram
+determinant also does not bypass this issue. It excludes degenerate
+configurations, uses rational rather than polynomial operations, and
+has no automatic meaning for coincident quantum distributions.
+
+6. THE N-LEG MIXING ISSUE HAS TWO DIFFERENT ANSWERS
+
+The exact theorem in tensorized_leg_calibration_turn19 says the following.
+If a fixed finite one-leg calibration produces an integrable connection
+K(g), then n independent local calibrations produce exactly the Kronecker
+sum K^(n)=sum_a K_a. The norm is at most n||K||, fundamental matrices
+cost at most C^n, and their endpoint error costs C^n n times the one-leg
+tail. The spin-six turn18 finite correction therefore works at every n
+with the SAME local scheme; no perturbative order proportional to n is
+required just from tensoring the local frame.
+
+This remains true for complete correlated moments: a linear change of
+each inserted field acts tensorwise by multilinearity, regardless of
+whether the probability law factorizes. What does NOT follow is that
+the entire scale evolution of an n-point correlation is a Kronecker sum.
+Genuinely joint forcing and connected source/contact terms remain.
+
+For those terms a bound with one inverse-running norm per external leg
+can have a factor j^(alpha n). A positive physical-scale power r_j^delta
+absorbs this with a fixed-factorial cost. The parent's separate theorem
+spatial_gain_joint_os_growth_turn19 proves the exact sum. A mere fixed
+g_j^p remainder cannot do so for all n, and even
+exp[-c(log j)^nu], nu>1, can produce constants exp[C n^(nu/(nu-1))].
+
+If perturbative order N(n)=O(n) must instead grow for a joint remainder,
+that is not intrinsically fatal: a WHOLE-correlation estimate
+C^(n+N)((n+N)!)^B is still fixed-factorial at N=O(n). By contrast
+independently paying (N!)^B at each of n legs can yield
+exp[C n^2 log n], which is not such a bound. Unspecified fixed-order
+constants C_N prove neither conclusion. Most importantly, N(n) may
+change an estimate or a truncation used in its proof, not redefine the
+physical field counterterms separately at every arity.
+
+7. ECONOMICAL TARGET THAT PRESERVES THE FULL OBJECTIVE
+
+Keep SU(2), as already chosen. Do not insist that every new field be
+affiliated with or constructed as a strong operator limit in the scalar
+net if a compatible enlarged OS hierarchy is easier. A direct cubic
+seed is allowed and has a cleaner leading free form factor than scalar
+fusion. For each fixed finite physical frame, choose one normalization
+and prove all its joint finite-arity limits, with corrected OS growth.
+Tensor the fixed local running calibration exactly; seek a positive
+spatial gain for the actual joint forcing after local subtractions.
+
+This is a materially weaker and more focused consumer than the original
+all-copy bounded-operator programme. It still has to include all required
+jet/product directions and their nonabelian UV identification. A finite
+Q/T theory with no diagonal construction is not the final substitute.
+There is no new published result in the checked repository that supplies
+that missing all-label interacting diagonal theorem.
+
+8. INDEPENDENT AUDIT OF THE PARENT'S ARITY SUM NOTE
+
+Checked spatial_gain_joint_os_growth_turn19.txt Sections1--5:
+
+ PASS: sum_k (1+k)^(qn)e^-ck <= C^n(n!)^ceil(q), the shifted-date
+ factor, j_d=ceil(log_L(c0/d)), the arbitrarily small additional linear
+ collision exponent, the stretched-log saddle lower bound, and the
+ N(n)=O(n) Gevrey summation with its explicit compatibility requirement.
+
+Two precision qualifications were sent to the parent:
+ * Any statement that the test derivative order is O(n) must refer to
+   TOTAL order, not O(n) independently in each of n slots.
+ * To make the constant-random-field counterexample explicitly test E0'
+   on S^0, choose n disjoint translated compact Gevrey bumps with unit
+   integrals. Their tensor product is collision-flat and its p_(sn)
+   grows at most C_s^n(n!)^(B_s), while the moments grow as
+   exp[c n^(nu/(nu-1))]. Identical overlapping bump products would not
+   belong to S^0. This is a scope clarification, not a flaw in the sum.
+
+No numerical or summability error was found. The note correctly leaves
+the actual Yang--Mills joint forcing estimate unproved.
+
+9. SCALAR FOUNDATION CHECK: DIRECT OS IS A CONSUMER CHANGE ONLY
+
+This turn does NOT establish a scalar continuum theory on which the
+higher hierarchy may silently be based. In fact all_age.tex, in the
+paragraphs beginning "The scalar slab/rotation route" and "The
+corrected Osterwalder--Schrader reconstruction theorem", ALREADY uses
+the same corrected OS-II growth hypothesis now invoked in turn18.
+It explicitly states that the scalar theory assumed later is conditional
+on the actual source estimates and joint tube/ordered-sector
+identification. Replacing the stronger higher-field heat-operator
+consumer by direct joint OS does not prove either of those inputs.
+
+The source provenance has nevertheless advanced. The FINAL turn16
+audits establish the limited own-invariant fine-M R-input extension
+relative to the named original Bałaban estimates, including the complete
+common-tau source deformation, original independent-(U,J) contours,
+same-read Gamma/beta cancellation, vacuum ledger and one-use healed
+large-field reserve. The homogeneous scalar minimum/support case also
+passed the recovered CMP102 Proposition9 comparison. These are not
+still-open copies of the stronger dimension-six mixed-retraction issue.
+See root_original_source_audit_turn16 and original_source_frontier_turn16
+Sections8--9. Gaussian positive-beta and complete finite-q response
+continue to use their separately named structural/normalization imports.
+
+Nor should a new generic "all spectators" obstruction be invented.
+rotation_slab_operator_consumer Sections2--3 derives the endpoint-source
+array inequality (2.2) from the actual global source stability, local UV
+vacuum envelope and fixed-support singleton bound. Endpoints occupy
+finitely many cells; their fixed-cutoff constants are independent of the
+array length and disappear under reflection doubling. That is the
+precise spectator mechanism required by this scalar consumer. It uses
+the ORIGINAL Wilson source law, not an assumed normalized law of
+individual retained histories.
+
+The common-law statement still has to be assembled with all its actual
+hypotheses: the same continuum subsequence/source normalization in the
+coordinate and diagonal RP constructions; the complete joint tube and
+mixed Gram/ordered-sector identities; and the normalized finite-prefix
+Gaussian comparison used by the reflected witness. For the witness,
+random_sign_packing_nontriviality (19) is the required full-law statement,
+Cov_bare=q_s^2 g_s^4 K_Maxwell+o(g_s^4), uniformly before removal of
+regulators at a fixed weak witness band. Its positive free coefficient
+alone is not that statement. The archive's packing argument supplies a
+consumer of the causal source and early-prefix bounds, not a replacement
+proof of them. This audit has not found a new defect in those modules;
+it has also not performed their final joint assembly and should not
+report that assembly as achieved.
+
+The latest upstream manuscript does not fill this exact role. Its scalar
+O(4) conclusion remains conditional on the far-stress-flux IR-fl input.
+Its separate rotation theorem for ordinarily closed distributional
+two-forms with a global L2 sub-Gaussian bound cannot simply be applied
+to the nonabelian curvature or to the scalar action density. The project
+has a different possible route: fixed-state coordinate/diagonal RP,
+spectral cone, joint tube and angular 7/2<4 continuation. Thus IR-fl is
+not logically indispensable to the project, but the actual two-frame
+source/identification hypotheses of that alternative remain necessary.
+
+Finally, the direct joint-distribution strategy can avoid constructing
+each new field inside an already reconstructed scalar Hilbert space.
+It can build one enlarged hierarchy directly if its source limits,
+covariance, RP, growth and nonzero calibration are all proved. This is
+a legitimate simplification of the consumer, not evidence that a
+previous conditional scalar law has become unconditional.

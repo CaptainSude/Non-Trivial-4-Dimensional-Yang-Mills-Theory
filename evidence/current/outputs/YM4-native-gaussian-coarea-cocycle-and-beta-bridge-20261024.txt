@@ -1,0 +1,360 @@
+FINITE CURRENT-CORRECTED GAUSSIAN COCYCLE AND THE NATIVE BETA BRIDGE
+24 October 2026. audit_two_root. Independent proof and archive assessment.
+No archive or output changes. Independent review requested.
+
+RESULT
+
+There is an exact finite leading-amplitude composition theorem for
+nested nonlinear constraints. Its Hessian identity retains BOTH the
+inner and outer constraint-current corrections. Its density identity
+retains every coarea factor. On the literal homogeneous B109 regular
+germ, the displayed Gaussian Z^(j) includes that constraint coarea,
+and the native normalized gauge insertion supplies the separate
+gauge-orbit cancellation. This gives a finite scalar Gaussian cocycle,
+not a statement that successive positive-coupling sharp-cut integrals
+equal one composite sharp-cut integral.
+
+The missing uniform signed beta bridge is more than this finite
+identity. It requires the actual classical moment/vertex and regulator
+identifications listed in Sections6--7. The archived positive-beta
+assembly is conditional on those inputs; its statement does not
+register them for the present native B109/B116 objects by itself.
+
+1. A FINITE NONGAUGE THEOREM WITH ALL DENSITIES
+
+Let X,Y,Z be finite smooth spaces with positive smooth densities
+mu_X,mu_Y,mu_Z. Let f:X->Y and h:Y->Z be smooth submersions in a
+neighborhood of the points in question. In local coordinates put
+C=Df(x_*), D=Dh(y_*). Assume a smooth conditional minimum section
+u(y) with f(u(y))=y, and define s(y)=S(u(y)). At z suppose y_*(z)
+is a strict local minimum of s on h(y)=z. Write x_*=u(y_*).
+Assume positive definite constrained Hessians at both minima. The
+statement concerns these local branches; no global minimum selection
+or regulator-uniform neighborhood is required.
+
+Define a_f(y) as the leading Gaussian coefficient of the local
+pushforward of exp(-S/tau)mu_X through f, relative to mu_Y, after
+removing exp(-s(y)/tau)(2*pi*tau)^((dimX-dimY)/2). Define a_h(z)
+similarly for s and h using mu_Y, relative to mu_Z. Let a_hf(z) be
+the corresponding coefficient for h composed with f. Then
+
+             a_hf(z)=a_f(y_*(z)) a_h(z).                    (1)
+
+These a's are raw leading density coefficients. They contain all
+source-zero Jacobians and background-dependent densities; none is
+called a harmless constant in the theorem. The target-normalized
+logarithms consequently obey a cocycle. If u(0)=0 and y_*(0)=0,
+
+ log[a_hf(z)/a_hf(0)]
+   =log[a_f(y_*(z))/a_f(0)]+log[a_h(z)/a_h(0)].              (2)
+
+The equivalent version at a nonzero base uses y_*(z_base) in the
+inner denominator. This scalar remains in the exact normalization.
+
+2. CURRENT-CORRECTED SCHUR IDENTITY
+
+Use coordinate column gradients and ordinary Euclidean transposes
+only for the following calculation. There are multipliers lambda,nu
+at the two saddles satisfying
+
+ S_x=C^T lambda,     s_y=lambda=D^T nu.
+
+The envelope relation s_y=lambda follows by differentiating
+f(u(y))=y. Let
+
+ L_f=S_xx-sum_l lambda_l f_l'',
+ q=s_yy,
+ H=Du(y_*),     CH=Id.
+
+Differentiating the conditional stationarity equation gives exactly
+
+                     L_f H=C^T q.                          (3)
+
+Thus, for any basis K of ker C,
+
+ K^T L_f H=0,      H^T L_f H=q.                            (4)
+
+The second identity includes the second derivative of the constraint;
+it would generally be false with S_xx in place of L_f.
+
+The complete composed constraint satisfies
+
+ D^2(h composed with f)_a
+    =sum_l D_al f_l''+C^T h_a'' C.
+
+Therefore its Lagrangian Hessian is
+
+ L_hf=S_xx-sum_a nu_a D^2(h composed with f)_a
+     =L_f-C^T(sum_a nu_a h_a'')C.                         (5)
+
+Choose a basis R of ker D. Every vector in ker(DC) has a unique
+decomposition K xi+H R eta. Indeed its C image is in ker D and
+subtracting H times that image leaves ker C. Using (3)--(5),
+
+ [K,HR]^T L_hf [K,HR]
+       =diag(A,B),
+ A=K^T L_f K,
+ B=R^T(q-sum_a nu_a h_a'')R.                              (6)
+
+Both blocks are the ACTUAL restricted second derivatives of their
+nonlinear constrained phases. The cross block is zero, and the outer
+block contains its own multiplier-curvature term. Positivity of A,B
+gives positivity of the composed quotient Hessian in these coordinates.
+Equation(6) is the requested finite current-corrected Schur identity.
+It does not replace the intermediate constraint by a linear average.
+
+3. COAREA AND COORDINATE VOLUMES
+
+Choose an actual chart x=Phi(xi,y) with f(Phi(xi,y))=y and
+Phi(0,y)=u(y). Choose y=Psi(eta,z) adapted to h, with
+Psi(0,z)=y_*(z). Write the exact density decomposition as
+
+ mu_X = m_f(xi,y) dxi mu_Y(dy),
+ mu_Y = m_h(eta,z) deta mu_Z(dz).
+
+The composed chart x=Phi(xi,Psi(eta,z)) therefore has density
+m_f(xi,Psi(eta,z))m_h(eta,z) dxi deta mu_Z(dz). This is an exact
+change-of-variables identity, not a comparison of unspecified induced
+surface measures. Since the phase in this chart has Hessian (6),
+
+ a_f=m_f(0,y_*)/sqrt(det A),
+ a_h=m_h(0,z)/sqrt(det B),
+ a_hf=m_f(0,y_*)m_h(0,z)/sqrt(det A det B).
+
+This proves(1). In pivot coordinates, the factors m_f,m_h contain the
+inverse pivot determinants. Their product is exactly the composite
+coarea density. Relative Haar factors at the intermediate point occur
+once in the numerator and once in the denominator and cancel through
+this identity, not by a declaration that Haar is flat everywhere.
+
+The proof could also be obtained by sequential finite-dimensional
+Laplace asymptotics on one compact tube. No uniform ultraviolet
+stationary-phase remainder is needed for an identity of these finite
+coefficients. Smooth amplitudes multiplying the input are simply
+evaluated at the corresponding saddle at leading order.
+
+4. GAUGE ORBITS: KEEP THE FACTORS UNTIL AN EXACT IDENTITY
+
+If there are gauge zero modes, Sections1--3 apply first on compatible
+local quotient slices with the quotient densities obtained from the
+ORIGINAL measures. They do not justify replacing a soft-gauge
+determinant by a hard-slice determinant without its orbit density.
+
+For the actual native based site group, the necessary cancellation
+has an independent exact group-integral proof. At a blocking step
+let H_f be the product of site groups equal to identity at the output
+centers. For the native averaged endpoint contour P_x(U), covariance
+is
+
+       P_x(U^v)=P_x(U)v(x)^(-1),       v in H_f.
+
+Let q be the actual conjugation-invariant gauge penalty. Product
+normalized site Haar and right invariance give
+
+ int_(H_f) prod_x exp[-q(P_x(U)v(x)^(-1))/tau] dv
+       = c(tau)^(number of noncenter sites),                (7)
+ c(tau)=int_G exp[-q(w)/tau] dw.
+
+If the actual gauge insertion also carries its near-identity mask,
+insert that SAME mask in each factor defining c; right invariance
+still proves(7). Thus inserting the normalized gauge factor into a
+based-invariant physical coarea integral is an EXACT identity.
+Its normalization is background independent because of(7), not
+because the soft gauge Hessian is declared orthogonally identical
+to a hard slice. The constrained target is fixed by H_f.
+
+B109 printed254--255 (0.14)--(0.16) is precisely this positive gauge
+insertion and normalization. Its averaged endpoint contours are
+defined in(0.5)--(0.12) with the needed left/right covariance. At the
+gauge-zero representative their differential on a based gauge tangent
+is minus the identity in the actual site Lie coordinates. The leading
+gauge integral is therefore the leading term of the SAME c(tau)
+in(7). The finite soft-gauge Gaussian and the quotient leading density
+agree after retaining this factor. Any group/color convention changes
+that factor at every target in the same way; only then may it be
+canceled by normalization at the flat target.
+
+For nested native maps, the based site group at the final centers
+splits into sites away from the intermediate centers and intermediate
+sites away from the final centers. Their normalized product Haar is
+exactly the product of the two site Haar measures. Sequential use of
+(7) and the physical coarea theorem gives(1)--(2) for the complete
+native soft-gauge leading amplitudes. A direct composite contour gauge
+need not equal the sequential gauge: (7) relates both to the same
+physical quotient amplitude, keeping all orbit factors.
+
+An auxiliary semiclassical parameter tau may be used to establish
+this finite identity. It is NOT a claim that a fixed nonflat
+background remains in the original shrinking prior-mask domain as
+the physical running coupling tends to zero. Nor is the original
+sharp noise window assumed invariant under arbitrary fine gauges.
+The identity concerns the explicit Gaussian functions on their
+finite regular germ; original positive-law equality is used only
+on the original admitted subset.
+
+5. LITERAL HOMOGENEOUS B109 MATCH
+
+Primary readback includes the original pixels
+  package/work/turn125_primary/B109-domaincheck-12.png
+  package/work/turn125_primary/B109-source-13.png
+inside work/handoff/original-workspace/work/, and the accompanying
+b109_full.txt printed253--269.
+
+B109 printed260 (1.4) is literally
+
+ Z^(j)(U_k)=int dB delta(Qtilde B)
+                  exp[-1/2 <B,Delta^(j)(U_k)B>].            (8)
+
+Its linear delta is part of the Gaussian definition. Solving it
+contributes its actual inverse pivot determinant; this is not an
+extra factor inferred from the covariance alone. The printed261
+equation(1.5) contains the current-corrected inner-minimum quadratic,
+the next nonlinear-constraint second-derivative/current term, and
+the averaged-gauge quadratic. Printed266--267 (2.6)--(2.11) derives
+these terms by actual stationary substitution and nonlinear constraint
+straightening. The linear stationary term cancels on the constrained
+tangent, not by setting the physical current to zero. Printed268
+then states the covariance after solving the delta. This is the
+native realization of L_f and the gauge factor in Sections2--4.
+
+For finite homogeneous INTEGER grade m, the coupling-free classical
+action on the current field is S_m(V)=A(U_m(V)), with its flat value kept or
+subtracted consistently. B109 printed265 (2.2)--(2.3) explicitly
+identifies the next constrained minimum as mathcal M^m U_(m+1)(W),
+where mathcal M denotes the primitive ordinary averaging map. Thus the
+inner and outer stationary sections used above are actual native
+ones on a finite common regular germ. Iterating the ordinary map
+means literal composition of its primitive averages. It is not a
+replacement by some separately defined direct large-block average.
+
+For one step, (8) is the complete coarea/soft-gauge leading amplitude
+up to factors independent of the background, proved by the native
+gauge identity(7), the actual delta, and the same stationary chart.
+Powers of the chosen semiclassical or running scaling parameter,
+fixed color-coordinate factors and powers of L are target independent;
+all background-dependent pivot/current factors remain in(8).
+
+Let p,q be positive INTEGER step counts. Define Z_(m,p)^comp to be
+the corresponding complete Gaussian coarea/soft-gauge amplitude for
+the LITERAL p-step composite map starting at grade m, with action
+S_m. Its physical blocking ratio is L^p; L remains the fixed primitive
+lattice blocking ratio. Write V_*(W) for the actual intermediate
+minimum at grade m+p when the final field is prescribed at grade
+m+p+q. The finite theorem proves on its common real germ
+
+ log[Z_(m,p+q)^comp(W)/Z_(m,p+q)^comp(1)]
+   =log[Z_(m,p)^comp(V_*(W))/Z_(m,p)^comp(1)]
+      +log[Z_(m+p,q)^comp(W)/Z_(m+p,q)^comp(1)].           (9)
+
+The finite torus must be compatible with these p+q primitive steps.
+No arbitrary new averaging prescription is used. For elementary steps the factors are the
+native Z^(j) of(8), with their physical minimum substitution. The
+composite Gaussian is introduced by this exact finite physical
+composition; no equality to a different archive operator is assumed.
+All determinants are positive on the real germ. Their normalized
+logarithms are zero at flat, so there is no branch ambiguity. Once
+their individual analytic domains are known, the germ identity
+extends to a connected common analytic domain by uniqueness.
+
+There is NO assertion here of an exact finite beta cocycle. Applying
+a second-moment Maxwell extractor to a transported old scalar requires
+that the classical transport preserves the actual extractor. A finite
+periodic short-moment convention can have leakage. Nor is(9) an
+identity of coefficientwise polymer decompositions or an equality of
+positive-coupling success sectors. These are independent questions.
+
+6. WHAT THE ARCHIVED POSITIVE-BETA ASSEMBLY ACTUALLY ASSUMES
+
+Read, without modifying, the archived files under
+  work/handoff/original-workspace/work/package/work/archive/
+    ym4-research/:
+  work/actual_positive_beta_assembly_fragment.tex;
+  outputs/ym4-determinant-flow-notebook.tex (Notebook32);
+  outputs/ym4-soft-determinant-notebook.tex (Notebook36);
+  work/actual_base_ward_heat_comparison_fragment.tex;
+  work/soft_penalty_physical_band_fragment.tex.
+
+The assembly's theorem explicitly assumes classical structural,
+determinant-identification and localized-vertex inputs. Its estimate
+is 22 alpha_g log K+O(1), with constants uniform only over systems
+which supply those inputs. Its internal algebraic integration of
+the heat-band errors is not the missing native step. Nothing here
+rederives or promotes that numerical coefficient.
+
+Notebook32's finite leading cocycle uses a physical coarea tube and
+retains the inverse pivot and full soft-gauge Hessian. Sections1--5
+above give a direct finite Hessian/density proof and a primary native
+match of this algebraic part. The notebook itself expressly refuses
+to equate sequential sharp windows at positive coupling.
+
+Its exact gauge/coarea bridge also keeps the coarse-constraint
+determinant. In its notation, with the full Lagrangian Hessian,
+
+ D=N0[log det G_b -1/2 log det Q_b -1/2 log det(C Q_b^-1 C^T)].
+
+For a chosen coarse completion, the last covariance is the inverse
+of q_eff+B. This identity alone does not establish a uniform massive
+reference comparison. The notebook even records the useful concrete
+obstruction: a ghost pinned only at K-centers has a trial vector
+equal to 1 off those centers, giving lambda_min<=2d/(K^d-1).
+Thus an isolated inverse bound C K^2 is false in dimension four.
+The vector/ghost/coarse package must stay coupled.
+
+7. THE EXACT REMAINING NATIVE BRIDGE
+
+To use the archived positive composite coefficient in the new causal
+shooting theorem, register the following for the SAME native family:
+
+(a) Classical kernels, not quantum Hessian bounds alone. The literal
+S_m=A(U_m(V)), in native current coordinates, must supply uniformly
+exponentially rooted Taylor kernels through degree four, complete
+relative-coordinate/current chain terms, and a depth-uniform fixed
+spare chart or an equivalent finite-jet bound. The archive's heat
+comparison additionally uses its flat Maxwell normalization,
+analytic double zero and elliptic lower comparison. A later complete
+fluctuation Hessian gap does not by itself give these statements.
+
+(b) Classical Maxwell transport. Show that the actual infinite
+Maxwell second-moment functional is preserved under these same
+minimum substitutions, with the exact B109 normalization. For
+finite regulators retain the finite reference denominators and
+control their leakage, uniformly when the old depth varies. The
+finite scalar identity(9) does not remove this requirement.
+
+(c) Determinant and source-jet identification. Match the composite
+Gaussian in(9), including its full constraint-current and gauge
+factors, to the archive's moving mean-zero/soft vector-ghost package.
+The archive only identifies certain auxiliary off-shell operators
+through their actual on-shell affine jets; those jets, the corrected
+constraint's physical operator bounds, and its first two background
+derivatives must be proved for the native average and minimum map.
+The finite coarea identity narrows this task but does not prove the
+uniform physical scaling or heat bounds of that package.
+
+(d) Regulator passage. The archive's polynomial affine-field heat
+coefficient is an infinite-lattice Taylor density (or a declared
+explicit periodization). It is not a periodic magnetic field at
+finite flux. Arbitrary native finite winding kernels are not
+automatically those periodizations. A joint fixed-ratio local limit
+and uniform moment-tail passage must connect actual finite native
+coefficients to the compared infinite systems while old depth varies.
+No favorable subsequence may be silently selected to get positivity.
+
+The existing homogeneous fixed-radius replay and the new source
+calculus help (a), but their quantitative statements must be matched
+to precisely these classical degree-four kernels and physical
+source conventions. They do not make (b)--(d) true by definition.
+
+After this registration, a FIXED sufficiently long block with positive
+margin is enough: the shooting theorem needs a uniform positive
+stretch drift with a bounded defect, not convergence of individual
+increments or a memoryless beta function. The native non-Gaussian
+increment is already reduced to O(g_j log^p(g_j^-2)) in
+native_coupling_shooting_and_beta_input_20261024 under the stated
+homogeneous replay. One may choose the block length after the uniform
+comparison constant, then the weak floor after its positive margin.
+
+This file closes the finite current-corrected Schur/coarea algebra and
+locates its actual native Gaussian factor. It does not claim that the
+uniform heat comparison, positive native drift, full history sum,
+continuum measure or nontriviality has been proved.

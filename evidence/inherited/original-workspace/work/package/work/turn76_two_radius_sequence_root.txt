@@ -1,0 +1,217 @@
+TURN76 -- COUPLED FIXED-CORE AND RUNNING-SOURCE STABILITY
+20 October 2026. Root. Conditional sequence theorem with explicit native gates.
+
+PURPOSE
+
+The actual homogeneous q estimates of TURN75 and TURN76 do not require
+an analytic extension of every inherited source to a fixed field ball.
+A homogeneous running source can remain on a_j=g_j ell_j^p, with
+ell_j=1+|log g_j|, provided
+its neutral size is measured as t_j=||r_j||_(a_j)/a_j^2. Its quantum
+error in that norm is delta_j=O(ell_j^(-2p)), which is small but is
+NOT summable along the ultraviolet sequence by itself.
+
+This note proves the coupled iteration needed to use that fact. The
+smallness of a newly forced tag must be inserted BEFORE summing its
+feedback into the marginal. No bound on an arbitrary R/B source, no
+native all-history typing, and no continuum observable theorem is
+assumed to have been established by this sequence argument.
+
+1. EXACT BOOKKEEPING TO WHICH THE LEMMA APPLIES
+
+Use fixed q endpoints, relabelled j=0,...,N. Scalars/vacua are retained
+in a separate exact source ledger. The nonconstant one-mark state is
+
+             X_j=alpha_j S_j+c_j+r_j.                         (1.1)
+
+Here S_j is the same coupling-free physical reference, beta_j S_j=1;
+c_j is a beta-zero complete homogeneous family on a fixed ball b;
+r_j is a beta-zero complete homogeneous family on the running ball a_j.
+Both families retain the source as a jointly covariant neutral variable
+and retain complete carrier/frame reads. The finite Maxwell extraction
+on both domains is the SAME actual functional. Projection obeys
+
+ ||S_j||_(a_j)<=C a_j^2,
+ |beta_j r|<=C a_j^(-2)||r||_(a_j),
+ ||P_j||_(a_j -> a_j)<=C.                                  (1.2)
+
+Representing a sum in (1.1) is bookkeeping, not a unique direct-sum
+decomposition of functions. Fix the declared decomposition throughout
+the exact map. In particular, small unmarked-base corrections may be
+filed as running sources only after their actual complete family has
+been admitted there. They are not assigned to the fixed core by size.
+
+Assume the exact retained one-mark map, with all unmarked data frozen,
+can be written in this declared decomposition as
+
+ c_(j+1)=A_j c_j+f_j alpha_j,
+ r_(j+1)=B_j r_j+F_j alpha_j+H_j c_j,
+ alpha_(j+1)=(1+b_j)alpha_j+l_j(c_j)+m_j(r_j).               (1.3)
+
+Any linear running-to-running correction is included in B_j. Every
+source scalar produced by this equation is still retained elsewhere.
+Equation (1.3) is an ATTACHMENT HYPOTHESIS, not a consequence of knowing
+only the size of one isolated raw term. It must hold for the same
+actual native source, and not for a selected substitute density.
+
+Write C_j=||c_j||_b and t_j=||r_j||_(a_j)/a_j^2. Suppose uniformly
+
+ ||A_j c||_b <= rho_c ||c||_b,       ||f_j||_b <= C g_j^2,
+ ||B_j r||_(a_(j+1))/a_(j+1)^2 <= rho_r ||r||_(a_j)/a_j^2,
+ ||F_j||_(a_(j+1))/a_(j+1)^2 <= C eta_j,
+ ||H_j c||_(a_(j+1))/a_(j+1)^2 <= C eta_j ||c||_b,
+ |b_j| <= C[g_j^4+epsilon_j g_j^2+eta_j],
+ |l_j(c)| <= C[g_j^2+epsilon_j+eta_j] ||c||_b,
+ |m_j(r)| <= C[delta_j+epsilon_j+eta_j] ||r||_(a_j)/a_j^2,   (1.4)
+
+where rho_c,rho_r<1, 0<=delta_j<=delta_*, and 0<=eta_j<=eta_*<=1.
+The period errors epsilon_j are bounded. Uniform contraction in (1.4)
+is obtained by choosing q and the minimum final period first, then the
+weak floor: rho_c bounds kappa_c+Cg^2 and rho_r bounds
+kappa_r+Cdelta_j+Cepsilon_j+Ceta_j. This does not sum delta_j.
+
+The same choice requires the actual source noise admission g_j T_j/a_j
+to be small and the source-free occupied expansion on its separate
+fixed ball b0. These are not consequences of contraction alone.
+
+2. COUPLING COMPARISON AND TWO CONVOLUTIONS
+
+Let gamma_j=g_j^(-2)>=Gamma>=1 and
+|gamma_(j+1)-gamma_j|<=D. Fix K>2 and suppose
+
+                         eta_j<=C_eta g_j^K.                (2.1)
+
+Choose Gamma large enough that, for rho=max(rho_c,rho_r),
+
+       rho(1+D/Gamma)^(max(2,K)/2)<1.                       (2.2)
+
+For i<j, the bounded signed increment condition gives
+
+ g_i/g_j=(gamma_j/gamma_i)^(1/2)
+                    <=(1+D/Gamma)^((j-i)/2).
+
+Thus for s=2 or K the geometric sum gives
+
+ sum_(i<j)rho^(j-1-i)g_i^s <= C_s g_j^s.                   (2.3)
+
+No monotonicity is needed. Constants depend on the fixed margin in
+(2.2), not on N. At q endpoints D and all constants include that fixed q.
+
+3. UNIT REFERENCE START: PROOF BEFORE GRONWALL
+
+Take alpha_0=1 and c_0=r_0=0. Let M_j=max_(0<=i<=j)|alpha_i|.
+Variation of constants in the first equation of (1.3), followed by
+(2.3), gives
+
+                        C_j<=C g_j^2 M_j.                  (3.1)
+
+Insert this result into the running equation. Since g_j<=1,
+
+ t_j <= C sum_(i<j)rho_r^(j-1-i)eta_i(|alpha_i|+C_i)
+     <= C M_j sum_(i<j)rho_r^(j-1-i)g_i^K
+     <= C g_j^K M_j.                                      (3.2)
+
+Neither (3.1) nor (3.2) presupposes a bound on M_j. Substituting BOTH
+in the exact marginal equation gives
+
+ |alpha_(j+1)-alpha_j| <= C a_rate,j M_j,
+ a_rate,j=g_j^4+epsilon_j g_j^2+(1+delta_j+epsilon_j)g_j^K.  (3.3)
+
+For example, the potentially dangerous running contribution is
+delta_j t_j <= C delta_j g_j^K M_j. Summing delta_j alone would be an
+incorrect and much weaker estimate. The terms eta_j C_j and eta_j t_j
+are absorbed into the displayed g_j^K term because g_j<=1 and eta_*<=1.
+The factor C_eta is included in constants, and remains fixed before
+the ultraviolet depth is varied.
+
+Let A_N=sum_(j<N)a_rate,j. Discrete Gronwall and then the absolute
+increment sum yield
+
+ M_N<=exp(C A_N),
+ C_N<=C g_N^2 exp(C A_N),
+ t_N<=C g_N^K exp(C A_N),
+ |alpha_N-1|<=C A_N exp(C A_N).                             (3.4)
+
+In particular, if C A_N exp(C A_N)<1/2, the reference coefficient
+cannot vanish. This is ONLY a coefficient statement, not a covariance
+lower bound or a nontrivial quantum field theory.
+
+4. DEPTH-UNIFORM SUMS AND UV TAILS
+
+Suppose in addition the tuned trajectory has the lower envelope
+
+ gamma_j >= G+d(N-j),  d>0,
+ Q_j=L^(N-j)Q_end,     L>1,
+ epsilon_j<=E exp[-c Q_(j+1)].                             (4.1)
+
+The envelope is a separate input from the bounded signed increment
+condition. The decreasing integral comparison gives
+
+ sum_(j<N)g_j^4 <= 1/(dG),
+ sum_(j<N)g_j^K <= G^(1-K/2)/[d(K/2-1)].                   (4.2)
+
+Writing s=N-1-j and using L^s>=1+s(L-1) gives
+
+ sum epsilon_j g_j^2
+ <= E G^(-1) exp(-cQ_end)/[1-exp(-c(L-1)Q_end)].            (4.3)
+
+Because delta_j and epsilon_j are bounded, (4.2)--(4.3) imply
+
+ A_N <= C[G^(-1)+G^(1-K/2)+G^(-1) exp(-cQ_end)].            (4.4)
+
+The constant in (4.4) is uniform over N, with a fixed positive minimum
+Q_end. Thus the running feedback is summable despite the nonsummable
+operator error delta_j~ell_j^(-2p).
+
+For the strict fine prefix j<N-m, replace G in the first two terms
+of (4.4) by G+dm. The finite-period contribution is bounded by
+
+ C E [G+d(m+1)]^(-1) exp[-c L^m Q_end].                    (4.5)
+
+These tails are for one coefficient recurrence with its fixed
+decomposition. They do not compare different regulated measures,
+prove compatibility of observable families, or construct a limit.
+
+5. NORMALIZED VERSUS UNNORMALIZED RAW POWERS
+
+The input eta_j in (1.4) is a NORMALIZED running-source bound. If a
+typed forcing has the unnormalized norm O(g_j^P), then dividing by
+a_(j+1)^2, with a_(j+1)/a_j bounded above AND below by fixed positive
+constants (as follows from the signed-step profile) and ell_j>=1, gives
+
+      eta_j<=C g_j^(P-2) ell_j^(-2p).                      (5.1)
+
+Consequently P>4 is a simple sufficient condition to use the theorem
+with K=P-2>2. Conversely, a desired normalized g_j^K forcing follows
+from an unnormalized bound C g_j^(K+2) ell_j^(2p). Forgetting the a^-2
+in (5.1) would falsely permit a much larger raw error.
+
+The condition P>4 is sufficient, not necessary. At P=4 the comparison
+series sum gamma^(-1)(1+log gamma)^(-2p) is convergent when p>1/2.
+Using that profile in place of g^K and its corresponding convolution
+also gives summability. This endpoint improvement is not needed for
+an already proved arbitrary-power forcing; no such full sourced
+forcing is asserted here.
+
+6. WHICH NATIVE OBLIGATIONS THIS DOES AND DOES NOT REMOVE
+
+TURN75 gives the fixed-core one-mark bounds and constant-reference
+birth cancellation, with its exact finite-period leakage. TURN76's
+running q estimate supplies the homogeneous B_j contraction and
+delta_j feedback in (1.4), once r_j already has the required class.
+The finite-radius normalization is therefore not a reason to force
+every healed term to extend holomorphically to the fixed ball b.
+
+What remains is an actual source attachment of (1.3)--(1.4):
+the old/current mixed reads, boundary compensations, gauge and source
+roots, complete age-dependent raw ownership, and the resulting
+normalized forcing eta_j. The source-free C+D decomposition by itself
+does not prove those assertions for a sourced D correction. Its
+covariance interpolation is available only on the admitted running
+domain; no larger unmarked domain has been assumed in this note.
+
+The exact source vacua and two-source conditional covariance births
+still need their full-law estimates. Reflection-positive reconstruction,
+continuum covariance and nonzero original-law physical-time correlation
+are not consequences of (3.4). This is a completed sequence calculation
+for the explicit class above, not a completed Yang--Mills existence proof.

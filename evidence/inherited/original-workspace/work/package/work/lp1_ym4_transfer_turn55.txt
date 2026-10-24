@@ -1,0 +1,455 @@
+LP1: CHAMBER REFLECTIONS, SAME-STATE TRANSFER, AND THE YM4 ROUTE
+20 October 2026. TURN55. gauge47.
+
+STATUS AND SOURCES
+
+LP1 is useful for separating fixed-lattice reflection positivity from
+ultraviolet construction. It does not resolve the full-law or continuum
+gates in current_proof_frontier_turn54.txt.
+
+The exact pure-Wilson diagonal slab construction suggested by LP1 is
+already present in our archived Notebook 02. A concrete additional
+transfer is available: LP1's unequal-height folds remove the restriction
+to special divisible original volume sequences in that fixed-coupling
+argument. Section 6 below derives its four-dimensional weighted-volume
+formula. This extension retains the archived Wilson slab, operator
+insertion, and local layer-reduction inputs; LP1 does not prove those
+nonabelian inputs for us.
+
+Source inspected:
+  repository commit 9ee82722b46ececeae2ef21942b527c49d947b03;
+  Infinite-lattice reflection positivity (LP1)/LPO1.pdf;
+  local work/lp1_turn55/LPO1.pdf and LPO1.txt, 36 pages;
+  accompanying README.md.
+  PDF SHA256:
+  ff5d8222519ddf4550bee88fb7aedac04540bd3d7f7ce47c3ce5fb6532f1c777
+
+Pinned source:
+https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/blob/9ee82722b46ececeae2ef21942b527c49d947b03/Infinite-lattice%20reflection%20positivity%20(LP1)/LPO1.pdf
+
+The README explicitly warns that correctness has not been satisfactorily
+verified. LPO1 identifies itself as an expanded proof outline. Many
+model-specific cards list "proof tasks" or inherited input, with locators
+into a QED3 manuscript and S2. Those citations are not new proofs inside
+LPO1. This audit directly checks its geometry and general arguments,
+and distinguishes the remaining model-specific interfaces.
+
+PDF pages 15 and 23 were rendered to verify the closing-character and
+complex-conjugation formulas, which text extraction can obscure.
+
+Prior local comparison:
+  archive/ym4-research/notebooks/02-ym4-reflection-notebook/main.tex
+  archive/ym4-research/work/reflection_assembly_audit.md
+  archive/ym4-research/work/diagonal_chain_coordinate_chessboard_2026-10-18.txt
+
+The prior notebook is an internally reviewed research derivation, not an
+external certification. No separate local file named RP1/RPO1 was found;
+the comparison here is specifically to that archived Wilson route.
+
+1. THE CHAMBER GEOMETRY REALLY SUPPLIES NORMAL CROSSINGS
+
+README and LPO1 pp.13--15, I.a--I.b/F.a.
+
+Let W=Z^3 semidirect B_3, where B_3 denotes the signed permutation
+group. The region
+
+                 0<x_3<x_2<x_1<1/2
+
+is a fundamental alcove for this affine reflection action. Its volume
+is (1/2)^3/3!=1/48. An interior v_0 has trivial stabilizer; the chamber
+sites Wv_0 consequently have 48 points per photon lattice cell.
+
+The four neighbors g s_i v_0 are reflections across the four walls of
+gC_0. In the fundamental chamber, orthogonal projection onto each wall
+lies in its wall face: zeroing x_3, averaging an adjacent ordered pair,
+or setting x_1=1/2 preserves all other weak ordering inequalities.
+The connecting segment lies in the two adjacent chamber closures.
+Thus a fixed arrangement mirror can be crossed only through that
+common wall. Every crossing chamber edge is normal to the mirror,
+and its endpoints are exchanged by the reflection. An edge is not
+merely assigned to the nearest mirror after the fact.
+
+There is also a simple check on the photon projection pi. At v_0,
+pi(v_0)=0. The first three simple reflections keep the nearest photon
+site equal to 0; s_3 changes it to e_1. After applying any g, nearest
+site projection is equivariant and remains unique. Hence chamber
+hops project either to a single photon site or to a genuine nearest
+neighbor photon link. Internal hops have A(x,x)=0.
+
+This proves the basic crossing geometry from the stated chamber
+definition. It does not establish the Poisson-summed photon Gram
+factor, the complete fermionic reflection convention, or gluing.
+
+The mirror family is exactly
+
+ x_j=c, c in (1/2)Z;       x_j +/- x_k=c, c in Z.
+
+The different offset grids are necessary: reflection in x_j=c is a
+lattice map iff 2c is integral, whereas the diagonal formula requires
+c integral. There are three coordinate and six diagonal families.
+
+In four dimensions the same geometry has the alcove
+0<x_4<x_3<x_2<x_1<1/2, five chamber neighbors, and 2^4 4!=384
+sites per photon cell. Its mirror families number 4+12=16.
+This is a geometric extension, not a construction of a nonabelian
+four-dimensional gauge/fermion measure. For pure YM no such fermion
+refinement is needed.
+
+2. ORIENTATION, SPIN AND THE CLOSING CHARACTER CANNOT BE DROPPED
+
+LPO1 p.13, I.a; pp.14--15, I.b/F.a; p.30, C.b.
+
+The abelian curvature is an oriented two-cochain. Pullback includes
+the induced orientation. For x_1=0, F_12 and F_13 change sign and
+F_23 does not. For x_1=x_2, F_12 changes sign and F_13/F_23 are
+exchanged, with the transformed locations understood. An observable
+reflection is the ANTILINEAR operation
+
+                  Theta A = conjugate(A composed with theta^*).
+
+In particular Theta phi_beta=phi_(-theta^* beta). The minus sign here
+comes from complex conjugation in addition to the tensor pullback.
+Treating all plaquette components as scalars would invalidate the
+reflected form and the characteristic-function restoration argument.
+
+For the doubled three-dimensional Clifford matrices in the README,
+gamma_n^2=I for a unit normal n. With P_+/-=(I+/-gamma_n)/2,
+
+ I-rho gamma_n=(1-rho)P_+ +(1+rho)P_-.
+
+This is positive when 0<rho<1. Multiplication of the crossing hopping
+matrix by the reflection Clifford factor, with the appropriate
+fermionic order convention, yields these positive coefficients.
+The hopping matrix rho I-gamma_n itself is indefinite; it must not
+be advertised as the positive Gram matrix. The reverse orientation
+uses the corresponding I+rho gamma_n. The exact Berezin ordering
+and reflection signs remain part of the finite fermion module.
+
+The same strict range makes every matching hopping matrix invertible:
+its eigenvalues are w_i(rho+/-1)/2. Thus rho=1 is not a harmless
+endpoint in E.a's layer-elimination argument.
+
+The doubled spin representation also accommodates improper spatial
+maps. If J exchanges the two Pauli blocks, then J anticommutes with
+all gamma_j, and J gamma_n implements the reflection of gamma_v
+under conjugation. Its phase can be changed without affecting that
+conjugation. This algebra checks why a spin lift is available; it
+does not remove the Fock sign at a periodic seam.
+
+For real M and symmetric edge weights, the two Pauli blocks of the
+finite operator are adjoints, including the unitary link phases and
+boundary characters. Thus det D=|det D_+|^2>=0. Strict positivity of
+the integrated normalization still requires its finite-model input;
+semidefiniteness alone is not a proof that the normalizer is nonzero.
+
+On a cubic torus the antiperiodic character is
+chi(n m)=(-1)^(m_1+m_2+m_3). Signed coordinate permutations preserve
+it. But chi(n(e_1+e_2))=+1: a diagonal cross-section does NOT inherit
+an independent antiperiodic character in every adapted direction.
+
+F.a correctly retains the exact factor
+
+        Tr[V_g^(-1) U_f^((1+chi(g))/2) S_r ... S_1].
+
+Periodic chi(g)=+1 inserts Fock parity; antiperiodic chi(g)=-1 does
+not. The transport V_g can also have a tangential part. Only the
+reflected even fold on the straightened torus cancels the relevant
+transport and yields a positive Schatten power.
+
+The distinction D'_n versus D_n in the source's chain records an
+actual change of fermion character. They cannot be identified just
+because their underlying period lattices agree. For pure Wilson YM
+there is no fermion character or Fock parity, so this middle step
+disappears. The geometric tangential closing transport remains.
+
+3. THE PRECISE PURE-WILSON DIAGONAL SUBLEMMA
+
+This is independently checked here and already written in archived
+Notebook 02, Section 2, equations (2.1)--(2.5).
+
+Use SU(N) link variables and positive Wilson factor
+
+             k_beta(U)=exp[(beta/N) Re Tr U], beta>0.
+
+At an integer mirror x_1-x_2=c, no coordinate link crosses the plane
+in its interior. A (1,2) plaquette based at height c has vertex
+heights c,c+1,c-1,c. It is the only crossing plaquette type.
+It splits into two length-two paths with the same boundary endpoints.
+If their holonomies, in the same endpoint orientation, are A and B,
+the weight is k_beta(AB^*).
+
+Write u(A) for the real and imaginary matrix entries of A. Then
+u(A).u(B)=Re Tr(AB^*) and |u(A)|^2=N. The absolutely convergent
+feature expansion
+
+ Phi_alpha(A)=[(beta/N)^|alpha|/alpha!]^(1/2) u(A)^alpha
+
+has
+
+ <Phi(B),Phi(A)>=k_beta(AB^*),    ||Phi(A)||^2=e^beta.
+
+Thus the crossing factor is genuinely a positive Gram kernel.
+Noncommutativity causes no factorization error: the two entire
+ordered path holonomies are the arguments. Reflection exchanges
+the paths, rather than arbitrarily reversing matrix factors.
+
+Boundary links carry Haar measure once. Plaquettes in the mirror
+carry square-root weights on the two adjacent slabs. Contracting
+the feature indices restores each crossing plaquette exactly.
+At fixed finite cross-section all weights and feature norms are
+bounded, so these kernels are Hilbert--Schmidt. Gluing is exact,
+and geometric reflection gives the adjoint.
+
+Consequently the exact twisted slab trace and Schatten folds are
+available for this pure-gauge geometry. A coordinate cubic torus
+usually does not split into two halves at the selected diagonal:
+the complement of a single diagonal cut need not separate it.
+The twisted trace is not automatically a positive reflected form.
+One still needs the adapted-period comparison.
+
+The SU(N) Gram construction alone is not a proof of the whole
+fixed-coupling infinite-volume theorem for arbitrary SU(N). The
+archived local convolution/layer-reduction estimates were supplied
+in explicit SU(2) form; their extension must be checked separately.
+
+For nonabelian configurations the safe state space here is the
+compact product G^E of oriented links, U_bar(e)=U_e^(-1). The
+reflection acts geometrically on these links. A based plaquette
+holonomy can acquire a conjugation when its basepoint changes and
+is inverted when orientation reverses. There is no global abelian
+identity dF=0 for Lie-algebra plaquette logarithms, nor an automatic
+symmetry F -> -F. LP1's closed real two-cochain probability theorem
+must not be substituted for this link-space statement.
+
+4. WHAT RESTORES THE COMPARISON STATE -- AND WHAT DOES NOT
+
+LPO1 F.b--c pp.16--17; M.b p.22; H.a--b pp.23--24;
+E.a--d pp.25--28; C.a--b pp.29--30; S.a--c pp.34--36.
+
+The logical transfer is sound at the explicit model inputs:
+
+ (i) Full reflected arrays of a bounded real local O produce tilted
+     adapted-torus laws with RP at a specified fixed wall.
+ (ii) The pressure comparison gives nu(O)<=lambda_O(O) after volume
+      tends to infinity and then the tilt tends to zero.
+ (iii) Coordinate operator bounds plus local two-layer reduction
+       restore even translations of lambda_O.
+ (iv) Position O at the target wall, transport the expectation back,
+      and use compact convex separation for every real determining
+      local test. Different O may use different lambda_O.
+
+Steps (iii) and "every real determining local test" are substantive.
+A limiting tilted Gibbs/DLR state need not be translation invariant.
+Taking t down to zero does not imply convergence to the original
+state without uniqueness. Averaging auxiliary states over arbitrary
+translations would move the RP wall and would not repair this step.
+
+The general near-Hermiticity argument H.a does transfer:
+if o(1)=1 and |o(X)|<=gamma ||X|| on a common local unital
+*-algebra, then
+
+ |o(X^*)-conjugate(o(X))|<=4 sqrt(gamma^2-1)||X||.
+
+For self-adjoint X of norm at most one, write o(X)=u+iv and apply
+the norm bound to X+is. Optimizing s yields |v|<=sqrt(gamma^2-1).
+Taking the real and imaginary self-adjoint parts proves the formula.
+No positivity assumption on this operator functional is smuggled in.
+The limiting contractive unital functional is Hermitian. Reflection
+as adjoint then gives the required two-layer invariance.
+
+But these LP1 model-specific mechanisms do NOT directly transfer:
+
+ * E.a uses the chamber graph's perfect matching and invertible
+   fermionic hopping matrices, plus Berezin integration by parts.
+ * E.c unfolds compact photon links with all integer fluxes and
+   uses the exact quadratic Maxwell contour shift. The resulting
+   character cancels an outer plane's abelian exponent. Nonabelian
+   Wilson multiplication has no such linear cancellation formula.
+ * H.b's two heat scales and electric-shift norm identity exploit
+   abelian Gaussian convolution and its charge basis.
+ * The all-flux sharp Gaussian bound supplies QED tightness and
+   estimates for unbounded curvature insertions. It is not a YM
+   Gaussian-domination theorem.
+
+For pure compact Wilson YM, compactness replaces QED's Gaussian
+tightness only at FIXED lattice spacing in link space. The archived
+SU(2) proof supplies its different restoration mechanism: positive
+electric-convolution eigenvalues, finite Peter--Weyl approximation,
+and an explicit gauge-covariant local reduction to two slices.
+See Notebook 02 Sections 3--4 and 7. Positivity of convolution by
+itself does not prove that local reduction.
+
+The convex separation theorem S.b checks directly: use the Hausdorff
+topology on finite signed measures generated by the determining real
+test space. Compactness of the RP class and strict separation would
+produce a single violating test. In the compact-link specialization,
+gauge-invariant local Peter--Weyl tests suffice within gauge-invariant
+laws; finite endpoint gauge averaging preserves a separating
+expectation. No common comparison state for all O is required.
+
+RP passes to the complete open-side L2 space by finite-coordinate
+approximation and the reflection isometry. LP1 explicitly excludes
+plaquettes on or crossing the mirror. Any enlarged closed-side
+claim must be justified by the corresponding boundary construction,
+not obtained by changing this convention silently.
+
+5. THE SAME-STATE RESULT DOES NOT REQUIRE AN RG SOURCE ALGEBRA
+
+For each fixed beta, O is bounded on its finite compact link space.
+The reflected auxiliary tilt exp[t sum O_c] is therefore a valid
+finite probability tilt for every finite torus. Its required
+operator and local reduction estimates have fixed-beta constants.
+They need not be uniform in beta for the volume-first argument.
+
+Thus, at the archived Wilson modules, this route removes the need
+to propagate diagonal RP through every individual gauge-fixing,
+cutoff, reblocking or auxiliary weak-field operation. It also
+removes uniqueness as a symmetry input. RP is proved for the SAME
+original infinite-volume Wilson limit, using auxiliary laws only
+inside the domination/separation argument.
+
+It does not turn our constant original-action source estimate into
+the determining-test comparison. Here arbitrary bounded local O is
+handled directly by the fixed-lattice Wilson measure and its
+operator modules. Nor does it identify a retained native R output
+with that original measure. If the construction only controls a
+selected or insufficiently identified full law, that identification
+gate remains exactly where frontier54 places it.
+
+6. A CONCRETE FOUR-DIMENSIONAL ARBITRARY-SIDE EXTENSION
+
+This is a conditional extension of the archived fixed-beta Wilson
+argument using LP1 V.a--c, pp.31--33. Its new arithmetic and volume
+accounting are explicit below. The imported inputs are exact Wilson
+slabs/folds, the coordinate pressure limit, and the existing
+fixed-beta amplification/restoration modules. This section does
+not claim to re-prove those modules.
+
+Fix beta and an admissible even cell width h, large compared with
+the support of O. Take a companion m<=n with 4h dividing m.
+In the orthogonal heights
+
+           (x_1-x_2, x_1+x_2, x_3, x_4)
+
+the successive original heights are (n,2n,n,n). Choose fold counts
+
+           2k=(m/h, 2m/h, m/h, m/h).
+
+At each step take 2k_a-1 regular slabs of height h and one empty
+slab of the remaining height. The latter is positive for n>=m.
+Its own straightened torus has normal period 2k_a times that
+remaining height. Its possibly large volume is charged with its
+Schatten exponent, not as an unweighted exceptional volume.
+
+Repeated use of the exact one-step identity
+
+       |T|=sum_j |T_j|/(2k_a)
+
+shows that the final regular weighted volume is
+
+       V_reg=(m-h)^3(2m-h)/2.                         (6.1)
+
+The diagonal cell volume is |Q|=h^4/2, and its number of regular
+copies is R=V_reg/|Q|. The final full adapted torus
+D(m/2,m,m,m) has volume m^4 and 2m^4/h^4 cells.
+The sum of ALL exceptional weighted volumes is exactly
+
+                         V_exc=n^4-V_reg.             (6.2)
+
+This follows either by telescoping the four volume identities or
+by noting the successive retained weighted volumes:
+
+ (m-h)n^3,
+ (m-h)(2m-h)n^2/2,
+ (m-h)^2(2m-h)n/2,
+ (m-h)^3(2m-h)/2.
+
+For the unnormalized Wilson weight of Section 3 there are six
+plaquettes per four-dimensional site and
+
+       -6 beta <= |T|^(-1) log Z_T <= 6 beta
+
+on the admissible nondegenerate tori. Let bar f_beta be this common
+upper bound and f_beta,infinity the coordinate pressure limit.
+The same Jensen/convexity calculation as LP1 V.b gives
+
+ mu_C(n)(O) <= mu_D(m),t(O) + (|Q|/t) Delta_beta(n,m,h),
+
+ Delta_beta =
+   f_beta(m/2,2m,m,m)-f_beta,infinity
+   + (V_exc/V_reg)(bar f_beta-f_beta,infinity).          (6.3)
+
+Full reflected arrays are used on the final torus. The original
+translated copies have the same expectation by the original
+Wilson measure's lattice symmetries. The empty slab has no source.
+The weighted-volume identity is what prevents the exceptional
+large tori from producing a nonvanishing pressure error.
+
+For arbitrary integers n_i tending to infinity choose, for example,
+
+ k(n)=max{k>=1:8 k!<=sqrt(n)},
+ m(n)=8 k(n)! floor[n/(8 k(n)!)],
+
+after defining the finitely many small cases harmlessly.
+Then m<=n, n-m<sqrt(n), m/n->1, and every fixed positive integer
+divides m eventually. Thus every fixed h is eventually admissible.
+At fixed beta,
+
+ V_reg/n^4=(m/n)^4(1-h/m)^3(1-h/(2m)) -> 1,
+
+and all comparison sides grow. Consequently Delta_beta->0.
+First take volume to infinity at fixed t>0, then t down to zero.
+LP1's separation architecture and the archived Wilson restoration
+modules then extend the SAME-state fixed-beta RP conclusion to
+arbitrary cubic volume subsequences.
+
+This comparison does not identify the original and companion
+finite laws. It removes the divisibility restriction on the
+original sequence by expectation domination. It requires no new
+fermionic spin or flux estimate in the pure-gauge model.
+
+The estimate is not uniform as beta tends to infinity. In particular,
+the elementary exceptional-pressure bound itself grows with beta,
+and convergence of the coordinate pressure has no ultraviolet rate
+here. An arbitrary simultaneous volume/cutoff limit is not licensed.
+
+Independent check: tail47 reviewed Section 6's four fold counts,
+regular-copy count, weighted-volume telescope, Jensen denominator
+and Wilson normalization. PASS at the explicit exact-fold/placement
+inputs; no repair requested. This check does not certify the imported
+Wilson restoration modules.
+
+7. EFFECT ON THE CURRENT YM4 PROGRAM
+
+Concrete route choice: retain the original pure-Wilson regulator,
+prove its same-state coordinate/diagonal RP at each fixed spacing
+by the existing Wilson slab route, and use the unequal folds above
+if arbitrary original volume sequences matter. Then take a
+volume-first ultraviolet limit only after the required physical
+observable bounds are obtained. Do not add chamber fermions merely
+to recover this regulator symmetry.
+
+This separates a symmetry obligation from the native large-field
+continuation/normalization work. It can avoid demanding that each
+auxiliary RG kernel or selected window preserve diagonal RP.
+It does not eliminate:
+
+ * identification of the actual original full Wilson law and its
+   inserted numerators, including the missing whole-R identity;
+ * common bare data and the required quantitative comparison of
+   the physical observables controlled by the RG;
+ * uniform ultraviolet tightness and convergence of the same
+   reflected observable algebra;
+ * Euclidean rotation symmetry beyond lattice signed permutations;
+ * continuum reconstruction and nontriviality.
+
+The sixteen B_4 mirror families generate lattice isometries with
+signed-permutation linear parts, not arbitrary SO(4) rotations.
+Having their RP inequalities at every cutoff does not prove full
+continuum rotation invariance. Likewise fixed-spacing compactness
+of G^E says nothing by itself about tightness of renormalized
+curvatures or fields as the lattice spacing tends to zero.
+
+LP1 therefore supplies a precise route clarification and a useful
+arbitrary-volume refinement. It is not the missing full-measure
+Yang--Mills existence argument.

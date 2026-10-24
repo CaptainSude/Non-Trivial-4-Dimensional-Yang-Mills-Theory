@@ -1,0 +1,212 @@
+TURN88 -- A POSITIVE-ENERGY FILTER OF THE BOUNDED MAGNETIC SCALAR
+tail47. 20 October 2026. Original observable and explicit FREE benchmark.
+
+RESULT AND SCOPE
+
+For the bounded original scalar already fixed in TURN63/87, take the difference of two copies separated by a FIXED positive physical time delta. Its continuum OS vector, when the stationary infinite-time scalar reconstruction applies, is (I-exp(-delta H))v. It is orthogonal to the ENTIRE zero-energy subspace, without assuming ergodicity or vacuum uniqueness. A nonzero reflected norm for this difference would therefore give a positive-energy scalar state, rather than merely a static mixture variable.
+
+The free Maxwell reference gives an explicit strictly positive lower bound for this same difference, including a small smooth spacetime smear. The actual original-Wilson mixed coefficient lower bound remains unproved. This note does not identify the interacting calibration, a local YM algebra, O(4) symmetry, a mass gap, or continuum Yang--Mills theory. Temporal filtering and bounded scalar compactness are existing mechanisms from TURN67, TURN71, TURN82 and TURN87; the calculation below makes their sufficient source target precise for this particular radial probe.
+
+1. THE SAME ORIGINAL FAMILY, ITS SUPPORT AND ITS SOURCE
+
+Fix physical spatial-flow time s>0. On each original Wilson lattice, evolve spatial links separately on each original time slice by spatial Wilson gradient flow for physical time s. Use the SAME definition and spatial boundary convention at every cutoff. For the flowed12-plaquette write P_s=p0 I+i p.sigma and define
+
+ b_a(t,x)=exp[-h |2p(P_s(t,x))/(g_* a^2)|^2],
+                    0<=b_a<=1.                         (1.1)
+
+Here h>0 and g_*>0 are fixed physical observable parameters. They are not running bare couplings or a proved renormalized coupling. This deterministic original-link observable is gauge invariant and reads only its own original time slice, although its spatial read can be the whole declared spatial torus. No continuum nonlinear flow is needed to define it at finite cutoff; identifying its limiting field still needs analysis.
+
+Take f>=0, f in C_c^infinity(R^4), integral f=1, supported in
+ [T-eta,T+eta] times a spatial ball of radius ell, with T>0 and eta<T/2.
+Use reflection-compatible spacetime cells and exact cell-integral weights:
+
+ O_a(f)=int f(x)b_a(x)dx,                0<=O_a(f)<=1.    (1.2)
+
+Let tau_delta f(t,x)=f(t-delta,x). Choose actual lattice time translations delta_a>0 with delta_a->delta>0 and define
+
+ F_a=O_a(f)-O_a(tau_delta_a f),           |F_a|<=1.      (1.3)
+
+Both complete time reads must stay strictly inside the same positive half, a fixed physical distance from BOTH fixed reflection slices. In a finite time circle this requires T+eta+delta_a to lie below the second reflection plane with a fixed buffer. The source is then an actual positive-half gauge-invariant function. Translation invariance of the SAME original law gives E F_a=0 exactly. The reflected copy is the geometric time reflection of this whole function; there is no temporal color comparison or parallel transport between the two radial terms.
+
+Because b_a is bounded,
+ |O_a(tau_delta_a f)-O_a(tau_delta f)|
+       <=||tau_delta_a f-tau_delta f||_1 ->0.           (1.4)
+Thus integer-time implementation does not change the limiting observable. The physical profile, flow time, calibration, delta, and original regulator sequence are common to all four source rows.
+
+Use the ORIGINAL full normalization
+
+ L_a(u,v)=log E_mu_a exp[u F_a+v Theta F_a],
+ N_a=partial_u partial_v L_a(0,0)
+       =E_mu_a[(Theta F_a)F_a].                        (1.5)
+
+For this real scalar, Theta is the ordinary geometric reflection in(1.5); conjugation is included in the OS sesquilinear form for complex tests. The last equality uses E F_a=0. Reflection positivity gives N_a>=0. For complex u,v,
+ |M_a(u,v)|<=exp(|u|+|v|),
+ |M_a(u,v)-1|<=exp(|u|+|v|)-1,
+so the normalized logarithm is uniformly well defined on |u|+|v|<log2. Source analyticity is automatic; background-domain holomorphy is a separate matter.
+
+The sufficient original-law target is now ONE quantity:
+
+                      liminf_a N_a>0.                 (1.6)
+
+No estimate below proves(1.6). It is stronger than a norm floor for the unfiltered O in precisely the way needed to remove invariant zero-energy states.
+
+2. WHEN THE TEMPORAL DIFFERENCE REALLY MEANS POSITIVE ENERGY
+
+The following elementary reconstruction uses an INFINITE-time stationary reflection-positive probability law for the bounded scalar distribution b. This law can be a subsequential limit of the original family if its temporal periods tend to infinity, original temporal RP and stationarity pass, and the fixed-source family is kept. The compactness argument in TURN87 applies to b in the local weak-* unit ball of L-infinity, and products of smeared fields are continuous bounded coordinates. Spatial-flow nonlocality within a time slice does not invalidate temporal positive-half measurability.
+
+Let A_+ be the cylinder-polynomial algebra of smooth compact smears strictly in t>0. Define the OS form
+ (F,G)_OS=E[overline(F(theta b))G(b)].
+Time shifts sigma_t, t>=0, move every read later into the same half. Stationarity and reflection imply
+ (F,sigma_t G)_OS=(sigma_t F,G)_OS,
+ ||sigma_t F||_OS^2=(F,sigma_(2t)F)_OS.                (2.1)
+
+The ordinary L2 norms of all translates are equal and bound their OS norms. Apply OS Cauchy--Schwarz repeatedly to(2.1): if a(t)=||sigma_t F||_OS, then
+ a(t)^2<=a(0)a(2t),
+ a(t)<=a(0)^(1-2^-n) a(2^n t)^(2^-n).
+Since a(2^n t)<=||F||_L2, letting n->infinity gives a(t)<=a(0). This also sends null vectors to null vectors. Therefore sigma_t descends to a symmetric contraction T_t on the OS Hilbert completion. The semigroup identity is inherited from shifts. Strong continuity holds on the dense polynomial algebra from the L1 translation continuity of the test functions and |b|<=1, then extends by contraction. Finally T_t=T_(t/2)^2 is positive, so
+
+                         T_t=exp(-tH), H>=0.            (2.2)
+
+This proves the scalar semigroup claim being used; no identification of -log of an isotropic lattice transfer matrix with a differential Hamiltonian is made.
+
+Let v=[O(f)] and w=[O(f)-O(tau_delta f)]. Then
+
+ w=(I-exp(-delta H))v,
+ 1_{0}(H)w=0,
+ ||w||^2=int_[0,infinity) (1-exp(-delta E))^2 dnu_v(E). (2.3)
+
+The constant part of v and every other invariant component are killed. A nonzero w has spectral support in (0,infinity), independent of component ergodicity. This is positive-energy CONTENT, not a spectral gap above the vacuum.
+
+At a fixed finite thermal time circle, TURN82 gives a Hilbert--Schmidt energy-DIFFERENCE generator with both signs. Buffered translations are available only in a limited interval. The iteration to times2^n t above is then unavailable. A finite-circle norm floor alone must not be labeled a positive vacuum-energy statement. The infinite-time stationary limit (or another separately justified positive semigroup construction) is essential.
+
+3. THE FREE RADIAL COVARIANCE AND ITS COMPLETE MONOTONE EXPANSION
+
+Use three independent canonical Maxwell colors with spatial heat flow. The variance of one flowed12-curvature component and its covariance are
+
+ v_s=1/(48pi^2 s^2),
+ c_s(tau,r)=int d^3k/(2pi)^3 exp[i k.r-2s|k|^2-tau|k|]
+                         (k1^2+k2^2)/(2|k|), tau>=0.   (3.1)
+
+These are the TURN63 free formulas, not bounds on the nonlinear original law. Put h=1/(2v_s) in the calibrated Gaussian reference. Its connected radial covariance is
+
+ D_s(tau,r)=(4-[c_s(tau,r)/v_s]^2)^(-3/2)-1/8.          (3.2)
+
+At r=0, write r_s(tau)=c_s(tau,0)/v_s. Angular integration gives
+
+ r_s(tau)=int_0^infinity e^(-tau k) rho_s(dk),
+ rho_s(dk)=8s^2 k^3 e^(-2sk^2)dk,       int rho_s=1.    (3.3)
+
+For |r|<=1 the binomial series is absolutely uniformly convergent:
+
+ (4-r^2)^(-3/2)-1/8=sum_(n>=1) a_n r^(2n),
+ a_n=(1/8)(3/2)_n/(4^n n!),             a_1=3/64.      (3.4)
+
+All a_n are positive and sum to3^(-3/2)-1/8. Hence the finite positive measure
+
+                mu_s=sum_(n>=1) a_n rho_s^(*2n)         (3.5)
+
+has no atom at zero and satisfies D_s(tau,0)=int e^(-tau E)mu_s(dE). In particular D_s(.,0) is completely monotone. Positive-time derivatives follow by dominated convergence; at zero every fixed derivative is finite as well, since the coefficients decay geometrically and rho_s has all moments. Only the positive-time Laplace representation is needed below.
+
+For delta>0 define the filtered kernel
+
+ K_(s,delta)(tau,r)
+       =D_s(tau,r)-2D_s(tau+delta,r)+D_s(tau+2delta,r).  (3.6)
+
+At r=0 it is exactly
+
+ K_(s,delta)(tau,0)
+       =int e^(-tau E)(1-e^(-delta E))^2 mu_s(dE)>0.   (3.7)
+
+This strictness is not obtained by subtracting separate lower bounds for the three D terms. The positive spectral series is what controls the cancellation. Complete monotonicity in tau is asserted here at r=0, not for arbitrary nonzero spatial separation.
+
+4. AN EXPLICIT POINT MARGIN AND A SPACETIME SMEAR
+
+Set k0=1/sqrt(2s), k1=2/sqrt(2s). The probability that a rho_s variable lies in[k0,k1] is
+
+                p_*=2/e-5e^(-4)>0,                   (4.1)
+
+because u=2sk^2 has density u e^(-u). Retain only n=1 in(3.5) and both frequencies in this interval. At tau=2T,
+
+ K_(s,delta)(2T,0)>=B_(s,T,delta),
+ B_(s,T,delta)=(3/64)p_*^2 exp[-8T/sqrt(2s)]
+                         (1-exp[-2delta/sqrt(2s)])^2>0. (4.2)
+
+This uses E in[2k0,2k1]; the exponential is bounded below by exp(-4Tk1), and the difference factor by(1-exp(-2delta k0))^2. All quantities are physical, fixed independently of the cutoff.
+
+To retain a distributionally continuous observable, define
+
+ q_s=3sqrt(pi)/(4sqrt(2s)),       L_s=q_s/(3sqrt(3)).    (4.3)
+
+The nonnegative Fourier weight in(3.1) has mean |k| equal to q_s. Therefore
+ |c_s(tau,r)/v_s-c_s(tau',r')/v_s|
+       <=q_s(|tau-tau'|+|r-r'|).
+Since |c_s/v_s|<=1 and
+ sup_(|r|<=1)|d[(4-r^2)^(-3/2)]/dr|=1/(3sqrt(3)),
+the analogous bound for D has constant L_s. The three terms of K have total absolute coefficient4, so
+
+ |K_(s,delta)(tau,r)-K_(s,delta)(2T,0)|
+       <=4L_s(|tau-2T|+|r|).                          (4.4)
+
+For the nonnegative unit-mass f of Section1, choose additionally
+
+                eta+ell<=B_(s,T,delta)/(16 L_s).        (4.5)
+
+For two points in its support, |t_x+t_y-2T|<=2eta and |x-y|<=2ell. Thus K>=B/2 throughout that pair of supports. Expanding the actual two temporal differences and using Gaussian stationarity gives
+
+ N_G(f,delta)=||O_G(f)-O_G(tau_delta f)||_OS^2
+     =int dx dy f(x)f(y)K_(s,delta)(t_x+t_y,x-y)
+                      >=B_(s,T,delta)/2.              (4.6)
+
+The smallness condition(4.5) may be conservative, but leaves fixed positive eta,ell for every s,T,delta>0. The tests therefore need not approach delta functions as the cutoff is removed.
+
+These are infinite-volume Gaussian formulas. Their use as a finite-volume reference requires the corresponding large-volume/free-lattice comparison, with the same observable. The free lattice covariance convergence in TURN63 supplies the cutoff part; no interacting or calibrated original-law comparison is inferred.
+
+5. THE PRECISE ORIGINAL-LAW CONSUMER
+
+A sufficient new estimate, at the one original sequence and fixed parameters above, is
+
+      |N_a-N_G(f,delta)|<=B_(s,T,delta)/4+o(1).          (5.1)
+
+It gives liminf N_a>=B/4. Equivalently one can prove that lower bound directly without a Gaussian comparison. N_a is the one mixed logarithmic source coefficient(1.5), including its complete original denominator. Expanded in unfiltered O it contains four reflected two-point terms; stationarity and reflection combine the two cross terms, but no source vacuum or mean is dropped without that identity.
+
+Bounded scalar compactness on one common original family gives a subsequential law in the local weak-* unit ball of L-infinity. Each F_a converges as an observable coordinate to F=O(f)-O(tau_delta f), using(1.4); all its reflected products are bounded continuous coordinates. Hence N_a converges along that same law subsequence to ||[F]||_OS^2. If time periods tend to infinity and stationarity/RP pass as in Section2, (5.1) yields a nonzero vector orthogonal to ker H. The whole scalar law and its common smear algebra, not unrelated scalar subsequences for separate tests, are used.
+
+This changes the requested source comparison from the unfiltered TURN87 norm to a dynamic coefficient that annihilates a time-invariant mixture component. It avoids an ergodic-component hypothesis for this one positive-energy milestone. It does not construct the intended local Yang--Mills observable algebra. Fixed s selects time versus space, the spatial flow can be nonlocal, g_* has not been matched to a physical interaction, and nonzero spectral content is not a mass gap or nonabelian interaction theorem.
+
+Neither the exact first switch, native reference normalization, generic HS smoothing, bounded-source entire estimates, nor the existing one-point energy tails establish(5.1). The actual native/full-law source comparison remains the substantive next task. A scalar law with b(t,x) independent of t satisfies all boundedness and may have a nonzero unfiltered centered OS norm, but F is identically zero; the new target excludes exactly this false positive.
+
+6. A FIXED POSITIVE-ENERGY BAND, USING THE PHYSICAL BUFFER
+
+The scalar semigroup just proved yields a further quantitative consequence. Let 0<d<T-eta, so the whole profile can be shifted BACK by d while remaining strictly positive in time. In the infinite-time reconstructed scalar law put
+
+ u=[O(tau_(-d)f)-E O(f)],
+ v=[O(f)-E O(f)]=e^(-dH)u,
+ w=(I-e^(-delta H))v.
+
+Ordinary Cauchy--Schwarz and 0<=O<=1 give
+             ||u||_OS^2<=Var(O)<=1/4.                 (6.1)
+Suppose ||w||^2>=m>0. Necessarily m<=1/4, since H>=0 makes both factors in w contractions. Write nu_u for the spectral measure of u and
+
+ nu_w(dE)=e^(-2dE)(1-e^(-delta E))^2 nu_u(dE).
+
+Choose
+ epsilon=sqrt(m)/delta,
+ Lambda=max{2epsilon, log(1/m)/(2d)}.                  (6.2)
+
+For E<epsilon, (1-e^(-delta E))^2<=delta^2 E^2 and(6.1) bounds the corresponding nu_w mass by m/4. For E>Lambda, e^(-2dE)<=m and the difference factor is at most1, so the upper tail also has mass at most m/4. Hence
+
+             ||1_[epsilon,Lambda](H) w||^2>=m/2.       (6.3)
+
+Thus the surviving filtered state has weight in a fixed finite, strictly positive physical energy band. A norm floor cannot be hidden entirely at zero energy or at arbitrarily large energies. This conclusion still concerns one scalar state in the reconstructed system, not a global gap or a canonical interacting particle.
+
+For example, the original comparison(5.1) permits any limiting lower bound m=B/4. Equation(6.3) then uses d, delta and B fixed in physical units. It is an implication AFTER the original-law floor and the same infinite-time scalar reconstruction; the finite thermal energy-difference generator of TURN82 is not substituted into it.
+
+PROVENANCE
+
+TURN63: work/spatial_flow_probe_turn63.txt and work/spatial_magnetic_gaussian_limit_turn63.txt, original finite-flow definition and free covariance/calibration.
+TURN67: work/temporal_filter_physical_probe_turn67.txt, Sections1 and6, spectral filtering and the unclosed original physical source estimate.
+TURN71: work/turn71_spectral_subsequence_root.txt, positive norm versus positive-energy distinction.
+TURN82: work/turn82_physical_translation_gauge.txt, exact buffered thermal translation, and its explicit thermal/vacuum distinction.
+TURN87: work/turn87_minimal_source_target_gauge.txt, bounded scalar compactness and the unfiltered spacetime-smear target.
+
+All new displayed implications above were derived here. No new literature theorem, primary source estimate, or original-law lower bound is imported. Frozen producers and status files were not changed.

@@ -1,0 +1,465 @@
+ONE-SOURCE CONDITIONAL EXPECTATION: EXACT TRANSPORT AND ITS NORM OBSTRUCTION
+19 October 2026. Independent turn29 audit. No continuum-existence claim.
+
+0. WHAT IS NEW IN THIS AUDIT
+
+The conditional-expectation algebra is not new. The archive
+rp_conditional_nontriviality_audit_2026-10-18, turn3
+scalar_fusion_bypass_check, turn8 exact_blocked_flow_array_iteration,
+turn12 L2_source_nontriviality_and_gauge_audit, and turns14--15
+positive_channel_innovation_ledger / projected_reflection_transport
+already record its product, locality, sign, and normalization limits.
+Those exclusions remain correct.
+
+The sharper test below uses the actual free curvature-square source,
+with its dimension-four normalization and optimal deterministic
+centering. Its ordinary Lp norm diverges at the cutoff for EVERY fixed
+p>=1, although separated physical correlations have the familiar
+finite free limit. Thus an ordinary Doob estimate asks for a stronger,
+and in this free model false, bound than the separated Schwinger/OS
+construction needs. This is not merely an arbitrary rescaling toy.
+
+An exact Gaussian conditional formula then distinguishes a genuine
+possible improvement from Jensen: conditioning CAN discard the
+divergence, but only an estimate of the actual conditional reconstruction
+proves that. Its interacting analogue is precisely an effective-source
+response estimate, including its joined contacts.
+
+1. THE EXACT FINITE-CUTOFF STATEMENT
+
+Let mu_a be the original positive finite-lattice Wilson probability law,
+and let G_0 superset G_1 superset ... superset G_J be sigma-fields of
+specified deterministic coarse functions of its links. These functions
+must actually compose; if they do not, replace G_j by a genuinely nested
+chosen family rather than invoking the tower property incorrectly.
+
+For an integrable ORIGINAL source F_a define
+
+             F_(a,j)=E_mu_a[F_a | G_j].                    (1.1)
+
+Then E[F_(a,j)|G_k]=F_(a,k) for j<=k, all means agree, and
+
+             ||F_(a,j)||_p <= ||F_a||_p,  1<=p<=infinity. (1.2)
+
+For p>1 the finite reversed Doob maximal inequality also costs only
+p/(p-1), but its right side is still ||F_a||_p. In L2,
+
+ ||F_(a,j)||_2^2-||F_(a,j+1)||_2^2
+                 =||F_(a,j)-F_(a,j+1)||_2^2.              (1.3)
+
+None of these is a lower bound on the retained centered norm. Exact
+coefficient masses are preserved if one transports the COMPLETE source
+array E[product F_a | G_j]; it is generally false that this equals the
+product of its singleton conditional expectations.
+
+These statements need no analytic density ratio or complex zero-free
+region. They also supply no holomorphic original-pair norm, rooted
+carrier bound, local support, or field-coordinate calibration. A global
+conditional expectation usually reads the entire coarse configuration.
+
+2. AN ACTUAL FREE CURVATURE-SQUARE NORM DIVERGENCE
+
+Take a periodic four-dimensional cubic lattice of spacing a=1/L,
+with N=L^4 vertices, and one real color. Remove gauge and harmonic
+one-form directions. Let d_1 be the lattice curl from one-cochains to
+oriented plaquette cochains, using one orientation for each of the six
+plaquette types. The Gaussian action is
+
+                         (1/2)||d_1 A||^2.
+
+The curvature Y=d_1 A has covariance
+
+       C=d_1(d_1^*d_1)^+d_1^*,
+
+the orthogonal projection onto im d_1. This is an honest finite Gaussian
+law on that subspace; no inverse on gauge or harmonic modes is used.
+The first cohomology of the periodic cubical complex has dimension four,
+so rank d_1=4N-[(N-1)+4]=3(N-1). Translation and coordinate symmetry give
+
+                C_pp=(N-1)/(2N) for every plaquette p.    (2.1)
+
+Equivalently, with the canonical nearest-neighbor cochain differential,
+the Fourier symbol is exterior multiplication by
+d(k)=(exp(ik_mu)-1)_mu. At zero momentum it has rank zero, and at each
+nonzero momentum the map Lambda^1->Lambda^2 has rank three. This gives
+the same rank without a gauge-fixing convention or a cohomology count.
+
+For any nonnegative nonzero smooth physical test f, supported if desired
+strictly inside a positive-time half, put f_p=f(center(p)) and
+
+       Q_a(f)=sum_p f_p [Y_p^2-C_pp].                     (2.2)
+
+With F_phys=a^(-2)Y this is exactly
+a^4 sum_p f_p :F_phys,p^2:. The coupling-normalized Wilson energy has
+this quadratic germ, up to a fixed convention-dependent factor. Colors
+just give independent copies and a fixed multiplicative factor.
+
+Gaussian contraction gives the exact formula
+
+ Var Q_a(f)=2 Tr(M_f C M_f C)
+           =2 sum_(p,q) f_p f_q |C_pq|^2.                (2.3)
+
+Because f>=0, retain the diagonal terms for the lower bound. Since C is
+an orthogonal projection, Hilbert--Schmidt contraction gives the upper
+bound. For L>=2,
+
+ (1/8) sum_p f_p^2 <= Var Q_a(f) <= 2 sum_p f_p^2.
+
+Consequently
+
+               c_f a^(-4) <= Var Q_a(f) <= C_f a^(-4).  (2.4)
+
+For the full-torus constant test f=1 this simplifies further:
+Q_a(1) is chi-square with 3(N-1) degrees of freedom minus its mean,
+and Var Q_a(1)=6(N-1). For a supported nonnegative f the diagonal
+argument above is the separate proof; it does not use a constant test
+or mistakenly replace a supported source by the full torus energy.
+
+This includes the exact mean subtraction. Further deterministic vacuum
+subtractions cannot reduce the variance.
+
+For completeness this is an Lp, not merely L2, obstruction. Diagonalize
+the real symmetric quadratic form on im C, writing Q=sum lambda_r(Z_r^2-1).
+Then
+
+ E Q^4=12(sum lambda_r^2)^2+48 sum lambda_r^4
+                          <=15 (E Q^2)^2.
+
+Interpolation gives ||Q||_1>=||Q||_2/sqrt(15), and hence every p>=1 has
+||Q||_p>=c_f a^(-2). Paley--Zygmund also gives
+
+ P{|Q| >= sqrt(Var Q/2)} >=1/60.
+
+This also gives the direct L1 lower bound ||Q||_1>=sqrt(Var Q/2)/60,
+without interpolation. The preceding interpolation bound is sharper.
+
+Thus these centered ordinary random variables are not even tight without
+an additional normalization or change of observable. This is a rigorous
+free comparison-model obstruction to the proposed abstract implication;
+it is NOT a proved interacting-YM variance asymptotic.
+
+For separated f and h the diagonal mechanism is absent. The lattice curl
+Green kernel has its ordinary off-diagonal scaling C_pq=O(a^4 d^-4) at
+fixed positive physical separation d. Formula(2.3) with f,h therefore
+has a finite separated limit, as in the already audited free reflected
+witness and free packet notes. No such off-diagonal fact was needed to
+prove(2.4). Ordinary E[Q_a(f)^2] tests coincident fields across its two
+factors; the separated or reflected OS pairing does not. Replacing the
+latter by the former is the specific overly strong norm demand.
+
+A multiplicative factor of order a^2 would repair the ordinary variance
+here, but it also kills the nonzero separated dimension-four correlation.
+It is not the required physical field normalization. Source-dependent
+contact counterterms may define off-diagonal/extended Schwinger objects,
+but subtracting a quadratic term from log Z is no longer a positive
+moment-generating function to which ordinary Jensen can be applied.
+
+3. CONDITIONING CAN REMOVE THE DIVERGENCE, BUT JENSEN DOES NOT PROVE IT
+
+Let X be any centered finite Gaussian vector with covariance C and let
+B be a jointly Gaussian coarse vector. On its nonsingular range set
+
+ m(B)=E[X|B]=H B,  C_m=Cov(m),  D=C-C_m.
+
+For a symmetric matrix M write Q_M=X^t M X-Tr(MC). Then exactly
+
+ E[Q_M|B]=m^t M m-Tr(M C_m),
+ Var E[Q_M|B]=2 Tr(M C_m M C_m).                          (3.1)
+
+Uniform control can therefore hold even while Tr(MCMC) diverges, if
+the ACTUAL reconstructed covariance C_m smooths the necessary slots.
+For example, with N independent standard Gaussians and
+B=N^(-1/2)sum X_i,
+
+ E[sum_i(X_i^2-1)|B]=B^2-1.
+
+The input variance is 2N and the output variance is 2. This establishes
+the possible gain directly; contraction alone only gives the bound 2N.
+After dividing the input by sqrt(2N), it also gives a unit-variance
+source whose conditional singleton tends to zero in L2.
+
+For two quadratic marks the missing joined coefficient is explicit:
+
+ E[Q_M Q_N|B]
+   =E[Q_M|B] E[Q_N|B]
+      +2 Tr(M D N D)+4 m^t M D N m.                     (3.2)
+
+For symmetric M,N,D the last scalar is equal to its transpose, so no
+additional symmetrization factor is missing. These contacts preserve
+the original product even if both singleton projections become small.
+They need not have a favorable sign for separated/reflected choices.
+The exact full-array construction of turn8 already retains them.
+
+For the native interacting proposal, (3.1) identifies what a genuinely
+new bound would have to replace. It is an estimate of the actual
+conditional source after integration, not a generic Banach contraction.
+An estimate of the regular homogeneous conditional kernel alone omits
+the full conditional large-field/history terms in that same source.
+
+4. THE CONDITIONAL SOURCE IS AN EFFECTIVE-DENSITY RESPONSE
+
+At finite cutoff let nu_t=q_*[e^(tF)mu] be the UNNORMALIZED pushed-forward
+measure, with nu_0=q_*mu. For bounded F (automatic for each fixed compact
+lattice source, with its cutoff-dependent bound),
+
+       d nu_t/d nu_0 (v)=E_mu[e^(tF)|q=v].               (4.1)
+
+Thus, wherever the real conditional expression is defined,
+
+       partial_t log(d nu_t/d nu_0)|_0=E[F|q=v].         (4.2)
+
+For normalized nu_t/nu_t(1), the right side is E[F|q=v]-E F.
+Higher derivatives are the conditional connected source coefficients.
+These identities can equally be formulated weakly without a density
+with respect to Haar; gauge-slice singularities do not invalidate them.
+
+Consequently defining a source by conditional expectation avoids choosing
+a particular low/high decomposition, but it does not by itself estimate
+the response. A native regular-step proof may establish such an estimate
+by expanding the right side. Its mature source profiles, scalar vacuum
+part, and joint contacts have not disappeared; they are now implicit in
+the single function (4.2). A local estimate of that function in a weaker
+real norm would be a legitimate alternative producer. It is not supplied
+by (1.2), by a source-free partition stability bound, or by a bound for
+the separately normalized reference kernel.
+
+In particular, a uniform real exponential-moment bound for the centered
+bare Q_a(f) would contradict(2.4). The scalar complete-source machinery
+used for separated/nilpotent derivatives should not be silently promoted
+to such an ordinary exponential-moment statement.
+
+5. REFLECTION AND THE ACTUAL NATIVE LAW
+
+There are two independent dictionary issues.
+
+(a) The deterministic q pushforward of the original Wilson measure
+always permits(1.1). The full published sequence is (RT)^j, including
+large-field replacement and its retained operations. It is not simply
+that deterministic pushforward. A complete positive joint channel, when
+identified, permits its own conditional expectations; the exact source
+has to be transported by that channel, including its source-dependent
+normalization/contact terms. The source-free stability theorem cannot
+identify these functions with an arbitrary deterministic-block Doob
+martingale. This is already isolated in the primary-source audit
+native_partition_ratio_source_audit_turn14.
+
+(b) A reflection-stable coarse sigma-field need not have conditional
+expectation preserving the positive-half algebra. Therefore ordinary
+orthogonal projection need not be an OS orthogonal projection. The
+archive rp_conditional_nontriviality_audit supplies both the exact
+sufficient half-algebra condition and a Gaussian quadratic cancellation
+example. Turn15 projected_reflection_transport gives the corrected
+two-error ledger when locality is approximate. Neither error is removed
+by the contraction in(1.2).
+
+Bare site-plane factorization is a genuine special case: the two open
+halves are conditionally independent given the plane links, and the
+reflected norm of F equals the ordinary variance of its exact conditional
+half-space amplitude. That is already proved in the archive. Bounding
+that amplitude and its induced boundary law is a distinct producer;
+the bulk RG Gaussian coefficient is not automatically that variance.
+
+6. CONSEQUENCE FOR THE TURN28 HEALED/LIVE IMPROVEMENT
+
+The turn28 first-contact theorem bounds a KNOWN generated joint source
+family on its actual native domain, with its original row debit, arms,
+and complete normalizer companions. A live insertion is then carried
+once: retained real variables use chronology, remaining outer/background
+reads use the native B-domain inclusion. At healing it yields a tiny
+own-invariant bulk source. These are concrete improvements and are not
+weakened by this audit.
+
+The remaining mature regular-T question is the bound for that healed
+source on subsequent actual normalized regular steps, with its inherited
+profiles and boundary terms. Declaring it to be a conditional expectation
+would be useful only after identifying the same source in the ORIGINAL
+positive law and proving a cutoff-uniform estimate such as(3.1) for its
+full conditional function or for the exact separated source array.
+
+Jensen neither proves that native estimate nor converts the supplied
+pointwise history envelope into a normalized estimate. Its bare norm is
+not known; for the primitive dimension-four free source the analogous
+ordinary norm is demonstrably divergent. Conversely, this does NOT show
+that the native mature source bound is impossible. The Gaussian formula
+(3.1) demonstrates how a real conditional estimate could bypass a large
+bare norm, if it were actually proved.
+
+The practical conclusion is narrow: no new global Doob shortcut closes
+the current recurrence. A direct conditional-source proof remains a
+valid alternative, but its decisive content is the integrated native
+source estimate, not the abstract conditional-expectation theorem.
+
+7. REFERENCES AND PROVENANCE
+
+The new calculations(2.1)--(2.4),(3.1)--(3.2),(4.1)--(4.2) are direct
+finite-dimensional proofs above. They do not import an unverified
+probabilistic realization of a signed RG history. No literature search
+is needed for their algebra.
+
+The primary native distinction used in Section5 is recorded with exact
+locators in native_partition_ratio_source_audit_turn14: Balaban CMP119
+(1988), pp243--245,254 and pp255--262; CMP122-II(1989), pp355--356,
+379--380 and389--392. Those papers describe the averaging T, subsequent
+R operation, and retained chronological integrals. Their complete-law
+stability does not assert the source-response identity needed here for
+an arbitrarily chosen bare/coarse observable pair.
+
+This file deliberately does not re-prove the earlier turn12 generic
+reference-projection counterexamples or call fixed-graph Gaussian
+convergence a uniform refinement theorem.
+
+8. INDEPENDENT AUDIT OF MATURE_MARKED_T_TURN29
+
+Read the complete draft of mature_marked_T_turn29 and the operative
+fixed_quadratic_regular_closure_turn26. The quantum conclusion passes
+at the SAME complete protected fixed-geometric-radius prepared-source
+scope. The following spells out why its new positive profile norm is
+available and gives one necessary correction to the static statement.
+
+8.1 Exact normalized quantum identity
+
+For Delta F=g L+g^2 R, with L odd in the original even Gaussian/window,
+
+ <Delta F>_(Vcore)
+   =g^2[<R>_(Vcore)+integral_0^1 Cov_(tVcore)(L,Vcore/g)dt].
+
+The sign, factor g^2, and normalization are correct. This requires the
+already reduced interaction on the original independent-pair contours;
+an uncancelled free-current linear action would invalidate the score
+bound. The original constrained cancellation precedes that extension,
+as checked in turns21/26. The estimate remains a fixed-moment connected
+expansion statement, not division of unnormalized partition estimates.
+The core term is fixed-radius; the scalar-base comparison creates a
+separate RUNNING-radius high output, normalized as in (4.2) of the
+audited note. These output norms should not be conflated.
+
+8.2 Positive source-column bound before summation
+
+For one unit input root (lambda,X,z), differentiate its original
+localized potential before summing the connected expansion. Every
+surviving cluster contains that distinguished read; numerator terms
+disconnected from it cancel against the denominator. Apply the odd
+moment/interpolation argument to this same distinguished family.
+The positive majorant therefore has its g^2 factor before the sum over
+clusters and output roots. This is the crucial order of operations.
+
+Retain the complete input carrier as part of the output carrier,
+including an inherited geometry label when that is larger than the
+field read. Assigning the complete output coefficient to its ordinary
+finite-overlap roots costs at most a fixed polynomial of current-cell
+carrier size. The original improved-to-inductive reserve pays that
+polynomial. The rooted cluster bound at the INPUT root then bounds the
+sum over ALL output roots; it is stronger than merely estimating the
+supremum of a separately resummed output field value.
+
+Because c(z) is a density coefficient, this gives
+
+ sum_(Y,y) m_(j+1)(y) exp(kappa_out d_(j+1)(Y))
+                    K(Y,y;X,z)
+  <= C g_j^2 m_j(z) exp(kappa_in d_j(X)).               (8.1)
+
+The fixed L^4 change of current cell volume is part of C. No factor
+counting the fine UV links is introduced: their sum was already the
+physical hat mass in the literal clover estimate. A selected connecting
+arm remains in each cluster. Keeping that arm before summation gives
+the local spatial convolution as well as (8.1). A bare final global
+l1 bound, without that rooted construction, would not give the arm.
+
+For the base-tag comparison the distinguished source and scalar-tag
+roots lie in one connected cluster. Sum the tag root using its supplied
+uniform local positive activity norm. The same argument supplies the
+epsilon_j source column. It does not use an extensive scalar supremum
+as if it were a local norm. Old geometry carriers retain their original
+metric, exactly as in the turn28 two-carrier proof.
+
+Linearity then permits arbitrary summable frozen tensor/profile labels.
+One normalizes a single input coefficient to size one for its complex
+source circle and restores its absolute value in the kernel estimate.
+No common finite disk for a sum of arbitrarily large calibrated source
+coefficients is asserted. Likewise a tiny native running-radius R seed
+does not acquire fixed-radius analyticity through this argument.
+
+Thus (8.1) is a valid labelled version of the already admitted ORIGINAL
+positive connected proof. It would not follow from turn26's final
+coefficient estimate alone if its complete rooted preparation were
+discarded. The audited note expressly retains that preparation.
+
+8.3 Static profile correction: B^0=0 needs a compatible projection
+
+The sentence in Section5 of the draft saying that positive re-hatting
+alone gives B^0=0 is too broad for NEWLY ROOTED spatial coefficients.
+Consider, already on a common field, a zero-affine quadratic coefficient
+
+                     Z=q(x_1)-q(x_2),
+
+where q is the same normalized local clover square and the two points
+belong to one retained old carrier. Constant affine curvature makes its
+COMPLETE leading coefficient zero. Partition it by two new hats with
+b_0(x_1)=1,b_0(x_2)=0 and complementary b_1. The two new rooted pieces
+have nonzero leading coefficients +1 and -1. Their sum is zero, but
+their positive profile norm is not. Smooth overlapping hats give the
+same example whenever the two hat values differ.
+
+Therefore B^0=0 is valid when the extractor retains the COMPLETE old
+coefficient/root through the static composition, or when a compatible
+projection is separately proved. It is not a consequence of a positive
+mass-preserving re-hat map on low profiles. Internal21/global affine
+identity, local root-by-root identity, and positive profile norm are
+different assertions. The exact ledger (5.1) is correct with B^0 kept.
+This correction was sent to the author and root before any promotion.
+
+8.4 Direct re-hatting is nevertheless a useful exact identity
+
+For a fixed literal common-field coefficient density f and complete
+hats b_jz, set c_jz=(integral b_jz f)/(integral b_jz). Then
+
+ integral f q =sum_z [c_jz integral b_jz q
+                      +integral b_jz(f-c_jz)q].
+
+Each COMPLETE residual on the right has zero universal affine21, and
+the positive physical-l1 low norm contracts. This is the precise
+common-field construction being checked by admission_proof. It does
+not say that the newly rewritten residual has the age of the original
+source seed. On the fresh j-domain it is an age-zero own-field clover
+residual. Any claim of older strict gain must retain the actual dated
+static comparison, and quantum-born nonclover functions remain separate.
+
+The common-field identity is preserved by a common linear operation,
+but estimates after a nonlinear prepared pullback require its original
+complete-family domain and norms. It neither equates independently
+prepared finite-box reads nor makes their boundary low leakage vanish.
+
+8.5 Current bounded verdict
+
+The protected regular quantum map has the claimed positive q_j+epsilon_j
+source kernel at the existing complete source/core scope; the output
+radius distinction and the rooted proof above are essential. This is a
+real refinement of the scalar final-coefficient estimate. It is not a
+proof that the COMPLETE mixed static/mature/profile map has identity
+low transport, nor a proof of recurrent healed-source closure. The
+specific static-profile cancellation issue is (8.3), not a generic
+appeal to missing normalized probability.
+
+8.6 Author correction checked
+
+The author revised Section5 to retain B^0 under pointwise re-hatting
+and supplied the compatible numerical WHOLE-coefficient assignment
+theta_yz=m_(j+1)(y)A_yz/m_j(z), sum_y theta_yz=1. This is algebraically
+correct: multiplying an entire zero-affine coefficient by a number
+preserves its zero coefficient. Its full old read/support must stay
+with every assigned piece; it is not a claim that a new hat localizes
+that field function. The revised text keeps this qualification.
+
+Revised Section2 also states the actual anchored clover root bound
+
+ sum_Y K(Y,y;z)<=C(q_j+epsilon_j)(m_j/m_(j+1))
+                         exp[-c dist(y,z)/(M r_j)].
+
+This repairs any possible use of a column estimate as a row estimate.
+The fixed-relative-spacing lattice sum gives the stated uniform row
+bound. A large general field read must instead use distance to that
+read and its carrier envelope, as the revision now explicitly says.
+Old carrier weights pass unchanged; only a NEW quantum joining-carrier
+reserve is spent. These corrected quantum/profile assertions pass at
+the named original prepared-source scope. They do not close the mixed
+static eligibility and boundary/default comparison.

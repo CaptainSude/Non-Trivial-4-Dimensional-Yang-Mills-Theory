@@ -1,0 +1,180 @@
+INDEPENDENT AUDIT OF THE REFLECTED POSITIVE-CHANNEL LEDGER
+19 October 2026. Admission/proof agent.
+
+Audited source: work/reflection_channel_covariance_ledger_turn14.txt,
+196-line version containing the pure-gauge lemma in Section 5.
+
+VERDICT
+
+The displayed identities, covariance constants, and stated sufficient
+OS-isometry criterion are correct. The reflection ledger genuinely can
+require less than the ordinary innovation ledger: independent noise in
+opposite reflected halves can contribute ordinary variance and contribute
+zero reflected covariance. No native Balaban attachment follows merely
+from this finite-probability statement; the source note says so explicitly.
+
+Two qualifications should remain explicit in subsequent use:
+
+ (i) The signed reflection budget controls an INTEGRATED finite Gram
+ matrix. Unlike the ordinary positive covariance ledger, it does not
+ imply an L1 bound for the conditional product defect.
+
+ (ii) A noise's geometric block must contain every output coordinate
+ affected by that noise, including reconstruction, gauge/frame, and
+ auxiliary-label reads. Independence of the random seeds alone does not
+ make their effects spatially confined.
+
+1. EXACT TELESCOPE AND THE POSITION OF THE CONJUGATION
+
+For the actual probability joint law mu_j(dx) K_j(x,dy), Jensen gives
+F_j=K_j F_(j+1) in L2(mu_j). Reflection invariance and a change of variable
+x -> theta_j x give
+
+ conjugate(G_j[b,a])
+  = integral F_j^b(theta_j x) conjugate(F_j^a(x)) dmu_j(x)
+  = G_j[a,b].
+
+Thus G_j is Hermitian even without reflection positivity. For
+f_j=sum_a c_a F_j^a, the quadratic form of the one-step difference is
+
+ c* E_j c
+  = integral Cov_(K_j(x,.))(f_(j+1) o theta_(j+1), f_(j+1)) dmu_j(x),
+
+where Cov(u,v)=E[conjugate(u)v]-conjugate(Eu) Ev. Reflection
+intertwining is precisely what identifies K_j(f o theta) with the
+reflected backward mean. The integrated expression is real, although
+the conditional expression need not be real for a fixed input x.
+
+The two terms integrate to G_(j+1) and G_j. Consequently the telescope
+and the operator-norm implication of (1.4) are exact. The order of the
+supremum and the date sum in (1.4) is sufficient: for each unit c,
+
+ |c*(sum_j E_j)c| <= sum_j |c*E_j c| <= epsilon.
+
+No positive-semidefinite statement about E_j was used. The centering
+statement is also correct, since the ordinary means of F_j are constant
+along the chain.
+
+The initial-state warning at source lines 50--53 is essential. If an
+auxiliary variable A is already randomized in X_0=(U,A), its elimination
+to the bare field U is another conditional channel and has its own
+reflected product defect. An arbitrary enlargement of the initial
+sigma-field cannot be used to make that defect disappear.
+
+2. SIGNED DEFECTS DO NOT HAVE THE ORDINARY L1 CONSEQUENCE
+
+Here is an exact finite counterexample. Let the input x be a fair sign,
+with input reflection the identity. Given x, sample a fair sign Y_+ and
+put Y_-=x Y_+. Output reflection exchanges Y_+ and Y_-. Every conditional
+law is exchange-invariant, so the kernel intertwines reflections. Put
+f(Y_+,Y_-)=Y_+. Then
+
+ Kf=0,
+ K[(Theta f)f]-(Theta Kf)(Kf)=x.
+
+The integrated defect is zero, while its L1 norm is one. The output
+unconditional law is the independent product of two fair signs and is
+reflection positive. Thus this issue is not caused by a failure of RP.
+
+Accordingly, (1.4) transports the finite reflected Gram floor exactly as
+claimed; it does not imply approximate multiplicativity in conditional
+L1, let alone pointwise or as an operator algebra. A bound obtained by
+integrating the ABSOLUTE oscillation majorant is stronger and does give
+the corresponding L1 estimate, but that is an additional bound.
+
+3. SHARED-NOISE COVARIANCE ESTIMATE
+
+Fix all input and geometry data, and let the noises be a genuine product
+law. Exposing them in a fixed order gives orthogonal martingale
+differences d_i f and d_i h. Conditional on the preceding noises, the
+averaged function of the i-th noise has diameter no greater than osc_i f.
+For real functions, conditional variance is at most (osc_i f)^2/4.
+For complex functions, the independent-copy identity gives the valid
+bound (osc_i f)^2/2. Conditional Cauchy--Schwarz and summation therefore
+give exactly source (2.1) and (2.2). No sign restriction is needed.
+
+The resulting reflected estimate involves
+
+ osc_i(f o theta) osc_i(f),
+
+not either of the two squared oscillations separately. If one factor
+vanishes, the noise is free in this estimate even when it creates large
+variance in the other half.
+
+The geometric interpretation at source lines 85--95 is valid provided
+changing noise Y_i changes only coordinates in its COMPLETE output
+block. For example, independent seeds followed by a global constrained
+reconstruction are not a block-local output law merely because the
+seeds were assigned small initial regions. Likewise, a random gauge
+choice or geometry label which enters a backward source is part of its
+read. The source's explicit backward-function warning is necessary.
+
+The total-covariance identity (3.1) is exact, including for label-dependent
+functions interpreted on the complete output state. Conditional
+independence after fixing a shared selection label does not remove the
+covariance of the conditional means. Treating that selection as its own
+transition is a valid alternative only if it is included in the ledger.
+
+4. HALF-ALGEBRA ISOMETRY
+
+Properties (a)--(c) of Section 4 imply, for every pair in the actual
+output positive-half algebra,
+
+ <f,h>_(OS,out) = <Kf,Kh>_(OS,in).
+
+The input positive-half membership in (b) is not dispensable. With it,
+input RP proves output RP, null vectors map to null vectors, and the
+linear map extends isometrically from the output OS completion into the
+input OS completion. Surjectivity is not asserted and does not follow.
+
+Conditional independence of the two output half sigma-fields given the
+complete input implies (c), since K Theta = Theta K. Shared random
+reflection-plane variables prevent that simple factorization unless
+they are fixed in the conditioning or handled by a separate boundary
+Hilbert-space formulation. The source correctly retains this clause.
+
+A finite-matrix approximate version cannot establish RP on the whole
+algebra. Conversely, original bare RP can be used as the ambient form
+without proving output RP if the particular backward sources belong to
+the original half algebra and their reflected Gram is controlled. These
+are the two distinct uses already separated in the source.
+
+5. PURE GAUGE SUBSTEPS
+
+For an actual kernel supported in the input field's gauge orbit, and
+functions which are functions of that orbit, f(y)=f(x) for every output
+y in the kernel support. Therefore Kf=f and K(fh)=fh pointwise. The
+same is true of Theta f when reflection conjugates the gauge action
+into the reflected gauge action. Both ordinary and reflected defects
+are zero, independently of how correlated the gauge randomness is.
+
+This proof requires equality as observables on the complete input and
+output states. Gauge invariance in the field variable alone does not
+remove a dependence on an auxiliary label which the substep also
+changes. One should either work on the actual field quotient or retain
+such labels in the observable and test orbit constancy there.
+
+Preservation of gauge invariance by every later channel ensures that
+the backward field functions stay in this zero-defect class. An
+integration-only equality of gauge-slice formulas is not, by itself, a
+joint transition supported on gauge orbits. The source explicitly makes
+this distinction and does not misclassify a physical refill as a gauge
+transformation.
+
+6. TERMINAL WITNESS AND NATIVE SCOPE
+
+The independent-Haar example in Section 6 is correct: strictly
+half-supported centered functions have positive ordinary variance and
+zero OS norm. A positive density lower bound, or an ordinary covariance
+floor, cannot substitute for a reflected Gram floor. Positivity of the
+measure mu-alpha nu is also different from reflection positivity of
+that remainder.
+
+The revised target in Section 7 is therefore a valid narrower target:
+an actual terminal reflected witness, backward half-algebra attachment,
+and the complete shared-noise defect budget. The present audit proves
+no such native budget, no terminal YM witness, and no locality of the
+actual R backward functions. In particular it does not repair the
+unverified normalized positive-channel dictionary for all gauge-slice
+and large-field operations. It verifies the finite-probability consumer
+which can be used once those inputs are established.

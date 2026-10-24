@@ -1,0 +1,154 @@
+ROOTED-FOREST BOX GEOMETRY: EXPLICIT RECTANGLES AND A POLYNOMIAL POINCARE BOUND
+19 October 2026. balaban_inputs. Independent audit of root's turn37 lemma.
+
+VERDICT
+
+The requested geometry is valid for the full open cubical box, with all
+boundary vertices anchored and all boundary edges fixed. In fact each
+needed filling is a simple coordinate rectangle using DISTINCT elementary
+plaquettes. This proves the stronger estimates
+
+ max_chord dist(y_e,1) <= C R sqrt(S_V(y)) + C R delta,
+ ||x||_2^2 <= C R^6 ||d x||_2^2 at V=1,                     (0.1)
+
+in dimension four, with unscaled link/plaquette counting norms. Therefore
+the proposed weaker R^2 and R^8 estimates also hold. No native effective
+R kernel, continuum limit or uniform growing-graph Laplace expansion is
+asserted by this geometric result.
+
+1. EXACT GRAPH AND FOREST
+
+Take vertices {0,...,R}^4 with integer R>=2. A boundary vertex has at least
+one coordinate 0 or R. Every boundary vertex is anchored; boundary edges
+are edges contained in the cubical boundary. The free/nonboundary edges
+have at least one interior endpoint. With unit nearest-neighbor edges
+and R>=2, an edge with two boundary endpoints is contained in a common
+boundary face, so these conventions agree.
+
+For each transverse t=(x2,x3,x4) in {1,...,R-1}^3 include the edges
+
+           (k-1,t)--(k,t),             k=1,...,R-1,
+
+in the forest. The component is rooted at (0,t). All other boundary
+vertices are isolated forest roots. Thus every forest component contains
+EXACTLY ONE anchored vertex, and every interior vertex is covered.
+There is no edge from (R-1,t) to (R,t) in the forest: including it would
+put two boundary anchors in the same component and would be invalid.
+
+A gauge transformation equal to identity at all boundary vertices sets
+the forest links to identity recursively. Boundary links remain the
+prescribed V. Write y_e for the transformed nonforest free links.
+All paths below are interpreted with their induced orientations; reversing
+an edge replaces its holonomy by its inverse and preserves its distance
+to identity.
+
+2. EXPLICIT FILLINGS FOR EVERY FREE CHORD
+
+There are precisely the following nonforest free-edge cases.
+
+(A) Transverse interior edge, direction mu in {2,3,4}.
+Both endpoints are interior and have the same x1=s, 1<=s<=R-1.
+Their forest roots lie at x1=0 and are joined by the corresponding one
+boundary edge. The two forest paths, e, and that boundary connector bound
+the x1--xmu rectangle of width s and height one. It has s<=R plaquettes.
+
+(B) Transverse edge from an interior vertex to a side boundary, direction
+mu in {2,3,4}, with xmu reaching 0 or R. The boundary endpoint is its own
+anchored root. Join the interior root to the corresponding side-face
+point at x1=0 by one boundary edge, then run in the x1 direction along
+that side face to the boundary endpoint. The connector has length s+1.
+Together with the one interior forest path and e it bounds the same
+width-s, height-one coordinate rectangle, with s<=R plaquettes.
+
+(C) Top x1 edge, from (R-1,t) to (R,t), t strictly interior transversely.
+The latter endpoint is an anchored boundary root. The forest path plus
+e runs along the entire line from (0,t) to (R,t). Take the boundary
+connector from (R,t) along the top face to x2=0, then down the side face
+x2=0 to x1=0, then along the bottom face back to (0,t). Its length is
+R+2t2<=3R. The resulting loop bounds the x1--x2 rectangle
+
+                    [0,R] x [0,t2]
+
+with x3,x4 fixed. It has R t2<=R^2 plaquettes.
+
+Bottom x1 edges are already forest edges. All remaining x1 edges either
+belong to the forest or are fixed boundary edges. These cases exhaust
+every free chord, including those with one boundary endpoint.
+
+Each filling plaquette is NOT wholly in the cubical boundary. In cases
+(A),(B), the x1 and xmu coordinates vary and all other coordinates are
+strictly interior. In(C), x1 and x2 vary and x3,x4 are strictly interior.
+Thus every filling plaquette belongs to the action depending on the free
+links. Pure-boundary action constants need not be included in S_V.
+
+3. NONABELIAN PRODUCT ESTIMATE
+
+Use a faithful unitary representation and its normalized Hilbert--Schmidt
+distance d(U,1)=||U-1||. It is invariant under conjugation and obeys
+
+                d(UV,1)<=d(U,1)+d(V,1).
+
+Any fixed bi-invariant group distance is comparable to it on this compact
+group, with constants depending only on the group/representation.
+For a rectangular plaquette disk, successively peel boundary plaquettes
+(or use a spanning tree in its dual grid). The perimeter holonomy is a
+product of conjugates of the elementary plaquette holonomies or their
+inverses, with EACH elementary plaquette appearing once. The connecting
+transports need not be small: conjugation invariance is enough. Hence
+
+ d(U_boundary(rectangle),1)
+        <=sum_(p in rectangle) d(U_p,1)
+        <=sqrt(number of p) [sum_(p in rectangle)d(U_p,1)^2]^(1/2).
+
+In the forest gauge the same perimeter holonomy is y_e times its fixed
+boundary connector C_e(V), up to orientation. If
+
+ delta=max_(boundary edge b) d(V_b,1),
+
+then d(C_e(V),1)<=3R delta. The Wilson action S_V containing every
+plaquette that reads a free edge is a fixed positive multiple of
+sum_p d(U_p,1)^2 in this representation. Since each rectangle has at most
+R^2 distinct plaquettes, the preceding inequalities prove
+
+                   d(y_e,1)<=C R sqrt(S_V(y))+3R delta.     (3.1)
+
+The total action may also include fixed boundary plaquettes; this only
+enlarges its right-hand side. If a convention subtracts the actual
+minimum action from S_V, (3.1) does NOT follow with that centered action:
+the displayed proof uses the nonnegative uncentered plaquette sum.
+
+4. LINEARIZATION AT IDENTITY BOUNDARY
+
+Set V=1 and y_e(t)=exp(t x_e), with x zero on the forest and boundary.
+Linearizing the exact rectangular perimeter identity gives
+
+                 x_e = sum_(p in rectangle_e) +/- (d x)_p.
+
+The Lie algebra is a vector space at this order; the transports all equal
+identity. Therefore
+
+              |x_e|^2 <= R^2 sum_p |(d x)_p|^2.
+
+There are at most C R^4 free chords. Summing this bound gives
+
+                  ||x||_2^2<=C R^6 ||d x||_2^2.             (4.1)
+
+The Hessian on this anchored forest slice is thus strictly positive with
+a polynomial lower bound c R^-6 in these unscaled counting norms.
+The weaker c R^-8 claimed in the candidate follows immediately. Constants
+also include the fixed positive invariant quadratic form from the chosen
+faithful Wilson representation. No monotonicity or continuum Poincare
+theorem is used.
+
+5. SCOPE QUALIFICATIONS
+
+The boundary must be anchored at EVERY fixed exterior vertex; the forest
+above satisfies this exactly. Prescribed nonidentity boundary values are
+allowed in(3.1), and their connector contribution remains C R delta.
+The linear estimate(4.1) is at V=1. Obtaining a uniform Hessian bound near
+a nonzero boundary-dependent minimum requires a separate perturbation
+estimate with its R dependence; it is not part of this audit.
+
+The claim is for a full embedded cubical box. Holes, periodic local
+identifications, irregular deleted subcomplexes, or a forest joining two
+anchored vertices are different geometries. They are not covered.

@@ -1,0 +1,406 @@
+TURN75 -- ORIGINAL BOUNDARY CHANNELS AND BOUNDED REFLECTION WITNESSES
+20 October 2026. tail47.
+
+RESULT
+
+There is an original-law route which does not require action-density
+source differentiation: distinguish two conditional laws of an ORIGINAL
+positive-time block given two original boundary events. Section 2 proves
+a quantitative bounded-observable reflection lower bound, and a converse
+showing exactly what boundary information a bounded witness must retain.
+
+Section 3 gives an actual new consumer of the TURN37 bare-box theorem.
+Mirror-paired half-local coarse-preserving replacements remain reflection
+positive, and their centered reflected norms differ by at most alpha
+times the total core oscillation of the observable. This comparison is
+for the same original observable and preserves the full denominator.
+It is not an identification with the TURN70 selected law.
+
+These facts do not yet produce the needed lower bound. Section 4 gives
+a sharp positive smooth reflection-positive model in which BOTH coarse
+and positive-time marginals are exactly fixed and nondegenerate, the
+complete joint density is uniformly comparable to a product density,
+and nevertheless every bounded positive-time reflected channel tends
+to zero. This tests a different shortcut from the earlier selection
+counterexample: no selection or changed coarse marginal is involved.
+
+Section 5 identifies a sufficient local JOINT-density comparison, much
+more specific than partition stability or a one-body density estimate.
+Section 6 checks the actual retained native inputs. They do not supply
+this comparison, the original conditional contrast, or its positive
+physical-time lower bound. Full nontrivial YM4 existence remains open.
+
+1. EXACT ORIGINAL REFLECTION GEOMETRY
+
+Use a finite original Wilson lattice with even temporal period N>=4,
+site reflection theta:t->-t, and normalized Haar measure. Let B be the
+spatial link data on BOTH fixed slices t=0,N/2. Every Wilson plaquette
+belongs to one half-cylinder or one fixed slice. Thus the full original
+law has the exact disintegration
+
+ mu(dB,dU_+,dU_-)=pi(dB) Q_B(dU_+) (theta_*Q_B)(dU_-).    (1.1)
+
+All normalizers in Q_B and pi are the original ones. This is the finite
+Wilson conditional-product identity already proved in TURN74 Section 7.
+In particular, for real F with complete read in the positive half,
+
+ C_mu(F):=Cov_mu(theta F,F)=Var_pi(m_F),
+ m_F(B)=Q_B F.                                           (1.2)
+
+For a positive physical-time witness below, require that F read a block
+at distance at least delta>0 from BOTH fixed slices in physical time,
+with delta fixed independently of the ultraviolet regulator. Merely
+taking F=G(B) would
+give Var_pi(G), but would not test transmission to positive physical
+time. This distinction is essential in a cutoff limit.
+
+Let X=X(U_+) be a compact-valued ORIGINAL gauge-invariant block record,
+with complete read inside such a positive-time block. It can be a finite
+collection of gauge-invariant observables, or the compact gauge-orbit
+record of a finite block. It is not a newly drawn native reference field.
+All functions F considered in Section 2 are real functions of this X.
+
+The relevant operator is the centered original conditional channel
+
+ K_0 F(B)=E_mu[F(X)|B]-E_mu F(X).                         (1.3)
+
+Then C_mu(F)=||K_0 F||_(L2(pi))^2. Positivity of pi, even with precise
+upper and lower density bounds, says nothing by itself about K_0.
+
+2. A BOUNDED, SOURCE-FREE WITNESS AND A QUANTITATIVE CONVERSE
+
+Take any measurable boundary event E, with p=pi(E) in (0,1), and set
+
+ nu_+=Law_mu(X|E),  nu_-=Law_mu(X|E^c),
+ d_E=||nu_+-nu_-||TV,   TV=sup_A |nu_+(A)-nu_-(A)|.       (2.1)
+
+If gauge invariance is required, take E invariant under the boundary
+gauge action. For X already gauge-invariant all functions below have
+that property automatically.
+
+There exists measurable F_E(X) in [-1,1] with
+
+ C_mu(F_E) >= 4p(1-p)d_E^2.                              (2.2)
+
+PROOF. Choose a Hahn decomposition of nu_+-nu_- and let F_E be its
+sign. Then nu_+F_E-nu_-F_E=2d_E. Put G=1_E-p. Direct calculation gives
+Cov_mu(F_E,G)=p(1-p)(nu_+F_E-nu_-F_E), while Var_pi G=p(1-p).
+Since G is boundary-measurable, Cauchy--Schwarz applied to K_0 F_E and G
+gives (2.2). No canonical action normalization, complex source disc,
+or source-dependent partition factor is involved.
+
+On a compact metric record space, the same supremum can be approached
+by continuous F in [-1,1]. Indeed finite Borel measures are regular;
+approximate the Hahn sets in the L1 norm of nu_++nu_- by closed/open
+sets, then use a continuous separating function. If a block gauge
+action is retained instead of passing to the orbit space, average this
+function over the compact gauge group. Invariant nu_+,nu_- preserve
+its expectations and supremum bound. This is a finite-regulator
+approximation; it gives no uniform analytic derivative or carrier norm.
+
+There is also a converse strong enough to locate the missing estimate.
+Suppose |F|<=1 and C_mu(F)=v>0. Let m=E[F|B], a=EF and
+E={m>=a}. Since |m-a|<=2,
+
+ Cov(F,1_E)=E[(m-a)_+]=(1/2)E|m-a| >= v/4.              (2.3)
+
+The same covariance is p(1-p)(nu_+F-nu_-F), whose absolute value is
+at most 2p(1-p)d_E. Hence
+
+ p(1-p)d_E >= v/8,
+ p(1-p)>=v/8,             d_E>=v/2.                     (2.4)
+
+The last two inequalities use d_E<=1 and p(1-p)<=1/4. In particular
+a bounded witness with a uniform reflected norm requires a genuinely
+distinguishable original positive-time conditional law; a nondegenerate
+boundary marginal alone cannot replace it.
+
+Equivalently, with
+
+ D_X=sup_(E subset B) sqrt[p(1-p)] d_E,
+ S_X=sup_(|F(X)|<=1) C_mu(F),
+
+the preceding argument proves
+
+                 4D_X^2 <= S_X <= min(1,4D_X).          (2.5)
+
+For the upper bound, (2.3)--(2.4) imply
+sqrt[p(1-p)]d_E >= v/(8sqrt[p(1-p)]) >= v/4.
+This criterion concerns bounded probes of the stated original block.
+Its converse permits a boundary event depending on all B. Requiring E
+to lie in a particular small boundary subalgebra is a useful stronger
+construction target, not a consequence of the converse.
+
+Even a nonzero bound in (2.2) is not by itself a positive-energy or
+interacting continuum theorem. The chosen block, time separation,
+regulator dependence, common observable algebra, and spectral content
+still require control. A persistent zero-energy coarse variable could
+also give a nonzero reflected norm.
+
+3. ACTUAL BARE-BOX TRANSFER OF THE REFLECTED NORM
+
+Apply precisely the bare coarse-preserving construction of
+coarse_preserving_box_replacement_turn37.txt, Sections 2--8, in boxes
+strictly inside the positive half and their reflected copies. Require:
+
+ (i) complete box interiors, collars, gate and coarse-statistic reads
+     are in their own closed half, with shared reads only in B;
+ (ii) no Wilson plaquette reads two active interiors;
+ (iii) the negative-half kernel is the reflected positive kernel, and
+       the two half operations are applied independently, without a
+       shared unretained ancillary choice;
+ (iv) every operation is a source-free normalized local kernel and
+      keeps its exterior and declared coarse statistic pointwise.
+
+The existing theorem's conditional discrepancy bound is used in its
+actual scope. At fixed exterior omega, disintegrate Q_i^omega over
+Y_i with kernel R_i. With p_i=R_i(W_i^c), and
+G_i={good boundary,p_i<=theta}, the new fiber is R_i on G_i^c and
+R_i(.|W_i) on G_i. The annealed original bound gives
+
+ d_i(omega)=int 1_(G_i) p_i dnu_i^omega <= alpha          (3.1)
+
+uniformly in omega. On a bad boundary the replacement is the identity.
+No smallness at every individual coarse value is assumed.
+
+There is a coupling preserving (omega,Y) in which U_i is the original
+fiber draw, and the replacement V_i equals U_i unless G_i and U_i is
+outside W_i. On that event draw V_i from R_i(.|W_i). The V_i marginal
+is exactly the declared conditioned fiber. Its discrepancy probability
+averaged over Y_i at fixed omega is d_i(omega), not a product of inverse
+acceptance probabilities. Different core couplings can be performed
+conditionally independently; independence is not needed for (3.2).
+The product application of the two half kernels in (iii) is retained
+when asserting the reflected factorization (3.3).
+
+For a positive-half observable F define c_i(F) as a deterministic upper
+bound on its oscillation when only core i is changed while its exterior
+and prescribed coarse value are fixed, allowing all other admissible
+fields in the supremum. Put O(F)=sum_i c_i(F), over positive-half cores.
+This is a finite or summable sum. Telescoping the changes and (3.1) give
+
+ E[|F(U)-F(V)| | omega] <= alpha O(F).                    (3.2)
+
+If F reads no interior it has O(F)=0. Merely |F|<=1 gives only c_i<=2,
+and O(F)<=2 times the number of read cores; it does not give O(F)<=2.
+
+Because the operations are half-local and reflected, applying them to
+(1.1) gives exactly
+
+ nu(dB,dV_+,dV_-)=pi(dB) Q'_B(dV_+) (theta_*Q'_B)(dV_-).  (3.3)
+
+Thus nu is reflection positive and has the SAME original boundary
+marginal pi. A gate or derived minimum reading the opposite half would
+invalidate this argument and is excluded by (i).
+
+Since B is among the unchanged exterior data, (3.2) implies
+
+ ||m_mu-m_nu||infinity <= alpha O(F),
+ m_mu=E_mu[F|B],       m_nu=E_nu[F|B].                   (3.4)
+
+Centering is an orthogonal projection in the SAME L2(pi). The reverse
+triangle inequality and (1.2),(3.3) therefore prove the new consumer
+
+ |sqrt(C_mu(F))-sqrt(C_nu(F))| <= alpha O(F).             (3.5)
+
+In particular a replacement-law margin sqrt(C_nu(F))>=c0 transfers
+to the full original law whenever alpha O(F)<c0. The proof is for the
+literal observable F evaluated on original and coupled link fields;
+it does not replace an original old-source mark by a fresh R reference.
+
+One may combine (2.2) with (3.5) if a conditional block contrast under
+nu has actually been proved. The Hahn-sign discriminator then needs
+its OWN oscillation estimate: (2.2) alone does not supply it.
+
+This does not identify nu with the all-selected TURN70 path. Its exact
+full coarse/exterior marginal is retained; bad fibers are unchanged,
+and its next outgoing density differs from the globally windowed law.
+There is no current proof of the required positive-time contrast for
+this nu. The known alpha, superlogarithmic in log(1/g), also does not
+pay a generic polynomial physical read count. Thick/flowed bounded
+probes would need the actual oscillation or another continuity bound;
+none is imported from a linear heat approximation.
+
+4. SHARP OBSTRUCTION: FIXED MARGINALS AND STRONG POSITIVE DENSITY BOUNDS
+
+This is an inference counterexample, not a Yang--Mills counterexample.
+Take two compact probability spaces with measures pi(db),nu(dx), and
+real smooth functions k,l with mean zero and |k|,|l|<=1. For
+0<=epsilon<=1/2 define
+
+ Q_b^epsilon(dx)=[1+epsilon k(b)l(x)]nu(dx),
+ mu_epsilon(db,dx_+,dx_-)
+       =pi(db) Q_b^epsilon(dx_+) Q_b^epsilon(dx_-).       (4.1)
+
+The denominator is exactly one. Both one-half marginals are exactly
+nu, and the boundary marginal is exactly pi, for every epsilon.
+Reflection exchanges the halves. For every complex half function A,
+
+ E[(Theta A)A]=int |Q_b^epsilon A|^2 dpi>=0.              (4.2)
+
+The complete density relative to pi tensor nu tensor nu lies between
+(1-epsilon)^2 and (1+epsilon)^2; it is smooth, positive and tends
+uniformly to one. Thus even volume-independent two-sided density
+bounds, exact normalization and unchanged nondegenerate one-body laws
+hold, more strongly than a partition stability bound.
+
+For every bounded real F of x alone,
+
+ E[F|b]=nu F+epsilon k(b)nu(F l),
+ C_mu_epsilon(F)=epsilon^2 pi(k^2)[nu(F l)]^2.            (4.3)
+
+Consequently all |F|<=1, even epsilon-dependent choices, satisfy
+C_mu_epsilon(F)<=epsilon^2. A positive-time marginal variance floor
+also fails to help: Var(F)=Var_nu(F) is unchanged, while its reflected
+norm vanishes. The zero mode is absent from the centered channel when
+epsilon=0 despite all these positive density statements.
+
+A concrete gauge-invariant compact example uses normalized SU2 Haar
+for pi and nu, with k(b)=Tr(b)/2 and l(x)=Tr(x)/2. These are smooth
+class functions, their Haar means vanish and their second moments
+are 1/4. For F=l,
+
+                 Var(F)=1/4,       C_mu_epsilon(F)=epsilon^2/64.
+
+The joint law is invariant under independent conjugations of each
+holonomy variable. This is a compact holonomy model, not a claim that
+it has the four-dimensional Wilson action or its continuum dynamics.
+Arbitrary independent flags with rare-event bounds can be appended to
+both halves without changing (4.3). Their complete normalization and
+marked rare-event upper bounds still supply no lower channel estimate.
+
+Unlike TURN71's selection counterexample, no rare selection reweights
+the coarse law here. The channel itself is arbitrarily weak while all
+the indicated unmarked marginal information stays identical. Hence
+positive coarse-marginal bounds cannot establish a nonzero reflected
+original mean without an additional ORIGINAL joint-channel estimate.
+
+5. WHAT SORT OF UNMARKED DENSITY ESTIMATE WOULD ACTUALLY SUFFICE
+
+A local joint comparison can avoid analytic action-source transport,
+but it must identify the original boundary/positive-time joint law.
+Here is one quantitative finite-regulator consumer.
+
+Let lambda be a comparison law for the SAME pair (B,X), and let E be
+a boundary event with p_lambda in [p0,1-p0], 0<p0<=1/2. Suppose its
+conditional X laws have TV contrast at least d0>0. If
+
+ ||Law_mu(B,X)-lambda||TV <= delta,
+ delta <= p0 d0/16,                                     (5.1)
+
+then some |F(X)|<=1 obeys
+
+                         C_mu(F)>=p0^2 d0^2/4.          (5.2)
+
+PROOF. Since d0<=1, delta<=p0/16. Both original event probabilities
+are at least p0/2. For either sign of E, subtract conditional ratios:
+the conditional-law TV error is at most 2delta/mu(E_sign), hence at
+most 4delta/p0. The two errors lower the original contrast by at most
+8delta/p0<=d0/2. Apply (2.2), with p(1-p)>=p0^2/4.
+
+For example, an exterior-INTEGRATED joint log-density comparison
+dmu_pair=e^L dlambda/int e^L dlambda with osc(L)<=eta implies
+TV<=tanh(eta/4). This follows by the usual extremal two-valued
+likelihood calculation: the likelihood ratio has maximum/minimum
+ratio at most e^eta, and the maximal TV is
+(e^(eta/2)-1)/(e^(eta/2)+1). It is the local JOINT density whose
+oscillation is needed. The scalar partition factor alone cancels
+and does not bound this oscillation or supply d0.
+
+The comparison law need not be reflection positive for this consumer;
+(1.2) is used for the actual original Wilson law. Its positive
+contrast must still be known. Mere comparability to a product law
+does not supply it, as Section 4 demonstrates. Uniform small errors
+relative to an explicitly coupled reference could suffice; the
+retained native results do not yet establish those hypotheses for
+an original positive-time physical block.
+
+6. CHECK AGAINST THE ACTUAL RETAINED INPUTS
+
+The following source scopes were inspected, rather than inferred from
+the phrases "coarse density" or "ultraviolet stability".
+
+(a) normalization_to_local_laws_turn56.txt, Section 3, retains B119
+(2.18)--(2.20)'s complete terminal density and the full dated census.
+Its usable unmarked upper bound is an INTEGRATED positive envelope
+M_weak(V)<=exp(C_+V); the lower bound is the original total mass
+I(V)>=exp(-C_-V). It explicitly rejects bounding a naked prefactor
+by exp(CV) before paying dated field-volume costs. These statements
+are not pointwise two-sided bounds for an original (B,X) joint law,
+nor a contrast between its boundary-conditioned versions. Even the
+stronger product-comparability example in Section 4 is insufficient.
+
+(b) large_I_useful_estimates_turn60.txt and the supplied Large-I
+attachment separate classical background geometry, fixed branch
+analyticity and the normalized reference q from physical original
+correlation estimates. The literal R q preserves the appropriate
+integrated mass; it redraws a current field. The original old record
+must be retained. A nondegenerate q-marginal is not the distribution
+of the old original positive-time block X. Its variance cannot be
+substituted into (1.2) or (2.2).
+
+(c) turn74_native_transport_history.txt, Sections 2--4, gives the
+exact source recursion on the admitted positive native prefix:
+X'=KX and Z'=KZ+Cov_K(X,Y), with final E Z+Cov(X,Y). At a frozen R
+choice the new q is source-free and the old means stay in the old
+integral. The unmarked current output therefore does not identify
+the original K_0 of (1.3). Formal transport fixes this identity but
+does not supply a lower bound for it.
+
+(d) The TURN73 private jets concern original reads which are STILL
+wholly owned by the specified raw lineage. Their fixed-order
+suppression and connected estimates are upper bounds at the stated
+complete outer data. They neither cover the original regular-origin
+and straddling complement nor determine the exterior conditional
+mean of a general bounded discriminator from Section 2. Boundedness
+of that discriminator does not automatically give the analytic
+source-labelled native norm or an old-private ownership identity.
+
+(e) TURN74's native regular g^2 response and conditional neutral
+sequence retain their same-map fixed-core preparation/contraction
+gates. They do not identify a bounded original block discriminator
+with an admitted fixed-core mark after every elimination. Even a
+complete upper two-mark estimate would not alone supply a positive
+contrast d0 in (5.1).
+
+(f) TURN37 supplies precisely the bare conditional law and uniform
+annealed discrepancy used in Section 3, not an arbitrary generated
+native fiber estimate. Its oscillation comparison was already proved;
+the new content here is its half-local RP and reflected-norm consumer.
+TURN70 remains a selected law with a different complete path weight.
+It does not compute the positive margin for nu in (3.5).
+
+There is also an actual negative test for one tempting bounded
+observable class: temporal_filter_physical_probe_turn67.txt, Section 3,
+proves from original isotropic Wilson private-edge conditionals that
+polynomially many separated-time thin-loop holonomies are conditionally
+close to independent Haar. Every uniformly bounded function of those
+records has reflected norm <=2 sum_j epsilon_j, tending to zero at the
+stated logarithmic weak-coupling scaling. Thus arbitrary bounded
+thresholding of this specific data cannot implement the contrast
+target. Thick/flowed records and renormalized unbounded composites are
+outside that negative result; they require their actual estimates.
+
+7. PRECISE MATHEMATICAL CONSEQUENCE
+
+For bounded original positive-time probes, one can now pose a concrete
+source-free alternative to the action-density induction: establish an
+original boundary-conditioned block contrast, or compare the original
+local joint law to an explicitly coupled law as in (5.1). The existing
+bare replacement can transfer such a margin by (3.5) when its total
+core oscillation is controlled. These are explicit finite-regulator
+consumers and not a declaration that the needed contrast is known.
+
+The unmarked native estimates currently retained do not prove that
+contrast. Coarse-marginal positivity, a nonzero marginal variance,
+mass preservation, rare private histories, and even uniform product
+density comparability do not imply it. Section 4 proves this precise
+logical obstruction while keeping reflection positivity and both
+marginals fixed.
+
+No selected law is substituted for the original Wilson law, no
+boundary-only fluctuation is called a positive-time physical witness,
+and no ordinary same-support L2 condition is imposed on renormalized
+unbounded composites. Those may instead use the separate OS/source
+route already retained. Neither route is completed here; no continuum
+YM4 existence or nontriviality claim is made.

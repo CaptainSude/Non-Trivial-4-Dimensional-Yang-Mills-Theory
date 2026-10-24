@@ -1,0 +1,252 @@
+SIGNED DERIVATIVE WITNESS: POSITIVE ENERGY AND NONZERO MOMENTUM
+18 October 2026. Working extension of the sign-packing witness.
+
+Scope. This strengthens random_sign_packing_nontriviality without changing
+its source estimates. It proves strict positivity of a signed Maxwell
+benchmark, then identifies the resulting OS vector. It rules out an
+explanation by vacuum-sector fluctuations. It is relative to the same
+source/early-Gaussian modules and the existing OS reconstruction; it is
+not a mass-gap or vacuum-uniqueness theorem.
+
+1. A COMPACT TEST WITH ZERO INTEGRAL
+
+Choose nonzero nonnegative smooth functions
+
+ eta in C_c^infinity((tau,2tau)), tau>0,
+ chi in C_c^infinity(R^3),
+ psi(t,x)=eta(t)chi(x).
+
+The first choice f_1=partial_t psi already annihilates every zero-energy
+vector, as shown below. For a stronger witness use
+
+             f=partial_t partial_(x1) psi.             (1)
+
+Then f is real, smooth, compactly supported in the strict positive-time
+halfspace, sign-changing, and integral f=0. Its reflected test is
+(theta f)(t,x)=f(-t,x); this includes the correct derivative sign and
+must not be replaced by an independently chosen positive lobe.
+The two supports are separated by at least 2tau in time. Multiply psi
+by a fixed constant if a prescribed unit C1 ceiling for f is desired.
+The lower bound below changes by that fixed constant squared only.
+
+2. STRICT MAXWELL REFLECTED POSITIVITY FOR THIS SIGNED TEST
+
+The actual free benchmark is the scalar quadratic energy
+E=(1/2)sum_(mu<nu,color)F_(mu nu)^2 in the normalized trace metric.
+Away from coincidences its connected Euclidean kernel is
+
+                 K_E(x)=C_M |x|^-8, C_M>0.            (2)
+
+This follows directly from the already used curvature Wick formula.
+For the standard component normalization of broad_packet_actual_gaussian,
+D(x)=1/(4pi^2|x|^2) for each potential component. At x=(t,0,0,0), the
+six diagonal curvature covariances are three copies of -1/(pi^2 t^4)
+and three copies of +1/(pi^2 t^4); all off-diagonal entries vanish.
+Wick's factor dim(g)/2 gives C_M=3 dim(g)/pi^4. Euclidean covariance
+and homogeneity give(2). Only C_M>0 is needed below, so harmless trace
+convention changes do not affect the argument.
+
+For sigma>=0 let D_sigma be the Euclidean scalar propagator with mass
+squared sigma. Its heat-kernel formula, for x!=0, gives
+
+ D_sigma(x)=int_0^infinity (4pi s)^-2
+                exp[-|x|^2/(4s)-sigma s] ds.
+
+Integrating sigma^2 first yields
+
+ int_0^infinity sigma^2 D_sigma(x) d sigma
+   =(1/(8pi^2))int_0^infinity s^-5 exp[-|x|^2/(4s)]ds
+   =192/(pi^2 |x|^8).
+
+Consequently the separated kernel has the positive representation
+
+ K_E(x)=int_0^infinity rho(sigma) D_sigma(x)d sigma,
+ rho(sigma)=(C_M pi^2/192) sigma^2.                    (3)
+
+This identity is used only at positive separation; it makes no claim
+about a unique extension of |x|^-8 at its ultraviolet contact point.
+For t>0 the spatial Fourier transform of D_sigma is
+exp(-omega t)/(2omega), omega=sqrt(|p|^2+sigma). Thus for any real
+positive-time compact smooth f,
+
+ K_Maxwell(f,theta f)
+ =int_R3 dp/(2pi)^3 int_0^infinity d sigma
+       rho(sigma)/(2omega) |F(omega,p)|^2,              (4)
+ F(omega,p)=int_(t>0)dt dx f(t,x) exp(-omega t-ip.x).
+
+The time support gap makes every differentiation and integral here
+absolutely convergent; the high-energy tail has exponential decay.
+For f_1=partial_t psi, integration by parts gives
+F_1=omega Psi. For the stronger choice(1), it gives
+
+             F(omega,p)=i omega p_1 Psi(omega,p).      (5)
+
+In particular there is no sign cancellation in its reflected norm:
+
+ K_Maxwell(f,theta f)
+ =int dp d sigma/(2pi)^3
+       rho(sigma) omega p_1^2/2 |Psi(omega,p)|^2>0.    (6)
+
+To see strictness quantitatively, hat chi(0)=int chi>0, so |hat chi(p)|
+has a positive lower bound in a small ball around zero. The Laplace
+transform of nonzero eta>=0 is positive and bounded below on every
+fixed compact interval of positive omega. Restrict(6) to a small
+positive-volume p region with p_1 bounded away from zero, and to a
+compact sigma interval inside (0,infinity). Every factor is then
+bounded below by a positive constant. Denote the resulting fixed
+shape constant by K_f>0. The same proof without p_1^2 proves the claim
+for f_1.
+
+3. THE INTERACTING SOURCE/PACKING ESTIMATES ARE UNCHANGED
+
+Use the fixed shape f from(1), with its reflected shape theta f, in
+the broad packet at witness scale s. All earlier source arguments are
+holomorphic/multilinear in arbitrary signed smooth profiles. Their
+error bounds use absolute C1 norms, support size and separation;
+none required the profile itself to be nonnegative. The initial
+gradient, tensor-hat phase error, regular marked comparison, R deletion,
+Gaussian quadrature and pre-witness mixed tail therefore retain their
+proved bounds with new fixed shape constants.
+
+In particular the exact leading factor remains
+
+       q_s^2 g_s^4 K_f,   q_s=-Gamma'_s,               (7)
+
+not q_s g_s^4 and not an additional derivative-dependent power of
+rho. The shape f(x/rho) is an amplitude-one rescaled shape; its
+dimensionless derivatives are already in the definition of f.
+The degree-minus-eight continuum kernel cancels the two four-volume
+rescalings exactly as for the old positive packet.
+
+For random-sign packing, the sums of disjoint copies of f and theta f
+still have sup norm O(1), Lipschitz norm O(R_N^-1), independently of
+their count. The original fixed-cell h bound, exact h12-h1*h2 identity,
+and causal re-terminalized late-vacuum estimate therefore give
+
+ Cov_bare(O(f_R),O(theta f_R))
+       =q_s^2 g_s^4 K_f+o(g_s^4),                     (8)
+
+with the same parameter order as random_sign_packing_nontriviality.
+Here rho=Gamma_w^B and the witness band Gamma_w are fixed before
+removing regulators, R=rho ell^{-(N-s)}, and a subsequence fixes N-s.
+Choose the band sufficiently large that the absolute error is at most
+(q_*^2/2)g_s^4 K_f. The continuum limit then has
+
+             ||v_(f_R)||_OS^2 >= c_w>0,               (9)
+
+where c_w can be chosen as q_*^2 K_f/[2(Gamma_w+C_q)^2].
+
+Covariance and reflected norm: work with the centered scalar field,
+or subtract the exact finite-regulator mean in the OS vector. The
+reflected connected covariance is then exactly its squared OS norm.
+In the continuum, translation invariance makes the one-point function
+constant, and integral f_R=0, so this mean subtraction is zero for
+the present test. If exact finite-mesh zero mean is wanted, replace
+the two derivatives in(1) by lattice differences of psi at that mesh;
+periodic sums telescope in each direction. Their supports remain in
+the strict positive halfspace at sufficiently fine mesh and they
+converge in every required smooth-test norm. This optional convention
+is unnecessary for the connected identity(8).
+
+4. WHY THIS VECTOR HAS GENUINE POSITIVE ENERGY
+
+Let v_chi=[Phi(chi)] be the one-field OS vector for a positive-time
+test chi, using the reconstructed centered scalar field. This use of
+one-field vectors and their reflected pairings is entirely inside the
+off-collision test domain. Let
+
+ T(a)=exp(-aH),  U(y)=exp(i y.P),
+ T(a)v_psi=v_(psi(t-a,x)),
+ U(y)v_psi=v_(psi(t,x-y)).
+
+Since psi has positive distance from the time-zero plane, these test
+translations exist in a neighborhood of zero. Smooth-test convergence
+and continuity of the separated S2 pairing imply convergence of their
+difference quotients in OS norm. Therefore
+
+ v_psi in D(H P_1),
+ v_(partial_t psi)=H v_psi,
+ v_(partial_(x1) psi)=-iP_1 v_psi,
+ v_f=-i H P_1 v_psi.                                 (10)
+
+These are strong derivative statements, not formal integration by
+parts with an uncontrolled point field. Joint-generator domains follow
+by the same test-difference argument for the mixed derivative and the
+strong commutation of H and P_1.
+
+For psi_R(x)=psi(x/R) and f_R(x)=f(x/R), the physical-unit version is
+
+                 v_(f_R)=-i R^2 H P_1 v_(psi_R).      (11)
+
+For the simpler f_1 packet the factor is R and only H appears.
+Let E_H({0}) and E_(P1)({0}) be the joint spectral projections. From
+(11),
+
+ E_H({0})v_(f_R)=0,  E_(P1)({0})v_(f_R)=0.            (12)
+
+Thus(9) is NOT a fluctuation among zero-energy vacuum vectors, even
+if that subspace is larger than the span of the chosen Omega. It also
+cannot live entirely at zero spatial momentum. Its joint spectral
+measure has positive mass with E>0 and p_1!=0. Since it is a finite
+nonzero measure, some bounded region with E>=1/k and |p_1|>=1/k has
+positive mass. This does not imply a lower bound for the spectrum of
+H on ALL nonvacuum vectors, and hence does not prove a mass gap.
+
+5. VACUUM-PHASE DECOMPOSITION
+
+Suppose the reconstructed theory is decomposed by a VALID vacuum-phase
+or central-decomposition theorem into positive-energy covariant sectors,
+with translations, vacuum vectors and smeared fields decomposable:
+
+ H=integral^direct H_xi d pi(xi),
+ H_generator=integral^direct H_xi,generator d pi(xi),
+ P=integral^direct P_xi d pi(xi),  Omega=int^direct Omega_xi.
+
+The direct-integral spectral calculus applied to(11) gives, almost
+everywhere,
+
+ v_(f_R),xi=-iR^2 H_xi P_(1),xi v_(psi_R),xi,
+ ||v_(f_R)||^2=int ||v_(f_R),xi||^2 d pi(xi)>0.         (13)
+
+Therefore a positive-measure set of sectors has a nonzero witness
+orthogonal to its entire zero-energy and zero-P1 subspaces. Restricting
+to the field-generated cyclic subtheory in such a sector retains the
+witness. This is the precise preservation claim needed when extracting
+a vacuum phase. It is not inferred merely from a positive total
+connected covariance of a test with nonzero integral.
+
+Equivalently, in a decomposition into translation-invariant states
+with appropriate reflection-positive reconstructions, each phase's
+one-point value is c_xi integral f_R=0. The between-phase variance of
+one-point functions vanishes, so the total reflected covariance is the
+average of the phase reflected norms, with no vacuum-mixture term.
+
+CAUTION: an arbitrary ergodic decomposition of a translation-invariant
+Euclidean measure is NOT asserted here to preserve RP or the other
+quantum axioms. Those properties must come from the chosen valid phase
+decomposition theorem. Formula(13) is the consequence once that theorem
+applies; it cannot replace its hypotheses.
+
+6. WHAT LORENTZ COVARIANCE SAYS ABOUT ZERO SPATIAL MOMENTUM
+
+Positive energy and the cone H>=|P| alone allow a spatially constant
+quantum system with H>0 and P=0. Thus f_1=partial_t psi by itself
+does not exclude that possibility before Lorentz covariance is known.
+Our stronger mixed derivative(1) excludes it directly by(12).
+
+In a SEPARABLE Hilbert space carrying a Lorentz-covariant joint
+translation spectrum, the spectral projection of
+
+       S={(E,p): E>0, p=0}
+
+is zero. Indeed a boost of rapidity r in direction1 maps S to the ray
+S_r={(E cosh r,E sinh r,0,0):E>0}. Distinct rapidities give disjoint
+rays. If E(S) were nonzero, covariance would make every E(S_r)
+nonzero, providing uncountably many orthogonal nonzero subspaces,
+contrary to separability. This rules out a normalizable state whose
+entire positive-energy momentum measure sits on the rest line.
+
+It does NOT remove rest-energy points from the topological spectrum:
+ordinary massive mass shells contain (m,0), although their exact
+point spectral projection is zero. No stronger statement is needed
+for the present witness, which already has p_1!=0 without that argument.

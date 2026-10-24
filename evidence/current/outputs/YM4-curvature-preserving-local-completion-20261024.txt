@@ -1,0 +1,247 @@
+CURVATURE-PRESERVING LOCAL COMPLETION AND FIRST-BARE LOCALITY
+24 October 2026. Root derivation; independent audit requested.
+
+RESULT AND SCOPE
+
+A small-curvature coarse field on a filled box has a finite-read
+completion, equal to its canonical representative on the inner box and
+flat outside the outer box. The completed plaquette bound is C delta,
+provided R^2 delta is sufficiently small. Its raw-link bound is C R delta.
+These two bounds must not be confused. CMP102 Theorem1 admits this field
+as determining data for the actual homogeneous minimum: its fine
+curvature AND physical current have cap C delta, independently of R.
+
+Combined with the independently checked first-bare endpoint action and
+physical-source comparisons, this gives finite-read approximations to an
+original normalized first-success thin observable on the full admitted
+small-curvature family. A finite telescoping expansion through order
+N=O(r^2) has exponentially small neighborhood coefficients and a rare
+terminal error. It does not require the original field to lie in one
+global canonical small-link box. This note proves the real construction.
+An analytic coefficient catalogue requires the separate complex/source
+projection check; all-history source transport and continuum existence
+are not asserted here.
+
+1. GEOMETRY, ONE TREE, AND THE ACTUAL AREA COUNT
+
+Work in coarse lattice units, dimension d=4, on an embedded filled cube
+Q_(2R) centered at a chosen source root o=0. R>=R0 is integral; the cube
+and one extra incident collar do not wrap the finite torus. Include every
+bond/plaquette used below. Suppose
+
+                 ||V(partial p)-1||_op <= delta.               (1)
+
+Use coordinate order 1,2,3,4 for every radius. P_x goes from 0 to x by
+the signed coordinate segments in that order. These paths form one
+tree: the parent of x deletes one signed unit of its highest-index
+nonzero coordinate toward zero. Restriction to a smaller centered cube
+gives the same paths, without choosing a new gauge at each radius.
+Let V(P_x) be the ordered parallel transport. Define
+
+         C(V)_(x,y)=V(P_x) V_(x,y) V(P_y)^(-1).                (2)
+
+For y=x+e_j, commute the single e_j edge past the later signed segments
+k>j. The resulting loop is filled by width-one strips of total area
+sum_(k>j)|x_k| <= 2(d-1)R. Signed prefix cancellation gives the same
+bound when x_j=-1,y_j=0 or other coordinates are negative. The strips
+stay in Q_(2R). The complete path length is at most C_d R. This proves
+an O(R), not O(R^2), elementary-plaquette count for each canonical edge.
+
+Each strip insertion changes the loop by a unitarily conjugated
+plaquette or its inverse. For unitaries, ||prod U_i-1||<=sum||U_i-1||.
+Therefore
+
+                 ||C(V)_e-1|| <= C_d R delta.                 (3)
+
+When C_d R delta is below a fixed logarithm margin, set
+A_e=-i Log C(V)_e. A_e is Hermitian traceless for SU(2), A_(-e)=-A_e,
+and ||A_e||<=C R delta. Equation(2) is a genuine gauge transformation
+inside the cube, so its plaquette bound remains (1).
+
+2. CUTOFF PROOF WITH ALL CROSSING PLAQUETTES
+
+Choose an unoriented bond function chi_e in [0,1], equal to 1 on every
+bond of Q_R including its required incident collar, and equal to 0
+before the outer boundary of Q_(2R), with a complete one-cell zero
+collar. Neighboring edges of a plaquette obey |chi_e-chi_f|<=C/R.
+One may sample a fixed smooth radial/cube cutoff at bond midpoints,
+with a fixed inner/outer spare fraction; enlarge R0 for rounding.
+Set
+
+ Vhat_R,e=exp(i chi_e A_e) inside Q_(2R), and Vhat_R,e=1 outside. (4)
+
+This respects orientation and agrees exactly with C(V) on Q_R. It
+depends only on the filled input Q_(2R); outside it is exactly flat.
+To bound its curvature, orient a plaquette's four edges cyclically.
+The four-factor analytic product expansion gives, for ||A_e||<=a_*:
+
+ ||prod_(e in partial p)exp(i A_e)-1-i sum_e A_e||
+                                      <= C max_e||A_e||^2.
+
+Consequently (1),(3) imply
+
+                  ||sum_e A_e|| <= C(delta+R^2 delta^2).      (5)
+
+For any one edge e0 of the plaquette,
+sum chi_e A_e = chi_e0 sum A_e +sum(chi_e-chi_e0)A_e.
+The second sum is bounded by C R^-1 * R delta=C delta. Applying the
+same four-factor estimate to chi A now proves
+
+       ||Vhat_R(partial p)-1|| <= C(delta+R^2 delta^2).         (6)
+
+Crossing plaquettes have their nonzero edges in the declared input
+collar; the remaining A may be assigned zero because chi=0 there.
+The same estimate applies, or all four completed edges are identity.
+In particular, if
+
+                          R^2 delta <= c_*,                  (7)
+
+then every completed plaquette is <=C_* delta, with constants fixed
+before R and delta. Condition(7), with c_* small, also implies the
+logarithm margin required for (3) when R>=1. No bound on an unfilled
+surface, total topological charge, or torus winding is being assumed.
+This is a local completion on an embedded box, not a global flattening.
+
+Under an arbitrary coarse gauge h on the input cube, C(V^h) is the
+constant root conjugate h(0) C(V) h(0)^(-1). The principal log and (4)
+respect this conjugation; the exterior identity does too. Thus Vhat_R
+has exact covariance by the one root matrix. The whole family uses
+the same root/tree; Vhat_R and Vhat_(R-1) agree on Q_(R-1).
+
+At each real admitted input, (4) is holomorphic on a sufficiently
+small complex relative-link neighborhood. Products contain O(R)
+unitary factors. On a tube with R times its radius small, their first
+and second variations have O(R) and O(R^2) sup-norm bounds. The log is
+on a fixed branch and the exponential is on a fixed bounded chart.
+Thus these completion derivative prices are polynomial. This finite
+map assertion alone does not prove holomorphic normalized source laws.
+
+3. NATIVE MINIMUM, CURRENT, AND SAME-FORM AUXILIARY LAW
+
+CMP102, The Variational Problem and Background Fields (1985), printed
+278 condition(7), assumes small plaquettes of the determining field.
+Printed279 Theorem1 states that for ARBITRARY such V, epsilon1<a1,
+there is a minimal orbit in U_k(B3 epsilon1) intersect B_k(V). Its
+definition on printed278(2) contains both scaled curvature and scaled
+physical current. The orbit is the unique critical orbit in U_k(eps0)
+when B3 epsilon1<=eps0<=a0. B109 printed260(1.1)--(1.2) restates this
+for homogeneous periodic data; printed253--254 transfers the prior
+results to its actual equivariant averaged-contour convention.
+
+Apply this with epsilon1=C_*delta, not C R delta. For delta small with
+a fixed spare native margin, Vhat_R has the actual first minimum
+U_R, with curvature and current cap C delta independent of R. Select
+the original averaged-axial representative U_R(y,x)=1. The fixed-block
+soft-gauge conversion and the complete first primitive estimates in
+first_bare_endpoint_action_comparison_20261024 Section1 and Section5
+give the weighted complete gap on every product K_S with g S<=eps_cap.
+The actual Wilson/current/gauge/Haar/private-pivot formula therefore
+defines a positive same-form auxiliary law on K_r and its containing
+products. No inherited interaction is present at this literal grade.
+
+This admission is for the auxiliary minimum/action. It does not assert
+that an original P0/P1/Q1 selector has value one at Vhat_R. Original
+record probabilities and scalar masses are not replaced by this law.
+
+On any FIXED complete packet near the root, canonical coarse links
+are O(C_packet delta), by the same strip count at that packet's own
+radius. Averaged-axial gauge, bounded-area within-block loop comparisons
+and the exact coarse average then give raw fine links O(C_L C_packet
+delta). This price is independent of the exterior completion radius;
+if the packet itself grows, its actual area price must be retained.
+This supplies the local source chart and does not claim all fine links
+over Q_R are uniformly O(delta) in the one global root gauge.
+
+4. ORIGINAL COARSE GAUGE COVARIANCE AND LOCAL APPROXIMANTS
+
+Let the original full coarse field V have the actual homogeneous
+first-success admission with curvature cap delta and source amplitude
+osc(f)<=eta. The thin gauge-invariant source f has a fixed complete
+read P passing the unused-private-pivot test. Fix its completed local
+free reads I,B and packet T, as in the endpoint-source note. The
+source must not have independently held physical arguments outside I.
+
+Extend the tree gauge from Q_(2R) arbitrarily to coarse vertices of
+the finite torus. Lift this gauge block-constantly to the fine lattice.
+The actual averaged-axial and coarse-average conventions are equivariant;
+the independent noise variables transform by orthogonal adjoint maps.
+Their product balls and Lebesgue/Haar/coarea conventions are preserved.
+Thus simultaneous coarse covariance (B119(1.17)) gives the same original
+normalized gauge-invariant source value after this transformation.
+It does not require invariance under arbitrary fine gauge changes of
+the original noise cut. Denote this transformed original endpoint V^c.
+It agrees with Vhat_R on Q_R and retains the original curvature/current
+admission. Outside Q_R no raw-link comparison is needed.
+
+Define F_R(V)=T_(Vhat_R)f by the same-form auxiliary law of Section3.
+It is a function only of V on Q_(2R). It is gauge invariant because
+the completion changes only by constant root conjugation. The normalized
+original T_V f is compared with F_R; it is never replaced without error.
+
+For the registered original first cap delta<=C_0 g r, the endpoint
+source theorem with epsilon_cmp=C delta and S=K r yields
+
+ |T_V f-F_R(V)| <= C eta [P_I r^2 exp(-kappa(R-R0))
+                               +( |I|+|B| ) exp(-c_r r^2)].    (8)
+
+The factor sqrt(|B|) in noise TV is absorbed in the displayed fixed-read
+polynomial P_I. A fixed sufficiently large K and R0 ensure both rechart
+inclusions; require g K r<=eps_cap. The common-shell minimum comparison
+uses curvature/current epsilon_cmp=C delta, not the global R delta
+raw-link cap. For more general delta replace r^2 by
+1+P_I delta r/g and keep the explicit local rechart condition.
+The original exterior marginal includes its exact Z_I and full raw
+normalizer throughout. Equation(8) compares normalized source means,
+not raw endpoint masses or probabilities of the original histories.
+
+5. FINITE TELESCOPING WITH THE CUT TAIL KEPT
+
+For R0<=n<=N use the same construction at integer radius n, and set
+
+ a_R0(V)=F_R0(V),  a_n(V)=F_n(V)-F_(n-1)(V) for n>R0.
+
+The two auxiliary endpoints agree on Q_(n-1), so the same proof gives
+
+ |a_n(V)| <= C eta [P_I r^2 exp(-kappa(n-R0))
+                                  +P_I exp(-c_r r^2)].        (9)
+
+This is a genuine finite-read, gauge-invariant real expansion. Its
+constant part stays in a_R0; every a_n, n>R0, annihilates constant
+observables. The original exact identity is
+
+ T_V f = sum_(n=R0)^N a_n(V) + E_N(V),  E_N=T_V f-F_N(V).       (10)
+
+There is ONE terminal error from (8), not the sum of all cut errors.
+If N<=sigma r^2 and sigma is fixed with kappa' sigma<=c_r/2, where
+0<kappa'<kappa, the second term of (9) is bounded by a fixed multiple
+of exp[-kappa'(n-R0)]. Hence all finite coefficients satisfy
+
+ |a_n| <= C eta P_I(1+r^2) exp[-kappa'(n-R0)].                  (11)
+
+If also N>=sigma0 r^2 for fixed sigma0>0 and r is sufficiently large,
+(8) bounds the terminal error by eta poly(r) exp(-c' r^2).
+The simultaneous geometric requirement is N^2 delta<=c_* and the
+torus must contain the largest input cube and collar. In the native
+weak regime delta<=C g r, r=A log^p(g^-2), any fixed N~r^2 satisfies
+N^2 delta=O(g r^5)->0. These explicit conditions cannot be omitted for
+a different radius/coupling prescription or a small wrapping torus.
+
+The rare-tail floor is not claimed to vanish as n tends to infinity at
+fixed g. We have used a FINITE depth n<=O(r^2) and retained a terminal
+error. No assertion that F_n itself is holomorphic for nonsmooth f is
+made. To use (11) as analytic RG source coefficients, replace F_n by
+consistent analytic physical-source projections, prove their complex
+domains at these completed backgrounds, and retain their cut errors.
+That is the next finite interface. The signed native Gaussian drift,
+all-scale source transport, original complement summation, continuum
+state identification and nontriviality remain separate requirements.
+
+PRIMARY SOURCES AND PRODUCERS
+
+CMP102 primary: work/handoff/original-workspace/work/package/work/
+admission_sources/cmp102_variational_primary.txt, printed278--279.
+B109 primary: same package/work/turn125_primary/b109_full.txt,
+printed253--254 and260. B119 printed248--250, especially(1.12)--(1.19).
+first_bare_endpoint_action_comparison_20261024 and compiled audit.
+first_bare_endpoint_source_marginal_20261024 and connected audit.
+native_common_shell_relative_minimum_comparison_20261023 and audit.

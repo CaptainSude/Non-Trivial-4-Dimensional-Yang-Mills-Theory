@@ -1,0 +1,286 @@
+EXACT ENDPOINT MODULUS BUDGET AND ITS ITERATION LIMIT
+24 October 2026. audit_two_root. Intermediate proof note; no archive edits.
+
+RESULT
+
+The elementary minimum estimate in the existing endpoint proof admits
+a sharper, explicit summation. It replaces an arbitrarily selected
+Holder exponent by a quantitative spatial-rate/modulus tradeoff. At
+zero spatial output rate it gives a logarithmic modulus loss. At any
+fixed positive spatial output rate it still gives a positive power
+loss. Neither version is a uniform RG closure. Original-root density,
+physical gR, changing reference laws, and their actual admission all
+remain in the recursion below.
+
+This is a finite consumer of stated endpoint/shell estimates. It does
+not assert that the actual native correction saturates its bound or
+that its true regularity deteriorates. A better native joint estimate
+could avoid this method's loss.
+
+1. THE EXACT SUM IN THE EXISTING PROOF
+
+Use a d-dimensional bounded-degree lattice with polynomial ball and
+shell counts; d=4 in the intended application. F has an actual hybrid
+coordinate profile A exp[-lambda d(i,P)]. The existing bounded-
+interaction covariance consumer implies, for a bounded function G
+supported in B_n(b),
+
+ |Cov(F,G)| <= C A (1+n)^d osc(G)
+                    exp[-lambda (d(P,b)-n)_+].                 (1)
+
+Assume the difference of one correction rooted at b has an EXACT
+shell decomposition, after removing its noise-independent scalar,
+with
+
+ osc(G_(b,n)) <= K min{u exp[-eta d(b,q)],
+                         chi (1+n)^(d-1) exp[-eta n]}.         (2)
+
+Here q is the changed determining coordinate. The first cap is its
+actual endpoint modulus; the second is the complete current-noise
+shell cap. No mixed physical derivative is assumed. The old endpoint
+proof has u=T s and chi=gR. For a general input modulus these are
+replaced as in Section4.
+
+Choose a FIXED eta_bar<eta, absorbing the displayed shell polynomial
+into its reserve. For 0<kappa<=lambda and 2 kappa<eta_bar, (1),(2),
+the triangle inequality d(P,q)<=d(P,b)+d(b,q), and the root shell
+count give
+
+ sum_(b,n) |Cov(F,G_(b,n))|
+ <= C A K exp[-kappa d(P,q)] S_kappa(u,chi),
+
+ S_kappa(u,chi)
+  =sum_(r,n>=0) (1+r)^(d-1)(1+n)^d exp[kappa(r+n)]
+                min{u exp[-eta_bar r],chi exp[-eta_bar n]}.    (3)
+
+This counts BOTH the correction roots b and their noise shells.
+An initial family with density rho of labels per lattice cell costs
+rho on the right. All constants in (3) are independent of volume.
+The original full support may have extra fixed size powers; they
+only change the explicitly finite polynomial powers below.
+
+Write m=min(u,chi), M=max(u,chi), theta=kappa/eta_bar. For positive
+u,chi,
+
+ S_kappa(u,chi)
+ <= C_(kappa,eta_bar) m^(1-theta) M^theta
+                         [1+log(M/m)]^d.                     (4)
+
+When either argument is zero the sum is zero. At kappa=0 separately,
+
+ S_0(u,chi) <= C_eta_bar m [1+log(M/m)]^(d+1).                  (5)
+
+Proof of (4): suppose u<=chi and put N=log(chi/u)/eta_bar.
+Split the sum at n=r+N. Below this line the minimum is u exp(-eta_bar r).
+The n-sum is at most C(1+r+N)^d exp[kappa(r+N)]. The remaining r-sum
+has decay eta_bar-2kappa. Above the line, summing the exponential
+n-tail gives the SAME factor u exp(kappa N), times the same polynomial.
+This is u^(1-theta) chi^theta(1+N)^d. If u>=chi interchange r,n;
+the two polynomial powers differ by one, so the same upper power d
+is sufficient. At kappa=0 the lower finite n-sum has power d+1;
+the reverse ordering has power d, bounded by the stated d+1.
+
+The constants in (4) deteriorate as kappa approaches zero or
+eta_bar/2, or as the earlier reserve eta-eta_bar vanishes. Formula
+(5) is a different bound; it does not assert continuity of those
+particular constants. Extra support powers can be handled by replacing
+d in (4) and d+1 in (5) by the corresponding larger fixed powers.
+
+2. WHAT THIS SAYS ABOUT MODULI AND RATES
+
+For s tending to zero, chi>0 fixed and u(s) approximately s^alpha,
+(4) has modulus
+
+ C chi^theta s^[alpha(1-theta)] (1+log(1/s))^d.                (6)
+
+Thus exact summation improves the quantitative budget but does not
+remove the power loss when a positive spatial rate is demanded by
+this proof. In old lattice units the output rate is kappa. If actual
+blocking gives d_old>=L d_new-C, its rate in the new lattice is at
+most L kappa before other reserves.
+
+Consequently, if a proposed induction requires a rate floor nu_*>0,
+while the available input/noise-shell exponents eta_bar are bounded
+above by a fixed nu^*, then it must take
+
+ kappa_j>=nu_*/L,   theta_j>=nu_*/(L nu^*).                    (7)
+
+The orders supplied by this particular proof then obey
+alpha_(j+1)<=alpha_j(1-theta_j); a fixed positive order cannot survive
+arbitrarily many steps. Choosing summable theta_j instead gives up
+the asserted rate floor, unless an ADDITIONAL estimate replenishes
+the spatial exponent beyond these hypotheses. A fixed blocking
+factor helps a finite step, but does not by itself refute (7).
+
+At zero spatial output rate (5) preserves a power with logarithmic
+loss: the majorant is omega(s)[1+log(B/omega(s))]^(d+1) when omega(s)
+is the smaller argument. This does not produce a stable concave
+modulus at fixed parameter contraction. Indeed if omega is nonzero,
+continuous at zero and concave, omega(tau s)>=tau omega(s) for fixed
+0<tau<1. The quotient of this TRANSFORMED MAJORANT at tau s by
+omega(s) diverges as s tends to zero. This is an obstruction to
+closing this majorant in the same modulus, not a lower bound on
+the actual normalized response.
+
+Moreover Dini continuity alone cannot transfer an exponentially
+localized minimum response into an exponentially localized endpoint
+response. For example omega(s)=[log(e/s)]^-p, p>1, is Dini near zero,
+but omega(s exp(-sigma r)) decays only polynomially in r. A positive
+upper scaling index, such as
+
+ omega(t v)<=C v^alpha omega(t), 0<v<=1, alpha>0,              (8)
+
+or a separate jointly spatial endpoint estimate, is needed for
+that composition. Power-log moduli can satisfy weaker versions of
+(8) with a rate reserve, but their constants are not uniform when
+the logarithmic powers accumulate.
+
+3. A SUFFICIENT MIXED ENDPOINT ESTIMATE, AND WHY IT IS NEW
+
+If instead of (2) one proves the genuinely JOINT bound
+
+ osc(G_(b,n)) <= K u(s) exp[-eta d(b,q)]
+                         chi_n exp[-eta n],
+ sum_n (1+n)^d exp(2kappa n) chi_n < C,                        (9)
+
+then (1) directly gives C A K u(s) exp[-kappa d(P,q)] with fixed
+spare rates and NO change to its modulus. This is a useful exact
+interface: a mixed parameter/noise localization estimate supplies
+what the two separate caps cannot. An appropriate block version
+could carry the physical gR gain in chi_n.
+
+The currently proved first derivative of ell supplies only separate
+caps. Its elementary four-corner consequence is
+
+ |Delta_q Delta_r ell_b|
+ <=2K min{s exp[-eta d(b,q)],t exp[-eta d(b,r)]}
+ <=2K sqrt(s t) exp[-eta(d(b,q)+d(b,r))/2].                   (10)
+
+It is tempting to regard (10) as a stable mixed Holder class. There
+is an additional closure issue. For a bilinear interpolation of the
+four corner energies S and sources F on the SAME product domain,
+ordinary auxiliary u,v differentiation gives the exact identity
+
+ partial_u partial_v E F
+ = E F_uv-Cov(F_u,S_v)-Cov(F_v,S_u)-Cov(F,S_uv)
+                                      +Cum(F,S_u,S_v).        (11)
+
+These are derivatives in auxiliary interpolation variables, so (11)
+is valid for nonsmooth physical endpoints. The term Cov(F,S_uv)
+requires the spatial CURRENT-NOISE localization of the mixed
+endpoint difference S_uv. If only its amplitude is controlled by
+(10), attaching F's distant root again requires a third mixed
+parameter/noise difference or a separate joint estimate like (9).
+A finite mixed-order hierarchy therefore does not close merely by
+writing (10). No analytic or all-orders cluster estimate has been
+proved here to remove that requirement.
+
+4. AN EXPLICIT FINITE AMPLITUDE/ROOT RECURSION
+
+This is a conditional consumer, not a native induction theorem.
+Assume at grade j an original-label family of root density rho_j,
+amplitude k_j, and a normalized concave modulus omega_j(1)=1 on
+physical input radius a_j. Write delta_j=rho_j k_j, absorbing the
+already paid fixed support norms into that quantity. Require the
+small value-interaction hypothesis of the covariance consumer
+uniformly for ALL partial insertion coefficients and the auxiliary
+endpoint laws. Require complete reference score response S_j, actual
+minimum/map response T_j, whole product admission, and the spatial
+composition needed for (2). They are not consequences of delta_j.
+
+For a change s in one next determining block define
+
+ u_j(s)=omega_j(C T_j s/a_j),
+ h_j=omega_j(C g_j/a_j),
+ chi_j=omega_j(C g_j R_j/a_j).                               (12)
+
+Arguments can be capped at a fixed domain-sized number with the
+corresponding harmless constant. A concave modulus extended
+constantly after that number is sufficient. Its subadditivity gives
+omega_j(C g_j t/a_j)<=C(1+t) h_j. Thus k_j h_j is the incoming
+test's HYBRID current-noise profile; chi_j is its full-noise cap.
+The latter retains the PHYSICAL g_j R_j, not just the radius R_j.
+
+The exact endpoint interpolation and (3)--(4) give the per-original-
+label insertion response at a spare spatial rate
+
+ m_(j+1)(s) <= C k_j {u_j(s)+h_j S_j s
+                      +delta_j h_j S_kappa(u_j(s),chi_j)}.    (13)
+
+The first term is the direct test change. The second uses the
+COMPLETE normalized smooth-reference score. The last is the
+covariance against the entire correction difference; its total
+root density/amplitude is delta_j. No global total-variation
+smallness, derivative of the nonsmooth score, or omitted denominator
+is used. All raw flat scalar factors stay in the outer mass, as in
+the exact sequential-insertion proof.
+
+To turn (13) into next supported value interactions, telescope over
+the NEXT physical Cartesian box, changing each coordinate by at
+most C a_(j+1). Root and shell counts give, schematically but with
+the actual scale factors displayed,
+
+ delta_(j+1) <= C_geo,rate L^d delta_j
+   {u_j(C a_(j+1))+h_j S_j C a_(j+1)
+        +delta_j h_j S_kappa(u_j(C a_(j+1)),chi_j)}.            (14)
+
+Here C_geo,rate includes the convergent shell sums and any declared
+fixed polynomial support-size norm. The L^d is the actual maximum
+number of grade-j roots entering a grade-(j+1) cell; in dimension
+four it is L^4. If roots represent an older cohort, its accumulated
+density must already be in delta_j. Renaming their sum does not
+remove that density. Additional new emissions require an ADDED,
+independently proved current-root term and their own cohort census.
+
+For a Lipschitz input, k_j=a_j K, (12)--(13) recover the earlier
+finite estimate, now with the exact minimum sum: direct term K T s,
+reference K g S s, and correction term proportional to
+K^2 g S_kappa(Ts,gR), with the appropriate label density. This
+checks the scaling of both g and gR in (13).
+
+The displayed constants must be uniform to use (14) repeatedly.
+In particular the coefficient tubes, whole-cut physical margins,
+complete smooth-reference gap and score, map response and lattice
+conversion are additional later-grade hypotheses. The present
+first-three-grade native proofs do not supply that uniform sequence.
+
+5. NUMERICAL FEASIBILITY IS SEPARATE FROM NATIVE CLOSURE
+
+Even granting all reference hypotheses, (14) would need a genuine
+linear contraction or an independently stable renormalized sector.
+For example if omega(t)=t^alpha and the physical determining ratio
+T_j a_(j+1)/a_j is of order L^-1, its direct channel is of order
+L^(4-alpha), before the other terms. It does not give a dimension-
+four gain. This is a property of this envelope, not proof that the
+actual YM correction has that size.
+
+The exact independent-variable example in Section8 of the third-
+closure critical review confirms that the abstract assumptions cannot
+imply contraction: ell_i(beta)=delta+c beta, B_i=theta/L+g x_i,
+N=L^4 independent fine variables give the exact field-dependent
+next log ratio L^3 c theta. Positivity, small local values and all
+reference gaps hold; the retained scalar is not the cause of growth.
+That example is not a gauge-invariant native YM correction.
+
+A numerically sufficient stable recursion would require, for example,
+an actual norm with delta_(j+1)<=q delta_j+C delta_j^2+birth_j,
+q<1, uniformly controlled source gains and rates, and controlled
+birth accumulation. The present estimate establishes no such q.
+An initially very small exp[-c(log gamma_0)^(2p)] tail alone does
+not pay L^(4T) when gamma_0 is proportional to ultraviolet depth T.
+
+Thus the exact min sum is a usable sharper finite consumer. A real
+uniform advance would be a native estimate of type (9), or an
+equivalent stable spatial mixed-modulus/smoothing theorem, together
+with the dimension-four sector extraction and later-reference
+induction. The existing bounded-interaction mechanism is compatible
+with such inputs but does not manufacture them.
+
+READBACK
+ work/nonlinear_mixture_response_consumer_20261024.txt
+ work/full_mixture_third_coarse_closure_20261024.txt
+ work/full_mixture_third_coarse_closure_critical_review_20261024.txt
+ work/full_omega_spatial_consumer_20261023.txt
+
+All native precision, gauge, physical-domain, original normalizer and
+source-calibration premises retain their previously stated scope.

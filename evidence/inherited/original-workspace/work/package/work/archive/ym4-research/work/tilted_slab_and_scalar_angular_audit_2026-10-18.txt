@@ -1,0 +1,187 @@
+TILTED SLAB AND SCALAR ANGULAR CONTINUATION: INDEPENDENT AUDIT
+18 October 2026. Working note, constrained_fiber.
+
+1. THE TILTED ARRAY NEEDS NO ADAPTED-TORUS SOURCE THEOREM
+
+I independently checked diagonal_chain_coordinate_chessboard_2026-10-18.
+Its coordinate cells around the diagonal packet centers are the correct
+way to keep complex normalization and arbitrary endpoint supports.
+In u=(t+x)/sqrt(2), a coordinate square [lb,(l+1)b]^2 has the EXACT
+u-range [l sqrt(2)b,(l+1)sqrt(2)b]. Thus all array cells lie in the
+array's tilted slab. Endpoint complete link/plaquette supports outside
+that slab can be assigned to different closed coordinate cells. Keep
+the word COMPLETE: a plaquette barycentre alone is not its read support.
+
+For a complete fold of one packet, every clone has full-support gap
+c delta from every other clone, including transverse neighboring cells.
+The source norm of their union is
+
+ u_a=C|z|max(delta^-2,sqrt(a)delta^-3),
+
+independent of the number of clones. Subtracting singleton coefficients
+cancels the linear Taylor terms exactly. A carrier meeting r_X copies
+has remainder <=C r_X u_a^2 exp(-kappa d_a(X)). Root at each of its
+copies and reserve the crossing factor exp(-c delta/a). Per copy the
+root counts are C delta^2 a^-4 for a<=delta and C a^-2 for a>=delta.
+The resulting geometric scale sums are bounded by
+
+ C |z|^2 sum_(a<=delta)
+       (delta^-2 a^-4+delta^-4 a^-3) exp(-c delta/a)
+   +C |z|^2 sum_(a>=delta) delta^-6 a^-1
+ <= C |z|^2 delta^-7.
+
+The 2D packing density introduces no additional factor: r_X has already
+been charged to clones. At |z|<=c delta^(7/2), each full-cell norm is
+bounded by exp(C_f), after the exact singleton normalization. Coordinate
+chessboard Holder multiplies m such norms and the ordinary sup norms
+of endpoint-cell factors, yielding C_(epsilon,A,delta) exp(C_f m).
+C_f is independent of A and epsilon.
+
+Use the SAME finite coordinate torus's exact singleton d_(epsilon,T).
+Its coordinate images transform by bare symmetry, while each actual
+singleton h is bounded uniformly in its scaffold phase. No assertion
+of E_UV translation invariance or of thermodynamic coefficient shape
+uniqueness enters this proof. The free N_T can be made divisible by
+all fixed bare-cell lengths on one factorial subsequence. The old
+two-frame state proof remains valid for n=2 N_T ell^M: its fixed odd
+scales divide n/2 eventually and all slab counts remain even.
+
+Take the thermodynamic limit first, then the doubling length, then UV.
+The exact d becomes that of the SAME limiting state. Same-state diagonal
+RP supplies reflection doubling; it is not used as a source estimate
+on an auxiliary torus. This closes the tilted counterpart of the sharp
+kappa=7/2 slab estimate, relative to the recorded source producer.
+
+2. THE MISSING NARROW-TO-GENERAL STEP IS A FINITE ODE
+
+This adapts the explicit mechanism in the supplied
+YM_Rotation_Invariance_simplified, Sections4.3--4.4, to the scalar
+ordered kernels constructed by rotation_slab_operator_consumer.
+It does not invoke the supplied two-form closedness or an ordinary
+Euclidean L2 bound.
+
+For fixed order N and fixed transverse profiles, let S_N(Z) be the
+holomorphic kernel on each ordered tube. The sharp bounded insertions
+give growth min q(gaps)^(-kappa N), kappa=7/2, and actual mixed-length
+Hilbert Gram vectors for positive strictly ordered tuples. Coordinate
+quarter-turn symmetry identifies coordinate/time and spatial-order
+charts on their real overlaps, hence their holomorphic overlaps.
+
+On a narrow real-open set of ordered tuples, successive chords lie
+within a fixed angle theta0<pi/4 of one axis. Every real rotation can
+then be covered by a quarter-turned ordered chart, with a uniformly
+positive gap margin. Imaginary rotations preserve its tube and obey
+
+ q(R_(-i beta) z)>=exp(-|beta|) q(z).
+
+The glued angular function is therefore entire, pi/2-periodic, with
+growth C_(N,Z,f) exp(kappa N|beta|). Scalar transverse profiles have
+no tensor-rotation growth. Fourier contour shift leaves only
+
+ Lambda_N={ell in 4Z: |ell|<=kappa N}.
+
+Set P_N(D)=product_(ell in Lambda_N)(D+ell). On the narrow set,
+
+ P_N(partial_beta) S_N(R_(-i beta)Z)=0.             (1)
+
+For EACH FIXED REAL beta, the left side is holomorphic in Z throughout
+any given ordered tube: imaginary rotation maps that tube to itself,
+and beta derivatives of this holomorphic composition are legitimate.
+That connected tube contains a nonempty narrow real-open set. The
+several-variable identity theorem therefore proves (1) on the ENTIRE
+tube. No assertion that a general Gram tuple is narrow is needed.
+
+The roots of P_N are distinct. For every ordered Z its real-beta
+function is a finite sum of exp(-ell beta). Values at |Lambda_N|
+fixed distinct beta values determine its coefficients by one finite
+Vandermonde inverse. They are holomorphic in Z. This proves the same
+frequency restriction and entire angular continuation for ALL ordered
+tuples, in particular for every NONNARROW diagonal Gram entry.
+Constants may depend on N; the uniform requirement is only kappa<4.
+
+3. JOINED CHARTS, THE SECOND FRAME, AND DETECTION
+
+The local rotation transport of coefficients follows by uniqueness
+where a real small rotation remains in an ordered chart. Generic
+configurations with no pair of perpendicular chords have their whole
+real rotation orbit in the union of time-ordered and x-ordered charts:
+failure of both orderings would require a horizontal and vertical
+chord. On overlaps the kernels agree with the SAME original ordered
+Schwinger sector, so coefficient transport continues around the orbit.
+
+For an arbitrary distinct planar configuration choose an angle giving
+distinct times, and transport its coefficients back. Two choices are
+consistent by approximation with generic configurations while retaining
+the strict endpoint ordering gaps. One such angle works on a neighborhood,
+so the extension is real analytic. This defines a separated planar
+kernel; it is not yet an assertion about old contact distributions.
+
+Apply the same construction in the pi/4 frame using the tilted slab
+estimate and that frame's spectral cone. Wherever both the ordinary
+and tilted orderings are strict, both kernels represent the original
+hierarchy, after the literal planar change of coordinates. Consequently
+their coefficient relation is exactly
+
+ a_tilde,ell(Z)=exp(i ell pi/4) a_ell(Z).
+
+Analytic continuation through the joined charts extends this relation
+to the common separated planar sector. This compares TWO Hilbert
+spaces of the SAME hierarchy; no equality of the rotated states has
+been assumed.
+
+For every finite family of strictly positive, internally ordered test
+tuples, the imaginary-angle kernel is the actual Gram matrix of the
+bounded-insertion vectors. Their concatenations (J chi,eta) are always
+strictly time ordered, even when nonnarrow, and Section2 supplies their
+finite angular expansion. Empty tuples are included. A nonzero analytic
+coefficient is nonzero somewhere with distinct times. Permute those
+times, translate any chosen split to zero, and reflect/conjugate the
+earlier group. This detects the leading coefficient across EVERY split.
+
+Thus the hypotheses of rotation_research Theorem6.1 hold on this
+separated sector. Mixed-length Cauchy--Schwarz, the pi/4 sign comparison,
+and discrete convexity force all nonzero frequencies to vanish because
+kappa=7/2<4. Neither a no-contact theorem nor ordinary L2 density is
+required for this sector conclusion.
+
+4. FULL-POINT EXTENSION AND WHAT IS NOT CLAIMED ABOUT CONTACTS
+
+The fully localized insertion bound of the consumer gives an analytic
+full-point kernel on strict time-order chambers with growth
+C^N min-gap^(-5N). Smearing transverse variables identifies it with
+the planar kernels on those chambers; equality as transverse
+distributions becomes pointwise equality because the full kernel is
+real analytic there.
+
+At a generic equal-time wall only one pair ties. Some spatial coordinate
+distinguishes the pair, so every relevant planar projection in that
+coordinate plane remains distinct near the wall. A small fixed rotation
+separates all times. The proved planar invariance identifies the analytic
+patch from that rotated chamber with BOTH neighboring chambers. Generic
+paths through SO(4), then continuity with two strict endpoint separating
+rotations, give a well-defined real-analytic covariant kernel at every
+configuration of distinct FULL points.
+
+The quantitative separating-direction bound |v.(x_i-x_j)|>=c d/N^2
+gives C^N N^(10N)(1+d^(-5N)); hence a fixed factorial envelope and
+Schwartz derivative/weight orders linear in N. Collision-flat tests
+are integrated absolutely against this new kernel. This construction
+need not reproduce old equal-time or planar-contact distributions.
+
+The new RP proof is valid with that scope. First use compact positive-
+half test tensors supported away from internal FULL collisions. Excise
+their INTERNAL equal-time walls by smooth cutoffs. Every resulting
+reflected quadratic pairing is a finite sum of strict time-order
+chamber pairings, where new and old kernels agree, so original RP applies.
+Reflected cross-group times have opposite signs and already stay apart.
+The NEW off-collision kernel is bounded on the compact support; dominated
+convergence removes the time-wall cutoffs in its quadratic form. No
+convergence in the OLD S0 topology is claimed or needed.
+
+Finally the NEW linear-order collision-flat bound and the standard
+compact/full-collision/positive-boundary cutoffs extend RP to its declared
+positive S0 domain. The usual smooth positive-support test convention
+ensures flatness at the time boundary when that boundary is included.
+The ordered Wilson witness is preserved. This is a covariant extension
+of the ordered physical sector, not a proof that all old contact terms
+vanish, and not by itself a proof of the complete Yang--Mills theorem.

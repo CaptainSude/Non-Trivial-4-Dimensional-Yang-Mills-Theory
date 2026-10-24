@@ -1,0 +1,333 @@
+TURN85 -- ORIGINAL WILSON PROFILE CANCELLATION AND THE SWITCH DIVERGENCE
+20 October 2026. tail47. Exact finite-regulator results.
+
+RESULT
+
+There is an actual full-Wilson cancellation which improves an absolute
+source displacement estimate. For a Haar-divergence-free change of an
+original link, a constant local action response is exactly a derivative
+of the remaining test. If that test reads no changed link, the derivative
+is zero. A varying action profile then enters through differences across
+the incident plaquette star. This is an exact integration identity under
+the original normalized law, not stationarity only at a classical minimum.
+
+A finite one-link conditional calculation sharpens this: the conditional
+drift of a constant-star action under an exterior-measurable rotation is
+exactly quadratic in its angle. The full separated covariance change is
+the OUTER covariance of this explicitly known drift. It is retained, not
+declared zero.
+
+A native-style field-dependent cutoff rotation is different. Its Haar
+divergence adds a definite source row. A concrete original Wilson one-link
+conditional measure, with a smooth switch supported only in a rare outer
+shell, has a STRICTLY POSITIVE first constant-action response from this
+term. Complete action stationarity does not cancel it. The term is small
+by a genuine conditional tail estimate in this elementary model, but its
+native full-record analogue and physical root census remain to be proved.
+
+This complements the exact noisy-square obstruction in
+work/turn85_noisy_plaquette_response_gauge.txt, independently audited in
+work/turn85_noisy_plaquette_audit_tail.txt. It does not duplicate that
+square or assert it is a trajectory of the full native constrained map.
+
+1. ORIGINAL NORMALIZATION AND THE EXACT HAAR IDENTITY
+
+Take the nondegenerate finite periodic SU(2) Wilson model, periods at
+least4, normalized link Haar measure dU and homogeneous ORIGINAL beta>0:
+
+ mu(dU)=Z^(-1) exp[-beta S(U)]dU,
+ S=sum_p h_p, h_p=1-Tr(U_p)/2.
+
+All statements also make sense with fixed exterior links where specified.
+No selected weak law, altered partition denominator or native effective
+action is substituted for this density.
+
+Let D_e be a real smooth vector field acting only on link e. Its coefficient
+may depend on other links. Write d_e=div_Haar D_e, with the divergence
+taken in the acted-on link coordinate. For every smooth test G, integration
+of a total divergence on the compact group gives
+
+ beta E_mu[(D_e S)G] = E_mu[D_e G]+E_mu[d_e G].              (1.1)
+
+Bounded tests with the required weak derivatives follow by approximation.
+At finite volume all smooth source exponentials used below are integrable.
+There are no discarded boundary terms on the complete original group.
+
+For example D_e U_e=X_e(U_others)U_e with X_e anti-Hermitian traceless
+and independent of U_e has d_e=0. Conditional on all other links this is
+a left-invariant Haar vector field. Dependence on exterior links does not
+create a divergence in the e coordinate. A sum of such fields remains
+divergence-free, even if its different exterior reads overlap. Smoothness
+and the actual reads still matter for its finite flow and locality.
+
+Gauge invariance of the comparison can be retained by requiring
+X_e(U^g)=g_(tail e) X_e(U) g_(tail e)^(-1). Without that property the
+integration identity remains true, but the new observable need not be
+gauge invariant. Reflection support likewise includes the full read of X_e.
+There are concrete nonconstant choices: take X_e=(W-W^dagger)/2 for an
+exterior closed Wilson loop W based at the tail and not using e. This is
+traceless anti-Hermitian in SU(2), has the stated covariance, and remains
+independent of U_e. Its entire loop is part of the declared read.
+
+2. EXACT SOURCE-GRADIENT AND TWO-JET FORMULAS
+
+Let F_f=beta sum_p f_p h_p be the canonical original action source,
+with deterministic real profile f. For each changed link choose a real
+anchor value f_e, for example its physical interpolant at the link center.
+For D=sum_e D_e define
+
+ R_f=beta sum_e sum_(p incident e) (f_p-f_e) D_e h_p,
+ D^f=sum_e f_e D_e,                 d^f=sum_e f_e d_e.       (2.1)
+
+Each h_p is differentiated with its physical orientation; the identity
+D_e S=sum_(p incident e)D_e h_p is literal. Summing(1.1) gives
+
+ E[(D F_f)G] = E[R_f G]+E[D^f G]+E[d^f G].                 (2.2)
+
+This holds against the COMPLETE remaining test G. Thus the four raw rows,
+source-dependent scalar means and mixed contacts are preserved. One may
+take G=G0 exp(s F_f+t H_h) at finite regulator, retaining D^f G0 as well as
+s D^f F_f+t D^f H_h. There is no silent source-free substitution for G0.
+
+In particular,
+
+ E D F_f = E R_f+E d^f,
+ Cov(D F_f,H_h)
+   =Cov(R_f,H_h)+E D^f H_h+Cov(d^f,H_h).                   (2.3)
+
+The middle term is the exact same-read contact term. For a family of
+source functions F_t,H_t with derivatives DF,DH at0, the derivative of
+their centered covariance is the sum of(2.3) and its F,H interchange.
+The analogous formula with a bounded outside test is immediate. These
+are first variations of the actual centered covariance, not just its
+unnormalized numerator.
+
+If every d_e=0 and H reads none of the links in D^f, the last two terms
+of(2.3) vanish. The first response is then Cov(R_f,H), with the actual
+profile differences f_p-f_e. If f is constant on each changed star,
+R_f=0 and this response is EXACTLY zero. No independence of the Wilson
+links or small-field hypothesis is needed.
+
+This gain is not an automatic product of two profile differences. The
+remaining Cov(R_f,H) is a full original-law covariance. Nor can disjoint
+supports of two nominal labels replace disjointness of their complete
+original link reads. When d^f is nonzero, even disjoint H retains its
+outer covariance in(2.3).
+
+For reference, the full original energy bound from TURN64 yields a
+quantitative finite first-variation estimate. If ||X_e||<=v_e for a
+single-link left generator, then
+
+ |D_e h_p|<=v_e sqrt(2h_p),
+ ||R_f||_2<=4 sqrt(beta) sum_e v_e omega_e(f),
+ omega_e(f)=sum_(p incident e)|f_p-f_e|.                    (2.4)
+
+Here E beta h_p<=8 is a deliberately loose consequence of
+E exp(beta h_p/4)<=2^(3/4). If H=beta sum hprof_p h_p and W_h=sum|hprof_p|,
+then ||H-EH||_2<=16 W_h. In the divergence-free disjoint-read case,
+
+ |Cov(D F_f,H)|<=64 sqrt(beta) W_h sum_e v_e omega_e(f).     (2.5)
+
+For a smooth physical f, omega_e(f)<=C a [f]_Lip on the original mesh a.
+This is one genuine profile-gradient gain. It does not by itself pay the
+number of changed links in a fixed four-dimensional physical volume.
+For a different calibration c0 sum f h, the two derivative/divergence
+terms in(2.2) acquire c0/beta and R_f uses c0. Canonical c0=beta here
+always means the ORIGINAL coupling, not a running native coupling.
+
+3. EXACT FINITE CONDITIONAL DRIFT: A CONSTANT STAR IS QUADRATIC
+
+Fix a link e and condition on all other original links, denoted omega.
+Each incident plaquette has the form
+
+ h_p(U_e,omega)=1-u.v_p(omega),
+
+where u in S^3 is the quaternion of U_e and v_p in S^3 is the correctly
+oriented exterior staple. Put
+
+ v=sum_(p incident e) v_p,  r=beta|v|<=6beta,
+ n=v/|v| if v!=0,       m(r)=I_2(r)/I_1(r), m(0)=0.
+
+The ACTUAL conditional law is
+
+ q_omega(du)=exp(r n.u)du / [2 I_1(r)/r],
+                    E_q u=m(r)n.                         (3.1)
+
+The r=0 interpretation is Haar and the mean is zero. The normalizer and
+Bessel ratio follow by Haar rotation from the standard single-link
+Wilson integral, already proved in TURN64. The exterior marginal is
+still the exact original one and contains its conditional partition
+factor; it is not replaced by an independent boundary law.
+
+Let k(omega)=exp(i theta(omega) a(omega).sigma), |a|=1, and change only
+the source read U_e to k U_e. The angle and axis must be independent of
+U_e given omega. Let L_k be its real orthogonal action on quaternions.
+It satisfies
+
+ (L_k+L_k^t)/2=cos(theta)I,
+ ||I-L_k||=2|sin(theta/2)|.                                (3.2)
+
+Define a_f=beta sum_(p incident e) f_p v_p and
+delta a_f=beta sum_(p incident e)(f_p-f_e)v_p. The complete source F_f
+also has terms independent of e; they cancel in its difference. Direct
+use of(3.1)--(3.2) gives the exact conditional drift
+
+ b_f(omega)=E_q[F_f(kU_e,omega)-F_f(U_e,omega)]
+ = f_e r m(r)(1-cos theta)
+       +m(r) delta a_f.(I-L_k)n.                          (3.3)
+
+For r=0 the entire expression is0, independent of the arbitrary n.
+In particular, for a constant profile on the six incident plaquettes,
+
+              b_f=f_e r m(r)(1-cos theta).                 (3.4)
+
+This is nonnegative for f_e>=0 and genuinely quadratic, rather than just
+a zero first derivative. A useful uniform estimate is
+
+ |b_f|<=3 beta |f_e| theta^2+beta |theta| omega_e(f),        (3.5)
+
+using0<=m(r)<=1, r<=6beta and the elementary trigonometric inequalities.
+No exterior weak-field assumption was made. A flat or balanced-staple
+exterior is included without a division by its staple norm.
+
+If H is ANY integrable original observable independent of U_e, conditioning
+first gives an exact full-law comparison:
+
+ Cov_mu(F_f(kU_e),H)-Cov_mu(F_f(U_e),H)
+                          =Cov_(mu_out)(b_f,H).            (3.6)
+
+Thus the fiber contribution cancels and the remaining outer channel is
+explicit. It is not zero merely because b_f is small, positive or quadratic.
+For canonical H, a crude bound is16 W_h times the supremum in(3.5), if
+that supremum is available. More refined outer estimates remain possible.
+
+The formula extends by summation to a set of free links when no plaquette
+reads two of them and every rotation depends only on their common exterior.
+Those hypotheses give the actual conditional product and an additive
+decomposition of F. It must not be applied link-by-link to simultaneous
+changes sharing plaquettes or reading one another's new variables.
+
+4. AN ACTUAL SMOOTH RARE-TAIL SWITCH HAS AN EXTRA FIRST RESPONSE
+
+The preceding cancellation is sensitive to volume preservation, not just
+small displacement. Let D0 U=i sigma3 U and put
+
+ D=chi(h(U)) D0,
+ 0<=chi<=1, chi=0 on[0,a], chi=1 on[b,2],
+                  0<a<b<2, chi' nonnegative and not identically zero.
+
+This has the same inner-zero/outer-one switch direction as the native
+smooth cutoff. Its Haar divergence is
+
+ d=D0 chi(h(U))=chi'(1-u0) u3.                              (4.1)
+
+Indeed D0 u0=-u3. The map exp[i t chi(h(U))sigma3]U has this vector field
+and Jacobian derivative at t=0; for sufficiently small t it is a smooth
+invertible map. It is not a Haar-preserving constant rotation.
+
+Take the genuine one-link conditional Wilson law(3.1) with
+n=(cos phi,0,0,sin phi), 0<phi<pi, r>0. Six identical exterior staples
+V=exp(i phi sigma3) realize r=6beta: set the transverse exterior links
+to I and the six opposite parallel links to the required V, with the
+appropriate orientation. They are distinct for the stated periods.
+Other plaquettes depend only on fixed exterior variables.
+
+Pairing u3 with -u3 in the Haar integral gives
+
+                       E_q d>0.                           (4.2)
+
+In fact on u3>0 the paired integrand is proportional to
+2 chi'(1-u0)u3 exp(r cos(phi)u0) sinh(r sin(phi)u3), positive on a
+set of positive Haar measure. Let A_e=beta sum_(p incident e)h_p be the
+complete conditional canonical action. Equation(1.1) now says
+
+       d/dt E_q A_e(exp[i t chi(h(U))sigma3]U)|_(t=0)
+                           = E_q d>0.                     (4.3)
+
+The conditional classical action is stationary at its minimum U=V.
+Choose phi small enough that h(V)<a, so the switch even vanishes near
+that minimum. Neither fact nulls(4.3). This is an exact compact original
+Wilson conditional calculation, not an abstract change of Gaussian
+moments. It does not assert this coordinate is the full native B_j map.
+
+There is a legitimate rare-tail bound in this model, with the COMPLETE
+conditional denominator. Put Delta=(sqrt(a)-sqrt(h(V)))^2>0. On the
+support of chi', triangle inequality gives h(V^(-1)U)>=Delta. Under q,
+W=V^(-1)U has the central one-link Wilson law at coupling r. Its radial
+Gamma-tilt bound gives E exp[r h(W)/2]<=2^(3/2). Hence
+
+ 0<E_q d<=2^(3/2)||chi'||_infinity exp(-r Delta/2).          (4.4)
+
+This demonstrates exactly what must be retained: a switch derivative,
+its actual tail support, and its conditional normalizer. A sharper source
+statement cannot simply erase the divergence because the switch equals
+one on an outer plateau. The derivative lives at its transition.
+
+5. COMPLETE REMAINING TESTS AND THE NATIVE ATTACHMENT
+
+For a non-volume-preserving original vector field, the decisive separated
+formula is already(2.3): even if D^f H=0, the original covariance response
+contains Cov(d^f,H). For a single changed link and outside H the exact
+raw identity is
+
+ E[(D F_f)H]=E[R_f H]+f_e E[d_e H].                        (5.1)
+
+The comparison cannot omit this term, or replace it by its mean, while
+later tests read the exterior. A full source package exp(sF+tH) retains
+both normalization derivatives and all repeated/contact rows through(2.2).
+It needs no analytic continuation of an inverse original record for this
+REAL identity, but does need the actual original vector field and its
+divergence (or an exact finite change-of-variables equivalent).
+
+For a native free-coordinate integral, Haar in(1.1) is replaced by the
+actual Gaussian/coarea density and domain. A moving hard cut produces
+the corresponding boundary measure; a smooth cut produces its derivative;
+constraints require a tangent vector field or their own response. The
+identity with only beta D S is then false unless all these factors are
+included. Likewise, the actual effective action has old interactions:
+its stationarity does not identify an original bare source with its
+current action. No running beta_j replaces beta0 in this calculation.
+
+The same caution applies before changing coordinates if auxiliary records
+are retained. For a smooth positive joint density mu(dU)kappa(dxi|U),
+holding xi fixed adds D_e log kappa to the right-hand score in(1.1).
+Normalization of kappa makes its unweighted mean score zero, not its
+pairing with a source/remaining test depending on xi. An independent-seed
+representation avoids that density score only by retaining the complete
+U-dependence of the reconstructed ancillary reads in D_e G and in D_e.
+Thus the original-link conditional calculation(3.3) cannot be applied
+after conditioning on an arbitrary native ancillary record as though the
+remaining conditional link law were still the same tilted Haar law.
+
+This pinpoints a source-specific next calculation. If the original switch
+response can be expressed as an exterior-measurable, divergence-free
+rotation of the affected fine links, Sections2--3 give a real profile
+gain and a quadratic local drift. If its coefficient reads the acted-on
+field, the exact extra row is its divergence/score, illustrated by(4.3).
+One must bound that row under the full continued law, with the full
+remaining-test algebra and actual primitive reserve. Its required
+ownership and source-to-plane read are not supplied by ||H_j|| alone.
+
+6. SCALE CONSEQUENCE AND LIMITS
+
+The deterministic noisy square shows why a curvature-only fixed-noise
+L^(-2j) estimate can be too strong. The exact identities here show one
+way that integration may recover an additional order, but under stricter
+conditions than a small background or a classical saddle equation.
+
+For a smooth physical profile at mesh a, the first term in(2.5) gains one
+power a through omega_e(f). A constant-star action instead has the exact
+finite O(beta theta^2) drift(3.4). Neither is a general curvature-fourth-
+power estimate. Summing over order a^(-4) original roots and retaining
+their coherent outer covariance can still defeat the local gain. At a
+bare shift theta~g0 polylog exp(-R0), beta0 theta^2 is small; that alone
+does not pay the physical root count identified in TURN84.
+
+No theorem in this note supplies the original field response of an
+arbitrary stopped/restarted native record, the native cut/coarea score,
+or a nonzero reflected continuum channel. The exact positive finite-law
+profile and conditional-drift identities are the new constructive
+consumers; the actual switch-divergence example identifies the remaining
+term which a valid native application has to estimate.
+
+Frozen prior producers and authoritative status files were not edited.

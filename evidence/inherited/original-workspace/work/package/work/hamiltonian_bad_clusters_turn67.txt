@@ -1,0 +1,310 @@
+JOINT BAD-TILE AND CLUSTER BOUNDS IN THE ACTUAL GROUND LAW -- TURN67
+20 October 2026. gauge47. Submitted for independent audit.
+
+This note extends the proved local action MGF to simultaneous bad
+regions. No independence of regions is assumed. The law is the actual
+finite-spatial Hamiltonian ground law, not a native RG reference law.
+
+1. MODEL, BOARD, AND INPUTS
+
+Let mu=Omega^2 dU be the normalized positive ground law of
+
+ H=g^2 K/(2a)+4S/(g^2 a),  S=sum_(spatial p)(1-Tr U_p/2),
+
+on a nondegenerate periodic three-dimensional SU2 spatial lattice.
+Retain the even-period assumption N_i even in every direction,
+including any direction tiled by a single block. Its periods N_i
+and tile lengths l_i>=2 satisfy
+
+ M_i=N_i/l_i=2^k_i,  k_i nonnegative integers.
+
+Let n=N_1N_2N_3, V=l_1l_2l_3, and K_board=M_1M_2M_3=n/V.
+Tile labels form the periodic board product_i Z/(M_i Z).
+The closed tile B_b has vertices in product_i[b_i l_i,(b_i+1)l_i],
+with the natural periodic interpretation. Its strict interior excludes
+the boundary planes. Plaquette sets below are sets, not multisets.
+
+From hamiltonian_marked_derivative_turn67.txt we use two proved
+facts for THIS same normalized ground law:
+
+ log E_mu exp(tS/g^2)<=(9n/2) artanh(t/2),  0<=t<2,     (1.1)
+
+and spatial reflection positivity in every integer-coordinate site
+plane. The RP proof conditions on the two fixed planes' links in
+the finite anisotropic Wilson law, factors the two reflected halves,
+then passes first to its temporal ground state and next to the
+controlled fixed-spatial temporal limit. It applies to functions
+of a CLOSED half, including its planar boundary links.
+
+No spatial reflection positivity of a nonlinear flowed measure is
+an input. The present estimates concern the unflowed ground law.
+
+2. MULTIFUNCTION CHESSBOARD FROM REPEATED RP CAUCHY--SCHWARZ
+
+We give the full argument, because the one-function inequality alone
+does not imply a joint bad-event estimate.
+
+For a function f on the base tile B_0 define its canonical reflected
+copy theta_b f as follows. In coordinate i, place the copy by
+
+ x_i -> b_i l_i+x_i                 if b_i is even,
+ x_i -> b_i l_i+(l_i-x_i)           if b_i is odd.
+
+The induced pullback on links includes the correct link inversion
+when an oriented edge is reversed. Since M_i is even unless it is1,
+the convention is consistent on the periodic board. Dimensions with
+M_i=1 need no reflections or dissemination in that direction.
+
+For a site reflection in x_j=c l_j, the tile index changes to
+
+                  b'_j=2c-1-b_j modulo M_j.
+
+Its parity flips. Hence the reflection maps theta_b f EXACTLY to
+theta_b' f, with all other indices unchanged. This identity, rather
+than a mere translation of a possibly nonsymmetric f, is used below.
+
+Take a finite alphabet of nonnegative bounded continuous base-tile
+functions f_1,...,f_q. Initially replace each by f_l+epsilon,
+epsilon>0, so all normalization factors are strictly positive:
+
+ z_l=[E_mu product_(b on board)theta_b(f_l+epsilon)]^(1/K_board).
+
+Set g_l=(f_l+epsilon)/z_l. A homogeneous labeling by l then has
+expectation exactly1. For an arbitrary labeling sigma of all board
+sites with alphabet{1,...,q}, put
+
+             Z(sigma)=E_mu product_b theta_b g_(sigma(b)).
+
+There are finitely many labelings. Choose one maximizing Z, and
+write its maximum M. We know M>=1 from a homogeneous labeling.
+
+Cut the board into the two closed halves of any permitted site
+reflection. Write the mixed product as F_+ theta(F_-), where F_+
+and F_- read one closed half after the reflected identification.
+Shared planar links cause no problem: each factor is assigned to
+the half containing its tile, and both half functions may read
+those same boundary links. The RP bilinear form gives
+
+ Z(sigma)^2 <= Z(sigma_+) Z(sigma_-).                    (2.1)
+
+Here sigma_+ is obtained by copying the positive half's labeling
+into the other half by reflection, and sigma_- copies the negative
+half. Both are among the labelings over which M was maximized.
+At a maximizing sigma, (2.1) and Z(sigma_+),Z(sigma_-)<=M imply
+
+                       Z(sigma_+)=Z(sigma_-)=M.         (2.2)
+
+We now turn one maximizing pattern into a homogeneous one, without
+assuming it was homogeneous initially. Start with the label l at
+tile0. There is a monochromatic rectangle of side1 in every board
+direction. Suppose its length in direction j is m<=M_j/2, beginning
+at coordinate0. Reflect in the right boundary x_j=m l_j and retain
+the half containing that rectangle. The rectangle fits in that
+half, because m<=M_j/2. Its old and reflected copies give a
+monochromatic rectangle of length2m in direction j; all its other
+lengths remain unchanged. By(2.2) the new pattern still maximizes Z.
+
+Repeat until direction j is full, then perform the same doubling
+in the remaining directions. Dyadic M_j ensure that every step
+has the indicated half-geometry. A dimension of size1 is skipped.
+The result is a homogeneous labeling by l and still has value M.
+Its value is1 by normalization. Thus M=1 and every pattern has
+Z(sigma)<=1.
+
+Undoing the normalization and then taking epsilon down to0
+(bounded convergence on this finite board) proves
+
+ E_mu product_b theta_b f_(sigma(b))
+  <= product_b [E_mu product_c theta_c f_(sigma(b))]^(1/K_board).
+                                                               (2.3)
+
+Zero disseminated expectations are handled by the same limiting
+argument; no division by them is performed. Unoccupied sites are
+assigned the alphabet function1. Formula(2.3) is the required
+multipoint chessboard bound.
+
+The normalized-maximizer proof was independently derived and
+checked with history47. Standard primary context: Biskup,
+Reflection Positivity and Phase Transitions in Lattice Spin Models,
+Theorem5.8 and proof, printed pp44--46:
+ https://arxiv.org/pdf/math-ph/0610025 .
+Our dyadic rectangle construction above states the actual geometry
+and is sufficient for the present gauge-field application.
+
+3. STRICT-INTERIOR JOINT MOMENTS AND BAD-TILE PROBABILITIES
+
+Let S_b^int sum h_p over plaquettes whose every vertex is strictly
+inside B_b. These copies are disjoint and
+
+                      sum_b S_b^int<=S.                (3.1)
+
+All plaquette orientations are included, so the reflected copy
+theta_b S_0^int is exactly S_b^int.
+
+For arbitrary numbers0<=t_b<2, use(2.3) with the finite alphabet
+of functions exp(t_b S_0^int/g^2), including1 where t_b=0.
+By(3.1) and(1.1), each disseminated expectation is at most
+exp[(9n/2)artanh(t_b/2)]. Consequently
+
+ log E_mu exp[sum_b t_b S_b^int/g^2]
+              <=(9V/2) sum_b artanh(t_b/2).             (3.2)
+
+In particular define the bad event
+
+                   A_b={S_b^int>=g^2 L^2}.
+
+For every prescribed set A of DISTINCT board sites, exponential
+Markov with t_b=1 on A and0 outside gives
+
+ mu(intersection_(b in A) A_b)<=q_int^|A|,
+
+             q_int=min{1,3^(9V/4) exp(-L^2)}.           (3.3)
+
+This is the proposed joint rare-tile estimate with the complete
+original ground-state normalizer. It is not a product-law claim.
+Distinct thresholds L_b may be used, with the corresponding
+product of the unclipped factors, or all clipped factors via
+omitting the factors above1 and using monotonicity of events.
+
+Strict-interior tests do not inspect plaquettes on tile boundaries.
+No complete large-curvature field decomposition is inferred solely
+from(3.3). Section4 supplies a precise variant that includes them.
+
+4. COMPLETE CLOSED TILES: A BOUNDED-OVERLAP VARIANT
+
+Let S_b^cl sum h_p over all plaquettes whose every vertex lies
+in the CLOSED tile B_b. Every spatial plaquette belongs to at
+least one such tile. It belongs to at most two: it has extent1
+in each of its two tangent directions, so its containing tile in
+each such direction is unique; only its third, constant coordinate
+can lie in a boundary plane shared by two tiles. Periodic duplicates
+are collapsed because plaquette lists are sets. Therefore
+
+                       S<=sum_b S_b^cl<=2S.            (4.1)
+
+The shared boundary reads are allowed in the closed-half RP
+argument of Section2. We do not assert disjointness or independence
+for these functions. Apply(2.3) to exp[t_b S_0^cl/(2g^2)] and use
+the upper bound in(4.1):
+
+ log E_mu exp[sum_b t_b S_b^cl/(2g^2)]
+              <=(9V/2) sum_b artanh(t_b/2), 0<=t_b<2.  (4.2)
+
+Thus for A_b^cl={S_b^cl>=g^2 L^2},
+
+ mu(intersection_(b in A) A_b^cl)<=q_cl^|A|,
+
+             q_cl=min{1,3^(9V/4) exp(-L^2/2)}.          (4.3)
+
+This variant tests every plaquette, paying the explicit factor2
+in the threshold exponent. It does not turn small plaquette
+curvature into a globally weak connection or determine a gauge.
+It also does not imply a lower bound on a physical fluctuation.
+
+5. CONNECTED BAD-CLUSTER TAILS: NO INDEPENDENCE NEEDED
+
+Either choose the strict-interior events with q=q_int, or the
+closed-tile events with q=q_cl. Let G_board be any specified
+simple adjacency graph on the board, with maximum degree D>=1.
+Examples are nearest-face neighbors, D<=6, or touching tiles,
+D<=26. Dimensions of size1 or2 can only reduce these degrees;
+self-loops and repeated neighbors are removed.
+
+For a vertex b let C_b be its bad connected component, with
+C_b empty when b is not bad. The number of connected vertex sets
+of size k containing b is at most
+
+                             D^(2(k-1)).               (5.1)
+
+To verify(5.1), impose a fixed ordering of neighbors, choose a
+canonical spanning tree of each such set, and perform its
+depth-first traversal from b. This gives a walk of length2(k-1)
+which visits exactly that set. Different sets have different
+visited sets and thus different walks. There are at most
+D^(2(k-1)) such walks. For k=1 the bound is1.
+
+If |C_b|>=k, it contains a connected set of exactly k vertices
+including b: grow a spanning tree until k vertices have been
+selected. Joint bound(3.3) or(4.3) and the union bound give
+
+             mu(|C_b|>=k)<=q (D^2 q)^(k-1).            (5.2)
+
+There is no sum over larger cluster sizes and no conditional
+independence statement. The estimate holds for1<=k<=K_board;
+for larger k the probability is zero.
+
+For D^2 q<1 it follows, in particular, that
+
+ E_mu |C_b|<=q/(1-D^2 q),
+
+ E_mu exp(t|C_b|)
+  <=1+(exp(t)-1)q/[1-exp(t)D^2 q],
+                    0<=t<log[1/(D^2 q)],              (5.3)
+
+and
+
+ mu(some bad component has size>=k)
+                  <=K_board q(D^2 q)^(k-1).            (5.4)
+
+The graph-radius bound from b follows by replacing k with r+1.
+Formula(5.4), rather than a rooted probability without a volume
+factor, is what controls existence somewhere on the whole torus.
+
+There is also a simple all-bad-count bound. If N_A is the number
+of bad sites in any prescribed finite board subset A, expansion
+of product_b[1+(exp(t)-1)1_(A_b)] and the joint estimate give
+
+            E_mu exp(t N_A)<=[1+q(exp(t)-1)]^|A|, t>=0. (5.5)
+
+This is an upper Laplace comparison, not stochastic domination
+of the full bad-site process and not an assertion of independence.
+
+6. PHYSICAL SCALE AND EXACT LIMITS OF THIS RESULT
+
+For fixed tile side lengths, V is fixed. Choosing L large enough
+that D^2 q<1 gives exponentially decaying component-size tails
+uniformly in the ambient torus and in g. Choosing
+L(g)=log(1/g) as g->0 makes q super-polynomially small in g
+at fixed V. The finite-board estimates remain the precise claims.
+
+For an illustrative fixed-physical-volume regulator sequence with
+K_board<=C a^-3 and D^2 q<=exp(-c0)<1 uniformly, take
+k_a=ceil[(4/c0)log(1/a)]+1. Equation(5.4) gives an upper bound
+of order a on the existence of any bad component of size k_a.
+On its complement every connected component of CLOSED bad tiles
+has physical diameter in the spatial torus metric at most
+C l_max a k_a, which tends to0.
+Face or touching adjacency is kept as specified. If one wants
+to connect all geometrically touching bad regions, touching
+adjacency, with D=26, is the appropriate version.
+
+For a concrete logarithmic weak-coupling sequence
+g_a^2 comparable to1/log(1/a), one may take L(g_a)=log(1/g_a).
+Then q_cl tends to0, the uniform c0 condition eventually holds,
+and g_a^2 L(g_a)^2 tends to0. Thus all plaquettes outside the
+closed bad tiles obey a vanishing unrenormalized curvature
+threshold, while the bad-tile components have the preceding
+small-diameter high-probability bound. This still gives no
+control on the dynamical influence of those components.
+
+This conclusion concerns the actual unflowed Hamiltonian ground
+field at that fixed tile resolution. Many small bad components
+may still occur, and their effect on nonlinear spatial flow is
+not bounded by their diameter alone. The thresholds themselves
+are g^2 L^2 and are not a physically renormalized curvature scale.
+
+The events are not Bałaban history labels. They do not include his
+derived minimizer, auxiliary-field, reconstruction, gauge-choice,
+or age/maturity predicates. They provide neither native history
+admission nor an all-history physical transport theorem.
+
+Similarly, RP of mu supplies no multipoint estimate for the
+nonlinear flowed pushforward, and these unmarked probabilities
+do not bound derivative-weighted bad events. Such a weight can
+favor a rare component. The marked entropy/transport issue in
+hamiltonian_marked_derivative_turn67.txt remains.
+
+The new result is genuine joint full-ground-law local
+concentration and its connected-cluster consequences. It does
+not prove the nonlinear physical observable derivative target,
+its variance floor, or a nontrivial continuum YM4 existence theorem.

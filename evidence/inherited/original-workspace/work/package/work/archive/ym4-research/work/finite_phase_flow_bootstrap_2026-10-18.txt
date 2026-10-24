@@ -1,0 +1,187 @@
+FINITE PHASE CONTAINMENT AND THE STRONG BLOCK BOOTSTRAP
+18 October 2026. Working proof, using the q-kernel estimate and the earlier
+localized classical/source lemmas. The q-kernel and this bootstrap have
+passed separate internal audits. This is not a continuum-existence claim.
+
+1. WHAT MUST BE PROVED AT A BLOCK ENDPOINT
+
+Use the exact source coupling gamma=g^-2 and the actual regular action E,
+with beta(E)=0. Fix the grouping, support reserves and then a block length
+q for classical contraction. Put
+  b(gamma)=c gamma^-1/2 log(gamma),
+  t(gamma)=(log gamma)^(3/4),
+  delta(gamma)=g t/b=c^-1(log gamma)^(-1/4).
+The auxiliary cutoff t is only an analysis device. Actual source cutoffs
+are retained through exact annular output insertions.
+
+At aligned endpoints j=mq maintain
+  ||E_j||_{a,b_j} <= K b_j^2,
+  gamma_j-gamma_{j+q} >= d>0 for completed blocks,
+  |gamma_{r+1}-gamma_r| <= D at completed primitive steps.
+The initial Wilson state has E_0=R_0=0 in these coordinates.
+
+The static-history theorem, using ONLY the preceding finite prefix, gives
+  b_r^-2 ||R_r||_{a,b_r} <= rho(gamma_r),
+  rho(x)=C x^(2-P)(log x)^k -> 0, P>2.
+During the next unfinished block the same argument allows a larger fixed
+additive slack C_q in gamma_i>=gamma_r+c(r-i)-C_q. This follows from
+past aligned drift and bounded intervening increments; positivity of the
+unfinished block is not used. The source birth bound may be imported only
+after each step's coupling containment has been verified.
+
+2. A PRIMITIVE ESTIMATE DOES NOT REQUIRE THE NEXT BIRTH
+
+The actual regular source split, CMP119 (3.26)--(3.28), is
+  E_{r+1}=P[T_1 E_r+D_1+N_1(E_r+R_r^old)+h_r^reg].        (1)
+Here P=I-S beta, N_1 is the normalized inner regular logarithm minus its
+static value, D_1 includes the complete zero-input amplitude, and
+  h_r^reg=log(K_outer^reg rho_r^reg/K_inner^reg rho_r^reg)
+is evaluated at the ACTUAL regular input. Its constant part is removed.
+Old R enters only the fluctuation difference; its static value remains
+in R. Young R interpolation contributes to R'', not to (1). Thus (1)
+requires no new R_{r+1} estimate to bound its beta or its action norm.
+For the full q raw integral a distinct h_r^full uses E+all R at s=1.
+Confusing these two logarithms would be a source-ledger error.
+
+For causality, prepare the next regular integral and its annular comparison
+on a provisional output source domain at a fixed fraction of alpha(g_r),
+using only the entering coupling. Compute beta and establish (3) there.
+Bounded increments then compare that domain to a fixed fraction of the
+actual alpha(g_{r+1}). No output source domain or new birth is assumed
+before the coupling needed to define it has been controlled.
+
+At phase a=0,...,q choose auxiliary radii
+  b^{(a)}=zeta^a b_j,  0<zeta<1,
+and a finite decreasing sequence of spatial exponents
+  a=a_0>a_1>...>a_q>0.
+Choose zeta and these losses once, so each primitive stationary/noisy
+chart fits the preceding ball and each primitive support substitution
+has a fixed prepared-to-output reserve. A primitive same-radius or
+same-exponent estimate is NOT assumed. q is fixed, so all resulting
+constants B_a,C_a are finite. The later q theorem restores the canonical
+endpoint radius and exponent directly from the initial endpoint.
+
+The whole-family one-step complex mark, the complete fixed-domain
+forcing bound, and the regular annular comparison imply on these balls
+  |E_{r+1}|_{phase a+1}
+     <= B_a |E_r|_{phase a}+C_a
+         +C_a delta_j(|E_r|_{phase a}+rho_j)
+         +C_a tau_j/(b_j^2),                              (2)
+where tau_j=exp[-c_t(log gamma_j)^(3/2)]. Fixed powers of zeta and radius
+ratios are included in C_a. Global color invariance and a fixed analytic
+ceiling give D_1-D_1(0)=O((b^{(a+1)})^2), including its full gauge,
+Gaussian, Haar and pivot amplitude. This forcing estimate does not cost
+b_j^-2 on a mere O(1) bound.
+
+Define finite phase bounds K_0=K and, for example,
+  K_{a+1}=2(B_a+1)(K_a+C_a+1).
+Taking Gamma large makes (2) imply |E_{j+a}|<=K_a for all a<=q.
+In beta(1), beta(T_1E)=beta(E)=0. Thus
+  |gamma_{r+1}-gamma_r|
+     <= C_D+C_a delta_j(K_a+rho_j)+C_a tau_j/b_j^2.       (3)
+Choose D>C_D+1 (increasing for the finite set of primitive conventions)
+and then Gamma large. Equation (3) proves the next bounded increment
+using only the existing state. It makes the new coupling weak whenever
+the entering block has gamma_j>=Gamma+qD. The source conditional step
+can now be completed and its actual R' and R'' birth bounds imported.
+This repeats finitely many times. It is the noncircular order of the
+primitive extension, even though the strong endpoint norm is obtained
+only after the whole block has been integrated.
+
+3. THE q ESTIMATE RESTORES THE STRONG CLASS AND DRIFT
+
+The raw q calculation and actual-state annular insertions give exactly
+  E_{j+q}=P[T_q E_j+D_q+N_q(E_j)+Z_q],
+  gamma_j-gamma_{j+q}=beta[D_q+N_q(E_j)+Z_q],             (4)
+where Z_q includes T_q R_j, the marked N difference, all actual new
+R-operation insertions, all frozen full annular insertions, and -R_{j+q}.
+The full q-kernel norm estimate, independently internally audited, is the essential
+input here. It gives
+  |E_{j+q}| <= theta K+C_F
+      +C_q[delta_j(1+K+rho_j)+rho_j+tau_j/b_j^2],         (5)
+with theta<1, and
+  gamma_j-gamma_{j+q} >= d_G
+      -C_q[eta_j+delta_j K+rho_j+tau_j/b_j^2].            (6)
+Here d_G>0 is the established lower Gaussian block coefficient for the
+chosen group/scheme (currently SU(2)); eta_j->0 is the fixed-radius
+zero-input non-Gaussian error. In the prepared inner calculation one may
+take eta_j bounded by C_q(g_j t_j^3+g_j^2 t_j^2+tau_j), with fixed q.
+The static all-age estimate controls both endpoint R terms in (4);
+those endpoint terms may not be dropped because the source subtracts
+only the regular marginal, not the full static history.
+
+Slow variation of b across q bounded steps is 1+O_q(1/gamma_j).
+The classical contraction estimate on normalized moving balls therefore
+has theta<1 after increasing Gamma; it is not an assumption that changing
+the argument by a scalar preserves the original invariant field class.
+
+Choose K>=2C_F/(1-theta), enlarging it if necessary for the initial
+state, then fix its finite phase bounds, D, and finally Gamma. Every
+term in square brackets in (5),(6) tends to zero as Gamma grows.
+Make their contributions at most (1-theta)K/2 and d_G/2 respectively.
+Then (5) restores |E_{j+q}|<=K and (6) proves d=d_G/2. This establishes
+the simultaneous induction, provided the q preparation lemma is proved
+for the exact kernels and the source finite-prefix hypotheses match.
+It does not require an all-age quantum marked-ancestor estimate.
+
+4. EXISTENCE OF ARBITRARILY LONG WEAK RUNS NEEDS NO SHOOTING
+
+For the continuum-existence objective, an exact prescribed terminal
+coupling at every prescribed cutoff is stronger than necessary. In
+particular discrete source partition choices need not be assumed
+continuous in the bare coupling without proof.
+
+Assume the bounds just proved hold uniformly in depth for the homogeneous
+recursion on compatible regulators. Choose H>Gamma+2qD. Start at any
+gamma_0=A>H and stop at the
+FIRST aligned endpoint N=mq with gamma_N<H. Positive block decrement
+d guarantees finite stopping. All prior endpoints are >=H, and bounded
+primitive increments imply every intervening step is weak. At the last
+endpoint,
+  H-qD <= gamma_N < H,
+and
+  (A-H)/D < N <= q[1+(A-H)/d].                         (7)
+The upper bound follows by aligned positive drift; the lower follows
+by summing |Delta gamma|<=D. A harmless endpoint equality changes only
+strict versus non-strict notation.
+
+Take A_l->infinity. Then N_l->infinity, physical mesh a_l=ell^-N_l tends
+to zero, and endpoint gamma_N lies in a fixed compact weak interval.
+A subsequence has convergent terminal inverse coupling in that interval.
+No continuity, monotone bare-to-renormalized map, clipped state theorem,
+or exact matching of an externally prescribed horizon is used.
+
+There is a direct finite-torus implementation when the input estimates are
+uniform on the source's compatible tori. Put
+  n_max=q ceil(1+(A-H)/d).
+Choose an aligned ell-power L_A tending to infinity and exceeding all
+source collars and rounded blocks for gamma<=A+qD. Start on a torus with
+M_A=L_A ell^n_max sites per side. It supports all steps up to n_max.
+Construct this ACTUAL finite-regulator recursion and stop at N<=n_max.
+Only then assign its physical spacing ell^-N. Its physical side satisfies
+  M_A ell^-N >= L_A -> infinity,
+while (7) gives ell^-N->0. Thus candidate regulators simultaneously remove
+the ultraviolet and finite-volume cutoffs without assuming coefficient
+independence of the regulator, continuity in A, or a preassigned horizon.
+If some input estimate is only volume-first, that estimate must still be
+applied in its proved order; this arithmetic cannot supply a missing
+uniform estimate.
+
+This stopping construction provides candidate regulator sequences only.
+It does not prove convergence of physical observables,
+reflection positivity of a modified regulator, Euclidean invariance, or
+a nonzero Osterwalder--Schrader witness.
+
+STATUS
+The bootstrap and stopping-time deductions are elementary consequences
+of their displayed analytic inputs, with the circularity and unnecessary
+continuity assumption removed. The exact q Gaussian localization/core
+preparation is in raw_q_block_cluster_response_2026-10-18.txt, with its
+independent source audit in raw_q_block_independent_audit_2026-10-18.txt.
+The finite-phase argument and stopping arithmetic were independently
+checked by constrained_fiber; the provisional-domain and finite-torus
+refinements above implement that audit. All conclusions remain relative
+to the previously developed localized operator, classical contraction,
+positive Gaussian coefficient, and conditional source-induction inputs.
+These internal checks are not independent mathematical certification.
+A continuum observable construction remains essential to the full goal.

@@ -1,0 +1,244 @@
+BOUNDED LOCAL TESTS: EXACT ORDINARY-MARGINAL RESPONSE
+23 October 2026. New finite result. Original handoff files unchanged.
+Independent finite proof/scope review: local_response_consumer_audit
+_20261023.txt. Inherited native hypotheses remain conditional inputs.
+
+MAIN ADVANCE
+
+The prior normalized-score note required a source gradient arm to gain
+distance, or gave only a global bound for an opaque bounded source. A
+VERIFIED LOCAL COORDINATE READ is another sufficient input. No derivative
+of a bounded measurable local test is needed. Project the COMPLETE score
+onto the source read, differentiate that smooth projection, and apply
+the inherited full-law covariance estimate on the complementary variables.
+
+This proves a local total-variation bound for the actual normalized
+ordinary fiber when retained current coordinates vary on one fixed
+admitted geometry. It also gives covariance decay for two arbitrary
+bounded local tests, and stability against local hard masks. It does not
+identify two general geometry-changing reset branches with this family.
+
+1. FULL LAW AND UNIFORM PRINCIPAL-RESTRICTION INPUTS
+
+Use the real matched ordinary law from full_birth_conditional_factor_match
+_20261022, Sections 3--4, and survivor_normalized_score_20261023:
+
+ Q_a(dx)=Z_a^(-1)1_KI(x) exp[-H(x,psi(a);y)] dx.          (1)
+
+K_I is a FIXED product of convex coordinate-block balls. Geometry,
+background, all old raw histories, coupling, coordinates and cut radii
+are fixed. H includes every x-dependent action/measure/solved-constraint
+term. Exterior factors cancel in this ratio and remain in the outer law.
+The same native strict-chart and same-trajectory R-profile hypotheses
+are retained. No complete new proof of those inherited inputs is claimed.
+
+For all fields in the full required product domain, assume the registered
+unweighted gap c0>0 and complete weighted row AND column bounds M_nu for
+H'' in the JOINT current free coordinates I union E. The inherited
+weighted conditional covariance constant is c_nu^(-1), c_nu>0:
+
+ |Cov_Q(U,V)| <= c_nu^(-1)
+       ||W^-1 grad U||_2 ||W grad V||_2,                 (2)
+
+for block-scalar W with nu-Lipschitz logarithm. The unweighted Poincare
+constant is c0^(-1). Norms in (2) are under the exact conditional law.
+
+These facts hold with the SAME bounds after fixing any subset R of
+interior coordinate blocks and integrating C=I\R. Indeed K_C is still
+a fixed convex product. Principal restriction preserves the bare gap,
+decreases the absolute weighted perturbation/commutator bounds, and
+allows the induced arbitrary real linear force. Fixing x_R is not a
+new geometry, old-history change, or conditioning on a nonproduct event.
+This follows from the proof of the inherited weighted theorem, not an
+assumption that conditioning arbitrary correlated measures is harmless.
+
+Write d for that native index metric and W_i=exp[-nu d(i,R)].
+
+2. PROJECTED-SCORE PROOF
+
+Let a(t) follow a C1 path on the admitted slice, including admission of
+the WHOLE path. Put b_t=Dpsi(a(t)) dot a(t) and
+
+ S_t(x)=H_E'(x,psi(a(t));y)b_t,
+ m_t(r)=E_(Q_t)[S_t | x_R=r].                            (3)
+
+For fixed r and v supported on R, differentiation of the original
+complementary normalized ratio gives
+
+ D_v m_t(r)=E_r[v^T H_RE'' b_t]
+                  -Cov_r(S_t,v^T H_R').                 (4)
+
+Every covariance here uses the complete conditional Hamiltonian. The
+normalizer's derivative supplies precisely the centering in (4).
+No partition-function lower bound is inserted. K_C is fixed, so there
+is no moving-boundary term. At interior r this is ordinary dominated
+differentiation on a compact domain. The uniform estimates extend m_t
+as a Lipschitz function to the product closure; this suffices for the
+subsequent weak-gradient Poincare inequality.
+
+Schur's test and the complete joint Hessian bounds give, pointwise,
+
+ |v^T H_RE''b| <= M_nu ||v||_2 ||W_E b||_2,
+ ||W_C grad_C S||_2 <= M_nu ||W_E b||_2,
+ ||W_C^-1 grad_C(v^T H_R')||_2 <= M_nu ||v||_2.         (5)
+
+The last operator is W_C^-1 H_CR'' W_R with W_R=1. Its weighted row
+and column sums obey the same bound; the reversed weight is allowed.
+If C is empty, the covariance term is zero. Thus (2),(4),(5) imply
+
+ ||grad_R m_t||_2 <= K_nu ||W_E b_t||_2,
+ K_nu=M_nu+M_nu^2/c_nu.                                 (6)
+
+No sqrt(|R|) appears: test arbitrary UNIT vectors v before taking the
+dual norm. Treating coordinates separately would lose this improvement.
+
+Apply the FULL-law Poincare inequality to m_t(x_R):
+
+ Var_(Q_t)(m_t) <= c0^(-1) K_nu^2 ||W_E b_t||_2^2.       (7)
+
+There is no separately assumed curvature theorem for the marginal
+on R. The function m_t simply has zero gradients outside R.
+
+3. BOUNDED LOCAL RESPONSE AND TOTAL VARIATION
+
+Let F be any bounded REAL measurable function of x_R, fixed along the
+path, and let b_F=(ess sup F-ess inf F)/2. It may be discontinuous;
+the proof never differentiates F. Conditional expectation and the exact
+full score identity give
+
+ d Q_tF/dt=-Cov_(Q_t)(F,S_t)=-Cov_(Q_t)(F,m_t).
+
+Since sd(F)<=b_F, (7) gives
+
+ |d Q_tF/dt| <= b_F K_nu/sqrt(c0) ||W_E b_t||_2.         (8)
+
+If the parameter variation is supported in T subset E, then
+||W_E b_t||_2<=exp[-nu d(R,T)]||b_t||_2. For the native controlled
+bondwise switch, ||b_t||<=[1+C exp(-R_switch)]||dot a(t)|| and its
+support is unchanged. Integrating proves the advertised exponential
+distance bound for bounded local tests without any source gradient.
+
+Let q_a^R be the actual marginal on x_R, with TV half the L1 distance.
+Apply (8) to every indicator (b_F=1/2), and integrate BEFORE taking
+the supremum over indicators:
+
+ TV(q_a1^R,q_a0^R)
+ <= min{1, K_nu/(2 sqrt(c0))
+             integral_0^1 ||W_E Dpsi(a(t))dot a(t)||_2 dt}. (9)
+
+The same upper bound also follows by differentiating the marginal
+density: its centered score is m_t-E_Q S_t and its derivative L1 norm
+is bounded by sd(m_t). Thus the normalization of TV in (9) is exact.
+
+For one smooth bounded interior-local source word, (8) is a new optional
+producer using only its bounded actual read; analytic B typing is not
+required. For measurable local source flags on those same coordinates,
+(8) still applies. A geometric/history selector is not declared to be
+such a function without its actual read representation.
+
+4. TWO BOUNDED LOCAL TESTS IN THE SAME ORDINARY FIBER
+
+Let F(x_R),G(x_T) be bounded real tests on DISJOINT interior coordinate
+sets R,T. For h(z)=E_Q[F|x_T=z], use (8) on the principal kernel I\T,
+with x_T as its exterior parameter and the identity switch. All the
+uniform restriction estimates in Section 1 still hold. This gives
+
+ ||grad_T h||_2 <= b_F K_nu/sqrt(c0) exp[-nu d(R,T)].
+
+The full-law Poincare inequality for h(x_T), followed by sd(G)<=b_G,
+proves
+
+ |Cov_Q(F,G)| <= b_F b_G
+       min{1, (K_nu/c0) exp[-nu d(R,T)]}.               (10)
+
+Here the first bound is elementary Cauchy--Schwarz. No derivative of
+either test, arbitrary source radius shrinkage, or global physical
+Wilson variance enters. A test with a direct x_T read would contribute
+a direct derivative and does not satisfy the disjoint-read argument.
+This is an inner ordinary covariance, not the covariance after closing
+its arbitrary outer background/coarse-coordinate law.
+
+5. HARD LOCAL MASKS AND EXACT BOUNDARY MIXTURES
+
+Within this SAME law, let E0 be any event measurable in x_T, p=Q(E0).
+For p>0 the exact mass-weighted changed-domain row is
+
+ p[Q(F|E0)-QF]=Cov_Q(F,1_E0).                           (11)
+
+The local event may have arbitrarily small mass; no derivative of its
+indicator or boundary is required. Equations (10),(11) give a joined
+estimate without a reciprocal p. The elementary bound 2 b_F p(1-p)
+and interpolation can also be used, as recorded in mixed_reset_progress.
+
+A stronger rarity-times-distance bound is available if the actual
+compact parameter diameter is affordable. Section 4 and convexity of
+K_T imply
+
+ osc_(z in K_T) h(z)
+ <= b_F K_nu/sqrt(c0) exp[-nu d(R,T)] diam_2(K_T).
+
+Consequently
+
+ |Cov_Q(F,1_E0)|
+ <= p(1-p)b_F min{2, K_nu/sqrt(c0)
+                       exp[-nu d(R,T)] diam_2(K_T)}.     (12)
+
+Proof: write Cov(F,1_E0)=p(1-p)(E[h|E0]-E[h|E0^c]).
+For p=0 or 1 the covariance is zero. The diameter is its actual block
+coordinate diameter, including its support-size and cutoff prices.
+It may not be replaced by a fixed constant for an unbounded owner.
+
+More generally, keep a fixed interior set U containing R, and view
+all x_(I\U) as exterior data. Any nonnegative reweighting depending
+only on those exterior variables changes the marginal on R into a
+mixture of the SAME q_z^R. A uniform bound for TV(q_z^R,q_z'^R) from
+(9) bounds the distance between any two such mixtures, regardless of
+their normalizing masses. This applies to hard masks, changed exterior
+weights and fixing versus averaging exterior coordinates, provided
+the SAME local conditional density is retained. It does not allow a
+change in H inside U or in its constraint chart to be ignored.
+
+For variations in many exterior coordinates, retain the weighted
+quantity integral ||W_E dot z||_2. A subsequent volume-uniform bound
+requires the ACTUAL lattice/read census and coordinate amplitudes;
+the global unweighted diameter is not automatically acceptable.
+
+6. NATIVE APPLICATION AND REMAINING RESET MATCH
+
+Equations (8)--(10) are valid for the matched actual ordinary law (1),
+conditional on the already admitted complete Hessian/profile inputs.
+This is a nonempty native parameter family: sufficiently small retained
+current-coordinate variations around a strict admissible fiber, with
+fixed geometry and raw history, satisfy the same path conditions.
+It removes the extra smooth-source requirement in that family.
+
+It also answers part of neutral_prefix_localized_real_kernel_followup:
+a local marginal comparison can be proved from the COMPLETE interacting
+conditional Hessian theorem once the laws differ only by the specified
+held current coordinates. Gaussian covariance decay alone would not
+prove this. The full factor match and principal conditional laws do.
+
+For two general reset preimages A and empty, still establish:
+ * a common independent coordinate read for the source word;
+ * identical conditional geometry/action, or controlled full score
+   changes, in the local region actually used;
+ * all changing old histories, constraint maps, source read switches
+   and cutoff changes, with their exact physical probabilities;
+ * the required retained-slot/source-position budget for any word sum.
+
+The native removed-owner event has NOT been identified with E0 in (11)
+or an exterior-only reweighting in Section 5. Those are explicit new
+finite producers, not a replacement of the LII branch law by B119.
+No positive full-law ordinary covariance theorem is inferred for the
+entire original Wilson measure, whose global source variance diverges.
+
+SOURCE LOCATORS (ALL UNDER work/handoff)
+
+original-workspace/work/full_birth_conditional_factor_match_20261022;
+original-workspace/work/inherited_boundary_reference_20261022;
+original-workspace/work/extended_birth_reference_20261022;
+original-workspace/work/switch_conditional_allocation_20261022;
+original-workspace/work/package/work/turn124_primitive_convex_reference;
+continuation-workspace/work/neutral_prefix_localized_real_kernel_followup
+_20261023. Current companion: survivor_normalized_score_20261023 and
+the audit of that calculation. No new inaccessible reference is needed.

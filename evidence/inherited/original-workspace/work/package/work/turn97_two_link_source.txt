@@ -1,0 +1,447 @@
+TURN97 -- A SECOND INTERACTING INTEGRATION OF THE ORIGINAL WILSON SOURCE
+21 October 2026. two_link97. Finite original-law theorem, with near-flat
+exterior hypotheses. No shared frontier edit.
+
+RESULT
+
+Two opposite parallel raw links sharing one plaquette give an actual
+eleven-plaquette Wilson fiber. Its two integrations can be performed in
+sequence while keeping both the changed action and the old action source.
+The second conditional law is explicitly not a Wilson one-link law.
+
+For all exterior staples in a fixed sufficiently small neighborhood of
+a common unit quaternion, the full conditional mean of the ORIGINAL
+eleven-plaquette action, after subtracting its flat-exterior value, agrees
+with its actual classical conditional minimum with a relative error
+O(beta^-2). The constants are uniform over that neighborhood and over
+beta>=beta_0. In particular, the same O(beta^-2) protection holds for the
+quadratic exterior coefficient after the second interacting integration.
+The external fields in the exponent have size approximately 5 beta;
+they are not the bounded-amplitude regime of TURN96 Section3A.
+
+This is a two-link weak-exterior theorem, not a full block induction or
+a cutoff-uniform correlation estimate. The generated action is retained
+exactly throughout. The proof uses a parameter-uniform finite-dimensional
+Laplace estimate, proved below directly for the original source. It does
+not differentiate an uncontrolled asymptotic remainder.
+
+1. THE ACTUAL WILSON FIBER AND THE CHANGED SECOND ACTION
+
+Choose two opposite parallel links of one elementary plaquette on an
+ordinary finite four-dimensional Wilson lattice, with periods at least
+four. They share exactly that plaquette. Each belongs to five additional
+plaquettes, giving eleven distinct plaquettes in their union. Condition
+on every other original link and take the constant profile on this union.
+An additive source from exterior-only plaquettes can be restored as an
+exterior-measurable summand; it is not part of the fiber energy below.
+
+If the shared plaquette is Q A R^{-1} B^{-1}, put x=Q and y=B R A^{-1}.
+Both are unit quaternions. Left/right multiplication preserves Haar, and
+
+ (1/2)Tr(Q A R^{-1} B^{-1})=x dot y.
+
+Each private plaquette is linear in the appropriate quaternion variable.
+There are unit exterior staples a_i,b_j in S^3, i,j=1,...,5, such that,
+with a=sum_i a_i and b=sum_j b_j, the original touched action is exactly
+
+ S_t(x,y)=11-x dot y-a dot x-b dot y
+        =(1-x dot y)+sum_i(1-a_i dot x)+sum_j(1-b_j dot y). (1.1)
+
+Here t denotes the actual exterior staple data after the indicated Haar
+coordinate change. Correlations among those data caused by the original
+exterior geometry do not affect any assertion below: it is a theorem for
+all data in the stated neighborhood, hence also for the realizable ones.
+The conditional probability and normalized original-source mean are
+
+ Z_beta(t)=int exp[-beta S_t(x,y)] dx dy,
+ A_beta(t)=Z_beta(t)^(-1) int S_t exp[-beta S_t] dx dy.
+                                                               (1.2)
+
+All Haar measures are normalized. Write z(s)=2 I_1(s)/s, z(0)=1, and
+m(s)=z'(s)/z(s)=I_2(s)/I_1(s). The FIRST integration is exact:
+
+ Z_beta(t)=exp(-11 beta) int exp(beta b dot y)
+                                  z(beta|a+y|) dy,              (1.3)
+ J_beta(t,y)=E[S_t(x,y)|y]
+           =11-b dot y-|a+y|m(beta|a+y|).                        (1.4)
+
+The actual second probability is
+
+ rho_beta,t(dy)=exp(beta b dot y)z(beta|a+y|)dy /
+                     int exp(beta b dot y)z(beta|a+y|)dy,
+ A_beta(t)=int J_beta(t,y)rho_beta,t(dy).                         (1.5)
+
+The new effective energy is
+
+ E_eff,beta(t,y)=11-b dot y-beta^(-1)log z(beta|a+y|),
+
+and the old source is J_beta=partial_beta[beta E_eff,beta], not merely
+E_eff,beta. The logarithmic Bessel term and its beta derivative cannot be
+discarded in the second integration.
+
+For a differentiable exterior path the exact response, wherever written
+with r=|a+y|>0, is
+
+ d_t A_beta=E_rho[d_t J_beta]
+  +Cov_rho(J_beta, beta dot b dot y+beta m(beta r) dot r).         (1.6)
+
+Thus the action score and the normalizer are both present. Near the flat
+data considered below |a| is close to five, so r is bounded away from zero
+for EVERY y in S^3. Globally (1.3)--(1.5) still have their smooth continuous
+interpretation at r=0.
+
+If F is integrable and measurable outside these two raw links, then
+
+ Cov_original(F,S_t)=Cov_original(F,A_beta(t)).                   (1.7)
+
+This is the conditional-expectation identity in the same original Wilson
+measure. It permits subtraction of the constant A_beta(flat). It does
+not make arbitrary history ownership or deciding labels exterior
+measurable.
+
+2. PRECISE NEAR-FLAT THEOREM
+
+Let n=(1,0,0,0). Use tangent coordinates
+
+ a_i=(sqrt(1-|u_i|^2),u_i), b_j=(sqrt(1-|v_j|^2),v_j),
+ t=(u_1,...,u_5,v_1,...,v_5) in R^30,
+
+for all |u_i|,|v_j| sufficiently small. Denote by t=0 the flat data. Set
+
+ D(t)=min_(x,y in S^3) S_t(x,y),
+ T_beta(t)=A_beta(t)-A_beta(0).
+
+There exist epsilon>0, beta_0>=1, and finite C, depending only on this
+fixed two-link fiber, such that on |t|<epsilon:
+
+ (i) the minimizer is unique and smooth in t, D is smooth, D>=0;
+
+ (ii) there is a smooth c_1(t) and a remainder obeying
+
+     A_beta(t)=D(t)+3/beta+c_1(t)/beta^2+R_beta(t),
+     ||R_beta||_(C^2(t))<=C beta^(-3),                         (2.1)
+
+     uniformly beta>=1 after enlarging C if necessary;
+
+ (iii) the centered source has the RELATIVE estimate
+
+     |T_beta(t)-D(t)|<=C beta^(-2)D(t).                        (2.2)
+
+Consequently, for beta sufficiently large,
+
+ (1-C beta^-2)D(t)<=T_beta(t)<=(1+C beta^-2)D(t).                (2.3)
+
+No typical-field statement is made here. The neighborhood is an actual
+restriction on the exterior staples, and its complement has not been
+estimated by this theorem. The constants do not depend exponentially on
+the physical exponent amplitudes |beta a| and |beta b|, which are of
+order beta inside this neighborhood.
+
+3. UNIQUE MINIMUM, THE CLASSICAL QUADRATIC FORM, AND ITS ZERO MODES
+
+At t=0,
+
+ S_0(x,y)=(1-x dot y)+5(1-n dot x)+5(1-n dot y)
+        >=(5/2)(|x-n|^2+|y-n|^2).
+
+Its unique minimum is (n,n), with value zero. In the six tangent variables
+(xi,eta) of x,y, the Hessian is
+
+ H=[[6 I_3,-I_3],[-I_3,6 I_3]],
+
+with eigenvalues 5 and 7, each of multiplicity three. In a sufficiently
+small fixed chart its Hessian remains uniformly positive under small
+t. The implicit function theorem gives a unique smooth critical point
+there. The displayed global gap at t=0, compactness, and a small uniform
+perturbation exclude any global minimum outside that chart. This proves
+(i), including a uniform gap away from a smaller minimum neighborhood.
+
+Put U=sum_i u_i, V=sum_j v_j. Minimizing the quadratic expansion gives
+
+ D^(2)(t)=1/2 sum_i|u_i|^2+1/2 sum_j|v_j|^2
+           -[6(|U|^2+|V|^2)+2 U dot V]/70.                   (3.1)
+
+Indeed the quadratic energy before minimization is
+
+ 1/2 |xi-eta|^2+1/2 sum_i|xi-u_i|^2
+                         +1/2 sum_j|eta-v_j|^2,
+
+and H^{-1}=(1/35)[[6 I_3,I_3],[I_3,6 I_3]]. The kernel of (3.1)
+consists exactly of u_i=v_j=w for one common w. These are the common
+staple rotations. On a slice fixing a_1=n, the form is positive definite.
+
+More exactly, every summand in (1.1) is nonnegative. Hence D(t)=0 iff
+all ten staples are the SAME unit quaternion, in which case the minimum
+has x=y equal to that quaternion. This is the whole nearby zero manifold.
+
+4. PARAMETER-UNIFORM LAPLACE PROOF FOR THE ORIGINAL SOURCE
+
+We include the argument to specify the beta derivative control that is
+actually needed. Smooth parameter-dependent Morse coordinates z in R^6
+near the unique minimum put the energy exactly into the form
+
+ S_t=D(t)+|z|^2/2.
+
+One construction starts with centered local coordinates w at the smooth
+minimum, writes S_t-D(t)=w^T K(w,t)w/2 by the integral Hessian formula,
+and sets z=K(w,t)^(1/2)w. The uniformly positive matrix square root is
+smooth, and its derivative at w=0 is invertible uniformly in t. The
+inverse function theorem gives a common coordinate neighborhood. The
+product Haar density in these coordinates is a positive smooth B(z,t),
+with B(0,t) uniformly bounded away from zero and with uniformly bounded
+derivatives of every fixed finite order.
+
+Insert a fixed radial cutoff chi(z), supported in that neighborhood and
+equal to one in a smaller ball. The complement has S_t-D(t)>=delta>0
+uniformly. Its integrals, and two t derivatives, are bounded by a fixed
+polynomial in beta times exp(-delta beta). This applies to both the
+partition function and its energy-excess numerator; it also covers
+derivatives of the moving local chart/cutoff when returned to x,y.
+
+After z=beta^(-1/2)w, radial symmetry removes the odd Taylor terms of B.
+The standard Gaussian moment identities, obtained by one-dimensional
+integration by parts, give in dimension six
+
+ e^(beta D)Z_beta
+  =(2 pi)^3 beta^-3 [ B_0+(Delta_z B)_0/(2 beta)+O_C2(beta^-2)],
+
+ e^(beta D) int (S_t-D)exp(-beta S_t) dx dy
+  =(2 pi)^3 beta^-4 [3 B_0+2(Delta_z B)_0/beta+O_C2(beta^-2)].
+                                                               (4.1)
+
+Normalized-Haar constants are already in B. Taylor remainders of order
+four, with two t derivatives, are bounded by C|z|^4. Gaussian fourth
+moments control the remainders in (4.1); the cutoff error is exponential.
+The positive lower bound on B_0 permits division with two parameter
+derivatives. The ratio is
+
+ A_beta(t)-D(t)=3/beta+
+               [(Delta_z B)_0/(2 B_0)]/beta^2+O_C2(beta^-3).
+
+This proves (2.1), with c_1=(Delta_z B)_0/(2 B_0). In particular, the
+beta-independent one-loop log-determinant makes no beta^-1 contribution
+to the flat-subtracted original source. The universal dimension term
+3/beta cancels when its flat value is subtracted. There is no inference
+from a beta-undifferentiated partition-function error: the energy
+numerator was estimated directly.
+
+An independent flat-point calculation by block97 makes the scalar
+subtraction explicit:
+
+ A_beta(0)=3/beta-39/(490 beta^2)+O(beta^-3).                 (4.2)
+
+Indeed, in tangent coordinates X,Y at n the quadratic energy is
+3(|X|^2+|Y|^2)-X dot Y, its quartic term is
+(3/4)(|X|^4+|Y|^4)-(1/4)|X|^2|Y|^2, and the quadratic Haar-density
+correction is (|X|^2+|Y|^2)/2. For the centered Gaussian with covariance
+H^{-1}, the moments are E|X|^2=18/35, E|X|^4=108/245, and
+E|X|^2|Y|^2=66/245. The partition coefficient, hence the coefficient
+c_1(0) in the energy expansion, is their combination
+18/35-(3/2)(108/245)+(1/4)(66/245)=-39/490.
+
+5. WHY THE REMAINDER IS RELATIVE TO D, WITHOUT A PER-FIBER CONSTANT
+
+Both D and A_beta are invariant under a simultaneous orthogonal rotation
+of all staples and of x,y. The product S^3 Haar measure and all dot
+products in (1.1) are invariant under this SO(4) action. In particular,
+A_beta is exactly equal to A_beta(0) on the common-staple zero manifold.
+
+Choose a smooth orthogonal rotation sending a_1 to n near a_1=n. It
+puts the remaining nine staples into small tangent coordinates w in
+R^27, while fixing the first staple to n. On this local slice define
+
+ E_beta(w)=A_beta(w)-A_beta(0)-D(w).
+
+From (2.1), ||E_beta||_C2<=C beta^-2. Exactly E_beta(0)=0. The subgroup
+SO(3) fixing n rotates all nine three-component tangent variables; no
+nonzero invariant linear functional exists on their direct sum.
+Therefore grad_w E_beta(0)=0 for every beta, independently of the
+asymptotic expansion. Taylor's theorem yields
+
+ |E_beta(w)|<=C beta^-2 |w|^2.
+
+The positive definite classical Hessian (3.1) on this slice gives
+D(w)>=c|w|^2 after shrinking the neighborhood. Combining the two proves
+(2.2). This argument is uniform over the common-staple rotations; it
+does not introduce a spurious cost along their exact zero directions.
+
+In these quotient coordinates one also gets a genuine response estimate
+
+ |grad_w[A_beta(w)-D(w)]|<=C beta^-2 |w|,                   (5.1)
+
+because subtraction of A_beta(0) does not affect a derivative. Thus the
+conditional-source response agrees with the actual classical response
+to relative order beta^-2 in this local norm. Formula (1.6) identifies
+the full changed-action score that this estimate includes.
+
+6. QUADRATIC COEFFICIENT AFTER THE SECOND INTEGRATION
+
+Let T_beta^(2) be the quadratic Taylor polynomial of the actual centered
+source at flat exteriors. Equations (2.2), (3.1) imply
+
+ |T_beta^(2)(t)-D^(2)(t)|<=C beta^-2 D^(2)(t).              (6.1)
+
+This is an operator statement on the quotient by common rotations, not
+an estimate obtained by inserting a smooth classical field into a
+typical quantum configuration. It follows for the original two-link
+fiber after both integrations. The protected coefficient is not the
+coefficient of a guessed Wilson action for the second link.
+
+For a completely explicit finite-beta representation at the flat point,
+let the scalar c=n dot y have probability density proportional to
+
+ (1-c^2)^(1/2) exp(5 beta c)
+           z(beta sqrt(26+10c)),  -1<c<1.
+
+Define
+
+ M=E c,
+ C_d=(1-E c^2)/3,
+ C_o=(1/3)E[(1-c^2)m(beta sqrt(26+10c))/sqrt(26+10c)].
+
+The two-link exchange symmetry gives E x_0=E y_0=M. Simultaneous
+SO(3) invariance gives E x_i x_j=E y_i y_j=C_d delta_ij and
+E x_i y_j=C_o delta_ij for spatial quaternion components. Direct
+second differentiation of the finite positive partition integral yields
+
+ T_beta^(2)= (M+beta M')/2 [sum_i|u_i|^2+sum_j|v_j|^2]
+  -[beta C_d+(beta^2/2)C_d'](|U|^2+|V|^2)
+  -[2 beta C_o+beta^2 C_o'] U dot V.                        (6.2)
+
+Primes here differentiate beta with all normalized exterior staples
+fixed. All moments and their derivatives use the displayed actual radial
+law. Formula (6.2) is exact at every beta>0. The asymptotic theorem proves
+that it approaches (3.1) with the relative error (6.1), without requiring
+numerical quadrature or a separate moment-expansion assumption.
+
+As a direct normalization/factor check, simultaneous infinitesimal
+rotation of x and y in a (0,i) plane and Haar integration by parts give
+
+ C_d+C_o=M/(5 beta).
+
+Substitution into (6.2) makes its value zero when all u_i=v_j=w, exactly
+as required by common-staple rotation invariance, for EVERY beta>0.
+
+6A. THE ACTUAL VARYING PLAQUETTE PROFILE
+
+The same fiber also transports a deterministic real weight on each of
+its eleven original plaquettes. Let w_0 be the shared-plaquette weight,
+w_i the five x-private weights, and v_j the five y-private weights.
+Write
+
+ S_w=w_0(1-x dot y)+sum_i w_i(1-a_i dot x)
+                            +sum_j v_j(1-b_j dot y),
+ W=w_0+sum_i w_i+sum_j v_j,
+ a_w=sum_i w_i a_i, b_w=sum_j v_j b_j,
+ wbar=W/11, omega=max_l |w_l-wbar|,
+
+where the final maximum ranges over all eleven weights, including the
+five denoted v_j. Define M_beta,w(t)=E_beta,t S_w. The underlying
+probability remains the UNWEIGHTED original action (1.1); the profile
+does not change its minimizer x_*(t),y_*(t).
+
+After the first integration the exact original weighted insertion is
+
+ J_beta,w(t,y)=W-b_w dot y
+      -[m(beta|a+y|)/|a+y|](a+y) dot (a_w+w_0 y),            (6.3)
+
+and M_beta,w=int J_beta,w rho_beta,t with the SAME changed density (1.5).
+This explicitly includes the shared-plaquette term. It is not obtained
+by multiplying a guessed effective action by a profile.
+
+Let S_w,cl(t)=S_w(x_*(t),y_*(t)). In the neighborhood of Section2,
+
+ |M_beta,w(t)-M_beta,w(0)-S_w,cl(t)|
+   <=C[|wbar|beta^-2+omega beta^-1]D(t),                   (6.4)
+
+uniformly beta>=1 (with the same type of fixed constants). No source
+normalization by beta is inserted here. The reference minimum is that
+of the baseline unweighted action; it is not reoptimized for w.
+
+Proof with the needed exterior derivatives. In the parameter-Morse
+coordinates of Section4 let G_w(z,t)=S_w(x(z,t),y(z,t)). The same Gaussian
+moment calculation for the numerator G_w B gives
+
+ M_beta,w(t)=G_w(0,t)+A_w(t)/beta
+                         +O_C2(||w||_infinity beta^-2),
+ A_w(t)=(1/2)Delta_z G_w(0,t)
+               +grad_z G_w(0,t) dot grad_z log B(0,t).      (6.5)
+
+The proof expands G_w B and B through cubic order. Odd terms integrate
+to zero, leaving the displayed quadratic coefficient and a fourth-order
+Taylor remainder; its two t derivatives obey the same bounds. Linearity
+of the mark makes all constants proportional to ||w||_infinity. Thus
+(6.5) is a bound on the actual weighted numerator, not differentiation
+of an unparameterized asymptotic formula. For the uniform mark w=1,
+G_1=D+|z|^2/2, so A_1=3 identically. Its stronger remainder is precisely
+Section4's constant-source theorem.
+
+Now split w=wbar*1+delta w. For the delta mark, (6.5) gives a C^2 bound
+C omega/beta on
+
+ M_beta,delta w(t)-M_beta,delta w(0)-S_delta w,cl(t).
+
+This difference vanishes on the common-staple manifold. The SO(3)
+stabilizer again forbids any linear derivative on the slice a_1=n,
+for arbitrary fixed weights: each weighted plaquette defect is invariant
+under simultaneous rotations. The same Taylor and D>=c|w_slice|^2
+argument as in Section5 therefore bounds it by C omega D/beta. The
+constant part is bounded by |wbar| C D/beta^2 using (2.2). This proves
+(6.4). The coordinate name w_slice in this sentence denotes the quotient
+exterior coordinates, not the plaquette-weight vector.
+
+For a scalar physical profile sampled at the eleven plaquette centers,
+omega<=C a ||grad f||_infinity at lattice mesh a, including the support
+edge when f is smoothly extended by zero. Orientation-dependent weights
+require their actual oscillation; a spatial derivative bound alone is
+not asserted for them. The gain is attached to the SAME classical
+defect D, with no independent per-fiber constant. It still does not turn
+the bound into a uniform sum over microscopic source locations.
+
+7. WHAT THIS CLOSES AND WHAT IT DOES NOT
+
+Closed: an actual SECOND interacting integration, retaining the changed
+action, the original constant source, its normalizer, and its response
+score; uniform control for exterior exponent amplitudes of order beta
+in a fixed near-flat region; and an O(beta^-2) relative correction to
+the true classical conditional minimum and to its quadratic coefficient.
+The varying-profile extension retains the full original weighted mark
+with error C[|wbar|beta^-2+omega/beta] times that same minimum.
+
+Not closed: general raw exteriors, probability of the complement of the
+near-flat region, arbitrary native cuts or branch indicators, constants
+uniform in a growing block, an invariant action/source class under
+successive blocks, a microscopic source-census bound, a positive
+continuum response, or a continuum construction. The scalar flat value
+is the conditional value at flat exterior data, not the expectation in
+the full Wilson measure. Pointwise comparison does not give a sign or
+multiplicative comparison for a separated connected correlation.
+
+Relation to prior work: TURN96 supplies the exact one-link source and
+the bounded-amplitude two-link commutator estimate. Its warning against
+repeating the unchanged Wilson conditional law is obeyed by (1.3)--(1.6).
+Earlier finite-graph Laplace work already gives unparameterized compact
+weak-coupling asymptotics. The additional point proved here is control
+of the actual old source with two exterior derivatives, the cancellation
+of its universal 3/beta term after flat subtraction, and the relative
+estimate using the common-staple zero manifold.
+
+Independent audit: block97 read Sections1--6 and returned PASS at the
+fixed weak-exterior scope. The audit checked the Haar change of variables,
+the exact changed density/source and score, the parameter-Morse core and
+tail argument, the direct C^2 energy-numerator expansion, the relative
+estimate and gradient bound, and the exact finite-beta quadratic formula
+(6.2). Its independent flat c_1 calculation is recorded in Section4 and
+work/turn97_fixed_block.txt. The optional additional families in that
+separate note are not used in this theorem.
+
+Section6A was added after that first audit, at root's request. heatbath97
+independently audited Sections1--6 and the added Section6A and returned
+PASS, checking the exact weighted insertion, the marked-Morse coefficient,
+the C^2 error, the invariant first-jet argument for arbitrary fixed weights,
+and the omega/beta relative-D estimate. Its requested Taylor-remainder
+wording correction has been incorporated. The source's field-independent
+dimension cancellation and generic parameter-C^2 Laplace method are not
+claimed as new general principles; they already occur in TURN74 and
+TURN40 respectively. Here they are applied to the literal compact
+two-link original Wilson fiber with its exact changed action and source.

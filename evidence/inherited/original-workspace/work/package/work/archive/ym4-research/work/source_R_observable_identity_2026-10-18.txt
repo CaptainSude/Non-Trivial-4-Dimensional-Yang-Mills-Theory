@@ -1,0 +1,342 @@
+THE SOURCE R OPERATION: EXACT EXTERIOR IDENTITY AND OBSERVABLE ERROR
+18 October 2026. Focused work note; no public artifact.
+
+1. WHICH VARIABLES THE SOURCE NORMALIZES
+
+The primary source available for direct reading is Balaban, CMP122 (1989),
+355--392, DOI10.1007/BF01238433:
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+
+Its p356, preceding (1.1), explicitly leaves the old T_k^h, T_h and V_h
+integrations outside the displayed R operation. These are not future coarse
+fields. The preparatory integrations produce the PAST levels h+1,...,k,
+where N=k-h. This indexing is explicit in the repository Raw I, lines53760ff,
+and agrees with the PRIMARY text at p362, which treats j=h+1,...,k and a
+boundary layer measured in the L^{-h} scale. The N steps therefore must not
+be interpreted as a future constraint at level k+N.
+
+The denominator is analyzed in (1.2) and (1.10), pp356--358. It integrates
+the local V' variables on Lambda, with the axial gauge delta and the small
+cutoff, against the reference Wilson weight built from U_{k,Z}(V' V_Lambda).
+All unintegrated variables are held fixed. The variational problem (1.3)
+fixes averages on Z\Lambda; (1.4) expressly admits every variation supported
+inside Lambda. The reference normalization has no additional delta fixing
+a future block average inside Lambda. Positivity of the real density is
+also stated at pp379--380, (1.73)--(1.75).
+
+The repository's existing definition at Raw I lines898--921 gives precisely
+the same integrate-and-normalized-reference-reinsert description, referring
+to CMP122-I (1.100)--(1.102). The latter paper remains inaccessible through
+the available primary routes, and the OCR drops the full display (1.1) of
+CMP122-II. Consequently the notes below do not invent a symbol-by-symbol
+transcription of those displays. They use their identified numerator and
+denominator structure, corroborated by the printed discussion of the actual
+denominator in (1.10). This is not an identification of R with an arbitrary
+user-chosen Markov kernel.
+
+2. EXACT TERM-BY-TERM EXTERIOR MARGINAL AND COUPLING
+
+Fix a positive source history h before its R replacement. Include all
+retained old variables, auxiliary choices, and component labels in h or x.
+Let x denote all unintegrated variables and y the actual current bond
+variables integrated by this replacement. Write its positive incoming
+measure as nu_h(dx,dy), with marginal m_h(dx). Let w_h(x,y')dy' denote the
+source reference measure, INCLUDING its Haar/axial-gauge factors and cutoff.
+The normalization analyzed in (1.10) is
+
+  D_h(x)=int w_h(x,y')dy' >0.
+
+The normalized replacement term is exactly
+
+  (Rnu)_h(dx,dy')=m_h(dx) K_h(x,dy'),
+  K_h(x,dy')=w_h(x,y')dy'/D_h(x).                         (2.1)
+
+The factors from the unperformed old integrations pass through this identity.
+There is no assertion D_h(x) is constant in x. Equation (2.1) is precisely
+why the normalizer must be retained: integrating y' gives m_h, pointwise in
+x. Thus every bounded observable depending only on x is preserved exactly.
+For physical gauge-invariant observables, any subsequent undoing of axial
+gauge also leaves the observable invariant. Arbitrary gauge-dependent
+observables need an explicit account of that gauge averaging.
+
+Disintegrate nu_h=m_h(dx) P_h(x,dy), and define the positive joint measure
+
+  pi_h(dx,dy,dy')=m_h(dx) P_h(x,dy) K_h(x,dy').             (2.2)
+
+Its marginals are nu_h and (Rnu)_h. This proves, for every bounded F,
+
+ |nu_h(F)-(Rnu)_h(F)|
+   <= int m_h(dx) int P_h(x,dy)K_h(x,dy') |F(x,y)-F(x,y')|.
+                                                               (2.3)
+
+In particular define osc_{A_h}F(x) as the oscillation under changes of the
+actual replaced current variables A_h, with all retained variables fixed.
+For normalized total measures, summing (2.3) over the positive histories
+gives
+
+ |mu(F)-(Rmu)(F)| <= E_mu_history[osc_{A_h}F]
+                 <=2||F||_infinity P_mu_history(A_h intersects supp F).
+                                                               (2.4)
+
+The first bound is usually more useful. If a replacement is performed by a
+sequence of component kernels, apply (2.3) at each component with its actual
+conditional law. No independence of the original components is assumed.
+The probability is the normalized POSITIVE history probability before R.
+It is not a connected-log polymer coefficient.
+
+3. EXACT MULTISCALE TELESCOPE USING ONLY ACTUAL PREFIX LAWS
+
+Let T_i be the actual positive mass-preserving block pushforward and let
+nu_0=mu_0, mu_i=T_i nu_{i-1}, nu_i=R_i mu_i. Thus nu_i is the actual modified
+source prefix, while the original Wilson blocked measure at level n is
+
+  mu_n^W=T_n ... T_1 mu_0.
+
+For a bounded final observable F put
+  F_i=T_{i+1}^* ... T_n^* F.
+These are pure-blocking pullbacks, not adjoints of future R operations.
+Linear telescoping gives the exact identity
+
+  mu_n^W(F)-nu_n(F)=sum_{i=1}^n [mu_i(F_i)-nu_i(F_i)].       (3.1)
+
+This identity is valid even though R may be defined through the incoming
+state; only the linearity of the T_i is used. Combining with (2.3),
+
+ |mu_n^W(F)-nu_n(F)|
+    <=sum_i E_{mu_i,history}[osc_{A_i}F_i]
+    <=2||F||_infinity sum_i P_{mu_i,history}(A_i intersects S_i), (3.2)
+
+where S_i is an actual strict support of the future pure-block pullback.
+For deterministic block averages it is their backward dependency support.
+For stochastic local T_i it is the corresponding kernel-read support.
+This needs no unknown law of the completely unmodified history at scale i.
+
+4. WHY THERE IS NO AUTOMATIC FULL-COARSE-FIBER IDENTITY
+
+The conditional variables x in (2.1) are the UNINTEGRATED source variables,
+not a future coarse average of y. The local reference law is positive on
+an open set of independent nongauge coordinates y. A nonconstant future
+coarse observable of those coordinates is therefore not fixed by this law.
+A replacement preserving a specified complete coarse field would instead
+need a reference supported on that coarse fiber and its fiberwise normalizer.
+The source normalizer above is an unconstrained local reference integral.
+
+One cannot identify this with Notebook40's deliberately constructed
+full-coarse-fiber replacement. That notebook's preservation identity would
+be useful for observables, but it belongs to a different replacement unless
+one rebuilds the source large-field bounds for that constrained operation.
+The old V_h integrations mentioned before (1.1) do not repair the mismatch,
+because h=k-N<k and those variables are not future coarse constraints.
+
+5. WHAT THE PRINTED SUPPRESSION DOES AND DOES NOT BUY
+
+CMP122-II (1.98)--(1.100) bounds connected-log R' activities. These activities
+may have signs; their sum is not the probability in (2.4). To convert them
+into a component-hit probability one must retain a distinguished positive
+history component through the numerator/denominator expansion. The positive
+T'_k(X) bounds (1.73),(1.89) are relevant inputs, but a coefficient estimate
+alone must not be relabelled as a normalized probability.
+
+Even grant a local component-hit bound per current cell
+  p_i <= C (log gamma_i)^K exp[-c(log gamma_i)^p], p>1.
+At fixed physical final support, its strict backward support has a number
+of fine cells growing exponentially in n-i (for a block-filled support,
+of order L^{4(n-i)}). A raw loop support already grows at least with its
+length, of order L^{n-i}. Along an asymptotically free weak history
+gamma_i comparable to Gamma+c(n-i), the corresponding estimate in (3.2)
+contains
+
+  L^{alpha(n-i)} exp[-c(log(Gamma+c(n-i)))^p], alpha>0.      (5.1)
+
+This upper-bound expression eventually grows, because linear age dominates
+every fixed power of its logarithm. It therefore does NOT prove any
+cutoff-uniform small comparison. This is a failure of that estimate, not
+a proof that the actual hit probability is large. The same problem applies
+to arbitrary fixed polynomial birth suppression gamma_i^{-P}.
+
+Thus the useful exact target is the FIRST line of (3.2): the effect of a
+replacement on a properly normalized physical observable. Pure rarity and
+the source scalar partition-function normalizations do not settle it.
+
+6. A PRECISE OS WITNESS TRANSFER TEST
+
+For a bounded positive-time observable F, ||F||_infinity<=1, and reflection
+theta, set
+  Q_mu(F)=mu[(theta conjugate F)F]-|mu(F)|^2
+for a reflection-invariant measure. Define
+  Delta(G)=sum_i E_{mu_i,history}[osc_{A_i}(T_{i+1:n}^*G)].
+Then (3.1)--(3.2) imply
+
+  |Q_{mu_n^W}(F)-Q_{nu_n}(F)|
+       <=Delta((theta conjugate F)F)+2Delta(F).             (6.1)
+
+Indeed |muF|,|nuF|<=1, so their squared-modulus difference is at most
+2|muF-nuF|. A lower bound Q_{nu_n}(F)>=c>0 therefore transfers if the
+right side of (6.1) is uniformly below c. A positive ordinary variance is
+insufficient: a product measure can have positive variance and zero
+centered reflection norm for observables separated from the plane.
+
+No such nontrivial reflection-norm lower bound or vanishing/controlled
+Delta for a physical continuum observable is proved by the source bounds
+audited here. Equations (2.3), (3.1), and (6.1) give exact denominators and
+actual prefix laws for the missing observable calculation, rather than a
+generic assumed resampling model or an identification with full fibers.
+
+7. THE SOURCED PARTITION ROUTE AVOIDS THIS COMPARISON ENTIRELY
+
+This is a route correction, not a withdrawal of the preceding identities.
+The estimates in Sections3--6 are needed only if one chooses to compare an
+UNSOURCED final observable with the same function under the modified law.
+They are unnecessary for correlations extracted from an exactly transported
+sourced partition function.
+
+Freeze a finite regulator and the real source-free choices: cuts, partitions,
+history bookkeeping, reference couplings, configuration maps, and normalized
+R reference kernels. Include retained histories in the state space. Every
+block operation and every normalized R operation is then a linear,
+mass-preserving map on finite complex measures. For the local R replacement,
+if eta^w(dx,dy) is a complex incoming measure, its output is
+
+  (R eta^w)(dx,dy')=[int eta^w(dx,dy)] K(x,dy'),
+  int K(x,dy')=1.                                      (7.1)
+
+Consequently int R eta^w=int eta^w exactly, with the real denominator D(x)
+from Section2 retained. No source-dependent inverse or logarithm is required
+for this identity. A source-dependent reference kernel is also allowed if
+it is normalized and its denominator does not vanish; freezing it avoids
+that additional algebraic requirement.
+
+For any finite collection of bounded finite-regulator observables O_i put
+rho_0^z=exp(sum_i z_i O_i)rho_0. These densities are entire with values in
+finite measures. Composing the frozen maps gives
+
+  int rho_n^z = int rho_0^z = Z_n(z),                    (7.2)
+
+for all complex z. Integrating its derivatives at zero therefore gives the
+ORIGINAL Wilson moments. Differentiating the logarithm near zero gives the
+original connected correlations. One does not identify those derivatives
+with inserting O_i of the new current variables. In the frozen positive
+joint process, the derivative density divided by rho_n^0 is the conditional
+expectation of the original insertion given the final state; higher
+derivatives are conditional moments of products. This is the exact location
+of the transported observable.
+
+Equation(7.2) is not an imported physical-observable theorem. It is a direct
+consequence of the actual source normalization (1.10) and the linear
+integrate-and-reinsert identity. Its specialization is explicitly stated in
+the repository Raw II, (5.1:eq-correlation-theorem-c), around lines2930--2936:
+the integral of rho_k^w equals the integral of rho_0^w. The repository uses
+more elaborate sourced preparation to estimate this exact integral.
+
+8. SOURCE DOMAIN: OVERLAP IS ALLOWED; THE UNIFORM ESTIMATE IS THE INPUT
+
+At a fixed physical stopping scale, let nu_i=||f_i||_sharp and
+sum_i |z_i|nu_i<r. For arbitrary compact smooth or Lipschitz profiles,
+
+  ||sum z_i f_i||_infinity <= sum |z_i|nu_i,
+  Lip(sum z_i f_i) <= sum |z_i| Lip(f_i).               (8.1)
+
+The weight classes W_j of Raw II2722--2787 use only these two inequalities:
+|w|<r_j and Lip_j w<l_j. Their nesting proof puts (8.1) in all earlier W_j.
+The profiles may overlap and may have either sign. Separation enters only
+clause(iv) of the correlation theorem, after vacuum subtraction, not the
+source domain or the proposed sourced induction in clause(iii).
+
+The following explicit one-cutoff estimate is enough for subsequential
+off-diagonal correlations; two-cutoff closeness and uniqueness are stronger
+than necessary. On a common ball ||w||_sharp<r, suppose
+
+  Z_N(w)=exp(E_N(w)) Ztilde_N(w),  E_N(0)=0,
+  |Ztilde_N(w)|<=A_h,  Ztilde_N(0)>=1/B_h>0,            (8.2)
+
+uniformly in the fine cutoff N, at the chosen fixed stopping lattice h.
+The bare source-independent vacuum normalization must be the same on both
+sides; arbitrary source-dependent scalar normalizations are not permitted.
+Assume additionally that E_N is a sum of source-local analytic terms with
+a uniform exponentially weighted tree norm. These are quantitative source
+inputs, not consequences of (7.2).
+
+Put H_N=Ztilde_N/Ztilde_N(0) and Q=A_h B_h. Then H_N(0)=1 and |H_N|<=Q.
+Apply the Schwarz lemma to (H_N(lambda w)-1)/(Q+1) on the complex line through
+w. It gives
+
+  |H_N(w)-1| <= (Q+1)||w||_sharp/r.                    (8.3)
+
+Thus H_N is zero-free on ||w||_sharp<r/[2(Q+1)], and there |Log H_N|<=log2.
+For n profiles, choose each source radius r/[2n(Q+1)nu_i]. Cauchy's formula
+then bounds every mixed n-th derivative of Log H_N by
+
+  log2 [2n(Q+1)/r]^n product_i nu_i.                  (8.4)
+
+Zero profiles can simply be omitted. These bounds apply to overlapping
+profiles too; it is the derivative of E_N that may diverge there.
+
+For pairwise separated profiles, the mixed derivative of a source-local
+term vanishes unless its source carrier meets every support. In particular,
+its physical diameter must be at least the separation d. An exponential
+tree bound at lattice spacing h_j gives a factor exp(-c d/h_j), up to a
+fixed collar allowance. At fixed torus, even the crude number of anchors
+O(Vol h_j^-4) is summable:
+
+  sum_j h_j^-4 exp(-c d/h_j) <= C d^-4                 (8.5)
+
+for a geometric sequence h_j<=1, with a harmless change of C when d>1.
+To verify(8.5), split at h_j approximately d; the coarser geometric sum
+is O(d^-4), and the finer sum is d^-4 times sum_m L^(4m) exp(-c' L^m).
+Fixed powers of |log h_j| are handled in the same way. After Cauchy in the
+source variables this proves cutoff-uniform separated derivatives of E_N
+under the stated local source norm. This is the elementary local mechanism
+behind the deposited correlation theorem; the work is to establish(8.2)
+and that source norm for the actual sourced full recursion.
+
+Raw III53471ff is a correct DIFFERENTIATION CONSUMER: its assumptions already
+include a common holomorphic source bound and closeness of the normalized
+partition functions. It supplies neither of these producer estimates.
+Raw III68230ff gives the exact finite-lattice definition
+Z=integral exp[-gamma A+sum z_i sum_p f_i(p)a_p]dU and entirety. Entirety at
+each N alone gives no N-independent source bound or zero-free radius.
+
+The outstanding producer assumptions are listed explicitly in Raw II's
+correlation theorem (2791ff), including preparatory-window data whose proof
+is outstanding. The previous work/source_stability_research.md audits the
+active global-carrier dependency, not merely a convenient three-map model.
+The primary CMP122-II theorem itself is source-free; its p356 leaves physical
+observable estimates to further analysis. None of the present scalar-flow
+work silently discharges the full sourced preparation theorem.
+
+9. CONTACT SUBTRACTIONS AND REFLECTION POSITIVITY: AN EXACT USEFUL LEMMA
+
+Overlapping sources require a local contact subtraction or another specified
+extension; separated estimates alone do not bound their original cumulants.
+There is, however, no algebraic obstruction from reflection positivity to
+a LOCAL subtraction.
+
+Let Z_N(w)/Z_N(0) be the original reflection-positive exponential generating
+functional, and let C_N(w) be a scalar counterterm with C_N(0)=0. Assume
+reflection conjugation covariance and exact additivity on disjoint supports:
+
+  C_N(theta conjugate w)=conjugate C_N(w),
+  C_N(u+v)=C_N(u)+C_N(v) when supp u and supp v are disjoint. (9.1)
+
+For sources w_i supported a positive distance inside the positive half-space,
+the reflection matrix of the subtracted functional
+Hhat_N(w)=exp[-C_N(w)]Z_N(w)/Z_N(0) is
+
+ Hhat_N(theta conjugate w_i+w_j)
+ =exp[-conjugate C_N(w_i)]
+   [Z_N(theta conjugate w_i+w_j)/Z_N(0)] exp[-C_N(w_j)]. (9.2)
+
+This is a diagonal congruence of a positive semidefinite matrix, hence remains
+positive semidefinite. Any convergent common-source limit retains this
+reflection positivity. Local integrals of finite source jets satisfy the
+disjoint-support additivity in(9.1). Ordinary probability-positive-definiteness
+does not follow from this argument and is not claimed.
+
+The full quasilocal vacuum functional E_N in(8.2) generally does NOT satisfy
+(9.1): finite-scale terms can connect the two half-spaces. One must separate
+its genuinely local divergent contact part before using(9.2), retaining its
+finite cross-support part in the physical correlations. Proving a uniform
+remainder after this subtraction, common-source convergence, continuous
+Euclidean covariance, and a nonzero OS witness remains separate analytical
+work. Equation(9.2) identifies a valid positivity mechanism, not a completed
+contact-renormalization theorem for the current Yang--Mills construction.

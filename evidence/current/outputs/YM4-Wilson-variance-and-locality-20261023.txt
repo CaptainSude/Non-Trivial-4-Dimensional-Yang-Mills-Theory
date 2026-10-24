@@ -1,0 +1,437 @@
+SOURCE ENERGY, PHYSICAL CALIBRATION AND AN ORIGINAL-WILSON L2 OBSTRUCTION
+23 October 2026. New derivation. Independent audit PASS for the
+original-Wilson variance lower bound and calibration implication;
+see source_energy_calibration_independent_audit_20261023.txt.
+No handoff originals or archives changed.
+
+MAIN FINDING
+
+The inhomogeneous energy consumer is sound, but asking for a uniform
+ordinary L2 norm of the project's complete smeared Wilson energy is
+too strong. For the actual SU(2) Wilson measure, a self-contained
+conditional-link argument below proves, for every nonzero fixed real
+Lipschitz scalar profile f and all sufficiently fine lattices and weak
+bare couplings,
+
+ Var_mu[ c_a sum_p f_p h_p ] >= C_f |c_a|^2 a^(-4) t_a^(-2).  (A)
+
+The profile is the project's coherent scalar profile; its plaquette
+weights have NO extra a^4. Constants in (A) are independent of lattice
+spacing, surrounding periodic volume and t_a once the fixed positive
+profile box is contained. This is an actual Wilson-law lower bound,
+not a Gaussian toy example or a lower bound on an individual RG sector.
+
+On the registered bounded-step weak trajectory t_a=O(1+log(1/a)),
+either declared endpoint calibration c_a=t_R or the bounded nonzero
+selected-coordinate candidate makes the right side diverge. Subtracting
+a deterministic first-source mean does not change this result.
+
+Thus global source-variance absorption cannot supply the separated
+energy-covariance target in its present form. The finite energy lemma
+remains useful for suitably matched actual tails, bounded sectors, or
+relative errors with sufficient cutoff dependence. This route needs
+separation-sensitive estimates, such as the qualified near/near bound,
+or equivalent cancellations or controlled coarse-source variances.
+
+1. A DIRECT NONCIRCULAR ENERGY-ABSORPTION CRITERION
+
+Use the notation of connected_energy_findings.txt. For an actual
+source f, arbitrary reference sequence s and residual r=f-s, write
+
+ F=||f||_E=sigma_b(f_b), S=||s||_E, R=||r||_E.
+
+Minkowski gives exactly F<=S+R. Hence a sufficient noncircular uniform
+variance condition is an independently proved uniform reference-energy
+bound S<=S_0 and a uniform emitted-error budget R<=B_0. The latter can
+be supplied by
+
+ sigma_b(f_b-s_b)+sum_e sigma_(e+1)(F_e s_e-s_(e+1))<=B_0.
+
+These conditions need not use pointwise source bounds. A weaker useful
+relative version is R<=eta F+B with eta<1 and independently controlled
+S,B. At finite cutoff this algebraically implies
+
+                         F <= (S+B)/(1-eta).             (1)
+
+No already established uniform F is needed to absorb it. However,
+the relative inequality itself must be proved from model inputs,
+not by declaring a normalized remainder small. The fixed eta<1 must
+be uniform. Section 3 shows that (1), with S,B uniformly finite, is
+impossible for the complete chosen Wilson observable on its weak
+trajectory. Thus at least one of its hypotheses necessarily fails.
+
+For a desired separated error it is unnecessary even to impose a
+uniform F: the exact single-emission bound is
+
+ sigma_(e+1)(delta_e) sigma_(e+1)(g_(e+1)).               (2)
+
+One can seek summability of these products using ACTUAL tail variances
+and additional source separation. Replacing every second factor in
+(2) by sigma_b(g_b) is a convenient finite estimate, not a harmless
+uniform-limit step. Keeping (2) is the weaker interface.
+
+2. SELF-CONTAINED UNIFORM MEAN-ENERGY BOUND
+
+Take a four-dimensional rectangular periodic lattice with spacing a,
+at least four sites in every direction, and normalized SU(2) link
+Haar measures. Let N be its number of sites, N_b=4N its unoriented
+positive-coordinate links and N_p=6N its unoriented plaquettes. Set
+
+ h_p=1-(1/2)Tr U_p in [0,2], H=sum_p h_p,
+ dmu_t=Z(t)^(-1)exp[-tH] product_b dU_b,   t>=1.          (3)
+
+Use the standard bi-invariant geodesic distance on SU(2). The Haar
+mass of the identity ball of radius 1/(4 sqrt(t)) is at least
+c_0 t^(-3/2), with c_0>0 independent of t. On the event that EVERY
+link lies in that ball, the triangle inequality gives plaquette
+distance at most 1/sqrt(t), hence h_p<=1/(2t). Therefore
+
+ Z(t)>=exp[-N_p/2] (c_0 t^(-3/2))^(N_b),
+             -log Z(t)<=C N_p log(2+t).                  (4)
+
+The finite function log Z is convex, log Z(0)=0, and its derivative
+is -E_t H. The derivative at t is at least the secant slope from 0:
+
+                 E_t H <= -log Z(t)/t
+                         <=C N_p log(2+t)/t.             (5)
+
+For each orientation, translations make the N plaquette expectations
+equal. Positivity of every h_p thus implies, without needing equal
+physical side lengths or rotational symmetry,
+
+                      E_t h_p <= C_1 log(2+t)/t.         (6)
+
+Indeed the sum over one orientation is at most E_t H, and N_p/N=6.
+All constants are independent of volume and a. The archived sharper
+TURN64 energy bound is not required for this argument.
+
+3. ORIGINAL-WILSON VARIANCE LOWER BOUND
+
+3A. A positive-density family of conditionally independent links
+
+Let f be a nonzero real Lipschitz scalar function in fixed physical
+units. The source weights f_p may be samples, the project's coherent
+four-corner averages, or any deterministic weights satisfying
+
+ |f_p-f(x_l)| <= C a Lip(f)
+        whenever p contains the link l with midpoint x_l.             (7)
+
+The coherent tensor-multilinear interpolation of fixed endpoint
+profile data is itself a fixed Lipschitz f and satisfies (7).
+Replacing f by -f leaves its source variance unchanged. Hence choose
+a fixed physical box B of positive volume and f_*>0 with f>=f_*
+throughout B. Such a box exists by continuity after a possible sign
+change. For sufficiently small a, B contains at least c_B a^(-4)
+link midpoints of one fixed orientation, say direction 1.
+
+Form a graph on those candidate links: join two when they occur in
+one plaquette. Each candidate has at most six neighbors, the parallel
+links displaced by +/-one step in each of the other three directions.
+A greedy independent set S therefore has
+
+                       |S| >= c_B a^(-4)/7.              (8)
+
+No plaquette contains two selected links. There is no even-size or
+dyadic assumption. Restrict B to an ordinary coordinate patch of the
+torus; periodic identifications elsewhere cause no new degree beyond
+the same six neighbors. The assumption of at least four sites per
+direction excludes degenerate plaquette conventions.
+
+Condition on all links outside S. Every plaquette either contains no
+selected link or one. The Wilson action and the observable split into
+sums of single-selected-link functions plus outside constants. Thus
+the selected links are independent under this conditional measure,
+even though their stars may share already conditioned links.
+
+3B. The actual single-link conditional law
+
+Represent SU(2) by unit quaternions u in S^3. For every plaquette p
+containing a selected link l, cyclicity and conjugation of the trace
+give a unit quaternion v_(l,p), determined by the outside links, with
+
+                 (1/2)Tr U_p = u_l dot v_(l,p).
+
+There are exactly six such plaquettes. Define
+
+ w_l=sum_(p contains l)v_(l,p),
+ w_(f,l)=sum_(p contains l)f_p v_(l,p),  |w_l|<=6.        (9)
+
+The conditional density of u_l relative to uniform S^3 is proportional
+to exp[t u_l dot w_l]. Its observable contribution, up to a conditional
+constant, is -c_a u_l dot w_(f,l). These are exact formulas; no
+small-field approximation, gauge fixing or boundary-law replacement
+is involved.
+
+Set S_l=sum_(p contains l)h_p=6-u_l dot w_l. If |w_l|<3 then S_l>3
+for EVERY u_l. By (6) and Markov's inequality,
+
+ P_t(|w_l|<3) <= P_t(S_l>3)
+                     <= C_2 log(2+t)/t.                 (10)
+
+Consequently there is a universal t_0 such that
+P_t(|w_l|>=3)>=1/2 for all t>=t_0, uniformly in l, a and volume.
+The staple event is outside-measurable, but (10) uses the original
+unconditional energy estimate. No uniform conditional energy bound
+under arbitrary fixed boundary links is being assumed.
+
+3C. A uniform radial variance bound for tilted S^3
+
+On |w_l|>=3 put n=w_l/|w_l|, z=u_l dot n and k=t|w_l|.
+The exact density of z on [-1,1] is proportional to
+
+                         exp(kz) sqrt(1-z^2).
+
+For k>=6, the variable y=k(1-z) has density proportional to
+
+ exp(-y) sqrt(y) sqrt(2-y/k),       0<=y<=2k.            (11)
+
+Its normalization is at most sqrt(2) Gamma(3/2). On the two fixed
+intervals I_1=[1/2,1] and I_2=[2,3], sqrt(2-y/k)>=sqrt(3/2).
+Each interval therefore has probability at least a strictly positive
+universal constant p_i, independent of k. For independent copies
+y,y', Var(y)=(1/2)E(y-y')^2>=p_1 p_2, since the intervals have distance
+one. Consequently
+
+                         Var(z)>=c_rad/k^2.             (12)
+
+This elementary argument supplies the needed uniform bound without
+Bessel asymptotics. Increase t_0 if necessary so t_0>=2.
+
+3D. The weighted physical profile retains the radial variance
+
+Let alpha_l=w_(f,l) dot n. From (7),(9),
+
+ |w_(f,l)-f(x_l)w_l|<=6 C a Lip(f).
+
+Choose a small enough that C a Lip(f)<=f_*/4. On |w_l|>=3,
+
+          alpha_l >= f_* |w_l|-6 C a Lip(f)
+                         >=(f_*/2)|w_l|.                (13)
+
+The tilted S^3 law is invariant under every rotation of the three
+coordinates perpendicular to n. These coordinates have zero means,
+and each has zero covariance with z. Hence, decomposing w_(f,l) into
+its radial and perpendicular parts, its conditional variance satisfies
+
+ Var(u_l dot w_(f,l) | outside)
+      >=alpha_l^2 Var(z)
+      >=c_rad f_*^2/(4t^2),     on |w_l|>=3.             (14)
+
+The discarded perpendicular variance is nonnegative. This exact
+orthogonality avoids an additional a t->0 assumption that a crude
+triangle estimate of the profile error would introduce.
+
+3E. Sum the actual independent conditional variances
+
+The law of total variance and conditional independence from 3A give
+
+ Var_mu[ c_a sum_p f_p h_p ]
+  >= E_mu Var( c_a sum_p f_p h_p | outside S)
+  = |c_a|^2 sum_(l in S) E_mu Var(u_l dot w_(f,l)|outside S)
+  >= |c_a|^2 |S| c_rad f_*^2/(8t^2)
+  >= C_f |c_a|^2 a^(-4)t^(-2).                           (15)
+
+Equations (8),(10),(14) prove the claimed lower bound. The many
+outside-dependent conditional means cannot cancel this positive
+conditional-variance contribution. This is why the argument applies
+to the full correlated Wilson law, rather than requiring independent
+plaquettes or a sign theorem for plaquette covariances.
+
+3F. EXACT LOCALITY: THE DIVERGENT VARIANCES NEED NOT ENTER A SEPARATED PAIR
+
+Let Q_S denote the SAME conditional elimination of any deterministic
+independent link set S: it averages the selected links and holds every
+other link fixed. For two scalar profiles f,g, exact conditional
+independence gives
+
+ Cov_(Q_S)(H_f,H_g)
+   =sum_(l in S) Cov_(single l)
+                (u_l dot w_(f,l),u_l dot w_(g,l)).        (15a)
+
+The signs from the two minus signs cancel. A term is zero whenever
+one of its two weighted staples is zero. If the supports of the
+actual plaquette weights f_p and g_p are physically separated by
+more than a fixed star-diameter C a, no selected link belongs to a
+plaquette with nonzero f weight AND a plaquette with nonzero g weight.
+Consequently
+
+                         Cov_(Q_S)(H_f,H_g)=0            (15b)
+
+pointwise in the complete outside state. Include any original source
+sampling/read collars in the supports used for this assertion.
+
+The arriving means are also explicit local functions. Define
+
+ C_f^S(outside)=sum_(p containing no selected link) f_p h_p
+                    +sum_(l in S)sum_(p contains l) f_p,
+ Z_1(k)=integral_(S^3) exp(k u dot n) dHaar(u),
+ m(k)=d[log Z_1(k)]/dk.
+
+Rotational invariance makes Z_1 independent of the unit vector n.
+Then exactly
+
+ Q_S H_f = C_f^S(outside)
+       -sum_(l in S) w_(f,l) dot
+              [m(t|w_l|) w_l/|w_l|].                    (15c)
+
+The bracket is defined to be zero when w_l=0; this agrees with the
+uniform S^3 conditional mean and the continuous extension. Each
+changed summand reads only the outside links in that one plaquette
+star. Thus (15c) keeps an explicit bounded geometric read at this
+one elimination, with its EXACT local conditional normalizer.
+
+By the law of total covariance, for the separated pair in (15b),
+
+ Cov_mu(H_f,H_g)=Cov_(mu_out)(Q_S H_f,Q_S H_g).           (15d)
+
+The microscopic conditional variances used to prove (15) can therefore
+diverge while their cross conditional covariance is exactly zero.
+Global Cauchy--Schwarz would discard this concrete separation. The
+remaining outer covariance in (15d) is still the quantity to estimate.
+
+This is one exact original-lattice conditional elimination. It proves
+neither closure under repeated elimination nor locality for arbitrary
+compiled native RG means, nor any continuum limit. It is a concrete
+example of the locality information a suitable connected consumer
+should preserve instead of bounding every pair by full self-variances.
+
+4. CALIBRATION AND THE ACTUAL WEAK TRAJECTORY
+
+The source is precisely the affine source in
+original_energy_normalization_20261022 and
+original_source_birth_catalogue_20261022:
+
+ O_a(f)=c_a H_(a,f), H_(a,f)=sum_p f_p h_p,
+ t_a=g_(native,a)^(-2)=4/g_(physical,a)^2.                (16)
+
+For either c_a=t_R or the declared frozen-selected coordinate
+c_a=t_R/alpha_N'(0), the supplied calibration is bounded above and
+away from zero at fixed weak endpoint under its stated hypotheses.
+The latter is not a full-native inverse-coupling theorem, and this
+argument does not upgrade its scope.
+
+The accepted bounded-step inverse-coupling bound gives
+t_a<=t_R+C T on a=L^(-T) ell_T. Therefore for these calibrations
+
+ sigma_mu(O_a(f)) >= c_f |c_a| a^(-2)/t_a -> infinity.   (17)
+
+Even if t_a stays in a fixed sufficiently weak range, (17) diverges.
+The weakest necessary normalization condition imposed by uniform
+ordinary L2 would be |c_a|=O(a^2 t_a). It is not sufficient. It is
+incompatible with the two chosen nonzero endpoint calibrations.
+
+Multiplying by that vanishing normalization would change the target:
+if the current candidate has the sought finite nonzero separated
+covariance, multiplying it by O(a^2 t_a) makes that separated covariance
+vanish on the stated trajectory. This is a conditional scaling
+observation, not a proof of an already constructed Wilson limit.
+
+Subtracting deterministic means or the universal first-source scalar
+counterterms leaves (15) unchanged. A nonlinear source reparameterization
+can subtract an additional mixed contact in its logarithmic derivative,
+but the resulting number is no longer the positive ordinary variance
+of O_a(f). It therefore cannot replace sigma_mu(O_a(f)) in the
+positive-kernel energy proof without a new argument.
+
+There is also a precise necessary scaling for using the GLOBAL
+Cauchy--Schwarz error majorant itself. If its term B_f sigma_mu(O_a(g))
+is to be <=epsilon for a fixed nonzero partner g, then (15) forces
+
+                  B_f <= C_g epsilon a^2 t_a/|c_a|.     (17a)
+
+This is a necessary condition on that proposed sufficient bound,
+not a lower bound on the actual separated error. The current
+fixed-record rarity caps, which are only stretched logarithmic in
+the inverse coupling unless a genuine source age supplies more,
+do not establish the exponentially small-in-depth scale in (17a).
+
+5. POSITION CENSUS: WHY NEAR/NEAR AND CAPTURE DO NOT REPAIR GLOBAL L2
+
+The actual near-source census retains
+
+ sum_(R at m,i) A_R <=C N_m Mhat_i L^[-alpha(m-i)],
+ N_m<=C(V+1)L^[4(T-m)], Mhat_i<=U(1+gamma_i)^D.           (18)
+
+The separated conditional near/near theorem supplies a genuine
+joining factor exp[-c dist_e(P_p,P_q)^(1/4)]. At fixed positive
+physical separation d_0 and near-current m, it beats the two-arm
+density and gives the established finite all-date bound after U^2
+is retained. This argument has no positive d_0 for self-variance.
+Even if a same-support near census is sharpened by summing the
+distance kernel over the second position, a one-cell density remains;
+there is no conclusion of bounded total energy from that theorem.
+
+Similarly the capture energy result is per original record:
+
+ B_R^cap<=C A_R exp[-p_*/32].                            (19)
+
+Summing (19) by the available triangle/position census keeps (18)'s
+current-cell density. At date e, even an arbitrarily strong valid
+pre-capture m-to-e age can sum old m but leaves L^[4(T-e)]. The native
+rarity exp[-c(log gamma_e)^p] does not beat that factor on
+gamma_e=O(gamma_T+T-e). The energy lemma removes repeated payment
+AFTER emission; it supplies no missing spatial source count.
+
+Nor can one replace the sum of capture standard deviations by the
+square root of their summed variances without orthogonality. The
+coherent-emission example in connected_energy_findings establishes
+the exact logical boundary. Even a hypothetical independence saving
+that changed density a^-4 to a^-2 would not itself yield a uniform
+full-source norm; (15) confirms actual divergence for that observable.
+
+There is no contradiction with the near/near conditional theorem:
+it estimates one qualified rare reset sector on fully held q,y.
+The original source variance includes the regular quantum/contact
+contributions, all other stages and the final covariance. A divergent
+sum of ordinary conditional variances is exactly compatible with
+the energy identity and finite separated covariances.
+
+6. A WORTHWHILE REPAIR AND ITS PRECISE REMAINING INPUT
+
+The all-order continuum note explicitly targets collision-flat
+Schwartz tests, and the current four-entry witness uses separated
+reflected supports. Neither requires an ordinary same-support L2
+limit of the Euclidean Wilson energy random variable. Thus (15) is
+not an obstruction to that chosen separated field-construction route.
+
+Use the energy lemma on the appropriate portion of the exact actual
+covariance decomposition, rather than demanding global (1):
+
+* Keep early short-distance/contact contributions in a connected
+  two-root calculation with their physical separation. A global
+  Cauchy--Schwarz replacement loses exactly this information.
+* At a fixed physical coarse scale b(a), retain the actual conditional
+  means f_(b(a)),g_(b(a)). Their tail energy equals their actual
+  variances, which may be finite even though (17) diverges. A uniform
+  bound here is a new model estimate; it is not inherited from L2
+  contraction of the divergent original source.
+* For a bounded error emitted at e+1, use its exact actual tail and
+  the local budget (2). Late fixed-window emissions can be useful
+  once the other source's corresponding coarse variance is bounded.
+  Early emissions still require sufficient joint spatial decay or
+  a calibrated smoothing/conditional-variance estimate.
+* The near/near joining theorem is already an appropriate producer
+  for its qualified reference sector. Extend that kind of connected
+  estimate to the surviving/recentered mixed terms, or prove a
+  physically localized coarse-energy bound that can replace it.
+
+This repair preserves the original affine observable, its calibration,
+all independent contacts, and the exact terminal covariance. It does
+not require a uniform ordinary L2 theorem that (15) rules out. It
+also does not magically provide the missing mixed producer.
+
+READ LOCATORS
+
+Current work: connected_energy_findings.txt and independent audit.
+Handoff continuation-workspace/work:
+  original_source_birth_catalogue_20261022.txt, especially Sections 1,5;
+  original_observable_next_consumer_audit_20261022.txt, Sections 1,2,4;
+  immediate_near_preparation_source_date_census_20261023.txt;
+  separated_near_current_source_covariance_census_20261023.txt;
+  cost_tilted_owner_intensity_first_capture_20261023.txt.
+Handoff original-workspace/work:
+  original_energy_normalization_20261022.txt;
+  package/work/tensor_all_order_continuum_turn2.txt, Sections 1--3;
+  package/work/bounded_witness_limits_turn56.txt.
+The last file's Gaussian warning is not used to prove (15); the
+original-Wilson argument above is independent and self-contained.

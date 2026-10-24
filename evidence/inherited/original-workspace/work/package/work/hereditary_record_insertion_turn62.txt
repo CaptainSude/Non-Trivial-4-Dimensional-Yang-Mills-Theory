@@ -1,0 +1,158 @@
+POSITIVE INSERTION WITH HEREDITARY PRIVATE RECORDS -- TURN62
+20 October 2026
+
+This is a finite-measure theorem. Its native Yang--Mills application
+requires the source identifications recorded separately. It is not
+a continuum existence theorem.
+
+1. STATEMENT
+
+Fix outer data o. Let L be a finite set of geometric component labels.
+For each X in L let (E_X, nu_X) be a measurable space with a finite
+positive measure. An element of E_X may contain all ancestral discrete
+choices, gauge-tree choices, and the old continuous integration
+variables private to X. No probability normalization is assumed.
+
+For every eta subset L let H_eta be a measurable {0,1}-valued function
+on the product of E_X for X in eta. All compatibility conditions,
+including conditions involving several private records, may occur
+in H_eta. Let V_eta be real and measurable on {H_eta=1}.
+
+Suppose:
+
+(a) Erasure is admissible:
+
+ H_(eta union {X})(xi_eta,xi_X) <= H_eta(xi_eta).
+
+Thus a record permitted with X remains permitted when X is erased.
+This is a pointwise condition on surviving records, not merely
+downward closure of the set of undecorated geometric families.
+
+(b) The SAME measures nu_Y and record coordinates E_Y occur for
+every surviving Y. In particular they do not acquire a normalization,
+cutoff, denominator, or history multiplicity depending on eta.
+
+(c) For X not in eta and on {H_(eta union {X})=1},
+
+ V_(eta union {X})(xi_eta,xi_X) - V_eta(xi_eta) <= b_X,
+
+where b_X is finite and independent of the private records.
+This holds for every eta, not just for one initial family.
+
+Put
+
+ w_eta = integral H_eta exp(V_eta) product_(Y in eta) nu_Y(dxi_Y),
+ Z = sum_eta w_eta,       0 < Z < infinity,
+ lambda_X = exp(b_X) nu_X(E_X).
+
+The empty-family exponent V_empty is retained. It may depend on o.
+It is not set to zero by convention.
+
+For a set L_S of component labels, let N_S=|eta intersect L_S| and
+Lambda_S=sum_(X in L_S) lambda_X. Under the probability weights
+w_eta/Z,
+
+ E[(N_S)_q] <= Lambda_S^q             for every integer q>=0,
+ E[exp(t N_S)] <= exp((exp(t)-1)Lambda_S)   for every t>=0.
+
+Here (N)_q=N(N-1)...(N-q+1), with (N)_0=1.
+
+2. PROOF
+
+For a fixed family eta and X outside eta, assumptions (a)--(c)
+give the pointwise bound, with the exponent evaluated only where
+the left side is nonzero,
+
+ H_(eta union X) exp(V_(eta union X))
+ <= H_eta exp(V_eta) exp(b_X).
+
+The right side is independent of xi_X. Integrating the private
+record xi_X against the same finite measure nu_X gives
+
+ w_(eta union X) <= lambda_X w_eta.
+
+For distinct X_1,...,X_q in eta, repeated erasure gives
+
+ w_eta <= (product_i lambda_(X_i)) w_(eta without {X_i}).
+
+The intermediate inequalities are legal by (a) and (c).
+For fixed distinct X_1,...,X_q, the map
+eta -> eta without {X_1,...,X_q}
+is injective on the families containing all the X_i. Consequently,
+
+ sum_(eta containing all X_i) w_eta
+ <= (product_i lambda_(X_i)) sum_(eta' avoiding all X_i) w_eta'
+ <= (product_i lambda_(X_i)) Z.
+
+Sum this inequality over ordered distinct q-tuples in L_S and
+divide by the SAME Z. The left side is E[(N_S)_q]. Dropping the
+distinctness restriction in the nonnegative right side bounds it
+by Lambda_S^q. Finally,
+
+ exp(tN) = sum_(q>=0) (N)_q (exp(t)-1)^q/q!
+
+for integer N>=0. Positivity and the factorial estimate prove the
+exponential bound. No lower estimate on Z and no division by a
+possibly tiny individual nu_X(E_X) occurs. QED.
+
+3. OUTER INTEGRATION
+
+Let all the objects depend measurably on o, and let the original
+positive representation have weight W(do) w_eta(o). Suppose its
+total mass is finite and positive. If
+
+ Lambda_S(o) <= epsilon |S|
+
+for almost every o, then for every outer-measurable event A,
+
+ E[exp(tN_S) 1_A]
+ <= exp((exp(t)-1) epsilon |S|) P(A).
+
+Proof: multiply the pointwise inequality Z_t(o)<=C Z_0(o) by
+1_A(o) W(do), integrate, and divide by the original total mass.
+This works for A equal to the entire outer space. If the hypotheses
+are verified only on a sector A, it proves only the stated
+sector-restricted estimate.
+
+4. WHAT THIS RELAXES
+
+The allowed old-history space need not be a Cartesian product.
+One can integrate all private histories against fixed component
+measures and put their shared admissibility restriction in H_eta.
+Only the pointwise erasure implication is needed.
+
+Equivalently, discrete histories can be promoted to decorated
+component labels. The present formulation avoids treating each
+history as if it separately received the same aggregate mass bound.
+If the source gives a bound on the SUM over histories, retain that
+sum inside nu_X. Counting all histories once more would be wrong.
+
+Fixed-catalogue factorization alone does not imply assumptions (a)
+or (b). Nor does positivity alone imply them. They must come from
+the native definition of the component operation and the actual
+old-history erasure map at fixed NEW outer data.
+
+5. RELEVANCE OF THE NEW PRIMARY PDF
+
+Bałaban, Large field renormalization II, CMP 122 (1989), 355--392,
+pp378--379, equations (1.71)--(1.72), visibly provides:
+
+- a component operator defined using its own restricted old
+  history, gauge average, and old private integrals;
+- the common new small-field cutoff and effective action outside
+  the first-class component sum;
+- retained second-class factors outside that same sum;
+- interior V(X^~,U_k) inside the corresponding private operator;
+- the explicit warning that the history sum in the operator also
+  acts on the interaction exponential.
+
+The last point is why xi_X includes the history and why the
+interaction V_eta must retain its dependence on all those records.
+Replacing each operator by its total mass BEFORE evaluating the
+interaction would not be an identity.
+
+This theorem concerns a count attached to the actual first-class
+component sum. It does not identify that count with a continuum
+observable, or establish rescaled moment bounds, Euclidean
+invariance, Osterwalder--Schrader reconstruction, or a nonzero
+continuum reflection norm.

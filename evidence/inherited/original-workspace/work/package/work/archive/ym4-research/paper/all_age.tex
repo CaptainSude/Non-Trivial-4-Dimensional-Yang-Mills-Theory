@@ -1,0 +1,1664 @@
+% Standalone sections for inclusion in the handoff paper. No preamble.
+% Requires only the standard mathematical commands supplied by amsmath/amssymb.
+
+\section{Scope of the all-age and full-history argument}
+\label{ha:scope}
+
+The purpose of these sections is to separate finite algebra, positive
+majorant estimates, and functional-analytic consequences from the analytic
+source attachment on which their application depends.  The resulting
+statement is conditional.  In particular, the estimates below do not
+establish a nondegenerate twenty-one-component field, its continuous tensor
+transformation law, or a full Yang--Mills theory.
+
+Fix a finite regulator, one source-free trajectory, and a terminal weak
+coupling band.  Primitive dates are denoted by $j\leq N$, physical cell
+lengths by $r_j=\ell^{j-N}$, and inverse couplings by
+$\gamma_j=g_j^{-2}$.  We distinguish the physical analytic radius
+$b_j=cg_j\log\gamma_j$ from the original source radius
+$a_j=Cg_j\log^{q_{\rm rad}}\gamma_j$.  The retained source fluctuation
+gain is
+\begin{equation}
+ \delta_j=\frac{g_jT_j}{a_j},\qquad
+ \delta_j\leq C(\log\gamma_j)^{-\nu},\quad \nu>0.
+ \label{ha:delta}
+\end{equation}
+It must not be identified with the physical regular-graph parameter
+$\eta_j=(g_j/b_j)^2$.  Aligned endpoints have positive drift; fixed
+primitive oscillations are included in constants.  The estimates used
+below include
+\begin{equation}
+ \gamma_i\leq\gamma_j+D(1+j-i),\qquad
+ j-i\leq C\gamma_i,
+ \label{ha:drift}
+\end{equation}
+on the weak part of the trajectory.  The terminal band is fixed before
+taking ultraviolet limits.
+
+An original activity is retained with its birth date, pointed root,
+carrier, original independent-pair extension, and scalar coordinate.
+An original chronological operator is estimated on every admitted analytic
+test function.  A bound on its value at $1$, or a normalized expression
+$T_H/T_H1$, is never substituted for that operator norm.  A regular
+physical field norm is not an original independent-$(U,J)$ norm.
+
+Here are the principal application hypotheses used in this part of the
+paper.  Their distinction is important.
+\begin{enumerate}
+\item The actual regular source difference maps have the stated
+same-contour analytic margins, complete supported norms, fixed-degree
+marked cluster bounds, and positive dated creation majorants.  Their
+physical marginal graph and its future-corrected projection are available
+on the physical $b_j$ balls.
+\item The original chronological expansion has a convergent positive
+rooted majorant, its all-spectator composition norm, and fixed spare
+occupation, carrier, and component-interior reserves.  All reference
+inverses are the original source-free ones.
+\item At a first mixed-history read, the actual nested minimum-plus-response
+maps have the required local regularity on the complete averaging and
+current footprints, on the same localization contours as their neutral
+bound.  This is the unresolved source-attachment hypothesis discussed
+below; final-field admission alone does not imply it.
+\item When two global source colours are used, carried mixed coefficients
+have the retained two-slot profile representation and original spectator
+majorant stated in Section~\ref{ha:two-colour}.  Prefusion live seeds
+retain their unused early reserve.  These are stronger assertions than
+two separate first-mark bounds.
+\end{enumerate}
+Statements explicitly described as algebraic do not require the third
+hypothesis.  The copied estimate and its downstream field construction do.
+
+\paragraph{Provenance and status precedence.}
+The status controlling these sections is
+\path{work/ym4-resumed-research-status-2026-10-18.txt}.
+Earlier statements that a repeated integration audit had closed every
+analytic input are superseded by the admission gap in
+\path{work/static_original_tube_first_contact_audit_2026-10-18.txt},
+Sections 11--15.  Conversely, the later fixed-coupling same-state
+reflection argument discussed next supersedes the earlier torus-topology
+objection; these two updates concern different issues.
+
+\section{Scalar prerequisites and their precise logical role}
+\label{ha:scalar}
+
+The later operator construction takes place on one scalar Hilbert space.
+It therefore requires more than the formal existence of scalar
+off-diagonal correlations.  We record the scalar inputs and their
+conditional consequences rather than assuming a scalar Poincare theory
+without explanation.
+
+\subsection{Flat-diagonal growth and the reflection space}
+
+Let $\mathcal D_n=\bigcup_{i<j}\{x_i=x_j\}$ and let
+$\mathcal S^0_n$ be the Schwartz functions flat, to every order, on
+$\mathcal D_n$.  Suppose compatible off-diagonal correlations obey, on
+separated tensor packets,
+\begin{equation}
+ |S_n(f_1\otimes\cdots\otimes f_n)|
+ \leq A^n(n!)^B(1+d^{-1})^{cn}
+               \prod_{i=1}^n\|f_i\|_{C^1},
+ \label{ha:packet-growth}
+\end{equation}
+where packet radii are at most $\rho/n$, their mutual separation is $d$,
+and the constants are independent of placement.  There are fixed
+$A_1,B_1,C_1$ such that the canonical extension satisfies
+\begin{equation}
+ |S_n(F)|\leq A_1^n(n!)^{B_1}p_{\lceil C_1n\rceil}(F),
+ \qquad F\in\mathcal S^0_n.
+ \label{ha:flat-growth}
+\end{equation}
+Here $p_m(F)=\max_{|\alpha|\leq m}\sup_x
+(1+|x|)^m|\partial^\alpha F(x)|$; changing equivalent norms changes
+the constants only.
+
+\emph{Proof of the extension mechanism.}
+Use a capped dyadic configuration partition of mesh
+$\varepsilon_s=2^{-s}c/n$, supported where every pair is separated
+by a fixed multiple of $n\varepsilon_s$.  It can be formed from
+$O(n^2)$ fixed Gevrey transition factors and a product spatial partition.
+At total derivative order $O(n)$, the product rule and Gevrey bounds cost
+$n^{O(n)}$, rather than an uncontrolled constant exponential in $n^2$.
+Rescale each configuration box and expand in a tensor Fourier series.
+Six derivatives in each four-dimensional variable make the weighted
+Fourier series summable after the $C^1$ cost in
+\eqref{ha:packet-growth}.  A box then costs
+$\varepsilon_s^{-(c+1)n}$ times derivatives of $F$ of order at most
+$6n$.  Flatness supplies $\varepsilon_s^{kn}$ by Taylor expansion toward
+a nearest full collision, with $k>c+5$.  Summing configuration boxes
+costs $\varepsilon_s^{-4n}$, leaving the summable power
+$\varepsilon_s^{(k-c-5)n}$.  Spatial Schwartz weights sum with order
+linear in $n$.  Every remaining $n^{Dn}$ is bounded by
+$e^{Dn}(n!)^D$.  This proves \eqref{ha:flat-growth}.  Compact tests
+away from $\mathcal D_n$ are dense in $\mathcal S^0_n$: first cut off
+at infinity, then remove a collision neighborhood, using arbitrarily
+high flatness to absorb each fixed derivative of the cutoff.  This
+also proves uniqueness.  If the regulator estimates require the mesh
+to be smaller than the packet, first take limits on fixed separated
+packets and only then perform this extension.  No uniform estimate
+below the regulator mesh has been inferred. \hfill$\square$
+
+For a mirror with normal $e$, let $\mathcal D_e$ consist of finite test
+sequences whose nonconstant components are smooth, compact, internally
+off full collisions, and supported where all $e\cdot x_i>0$.  Define
+\begin{equation}
+ (F,G)_e=\sum_{n,m}S_{n+m}
+       ((\theta_e\overline{F_n})^{\rm rev}\otimes G_m).
+ \label{ha:rp-form}
+\end{equation}
+Finite-regulator reflection positivity passes to these tests whenever
+the same-state limiting construction supplies that mirror.  Complete
+the quotient by its null space.  This is a Hilbert-space construction
+from distributions, not an ordinary Euclidean probability $L^2$ space.
+The test space is a vector space and a partial separated-support algebra;
+arbitrary products can create collisions and are not automatically in it.
+
+Positive normal translations $T(t)$ satisfy
+\begin{equation}
+ \|T(t)F\|\leq \|F\|^{1-2^{-m}}
+                         \|T(2^mt)F\|^{2^{-m}}.
+ \label{ha:semigroup-doubling}
+\end{equation}
+The rightmost norm grows polynomially in its translation argument by
+Schwartz continuity.  Sending $m\to\infty$ proves contractivity, and
+test continuity gives a strongly continuous semigroup $e^{-tH}$ with
+$H\geq0$.  Tangential translations give strongly continuous unitaries.
+No cutoff of equal-time hypersurfaces is used: such hypersurfaces contain
+points off the full collision diagonal and cannot generally be removed
+in the original Schwartz topology.
+
+\subsection{Same-state reflections, slabs, and reconstruction}
+
+For the literal Wilson $SU(2)$ measure at each fixed finite bare coupling,
+the audited two-frame argument yields diagonal reflection positivity of
+each coordinate-periodic thermodynamic subsequential state.  Its content
+is stronger than equality of pressures.  Adapted diagonal tori first
+give raw-link, closed-halfspace positivity.  Twisted transfer traces are
+bounded by Schatten Holder inequalities; their straightened factors
+are ordinary Wilson integrals.  Sparse tilts and operator-norm
+amplification produce a comparison law.  An exact paired local reduction
+then yields coordinate reflection invariance and even translations of
+that law.  Convex separation, with gauge averaging of a full-space
+separator, puts the original coordinate state in the full diagonal-RP
+class.  The amplification is performed at fixed coupling, volume tends
+to infinity before the tilt tends to zero, and finite-rank approximation
+is taken after those bounds.  This argument does not assert RP on every
+straight finite torus, and it is not itself a continuum rotation theorem.
+
+This volume-first statement is compatible with the stopping regulators.
+For fixed bare $A$, bounded positive block drift bounds the stopping
+date by a finite $n_{\max}(A)$.  Take arbitrarily large compatible tori
+supporting every step up to that date, and pass to a volume subsequence
+on which the stopping integer $N_A$ is constant.  The resulting law is
+a fixed-$A$ coordinate-periodic thermodynamic limit.  Sending
+$A\to\infty$ afterward gives $N_A\to\infty$.  Additional countable
+subsequences can fix the finite witness offsets.  This does not require
+finite-volume running coefficients to be identical at different volumes.
+
+The scalar slab/rotation route still requires its source pressure and
+identification inputs.  In a coordinate plane, a normalized packet
+insertion with two positive paddings has the bound
+$C\delta^{-7/2}$.  Reflection doubling, with endpoint factors assigned
+outside the array cell, turns the source-array estimate into this
+operator bound.  A planar cone comparison using the coordinate and
+diagonal RP spaces gives $H\geq |P_i|$ in each selected plane.
+For example its two spectral representations imply
+\begin{equation}
+ \int e^{-2L\omega}|F(\omega-ip)|^2\,d\rho
+ \leq C_A\sup_{r\geq0}|F(r)|\sup_{s\in\mathbb R}|F(is)|.
+ \label{ha:cone-probe}
+\end{equation}
+The Laplace probes
+$F_j(z)=e^{-j}z^{1-4i\epsilon j/\pi}(1+z)^{-3}$
+have bounded product of the two suprema and grow exponentially on
+$\epsilon\arg z>\pi/4$.  Positivity of $\rho$ excludes $|p|>\omega$.
+No isometric identification of the two RP Hilbert spaces is required.
+
+The bounded insertion construction supplies a \emph{joint} tube and
+mixed Gram identities.  Separate one-gap analyticity would not suffice.
+With the same-state two-frame input, the angular argument and the
+$7/2<4$ bound give the scalar planar rotation continuation.  A full-point
+version has heat bound $C\tau^{-5}$ and off-collision kernel estimate
+$C^n n^{10n}(1+d^{-5n})$.  Its covariant extension of the ordered sector,
+if these identifications are retained, obeys
+\eqref{ha:flat-growth}, symmetry, and RP.  It need not agree with an
+arbitrary earlier extension on equal-time contact configurations.
+
+The corrected Osterwalder--Schrader reconstruction theorem on
+$\mathcal S^0$ consumes linear seminorm order and a fixed factorial
+power, as in \eqref{ha:flat-growth}; it does not require that power to
+be small.  With Euclidean covariance, RP, and symmetry it gives the
+scalar Wightman theory, leaving clustering as a separate input.
+Thus the scalar theory assumed later is conditional on the actual
+source estimates and the joint tube/ordered-sector identification,
+not on a choice of arbitrary full-Schwartz contact extensions.
+
+The full-point insertion bound also identifies
+$e^{-\tau H}\phi(f)e^{-\tau H}$ with a bounded Minkowski-smeared
+operator of norm $C\tau^{-5}\|f\|_1$.  For compact energy-transfer
+support, unit energy bands have bounded width of interaction.  Taking
+$\tau=(1+n+m)^{-1}$ gives block norm
+$C\|f\|_1(1+n+m)^5$; block Schur summation proves
+$\|\overline{\phi(f)}(1+H)^{-5}\|<\infty$.  The identification uses
+the joint tube and common test domain before removing external imaginary
+gaps.  A bounded Euclidean insertion alone is not this identification.
+The generalized Hamiltonian bound permits the Driessler--Summers
+decomposition into clustering scalar Wightman phases with unique vacua,
+under that theorem's hypotheses.  It is not generic ergodic decomposition
+of an assumed Euclidean probability law.
+
+A nontrivial phase can be retained with a derivative witness
+$f=\partial_t\partial_{x_1}\psi$, supported at positive Euclidean time.
+The exact strong test-translation derivative gives
+$v_f=-iHP_1v_\psi$, with the appropriate dilation factor for dilated
+packets.  A strictly positive reflected norm therefore has a nonzero
+projection into some compact positive-energy interval, outside
+$\ker P_1$.  This projection disintegrates into nonnegative phase norms,
+so a positive-measure collection of the decomposed phases is nontrivial.
+Neither a spectral mass gap nor phasewise ultraviolet normalization
+follows.  An averaged asymptotic coefficient can vary between phases;
+phasewise matching requires a decomposable operator estimate or estimates
+with all bounded central insertions.
+
+\paragraph{Provenance.}
+The detailed scalar inputs are recorded in
+\path{work/os_s0_whitney_extension_2026-10-18.txt},
+\path{work/s0_reflection_common_core_audit_2026-10-18.txt},
+\path{work/same_state_diagonal_rp_reaudit_2026-10-18.txt},
+\path{work/rotation_slab_operator_consumer_2026-10-18.txt},
+and \path{work/scalar_reconstruction_and_phase_selection_2026-10-18.txt}.
+The opening diagonal-RP warning in the older common-core note is superseded
+by the later fixed-coupling re-audit, not by an automatic continuum claim.
+
+\section{Permanently dated periodic marginals}
+\label{ha:periodic}
+
+Maturation of a complete cohort does not erase the individual old
+phase-root marginals.  The following repair is an identity on the birth
+root lattice and on the same original fine field.
+
+\paragraph{Periodic primitive.}
+Let $a:\mathbb Z^4\to V$ be $p$-periodic with zero mean, where $V$ is
+a normed tensor space or finite coefficient algebra.  Write $A_\mu$ for
+averaging in coordinate $\mu$ and set
+$f_\mu=A_1\cdots A_{\mu-1}a-A_1\cdots A_\mu a$.
+Each $f_\mu$ has zero sum on its $\mu$-line.  Its cumulative sum, extended
+periodically, gives
+\begin{equation}
+ a(z)=\sum_{\mu=1}^4D^-_\mu b_\mu(z),\qquad
+ \|b_\mu\|_\infty\leq2p\|a\|_\infty,
+ \quad
+ \sum_z a(z)F_z=-\sum_{z,\mu}b_\mu(z)D^+_\mu F_z.
+ \label{ha:coboundary}
+\end{equation}
+The wrap-around equality follows from the zero line sum.  Rectangular
+periods use their maximum.  The construction is linear, so label sums
+may remain inside the spatial norm throughout.
+
+Let $q_{AB}(U,x)$ be the same fine clover tensor, with its fine volume
+factor, at every date.  Set
+\begin{equation}
+ \widehat Q_{i,z}(U,J)=\sum_xh^i_z(x)q_{AB}(U,x),\qquad
+ h^i_z(x)=\prod_\mu(1-|x_\mu/r_i-z_\mu|)_+.
+ \label{ha:qhat}
+\end{equation}
+This reference is independent of the formal current $J$.  A change of
+fine summation index gives the exact identity
+\begin{equation}
+ \widehat Q_{i,z+e_\mu}-\widehat Q_{i,z}
+ =\sum_xh^i_z(x)\{q_{AB}(U,x+r_ie_\mu)-q_{AB}(U,x)\}.
+ \label{ha:qhat-difference}
+\end{equation}
+For an actual eligibility mask $\chi$ and a profile $f$, summation by
+parts in \eqref{ha:coboundary} differentiates $\chi(z)f(r_iz)\widehat Q_{i,z}$.
+Its exact product rule has three terms: the fine-clover difference,
+the profile difference, and the mask difference.  The latter two keep
+their original endpoints and birth widths.  They are not discarded
+as changes of representation.
+
+On a common admitted smooth read of physical scale $r_n$, put $h=r_i/r_n$.
+The same-contour curvature and Holder estimates imply
+\begin{equation}
+ |\widehat Q_{i,z}|\leq Ca_n^2h^4,
+ \qquad |D^+\widehat Q_{i,z}|\leq Ca_n^2h^{4+\beta}.
+ \label{ha:phase-gain}
+\end{equation}
+There are $O(h^{-4})$ old roots per $n$-cell.  The phase sum is therefore
+bounded by $Cpa_n^2\|a\|_\infty h^\beta$, whereas its direct neutral
+bound is $Ca_n^2\|a\|_\infty$ with \emph{no period factor}.  Taking
+the minimum before the age sum is decisive.  A profile difference costs
+$pr_i^\theta[f]_\theta$; an actual boundary commutator is supported in
+an old-width strip, with any printed $MR_i$ collar retained.
+
+At an artificial boundary only a patch of scale $d r_n$ may be smooth.
+The safe functional comparison is the minimum of a neutral and a
+prepared Ward bound, of the form
+\begin{equation}
+ Ca_n^2h^4\min\{1,Kp h^\beta d^{-(4+\beta)}\}.
+ \label{ha:graded-phase}
+\end{equation}
+The same function and contours are required on both sides.  Summing
+dyadic collar shells, whose relative volume is $O(d)$, with
+$t=(Kph^\beta)^{1/(4+\beta)}$, costs $O(t)$: below $t$ use the neutral
+bound; above $t$ sum $Kph^\beta d^{-(3+\beta)}$.  This proves a positive
+gain of exponent $\beta/(4+\beta)$, capped at one, without asserting
+uniform smoothness through the seam.  The use of this estimate for the
+actual mixed maps is precisely part of the unresolved attachment.
+
+\paragraph{Exact matured mean.}
+If $R=r_j/r_i$ is divisible by $p$, then for every residue vector $\alpha$,
+\begin{equation}
+ R^{-4}\sum_{z\equiv\alpha\ ({\rm mod}\ p)}
+       \prod_\mu(1-|z_\mu/R-Z_\mu|)_+=p^{-4}.
+ \label{ha:tent-balance}
+\end{equation}
+In one dimension write $R=pq$ and partition the translates of the tent
+into $q$ unit partition-of-unity families; the sum is $q$.  Products
+prove the formula.  Thus the grouped affine curvature coefficient of
+a periodic old reference is exactly its phase mean.  Its oscillatory
+full function still exists and is bounded by
+\eqref{ha:coboundary}--\eqref{ha:graded-phase}.
+
+Split each complete pointed birth at creation as
+$v_i+\widehat Q_i d_i+Z_i$, with its full affine curvature projection
+$\Pi Z_i=0$.  Define $M_i$ to bound the \emph{whole} nonconstant newborn,
+including $d_i$, not just $Z_i$.  Exact affine reproduction gives
+\begin{equation}
+ \Pi_jW_j(Z)=\sum_{i\leq j}R_{ij}^{-4}
+                 \sum_zh_Z(z/R_{ij})d_i(z).
+ \label{ha:physical-marginal}
+\end{equation}
+Old zero-projection remainders contribute zero because their first jet
+vanishes and the linear prefix reproduces affine curvature.  Their
+quantum changes are already later births.  Mature terms in
+\eqref{ha:physical-marginal} are phase means; the remaining positive hat
+averages are bounded by $C\sum_{i\,{\rm young}}M_i$.  Youth lasts only
+$O(\log p_i)$ dates.  No old function is redated, and no scalar or
+historical boundary term is removed by this identity.
+
+\paragraph{Provenance.}
+\path{work/periodic_marginal_coboundary_2026-10-18.txt};
+the hats and pointed decomposition are those associated with CMP119
+(3.40)--(3.43), (3.65)--(3.67), with tensor projection before its scalar
+Euclidean reduction.
+
+\section{Positive Volterra estimates and a separate native-error lane}
+\label{ha:volterra}
+
+Suppose the literal dated preparation kernel obeys, for $t=j-i$,
+\begin{equation}
+ k_{ji}\leq C(1+t)^q
+ \min\{1,C(1+\log\gamma_i)^r e^{-\beta t}\}
+             +C(1+t)^q e^{-\beta t}.
+ \label{ha:phase-kernel}
+\end{equation}
+Put $L_j=1+\log(1+\log\gamma_j)$.  Then
+\begin{equation}
+ \sum_{i\leq j}k_{ji}\leq C L_j^{q+1}.
+ \label{ha:row-sum}
+\end{equation}
+Indeed, for $t\leq\gamma_j$, \eqref{ha:drift} makes $\gamma_i$ comparable
+to $\gamma_j$.  Split at $C_0+C_1\log\log\gamma_j$: use the neutral
+term below and the exponential above.  For $t>\gamma_j$, use
+$\gamma_i\leq C(1+t)$ and an absolutely summable exponential tail.
+Therefore $\delta_jL_j^{q+1}\to0$ at a sufficiently weak floor.
+
+If a matured physical cohort has
+$|c_j|\leq A(\gamma_i/\gamma_j)^p$ and its actual newborns satisfy
+\begin{equation}
+ M_{j+1}\leq C\delta_j\left(|c_j|+
+                  \sum_{u=i}^jk_{ju}M_u\right)+f_{j+1},
+ \label{ha:birth-rec}
+\end{equation}
+with $M_i\leq A$ and $f_{j+1}\leq A(\gamma_i/\gamma_{j+1})^p$, then
+\begin{equation}
+ M_j\leq CA(\gamma_i/\gamma_j)^p,\qquad
+ \sum_{u=i}^jM_u\leq CA\gamma_i(\gamma_i/\gamma_j)^p.
+ \label{ha:birth-poly}
+\end{equation}
+Divide by the monotone weight $(\gamma_i/\gamma_j)^p$ and use
+\eqref{ha:row-sum}; choosing the feedback coefficient below $1/2$
+proves the first bound by induction.  The number of dates in
+\eqref{ha:drift} proves the second.  This is a positive bound for a
+list of original births, not a static semigroup on arbitrary pair tubes.
+
+On a fusion-to-midpoint interval where $\gamma_j\asymp G$, the same
+proof with weight $e^{\alpha(j-i)}$, $\alpha=c/(1+\log\log G)$,
+gives
+\begin{equation}
+ M_j\leq CA\left(e^{-c(j-i)/(1+\log\log G)}+\zeta_G\right)
+ \label{ha:slow-decay}
+\end{equation}
+when the physical forcing has a stable exponential plus the floor
+$\zeta_G$, and the added forcing is $O(A\delta_j\zeta_G)$.
+The weighted row sum is unchanged up to a constant: the neutral
+memory interval has length $O(\log\log G)$ and the tail still decays.
+Across $cG$ dates the first term beats every fixed
+$\exp[C(\log G)^d]$ preparation loss.  A power floor $G^{-K}$ does not.
+
+\subsection{The actual old/young split}
+
+Let $\rho_j$ be the actual regular density, $Y_j$ its source-free young
+$R$ sum, and $\sigma_j=\rho_je^{-Y_j}$.  The regular comparison is
+\begin{equation}
+ C_j^0W=\frac{K_j^{\rm in}(\sigma_jW)}{K_j^{\rm in}\sigma_j},
+ \qquad C_jW=\frac{K_j^{\rm in}(\rho_jW)}{K_j^{\rm in}\rho_j}.
+ \label{ha:actual-core}
+\end{equation}
+The first kernel contains the old $R$ whose partitions fit the next
+lattice.  It is neither an all-$R$ kernel nor an $E$-only kernel.
+Its successive densities satisfy the exact identity
+\begin{equation}
+ \sigma_{j+1}=e^{A_j}K_j^{\rm in}\sigma_j,\quad
+ A_j=F_j+h_j+log\frac{K_j^{\rm in}\rho_j}
+                              {K_j^{\rm in}\sigma_j}-Y_{j+1}.
+ \label{ha:intermediate-normalizer}
+\end{equation}
+The intermediate $A_j$ remain in a joint block integral.  Dropping them
+would change the product of normalized kernels.
+
+Interpolating only the source-free $Y_j$ gives, with $P_j$ the unchanged
+static prefix,
+\begin{equation}
+ (C_j-C_j^0)W=\int_0^1
+       \operatorname{Cov}_{\sigma_je^{sY_j}}
+       (W-W(P_j),Y_j-Y_j(P_j))\,ds.
+ \label{ha:native-identity}
+\end{equation}
+This is exact, annihilates constants, and acts on the same complete mark.
+It does not bound derivatives of a sourced young-$R$ family by a native
+source-free power.  The original young renewal estimates yield a literal
+newborn bound, including its scalar value,
+\begin{equation}
+ a_{j+1}^{-2}\|(C_j-C_j^0)W\|_{\rm new,orig}
+ \leq C\gamma_j^{d}g_j^{K_{\rm nat}}
+                     a_j^{-2}\|\Delta W\|_{\rm prep}.
+ \label{ha:native-newborn}
+\end{equation}
+The powers in this estimate are fixed before the native target exponent.
+Young parent ages are $O(\log\log\gamma_j)$, so
+$(g_i/g_j)^{K_{\rm nat}}\leq
+\exp[CK_{\rm nat}\log\log\gamma_j/\gamma_j]$.
+Thus stronger native output powers can be obtained by increasing the
+weak floor, while the admission exponent $\kappa_R$ remains fixed.
+Fresh healed $R'$ uses its genuine bad-field reserve; regular $R''$
+renewal uses \eqref{ha:native-identity}, not that reserve.
+
+Unroll a difference by its first use of $C-C^0$.  Early first-native
+outputs are already small in their original creation norm and continue
+through the polynomial cohort bound \eqref{ha:birth-poly}.  Late
+first-native outputs act on the already decayed prepared difference.
+Consequently a native power-small error is never multiplied by the
+large graded-read constant.  Choosing $K_{\rm nat}$ after the fixed
+admission, creation, transport, and date-count powers leaves any desired
+fixed power $G^{-K}$.  The choice is acyclic only if strengthening the
+native estimate changes the weak floor and constants, not those powers.
+
+\paragraph{Provenance.}
+\path{work/phase_kernel_positive_volterra_2026-10-18.txt},
+\path{work/singleton_dated_birth_polynomial_operator_2026-10-18.txt},
+\path{work/native_R_power_vs_source_admission_2026-10-18.txt},
+and \path{work/native_young_R_marked_error_lane_2026-10-18.txt}.
+
+\section{Causal scalar extraction and complete-copy coefficients}
+\label{ha:scalars}
+
+Introduce a nilpotent variable $\xi_a$, $\xi_a^2=0$, only after copy $a$
+has been assembled as a complete scalar density coefficient, including
+all its lower subsets, deterministic matching coefficients, and identity
+term.  A copy is not one of the partial blocks of its logarithm.
+In a local norm the sum over label sets is inside the spatial sum:
+\begin{equation}
+ \|b\|_{\mathbf t,\kappa}=
+ \sup_x\sum_{H\ni x}e^{\kappa d(H)}
+                \sum_{S\ne\varnothing}t_S\|b_{H,S}\|,
+ \qquad t_S=\prod_{a\in S}t_a.
+ \label{ha:local-algebra}
+\end{equation}
+A sum of global norms of separate copies would grow with their number
+even when their supports are disjoint.
+
+At a universal birth $l$, write the actual coefficient
+$A_{l,\alpha}=v_{l,\alpha}+B_{l,\alpha}$, where
+$B_{l,\alpha}(I,0)=0$.  Let $I_l(H,\alpha)$ be its actual birth eligibility.
+Then, identically in the finite algebra,
+\begin{equation}
+ \exp\!\left(\sum_{I_l=1}A_{l,\alpha}\right)
+ =e^{V_l}e^{-D_l(H)}
+       \exp\!\left(\sum_{I_l=1}B_{l,\alpha}\right),
+ \quad
+ V_l=\sum_\alpha v_{l,\alpha},\quad
+ D_l=\sum_{I_l=0}v_{l,\alpha}.
+ \label{ha:birth-scalar}
+\end{equation}
+The central $V_l$ commutes with every later frozen linear operator.
+$D_l$ retains its birth history and witness.  For any later mask $J$,
+the replacement of $I_l$ by $J$ must retain the opposite scalar mask
+correction before taking absolute values.  A later hole cannot create
+a new microscopic deficit from an already exported scalar.  The
+identity applies to genuine universal healed births as well as regular
+births; a history-dependent boundary scalar was never universal and
+remains in its chronological operator.
+
+This order has a quantitative consequence.  At birth,
+$\Omega_l\supset\Lambda_l\supset\Omega_{l+1}$ implies
+$\Lambda_l^c\subset\bigcup_{n\leq l}\Gamma_n$.  Failure of the literal
+pointed restrictions $z\in\Lambda_l^{(0)}$, $X\subset\Lambda_l$ gives
+either the prescribed current collar or a retained carrier path to that
+complement.  Per actual own-$n$ cell, $n\leq l$, the number of current-$l$
+roots at carrier distance $q$ is at most
+$C(1+q+MR_l)^4$, since $r_n/r_l\leq1$.  A tree reserve pays the $q$
+moment.  There is no future scale $p$ and no factor $(r_p/r_l)^4$.
+This census concerns actual new scalar coefficients.  An old fusion-root
+coefficient cannot be relabelled as a new birth to use it.
+
+For an opened component, suppose the assigned singleton deficits satisfy
+$|d_a(H)|\leq P(G)n_a(H)$ and $\sum_an_a(H)\leq CD_H$ in its actual
+paid cell/path census.  Nilpotence gives
+\begin{equation}
+ \left\|e^{\sum_a\xi_ad_a(H)}\right\|_{\mathbf t}
+ =\prod_a(1+t_a|d_a|)
+ \leq \exp\!\left(\sum_an_a\log(1+t_aP(G))\right).
+ \label{ha:deficit-product}
+\end{equation}
+Choosing the logarithm below a reserved fraction of the actual occupation
+debit pays this factor on every analytic spectator.  The inequality is
+applied within the labelled branch, before the history sum.  It does not
+tilt the unmarked measure by occupation of every historical bad cell.
+Nor does exact full-state centering prove this estimate.  Universal
+singleton scalar sums may be extensive and stay outside it.
+
+\paragraph{Provenance.}
+\path{work/stopped_scalar_chronological_normal_form_2026-10-18.txt},
+\path{work/initial_clone_census_quotient_audit_2026-10-18.txt},
+and \path{work/copy_pressure_normalization_integration_audit_2026-10-18.txt}.
+
+\section{The first-contact classification and the remaining source gap}
+\label{ha:first-contact}
+
+Consider one complete adjacent-frame difference whose future-corrected
+regular coordinate vanishes.  Choose a midpoint $m$ with
+$\gamma_m\asymp G$ and $m-f\geq cG$; lower it by the finite preparation
+window where necessary.  At each old root keep its full original
+carrier, clover, current stencil, and attachments.  The exhaustive
+estimate distinguishes the following cases.
+
+An early genuine bad-field or annular event retains its original birth
+and attachment reserve. If an old short stencil first meets an ancient
+raw cell at a later read, and the cell tier $n$ is no finer than the
+birth tier $i$, the original neutral fourth power cancels the old-root
+census at that own tier. For $n<i$, retain the literal original-domain
+operator admission and the actual cell/path occupation; one must not
+rescale the birth into the finer tier and claim that cancellation.
+A root far from its copy instead keeps
+its original exit path.  Remote dependence on a bad cell does not itself
+count as a nearby contact.  If the short stencil meets no old actual cell,
+its existing determining tier is late, apart from artificial graded seams
+and the preparation cap; the improved read is applied there.  Newly
+introduced late roots have their own small creation norm and do not need
+a fabricated early path.  Periodic, mask, and profile terms retain the
+identities in Sections~\ref{ha:periodic}--\ref{ha:scalars}.
+
+For the smooth case the target estimate is a same-contour minimum of
+the original neutral bound and a proper-layer Ward bound.  A graded
+collar sum and the phase recurrence then give, schematically,
+\begin{equation}
+ P(G)L_k\exp\!\left[-\frac{cG}{1+\log\log G}\right],
+ \qquad
+ L_k\leq\exp[C(1+R_k)(1+\log\gamma_k)^C].
+ \label{ha:proper-layer-gain}
+\end{equation}
+This beats the fixed preparation loss.  The native lane of
+\eqref{ha:native-newborn} is kept separate.  After all fixed polynomial
+losses the intended complete-copy small factor is
+\begin{equation}
+ \varepsilon(G)=e^{-c(\log G)^s}+G^{-K},\qquad s>1.
+ \label{ha:epsilon}
+\end{equation}
+
+\paragraph{Unresolved application hypothesis.}
+The estimate \eqref{ha:proper-layer-gain} is not supplied by membership
+of the final field in the original independent-pair domain.  One needs
+the actual nested bases
+$U(\mathcal B(Y_r);\hbox{modified coarse data})$, together with their
+independent-current companions and localized responses, to be admitted
+on the complete local averaging/operator footprint in one compatible
+gauge.  Both neutral and improved bounds must hold on the same contour.
+The local current inverse now gives a physical current estimate on an
+\emph{already admitted} finite same-family collar.  It does not create
+that collar across a nested minimum.
+
+The latest slotwise reduction references the preceding complete
+reconstructed field.  New boundary slots then agree exactly, and old
+interior slots retained by its baseline differ by controlled response
+and the retained endpoint gauge.  The unresolved slots are the
+preparation-changed ones, including their transition back to retained
+blocks, on their full footprints.  Independently good gauges on two
+pieces do not give one admissible mixed coarse datum.  Peeling an outer
+response does not invert a nested minimum.  Deleting an entire coarse
+footprint as a neutral strip leaves a cost of order $r_p/r_n$, which
+need not tend to zero with $G$.  A graded bypass would require its
+terminal collars to remain in one admitted branch or a common identity
+annulus; the required inclusion is not verified.
+
+A dimension-independent real-slice continuation can weaken the complex
+target: a bound on a full real parameter diameter and a fixed complex
+margin yields a positive reduced exponent by the two-constants theorem.
+A physical graph or one real specialization is not that full diameter.
+Thus this alternative does not remove the present admission hypothesis.
+The subsequent assembly is a theorem from that hypothesis and the
+specified original majorants, not an independent proof of it.
+
+\section{Merged groups and a single prefix-tree reserve}
+\label{ha:forest}
+
+Copy supports, including their read collars, are separated by $\tau$.
+For one term of the original connected expansion retain its paid
+component interiors and attachments, with their dates.  Let $T_i$ be
+the cumulative paid cost by date $i$, and let $b_i$ count labels that
+already belong to groups of at least two labels.  A mixed scalar
+retires its labels, which are retained as ghosts through $N$.
+
+In the early range assume the actual propagated cover has at most
+$CT_i$ paid pieces of diameter at most $Cs_i$, together with their
+actual connections, where
+\begin{equation}
+ s_i\leq C\ell^{-(N-i)}(1+N-i)^{d_R},\qquad Cs_i<\tau/4.
+ \label{ha:cover-scale}
+\end{equation}
+Each piece meets at most one copy.  A connected group meeting $h\geq2$
+separated supports needs a spanning network of length at least
+$c\tau(h-1)$.  Its paid cover constructs one of length at most
+$Cs_iT_i$.  Therefore
+\begin{equation}
+ b_i\leq C\tau^{-1}s_iT_i.
+ \label{ha:prefix-packing}
+\end{equation}
+This assertion is only early.  A single late cover can contain many
+copies and need not satisfy it.
+
+Suppose rough propagation after a first merger costs $e^{Ch}$ per date
+for an $h$-label group, in the same original local/operator norm.
+Choose $A_\tau=\lceil K_0(1+\log(1/\tau))\rceil$ and split at
+$N-A_\tau$.  Then
+\begin{equation}
+ \sum_{i\leq N-A_\tau}b_i
+ \leq\frac{C\ell^{-A_\tau}(1+A_\tau)^{d_R}}{\tau}T_N,
+ \qquad
+ \sum_{i>N-A_\tau}b_i\leq m(A_\tau+1).
+ \label{ha:forest-sums}
+\end{equation}
+For sufficiently large fixed $K_0$, one reserved tree fraction pays
+the entire early loss.  Hence
+\begin{equation}
+ e^{C\sum_i b_i}e^{-\kappa T_N}
+ \leq C_0^m\tau^{-D_0m}e^{-\kappa T_N/2}.
+ \label{ha:forest-result}
+\end{equation}
+No tree is re-spent at each ancestor merger.  The estimate applies
+termwise to the original expansion with its original multiplicities;
+it does not authorize summing a new family of labelled forests.
+
+Only a small source ball may be available.  If a complete newborn map
+is analytic for $\|X\|<R_j=cg_j^{\kappa_R}$ and bounded by $CR_j$,
+its degree-$p$ ordered multilinear majorant costs
+$C_1^pR_j^{1-p}\prod_l\|X_l\|$. Here the norm is the absolute
+activity norm. In the $a_j^2$-normalized current-birth norm, replace
+$R_j$ by $\widehat R_j=cg_j^{\kappa_R}/a_j^2$ throughout this bound.
+The field-projection cost $a_j^{-2}$ cancels the $a_j^2$ norm of the
+canonical reference. Thus unary propagation has no inverse-radius loss;
+each new $p$-way merger loses $p-1$ radius powers, a fixed polynomial
+coupling cost. Assign these powers
+to distinct leaves: each child subtree retains one unassigned leaf;
+at a merger assign all but one and pass the remaining representative
+upward.  Every leaf is charged at most once.  If its first merger was
+at $i_a\leq j$, then
+$\log R_j^{-1}\leq C(1+N-i_a)$, whose sum is bounded by
+$C\sum_i b_i+Cm$.  Equation~\eqref{ha:forest-result} pays it.
+Existing Taylor/cluster symmetry factors remain those of the original
+series; analyticity alone is not a claim of a factorial-free bound for
+an arbitrary unordered coefficient.
+
+A mixed scalar created at $l$ has root density $r_l^{-4}$.  Its ghosts
+pay this, and an extra factor $e^{\lambda(N-l)}$ can be retained to
+sum all primitive dates.  Distinct scalar factors in a square-free
+term have disjoint labels.  A singleton deficit born before a merger
+cannot be paid retroactively by that ghost: it needs the causal
+singleton budget of Section~\ref{ha:scalars}.
+
+\paragraph{Provenance.}
+\path{work/merged_group_prefix_forest_2026-10-18.txt}
+and the original rooted source majorant retained in
+\path{work/initial_clone_census_quotient_audit_2026-10-18.txt}.
+
+\section{From local chronological domination to normalized pressure}
+\label{ha:pressure}
+
+Let $F_a$ be complete actual scalar-composite copies on a finite torus,
+and keep the original unmarked expectation $\mu_0$.  Restriction of the
+copy family means setting its variables to zero in the same construction.
+After exporting every universal marked scalar at birth, the exact identity is
+\begin{equation}
+ M(\boldsymbol\xi)=\mu_0\prod_a(1+\xi_aF_a)
+     =e^{U(\boldsymbol\xi)}H(\boldsymbol\xi),\qquad
+ H=\frac{Z_{\rm ren}(\boldsymbol\xi)}{Z_{\rm ren}(0)},
+ \quad H(0)=1.
+ \label{ha:pressure-identity}
+\end{equation}
+The denominator is the same source-free partition function.  The
+history-dependent deficits in \eqref{ha:birth-scalar} are in $H$, not
+in $U$.  If an original normalization was source dependent, its exact
+numerator over the fixed reference inverse is retained before this
+factorization.
+
+\paragraph{Conditional local-to-global proposition.}
+Assume the first-contact classification supplies the following summed
+bound in the norm \eqref{ha:local-algebra}, with fixed weakened reserves:
+\begin{equation}
+ \sum_S t_S\|T^{\rm ren}_{H,S}f_{\rm test}\|
+       \leq B_H^{\#}\|f_{\rm test}\|
+ \label{ha:spectator-domination}
+\end{equation}
+for every original analytic spectator, together with the corresponding
+rooted bulk and boundary bounds.  The empty coefficient is unchanged.
+Suppose the same positive family retains each copy-to-output carrier.
+Then, for terminal volume $V_T$ and $m$ copies,
+\begin{equation}
+ \|H\|_{\mathbf t}\leq e^{C_pV_T},
+ \qquad
+ \|U-\sum_a\xi_au_a\|_{\mathbf t}\leq C_vm,
+ \quad u_a=[\xi_a]U.
+ \label{ha:PV}
+\end{equation}
+
+\emph{Proof of the first bound.}
+Linear integrations and restrictions act coefficientwise. Multiplication
+is submultiplicative in the finite label algebra; exponentials and Mayer
+differences are bounded by their original positive series; chronological
+composition uses \eqref{ha:spectator-domination}.  The original final
+stability proof therefore yields
+$\|Z_{\rm ren}(\boldsymbol\xi)\|_{\mathbf t}\leq e^{C_+V_T}$.
+Its source-free lower bound is
+$Z_{\rm ren}(0)\geq e^{-C_-V_T}$ in the same normalization.  Division
+gives $C_p=C_++C_-$.  No separate linked-cluster theorem for a normalized
+live conditional law is needed.  Conversely, a family estimate only
+on $T_H1$ or only on nonvacuum coefficients would not justify this step.
+
+\emph{Proof of the mixed-scalar bound.}
+Anchor a mixed universal birth to one original marked vertex of a
+specified copy $a$, in a fixed compact support $K$, and retain its
+root-to-output path.  At current birth date $l$ the output-root count
+costs at most
+\begin{equation}
+ C_Kr_l^{-4}P(\gamma_l)(1+T)^{d_0}
+ \label{ha:scalar-root-count}
+\end{equation}
+times its original rooted carrier majorant.  This is a current root
+count, not another sum over old fusion roots.  The polynomial in the
+carrier is paid by a spare exponent.  In the prefix estimate include
+the ghost charge
+$\exp[(4\log\ell+C_P+\lambda)(N-l)]$, where
+$P(\gamma_l)\leq Ce^{C_P(N-l)}$ and $\lambda>0$ is fixed.
+It pays \eqref{ha:scalar-root-count} and leaves
+$Ce^{-\lambda(N-l)}$.  All primitive dates are now summable.
+
+The remaining original rooted series sums unmarked connectors and
+relative marked roots with the fixed reduced reserve.  Separated copy
+positions have density at most a fixed power of $\tau^{-1}$ in a
+carrier enlargement; retain the corresponding carrier moment.  Choose
+the final label weight with an additional fixed factor $\tau^D$ to
+absorb this density, profile derivatives, and the forest loss.
+Its local sum is a small constant $c$, independent of the number of
+copies.  Selecting an anchor in a coefficient with label set $S$ costs
+at most $|S|\leq2^{|S|}$, paid by reducing $c$ once while retaining
+$c^{|S|}$.  Thus
+\begin{equation}
+ \sup_a\sum_{S\ni a,\ |S|\geq2}t_S|U_S|\leq C_v.
+ \label{ha:rooted-vacuum}
+\end{equation}
+Summing over $a$ proves the second bound of \eqref{ha:PV}.  This proof
+uses the \emph{same retained rooted family} as
+\eqref{ha:spectator-domination}; separate bounds on each fixed subset
+would not suffice.  Universal singletons are excluded and may be
+extensive. \hfill$\square$
+
+An explicit sufficient version of \eqref{ha:spectator-domination} is a
+coefficientwise comparison, after complete-copy cancellations and causal
+scalar extraction, with the original simultaneous source family at
+radii $r_a=P(G)^{-1}$:
+\begin{equation}
+ t_S\operatorname{Maj}(\hbox{decorated term}_S)
+ \leq c^{|S|}r_S\operatorname{Maj}_0
+                       (\hbox{same term; weakened reserves}),
+ \qquad t_a\varepsilon(G)\leq cr_a.
+ \label{ha:license}
+\end{equation}
+Original scalar derivatives are extracted at the simultaneous local
+polydisc, with at most five internal labels per copy.  One must not
+differentiate a history-diameter-dependent Cauchy radius once for each
+label.  The first-contact lanes and forest licenses aim to prove
+\eqref{ha:license}; the remaining source-admission gap prevents treating
+this application as an unconditional theorem.
+
+\subsection{Compatible centering and actual arrays}
+
+The singleton residual mean is controlled without a local partition
+ratio.  Choose a fixed terminal-volume cell of volume $v_0$, compatible
+with all relevant past partitions and large enough for a buffered copy.
+Disseminate $D=F-u$ over its $B$ reflected cells.  Restriction consistency
+and compatible covariance identify the singleton scalars as the
+disseminates of $u$.  By \eqref{ha:PV}, the top coefficient is bounded by
+$t^{-B}\exp(C_pBv_0+C_vB)$.  The chessboard inequality and its $B$th
+root give
+\begin{equation}
+ |\mu_0F-u|\leq C_0t^{-1},\qquad C_0=e^{C_pv_0+C_v}.
+ \label{ha:residual-mean}
+\end{equation}
+There is no zero-free logarithm of $H$ in this argument.
+
+Put $F_a^c=F_a-\mu_0F_a$.  Nilpotence gives exactly
+\begin{equation}
+ \mu_0\prod_a(1+\xi_aF_a^c)
+ =\exp\!\left(U_{\rm mix}+\sum_a\xi_a(u_a-\mu_0F_a)\right)H.
+ \label{ha:exact-centering}
+\end{equation}
+Equations~\eqref{ha:PV}--\eqref{ha:residual-mean} bound its full coefficient
+norm by $\exp[C_pV_T+(C_v+C_0)m]$.  Top coefficient extraction costs
+exactly $\prod_at_a^{-1}$, with no extra factorial.
+
+Place a time array of $m$ copies in one rectangular cell whose spatial
+cross-section depends only on their fixed supports.  Its terminal volume
+is at most $C_Km$.  Disseminate the \emph{whole array cell} over a large
+torus, apply the preceding bound, and take the root by the number of
+cells.  The resulting chessboard seminorm is
+\begin{equation}
+ \left\|\prod_{a=1}^mF_a^c\right\|_{\rm CB}
+                       \leq\prod_{a=1}^m(C_Kt_a^{-1}).
+ \label{ha:array-bound}
+\end{equation}
+Fixed-regulator polynomial endpoint vectors are expanded into link-entry
+monomials and assigned to other closed cells before and after the array.
+Their sup norms give a prefactor independent of $m$.  Enlarging the
+array's transverse cross-section to contain arbitrary endpoints would
+instead produce an inadmissible endpoint-dependent constant per copy.
+Reflection doubling removes the fixed prefactor in the thermodynamic
+state.  Complex insertions stay intact; taking their pointwise absolute
+values or replacing a complex source by its real part is not part of
+the proof.
+
+\section{Causal prefix periods and the conditional copied estimate}
+\label{ha:copies}
+
+The centering identity does not make arbitrary translates of a
+prefix-subtracted fusion into compensated regular prototypes.  A
+translation can shift its numerical lower-subset coefficient pattern
+relative to the source scaffold.  Full centering corrects only its
+identity coefficient.
+
+Use instead the common causal prefix period of the two adjacent frames,
+including their scalar convention and all partition choices through
+fusion.  Its physical size obeys
+\begin{equation}
+ p_G\leq Cr_f(1+\log G)^d\leq e^{-cG}P(G).
+ \label{ha:prefix-period}
+\end{equation}
+The terminal matching matrices are spatially constant and do not enlarge
+this period.  A period translate is exactly the same unweighted prototype
+with translated envelope.  Future kernels need not commute with that
+translation: complete hat grouping and its exact profile commutator are
+performed on the fixed future trajectory before norms.
+
+The common origin reflection preserves the actual old-$R$ regular base,
+retained coordinates, scalar-radius windows, gauge/coarea factors, and
+intermediate normalizers.  Its finite products intertwine with the
+future-corrected projection, so a zero corrected coordinate remains zero.
+It is sufficient to adjoin finitely many actual reflected prototypes;
+the selected twenty-one columns need not already form a reflection
+representation.  A plane on an even $p_G$ grid is an origin reflection
+followed by a permitted translation.
+
+The residual-mean cell used in \eqref{ha:residual-mean} still uses the
+larger all-past-compatible period.  The long array uses the finer
+even-$p_G$ grid.  For
+$G\geq A[1+\log_+(1/\tau)]$, rounding its faces within empty buffers
+costs $O(p_G)\ll\tau$ and keeps volume $O(m)$.  At fixed bare regulator
+the free torus size factor can be chosen divisible by any fixed finite
+array dimensions and the source period, with even counts.  Take volume
+limits before arbitrary doubling and then the ultraviolet subsequence.
+
+Combining the preceding conditional estimates gives the actual conclusion
+of this part of the argument.  For a fixed compact center support and a
+fixed complete adjacent-frame difference $E_G$, there are finite
+$B,D,S$ such that
+\begin{equation}
+ \|\mathcal D_\tau(E_G(f)^c)\|
+ \leq C\tau^{-D}G^B
+       \{e^{-c(\log G)^s}+G^{-K}\}\,p_S(f),\qquad s>1.
+ \label{ha:copied-estimate}
+\end{equation}
+Here $\mathcal D_\tau$ denotes the bounded slab insertion with positive
+padding, not an already defined undamped operator.  The allowed array
+copies are the causal-period translates and finite reflections just
+specified.  Constants are independent of bare depth and array length.
+
+The parameter order is finite and noncircular.  First fix the admission
+exponent $\kappa_R$ above the original stability threshold, for example
+at least eight, and all geometric and analytic reserves.  Fix the fusion
+order, creation and matching powers, rough propagation constants, ghost
+charge, and finite test seminorm.  These determine $B,D$.  Then choose
+the source-free native output power so that the remaining $K$ exceeds
+$B$ and any later finite domain/locality losses.  Increase the weak
+floor last.  Native $R''$ remains a young renewal and receives no false
+fresh bad-field factor.  The weak terminal band is held fixed.  The
+proof does not provide one source radius uniform over arbitrary terminal
+inverse coupling tending to infinity.
+
+\paragraph{Provenance.}
+\path{work/copied_fusion_pressure_consumer_2026-10-18.txt},
+\path{work/prefix_period_copied_slab_consumer_2026-10-18.txt},
+and \path{work/copy_pressure_normalization_integration_audit_2026-10-18.txt}.
+The arbitrary-bare-translate wording in the older pressure consumer is
+superseded by the restricted causal-period statement above.
+
+\section{Two global colours and the corrected Holder packing power}
+\label{ha:two-colour}
+
+The following is a different, degree-two problem.  The copied bound
+\eqref{ha:copied-estimate} cannot be used as though it supplied a rough
+two-colour radius $R^\theta/P(G)$; its padding power may be much larger.
+Two global signed unions of packets are labelled by
+$z_1,z_2$, $z_1^2=z_2^2=0$, only after each complete internal scalar
+fusion coefficient has been formed.  A prefusion operator has the actual
+coefficients
+$T(W_1\,\cdot)$, $T(W_2\,\cdot)$, and $T(W_1W_2\,\cdot)$.
+The last is not the product of its values on the two separate marks.
+
+For an ordinary vertex $V=V_0+z_1V_1+z_2V_2+z_1z_2V_{12}$,
+\begin{equation}
+ [e^V-1]_a=e^{V_0}V_a,\qquad
+ [e^V-1]_{12}=e^{V_0}(V_{12}+V_1V_2).
+ \label{ha:vertex-two}
+\end{equation}
+For the normalized regular conditional map $K$ the logarithmic mixed
+coefficient is
+$KV_{12}+K(V_1V_2)-(KV_1)(KV_2)$.  These are exact identities with
+the original denominators.  The original source connected series, with
+its original symmetry factors and chronological order, gives
+\begin{equation}
+ [R'_j(X)]_{12}=\sum_{\mathcal C}\varphi^T(\mathcal C)
+ \left\{\sum_vp_{v,12}\prod_{u\ne v}p_{u,0}
+  +\sum_{v\ne w}p_{v,1}p_{w,2}\prod_{u\ne v,w}p_{u,0}\right\}.
+ \label{ha:two-cluster}
+\end{equation}
+For operator factors the products and replacements have their original
+order.  No division by $p_{v,0}$ is used.  A quadratic marked-position
+count is paid by a fixed reserve.
+
+The required input is a \emph{projective profile representation} before
+relative positions are summed:
+\begin{equation}
+ p_{v,a}[F]=\sum_\alpha L_{v,a,\alpha}\lambda_{v,\alpha}(F),
+ \quad
+ p_{v,12}[F_1,F_2]=\sum_{\alpha,\beta}
+  L_{v,12,\alpha\beta}\lambda_{v,\alpha}(F_1)
+                           \lambda_{v,\beta}(F_2).
+ \label{ha:slots}
+\end{equation}
+The slots are evaluations, normalized hats, and original endpoint
+differences with their carrier moments.  The sums of coefficient
+\emph{operator} norms, with relative positions inside the current-rooted
+majorant, must be bounded.  A supremum estimate for each profile or a
+homogeneous matrix estimate does not imply this norm.
+
+Suppose an actual opened history has the first- and mixed-input bounds
+$A_a[J_H+\sum_nP(\gamma_n)N_n]$ and
+$A_1A_2[J_H+\sum_nP(\gamma_n)N_n]^2$ in that norm.  Here the $N_n$
+are the exact paid own-layer census, not a newly inserted number of old
+cells, and $J_H$ is a current carrier moment.  The retained occupation
+reserve gives
+\begin{equation}
+ \left(1+\sum_nP(\gamma_n)N_n\right)^2
+               e^{-c\sum_nq_nN_n}\leq C.
+ \label{ha:degree-two-absorb}
+\end{equation}
+For example the original stretched-log $q_n$ dominates
+$\log P(\gamma_n)$ with a fixed margin; expanding the degree-two
+polynomial and assigning reserve to its at most two chosen factors
+proves the bound.  The two colours may use the same cell.  Apply this
+inequality before the existing rooted history sum.  Equations
+\eqref{ha:two-cluster}--\eqref{ha:degree-two-absorb} then bound a new mixed
+birth by $C(B_{12}+B_1B_2)$ with one fixed weaker reserve.  A source-free
+native variation supplies one changed native vertex, not a native factor
+per colour.
+
+Causal scalar removal is still exact.  If
+$V=z_1V_1+z_2V_2+z_1z_2V_{12}$, multiplying the density by $e^{-V}$ sends
+\begin{equation}
+ \rho_{12}\longmapsto\rho_{12}-V_1\rho_2-V_2\rho_1
+                            +(V_1V_2-V_{12})\rho_0.
+ \label{ha:two-scalar}
+\end{equation}
+An existing mixed coefficient is carried as such; it is not reset to a
+product of first coefficients.  Its current-date norm and the prefusion
+seed reserve are substantive inputs.  Freezing the maps and centering
+numbers proves the algebra but not that quantitative assertion.
+
+For separated global supports at distance at least $cR$, a connected
+mixed birth at $u$ retains a path meeting both supports, including paid
+component interiors.  Its tree cost satisfies
+$T_u\geq cR/(r_uMR_u)$.  If
+$r_w=R\gamma_w^{-A}$ and $u=w-t$, bounded drift gives
+\begin{equation}
+ \frac{R}{r_uMR_u}\geq
+ c\frac{\gamma_w^A}{(1+\log\gamma_w)^d}\ell^{t/2}.
+ \label{ha:early-path}
+\end{equation}
+Every fixed polynomial in the early coupling and age is summable against
+the resulting exponential, uniformly in the initial fusion $G$.
+Universal mixed cohorts retain fixed relative offsets and their finite
+phase period.  For a nonnegative offset majorant with $p^4$ phases,
+$\sum_\delta\max_\sigma a_{\delta\sigma}
+\leq p^4\max_\sigma\sum_\delta a_{\delta\sigma}$.
+The period conversion is a current polynomial.  It does not turn a live
+operator into an activity or prove its spectator norm by evaluation at $1$.
+
+\subsection{One original envelope per linear lineage}
+
+Fix $0<\theta<1/2$.  For the original smooth profile define
+$A_dF(x)=(F(x+d)-F(x))/|d|^\theta$.  The elementary inequality
+\begin{equation}
+ |\Delta_h\Delta_dF(x)|\leq
+ 2[F]_{2\theta}\min(|h|^{2\theta},|d|^{2\theta})
+ \leq2[F]_{2\theta}|h|^\theta|d|^\theta
+ \label{ha:holder-double}
+\end{equation}
+implies $\|A_dF\|_{C^\theta}\leq C\|F\|_{C^{2\theta}}$ uniformly in
+$d\ne0$, with the usual sup estimate for $|d|\geq1$.  There is a cost
+$R^{-2\theta}$ per colour for a packet of size $R$, not the earlier
+unjustified $R^{-\theta}$ cost.
+
+This regularity is paid only once.  If $L_j$ is the frozen linear map on
+the complete dated operator/scalar ledger and $M_{F_j}$ multiplication
+at its current root, the exact commutator identity is
+\begin{equation}
+ E_{j+1}=L_jE_j+
+       (L_jM_{F_j}-M_{F_{j+1}}L_j)L_{j:i},
+ \qquad E_j=L_{j:i}M_{F_i}-M_{F_j}L_{j:i}.
+ \label{ha:fixed-lineage}
+\end{equation}
+An existing gradient lineage is transported linearly, not refrozen as a
+new envelope at each date.  The new forcing contains one original
+profile difference.  At the first bilinear merger the product of the
+two slots is a fixed envelope for its mixed lineage.  Later operations
+linear in that mixed coefficient keep it and its origin tag.  With
+only two colours there is no unbounded sequence of normalized profile
+derivatives.
+
+In physical units a difference born at $l$ and read at $j\geq l$ costs
+$C[F]_{2\theta}r_j^\theta r_l^\theta
+\leq C[F]_{2\theta}r_j^{2\theta}$, with its original carrier moment.
+Thus the conditional current mixed birth bound has profile cost
+\begin{equation}
+ C P(\gamma_j)(1+R_j^{-2\theta})^2,\qquad R_j=R/r_j.
+ \label{ha:profile-cost}
+\end{equation}
+Packing $O(R_N^{-4})$ pairs and dividing the current root count by that
+number supplies $R_j^4$.  For $R_j\leq1$ the corrected late and terminal
+power is
+\begin{equation}
+             P(\gamma_j)R_j^{4-4\theta}.
+ \label{ha:packing-correct}
+\end{equation}
+For instance $\theta=1/4$ gives power three.  The original envelope,
+causal scalar tags, current output-root convention, and retained relative
+paths are all needed for this calculation.
+
+This is a conditional current-birth attachment.  It does not yet sew the
+early ten-scalar Gaussian comparison, late universal sum, and normalized
+terminal remainder into a full-state relative Gram lower bound.  In
+particular, \eqref{ha:packing-correct} is not a statement that the
+twenty-one limiting fields are independent.
+
+\paragraph{Provenance.}
+\path{work/two_colour_current_birth_kernel_2026-10-18.txt},
+especially its exact input in Sections 6--7 and its corrected
+fixed-lineage construction in Sections 10--11; see also
+\path{work/current_date_two_mark_gram_budget_2026-10-18.txt}.
+
+\section{Matching actual scalar frames without a Gram theorem}
+\label{ha:matching}
+
+Let $V=\operatorname{Sym}^2(\Lambda^2\mathbb R^4)$, of dimension twenty-one.
+Choose a finite set of scalar packet configurations, of orders at most
+five, whose normalized open Gaussian coefficient matrix $A$ is invertible.
+This is local coefficient rank only.  For each column retain the complete
+density germ
+\begin{equation}
+ D_{[k]}\left[e^{-V_{\rm prefix}(z)}\mathcal O_{\rm source}(z)\right]_{z=0}.
+ \label{ha:density-frame}
+\end{equation}
+Its prefix scalar convention is causal and frozen at its fusion date.
+If the conditional logarithm has coefficients $W_B$, the density
+coefficient is exactly $\sum_{\mathcal P}\prod_{B\in\mathcal P}W_B$.
+After the order-$k$ normalization, a partition with $t$ blocks costs
+\begin{equation}
+ C_k b_f^2\left(\frac{R_f^4b_f^2}{g_s^2}\right)^{t-1}.
+ \label{ha:density-partition}
+\end{equation}
+The bracket tends to zero at the chosen packet scale.  Products with
+$t\geq2$ have field degree at least four and no quadratic marginal.
+Thus the actual density frame can satisfy both
+$\Pi W=A+o(1)$ and $\|W\|_b/b^2\leq C$.  A merely polynomial original
+norm would not give the latter statement.
+
+Assume the physical regular graph has coordinates $(c,r)$, graph $T_f$,
+and future-corrected projection
+$\pi_f^N(c,r)=c+L_f^N(r-T_fc)$ with
+$\|T_f\|\leq Cg_f^2$, $\|L_f^N\|\leq C\eta_f$.
+The bounded physical frame gives
+\begin{equation}
+ \|C_f^N-A\|\leq C(o(1)+\eta_f),\qquad C_f^N=\pi_f^NW_f.
+ \label{ha:matrix-inverse}
+\end{equation}
+For a sufficiently weak floor it is invertible with uniformly bounded
+inverse.  No OS Gram lower bound has been used.
+
+For actual frames born at $i\leq f$, let $P_{i,f}$ be the marginal
+transport and set
+$B_i=P_{i,N}C_i^N$, $B_f=P_{f,N}C_f^N$.  Regard the frames as row
+vectors of actual observables.  The difference
+\begin{equation}
+ E_{i,f}=F_iB_i^{-1}-F_fB_f^{-1}
+ \label{ha:actual-difference}
+\end{equation}
+has zero corrected coordinate at the common date $f$, because
+\begin{equation}
+ \pi_f^N(K_{i,f}W_iB_i^{-1}-W_fB_f^{-1})
+            =P_{f,N}^{-1}-P_{f,N}^{-1}=0.
+ \label{ha:matching-zero}
+\end{equation}
+Matrix order matters; no commutativity is assumed.  Products and inverses
+have their fixed polynomial coupling bounds.  Every column remains a
+linear combination of actual complete scalar germs with their original
+chronological numerators, scalar deficits, and reference inverses.
+No abstract graph representative is inserted into a mixed history.
+
+The complete unweighted center cohort is grouped and matured before
+projection, using the exact tent residue balance.  This yields a constant
+matching matrix.  For a nonconstant center profile the difference from
+its current anchor is an explicit source-gradient family.  Period averaging
+does not by itself eliminate this family or give arbitrary-translate
+compensation; Section~\ref{ha:copies} states the narrower copied class.
+
+\paragraph{Provenance.}
+\path{work/actual_scalar_fusion_frame_matching_2026-10-18.txt}.
+
+\section{A conditional heat-damped limit on one scalar Hilbert space}
+\label{ha:heat-limit}
+
+Assume \eqref{ha:copied-estimate} for adjacent normalized actual frames,
+and the scalar Hilbert-space inputs of Section~\ref{ha:scalar}.  Let
+$G_n=2^nG_0$ and let $H_{G_n}^c(f)$ denote the centered complete frame.
+For $\operatorname{supp}f\subset\{|t|<T\}$, write
+\begin{equation}
+ B_{G,a}(f)=e^{-aH}H_G^c(f)e^{-aH},\qquad a>T,
+ \label{ha:finite-heat}
+\end{equation}
+as notation for the bounded ordered slab form.  This does not assume an
+undamped operator exists.  The difference estimate is
+\begin{equation}
+ \|B_{G,a}(f)-B_{2G,a}(f)\|
+ \leq C\min(1,a-T)^{-D}d(G)p_S(f),
+ \quad d(G)=G^B\{e^{-c(\log G)^s}+G^{-K}\}.
+ \label{ha:dyadic-difference}
+\end{equation}
+The finite-scale scalar anchor costs only
+\begin{equation}
+ \|B_{G,T+\tau}(f)\|\leq Ce^{CG}\min(1,\tau)^{-D_0}p_{S_0}(f).
+ \label{ha:heat-anchor}
+\end{equation}
+There are at most five scalar factors, with fixed distinct internal
+time coordinates and positive gaps whose inverses cost $e^{CG}$.
+All deterministic coefficients and finitely many derivatives have the
+same type of cost.  Spatial separation alone would not justify this
+ordered heat product.  The finite configurations can be perturbed to
+distinct times while preserving a positive singular-value margin.
+
+At each fixed finite list of $G_n$, take volume limits first, pass the
+bounded slab forms to the scalar continuum Hilbert space by their ordered
+matrix elements, and fix the finitely many allowed date offsets on a
+subsequence.  Matching matrices are bounded at fixed $G_n$; smooth
+coefficient functions have bounded fixed derivatives on compact centers.
+A countable diagonal subsequence therefore puts all scales on one
+Hilbert space and passes adjacent matching identities together.  There
+is no assertion of operator-norm convergence between different bare
+Hilbert spaces, nor of uniqueness of these limiting matching data.
+
+The dyadic tail satisfies, for a slightly smaller $c'$,
+\begin{equation}
+ \sum_{k\geq n}d(G_k)
+ \leq C\{e^{-c'(\log G_n)^s}+G_n^{B-K}\}=:d_*(G_n).
+ \label{ha:dyadic-tail}
+\end{equation}
+The power term is geometric; superlinear decay in $\log G_k$ absorbs
+its polynomial factor and the remaining sum.  Thus $B_{G_n,a}$ converges
+in the norm of maps from one fixed finite test seminorm to bounded
+operators.  Denote the limit by $B_a(f)$.  It is centered and satisfies
+\begin{equation}
+ B_b(f)=e^{-(b-a)H}B_a(f)e^{-(b-a)H},\qquad b>a>T.
+ \label{ha:heat-compatible}
+\end{equation}
+
+For small $\tau$, take the first dyadic $G$ exceeding
+$A[1+\log(1/\tau)]$.  Then $e^{CG}$ in
+\eqref{ha:heat-anchor} is only a fixed power of $\tau^{-1}$, and
+\eqref{ha:dyadic-tail} bounds the rest.  Consequently
+\begin{equation}
+ \|B_{T+\tau}(f)\|\leq C\tau^{-D'}p_S(f).
+ \label{ha:heat-bound}
+\end{equation}
+For tests supported in $[-\tau,\tau]\times K$, choose the same anchor
+so that the actual stencil radius and prefix period are below $\tau/10$.
+The same proof, on one fixed containing compact, gives the uniform
+small-slab version
+\begin{equation}
+ \|B_{4\tau}(f)\|\leq C_K\tau^{-D'}p_S(f).
+ \label{ha:small-slab}
+\end{equation}
+A fixed positive support collar cannot simply be set to zero; this
+anchor choice is the needed justification.
+
+On $\mathcal D_{\rm fin}=\bigcup_E1_{[0,E]}(H)\mathcal H$ define
+\begin{equation}
+ q_f(u,v)=\langle e^{aH}u,B_a(f)e^{aH}v\rangle.
+ \label{ha:heat-form}
+\end{equation}
+It is independent of $a$ by \eqref{ha:heat-compatible}.  Its spatial and
+Euclidean-time translation identities follow from the exact causal-period
+identities, since $p_{G_n}\to0$.  Spatially, heat slack and the scalar
+cone imply $\|(U(y)-1)e^{-\delta H}\|\leq C|y|/\delta$.
+For time shifts, use the bounded unequal-padding expression
+\begin{equation}
+ e^{-(a-a_0-t)H}B_{a_0}(f)e^{-(a-a_0+t)H}
+ \label{ha:unequal-padding}
+\end{equation}
+with both times positive, and
+$\|He^{-\delta H}\|\leq C/\delta$.  Approximate a fixed shift by prefix
+period shifts and pass the finite-seminorm bounds.  Thus
+$q(f_t)=e^{tH}q(f)e^{-tH}$ on finite-energy vectors.  The argument is
+translation-specific and supplies no continuous rotation covariance.
+
+\paragraph{Provenance.}
+\path{work/dyadic_actual_frame_heat_limit_2026-10-18.txt}.
+
+\section{From heat forms to closable tempered translation fields}
+\label{ha:operator}
+
+Polynomial heat-sandwich bounds alone do not give an undamped operator.
+For example, with $He_n=ne_n$ on $\ell^2$, the formal matrix $q_{mn}=1$
+has a bounded rank-one heat sandwich of norm $O(\tau^{-1})$, but its
+application to a basis vector is not square summable.  The exact
+Euclidean-time identity obtained above is the extra input used here.
+
+\subsection{A finite-band distribution ODE and its uniform inverse}
+
+Fix a spatial test $g$ and $P_E=1_{[0,E]}(H)$.  The compressed form
+$P_Eq(\chi\otimes g)P_E$ is a distribution in time with values in
+$\mathcal B(P_E\mathcal H)$.  The generator $H_E$ is bounded.  Its
+translation law implies the distribution equation
+$\partial_tT=\operatorname{ad}(H_E)T$.  Multiplying by
+$e^{-t\operatorname{ad}(H_E)}$ gives a distribution of zero derivative,
+which is a constant times Lebesgue measure: every compact test with
+integral zero is the derivative of a compact smooth test.  There is
+therefore a unique bounded operator $A_E(g)$ such that
+\begin{equation}
+ P_Eq(\chi\otimes g)P_E
+    =\int\chi(t)e^{tH_E}A_E(g)e^{-tH_E}\,dt.
+ \label{ha:distribution-ode}
+\end{equation}
+Uniqueness gives $P_{E'}A_E(g)P_{E'}=A_{E'}(g)$ for $E'<E$.
+This obtains a time-zero value after compression, not by evaluating
+an arbitrary distribution at a point.
+
+Choose one even nonnegative $\chi\in C_c^\infty((-1,1))$ with integral
+one, put $\chi_\tau(t)=\tau^{-1}\chi(t/\tau)$, and define
+$\Lambda(s)=\int\chi(t)e^{ts}\,dt$.  It is positive on the real line.
+For $\tau=(1+E)^{-1}$, all spectral differences $\tau(E_1-E_2)$ lie
+in $[-1,1]$.  Extend $1/\Lambda$ from this interval to a fixed smooth
+compactly supported function $m$ on $\mathbb R$.  Its Fourier transform
+has finite $L^1$ norm.  Consequently
+\begin{equation}
+ \mathcal M_{E,\tau}(B)=\int\widehat m(u)
+                e^{iu\tau H_E}Be^{-iu\tau H_E}\,du
+ \label{ha:laplace-inverse}
+\end{equation}
+is bounded uniformly in $E$ and in the dimension of $P_E\mathcal H$,
+and inverts $\Lambda(\tau\operatorname{ad}H_E)$.
+One can verify the inverse identity first on finite spectral step
+approximations to bounded $H_E$, then pass in operator norm using the
+$L^1$ Fourier majorant.  No finite-rank energy projection is assumed.
+
+The small-slab estimate \eqref{ha:small-slab} and
+$p_S(\chi_\tau\otimes g)\leq C\tau^{-(S+1)}p_S(g)$ imply
+\begin{equation}
+ \|A_E(g)\|\leq C_K(1+E)^p p_S(g)
+ \label{ha:band-polynomial}
+\end{equation}
+for a fixed integer $p\geq D'+S+1$.  Undoing $4\tau$ of heat on each
+side costs at most $e^{8\tau E}\leq e^8$ before applying
+\eqref{ha:laplace-inverse}.  Inverting a fixed positive time average
+instead would lose an exponential in $E$.
+
+Spatial translation covariance makes the constant uniform on translates
+of a fixed unit compact.  A smooth unit-cube partition and the weight
+$(1+|x|)^4$, which is summable in spatial dimension three, extend
+\eqref{ha:band-polynomial} to spatial Schwartz tests with
+\begin{equation}
+ p_{S,4}(g)=\sum_{|\alpha|\leq S}
+              \sup_x(1+|x|)^4|\partial^\alpha g(x)|.
+ \label{ha:spatial-seminorm}
+\end{equation}
+The compatible $A_E$ define a form $A(g)$ on finite-energy vectors.
+It need not be an operator there.  Unit-band Schur estimates do give
+$\|e^{-\tau H}A(g)e^{-\tau H}\|
+\leq C\tau^{-(p+1)}p_{S,4}(g)$.
+Equation~\eqref{ha:distribution-ode}, with positive left and right
+paddings, identifies its Euclidean one-insertion integral with the
+original $B_a(f)$ by equality of all finite-energy compressions.
+
+\subsection{Real-time smearing and a common invariant domain}
+
+Let $P_n=1_{[n,n+1)}(H)$ and write
+$A_{mn}(g)=P_mA_E(g)P_n$ for sufficiently large $E$.  Consistency makes
+this independent of $E$, and
+$\|A_{mn}(g)\|\leq C(1+m+n)^pp_{S,4}(g)$.
+For a spacetime Schwartz test define
+\begin{equation}
+ \Phi_{mn}(f)=\int_{\mathbb R}
+                e^{itH_m}A_{mn}(f(t,\cdot))e^{-itH_n}\,dt.
+ \label{ha:real-smearing}
+\end{equation}
+The integral converges in norm.  Write $H_m=m+K_m$,
+$H_n=n+K_n$, with $\|K_m\|,\|K_n\|\leq1$.  Integration by parts in
+$e^{it(m-n)}$, with derivatives falling on bounded residual generators
+and the test, proves for any fixed $k$
+\begin{equation}
+ \|\Phi_{mn}(f)\|\leq C_k(1+m+n)^p
+                 (1+|m-n|)^{-k}\mathcal N_k(f),
+ \label{ha:block-decay}
+\end{equation}
+where one may take
+\begin{equation}
+ \mathcal N_k(f)=\sum_{j\leq k,|\alpha|\leq S}
+ \int dt\,\sup_x(1+|x|)^4
+                   |\partial_t^j\partial_x^\alpha f(t,x)|.
+ \label{ha:block-seminorm}
+\end{equation}
+A time weight of order two bounds this by an ordinary finite Schwartz
+seminorm.  Compact Fourier support is unnecessary.
+
+Since $1+m+n\leq C(1+n)(1+|m-n|)$, block Schur summation for
+$k>p+1$ yields
+\begin{equation}
+ \|\Phi(f)(1+H)^{-p}\|\leq C\mathcal N_k(f).
+ \label{ha:one-sided-energy}
+\end{equation}
+More generally, for every integer $r\geq0$, choose $k>p+r+1$ to get
+\begin{equation}
+ \|(1+H)^r\Phi(f)(1+H)^{-(p+r)}\|
+                  \leq C_r\mathcal N_{k}(f).
+ \label{ha:all-weight-energy}
+\end{equation}
+The consistent blocks define $\Phi(f)$ on $\operatorname{Dom}(1+H)^p$,
+and in particular on the dense invariant space
+$\mathcal D_\infty=\bigcap_r\operatorname{Dom}(1+H)^r$.
+Equation~\eqref{ha:all-weight-energy} proves invariance and continuous
+Schwartz dependence on this space.  Temporal and spatial translations
+are exact.  Their positive-energy representation is the already supplied
+scalar one; no Lorentz transformation law of the new label is added.
+
+To prove closability, adjoin the actual reflected/conjugate finite frame
+before taking limits.  It is enough to enlarge the family finitely; one
+need not identify it with a prescribed twenty-one-component tensor
+reflection.  The even real averaging test above and uniqueness in
+\eqref{ha:distribution-ode} give
+$A_E(v,g)^*=A_E^\dagger(\bar v,\bar g)$.  Thus
+\begin{equation}
+ \Phi_v(f)^*\supset\Phi_{\bar v}^{\dagger}(\bar f)
+                   \quad\hbox{on }\mathcal D_\infty.
+ \label{ha:adjoint}
+\end{equation}
+The adjoint has a dense domain, so each smeared field is closable.
+Hermitian combinations with its companion are symmetric on the common
+domain.  These conclusions concern genuine real-time smeared operators,
+not merely bounded heat forms.
+
+\paragraph{Provenance.}
+\path{work/heat_form_to_operator_distribution_2026-10-18.txt}.
+The original scalar reconstruction's polynomial energy estimate and the
+new frame's band inversion are different arguments, with their own
+identification hypotheses explicitly retained.
+
+\section{Locality from the shrinking scalar stencils}
+\label{ha:locality}
+
+The field-domain theorem does not by itself imply locality.  Here the
+actual finite scalar-stencil provenance supplies a controlled crossing
+argument.  Assume the scalar field and its adjoint have the all-weight
+energy bounds and locality on $\mathcal D_\infty$.  Assume in addition
+that the identified, spatially smeared scalar time-zero form $a(g)$,
+supplied by the full-point ordered-insertion construction, satisfies
+the following bound for one fixed $q$:
+\begin{equation}
+ \|(1+H)^{-q}a(g)(1+H)^{-q}\|\leq Cp_s(g).
+ \label{ha:scalar-form-bound}
+\end{equation}
+Assume also the copied convergence already used above, and that the
+complete stencil diameter and prefix period obey
+$\delta_G+p_G\leq e^{-cG}P(G)$, while inverse internal time gaps and
+finitely many coefficient/test derivatives cost at most $e^{CG}$.
+
+\subsection{A downstream averaging and quantitative approximation}
+
+Average the actual finite-$G$ form over its prefix torus, translating
+back by the Hilbert-space translations.  The normalized average removes
+the periodic center dependence of the deterministic coefficients and
+leaves a continuously translated scalar-stencil expression.  It is
+performed \emph{after} the copied estimate, with positive heat slack in
+Euclidean time.  It makes no assertion that arbitrary translates were
+admissible producer clones.  Since the limit is translation covariant,
+this probability average has the same error $d(G)$ and the same limit.
+
+Its time-zero form is a finite sum or nuclear integral of ordered terms
+\begin{equation}
+ e^{s_1H}a(g_1)e^{-(s_1-s_2)H}a(g_2)\cdots
+                           a(g_k)e^{-s_kH},
+ \quad k\leq5,\quad s_1>\cdots>s_k,\quad |s_a|\leq\delta_G.
+ \label{ha:stencil}
+\end{equation}
+All internal heat gaps stay positive.  The absolute coefficient and
+fixed seminorm integral costs at most $e^{CG}$.  Joint spatial kernels
+need not have finite tensor rank: rescale their finitely many packet
+boxes, expand in a product Fourier series, and integrate by parts a
+fixed number of times in each spatial slot.  The resulting nuclear
+sum is absolutely convergent in the required seminorm, with the same
+type of $e^{CG}$ cost.
+
+The small-time inverse applied to the difference gives
+\begin{equation}
+ \|P_E(A_G^{\rm av}(g)-A(g))P_E\|
+             \leq C(1+E)^p d(G)p_s(g)
+ \label{ha:band-error}
+\end{equation}
+when $G\geq C[1+\log(1+E)]$ and the stencil is much smaller than
+$(1+E)^{-1}$.  There is also the crude bound
+$\|e^{-\rho_GH}A_G^{\rm av}(g)e^{-\rho_GH}\|
+\leq e^{CG}p_s(g)$ for $\rho_G\leq e^{-cG}P(G)$.
+Choose $a_G=c_0G^{-1/2}$ and $E_G=L_0G/a_G$, with $L_0$ fixed large.
+Band Schur summation bounds the high-energy part by
+$Ca_G^{-1}e^{CG-ca_GE_G}$; the limiting form has an analogous polynomial
+tail.  The low-energy part uses \eqref{ha:band-error}.  Hence for a fixed
+$D_1$,
+\begin{equation}
+ \|e^{-a_GH}(A_G^{\rm av}-A)e^{-a_GH}\|
+                   \leq C\{G^{D_1}d(G)+e^{-c'G}\}p_s(g).
+ \label{ha:shrinking-heat-error}
+\end{equation}
+The same holds after real-time center smearing.  The small error has
+not been multiplied by $e^{a_GE_G}$ or by $e^{CG}$.
+
+\subsection{Gaussian time averaging controls the crossing}
+
+Let $B$ and its adjoint partner satisfy the all-weight energy bounds,
+and put $\alpha_t(B)=e^{itH}Be^{-itH}$.  For the normalized Gaussian
+$k_\epsilon(t)$ of variance $\epsilon^2$, set
+\begin{equation}
+ B_\epsilon=\int k_\epsilon(t)\alpha_t(B)\,dt,\qquad
+ \alpha_z(B_\epsilon)=\int k_\epsilon(t-z)\alpha_t(B)\,dt.
+ \label{ha:gaussian-time}
+\end{equation}
+The second integral is entire between the relevant energy Sobolev
+spaces, with norm loss at most $e^{(\operatorname{Im}z)^2/(2\epsilon^2)}$.
+It agrees with complex conjugation on finite bands.  This supplies the
+meaning of complex conjugation without applying $e^{sH}$ to an arbitrary
+smooth-energy vector.  Moreover $B_\epsilon\to B$ strongly on
+$\mathcal D_\infty$ in each fixed output energy norm.
+
+Suppose a scalar spatial support and the support of $B$ have a strict
+locality margin $d>0$, so $[a(g),\alpha_t(B)]=0$ for $|t|<d$ as forms.
+Then only the Gaussian tail contributes, and for a sufficiently large
+fixed $q'$,
+\begin{equation}
+ \|(1+H)^{-q'}[a(g),\alpha_{is}(B_\epsilon)](1+H)^{-q'}\|
+ \leq Cp_s(g)\mathcal N(B)
+          e^{s^2/(2\epsilon^2)}e^{-d^2/(4\epsilon^2)}.
+ \label{ha:gaussian-tail}
+\end{equation}
+To obtain the time-zero locality premise, first smear in a small real-time
+interval where spacelike separation holds; the all-weight bounds make
+matrix elements smooth, and the temporal mollifier can be removed.
+The form estimate \eqref{ha:scalar-form-bound}, rather than an ordinary
+time-zero operator assertion, justifies both product orders.
+
+Expand the commutator of \eqref{ha:stencil} with $B_\epsilon$ by the
+product rule.  Each scalar factor is replaced by
+$[a(g_a),\alpha_{is_a}(B_\epsilon)]$ and the original positive internal
+gaps are unchanged.  This algebra is justified with spectral cutoffs
+and a slightly larger form weight.  Indeed, if
+$C=(1+H)^{-q}a(g)(1+H)^{-q}$ is bounded and $R=(1+H)^{-1}$, then
+\begin{equation}
+ \|R(C-P_ECP_E)R\|\leq\frac{2\|C\|}{1+E}.
+ \label{ha:cutoff-form}
+\end{equation}
+Thus one extra weight on each side gives norm convergence, and fixed
+positive gaps absorb all resulting finite polynomial weights.  There
+is no compact-resolvent assumption.
+
+Using \eqref{ha:gaussian-tail} at the replaced factor, summing the fixed
+number of factors and their nuclear packet decomposition gives
+\begin{equation}
+ \|e^{-aH}[\Phi_G^{\rm av}(f),B_\epsilon]e^{-aH}\|
+ \leq Ce^{CG}a^{-D_2}\mathcal N(f)\mathcal N(B)
+       e^{\delta_G^2/(2\epsilon^2)}e^{-d^2/(C_2\epsilon^2)},
+ \qquad a>2\rho_G.
+ \label{ha:finite-commutator}
+\end{equation}
+Strict spacelike separation of compact center supports supplies a
+uniform $d$ for all sufficiently small stencils.  Identity terms commute
+exactly, and every lower-subset term obeys the same estimate.
+
+Choose $\epsilon_G=a_G=c_0G^{-1/2}$ with $c_0$ small enough that the
+Gaussian exponent in \eqref{ha:finite-commutator} dominates $CG$.
+The finite-stencil commutator tends to zero exponentially.  To replace
+it by the limit, use \eqref{ha:shrinking-heat-error} at $a_G/2$ and the
+one-sided/all-weight bound for $B$.  The required crossing factor has
+norm at most $Ca_G^{-p_B}e^{Ca_G^2/\epsilon_G^2}$, so the additional
+loss is only a fixed power of $G$.  Increase the fixed native exponent
+$K$ beyond those powers.  This gives
+\begin{equation}
+ \|e^{-a_GH}[\Phi(f),B_{\epsilon_G}]e^{-a_GH}\|\longrightarrow0.
+ \label{ha:limiting-commutator}
+\end{equation}
+On $\mathcal D_\infty$, heat tends to the identity in every energy norm
+and $B_{\epsilon_G}\to B$ in the required norms.  Therefore
+$[\Phi(f),B]=0$ on this domain.
+
+First take $B$ to be the original local scalar field and its adjoint.
+This proves relative locality with the scalar sector.  Then take $B$
+to be another new field or its companion.  The first application
+supplies its locality with each scalar constituent, so the same
+argument proves mutual locality of the new family.  It requires no
+Haag duality or assertion that the scalar net already generates every
+new operator.  The result is common-domain locality, conditional on
+the stated scalar and copied inputs.
+
+\paragraph{Provenance.}
+\path{work/shrinking_scalar_stencil_locality_2026-10-18.txt}.
+
+\section{What the conditional chain would establish, and what it does not}
+\label{ha:identification}
+
+If the source-attachment and simultaneous chronological hypotheses in
+Section~\ref{ha:scope} are established for the actual scalar germ families,
+and the scalar reconstruction inputs in Section~\ref{ha:scalar} are
+retained on the same regulator subsequence, the argument produces a
+finite family of closable, mutually local, tempered translation fields
+on one scalar Hilbert space.  They have a common invariant
+$\mathcal D_\infty$, polynomial energy bounds, actual adjoint companions,
+centered vacuum expectations, and a positive-energy translation
+representation.  Their one-insertion Euclidean continuation is the
+constructed heat form.  This is a substantial conditional conclusion;
+none of these functional-analytic deductions repairs its missing source
+admission premise.
+
+Several different remaining questions must not be collapsed into one.
+First, Gaussian rank and the local inverse in
+\eqref{ha:matrix-inverse} do not give a lower bound for the full-state
+Gram matrix.  The complete mixed coefficient includes scalar output,
+conditional covariance, and cross terms with historical contributions.
+A positive universal vacuum coefficient or a positive conditional
+Gaussian comparison can be canceled by the remaining mixed terms.
+The two-colour attachment and the corrected power
+\eqref{ha:packing-correct} are ingredients for controlling these terms,
+not a completed relative lower bound.  Zero or dependent limiting
+directions have not been excluded.
+
+Second, shrinking translation periods prove continuous translations,
+not rotations.  The matched frame is built from selected scalar stencils,
+causal prefix subtractions, and terminal matrices.  Its limit has not
+been identified with the standard
+$\operatorname{Sym}^2(\Lambda^2\mathbb R^4)$ representation of
+$O(4)$, nor with its Wick-rotated Lorentz tensor.  Adjoining actual
+reflected companions proves closability without making that identification.
+Finite-symmetry identities and a local Gaussian tensor label do not
+replace continuous covariance of the full-state limit.
+
+Third, scalar phase selection is not selection of a compatible phase
+for an unconstructed full local field hierarchy.  Even when a family
+of decomposable operator bounds passes almost everywhere to phases,
+an averaged ultraviolet coefficient need not equal a fixed phase's
+coefficient.  A phasewise matching theorem must retain all necessary
+central tests, or a genuine decomposable operator-norm asymptotic.
+A nonzero positive-energy derivative witness proves neither a uniform
+mass gap nor uniqueness of the original mixed vacuum.
+
+Finally, a full Yang--Mills identification requires a compatible joint
+construction of gauge-invariant curvature differential polynomials,
+their mixing and local identities, and the relevant nonabelian
+short-distance laws on the same theory.  A scalar sector, twenty-one
+Gaussian quadratic symbols, or one formal dimension-six cubic matching
+coefficient is not that construction.  The fixed-$q$ refined parity
+estimate recently obtained for cubic analysis concerns the physical
+inner chart only.  It gives no all-age dimension-six transport theorem,
+no marked full-history cubic source theorem, and no replacement for
+the admission gap identified here.  Other gauge groups and a spectral
+mass gap are additional scope requirements if that broader formulation
+is intended.
+
+The narrow outstanding source estimate is concrete: admit the
+preparation-changed joined coarse slots, their retained endpoint frames,
+and their complete averaging/current collars uniformly at a fixed
+weak ceiling, and establish the improved first-read bound on its
+simultaneous contours.  Repeating the all-age bookkeeping cannot prove
+that estimate.  Once it is supplied, the conditional pressure, domain,
+and locality arguments above can be invoked with their stated inputs;
+the Gram and covariance questions still require their separate proofs.

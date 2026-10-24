@@ -1,0 +1,142 @@
+SEPARATED NEAR-CURRENT SOURCES: DETERMINISTIC COVARIANCE CENSUS
+23 October 2026. New elementary consumer; earlier files unchanged.
+STATUS: numerical implication below proved from the displayed inputs.
+The conditional covariance estimate (1) is an INPUT, not proved here.
+No full source catalogue, outer covariance or YM4 theorem is asserted.
+
+Fix the endpoint physical length unit ell_T and let V denote volume
+in those fixed endpoint units. At reset e<=T consider two prepared
+source records p,q with actual proper grades
+
+                 e-B_e<=m_p,m_q<=e,
+       0<=B_e<=C_B(1+log gamma_e)^p_B,                  (0)
+
+where B_e is a deterministic integer bound and C_B,p_B>=0 are fixed
+independently of e,T. A fixed B is included. This also covers a window
+reaching the actual h_e=e-Nprep_e when its registered preparation
+schedule has Nprep_e bounded by a fixed power of log gamma_e: choose
+B_e large enough for that schedule and any fixed additional offset.
+It does not cover unrestricted older m. Keep the original source roots,
+near preparation, calibration and exact conditional-law read rules.
+Condition on the FULL q,y state used by the proposed theorem. Assume
+its pointwise supported-state conditional covariance estimate
+
+ |Cov_e(g_p,g_q)| <= C A_p A_q
+   exp[C_0(1+R_e)^4-c_0 dist_e(S_p,S_q)^(1/4)].          (1)
+
+Here A_p,A_q are the original prepared source amplitudes. S_p,S_q are
+the ACTUAL MUTABLE source seed/read sets in that conditional theorem,
+including every local source/flag/query collar which its interaction
+or exclusion graph requires. Shared or global q,y arguments are fixed
+under this conditioning and create no mutable edge merely by being
+read by both sources. We do not require their elliptic field/held-Y
+argument closures to be disjoint. Require separation d0>0 of the
+mutable sets in fixed physical units and the numerical lower bound
+
+ dist_e(S_p,S_q) >= c_geom(d0/ell_T)L^(T-e).              (2)
+
+The fixed native cell size M can be included in c_geom. A metric which
+contracts arbitrary retained islands does not acquire (2) from source
+root separation alone. Thus (2), for the conditional theorem's exact
+mutable root sets and metric, is part of this consumer's input.
+
+Use the actual already-counted near-source census at fixed m,i:
+
+ sum_(records at m,i) A_R
+    <= C N_m Mhat_i L^[-alpha(m-i)],
+ N_m <= C(V+1)L^[4(T-m)],
+ Mhat_i <= U(1+gamma_i)^D,                               (3)
+
+with alpha>0 and fixed D>=0. The constant includes the fixed-loss
+r=m-s preparation, finite source-centred box choices, original safe
+core radius and calibration. The complete H,z,role sum has already
+been estimated before this census. There is no second auxiliary-root
+or unrelated ambient-history count in (3).
+
+Assume the native bounded-step upper comparison
+
+ gamma_a<=gamma_b+omega(b-a), a<=b,
+ gamma_a>=Gamma>=3,   R_e<=C_R(1+log gamma_e)^p_R,        (4)
+
+with fixed omega,C_R,p_R. Only this upper comparison and the stated
+common weak range are needed for the elementary sum.
+
+For t=m-i>=0 and m in (0), (4) gives
+gamma_i<=gamma_e+omega(B_e+t). Therefore
+
+ sum_(i<=m) Mhat_i L^[-alpha(m-i)]
+   <= C U(1+gamma_e+omega B_e)^D
+          sum_(t>=0)(1+t)^D L^(-alpha t)
+   <= C_(alpha,D,omega) U(1+gamma_e+omega B_e)^D.        (5)
+
+Actual lower-age restrictions only reduce this sum. Apply (3)--(5)
+to both sources, and then sum at most (B_e+1)^2 proper-grade pairs.
+For d=T-e their complete product census is bounded by
+
+ C U^2(V+1)^2 (B_e+1)^2 (1+gamma_e+omega B_e)^(2D)
+                         exp[8(d+B_e)log L].            (6)
+
+In particular the B_e density cost is NOT called a fixed constant.
+Insert (1)--(2) into (6). With a defined below, the exact sufficient
+date series before absorbing the preparation window is
+
+ C U^2(V+1)^2 sum_(e<=T) (B_e+1)^2
+     (1+gamma_e+omega B_e)^(2D)
+  exp[8(T-e+B_e)log L+C_0(1+R_e)^4
+                         -a L^((T-e)/4)].              (7a)
+
+Put P=max(4p_R,p_B,1). The fixed schedule (0) implies
+1+gamma_e+omega B_e<=C(1+gamma_e), since a fixed log power divided
+by gamma_e is bounded on gamma_e>=3. Also log(B_e+1) is absorbed
+by C(1+log gamma_e)^P, while 8B_e log L and C_0(1+R_e)^4 have the
+same bound. Thus, using gamma_e<=gamma_T+omega d, (7a) is at most
+
+ C U^2(V+1)^2 sum_(d>=0) (1+gamma_T+omega d)^(2D)
+  exp[8d log L+C_1(1+log(gamma_T+omega d))^P
+                         -a L^(d/4)],                 (7)
+
+where a=c_0[c_geom d0/ell_T]^(1/4)>0. Extending the finite date sum
+to all d>=0 is a positive upper bound, not an added source multiplicity.
+
+This series divided by its displayed U^2 is finite uniformly in the
+ultraviolet depth T. U retains the original calibration, possibly c_a;
+no cutoff-uniform bound for that calibration is assumed here. To make
+its endpoint dependence explicit, use
+1+gamma_T+omega d<=(1+gamma_T)(1+omega d) and the fixed-power inequality
+(u+v)^P<=C_P(u^P+v^P). This bounds (7) by
+
+ C_(a) U^2(V+1)^2(1+gamma_T)^(2D)
+                  exp[C_2(1+log gamma_T)^P],            (8)
+
+where C_(a) is finite and independent of gamma_T,T and the cutoff:
+its remaining summand is a polynomial in d times
+exp[8d log L+C_2(1+log(1+d))^P-a L^(d/4)]. The negative term
+eventually exceeds twice all positive terms. Thus the early-date
+tail after factoring (8)'s endpoint dependence is bounded by
+C exp[-(a/2)L^(d_min/4)] once d_min exceeds a fixed threshold.
+
+Equation(8) divided by U^2 is ultraviolet uniform at fixed endpoint
+coupling, separation and volume. The unnormalized source estimate is
+uniform only if U itself has an independently proved uniform bound.
+It does NOT assert a bound uniform as d0->0,
+gamma_T->infinity, or V->infinity. In particular no weak-coupling
+vanishing follows from this elementary estimate alone.
+
+The restriction (0) matters: for older m outside that window, N_m contains the
+additional factor L^[4(e-m)] on each arm, while (1)'s distance and
+R_e remain at e. This proof provides no compensating older-proper
+clock. Nor does it estimate the covariance of two conditional means
+under the outer law, or an incoming mixed/contact source row. Those
+are distinct consumers. Any actual preparation/dictionary price not
+included in Mhat_i, and any mutable selector/query read which invalidates
+(2), must remain explicit instead of being absorbed into C. Closing the
+conditioning can produce an outer covariance through common q,y; the
+present mutable-seed separation does not bound that term.
+
+Provenance: the root/age factor in (3) is the fixed-loss near census
+of source_centred_static_cover_assignment, Section5, and
+static_read_direct_clearance_geometry, Section5; the original A_R
+and its full-source grouping are in whole_near_source_no_hit_scalar_
+consumer, Sections1--2. This note only sums that census against the
+PROSPECTIVE conditional covariance estimate (1). It proves none of
+(1)'s physical conditional-law, raw-history or common-read premises.

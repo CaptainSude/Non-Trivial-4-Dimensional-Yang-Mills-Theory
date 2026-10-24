@@ -1,0 +1,291 @@
+SEPARATED LOCAL SOURCES: NORMALIZATION, AN EXACT CANCELLATION,
+AND THE REMAINING FULL-MEASURE TERM
+21 October 2026 — TURN95
+
+STATUS
+
+Nontrivial continuum four-dimensional Yang–Mills existence is not proved.
+This pass implements the local-source reassessment and obtains a modest
+finite-scale refinement. It does not establish a cutoff-uniform original
+correlation estimate, a nonzero continuum response, or a local field theory.
+
+The useful decisions are to use an additive inverse-coupling insertion,
+to exploit separated supports before estimating the mixed coefficient,
+and to retain only the actual generated native descendants in the next
+preparation problem. The already completed selected one-source induction
+is not reopened or treated as a new missing theorem.
+
+1. THE INSERTION NEED NOT CARRY THE DIVERGING BARE INVERSE COUPLING
+
+On a finite original SU(2) lattice set
+
+ e_p(U)=1-(1/2)Tr U_p,
+ S_f(U)=sum_p f_p e_p(U),
+ Z_a[gamma]=integral exp[-sum_p gamma_p e_p(U)] dHaar(U).
+
+The original normalized measure at homogeneous gamma_0 is denoted mu_a.
+At a fixed regulator the exact identities are
+
+ d_s log Z_a[gamma_0-s f]|_0 = E_mu S_f,
+ d_s d_t log Z_a[gamma_0-s f-t q]|_0 = Cov_mu(S_f,S_q).       (1)
+
+Proof: differentiate the finite compact-group integral and then its
+logarithm. The first derivative is the normalized marked numerator;
+the second subtracts the product of the two first moments. This uses
+no source-dependent geometric choices or uniform analytic source disc.
+
+A source gamma_0 S_f is a relative change of inverse coupling. S_f is
+an additive change. The extra gamma_0 is therefore not compulsory.
+
+Physical calibration still matters. Suppose a specified C^2 tuning
+function Gamma_a(theta) implements a physical inverse-coupling coordinate
+theta, with Gamma_a(theta)=gamma_0 at the baseline. Consider
+gamma_p(s,t)=Gamma_a(theta+s f_p+t q_p). Directly,
+
+ d_s d_t log Z_a[gamma(s,t)]|_0
+   = Gamma_a'(theta)^2 Cov_mu(S_f,S_q)
+       - Gamma_a''(theta) E_mu sum_p f_p q_p e_p.              (2)
+
+Indeed the action has derivatives Gamma_a' S_f and Gamma_a' S_q,
+and mixed derivative Gamma_a'' S_(fq). Differentiating log Z gives
+the covariance of the first derivatives minus the expected second
+derivative. If f and q have disjoint plaquette supports, S_(fq)=0
+exactly. A derivative |Gamma_a'| bounded above and bounded away from
+zero uniformly in the cutoff would therefore suffice for a uniform
+comparison with the coupling-free covariance.
+
+Equation (2) does not construct Gamma_a or bound its derivative for the
+full theory. It prevents us from imposing the stronger normalization
+gamma_0 S_f without a physical reason. The selected constant-source
+theorem already uses exp(zeta S_0), with a protected marginal coefficient.
+That selected result is not a differentiability theorem for the full
+native tuning, whose geometric choices have not been controlled in this
+way.
+
+The classical normalization is appropriate to geometric curvature:
+for a smooth anti-Hermitian connection,
+
+ U_p=exp(a^2 F_munu+O(a^3)),
+ e_p=-a^4 Tr(F_munu^2)/4+O(a^5).
+
+Thus sum_p f_p e_p already has the classical dimension-four integral
+normalization. This is a smooth-field calculation, not an approximation
+valid for typical ultraviolet samples. At a fixed positive weak physical
+coupling g_*, the free separated benchmark for this insertion is of
+order g_*^4 and need not vanish. No corresponding Wilson lower bound
+has been established.
+
+Additive source-only counterterms in the connected functional, whose
+second derivatives are supported on coincident source points, drop out
+for separated supports. Field-dependent mixing and later contact
+extensions remain necessary.
+
+2. AN EXISTING REGULAR ESTIMATE BECOMES LESS DEMANDING
+
+For the literal complete action source on one admitted homogeneous
+native regular primitive, TURN83 already gives a separated envelope
+of the form
+
+ |C_j(f,q)| <= C min(N_f,j,N_q,j) exp[-c d/ell_j]
+     [g_j^2 ell_j^(alpha+alpha') [f]_alpha [q]_alpha'
+        +g_j^4 ||f||_infinity ||q||_infinity].                (3)
+
+Here d is the distance between the actual interpolant supports at the
+scales where these are separated, ell_j the current cell scale, and
+N_f,j the corresponding source-cell count including interpolation/read
+collars. The stated physical-graph,
+complete-read, Gaussian-window and source-admission conditions remain.
+For bounded physical supports N_f,j<=C_f ell_j^-4. The geometric sum
+over fine scales is uniform, because exp[-c d/ell_j] dominates these
+powers of ell_j^-1. With the gamma_0 S_f convention the right side
+would instead carry gamma_0^2. The c0=1 choice removes that unnecessary
+factor.
+
+This is a useful application of an existing primitive estimate, not a
+new bound on the complete original covariance. Previously transported
+original marks contain more than the current primitive reference action.
+
+3. NEW FINITE-SCALE REFINEMENT: ONE SMALL COMPONENT CANNOT OWN BOTH MARKS
+
+Use the existing once-owned first-healing convention on the full positive
+history representation. An original plaquette touching a raw component
+is assigned nonnegative weights among its initial raw owners, totaling
+one. Follow each owner through whole-component mergers to its first
+healing. At scale k let F_X and H_X be the portions of S_f and S_q
+whose owners first heal in the eligible first-class raw component X.
+
+Let A and B be the original plaquette-center supports of f and q,
+d_infinity their periodic physical sup-distance, a_0 the original
+mesh, and ell_k=M a_k the current M-cell mesh. Then
+
+ d_infinity > 100 R_k ell_k + 2 a_0
+       implies F_X H_X=0 for every such X.                    (4)
+
+X here is the eligible raw component itself, not a later enlarged
+localization carrier or the complete analytic read of a posterior.
+
+Proof. Large field renormalization I, printed page 177, restricts an
+eligible component to a cube of side 100 M R_k in current lattice
+units. Its ancestors remain inside it in physical coordinates: the
+cover and layers contain the old component before rescaling, while
+the lattice mesh increases by the reciprocal rescaling factor.
+Whole-component mergers preserve this containment until first healing.
+
+Each assigned original plaquette has at least one original raw link in
+an ancestor. Its original center is therefore at most a_0 from X.
+If X owned nonzero portions of both sources, two such centers would
+be at distance at most 100 R_k ell_k+2a_0, contradicting (4).
+Integrating some other links of a straddling plaquette does not move
+this original anchor. This proves the claim also for those plaquettes.
+
+The first-class X_i in Large field renormalization II, printed page 378,
+are these same eligible components. The source locations and the
+physical-containment step were independently checked against the
+retained primary text and rendered formulas.
+
+Write R_f=sum_X F_X and R_q=sum_X H_X at this date. In the earlier
+first-healing moment estimate, the same-owner degree-two term is now
+absent. The existing distinct-carrier erasure bound therefore gives
+
+ E|R_f R_q| <= C_K^2 gamma_0^(-2K) ||f||_infinity ||q||_infinity
+                                      Lambda_k(A)Lambda_k(B),
+ |Cov(R_f,R_q)| <= 2 C_K^2 gamma_0^(-2K)
+          ||f||_infinity ||q||_infinity Lambda_k(A)Lambda_k(B). (5)
+
+All constants and admissions are those of the earlier once-owned
+real-source estimate; fixed powers can be paid by its initial reserve.
+The complete original denominator is retained. No independence of
+the two components is assumed. If outer data are averaged, apply
+uniform censuses to the absolute mixed and first moments separately;
+global covariance is not the average conditional covariance.
+
+This is an exact improvement, but (5) has no decay in the distance
+between two distinct owners. Its remaining current-cell censuses can
+grow as ell_k^-4 each. Along the logarithmic running-coupling trajectory,
+the available weak-tail envelope does not by itself pay that growth.
+Thus (5) is not a continuum clustering or summability theorem.
+
+4. THE ONE-RAW / ONE-REGULAR TERM DOES NOT CANCEL
+
+Decompose the literal original sources on the same complete history
+space as F=F_rest+R_f and H=H_rest+R_q. Exactly,
+
+ Cov(F,H)-Cov(F_rest,H_rest)
+   =Cov(R_f,H_rest)+Cov(F_rest,R_q)+Cov(R_f,R_q).              (6)
+
+Equation (4) improves the last term only. The first two can transmit
+correlation through the exterior even when the original supports are
+disjoint.
+
+For a specified basic-R factorization, write the actual positive joint
+with its remaining continuation as
+
+ dPi = Z_0^-1 sigma(de) tau_e(dx,dxi) q_e(dy) W(e,x,xi,y).
+
+The old slots x,xi include original records; q_e is the normalized
+fresh reference from Large-I (1.100). All class indicators and remaining
+weights belong in the stated factors exactly once. In particular, a
+class depending on the new reference cannot be omitted when centering
+or summing histories. The surviving term is
+
+ Cov(R_f,H_rest)
+   = Z_0^-1 integral sigma tau q
+          r_f(e,x,xi) [H_rest(e,x,xi)-E H_rest] W.            (7)
+
+The complete source/history sum is understood in this expression.
+Equation (7) is an original marked numerator, not a variance of the
+fresh reference. If the other mark is exterior-measurable, the old
+integral gives a first posterior which can still correlate with that
+exterior mark. If both marks were partially integrated, their joint
+conditional coefficient cannot be replaced by the product of two
+first posteriors.
+
+Sibling summation and scalar vacuum cancellation preserve (7); they
+do not estimate or annihilate it. A safe bound by absolute moments
+still contains the number of original fine plaquettes in the distant
+source. It therefore gives no uniform continuum estimate.
+
+5. THE DIRECT RENORMALIZED-MEASURE FORK WAS TESTED, NOT ASSUMED
+
+The finite reflection-positivity audit did not produce a factorization
+or an actual counterexample for the full first native R operation.
+That operation follows an admitted N-step prefix; an arbitrary
+one-plaquette redraw would not test it.
+
+For the complete positive old/new coupling, including all unreplaced
+branches and every crossing component, let V_o,V_n be the old and new
+current fields and F a bounded gauge-invariant positive-half cylinder.
+Let Q_o(F),Q_R(F) be their reflected quadratic forms. Direct subtraction
+and a product difference yield
+
+ |Q_R(F)-Q_o(F)| <= ||F||_infinity E[
+       |F(V_n)-F(V_o)|+|F(theta V_n)-F(theta V_o)|].          (8)
+
+A replacement that writes no link of the complete current support of
+F leaves F unchanged, even if its decision read is larger. Consequently
+
+ |Q_R(F)-Q_o(F)| <= 2||F||_infinity^2
+   [P(a replacement writes into supp F)
+      +P(a replacement writes into theta supp F)].           (9)
+
+For a reflection-invariant incoming law and equivariant complete lift,
+this is 4||F||_infinity^2 times the first probability. The inequality
+does not require incoming RP; using it as a lower bound for Q_R does.
+
+The exact reflected kernel retains each actual old component mass and
+the whole normalized reference integral. A crossing component has one
+joint denominator, not separately normalized positive and negative
+halves. Reflection invariance makes the kernel Hermitian, not positive.
+
+No bound on all basic replacements makes (9) vanish in the continuum
+at present. First-class counts alone are insufficient. Therefore this
+audit supplies no established shortcut past (7). It also does not rule
+out asymptotic reflection positivity by a future quantitative estimate.
+
+6. THE NEXT REQUIRED ESTIMATE, WITH OLD RESULTS PRESERVED
+
+TURN70 already closes the selected one-mark induction on its admitted
+fixed domains: the protected constant channel controls its marginal,
+and augmented contraction handles its inhomogeneous remainder. Do not
+replace this achievement by a new demand for a general invariant
+localization theorem.
+
+The unproved preparation concerns the actual GENERATED NATIVE source
+descendants on their running domains and the old integrated marks at
+later localization contours. The original closed SU(2) trace is a
+holomorphic polynomial; internal complex gauge factors cancel. But a
+current-link bound does not automatically bound its reconstructed old
+holonomy, or the marked integral's localization and source-cell costs.
+
+The next substantive advance must estimate (7), or obtain the same
+full original separated response by another construction. A complete
+two-source estimate needs both the source's renormalized one-mark
+transport and its connected contribution when the two regions can
+communicate. Separation makes the early direct cross contributions
+small; it does not control an unbounded inherited one-mark coefficient
+at a fixed later physical scale.
+
+No entire source functional, arbitrary-future-test comparison, or new
+proof of the selected one-mark theorem is required for this target.
+The physical calibration, local hierarchy, Euclidean symmetry, volume
+limit and nontriviality obligations from TURN94 remain open.
+
+PRIMARY REFERENCES AND PROVENANCE
+
+Bałaban, Renormalization group approach to lattice gauge field theories I,
+CMP109 (1987), 249–301: https://doi.org/10.1007/BF01215223
+Bałaban, Large field renormalization I, CMP122 (1989), 175–202:
+https://doi.org/10.1007/BF01257412
+Bałaban, Large field renormalization II, CMP122 (1989), 355–392:
+https://doi.org/10.1007/BF01238433
+
+Detailed TURN95 research notes retain the finite formulas, their exact
+prior inputs and source locations. Separate checks reviewed the
+first-healing geometry and the complete RP coupling. The latter review
+added two qualifications: incoming reflection invariance is required for
+Hermiticity, and coordinate-wise oscillation telescoping requires all
+hybrid configurations to lie in the domain. The displayed unweighted
+bound (9) does not require that additional interpolation premise.
+
+These are scoped mathematical checks, not independent certification of
+the entire accumulated project. No complete existence proof is claimed.

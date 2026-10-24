@@ -1,0 +1,597 @@
+CONSTANT SOURCE: FROZEN R, THE LOCAL NORMALIZER, AND A FINITE-DIFFERENCE BOOTSTRAP
+18 October 2026. Working proof and primary-source audit; no public document changed.
+
+This note distinguishes three statements which are easily conflated:
+ (a) analytic continuation of the small-field q-core in a relative common-coupling disc;
+ (b) continuation of the FULL R construction in a FIXED bare-source disc with its
+     real source-free kernels, reference normalizers and geometry frozen;
+ (c) zero-freeness of a normalized large-field conditional partition function.
+The proposed source route needs (a),(b), and does not need (c).
+
+Primary sources reopened in this pass:
+ B119, CMP119(1988),243--285, DOI10.1007/BF01217741,
+ https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+ B122II, CMP122(1989),355--392, DOI10.1007/BF01238433,
+ https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+The primary PDF extraction drops portions of displays. Formula locations and the
+surrounding prose were inspected; this is not a claim to have visually transcribed
+the unavailable B122I(1.100) display. The exact positive reference-replacement
+structure used below is established in work/source_R_observable_identity_2026-10-18.txt.
+
+1. THE TWO DIFFERENT DENOMINATORS
+
+B122II pp356--358,(1.2)--(1.10), analyzes the reference normalization inserted by
+R. The integrated domain Lambda is contained in a cube of side100M, the axial
+gauge is fixed, and the remaining quadratic form has a positive lower bound
+from(1.7)--(1.9). Thus this denominator has at most C_M independent current-scale
+coordinates. After extracting its background Wilson exponential, it is a small
+perturbation of a finite-dimensional Gaussian. The source already continues its
+logarithm in complex external (U,J), obtaining I(U0) and the bound(1.11).
+
+This is NOT the large-field operator T_k(X)1 of pp379--380,(1.71)--(1.75).
+There the printed zero-free argument treats the complex external-field change as
+a uniformly small exponent sigma relative to a positive real density. A coupling
+change zeta contributes -zeta S, which is not uniformly small over arbitrary X.
+Therefore (1.74)--(1.75) cannot simply be reused on |zeta|<c gamma.
+
+The original birth expansion uses unnormalized T_k(X): its activity bound(1.92)
+explicitly invokes(1.68),(1.73),(1.89), followed by(1.97)--(1.100). It does NOT
+invoke(1.75). The later use of T_k(X)/(T_k(X)1) occurs in the optional alternative
+representation(1.103)--(1.104), pp391--392. Retaining the original representation
+avoids a new large-field zero-free assertion. B119(2.19)--(2.22), pp258--259,
+likewise represents the old T operations as unnormalized factored integrations.
+
+2. A PROVED RELATIVE-DISC EXTENSION OF THE AUXILIARY LOCAL NORMALIZER
+
+This subsection is useful even though freezing the original R denominator means
+that the main source argument need not invoke it.
+
+Keep the real reference scale g=gamma^(-1/2), real integration coordinates x in
+V=exp(i g x), and the original real cutoff. Put lambda=1+zeta/gamma. The normalized
+nonconstant part of the local reference denominator has the form
+ I(lambda,U)=integral chi_T(x) exp[-lambda<x,A(U)x>/2+v(lambda,U,x)] a(gx) dx, (2.1)
+times an explicitly extracted background exponential and powers of g. Here
+dim x<=C_M. The fixed original complex background domain makes A(U) a small
+relative perturbation of a real positive matrix A0>=a_M I, and on the retained
+domain the source estimates after(1.2),(1.6) give
+ sup |v|+sup|a(gx)/a(0)-1|=epsilon_M(g)->0.             (2.2)
+The upper retained threshold T tends to infinity. The exponential separation
+factor in(1.6) makes its linear term small; this is explicitly stated there.
+The higher-order term is small by the cubic estimate after(1.2).
+
+Fix |lambda-1|<=c<1/4 and take the source background ceiling small enough. The
+full Gaussian integral
+ Z_G(lambda,U)=(2pi)^(n/2) det(lambda A(U))^(-1/2)       (2.3)
+has its unique analytic branch continuing lambda=1,U=U_real and has no zero.
+Its normalized total variation is bounded by C_M uniformly: compare Re(lambda A)
+with a_M/2 and use the determinant upper/lower bounds in dimension n<=C_M.
+Consequently
+ |I/[a(0)Z_G]-1| <= C_M[epsilon_M(g) exp(epsilon_M(g))
+                               + exp(-c_M T^2)] <1/2 (2.4)
+for sufficiently weak g. This proves a holomorphic zero-free local denominator
+uniformly on |zeta|<c gamma, with a bounded logarithmic correction. No variable
+contour or complexification of a characteristic function is used. The same proof
+works for the local shape/cube choices since their dimension and spectral
+constants depend on fixed M only. Products of these local normalizers incur the
+usual fixed cost per component already present in the source tree estimates.
+
+This argument does NOT prove zero-freeness for T_k(X)1 with unbounded X.
+
+3. FROZEN R IS EXACT, BUT IS NOT THE RECOMPUTED COMPLEX R
+
+Fix the source-free geometry, field maps and normalized reference kernel
+ K0(x,dy)=w_gamma(x,y)dy/D_gamma(x), integral K0=1.
+For every complex incoming measure eta^zeta,
+ R0 eta^zeta(dx,dy)=[integral eta^zeta(dx,du)]K0(x,dy). (3.1)
+Thus total mass is preserved exactly, with the original positive real-coupling
+normalizer D_gamma. The same denominator's external-background analytic
+extension is the already constructed source extension; zeta introduces no new
+inverse. This is the appropriate sourced partition-function route.
+
+It is false that (3.1) equals the R operation recomputed at gamma+zeta. For the
+single-domain model, recomputed and frozen output densities differ by
+ exp[zeta S(y)] Z_(gamma+zeta)/Z_gamma.                (3.2)
+This exact factor must remain in the R/boundary bookkeeping after one extracts
+the shifted Wilson term. It is not an extra small-field Gaussian beta term.
+
+At a fixed source radius |zeta|<=r, the extra local background term produced by
+the mismatch of reference and incoming Wilson coefficients is bounded by
+ C r alpha_i^2 per current-scale cell,                 (3.3)
+on the source regular analytic field domain. Indeed each plaquette is
+1+O(eta^2 alpha_i), its Wilson energy is O(eta^4 alpha_i^2), and the current-scale
+cell sum cancels eta^4. Here alpha_i<=C g_i(log gamma_i)^q, so the bound is
+ C_r gamma_i^(-1)(log gamma_i)^K ->0.                  (3.4)
+Fixed powers of the source large-block size only change K. These terms are
+attached to the actual replacement domain. They are not generated in the
+all-good unmarked bulk. On real integrated large-field variables, do not use a
+small-field estimate: retain the Wilson factor and use instead
+ |exp[-(gamma_i+zeta_i)S]|<=exp[-(gamma_i-2r)S]          (3.5)
+when |zeta_i|<=2r. Its coercivity loss is O(r/Gamma), uniform over weak histories.
+The same estimate applies to each Gaussian fluctuation quadratic form, with a
+fixed coercivity reserve. Gauge/Haar Jacobians and all old source-free reference
+normalizers remain unchanged.
+
+Finite-step consequence. In the ORIGINAL unnormalized representation, suppose
+the incoming complex actions satisfy the source localized analytic bounds and
+|zeta_i|<=2r on their actual prefix, with the source-free cuts frozen. Then the
+R birth bound is preserved, with fixed weakened constants, for sufficiently large
+Gamma. The proof is the source's absolute majorant proof with the following
+explicit changes only:
+ - every remaining real Wilson/positive Gaussian form uses(3.5), leaving a fixed
+   fraction of each large-field gain in pp380--383;
+ - (3.3) and the already bounded complex E/B terms cost a vanishing coefficient
+   times the replacement-domain volume, absorbed by the reserved tree exponent;
+ - no T_k(X)1 division is introduced; apply the unnormalized upper bound in place
+   of(1.73), then the unchanged component count(1.89),(1.92)--(1.100);
+ - frozen reference inverses are the original ones, so their holomorphy is the
+   original external-background holomorphy; alternatively Section2 handles a
+   deliberately recomputed local reference.
+All finite-volume integrands are holomorphic in the source, and the same absolute
+tree majorants are uniform, so the localized connected-log birth coefficients
+are holomorphic. Genuine fresh R' retains exp[-c(log gamma_i)^nu] from(1.100).
+For total R, including R'' renewals, retain the weaker arbitrary prescribed
+power bound gamma_i^(-P) of B119(2.31), with the source parameters chosen first.
+This statement is an induction step on the ORIGINAL source class. It is not an
+application of the positivity bound(1.75) to a complex coupling.
+
+The exact R normalizer and carrier geometry must remain those of the source.
+This proof does not fix an unverified replacement of its physical maps, or
+certify a different global-layer source producer. The current input is the
+original localized R representation, with its previously stated geometric and
+complex-background hypotheses.
+
+3A. THE BOUNDARY TAG, ITS LIFETIME BUDGET, AND ITS ENDPOINT
+
+This subsection supplies an essential qualification to the preceding finite-step
+consequence: the coefficient in(3.4) is NOT an arbitrary-power bulk R bound.
+It may include an O(zeta) Wilson marginal on the replaced region. It must remain
+in the component/boundary ledger until the actual large-field component is
+eliminated. Neither a small per-cell coefficient nor a small current volume
+licenses moving it directly into the homogeneous R family.
+
+Exact exponent ledger. Write one frozen replacement with old variable v and new
+reference variable y, and suppress unchanged exterior variables. Let S_o(v)
+be the Wilson part in the incoming density and S_n(y) the Wilson part extracted
+from the output. The sourced integral is
+
+  exp[-(gamma+zeta)S_n(y)] / D_gamma
+    * int w_gamma(y) exp[gamma S_n(y)]
+             exp[-gamma S_o(v)+E_o(v)]
+             exp{zeta[S_n(y)-S_o(v)]} dv.             (3A.1)
+
+All original Haar, axial-gauge, and characteristic factors are included in
+w_gamma and dv. This is just multiplication by the extracted exponential;
+no new normalizer or logarithm has been introduced. In the source's multiscale
+version the Wilson actions have its partition-of-unity weights and the shifts
+are zeta_n in each scale layer. The identical algebra holds term by term.
+The weights have fixed bounded overlap, so |zeta_n|<=2r suffices. The gamma
+pieces cancel the frozen inverse D_gamma exactly as in the original proof.
+There is NO uncancelled inverse D_(gamma+zeta) in(3A.1). Formula(3.2) is an
+optional comparison with a recomputed reference and is not used for estimates.
+
+Attach the extra difference to the actual replacement component Z even if its
+evaluation happens to be independent of some coordinates of Z. Its localizations
+are defined with a carrier containing Z and every connecting localization tree;
+the carrier is not replaced by the smallest apparent support of the resulting
+function. A history with no such component has no such extra term. In particular
+one must not manufacture a homogeneous source Wilson correction by forgetting Z.
+
+The two parts of this difference are treated differently. On real integration
+variables the negative old-action contribution stays with the positive Wilson
+weight and uses(3.5); it is never bounded by a regular-field supremum. The new
+reference action and the regular-background pieces use(3.3). Localization of
+these pieces uses precisely the same Wilson-action substitutions as the source:
+multiply each localized Wilson summand by its bounded zeta coefficient rather
+than by gamma. The displayed cancellation/localization identities are linear
+in that coefficient. Their boundary-response remainders retain the same
+connecting trees. The component-local part has a volume bound; the remaining
+parts have the relative tree decay outside Z. This is the resummed boundary
+class, not the homogeneous E class.
+On complex external fields, first make the source's comparison to a real
+background used in(1.73). The additional zeta-weighted external-field error
+is bounded by O(r/Gamma) times the corresponding gamma-weighted Wilson
+localization estimate and is paid by its reserved margin. Positivity is
+used only for the remaining real Wilson action, not for a complex field.
+
+Imported source interfaces, with scope made explicit:
+ (i) CMP119(2.40)--(2.42), and the alternative component-resummed class discussed
+     immediately after(2.42), allow carriers containing a large-field component
+     and measure decay outside that component.
+ (ii) CMP122-II(1.61)--(1.67) localizes such an insertion using the actual
+     source maps. Its resummation yields a component-volume term(1.69) and
+     exterior terms(1.68). The starting carrier is enlarged to contain every
+     component it meets before the subsequent localization operations. Thus
+     the replacement tag survives each union of carriers.
+ (iii) Component-local terms are included inside T_k(X), not divided out:
+     see the definition(1.71) and the exclusion specified after(1.72).
+The use of(i)--(iii) is an import of the source's actual localization theorem.
+It is not a proof that an alternative four-layer map satisfies its hypotheses.
+
+Here is why arbitrarily many ages and source volumes do not introduce a new
+factor proportional to the UV depth. Each replacement creates its defect once.
+At a later step that same term is transported or resummed, not created again.
+Let Z_i be the actual surviving large-field domains of a history, and put
+
+  c_i(Z_i)=M^d R_i^(d+1) d'_i(Z_i),                 (3A.2)
+
+with the source convention for d'_i and its harmless single-cube correction.
+The added regular-background component cost is at most C_r|Z_i| and hence
+C'_r c_i(Z_i). It can be made no larger than a fixed chosen unit of this
+budget by increasing the weak threshold; fixed source powers of log gamma
+do not obstruct that choice. The original vacuum and reference-normalization
+cost already has the larger form C c_i(Z_i).
+
+The source's lifetime reserve is exactly designed for the accumulated sum of
+these debits: CMP122-II(1.79)--(1.80) bounds the remaining reserve of a component
+by the sum of the costs of its successive enlarged descendants until it can be
+eliminated. In a step without a new large field, its reserve loses the next
+debit, as in(1.83). On merging components the available reserves add, and newly
+created large fields supply new reserve, as in(1.85). Replacing the fixed debit
+constant C by C+C'_r leaves this induction unchanged. Choose the source
+large-field constants first with that larger debit and a fixed coercivity
+fraction; then take Gamma large. The geometric lifetime estimate(1.81) and
+the merger induction(1.85)--(1.88) pay the ENTIRE sum of ages and volumes.
+This is stronger than separately bounding each age and then summing its bound.
+Repeated localization sums are those already paid by the source's spatial
+decay; attaching an existing deterministic tag creates no independent sum.
+
+Endpoint rule. Expand the original UNNORMALIZED component operators and the
+boundary interactions, keeping the tags. A connected polymer intersecting a
+surviving component remains a boundary polymer. If it is disjoint from every
+surviving component but contains a tagged defect, that defect's component must
+have been eliminated by one of the actual T operators in this polymer.
+Consequently its T-operator count is at least one. This is exactly the two-case
+distinction in CMP122-II(1.95)--(1.97): the count may start at zero for boundary
+polymers, but starts at one for bulk polymers. The reserve bound(1.89), after
+the fixed losses just described, extracts exp[-c p_0(g_k)] before the remaining
+sum. The connected-log expansion then gives the bulk birth bound(1.100) with
+weakened fixed constants. For p_0(g)=A(log g^-2)^nu, nu>1, this is smaller than
+any prescribed gamma^-P by taking Gamma sufficiently large. Surviving boundary
+polymers keep the boundary bound; they are never assigned this bulk bound.
+
+Cutoffs and compensators. Frozen characteristic functions remain identical
+factors on both sides of(3A.1). They are not differentiated or analytically
+continued in their threshold. The bad-field restrictions used to obtain the
+source reserve therefore remain available; only a fixed fraction of positive
+Wilson/Gaussian coercivity has been spent. Inverse local normalizers are the
+unchanged D_gamma and their already constructed background-analytic extensions.
+Their large classical exponents cancel within the original gamma part before
+the source difference is estimated. Any source-dependent vacuum contribution
+extracted later stays in the vacuum ledger. It cannot cancel a boundary tag or
+be used to discard the reference factor.
+
+Conclusion of the audit. The common bounded source shift fits the original
+resummed component-boundary induction and produces arbitrary-power BULK births
+only by the endpoint rule above. It is not necessary to prove large-field
+conditional zero-freeness. The required imported analytic localization and
+physical field maps remain exactly those of the source. If a chosen replacement
+or localization map does not preserve those interfaces, this argument does not
+apply; keeping a formal tag by itself cannot repair an invalid map estimate.
+
+4. THE ANNULAR COMPARISON ON THE SAME FIXED SOURCE DISC
+
+The marker proof in work/auxiliary_cutoff_comparison_2026-10-18.txt uses only
+holomorphic prepared coefficients, absolute bounds, and strict Gaussian
+coercivity. Under(3.5) these hold with the same fixed reserve after increasing
+Gamma. Therefore the bound
+ ||h_i(zeta)||_source <= C exp[-c(log gamma_i)^(2t)]     (4.1)
+holds on the fixed bare-source disc, PROVIDED it is applied at each actual
+complex input state satisfying the induction class. Define h_i at that actual
+state, freeze it after evaluation, and use
+ rho_(i+1)=exp(F_i+h_i) K_inner,i rho_i.                (4.2)
+No hybrid outer state or complex cutoff threshold is introduced. The annular
+connected log is zero-free by the prepared cluster expansion; it is not a
+large-field conditional partition normalization.
+
+5. THE q-CORE COMMON DISC: ACTUAL FINITE RECURSION, NOT HISTORY SLOTS
+
+Let G_j be the q-step core map with no R insertions, with the source-free cuts
+fixed. Vary only its INPUT gamma to gamma+zeta, |zeta|<c gamma, and hold its
+input E fixed in the same reference analytic ball. Run its actual finite q
+primitive recursion. The finite-phase analytic containment proof gives bounded
+primitive beta, so every INTERNAL offset
+ u_a(zeta)=gamma_(j+a)(zeta)-(gamma_j+zeta)             (5.1)
+is O_q(1) throughout the disc. This construction does not vary independent
+history coordinates. Its q Gaussian identity is the one of
+work/raw_q_block_cluster_response_2026-10-18.txt, with the same frozen windows.
+
+Keep physical noise g_j(0)x. The common factor lambda=1+zeta/gamma is included
+in the WILSON part of the centered complex Gaussian precision, so parity is
+unchanged. If auxiliary gauge insertions are also frozen source-free, their
+quadratic coefficients do NOT shift with gamma. Their ratios may therefore
+differ from1 by O(zeta/gamma), not O(1/gamma). Put this whole quadratic change
+in the free covariance; it is not a small cubic interaction.
+
+The complete Gaussian marginal is nevertheless independent of this gauge-width
+choice: the finite constrained quotient-amplitude identity in
+work/source_gaussian_germ_bridge.txt, Section4 (Notebook32 gauge lemma and the
+exact compact based-gauge insertion), includes the orbit/pivot factors and
+shows that changing a normalized gauge strength alters only vacuum constants.
+For positive real lambda it is the same constrained Laplace integral with a
+different gauge width; analyticity extends that identity to a fixed small
+complex lambda disc. Thus the complete Gaussian beta is independent of the
+common coupling also for FROZEN auxiliary gauge insertions. This identity,
+rather than a falsely small ratio estimate, is needed in that convention.
+The covariances and localized inverses are uniform on the disc by the same
+coercivity reserve and a fixed small relative matrix-perturbation bound.
+
+Alternatively, when using an exactly normalized gauge insertion adapted to
+the shifted running gamma, the residual internal ratios are
+1+u_a/(gamma+zeta)=1+O_q(1/gamma); common scalar determinant factors are vacuum.
+In neither convention may arbitrary independent history slots be differentiated.
+Every reference/insertion normalization must be retained for the quotient
+Gaussian identity. This paragraph does not license dropping a gauge-dependent
+determinant from the Gaussian amplitude.
+
+SHARP RESPONSE AT THE ACTUAL HOMOGENEOUS RADIUS. Keep the source-free
+reference ball b=c g0 log(gamma), g0=gamma^-1/2, fixed throughout this
+complex common-gamma disc. Choose the frozen inner threshold
+T=(log gamma)^t with 1/2<t<1. Do not use the crude (g0 T/b)^2 bound
+for the global tangent summation: its logarithmic power need not exceed
+one at this radius.
+
+Instead use the sharp normalized polynomial-moment bound proved in
+inner_two_mark_gaussian_prefix Section4 and explicitly for arbitrary
+analytic rooted marks in externally_rooted_physical_mark_transport
+Section8. It is uniform in the inherited base X throughout the reserved
+||X||<=K b^2 ball. For the nonlinear fluctuation correction N_gamma(X),
+its derivative is the exact normalized expectation of W minus W(P).
+Thus
+
+ ||D_X N_gamma(X)[W]||<=C(g0/b)^2||W||,
+ ||N_gamma(X)||<=C(g0/b)^2||X||,                    (5.2a)
+
+the latter by integrating along uX, 0<=u<=1, with N_gamma(0)=0.
+The complete core's purely geometric non-Gaussian term is also bounded
+by C g0^2 (plus its cutoff tail): its odd g0 O term vanishes under the
+centered even reference, and its normalized connected expansion gains
+the second g0. Maxwell extraction on the fixed fractional b ball costs
+at most C b^-2. Cutoff-only terms have their actual stretched-log tail,
+which also pays that fixed inverse-radius cost.
+
+More precisely this purely geometric parity bound holds on the FIXED
+geometric background ball, uniformly on the common coupling disc.
+Vacuum subtraction and constant-color averaging remove its zero and
+first field jets. Its restriction to the small b ball is consequently
+O[(g0^2+tail)b^2], by the same analytic seed argument; Maxwell extraction
+is O(g0^2+tail). Thus the purely geometric forcing is controlled as well
+as the inherited N term. The weaker C b^-2 estimate above already fits
+epsilon=log^-2(gamma), but DN alone would not bound this forcing.
+
+These moment statements hold UNIFORMLY on |zeta|<c gamma. Keep the
+WHOLE quadratic lambda H_W+H_G in the centered Gaussian, as specified
+above; its relative coercivity and localized inverses have fixed reserve.
+With physical noise g0 x, lambda multiplies the cubic and quartic
+geometric terms by bounded factors. The inherited Taylor coefficients
+are taken on the same reference b ball. Hence V=g0 O+g0^2 D still has
+the uniform odd/polynomial-growth structure used by the complex normalized
+marked-moment proof. Its retained domain and all normalizers are the same.
+No field-radius differentiation or independent history disc is involved.
+The same reasoning applies to every one of the finitely many primitive
+prefixes in Section6A, with their fixed phase-margin constants.
+
+The supported q-chart and this sharp whole-family response now give uniformly
+  beta_q(gamma,E)=beta_G,q+e_q(gamma,E), |e_q|<=C epsilon(gamma),
+  ||E_q(gamma,E)||_{a,b_out}<=C b_out^2,
+  ||D_E E_q||<=lambda_*<1,
+  ||D_E beta_q||<=C epsilon(gamma)/b^2,               (5.2)
+where epsilon(gamma)=(log gamma)^(-2), i.e. p=2, and the state directions have zero
+extracted Maxwell coefficient. The beta of the classical transport is then
+zero exactly. The same-family derivative bound in(5.2) follows by Cauchy in
+the state direction with the reserved input-class margin, using(5.2a)
+for the difference. The contraction includes the fixed q Maxwell
+projection and the reference radius ratio.
+
+Cauchy in the SINGLE common gamma disc yields
+  |partial_gamma beta_q|<=C epsilon(gamma)/gamma,
+  ||partial_gamma E_q||<=C b_out^2/gamma.             (5.3)
+The second bound is deliberately weaker than the parity gain; it is sufficient.
+The Gaussian beta_G,q has no common-coupling dependence, including all tracked
+vacuum factors. Auxiliary cutoff tails and the ratio errors O(1/gamma) are
+absorbed in epsilon. Conditions(5.2) are the audited supported q-core results
+on this complex Gaussian neighborhood; no full-R normalized operator is used.
+
+5A. CHECK OF THE FROZEN GAUGE-WIDTH GAUSSIAN IDENTITY
+
+There is a direct finite-dimensional check of the assertion in Section5.
+Use the exact constrained tangent Z=ker C at a source saddle, with its coarea
+measure, and write Z=E u+V a, where V is the based infinitesimal gauge insertion.
+Let B0 be the constrained Wilson Hessian including the multiplier/constraint
+curvature term. The source saddle identities give B0 V=0, and B0 is positive on
+the quotient. Let F denote the retained gauge map and assume F V invertible.
+For a positive common Wilson multiplier lambda,
+
+ int_Z exp[-lambda <z,B0z>/2-|Fz|^2/2] dz
+   = J(E,V) (2pi)^(dim Z/2)
+       |det(FV)|^-1 lambda^(-dim u/2)
+       det(E^T B0 E)^(-1/2).                        (5A.1)
+
+This follows by the change of variables z=Eu+Va and then a translation in a.
+Every omitted-looking factor is now explicit: J(E,V) is the same coordinate
+Jacobian, |det(FV)| is the orbit-density factor, and the original coarea includes
+the pivot |det C_p|^-1 and the target Haar density. For the contour gauge,
+F V=-I in its normalized coordinates; for another gauge it need not be one.
+The normalized gauge insertion supplies its matching orbit normalization.
+Changing its width rescales F and that normalization together. Dropping either
+factor would make the assertion false.
+
+Equation(5A.1) shows directly that keeping F fixed while changing lambda only
+produces the vacuum factor lambda^(-dim u/2), whose exponent is constant on the
+small target germ. Hence the ratio of complete amplitudes at W and at identity
+is independent of the common Wilson multiplier even with frozen gauge width.
+This is the specialization of Notebook32 dgb-gauge-lemma needed here. The exact
+normalized compact based-gauge insertion and its Haar change of variables are
+what identify this Gaussian with the actual source integral; the determinant
+identity alone would not identify a different physical measure.
+
+For the q composition apply this identity before discarding any primitive
+normalizer, and use exact pushforward composition. Every common lambda power
+is vacuum. Internal running offsets of bounded size contribute relative
+O_q(1/gamma) perturbations, already in the remainder ledger. The identity for
+positive real lambda extends to the chosen small complex disc by holomorphy
+and uniqueness of the determinant branches. This continuation uses the fixed
+relative coercivity neighborhood; it makes no statement about arbitrary
+complex gauge strengths or changing the retained integration contour.
+
+6. NONCIRCULAR FIXED-DISC CLOSURE BY FINITE DIFFERENCES
+
+Write macro indices m for steps jq. The reference real trajectory obeys fixed
+positive macro drift and bounded primitive oscillations. Let gamma_m>=Gamma,
+b_m=c gamma_m^(-1/2)log gamma_m, and the SHARP p=2 estimate in Section5.
+The actual homogeneous bootstrap radius has not been enlarged. The inner
+cutoff exponent satisfies 1/2<t<1; the older condition 2(s-t)>1 is not
+used and would be unavailable at s=1.
+Use the FIXED reference b_m balls throughout differentiation in the source.
+
+At a complex bare perturbation w, write
+ z_m(w)=Gamma_m(w)-gamma_m,
+ u_m(w)=||E_m(w)-E_m(0)||_{a,b_m}/b_m^2.
+The static all-age source estimate, linear in the birth norm and valid for
+complex coefficients, gives on an admitted prefix
+ ||R_m(w)||/b_m^2 <= rho_m,
+ rho_m=C gamma_m^(2-P)(log gamma_m)^K, P=kappa0/2>3,   (6.1)
+Choose the source exponent kappa0 BEFORE the geometry, at least
+max{8, any other already required source threshold}; CMP119 p263(2.46)
+uses kappa0>=7 for absolute stability. The tangent/deletion summation
+alone needs only P>3, which is not the whole source hypothesis.
+The superpolynomial annular tail is included
+in rho_m. No derivative of R_m is assumed. The exact q ledger subtracts its
+static endpoint and includes every birth/annular insertion as in the q note.
+
+Using(5.2)--(5.3) for the core and the crude TWO absolute R-error bounds gives
+ u_(m+1)<=lambda u_m+C |z_m|/gamma_m+C rho_m,
+ |z_(m+1)-z_m|<=C epsilon_m(u_m+|z_m|/gamma_m)+C rho_m, (6.2)
+where lambda<1 is fixed after allowing b_m/b_(m+1)=1+O(1/gamma_m).
+Initially z_0=w,u_0=0. These are differences of the ACTUAL two recursions;
+there is no independent-history differentiation and no assumption that an
+R descendant has small derivative.
+
+Let S_m=max_(a<=m)|z_a|. Reference positive drift implies past gamma_a>=gamma_m
+up to a fixed primitive buffer, and rho_a<=C rho_m. Iterating the first line
+of(6.2) therefore gives
+ u_m<=C S_m/gamma_m+C rho_m.                          (6.3)
+Inserting this into the second line gives
+ S_(m+1)<=S_m[1+C epsilon_m/gamma_m]+C rho_m.          (6.4)
+The reference drift yields
+ sum_m epsilon_m/gamma_m <=C(log Gamma)^(1-p),
+ sum_m rho_m <=C Gamma^(3-P)(log Gamma)^K.             (6.5)
+For any fixed source radius r>0, choose Gamma sufficiently large that the
+discrete Gronwall factor is<5/4 and C sum rho_m<r/8. For |w|<=r, (6.4) gives
+ S_m<3r/2<2r.                                       (6.6)
+
+This closes the |z_m|<=2r bootstrap used in Section3 with a strict margin. The
+state difference(6.3) is also a strict interior perturbation of the moving core
+class, by increasing Gamma. Intermediate primitive phases require the stronger
+finite-prefix argument below; bounded primitive beta alone does not establish
+their fixed source-disc containment. Analyticity at every finite prefix and
+the strict estimates below exclude a first exit. Thus the argument
+does not assume its own conclusion on a larger Cauchy disc. It proves uniform
+holomorphy and containment on ONE fixed bare disc |w|<r, with estimates uniform
+in UV depth, conditional on the already specified source geometry/producer
+inputs. A smaller disc is used only after this closure has been proved.
+
+6A. EVERY PRIMITIVE PHASE STAYS IN THE SAME FIXED SOURCE DISC
+
+Let a=0,...,q denote the phase within macro block m. Freeze the reference
+phase radii b_{m,a}, windows, and gauge widths chosen in the real finite-phase
+construction. Their ratios to b_m have fixed q-dependent upper and lower
+bounds. Write C_a(gamma,E) for the autonomous a-prefix core, with its ACTUAL
+successive Maxwell extractions. It is the prefix of the construction in
+Section5, not a map with independent internal history parameters. For every
+a<=q, the same proof, without requiring a contraction, gives
+
+ |partial_gamma beta_a|<=C_q epsilon_m/gamma_m,
+ ||D_E beta_a||<=C_q epsilon_m/b_m^2,
+ ||D_E (C_a)_E||<=C_q,
+ ||partial_gamma (C_a)_E||<=C_q b_{m,a}^2/gamma_m.    (6A.1)
+
+The E directions in the beta bound have zero Maxwell coefficient. Their
+classical transport has zero extracted coefficient at EVERY phase, so its
+possibly large fixed phase norm does not remove the epsilon gain. The
+complete Gaussian beta at each prefix is common-coupling independent by
+Section5A. Parity and common-disc Cauchy therefore apply to every a, even
+when that prefix has no positive Gaussian drift. Only q is required to
+have the positive drift and contraction used in(6.2).
+
+On an admitted primitive prefix, the exact ledger with endpoint R subtraction
+and actual birth/annular insertions gives an absolute error C_q rho_m for
+each normalized state output and each beta output. This uses the same
+finite-prefix source estimate as Section3; the bound for a newly generated
+endpoint is obtained from that step's admitted INPUT, not from future drift.
+Take differences of the actual two a-prefix recursions. Integrate(6A.1) along
+the straight segment in their common input gamma disc and reserved input
+E ball, and use the two absolute R-error bounds. With
+
+ z_{m,a}=Gamma_{m,a}(w)-gamma_{m,a},
+ u_{m,a}=||E_{m,a}(w)-E_{m,a}(0)||_{a,b_{m,a}}/b_{m,a}^2,
+
+one obtains
+
+ |z_{m,a}-z_m|<=C_q epsilon_m(u_m+|z_m|/gamma_m)+C_q rho_m,
+ u_{m,a}<=C_q(u_m+|z_m|/gamma_m+rho_m).              (6A.2)
+
+The macro bound(6.3), with S_m<3r/2, makes the first right member at most
+C_q epsilon_m r/gamma_m+C_q rho_m=o(r), uniformly in a and the UV depth.
+Increase Gamma so it is below r/4. Then |z_{m,a}|<7r/4<2r at EVERY phase,
+and u_{m,a}<=C_q(r/gamma_m+rho_m) lies strictly within every fixed phase
+moving-norm margin. This rules out a first intermediate-phase exit: given
+all previous phases admitted, the original source induction constructs the
+next phase, and(6A.2) puts its output strictly inside the same bounds.
+
+The domain statement is two-level. The estimates above control differences
+on the moving INNER balls used by the q-core. The OUTER original prepared
+source class used for R and the annular comparison retains its own fixed
+reserve under the imported original source induction of Section3. This is
+the same full-domain input needed before adding a constant source; it is
+not inferred from smallness on a smaller moving ball. The straight input-E
+segments in(6A.1)--(6A.2) lie in the reserved q-core class. All actual outer
+evaluations use the original prepared class and the finite-step source
+induction, with |z_{m,a}|<2r just established. No independent-history
+analyticity and no derivative of a fresh or old R term is assumed here.
+
+7. TANGENTS AND THE NORMALIZATION DERIVATIVE
+
+Apply Cauchy on |w|<r to the PROVED bounds and then restrict to |w|<=r/2. At w=0,
+  |Gamma'_m|<=C,
+  ||E'_m||/b_m^2<=C/gamma_m+C rho_m/r,
+  ||R'_m||/b_m^2<=C rho_m/r.                         (7.1)
+Here R'_m means a source derivative of the entire static history, NOT just a
+derivative of the newest R birth. The factor1/r is harmless; (6.5) is summable
+for P>3. Differentiating the exact core-plus-R ledger gives
+  |Gamma'_(m+1)-Gamma'_m|
+       <=C epsilon_m/gamma_m+C_r rho_m.              (7.2)
+Thus Gamma'_m remains close to its initial value1 when Gamma is sufficiently
+large. More generally all fixed source derivatives have factorial Cauchy
+bounds on a smaller fixed disc. This does not supply nontriviality of arbitrary
+physical observables; it is a running-coupling response statement.
+
+The b_m in(7.1) is a SOURCE-INDEPENDENT reference radius, so its derivative is
+zero. If instead one normalizes by the running holomorphic radius
+ b(Gamma)=c Gamma^(-1/2)(log Gamma)^s, its exact logarithmic derivative is
+  d/dw log b(Gamma)^2=(-1+2s/log Gamma) Gamma'/Gamma.  (7.3)
+Hence for E/b(Gamma)^2 the extra derivative is
+  -(-1+2s/log Gamma)(Gamma'/Gamma) E/b(Gamma)^2,
+which is O(K|Gamma'|/gamma), the same allowed size as(7.1). If the background
+argument itself is rescaled, E(b(Gamma)v), its additional chain-rule term is
+also O(K|Gamma'|/gamma) on a fixed smaller background ball by Cauchy. No
+normalization derivative has been discarded, and there is no claim that it
+has the smaller epsilon/gamma size.
+
+8. EXACT STATUS AND REMAINING CHECK
+
+The local denominator proof(2.1)--(2.4), the forcing convention, the exact
+frozen/recomputed distinction(3.2), and the finite-difference/tangent lemmas
+(6.2)--(7.3) are explicit arguments. The source large-field extension in
+Section3 is an extension of the ORIGINAL unnormalized majorant proof on its
+specified incoming class. It uses the source's actual local normalization
+and keeps the fixed-disc mismatch charged to R/boundary terms. It does not
+claim the optional normalized large-field bound(1.75) on a complex disc.
+
+Before promoting this to an end-to-end source producer, independently check
+that its chosen physical localization maps and determining families are those
+on which the source coefficient bounds used in Section3 hold, and that the
+q-core complex-disc argument(5.2) includes the same Maxwell extraction and
+all gauge/vacuum factors. Passive sources do not create new source-dependent
+minimizer equations: those physical maps can stay source-free. A separate
+replacement of the original localized source construction by the repository's
+four global layers still has its own geometric/current matching obligation.

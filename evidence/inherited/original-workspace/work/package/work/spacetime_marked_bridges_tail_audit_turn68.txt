@@ -1,0 +1,167 @@
+INDEPENDENT AUDIT: ACTUAL MARKED SPACETIME BRIDGES -- TURN68
+20 October 2026. tail47.
+
+VERDICT: PASS at the stated Hamiltonian ground-law scope.
+
+Producer audited in full:
+ work/spacetime_marked_bridges_turn68.txt
+ SHA256 A2F4FC210090BFD683C5D92BC70EE0480A3869D86229530445FAD2E62E018269
+
+Input read and used at its explicit theorem scope:
+ work/hamiltonian_spacetime_moments_turn68.txt
+ SHA256 4B7C3151738386FDF5EFBB0EF71BFE589C679DF87C8D0857ACA32153D9B895AC
+
+This audit checks the deductions from the latter's simultaneous-cell
+moment theorem, including all marks, centering, path multiplicities
+and physical scaling. It is not a second independent reconstruction
+of that input's entire reflection-positivity/chessboard proof.
+That input has a separate independent history47 audit.
+
+1. MODEL AND EXACT PROBABILITY SCOPE
+
+The probability is the actual stationary ground process of
+H=g^2 K/(2a)+4S/(g^2 a) on a finite periodic spatial SU2 lattice.
+It is obtained by the complete unprojected thermal trace followed
+by the ground limit at this FIXED spatial regulator; positivity and
+uniqueness make the limiting ground state gauge invariant.
+The producer neither replaces this law by a reference measure nor
+asserts an isotropic finite-Wilson identity at nonzero time spacing.
+
+For closed tiles of fixed lattice volume V, time length Delta=a,
+X_c=(a g^2)^(-1) integral_(I_c) S_b^cl and c=9V/2, the input is
+
+ log E exp(sum_c t_c X_c) <= c sum_c t_c,  0<=t_c<=2,
+
+for every FINITE collection of cells, under one common normalizer.
+Differentiation at zero, or the elementary right difference quotient,
+gives E X_c<=c. All quantities are bounded at the fixed regulator
+on finite time intervals. No conditional or independence premise
+has been inserted in using this input.
+
+2. MIXED MARKS, INCLUDING OVERLAP WITH THE BAD SET
+
+Write C=exp(c), q=exp(c-R). For a marked set J and prescribed bad
+set A, use x^m<=m! exp(x) and 1_{x>=R}<=exp(x-R).
+The exponent on a cell in J intersect A is exactly TWO, not an
+uncontrolled multiple of the number of marks or the path length.
+Thus the allowed input domain gives
+
+ E[product_(j in J) X_j^m_j product_(b in A) 1_{X_b>=R}]
+ <= product_j m_j! C^|J| q^|A|.
+
+Repeated powers at one cell are encoded by the single integer m_j.
+This checks (1.1), including arbitrary external marked cells.
+
+For distinct i,j, expand
+(X_i+c)(X_j+c)=X_i X_j+c X_i+c X_j+c^2.
+The four bounds are C^2, cC, cC, c^2 times q^|A|,
+which sum to (C+c)^2 q^|A|. This checks (1.2).
+The source application only uses distinct marks because its two
+cell supports are disjoint. The revised Section2 now says this
+explicitly. Coincident marks instead use m=2; the producer does
+not silently drop their factorial.
+
+3. BAD-PATH UNION AND INFINITE TIME
+
+A self-avoiding path of m edges has m+1 distinct bad vertices.
+There are at most D^m such paths from a fixed initial vertex.
+Consequently, for endpoints u,v and any distinct marked i,j,
+
+ E[(X_i+c)(X_j+c) 1_{u bad-connected v}]
+ <= (C+c)^2 sum_(m>=d_G(u,v)) D^m q^(m+1)
+ = (C+c)^2 q (Dq)^d_G(u,v)/(1-Dq).
+
+The same computation with uncentered marks checks (2.1).
+The time board is countable; positivity permits the path union
+and monotone passage through finite path collections. Even an
+infinite bad cluster connects two specified vertices through a
+finite self-avoiding witness. Cluster finiteness is not assumed.
+Periodic duplicate neighbors are removed, so they cannot increase
+the claimed degree or invalidate distinct-vertex counting.
+
+4. PHYSICAL NORMALIZATION AND CENTERED FULL SOURCE
+
+Deterministic ownership assigns a plaquette to one enclosing
+closed tile. For |f|<=M,
+
+ |Q_c(f)| <= 4M X_c,
+ |Q_c(f)-E Q_c(f)| <= 4M (X_c+c).
+
+The factor4 is correct: both definitions already contain
+1/(a g^2) and the same time integral. No extra inverse cell volume
+is present in this per-cell inequality. Arbitrary ownership need
+not preserve reflections; only the enclosing closed-tile input
+uses reflection positivity.
+
+For endpoint-connected covariance pieces, absolute values and
+the preceding bound yield 16 M_+ M_- (C+c)^2 times one sum over
+source endpoints. This is exactly the |A_+||A_-| factor in (3.2).
+
+For the event that SOME bad path connects the two support regions,
+one must also sum over its endpoints u in A_+, v in A_-, independent
+of the marked source cells c in A_+, d in A_-.
+Section2 applies with those independent marks. Thus
+
+ E[ |(Q_+-E Q_+)(Q_--E Q_-)| 1_bridge]
+ <= 16 M_+ M_- (C+c)^2 |A_+|^2 |A_-|^2
+                       q(Dq)^r_a/(1-Dq).
+
+This verifies (4.1). In particular the argument does not discard
+the source means, substitute conditional means, or place a source
+under a different partition-function denominator.
+It bounds an explicitly selected signed covariance contribution;
+neither that contribution nor its absolute majorant is asserted
+to be a separately reflection-positive observable.
+
+5. PHYSICAL-SEPARATION AND POLYNOMIAL FACTORS
+
+The final text correctly specifies positive separation in the
+periodic spatial geometry, or a common nonwrapping embedding.
+This excludes an unmentioned short path around the spatial torus.
+For fixed tile side lengths and time length a, a graph step has
+physical diameter at most C_tile a. Allowing for the cells meeting
+the support boundaries gives r_a>=c_d/a for all sufficiently small a.
+Each compact four-dimensional support reads at most C a^(-4) cells.
+
+Therefore the two source-endpoint sums in (3.2) cost a^(-8);
+the independent two connection-endpoint sums in (4.1) produce
+a^(-16). With Dq<=eta<1 uniformly,
+
+ q(Dq)^r_a/(1-Dq) <= C_eta exp[-c_d |log eta|/a].
+
+All constants may depend on the FIXED tile sizes, source supports,
+profile suprema and chosen threshold. They do not depend on a,
+g or the total spatial volume. Exponential separation wins against
+the stated polynomial factors and any additional explicitly
+polynomial/logarithmic source multiplier.
+
+The threshold identity also checks:
+X_c>=R is equivalent to
+(1/a) integral_(I_c) S_b^cl >= g^2 R.
+For fixed R it is a weak average-action threshold when g->0.
+There is no implication of pointwise small action within the cell,
+control of electric curvature, or admission to a native weak chart.
+
+6. SCOPE OF THE ADVANCE
+
+This is a genuine normalized-law, source-weighted estimate on
+spacetime connected large-action events. It does not merely bound
+an unmarked event before a future source is inserted.
+
+The following remain outside the result:
+ - the centered covariance on the complement of the spanning event;
+ - a positive lower bound for any separated physical covariance;
+ - contact/composite renormalization and spatial-cutoff convergence;
+ - identification of these simple action cells with Bałaban's
+   reconstruction, stopping, auxiliary or history predicates;
+ - interchange of spatial continuum and ground/temporal limits.
+
+These limitations are explicit in the producer. Its conclusion
+does not overstate them or claim a Yang--Mills existence proof.
+
+FINAL CHECK
+
+Both requested wording repairs were read in the hashed version:
+distinct arbitrary marks in Section2, and periodic/nonwrapping
+physical distance in Section5. No mathematical repair remains.
+This audit is frozen against the hashes above.

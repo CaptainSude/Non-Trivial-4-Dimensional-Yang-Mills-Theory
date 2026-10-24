@@ -1,0 +1,178 @@
+SMOOTHING WITH THE EXACT BLOCKED FREE PRECISION
+19 October 2026. Root derivation. Homogeneous Gaussian setting only.
+
+WHY THIS CORRECTION IS NEEDED
+
+The stationary full-array iteration of turn8 requires a flow preserving
+the ACTUAL current measure. After a free Gaussian blocking that measure
+has precision q_M, not the original nearest-neighbor Maxwell precision.
+Using the latter without a score companion would already be wrong in
+the free iteration. This note supplies uniform smoothing for the exact
+homogeneous flat q_M family, using the explicit previously derived
+symbols. It does not assert an interacting effective-action estimate.
+
+1. THE UNIFORM PRECISION FAMILY
+
+Let Q_M be the physical straight-string average with total factor M,
+and q_M(B)=inf_(Q_M A=B)||d A||^2, with units chosen so its output
+lattice spacing is one. Work on a compatible gauge/harmonic quotient;
+unfixed noncompact constant harmonic fields are not assigned a Gaussian
+inverse. All conclusions below concern curvature and are independent of
+the selected minimizing gauge.
+
+The explicit algebra in archive/ym4-research/work/
+flat_covariance_decay_research.md proves that q_M(theta) is uniformly
+bounded and holomorphic on one fixed complex strip, for every odd M,
+including M=1. It also gives, for real theta!=0,
+
+ q_M(B)=min_lambda (B+d^+ lambda)^* W_M^{-1}(B+d^+ lambda),
+ W_M=diag(D_mu/P0),
+ 0<c_D<=D_mu<=C_D,
+ P0=4M^2 sum_mu sin^2(theta_mu/(2M)).                        (1.1)
+
+Put lambda_c(theta)=sum_mu |exp(i theta_mu)-1|^2. On the real
+Brillouin cube, lambda_c<=P0<=C lambda_c. Hence (1.1) implies
+
+ c lambda_c ||Pi_T B||^2<=B^*q_M B
+                         <=C lambda_c ||Pi_T B||^2,        (1.2)
+
+uniformly in M. Pi_T is the orthogonal complement of d^+ at nonzero
+real momentum. Equation(1.2) follows by minimizing the comparison
+scalar Euclidean norms; no commutation of W_M with Pi_T is assumed.
+Also q_M d^+=0 and d^- q_M=0, identically on the analytic strip.
+
+Add the analytic gauge term and define
+
+                  G_M=q_M+d^+d^-.
+
+For real theta it is Hermitian and
+
+ c0 lambda_c I<=G_M(theta)<=C0 lambda_c I.                  (1.3)
+
+The analytic uniform bound for q_M gives a uniform second derivative
+bound for G_M on a fixed smaller strip by Cauchy. All constants below
+are independent of the prior total blocking M.
+
+2. COMPLEX HEAT BOUND WITHOUT A NORMALITY ASSUMPTION
+
+Let z=xi+i zeta belong to that smaller strip. Hermiticity on the real
+torus implies G_M(z)^*=G_M(conjugate z). Taylor's formula therefore
+cancels the linear term in the Hermitian part, giving
+
+ Re G_M(xi+i zeta)>=c0 lambda_c(xi) I-C1|zeta|^2 I.         (2.1)
+
+The inequality concerns quadratic forms on complex vectors. It uses
+the uniform second derivative bound on the intervening segment, not
+a real-momentum lower bound extrapolated without a remainder.
+
+For the ODE v'=-R^2 G_M(z)v, the energy inequality and Gronwall give
+
+ ||exp[-T R^2 G_M(z)]||
+        <=exp[-c0 T R^2 lambda_c(xi)+C1 T R^2|zeta|^2].     (2.2)
+
+This argument works for a nonnormal complex matrix; diagonalization
+with an uncontrolled condition number is not used.
+
+In a final coarse Bloch fiber p, the fine OLD-lattice aliases have
+z_l=(p+2pi l)/R, l in I_R^4. For |Im p|<=rho, (2.2) becomes
+
+ ||exp[-T R^2 G_M(z_l)]||
+                  <=C_(rho,T) exp[-c_T |Re p+2pi l|^2].   (2.3)
+
+Choose the centered Brillouin representatives; their physical
+derivative symbols u_l=R(exp(i z_l)-1) have size bounded by
+C(|Re p+2pi l|+rho). Thus any FIXED number of physical output
+differences can be inserted in (2.3), with an alias-square-summable
+majorant uniform in M,R. A finite real overlap at Brillouin boundaries
+can be handled by shifting centered aliases, as in the original
+symbol gluing argument.
+
+3. THE GAUGE TERM DOES NOT CHANGE THE CURVATURE FLOW
+
+The products q_M d^+d^- and d^+d^- q_M vanish. These are analytic
+identities, so the two terms commute on the complex strip. Since
+the exterior derivative d_1 kills d^+,
+
+ d_1 exp(-T R^2 q_M)=d_1 exp(-T R^2 G_M).                  (3.1)
+
+This can be checked termwise in the entire matrix exponential. There
+is no inverse of lambda_c or Pi_T in (3.1). The physical version has
+d_eta=R d_1. Consequently all curvature smoothing estimates may use
+the uniformly elliptic G_M while the actual drift remains q_M on
+the physical quotient.
+
+4. THE CORRECT BETWEEN-STAGE MINIMUM HAS A UNIFORM LOW NORM
+
+Use three lattices of spacings 1/(MR), 1/R, and 1. Physical averages
+obey Q_R Q_M=Q_(MR), with the literal nested straight-string convention.
+One direct verification partitions the start-point average into M
+subblocks and telescopes each long directional string into R strings;
+the linear average sums every subblock start with its same normalized
+weight. This statement uses flat linear averages, not nonlinear
+path-ordered products.
+
+Let H_(MR) be the explicit fine minimizing extension to final coarse
+data from flat_minimizer_locality_research.md. Set
+
+                     H_(M,R)=Q_M H_(MR).                   (4.1)
+
+Nested minimization proves that H_(M,R) is an energy-minimizing lift
+for the old precision q_M at spacing 1/R with prescribed Q_R data.
+Indeed minimizing first at fixed Q_M A and then over its Q_R constraint
+is the same infimum as imposing Q_(MR) A=B. The gauge representative in
+(4.1) need not be the orthogonal conditional-mean gauge; its curvature
+is the same as that of any Gaussian conditional minimizer.
+
+Physical straight averaging is a contraction up to a fixed geometric
+constant in volume-normalized L2: apply Jensen to its normalized
+box/string averages and count the bounded translation multiplicity.
+The aliases of H_(MR) already have a uniform L2 bound on a fixed
+complex coarse strip. Q_M reads a neighborhood of physical size O(1/R)
+and its normalized weights acquire only exp(C|Im p|/R) on that strip.
+It follows that H_(M,R) has a uniform coarse-to-old-cell L2 symbol
+bound there, independent of M and R. This needs no high derivative
+regularity of the sharp reconstruction.
+
+5. UNIFORM SMOOTHED CURVATURE SYMBOL AND ROOTED CONSEQUENCE
+
+Define the ACTUAL free old-variable evolution at fixed final physical
+time T>0 by exp[-T R^2 q_M] and put
+
+                  A_(M,R)=d_eta exp[-T R^2 q_M] H_(M,R).
+
+Use (3.1), then (2.3), and the alias L2 norm from Section4. For each
+fixed number k of physical fine differences, Cauchy--Schwarz in aliases
+gives a uniform pointwise symbol bound because
+
+ sum_l (1+|Re p+2pi l|)^{2(k+1)}
+                         exp[-2c_T |Re p+2pi l|^2]<C_(k,T).
+
+The bound holds on fixed physical output patches, including collars
+crossing coarse-cell faces, on a common complex p strip. Hence contour
+shifting gives exponential locality in the coarse INPUT cell, with
+every fixed output derivative controlled uniformly in M,R.
+
+This supplies the smoothing input needed by the multileg estimate
+from turn8 for the actual successive free measures. In particular
+the factor R^(D-2n-r), and its R^-1 consequence after full slot-moment
+subtraction, are not tied to a wrong stationary measure. A separate
+curvature factorization is used for re-entry into curvature-slot kernels;
+see free_curvature_reentry_turn9.txt when its audit is complete.
+
+6. EXACT MATCHED STATIONARITY AND LIMITS
+
+On any compatible finite Gaussian gauge/harmonic quotient, the current
+measure has covariance g^2 q_M^{-1} in its own link units. Its
+Ornstein--Uhlenbeck flow with drift q_M is stationary for precisely
+that measure. Under the physical rescaling used here its deterministic
+part is exp[-T R^2 q_M]; noise and volume metric are rescaled together.
+The conditional Wick identity therefore applies with the ACTUAL
+fine and blocked covariances. There is no replacement of q_M by q_1.
+
+This proves the homogeneous free matched-measure smoothing theorem.
+It uses neither the unpublished interacting coupling trajectory nor
+a claim about the full nonlinear blocked density. Holomorphy, locality
+and ellipticity of the interacting full score remain unproved. A
+compact active-region version for a nonlocal q_M needs its full
+exterior read/tail and boundary smoothing estimates; global Fourier
+locality does not make that version finite-range.

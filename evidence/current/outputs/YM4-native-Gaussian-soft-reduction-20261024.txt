@@ -1,0 +1,420 @@
+EXACT NATIVE GAUSSIAN, BLOCK-MEAN, AND FOUR-SOFT-FACTOR REDUCTION
+24 October 2026. Producer: connected_energy. Independent review requested.
+
+Result and registration
+-----------------------
+At fixed finite homogeneous old grade m and blocking ratio K=L^p, the
+normalized logarithm of the ORIGINAL complete B109 leading Gaussian
+amplitude equals the block-mean determinant pair and then its four soft
+factors. All its constraint-current, contour-gauge, inverse-pivot and
+normalized-Haar terms are accounted for. The proof changes linear
+coordinates in the original Gaussian; it does not declare a newly
+chosen block-mean gauge integral to be the original density.
+
+The identities hold on the actual native stationary small branch. They
+continue jointly through the reducible flat field and give equality of
+the native infinite fixed-depth coefficient kernels and their Maxwell
+extractor. They do not assert the signed large-K asymptotic or a uniform
+comparison with a different heat/regulator family. Native B109 beta is
+already defined after its infinite-volume kernel limit.
+
+Reviewed inputs used without changing their scope:
+ native_gaussian_coarea_cocycle_and_beta_bridge_20261024.txt;
+ native_affine_maxwell_transport_20261024.txt and its compiled audit;
+ native_affine_multiplier_and_heat_operator_interface_20261024.txt;
+ native_ordinary_trajectory_and_moving_map_bounds_20261024.txt and audit;
+ the flat scalar/vector energy comparisons and complete physical soft
+ vertices recorded in current checkpoint215.
+
+Primary: B109 printed252--255(0.3),(0.5)--(0.16), printed260--261
+(1.4)--(1.5), printed265--269(2.2)--(2.16); CMP102 printed305--309
+(170)--(190), Proposition9. The actual supplied PDF is
+ work/handoff/original-workspace/work/package/sources/supplied/balaban9.pdf.
+The earlier coarea note separately read the native Gaussian/pivot pixels.
+
+Archive used as algebra to verify, not as an already matched theorem:
+ work/handoff/original-workspace/work/package/work/archive/ym4-research/
+ notebooks/35-ym4-infrared-cancellation-notebook/main.tex,
+ ``A local block-mean gauge for the actual determinant'';
+ notebooks/36-ym4-soft-determinant-notebook/main.tex,
+ exact scalar and vector factorizations.
+
+1. Native charts and the residual Hessian, including currents
+-----------------------------------------------------------
+Let X be the current link manifold, Y its final coarse link manifold,
+and f:X->Y the LITERAL p-fold primitive ordinary average. Let S be the
+actual coupling-free classical action S_m and u:Y->X its native
+conditional minimum branch, so f(u(W))=W. The primary native identity
+is u=M^m U_(m+p), with the actual based gauge. Define s(W)=S(u(W)).
+
+At a real admitted W choose simultaneous left-relative charts centered
+at x_*=u(W) and W. Their coordinate origins are zero, and set
+
+ C=Df(0), H=Du(0), lambda=Ds(0), q=D^2s(0),
+ Lagr=D^2S(0)-sum_a lambda_a D^2f_a(0),
+                   Hcal=Lagr-C^T q C.                     (1)
+
+Here f in coordinates is Log[f(exp(i x)x_*) W^-1]/i. Thus its second
+derivative includes the actual nonlinear constraint and all the chart
+terms. The Hessians in(1) are the native left-relative Hessians at the
+two centers, not unrelated ordinary coordinates at a nonzero potential.
+
+The envelope and stationary identities give
+
+ DS(0)=C^T lambda,       CH=I,       Lagr H=C^T q.         (2)
+
+There is also a useful direct proof of all residual identities. Define
+on this native chart the scalar
+
+                       R(x)=S(x)-s(f(x)).                 (3)
+
+At every point of the minimum section R=0 and DR=0; the second equality
+uses stationarity and the envelope identity. The exact chain rule gives
+D^2R(0)=Hcal, including BOTH terms subtracted in(1). Differentiating
+DR(u(W))=0 gives Hcal H=0. The original S and effective s are gauge
+invariant and f is equivariant, so R is gauge invariant. Differentiating
+its gauge identity at this stationary point gives Hcal D=0, where D is
+the full-site infinitesimal current gauge generator. In particular
+
+         Hcal H=0,       Hcal D=0,       CH=I.             (4)
+
+No statement q D_c=0 off shell is used; that generally fails in the
+presence of a nonzero coarse current. It is Hcal, the Hessian of the
+stationary residual(3), that kills the full current gauge directions.
+
+For any v, write v=v_0+HCv, v_0 in ker C. Then
+
+             <v,Hcal v>=<v_0,Lagr v_0>>=0.                (5)
+
+The inequality is the ACTUAL conditional classical Hessian positivity
+on the native small branch. Its nullspace on ker C is precisely the
+based gauge range ran D_b, by the native constrained/gauge propagator
+gap, not merely by uniqueness of a minimum orbit. Here r restricts site
+parameters to final coarse centers, D_b=D|ker r, and equivariance gives
+
+                         CD=D_c r.                        (6)
+
+Thus(1)--(6) are native identities with the complete current correction.
+The gauge quadratic used to make the original Gaussian nonsingular is
+not included in Lagr; it is accounted for explicitly below.
+
+2. What the original Gaussian amplitude contains
+------------------------------------------------
+At one primitive step B109(1.4) is the Gaussian with its original
+linear constraint delta and the complete quadratic form(1.5). The
+derivation in printed266--268 subtracts the constraint-current second
+derivative, retains the averaged gauge quadratic, and eliminates the
+actual private pivots b0(c). Therefore the original delta already
+contains its inverse-pivot determinant. It is never to be inserted a
+second time from a covariance formula.
+
+For p steps use the exact native leading-amplitude composition theorem.
+It retains all intermediate coarea densities, the true intermediate
+minimum and both current-curvature corrections. This identifies the
+complete composite amplitude with the leading density of the same
+physical p-fold pushforward. Its normalized log is denoted G_(m,p)(W).
+
+The native based site gauge group has identity at final centers. For
+each native endpoint contour P_x and based v,
+P_x(U^v)=P_x(U)v(x)^-1. Product NORMALIZED Haar gives exactly
+
+ int prod_x exp[-q_g(P_x(U)v(x)^-1)/tau] dv
+          =c_g(tau)^(number of noncenter sites).           (7)
+
+Include the original gauge mask in both sides if present. This is the
+same positive identity as B109(0.14)--(0.16); its right side is independent
+of U by Haar invariance. Hence the original soft contour insertion and
+a based quotient computation give the same leading density after their
+OWN normalization. A composite contour gauge can be used for the
+calculation because(7) identifies it and the sequential gauges with that
+same density. It does not identify their positive-coupling sharp windows.
+
+At the gauge-zero representative let T be the contour differential.
+On the original based site Lie coordinates, T D_b=-I up to the fixed
+choice of gauge sign. Its gauge Gaussian integral is consequently the
+leading Gaussian coefficient of the SAME c_g in(7). This factor may
+contain powers of 2pi and the fixed gauge-penalty/color metric, but it
+has no background determinant. It is retained until target normalization.
+
+Relative Haar densities of source and target link coordinates at their
+origins are constant by left invariance, in the chosen trace/color
+coordinates. Intermediate ones cancel by the exact coarea identity.
+Fixed L powers relating an explicitly normalized Qtilde row to the
+coordinate differential C also give only their ACTUAL fixed row-volume
+factor. Denote the product of these background-independent original
+conventions by c_nat; its value is fixed by the original measure, not a
+new choice. All remaining background-dependent amplitude factors will
+be displayed. Taking the ratio at W and flat removes c_nat exactly.
+
+3. All-site linear calculation on an injective real open set
+----------------------------------------------------------
+Temporarily suppose D:S_sites->E_bonds and D_c:S_c->E_c are injective.
+All sites are included; no global base point is deleted. Write
+
+ G=D^T D, G_c=D_c^T D_c,
+ n_c=dim E_c, s_c=dim S_c, h_c=n_c-s_c.
+
+Let U,U_c be orthonormal frames perpendicular to the respective gauge
+ranges, and define
+
+ A=U_c^T C U, Hperp=U^T Hcal U,
+                    Qperp(a)=Hperp+a A^T A, a>0.          (8)
+
+Split x=U z+D(lambda_b,lambda_c), where lambda_b has zero center values
+and lambda_c consists of the actual center values. The site-coordinate
+split is an orthogonal coordinate split because r is literal restriction.
+The Jacobian is sqrt(det G). The target split into U_c and D_c coordinates
+has Jacobian sqrt(det G_c). By(6), the target delta fixes lambda_c and
+imposes A z=0. The based variable lambda_b appears in T x with coefficient
+-I, so its integration gives exactly the original background-independent
+gauge factor of Section2. On the constraint Cx=0, Lagr and Hcal have the
+same quadratic form, and Hcal kills D. The remaining quadratic is Hperp.
+
+The actual section H, projected to the physical frames, supplies a
+right inverse of A killed by Hperp. More precisely project H U_c to the
+fine horizontal frame U and adjust only a fine gauge component. Then
+A times this map is I because the removed gauge component has only a
+coarse gauge image, and Hperp times it is zero by(4). It follows that
+
+                  A Qperp(a)^-1 A^T=a^-1 I.               (9)
+
+The usual constrained finite Gaussian formula therefore gives
+
+ I_act(W)^2 = c_nat^2 (det G/det G_c)
+                           a^h_c / det Qperp(a).          (10)
+
+Here I_act is the original complete leading amplitude, with its fixed
+Gaussian dimension factors included consistently in c_nat. For instance
+the remaining physical integral has (2pi)^[(dim E-dim S)-h_c]/2;
+the based gauge Gaussian restores its own dimension factor before the
+normalization(7). These are constants of the ORIGINAL coordinate counts.
+The ratio sqrt(det G/det G_c) in(10) is a real coordinate Jacobian,
+not an extra Haar orbit factor appended to an already reduced amplitude.
+
+This argument works directly from the original delta. In particular
+the inverse pivot determinant and the actual target measure are already
+inside(10). No target Haar factor or unidentified orbit volume remains.
+
+4. Shear and block-mean determinant algebra
+------------------------------------------
+Use the ACTUAL moving-reference maps, registered in the trajectory note:
+
+ C-Cbar=D_c Z,       Cbar D=D_c B,
+ B B^T=K^-4 I.                                            (11)
+
+They are products at the actual ordinary intermediate backgrounds.
+Neither Cbar nor B is declared the derivative of a newly imposed
+nonlinear constraint with a new Haar measure. Set
+
+ P=I-B^T(BB^T)^-1 B,
+ choose V with orthonormal columns spanning ker B,
+ G_B=V^T G V,
+                    Q_B=Hcal+D P D^T+a Cbar^T Cbar.        (12)
+
+For completeness an auxiliary coupled matrix removes the ordinary
+coarse gauge row without changing the physical constraint:
+
+ Bcal(C)=[ Hcal+DD^T+a C^T C, sqrt(a) C^T D_c ;
+                         sqrt(a) D_c^T C, G_c ].
+
+Its quadratic form is x^T Hcal x+|D^T x|^2+
+|sqrt(a) Cx+D_c psi|^2. The shear psi'=psi+sqrt(a)Zx has determinant1,
+so det Bcal(C)=det Bcal(Cbar). The horizontal part of Cbar is still A,
+since U_c^T D_c=0. This step uses no inverse of D_c.
+
+Here is the determinant calculation with every scalar factor. In the
+orthonormal fine gauge frame D G^-1/2 the inserted columns D V are
+G^1/2 V; the target gauge row of Cbar is G_c^1/2 B G^-1/2. Their product
+vanishes because B V=0. Split this fine gauge space into ran(G^1/2 V)
+and its orthogonal complement. The first block contributes det G_B.
+Eliminating the second block removes the horizontal coarse-gauge row;
+the remaining physical block is EXACTLY Qperp(a). Thus
+
+ det Q_B=a^s_c det G_B det G_c det(B G^-1 B^T) det Qperp.   (13)
+
+Complete V to an orthogonal frame with W=B^T(BB^T)^-1/2. The inverse
+Schur block, or Jacobi determinant identity, gives
+
+ det(B G^-1 B^T)=det(BB^T) det G_B / det G.                (14)
+
+Combining(10),(13),(14), on the positive real branch,
+
+ I_act=c_nat a^(n_c/2) det G_B det(BB^T)^(1/2)
+                                                   det Q_B^(-1/2). (15)
+
+The ghost determinant has power ONE. The target dimension gives
+a^(n_c/2), including the coarse scalar dimensions which have not been
+deleted. Both are forced by the original constrained Gaussian algebra.
+
+Let mu=K^-1, J=K^2 B^T, Pi=J J^T, so P=I-Pi. Define
+
+                     Ghat=P D^T D P+mu^2 Pi.              (16)
+
+The P and Pi subspaces reduce Ghat, and
+det Ghat=(mu^2)^s_c det G_B. Moreover BB^T=K^-4 I exactly.
+In d=4 their two scale factors actually cancel:
+det G_B det(BB^T)^(1/2)=det Ghat. Thus(15) becomes
+I_act=c_nat a^(n_c/2) det Ghat det Q_B^(-1/2), with no unlisted
+block-normalization factor. All remaining prefactors are independent
+of W. With
+N0 F=F(W)-F(1), after the joint continuation in Section5,
+
+           G_(m,p)=N0[log det Ghat-(1/2)log det Q_B].       (17)
+
+Equation(17) is equality with the ORIGINAL target-normalized leading
+Gaussian, not with an alternative mean-zero-gauge pushforward.
+
+5. SU(2) injective locus and legitimate flat continuation
+--------------------------------------------------------
+The generic-locus computation is not being assumed at the flat field,
+where G and G_c are singular. There is a nonempty full-dimensional REAL
+open injective locus arbitrarily near flatness on every sufficiently
+large compatible finite torus.
+
+To see this for SU(2), choose at one coarse base point two cycle
+holonomies exp(i epsilon sigma_1), exp(i epsilon sigma_2). They have
+zero common Lie centralizer when epsilon is small and nonzero. They
+can be realized by distributing the corresponding constant small link
+increments along two periodic coordinate directions; their elementary
+commutators are small. Thus these W are within any prescribed real
+native neighborhood of identity for sufficiently small epsilon.
+A covariantly constant coarse site field must commute with both
+holonomies, hence is zero: D_c is injective. This is an open finite-
+matrix condition. If D lambda=0, (6) implies D_c r lambda=0, so r lambda=0;
+parallel transport from a center then gives lambda=0. Thus D too is
+injective at its ACTUAL minimum background.
+
+This uses infinitesimal generators only. The discrete SU(2) center
+introduces no extra factor: the calculation in Section3 is an all-site
+linear coordinate change, not division by a second full gauge-group
+volume. The original based gauge group of(7) is retained throughout.
+
+At flatness Ghat and Q_B are positive. For Ghat, internal-block Poincare
+on ker B_0 gives the gap cK^-2. For Q_B, use the already proved native
+flat lower form q_m>=q_W, the uniform upper bound on q_(m+p), and choose
+a>=R_q+1. At zero the current is zero and q D_c=0; therefore C^TqC=
+Cbar^TqCbar there. This yields the accepted mean-zero vector comparison
+and gap c_a K^-2. Alternatively at a fixed finite regulator the actual
+conditional positivity and the complementary coarse/gauge penalties
+give the same strict positivity. No massless det G or det G_c is used
+to define a flat logarithm.
+
+The original free-pivot Gaussian is positive at flatness and analytic
+on a small native complex germ, with its actual pivot determinant on
+the continued nonzero branch. Ghat and Q_B also have invertible analytic
+continuations on a common smaller germ. Their positive real values fix
+the logarithm branches. The ratio form of(15) agrees with the original
+Gaussian on the injective REAL open locus. Holomorphic uniqueness from
+such a full-dimensional real open set continues the identity to the
+connected common germ, including flatness. One may first use an
+injective base point for normalization and then subtract the common
+value at flat. This continues the JOINT gapped expression, not separate
+singular massless orbit logarithms or their arbitrary constants.
+
+The radius may depend on fixed m and K. Uniform fixed-K volume control
+uses the native exponential coefficient bounds and the flat gaps. No
+uniform inverse of D or D_c on the generic locus is claimed or needed.
+
+6. Exact four-soft-factor identity
+----------------------------------
+On the same germ set
+
+ T_s=D^T D+mu^2 Pi,
+ M_s=mu^2 J^T T_s^-1 J,
+ Vsoft=Q_B+(D J)(D J)^T=Hcal+DD^T+a Cbar^T Cbar,
+ S_csoft=I-J^T D^T Vsoft^-1 D J.                           (18)
+
+The notation S_csoft denotes the coarse Schur matrix, not the classical
+action S or the coarse site space. All transposes on the complex germ
+are analytic bilinear transposes inherited from the real pairings.
+
+In the orthonormal real frame [V,J], the upper block of T_s is G_B.
+Jacobi's inverse-block identity yields
+det G_B=det T_s det(J^T T_s^-1 J), hence
+
+                      det Ghat=det T_s det M_s.            (19)
+
+The determinant lemma and Woodbury identity give
+
+ det Q_B=det Vsoft det S_csoft,
+ S_csoft=(I+J^T D^T Q_B^-1 D J)^-1.                       (20)
+
+They are positive real identities, analytically continued with the
+same branches. Substitution in(17) proves the exact NATIVE formula
+
+ G_(m,p)=N0[log det T_s-(1/2)log det Vsoft
+                    +log det M_s-(1/2)log det S_csoft].   (21)
+
+The coefficients 1,-1/2,1,-1/2, the coarse color-fiber counts, and the
+flat normalizers are fixed by the original amplitude. There is no new
+source-independent constant left inside N0 and no missing source-
+dependent coarea factor. Off shell the full residual Hcal in(1)
+remains; q is not set to zero or replaced by the bare Wilson Hessian.
+
+7. Actual affine heat-family attachment
+---------------------------------------
+The reviewed native affine-current theorem gives lambda(t)=O(t^3)
+and the full effective gradient O(t^3) on the specified commuting
+constant-curvature polynomial probe. It also gives q D_c=O(t^3).
+Using C-Cbar=D_c Z, these statements imply through affine degree2
+
+ Hcal = S_m''-Cbar^T S_(m+p)'' Cbar+O(t^3).
+
+Thus Vsoft has the same first-two affine jets as the explicit family
+
+ S_m''(exp(i mu A))+D_A D_A^T
+     +Cbar_A^T[a I-S_(m+p)''(M_L^p(exp(i mu A)))]Cbar_A.   (22)
+
+This is precisely the complete-action family used by the reviewed
+physical source-vertex theorem. The equality here is an AFFINE JET
+identity attached to(21), not an equality of arbitrary off-shell
+background families. The native stationary affine representative can
+carry its actual based gauge. The covariant determinants/densities in
+(21) allow removal of this polynomial-growth gauge coefficientwise,
+using the same absolute exponential moments as the reviewed affine
+theorem; no nonzero unbounded affine field is placed in the original
+bounded domain. Differentiating inverses in(18) shows that the
+coarse Schur factor has the corresponding first-two affine jets too.
+The scalar T_s and M_s use the same actual D,B,J directly.
+
+8. Native infinite coefficients and remaining work
+-------------------------------------------------
+At fixed m,p the native minimum and classical/gauge/constraint source
+kernels have exponential locality; the moving-reference maps have
+their complete finite current reads. After U=u(W), those reads have
+exponential, generally not finite, dependence on W. Fixed-K gaps for
+Ghat,Q_B,T_s,Vsoft and their rooted coefficient bounds give localized
+resolvent/logarithm derivatives. The actual free-pivot determinant has
+the same fixed-depth locality. A small exponential weighted conjugation
+of a gapped resolvent supplies its weighted inverse; unweighted
+invertibility alone is not being used to infer spatial decay.
+
+Uniform rooted locality by itself does not assert convergence of each
+classical structural kernel. At fixed m,p, first choose a jointly
+convergent subsequence of all classical, constraint, gauge and source
+kernel coefficients needed here, by their uniform finite-jet bounds
+and a diagonal extraction over lattice indices and the finite jet
+orders. Preserve the exact finite algebraic identities on this ONE
+compatible subsequence. Weighted inverse identities and dominated
+rooted sums then pass the differentiated equality(21), with all
+primitive scalar terms retained, to that compatible kernel system.
+Their polynomial second moments pass by the same exponential
+domination. No uniqueness of the individual classical structural
+limits is required. Native B109(1.7),(1.20)--(1.22) gives the limit of
+the FULL Gaussian coefficient before defining beta; hence the RHS
+computed on ANY such compatible subsequence equals that same native
+coefficient. All uniform estimates established for the structural
+system remain valid on the subsequence. Applying the reviewed
+invariant-density Maxwell extractor to(21) is consequently legitimate.
+There is no extra arbitrary finite-winding convention to identify in
+order to DEFINE this native coefficient.
+
+This closes the exact native Gaussian-to-mean-zero-to-four-factor
+IDENTIFICATION, including its affine attachment(22). It does not prove
+uniform large-K differentiated Schur estimates, infrared/ultraviolet
+trace bounds, the actual/Wilson middle-band comparison, or the signed
+coefficient. Those quantitative steps must now be proved for the SAME
+four factors. A comparison with a differently defined archive regulator
+would still require its own identification. No mixed original histories,
+positive-coupling window equality, or continuum existence result is
+asserted here.

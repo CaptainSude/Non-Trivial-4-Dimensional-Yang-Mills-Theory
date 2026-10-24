@@ -1,0 +1,340 @@
+ACTUAL HAMILTONIAN SPACE-TIME ACTION MOMENTS -- TURN68
+20 October 2026. gauge47. Submitted for independent audit.
+
+RESULT AND SCOPE
+
+For the actual finite-spatial SU2 Hamiltonian ground process, the
+closed-tile action moment bound extends to arbitrary simultaneous
+space-time cells. The temporal cell length Delta can equal the
+spatial spacing a. In that case the exponential-moment constant of
+one cell is independent of a, g, the spatial volume, and the number
+of occupied cells.
+
+This is an actual normalized-law result. It does not prove connected
+correlation decay on configurations without a bad bridge, a uniform
+zero-free source logarithm, or a continuum Yang--Mills construction.
+It concerns unflowed action marks, not flow-derivative weights.
+
+1. MODEL AND CELL GEOMETRY
+
+On a nondegenerate periodic three-dimensional spatial SU2 lattice
+let n be its number of sites, with Pauli/2 metric convention, and put
+
+ H=kappa K+v S,   kappa=g^2/(2a),   v=4/(g^2 a),
+ S=sum_(spatial p) h_p,   h_p=1-Tr U_p/2 >=0.             (1.1)
+
+The unique normalized positive ground state is Omega, its energy
+is E0, and mu=Omega^2 dU. The previously proved exact trial bound is
+
+                         E0 <= 9n/a.                    (1.2)
+
+The ground state of the full compact product-space Hamiltonian is
+gauge invariant by uniqueness and positivity. It is the SAME ground
+state as the physical, gauge-invariant Hamiltonian.
+
+The spatial periods N_i are even. Choose tile lengths l_i>=2 with
+N_i/l_i=M_i a power of two; M_i=1 is allowed. Write V=l_1 l_2 l_3.
+The spatial board consists of closed tiles B_b. S_b is the sum over
+the SET of spatial plaquettes contained in B_b, with duplicates
+collapsed when a periodic tile spans a whole direction.
+
+Every plaquette belongs to at least one and at most two closed tiles:
+it varies by one edge in two directions and hence belongs to a
+unique tile interval in those directions. Its third coordinate is
+fixed and may belong to both sides of a tile boundary. Therefore
+
+                       S <= sum_b S_b <= 2S.             (1.3)
+
+This is precisely the closed-tile geometry of
+hamiltonian_bad_clusters_turn67.txt.
+
+For a temporal cell length Delta>0 let
+
+ I_j=[j Delta,(j+1)Delta],
+ X_(b,j)=1/(a g^2) int_(I_j) S_b(U(t)) dt.               (1.4)
+
+Time intervals overlap only at endpoints, a null set for this
+Lebesgue integral. There is NO additional factor two from temporal
+dissemination.
+
+The asserted joint ground-law bound is
+
+ log E_ground exp[sum_(c in A) t_c X_c]
+       <= c_Delta sum_(c in A) t_c,
+ c_Delta=9 V Delta/(2a),       0<=t_c<=2,               (1.5)
+
+for any finite collection A of distinct cells. In particular,
+
+ Delta=a:   log E exp[sum t_c X_c] <= (9V/2)sum t_c.    (1.6)
+
+No independence of cells is asserted or used.
+
+2. A CONVENIENT THERMAL APPROXIMATION AND ITS EXACT NORMALIZER
+
+Use the FULL, unprojected trace at temporal period B:
+
+ Z_B=Tr_full exp(-BH).
+
+The compact product group has a finite heat trace for B>0. The
+Feynman--Kac representation of Z_B is the finite positive measure
+of product-group Brownian loops, with diffusion kappa K, weighted
+by exp[-v int_0^B S(U(t))dt]. Its normalized probability law is
+denoted pi_B.
+
+This full thermal trace is deliberate. We do NOT assert that a
+Gauss-projected finite-period trace has the same independent-link
+Brownian-loop factorization. What is used is that
+
+   pi_B -> the stationary Omega^2 ground process as B->infinity
+
+on every fixed finite time window at this fixed spatial graph.
+The simple positive ground state is the physical ground state,
+so this limit is the desired actual law. It is not a substitute
+reference measure.
+
+For a constant source lambda on the entire temporal circle,
+Feynman--Kac gives the exact normalized identity
+
+ E_piB exp[lambda int_0^B S dt]
+      = Tr exp[-B(H-lambda S)] / Tr exp(-BH).           (2.1)
+
+For 0<=lambda<=v, form ordering and the min--max principle give
+
+ H-lambda S = kappa K+(v-lambda)S >= kappa K,
+
+ Tr exp[-B(H-lambda S)] <= Tr exp(-B kappa K).
+
+Since Z_B>=exp(-BE0),
+
+ log E_piB exp[lambda int_0^B S dt]
+       <= BE0 + log Tr exp(-B kappa K).                 (2.2)
+
+All factors, including the full original thermal normalizer, are
+retained. The last trace is the product of 3n single-link SU2 heat
+traces and tends to1 as B->infinity at fixed a,g,n. No simultaneous
+spatial-cutoff/thermal-limit assertion is needed.
+
+3. SPACE AND TIME REFLECTION POSITIVITY OF pi_B
+
+Choose B=2^k Delta. The following RP facts follow directly from
+the positive loop representation, rather than from an assertion
+that a flowed law inherits reflection positivity.
+
+Spatial site reflection:
+Condition on the COMPLETE Brownian link paths lying in the two
+fixed spatial planes. The product kinetic loop measure on all
+remaining links splits into two independent reflected factors.
+The bi-invariant SU2 Brownian law is invariant under link reversal
+and group inversion as required by the reflected link convention.
+Every spatial plaquette lies in one closed half or in a fixed
+plane. Accordingly the action integral splits into a common
+boundary-path factor and two reflected half factors.
+
+The RP pairing is the integral, against a positive boundary-path
+measure, of the absolute square of a conditional half integral.
+Both half functions may read the shared boundary link paths.
+Thus closed spatial tiles are admitted.
+
+Temporal reflection:
+Condition on the complete spatial configurations at the two
+fixed times of the temporal circle. The Brownian loop law splits
+into two time-reversed bridges with those endpoints. The integrated
+potential also splits into reflected halves. The same conditional
+absolute-square identity proves temporal RP. Both half functions
+may read the shared endpoint configurations. Integrated action
+sources receive no extra endpoint term.
+
+These arguments also follow by first using finite-dimensional
+Brownian bridge approximations and then bounded convergence for
+the continuous bounded action functionals at this fixed graph.
+All exponential cell functions used below are bounded at fixed
+B,a,g,n, since 0<=h_p<=2.
+
+The permitted mirror planes include every spatial tile boundary
+and every time-cell boundary. The measure is invariant under the
+associated translations and reflections.
+
+4. THE MIXED FOUR-DIMENSIONAL CHESSBOARD INEQUALITY
+
+The board has
+
+                 M=(n/V)(B/Delta)
+
+cells. Place each base-cell function by canonical alternating
+reflection in all four directions, including time reversal in
+odd temporal cells. Reflection in a tile boundary permutes these
+copies exactly. In a direction of board size1 no reflection is
+needed.
+
+Here is the complete mixed-pattern step. For a finite alphabet of
+nonnegative continuous cell functions f_l, first use f_l+epsilon.
+Normalize each by
+
+ z_l=[E_piB product_(all cells c) theta_c(f_l+epsilon)]^(1/M).
+
+Write g_l=(f_l+epsilon)/z_l. Every homogeneous labeling of the
+board by one g_l has expectation1. Maximize the expectation over
+the finite set of all label patterns; let its maximum be A>=1.
+
+For any board half cut, RP Cauchy--Schwarz gives
+
+ Z(pattern)^2 <= Z(copy-positive-half) Z(copy-negative-half).
+
+At a maximizing pattern both right factors are <=A and hence
+both must equal A. Begin with the label in one cell. By successively
+copying the half containing its monochromatic rectangle and
+reflecting in that rectangle's right boundary, double its extent
+in one board direction. It fits inside the retained half whenever
+its current extent is at most half the dyadic board length.
+Repeat in all four directions. Maximality is preserved and the
+final pattern is homogeneous, of expectation1. Thus A=1.
+
+Undoing the normalizations and taking epsilon down to0 proves
+
+ E_piB product_c theta_c f_(sigma(c))
+ <= product_c [E_piB product_d theta_d f_(sigma(c))]^(1/M).
+                                                               (4.1)
+
+Shared spatial boundary paths and temporal endpoint fields cause
+no change: they are allowed in both closed-half RP functions.
+Zero homogeneous expectations are handled by the epsilon limit.
+Unoccupied cells carry the alphabet function1.
+
+This proves the actual multipoint inequality; a one-function
+dissemination estimate or an independence assumption would not
+suffice.
+
+5. DISSEMINATION, GROUND LIMIT, AND A SHARPER ENERGY-CURVE VERSION
+
+For f_t=exp(t X_base), 0<=t<=2, all reflected copies are the
+corresponding cell action exponentials. By(1.3),
+
+ sum_(all c) X_c <= 2/(a g^2) int_0^B S dt.
+
+The full-board source is therefore bounded by(2.1) with
+
+ lambda=2t/(a g^2)=(t/2)v <=v.                         (5.1)
+
+Combining(4.1),(2.2), for a finite active set gives
+
+ log E_piB exp[sum_(c in A)t_c X_c]
+ <= |A| (V Delta/(nB))
+                [BE0+log Tr exp(-B kappa K)].          (5.2)
+
+Take B through dyadic multiples of Delta to infinity, with the
+active cells in a fixed finite time window. Bounded source words
+converge to their fixed-unsourced-ground-endpoint expectations;
+equivalently, isolate the long unmarked complementary interval
+in the trace and use ground-state dominance. Formula(5.2) yields
+
+ log E_ground exp[sum_(c in A)t_c X_c] <=9VDelta|A|/a.
+                                                               (5.3)
+
+There is a useful exact improvement. Define
+
+ E_c=inf spec[kappa K+(1-c)v S],       0<=c<=1.
+
+Then E_0=E0, E_1=0. At fixed graph the limiting log of the
+homogeneous trace ratio in(5.1), divided by B, is
+
+                         E0-E_(t/2).
+
+Consequently the stronger mixed inequality is
+
+ log E_ground exp[sum t_c X_c]
+ <= (VDelta/n) sum_c [E0-E_(t_c/2)].                   (5.4)
+
+No sourced ground vector replaces Omega at the two ends of the
+finite active window. The sourced ground energy enters only through
+the homogeneous full-board comparison.
+
+Because
+
+ kappa K+(1-c)vS=(1-c)H+c kappa K >=(1-c)H,
+
+we have E_c>=(1-c)E0 and E0-E_c<=cE0. Substitution into(5.4)
+and then(1.2) proves(1.5). Alternatively, interpolate the t=2
+homogeneous expectation by Holder before taking the ground limit.
+
+For c<1 the energy in(5.4) has the exact coupling expression
+
+ E_c = sqrt(1-c) E_ground(g_c),
+             g_c^2=g^2/sqrt(1-c),                     (5.5)
+
+on the same spatial graph and with the same spacing a. This follows
+by checking both kinetic and magnetic coefficients. It does not
+discard the electric contribution or assume any continuum beta
+function.
+
+6. CONSEQUENCES FOR ACTUAL PHYSICAL MAGNETIC SOURCES
+
+Let a bounded real plaquette profile f(t,p) have finite temporal
+support and define the canonically normalized action insertion
+
+ Y_f = int dt Q_f(t),
+ Q_f(t)=4/(g^2 a) sum_p f(t,p) h_p(U(t)).               (6.1)
+
+Assign every plaquette to one containing closed spatial tile,
+solely to avoid double counting when bounding this source.
+Let F_c be the supremum of |f| over the owned plaquettes and times
+in cell c. The arbitrary ownership convention is NOT used in RP;
+only the following pointwise inequality uses it:
+
+                         |Y_f| <=4 sum_c F_c X_c.
+
+For a complex scalar z with 4|z|F_c<=2 for every active cell,
+positivity and(1.5) imply
+
+ |E_ground exp(zY_f)|
+ <= E_ground exp(|z||Y_f|)
+ <= exp[(18VDelta/a)|z| sum_c F_c].                   (6.2)
+
+More generally one can use independent complex cell coefficients,
+with the same positive envelope. In particular Delta=a gives an
+admissible source amplitude |z|<=1/(2||f||infinity) independent
+of the cutoff. The logarithm of this ABSOLUTE VALUE bound still
+costs the number of physical space-time cells, of order a^-4 for
+a fixed space-time support and fixed spatial tile lengths.
+
+This improves the simple stationary-Jensen slab bound, whose
+admitted source coefficient shrinks like a/T. It gives actual
+cutoff-independent admitted source AMPLITUDES, with an
+extensive majorant. It does not prove a cutoff-independent
+zero-free neighborhood for the connected logarithm, nor an O(1)
+remainder after the required affine-in-time subtractions.
+
+At every fixed regulator the source expectation is entire,
+because Y_f is bounded. Its normalization at zero is exactly1.
+Estimate(6.2) alone is not a source-derivative convergence theorem
+in the spatial continuum limit.
+
+7. JOINT RARE CELLS, AND THE LIMIT OF THIS RESULT
+
+For any finite A and thresholds r_c>=0, Markov's inequality with
+t_c=2 gives
+
+ P_ground(X_c>=r_c for every c in A)
+ <= exp[sum_(c in A)(9VDelta/a-2r_c)].                 (7.1)
+
+One may instead use t_c=1 and obtain
+exp[sum(c_Delta-r_c)]. Polynomial marks can share the remaining
+unit of the t<=2 budget. These are actual simultaneous bounds on
+space-time energy cells and require no independence.
+
+They can suppress a connected chain of sufficiently bad cells
+joining separated time regions. The corresponding combinatorial
+source-mark consumer is being recorded separately by the parent.
+Neither(7.1) nor that consumer estimates the covariance carried
+by the complementary configurations with no such bad chain.
+
+The following conclusions are NOT being made:
+ - no spatial or temporal RP of a nonlinear flowed pushforward;
+ - no original-law/native-RG-reference identification;
+ - no assertion that these simple action cells are complete
+   Balaban large-field/history predicates;
+ - no uniform source-log analyticity or calibrated separated
+   magnetic covariance lower bound;
+ - no continuum existence claim.
+
+The result is a positive input on the actual Hamiltonian ground
+process, with exact source normalization and explicit cell units.

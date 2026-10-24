@@ -1,0 +1,510 @@
+AN ACTUAL SECOND REGULAR STEP WITH THE GENERATED CLASSICAL ACTION
+19 October 2026. TURN46. step46 producer.
+
+STATUS
+
+This note executes two nested regular integrations with the actual
+ordinary maps. The action in the second integration is the FIRST
+classical coarse action s1, not a newly postulated Wilson action.
+Its generated Haar/determinant action and its physical constant-source
+marks are retained. The first tiny analytic tail is also integrated.
+The result is conditional on the recorded first-step chart, cluster,
+and energy-window comparison theorems; it adds the checks needed to
+apply them once more in this regular sector.
+
+The constants are uniform in the size of the declared polylogarithmic
+boxes for TWO steps with fixed L. They are not asserted uniform in
+the number of steps. Neither all histories, arbitrary large fields,
+nor an interacting continuum Yang--Mills measure is constructed here.
+
+INPUTS INSPECTED
+
+gaussian_coarse_kernel_turn40.txt, especially (4.2)--(4.4);
+local_saddle_and_prefactor_turn40.txt, especially (5.3)--(5.4);
+analytic_tree_norm_turn41.txt, Sections 2--6;
+gaussian_iteration_energy_turn41.txt, Sections 4--6;
+finite_g_local_chart_turn42.txt, Sections 2--3;
+whitened_local_cluster_turn42.txt;
+boundary_gaussian_locality_turn42.txt;
+local_constant_source_turn45.txt;
+generated_source_stability_turn45.txt, especially Section 3A.
+
+1. GEOMETRY AND WHAT IS ACTUALLY INTEGRATED
+
+Fix L and an aligned original box with the original fine crossings and
+exterior links fixed to identity. Retain EVERY first coarse row with an
+active endpoint, including variable crossing rows. Apply the next full
+ordinary map to this inherited state. Do not freeze those crossing rows
+afresh. The next local forest is rooted at the next coarse centers and
+the inherited exterior anchors. Its chord insertion is denoted J2.
+
+The first classical action is
+
+ s1(u)=S0(x1,*(u)),
+
+where x1,* is the actual first constrained classical branch. Here u
+is the full framed first coarse datum, with the above exterior fixed.
+Put s1(0)=0. This restriction to identity exterior is explicit. A
+nonzero exterior can only be included by adjoining it to the joint
+small datum; the estimates below cannot discard a fixed forcing term.
+
+Let Phi2(u) be the literal next ordinary map in its local group chart,
+and v its prescribed second datum. On the second chord variables its
+linearization is Q2. The integration density contains the original
+coarse Haar measure and the exact second quotient/coarea Jacobian J_2.
+Thus an exact first density relative to first coarse Haar is used as
+the integrand, not multiplied by a second copy of that Haar density.
+
+Both integrations below are regular integrations: their local branches
+and fixed energy windows are specified. If a small convex chart is
+used to define the regular sector, the integral is restricted to it.
+Nothing here identifies that sector with every component of the
+unwindowed original law.
+
+2. THE FIRST GENERATED ACTION IS KNOWN ON A FIXED LOCAL DOMAIN
+
+Write x=g^-2, lambda=x-zeta, and
+
+ z=z(zeta)=g(1-g^2 zeta)^-1/2,       |g^2 zeta|<c_s.
+
+All cutoffs and all classical maps are frozen as zeta varies. TURN45
+gives the exact first density
+
+ a1(u;zeta)=C1(zeta) exp[-lambda s1(u)-W1loc(u;zeta)]
+                                      exp[D1(u;zeta)],             (2.1)
+
+ C1(zeta)=A01(0)(2pi)^(d1/2) z^d1 c_(T1)^m1,
+ W1loc(u;zeta)=-log[A01(u)/A01(0)]-F1(z(zeta),u).                   (2.2)
+
+Here d1 is the constrained fluctuation dimension; m1 is the FULL
+ambient product-Gaussian dimension. In particular the factor is
+c_(T1)^m1. The source-only values of F1 and D1 are retained in (2.1).
+There is no assertion that they vanish at u=0.
+
+The first local prefactor is not being assumed from its title. Its
+exact determinant identity is
+
+ A01(u)=j_C(x1,*(u)) /
+       {j_J(u) sqrt[(-1)^dimY1 det M1,*(u)]},                       (2.3)
+
+where M1,* is the first nonlinear KKT matrix. With B(u)=M1,*(u)-M1,0,
+the analytic branch satisfies
+
+ log det M1,*(u)-log det M1,0
+    =sum_(p>=1) (-1)^(p+1) Tr[(M1,0^-1 B(u))^p]/p.                (2.4)
+
+The inspected TURN41 proof gives a common any-leg tree coefficient
+bound for B, with both matrix legs included. Each trace coefficient
+with a datum leg can be rooted at that leg: bound one inverse edge by
+its uniform supremum, remove it, and sum the remaining tree using the
+weighted row/column bounds. The connected graph remains connected
+after that cycle edge is removed. Its tree spans all datum legs, so
+the desired external tree weight is paid. The scalar majorant is
+-log(1-k b(t)), with b(t)=sum_(n>=1) C^n t^n. Its radius is fixed,
+independent of the box. This proves a common analytic catalogue for
+the COMPLETE field-dependent determinant, not just its Hessian.
+The two Haar logarithms in (2.3) are finite-read analytic sums composed
+with the same saddle catalogue and satisfy the same bound. The vacuum
+A01(0) is kept in C1.
+
+It follows that, after a fixed loss of exponent and radius,
+
+ ||-log[A01(.)/A01(0)]||_kappa <=C,
+ ||F1(z(zeta),.)||_kappa <=C g^2 T1^6,                             (2.5)
+
+on a FIXED datum sup ball r1, jointly with |g^2 zeta|<c_s. The first
+quantity is source independent. The physical marks therefore obey
+
+ ||partial_zeta^n W1loc(.,0)||_kappa
+       <= n! C^n g^(2n+2) T1^6,              n>=1.                 (2.6)
+
+Both equations include source-only local carrier values; no mark has
+been deleted by a vacuum convention. These are the generated marked
+hypotheses that a generic unmarked O(1) action would NOT imply.
+
+3. THE SECOND CLASSICAL SADDLE AND ITS GAP
+
+The second classical action is defined by the literal constrained
+minimum in the regular chart:
+
+ s2(v)=s1(u2,*(v)),       Phi2(u2,*(v))=v.                          (3.1)
+
+At zero, D^2s1(0)=K_L, the actual first coarse Maxwell precision.
+The second flat saddle matrix is
+
+ M2,0=[ J2^t K_L J2   Q2^t ; Q2   0 ].                            (3.2)
+
+TURN41 proves on the inherited incident-row space, with the stated
+forest and full next rows,
+
+ <a,K_L a> >= c_L ||a||_2^2       when Q2 a=0,
+ ||K_L||_(2->2)<=C_L,
+
+and Q2 has a bounded fixed-L right inverse. Consequently (3.2) has a
+uniform inverse in l2. The needed spatial bound is also known at this
+particular first coarse level: TURN40 (4.2)--(4.4) proves exponential
+row/column bounds for K_L including its actual boundary rows.
+
+For clarity, locality of M2,0^-1 follows without pretending K_L is
+finite range. Conjugate (3.2) by the diagonal weights exp(epsilon
+dist(.,r)). The already weighted entries imply that its change in
+operator norm is O(epsilon), uniformly in r and box size. Choose
+epsilon so this norm times ||M2,0^-1|| is below 1/2. A Neumann inverse
+then gives uniformly weighted l2 bounds. Entrywise decay follows;
+summing lattice shells gives weighted row/column bounds at a smaller
+exponent. This is sufficient for the next analytic tree recursion.
+
+The nonlinear rows of Phi2 still have finite reads and a common local
+analytic radius. The nonlinear rows of grad s1 are exponentially local
+analytic rows with common any-leg coefficient bounds from TURN41.
+Finite range of the ACTION is unnecessary in that tree proof: replace
+the old finite-read nonlinear vertices by these weighted vertices in
+the same scalar majorant w=a t+k C^2(w+t)^2/[1-C(w+t)]. It produces
+u2,*(v), its multiplier, and s2 on a fixed smaller sup ball r2, with
+common analytic weighted coefficients and constants independent of
+box size. The same argument treats any-leg derivatives of the
+nonlinear second KKT matrix and of the exact second prefactor A02.
+
+For real data the tangent Hessian stays between fixed positive bounds
+on the second constraint kernel. For complex data the inverse branch
+persists by the weighted Neumann estimate. The constrained Hessian
+and its covariance square root therefore have the fixed weighted
+locality needed for the product-Gaussian construction.
+
+At the flat point the exact nested variational identity gives
+
+ D^2s2(0)=K_(L^2).                                               (3.3)
+
+This is the direct total-L^2 precision for the SAME original boundary
+problem, not a constant multiple of a nearest-neighbor plaquette form.
+At finite fields (3.1) is the definition; if the nested regular minima
+are the compatible absolute minima in the selected energy sector,
+it also equals the corresponding constrained original minimum.
+No assertion outside those selected branches is required here.
+
+4. WHY THE FIRST LOCAL FAMILY CAN BE COMPOSED WITH THIS SADDLE
+
+One must not infer this simply from a Hessian norm. The required
+composition uses the fixed complex domains and the common catalogues.
+If a carrier f_X is analytic in the first variables on radius r1,
+its absolute multivariate Taylor sum evaluated at fraction q of r1
+is at most ||f_X|| (1-q)^(-|X|), with finite coordinate multiplicity
+absorbed in |X|. Each variable is then replaced by its actual analytic
+second chart, whose coefficients have an any-leg tree bound. Connect
+those substitution trees to the connected old carrier X. Their union
+is a valid carrier for the resulting monomial. The new spatial weight
+is paid by the old carrier weight and the tree weights.
+
+Choose q small enough that (1-q)^(-C|X|) is paid by a fixed spare
+fraction of the old carrier exponent. The scalar substitution majorant
+then converges on one smaller radius r2. If the new root is on a
+substitution branch, reroot that tree at the new input leg and sum its
+old attachment location; the row AND column/any-leg bounds justify
+this operation. If it lies on the old hull, use the old rooted norm.
+Polynomial carrier/arity costs are paid by another spare exponent.
+Constants depend on fixed L and the chosen reserve, not box size.
+
+This proves the needed common catalogue after substitution into the
+second ambient constraint chart, not just into its saddle. In
+particular, with b2=z2 K2,v xi and xi in [-T2,T2]^m2, the centered
+first local generated action satisfies
+
+ ||W1loc(u2(b2,v);zeta)-W1loc(u2,*(v);zeta)||_kappa'
+        <= C |z2| T2/(1-C |z2| T2).                               (4.1)
+
+This holds on the INDEPENDENT product domain
+
+ ||v||_infinity<r2,  |z2|<c/T2^3,  |g^2 zeta|<c_s.                (4.2)
+
+The first amplitude is evaluated at z1=z(zeta), which lies inside
+its first disc c/T1^3 because g T1^3 is small. The variable z2 is
+independent of zeta in (4.2). The small tail D1 is NOT put into this
+large-domain cluster catalogue.
+
+The second derivative and first derivative Euclidean bounds for the
+local amplitude are at most C N2 on the small l2 fluctuation chart.
+Indeed the fixed analytic local catalogue gives summed local
+derivative bounds; the coarse/fine coordinate multiplicities differ
+by a fixed L-dependent factor. Thus the generated amplitude assumptions
+M1,M2<=C N2 of TURN45 are verified rather than postulated. Its first
+fluctuation jet may be nonzero and remains present.
+
+5. ENLARGING THE ACTUAL DATUM DOMAIN TO AN l2 BALL
+
+The small actual sup polydisc rho1=c g Lambda1/sqrt(N1) is sufficient
+but unnecessarily restrictive for this nested calculation. It arose
+from |s1(u)|<=C N1 ||u||_infinity^2. The inspected any-leg estimates
+give a better statement for l2-small data.
+
+On a fixed sup ball, the Jacobian of x1,*(u) has bounded row and
+column sums. Schur's estimate gives ||D x1,*||_(2->2)<=C. Since
+x1,*(0)=0, integration along a complex segment yields
+
+ ||x1,*(u)||_2<=C||u||_2,
+ |s1(u)|<=C||u||_2^2.                                           (5.1)
+
+The same statements hold for the second ambient chart jointly in
+its fluctuation b2 and datum v, since it vanishes at (0,0):
+
+ ||u2(b2,v)||_2 <= C2 (||b2||_2+||v||_2).                         (5.2)
+
+The first fixed-real-total-energy radial formula and its holomorphic
+Stokes comparison therefore extend to
+
+ U1={u: ||u||_2<c1 g Lambda1}                                    (5.3)
+
+intersected with the original fixed sup chart. Choose c1 so (5.1)
+implies |s1|<E1/8, E1=g^2 Lambda1^2. This ball is contained in the
+larger amplitude chart r_N=c/sqrt(N1) in the polylogarithmic regime,
+since g Lambda1 sqrt(N1) tends to zero. The remaining hypotheses of
+the radial proof are unchanged: |s1|<E1/8, uniform Morse/Haar bounds,
+and g Lambda1^3+N1 g Lambda1 small. In particular the smooth cutoff
+is still evaluated only at a fixed REAL total energy.
+
+This is a continuation of the SAME exact radial integral; it is not
+a new measure. On real regular fibers its equality with the integral
+uses the same full support within the selected Morse chart. On
+complex data it is the analytic continuation fixed by that equality.
+The source disc remains |g^2 zeta|<c_s: only the constant physical
+source is used in this note. No unchanged arbitrary-profile source
+radius on (5.3) is claimed.
+
+On (5.3), the first tail has the same value bound
+
+ ||D1|| <= epsilon1
+       <= C m1 exp(-T1^2/2)+C exp(CN1-c Lambda1^2).                (5.4)
+
+For comparison, using only the old sup polydisc would require
+Lambda1>=C sqrt(N1) Lambda2 below. Equation (5.3) removes that
+unnecessary square-root-volume loss. It does not produce a fixed
+g-independent domain for the actual tail.
+
+6. ALL SECOND CONTOURS FIT INSIDE THE INHERITED TAIL DOMAIN
+
+Choose the second actual datum ball
+
+ U2={v: ||v||_2<c2 g Lambda2},      E2=g^2 Lambda2^2.
+
+Take Lambda2^2>=A[m2 T2^2+N2+log(1/g)+1], with sufficiently large
+fixed A. All coordinates on the second actual radial contours, its
+Morse ball, and the Stokes homotopy obey ||b2||_2<=C g Lambda2.
+For the REDUNDANT auxiliary cube at the PHYSICAL z2=z(zeta),
+
+ ||z2 K2,v xi||_2<=C g sqrt(m2) T2<=C' g Lambda2.
+
+The covariance square root has a bounded l2 operator norm; it is
+not necessary to replace m2 by the constrained dimension d2.
+The nonlinear chart and the Morse chart have bounded derivatives
+on these small balls. Hence (5.2) implies, on EVERY indicated chain,
+
+ ||u2(b2,v)||_2 <= C3 g Lambda2.
+
+Choose once
+
+                  Lambda1 >= (4 C3/c1) Lambda2.                  (6.1)
+
+Then all these images are strictly inside (5.3), with a fixed margin.
+This verifies the inherited-domain hypothesis for the exact D1 factor
+on the second integral and comparison contours. It does NOT put D1
+on the independent large z2 disc (4.2); D1 remains separate.
+
+All T_i, Lambda_i, N_i may be fixed powers of log(1/g), and (6.1),
+g Lambda_i^3+N_i g Lambda_i small, and g T_i^3 small can hold
+simultaneously for sufficiently small g. In particular the TWO-step
+containment is concrete and compatible with the previously chosen
+small-field construction after choosing the first cutoff large enough.
+If first cutoffs were already fixed smaller than (6.1), the theorem
+does not silently replace them; it requires checking that inequality
+or defining the stated two-window regular sector with these choices.
+
+7. EXACT SECOND INTEGRATION AND ITS NEW GENERATED MARK
+
+Integrate (2.1) along Phi2(u)=v with the exact J_2 and the frozen
+second window psi(s1(u)/E2). The positive zero-source density is
+
+ a2(v;zeta)=C1(zeta) integral exp[-lambda s1(u)-W1loc(u;zeta)]
+             exp[D1(u;zeta)] J_2(u,v) psi(s1(u)/E2) db2.           (7.1)
+
+The first source still inserts the ORIGINAL action: (7.1) is obtained
+by literal integration of the sourced first density, not by replacing
+its source with a chosen coarse quadratic form. Fubini restores the
+original two nested regular integrations and both their normalizers.
+
+Use the second classical saddle and frozen Morse map for s1. Equations
+(4.1)--(4.2) verify the full generated local class required by TURN45.
+The product-Gaussian cluster construction gives an even function
+
+ F2(z2,v;zeta)=sum_X F2,X(z2,v;zeta),
+ ||F2(z2,.;zeta)||_kappa' <=C |z2|^2 T2^6.                        (7.2)
+
+Evenness follows from simultaneous (z2,xi)->(-z2,-xi); the first
+generated action can have a linear fluctuation jet. The centred
+interaction at z2=0 vanishes, which is essential here.
+
+First compare the integral without D1 to this auxiliary family by
+the same Stokes/tail argument. Then insert exp(D1). Since the whole
+second radial contour lies in U1 and the other normalized Morse
+amplitude is bounded on its small contour, Section 3A of TURN45
+applies with V=-D1 and eta=epsilon1. It changes the normalized
+integral by O(epsilon1), without requiring a large-domain derivative
+bound for D1. The result is the exact factorization
+
+ a2(v;zeta)=C1(zeta) exp[-lambda s2(v)-W1loc(u2,*(v);zeta)]
+       A02(v)(2pi)^(d2/2) z^d2 c_(T2)^m2
+       exp[F2(z(zeta),v;zeta)] exp[D2(v;zeta)],                    (7.3)
+
+ ||D2||_(U2,source disc)
+  <= C{epsilon1+m2 exp(-T2^2/2)+exp(CN2-c Lambda2^2)}=:epsilon2.  (7.4)
+
+The large prefactors A01,A02 and the two Gaussian dimensions have
+been retained explicitly. Neither d1+d2 nor m1+m2 is replaced by the
+other. D2 is the combined logarithmic residual, including the actually
+integrated first tail, not the old D1 evaluated only at the saddle.
+Smallness gives the consistent zero-free logarithm branch.
+
+The exact normalized constant-source log is consequently
+
+ L2(v,zeta)=log[a2(v;zeta)/a2(v;0)]
+   = zeta s2(v)-(d1+d2)/2 log(1-g^2 zeta)
+     -[W1loc(u2,*(v);zeta)-W1loc(u2,*(v);0)]
+     +F2(z(zeta),v;zeta)-F2(g,v;0)
+     +D2(v;zeta)-D2(v;0).                                       (7.5)
+
+Define the analytic local function on the FIXED datum sup ball r2 by
+
+ Q2,loc(v,zeta)=-[W1loc(u2,*(v);zeta)-W1loc(u2,*(v);0)]
+                 +F2(z(zeta),v;zeta)-F2(g,v;0).
+
+Thus the transported first local mark is retained EXACTLY. It is
++partial_zeta F1(z(zeta),u2,*(v)) at first source order. The new
+local mark comes from F2; its explicit source dependence is included.
+Equation (7.5) identifies this Q2,loc with the actual source log
+minus its classical, Gaussian vacuum, and tail terms ONLY on U2.
+The actual density and D2 are not claimed defined throughout r2.
+The common source disc and (7.2) imply, for n>=1,
+
+ ||partial_zeta^n Q2,loc(.,0)||_kappa'
+     <= n! C^n g^(2n+2)(T1^6+T2^6).                             (7.6)
+
+The norm is a rooted local value norm on the fixed datum sup ball r2.
+Its two datum derivatives have exponentially weighted row sums with
+the same power after spending a fixed exponent reserve. In particular
+the first marked coarse Hessian is
+
+ D^2s2(0) + a local O(g^4(T1^6+T2^6)) kernel + a tail.             (7.7)
+
+On the l2 datum ball U2, the tail satisfies
+
+ ||D_v^2 partial_zeta^n D2(0,0)||_(l2,l2)
+        <= n! C^n g^(2n) (g Lambda2)^-2 epsilon2.                 (7.8)
+
+For infinity-norm directions a further dimension factor is required;
+it has not been removed by notation. As a whole-box carrier D2 must
+pay exp(kappa C_L(N1+N2)). The exponentially small terms in (7.4)
+can pay this and any specified fixed power g^p by enlarging T1,T2
+and Lambda1,Lambda2 consistently before the source arity is chosen.
+
+8. AN EXPLICIT EXTRACTION; WHAT IT DOES NOT PROVE
+
+Define the actual second generated action, up to displayed source-only
+Gaussian constants, by
+
+ W2(v;zeta)=W1loc(u2,*(v);zeta)
+             -log[A02(v)/A02(0)]
+             -F2(z(zeta),v;zeta)-D2(v;zeta).                     (8.1)
+
+This is an equality, not an arbitrary assignment of a running source.
+Its local unmarked part is bounded O(1)+O(g^2(T1^6+T2^6)); its marked
+local part has (7.6). Its complete quadratic extraction is the fixed
+Taylor projection
+
+ B2(zeta)=D^2 W2(0;zeta),
+ W2,rem(v;zeta)=W2(v;zeta)-W2(0;zeta)-DW2(0;zeta)v
+                                      -(1/2) v^t B2(zeta) v.     (8.2)
+
+This removes the declared jets exactly. They are not discarded. The
+unmarked local matrix B2 has bounded weighted rows and columns. On a
+next constrained flat fluctuation space, K_(L^2)+g^2 B2 retains its
+spectral gap for small g, using the gap of TURN41 and the small
+operator norm g^2||B2||; the tiny tail contributes its explicit norm.
+This does not assert its arbitrary-depth spatial locality.
+
+If a SCALAR source convention is desired, fix beforehand a bounded
+linear functional ell on Hessians with ell(D^2s2(0))=1. For example,
+choose a fixed compact datum q of nonzero curl and set
+ell(B)=B[q,q]/D^2s2(0)[q,q]; the denominator has a fixed lower bound
+by the energy comparison. Apply this SAME ell to
+C2(v,zeta)=L2(v,zeta)-L2(0,zeta):
+
+ zeta2(zeta)=ell[D^2 C2(0,zeta)],
+ R2,mark=C2-zeta2 s2.                                            (8.3)
+
+Then ell[D^2 R2,mark]=0 exactly and
+
+ zeta2'(0)=1+O(g^4(T1^6+T2^6))+the explicit tail contribution.    (8.4)
+
+All remaining quadratic directions stay in R2,mark. This functional
+is a fixed finite-step normalization; it is NOT a proof that the
+allowed gauge-invariant marginal space is one-dimensional, a native
+beta-function calculation, or a positive ultraviolet beta coefficient.
+The complete quadratic extraction (8.2) likewise is not a substitute
+for gauge-compatible relevant/marginal renormalization conditions.
+
+9. THE PRECISE FAILURE OF A NAIVE ARBITRARY-DEPTH ITERATION
+
+Two distinct issues remain and should not be conflated.
+
+(a) ANALYTIC TAIL DOMAIN. The inherited tail is known on an actual
+datum ball of radius c_j g_j Lambda_j, not the fixed radius of the
+local analytic family. Repeating the containment proof used here
+would demand, with a fixed margin,
+
+ Lambda_j >= A_j (g_(j+1)/g_j) Lambda_(j+1),      A_j>1.           (9.1)
+
+The enlarged l2 domain removes the earlier sqrt(N_j) factor. It
+does not remove A_j. Iterating this sufficient condition over k
+levels requires Lambda_1 >= (g_k/g_1) Lambda_k product_(j<k) A_j.
+Even fixed A_j=A>1 gives geometric cutoff growth. This is incompatible
+with the polylogarithmic cutoff regime of the present estimates when
+the number of scales grows along the expected weak-coupling trajectory.
+It is a failure of THIS verification scheme, not a theorem that the
+actual density has no larger useful domain or that YM4 is impossible.
+
+Keeping every calculation in fixed-size blocks removes a possible
+global-volume factor but does not by itself remove (9.1). The same
+strict contour margin and inherited radius are still present. A
+successful block reorganization must additionally give a local
+energy-conditioned analytic domain stable under the actual maps,
+or transport the small tails through a separate large-field/real
+measure estimate without repeatedly imposing this nested ball
+criterion. Neither follows merely by calling a box a block.
+
+(b) UNIFORM LOCAL CLASS. The second KKT proof legitimately uses the
+known local K_L. Repeating it indefinitely needs uniform locality
+and a uniform nonlinear datum radius for the changing direct coarse
+classical actions and their generated analytic families. At arbitrary
+depth on a fixed-crossing box, TURN42 proves normal boundary screening
+but leaves the along-boundary projection estimate open. Its exact
+identity K_K-K_per=L^*(I-Pi_K)L does not bound distant shallow-boundary
+entries of Pi_K. Positivity, the gap, and the normal screening bound
+alone do not supply that missing spatial estimate.
+
+The two-step substitutions also spend definite analytic-radius and
+carrier-exponent reserves. A fresh uniform direct-scale theorem or
+contraction/renormalization mechanism is needed before those losses
+can be iterated without degeneration. This note supplies neither the
+native carrierwise gauge identities with independently varied
+background/current fields nor control of all relevant and marginal
+terms. Nor does it cover interrupted/large-field histories or prove
+a nonzero separated continuum observable.
+
+CONCLUSION
+
+The first generated interaction is not an unspecified hypothesis at
+the SECOND regular step: its fixed-domain catalogue, its physical
+source marks, its tail domain, and the second constrained gap have
+been identified and checked. The resulting exact density is (7.3),
+with source identity (7.5) and local summable-power response (7.6).
+The l2-domain improvement avoids an artificial square-root-volume
+loss. Uniform depth, native all-history identification, and continuum
+nontriviality remain open; no full existence proof is claimed.

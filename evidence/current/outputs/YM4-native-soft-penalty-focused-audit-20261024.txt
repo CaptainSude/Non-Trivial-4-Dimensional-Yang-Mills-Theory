@@ -1,0 +1,202 @@
+SOFT PRIOR-MASK PENALTIES: NATIVE GEOMETRY AND FINITE FORM AUDIT
+24 October 2026. audit_two_root. No archive/output edits.
+
+STATUS
+
+Scoped PASS for the parent's proposed soft-penalty route to a
+volume-uniform UNWEIGHTED Poincare inequality on the actual first
+guarded prior-mask domain. This audit checks the proposal as supplied
+in the parent's message and the native geometry proved in
+native_prior_domain_geometry_20261024. It is not a claim to have read
+a later saved root proof before that file exists.
+
+The derivation below also explains why no uniform global success
+probability, no rare-boundary trace shortcut, and no smoothness of
+the hard intersection boundary are required. Spatial covariance and
+arbitrary principal conditional versions are not established.
+
+1. PRECISE INPUTS
+
+On the same containing product K=product_i B_S, let H be the COMPLETE
+first source-zero action with base Hessian lower bound lambda>0 and
+the already audited weighted accretivity for slow spatial weights.
+Let r_j=|w_j|, cutoff s0=2 arcsin(epsilon0/2)/g0, with true first
+finite noise reads T_j and incidence bounded by B_L. Hold the actual
+guarded retained collar. The geometry note proves, throughout K,
+whenever r_j>=s0,
+
+ D^2 r_j[v,v]>=-C_L g0 |v_(T_j)|^2,                         (1)
+ grad r_j dot x>=c s0.                                    (2)
+
+The first inequality is ambient, not only tangent. It follows from
+the positive semidefinite norm-Hessian term plus D^2w_j=O(g0).
+The second follows from the baseline core margin and
+g0 S^2/s0=O(epsilon0). Both hold OUTSIDE the cut up to the containing
+radius, precisely where a penalty is active. Zero flat-row tests
+remain strictly redundant throughout K and can be omitted.
+
+For a read T_j choose chi_i=exp[-eta dist(i,T_j)] and X_i=chi_i x_i.
+Fixed read diameters and sufficiently small fixed eta give
+
+ X dot grad r_k>=0 whenever r_k>=s0, for EVERY k,
+ X dot grad r_j>=c s0 whenever r_j>=s0,
+ div X<=C, |X|<=C S,
+                 div X-X dot grad H<=C(1+r^2).              (3)
+
+The last inequality uses the complete base weighted accretivity and
+the true baseline force |grad_i H(0,z)|<=Cr. It does not require
+weighted accretivity of the penalized action. All constants include
+the finite spatial sums of chi and are independent of volume.
+The ratio S/s0 is fixed; (1+r^2)/s0<=C(1+r) at r>=1.
+
+2. UNIFORM PENALTY MOMENT INEQUALITY
+
+Let psi_t be smooth, convex and nondecreasing, zero on (-infinity,0],
+and tending to infinity for each positive argument as t increases.
+For example psi_t(u)=t(u_+)^4 is C2. Define
+
+ H_t=H+sum_k psi_t(r_k-s0),       dmu_t=Z_t^-1 e^(-H_t)1_K dx.
+
+Although r_k is nonsmooth at w_k=0, its composed penalty is identically
+zero on a neighborhood there. Thus H_t is C2 on the required real
+chart. This construction does not complexify a hard mask or change
+the target original source-zero scalar.
+
+The product outer boundary has X dot n>=0, since on its i-th spherical
+face the flux is chi_i S. Integration of div(f^2 X e^(-H_t)) gives
+
+ E_t[f^2 X dot grad H_t]
+                  <=E_t[2 f X dot grad f+(div X)f^2].
+
+Every penalty contribution on the left is nonnegative by(3). Keep
+the j-th one and move the BASE H term to the right. Then
+
+ c s0 E_t[psi'_t(r_j-s0) f^2]
+       <=C S E_t[|f||grad f|]+C(1+r^2)E_t f^2.
+
+For every fixed a>0, Young's inequality therefore gives
+
+ E_t[psi'_t(r_j-s0) f^2]
+       <=C a E_t|grad f|^2+C(a^(-1)+r)E_t f^2.             (4)
+
+This holds for arbitrary scalar f; it does not assume a boundary
+condition on f. The normalization cancels from the divergence identity.
+There is no factor t, no count of all masks, and no inverse success
+probability in(4). A function concentrated at the boundary is handled
+by its gradient term, rather than by a false rare-mass trace bound.
+
+3. BOCHNER ABSORPTION
+
+The exact ambient penalized Hessian is
+
+ H_t''=H''+sum_j [psi''_t grad r_j tensor grad r_j
+                                      +psi'_t D^2 r_j].
+
+Its first added term is positive semidefinite. Hence (1) gives
+
+ v^T H_t''v>=lambda |v|^2-C g0 sum_j psi'_t |v_(T_j)|^2.   (5)
+
+Apply(4) to each scalar component v_i,a for i in T_j and sum j.
+The bounded incidence, not the number of masks, gives
+
+ sum_j E_t[psi'_t |v_(T_j)|^2]
+   <=C B_L a E_t|grad v|^2
+                  +C B_L(a^(-1)+r)E_t|v|^2.              (6)
+
+For v=grad u the ordinary Bochner identity on a smooth convex
+containing domain has a nonnegative outer Neumann boundary term.
+Equations(5)--(6) yield
+
+ E_t(L_t u)^2
+ >=[1-C g0 B_L a] E_t|D^2u|^2
+       +[lambda-C g0 B_L(a^(-1)+r)] E_t|grad u|^2.         (7)
+
+Take a=1 and then the weak floor so g0 and g0 r are small relative
+to the fixed constants. The last bracket is at least lambda/2 and
+the first at least1/2. Applying(7) to a first nonconstant Neumann
+eigenfunction gives spectral gap at least lambda/2, uniformly in
+t and in the active volume. Equivalently
+
+                  Var_(mu_t) f<=2 lambda^(-1) E_t|grad f|^2. (8)
+
+One can avoid any product-corner regularity shortcut. For fixed finite
+I first work on the smooth convex domains
+
+           K_p={sum_i (|x_i|/S)^(2p)<1},
+
+with integer p, and then let p tend to infinity. These increase to
+the product interior. Their boundary also has X dot n>=0 because
+each defining-gradient block is a positive multiple of x_i.
+All preceding bounds hold with the SAME constants on K_p. The
+smooth convex Bochner boundary is nonnegative. Dominated convergence
+then passes(8) to the product. No enlarged physical chart or hard
+intersection smoothing has been introduced by this step.
+
+4. THE ACTUAL HARD-DOMAIN LIMIT
+
+At fixed finite volume, exp[-sum psi_t] decreases to the original
+prior-success indicator, up to its measure-zero cut boundaries.
+The common core proved in the geometry note has positive mass, so
+the limiting raw normalizer is nonzero. No volume-uniform lower bound
+on its ratio to the full product normalizer is needed for this limit.
+Dominated convergence passes(8) to the actual normalized D law for
+smooth ambient tests, and the usual form closure gives its Neumann
+Poincare inequality. The exact original exterior raw normalizer
+remains the one defining that conditional law.
+
+Thus this route does not require N exp(-c r^2) small. Such a size
+condition belongs to the separate finite inclusion-exclusion source
+comparison, not to the uniform penalty absorption proved here.
+
+5. LIMITS OF THE PASS
+
+The baseline margin and native full-chart bounds concern the actual
+guarded first fiber. After arbitrary additional coordinates are fixed,
+that margin can disappear; this argument is not an automatic principal
+conditional theorem. Likewise the weighted base covariance theorem
+cannot simply be applied to H_t.
+
+Specifically, the positive rank-one Hessian term in(5) becomes under
+spatial diagonal conjugation
+
+        psi''_t (W grad r_j)(W^(-1) grad r_j)^T.
+
+Its symmetric part need not be positive when grad r_j has more than
+one site and the weights differ. For the actual flat plaquette pattern
+grad r proportional to (n,-n), unequal weights already give a negative
+eigenvalue. Its magnitude grows with psi''_t, so a fixed small spatial
+rate does not alone give a bound uniform in t. This is the soft-penalty
+version of the hard multi-site tangent-space obstruction.
+
+No exponential spatial decay, boundary-source cancellation, or fourth
+power source-age estimate is claimed by this audit. The unweighted
+uniform gap is the finite/native consequence that has been checked.
+
+6. READBACK OF THE SAVED ROOT PROOF
+
+After the preceding proposal audit, I read the complete saved file
+native_mask_soft_penalty_poincare_20261024.txt, Sections1--6. Scoped
+PASS: no substantive correction is needed. This paragraph supersedes
+the initial provenance qualification only as to which file has now
+been read; all limitations above remain in force.
+
+The saved proof explicitly uses the full ambient lower bound for
+D^2 q_j throughout the active penalty region, the complete-action
+weighted drift, bounded read incidence, and the correct sign of the
+discarded outward flux. Its smooth convex exhaustion Omega_p is
+increasing: the finite-block l_(2p) norm decreases to the maximum
+block norm. Each finite-p boundary is smooth because its defining
+gradient cannot vanish on its unit level. X^j has nonnegative flux
+there, so both integrations by parts use the same constants. Taking
+p to infinity at fixed t and then t to infinity is legitimate at
+each fixed finite volume and preserves the exact normalizer. The
+finite-volume spectral and approximation arguments do not introduce
+a volume-dependent constant into the final inequality.
+
+The remote-defect extension is asserted only when the SAME local
+certificate, complete action match, fixed local coarse reference,
+baseline margin and containing-chart hypotheses apply. It does not
+cover the complement of that certificate. The saved proof also
+retains the distinction between this uniform unweighted gap and the
+separate finite-size spatial replica theorem. No new native or
+all-scale assertion is supplied by this readback.

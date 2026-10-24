@@ -1,0 +1,202 @@
+SUPPLEMENTAL FINITE-DIMENSIONAL CHECK OF THE NATIVE GAUSSIAN REDUCTION
+24 October 2026. connected_energy, author of the producer.
+This is a supplemental stress test, NOT an independent audit.
+
+Target: native_gaussian_soft_reduction_20261024.txt, especially(10)--(17).
+Conclusion: no defect found on the stated injective locus and its
+compatible analytic continuation. The direct Gaussian calculation,
+the metric/dimension counts, and the actual moving-background B
+normalization agree. A concrete isolated rank-deficient example below
+shows that the continuation hypothesis is genuinely needed.
+
+1. DIRECT FULL-COORDINATE GAUSSIAN, WITHOUT GHOST DETERMINANTS
+
+Retain finite real bond spaces E,E_c and site spaces S,S_c, the literal
+restriction r:S->S_c, and D_b=D|ker r. Let n=dim E, n_c=dim E_c,
+b=dim ker r. Assume the producer's native constrained gap, C surjective,
+and the actual contour derivative T:E->ker r with T D_b=-I.
+Let R_g be any positive gauge metric on ker r, not necessarily I.
+
+Choose an auxiliary positive target quadratic q_+. Define
+
+ F=Hcal+C^T q_+ C+T^T R_g T.                              (A)
+
+This replacement of the target quadratic changes nothing under
+delta(Cx): the original Lagr=Hcal+C^T q C has the same restriction
+to Cx=0. The constraint-current term in Hcal is NOT changed or
+discarded. The gap and T D_b=-I make F positive, even if the original
+unconstrained coarse Hessian q itself was not positive.
+
+The elementary Fourier/coarea Gaussian formula gives exactly
+
+ int_E delta(Cx) exp(-x^T F x/2) dx
+ = (2pi)^((n-n_c)/2)
+      [det F det(C F^-1 C^T)]^-1/2.                       (B)
+
+Normalize by the original based gauge Gaussian
+ (2pi)^(b/2)(det R_g)^-1/2.
+Apart from the separately retained original Haar/row constants, the
+result is therefore
+
+ (2pi)^((n-n_c-b)/2)
+  [det R_g / {det F det(C F^-1 C^T)}]^1/2.                (C)
+
+This is a direct scalar test of every alleged ghost/coarea formula.
+It uses the original full-coordinate delta, so it already contains
+the inverse-pivot Jacobian. Adding another private-pivot determinant
+after(B) would be double counting.
+
+An equivalent formula is obtained by an orthonormal frame N for ker C:
+
+ det F det(C F^-1 C^T)=det(CC^T) det(N^T F N).             (D)
+
+Thus(B) is exactly the ordinary coarea density times the constrained
+Gaussian. In particular it is independent of q_+, as it must be.
+The factor det R_g in(C) cancels the based-gauge metric dependence:
+on ker C the gauge orbit coordinates enter T with coefficient -I,
+and their Gaussian integral contributes (det R_g)^-1/2 before the
+original normalization. There is no background-dependent determinant
+of the contour gauge to insert when T D_b=-I.
+
+2. RECONCILIATION WITH(10)--(17)
+
+On the injective locus use orthonormal fine/coarse horizontal frames
+U,U_c and G=D^T D, G_c=D_c^T D_c. The full coordinate map
+ x=U z+D(lambda_b,lambda_c)
+has Jacobian sqrt(det G). The target map
+ y=U_c eta+D_c lambda_c
+has Jacobian sqrt(det G_c). Its delta imposes the physical constraint
+A z=0 and fixes the center variables; it does NOT produce a second
+integration over coarse gauge orbits. Integrating lambda_b against the
+original normalized gauge factor gives one. This recovers from(C)
+
+ I_unit^2=(det G/det G_c) a^(n_c-s_c)/det Qperp,
+
+where I_unit omits only the fixed (2pi) and original origin-density
+factors and Qperp=Hperp+a A^T A. The physical section killed by Hperp
+gives A Qperp^-1 A^T=a^-1 I, so every auxiliary a factor is fixed.
+
+The producer's vertical Schur decomposition then gives
+
+ det Q_B=a^s_c det G_B det G_c det(B G^-1 B^T) det Qperp.
+
+The Jacobi identity is checked in the orthonormal site frame
+ [V, B^T(BB^T)^-1/2]:
+
+ det(B G^-1 B^T)=det(BB^T) det G_B/det G.
+
+Consequently the direct amplitude(C) equals
+
+ I_unit=a^(n_c/2) det G_B det(BB^T)^1/2 det Q_B^-1/2.      (E)
+
+This fixes the ghost power ONE, the target dimension n_c (not only
+its horizontal dimension), and the block row determinant. In particular
+det Q_B is proportional to a^n_c on this locus; (E) is independent of
+the auxiliary positive a. The scalar prefactor is not an assumed
+gauge volume.
+
+In four dimensions BB^T=mu^4 I and
+ Ghat=P G P+mu^2 Pi
+has det Ghat=mu^(2s_c) det G_B. Thus
+ det G_B det(BB^T)^1/2=det Ghat,
+exactly, and (E) is the raw antecedent of normalized(17). All powers
+of K are accounted for before taking flat subtraction.
+
+3. FINITE MATRIX STRESS TEST
+
+I generated 216 compatible real finite systems using independent
+orthogonal fine/coarse frames, nontrivial positive Gram matrices G,G_c,
+arbitrary horizontal/coarse-gauge cross rows, arbitrary B with
+BB^T=mu^4 I, and arbitrary positive target q_+. Hcal was positive on
+the residual physical complement and annihilated both the gauge
+space and a genuine right-inverse section H. The random Z obeyed
+Z D=r-B, hence Cbar=C-D_c Z had the exact native algebraic identities.
+
+Dimensions tested included:
+ (b,s_c,h_c,h_f)=(3,2,3,7),(1,1,1,2),(5,3,4,8),
+                 (0,2,3,5),(2,2,0,4),(2,1,3,3),
+at K=1,3,5, with 12 realizations each. Thus the check includes no
+based variables, no coarse horizontal variables, and no residual
+physical variables. Empty determinant blocks were interpreted as one.
+
+Compared independently:
+ * the direct formula(B), divided by its fixed dimension factor;
+ * physical horizontal formula(10);
+ * vertical determinant identity(13);
+ * raw mean-zero formula(15);
+ * the exact d=4 Ghat form preceding(17).
+
+Maximum absolute log-determinant discrepancy: 8.984e-11.
+Maximum residual in the defining matrix identities: 1.285e-14.
+This numerical check is not the proof. Its purpose is to catch a
+missing determinant power, center dimension, or coarea normalization;
+the exact algebra above supplies the proof.
+
+4. RANK CASES: WHY COMPATIBLE CONTINUATION IS ESSENTIAL
+
+The displayed linear identities alone do not justify applying(15)
+on an arbitrary isolated rank-deficient stratum. For example take
+ E=E_c=S=S_c=R, r=C=H=Cbar=1,
+ D=D_c=Hcal=0, B=mu^2, Z=0, mu!=1.
+All the listed residual/intertwining identities hold and CH=1.
+There are no based variables, Q_B=a>0 and Ghat=mu^2>0. The original
+delta integral is 1, whereas the raw RHS of(E) is mu^2 if its fixed
+origin/dimension normalization is set to 1.
+
+This does NOT contradict the producer: this point is not a compatible
+limit of injective data with these same limits. In the scalar injective
+case CD=D_c r implies D_c=C D; Cbar D=D_c B then forces Cbar=C B.
+At the displayed point that would require 1=mu^2, impossible. The
+example demonstrates the necessity of the producer's actual native
+injective open locus and common analytic continuation, rather than
+allowing the identities to stand in for that argument.
+
+Likewise the residual identities by themselves do not imply a gap:
+Hcal could vanish on extra unconstrained physical directions. The
+actual constrained Hessian gap is an explicit separate input. Native
+SU(2) near-flat data has a compatible injective locus, and the complete
+Gaussian/Ghat/Q_B are jointly analytic and nonsingular at flatness at
+fixed finite depth. The producer uses precisely that stronger setting.
+An everywhere Abelian/trivial adjoint model must not be assigned the
+same raw all-site count by this continuation argument without its own
+stabilizer normalization.
+
+5. EXACT MOVING-BACKGROUND NORMALIZATION OF B
+
+This premise is exact, not a perturbation estimate. At any real
+admitted primitive background, the actual endpoint average has
+
+ B_j(y,x)=L^-4 Ad(P_j(y,x)), x in B_L(y), and zero otherwise.
+
+The blocks are disjoint. Each P_j(y,x) is a single GROUP-VALUED
+averaged endpoint transport, not an arithmetic average of adjoint
+matrices. Therefore Ad(P)Ad(P)^T=I in the native invariant color metric,
+and direct row multiplication gives
+
+ B_j B_j^T=L^-8 L^4 I=L^-4 I.
+
+At their actual successive ordinary backgrounds,
+
+ B_tot B_tot^T
+ =B_(p-1)...B_1 (B_0 B_0^T) B_1^T...B_(p-1)^T
+ =L^-4p I=K^-4 I.
+
+No equality between the backgrounds of different factors is needed.
+No global gauge choice or flat approximation is used. Equivalently
+the unique nested scalar block path gives coefficient K^-4 times
+the adjoint of the product of its actual endpoint transports; the
+supports of distinct final rows remain disjoint.
+
+For the holomorphic continuation, transpose remains the analytic
+bilinear transpose. Ad of the complexified group preserves the
+complexified invariant bilinear form, so the identity continues
+exactly as B_tot B_tot^T=K^-4 I. It is not a complex Hermitian norm
+identity; the separately proved uniform complex bounds are still
+needed for operator estimates. This confirms the premise in the
+native moving-map and affine-interface notes at their stated fixed
+ownership and homogeneous ordinary scope.
+
+Supplemental verdict: the exact native reduction survives these
+checks. The native continuation and constrained gap hypotheses are
+essential and must remain stated. No independent audit status is
+claimed by this author-generated stress test.

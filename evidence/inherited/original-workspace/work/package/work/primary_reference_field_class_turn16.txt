@@ -1,0 +1,441 @@
+PRIMARY REFERENCE FIELD CLASS; A SMALL-FIELD LIFT ROUTE
+19 October 2026. Turn 16. balaban_inputs.
+
+Status
+
+The original reference input is substantially weaker than the later
+independently reconstructed mixed-history classes. The primary B109
+definition and its stated smaller-constants criterion give a useful
+admission route: control a fine field, its first derivatives in a common
+gauge, and its actual Wilson current; all the required derived-minimum
+tests then follow. This criterion is primary, not an inferred replacement
+of the derived tests by a C1 estimate.
+
+The compact-bubble coarse-coordinate lift in Sections 4--5 is a separate
+construction. Section7 now proves its formerly isolated uniform ordinary
+averaging estimate directly from the primary one-step definition. No
+C^k estimate is used. Section8 identifies a simpler alternative using the
+primary homogeneous constraint chart: for the reference before II(1.10),
+the fine field is an AUXILIARY lift of current Vk, not an independently
+specified fine boundary of the local minimum.
+
+1. Sources and provenance
+
+B109 = Balaban, CMP109 (1987)249--301, pp261--263,
+especially (1.8), (1.10)--(1.16) and the paragraph immediately following
+(1.16). Primary PDF text inspected through:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+
+B122-II = CMP122 (1989)355--392, pp356--359, especially the paragraph
+preceding (1.10), and (1.12)--(1.13):
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+
+B119 = CMP119 (1988)243--285, p261, (2.34)--(2.39):
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+
+CMP102 = Balaban, CMP102 (1985)277--309, Proposition9, p309,
+with (190), p308. PRIMARY scan recovered by admission_proof:
+https://backend.production.deepblue-documents.lib.umich.edu/server/api/core/bitstreams/458f3d2e-742f-431d-8c7e-14f4f8ad3c3f/content
+Local PDF/text: work/admission_sources/cmp102_variational_primary.pdf/.txt.
+I viewed the rendered p309. Admission independently viewed all five
+derivative inequalities on p308. Earlier Raw I reconstructions are not
+being substituted for this primary statement.
+
+Some powers of the fine spacing in B109's web text are damaged by OCR.
+The domain summary below uses physical scale normalization rather than
+guessing those glyphs. Its four logical clauses and the smaller-constants
+criterion are legible in the primary text.
+
+2. What the original domain actually asks for
+
+On X at the indicated fine spacing, B109 first treats (U,J) as an
+independent pair, U group-complex-valued and J Lie-algebra-complex-valued.
+Both transform in the stated gauge-covariant way. Its domain is the
+union of complex gauge orbits of pairs admitting the following data:
+
+(i) A real compact-group factor with small plaquette curvature and a
+    small potential and first differences in a real gauge on each of
+    the prescribed local cubes.
+(ii) A complex relative exponential factor, with small potential and
+     first covariant differences relative to that real factor.
+(iii) The curvature of the full field and the independent current are
+      bounded by their prescribed constants.
+(iv) For the maximal native nested determining family on X, and each
+     initial subsequence, the corresponding axial-gauge minimum formed
+     from the actual averaged datum has both curvature and PHYSICAL
+     current bounds on the two-layer inset. The same derived tests are
+     imposed on the real factor.
+
+Thus (iv) is not merely stationarity of U, and (iii) does not set J=0.
+The special fine-field section is J=J_W(U), the Wilson first variation
+in the source convention. Fine boundary/exterior slots are not erased:
+the minimum tests use the declared native domains and their supplied
+boundary data. The two-layer inset is part of the definition, not a
+license to choose unrelated boundary fields.
+
+The paragraph after (1.16) states a SUFFICIENT SUBCLASS: sufficiently
+smaller constants in (i)--(iii) imply (iv). Its proof uses the bound on
+the averaged datum and CMP102 Proposition9. It then explicitly treats
+the physical-current section, requiring the corresponding current
+bound also for the real factor. This is the route applicable to a fine
+field perturbation below.
+
+The reference paragraph before B122-II (1.10) substitutes V_k=M^k(U)
+with U in the original complex regular field class. It does not impose
+an arbitrary new independent mixed-current rider there. For safety the
+present sufficient admission uses the physical-current section of the
+original pair class. It does not identify every later occurrence of
+the same shortened U-notation with every graded or arrested domain.
+
+B119 (2.34)--(2.39) separately describes multiscale original-domain
+conditions for the induction. They include tiered curvature/current
+tests and local gauge bounds. A reference-input theorem must not be
+strengthened to that complete mixed-history setting merely because
+both domains use the letter U.
+
+3. What CMP102 Proposition9 adds, and what it does not
+
+The actual minimum in axial gauge extends analytically in relative
+complex determining data. In its stated Landau representative, its
+logarithmic response H(B) obeys the earlier field estimates, and its
+functional derivative obeys (190). These include covariant second
+derivative/current-type control and a Laplacian bound. Their kernel
+scales have output length to power -3 and source length to power -d,
+times the displayed exponential distance factor.
+
+The theorem also specifies regularity assumptions on its external
+background. It therefore supplies more than just a C1 map, but it does
+not say that an arbitrary graded-tower minimum is homogeneous on its
+artificial rim. In particular it does not remove the anchor mismatch
+in Section4 of native_reference_score_attempt_turn15.txt by itself.
+
+4. Compact C2 perturbations preserve the smaller fine-field subclass
+
+Here is a direct local admission lemma, independent of minimization.
+Use units in which the chosen current block has size one and fine
+spacing eta. Assume a REAL fine anchor U_* has strict margin in the
+smaller (i)--(iii) subclass, including its actual current, on the ENTIRE
+target domain X (Z for the reference application). Separately choose
+one real coherent gauge on the complete protected perturbation/read
+patch. The global smaller-subclass condition is essential for invoking
+the primary sufficient criterion for every derived minimum on X.
+Let a(z) be holomorphic for |z|<r, real for real z, supported with its
+full Wilson stencil strictly inside the patch, and satisfy
+
+     ||a(z)||_infty + ||nabla_eta a(z)||_infty
+             + ||nabla_eta^2 a(z)||_infty <= C_a |z|.       (4.1)
+
+Set U(z)=exp(i eta a(z))U_*. The fixed real factor is U_*. Thus the
+complex-factor condition follows directly from (4.1), and the real
+factor's derived tests have not changed. The plaquette difference is
+bounded by C|z| in physical curvature units.
+
+The actual current difference is bounded by C|z|, uniformly in eta.
+There is a direct PRIMARY identity for this step: B109(3.11), p272,
+states J_W(exp(i eta a)U)-J_W(U)=D_U*D_U a+F(U,a), where F is local
+in U, its plaquette, a and its first covariant derivative, and F(U,0)=0.
+Its native analytic bounds are uniform in eta. The coherent C1 bound
+on the anchor controls D_U*D_U a by the ordinary C2 norm of a. Thus
+this displayed source identity proves the required current bound
+without differentiating the anchor curvature. Equivalently, one can
+see the same bound from the Wilson first variation: its derivative
+is the covariant second-difference Hessian acting on a, plus curvature
+times a and bounded coordinate/parallel-frame terms. In one coherent
+weak gauge the bound is
+
+ ||D J_W(U)[a]||_infty <= C[||nabla_eta^2 a||_infty
+   +(1+||A_U||_infty)||nabla_eta a||_infty
+   +(||nabla_eta A_U||_infty+||A_U||_infty^2
+                   +||J_W(U)||_infty)||a||_infty].         (4.2)
+
+All terms are local finite-difference/product identities; the second
+derivatives fall on the perturbation, not on the anchor potential.
+Integrating along t a and using Gronwall absorbs the current term.
+This gives the asserted uniform difference bound on a fixed weak ball.
+The same argument is holomorphic with absolute norms for complex z.
+
+Choose r below a fixed multiple of the smallest original margin divided
+by C_a. The primary B109 smaller-constants criterion then proves ALL
+derived-minimum conditions (iv) for U(z). No new minimum output or
+independent-current projection has been used. The fixed exterior is
+literally unchanged, since the perturbation and its full stencil vanish
+before that exterior. The complete gauge patch, and not an unrelated
+cover by several gauges, is essential.
+
+5. Exact-coordinate construction; separated from admission
+
+To turn Section4 into a lift of ONE specified current link, it remains
+to produce a(z) satisfying (4.1) and the exact M^k constraints. At the
+flat adjusted-average level this is elementary. Two smooth interior
+bumps per direction have linearly independent affine-hat moments for
+the incoming/outgoing incident rows. The resulting 2d dim(g) matrix is
+uniformly invertible under refinement. Smooth bumps supply C2 rather
+than merely C1 bounds. Control ALL incident rows, not only the target.
+
+Explicitly put N=L^k=2m+1 and label the longitudinal fine tail sites of
+the centered owner block by j=-m,...,m. In the normalized k-step
+straight-string average, their outgoing and incoming row weights are
+(j+m+1)/N and (m-j)/N. They sum to one. This identity follows either by
+counting translated length-N strings or by multiplying the one-step
+uniform-average generating polynomials. Choose two fixed nonnegative
+smooth longitudinal bumps supported in [1/8,3/8] and [-3/8,-1/8], and
+one common smooth transverse bump supported strictly inside the owner
+block. Take the longitudinal bumps strictly positive at EVERY point of
+the respective open interval (the usual smooth exponential bump), and
+the transverse factor strictly positive on (-3/8,3/8). Thus the positive
+longitudinal bump includes 2/11 and 3/11. Normalize their discrete masses.
+The corresponding outgoing
+weighted means differ by at least 1/4: every point in the first support
+has normalized longitudinal coordinate at least 1/4 greater than every
+point in the second. The incoming means are their complements. For
+N>=L>=11 every longitudinal interval contains fine sites, so every
+discrete mass is positive. Riemann-sum convergence supplies a uniform
+positive lower bound for all large N; the finitely many remaining N
+have a positive minimum. The same argument applies transversely. The
+two masses are also uniformly bounded above. The determinant is therefore bounded away from zero
+uniformly in k. Multiplying the fixed smooth shapes by its inverse
+gives uniform physical C2 bounds. At k=0 the map is the identity on
+current links; use the target fine-link coordinate directly instead
+of a fictitious interior continuum bump, with its enlarged protected
+Wilson stencil. Strict owner-cell interior support is not claimed in
+that k=0 case. It has its own finite uniform constants.
+
+The ordinary average is not identical to that adjusted average. Its
+flat endpoint-contour terms add a coarse gauge gradient d_c chi_k(a).
+For a bubble in one block, chi_k is supported at that block's coarse
+vertex. A compact smooth fine gauge parameter lambda with the opposite
+value there and zero at the other coarse vertices cancels this gradient,
+because ordinary gauge covariance gives
+
+                  Q_ord d lambda = d_c lambda|coarse.
+
+This repairs the flat right inverse and keeps compact support. It is
+not permissible to omit this correction and declare the straight-string
+matrix to be the literal ordinary averaging matrix.
+
+The nonlinear finite-dimensional inverse follows when the actual iterated
+ordinary averaging has the uniform smooth-bubble comparison
+
+  ||D M^k(U_*) E_ord - D M^k(1) E_ord|| <= C a_*             (5.1)
+
+and a uniform holomorphic second derivative on the fixed finite bubble
+ball, independent of k. Then finite-dimensional inversion gives a(z)
+with (4.1), exact prescribed target row, every other affected row fixed,
+and all unaffected rows unchanged by endpoint-block locality.
+
+Section7 proves (5.1) from the literal ordinary one-step averaging and
+its gauge covariance. It uses a bounded-potential holomorphic map and
+Cauchy; it does not propagate C2 norms through every intermediate step.
+C2 is needed only for the finitely many INPUT bubble shapes. Merely
+multiplying a fixed one-step constant would yield C^k and is invalid.
+
+This closes the compact construction for an anchor with strict smaller-
+subclass margin throughout the target X, a small coherent gauge on the
+COMPLETE finite dependency collar, and protected variable support. It is not an admission theorem
+for arbitrary overlapping weak gauges or independently supplied mixed
+current riders.
+
+Unchanged exterior field values do not imply unchanged derived minima.
+If the anchor outside the patch is only in the larger admitted class,
+the global smaller-constants implication cannot be used there. That
+weaker anchor would need a separate response estimate for all derived
+tests. Alternatively restrict the target X itself to the protected patch.
+
+Independent audit: work/compact_native_lift_independent_audit_turn16.txt
+checks the ordinary trajectory, exact flat weights, gauge correction,
+finite implicit inverse, support and actual-current estimate. It finds
+no remaining mathematical gap at the stated smaller-subclass/coherent-
+protected-collar scope. That audit does not assert all-history coverage.
+
+The one coherent gauge covers the owner block, all incident endpoint
+blocks read by M^k, and the fine stencil of the bubble. In that gauge
+the original anchor potential need not be defined globally: for the
+averaging estimate it can be extended by zero beyond the complete
+dependency collar, since Section7 requires only a sup bound there.
+No derivative of that artificial extension is used. For the current
+estimate all nonzero bubble/current stencils lie in the original
+coherent patch. Transforming back by its fixed real gauge preserves
+the original native covariant norms and exact coarse data. Fine exterior
+links outside the bubble support are unchanged. All other current
+coarse rows, including the rest of the incident star, are held fixed.
+
+Quantitatively, let a_margin be the smallest reserved allowance in the
+smaller original curvature, complex-C1 and physical-current bounds,
+in owner-block units. Let C_E bound the fixed bubble family in C2 and
+let C_J be the constant of Section4. The finite implicit-function
+argument can be run with ||t(z)||<=2|z| and hence
+||a(z)||_C2<=2C_E|z| on a disk
+
+             |z| < c min(r_geom, a_margin/(C_E(1+C_J))).
+
+Here r_geom and c depend on the fixed primitive L, group, chosen shapes
+and coherent patch constants, not on k or eta. A finite vector of
+incident-row parameters has the same conclusion in its fixed-dimensional
+sup ball. The target one-coordinate path is obtained by setting the
+other output increments to zero, not by neglecting their responses.
+
+6. Consequence for the reference score when a lift is available
+
+For either a certified exact-coordinate lift or any already specified
+admitted compact C2 path, the score result of turn15 applies on radius r:
+
+  sd_s(partial_z log w) <= C/r,
+  |Cov_s(f(Phi),partial_z log w)| <= C (g/r) Lip(f).
+
+The reference cutoff, geometry, gauge slice and relative Haar variables
+stay fixed. Constants depend on current geometry and reserved margins,
+not prior refinement. The baseline derivative E_s partial_z f(Phi)
+remains separate. No statement about moving branch selection, remote
+exponential decay, or the full R joint law follows from this local result.
+
+7. Uniform ordinary iterate: proof from B109(0.8),(0.11),(0.12)
+
+This section supersedes the conditional status of (5.1) in the first
+version of this note. It is an independent finite-dimensional argument
+from the actual primary ordinary average M. It does not identify the
+auxiliary corrected map below with the source's background-dependent Q.
+
+Fix the primitive odd L. At ONE step let U(y,x) be the averaged contour
+variable of B109(0.11). On a sufficiently small complex link-angle ball
+define
+
+ a(V;y)=exp[ average_(x in B(y)) log U_V(y,x) ],
+ C(V)(c)=a(V;c_-)^{-1} M(V)(c) a(V;c_+).                    (7.1)
+
+The one-step formulas involve finitely many links at fixed L and are
+holomorphic on a fixed ball. At V=1 the first differential of log M is
+the translated straight-string mean plus the averaged incoming endpoint
+contour minus its outgoing counterpart. This follows by differentiating
+the products/logarithm in (0.12), using the arithmetic-mean derivative
+(0.8) for (0.11). The two endpoint terms cancel in (7.1). Hence, in
+physical units, the first differential of C is Q_st, a positive normalized
+straight-string average with sup operator norm exactly one.
+
+For a fine spacing h set
+
+ F_h(A)=(i L h)^{-1} log C(exp(i h A)).
+
+A fixed-dimensional Taylor/Cauchy estimate gives
+
+ F_h(0)=0, DF_h(0)=Q_st,
+ ||DF_h(A)||_(infty->infty) <= 1+C_L h||A||_infty,         (7.2)
+
+on h||A|| below a fixed radius. The factor h is genuine: a term of
+degree n in the dimensionless link angles contributes h^(n-1) after
+division by Lh. The finite-dimensional norm is the complete link sup
+norm; its dimension depends on L only.
+
+Starting at eta=L^-k and h_t=L^t eta, iterate C with reference1 at every
+step, C_t=exp(i h_t A_t). Equation(7.2) gives
+
+ a_(t+1)<=a_t+C_L h_t a_t^2,
+ sum_(t<k)h_t=(1-eta)/(L-1).
+
+For sufficiently small a_0, a standard bootstrap gives a_t<=2a_0
+simultaneously for all k and all t<=k. This is valid for complex fields.
+
+The ordinary average is exactly gauge covariant by the product formula
+and similarity covariance of its analytic logarithms/group means.
+Define g_0=1 and, at each surviving coarse vertex,
+
+              g_(t+1)=g_t a(C_t).
+
+Then induction gives the EXACT ordered identity
+
+                     M^t(U)=C_t^{g_t}.                    (7.3)
+
+Each elementary contour has fixed length at fixed L, so
+||log a(C_t)||<=C_L h_t a_0. Ordered products and inverses therefore
+satisfy ||g_t-1||+||g_t^-1-1||<=C_L h_t a_0. Combining with C_t gives
+
+ ||(i h_t)^-1 log M^t(exp(i eta A))||_infty<=K_L||A||_infty. (7.4)
+
+All logarithms stay on their original branch after one fixed reduction
+of a_0. The maps are holomorphic on that same complex sup ball, uniform
+in t,k and compatible volume. Neither the source Q nor physical-current
+estimates enter this purely averaging argument.
+
+At final h_k=1, Banach-valued Cauchy applied to (7.4) bounds the first
+two derivatives of P(A)=(1/i)log M^k(exp(i eta A)) uniformly. For a
+coherent anchor U_*=exp(i eta A_*), the relative exponential family is
+represented by the fine potential
+
+ B(a,A_*)=(i eta)^-1 log[exp(i eta a)exp(i eta A_*)].
+
+This BCH map and its derivatives are uniform in eta; B(0,A_*)=A_* and
+D_aB(0,A_*)=I+O(eta||A_*||). The relative output logarithm at M^kU_*
+has another fixed analytic BCH coordinate change. Consequently its
+derivative on the fixed bubble space differs from the flat derivative
+by O(||A_*||), proving (5.1) with a depth-independent constant. The
+second derivative on that bubble space is uniformly bounded as well.
+
+The support statements used in Section5 can also be checked directly
+from (0.12): a row uses its two endpoint blocks; internal endpoint
+contours stay in the owner block. Nested aligned block composition
+preserves this property. In particular g_k(y), and its flat differential
+chi_k, read only the fine block owned by y. On a bubble in one final
+block, Q_ord,k=Q_st,k+d_c chi_k, and chi_k vanishes at every other final
+vertex. A smooth compact gauge bump with the prescribed value at y
+therefore gives the exact flat endpoint correction in Section5, with
+uniform C3 norm for the gauge parameter and uniform C2 norm for its
+fine gradient. The finite nonlinear inverse changes only the finitely
+many incident output rows.
+
+Differentiating that exact inverse at z=0 gives compact exact constraint
+duals on this protected ONE-BLOCK ordinary-average fiber, with uniform
+C1/C2 bounds. These may be paired with an actual stationary current to
+recover its multiplier from the Wilson first variation. This observation
+does not upgrade the result to a heterogeneous tower: finer retained
+rows can read the same support, and must be separately controlled before
+any such dual is used in a mixed constraint family.
+
+8. Reference boundary dictionary: an auxiliary global lift is sufficient
+
+There is a simpler source-attached option for a globally homogeneous
+regular anchor. B119(1.2)--(1.3), p246, defines its local test minimum
+from the copied field Q^1 V; the text explicitly states dependence on
+V restricted to the enlarged test cube. B119(2.13)--(2.16), pp256--257,
+repeats this construction with k-block copies. The complete determining
+datum, including the low-tier rim, is the averaged datum of that copied
+CURRENT field. This differs from the arbitrary heterogeneous retained
+datum V_j in (2.10)--(2.12).
+
+B122-II(1.3), p357, specifies the reference free-core minimum by the
+constraint datum M_(B_k(Z))(Q^k V_k) on Z outside Lambda. Thus its fixed
+rim/fine-boundary entries are functions of CURRENT V_k; no separately
+supplied earlier fine field is present in this displayed reference
+problem. The paragraph before(1.10), p358, replaces precisely V_k by
+M^k(U) in that function. It does not substitute U itself as the rim
+field of the local variational problem.
+
+Suppose an auxiliary homogeneous path U(z) is in the original fine-field
+class and realizes M^k(U(z))=V_k(z) on the COMPLETE current read, with
+only the chosen collar coordinate varying. Evaluating the source
+analytic extension on U(z) therefore gives the EXACT same reference
+weight as evaluating the original reference rule on V_k(z). Its copied
+boundary data, the fixed exterior, and their derivatives are those of
+V_k(z), even if U(z) changes on fine links outside Z. No D_eP term is
+discarded: all dependence of the local reference minimum is still
+differentiated through its actual V_k argument.
+
+For a coordinate whose copied determining footprint misses the fixed
+boundary/rim, those boundary entries remain literally fixed. If the
+coordinate reaches the rim, their induced variation is part of the
+reference derivative, not an unnoticed independent boundary parameter.
+The geometry and gauge slice remain fixed in both cases, and the path
+must stay in their admitted branch.
+
+This dictionary permits the primary homogeneous arbitrary-regular-U
+constraint chart, checked separately in
+work/protected_native_current_admission_turn16.txt, to supply the path.
+It need not take the graded reference minimum U0 as its anchor. Hence
+the extra graded-anchor premise H_min in turn15 is sufficient but not
+necessary for this fixed-reference score problem.
+
+Precise limit: the bypass is not applicable to a different function
+which genuinely reads independent fine exterior variables, retained
+old-tier V_j, moving branch selectors, or a change in the determining
+geometry. Nor does an anchor known only on an arbitrary collection of
+gauge patches automatically admit a global homogeneous extension. The
+compact construction covers one complete protected coherent patch;
+the homogeneous-chart option assumes its declared homogeneous anchor.

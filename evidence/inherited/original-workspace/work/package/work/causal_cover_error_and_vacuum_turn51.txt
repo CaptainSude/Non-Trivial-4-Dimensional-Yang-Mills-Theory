@@ -1,0 +1,187 @@
+CAUSAL COVER ERRORS AND THE SCALAR VACUUM INTERFACE
+20 October 2026. TURN51. Root proof.
+
+This note strengthens the causal estimate in the companion selected
+two-volume comparison. Its first result follows from that comparison's
+prefix inequalities. Its pressure statement is an implication with
+explicit scalar-normalization hypotheses. It is not a full-Wilson
+pressure theorem.
+
+1. THE ERROR AT AN EARLY SCALE DOES NOT HAVE TERMINAL SIZE
+
+Use common_bare_two_volume_turn51.txt, Sections4--5. At step r let
+N_r=N_end R^(n-r), R>1, and let the corrected scalar and activity
+differences be a_r and h_r. Suppose the comparison inequalities on
+EVERY admitted prefix [0,r] give
+
+ A_r := max_(0<=s<=r) a_s
+ <= C sum_(s<r) gamma_s^-2 A_r + C sum_(s<r) epsilon'_s,
+
+ sum_(s<=r) h_s
+ <= C sum_(s<r) [gamma_s^-2 a_s+epsilon'_s],             (1.1)
+
+with common constants, zero initial difference, and
+
+ C sum_(s<n) gamma_s^-2 <= 1/2,
+ epsilon'_s <= C(1+N_(s+1))^p exp[-c N_(s+1)].           (1.2)
+
+The bootstrap proof in the companion establishes (1.1) on all
+prefixes. Absorption, followed by the second inequality, gives
+
+ A_r + sum_(s<=r) h_s <= C sum_(s<r) epsilon'_s.        (1.3)
+
+Write N_(s+1)=N_r R^(r-s-1). The geometric exponential series
+satisfies, uniformly for N_r>=1,
+
+ sum_(k>=0) (1+N_r R^k)^p exp[-c N_r R^k]
+                         <= C exp[-c' N_r],           (1.4)
+
+for some c'>0. To verify this, first bound
+(1+x)^p exp[-c x]<=C_p exp[-(c/2)x]. Then use
+R^k>=1+k(R-1) to bound the remaining sum by
+exp[-(c/2)N_r]/[1-exp[-(c/2)N_r(R-1)]].
+The denominator is uniformly positive when N_r>=1.
+
+Consequently
+
+ a_r+h_r <= C exp[-c' N_r]                             (1.5)
+
+at every scale, with adjusted constants also including the
+finite-extraction correction rho_r. The same bound holds for
+|gamma_r^+-gamma_r| and for the corresponding normalized inherited
+activity difference. All constants are independent of n and the
+cover integer j.
+
+It would be wasteful to replace (1.5) everywhere by its terminal
+upper bound C exp[-c'N_end]: that loses the ultraviolet suppression
+needed when an extensive scalar is restored.
+
+For every fixed m>=0, (1.4) also gives
+
+ sum_(r=0)^n N_r^m(a_r+h_r)
+                         <= C_m exp[-c'' N_end].       (1.6)
+
+The same conclusion holds with fixed polynomial factors in n-r,
+because such factors are bounded by a power of R^(n-r).
+
+2. WHAT SUFFICES TO RESTORE THE SELECTED VACUUM
+
+Let v_r^N(gamma,e) be the RAW logarithmic scalar increment in an
+exact positive selected density recursion, with a fixed normalized
+field representative convention Phi_e(0)=0. Every Gaussian factor,
+flat determinant, Haar/coarea factor and window mass must be included
+in v. Let
+
+       vbar_r^N = v_r^N / N_(r+1)^4.
+
+Using input cell count instead changes only the fixed factor R^4.
+Assume the following estimates for the ACTUAL raw scalar increment,
+not for its field quotient:
+
+ (i) SAME-INPUT COVER COMPARISON:
+
+ |vbar_r^(jN)(gamma,E)
+       -vbar_r^N(gamma,C E)|
+                 <= C(1+N_(r+1))^p exp[-cN_(r+1)].     (2.1)
+
+ Here the first vbar uses the actual larger output cell count
+ (jN_(r+1))^4. The normalized restriction C is the companion's
+ canonical cover map. A volume-independent per-cell constant may
+ depend on r, the classical refinement and gamma, and cancels in
+ (2.1) when both inputs have the same gamma.
+
+ (ii) SCALAR RESPONSE:
+
+ |vbar_r^N(gamma,e)-vbar_r^N(gamma',e')|
+  <= C(1+n-r)^m [|gamma-gamma'|
+                           + b^-2 ||e-e'||_(a1,b)].   (2.2)
+
+ It is enough for this bound to hold on the particular common weak
+ envelope. Polynomial scale losses are allowed; arbitrary
+ ultraviolet-cutoff dependent constants are not.
+
+ (iii) FINITE-EXTRACTION SHIFT:
+ The scalar effect of e -> e+rho S, gamma -> gamma+rho,
+ |rho|<=C exp(-cN_r), obeys the same type of bound. An exact
+ invariance is sufficient. This matters because the companion
+ compares extracted representatives rather than simply C e.
+
+ Under (i)--(iii), summing the exact raw vacuum updates yields
+
+ |j^4 V_n^small - V_n^large|
+                   <= j^4 C exp[-c' N_end],           (2.3)
+
+ up to any explicitly specified initial scalar cover defect.
+ Indeed the absolute defect of step r is at most
+
+ j^4 C N_(r+1)^4 (1+n-r)^m
+       [exp(-cN_(r+1))+a_r+h_r+|rho_r|].
+
+ Apply (1.5)--(1.6). There is no factor proportional to the number
+ of ultraviolet steps, and no factor proportional to the finest
+ number of cells left after summation. The constant may depend
+ on the once-fixed terminal reference period and fixed grouping.
+
+ If an exact selected partition identity also has
+
+       log Z_sel^N = V_n^N + log I_n^N,
+
+ with terminal |log I_n^N| bounded independently of ultraviolet
+ depth at each of the two fixed physical reference volumes, (2.3)
+ gives a UV-uniform SELECTED partition cover defect. This last
+ identity and terminal integral estimate are separate premises.
+
+3. WHICH SCALAR FACTORS HAVE AN IMMEDIATE COVER ESTIMATE
+
+For a fixed finite internal fiber and translation-invariant flat
+matrix precision with a common positive, uniformly bounded,
+gapped analytic Bloch symbol A_M(k), the flat log determinant
+has the required scalar cover property. More explicitly, assume
+the principal trace logarithm f_M(k)=tr log A_M(k) has a uniform
+bounded holomorphic continuation to a fixed complex strip.
+Then its Fourier coefficients obey
+
+             |fhat_M(x)| <= C exp(-c|x|).
+
+The finite normalized Fourier sum is
+
+ N^-4 log det A_(M,N)
+  = N^-4 sum_(k in grid_N) f_M(k)
+  = sum_(z in Z^4) fhat_M(Nz).
+
+Thus its difference from the common zeroth coefficient is
+O(exp(-c'N)), uniformly in M. Subtracting the analogous expression
+at jN proves a common-volume comparison uniform in j.
+Fixed lattice orientation/internal-cell conventions are included
+in the finite fiber. A bounded holomorphic strip for the LOG,
+not only for A, is required. It follows, for example, by a small
+complex perturbation of the uniform positive real spectrum.
+
+If d_N=d_* N^4 and n_ch,N=n_* N^4 exactly, the factors
+
+        (2 pi g^2)^(d_N/2) c_T^(n_ch,N)
+
+have EXACT common per-cell logarithms at the same g. Their scalar
+response per cell is at most C/gamma when gamma=g^-2 is bounded
+below and T is fixed. If a global constraint produces finite
+nonextensive dimension corrections, those corrections must be
+kept separately rather than assigned the false exact counts.
+
+These observations explain why the scalar target is plausible.
+They do not verify the complete selected coarea, representative
+constant, terminal identity, or native full-law normalizer.
+In particular it remains necessary to prove the scalar response
+(2.2) in the weaker comparison norm on the same full field domain.
+
+4. LIMIT OF THE RESULT
+
+Equation (1.5) is a genuine improvement of the already stated
+selected coupling comparison. Equations (2.1)--(2.3) explicitly
+state the additional scalar obligations. This note does not infer
+them from a field quotient estimate.
+
+Even a complete selected vacuum proof would concern the positive
+selected multiscale measure. Restoring omitted Wilson histories
+changes its scalar pressure and may change the marginal flow.
+The native full-pressure and independent local-observable
+attachment remains necessary for the requested YM4 construction.

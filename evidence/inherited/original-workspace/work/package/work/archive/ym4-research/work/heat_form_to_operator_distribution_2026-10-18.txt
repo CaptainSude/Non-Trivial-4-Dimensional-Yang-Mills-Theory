@@ -1,0 +1,325 @@
+FROM THE ACTUAL HEAT-FORM LIMIT TO CLOSABLE TRANSLATION FIELDS
+18 October 2026. Domain upgrade; no locality, tensor rank, or O(4) claim.
+
+0. PRECISE INPUT AND OUTPUT
+
+Use the ONE scalar Hilbert space, H>=0, spatial translations U(y),
+vacuum Omega, and actual dyadic heat-form limit constructed in
+dyadic_actual_frame_heat_limit_2026-10-18. Its continuous Euclidean
+time translation identity is essential. A family of heat sandwiches
+without that identity would not suffice, as the counterexample in
+that note demonstrates.
+
+For a frame label v, write q_v(f) for its form on D_fin=union_E P_E H,
+P_E=1_[0,E](H). It is linear in the spacetime test f and v. Its heat
+regularization B_a(v,f) is bounded, compatible under further heat,
+and of finite distribution order. On D_fin, with f_h(t,x)=f(t-h,x),
+
+ q_v(f_h)=exp(hH) q_v(f) exp(-hH).                    (1)
+
+Spatial translations have the corresponding unitary covariance. The
+scalar spectral cone was used to pass the shrinking prefix-period
+identities to these continuous limit identities; it is not needed
+again for the temporal inversion below.
+
+The output is a time-zero operator-valued FORM A_v(g) on D_fin, then
+a real-time operator-valued tempered distribution Phi_v(f) with a
+common invariant domain D_infty=intersection_p Dom(1+H)^p. For a
+fixed finite p and finite Schwartz seminorm N,
+
+       ||Phi_v(f)(1+H)^(-p)|| <= C |v| N(f).           (2)
+
+More generally, for each integer r>=0 there is a finite seminorm N_r,
+
+ ||(1+H)^r Phi_v(f)(1+H)^(-(p+r))|| <= C_r |v|N_r(f). (3)
+
+Adjoining the reflected/conjugate finite frame supplies a dense
+adjoint domain, hence closability. No identification of that companion
+with the usual 21-component tensor reflection is assumed. No new
+Euclidean-to-Minkowski reconstruction theorem is invoked: the fields
+are constructed directly on the already reconstructed scalar Hilbert
+space by (1), spectral bands, and real-time smearing.
+
+1. THE NECESSARY UNIFORM SMALL-SLAB BOUND
+
+One must not use a fixed positive support collar T and then set T=0.
+What is required below, and follows from the copied bridge, is this:
+for a fixed spatial compact K, 0<tau<=1, and tests supported in
+[-tau,tau] times K,
+
+       ||B_(4tau)(v,f)|| <= C_K tau^(-D) |v| p_S(f),   (4)
+
+with fixed D,S and a constant uniform as the temporal support shrinks.
+
+Here is the explicit deduction. The original copied bound uses one
+finite test seminorm on a fixed containing compact set. Its array
+cross-section is bounded using that spatial compact set; shrinking
+the center-time support introduces only the stated padding powers.
+Choose an anchor dyadic scale G_tau comparable to 1+log(1/tau), with
+its fixed coefficient sufficiently large that BOTH the actual fusion
+stencil radius and the prefix period are <tau/10. This is possible
+because both are bounded by exp(-cG)P(G). The complete finite-scale
+support then lies in [-2tau,2tau] times a fixed enlargement of K;
+sandwiching with 4tau leaves positive padding at least 2tau.
+
+The finite-scale scalar insertion bound costs exp(CG_tau), a fixed
+power of tau^-1. It uses at most five scalar insertions, separated
+relative time coordinates, all exact prefix/Appell coefficients and
+the actual matching matrix. Sum the copied dyadic differences from
+this anchor onward. Their constants use the same containing compact
+and fixed seminorm; their padding is at least 2tau. This proves (4)
+with an enlarged fixed D. It is the small-slab version of Sections3--4
+of the heat-limit note, not a consequence of a fixed-T estimate alone.
+
+For chi in C_c^infty((-1,1)), set chi_tau(t)=tau^-1 chi(t/tau).
+For g supported in K,
+
+ p_S(chi_tau tensor g) <= C_chi tau^(-(S+1))p_S(g).     (5)
+
+The copied bridge and scalar anchor have fixed seminorm order, so the
+power in (5) is fixed. No derivative order grows with G or 1/tau.
+
+2. FINITE-ENERGY TEMPORAL DISTRIBUTIONS HAVE AN EXACT TIME-ZERO VALUE
+
+Fix E and g. Compress the form to P_E H. Equations(4) and the original
+fixed-compact heat bound make
+
+           T_(E,g)(f)=P_E q_v(f tensor g)P_E
+
+a distribution in one real variable with values in B(P_E H). Its
+translation law is (1), with bounded H_E=H|_(P_E H). Write
+L_E B=H_E B-B H_E, a bounded linear operator on that Banach space.
+The distributional translation law implies the differential equation
+
+                         dT/dt=L_E T.
+
+Multiplying by the smooth bounded-on-compacts operator exp(-tL_E)
+gives a distribution with zero derivative. Such a Banach-valued
+distribution is a constant times Lebesgue measure: every compact test
+of integral zero is the derivative of a compact smooth test, so the
+distribution annihilates it. Consequently there is a UNIQUE bounded
+operator A_E(v,g) on P_E H such that
+
+ P_E q_v(f tensor g)P_E
+        = integral f(t) exp(tH_E) A_E(v,g) exp(-tH_E)dt. (6)
+
+This argument is an elementary distribution ODE with a bounded
+generator. It does not evaluate an arbitrary distribution at a point.
+The exact covariance is what supplies that evaluation after compression.
+
+For E'<E, compression of (6) to P_E' obeys the same identity and the
+same uniqueness. Thus
+
+            P_E' A_E(v,g)P_E'=A_E'(v,g).              (7)
+
+It remains to prove a POLYNOMIAL bound in E. Exponential inversion of
+a fixed temporal averaging kernel would be insufficient.
+
+3. UNIFORM INVERSION OF A SMALL POSITIVE TEMPORAL AVERAGE
+
+Choose once and for all chi real, even, nonnegative, smooth, supported
+in (-1,1), and integral chi=1. Define
+
+             Lambda(s)=integral chi(t)exp(ts)dt.
+
+Lambda is smooth and positive on the real line; evenness and positivity
+give Lambda(s)>=1 there. Equation(6) implies
+
+ Q_E:=P_E q_v(chi_tau tensor g)P_E
+                         =Lambda(tau L_E) A_E(v,g).  (8)
+
+Take tau=(1+E)^-1. All spectral differences of H_E have |tau omega|<=1.
+Choose a smooth compactly supported function m on R equal to
+1/Lambda(s) on [-1,1]. Its Fourier transform has a fixed finite L1 norm.
+The multiplier
+
+ M_(E,tau)(B)=integral m_hat(u)
+       exp(iu tau H_E)B exp(-iu tau H_E)du             (9)
+
+therefore has operator norm <=||m_hat||_1, independent of E and tau.
+Fourier normalization is chosen so m(s)=integral m_hat(u)e^(ius)du.
+The spectral theorem on the left and right commuting actions of H_E
+shows M_(E,tau)Lambda(tau L_E)=Id. One direct verification uses finite
+spectral step approximations to H_E, which converge in OPERATOR NORM
+because H_E is bounded. The Fourier integral in (9) passes in norm
+by its L1 majorant; the compact-time integral defining Lambda also
+passes in norm. Applying (9) to (8) recovers A_E.
+
+Undo the heat in (4) only on P_E. Since tau E<=1,
+
+ ||Q_E|| <= exp(8tau E)||B_(4tau)(v,chi_tau tensor g)||
+          <= C_K |v| tau^(-(D+S+1))p_S(g).
+
+Let p be an integer at least D+S+1. Then
+
+          ||A_E(v,g)|| <= C_K |v|(1+E)^p p_S(g).      (10)
+
+This is the desired polynomial finite-band estimate. The bound on the
+reciprocal multiplier is uniform because its argument was rescaled
+to the FIXED interval [-1,1]. No dimension/rank estimate for P_E H is
+used; that space may be infinite dimensional.
+
+4. SPATIAL SCHWARTZ CONTINUITY AND THE CONSISTENT TIME-ZERO FORM
+
+Equation(7) defines a form A_v(g) on D_fin. Spatial covariance of q
+and uniqueness in (6) give
+
+      A_E(v,g_y)=U(y)A_E(v,g)U(y)^*.
+
+As U(y) commutes with P_E, the constant in (10) is uniform for translated
+unit spatial compacts. Choose a smooth unit-cube partition of unity.
+The sum of the translated local seminorms is bounded by
+
+ p_(S,4)(g)=sum_(|alpha|<=S) sup_x
+                       (1+|x|)^4 |partial^alpha g(x)|.
+
+The convergent sum of these local forms extends A_E to all spatial
+Schwartz g, with
+
+          ||A_E(v,g)||<=C |v|(1+E)^p p_(S,4)(g).      (11)
+
+The exponent 4 is simply greater than the spatial dimension 3.
+This is where a uniform local estimate becomes a global tempered
+estimate. It does not require a new infinite-support source theorem.
+
+The time-zero form need NOT be an operator on D_fin. Its heat
+regularization is nevertheless bounded: using unit energy bands in
+(11) and block Schur gives
+
+ ||exp(-tau H)A_v(g)exp(-tau H)||
+       <= C |v|min(1,tau)^(-(p+1))p_(S,4)(g).          (12)
+
+For example, a row sum is bounded by
+sum_n exp[-tau(m+n)](1+m+n)^p <= C tau^(-(p+1)),
+uniformly in m. The column bound is identical.
+
+Equations(6),(12) identify the original Euclidean heat forms without
+an external joint-tube uniqueness argument. If f is supported in
+|t|<T and a>T, the bounded integral formed using positive left/right
+heat paddings a-t and a+t has finite-energy compressions equal to
+B_a(v,f tensor g). Since all P_E increase to 1, the bounded operators
+are equal. This is a one-insertion identification on the same Hilbert
+space, not a conclusion about joint locality of several new fields.
+
+5. REAL-TIME SMEARING AND OFF-DIAGONAL ENERGY DECAY
+
+Put P_n=1_[n,n+1)(H), n>=0. Define the consistent blocks
+A_mn(v,g)=P_m A_E(v,g)P_n for E>max(m,n)+1. Equation(7) makes this
+independent of E. From (11),
+
+       ||A_mn(v,g)||<=C |v|(1+m+n)^p p_(S,4)(g).       (13)
+
+For a spacetime Schwartz test f define blockwise
+
+ Phi_mn(v,f)=integral_R exp(itH_m)
+                  A_mn(v,f(t,cdot)) exp(-itH_n)dt.    (14)
+
+This norm-converges because of (13) and Schwartz decay. Write
+H_m=m+K_m, H_n=n+K_n, with ||K_m||,||K_n||<=1. The integrand is
+exp[it(m-n)] times
+exp(itK_m)A_mn(v,f(t,cdot))exp(-itK_n).
+Integrate by parts k times when m!=n. Derivatives hitting the two
+bounded residual generators cost at most constants depending on k;
+the others hit f. Combining this with the direct m=n bound yields
+
+ ||Phi_mn(v,f)|| <= C_k |v|(1+m+n)^p
+                 (1+|m-n|)^(-k) N_k(f),              (15)
+
+where the explicit finite Schwartz-continuous seminorm
+
+ N_k(f)=sum_(j<=k,|alpha|<=S) integral_R dt sup_x
+               (1+|x|)^4 |partial_t^j partial_x^alpha f(t,x)|
+
+is bounded by an ordinary Schwartz seminorm using time weight 2.
+No compact Fourier support assumption is needed. Such support would
+give exact energy transfer, but the decay in (15) is enough.
+
+Use 1+m+n<=C(1+n)(1+|m-n|). Multiplication of (15) on the right by
+(1+H)^-p cancels (1+n)^p. Choosing k>p+1 makes both block row and
+column sums uniformly finite. The elementary block Schur test gives
+the bounded operator in (2). For (3), insert (1+m)^r on the left,
+(1+n)^(-(p+r)) on the right and choose k>p+r+1. The remaining matrix
+is again bounded by C(1+|m-n|)^(p+r-k).
+
+These consistent matrices define Phi_v(f) on Dom(1+H)^p and in
+particular on D_infty. Formula(3) shows Phi_v(f)D_infty subset D_infty.
+The field map is continuous from Schwartz tests into continuous
+operators on this common smooth-energy domain. In particular it is
+an operator-valued tempered distribution in the usual domain sense.
+
+Real-time and spatial covariance are exact, inherited from (14) and
+the covariance of A_E. Its energy-momentum translations act in the
+ALREADY given positive-energy scalar representation. This does not
+add Lorentz covariance of the label v.
+
+6. ADJOINTS: ADJOIN THE ACTUAL REFLECTED FAMILY FIRST
+
+No assertion that the original 21 chosen stencils are closed under
+time reflection is needed for closability. Adjoin their finite
+reflected/conjugate family at every finite G. Define it by the EXACT
+OS adjoint of the original actual scalar composite, including the
+reflected deterministic prefix coefficients and matching numbers.
+This is a finite enlargement (at most 42 columns before any linear
+redundancy is removed), not a new anisotropic measure.
+
+Its heat estimate and dyadic Cauchy estimate are exactly the adjoints
+of those already proved. Define the companion by its individual columns
+and extend LINEARLY in a complex label v. Its centered limit satisfies
+
+        q_v(f)^*=q_(bar v)^dagger(overline(f) circ theta), (16)
+
+where theta(t,x)=(-t,x), as forms on D_fin. All quantities are passed
+on the SAME regulator/matching subsequence. No new compactness choice
+is necessary for the companion.
+
+Use the even real chi in Section3. Taking adjoints in (8), or using
+the uniqueness in (6), gives
+
+                 A_E(v,g)^*=A_E^dagger(bar v,bar g).   (17)
+
+Applying (14) then gives, on D_infty,
+
+             Phi_v(f)^* superset Phi_(bar v)^dagger(bar f). (18)
+
+The right side has the dense domain D_infty. Therefore every Phi_v(f)
+is closable. For real f the combinations (Phi+Phi^dagger)/2 and
+(Phi-Phi^dagger)/(2i) are symmetric on that common invariant domain.
+This proves closability without assuming which tensor components
+should carry factors of i under Wick rotation.
+
+There is a possible stronger finite-symmetry identification, separate
+from (18). If the exact origin-reflection covariance of the actual
+regular graph/projection is used, the reflected normalized prototype
+and the canonical prototype with reflected terminal coordinate have
+the same corrected coordinate. Their difference is a complete
+same-scale zero-coordinate actual germ. Applying the copied stable
+estimate to that finite two-frame family would identify the limits.
+Then the involution on Sym^2(Lambda^2 R^4) is (-1) to the number of
+time indices, and the usual i-powers make real Minkowski labels
+Hermitian. This extra identification is NOT needed or assumed for
+the operator-domain conclusion above.
+
+7. REGULATOR ORDER, SCOPE, AND WHAT HAS BEEN GAINED
+
+Everything after Section1 is performed on the ONE limiting scalar
+Hilbert space obtained by the prescribed thermodynamic-first,
+continuum-diagonal procedure. The exact adjacent matching identities,
+prefix-period covariance and adjoint identities are passed together.
+The spectral-band argument does not compare operators from different
+bare Hilbert spaces or assume finite-volume continuum generators.
+
+The result is stronger than a family of bounded Euclidean sandwiches:
+it produces genuine closable real-time smeared fields, a common
+invariant dense smooth-energy domain, a fixed polynomial energy bound,
+tempered test dependence, centering, and translation covariance. Their
+one-insertion Euclidean continuations agree with the original q by
+(6). No unknown convergence rate of lower limiting fields enters.
+
+The construction does NOT yet prove that the 21 original labels are
+nonzero/independent, have a Lorentz tensor law, or commute at spacelike
+separation. Those require the separate Gram, covariance, and locality
+arguments. The fact that each finite-G object is a scalar composite
+with shrinking support is not by itself a domain proof of limiting
+locality; the needed controlled continuation/commutator limit must
+still be supplied. No full Yang--Mills existence claim follows merely
+from this domain upgrade.

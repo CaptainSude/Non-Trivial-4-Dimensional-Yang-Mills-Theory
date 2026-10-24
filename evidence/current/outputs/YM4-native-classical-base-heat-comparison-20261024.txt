@@ -1,0 +1,360 @@
+NATIVE CLASSICAL WARD JETS AND UNIFORM BASE HEAT COMPARISON
+24 October 2026. compiled_source. New native attachment and proof.
+Independent review completed: scoped PASS in
+native_classical_base_heat_root_audit_20261024.txt. No archive or output edits.
+
+RESULT AND SCOPE
+
+Let S_m be the actual homogeneous depth-m minimum VALUE of the original
+normalized Wilson action, expressed in current unit coordinates using
+the literal B109 nested ordinary averages. Let S_W denote the BARE
+normalized Wilson action on this current lattice, regardless of the
+index convention used for it in an archived notebook. Work with the
+native infinite Taylor-kernel coefficients, or a declared compatible
+infinite structural realization of those coefficients. No finite
+momentum-grid interpolation or finite winding identification is used.
+
+Write R_m=S_m-S_W and use midpoint momentum coordinates. The actual
+total kernels satisfy, uniformly in m,
+
+ R_2=O(|p|^4),
+ R_3=O((max_j |p_j|)^3),
+ R_4=O((max_j |p_j|)^2),             sum_j p_j=0.             (1)
+
+The constants include fixed color/direction sums and fixed spatial
+moments, and are independent of old depth. The statements concern
+TOTAL Taylor kernels; no arbitrary chosen activity is asserted to
+have its own Ward identity.
+
+Define the actual left-relative background-Feynman vector base
+
+ B_m(a)=S_m''(exp(i a))+D_a D_a^T,
+
+with D_a the native scalar gauge generator. For trace-orthonormal H
+and distinct alpha,nu, define by fixed-time rooted Taylor kernels
+
+ h_m(s)=[t^2] tr_E(exp[-s B_m(a(t))])_(0,0),
+ a_alpha(t,x)=t x_nu H, a_other=0.                          (2)
+
+Then
+
+ |h_m(s)-h_W(s)| <= C/s,                  s>=1,
+ integral_1^(K^2) |h_m(s)-h_W(s)| ds/s <= C.                (3)
+
+The scalar base D_a^T D_a is identical for the two actions. The same
+comparison therefore applies to vector minus two scalar heat densities.
+These are infinite-coefficient identities, not a varying affine flux
+on a finite torus. This note closes the indicated native BASE comparison;
+it does not prove the soft-pair heat-band comparison, coarse determinant
+traces, signed drift, all-history RG iteration or existence of Yang--Mills.
+
+1. EXACT NATIVE SYMMETRIES, RATHER THAN AN ARCHIVED ASSUMPTION
+
+Primary source read: B109 printed252--254, definitions(0.3),(0.5)--(0.12),
+and printed269(2.17)--(2.18). The supplied text is
+work/handoff/original-workspace/work/package/work/turn125_primary/
+b109_full.txt. The original paper is package/sources/supplied/balaban9.pdf
+under the same original workspace. CMP102's actual regular minimum and
+its uniqueness modulo the based gauge are the minimum input already
+registered in homogeneous_classical_rooted_taylor_kernels_20261024.txt.
+
+The point group is not supplied by a single arbitrarily ordered tree.
+B109252 defines the endpoint contour family using ALL permutations of
+the nonzero coordinate displacements. Centered odd blocks are preserved
+by signed coordinate permutations. Such a transformation permutes this
+entire family. The analytic group mean is invariant under permutation
+of its arguments by(0.7), so the endpoint mean is covariant. Translated
+middle strings and center reference strings in(0.12) transform as their
+actual oriented paths. Thus the ordinary average is covariant under
+current-lattice translations and full signed permutations.
+
+Orientation reversal is consistent with the anchored logarithm. If P
+is a path product and C the corresponding center path, the reversed
+anchored product is P^-1 C=C^-1(PC^-1)^-1 C. On the same local log
+branch its logarithm is minus the conjugate of log(PC^-1). Restoring
+the outside C^-1 factor gives the inverse of the original average.
+No separate assumption that a chosen logarithm of an arbitrary group
+mean commutes with inversion is needed for this calculation.
+
+The endpoint means are left/right equivariant, so arbitrary fine gauges
+induce the corresponding gauge at the actual coarse centers. Both the
+original Wilson action and its regularity class have the same gauge,
+spatial and reality properties. Transforming a regular constrained
+minimum therefore gives a regular minimum for the transformed datum;
+native uniqueness of its orbit identifies it with the actual minimum.
+Consequently its VALUE S_m has exactly these identities. The proof
+does not require a selected axial representative itself to be unchanged
+by every reflection. Reality follows from the real Wilson minimum.
+
+For infinitesimal Ward identities only compact small gauges in a common
+local analytic germ are needed. The exact covariance of the averages
+and the native minimum domain provide that germ. All these identities
+hold at every finite depth and pass to infinite kernel coefficients by
+the uniform rooted bounds. They are not assumptions about a quantum
+source, a cutoff integral or a noninvariant local density.
+
+The needed quantitative input is the independently audited uniform
+rooted classical action kernels through degree4. It supplies every
+fixed spatial moment used below. The independently checked affine
+Maxwell transport gives beta(S_m)=beta(S_W)=1 in the original trace
+normalization. The curl-average argument gives q_W<=q_m, and the
+uniform quadratic rows give q_m<=C q_W. These statements have their
+actual native action and scale normalizations already matched.
+
+2. TOTAL LOW-ORDER WARD PROOF READ AND REPRODUCED
+
+The archived proofs read in full were total_kernel_ward_extraction_
+fragment.tex, finite_classical_contraction_fragment.tex (the graded
+Ward-repair portion), and actual_base_ward_heat_comparison_fragment.tex.
+They are under package/work/archive/ym4-research/work. The argument
+below uses the exact infinite Ward identities, so it does NOT import
+the finite contraction note's separate periodization or macrostep
+assumptions. The relevant native published identities are B109283--284
+(4.9)--(4.15). Here they can be derived directly.
+
+Use Hermitian link logs and d lambda=lambda_+-lambda_-. Differentiating
+U_b(t)=exp(i t lambda_-) exp(i A_b) exp(-i t lambda_+) gives
+
+ delta A=-d lambda+L_lambda(A)+Q_lambda(A,A)+O(A^4 lambda),
+ L_lambda(A)=(i/2)[lambda_-+lambda_+,A],
+ Q_lambda(A,B)=(1/24)([A,[B,d lambda]]+[B,[A,d lambda]]).   (4)
+
+This is z/(1-exp(-z))=1+z/2+z^2/12+O(z^4); the cubic Bernoulli
+coefficient vanishes. Constant color invariance of a simple factor
+annihilates the one-point kernel at each bond. Differentiating the
+TOTAL identity DE(A)[delta A]=0 and polarizing gives
+
+ K2(A,d lambda)=0,
+ K3(A,B,d lambda)=K2(A,L_lambda B)+K2(B,L_lambda A),
+ K4(A,B,C,d lambda)=sum_cyclic K3(A,B,L_lambda C)
+                       +2 sum_cyclic K2(A,Q_lambda(B,C)). (5)
+
+The same identities hold for R_m because an ENTIRE invariant Wilson
+action, rather than just its quadratic polynomial, was subtracted.
+
+In midpoint Fourier coordinates the linear gauge symbol is
+2i sin(k_mu/2), L has bounded analytic factor i cos(k_mu/2), and Q
+has a factor proportional to i sin(k_mu/2). Full inversion gives
+
+ Gamma_n(-p_1,...,-p_n)=(-1)^n Gamma_n(p_1,...,p_n).         (6)
+
+Reflections and permutations restrict the quadratic degree-two tensor
+to diagonal A p_mu^2+B sum_(nu!=mu)p_nu^2 and off-diagonal C p_mu p_nu.
+Ward transversality implies A=0,C=-B. The constant tensor is zero by
+the degree-one Ward identity. Parity eliminates odd degrees. Since
+the actual coefficient B is beta(S_m)=1, subtracting S_W gives R2
+with zero jets through momentum degree3, hence the first part of(1).
+
+For the cubic residual, scale all momenta by t and use p+q+k=0.
+The right side of its Ward identity is O(t^4), while parity gives
+R3(tp,tq,tk)=t P1(p,q,k)+O(t^3). The order-t^2 left side says that
+P1 is transverse in EVERY slot. Eliminate k=-p-q and write
+
+ (P1)_(mu nu rho)=sum_sigma A_(mu nu rho;sigma)p_sigma
+                             +B_(mu nu rho;sigma)q_sigma.
+
+In contraction with p_mu, independent monomials p_mu q_sigma force
+all B coefficients to vanish. Contraction with q_nu then forces all
+A coefficients to vanish. This argument allows arbitrary color
+coefficients and does not presume a separately invariant cubic term.
+Parity now gives R3=O(max|p_j|^3).
+
+For the quartic residual the K3,L terms in(5) are O(t^3); the K2,Q
+terms are O(t^5). Parity gives R4=P0+O(t^2). Its leading Ward term
+contracts P0 with an arbitrary last momentum, since the other three
+may sum to its negative. Therefore P0=0 and R4=O(max|p_j|^2).
+This proves all of(1).
+
+Exponential rooted kernels give uniform moment bounds. Taylor's
+integral remainder then quantifies (1) and all derivatives needed
+through two external momenta. For example the required moments are
+orders4,3,2 of field degrees2,3,4. No fifth field derivative is used.
+Midpoint-to-source-site changes multiply components by analytic
+phases and cannot lower any of the vanishing orders.
+
+3. ACTUAL LEFT-RELATIVE VERTICES INCLUDING THE CURRENT TERM
+
+Let Xi_a(B)=log(exp(iB)exp(ia))/i,
+J(a)=D_B Xi_a(0)=I+J1(a)+J2(a,a)+O(a^3),
+T(a)=D_B^2 Xi_a(0)=T1(a)+O(a^2), with T(0)=0.
+The Hessian difference is EXACTLY
+
+ L_R(a)[B,C]=R''(a)[J(a)B,J(a)C]+R'(a)[T(a)[B,C]].         (7)
+
+At background degree1 it is R3[a,B,C] plus the two R2 terms with
+J1 on one quantum leg. At degree2 it contains
+
+ (1/2)R4[a,a,B,C],
+ R3[a,J1(a)B,C]+R3[a,B,J1(a)C],
+ R2[J2(a,a)B,C]+R2[B,J2(a,a)C]+R2[J1(a)B,J1(a)C],
+ R2[a,T1(a)[B,C]].                                       (8)
+
+The last line is the full current times coordinate-curvature term.
+It is not discarded using an off-shell stationarity claim. J1,J2,T1
+are bond-local fixed color maps; they merge momenta without inverse
+momenta. Thus (1) gives difference orders4,3,2 for the flat, first-
+background and second-background ACTUAL relative Hessians. The
+gauge-fixing generator term is identical for m and W and cancels.
+
+Let V_a^m(k,p) map quantum momentum k to k+p for a background mode p,
+and W_ab^m(k;p,-p) be its mixed second vertex. For rho=|k| in a fixed
+small punctured ball and r<=2,
+
+ ||partial_p^r Delta V_a(k,p)|_(p=0)||
+ +||partial_p^r Delta V_b(k+p,-p)|_(p=0)|| <= C rho^(3-r),
+ ||partial_p^r Delta W_ab(k;p,-p)|_(p=0)|| <= C rho^(2-r).  (9)
+
+The derivative of the second V differentiates BOTH arguments. Baseline
+vertices obey the sufficient loose bounds
+
+ ||partial_p^r V||<=C rho^(1-r),
+ ||partial_p^r W||<=C rho^(-r),                           (10)
+
+while partial_p^2 W is actually bounded by analyticity. For Wilson,
+the first vertex vanishes at all momenta zero by its odd cubic vertex;
+the first gauge-fixing vertex also vanishes there because it retains
+one flat difference leg. Adding(9) gives(10) for m. All vertices and
+the required derivatives are uniformly bounded away from k=0.
+
+4. MATRIX HEAT ESTIMATES WITHOUT A TIME-ENDPOINT LOSS
+
+At flat, B_W(k)=delta(k) I, delta(k)=4 sum_mu sin^2(k_mu/2).
+The native q_W<=q_m<=Cq_W, together with the SAME scalar gauge term,
+gives c delta I<=B_m<=C delta I. Near zero,
+
+ ||partial_k^r(B_m-B_W)||<=C rho^(4-r), r<=2,
+ ||partial B_m||<=C rho, ||partial^2 B_m||<=C.              (11)
+
+For E_m(t,k)=exp(-t B_m(k)), matrix Duhamel differentiation gives
+
+ ||partial_k^r E_m(t,k)||
+     <= C_r rho^-r (1+t rho^2)^r exp(-c t rho^2), r<=2.    (12)
+
+The sharper first/second prefactors are Ct rho and
+C(t+t^2 rho^2). No spectral eigenvector or eigenframe is differentiated.
+The exact difference identity
+
+ E_m(t)-E_W(t)=-integral_0^t E_m(t-u)(B_m-B_W)E_W(u) du
+
+and(11) give
+
+ ||partial_k^r(E_m-E_W)(t,k)||
+ <= C_r t rho^(4-r)(1+t rho^2)^r exp(-c t rho^2).          (13)
+
+These estimates hold for EVERY t>=0, including t=0. In particular
+(13) retains its factor t. No inverse of a Duhamel time or of a
+spectral splitting is introduced.
+
+For compact source directions the first vertex and mixed second
+vertex are trace class by their complete rooted kernel sums. Hence
+the total heat variation is well defined even though the vacuum
+trace is infinite. Differentiating and cycling only the TOTAL trace
+gives
+
+ D^2 Tr exp(-sB)[a,b]
+ =-s Tr(exp(-sB)B''[a,b])
+  +s^2 integral_0^1 Tr(exp(-s(1-v)B)B'[a]
+                              exp(-svB)B'[b]) dv.         (14)
+
+There is no extra factor two; the integral includes the two orders.
+Translation covariance yields its external-momentum kernel
+
+ H_ab^m(s,p)=-s integral_k tr(E_m(s,k)W_ab^m(k;p,-p))
+  +s^2 integral_0^1 integral_k tr(E_m(s(1-v),k+p)
+              V_a^m(k,p)E_m(sv,k)V_b^m(k+p,-p)) dk dv.     (15)
+
+The normalized Brillouin measure is dk/(2pi)^4. Fixed-s exponential
+moments justify two external derivatives and the Fourier expression.
+
+Differentiate(15) twice in p, evaluate at p=0 and subtract W from m.
+For the tadpole, the two differences before its outside s are bounded
+by Cs rho^4 exp(-cs rho^2) and C exp(-cs rho^2). This uses the bounded
+second derivative of the baseline W, not its unnecessarily loose
+rho^-2 bound in(10). Their full integrals are O(s^-2) and O(s^-1).
+
+Telescope the bubble into its four factor differences. A vertex
+difference has combined vertex degree3+1=4. Distributing two external
+derivatives over all factors leaves the bound
+
+ C rho^2 P(s rho^2) exp(-cs rho^2).
+
+A heat difference instead contributes its time t<=s from(13), and
+combined degree4+1+1=6. After two derivatives its bound is
+
+ C s rho^4 P(s rho^2) exp(-cs rho^2).
+
+P is a fixed polynomial. Both estimates are uniform in v because
+the heat times sum to s; the difference identity also keeps this
+total time when its own internal integration is included. The 4D
+k-integrals are O(s^-3) in both cases. Multiplication by s^2 gives
+O(s^-1). These estimates remain valid at v=0 and v=1. Away from
+k=0 the uniform flat gap gives a polynomial times exp(-cs).
+Therefore
+
+ |partial_p^2(H_ab^m-H_ab^W)(s,0)|<=C/s, s>=1.             (16)
+
+5. THE DIAGONAL DENSITY AND THE FACTOR ONE-QUARTER
+
+At fixed s, the diagonal color trace of the heat kernel is individually
+gauge invariant: the LEFT-RELATIVE Hessian and DD^T transform by the
+same pointwise adjoint frame, and functional calculus conjugates the
+whole heat operator. Global color invariance kills its first jet for
+a semisimple group. Fixed-time Duhamel/rooted kernel estimates provide
+the moments needed to test its Hessian against polynomial fields.
+Neither an infinite total vacuum functional nor an unbounded affine
+field in a global analytic ball is being evaluated.
+
+For a density rho_0, write its external Hessian K_0(b,c). Local Ward
+and its vanishing first jet imply row and column annihilation of
+constant potentials, by compactly truncated linear gauges and the
+moment limit. For the affine alpha,nu probe this gives
+
+ [t^2]rho_0(t x_nu H e_alpha)
+ =-(1/4) sum_(b,c) K_0(b,c)(c_nu-b_nu)^2.
+
+Translation reanchoring turns the last sum into the second moment
+of the TOTAL heat Hessian. On a diagonal external component the
+midpoint phases cancel. Thus the exact normalization is
+
+ h_m(s)=(1/4) partial_(p_nu)^2 H_(alpha H,alpha H)^m(s,0). (17)
+
+This agrees with native B109(1.20),(1.22),(5.37),(5.42): Pi is the
+positive second derivative, beta is one-half the diagonal second
+momentum derivative, and beta equals twice the affine t^2 density.
+No sign, half-factor or diagonal partial-trace cyclicity is hidden.
+
+For the actual endpoint-K probe t x_nu H/K^2, translations change it
+only by a constant commuting pure gauge. The same formal moment
+argument makes every diagonal density coefficient in a final block
+equal. Its K^4 current roots cancel the K^-4 from the two source
+factors. This is the correct root normalization when(3) is used in
+the subsequent endpoint comparison; it is not a finite torus flux
+interpolation.
+
+Combining(16) and(17) proves(3). Integrating C/s with ds/s from1 to
+K^2 gives a K-independent constant. The identical scalar base may
+be subtracted without changing this conclusion.
+
+6. EXACTLY WHAT IS NOW ATTACHED
+
+The archived base comparison no longer needs its nonlinear Ward
+orders or native spatial symmetries as unverified ``previously
+proved'' premises. Here they follow from the actual symmetric
+ordinary average, the original minimum VALUE, the explicit total
+Ward equations, the newly proved uniform rooted classical kernels,
+and the matched Maxwell coefficient. The matrix heat estimate and
+its density normalization have been checked directly above.
+
+The proof is uniform in old depth on the native infinite coefficient
+convention. If one uses a compatible subsequential infinite kernel
+realization, all bounds hold for every such realization; no uniqueness
+of an extensive infinite action is assumed or required. This note
+does not identify unrelated finite winding kernels or change any
+original finite cutoff integral.
+
+Still separate are the exact native Gaussian-to-soft scalar ledger,
+coarse Schur inverses and trace estimates, the soft-versus-base
+comparison over the middle band, its UV/IR ends, and the actual
+signed Wilson logarithmic coefficient. No one-loop sign, accumulated
+running-coupling control, large-field closure or full Yang--Mills
+existence conclusion is asserted by this finite-kernel result.

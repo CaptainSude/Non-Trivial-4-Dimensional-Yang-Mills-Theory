@@ -1,0 +1,426 @@
+NATIVE AFFINE CURRENT JETS, FLAT ELLIPTICITY, AND THE HEAT INTERFACE
+24 October 2026. audit_two_root. New finite/order-specific proof.
+No archive or output edits. Independent review requested.
+
+STATUS AND NOTATION
+
+Two smaller pieces of the coupling bridge can be proved without a
+uniform one-loop comparison: (i) the actual flat classical minimum
+Hessian dominates the Wilson curl form, using the literal ordinary
+average; (ii) the actual constrained minimum and multiplier on a
+commuting affine probe have vanishing current/multiplier jets through
+order two, once the fixed-endpoint native stationary kernels are
+extended to polynomial inputs by their exponential bounds.
+
+The fixed-order algebra does not require a uniform large-block
+stationary inverse. Passing it uniformly in old depth requires the
+uniform kernel majorants being registered separately. Sections5--6
+then isolate the additional quantitative moving-map bounds needed by
+the archived heat argument. They are not inferred from the labels
+"actual" or "analytic" in an archived notebook.
+
+L is the fixed odd primitive blocking ratio. m is an integer old grade,
+p is an integer number of subsequent steps, and K=L^p, mu=1/K. The
+literal current classical action is S_m(V)=A(U_m(V)), with its flat
+scalar treated consistently. Current-coordinate counting pairings
+are used. The archive often calls the scale L^m by M; that notation
+is not used for an integer grade here.
+
+1. EXACT LINEAR CURL IDENTITY FOR THE NATIVE AVERAGE
+
+B109 printed252--254 (0.3),(0.5)--(0.12) defines centered odd-L blocks,
+the equivariant endpoint contour mean, and the anchored-log ordinary
+average. Linearize at the identity. For a coarse edge from y to
+y+L e_mu and a fine bond field a, write tau_y(r) for the arithmetic
+mean of line integrals over the actual endpoint paths from y to y+r.
+Then the literal differential is
+
+ (Q_L a)_mu(y)=L^-4 sum_(r in B_L)
+   [tau_y(r)+sum_(s=0)^(L-1) a_mu(y+r+s e_mu)
+                                  -tau_(y+L e_mu)(r)].       (1)
+
+The endpoint terms are psi(y)-psi(y+L e_mu), where
+psi(y)=L^-4 sum_r tau_y(r). They therefore cancel EXACTLY in the
+coarse curl. Telescoping the two straight strings gives
+
+ (d Q_L a)_(mu nu)(y)=L^-4 sum_(r in B_L)
+   sum_(s,t=0)^(L-1) (d a)_(mu nu)(y+r+s e_mu+t e_nu).       (2)
+
+No selected axial-path identification is used: the endpoint means
+cancel whatever their actual arithmetic path weights are. Orientations
+are fixed positive orientations; reverse plaquettes follow by sign.
+
+Iterate the ACTUAL primitive map p times. Its linear differential
+is Q^(p), not an independently chosen direct large-block average.
+Balanced base-L digits identify
+r_total=r_0+L r_1+...+L^(p-1)r_(p-1) bijectively with B_K.
+The ordinary digits in s_total and t_total similarly enumerate
+0,...,K-1 exactly once. Thus (2) iterates to the SAME formula
+
+ d Q^(p) a = Q_K^(2) da,
+ (Q_K^(2)F)_(mu nu)(y)=K^-4 sum_(r in B_K)
+            sum_(s,t=0)^(K-1) F_(mu nu)(y+r+s e_mu+t e_nu). (3)
+
+This proof applies on the infinite lattice and on compatible tori,
+with the prescribed periodic translations. It needs no affine flux.
+
+Here is a uniform norm proof which avoids an overlap constant at
+each stage. Let Q_(0,K)F(y)=K^-4 sum_(r in B_K)F(y+r). Distinct
+coarse rows have disjoint fine scalar supports, so its counting
+l2 operator norm is exactly K^-2. For a fixed plaquette component,
+
+ Q_K^(2)=sum_(s,t=0)^(K-1) Q_(0,K) translation_(s e_mu+t e_nu).
+
+Each translation is unitary on the fine counting space. Hence
+
+                     ||Q_K^(2)||_(2->2)<=K^2 K^-2=1.        (4)
+
+The map is diagonal in plaquette component and color, so the same
+bound holds for the whole curl field. This is the four-dimensional
+counting cancellation. The analogous bound in dimension d is
+K^(2-d/2). It is not a volume count or an estimate for each entry.
+
+2. CONSEQUENCE FOR THE ACTUAL CLASSICAL FLAT HESSIAN
+
+At flatness the second variation of the classical minimum value is
+the minimum of the fine Wilson quadratic form subject to the
+linearized actual averaging constraint. The stationarity/implicit
+minimum theorem identifies its minimizing lift; gauges affect neither
+energy nor the constraint curvature in this flat quadratic statement.
+With consistent trace normalization,
+
+ <v,q_m v> = min_(Q^(m)a=v) ||d_fine a||^2.
+
+Use (3)--(4) on every admissible lift. It gives
+
+       ||d_current v||^2<=||d_fine a||^2,
+       q_m >= q_W=d_current^*d_current.                     (5)
+
+An overall fixed normalization common to both sides is harmless, but
+must be the SAME Wilson convention. In d=4 no scale-dependent action
+prefactor is inserted. Equation(5) is an actual native flat lower
+bound, independent of m and compatible volume. It does not use a
+claimed universal quantum coefficient or a choice of structural limit.
+
+For the complementary upper bound, suppose the separate classical
+kernel producer supplies uniform exponential quadratic rows. Ward
+invariance q_m(k)d(k)=0 first implies q_m(0)=0. Positivity for real
+momenta then forces q_m'(0)=0, since either sign of a nonzero Hermitian
+linear jet would contradict positivity. Uniform second moments yield
+||q_m(k)||<=C delta(k), with delta(k)=sum_mu|exp(ik_mu)-1|^2.
+Since q_m kills the gradient vector, this is equivalent to
+
+                    q_W<=q_m<=C q_W                         (6)
+
+on the transverse subspace, and both vanish on gradients. The same
+uniform Taylor data yields the physical complex-twist estimate
+
+ ||q_m(k+i mu theta)-q_m(k)||
+ <=C[mu|theta| sqrt(delta(k))+mu^2|theta|^2]                 (7)
+
+for a fixed sufficiently small theta. Near zero this uses the double
+zero and Taylor's formula; away from zero it uses the uniform analytic
+strip and delta bounded below. The upper bound and(7), unlike(5),
+explicitly retain the separate uniform classical-kernel premise.
+
+3. THE EXACT COMMUTING AFFINE CANDIDATE
+
+Take commuting Cartan-valued c_mu,B_(mu nu), with B_(mu mu)=0, and
+
+ A_mu(x)=c_mu+sum_nu B_(mu nu)x_nu,  U_mu(x)=exp(i A_mu(x)).
+
+Its plaquette is the constant commuting matrix exp(i F_(mu nu)),
+F_(mu nu)=B_(nu mu)-B_(mu nu). The FULL Wilson Euler derivative
+vanishes componentwise: the two plaquettes incident to a bond in
+each transverse direction contribute opposite transported sine
+terms. Their transports commute with the background curvature.
+This is a Lie-algebra identity, valid against non-Cartan variations
+as well as Cartan variations. It is a local infinite-lattice
+identity, with no artificial boundary action added.
+
+For x=y+r in one primitive block, every coordinate-order endpoint
+path has transport exp(i r.A(y)) times a Cartan matrix independent
+of y. Equivariance of the selected native group mean factors out
+exp(i r.A(y)). Conjugation covariance puts its remaining value in
+the Cartan subgroup, on the local branch. Thus
+
+             P_L(U;y,y+r)=exp(i r.A(y)) p_L(B,r).           (8)
+
+No logarithmic-arithmetic formula for the nonlinear selected mean is
+assumed. The SAME p_L factors cancel between two translated endpoint
+blocks. The path product in B109(0.12), relative to its center string,
+therefore has logarithm
+
+                 L sum_nu (B_(mu nu)-B_(nu mu)) r_nu.
+
+The centered r mean is zero. Since B_(mu mu)=0, the center string
+itself is exp(i L A_mu(y)). Consequently
+
+ M_L(U)_mu(y)=exp(i L A_mu(y)),
+ M_L^p(U)_mu(y)=exp(i K A_mu(y)).                            (9)
+
+These equalities are local analytic-germ identities and therefore
+formal Taylor identities at each lattice site. They are not an
+evaluation of a bounded global map on an unbounded nonzero affine
+field. A current affine probe t n_nu H is obtained from the fine
+probe t x_nu H/K^2. Its output curvature is exactly K^2 times its
+fine curvature. The rooted candidate may be put into the actual
+native based gauge without changing its output or zero current.
+
+4. POLYNOMIAL JET UNIQUENESS AND MULTIPLIER VANISHING
+
+The precise fixed-endpoint input is the native stationary recursion
+on an actual fixed gauge slice, of the form
+
+       A z+B w+N(w,z)=0,           N=O((w,z)^2),             (10)
+
+with exponentially summable A,A^-1,B, inverse identities on finitely
+supported fields, and exponentially rooted Taylor kernels of N
+through degree2. Gauge conversion/constraint charts used to define
+this recursion must have the same finite-order property. Constants
+may depend on the FIXED endpoint and old finite grade. This is the
+native small-branch recursion in CMP102 printed305--309 (174)--(190),
+with the flat constrained/gauge inverse. Its uniform version in old
+grade is the separate kernel registration, not a consequence of
+this formal argument.
+
+For polynomial-growth v, exponential convolution preserves polynomial
+growth: (1+|j|)^r <= (1+|i|)^r (1+d(i,j))^r. The same estimate and
+absolute summation extend both inverse identities to such fields.
+Thus A has no polynomial-growth nullvector. Rooted finite-degree
+Taylor kernels are also absolutely summable on polynomial inputs,
+since a fixed polynomial of every joining length is absorbed by
+the exponential. At each order the coefficient z_n is therefore
+the UNIQUE polynomial solution A^-1 times its known lower-order
+forcing. These are precisely the coefficients of the bounded-field
+analytic minimum branch, extended by their kernels.
+
+Apply this to the based-gauge version of(8)--(9). It satisfies the
+actual constraints, gauge condition and Wilson stationary equation
+through order2, with full current zero. It consequently agrees with
+the actual minimum branch's polynomial jets through that order.
+The actual target multiplier is zero through order2 too: the
+stationarity equation is grad S=C^T lambda; the actual constraint
+has its right inverse on the small branch, so a zero full gradient
+forces lambda=0. This identifies every component of the multiplier,
+not merely its contraction with the one affine direction.
+
+The same conclusion applies to the actual S_m. The envelope identity
+identifies its left-relative target gradient with the multiplier of
+the ORIGINAL Wilson minimum under m primitive averages. Choose its
+fine affine curvature divided by L^(2m), apply(9) and polynomial
+uniqueness, and obtain
+
+       grad_left S_m(U^aff(t))=O(t^3).                      (11)
+
+For p further steps use the literal native composition identity
+P_(m,p)=M^m U_(m+p), from B109 printed265(2.2)--(2.3). Apply the
+ORIGINAL Wilson polynomial-jet uniqueness at the single fixed endpoint
+m+p, and then the exact ordinary affine average(9) m times. This
+identifies the actual final-to-intermediate minimum's affine jets;
+no additional inverse theorem for an abstract effective S_m stationary
+equation is required. Equation(11) makes the full gradient of S_m
+zero through order2 at this intermediate affine jet. The same native
+constraint right inverse then gives its actual outer multiplier
+
+                   lambda_(m,p)(t)=O(t^3).                 (12)
+
+Equations(11)--(12) are exact formal identities at FIXED m,p. Uniform
+moment majorants, once independently proved, pass them to varying-old-
+grade local kernel limits by dominated summation. They do not require
+an inverse or analytic neighborhood uniform in the composite K.
+
+Let C be the differential of the actual composite average, and q
+the actual relative Hessian of S_(m+p) at its coarse affine output.
+The full Lagrangian Hessian is Lagr=S_m''-lambda.f''. Equation(12)
+implies Lagr=S_m'' through order2. Differentiated gauge invariance,
+together with the full gradient(11), gives q D_c=O(t^3). For ANY
+exact moving-reference identity C-Cbar=D_c Z, it follows that
+
+       C^T q C=Cbar^T q Cbar+O(t^3).                       (13)
+
+This is an algebraic affine identification. It does not replace the
+effective S_m Hessian by the bare Wilson Hessian, and it says nothing
+about generic off-shell physical backgrounds.
+
+5. THE MOVING-MAP INTERFACE: EXACT ALGEBRA VERSUS UNIFORM ESTIMATES
+
+The archived mean-zero construction can be built using the actual
+B109 endpoint mean. For a primitive frozen reference U, define
+
+ B_U phi(y)=L^-4 sum_(x in B_L(y)) Ad_(P_L(U;y,x)) phi(x),
+ Z_U v(y)=L^-4 sum_x D_v[log(P_L(exp(iv)U;y,x)
+                                      P_L(U;y,x)^-1)/i]_0,
+ Cbar_U=C_U-D_(M_L U) Z_U.
+
+Endpoint covariance gives Z_U D_U=r_L-B_U and
+Cbar_U D_U=D_(M_L U)B_U. Composing at the ORDINARY intermediate
+references U_j=M_L^j U gives exactly
+
+ C-Cbar=D_c Z,       Cbar D=D_c B,
+ B(y,x)=K^-4 Ad_(P_hier(U;y,x)) for x in B_K(y),
+                      B B^T=K^-4 Id.                      (14)
+
+The last identity follows from disjoint row supports and orthogonality
+of each real adjoint transport (bilinear complex orthogonality on the
+holomorphic continuation). Cbar is a moving-reference tangent, NOT
+the derivative of a fixed-identity corrected nonlinear map. All
+coefficients in(14) have one- or two-final-block reads at fixed K.
+
+With J=K^2 B^T, Pi=J J^T and P=Id-Pi, the exact finite gauge/coarea
+algebra, if applied to these native maps and the same determinant
+normalizations as the preceding finite cocycle note, gives the pair
+
+ Ghat=P D^T D P+mu^2 Pi,
+ Q_B=Lagr-C^T q C+D P D^T+a Cbar^T Cbar.                    (15)
+
+Section4 removes the multiplier and replaces C^T q C by Cbar^T q Cbar
+through the ACTUAL affine jets. Thus the soft vector completion has
+the same first two affine jets as the explicit family
+
+ Vtilde(A)=S_m''(exp(i mu A))+D_A D_A^T
+       +Cbar_A^T[a Id-S_(m+p)''(M_L^p(exp(i mu A)))]Cbar_A.  (16)
+
+This narrows the on-shell identification gate. It does not by itself
+establish a uniform norm for the maps in(16).
+
+Here is a precise sufficient additional quantitative map certificate.
+For complete physical C1 directions A with
+||A||_phys,1=||A||_infty+mu^-1||nearest difference A||_infty,
+bounded by a fixed small a_*, prove, uniformly in p and old grade:
+
+ (T) the ordinary intermediate references, in compatible complete
+     charts, and their first-two physical-source derivatives satisfy
+     ||theta_j||_infty <= C (L^j/K) a_*,
+     ||D_A^r theta_j||_infty <= C (L^j/K) prod a_l,
+     r=1,2,  0<=j<p;
+
+ (M) ||J_A||<=C, ||D^r J_A[A_1,...,A_r]||<=C prod a_l,
+     ||Cbar_A||<=C mu,
+     ||D^r Cbar_A[A_1,...,A_r]||<=C mu prod a_l,
+     r=1,2, with their FULL one-/two-final-block source reads.
+
+The norms here are Hilbert operator norms, not entrywise sums over
+the K^4 internal coordinates. Pure fixed-K analyticity supplies no
+uniform constants in (T) or (M). The ordinary trajectory assertion
+must include its moving endpoint means; multiplying a crude C_L at
+each step would give a false K power.
+
+Once(T) is proved, a concrete route to(M) is available. The flat
+primitive scalar and corrected bond maps have counting norms L^-2
+and at most L^-1. Fixed-L analytic perturbations change them by a
+relative O(||theta_j||). Products therefore cost
+exp[C sum_j L^j a_*/K]<=exp(C a_*), not C^p. Differentiating those
+products once or twice gives the same summable geometric series;
+the normalized K^2 B^T and K Cbar then have bounded derivatives.
+For B the exact real row Gram identity already fixes its norm.
+Local source derivatives retain their complete final-block reads.
+This is a proof of (T)=>(M) with the indicated compatible charts,
+not a proof of(T) from a flat first-jet identity alone.
+
+6. QUANTITATIVE HEAT INPUTS LEFT AFTER THE ALGEBRA
+
+The archived actual_base_ward_heat_comparison_fragment uses actual
+classical degree<=4 rooted kernels, gauge Ward identities, exact flat
+Maxwell normalization, and the lower bound(5). It derives the
+relative-Hessian vertices and the actual/Wilson heat difference.
+The positive-beta assembly does not provide these native hypotheses
+just by stating its conclusion. The present task leaves the separate
+uniform classical kernel and Maxwell-transport producers unassumed
+until reviewed.
+
+Conditional on those two producers and(M), the remaining operator
+checks can be written explicitly, without asking for a generic
+uniform stationary map at nonzero magnetic field:
+
+(H1) Flat physical energy and weighted inverses. The scalar reference
+is R_s=D^T D+mu^2 Id and the vector reference is
+R_v=d_1^*d_1+D D^T+mu^2 Id, where d_1 is the bond-to-plaquette
+curl. Thus R_v is the componentwise scalar Laplacian plus mass,
+not merely the degenerate vector curl form. With the corresponding
+R_mu in each space, the soft scalar T_s=D^T D+mu^2 Pi and soft
+vector V=Q_B+(D J)(D J)^T must obey c R_mu<=T_s,V<=C R_mu,
+and the same energy-sandwiched inverses under sufficiently small
+physical exponential twists. The flat maps are the actual uniform
+block mean and straight-string bond mean. Block Poincare plus(5),
+and (7) plus their finite physical range, are the available proofs;
+a gap at each fixed K alone is not the required uniform statement.
+
+(H2) Localized physical vertices. For r=1,2 retain complete smooth
+source collars and rooted physical-block operator bounds for
+R_mu^-1/2 (D_A^r T_s or D_A^r V) R_mu^-1/2, with constants C prod a_l.
+For the classical part the archived covariant-Hessian theorem uses
+the stronger decomposition
+
+ [t^r]S_m''(exp(i t mu A))=d_0^* Z_r+Z_r^* d_0+E_r,
+ ||Z_1||<=C mu a_*, ||E_1||<=C mu^2 a_*,
+ ||Z_2||<=C mu^2 a_*^2, ||E_2||<=C mu^2 a_*^2.
+
+It follows from the uniform rooted degree-four kernels and ordered
+Ward factorization, not from a bare operator Hessian bound. The
+coarse term in(16) then has O(mu^2) physical vertices by(M).
+
+(H3) Coarse Schur factors and heat traces. Keep
+M_s=mu^2 J^T T_s^-1 J and S=Id-J^T D^T V^-1 D J. Their fixed color
+fibers per final block and their rooted first-two derivatives must
+be controlled using(H1)--(H2) before taking traces. Do not estimate
+raw derivatives of D J across sharp block boundaries separately.
+The elementary flat trace bound has scale
+C{K^4/(1+K^2 u)^2+N^-4}exp(-c u) per final volume, for physical
+time u. Cubic localized resolvents (Schatten order3>4/2), retaining
+the marked block projector, are the archive's route to uniform
+infrared differentiated traces, rather than an operator-norm trace
+bound which would reintroduce K^4.
+
+The exact four-factor determinant identity is
+
+ D=N0[log det T_s-1/2 log det V
+                         +log det M_s-1/2 log det S].       (17)
+
+The archive proves the bounded coarse/UV/IR contributions and the
+intermediate-band comparison CONDITIONALLY on precisely these
+classical/moving-map/vertex inputs. For clarity, a sufficient final
+band certificate is
+
+ |integral_(0,1) h(s) ds/s| +
+ |integral_(K^2,infty) h(s) ds/s| <=C,
+ |h(s)-h_base,m(s)|<=C s/K^2,       1<=s<=K^2,
+ |h_base,m(s)-h_W(s)|<=C/s,
+
+with the normalized source convention and bounded coarse terms kept.
+The fixed Wilson reference is then a separate specified calculation.
+No numerical coefficient is imported by the present note.
+
+There is a genuine obstruction to strengthening(H2) to arbitrary
+separate raw mean-zero vertices: the archived actual compact pure-
+gauge example gives ||Ghat_0^-1/2 Ghat'_0 Ghat_0^-1/2|| growing at
+least c sqrt(K), while its total heat trace is constant. Thus the
+soft pair and its exact coarse corrections, or an equivalently
+cancelled trace argument, are essential. Fixed-K exact algebra and
+gauge covariance do not imply the missing uniform bound by themselves.
+
+Finally, these are infinite-lattice Taylor-density statements or
+declared compatible periodizations. The actual finite-regulator
+winding/moment passage remains separate. A constant nonzero Cartan
+flux is not analytically varied on a periodic torus. Section4 closes
+the formal affine multiplier obstruction, not that regulator issue.
+
+SOURCES READ
+
+Native: B109 printed252--255,260--268, actual(0.3),(0.5)--(0.12),
+(1.1)--(1.5),(2.2)--(2.11); CMP102 printed305--309(174)--(190).
+Local files are those registered in the preceding native Gaussian
+coarea cocycle note.
+
+Archived, read as conditional proofs and clues:
+  work/cartan_determinant_moment_fragment.tex;
+  work/actual_positive_beta_assembly_fragment.tex;
+  work/actual_base_ward_heat_comparison_fragment.tex;
+  work/soft_penalty_physical_band_fragment.tex;
+  outputs/ym4-infrared-cancellation-notebook.tex Sections on the
+    covariant moving-reference scalar average and mean-zero bridge;
+  outputs/ym4-soft-determinant-notebook.tex Sections on soft vector,
+    physical vertices and cubic infrared resolvents;
+  work/mean_zero_gauge_vertex_provenance_audit.txt.
+All under work/handoff/original-workspace/work/package/work/archive/
+ym4-research/. No archived assertion is a new instruction.

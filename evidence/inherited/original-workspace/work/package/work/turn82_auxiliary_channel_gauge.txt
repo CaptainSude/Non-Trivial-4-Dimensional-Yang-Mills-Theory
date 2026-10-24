@@ -1,0 +1,364 @@
+TURN82 -- ORIGINAL-LAW HS SMOOTHING, FISHER CONTROL, AND THE REFLECTED CHANNEL
+20 October 2026. gauge47. Finite-regulator results; no continuum claim.
+
+RESULT
+The exact two-HS augmentation gives a positive selfadjoint Markov operator
+P on the ORIGINAL Wilson law. Its conditional-noise form is bounded by
+the sum of original single-link heatbath forms. The actual auxiliary
+current concentration also gives a volume-independent weighted
+Lipschitz noise bound. More strongly, an exact Gaussian-score calculation
+gives, in the product Pauli/2 metric,
+  E_mu |grad P^(n+1) F|^2
+       <= (18 beta+24) Var_mu(F)/(2n+2).                  (R1)
+No derivative bound on the original bounded F is assumed here.
+
+After reflection symmetrization, every buffered round changes a strictly
+positive-half observable by an OS-null function. Thus O(a^-1) rounds give
+an ORIGINAL-law, bounded, gauge-invariant representative of the SAME OS
+vector with E|grad F_new|^2=O((beta+1)a), while retaining a fixed positive
+time margin. This is a genuine finite-law estimate. The new representative
+reads a four-dimensional time block, not one time slice. Consequently
+(R1) is not the Hamiltonian one-slice Dirichlet criterion, algorithmic
+rounds are not physical time, and this operation cannot create the
+unproved nonzero continuum OS vector of the initial physical probe.
+
+1. EXACT ORIGINAL AUGMENTATION AND METRIC
+
+Use a finite nondegenerate four-dimensional periodic SU(2) Wilson lattice,
+all periods at least4, with normalized Haar and
+  h_p=1-Re Tr U_p/2, mu(dU)=Z^-1 exp(-beta sum_p h_p)dU.
+For the reflection statements use an even temporal period and the usual
+site-reflection-positive original Wilson law. A strict positive-half read
+avoids both temporal fixed slices and links crossing them.
+
+The two-HS identities are those explicitly proved in
+work/turn81_external_source_history.txt Sections2 and5. Their underlying
+primary method is Vairinhos--de Forcrand, JHEP12(2014)038,
+arXiv:1409.8442, pp2--3. We use its exact positive augmentation, not a
+weak-sector approximation. Denote the auxiliary variables by xi=(G,R),
+their marginal by nu, and the original conditional lift by kappa_U.
+
+For each plaquette let A_p and B_p be its two oriented length-two paths.
+With independent standard complex 2x2 matrices Z_p,W_h of density
+pi^-4 exp(-||Z||_F^2), the ACTUAL conditional lift given original U is
+  G_p=m_p(U)+Z_p, m_p=sqrt(beta)(A_p+B_p)/2,
+  R_h=n_h(U,G)+W_h,
+  n_h(U,G)=sqrt(beta)U_h/2+G_p V_h^dagger.               (1.1)
+Here U_h V_h is the corresponding half-path. The W_h are independent
+given G and U; the displayed innovations may all be chosen independent.
+The conditional G moments satisfy, uniformly in EVERY real U,
+  ||m_p||_F^2=beta(2-h_p)<=2beta,
+  E[||G_p||_F^2|U]<=4+2beta.                             (1.2)
+
+Given real xi, all ORIGINAL links are independent:
+  k_xi(dU)=product_e exp(Re Tr J_e^dagger U_e)dU_e/I(J_e),
+  J_e=sum_first sqrt(beta)R_h+sum_second 2R_h^dagger G_p.
+                                                               (1.3)
+Orientations involving an inverse link are converted by the corresponding
+dagger. Write U=q_0 I+i q_vec.sigma, q in S3, and define a(J) by
+Re Tr J^dagger U=a(J).q. In particular a(cU)=2c q(U).
+Equation(1.3) is a normalized conditional law, not an independently
+chosen reference law. Its mixture is exactly mu, including Z.
+
+For gradients use the invariant SU(2) metric in which i sigma_alpha/2
+are orthonormal. If v_e is a link tangent in these coordinates,
+  ||D_v U_e||_F^2=|v_e|^2/2, ||v||^2=sum_e |v_e|^2.      (1.4)
+All constants below use this convention. Quaternion chord distance is
+a different distance and is named explicitly in Section3.
+
+2. POSITIVE DATA AUGMENTATION AND ORIGINAL HEATBATH COMPARISON
+
+For real F in L2(mu), define
+  C F(xi)=E[F(U)|xi],
+  C* H(U)=E_kappa_U H(xi), P=C*C.                        (2.1)
+The joint measure gives the stated adjoint. Conditional Jensen shows
+that C is a contraction. Hence P is Markov, stationary, selfadjoint and
+0<=P<=Id. This is the actual step U -> xi -> U', with U,U' conditionally
+independent under k_xi. Its exact form is
+  D_HS(F):=<F,(Id-P)F>_mu
+        =E_nu Var_k_xi(F)=E[(F(U')-F(U))^2]/2.           (2.2)
+In particular Var_nu(CF)=Var_mu(F)-D_HS(F). This identity alone says
+nothing about the reflected covariance of CF or F.
+
+Product-measure Efron--Stein at fixed xi gives
+  Var_k_xi F <= sum_e E_k_xi,-e Var_k_xi,e F.
+The right side integrated over nu equals
+sum_e E Var(F|xi,U_(not e)). By the conditional-variance decomposition
+with respect to U_(not e), this is no larger than
+  D_HB(F):=sum_e E_mu Var(F|U_(not e)).
+Therefore, exactly for the original Wilson law,
+  D_HS(F)<=D_HB(F).                                      (2.3)
+The heatbath convention in(2.3) is one rate-one update per link, summed
+over all links. For a random-scan form divide D_HB by the link count.
+The direction in(2.3) does not deduce a heatbath or gradient upper bound
+from a small HS form.
+
+For n>=0 the spectral theorem for 0<=P<=Id also gives
+  D_HS(P^n F)<=Var_mu(F)/(2n+1),                          (2.4)
+using sup_(0<=x<=1) x^(2n)(1-x)<=1/(2n+1). No spectral
+gap or mixing time estimate is used.
+
+3. ACTUAL CONDITIONAL NOISE: WEIGHTED LINK INFLUENCES
+
+Let B be a real bounded original observable, and assume deterministic
+quaternion-chord influences L_e satisfying, for all other link values,
+  |B(U)-B(U with U_e replaced by V)|
+       <= L_e |q(U_e)-q(V)|.                             (3.1)
+For k_a(dq) proportional to exp(a.q)domega(q), set r=|a| and
+c(r)=I_2(r)/I_1(r). Its mean is c(r)a/r, with mean0 at r=0.
+For two independent samples q,q',
+  E|q-q'|^2=2[1-c(r)^2].
+The exact S3 covariance bounds proved independently in
+work/turn82_current_tube_history.txt Section2 imply
+  1-c(r)^2=Tr Cov(q)<=4/(1+r).                           (3.2)
+Applying(3.1) in the product Efron--Stein formula before averaging gives
+  D_HS(B)<=sum_e L_e^2 E_nu[1-c(|a(J_e)|)^2]
+          <=4 sum_e L_e^2 E_nu(1+|a(J_e)|)^-1.           (3.3)
+There is no conditional spectral-gap theorem hidden in this proof.
+
+The actual current-concentration companion,
+work/turn82_auxiliary_tails_tail.txt Section5, proves for the standard
+three-first/three-second incidence convention
+  P_nu{|a(J_e)|<2beta}<=p_beta,
+  p_beta=min(1,192 exp(-beta/3200)),
+and this bound holds uniformly conditional on ANY original U. Thus
+  E_nu(1+|a(J_e)|)^-1<=(1+2beta)^-1+p_beta
+                         <=C/(1+beta).                 (3.4)
+The constant is absolute, not optimized. This proves the actual
+volume-independent consumer
+  D_HS(B)<=C/(1+beta) sum_e L_e^2.                        (3.5)
+For 0<=B<=1 one may take the minimum with1/4. Its reflected convention
+has exactly the same estimate after relabeling links. Section6 uses
+only these two conventions, not an unverified incidence lower bound
+for every possible auxiliary convention.
+
+The surviving signal is Var_nu(CB); the loss in(3.3) is ordinary
+conditional noise. Neither a large ordinary variance nor small loss
+establishes a nonzero reflected norm. The separate Fisher estimate below
+is stronger for producing a smooth representative because it requires
+no prior control of the influences L_e of a nonlinear spatial flow.
+
+4. AN EXACT ORIGINAL-LIFT FISHER BOUND
+
+Differentiate kappa_U at fixed xi, in a deterministic tangent direction v.
+The score is
+  S_v=2 Re sum_p <Z_p,D_vm_p>_F
+          +2 Re sum_h <W_h,D_U n_h[v]>_F.                (4.1)
+In D_U n_h the variable G is held fixed. The score has mean0. Every
+first/second cross term vanishes after conditioning on G and integrating
+the mean-zero W. Different W scores also have zero cross covariance.
+For a standard complex Gaussian, the variance of 2 Re<Z,A> is2||A||^2.
+Consequently the Fisher quadratic form is exactly
+  I_U(v):=E_kappa_U S_v^2
+       =2 sum_p ||D_vm_p||_F^2
+           +2 sum_h E_(G|U)||D_U n_h[v]||_F^2.           (4.2)
+In particular one must not differentiate G(U) inside n_h while also
+using the conditional-score decomposition(4.1).
+
+Here is an explicit bounded-incidence estimate with no volume factor.
+The derivative of A_p+B_p has four link contributions, each of norm
+|v_e|/sqrt2. Cauchy--Schwarz and(1.4) give
+  ||D_vm_p||_F^2 <= (beta/2)sum_(e in p)|v_e|^2.
+Every four-dimensional edge belongs to six plaquettes, so its total
+contribution to the first sum of(4.2) is at most6beta|v_e|^2.
+
+For a half-path,
+  D_U n_h[v]=(sqrt(beta)/2)D_v U_h+G_p D_v V_h^dagger.
+Pauli/2 multiplication gives
+||G_p D_v V_h^dagger||_F^2=|v_V|^2||G_p||_F^2/4.
+Using ||x+y||^2<=2||x||^2+2||y||^2 and(1.2),
+  2 E||D_U n_h[v]||_F^2
+      <= (beta/2)|v_U|^2+(4+2beta)|v_V|^2.               (4.3)
+Each edge occurs in six half-path incidences in total. The larger of
+these two coefficients is4+2beta. Combining the two sums proves
+  I_U(v)<=(18beta+24)||v||^2
+          <=24(beta+1)||v||^2                            (4.4)
+for EVERY real original U. Dagger-oriented traversals satisfy the same
+norm estimates. No small-action event, moment of the Wilson density,
+or physical source derivative is used in(4.4).
+
+For bounded real F, CF is a fixed bounded function of xi. Differentiation
+under kappa_U is justified by its Gaussian densities and finite moments,
+uniformly on the compact original link manifold. Thus PF is smooth and
+  D_v PF(U)=E_kappa_U[(CF-PF(U))S_v].                     (4.5)
+Cauchy--Schwarz followed by(4.4), and then taking the supremum over a
+SINGLE unit tangent v, gives
+  |grad PF(U)|^2 <=(18beta+24) Var_kappa_U(CF).            (4.6)
+Taking a separate coordinate estimate and summing would insert an
+unnecessary dimension factor; the Fisher operator bound avoids it.
+
+Integrating the variance and using C*C=P yields the exact consumer
+  E_mu |grad PF|^2
+      <=(18beta+24)(||CF||_nu^2-||PF||_mu^2)
+      =(18beta+24)<F,P(Id-P)F>_mu.                      (4.7)
+This is an averaged gradient estimate for the ACTUAL original law.
+It uses the conditional law of auxiliaries given U, not a Gaussian
+assumption about their interacting marginal nu.
+
+5. ITERATION WITHOUT AN INPUT FLOW-DERIVATIVE ESTIMATE
+
+Apply(4.7) with P^nF and use the spectral theorem:
+  E_mu |grad P^(n+1)F|^2
+     <=(18beta+24)<F,P^(2n+1)(Id-P)F>_mu
+     <=(18beta+24) Var_mu(F)/(2n+2).                    (5.1)
+The exact scalar maximum is
+(2n+1)^(2n+1)/(2n+2)^(2n+2), which is bounded by1/(2n+2).
+For 0<=F<=1, all iterates remain in[0,1] and Var_mu(F)<=1/4.
+No statement of convergence to equilibrium uniformly in the regulator
+is necessary. A finite graph's eventual mixing would not justify
+letting the iteration count violate the support restrictions below.
+
+6. FINITE READ COLLARS, REFLECTION SYMMETRIZATION, AND OS NULLNESS
+
+For a complete original link read set S define H(S) to be the union of
+all plaquette edges in plaquettes containing an edge of S. If F reads S,
+then CF uses only the currents J_e for e in S. Each such current uses
+G_p,R_h in those incident plaquettes. Formula(1.1) samples these variables
+using only the original links in those SAME plaquettes and their local
+Gaussian innovations. Therefore
+  P F reads only H(S).                                  (6.1)
+Repeated reads are contained in H^n(S). Gauge covariance of the exact
+augmentation also shows that P preserves gauge invariance. Its source
+integrals remain original observables, not auxiliary observables renamed
+as original ones.
+
+To avoid assuming that a fixed HS half-path convention is reflection
+symmetric, write R F=F composed with theta for the LINEAR geometric
+temporal pullback, without complex conjugation, and set
+  Pbar=(P+R P R)/2.                                      (6.2)
+This is a positive selfadjoint stationary Markov contraction, commutes
+with R, and has the same read collar. The complex inner product is
+<F,H>=E[conjugate(F)H], and OS(F,H)=<R F,H>. Thus the OS conjugation
+occurs exactly once. The theorem below is stated for real observables;
+the same convention gives its sesquilinear extension. Pbar can be represented by an
+independent convention label L in{0,1}, followed by that convention's
+exact HS augmentation. Given (L,xi), the original link law is still a
+product. The label has no U derivative, so its Fisher quadratic form
+is the average of the two Fisher forms. All of(2.2)--(2.4), (3.3)--(3.5),
+and (4.4)--(5.1) therefore hold for Pbar with the stated constants.
+We do NOT claim reflection positivity for all functions of this label:
+reflection swaps conventions, and an odd label function need not have
+a positive reflected form. Only the ORIGINAL-law proof below is used.
+
+For ANY original F,H with disjoint complete original link reads,
+conditional product independence in(1.3) gives
+  <F,Pbar H>_mu=E_(L,nu_L)[(C_L F)(C_L H)]
+               =E_mu[FH].                              (6.3)
+For complex observables insert the usual conjugation in the first
+factor. No disjointness of the auxiliary stars is needed for(6.3).
+That stronger assumption would only be needed for an unrelated claim
+of independence of two entire update randomizations.
+
+Suppose F and Pbar F are both supported strictly in the original positive
+half. For any positive-half K, the original reads of R K and F are
+disjoint. Equation(6.3) says
+  <R K,Pbar F-F>_mu=0.                                   (6.4)
+Taking K=Pbar F-F is permitted by the support assumption. Thus Pbar F-F
+has zero original OS seminorm. The original Wilson RP form makes this
+an exact equality of OS quotient vectors; it is not merely an equality
+of two positive numbers. Means are also unchanged by stationarity.
+Inductively, whenever every intermediate H^j(S) remains in the strict
+positive half,
+  [Pbar^n F]_OS=[F]_OS,
+  <R Pbar^n F,Pbar^m H>_mu=<R F,H>_mu                     (6.5)
+for similarly buffered H,m. Centered Gram matrices are preserved too.
+This argument uses the original measure and its conditional product
+identity, not a presumed RP structure on every auxiliary function.
+
+If a complete original read set is at physical time distance at least
+d>0 from BOTH temporal fixed slices, the plaquette collar extends its
+time range by at most a per round, with harmless endpoint conventions.
+Taking n=floor(d/(4a)), for a sufficiently small compared with d, leaves
+a fixed positive margin. Equations(5.1) and(6.5) give, for 0<=B<=1,
+  E_mu |grad Pbar^n B|^2 <= C(beta+1)a/d,
+  [Pbar^n(B-E_mu B)]_OS=[B-E_mu B]_OS.                   (6.6)
+The norm in(6.6) is the full four-dimensional product link gradient.
+The constant is independent of volume and does not depend on an input
+Jacobian bound for B.
+
+6A. STATES ARE PRESERVED; THE MAP IS NOT AN ALGEBRA HOMOMORPHISM
+
+Pbar is not multiplicative. For example
+Pbar(F^2)-(Pbar F)^2 is the conditional variance of F(U') given U
+under the complete one-step update, and is generally nonzero. The
+OS-null relation Pbar F-F therefore does NOT permit replacing every
+same-side product by the product of its individually smoothed factors.
+The OS null space is not being asserted to be a pointwise-product ideal.
+
+For bounded original positive-half probes B_1,...,B_m the correctly
+retained finite-source package is
+  G_n(s;U)=Pbar^n exp(sum_i s_i B_i)(U).                  (6.7)
+Its mixed jets are Pbar^n of the ORIGINAL products, including repeated
+marks; they are not products of Pbar^n B_i. If the complete read halos
+remain in the positive half, (6.5) applies to this whole source function
+and to each jet, preserving their buffered reflected Gram forms and
+their original means. Scalar-source analyticity at each finite lattice
+follows from boundedness. A uniform complex ORIGINAL-field domain for
+(6.7) is a separate continuation estimate; it is not supplied by the
+OS identity alone. Thus this note constructs OS-equivalent state
+representatives, not a new multiplicative continuum observable algebra.
+
+7. THE ACTUAL SPATIALLY FLOWED MAGNETIC PROBE AND PHYSICAL LIMITS
+
+One eligible input is the exact finite-regulator probe from
+work/spatial_flow_probe_turn63.txt:
+  B_(a,s)(t,x)=exp[-h |2 p(P_(12,s,a)(t,x))/(g_* a^2)|^2],
+with fixed physical s>0, h>0 and g_*>0. Here p is the SU(2) quaternion
+vector of the spatially flowed plaquette. Spatial Wilson flow uses only
+the original spatial links at time t (or its declared spatial box), so
+this is gauge invariant, lies in[0,1], and has exact single-time support.
+The original scalar is kept; g_* is not silently replaced by bare g_a.
+
+Equation(3.5) would require a bound on its GLOBAL link influences. The
+linearized Maxwell comparison gives a squared coefficient sum of order
+a/(g_*^2 s^(5/2)), as recorded in TURN64 magnetic_drift Section5, but that
+is not an actual nonlinear influence bound. Compact-flow smoothness at
+each finite lattice supplies finite influences, not the required uniform
+scaling. Equation(6.6), in contrast, applies directly to this bounded
+nonlinear input without importing its free comparison or a flow Jacobian
+estimate. It produces a different original function in its exact OS class.
+
+This improves the available ORIGINAL-law derivative estimate, while
+leaving two important distinctions intact:
+(i) The input probe's nonzero continuum reflected norm and calibration
+    are still unproved. Exact OS preservation cannot create that norm.
+(ii) Pbar^n B reads a four-dimensional time block of physical thickness
+     O(na), rather than a single spatial slice. The earlier one-slice
+     Hamiltonian energy criterion concerns a different function space
+     and a different law. Its conclusion does not follow from(6.6).
+For n of order a^-1, the bound is O(beta a), the appealing scale of the
+previous gradient target, but its domain is the full isotropic Wilson
+configuration. No isotropic-to-ground-law transfer has been supplied.
+
+Similarly, the HS generator Id-Pbar and the heatbath generator in(2.3)
+are algorithmic reversible generators. Their spectral parameter is not
+physical temporal translation. Even replacing Pbar by
+(1-epsilon)Id+epsilon Pbar rescales the algorithmic form while leaving
+the Wilson law and its physical transfer matrix unchanged. Such a choice
+cannot by itself prove a physical mass or spectral bound. The finite
+read argument allows order a^-1 rounds within a fixed time buffer;
+order a^-2 diffusive rounds do not preserve that buffer by this argument.
+This is a limitation of the proved deterministic collar, not a theorem
+that a sharper propagation estimate is impossible.
+
+8. WHAT IS CLOSED AND WHAT REMAINS
+
+Closed here for the exact finite original Wilson law: the HS/heatbath
+form comparison; weighted conditional-noise estimate with actual current
+moments; the dimension-free Fisher operator bound and its iterative
+gradient consumer; and exact OS-nullness of buffered original-law
+averaging, with gauge and reflection conventions explicitly retained.
+The original partition function and every conditional normalizer are
+already inside the common positive joint law throughout.
+
+No native selected-sector map, raw-history truncation, or replacement
+of a physical source by its reference redraw is used. Conversely, these
+results supply neither spatial mixing of nu nor an original separated
+source lower bound. The concrete next physical question is whether an
+original bounded positive-half probe has a uniform nonzero OS channel,
+or whether these OS-equivalent time-block representatives admit a
+physical translation-energy estimate using their full block reads.
+Neither conclusion is inferred from ordinary variance, current size,
+or the algorithmic smoothing parameter.
+
+No authoritative output, status, or earlier note was modified.

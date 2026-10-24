@@ -1,0 +1,89 @@
+TURN82. INDEPENDENT AUDIT OF THE SAFE AUXILIARY SOURCE GERM
+20 October 2026. tail47.
+
+VERDICT: PASS at the stated real-safe-center, finite-read, conditional
+source-kernel scope. No full interacting source integration is inferred.
+
+Producer: work/turn82_safe_auxiliary_source_root.txt
+SHA256: FFB67FC9CD4100A56AE08C1881CAB8882AA9940322FC1CD6B540602421829284
+
+Final wording amendment checked: the diameter bound distinguishes link
+centers from the union of geometric links. No probabilistic or source
+estimate changed from the previously audited 6D781A08 version.
+
+The complete producer was read against the actual two-HS tail and
+independent-current estimates. The standard three-first/three-second
+path convention, complete read ownership and beta>=1 are explicit.
+
+1. Real-Hilbert complexification.
+
+The adjoint and physical quaternion projection are real-linear maps;
+their Hilbert complexifications retain operator norms1 and sqrt2.
+The real bilinear matrix product has Frobenius norm at most the product
+of input norms. Expanding real and imaginary parts gives the stated
+conservative complex-bilinear norm bound2. If one factor is fixed real,
+the map is the complexification of a single bounded real-linear map,
+so its norm remains at most that real factor's Frobenius norm. This
+justifies all three terms in (2.1), including the quadratic coefficient4.
+
+2. The complete current increment and source radius.
+
+The six incidence rows contribute six r and six g entries. A half-path
+R enters two original currents and a plaquette G enters four. The
+linear incidence operator therefore has norm at most sqrt(12*4),
+and 5sqrt2*sqrt48=5sqrt96<50. Each half-path has only one second-link
+occurrence. The quadratic l2 estimate uses at most three terms per row,
+then the nonnegative inequality
+sum_h r_h^2 g_(p(h))^2<=(sum_h r_h^2)(sum_p g_p^2)<=d^4/4.
+Its projected coefficient is2sqrt6<5. Thus (2.2) is valid with every
+actual polynomial cross term retained.
+
+At a real safe center, 1+|a_e|>=1+2beta. For beta>=1 and d<=1,
+(50sqrt(beta)d+5d^2)/sqrt(1+2beta)<40d. Hence d<1/80 indeed enters
+the proved weighted current ball of radius1/2. The conditional kernel
+norm is at most exp(1/3). At R<1/4,
+exp(1/3)(exp(R)-1)<1/2, giving the claimed common source logarithm.
+Its value at z=0 is exactly zero because the kernel stays normalized.
+The radius1/160 Cauchy and fixed-order polarization bounds follow.
+
+These constants do not depend on beta, volume, or read count because
+the domain is a TOTAL auxiliary Hilbert ball, not a fixed coordinate
+polydisc. The producer correctly excludes coefficient-sum norm claims
+and analyticity of the real safe indicator. Bounded measurable original
+probes suffice for the conditional integral; no differentiability of
+their nonlinear flow is implicitly used.
+
+3. Unsafe component census.
+
+The adjacency graph has maximum degree18. A depth-first spanning-tree
+walk of length2(m-1) visits exactly its connected m-vertex set; choosing
+one such walk per set gives the count18^{2(m-1)}=324^{m-1}. A component
+of size at least m contains a rooted connected subset of exactly m.
+Combining this with the actual prescribed-set probability bound gives
+precisely (4.1), including p_beta^{1/19} and q_beta.
+
+For N_a<=C a^{-4} and beta(a)>=b log(1/a), the union bound is
+C_m a^{-4+bm/60800}. Thus the threshold m>243200/b in (4.2) is
+correct. Physical diameter is interpreted in the periodic physical
+metric on a torus, or in a common nonwrapping embedding. Adjacent
+plaquette-linked link centers are at most2a apart. After excluding
+components of size at least m, the conservative center-diameter bound
+2a(m-1) is valid. Adding the link segments gives the conservative
+geometric-union diameter bound2am. Both tend to zero for the fixed
+m>=2 used here. If beta(a) merely tends to infinity,
+taking m proportional to a^{-1} makes the negative logarithm from
+q_beta^{m-1} dominate the O(log(1/a)) volume term. This proves the
+fixed-positive-diameter exclusion at fixed physical volume.
+
+4. Scope and actual-law identification.
+
+The tails and connected-set census concern the normalized interacting
+nu_beta inherited from the literal original Wilson law. Their proof
+uses conditional Gaussian noises, not independent nu coordinates.
+The safe source germ is centered at records satisfying ALL relevant
+safe conditions. None of the results implies that an extensive read
+set is entirely safe, that small holes have small observable influence,
+or that averaging the germs gives a localized normalized source
+expansion. The final text explicitly retains these limitations, as
+well as the absence of a nonzero physical reflected channel or a
+continuum Yang--Mills construction.

@@ -1,0 +1,242 @@
+EXPLICIT ALL-ORDER EXTENSION ON FLAT-DIAGONAL SCHWARTZ TESTS
+18 October 2026. Working proof, not a claim of continuum construction.
+
+1. INPUT AND PRECISE CONCLUSION
+
+Write D_n=union_{i<j}{x_i=x_j} in (R^4)^n and
+d(x)=min_{i<j}|x_i-x_j|_infinity. Suppose compatible off-diagonal
+correlations T_n are given on tensor tests. Assume fixed A,B,c,rho>0
+such that, whenever the f_i are supported in pairwise disjoint boxes
+of radius at most rho/n and mutual distance at least d>0,
+
+ |T_n(f_1 tensor ... tensor f_n)|
+ <= A^n (n!)^B (1+d^-1)^(cn) product_i ||f_i||_{C^1}.       (1)
+
+The constants do not depend on placement. Compatibility means that
+the multilinear functionals agree under restriction and finite
+partitions; it holds for limits of the actual correlation functionals.
+Increasing constants covers n=1, separately treated by unit-scale
+partitions. It suffices to prove the result for n>=2.
+
+Let S_flat be the closed subspace of Schwartz functions F for which
+every partial derivative vanishes on D_n. Put
+
+ p_m(F)=max_{|alpha|<=m} sup_x (1+|x|_infinity)^m |D^alpha F(x)|.
+
+There are fixed A_1,B_1,C_1 such that T_n has a unique continuous
+extension from compact tests away from D_n to S_flat and
+
+ |T_n(F)| <= A_1^n (n!)^B_1 p_{ceil(C_1 n)}(F).             (2)
+
+For example, let k=ceil(c)+7. The proof below permits C_1=k+6 and
+B_1=B+k+40, after increasing A_1. Constants are deliberately loose.
+No abstract dimension-dependent kernel theorem is used.
+
+SCOPE: (2) is the regularity bound on the flat-diagonal Schwartz
+space. Hahn--Banach supplies extensions to the full Schwartz space
+with the same bound, but does not choose contact terms consistent
+with every other OS axiom. A reconstruction theorem formulated on
+S_flat may consume (2) directly. If full-Schwartz Schwinger functions
+are required, their compatible contact extension remains separate.
+
+2. A DYADIC CONFIGURATION PARTITION WITH CONTROLLED DERIVATIVES
+
+Fix a large numerical K, say K=100. Choose a nondecreasing smooth
+chi on [0,infinity), zero on [0,1], one on [4,infinity), taking
+values in [0,1], with derivative bounds
+
+ ||chi^(m)|| <= C^(m+1) (m!)^2.
+
+Such a fixed Gevrey-2 transition follows from exp(-1/t), with its
+standard elementary differentiation estimate. Constants below may
+depend on this one transition, but never on n. Set
+
+ ell_0=min(1,rho/10)/n,       ell_s=2^-s ell_0,
+ H_s(x)=product_{i<j} chi(|x_i-x_j|_2^2/(K n ell_s)^2),
+ h_0=H_0,                   h_s=H_s-H_{s-1} (s>=1).
+
+Then h_s>=0 and sum_{s>=0}h_s=1 off D_n. At any fixed point only
+a fixed number of h_s are nonzero, apart from the single far term.
+Where h_s is nonzero, all pairwise Euclidean distances exceed
+K n ell_s. For s>=1 at least one pair has Euclidean distance at most
+4K n ell_s. Equivalence with the four-dimensional sup norm changes
+only K by a fixed factor. Thus these are capped Whitney scales.
+
+Choose a one-dimensional nonnegative smooth theta supported in
+[-1,1], with sum_{m in Z}theta(t-m)=1 and bounds
+||theta^(m)||<=C^(m+1)(m!)^2. It can be constructed by dividing a
+fixed Gevrey bump by its periodized sum; this denominator has a
+fixed positive lower bound and at most a fixed number of terms.
+In N=4n dimensions let
+
+ theta_{s,m}(x)=product_{a=1}^N theta(x_a/ell_s-m_a), m in Z^N.
+ F_{s,m}=F h_s theta_{s,m}.
+
+Their sum is F off D_n. Discard terms that are identically zero.
+The product boxes containing a remaining term, enlarged from radius
+ell_s to radius 2ell_s in each four-dimensional block, remain
+pairwise disjoint. Indeed a point where h_s theta_{s,m} is nonzero
+witnesses separation >=K n ell_s, whereas enlargement moves the
+points by only a fixed multiple of ell_s. Their radii are <=rho/n.
+Their mutual distance d_{s,m} is at least a fixed multiple of
+n ell_s, and hence at least a fixed multiple of ell_s.
+
+Here is the dimension bookkeeping. The product defining h_s times
+theta_{s,m} contains at most C n^2 factors, each bounded by one.
+For an ordered derivative of total order u, distribute its u
+individual differentiations among these factors: there are at most
+(C n^2)^u choices. The derivative factors obey a product bound
+C^u (u!)^2 ell_s^-u because product_j u_j! <= u!.
+Undifferentiated factors cost one, not C. The subtraction defining
+h_s costs only two. Therefore, for 0<=u<=6n,
+
+ ell_s^u ||D^alpha(h_s theta_{s,m})||_infinity
+ <= C^n n^(30n),                                         (3)
+
+uniformly s,m. This loose exponent also includes the product rule
+used below. In particular it does not contain C^(n^2), nor an
+overlap constant raised to O(n). Using an arbitrary Whitney
+partition and bounding derivatives of its reciprocal by its
+dimension-dependent overlap would not justify this estimate.
+
+3. LOCAL TENSOR FOURIER EXPANSION
+
+Scale y=x/ell_s-m. The function
+G(y)=F_{s,m}(ell_s(m+y)) has support in [-1,1]^(4n).
+Expand it periodically on [-3,3]^(4n). For each four-dimensional
+block apply (1-Delta_{y_i})^3. Its Fourier coefficients satisfy
+
+ |a_{k_1,...,k_n}|
+ <= C^n product_i(1+|k_i|^2)^-3
+       max_{|alpha_i|<=6} ||D_y^alpha G||_infinity,         (4)
+
+where k_i in Z^4. The maximum uses total derivative order <=6n.
+There is only a fixed number of terms per block in the differential
+operator, so its expansion contributes C^n.
+
+Choose a fixed four-dimensional cutoff eta equal to one on [-1,1]^4
+and supported in (-2,2)^4. The Fourier series represents F_{s,m}
+globally as a sum of tensor products
+
+ product_i eta(x_i/ell_s-m_i)
+             exp(i pi k_i.(x_i/ell_s-m_i)/3).
+
+Each factor has C^1 norm <=C ell_s^-1(1+|k_i|). The fixed sum
+
+ sum_{k in Z^4}(1+|k|^2)^-3(1+|k|)
+
+converges. Consequently (1), (3), and (4) give
+
+ |T_n(F_{s,m})|
+ <= A_2^n (n!)^B n^(30n) ell_s^[-(c+1)n]
+       max_{|alpha|<=6n} ell_s^|alpha|
+                    sup_{support F_{s,m}} |D^alpha F|.     (5)
+
+One may harmlessly replace the support in (5) by the bounded
+neighborhood where derivatives of h_s theta_{s,m} are supported.
+The same separation/nearest-collision bounds hold there by closure.
+
+This also constructs the off-diagonal distribution without invoking
+a kernel theorem. On any compact product rectangle away from D_n,
+the tensor Fourier series converges absolutely in the norm used in
+(1), and finite tensor sums are dense in the required finite-order
+smooth topology. Two such constructions coincide on overlaps,
+since they agree on tensor tests; a finite product partition proves
+the equality for general tests supported in the overlap. Thus the
+local definitions glue to the given compatible off-diagonal T_n.
+
+4. FLATNESS AND SPATIAL DECAY
+
+Let M=(k+6)n, where k=ceil(c)+7. For s>=1 and a point in the
+support of a differentiated h_s theta_{s,m}, a pair is separated
+by at most C n ell_s. Move one of those two four-dimensional
+coordinates onto the other, keeping every other coordinate fixed.
+The resulting point lies on D_n. Taylor's formula along this line,
+using vanishing of every derivative of F on D_n, gives, for
+|alpha|<=6n,
+
+ |D^alpha F(x)|
+ <= (C n ell_s)^(kn)/(kn)!
+       max_{|beta|=kn, y on the segment}|D^(alpha+beta)F(y)|.
+
+The notation absorbs the at most 4^(kn) directional-derivative
+expansion into C^(kn). Derivatives used have order <=M.
+The displacement is at most C n ell_0, a fixed constant independent
+of n. Also x differs from the grid center ell_s m by at most
+ell_s. Hence the Schwartz weight at y is comparable to the weight
+at that center, with comparison C^M, and ell_s^|alpha|<=1. Discarding
+the beneficial factorial yields
+
+ max_{|alpha|<=6n} ell_s^|alpha| sup |D^alpha F|
+ <= C^n n^(kn) ell_s^(kn)
+              (1+|ell_s m|_infinity)^-M p_M(F).            (6)
+
+For s=0 no flatness is needed. The same quantity is bounded by
+
+ C^n (1+|ell_0 m|_infinity)^-M p_M(F).                     (7)
+
+5. EXPLICIT CELL AND SCALE SUMS
+
+For N=4n, M=(k+6)n>N, and 0<ell<=1,
+
+ sum_{m in Z^N}(1+|ell m|_infinity)^-M <= C^N ell^-N.       (8)
+
+To see this without a dimension-hidden integration constant, count
+points in sup-norm dyadic shells. The jth shell has at most
+(C 2^j/ell)^N points and weight at most 2^-jM. The resulting
+geometric series sum_j 2^-j(M-N) is uniformly bounded. The central
+shell obeys the same estimate. This proves (8) with C independent n.
+
+Combining (5),(6),(8), all s>=1 terms sum to at most
+
+ A_3^n (n!)^B n^[(k+30)n] p_M(F)
+                 sum_{s>=1} ell_s^[(k-c-5)n].             (9)
+
+The exponent k-c-5>=2, so the scale sum is bounded by one after
+an unimportant fixed factor. For s=0, (5),(7),(8) give
+
+ A_4^n (n!)^B n^(30n) ell_0^[-(c+5)n] p_M(F)
+ <= A_5^n (n!)^B n^[(c+35)n] p_M(F).                     (10)
+
+Since n^(Dn)<=e^(Dn)(n!)^D, (9)--(10) imply (2) with the constants
+stated in Section 1. Every dimension-dependent loss has been
+displayed: n^2 cutoff factors differentiated O(n) times, O(n)
+Gevrey derivative factorials, kn-order flat Taylor loss, and the
+ell^-4n configuration-cell count. Each is n^{O(n)}.
+
+6. CONVERGENCE, CANONICITY, AND WHAT THIS DOES NOT PROVE
+
+The series sum_{s,m} T_n(F_{s,m}) is absolutely convergent by
+(9)--(10), defines the claimed extension, and obeys (2). Compact
+smooth tests away from D_n are dense in S_flat in its Schwartz
+topology. An explicit approximation first cuts off at spatial
+infinity, then multiplies by H_s and lets s tend to infinity.
+The derivatives of H_s grow only as a fixed power of ell_s^-1
+for each fixed n and derivative order. Flatness supplies an
+arbitrarily higher power, so every fixed Schwartz seminorm tends
+to zero on the removed collision neighborhood. The spatial cutoff
+is treated by Schwartz decay. Each approximation is compact and
+avoids D_n, hence uniqueness follows from continuity.
+
+If an actual regulator family satisfies (1) for ALL tiny boxes and
+separations at each fixed regulator, the same proof gives a uniform
+bound (2). This stronger premise must not be inferred when the
+source producer requires the mesh to be smaller than the test box
+or separation. In that case first extract continuum limits on each
+fixed positive-separated tensor box (and a countable dense class),
+then apply the present proof to those continuum correlations. The
+canonical S_flat extension is a continuum construction; it does
+not, without additional small-separation estimates, assert direct
+convergence of bare-regulator evaluations on every flat test.
+No separate dimension-dependent distribution theorem is required.
+Permutation symmetry and Euclidean covariance pass on S_flat if
+they hold on that dense off-diagonal class. Reflection positivity
+passes for any OS test class whose tested quadratic combinations
+remain in the admitted domain and for which the regulator identity
+is available. The present argument does not supply that domain
+identification, contact terms, clustering, or nontriviality.
+
+The source producer still has to prove the uniform product estimate
+(1) for the correctly renormalized and centered actual observables.
+This note closes its all-order flat-Schwartz regularity consumer;
+it does not assume that producing (1) completes Yang--Mills existence.

@@ -1,0 +1,470 @@
+INTERACTING GAUSSIAN SELECTION: A SUFFICIENT GLOBAL ESTIMATE AND ITS LIMIT
+TURN72. tail47. 20 October 2026.
+
+RESULT
+
+There is a genuine volume-uniform weak-interaction extension of the
+Gaussian product-ball covariance comparison: globally small bounded
+local Mayer activities permit a connected expansion in which every
+full-minus-selected coefficient has one exponentially small Gaussian
+tail insertion. Section2 proves this for a bounded-degree interaction
+graph and quadratic marks on finitely many coordinate blocks.
+
+The actual TURN48 selected interaction does NOT presently satisfy that
+global hypothesis. Its analytic remainder, Jacobian and inherited input
+are admitted on the weak chart and on the product-ball Gaussian domain.
+The bound C(g T^3+epsilon gT/b) is not an untruncated Gaussian norm.
+
+This distinction cannot be bypassed using only local analyticity and
+partition stability. Section4 gives a compact positive analytic model
+with a bounded Gaussian-normalized partition function, the required
+small local even interaction, and an order-one covariance correction
+coming from distant wells. The source in that example is a fixed
+bounded quadratic observable, not the total classical action.
+
+There is also a positive actual compact-group check. For a single SU(2)
+Wilson plaquette, global radial action coercivity proves an exponential
+full-minus-selected bound for quadratic-growth observables, including
+the normalized plaquette action. This does not supply the corresponding
+coupled constrained-fiber theorem.
+
+1. WHAT THE ACTUAL SELECTED IDENTITY SAYS
+
+The exact TURN48 periodic macro identity is, with every original source
+and inherited quantum term retained,
+
+ a_W(w;zeta)
+ =C_in(zeta) exp[-s(w)/g^2+zeta s(w)+E_pre(w;zeta)]
+       A0(w)(2pi g^2)^(d/2)c_T^(n_e)
+       E_(gamma_T^tensor) exp V_(g,t)(w,xi;zeta),       (1.1)
+
+ V_(g,t)
+   =(t/2)xi^tP(w)xi -(1-t)r_w(gKxi)/g^2
+    +log[J_w(gKxi)/J_*(w)]
+    +E(U_pre(w,gKxi);zeta)-E_pre(w;zeta),              (1.2)
+ t=g^2 zeta.
+
+The window is frozen at the unsourced g,K,P,chart. The dummy normal
+energy is not sourced. The physical Gaussian dimension d and the number
+n_e of ambient color blocks are different. All constants in (1.1)
+are part of its exact positive selected-sector interpretation.
+
+For |xi_i|<=T, the chart/inherited-input estimate gives
+
+ ||log U_pre(w,gKxi)/i||_infinity
+                 <=C_a b/R+C_R gT < b/2.             (1.3)
+
+The complete rooted bounded-potential budget is
+
+ C_R[g T^3+|t|T^2+epsilon_bar gT/b] < epsilon_cluster. (1.4)
+
+The actual classical minimum, the canonical chart, its coarea and the
+complete-field incoming E are only admitted on the specified domains.
+Neither (1.3) nor (1.4) asserts their continuation to every real xi.
+Removing gamma_T in (1.1) and writing gamma instead is therefore a
+new mathematical operation. Before treating it as the original full
+fiber one must supply both that global definition/identity and the
+estimates which justify its normalized connected expansion.
+
+Source anchors: projected_product_sector_turn48 Sections2--4,6;
+periodic_projected_product_bridge_turn48 equations(4)--(8).
+The present note does not alter their frozen source or normalization.
+
+2. A PROVED WEAK-INTERACTION EXTENSION WITH COMPLETE DENOMINATORS
+
+2A. Precise theorem
+
+Let G=(I,E) be a finite graph of maximum degree D. At each vertex put
+xi_i in R^q with standard Gaussian probability gamma. Let
+
+ gamma_T = gamma(. | |xi|<=T),  c_T=gamma(|xi|<=T),  T>=1.
+
+For every edge e={i,j} let V_e(xi_i,xi_j) be real and measurable. Suppose
+the GLOBAL Mayer activities satisfy
+
+       sup_(R^q x R^q)|exp V_e-1| <= epsilon.          (2.1)
+
+Fix k0 and kappa>0. There is epsilon_0(D,q,k0,kappa)>0 such that the
+following holds when epsilon<=epsilon_0. Define the actual probabilities
+
+ dmu_inf=Z_inf^-1 exp[sum_e V_e] product_i dgamma_i,
+ dmu_T  =Z_T^-1   exp[sum_e V_e] product_i dgamma_(T,i). (2.2)
+
+Thus mu_T is exactly mu_inf conditioned on ALL |xi_i|<=T. In particular
+
+ P_mu_inf(all good)=c_T^|I| Z_T/Z_inf,                 (2.3)
+
+which need not be near one. No global lower bound on this probability
+is assumed or used.
+
+Let A,B be sets of at most k0 sites. Let F_A,H_B be quadratic
+polynomials in their respective coordinate blocks, with
+
+ |F_A(xi)|<=M_F(1+sum_(i in A)|xi_i|^2),
+ |H_B(xi)|<=M_H(1+sum_(i in B)|xi_i|^2).              (2.4)
+
+The same proof works for measurable marks satisfying these growth
+bounds and admitting the stated complex exponential integrals.
+Then uniformly in the graph volume,
+
+ |Cov_mu_inf(F_A,H_B)-Cov_mu_T(F_A,H_B)|
+   <=C M_F M_H exp[-c T^2] exp[-kappa dist_G(A,B)].    (2.5)
+
+When A and B lie in different interaction components, the left side
+is zero. When A intersects B, take distance zero. Constants depend
+on D,q,k0,kappa and the fixed smallness margin, not on |I|.
+
+This is an all-orders interacting statement. It is not obtained by
+bounding Z_inf^-1 and Z_T^-1 separately by extensive exponentials.
+It does require the much stronger global input (2.1).
+
+2B. A small signed base-measure derivative
+
+Interpolate the ONE-SITE probability by
+
+                gamma_s=(1-s)gamma_T+s gamma,  0<=s<=1.
+
+Let nu=gamma-gamma_T. For every fixed 0<eta<1/2,
+
+ integral exp(eta|xi|^2) |nu|(dxi) <=C_(q,eta)e^(-c_eta T^2).
+                                                               (2.6)
+
+Indeed gamma-gamma_T equals gamma on the complement of the ball and
+equals -(1-c_T)gamma_T on the ball. Its weighted variation is bounded
+by the corresponding Gaussian weighted tail plus
+(1-c_T) E_gamma_T exp(eta|xi|^2). Since T>=1, c_T is bounded below
+by c_1>0. Both terms have the asserted Gaussian tail estimate.
+Polynomial factors can be absorbed by decreasing c_eta.
+
+For a union of at most 2k0 sites the derivative of the product gamma_s
+is a sum of at most 2k0 products with one nu factor. Thus (2.6)
+also controls that derivative, including weights exp(eta sum|xi|^2).
+
+Normalize the marks by their M_F,M_H and introduce complex sources
+z,w on a fixed disc |z|,|w|<=r0, where r0 depends only on q,k0.
+The bound (2.4) and Gaussian exponential moments allow r0 to be
+chosen so that the local source partition factor differs from one
+by less than 1/4, uniformly in s and T. Consequently its normalized
+complex measure has uniformly bounded variation, and its s derivative
+has variation at most
+
+                         C exp[-c T^2].              (2.7)
+
+For disjoint A,B, make them two source blocks. For overlapping A,B,
+use their union as one block. Other vertices remain singleton blocks.
+Contracting these source blocks gives a graph of degree at most a
+fixed D'=2k0 D, allowing parallel edges. The bounded interactions
+internal to a source block can be included in its local measure:
+because epsilon<1/2, |V_e|<=2epsilon, and their number is bounded
+in terms of D,k0. This changes only the fixed constants and retains
+(2.7) after further decreasing epsilon_0,r0.
+
+All local normalization factors are retained. For disjoint A,B their
+logarithms depend on at most one of z,w and hence have zero mixed
+derivative. If A and B overlap, their local mixed derivative difference
+is O(exp[-cT^2]) by (2.6)--(2.7) and Cauchy.
+
+2C. Connected expansion and its uniform majorant
+
+For the remaining edges write w_e=exp V_e-1. Expanding the finite
+product product_e(1+w_e) gives an exact hard-core polymer gas:
+a polymer X is the vertex support of a connected nonempty edge set,
+with activity
+
+ zeta_s(X;z,w)
+  =sum_(F connected, V(F)=X)
+       integral product_(e in F)w_e product_(i in X)dnu_(i,s;z,w).
+                                                               (2.8)
+
+Here the nu_i are the just-normalized local complex measures.
+They have variation bounded by a fixed L; away from source blocks
+their variation is one. All logarithms of source-block partition
+factors have already been retained separately. The polymer gas
+partition function multiplies their product, so this is the exact
+interacting source integral, not a replacement denominator.
+
+A simultaneous source/s majorant is
+
+ a(X)=L^|X| sum_(F connected, V(F)=X) epsilon^|F|,
+ |zeta_s(X)|<=a(X),
+ |partial_s zeta_s(X)|<=C e^(-cT^2)|X| a(X).          (2.9)
+
+The derivative statement follows by differentiating one normalized
+local measure at a time and applying (2.6)--(2.7). Internal source-block
+normalization derivatives are included in that bound.
+
+For completeness, the needed smallness follows directly from graph
+counting. A connected edge set on k vertices has a spanning tree.
+After choosing one, summing all additional edges costs at most
+(1+epsilon)^(D' k/2). The number of rooted tree embeddings with
+k vertices is at most (4D')^(k-1), by ordered rooted tree shapes and
+at most D' choices for every edge. Thus, with
+H=L exp(a)(1+epsilon)^(D'/2),
+
+ sup_i sum_(X contains i) exp(a|X|)a(X)
+      <= H sum_(k>=2)(4D' epsilon H)^(k-1).           (2.10)
+
+Multiple edges are counted with their labels. Taking
+a=kappa+4 and then epsilon_0 sufficiently small makes the right
+side, for example, less than 1/10. No volume appears.
+
+The hard-core connected-log expansion is
+
+ log Xi_s
+  =sum_(m>=1)1/m! sum_(X_1,...,X_m)
+         phi^T(X_1,...,X_m) product_l zeta_s(X_l),     (2.11)
+
+where phi^T is the alternating sum of connected incompatibility graphs.
+Its absolute value is bounded by the number of labelled spanning trees
+whose edges join intersecting polymers. One proof partitions connected
+graphs into intervals indexed by a rooted spanning tree: the alternating
+sum on each interval is zero or has absolute value one.
+
+Here is the rooted convergence estimate used below. If
+sup_i sum_(X contains i)a(X) exp[(kappa+2)|X|]<=1,
+then at a fixed root polymer X the tree sum of descendants, with
+weights a(Y)exp[(kappa+1)|Y|], is at most exp|X|.
+To see this, truncate the possible number of descendants. If the
+subtree factor at Y is at most exp|Y|, summing the unordered children
+at X is bounded by
+
+ exp[sum_(Y intersects X) a(Y)exp[(kappa+2)|Y|]]
+                                                 <=exp|X|.
+
+Induction starts at leaves; monotone convergence removes the truncation.
+Rooting an entire cluster at a polymer containing a prescribed site
+then bounds the cluster sum uniformly. The extra cardinal reserves
+in (2.10) also pay the factor sum_l |X_l| in (2.9).
+This proves absolute convergence of (2.11), its source derivatives,
+and its s derivative on the fixed smaller source discs. It also
+establishes the required nonzero local analytic branch of Xi_s.
+
+2D. The difference has a tail insertion and connects both marks
+
+Differentiate (2.11) in s. By (2.9), each term has ONE differentiated
+local measure and is bounded by C e^(-cT^2) times the common absolute
+cluster majorant, with the cardinal factor already paid.
+
+For the mixed source derivative, only clusters whose union meets
+BOTH source blocks contribute. Every such union is connected in the
+contracted interaction graph. For disjoint source blocks it therefore
+has total polymer cardinality at least dist_G(A,B)+1. The exponential
+reserve extracts exp[-kappa dist_G(A,B)]. Root at one source block;
+there are at most k0 original roots, already included in C.
+
+Integrating s from zero to one and applying Cauchy in z,w gives
+C e^(-cT^2)e^(-kappa dist(A,B)) for the normalized marks.
+Restoring M_F M_H proves (2.5). The overlap case includes its local
+source-block normalization term as described in Section2B.
+
+Finally,
+partial_z partial_w log E_mu exp(zF+wH)|_(0,0)=Cov_mu(F,H).
+Thus the exact logarithms estimated above really give the covariance
+difference in (2.5). The factor c_T^|I| in (2.3) is source independent
+and cancels only at this derivative; the source-dependent interacting
+partition functions were never removed.
+
+For marks written as absolutely summable sums of finite-read quadratic
+pieces, (2.5) can be summed when the corresponding marked support norms
+are available. A nonlocal physical pullback requires that support
+estimate; replacing its coefficient matrices by unrelated local marks
+would not be valid. The Gaussian companion proves its own exact
+projection/whitening support bounds. The present theorem does not
+silently extend (2.1) to all-arity unbounded interactions.
+
+3. WHY THE ACTUAL TURN48 HYPOTHESES DO NOT SUPPLY SECTION2
+
+The selected local construction has three separate missing inputs for
+the untruncated replacement:
+
+ (i) a definition of the complete same-source phase, Jacobian and
+     inherited amplitude for all Gaussian coordinates used;
+ (ii) identification of that enlarged integral with the actual omitted
+      portion of the original constrained compact gauge fiber;
+ (iii) a global weighted connected expansion or domination estimate
+       strong enough to retain one tail mark with two physical sources.
+
+The bounded-domain estimate (1.4) provides none of these automatically.
+For example g^2 xi^4 is analytic and even, and is small on |xi|<=T
+when gT^3 is small. But E_gamma exp(g^2 xi^4) is infinite for every
+real g>0. Local analyticity does not even imply real integrability
+of a formal untruncated extension.
+
+Keeping exact compact-group nonlinearities avoids this particular
+divergence but does not make the global Mayer sup small. Already for
+one SU(2) plaquette, in its principal logarithm coordinate xi with
+U=exp(i g xi.sigma), the Gaussian-relative interaction is
+
+ V_g(xi)=|xi|^2/2 -(1-cos(g|xi|))/g^2
+                         +2log[sin(g|xi|)/(g|xi|)].   (3.1)
+
+At |xi|=r/g with a fixed 0<r<pi, its leading term is
+[r^2/2-(1-cos r)]/g^2>0. Therefore exp V_g is exponentially large
+there as g->0; at the cut locus the Jacobian vanishes. Extending the
+density by zero beyond the principal chart gives w=-1 outside.
+None of these facts meets (2.1), despite the favorable global real
+bound proved next.
+
+The published/native large-field action census and the retained full
+Wilson energy inequalities concern their actual actions and geometry.
+They cannot be reinterpreted without proof as uniform small global
+activities in the moving constrained xi variables. In particular a
+current relative chart event is not the same as a collection of large
+original plaquette actions. This note supplies no such identification.
+
+4. ANALYTIC COMPACT COUNTERMODEL: STABILITY PLUS LOCAL SMALLNESS IS NOT ENOUGH
+
+Take a physical scalar b in [-2,2], with positive reference db and
+
+ S(b)=b^2(1-b^2)^2/2,       Q(b)=b^2.
+
+For real g>0 consider the exact positive compact law
+mu_g(db)=Z_phys(g)^-1 exp[-S(b)/g^2]db.
+Its source Q is fixed and bounded on that physical interval.
+Around the saddle b=0 set b=gx. After extracting the Gaussian
+normalization, its sourced partition function is
+
+ Z_g(z)=(2pi)^(-1/2) integral_(|x|<=2/g)
+               exp[-x^2/2+V_g(x)+z g^2x^2]dx,
+ V_g(x)=g^2x^4-(g^4/2)x^6.                            (4.1)
+
+The interaction is a polynomial, even in g and x, and on the entire
+complex disc |x|<=T obeys
+
+             |V_g(x)|<=|g|^2 T^4+(|g|^4/2)T^6.       (4.2)
+
+It obeys the selected small-domain budget when |g|T^3 is small.
+There is no hidden failure of local joint analyticity.
+
+The classical action has three minima, at b=0,+1,-1, with
+
+                   S''(0)=1,   S''(+1)=S''(-1)=4.
+
+The normalized partition has the explicit limit
+
+                         Z_g(z)->1+exp z              (4.3)
+
+locally uniformly for complex z in bounded discs. To prove this,
+write Z_g=(sqrt(2pi)g)^-1 integral_[-2,2]
+exp[-S(b)/g^2+z b^2]db. Split into small fixed neighborhoods of the
+three minima and their complement. The complement is exponentially
+small. In each neighborhood b=b_*+g y, Taylor's theorem and a
+strict local quadratic lower bound give dominated Gaussian convergence.
+The contribution is exp(z b_*^2)/sqrt(S''(b_*)).
+Their sum is exactly 1+exp z. The same domination is uniform on
+bounded complex z discs; Cauchy therefore also gives source-jet
+convergence. In particular Z_g(0)->2: the partition normalization is
+uniformly of its expected Gaussian order.
+
+Consequently the normalized law of Q converges to the distribution
+which puts mass1/2 at0 and mass1/2 at1, and
+
+                         Var_mu_g Q ->1/4.            (4.4)
+
+Now select the declared saddle chart by |x|<=T(g), where
+T(g)->infinity and gT(g)^3->0. Its exact selected source logarithm
+uses the SAME density and the SAME Q, conditioned on that event.
+Equation(4.2) tends uniformly to zero there and
+0<=Q<=g^2 T(g)^2->0. Its normalized source generating function tends
+locally uniformly to1, so
+
+                         Var_selected Q ->0.          (4.5)
+
+Meanwhile the Gaussian probability of the omitted |x|>T(g) tends
+to zero exponentially. The interaction has promoted Gaussian-rare
+neighborhoods of x=+/-1/g to order-one physical mass.
+
+This example is not a gauge theory and not a counterexample to the
+actual Yang--Mills claims. It is a counterexample to inferring a
+full-source correction bound from the displayed local analytic
+budgets, evenness, positivity, and a Gaussian-order partition bound.
+The source Q is NOT the total S. A total-action source can be blind
+to the relative weights of equal-depth saddles; no contrary statement
+is inferred here. The example addresses the proposed general physical
+quadratic-source comparison.
+
+5. POSITIVE ACTUAL CHECK: ONE COMPACT SU(2) WILSON PLAQUETTE
+
+Let U in SU(2), normalized Haar measure, h(U)=1-Tr(U)/2,
+and density proportional to exp[-h(U)/g^2], 0<g<=1.
+Use U=exp(i b.sigma), 0<=|b|<pi. Haar measure is
+
+               (2pi^2)^-1 [sin|b|/|b|]^2 db.
+
+With b=gxi and J_g(xi)=[sin(g|xi|)/(g|xi|)]^2, the actual normalized
+law of xi has density proportional to
+
+ 1_(|xi|<pi/g) exp[-(1-cos(g|xi|))/g^2] J_g(xi) dxi. (5.1)
+
+This is precisely the Gaussian-relative representation(3.1), including
+its finite principal-chart domain. For 0<=r<=pi,
+
+              2r^2/pi^2 <=1-cos r<=r^2/2.            (5.2)
+
+Thus the density before normalization is bounded above by
+exp[-2|xi|^2/pi^2]. On |xi|<=1 it is bounded below by
+(sin1)^2 exp[-|xi|^2/2], uniformly in g<=1.
+The normalized xi-law nu_g therefore satisfies
+
+ c<=Z_gauss_relative(g)<=C,
+ nu_g(|xi|<=1)>=c,
+ E_nu_g[(1+|xi|^k)1_(|xi|>T)]<=C_k exp[-c_k T^2]    (5.3)
+
+for every fixed k and T>=1. If T>=pi/g the tail is empty.
+The constants do not involve an unnormalized rare-event denominator.
+
+Let nu_(g,T)=nu_g(. ||xi|<=T). For observables satisfying
+
+ |F(xi)|<=M_F(1+|xi|^2),  |H(xi)|<=M_H(1+|xi|^2),
+
+the elementary identity
+
+ E_nu_g F-E_nu_(g,T)F
+ =E_nu_g[F1_(bad)]-nu_g(bad)E_nu_(g,T)F               (5.4)
+
+and (5.3), with k=2,4, prove
+
+ |Cov_nu_g(F,H)-Cov_nu_(g,T)(F,H)|
+                       <=C M_F M_H exp[-cT^2].       (5.5)
+
+Indeed the same argument bounds the product moment difference, and
+the individual means are uniformly bounded. The selected denominator
+is bounded below because T>=1, so every conditional moment used in
+(5.4) is controlled. This proof does not require F,H to be polynomial.
+
+In particular Q=h(U)/g^2 obeys 0<=Q<=|xi|^2/2, so (5.5) applies to
+the normalized physical action. For the unscaled h, it gives the
+explicit covariance correction C g^4 exp[-cT^2]. For independent
+copies of this single-plaquette model the local estimate extends
+immediately without a whole-volume normalization loss.
+
+This is a genuine nonlinear compact Wilson integral, but only a single
+plaquette (or an independent product). Its special input is the global
+coercivity(5.2) in the actual chart. The coupled four-dimensional
+constrained fiber has neither independent plaquettes nor this global
+single-saddle inequality supplied by TURN48. Formula(5.5) must not be
+promoted to that setting without the corresponding action, coarea,
+source and connected-support estimates.
+
+6. WHAT HAS CHANGED, AND THE NEXT ACTUAL ESTIMATE
+
+The question is no longer whether a tiny local analytic interaction
+should heuristically preserve the Gaussian cutoff correction. It
+does preserve it under the explicit global high-temperature hypothesis
+in Section2, and it can fail badly without a global hypothesis even
+when the partition normalization is stable.
+
+For the present YM route, a useful next theorem would retain the
+actual full constrained compact measure and prove a connected
+two-source expansion with one charged omitted-coordinate/branch
+insertion. A weighted activity estimate may replace the overly strong
+supremum hypothesis(2.1), as the single-plaquette calculation shows.
+But it must retain global stability under overlapping activities,
+the actual coarse source, the moving physical/gauge constraints, and
+the complete denominator. Local holomorphy of V on C_T is insufficient.
+
+No untruncated extension of the TURN48 kernel, no full-law source
+correction, and no four-dimensional continuum construction has been
+proved by this note. The proved additions are the explicit interacting
+sufficient theorem, the compact analytic obstruction to the shortcut,
+and the exact nonlinear one-plaquette tail comparison.

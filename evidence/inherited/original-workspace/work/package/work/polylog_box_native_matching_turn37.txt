@@ -1,0 +1,369 @@
+POLYLOGARITHMIC BARE BOXES VERSUS THE NATIVE CONDITIONAL INTEGRALS
+19 October 2026. balaban_inputs. Turn37 source/matching audit.
+
+RESULT
+
+The new Dirichlet-box theorem applies without a change of law to a
+BARE Wilson conditional interior, with its complete boundary/exterior
+fixed and no block-average observation conditioned upon. It does not
+directly apply to the native regular T integral: that integral has a
+hard nonlinear average constraint already at its first step. Its later
+Gaussian representation solves this constraint; it is not a softening
+or deletion of it. A concrete Gaussian calculation below proves why
+an ambient small-tail estimate cannot be passed to those fibers.
+
+There is a different, genuinely native positive result: the admitted
+R-reference integral in II(1.2) has a fixed-current-size axial slice,
+an actual quadratic lower bound, and an actual same-reference
+denominator estimate. It has normalized Gaussian tails in its current
+fluctuation coordinates. This was already proved in the turn15/21
+reference notes; it does not identify that reference with the new bare
+Dirichlet box. The two results have complementary, distinct scopes.
+
+1. PRIMARY DICTIONARY: HARD CONSTRAINT, GAUGE, AND ACTION
+
+Directly inspected primary sources:
+
+[B109] CMP109(1987)249--301, pp265--270, (2.1)--(2.16), (3.1):
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+
+The original T integral has the group-average delta. Its critical
+background is selected ON that fiber; (2.3) identifies its coarse
+representative. Relative logarithms and the specified axial/Landau
+gauge transformations give (2.10). On p267 the nonlinear average is
+straightened by B'=B-hD(B), with LQh=I. The result still contains
+delta(QB). On p268 constrained corridor variables are eliminated;
+the Gaussian covariance is (C* A^(k) C)^-1 on the remaining variables.
+The gauge-fixing quadratic and the Gaussian are not substitutes for
+the original average condition. Equations(2.12)--(2.13) retain the
+interaction, inherited effective terms, cutoff and normalization.
+
+[B122-II] CMP122(1989)355--392, pp356--359, (1.2)--(1.13):
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+
+Its refill reference instead varies current links in Lambda, pins G0,
+and reconstructs a fine field. The minimizing U0 in (1.3) has prescribed
+averages on Z\Lambda. Equations(1.4)--(1.6) cancel/localize the linear
+term. Equations(1.7)--(1.9) give coercivity on the axial slice;
+(1.10)--(1.11) retain its denominator and background action. The stated
+Lambda fits a 100M current box. The analytic extension uses an admitted
+fine field via V_k=M_k(U), not arbitrary fixed boundary data.
+
+[B119] CMP119(1988)243--285, pp257--259, (2.18)--(2.23):
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+
+The full later density retains the chronological operators and an
+action containing Wilson, E, R, boundary and vacuum terms, with the
+selected geometry. A conditional current-link action is consequently
+not identified merely by the bare Wilson plaquettes on that graph.
+
+These statements use the primary PDFs, not reconstructed Raw files.
+OCR does not reliably preserve every displayed coefficient; no claim
+below depends on an unread subscript or prefactor.
+
+2. EXACT PLACE WHERE THE NEW BARE RESULT APPLIES
+
+Let D be the open cubical box with every boundary link fixed to e.
+Include in S_D every Wilson plaquette reading a free edge. Such a
+plaquette lies in the box. The positive bare action splits as
+
+             S(U)=S_ext(e)+S_D(u;e).
+
+The exact conditional law is therefore
+
+ mu_D(du|e)=Z_D(e)^-1 exp[-S_D(u;e)/g^2] dHaar(u).       (2.1)
+
+Gauge transformations are identity at ALL boundary vertices. The
+one-anchor-per-component forest in polylog_box_geometry_audit_turn37
+is an exact Haar change of variables for (2.1). For boundary data in
+the SAME coherent frame satisfying delta<=c R^-24, the theorem in
+polylog_box_conditional_tail_turn37 applies with its actual minimum
+x_*(e), actual Z_D(e), and R<=C log(1/g)^b. Constants are independent
+of the surrounding volume. Integrating (2.1) over admitted exteriors
+is legal; unadmitted exterior mass must remain separate.
+
+This is a definite stage of the original positive bare law. It is not
+a theorem for a conditional law obtained by additionally revealing
+block averages, history flags, nonlocal minimizing fields, or auxiliary
+variables. Such revealing generally changes the conditional law even
+when the unconditioned marginal has not changed.
+
+3. HARD-FIBER OBSTRUCTION AND EXACT GAUSSIAN NORMALIZATION
+
+Let x in R^N have density exp[-x^t H x/(2g^2)], H>0, and let Q have
+m independent rows. Use the ordinary Lebesgue delta convention.
+Put Sigma=Q H^-1 Q^t. Direct Gaussian integration gives
+
+ Z_Q(b)=(2 pi g^2)^((N-m)/2) (det H)^(-1/2)
+             (det Sigma)^(-1/2)
+             exp[-b^t Sigma^-1 b/(2g^2)].                (3.1)
+
+The constrained mean and covariance are
+
+ x_b=H^-1 Q^t Sigma^-1 b,
+ Cov(x|Qx=b)=g^2[H^-1-H^-1 Q^t Sigma^-1 Q H^-1].        (3.2)
+
+Thus conditioning is singular relative to the ambient distribution.
+For example take H=I and Qx=x_1. For b=2gT, the fiber has probability
+one of lying outside {|x|_infty<=gT}, although the ambient failure
+probability is at most 2N exp(-T^2/2). With T a power of log(1/g), b
+still tends to zero and is inside any fixed weak-data neighborhood.
+This is a counterexample to the INFERENCE from a bare centered tail
+to a tail at every small block datum, not a counterexample to a new
+constrained theorem centered at its own minimum.
+
+The nonlinear version is equally exact: if a retained datum v is
+outside the image M_e(W) of the proposed bare good window, then its
+entire fiber M_e^-1(v) avoids W. Even near identity, a shrinking gT
+window need not cover all admitted coarse data. The native critical
+configuration in B109(2.3) is chosen to handle this dependence; it
+cannot be replaced by the unconstrained Dirichlet minimum.
+
+There IS a useful positive Gaussian statement. If H>=lambda I, then
+the bracketed covariance in (3.2) is <=lambda^-1 I. Hence
+
+ Prob(max_l |x_l-x_b,l|>gT | Qx=b)
+                  <=2N exp(-lambda T^2/2).              (3.3)
+
+No determinant ratio is discarded in deriving this normalized bound:
+(3.1) is its exact denominator. For fixed-dimensional color blocks,
+only fixed constants change. With N<=C R^4 and lambda>=c R^-8 this is
+a polynomial-box Gaussian tail, uniformly in the value b. This
+establishes a real matching principle at the LINEAR Gaussian level.
+It does not control the nonlinear constrained compact complement.
+
+All rows here are independent after fixing the gauge and the boundary.
+Redundant coarse gauge rows must first be removed or treated on their
+actual quotient. An ambient determinant with redundant rows is not
+the native normalization.
+
+4. WHAT THE NONLINEAR MATCH WOULD REQUIRE, IN ACTUAL OBJECTS
+
+For the B109 fiber, write its logged constraint in a boundary-preserving
+gauge as F_e(x)=v. On a regular-value patch its conditional integral is
+
+ integral_(F_e^-1(v)) exp[-S_D(x;e)/g^2]
+              a_e(x) J_(F_e)(x)^-1 dvol_fiber(x),        (4.1)
+
+where a_e includes Haar/gauge densities and every actual cutoff; a
+group-coordinate density on v is included consistently in the delta.
+Integrating (4.1) over v recovers the ambient integral. An ambient
+lower bound controls that integral of fiber normalizers, not a
+pointwise lower bound for any selected fiber normalizer.
+
+There are four specific missing quantitative comparisons if the new
+polylog theorem is to be transplanted to that native fiber:
+
+(a) The SAME native constraint and fixed boundary admit a fiber chart
+    around U_(k+1)(W), with polynomial-in-R radius and distortion. The
+    source's local B-hD(B) construction supplies a small-field chart,
+    but has not here been matched to a growing bare Dirichlet box and
+    all its boundary/average rows.
+
+(b) The physical fiber Hessian has a polynomial lower bound in those
+    coordinates. It is the restriction of
+           D^2 S - sum_alpha lambda_alpha D^2 F_alpha
+    at a constrained critical point (DS=DF^t lambda), with the gauge
+    directions removed. A lower bound for the ambient Hessian at the
+    unconstrained minimum alone does not prove this statement. The
+    native quadratic form already incorporates this correction.
+
+(c) The coarea/Haar/chart density and actual cutoff admit a denominator
+    ball with controlled mass and controlled distortion. The source's
+    corridor elimination must be kept, including its Jacobian; the
+    soft gauge-fixing Gaussian does not supply this comparison.
+
+(d) The rest of the SAME compact fiber has an action gap above its
+    own constrained minimum. The bare filling inequality gives a gap
+    above the identity-centered unconstrained problem; subtraction
+    of a potentially nonzero fiber minimum is not automatic. Native
+    small-field integrals impose chi and handle the complementary
+    branches separately, so their local charts do not assert this
+    global fiber gap.
+
+For k>0 there is an additional concrete change of action: (4.1) must
+use the inherited complete effective density, not S_D alone. The
+residual-perturbation lemma in polylog_box_perturbation_turn37 can
+cover a real factor e^E on the SAME bare quotient if its global
+oscillation, per-link gradient and Hessian satisfy the stated bounds.
+No inspected primary clause identifies all native E/R/B, flags and
+vacua with such an everywhere finite E on that quotient. A hard zero
+cutoff cannot be replaced by a finite oscillation bound for log chi.
+
+5. A NATIVE NORMALIZATION COMPARISON THAT REALLY IS AVAILABLE
+
+On the fixed admitted real branch of II(1.2), remove its B-independent
+background factor EXACTLY. The normalized reference then has form
+
+ s(dB)=Z_ref^-1 1_(D_T)(B) sigma(gB)
+           exp[-ell(B)-Q(B,B)/2-R(B)] dB,                (5.1)
+
+on the actual G0-pinned coordinates. The primary estimates cited in
+Section1 supply, at fixed current geometry, lambda I<=Q<=Lambda I,
+a bounded linear term, bounded R throughout its source window, and
+bounded Haar density. D_T contains a fixed Euclidean ball at weak
+coupling. Consequently its denominator is bounded below on that ball;
+the numerator outside |B|>t is bounded by a whole-space Gaussian.
+Completing the square yields, for t>=1,
+
+                 s(|B|>t)<=C exp(-c t^2),              (5.2)
+
+with C,c depending on the fixed 100M geometry and admitted radii, not
+the previous fine refinement depth. All fixed polynomial moments
+follow. The constants and the actual T are retained, not enlarged
+to arbitrary domains. This is the direct argument already recorded
+in native_reference_score_attempt_turn15 and the turn21 refill note.
+
+Here the output V'=exp(i g B) is a current-link fluctuation relative
+to V_Lambda. Its fine reconstruction U_(k,Z)(V'V_Lambda) is not the
+collection of freely integrated fine Wilson links. In particular,
+(5.2) does not imply a tail for its arbitrary fine-link logarithms
+around the bare Dirichlet minimum. Nor does it estimate the incoming
+history's occupation probability. It normalizes one admitted refill
+reference only, preserving its incoming exterior mass.
+
+6. SOFT CONSTRAINTS AND EXACT USE OF AUXILIARY VARIABLES
+
+A factor exp[-tau |F_e(x)-v|^2] is a soft physical constraint and gives
+a different conditional law. Sending tau to infinity requires the
+coarea and normalization information in (4.1); a bound whose constants
+grow with tau is not a hard-fiber result. Conversely, adjoining a
+normalized Gaussian auxiliary variable can preserve the x marginal
+exactly AFTER integrating that variable. Conditioning on its value
+tilts x and restores a new conditional normalizer. These two operations
+must not be confused with the native gauge-fixing quadratic G(V).
+
+An elementary comparison valid on one unchanged support is
+ Prob_(e^E mu)(A)<=exp(osc E) mu(A).
+It can transfer the bare theorem when a finite real E is actually
+known there. It cannot cover a hard average delta, a changed gauge
+quotient, or cutoff-induced zeros by merely naming them interactions.
+
+CONCLUSION
+
+There is an exact bare-stage application and an exact native
+fixed-current-reference tail. Their common Gaussian core has the
+explicit fiber normalization (3.1)--(3.3). The first unproved matching
+step is the nonlinear constrained-minimum/coarea/global-gap comparison
+on the SAME growing box, followed, at later dates, by an actual
+complete-effective-action comparison. No change of law, all-scale
+conditional probability, or Yang--Mills existence conclusion is made.
+
+7. POSITIVE FIRST-STEP BRIDGE: ANNEALED FIBERS, NOT A UNIFORM FIBER TAIL
+
+The uniform-fiber obstruction in Section3 does NOT obstruct the
+following exact construction. This is the additional route proposed
+by root and independently audited by admission_proof.
+
+Fix an admitted exterior omega and let Q^omega be the actual bare
+Dirichlet probability on one core. Let W be its centered good window
+and Q^omega(W^c)<=alpha. For ANY measurable retained datum Y disintegrate
+
+ Q^omega(du)=nu^omega(dy) Q_y^omega(du),
+             p(y)=Q_y^omega(W^c).
+
+Standard Borel spaces suffice; no differentiability, coarea lower
+bound, regular-value assumption or density in y is needed here.
+Then
+
+ integral p(y) nu^omega(dy)<=alpha,
+ nu^omega(p>theta)<=alpha/theta,                          (7.1)
+
+for 0<theta<1. On p<=theta replace Q_y^omega by its normalization on
+W; on p>theta leave it unchanged. Call the resulting joint law Qhat.
+The COMPLETE (omega,Y) marginal is unchanged exactly. On good fibers
+the new denominator is at least 1-theta, and
+
+ TV(Q_y^omega,Q_y^omega(.|W))=p(y).
+
+Thus a maximal coupling has mean discrepancy at most alpha. If a
+fiber is called uncontrolled when p>theta or the good-fiber coupling
+disagrees, then its mean uncontrolled indicator is at most alpha/theta:
+
+        1_(p>theta)+p 1_(p<=theta) <= p/theta.             (7.2)
+
+This sharp estimate does not add alpha and alpha/theta separately.
+An uncontrolled-boundary contribution remains separate. A joint sparse
+boundary parameter beta, if independently established in the required
+conditioning, combines with the conditional alpha/theta estimate;
+the bare box theorem does not itself establish that beta.
+
+For separated bare cores, condition on their complete common exterior.
+The bare interiors are independent. If each coordinate of Y reads
+only one core plus that exterior, the disintegration and maximal
+couplings can be performed independently. Consequently every selected
+set of uncontrolled good-boundary cores has the corresponding product
+bound (alpha/theta)^number, conditional on that exterior. Merely
+disjoint output supports are not enough: the complete datum reads
+must have this separation.
+
+8. ACTUAL ONE-STEP AVERAGES AND PRECISE BRANCH QUALIFICATIONS
+
+B109 pp253--255, (0.11)--(0.17), provides the relevant first-step
+dictionary. The ordinary one-step average (0.12) uses paths within
+the two endpoint blocks. The exponential gauge fixing follows the
+exact gauge-integration identity (0.15), whereas (0.17) is explicitly
+a small-field restricted transformation. These are different roles.
+
+Here is a concrete admissible choice of Y for (7.1): collect EVERY
+ordinary one-step coarse row whose complete path footprint meets a
+free core, together with all required local validity/branch data.
+Rows that do not touch any core are fixed by the exterior. If the
+cores are separated by more than the maximum two-block read diameter,
+no such row reads two free cores. Their values are then functions of
+one core and the fixed exterior, exactly as required above. With L
+fixed this is a fixed O(L) fine-link collar; it does not grow with the
+number of fine refinements. There is no assertion for iterated averages
+or for a global reconstructed-minimum read merely from this fact.
+
+The native average is defined in its local regularity/logarithm domain.
+Outside that domain attach an invalid symbol and leave that branch
+unchanged. To charge an invalid branch to alpha one must additionally
+verify W implies validity on the COMPLETE average footprint, including
+the exterior collar. A weak boundary on the surface of the core alone
+does not certify arbitrary exterior links in that footprint. On a
+coherent weak complete collar, the finite path lengths in (0.12) do
+give validity for a sufficiently small link-chart window. Invalid
+collars remain part of the separate boundary admission event.
+
+Gauge frames must also be retained exactly. The boundary-rooted forest
+used in the new theorem generally gauges interior coarse roots; its
+coarse averages need not equal the original framed coarse averages.
+The safe construction defines Y=M(U) on the ORIGINAL link variables,
+and defines W by their canonical boundary-fixed forest representative.
+Equivalently retain the root gauge variables along with that
+representative. This preserves the original coarse datum, not only
+its gauge orbit. Do not silently replace Y by M of the forest field.
+
+Preserving these averages proves exact preservation of the un-gauge-
+fixed first bare pushforward. For a PARTICULAR native branch integral,
+one must also preserve its complete multiplier. If its factor b(U)
+(for example an actual characteristic or gauge factor) is included in
+Y, then
+
+ integral b(U) f(Y) Qhat(dU)=integral b(U) f(Y) Q(dU)      (8.1)
+
+exactly. The same conclusion follows from a separately justified exact
+gauge-integration identity before replacement. Equation(8.1) is a
+measure identity; it does not assert that the annealed rarity alpha
+continues to hold after normalizing by that selected branch's mass.
+If the branch multiplier/selector has a read coupling two cores, the
+independent sparse estimate is not asserted for that augmented Y.
+
+This produces a legitimate FIRST BARE-STEP constrained replacement
+preserving exterior and coarse data (and any genuinely local retained
+branch factors) without uniform control of every fiber. It bypasses
+items(a)--(d) for this annealed use only. It neither identifies the
+replacement with Bałaban's original R kernel nor provides its complex
+analytic continuation, derivatives, response kernels, or subsequent
+effective-action estimates. The good-fiber event p(y)<=theta is only
+measurable here; no holomorphic gate or source-domain claim is made.
+
+LATER TURN37 REFINEMENT. The companion polylog_box_collar_turn37 now
+supplies an actual original-law probability bound for the complete
+finite-width collar of the FIRST fixed-L ordinary average. In its
+stronger common frame, all relevant paths are O(LgT), so its intrinsic
+mean/logarithm branch is valid. Thus that specific invalid-collar
+condition in Section8 can be proved, not assumed. The original-frame
+open-transport gauge gate, chi_0 relative to a constrained minimum,
+later histories and analytic derivative requirements remain separate.

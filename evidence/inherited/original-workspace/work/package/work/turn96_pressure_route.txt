@@ -1,0 +1,443 @@
+TURN96 -- AN EXACT ORIGINAL-WILSON SOURCE REDUCTION TO STAPLE DEFECTS
+21 October 2026. response96. Finite-regulator theorem and scope audit.
+
+RESULT
+
+There is a concrete real-variable bypass of the old-mark analytic problem
+at ONE conditional integration. A separated original Wilson action source
+can be replaced, inside its covariance with the other original source,
+by a local function of exterior staple defects. The complete original
+normalizer is retained. The removed term is the explicit conditional value at a flat exterior; it is not the full Wilson expectation.
+The flat-value-subtracted conditional source is pointwise comparable to the geometric
+defect with relative error at most 1/(4 beta). A varying source profile
+adds its star oscillation TIMES that same defect, rather than a separate
+per-link constant.
+
+This is a finite, original-law identity, not the missing all-scale native
+bound. It does not apply to a history-owned raw mark merely because that
+mark's original source lies far away: its ownership or branch label can
+read the link being conditionally integrated. The theorem instead applies
+before that history decomposition to the full original covariance.
+
+The convexity argument in Section 2 was proposed by root and independently
+checked here. Sections 1, 3--6 give the actual conditional source, global
+normalization, local reads, and limits of this reduction. The refined
+weak-field remainder in Section 4 has an independent elementary integral
+proof. No shared frontier or previous producer was edited.
+
+1. LITERAL ORIGINAL CONDITIONAL LAW AND ITS SOURCE
+
+Take a finite periodic nondegenerate four-dimensional SU(2) Wilson lattice,
+with periods at least four, normalized link Haar measure, beta>0, and
+
+  mu(dU)=Z^{-1} exp[-beta sum_p e_p(U)] dHaar(U),
+  e_p=1-Tr(U_p)/2,             S_q=sum_p q_p e_p.
+
+The profiles q_p are deterministic real numbers. An integrated link e
+belongs to six distinct elementary plaquettes. Hold every other link
+fixed, and identify U_e with its unit quaternion u in S^3. With the proper
+orientation of the other three links of each incident plaquette, there
+are unit quaternions v_{p,e} such that
+
+  e_p=1-u dot v_{p,e},
+  V_e=sum_{p containing e} v_{p,e},    r_e=|V_e| in [0,6].   (1.1)
+
+This includes inverse appearances of U_e because inversion is an
+orthogonal linear operation on quaternion coordinates. The ACTUAL
+conditional probability, including its normalizer, is
+
+  q_e(du|outside)=exp(beta V_e dot u)du / z(beta r_e),
+  z(s)=2 I_1(s)/s,             m(s)=I_2(s)/I_1(s),
+  E_e u=m(beta r_e)n_e,        n_e=V_e/r_e.                  (1.2)
+
+At r_e=0 the law is Haar, m(0)=0, and n_e can be any unit vector.
+Formula (1.2) is the actual six-staple conditional law already derived in
+TURN45/64/85. It is not the conditional law after fixing an arbitrary
+native history or its deciding indicators.
+
+Define the nonnegative geometric defect and its constituent deficits:
+
+  D_e=6-r_e,
+  delta_{p,e}=1-v_{p,e} dot n_e >=0,
+  sum_{p containing e} delta_{p,e}=D_e.                    (1.3)
+
+The last identity also holds at r_e=0 for any choice of n_e.
+For a profile put
+
+  qbar_e=(1/6)sum_{p containing e}q_p,
+  omega_e(q)=max_{p containing e}|q_p-qbar_e|.
+
+Writing S_{q,e}=sum_{p containing e}q_p e_p, direct conditional
+expectation yields the EXACT identity
+
+  E_e S_{q,e}
+   =qbar_e [6-r_e m(beta r_e)]
+      +m(beta r_e)sum_{p containing e}(q_p-qbar_e)delta_{p,e}.
+                                                               (1.4)
+
+Its profile correction is bounded by omega_e(q) D_e. In particular the
+correction has no independent microscopic fluctuation or constant term.
+For a constant-star profile it is zero exactly.
+
+With c_beta from Section 2, an equivalent form is
+
+ E_e S_{q,e}-c_beta qbar_e
+  =m(beta r_e)sum_p q_p delta_{p,e}
+           +(sum_p q_p)[m(6 beta)-m(beta r_e)].            (1.5)
+
+Since m is increasing, this is nonnegative whenever all q_p>=0,
+including nonconstant profiles and r_e=0. This positivity concerns the
+conditional source function, not its covariance with a separated source
+or its expectation uniformly in the cutoff.
+
+2. GLOBAL FLAT-VALUE-SUBTRACTED COMPARISON, WITHOUT A GOOD-STAPLE EXCEPTION
+
+Set
+
+  c_beta=6[1-m(6 beta)],
+  T_beta(D)=6m(6 beta)-(6-D)m(beta(6-D)),  0<=D<=6.
+
+Then
+
+  6-r m(beta r)=c_beta+T_beta(6-r),
+  m(6 beta)D <= T_beta(D) <= D,
+  0 <= D-T_beta(D) <= D/(4 beta).                          (2.1)
+
+The last bound is valid for every beta>0; for small beta it is merely
+loose. The first comparison remains meaningful for all beta, including
+the beta=0 limiting identity T_0=0.
+
+Here is a complete proof. The Bessel ratio, equivalently differentiation
+of the S^3 tilted Haar integral, obeys
+
+  m'(s)=1-m(s)^2-3m(s)/s,   m(s)=s/4+O(s^3).               (2.2)
+
+For s>0 one also has m'(s)=Var_s(n dot u)>0 and m(s)>0.
+For completeness, integrate the derivative of
+exp(st)(1-t^2)^(3/2) over [-1,1]. Its endpoint values vanish, and the
+result is s E_s(1-t^2)=3 E_s t. Since m=E_s t and
+m'=E_s t^2-m^2, this gives (2.2) directly. The expansion at zero uses
+E_Haar t^2=1/4 and symmetry.
+Let g(s)=s m(s). Then
+
+  g'(s)=s-[g(s)^2+2g(s)]/s,
+  g''(s)=2-[2g(s)+3]g'(s)/s.                             (2.3)
+
+First g'>0 by g'=m+s m'. Moreover g'<1 everywhere. It starts below one
+near zero. At a hypothetical first point g'=1, the first equation gives
+g+1=sqrt(s^2-s+1), and the second gives
+
+  g''=2-[2sqrt(s^2-s+1)+1]/s <0.
+
+This contradicts the nonnegative derivative at a first crossing from
+below. The strict inequality follows from
+s^2-s+1=(s-1/2)^2+3/4, and is also immediate when s<1/2.
+
+Next g''>0 everywhere. It starts at g''(0)=1/2. At any zero of g'',
+differentiating (2.3) and using the zero condition gives
+
+  g'''=2[1-g'^2]/s >0.
+
+A first zero reached from strictly positive g'' must instead have
+g'''<=0. This contradiction proves convexity.
+
+For 0<=s<=s_* convexity and g(0)=0 give
+g(s)<=s g(s_*)/s_*. The upper slope bound g'<1 gives
+g(s_*)-g(s)<=s_*-s. Taking s=beta r and s_*=6 beta and dividing by beta
+proves the two-sided comparison in (2.1).
+
+Finally 1-m(s)<=3/(2s). One direct proof uses z=s(1-n dot u): its density
+on [0,2s] is proportional to
+
+  z^(1/2) exp(-z) (1-z/(2s))^(1/2).
+
+It is a Gamma(shape 3/2, rate 1) density tilted by a nonincreasing
+nonnegative function. Its mean is therefore at most 3/2, by the elementary
+negative covariance of an increasing and a decreasing function. Hence
+s[1-m(s)]<=3/2. Combining this with (2.1) at s=6 beta gives D/(4 beta).
+
+No asymptotic Bessel expansion or exclusion of r=0 was used in (2.1). The word centered below refers only to subtraction of this flat-exterior value. The transformed source generally has nonzero expectation under the original Wilson law.
+
+3. THE DEFECT IS A LOCAL CLOSED-LOOP FUNCTION
+
+The identity
+
+  sum_{p<p'} |v_{p,e}-v_{p',e}|^2=36-r_e^2
+
+gives
+
+  D_e = 2/(6+r_e) sum_{p<p'} [1-v_{p,e} dot v_{p',e}].     (3.1)
+
+Each dot product is one half the trace of the closed path formed from
+one three-link staple and the inverse of another. Thus D_e is a bounded,
+nonnegative, gauge-invariant function of exterior closed loops. It reads
+no U_e and uses only the six plaquette stars around e. The formula also
+holds at r_e=0. Immediate retracing in some paired paths causes no problem;
+these are the literal products of the correctly oriented staple paths.
+
+Although n_e is undefined at r_e=0, the profile term in (1.4) is continuous
+and independent of that choice there. A formula without n_e is
+
+  m(beta r_e)sum_p(q_p-qbar_e)delta_{p,e}
+   =-[m(beta r_e)/r_e] sum_p(q_p-qbar_e)v_{p,e} dot V_e,    (3.2)
+
+with m(beta r)/r continued at zero as beta/4. Also r m(beta r) is a smooth
+function of r^2 at zero. Thus the complete conditional insertion is
+well-defined on ALL original real configurations. No inverse-staple
+singularity or manually chosen axis is introduced.
+
+This is only real regularity. Uniform holomorphy on every native complex
+external domain does not follow from (3.2); the continued conditional
+normalizer has complex zeros. The new argument deliberately does not
+require that holomorphy for its finite original-law covariance identity.
+
+3A. ACTUAL CONDITIONAL RESPONSE WITH NO BETA LOSS
+
+There is also a uniform response estimate for the CONSTANT-star source,
+including the response of its actual conditional probability and normalizer.
+As a function of the exterior staple sum V, write
+
+  A_beta(V)=6-beta^(-1)g(beta|V|).
+
+By Section 2, 0<g'(s)<1 for s>0 and g'(0)=0. Consequently
+
+  |grad_V A_beta|=g'(beta|V|)<=1,
+  |A_beta(V')-A_beta(V)|<=|V'-V|.                         (3.3)
+
+The function is smooth at V=0 because g(s)=s^2/4+O(s^4).
+For a differentiable path of actual exterior staples,
+
+  |d A_beta/dt| <= |sum_p d v_{p,e}/dt|
+                        <=sum_p |d v_{p,e}/dt|.           (3.4)
+
+This is a genuine conditional-source response bound uniform in beta;
+the conditional score and normalizer are included by the exact formula,
+rather than bounded separately by their apparent beta factors. Subtracting
+c_beta does not change (3.3). The same statement holds for a scalar
+constant-star profile, multiplied by its absolute value.
+
+Do not extend this bound unchanged to arbitrary varying profiles. Their
+extra term (3.2) can have derivatives of order beta omega_e(q) near V=0.
+Nor does (3.3) by itself bound the dependence of a multistep posterior on
+its native exterior variables: the actual map from those variables to
+the present original staples would still have to be controlled.
+
+3B. ACTUAL CONDITIONAL MINIMUM AND ITS QUADRATIC SOURCE COEFFICIENT
+
+The defect has a direct variational meaning on every real exterior:
+
+  D_e=min_{u in S^3} sum_{p containing e}(1-u dot v_{p,e})
+     =6-|V_e|.                                           (3.5)
+
+At V_e!=0 the minimizer is n_e; at V_e=0 every u minimizes. Thus the
+constant-star source after conditional integration differs from the
+ACTUAL classical conditional minimum by the scalar c_beta and a relative
+remainder bounded in (2.1). This is not a substitution of a fresh
+reference-field action for the old source.
+
+Around a flat exterior choose a common orthogonal quaternion frame
+with v_{p,e}=(1-|x_p|^2/2,x_p)+O(|x_p|^3). Put xbar=(1/6)sum_p x_p.
+Expansion gives
+
+  D_e=(1/2)sum_p |x_p-xbar|^2+O(|x|^3).                   (3.6)
+
+This is exactly the Schur complement obtained by minimizing the quadratic
+star energy (1/2)sum_p |y-x_p|^2 over the varied link coordinate y.
+For a constant-star profile, the quadratic coefficient after subtracting
+the flat exterior value is multiplied by
+
+  T_beta'(0)=g'(6 beta)=1-b'(6 beta).                     (3.7)
+
+Equation (4.3) below therefore shows
+0<g'(6 beta)<1 and 1-g'(6 beta)<=C beta^(-2) for beta>=1/6.
+The actual conditional quadratic source changes only by O(beta^-2),
+although the exception-free pointwise relative estimate in (2.1) is
+O(beta^-1). This is a one-link compact-law statement. It does not identify
+the quadratic extraction of a full native blocked map or prove stability
+after overlapping conditional integrations or repeated coarse graining.
+
+There is an equally explicit weighted quadratic jet. At the same flat
+exterior, delta_{p,e}^{(2)}=(1/2)|x_p-xbar|^2, so (1.4) gives
+
+ (E_e S_{q,e}-c_beta qbar_e)^{(2)}
+  =(1/2)sum_p {qbar_e g'(6 beta)
+             +m(6 beta)(q_p-qbar_e)}|x_p-xbar|^2.          (3.8)
+
+The original weighted source evaluated at the UNWEIGHTED conditional
+classical minimizer has quadratic term
+(1/2)sum_p q_p |x_p-xbar|^2. Subtracting this from (3.8) and using
+(2.1),(4.3) bounds the absolute quadratic error by
+
+ [C beta^(-2)|qbar_e|+(4 beta)^(-1)omega_e(q)]
+                           (1/2)sum_p |x_p-xbar|^2,      (3.9)
+
+for beta>=1/6. The constant-star coefficient has O(beta^-2) change;
+the profile variation has O(beta^-1) change. These statements concern
+the literal quadratic Taylor coefficient at a flat original exterior,
+not the size of the source on typical configurations or a completed
+native marginal extraction. The reference minimum in this comparison
+is the baseline unweighted action minimum; it has not been recomputed
+using the source profile as a new action.
+
+4. SHARPER CENTERED REMAINDER AWAY FROM ZERO STAPLE SUM
+
+For every fixed r_0 in (0,6], beta r_0>=1, and r in [r_0,6],
+
+  0<=[6-r]-[6m(6 beta)-r m(beta r)]
+       <= C (beta r_0)^(-2) [6-r].                       (4.1)
+
+Here C is absolute; the r_0 dependence is displayed. Thus the stronger
+O(beta^-2) statement holds in a fixed nondegenerate-staple region, still
+with the centered error proportional to D rather than a constant.
+
+Proof independent of the convexity argument. Let
+b(s)=s[1-m(s)]. In the Gamma representation from Section 2, b(s)=E_s z.
+For s>0, differentiating the density at fixed z gives
+
+  b'(s)=Cov_s(z, z/[4s^2(1-z/(2s))]).                     (4.2)
+
+The upper integration endpoint contributes no boundary term because the
+undifferentiated weight vanishes there. The differentiated square-root
+singularity is integrable. This can also be justified first away from
+the endpoint and then by dominated convergence on a compact interval
+of positive s. Both arguments of this covariance increase, so b'>=0.
+For s>=1,
+
+  b'(s) <= (4s^2)^(-1) E_s[z^2/(1-z/(2s))] <= C/s^2.     (4.3)
+
+For the second inequality the normalizing integral is bounded below by
+its fixed portion 0<=z<=1. In the numerator split 0<=z<=s, where the
+inverse square root is at most sqrt(2), and s<=z<=2s, whose integral
+is bounded by C s^(7/2) exp(-s). This is uniformly bounded for s>=1.
+
+Since
+
+  D-T_beta(D)=[b(6 beta)-b(beta r)]/beta,
+
+integrating (4.3) over u in [r,6] proves (4.1). This refinement is not
+needed for the global, exception-free inequality (2.1).
+
+5. EXACT GLOBAL SEPARATED-COVARIANCE REDUCTION
+
+Let E(q) be the set of all original links in plaquettes with q_p!=0.
+Suppose F is integrable and measurable outside EVERY link in E(q).
+At finite volume all action sources considered here are bounded.
+Define, under the SAME original Wilson law,
+
+  D_beta,q(U)=(1/4)sum_e {
+       qbar_e T_beta(D_e)
+       +m(beta r_e)sum_{p containing e}(q_p-qbar_e)delta_{p,e}
+                               },                        (5.1)
+
+where only stars with some q_p!=0 need be included. Then
+
+  E S_q = [1-m(6 beta)]sum_p q_p + E D_beta,q,
+  Cov(F,S_q)=Cov(F,D_beta,q).                              (5.2)
+
+Proof. Every plaquette has four edges, so S_q=(1/4)sum_e S_{q,e}.
+For each summand separately, F does not read e. Conditional expectation
+therefore preserves both its ordinary expectation and its pairing with F.
+Use (1.4), subtract the deterministic c_beta qbar_e, and sum. The scalar
+is correct because
+
+  (1/4)sum_e c_beta qbar_e
+        =(c_beta/6)sum_p q_p=[1-m(6 beta)]sum_p q_p.
+
+This is a sum of SEPARATE conditional-expectation identities. It is not
+a claim that simultaneous conditional draws on overlapping stars are
+independent, nor a composition of heat-bath kernels, nor an equality
+S_q=constant+D_beta,q pointwise.
+
+In particular, if the original plaquette-link supports of f and q are
+disjoint, F=S_f gives
+
+  Cov(S_f,S_q)=Cov(S_f,D_beta,q).                          (5.3)
+
+If additionally the complete star read of D_beta,q contains none of the
+original source edges E(f), applying the same identity to the f source
+gives the TWO-SIDED version
+
+  Cov(S_f,S_q)=Cov(D_beta,f,D_beta,q).                     (5.4)
+
+For fixed positive physical separation the additional read condition
+holds at all sufficiently fine meshes. At a specified finite lattice
+the exact link-read condition, rather than an arbitrary distance
+constant, is the assertion used. The source-defect transform enlarges
+the read only by one plaquette star around a source edge.
+
+6. POINTWISE ERROR, WHAT IT DOES AND DOES NOT ESTIMATE
+
+Let D_q=(1/4)sum_e qbar_e D_e. Equations (1.3),(2.1) imply pointwise
+
+  |D_beta,q-D_q|
+    <=(1/4)sum_e [|qbar_e|/(4 beta)+omega_e(q)]D_e.         (6.1)
+
+For a smooth scalar physical profile sampled at plaquette centers,
+omega_e(q)<=C a [q]_Lip, including stars meeting its support boundary
+when q is extended smoothly by zero. Orientation-dependent sources
+require their actual star oscillation; one cannot replace it by a spatial
+gradient without the corresponding regularity assumption.
+
+The pointwise error has no standalone per-edge constant. Consequently,
+for a valid F in Section 5,
+
+ |Cov(F,D_beta,q-D_q)|
+ <=(1/4)sum_e [|qbar_e|/(4 beta)+omega_e(q)]
+                         E[|F-EF| D_e].                 (6.2)
+
+This retains the actual correlated geometric defect rather than first
+bounding it by the number of fine links. Formula (6.2) is a legitimate
+bound but is NOT cutoff-uniform as presently proved. Replacing the last
+expectation by a crude absolute moment reintroduces the fine root census.
+Pointwise comparison of T_beta(D) with D does not imply multiplicative
+comparison or positivity of separated covariances with an arbitrary F.
+
+No assertion D_e=O(a^4) on typical Wilson configurations is made. Smooth classical-field scaling cannot replace an estimate in the quantum measure.
+
+This step provides an explicit, gauge-invariant, flat-value-subtracted
+descendant of the original source in real variables. It avoids needing
+an analytic norm for a history-dependent old mark at this step. It does
+not yet give a closed RG class for the generated loop-defect functions:
+after actual decimation the action is no longer a sum of elementary
+Wilson plaquettes, so the next conditional law is not automatically
+the same six-staple tilted Haar law. Iterating (5.1) as though the action
+were unchanged, or changing only the source and declaring the lattice
+coarser, would be invalid.
+
+The proposed useful next gate is therefore specific: propagate the
+explicit flat-value-subtracted exterior function (5.1), with its closed-loop form
+(3.1) and relative remainder (6.1), through one actual admitted native
+regular step; or construct a controlled decimation of BOTH the action
+and this source. It is not enough to invoke holomorphy of a bare trace.
+
+Neither (5.2) nor its two-sided version estimates the already
+history-resolved Cov(R_f,H_rest) unless the claimed F measurability has
+been established including every ownership, class and continuation read.
+Conditioning on native indicators also changes (1.2). The present result
+is a possible finite start of a route around that decomposition, not a
+retroactive closure of its missing marked comparison.
+
+PROVENANCE AND SELF-AUDIT
+
+Read: frontier95; outputs/yang-mills-separated-local-sources.txt;
+turn94_architecture_history.txt; turn78_live_source_history.txt;
+turn83_integrated_two_jet_next_history.txt;
+selected_connected_covariance_turn70.txt;
+turn84_history_restart_scope.txt; turn85_full_wilson_profile_tail.txt;
+covariant_fisher_witness_turn45.txt.
+
+The Bessel conditional law was already established in the latter two
+finite-Wilson notes. The new source reduction is derived above from its
+literal normalized integral. The prior TURN85 source-DISPLACEMENT drift
+is different from the source-CONDITIONAL-EXPECTATION studied here.
+TURN70's selected source induction and separated covariance estimates
+remain intact; they have not been reproved or reopened as missing.
+
+Checks: inverse plaquette orientations are absorbed into v_{p,e}; each
+star has six terms and each plaquette is counted four times; the scalar
+subtraction is c_beta/6 per plaquette; r=0 is retained; beta=0 has the
+correct limiting centered value zero; overlapping star updates are NOT
+composed; the original Gibbs normalizer and exterior marginal remain;
+covariance comparison is not inferred from pointwise positivity; and
+history-dependent raw marks are excluded absent exact measurability.
+

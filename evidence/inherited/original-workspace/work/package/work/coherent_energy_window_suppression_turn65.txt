@@ -1,0 +1,193 @@
+WILSON SUPPRESSION OF THE HOMOGENEOUS ENERGY WINDOW -- TURN65
+20 October 2026. Root derivation; independent audit required.
+
+STATUS
+
+The deterministic Hessian counterexample in radial_flow_hessian_turn65
+does not establish a divergent Wilson average. This companion result
+shows more: a fixed, sufficiently thin gauge-invariant energy window
+around that homogeneous example has exponentially small ORIGINAL
+Wilson mass in the spatial volume. Even a crude global nonlinear-flow
+derivative bound then makes its entire Hessian contribution vanish
+at fixed physical spatial volume.
+
+The result controls this particular window, not every configuration
+with a large flow derivative. It is not the missing full-measure
+derivative estimate. It does identify a genuine way in which the
+Wilson conditional law supplies information absent from the bare
+plaquette moment inequality.
+
+1. A UNIFORM SINGLE-EDGE SMALL-WINDOW ESTIMATE
+
+Use the original finite nondegenerate periodic four-dimensional SU(2)
+Wilson law with homogeneous beta>=1. Given all links except e, its
+quaternion q has density proportional to
+
+                 exp(z.q),  |z|<=6beta, q in S^3,
+
+relative to normalized Haar dω. Any incident plaquette energy is
+h_p=1-a.q for an exterior-measurable unit vector a.
+
+There is a numerical C, independent of the volume, beta, and exterior,
+such that
+
+ P(|beta h_p-1|<=epsilon | all other links)
+                     <= C epsilon,  0<epsilon<=1/2.     (1.1)
+
+Proof. Let kappa=|z|. A spherical cap of radius
+c/sqrt(1+kappa) about z/kappa has Haar mass at least
+c'(1+kappa)^(-3/2) and satisfies z.q>=kappa-C'.
+The kappa=0 case follows directly from Haar normalization. Therefore
+
+ Z(z)=int exp(z.q)dω(q)>=c exp(kappa)(1+kappa)^(-3/2),
+ sup_q exp(z.q)/Z(z)<=C(1+kappa)^(3/2)<=C' beta^(3/2).
+                                                               (1.2)
+
+Under Haar, h=1-a.q has density (2/pi)sqrt(h(2-h)) on [0,2],
+independently of a. The interval
+[(1-epsilon)/beta,(1+epsilon)/beta] has length2epsilon/beta,
+and its density is at most C beta^(-1/2). Its Haar probability
+is at most C epsilon beta^(-3/2). Multiplying by (1.2) proves (1.1).
+No favorable staple, action convexity, or independence is needed.
+
+The center1 could be replaced by any fixed positive center with a
+modified constant on a fixed compact range. Only center1 is used here.
+This is an upper anti-concentration bound, not a lower fluctuation
+bound and not a tail estimate for the entire low-energy region.
+
+2. MANY SPECIFIED PLAQUETTES
+
+Let p_1,...,p_m be plaquettes with designated distinct edges e_i such
+that e_i does not occur in p_j for j!=i. The Wilson action may still
+couple the designated variables through other plaquettes. Put
+A_i={|beta h_(p_i)-1|<=epsilon}. Conditioning on every link but e_i,
+all the other A_j are measurable. Equation (1.1) gives
+
+ P(intersection_(i=1)^m A_i)<=(C epsilon)^m.              (2.1)
+
+To see that no conditional-independence premise is hidden here,
+write E[1_(intersection_{j!=i} A_j) E(1_Ai | outside e_i)]
+and use (1.1), then repeat. The outside includes all temporal links
+and the full remainder of the four-dimensional lattice.
+
+In a fixed spatial slice with n sites there are n plaquettes of
+orientation12. Choose a maximal edge-disjoint subset greedily.
+On a nondegenerate periodic lattice every such plaquette shares
+an edge with at most four other plaquettes of that SAME orientation.
+Thus a subset of size m>=n/5 can be selected (rounding downward,
+or replacing1/5 by1/10 for all sufficiently large n, is harmless).
+Any edge in each selected plaquette is a valid designated edge.
+
+Define the gauge-invariant full-slice event
+
+ E_epsilon={|beta h_(12,x)-1|<=epsilon for every spatial site x}.
+
+It contains the homogeneous field used in radial_flow_hessian_turn65
+and all its gauge transforms. It also contains an open neighborhood
+of that field at each fixed regulator. Applying (2.1) to the selected
+subset yields
+
+                     P_W(E_epsilon)<=(C epsilon)^m.     (2.2)
+
+Fix epsilon0 in (0,1/2] small enough that C epsilon0<=exp(-1).
+For all sufficiently large spatial tori,
+
+                     P_W(E_epsilon0)<=exp(-c n).         (2.3)
+
+This is uniform for beta>=1 and in the time period. No comparison
+with a gauge-fixed measure or covering of a gauge orbit is used.
+The entire event is gauge invariant from its definition.
+
+3. A CRUDE GLOBAL FLOW HESSIAN BOUND
+
+For completeness, the actual bounded magnetic probe of the preceding
+note has, for fixed alpha,g_*>0 and a<=1,
+
+ sup_U ||Hess F_s,a(U)||op <= C a^-8 exp(C' s/a^2).        (3.1)
+
+The constants can be taken independent of spatial volume and beta;
+they depend on alpha,g_* and the fixed lattice incidence degree.
+This estimate is deliberately crude and is not a continuum bound.
+
+Here is a finite-dimensional justification that keeps dimension
+dependence explicit. Embed every SU(2) link as a unit quaternion
+in R^4. Plaquette energies are fixed-degree polynomials in neighboring
+quaternions, including their linear conjugates. The round tangential
+gradient is the ambient gradient projected by I-q q^T. Thus the
+spatial flow has a polynomial ambient extension
+
+                   q_s=a^-2 V(q)
+
+whose component for a link depends on a bounded number of neighboring
+links. Along the product of unit spheres all coefficients of V,
+DV and D^2 V are bounded by incidence-dependent constants. The first
+and second derivative OPERATOR norms are bounded independently of
+the number of links:
+
+                  ||DV||op<=C, ||D^2V||bilinear<=C.
+
+For the first derivative, apply Cauchy--Schwarz on each bounded
+neighborhood and then sum; each input link occurs a bounded number
+of times. For the second, bound one local l2 factor by its global
+l2 norm, then sum the squares of the other local factor using the
+same bounded overlap. This proves a bilinear l2 bound with no factor n.
+
+The variational equations and Gronwall therefore give
+
+ ||D Phi_s||op<=exp(C s/a^2),
+ ||D^2 Phi_s||bilinear<=C exp(C' s/a^2).                  (3.2)
+
+For the second inequality, differentiate the first variational
+equation once more: the inhomogeneous term is bounded by
+C a^-2 exp(2C s/a^2), and its time integral is bounded by an exponential
+with a larger fixed rate. Ambient derivatives at the compact base
+flow suffice; no assertion about global ambient solutions is needed.
+
+A single final plaquette has first and second ambient derivatives
+bounded independently of volume. The function
+exp[-4alpha |p|^2/(g_*^2 a^4)] has, on that compact plaquette range,
+first derivative bounded by C a^-4 and second derivative bounded
+by C a^-8. The chain rule and (3.2) give the ambient version of (3.1).
+
+Finally, the second derivative along a unit product-sphere geodesic
+includes its ambient acceleration. In quaternion coordinates, the
+Euclidean norm of that acceleration is bounded by a constant times
+the square of the product-metric speed: sum_e |q_e'|^4 is at most
+(sum_e |q_e'|^2)^2. Its pairing with the first derivative has the same
+or smaller bound. Hence (3.1) holds for the actual Riemannian Hessian.
+The Pauli/2 metric differs from the ambient round metric only by
+the fixed factor4 and changes no dimension or cutoff exponents.
+
+4. THE EXPLICIT WINDOW HAS VANISHING HESSIAN CONTRIBUTION
+
+Take a sequence of cubic spatial tori of fixed side L>0, with
+n=(L/a)^3, and fix s>0, alpha>0, g_*>0. Equations (2.3),(3.1) give
+the actual original-law estimate
+
+ E_W[1_(E_epsilon0) ||Hess F_s,a||op]
+       <=C a^-8 exp[C' s/a^2-c(L/a)^3] ->0.             (4.1)
+
+This holds uniformly for beta>=1, in particular on the sequence
+used for the deterministic Hessian divergence. The same conclusion
+holds for any fixed positive power of the norm, by changing the
+prefactor and the C' coefficient; the negative a^-3 exponent wins.
+
+There is no contradiction with the homogeneous example. A pointwise
+large derivative can lie in a window that is sufficiently rare in
+the actual Gibbs measure. The moment-only counterlaw of the preceding
+note places all its mass in this window and violates (1.1). That is
+the extra information furnished by the exact Wilson conditional law.
+
+The event E_epsilon0 does NOT exhaust fields with large derivatives.
+Its complement includes almost all configurations, including ordinary
+spatially fluctuating ones, and no Hessian bound there has been proved
+by this argument. We have not decomposed the complete bad derivative
+set into such volume-sized coherent windows. Taking a union over
+unspecified backgrounds without controlling its size would invalidate
+the estimate.
+
+The conclusion is therefore a positive but limited actual-law
+consumer: the specific homogeneous obstruction and this entire
+gauge-invariant window around it do not force an averaged Hessian
+failure. The uniform physical variance, actual nonlinear temporal
+increment, and complete YM4 construction remain open.

@@ -1,0 +1,208 @@
+DECORATED BOUNDED-POTENTIAL CLUSTERS AND COVER COMPARISON
+20 October 2026. TURN51. Root proof.
+
+PURPOSE AND PRECISE STATUS
+
+This proves the cluster step needed for a strengthened version of the
+selected-kernel periodic comparison. Its hypothesis is a primitive
+potential catalogue with a positive majorant retaining actual lifted
+edge/path lengths. Ordinary final-support decay alone does not imply
+that hypothesis. Primitive construction and inherited substitution are
+checked separately in common_bare_two_volume_turn51.txt.
+
+This result concerns the selected product-ball integral. It says nothing
+about the omitted full-Wilson histories.
+
+1. PRIMITIVE CATALOGUE AND THE LENGTH NORM
+
+Let mu be a product probability law on finitely many coordinate blocks.
+Coarse complex fields w range over one fixed common polydisc; they are
+parameters, not integrated variables. Suppose
+
+       V=sum_(D in catalogue) V_D(w,xi).
+
+Each decoration D has a declared finite connected carrier C_D,
+containing every xi and w read and an anchoring site, and a
+nonnegative length l_D. That length includes any lifted propagator
+path, intermediate vertex connection, or inherited-carrier connection
+needed to reconstruct its geometry. Different decorations may have
+the same projected carrier and the same functional dependence.
+They must not be merged before their length is charged.
+
+Fix kappa>0, delta>0, sigma>0. Assume
+
+ sup_x sum_(D: x in C_D)
+    exp[(kappa+3delta)|C_D|+sigma l_D] ||V_D|| <=epsilon, (1.1)
+ 2epsilon<=delta/4, epsilon<=1/4.
+
+The norm is a supremum over the same coarse polydisc and product
+xi support. Matrix/component multiplicities are already included.
+Continuous auxiliary labels may be treated with their total-variation
+integrals instead of sums, by finite approximation and domination.
+
+The connected carrier can be supplied by a chosen finite path hull.
+If a primitive estimate instead weighs read count and path length
+separately, its own comparison must pay the added hull cardinality.
+For J-cell hulls a path of fine length l visits at most C(1+l/J)
+cells; the corresponding exponent must be reserved once.
+
+2. LENGTH IS PRESERVED THROUGH THE NONLINEAR CLUSTER EXPANSION
+
+Conclusion: the analytic branch at zero has an absolutely convergent
+decorated connected expansion
+
+   log E_mu exp(V)=sum_Gamma F_Gamma(w),
+   C_Gamma=union of primitive carriers,
+   L_Gamma=sum_D n_D l_D,
+
+where n_D is the multiplicity of V_D in that term, and
+
+ sup_x sum_(Gamma: x in C_Gamma)
+     exp[kappa|C_Gamma|+sigma L_Gamma] ||F_Gamma||
+                                                     <=2epsilon. (2.1)
+
+Every Gaussian read, even if repeated in several factors, remains in
+the geometry. Closed loops with no far external read are still charged
+by L_Gamma. The right side is independent of volume.
+
+Proof. Put a_D=exp(sigma l_D). Expand each factor
+
+   exp(V_D)-1=sum_(n>=1) V_D^n/n!.
+
+The absolute sum with the desired length charge is bounded by
+
+   exp(a_D ||V_D||)-1<=2a_D||V_D||=:w_D,               (2.2)
+
+since a_D||V_D||<=epsilon<=1/4. Thus nonlinear repetition charges
+n l_D, not merely l_D.
+
+Expand the product of these factors and group overlapping carriers
+into connected families. Independence of disjoint xi supports makes
+this an exact hard-core polymer gas. Declaring an overlap of coarse
+reads or unused path sites incompatible only groups additional
+terms; disjoint declared carriers still imply independent xi reads.
+All field parameters w retain their full analytic functions.
+
+The positive overlap-tree majorant, with
+b_D=w_D exp[(kappa+delta)|C_D|], has recursion
+
+   T_D=b_D exp(sum_(E: C_E intersects C_D) T_E).
+
+The supersolution T_D<=b_D exp(delta|C_D|) follows from
+
+ sum_(E: C_E intersects C_D)
+       w_E exp[(kappa+2delta)|C_E|]
+ <=2epsilon |C_D|<=delta|C_D|.
+
+The exponential generating recursion includes unordered offspring
+factorials; allowing repeats only enlarges the positive bound.
+Since the cardinality of a union is at most the sum of cardinalities,
+the length-weighted overlap activities A_P obey
+
+ sup_x sum_(P contains x)
+       exp[(kappa+delta)|P|] ||A_P||_(length) <=2epsilon.
+
+Apply the same pinned hard-core cluster bound used in TURN42,
+Section4: with comparison activity
+r_P=exp(kappa|P|)||A_P||_(length) and a(P)=delta|P|,
+the incompatibility sum is <=2epsilon|P0|<=a(P0).
+Its positive pinned logarithmic expansion is bounded by exp(a(P)).
+Pinning a final log cluster at x and summing over one polymer
+containing x proves (2.1).
+
+The entire argument uses positive absolute majorants. Retaining the
+individual primitive-power labels throughout makes their total
+length additive under every product and expectation. Integration
+against a product probability cannot increase a supremum norm.
+No cancellation is used to pay a length weight. Finite catalogue
+truncations converge absolutely in this norm, proving the statement
+for countable catalogues and preserving holomorphy.
+
+The only general cluster theorem used here is the same pinned
+hard-core bound already recorded in whitened_local_cluster_turn42,
+Section4. The additional length bookkeeping and its nonlinear
+multiplicity are proved above rather than inferred from a bound
+on final supports.
+
+3. WHAT SHORT-CLUSTER MATCHING REQUIRES
+
+Consider a torus of current period N and its j-fold cover, j>=2.
+All local rules and real product laws are the same. Assume the
+primitive catalogues have an exact lift correspondence for short
+decorated objects, including all operator image labels, integration
+variables and symmetry/root factors.
+
+In particular, let the TOTAL geometric length of a connected
+primitive family dominate the length of a connected lifted graph
+through every read, with its inherited carrier hull. Any inconsistent
+identification around a closed path, or any identification of two
+distinct lifted reads by reduction modulo N, then costs at least N.
+
+Accordingly, families with total length <N/4 have a unique consistent
+root-fixed lift to either torus. Their local coefficients and their
+product-law moments agree. The same is true after overlap grouping
+and logarithmic clustering. A connected log cluster links its
+constituents through carrier intersections; all corresponding paths
+must be part of the stipulated geometry.
+
+This is a geometric premise on the actual declared catalogues.
+It cannot be justified from the projection of their final support
+alone, and it can fail if a global coefficient depends on the period.
+
+Let R_j denote normalized cover restriction, averaging over the j^d
+root lifts and restricting the coarse fields to repeated ones.
+Assume its carrier norm is nonincreasing, as proved by carrier
+projection in the companion note. Short clusters cancel termwise.
+Each of the two remaining long-cluster sums is bounded by (2.1).
+Consequently
+
+  ||R_j F_(jN)-F_N||_kappa
+                         <=4epsilon exp(-sigma N/4).  (3.1)
+
+This is uniform in j and in the finite regulator. Factors associated
+with a fixed spatial grouping can be absorbed by changing sigma by
+a fixed factor; they must not depend on N or on the number of steps.
+
+4. EVENNESS, COUPLING DERIVATIVES, AND A FIXED ANALYTIC DOMAIN
+
+Suppose the primitive catalogue is holomorphic on one amplitude disc
+|z|<r and has (1.1) uniformly there. If its parity is preserved by
+the decoration assignment,
+
+  V_D(-z,w,-xi)=V_D(z,w,xi),
+
+and mu is even, then every integrated overlap activity and every
+decorated connected logarithmic term is even in z. If V_D(0)=0,
+the logarithm and its cover difference both vanish to second order.
+Cauchy estimates in the SAME weighted length norm then improve
+(3.1), for |g|<=r/4, to
+
+ ||R_j F_(jN)(g)-F_N(g)||
+           <=C epsilon (g/r)^2 exp(-sigma N/4).
+
+For gamma=g^-2 this also gives
+
+ ||partial_gamma F_N(g)||<=C epsilon g^4/r^2,
+
+on a smaller fixed subdisc. These are derivatives of the actual
+baseline product-ball integral with its real cutoff T fixed during
+the analytic argument. They are not derivatives of a cutoff T(g)
+or an identification with the frozen-window original-action source.
+
+When applying this statement to repeated selected maps, every field
+radius, length exponent, grouping and amplitude margin must be fixed
+once. An additional shrinking of the field ball at each step would
+not give the claimed arbitrarily deep comparison.
+
+5. APPLICATION BOUNDARY
+
+This theorem supplies the decorated CLUSTER step. A valid selected-map
+application must also provide its primitive weighted norm, canonical
+short lift correspondence, complete inherited substitution, leading
+determinant comparison, and beta extraction comparison.
+Those interfaces are addressed in common_bare_two_volume_turn51.txt.
+
+The full Wilson law does not have the independent product-ball
+reference assumed here after its omitted histories are restored.
+No full-measure pressure, reflection, or continuum conclusion follows
+from (3.1) alone.

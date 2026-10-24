@@ -1,0 +1,404 @@
+GROUND-STATE ACTION MOMENTS AND THE MARKED FLOW DERIVATIVE -- TURN67
+20 October 2026. gauge47. Submitted for independent audit.
+
+The underlying law throughout is the actual finite-spatial Hamiltonian
+ground law mu=Omega^2 dU. No selected reference law is substituted.
+The physical spatial-flow derivative target is not proved in this note.
+
+1. EXACT MODEL AND GROUND-STATE MULTIPLIER IDENTITY
+
+Let X=SU2^E be a finite nondegenerate periodic spatial lattice with
+n sites, 3n links and 3n spatial plaquettes. Use normalized Haar and
+the Pauli/2 metric. Set
+
+ H=-kappa Delta+v S,  kappa=g^2/(2a),  v=4/(g^2 a),
+ S=sum_p h_p,  h_p=1-Tr U_p/2.
+
+Let H Omega=E0 Omega, Omega>0, int Omega^2=1, and mu=Omega^2 dU.
+The actual controlled temporal construction and TURN66 energy proof
+give this exact H and E0<=9n/a. We retain those established scopes.
+
+For every smooth real f, direct integration by parts gives
+
+ kappa int |grad(f Omega)|^2 +v E_mu[S f^2]
+               =E0 E_mu f^2+kappa E_mu|grad f|^2.        (1.1)
+
+Indeed expand the square and use H Omega=E0 Omega multiplied by
+f^2 Omega. There is no approximate ground-state equation.
+In particular
+
+ v E_mu[S f^2]<=E0 E_mu f^2+kappa E_mu|grad f|^2.         (1.2)
+
+The nonnegative kinetic term discarded in(1.2) is stated explicitly.
+For f=1 this recovers the energy mean bound; it does not justify
+factoring a nonconstant f from its correlation with S.
+
+The exact pointwise action bound used below is
+
+                       |grad S|^2<=8S.                 (1.3)
+
+For each incident edge,
+|grad_e h_p|^2=(2h_p-h_p^2)/4<=h_p/2.
+There are four incident spatial plaquettes per edge and four
+edges per plaquette. Cauchy--Schwarz gives(1.3).
+
+2. A NEW ACTUAL GROUND-LAW EXPONENTIAL ACTION BOUND
+
+Define Z(lambda)=E_mu exp(lambda S). The finite compact configuration
+space makes Z finite and smooth for every real lambda.
+Use f=exp(lambda S/2) in(1.2), and then(1.3):
+
+ v E_mu[S exp(lambda S)]
+  <=E0 Z(lambda)+(kappa lambda^2/4)
+                          E_mu[|grad S|^2 exp(lambda S)]
+  <=E0 Z(lambda)+2kappa lambda^2 E_mu[S exp(lambda S)].
+
+Thus for0<=lambda<2/g^2,
+
+ d_lambda log Z(lambda)
+    <= E0/(v-2kappa lambda^2)
+    = (E0/v)/[1-(lambda g^2/2)^2].
+
+Integrating from0, where Z(0)=1, proves
+
+ log E_mu exp(lambda S)
+      <=(a E0/2) artanh(lambda g^2/2)
+      <=(9n/2) artanh(lambda g^2/2).                   (2.1)
+
+Equivalently, for0<=t<2,
+
+ log E_mu exp(t S/g^2)
+                         <=(9n/2) artanh(t/2).         (2.2)
+
+All constants, the normalization Z(0)=1, and the coupling radius
+are exact. This proof uses the actual ground equation and no
+isotropic Wilson one-edge conditional formula. It therefore does
+not inherit the conditional-law limitation identified in TURN66.
+
+For example, t=1 gives
+
+ E_mu exp(S/g^2)<=3^(9n/4).                             (2.3)
+
+The bound is extensive. Alone it does not bound the exponential
+moment of a fixed local region with an extensive factor replaced
+by that region's size. Such a replacement needs another argument.
+It also does not give an exponential moment for the initial-field
+flow derivative.
+
+3. SPATIAL REFLECTION POSITIVITY OF THIS ACTUAL GROUND LAW
+
+Take each spatial period N_i even. A spatial site reflection has
+two fixed coordinate planes, at x_i=c and x_i=c+N_i/2. Links
+lying in either plane are shared boundary variables. All other
+links belong to exactly one reflected closed half; orientation
+reversal uses inverse group elements and preserves Haar measure.
+
+At finite temporal spacing delta and temporal period N_time,
+the actual anisotropic Wilson density has positive spatial and
+temporal couplings, constant by orientation. Every elementary
+plaquette lies wholly in one closed spatial half or wholly in
+one boundary plane. No plaquette contains both a strictly positive
+and a strictly negative spatial vertex across a site plane.
+Thus, conditional on the links in the two planes, the density is
+
+            positive boundary weight times W_+ theta(W_+).
+
+The measures on the two nonboundary link sets are reflected product
+Haar. Integrating F theta(conjugate F) for a bounded function of
+one closed half is an integral of an absolute square against that
+positive boundary weight. This proves spatial site-reflection
+positivity directly, including all temporal links and plaquettes.
+The reflection is spatial, so the chosen temporal slice is fixed.
+
+First send N_time to infinity at fixed delta, using the proved
+simple Wilson transfer ground-state limit. Then send delta to0
+at fixed spatial lattice, using Omega_delta->Omega in L2. Bounded
+continuous spatial-half functions and their reflected products
+pass to both limits. Hence mu=Omega^2 dU has the same spatial RP.
+No uniformity in the spatial lattice is needed for this argument.
+
+Only site planes are used below. This conditional-square proof
+does not require a statement about more delicate diagonal mirrors,
+does not modify any gauge-choice law, and does not assert that
+(Phi_s)_*mu remains spatially reflection positive.
+
+4. A LOCAL EXPONENTIAL ACTION BOUND WITH EXACT TILE CONVENTIONS
+
+Let B be the rectangular cell box [0,l_1]x[0,l_2]x[0,l_3],
+with integer l_i>=2 and N_i/l_i=2^k_i, k_i a nonnegative integer.
+Write
+
+             V_B=l_1 l_2 l_3,   K_B=n/V_B.
+
+Use a translate if needed. Let P_B^int be the plaquettes whose
+EVERY vertex has coordinate strictly between0 and l_i in each
+direction. Thus no plaquette in this set touches a tile boundary.
+Put S_B=sum_(p in P_B^int) h_p. Empty sets cause no difficulty.
+
+For any nonnegative bounded F depending only on this strict
+interior, repeated RP Cauchy--Schwarz gives
+
+ E_mu F <= [E_mu product_(b in board) theta_b F]^(1/K_B). (4.1)
+
+Here theta_b denotes the successive reflected copy, including
+the induced orientations on links. For completeness, in direction1,
+reflect a block of length l_1 across its right site plane to make
+a pair of copies. Cauchy--Schwarz against1 yields a square-root
+bound. The pair lies in a block of length2l_1; repeat across its
+right site plane until the length is N_1. Each intermediate block
+fits in a closed half because its length is at most N_1/2.
+Then do directions2 and3. At each stage the existing product
+has no boundary dependence in the direction being doubled.
+The exponents multiply to1/K_B. This proves(4.1) for the single
+function needed here without assuming a multipoint theorem.
+
+Take F=exp(t S_B/g^2). Reflections preserve h_p, and the strict
+interiors are disjoint. Therefore
+
+       sum_b theta_b S_B <= S
+
+pointwise. Apply(2.2) after(4.1) to obtain, for0<=t<2,
+
+ log E_mu exp(t S_B/g^2)
+                   <=(9 V_B/2) artanh(t/2).             (4.2)
+
+In particular
+
+                E_mu exp(S_B/g^2)<=3^(9V_B/4).         (4.3)
+
+This is an actual local ground-state concentration bound. The
+constant depends on the enclosing tile's cell volume, not the
+ambient torus volume. A smaller plaquette set contained in the
+same strict interior obeys the same bound by monotonicity.
+We do not replace V_B by its number of plaquettes without proof.
+
+For a simple uniform local consequence, suppose all N_i are
+divisible by4 with N_i/4 a nonnegative integral power of2. A translate of
+a4x4x4 tile has a full four-plaquette spatial edge star strictly
+inside it: for an edge in direction1 use endpoints(1,2,2) and
+(2,2,2), and permute directions for the others. Thus, with
+
+                 rho_e=sum_(p containing e) sqrt(h_p),
+
+Cauchy--Schwarz gives rho_e^2<=4 S_B, and(4.3) proves
+
+             E_mu exp[rho_e^2/(4g^2)]<=3^144.           (4.4)
+
+The explicit constant144 is9*64/4. It is not optimized.
+The requirement on torus divisibility is part of this proved
+version; it is harmless for a chosen dyadic regulator sequence,
+but is not silently removed for arbitrary periods.
+
+The standard chessboard context was checked against the primary
+paper by Biskup, Chayes and Nussinov, Section6.1, which also uses
+site reflections and dyadically related rectangular blocks:
+ https://web.ma.utexas.edu/mp_arc/c/03/03-445.pdf .
+The RP attachment and single-function doubling proof used here
+are given explicitly above. No model-specific spin conclusion
+from that paper is imported into the gauge model.
+
+5. AN ACTUAL STATE-SENSITIVE MARKED CURVATURE INEQUALITY
+
+Let W>=0 be a measurable mark with 0<m=E_mu W<infinity and
+write nu=(W/m)mu. Relative entropy is
+
+ H(nu|mu)=E_mu[(W/m)log(W/m)] in[0,infinity].
+
+For finite entropy the entropy variational inequality and(4.4)
+give
+
+ E_nu rho_e^2 <=4g^2[H(nu|mu)+144log3],
+
+and consequently
+
+ E_mu[rho_e W]
+   <=2g m sqrt[H(nu|mu)+144log3].                       (5.1)
+
+The inequality is also valid with an infinite right side.
+It is a bound under the ACTUAL ground law with the actual mark.
+It has neither an independence assumption nor an ambient-volume
+constant. It is not an inference that the curvature and W factor.
+
+Only the links in the four-plaquette star are needed. Let pi_e
+project onto their union (at most13 unoriented links), and put
+mu_e=(pi_e)_*mu. By applying the same entropy variational inequality
+on that finite star, the entropy in(5.1) can be replaced by
+
+                    H((pi_e)_*nu | mu_e).              (5.2)
+
+This is no larger than the full entropy, but need not be small.
+The curvature marginal is genuinely that of Omega^2.
+
+The same statement works at the CURRENT flowed configuration
+without claiming RP for the flowed law. The compact smooth
+spatial flow Phi_r is a diffeomorphism for every finite r:
+its smooth vector field has complete forward and backward flow.
+For a possibly r-dependent mark W_r>=0, m_r=E_mu W_r>0, define
+
+ nu_(e,r)=(pi_e o Phi_r)_*[(W_r/m_r)mu],
+ h_(e,r)=H(nu_(e,r)|mu_e).
+
+Then, by applying(4.4) to the reference mu_e and comparing the
+ACTUAL tilted pushforward to it,
+
+ E_mu[rho_e(Phi_r U) W_r(U)]
+                <=2g m_r sqrt[h_(e,r)+144log3].         (5.3)
+
+For W_r=|J_(r,e)|^2 this is a precise consumer for the actual
+marked Jacobi term. Zero m_r gives a zero left side and is
+omitted. The information still needed is the entropy of a
+finite-star marginal under the derivative-weighted flow.
+Neither the unmarked energy nor its new local exponential
+moment controls that entropy.
+
+One should also retain the parabolic spatial structure. Even a
+uniform bound on h_(e,r) would only replace the adverse curvature
+weight by O(g). Discarding all spatial coercivity and applying
+Gronwall to a Jacobi inequality with prefactor a^-2 would still
+produce exp(C g r/a^2), which is inadequate at fixed physical r.
+Thus(5.3) is useful genuine marked control, not the missing
+cutoff-uniform parabolic estimate itself.
+
+6. WHAT INTEGRATION BY PARTS ACTUALLY DOES TO THE FLOW MARK
+
+Write c=4/a^2, b=-c grad S, and f_r=f o Phi_r for any fixed
+smooth real physical f. Autonomy of the flow gives
+
+                 partial_r f_r=b.grad f_r.
+
+Put l=log Omega and
+
+       B=Delta S+2 grad l.grad S=div_mu(grad S).
+
+The exact action eigenfunction identity for a four-distinct-link
+SU2 plaquette gives
+
+              Delta S=3(|P_sp|-S).                     (6.1)
+
+Indeed each of its four link Laplacians acts on its fundamental
+matrix entry with eigenvalue-3/4. Consequently the Hessian
+transport/product rule and weighted integration by parts give
+
+ d_r E_mu|grad f_r|^2
+  =-2c E_mu Hess S(grad f_r,grad f_r)
+                            +c E_mu[B |grad f_r|^2].    (6.2)
+
+This is an Eulerian identity with all coefficients evaluated at
+the original U. It is equivalent to following Jacobi variations
+along Phi_r; no time-dependent reference measure is discarded.
+
+The second term is not zero merely because E_mu B=0. In fact
+B is nonzero in this ACTUAL model: at a flat configuration,
+grad S=0,S=0, so B=3|P_sp|>0. Since mu has a positive smooth
+density, E_mu B^2>0. The smooth positive gauge-invariant mark
+W=1+epsilon B, with0<epsilon<1/(2||B||infinity), obeys
+
+                      E_mu[B W]=epsilon E_mu B^2>0.    (6.3)
+
+This does not assert that W is a particular flow derivative.
+It disproves a general symmetry or unmarked-centering argument
+for eliminating the weighted divergence term.
+
+Integrating that term by parts instead yields exactly
+
+ E_mu[B |grad f_r|^2]
+             =-2 E_mu Hess f_r(grad S,grad f_r).         (6.4)
+
+The new term is a SECOND configuration derivative of the
+flowed observable. The Fisher estimate
+E_mu|grad l|^2<=18n/g^2 controls only an unweighted square.
+Using it in(6.2) by Cauchy--Schwarz introduces
+E_mu[|grad S|^2 |grad f_r|^4] in addition to the extensive
+factor n/g^2. Neither quantity is presently controlled at
+the desired scale. Thus integration by parts has exposed,
+not removed, the correlated derivative.
+
+There is a second exact way to display this cost. For any
+smooth vector-valued mark J, apply(1.2) to
+f_epsilon=(|J|^2+epsilon)^1/2 and send epsilon down to0.
+Kato's inequality gives
+
+ E_mu[S |J|^2]
+   <=(9/4)n g^2 E_mu|J|^2
+                          +(g^4/8)E_mu|nabla J|^2.     (6.5)
+
+Here a metric covariant derivative can be used for a smooth
+vector-bundle mark; the scalar norm regularization is sufficient.
+If J is a flow tangent, nabla J includes a second variation
+of the flow. Its coefficient is small in g, but no configuration
+space diffusion/dissipation term in the deterministic Jacobi
+equation absorbs E|nabla J|^2. Treating it as already controlled
+would restate an unproved stronger estimate.
+
+7. EXACT TRANSPORT ENTROPY AND A FREE REFERENCE DIAGNOSTIC
+
+For a FIXED smooth nonnegative normalized density w relative
+to mu, let nu_0=w mu and nu_r=(Phi_r)_*nu_0. The diffeomorphism
+change of variables gives
+
+ H(nu_r|mu)
+   =H(nu_0|mu)+E_(nu_0)[log mu_density(U)
+       -log mu_density(Phi_r U)-log Jac Phi_r(U)]
+   =H(nu_0|mu)+c int_0^r E_(nu_t) B dt.                (7.1)
+
+All densities are with respect to product Haar volume. Formula
+(7.1) is first derived for positive w and then by regularization.
+It does not posit invariance of mu under deterministic spatial
+flow. A final-time-dependent tangent weight W_r can be held
+fixed when applying this identity for that specific r; no
+unjustified time differentiation of W_r is performed.
+
+The right side again contains a marked B term. The global
+Fisher estimate and current-action dissipation do not give a
+cutoff-uniform bound on it. Moreover, replacing the local
+entropy(5.2) by a global transported entropy can be intrinsically
+far too expensive even in the free Gaussian comparison.
+
+Indeed for independent real Gaussian modes X_k with any positive
+variances sigma_k^2, a linear heat flow sends X_k to
+exp(-r omega_k)X_k. Its full transported relative entropy is
+EXACTLY
+
+ H_r=(1/2)sum_k[exp(-2r omega_k)-1+2r omega_k].          (7.2)
+
+The mode variance cancels. On a three-dimensional spatial lattice,
+a positive proportion of transverse Maxwell modes have
+omega_k comparable to a^-2, with their number comparable to n.
+At fixed positive r, (7.2) is then bounded below by c n r/a^2
+for small a, and has the same order as an upper bound.
+
+This is only a FREE-reference calculation. It is not a claim
+about the unknown nonlinear marked entropy or instability of
+the actual ground state. It shows why imposing a bounded full
+transport entropy would exclude even an otherwise useful free
+heat smoothing. The finite-star entropy in(5.2)--(5.3), and a
+parabolic estimate using its actual spatial placement, are the
+more appropriate remaining quantities.
+
+8. CONSEQUENCE FOR THE PHYSICAL TARGET
+
+For the physically calibrated bounded nonlinear magnetic
+observable
+
+ F_(a,s)(U)=exp[-alpha |2p(P12(Phi_s U;x))/(g_*a^2)|^2],
+
+with fixed physical s,alpha,g_*>0, the target is still
+
+                  E_mu|grad_U F_(a,s)|^2<=C a/g_a^2.   (8.1)
+
+Sections1--4 prove a new actual global and local exponential
+magnetic-action bound. Section5 proves an actual local marked
+curvature inequality, explicitly recording its entropy cost.
+Sections6--7 identify what the proposed ground-state/Fisher
+integration-by-parts shortcut must additionally control.
+No arbitrary comparison measure is inserted anywhere in those
+identities; the only separate reference model is explicitly
+the free calculation(7.2).
+
+The local bound is available to test a spatial multiscale
+parabolic argument or to bound truly local large-curvature
+events in Omega^2. It does not itself prove(8.1), a physical
+variance floor, or a spatial continuum Yang--Mills law.
+In particular no spatial RP property of the nonlinear flowed
+law, no isotropic Wilson conditional density for Omega^2,
+and no independent curvature/tangent factorization is claimed.

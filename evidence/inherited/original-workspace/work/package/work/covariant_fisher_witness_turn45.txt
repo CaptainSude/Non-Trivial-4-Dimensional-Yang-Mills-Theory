@@ -1,0 +1,344 @@
+COVARIANT FISHER DIRECTIONS IN THE ORIGINAL WILSON LAW -- TURN45
+19 October 2026. Exact finite-lattice results; no continuum existence claim.
+
+0. RESULT AND ITS LIMIT
+
+The deterministic Lie-direction obstruction in rotation_route_turn44,
+Section 9 can be bypassed by a field-dependent gauge-covariant vector
+field. The exact Fisher identity then has a nonzero numerator. In
+particular, for the SU(2) Wilson law on any finite nondegenerate
+four-dimensional hypercubic lattice, every elementary plaquette with
+at least one integrated edge obeys
+
+       Var_mu(h_p) >= c/(1+beta)^2,                         (0.1)
+
+where h_p=1-(1/2)Re Tr U_p, dmu=Z^-1 exp(-beta sum_p h_p)dHaar,
+and c>0 is independent of volume, boundary data and beta>=0. This is
+an estimate in the ORIGINAL compact Wilson law, including large fields.
+The statement applies to free, fixed, and ordinary periodic boundaries
+provided the varied edge is integrated and occurs once in each incident
+elementary plaquette. Fully fixed boundary plaquettes are excluded.
+
+However, a strictly local Fisher score whose complete read support lies
+on one side of a reflection is exactly orthogonal to every observable
+on the other side. In particular its own reflected norm is ZERO. Thus
+nonzero ordinary variance obtained this way does not itself certify a
+nonzero physical state after Osterwalder--Schrader reconstruction.
+
+Sections 1--3 prove (0.1) by a covariant direction. Sections 4--5 isolate
+the exact reflected-null obstruction and the normalization/contact cost.
+No RG source theorem, gauge fixing, small-field cutoff or convexity
+assumption is used in these finite-volume results.
+
+1. EXACT COVARIANT FISHER IDENTITY
+
+Let M=G^E with product bi-invariant Riemannian metric and normalized Haar
+volume, where G is compact and connected. Put dmu=Z^-1 exp(-beta S)dvol,
+with smooth real S. For any smooth real vector field V on M define
+
+       sigma_V = beta V S - div V.                         (1.1)
+
+Integration of div(F V exp(-beta S)) on the compact manifold gives
+
+       E_mu[V F] = E_mu[F sigma_V],     E_mu sigma_V=0.     (1.2)
+
+Consequently, when E sigma_V^2>0,
+
+       Var_mu(F) >= |E_mu V F|^2 / E_mu sigma_V^2.          (1.3)
+
+For V=grad F, the numerator is (E|grad F|^2)^2. If both S and F are
+gauge invariant, then grad F is gauge covariant because gauge actions
+are isometries of the product bi-invariant metric. The score is gauge
+invariant. Local gauge symmetry no longer forces E V F to vanish: it is
+nonnegative and strictly positive unless F is constant on every varied
+connected component almost surely.
+
+One can use only a subset of the links: take V=grad_I F in the product
+of their G factors, holding all other variables fixed. Its divergence,
+Laplacian and score use exactly those factors. The full-law identity
+(1.2) remains valid by conditional integration by parts.
+
+For the full gradient, let L=Delta-beta grad S dot grad. Then
+sigma_grad F=-L F. The integrated Bochner identity is
+
+ E[(L F)^2] = E[|Hess F|^2
+                   +(Ric+beta Hess S)(grad F,grad F)].    (1.4)
+
+To verify the sign, use
+ (1/2)L|grad F|^2-grad F dot grad(LF)
+ =|Hess F|^2+(Ric+beta Hess S)(grad F,grad F),
+integrate L|grad F|^2 to zero, and integrate the remaining gradient
+pairing by parts. Formula (1.4) does NOT assert Hess S>=0. Negative
+curvature of the action is retained. It is an exact identity, not a
+volume-uniform lower-curvature assumption.
+
+2. THE CONDITIONAL SU(2) LAW AND A UNIFORM GRADIENT RESPONSE
+
+Identify SU(2) with the unit round sphere S^3 of quaternions q. Normalized
+Haar is normalized round volume. Fix an unoriented edge variable U_e=q
+and condition on all other links. Every incident Wilson plaquette is
+
+                    h_r=1-a_r dot q,
+
+where a_r is a unit vector in R^4 determined by the other links and by
+orientation. The inverse of q is an orthogonal linear operation, so the
+formula also holds when the plaquette traverses e in the reverse direction.
+There are at most m=2(d-1)=6 such plaquettes in dimension four. Thus
+
+ dmu(q | other links) = Z_b^-1 exp(beta b dot q)domega(q),
+       b=sum_{r containing e}a_r,       |b|<=6.             (2.1)
+
+For the chosen plaquette p write a=a_p and x=a dot q, so h_p=1-x.
+If b is nonzero write n=b/|b|, kappa=beta|b|, t=n dot q and
+alpha=a dot n. For b=0 choose n arbitrarily and put kappa=0.
+The marginal density of t on [-1,1] is proportional to
+
+                    exp(kappa t)(1-t^2)^(1/2).             (2.2)
+
+Claim: with r=1+kappa,
+
+              E_b(1-t^2) >= c/r.                         (2.3)
+
+For 0<=kappa<=2 the conditional density relative to Haar is bounded
+below by exp(-4), so (2.3) follows from the positive Haar expectation.
+For kappa>=2 put u=1-t. The normalizer is at most
+
+ exp(kappa) sqrt(2) int_0^infinity exp(-kappa u)u^(1/2)du
+             = C exp(kappa)kappa^(-3/2).
+
+On u in [1/(2kappa),1/kappa], the unnormalized mass is at least
+c exp(kappa)kappa^(-3/2): exp(-kappa u)>=exp(-1), and
+sqrt(2u-u^2)>=sqrt(u). Therefore this band has probability at least c.
+On it 1-t^2=2u-u^2>=u>=1/(2kappa), proving (2.3).
+
+By transverse rotational symmetry, if s is any unit transverse
+coordinate then E_b s=E_b(ts)=0 and
+E_b s^2=(1/3)E_b(1-t^2). Write x=alpha t+sqrt(1-alpha^2)s.
+Since grad h_p=-a+xq on S^3,
+
+ N_b := E_b|grad_e h_p|^2 = E_b(1-x^2)
+      = alpha^2 E_b(1-t^2)
+           +(1-alpha^2)[1-(1/3)E_b(1-t^2)]
+      >= c[alpha^2/r+(1-alpha^2)] >= c/r.                 (2.4)
+
+This is the nonzero covariant Fisher response. It holds for every
+conditioned exterior, even a large-field exterior or a vanishing staple b.
+
+3. A SHARP-POWER FINITE-WILSON VARIANCE LOWER BOUND
+
+Use V=grad_e h_p, varying only the chosen edge. On the unit round S^3,
+
+ Delta h_p=3x,        Hess h_p=x g_S3,       Ric=2g_S3,
+ S(q | other links)=constant-b dot q,
+ Hess_e S=(b dot q)g_S3.
+
+The exact score is therefore
+
+ sigma = beta[a dot b-(a dot q)(b dot q)]-3(a dot q).     (3.1)
+
+It is the same globally gauge-invariant scalar obtained from (1.1).
+Conditional Bochner gives
+
+ D_b := E_b sigma^2
+       = E_b[3x^2+(2+kappa t)(1-x^2)]
+       <= 3+(2+kappa)N_b
+       <= C(1+kappa)N_b.                                (3.2)
+
+The final inequality uses (2.4), so 3<=C(1+kappa)N_b.
+In (3.2) the possibly negative kappa t term was only bounded above;
+no assertion of positive Hessian of the Wilson action was needed.
+Conditional Fisher gives
+
+ Var_b(h_p) >= N_b^2/D_b
+             >= c N_b/(1+kappa)
+             >= c/(1+kappa)^2
+             >= c/(1+6beta)^2.                           (3.3)
+
+The law of total variance proves (0.1), with a changed absolute constant.
+Alternatively, the SAME unconditional vector field proves it directly:
+N=E N_b>=c/(1+6beta), D=E D_b<=C(1+6beta)N, and (1.3) gives
+Var_mu(h_p)>=c/(1+6beta)^2.
+
+The inverse-square beta power is sharp for this uniform conditional
+statement. If b is a fixed positive multiple of a and kappa tends to
+infinity, u=1-a dot q has density proportional to
+exp(-kappa u)u^(1/2)(2-u)^(1/2), 0<=u<=2. After z=kappa u,
+dominated convergence of moments gives z -> Gamma(shape=3/2,rate=1).
+Hence Var_b(h_p)=(3/2+o(1))/kappa^2. This sharpness example describes
+a conditional fiber and does not claim it is a typical full-law exterior.
+
+4. EXACT CONTACT ORTHOGONALITY AND REFLECTED NULLNESS
+
+The variance bound above is not a separated-correlation lower bound.
+There is a stronger structural reason than simply a weak estimate.
+
+For ANY vector field V differentiating only a set of link variables I,
+and any smooth H independent of those variables, (1.2) gives
+
+                   E_mu[sigma_V H]=E_mu[V H]=0.           (4.1)
+
+This remains true even when the coefficients of V depend on links
+outside I; only differentiating H matters. It is an equation-of-motion
+or contact identity in the original finite Wilson law.
+
+Now choose a reflection theta and suppose V and the complete read
+support of sigma_V lie strictly in the positive half. This is possible
+for V=grad_e h_p if p and every action plaquette meeting e lie far
+enough from the reflection plane. Then Theta sigma_V depends only on
+negative-half links, hence on none of I. Equation (4.1) yields
+
+                E_mu[(Theta sigma_V)sigma_V]=0.           (4.2)
+
+More generally E_mu[(Theta F)sigma_V]=0 for every positive-half F.
+When the law is reflection positive, (4.2) says sigma_V is exactly an
+OS-null vector. In particular (1.2) may have E[V F]>0 and
+E[F sigma_V]>0 while its reflected analogue has zero right hand side.
+
+This is not an impossibility theorem for every Fisher-based continuum
+argument. A direction whose support reaches the separating surface,
+a global constrained direction, or a comparison that links an ordinary
+variance to a positive separated spectral component may avoid this
+particular nullness. But each requires an additional construction and
+estimate. A local score lower bound alone cannot be substituted for
+the needed positive reflected witness.
+
+This obstruction is separate from, and consistent with, TURN44's
+Gaussian cross-scale cancellation example. That example shows why a
+positive one-step separated coefficient need not survive summing all
+scales. The present identity shows why a positive unreflected local
+Fisher response can live entirely in a reflected-null direction.
+
+5. THE ULTRAVIOLET CONTACT PRICE AND SOURCE NORMALIZATION
+
+Centering h_p changes neither (0.1) nor its Dirichlet response. If a
+prescribed physical observable is O_{p,a}=z_a(h_p-E h_p), then
+
+             Var(O_{p,a}) >= c z_a^2/(1+beta_a)^2.         (5.1)
+
+The estimate does not determine z_a. Choosing a cutoff-dependent
+normalization by demanding variance one is circular if the purpose is
+to identify the prescribed Yang--Mills observable and its source.
+Moreover, single-plaquette variance does not control covariance between
+two regions at a fixed positive physical separation.
+
+One can expose the contact-volume cost without assumptions on signs
+of arbitrary covariances. Choose plaquettes p_i with designated edges
+e_i so that (a) no Wilson action plaquette contains two e_i, and
+(b) p_i contains e_i but no other designated edge. A fixed-orientation
+plaquette at bases in 4Z^4, with its same oriented first edge designated,
+is one such choice on a large non-wrapping box. Conditional on all
+other links, the e_i laws are independent and each h_{p_i} depends
+on only its designated variable. Thus for deterministic real c_i,
+
+ Var_mu(sum_i c_i h_{p_i})
+   >= E Var(sum_i c_i h_{p_i} | other links)
+   = sum_i c_i^2 E Var(h_{p_i} | other links)
+   >= c(1+beta)^(-2)sum_i c_i^2.                         (5.2)
+
+This is a sparse observable family, not an assertion for every full
+plaquette sum: in a full sum several plaquettes can involve one
+designated link and their linear coefficients can combine or cancel.
+
+On a fixed physical four-volume with mesh a, this sparse family has
+order a^-4 plaquettes. For the smeared discretization
+
+           X_a(f)=a^4 z_a sum_i f(x_i)(h_{p_i}-E h_{p_i}),
+
+(5.2) gives, for a smooth nonzero f in a fixed interior region,
+
+             Var X_a(f) >= c z_a^2 a^4/(1+beta_a)^2.      (5.3)
+
+For the weak-field engineering choice z_a=beta_a a^-4 and beta_a>=1,
+this is at least c a^-4. Accordingly this sparse local approximation
+cannot have uniform L2 bounds under that choice. Diverging variances
+alone do NOT prove failure of tightness without further moment/control
+assumptions, and (5.3) is not a contradiction to a renormalized
+off-diagonal Schwinger-function or OS construction. It records the
+contact fluctuations that such a construction must treat correctly.
+
+At the alternative noise normalization z_a=beta_a a^-2, the lower
+bound is merely order one. Such a choice can retain ultraviolet noise;
+it does not identify a Yang--Mills continuum field. In general a
+positive ordinary variance can be carried by contact terms. A
+nontrivial physical witness needs positive correlation across a fixed
+positive separation, or another precise argument excluding a pure
+contact/OS-null contribution.
+
+No exact finite Wilson identity here fixes the running source
+normalization. The needed all-scale source representation, local
+remainder bounds, and nonzero separated physical kernel remain open.
+
+6. A BOUNDARY FISHER ROUTE AND THE PROPAGATION ESTIMATE IT REQUIRES
+
+There is an exact way to turn Fisher into a reflected-witness problem,
+but its numerator is then a genuine propagation correlation.
+
+Take a reflection-symmetric finite box with a fixed mirror layer B of
+links, positive variables X, and their reflected negative copy Y. Assume
+the literal action splitting
+
+         S(B,X,Y)=S_0(B)+S_+(B,X)+S_+(B,theta Y).
+
+For example a site reflection of a free-boundary hypercubic box has
+this splitting when B contains the links lying in the mirror layer.
+Write Z_+(B)=int exp(-beta S_+(B,X))dX and let nu_B be the normalized
+positive-half conditional law. The actual boundary law is
+
+         dr(B)=Z^-1 exp(-beta S_0(B))Z_+(B)^2 dHaar(B).
+
+For a real positive-half observable F define m_F(B)=E_nuB F. Conditional
+independence of the two halves gives the exact reflected covariance
+
+ E_mu[(Theta(F-E_mu F))(F-E_mu F)] = Var_r(m_F).         (6.1)
+
+For any boundary vector field W, its score under r is
+
+ sigma_W^r = beta W S_0-2W log Z_+-div_B W
+           = beta W S_0+2beta E_nuB(W S_+)-div_B W.      (6.2)
+
+Hence (1.3), now on the boundary manifold, gives
+
+ reflected covariance >= |E_r W m_F|^2/E_r(sigma_W^r)^2. (6.3)
+
+For F with no explicit dependence on the boundary links,
+
+        W m_F(B) = -beta Cov_nuB(F,W S_+).               (6.4)
+
+If F does depend on B, add E_nuB(W F) to the right side. Differentiating
+the EXACT normalized conditional law proves (6.4), including its
+normalizer term. All vector-field coefficients are held at their
+boundary values while differentiating in each tangent direction.
+
+Thus a boundary Fisher proof would require both a lower bound on the
+averaged force-observable covariance in (6.4), reaching from the mirror
+to the fixed physical support of F, and an upper bound on (6.2). The
+single-link estimate of Sections 2--3 provides neither. Choosing
+W=grad_B m_F makes the response positive but presupposes quantitative
+control of the very boundary response to be proved. Defining W by an
+inverse covariance or normalizing it by that unknown response does
+not establish the required bounds.
+
+Equation (6.3) is a concrete legitimate alternative to the OS-null local
+score, and it specifies exactly where the all-scale propagation input
+returns. No lower bound for (6.4) at a fixed nonzero physical distance
+has been established here.
+
+7. AUDIT CHECKLIST AND STATUS
+
+* V=grad_e h_p is field dependent and gauge covariant; the proof does
+  not reuse a deterministic Lie direction forbidden by local symmetry.
+* The Haar divergence is retained, producing the essential -3x term.
+* The single-link conditional law is exact, not a weak-coupling Gaussian.
+* The beta^-2 lower bound is uniform over ALL exterior fields and volumes.
+* Round-S^3 metric conventions are used consistently; rescaling the
+  bi-invariant metric rescales numerator and denominator compatibly.
+* No sign is assigned to separated plaquette covariances.
+* The complete read support of the score, including all action staples,
+  must lie in the positive half before asserting the OS-null conclusion.
+* The sparse-array estimate is not promoted to an arbitrary full-source
+  sum or to a continuum tightness theorem.
+
+These are elementary derived identities. They require no unverified
+import from the newest QED3 paper. They establish a real original-law
+local variance result while specifying why it does not finish the
+nontrivial four-dimensional Yang--Mills existence proof.

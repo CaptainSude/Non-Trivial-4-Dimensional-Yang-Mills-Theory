@@ -1,0 +1,325 @@
+TENSOR ALL-ORDER CONTINUUM AUDIT AND SEPARATION LEMMA
+18 October 2026. Independent working proof; no claim of completed YM4.
+
+1. WHAT IS ACTUALLY NEEDED FOR THE PRESENT RECONSTRUCTION ROUTE
+
+Primary source: Osterwalder--Schrader II, CMP42 (1975), pp287--288,
+Section IV.1, equation (4.1), and introduction pp282--283:
+https://scispace.com/pdf/axioms-for-euclidean-green-s-functions-ii-with-an-appendix-4g1guiqrrx.pdf
+DOI10.1007/BF01608978.
+The stated E0' hypothesis has one fixed seminorm-order multiplier s
+and a factorially bounded sequence of constants for the entire
+hierarchy on the flat-collision Schwartz space. The practical bound is
+
+ |S_n(F)| <= C^n (n!)^B p_(s n)(F),                         (1.1)
+
+with C,B,s independent of n. Their stronger E0'' is unnecessary here.
+The paper also gives a different reconstruction hypothesis; thus (1.1)
+is sufficient for the selected route, not claimed logically necessary
+for every possible QFT construction. Separate finite-order bounds do
+not justify invoking this theorem. The distinction matters because the
+analytic continuation of one correlation uses higher correlations.
+
+The explicit existing os_s0_whitney_extension_2026-10-18.txt consumes
+exactly a separated-product bound C^n(n!)^B d^(-A n), with one fixed A.
+It produces (1.1) with a larger fixed factorial power and O(n)
+seminorm order. Flatness at collisions pays a d^(-A n) singularity; it
+does not erase an uncontrolled numerical C_n already present away
+from collisions. For example fix a family of disjoint translated
+Gevrey bumps with unit mutual separation. Their tensor seminorm of
+order O(n) is at most exp[O(n log n)]. It cannot absorb exp(c n^p),
+p>1, by merely invoking flatness.
+
+The scalar source consumer in sourced_hierarchy_growth_audit Sections
+6--9 is a valid improvement of its earlier exp(C n^6) estimate under
+its stated source-producer hypotheses. Its shrinking chessboard
+buffer is eta~1/n, its centered generating function is bounded by
+exp[O(n log n)], and its square-free UV restoration costs a fixed
+factorial power. It cannot be applied to tensor one-jets without
+proving its joint source hypotheses. In particular a scalar uniform
+source ball is not supplied by a tensor normalization matrix whose
+bare norm grows polynomially with the cutoff coupling gamma.
+
+2. THE STRETCHED-LOG OPTIMIZATION IS REAL BUT AVOIDABLE WITH GEOMETRY
+
+The crude estimate
+
+ sup_(gamma>=1) gamma^(D m) exp[-c(log gamma)^nu]
+       = exp[C m^(nu/(nu-1))], nu>1,                       (2.1)
+
+follows by setting u=log gamma and maximizing Dm u-cu^nu.
+It is not an acceptable all-order OS bound for fixed nu. It is also
+not an intrinsic obstruction to separated insertions: it discards
+their scale of first joint localization.
+
+Here is the exact elementary estimate needed instead. Let the
+physical scales be geometric, a_k=a_* L^(-k), and suppose bounded
+primitive scalar increments give
+
+ gamma(a) <= C[gamma(d)+log(d/a)] for a<=d,
+ gamma(d) <= C[gamma_*+1+log(1/d)] for 0<d<=1.             (2.2)
+
+Fix lambda,D,c>0. Then for every integer m>=2,
+
+ sum_(a<=d) a^(-lambda m) gamma(a)^(D m) exp[-c d/a]
+ <= C^m d^(-lambda m) (m!)^ceil(lambda)
+                    [gamma(d)+log(m+1)]^(D m)
+ <= C_1^m (m!)^B d^(-A m),                               (2.3)
+
+for fixed A,B. Any fixed polynomial anchor multiplicity can be
+included by increasing lambda. Constants depend on fixed gamma_*,
+L,c,D,lambda, but neither on the UV cutoff nor m.
+
+Proof. Put u=d/a>=1. Spend half the exponential to sum the geometric
+u sequence. With another quarter,
+sup u^(lambda m) exp(-cu/4) <= (C m)^(lambda m).
+For the last quarter, maximize
+Dm log(G+log u)-cu/4, G=max(1,gamma(d)).
+At an interior maximum u(G+log u)=4Dm/c, so u<=C m;
+the endpoint u=1 obeys the same bound. Thus its supremum is at most
+[C(G+log(m+1))]^(Dm). Stirling bounds the first factor by a fixed
+factorial power. The inequalities log(m+1)<=C m and
+G<=C(1+log(1/d))<=C/d finish the second line of (2.3).
+
+When there is no engineering a^(-lambda m) factor, the age penalty
+itself costs only exp[O(m log log(m+1))] at fixed d. This is stronger
+than necessary. A crude polynomial bound in u also yields a fixed
+factorial power and is enough for reconstruction.
+
+The coarse scales d<=a<=1 cost at most
+C^m d^(-lambda m) gamma(d)^(Dm) [1+log(1/d)], also bounded by
+the last line of (2.3). There is no need to change the construction
+or the terminal weak-coupling floor with m.
+
+3. THE FIRST-DATE SHORTCUT IS FALSE FOR MULTISCALE COMPONENTS
+
+A connected history component may contain a tiny ancient large-field
+island at scale a_b near the first insertion, followed by a coarse
+connection at scale d to the second insertion. Its earliest date is
+b, but its physical connecting edge is only O(1) in d units. It need
+not contain a path of length d/a_b in the a_b lattice. Consequently
+
+ firstdate(Y)=b and Y meets two supports distance d apart
+       does NOT imply a factor exp[-c d/a_b].              (3.1)
+
+The one-mark census in tensor_original_source_turn2 (11.3) has already
+summed the source positions and bounds everything by the earliest
+gamma_b. Raising it to the mth power and attaching exp[-d/a_b] is
+unjustified. The proper-row density bound is useful precisely before
+this coarsening: each source arm must retain its own row and carrier.
+
+The correct organization is:
+ - dress each singleton source arm by its complete one-mark evolution;
+ - charge old large-field islands met by that arm to its own native
+   stretched-log reserve, costing a fixed constant for that arm;
+ - only at the first genuine joint vertex use an m-mark local Taylor
+   bound, dated at the scale of that joint vertex;
+ - keep all fine-scale arms that allow separated sources to meet an
+   earlier vertex, with their exponential localization weights.
+
+The old island in the example is then a one-leg dressing, while the
+joint vertex has coupling gamma(d), not gamma_b. If two distant
+sources both reach the old island before coarsening, their retained
+fine arms do cost exp[-c d/a_b], and (2.3) applies legitimately.
+
+4. A PRECISE SUFFICIENT PRODUCER THEOREM
+
+The following marked-forest statement is sufficient; a cutoff-uniform
+positive anisotropic action or global ordinary source disc is not
+required. It is stronger than the current first-jet result, but much
+more precise than a request for generic all-order control.
+
+Fix once the source-free RG construction and the 21-dimensional
+linear tensor normalization. Use distinct square-free source labels
+t_i with t_i^2=0 and physical profiles f_i supported in disjoint
+balls. Require an EXACT expansion of their normalized density
+coefficients into forests with these properties:
+
+(F1) All one-label subtrees are resummed by the actual one-mark
+     propagator, including its original vacuum, native R, and opened
+     history terms. Its norm is bounded by a fixed constant times
+     the specified single-label physical seminorm at its endpoint.
+
+(F2) Each joint vertex reads all of its incoming source carriers on
+     the literal prepared contour. At scale a, a vertex of incoming
+     arity r costs at most C^r(r!)^b a^(-lambda r)
+     gamma(a)^(D r), for fixed b,lambda,D, in compatible norms for
+     the incoming subtrees. Its source carrier retains exponential
+     tree decay at scale a, or an equivalent product of scale-labelled
+     arm weights. These weights are not replaced by a census at the
+     earliest large-field date. An unused fixed fraction pays carrier
+     entropy and the unmarked history summation.
+
+(F3) The sum of absolute majorants for scale-labelled skeletons,
+     after the unmarked histories and singleton chains are resummed,
+     costs at most C^n(n!)^b' times the vertex estimates. No C^l factor
+     remains for an arbitrarily long one-label chain. Engineering
+     weights telescope in these compatible subtree norms, leaving
+     total degree O(n), not the sum of the numbers of descendant
+     labels at all vertices. This distinction is essential: a binary
+     comb has O(n^2) summed descendant counts, while its total incoming
+     arity is <=2n-2. In particular the source labels are attached
+     before component resummation.
+
+(F4) The resulting coefficients are the SAME bare Wilson moments
+     with the SAME normalization for all n. Vacuum restoration is
+     exact. Centering deletes only the actual one-point means. The
+     statement is uniform at one fixed terminal band for every n;
+     a smaller cutoff epsilon_n for each fixed n is harmless, but a
+     different weak-coupling floor or different model for each n is not.
+
+For an unambiguous sufficient statement, require the following
+already-resummed connected estimate as the quantitative conclusion
+of (F2)--(F3). The unsummed skeleton formulation must establish this
+scale power counting, rather than treating it as automatic. For
+every label block S of size m>=2 and its
+minimum support separation d_S, require
+
+ |K_S| <= C^m(m!)^b product_(i in S)||f_i||_sharp
+       times sum_a a^(-lambda m) gamma(a)^(D m)
+                    exp[-c d_S/a]                         (4.1)
+
+on fine scales a<=d_S, with the same bound without the exponential
+on coarse scales. Here K_S is an exact connected coefficient after
+the singleton subtrees have been resummed. Formula (4.1) is not an
+assumption about cumulants of an unrelated Gaussian reference model.
+
+Then (2.3) proves
+
+ |K_S| <= C^m(m!)^B d_S^(-A m) product ||f_i||_sharp.
+
+For centered full moments sum over partitions pi of [n] with blocks
+of size >=2. Since product_(S in pi)|S|! <= n!, and the number of
+partitions is at most n^n<=e^n n!, the sum is bounded by
+
+ |S_n^centered(f_1,...,f_n)|
+ <= C^n(n!)^(B+1) d^(-A n) product_i||f_i||_sharp.          (4.2)
+
+The factor 21^n for tensor components is absorbed in C^n. The existing
+explicit Whitney proof gives (1.1). This proves the consumer without
+a zero-free full generating-function disc and without paying (2.1).
+
+Why (F2) is plausible, but not yet proved by first jets: a local
+holomorphic map on a coefficient ball has mixed derivatives bounded
+by (Cm/r)^m, hence C^m m! times a fixed-power scale radius loss.
+The actual local radius r_a~gamma(a)^(-D) therefore has exactly the
+required factorial cost with D independent of m. However, one must
+show this common local source map exists after the singleton
+normalization and on the actual mixed contours; a bound for its first
+derivative at zero does not establish it. One must also retain the
+multi-source support arms through all later source-free preparations.
+
+The public_argument_audit agent independently confirms that its
+one-mark source localization retains original carriers before the
+final census, but that the census alone does not establish (F1)--(F3).
+Thus the all-order separation improvement is a proved conditional
+consumer, not an unconditional all-order producer extracted from
+the current one-mark note.
+
+5. CONTINUUM AND ROTATIONS AFTER THE GROWTH ESTIMATE
+
+Given compatible actual lattice limits and (4.2), choose one diagonal
+subsequence on a countable dense family for ALL finite orders and
+the finite component labels. Uniform fixed-order bounds extend it to
+the specified test spaces. Symmetry, reality, and appropriate tensor
+reflection positivity pass from the actual Wilson correlators.
+For the tensor representation, reflection acts on F_(0i) with a
+minus sign and on F_(ij) with a plus sign; the induced signs on Q_AB
+must be included in the reflected test field. Treating all 21 entries
+as reflection-even scalar fields is incorrect.
+
+Continuous Euclidean rotations do not follow from hypercubic symmetry
+or all-order growth. The scalar slab/rotation notes use extra analytic
+and operator interfaces. Their tensor versions must identify the
+same covariance representation and the same reconstructed hierarchy.
+A nonzero tensor frame at a terminal lattice scale does not by itself
+prove a nonzero continuum two-point norm; that requires a surviving
+scale-independent observable estimate. Infinite volume, clustering
+or phase selection are likewise separate consumers of the actual
+hierarchy. None of these is supplied merely by (4.2).
+
+6. THE 21 QUADRATIC FIELDS STILL DO NOT IDENTIFY THE FULL YM ALGEBRA
+
+For SU(2), identify the six curvature components F_A at a point with
+six adjoint vectors v_A in R^3. The 21 quadratic quantities are their
+Gram entries v_A dot v_B. They are unchanged by every O(3) rotation
+of all six vectors. Gauge conjugation gives only SO(3). The cubic
+invariant v_A dot(v_B cross v_C), proportional to -i tr(F_A F_B F_C),
+changes sign under an adjoint reflection. Hence it is not a function
+of the Gram entries on a generic triple. Arbitrary curvature values
+at one point can be realized by a local connection (choose its first
+jet appropriately), so this is a genuine local invariant distinction.
+
+Therefore reconstructing the entire quadratic tensor hierarchy gives
+a tensor observable sector. Identifying it with the full YM local
+observable algebra requires a theorem generating/recovering the
+missing invariants, or a compatible extension to all invariant
+curvature and covariant-derivative polynomials. The primary
+Jaffe--Witten description asks for such local fields, not only F^2:
+https://ncatlab.org/nlab/files/JaffeWitten-QuantumYangMills.pdf
+This observation is independent of whether the user requests a mass
+gap; it concerns what has been constructed even on the existence side.
+
+7. BOUNDED WILSON OBSERVABLES: WHAT THEY DO AND DO NOT BUY
+
+For a countable family of lattice-approximated loops, normalized SU(2)
+traces lie in [-1,1]. Their joint laws therefore have subsequential
+limits on the compact product [-1,1]^N. Products have norm <=1, so
+no high-order moment growth problem occurs for these variables.
+Continuous algebraic loop identities and fixed positive-half-space
+reflection inequalities pass to such limits. This elementary compactness
+statement by itself is far weaker than a continuum Yang--Mills theory:
+it supplies no continuity as loops translate/rotate/deform, no local
+nontriviality, no point-field regularity, and no identification of a
+renormalized local curvature algebra. Renormalizing loops can also
+remove the original uniform bound, which cannot then be reused.
+
+There IS a bounded-algebra reconstruction theorem, so factorial point
+field growth need not be a universal prerequisite for every route.
+Schlingemann, hep-th/9802035, Definition2.3 and Theorem3.7, constructs
+a Haag--Kastler net from a regular reflection-positive Euclidean
+C*-net satisfying its time-zero condition. The paper explicitly
+includes Wilson-loop-type objects:
+https://arxiv.org/abs/hep-th/9802035
+https://www.esi.ac.at/preprints/esi498.pdf
+To use it here one must construct that Euclidean net, prove the
+regularity/time-zero hypotheses and nontriviality, and establish its
+YM identification. Compactness of loop marginals does not prove
+these assumptions. This is a possible alternative theorem target,
+not a shortcut obtained from the present tensor first-jet estimates.
+
+Positive flow time does not automatically repair this issue. The
+standard gauge gradient flow smooths in Euclidean time as well as
+space, so a flowed observable at positive coordinate time depends on
+underlying fields on both sides of the reflection plane. It cannot
+automatically be inserted in the original positive-time algebra.
+The Luescher--Weisz finiteness theorem is perturbative to all orders
+after ordinary four-dimensional renormalization, not a nonperturbative
+construction or a reflection-positivity transfer theorem:
+https://arxiv.org/abs/1101.0963
+
+A direct countercheck is the free massive scalar in one Euclidean
+time dimension. Heat flow multiplies its momentum covariance by
+exp(-2t p^2). The resulting covariance C_t(s) is smooth, even, decays
+at infinity, and C_t'(0)=0. If it were reflection positive as a local
+time field, its positive-time covariance would be a positive Laplace
+mixture int exp(-lambda s)d rho(lambda). Its right derivative at zero
+is -int lambda d rho, which vanishes only if rho is concentrated at
+lambda=0, making the covariance constant. This contradicts decay and
+nonzero variance. Thus even the free-field heat flow does not preserve
+the naive local-time reflection-positive field interpretation.
+
+8. MINIMAL NEXT THEOREM FOR THIS ROUTE
+
+The minimal concrete unresolved growth input is (4.1), or its
+source-arm marked-forest producer (F1)--(F4), for the literal original
+tensor-normalized Wilson construction on one fixed weak band. The
+crucial geometric clause is the actual joining scale of multiple
+source arms, not the earliest date of a completed mixed component.
+Once this is established, the all-order factorial/flat-diagonal
+regularity consumer is proved above and the exp(C n^p) loss is avoided.
+
+This growth input still has to be combined with tensor Euclidean
+covariance/rotation and nontriviality, then an observable-generator
+or larger-field construction theorem to identify a full YM theory.
+No scalar or quadratic-tensor sector alone establishes that last claim.

@@ -1,0 +1,228 @@
+EXACT SPATIAL COVARIANCE OF THE SOURCE RETAINED REGULAR KERNEL
+18 October 2026. Working proof; no publication artifact.
+
+RESULT
+
+For the actual homogeneous primitive averaging map, averaged-contour gauge,
+middle-interface pivot elimination, and radial retained cutoff, the regular
+conditional kernel is exactly covariant under the spatial symmetries of the
+output lattice, provided its frozen physical action is covariant. This holds
+at EVERY retained radius admitted by the source analytic preparation. It
+therefore holds for the auxiliary inner cutoff as well as the original one.
+No common-window annular comparison, unrestricted compact-fiber integral,
+or normalized large-field conditional is used. The q-layer kernel has the
+same property by exact nesting. This closes the symmetry input left open
+in rooted_scalar_burnin_2026-10-18.txt Section5, for its regular core.
+
+The entire physical scalar mark may be arbitrary within its admitted class;
+it need not be invariant under spatial transformations. Covariance is an
+operator identity which transports that mark. Gauge-invariant marks are
+used when replacing a classical representative by a comparison gauge.
+
+1. LITERAL SOURCE DATA
+
+Primary CMP109 (1987), 249--301, DOI10.1007/BF01215223:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+
+Pages252--254, (0.3)--(0.12), deliberately use ALL coordinate-order
+shortest paths between a block center and a point, and a permutation-
+invariant group mean. This replaces the earlier preferred-path definition
+which lacked Euclidean symmetry. The chosen mean is also inversion and
+left/right equivariant, as in (0.5)--(0.9). The reference coarse string and
+all parallel strings transform into the corresponding strings under a
+spatial symmetry, with reversal when necessary. Thus the actual ordinary
+average F obeys F(rV)=rF(V); its iterates have the same property. This is
+the source map already matched in source_gaussian_germ_bridge Section1.
+
+Pages254--255, (0.14)--(0.16), use the same averaged contour P(y,x), not
+a preferred axial path. The gauge function is the sum of its conjugacy-
+invariant class function, and its optional cutoff is radial in P(y,x)-1.
+Both are spatially invariant. Their compact based-gauge normalization is
+the identical scalar z for every pair(y,x), independent of the background.
+Spatial permutations only permute these factors. Removing a based gauge
+integral introduces no spatially varying normalizer.
+
+Pages265--266, (2.2)--(2.3), identify V_*(W) as the unique regular saddle
+with F(V_*)=W and averaged-contour gauge G(V_*)=0. Since action, constraint,
+and this gauge are covariant, uniqueness gives
+
+                     V_*(rW)=rV_*(W).                       (1.1)
+
+Here r preserves the actual homogeneous output lattice on a compatible
+finite periodic regulator. For the full hypercubic point group take a
+cubic regulator, or a common finite regulator carrying the transformations
+being compared, then pass the already controlled thermodynamic limit.
+No assertion for a spatial transformation breaking the chosen finite
+torus or a mixed-history domain is made.
+
+Most decisively, p269, (2.17)--(2.18), gives the exact orientation-sensitive
+transformation of the relative group field and states that its induced
+Lie-algebra transformation is orthogonal; it uses this to prove invariance
+through all remaining operations. The calculation below makes the retained
+coordinate and normalization content of that passage explicit.
+
+2. GEOMETRIC PIVOTS AND THE EXACT LINEAR RELATIVE TRANSFORMATION
+
+Use independent positive bonds. If e is a positive fine bond and a spatial
+isometry reverses it, writing V(e)=exp(i x(e))V_*(e) gives
+
+ V(e)^(-1)=exp[-i Ad_(V_*(e)^(-1)) x(e)] V_*(e)^(-1).          (2.1)
+
+Thus the induced map R_(r,W) on all relative Lie variables is a permutation
+of bond slots, followed by either the identity or -Ad_(V_*(e)^(-1)). For
+real W every V_* is unitary, so each color block is orthogonal for the
+same invariant trace metric. Absolute real Jacobian is one. The map is
+linear in the fluctuation x; it is not a noise-dependent gauge adjustment.
+
+The source pivot b0(c), p267 before (2.11), is the unique fine bond lying
+in the coarse straight bond c and crossing the interface of B(c-) and
+B(c+). Since L is odd, this is its central interface bond. Spatial
+symmetries preserve the set of these UNORIENTED pivots. In particular a
+reflection does not change a pivot into a retained bond. The complement
+is likewise preserved. Let D_(r,W) be the retained restriction of R.
+
+The nonlinear straightening x=B-hD(B) of p267 changes ONLY the pivots;
+after eliminating the linear constraint B=Cz, the retained original x
+is exactly z (or g z following the scalar noise rescaling). On the common
+small branch let Phi_W(z) denote the full relative solution of the exact
+constraint with these retained values. Constraint covariance and uniqueness
+of its pivot solution imply
+
+ Phi_(rW)(D_(r,W)z)=R_(r,W) Phi_W(z).                        (2.2)
+
+This is a finite-g identity of the nonlinear chart. Neither its proof nor
+its conclusion is merely a matching of Gaussian Hessians. The source
+orthogonality statement (2.18) is precisely consistent with (2.1)--(2.2).
+
+Consequently, for any common positive threshold T,
+
+  product_e 1_{|z_e|<T}=product_e 1_{|(D_(r,W)z)_e|<T}.       (2.3)
+
+The actual auxiliary_cutoff_comparison Sections1--2 uses these original
+nonpivot variables x_e, and raw_q_block_cluster_response Section4 makes
+only scalar changes by g_level/g. It does NOT whiten the Gaussian or cut
+in coordinates C^(-1/2)x. Consequently (2.3) applies to the actual inner
+windows used in the finite-prefix comparison, not just an alternative
+definition of a small-field kernel.
+
+Equality includes the boundary of every ball (for either convention < or
+<=). There is no symmetric-difference annulus. A color-coordinate cube
+would not enjoy (2.3); the source uses the invariant Lie norm ball in each
+bond slot, which is the retained cutoff used throughout our inner proof.
+
+3. COMPLETE MEASURE, NOT AN ISOLATED DETERMINANT
+
+The original constrained density includes Haar measure, the group delta
+of F(V)W^-1, the exact compact gauge insertion including z^-1, the Wilson
+classical action and the frozen inherited regular action. A spatial
+permutation/inversion preserves product Haar; inversion and conjugation
+preserve the delta at identity. Equations(1.1),(2.1) preserve the gauge
+class functions and any radial contour restriction. The physical action
+has its assumed source covariance. Hence the complete constrained density
+is carried to its counterpart, before any pivot elimination.
+
+The same assertion can be checked after elimination. Differentiating the
+constraint change gives orthogonal transformations on the target and pivot
+color spaces. Thus the absolute pivot determinant/coarea density is
+unchanged. Orientation signs are fixed chart-orientation conventions and
+cancel in the positive density. The retained Lebesgue Jacobian is one;
+the Haar pullback obeys j(Ad_u x)=j(x)=j(-x). The exact straightening
+Jacobian transforms by (2.2). All these factors must stay together.
+
+The constrained quadratic form satisfies A_(rW)=D A_W D^T, so its determinant
+and normalized Gaussian measure transform accordingly. Constants, linear,
+quadratic, and higher terms transform separately since D is independent of
+z. The source normalization at W=1, every power of g, and every compact
+gauge scalar are equal on the two sides. Thus neither a background-dependent
+denominator nor an extra vacuum factor is lost by the change of coordinates.
+
+Let I_T(W;f) be the complete admitted retained integral with scalar input f,
+and let K_T f(W)=I_T(W;f)/I_T(W;1). If R_r f(V)=f(rV), then
+
+                     K_T R_r=R_r K_T.                       (3.1)
+
+The denominator satisfies the same covariance separately; on the real
+domain it is strictly positive. The source connected expansion supplies
+the compatible nonzero analytic denominator in the complex domain used
+for norms. First prove (3.1) for all sufficiently small real backgrounds;
+then holomorphic uniqueness gives it on the connected common analytic
+domain. No assertion that complex Ad preserves a real sharp ball is used.
+
+If one computes physical fields in a second, nonsymmetric gauge, return
+to this literal source representative before the argument. An already
+proved comparison gauge may then be used inside invariant scalar marks.
+The proof does not silently demand that an arbitrary preferred gauge be
+spatially equivariant.
+
+4. THE FULL-DENSITY REGULAR WINDOW AND FROZEN E
+
+Primary CMP119, DOI10.1007/BF01217741:
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+
+Pages267--269, (3.15)--(3.20), use precisely the previous straightening and
+elimination. In the homogeneous all-good region the remaining cutoff is
+the product of retained-bond radial cutoffs, as recorded in
+source_full_density_cutoff_crosswalk Section1. Repeated cube tests are
+idempotent there. There is no remaining asymmetric local characteristic
+function depending on a mixed boundary. Replacing its threshold T_outer
+by any smaller admitted T_inner leaves (2.3) unchanged.
+
+The frozen homogeneous E is the ACTUAL source regular action. Its dated
+terms have the covariance in (2.29); current output-lattice symmetries
+preserve every earlier birth lattice. The source verifies the generated
+regular coefficients in (3.39)--(3.41). Older R contributions already
+absorbed into E do not turn E into the separately retained static R
+coordinate. The source condition for their absorption ensures their
+partitions fit the current lattice. The entire explicit static R history
+is deleted separately in defining the regular core; no spatial covariance
+of arbitrary young R or mixed large-field geometry is assumed here.
+
+Analytic preparation is exactly the original one: the transformation sends
+an admitted real cutoff configuration to another admitted one with equal
+retained norms and covariant background. It never enlarges the domain to
+a full compact fiber. General complex decoupling parameters are not claimed
+pointwise spatially fixed. Equality of the physical functions plus their
+proved analytic extensions is enough; coefficient representatives can be
+spatially symmetrized over the finite group without increasing their
+majorant, transporting carriers at the same time.
+
+5. q-LAYER KERNEL AND BURN-IN CONSEQUENCE
+
+At every primitive date retain its actual real gamma, actual gauge scalar,
+and same radial threshold for each retained bond. Fix a spatial symmetry
+of the FINAL output lattice. By nested centered odd-L blocks it preserves
+every finer primitive lattice, its middle pivots, averaged path families,
+and local gauge factors. Apply (3.1) successively at the actual intermediate
+background. In retained coordinates the resulting joint change of variables
+is triangular in the layer order: its diagonal blocks are the D_(r,W_level),
+which may depend on coarser-layer variables. Off-diagonal derivatives do
+not change its determinant, whose absolute value is one. Every layer's
+product window is preserved separately. An actual rescaling g_level/g
+is scalar and commutes with these changes.
+
+The unrolled raw q integral, or the composition of its normalized physical
+conditional kernels with ALL denominators included, is therefore exactly
+covariant. These two integral conventions must not be confused, but the
+proof works for either actual convention because each factor transforms.
+Inserting or deleting a scalar covariant E term preserves this identity.
+No assumption that all q noises are independently normalized is needed.
+
+For the regular core in rooted_scalar_burnin, one may take
+
+                      Kbar_j=Kcore_j.                       (5.1)
+
+The finite conjugate average equals the original kernel. The proposed
+mixture-mean covariance term is then identically zero, and the rotated-
+chart annular error is absent. The genuine actual-to-core errors from
+explicit R and new F/h terms still require their established separate
+bounds. This result does not upgrade R'' ancestry, solve the normalized
+outer observable problem, or prove continuum rotation invariance.
+
+STATUS: the cutoff-level identity follows from the explicit source
+(2.17)--(2.18), its geometric pivot choice, and the full factor calculation
+above, relative to the already established source-admissible homogeneous
+core. Constrained_fiber independently reread pp253--255 and269 and passed
+the saddle, exact finite-g transformation, geometric pivot, and original
+retained-window steps. Root separately checked that the actual auxiliary
+and q-kernel windows use the original retained coordinates, not whitening.
+These are internal mathematical audits, not external certification.

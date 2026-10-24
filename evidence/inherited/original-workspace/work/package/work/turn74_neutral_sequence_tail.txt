@@ -1,0 +1,289 @@
+TURN74 -- COUPLED NEUTRAL / MARGINAL SOURCE SEQUENCE
+20 October 2026
+Producer: tail47. Status: proved conditional sequence lemma; native attachment
+requirements are stated in Section 7. This is not a full-law source theorem.
+
+0. RESULT AND PURPOSE
+
+For a unit, coupling-free classical action source, a full quantum birth of
+size O(g_j^2) can coexist with a physical Maxwell birth of size O(g_j^4).
+If the SAME native source class has a contracting neutral classical
+propagator and O(g_j^2) quantum linear response, the neutral part remains
+O(g_j^2) and its feedback into the marginal is summable O(g_j^4).
+The marginal bound follows from the coupled equations; it is not an input.
+
+The result allows signed primitive coupling increments. It does not need
+an invariant quotient by arbitrary functions vanishing on the physical
+minimizing graph. Such functions remain in the neutral class whose
+contraction is an explicit hypothesis.
+
+1. PRECISE FIXED-CLASS HYPOTHESES
+
+Dates are j=0,...,n. Let V_j be normed source-coefficient spaces, with one
+fixed prepared norm convention and uniformly bounded maps as below.
+For this lemma only deterministic scalar vacua are factored out. Their
+actual coefficients remain in the separate raw source ledger. In
+particular this convention supplies no bound on a scalar mixed cumulant.
+
+Let beta_j:V_j -> C be a uniformly bounded physical marginal functional,
+and let S_j in V_j satisfy
+
+ beta_j(S_j)=1,   sup_j ||S_j|| < infinity.
+
+Set P_j=I-S_j beta_j, N_j=ker beta_j. Assume ||P_j|| <= C_P uniformly.
+The real version is obtained by preserving real coefficients throughout.
+
+L_j is the actual linear one-mark map at a fixed unsourced trajectory.
+The source does not move g_j, the cutoff domains, or the Gaussian measure.
+Suppose
+
+ L_j S_j = S_(j+1) + B_j,
+ L_j u   = T_j u + D_j u,       u in N_j.                 (1.1)
+
+Here T_j is the SAME classical map/reference convention, and
+
+ T_j N_j subset N_(j+1),
+ ||T_j|| <= M,
+ ||D_j|| <= C_D g_j^2,
+ ||B_j|| <= C_B g_j^2,
+ |beta_(j+1)(B_j)| <= C_b g_j^4.                          (1.2)
+
+The first inclusion is the exact beta-transport assertion on neutral
+inputs; for an extension to all V_j it is beta_(j+1) T_j=beta_j, with
+T_j S_j=S_(j+1). Only (1.1)--(1.2) are used in the proof.
+
+For one integer q>=1 and kappa<1, assume contraction of every complete
+q-block in one fixed aligned partition of the trajectory:
+
+ ||T_(kq+q-1)...T_(kq)||_(N_(kq)->N_(kq+q)) <= kappa.    (1.3)
+
+Single-step boundedness covers the initial/final incomplete pieces of
+any interval. One may instead assume (1.3) on all starting dates.
+All constants, q, spaces, and norm margins are fixed before choosing
+the weak floor. No bound on the source coefficient alpha is assumed.
+
+Write gamma_j=g_j^(-2). In addition to gamma_j>=Gamma, assume the
+geometric comparison (3.2) below, or one of its sufficient conditions.
+Finally the sum S_* = sum_(j<n) g_j^4 is finite with the quantitative
+bound needed in the intended application. Section 5 gives depth-uniform
+bounds from a positive block-drift envelope.
+
+2. EXACT COUPLED RECURRENCE AND PERTURBED CONTRACTION
+
+Decompose X_j=alpha_j S_j+u_j, where beta_j u_j=0. Equation (1.1) gives
+
+ alpha_(j+1)=alpha_j + b_j alpha_j
+                          + beta_(j+1)(D_j u_j),
+ u_(j+1)=A_j u_j + alpha_j f_j,                           (2.1)
+
+ b_j=beta_(j+1) B_j,  f_j=P_(j+1) B_j,
+ A_j=T_j+P_(j+1)D_j : N_j -> N_(j+1).
+
+The beta(D_j u_j) term is essential. The O(g^4) birth alone does not
+control the marginal if the complete neutral correction is ignored.
+
+Put d_*=C_P C_D/Gamma. Choose the weak floor so that d_*<=1 and
+
+ q (M+1)^(q-1) d_* <= (1-kappa)/2.                       (2.2)
+
+Telescoping a product, replacing one factor at a time, proves
+
+ ||A_(kq+q-1)...A_(kq)-T_(kq+q-1)...T_(kq)||
+          <= q (M+1)^(q-1) d_*.
+
+Thus every aligned A-block contracts by kappa'=(1+kappa)/2<1.
+Let r=(kappa')^(1/q). Splitting any interval into two incomplete
+pieces of length <q and complete aligned blocks gives
+
+ ||Phi_(j,i)|| <= C_Phi r^(j-i),
+ Phi_(j,i)=A_(j-1)...A_i,    0<=i<=j<=n.                 (2.3)
+
+For example C_Phi=(M+1)^(2q)(kappa')^(-2), enlarged to at least one,
+works. The empty product is included. Neither (2.2) nor (2.3) uses
+alpha or u, so this is not a bootstrap assuming the desired conclusion.
+
+3. NEUTRAL FORCING AND SIGNED MICROSTEPS
+
+Let U_0=||u_0|| and M_j=max_(0<=i<=j)|alpha_i|. Variation of constants
+in (2.1) gives the sharper, source-dependent estimate
+
+ ||u_j|| <= C_Phi r^j U_0
+       + C_Phi C_P C_B sum_(i<j) r^(j-1-i) g_i^2 |alpha_i|. (3.1)
+
+In particular, if
+
+ sum_(i<j) r^(j-1-i) g_i^2 <= C_conv g_j^2               (3.2)
+
+with C_conv independent of n,j, then
+
+ ||u_j|| <= C_0 r^j U_0 + C_1 g_j^2 M_j.                (3.3)
+
+Two sufficient conditions for (3.2) are useful.
+
+(a) Monotone coarseward growth: g_i<=g_j for i<=j. Then
+C_conv=1/(1-r).
+
+(b) Bounded signed primitive increments: gamma_i>=Gamma and
+|gamma_(i+1)-gamma_i|<=D. Put B=1+D/Gamma. At each step,
+gamma_(i+1)/gamma_i<=B, and consequently
+
+ g_i^2/g_j^2 = gamma_j/gamma_i <= B^(j-i).
+
+If rB<1, the left side of (3.2), divided by g_j^2, is at most
+
+ sum_(m>=1) r^(m-1) B^m = B/(1-rB).                     (3.4)
+
+Choosing Gamma once so that rB<=(1+r)/2 makes this constant uniform.
+This uses no primitive monotonicity. Positive block drift is needed
+for the long sum of g^4, not for this geometric convolution.
+
+4. NONCIRCULAR MARGINAL BOUND
+
+Uniform boundedness of beta and (2.1), followed by (3.3), gives
+
+ M_(j+1) <= (1+C_2 g_j^4) M_j
+                           + C_3 g_j^2 r^j U_0.         (4.1)
+
+Define
+
+ S_j=sum_(i<j)g_i^4,      H_j=sum_(i<j)g_i^2 r^i.
+
+Iterating (4.1), and using 1+x<=exp(x), proves
+
+ M_j <= exp(C_2 S_j) [|alpha_0|+C_3 U_0 H_j]
+     <= exp(C_2 S_j) [|alpha_0|+C_3 U_0/(Gamma(1-r))].   (4.2)
+
+This is a discrete Gronwall argument with the neutral feedback already
+included. Substitution into (3.3) yields the simultaneous estimate
+
+ ||u_j|| <= C_0 r^j U_0
+   + C_1 g_j^2 exp(C_2 S_j)
+                    [|alpha_0|+C_3 U_0/(Gamma(1-r))].    (4.3)
+
+For the unit reference initial condition alpha_0=1,u_0=0,
+
+ max_(i<=j)|alpha_i| <= exp(C_2 S_j),
+ ||u_j|| <= C_1 g_j^2 exp(C_2 S_j),
+ |alpha_j-1| <= C_4 exp(C_2 S_j) S_j.                    (4.4)
+
+The last inequality follows by summing the absolute increments in
+(2.1), not merely by bounding their maximum. If S_* is small enough,
+the real marginal therefore stays within, say, 1/2 of one. This is
+only a statement about a coefficient sequence. It is not a nonzero
+reflection norm, a positive-energy spectral witness, or nontriviality
+of a continuum Yang--Mills theory.
+
+A neutral initial input need not stay marginal-free: beta(D_j u_j)
+can generate alpha. Formula (4.2) retains the corresponding initial
+transient, of order Gamma^(-1)U_0 in the general bound.
+
+5. DEPTH-UNIFORM SUM AND ULTRAVIOLET TAIL
+
+Suppose
+
+ gamma_j >= Gamma_end + c(n-j) - C_h,    0<=j<=n,
+ G=Gamma_end-C_h>0.                                     (5.1)
+
+Use G in place of Gamma in the weak-floor and ratio hypotheses if it
+is the available common lower bound. Since the steps run j=0,...,n-1,
+
+ S_n <= sum_(s>=1)(G+cs)^(-2) <= 1/(cG).                 (5.2)
+
+For m>=0, the prefix strictly before the last m coarseward steps obeys
+
+ sum_(j=0)^(n-m-1) g_j^4
+       <= sum_(s>=m+1)(G+cs)^(-2) <= 1/[c(G+cm)].        (5.3)
+
+The bound is zero when the indicated prefix is empty. Also
+
+ sum_(j=0)^(n-m-1)g_j^2 r^j
+             <= 1/[(G+c(m+1))(1-r)].                   (5.4)
+
+Thus (4.2)--(4.4) are uniform in the initial ultraviolet depth.
+For the unit reference input, the total variation of alpha accumulated
+in the fine prefix in (5.3) is at most
+
+ C exp[C/(cG)]/[c(G+cm)].                               (5.5)
+
+For general initial data add the transient controlled by (5.4).
+This is a coefficient tail, not a comparison of physical source laws
+at different regulators.
+
+A positive fixed-block drift with bounded signed microsteps gives an
+envelope of the form (5.1). For example, if on every q-step interval
+gamma_j-gamma_(j+q)>=b>0 and |Delta gamma|<=D, write n-j=kq+s,
+0<=s<q. Then
+
+ gamma_j >= gamma_n + bk - Ds
+         >= gamma_n +(b/q)(n-j) -(D+b/q)(q-1).
+
+For drift given only on one aligned block partition, the two end
+pieces instead cost another fixed constant. Retain that constant as
+C_h; do not replace the signed trajectory by a monotone one.
+
+6. WINDOW TERMS AND CALIBRATION
+
+The native birth in turn74_regular_source_gauge.txt, Sections 5--8,
+has the more literal bound
+
+ |beta B_j| <= C g_j^4 + C g_j^2 tau_j,
+ tau_j=exp(-c_0 T_j^2).                                 (6.1)
+
+If tau_j<=C g_j^2 uniformly, it is absorbed in (1.2). This follows,
+after a fixed weak floor, from
+T_j>=a_0[log(gamma_j)]^p with p>1/2. Indeed
+c_0 a_0^2(log gamma)^(2p)-log gamma tends to infinity.
+The cutoff is frozen during source differentiation.
+
+Without that absorption, the same proof has the Gronwall rate
+g_j^4+g_j^2 tau_j, provided the full neutral birth remains O(g_j^2).
+Its summability must then be supplied explicitly. An unspecified
+small tail is not enough. Extra neutral forcing or finite-period
+beta leakage likewise needs its actual convolution and summed
+marginal budget; the exact theorem does not silently discard it.
+
+The source normalization here is the literal unit coupling-free S_j.
+For a source beta_0 S_original, linearity multiplies alpha_0,u_0,
+and the complete one-mark sequence by beta_0. It does not convert the
+unit bound (4.4) into a uniform canonically normalized source bound.
+Two source derivatives carry beta_0^2. Scalar vacua and the eventual
+two-mark collisions still require their own exact bookkeeping.
+
+7. ACTUAL NATIVE ATTACHMENT GATES
+
+The mathematical proof above is complete under (1.1)--(1.3), (3.2),
+and the stated coupling sum. It does not establish those native
+functional-analytic inputs merely from their names. In particular:
+
+* The fixed prepared source spaces must be the SAME spaces for the
+  actual native source lift, classical map, quantum response, beta
+  extraction, and repeated re-entry. Shrinking native analyticity
+  radii alone give inverse-radius response losses, not (1.2).
+* Physical beta transport from the native quadratic calculation must
+  match this exact ordinary-minimizer/reference composition. A
+  selected-kernel statement cannot supply this identification.
+* The q-block contraction has to hold on the complete beta-zero
+  native class, including retained off-pair physical-null families.
+  Neither a physical rank identity nor beta(Tu)=beta(u) proves that
+  nonlinear contraction. The selected TURN70 theorem is not imported
+  as a theorem for a different native kernel.
+* All one-mark norms, margins, and constants used in (1.2) must be
+  fixed before the source magnitude is bounded. Otherwise (4.2)
+  would be circular. This lemma concerns the linear jet at a frozen
+  unsourced trajectory, not a finite source disc whose radius is
+  secretly chosen from a presumed bound on alpha.
+* Native regular/healed/raw/boundary chronology, complete original
+  reads, mixed-source scalar coefficients, and outer conditional-mean
+  covariance are not supplied by a neutral one-mark sequence bound.
+
+Consequently this result narrows the missing native source induction:
+an O(g^2) complete birth is compatible with a summable physical
+marginal once SAME-MAP neutral contraction and fixed-core response
+are attached. It neither removes those attachment gates nor proves
+full original-law separated correlations or Yang--Mills existence.
+
+References within the project (scope, not independent theorem imports):
+turn74_regular_source_gauge.txt Sections 5--8; native_core_challenge_turn53.txt
+for the retained physical beta transport; native_extractor_compatibility_turn27.txt
+for the physically composed extractor; selected_scalar_source_induction_turn70.txt
+for the distinct selected construction, explicitly not substituted here.

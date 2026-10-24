@@ -1,0 +1,166 @@
+TURN97 -- ROOT AUDIT AND ADMISSION RECORD
+21 October 2026
+
+ADMITTED RESULTS
+
+1. The exact jointly integrated two-link original Wilson source, its
+   changed second density, and its normalized response formula.
+2. The fixed weak-exterior relative estimate C beta^-2 D for the
+   flat-subtracted constant source, and its C2 and quadratic versions.
+3. The weighted-source estimate
+   C[|wbar| beta^-2 + omega beta^-1]D at the baseline minimum.
+4. The explicit nonzero two-link action and source corrections.
+5. The actual original-law two-projection counterexample to a uniform
+   real exterior-response bound, including completion of the source.
+
+All five are finite-regulator statements. None is admitted as an
+all-history estimate, a uniform block-size theorem, a bound on the full
+physical source sum, or evidence of a positive continuum response.
+
+INDEPENDENT CHECKS OF THE JOINT INTEGRATION
+
+Root checked the original eleven-plaquette geometry, the normalized
+Haar substitution, the exact first integration, and the action score
+for the second integration. The retained old source is
+partial_beta(beta E_eff), not E_eff. Near a common staple, |a+y| is
+uniformly positive for every y, so no radial singularity enters this
+weak-exterior proof. The global formulas use their smooth continuation.
+
+The compact energy gap and positive six-dimensional Hessian justify
+the parameter-dependent Morse chart, including two exterior derivatives
+of the complement. Direct expansion of the energy-excess numerator
+gives the stated remainder without differentiating an unestimated beta
+remainder. The scalar 3/beta cancels exactly after flat subtraction.
+
+The relative bound is stronger than a bare C2 error: simultaneous SO(4)
+invariance gives an exact zero set along the common-staple diagonal;
+the SO(3) stabilizer gives a zero first jet on a transverse slice.
+The classical minimum has positive Hessian on that slice, so the error
+is bounded by C beta^-2 D with no independent per-fiber constant.
+
+For the weighted source, the exact first insertion includes both the
+shared term and all private terms. In Morse coordinates the marked
+ratio coefficient is
+
+ (1/2)Delta G_w + grad G_w dot grad log B.
+
+The denominator and numerator are expanded through cubic order; parity
+removes odd terms and leaves a fourth-order remainder. Its C2 norm is
+linear in the largest weight. Constant weights have coefficient three;
+residual weights have C2 error O(omega/beta). The same exact symmetry
+and transverse Hessian prove the relative weighted bound. Positivity
+is required for the unweighted baseline energy, not for the weights.
+
+The producer was also independently audited by block97 and heatbath97.
+heatbath97 audited the subsequently added weighted Section6A. The final
+wording correction requested in that audit is incorporated in the
+producer. The final producer has 20,613 bytes and SHA256
+8D74220E62308CB5CBFD686C946C52A752715935A238EC8FFD62546359F5959C.
+
+ROOT'S INDEPENDENT NONFLAT COEFFICIENT CALCULATION
+
+For a_i=n(theta), b_j=n(-theta), the minimum is
+x=n(phi), y=n(-phi), phi=5theta/7+O(theta^3). Put
+C=cos(2phi), k=5cos(theta-phi)+C. The centered covariance consists of
+three two-by-two blocks with v_i=k/(k^2-c_i^2),
+w_i=c_i/(k^2-c_i^2), where c_1=C and c_2=c_3=1.
+
+Writing delta for the theta-squared coefficient, root checked
+
+ delta C=-50/49, delta k=-60/49,
+ delta v=(324,444,444)/12005,
+ delta w=(-226,144,144)/12005.
+
+With m=sum v_i, the Haar/quartic contribution is
+
+ Q=m-(k-C)m^2/4-(k/2)sum v_i^2+(C/2)sum w_i^2.
+
+Its flat value is -39/490, and its theta-squared coefficient is
+-5573/84035. For the cubic contribution, let v=6/35 and w=1/35.
+Using Gaussian conditioning, independently of the producer's recursive
+pairing computation,
+
+ E[|X|^4 Y_1^2]=15v^3+20vw^2,
+ E[|X|^2|Y|^2 X_1Y_1]=25wv^2+10w^3.
+
+Hence E[(|X|^2Y_1-X_1|Y|^2)^2]
+=30v^3+40vw^2-50wv^2-20w^3=4/35.
+Since sin^2(2phi)=100theta^2/49+O(theta^4), the contribution
+of S_3^2/2 to the theta-squared coefficient is 10/343. The sum is
+
+ -5573/84035+10/343=-3123/84035.
+
+Finally det H=(k^2-C^2)(k^2-1)^2 gives
+delta log A0=-delta log det H/2=206/343. Thus
+
+ [theta^2] V_beta = 10beta/7-206/343+3123/(84035beta)
+                   +O(beta^-2),
+ [theta^2](A_beta(theta)-A_beta(0))
+                 =10/7-3123/(84035beta^2)+O(beta^-3).
+
+Root checked these identities using exact rational arithmetic. A separate
+one-dimensional radial/Gamma-moment computation by block97, independently
+checked by two_link97, agrees. The main relative theorem does not depend
+on these optional explicit coefficients. Their role is to verify that
+the generated action correction is nonzero and that the source's
+beta^-2 error is also generally nonzero.
+
+ROOT'S INDEPENDENT AUDIT OF THE TWO-PROJECTION OBSTRUCTION -- PASS
+
+The five-staple realizations of A=I and B(t)=(-1+t)I use unit quaternions
+and distinct actual exterior links. The second set can move without
+altering the first star. Each moved link has speed 1/sqrt(3) at t=0.
+The first projection is H_beta(v)=6-|I+v|m(beta|I+v|). The actual second
+projection at the old coordinate u=I has density proportional to
+exp(beta t v_0), so its derivative at zero is exactly
+beta Cov_Haar(H_beta,v_0).
+
+Root checked the Haar coordinate density, the uniform bound
+0<=H_beta-(6-|I+v|)<=3/(2beta), and
+
+ E_Haar[v_0 sqrt(2+2v_0)]=64/(105pi),
+ E_Haar|v_0|=4/(3pi).
+
+Consequently T_beta'(0)=-64beta/(105pi)+E_beta with
+|E_beta|<=2/pi. Completion to the original eleven-plaquette source
+adds (1-t)m(beta t), whose derivative is beta/4. Exterior-only
+plaquettes contribute at most 4sqrt(3), independently of beta.
+The resulting full locally constant source derivative is
+
+ beta[1/4-64/(105pi)]+R_beta,
+ |R_beta|<=2/pi+4sqrt(3).
+
+This is a real pointwise obstruction to an unrestricted uniform
+response class for repeated original-law projections. It is not a
+counterexample to a full Wilson expectation or covariance bound.
+The example does not give the Wilson probability of these exteriors.
+In particular it is consistent with the separately proved near-flat
+joint-integration theorem.
+
+The monotonicity and total-variation bound of two hold for the
+single-star function T_beta along this path. They must not be asserted
+unchanged for the completed source, and a path measure is not the
+full exterior marginal. Repeated projections can reintroduce a
+previously updated coordinate, so they are not a nested conditional
+expectation or a decimation of both links.
+
+RELATION TO EXISTENCE AND TO EARLIER RESULTS
+
+Generic finite-dimensional Laplace estimates and dimension cancellation
+were already established in TURN13/TURN40 and TURN74. The addition here
+is the complete compact interacting two-link original-law assembly,
+relative-to-minimum bound, weighted extension, explicit generated-action
+coefficients, and the quantified failure of unrestricted source-only
+conditional iteration. These must not be reported as a new general RG
+closure principle.
+
+The next substantive target is a controlled generated action/source
+pair through a genuine block with its actual boundaries and, on the
+native route, constraints and histories. Exceptional exteriors and the
+physical sum of source locations must be estimated in the same original
+normalized measure. A further fixed finite-dimensional example alone
+would not settle those tasks.
+
+The user-requested tools goal was created in TURN97 and is active.
+There is no token budget and no completion or blocked status is claimed.
+No newly inaccessible paper was needed for these finite proofs.

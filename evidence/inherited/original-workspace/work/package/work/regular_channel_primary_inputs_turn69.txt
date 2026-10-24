@@ -1,0 +1,363 @@
+REGULAR-CHANNEL PRIMARY INPUT CHECK -- TURN69
+20 October 2026. tail47. Read-only primary-source review and exact scaling tests.
+
+RESULT
+
+No theorem inspected in this focused check supplies the missing, canonically
+normalized, separated action-source estimate for the actual pure SU(2) law.
+This is a statement about the sources and proofs inspected below, not a
+literature-wide nonexistence assertion.
+
+There is a useful concrete finding beyond the previous source review:
+the published 2025 plaquette-source paper prints A_p/(a^4 g), whereas its
+own link convention gives A_p approximately a^4 g^2 Tr(F^2). Its bounded
+source theorem cannot silently be upgraded to the canonical A_p/(a^4 g^2).
+An exact SU(2) single-plaquette calculation in Section 3 proves why: the
+canonical cell action has a Gamma-type source singularity in the weak
+coupling limit, although its cutoff-scaled A_p/g version tends to zero.
+
+The standard infrared-bound paper also explicitly warns that its quadratic
+form covariance bound is not a pointwise correlation bound. Its theorem
+uses a particular product spin measure and bilinear interaction. The
+newer massive Yang--Mills--Higgs Gaussian theorem is an actual probability
+comparison, but its Higgs mass and power-law weak coupling assumptions
+do not describe our pure-Yang--Mills trajectory.
+
+The next actual task is consequently unchanged in substance: control
+mixed physical source derivatives on the regular complement, retaining
+the complete denominator, or directly control the corresponding separated
+OS norm. The separate electric_source_temporal_limit_turn69.txt now
+proves the temporal complex-coupling attachment at fixed spatial cutoff;
+it has been independently audited. This resolves a distinct temporal
+derivative issue, not the spatially uniform source estimate assessed here.
+
+1. CURRENT TARGET AND NONDUPLICATION
+
+Read: current_proof_frontier_turn68.txt,
+separated_gaussian_defect_pressure_turn30.txt,
+regular_quantum_convex_attachment_turn11.txt, and
+physical_estimate_source_check_turn61.txt.
+
+The TURN68 full-law result suppresses a time-averaged magnetic bad-cell
+path spanning a fixed physical separation. It bounds marked contributions
+on that event with the exact original denominator. It does not identify
+the complement with a Gaussian law: small bad components and entirely
+regular transmission remain there. Its real-source moment envelope is
+extensive in the number of physical cells. Nothing below removes that
+distinction.
+
+The TURN30 cross-determinant identity is exact for a Gaussian law. If the
+cross covariance between two separated smears is Hilbert--Schmidt, its
+mixed quadratic-source remainder is finite even when same-support
+quadratic traces diverge. This is a useful target cancellation, not an
+identity for the interacting law.
+
+TURN11 controls a selected admitted regular quantum step on a fixed
+finite active block. Its constants depend on that block; its actual
+domain-containment and exterior assumptions are part of the theorem.
+The constructed convex completion is a comparison law. No assertion
+there gives a global convex original Wilson measure, a conditional law
+given absence of spanning bad paths, or constants uniform when the
+number of cells in a fixed physical support diverges.
+
+2. PUBLIC REPOSITORY CHECK
+
+Checked at 2026-10-20T16:43:12.6744600Z:
+ https://github.com/ethanwsussman/Yang--Mills-LLM-experiment
+
+HEAD:
+ cf596e69629e0da2e25e33ab8cafc507c023a1de
+ commit time 2026-10-20T12:28:35Z
+ message "Update LPO1 to the revised infinite-lattice outline".
+
+The recursive path/blob list agrees exactly with the retained TURN67
+list. Evidence:
+ work/remote69/sussman-head.json
+ work/remote69/sussman-tree.json
+ work/remote69/repository-status.json.
+
+Immutable tree:
+ https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/tree/cf596e69629e0da2e25e33ab8cafc507c023a1de
+
+Thus no new public YM4 source estimate was available in this refresh.
+No unpublished completion is inferred from the repository or its authors'
+claims. The earlier RP1/LP1 outline scopes remain those of TURN61/TURN55.
+
+3. THE PUBLISHED 2025 PLAQUETTE-SOURCE RESULT: EXACT NORMALIZATION CHECK
+
+Primary paper:
+ P. A. Faria da Veiga and M. O'Carroll,
+ "On Yang-Mills Stability Bounds and Plaquette Field Generating Function",
+ Reports on Mathematical Physics 95 (2025), 303--380.
+ DOI 10.1016/S0034-4877(25)00035-7.
+ Publisher:
+ https://www.sciencedirect.com/science/article/pii/S0034487725000357
+ Full published institutional copy:
+ https://repositorio.usp.br/directbitstream/ef6d3c36-bb3e-4609-acf3-305a632492f3/3265110.pdf
+
+This full PDF was successfully retrieved, not inferred from its abstract.
+Saved as work/remote69/FO_published2025.pdf (78 pages), with pypdf text.
+Printed pp347--348 were visually checked in FO-pub-45.png and
+FO-pub-46.png. The earlier preprint is arXiv:2205.07376v2.
+
+The paper's equations (5)--(7) use
+
+ U_b = exp(i a g A_b),
+ A_p = 2 Re Tr(I-U_p) = ||I-U_p||_HS^2,
+ density proportional to exp[-(a^(d-4)/g^2) sum_p A_p].
+
+On printed p347, equation (82), the scaled observable used in Theorem 4 is
+
+ F_p^s = (a^(d-4)/g^2)^(1/2) Im Tr(U_p-I).                 (3.1)
+
+For defining SU(2), Tr(U) is real, so (3.1) vanishes identically. This
+does not dispose of the paper's other observable: Remark 16, on the
+same printed page, explicitly proposes the action field and says the
+arguments carry over. However its displayed normalization is literally
+
+ Tr H = A_p/(a^4 g),        Tr S = a^d Tr H,              (3.2)
+
+and claims H approximately Tr(F^a)^2. With its own link convention,
+U_p = I + i a^2 g F^a + higher terms, one instead gets
+
+ A_p = a^4 g^2 Tr[(F^a)^2] + higher terms.                (3.3)
+
+Thus (3.2) is g times the usual canonical action density at this
+formal leading order. This is a printed normalization discrepancy.
+It may be a typo in the claimed continuum interpretation, but we
+must not replace the actual displayed field and import the same
+source bounds without redoing their proof.
+
+There is a second scope qualification: the displayed development concentrates
+on U(N) (printed p308); the paper describes SU(N) modifications separately.
+Remark 19, printed p350, explicitly qualifies the limiting source
+analyticity domain for SU(N) as finite. We do not attribute an entire
+limiting SU(2) theorem to the authors. The calculation below rules out
+an attempted entire canonical-energy upgrade, not a fixed-disc theorem.
+
+Theorem 4, printed pp348--349, keeps the complete finite-volume
+normalizer and gives a factorized upper bound for r insertions,
+then thermodynamic subsequential bounds. The finite-volume bound
+contains z_u(r J_j), z_l, and the explicit retained/extra-bond counts.
+Its estimates are uniform for fixed r in the cutoff-scaled fields;
+they contain no separation-sensitive cross kernel or nonzero
+separated connected lower bound. The r-dependent source amplification
+must be retained when r grows like the number of physical cells.
+
+Here is a direct actual-law test of the normalization upgrade.
+Let U have normalized SU(2) Haar measure, h(U)=1-Tr(U)/2, and
+
+ c(beta) = integral exp[-beta h(U)] dU
+         = 2 exp(-beta) I_1(beta)/beta,   beta>0.
+
+The normalized one-plaquette Wilson law has density
+exp(-beta h)/c(beta). It is also realized by a single cycle after
+tree gauge fixing. Under the paper's convention, A=4h and beta=4/g^2.
+The canonical cell action is X=A/g^2=beta h. Exactly,
+
+ E_beta exp(J X) = c((1-J)beta)/c(beta).                  (3.4)
+
+For fixed real J<1, Laplace's method at U=I, or the standard positive
+real I_1 asymptotic, gives
+
+ c(beta) = sqrt(2/pi) beta^(-3/2)(1+O(beta^-1)),
+ E_beta exp(J X) -> (1-J)^(-3/2).                         (3.5)
+
+At J=1 the exact numerator is c(0)=1, and
+
+ E_beta exp(X) ~ sqrt(pi/2) beta^(3/2) -> infinity.        (3.6)
+
+All these finite-beta MGFs are entire. It is their cutoff-uniform
+entire bound which fails at canonical normalization. In contrast
+the paper's d=4 scaled action A/g is g X; its fixed moments tend
+to zero, with
+
+ E_beta[(A/g)^k] = g^k[(3/2)_k+o(1)]
+
+for every fixed nonnegative integer k. This follows from (3.4) on
+a fixed real source neighborhood below J=1, or directly by the
+same rescaled Haar integral.
+
+Consequently a uniform entire Gaussian source envelope for A/g
+cannot be used as a uniform entire envelope for A/g^2. This exact
+single-plaquette calculation does not contradict the theorem at
+its stated scaling, nor does it assert a result for all correlated
+four-dimensional plaquettes. It demonstrates the invalidity of
+the proposed normalization-only shortcut.
+
+Our separated source construction does not require an entire
+spatially uniform log partition function. A renormalized mixed
+remainder on an appropriate fixed disc could still be adequate.
+Neither (3.4) nor Theorem 4 supplies that separated remainder.
+
+4. WHAT THE CLASSICAL INFRARED BOUND ACTUALLY ASSUMES
+
+Primary paper:
+ J. Froehlich, B. Simon and T. Spencer,
+ "Infrared Bounds, Phase Transitions and Continuous Symmetry Breaking",
+ Communications in Mathematical Physics 50 (1976), 79--95.
+ DOI 10.1007/BF01608557.
+ Author-hosted full text:
+ https://math.caltech.edu/SimonPapers/65.pdf
+
+Saved work/remote69/FSS1976.pdf and text; printed p81 was visually
+checked. Read the theorem and proof at printed pp81--84.
+
+Section 2 assumes a product of identical single-site measures on
+R^N, with the stated exponential integrability, and a nearest-neighbor
+ferromagnetic bilinear energy
+
+ H = -J sum_<x,y> sigma_x dot sigma_y.
+
+Theorem 2.1 is a Gaussian domination estimate for a divergence source:
+
+ E exp[sigma(sum_i partial_i h_i)]
+       <= exp[(2J)^(-1) sum_(x,i) |h_i(x)|^2].             (4.1)
+
+Theorems 2.2--2.3 and Corollary 2.5 extract covariance quadratic-form
+bounds. The proof rewrites the interaction as Gaussian difference
+kernels, shifts those kernels, and uses a positive-definite
+kernel/transfer-operator inequality and Schatten Hoelder. It is not
+an inference from reflection positivity alone. Printed p84 explicitly
+cautions that the resulting quadratic-form estimate does not imply
+a pointwise covariance upper bound by the lattice Green function.
+
+This is closely related to the successful deterministic ambient
+Gaussian-feature shift in TURN65. That analogue is already proved
+for the actual Wilson temporal kernels. It does not turn a nonlinear
+magnetic observable into a deterministic linear source.
+
+The pure Wilson pushforward to plaquette actions does not have the
+product-site/bilinear-spin structure above. Plaquettes share links,
+and their products obey compatibility constraints. Neither merely
+renaming plaquettes as spins nor taking a small-field chart supplies
+the source-maximization theorem used in (4.1).
+
+Non-Abelian symmetry by itself is not an obstruction to (4.1):
+O(N) examples are included. The issue is the exact measure, energy,
+and source deformation, and the distinction between linear and
+composite observables.
+
+Two elementary checks make this last distinction precise.
+
+(a) Linear sub-Gaussian domination does not supply Wick's quadratic
+cross identity. Let R be 0 or sqrt(2), each with probability 1/2,
+and let independent fair signs e_1,e_2 be independent of R.
+Put Y_i=R e_i. Then
+
+ E Y_i=0, Cov(Y_1,Y_2)=0, E Y_i^2=1,
+ E exp(t_1Y_1+t_2Y_2) <= exp(t_1^2+t_2^2),
+ Cov(Y_1^2,Y_2^2)=1.                                    (4.2)
+
+The MGF bound follows by conditional cosh bounds and R^2<=2.
+Thus an upper Gaussian proxy with zero off-diagonal block does
+not imply zero quadratic cross covariance. The TURN30 determinant
+identity needs the law itself to be Gaussian or a separately
+controlled connected four-point remainder.
+
+(b) Even a Hessian lower bound cannot be polarized into a
+separation-sensitive covariance formula. Consider the centered
+two-dimensional Gaussian with precision
+
+ H = [[2,1],[1,2]] >= I.
+
+For F(x)=x_1 and G(x)=x_2, Cov(F,G)=-1/3, whereas
+grad(F) dot I^(-1) grad(G)=0. A valid variance bound using a
+Hessian lower bound can be combined with Cauchy--Schwarz, but
+its right side cannot simply be polarized into an off-diagonal
+upper bound. This is not a defect in TURN11; it rules out an
+unproved additional step sometimes proposed after convexity.
+
+5. AN ACTUAL RECENT GAUSSIAN COMPARISON, WITH DIFFERENT PARAMETERS
+
+Primary preprint:
+ F. Rajasekaran, O. Yakir and Y. Zhou,
+ "Gaussian Limits of Lattice Higgs Models with Complete Symmetry Breaking",
+ arXiv:2603.24555, 25 March 2026.
+ https://arxiv.org/pdf/2603.24555
+ Saved work/remote69/YMH2026.pdf and extracted text.
+
+Read the definition (1.2)--(1.3), Theorem 1 on PDF p5, its explicit
+parameter condition (1.12), and the explanation of unitary gauge
+on PDF p6. The action is
+
+ H(U) = (1/2) sum_p ||I-(dU)_p||^2
+          + (m/2) sum_e ||I-U_e||^2.                     (5.1)
+
+The second term is a Higgs-derived link mass in unitary gauge.
+The theorem concerns infinite-volume limits with a vanishing
+lattice mass chosen for the specified positive continuum Proca
+mass and with
+
+ beta^(-1) <= epsilon^(C_(d,n)).
+
+Remark 2 permits C_(d,n)=100 d n. The lifted Lie-algebra field
+converges to a massive Gaussian Proca field. The paper also
+proves a local total-variation comparison to its massive
+Gaussian reference in its proof, rather than merely asserting
+a perturbative expansion.
+
+These are genuine useful types of estimates. They cannot be
+imported here by dropping the mass term or by replacing the
+power-law weak coupling with beta of logarithmic order in
+epsilon^(-1). The mass supplies coercivity and the scale
+separation makes nonlinear errors small. Its limiting Gaussian
+field is not a nontrivial interacting pure YM4 construction.
+No massless-uniform estimate was established in this inspection.
+
+6. OTHER PRECISE PRIMARY STATUS
+
+Brennecke's 2026 free-energy paper:
+ https://link.springer.com/article/10.1007/s10955-026-03649-4
+ Theorem 1 restates the small-coupling/large-box leading U(N)
+ free-energy asymptotic, and Theorem 2 identifies its Maxwell
+ constant. These are scalar thermodynamic free-energy statements.
+ An o(1) per-volume remainder without a uniform complex
+ inhomogeneous-source estimate cannot be differentiated twice
+ to obtain the required separated physical covariance. No such
+ source theorem was located in the displayed result.
+
+Abdesselam:
+ https://arxiv.org/pdf/2207.07603
+ "Non-Abelian correlation inequalities and stable determinantal
+ polynomials", v2, 2022.
+ The abstract and Conjecture 1.1 distinguish the proposed invariant
+ O(N)/CP^(N-1) correlation inequalities from the proved zero-coupling,
+ large-power/determinantal limits. These are not a finite-coupling
+ pure SU(2) Wilson action-source inequality. No inference that all
+ conceivable non-Abelian inequalities are unavailable is intended.
+
+Bałaban--O'Carroll 1997, "A Simple Method for Correlation Functions
+ via Effective Actions", DOI 10.1006/aphy.1997.5690:
+ root is examining the full text separately this turn. This note
+ does not promote its abstract or title into a YM4 source theorem.
+ Any actual theorem attachment from that reading belongs in the
+ root's source-specific record.
+
+7. CONSEQUENCE FOR THE NEXT ESTIMATE
+
+The existing exact source identities allow a spatially local physical
+source to be carried through the finite temporal construction. The
+new marked bridge bounds remove a particular large-action connection
+contribution. To use a Gaussian benchmark on the remaining channel
+one still needs a controlled two-source remainder, not just a
+single-source absolute exponential moment:
+
+  log Z(s,t)-log Z(s,0)-log Z(0,t)+log Z(0,0),
+
+with canonical physical source normalization, uniformly controlled
+mixed derivative/remainder on separated supports, and the full
+original denominator. Alternatively one may directly estimate the
+separated OS covariance and its earlier-time upper bound. Local
+contact or affine bulk terms may cancel in these expressions, but
+one must establish the cancellation before taking an absolute
+volume bound.
+
+This check therefore rules out three concrete shortcuts:
+changing A/g to A/g^2 inside the 2025 entire bound; interpreting an
+infrared quadratic-form upper bound as Wick's separated composite
+formula; and removing the Higgs/power-law assumptions from the
+2026 Gaussian comparison. It does not rule out a genuine effective
+action proof of the required regular-channel source estimate.
+
+END. Full nontrivial YM4 existence remains unresolved.

@@ -1,0 +1,426 @@
+NATIVE COARSE SCHUR FACTORS: GAPS, ROOTED JETS AND MAXWELL BOUNDS
+24 October 2026. audit_two_root. New matched finite/infinite-density proof.
+Independent review requested. Archive and outputs unchanged.
+
+RESULT AND SCOPE
+
+The two coarse factors in the mean-zero/soft Gaussian decomposition
+have uniform flat positive spectra, exponentially weighted inverses,
+and first-two physical-source kernels with every displayed endpoint
+and source root retained. Their diagonal logarithmic densities have
+uniform second polynomial source moments. Consequently their actual
+infinite Maxwell contributions are bounded independently of old grade
+m and composite K=L^p, once the separate exact native Gaussian/coarea
+reduction assigns these factors to that Gaussian.
+
+The key extra estimate is Q_B(0)>=c(Delta_1+mu^2), mu=K^-1. It does
+NOT follow just from V(0)>=c(Delta_1+mu^2), since V=Q_B+(DJ)(DJ)^T.
+Sections1--3 prove it for the literal corrected flat ordinary average.
+The derivative proof keeps J and its derivatives OUTSIDE
+D^T V^-1 D. No raw derivative of DJ across a block interface is
+estimated, and no fine K^4 fiber is used as a trace bound.
+
+Scalar statements hold on a uniform small physical complex supremum
+ball. For the vector, only flat inverses and first-two source jets
+of the declared auxiliary family are claimed uniformly; no uniform
+nonlinear stationary domain or generic off-shell identification with
+the actual Gaussian is inferred. The native affine-jet theorem is
+what identifies the resulting actual Maxwell coefficient.
+
+NOTATION AND IMPORTED INPUTS
+
+All pairings are counting pairings, d=4. D is the full scalar gradient,
+d_1 the bond curl, Delta_0=D^T D and Delta_1=d_1^T d_1+DD^T, the
+componentwise scalar Laplacian on bonds. Q_0 averages disjoint centered
+K-blocks. Set J_0=K^2 Q_0^T, Pi_0=J_0 J_0^T and P_0=I-Pi_0.
+The actual flat corrected bond map is A=Cbar(0), the straight-string
+mean. It obeys
+
+ A D=D_c Q_0,           ||A||<=mu.                           (1)
+
+The reviewed native inputs are:
+* uniform classical rooted kernels and q_W<=q_m<=C q_W,
+  q_W=d_1^T d_1, ||q_m||<=R_q;
+* the H1 soft flat energy and weighted-inverse estimates;
+* the T/M ordinary trajectory and complete moving-map estimates;
+* the H2 first-two physical-source vertices with rooted block bounds;
+* actual affine minimum/multiplier jets and the invariant-density
+  Maxwell identity, used only in Section8.
+
+Their work files are listed at the end. No quantum action bound is
+silently substituted for one of these classical or matrix inputs.
+
+At flatness, choose a fixed a>=R_q+1 and write
+
+ Q_B=q_m+D P_0 D^T+A^T(aI-q_(m+p))A,
+ V=Q_B+D Pi_0 D^T,
+ T=Delta_0+mu^2 Pi_0,
+ M=mu^2 J_0^T T^-1 J_0,
+ S=I-J_0^T D^T V^-1 D J_0.                                (2)
+
+The algebraic Schur identities give
+ S=(I+J_0^T D^T Q_B^-1 D J_0)^-1
+whenever Q_B is positive. Its positivity and uniform comparison are
+proved below; they are not assumed in using this formula.
+
+1. A TRANSVERSE ESTIMATE FOR THE ACTUAL AVERAGE
+
+This is a direct reproof of the archived alias inequality, with the
+actual native A in(1). Let x be divergence free, D^T x=0, including
+harmonic one-forms. In a coarse Bloch fiber p in [-pi,pi]^4, use the
+K^4 fine aliases k_r=(p+2pi r)/K in the fine Brillouin zone. Write
+u_r=K d(k_r), P_r=|u_r|^2. The unitary alias coordinates x_r obey
+x_r perpendicular to u_r, and their Maxwell energy is
+K^-2 sum_r P_r |x_r|^2.
+
+For the scalar centered mean put
+a_r=K^-4 sum_(z in B_K) exp(i k_r.z). The normalized straight
+multiplier is diagonal in the bond direction alpha, with entry
+
+ omega_(r,alpha)=a_r K^-1 sum_(s=0)^(K-1) exp(i s k_(r,alpha)).
+
+In unitary counting Fourier coordinates,
+ K (A x)(p)=sum_r Omega_r x_r. This K factor is essential.
+The elementary multiplier facts are
+
+ P_r>=4 for r!=0,
+ sum_r |omega_(r,alpha)|^2<=1,
+ min_alpha |omega_(0,alpha)|>=c_omega=(2/pi)^5,
+ Omega_0 u_0=a_0 d_c(p).                                   (3)
+
+The first follows since a noncentral alias has a component of
+absolute physical momentum at least pi, and
+K sin(pi/(2K))>=1. The second is the fiber form of ||A||<=K^-1,
+already proved by row/column counting. For the third, each centered
+block sinc and the additional straight-string sinc on the central
+alias is at least 2/pi in modulus. The last is the exact telescope
+of the straight difference, equivalently(1). Phases are kept in
+Omega_0; only their absolute values enter the estimates.
+
+Let P_c be orthogonal projection away from d_c(p), with P_c=I at
+p=0. Set y=P_c sum_r Omega_r x_r and y_0=P_c Omega_0 x_0.
+For nonzero p,
+
+ x_0=P_(u_0)^perp Omega_0^-1 y_0,
+ |x_0|<=c_omega^-1 |y_0|.
+
+Indeed the removed coarse longitudinal vector pulls back to a
+multiple of u_0, by(3). At p=0, Omega_0=I and the identity is direct.
+The high-alias contribution to y has norm at most ||x_high|| by
+(3), and its energy sum is at least 4||x_high||^2. Therefore
+
+ ||x||^2 <= K^2[A_0 ||P_c A x||^2+B_0 ||d_1 x||^2],
+ A_0=2 c_omega^-2,   B_0=(1+2 c_omega^-2)/4.                 (4)
+
+This proof uses only the literal flat average and Fourier/Hodge
+geometry. It is uniform on compatible tori (including p=0) and on
+the infinite lattice. It uses neither a point-pinned inverse nor
+positivity of a classical residual. For K=1 the same conclusion
+holds immediately and the conservative constants remain valid.
+
+2. SCALAR MEAN LIFT AND THE FULL Q_B GAP
+
+Block Neumann Poincare gives ||psi||<=C_P^1/2 K||D psi|| whenever
+Q_0 psi=0. For a coarse scalar b, let H_b minimize ||D phi||^2
+subject to Q_0 phi=b. At finite volume the mean constraint fixes
+the constant mode and the minimizer exists uniquely. Its equation
+is P_0 Delta_0 H_b=0. A central-alias feasible lift gives
+
+ ||D H_b||^2<=C_lift K^2 ||D_c b||^2.                       (5)
+
+To check the scale, the central scalar multiplier satisfies
+|a_0(p)|>= (2/pi)^4 and the fine frequency is p/K. Divide the
+central fine plane wave by a_0(p); its average is the prescribed
+coarse wave. Counting Parseval costs K^4, while
+|d(p/K)|<=pi |d_c(p)|/(2K). This proves(5) with a fixed constant.
+The zero coarse mode is lifted constantly with zero energy.
+At a coarse Nyquist mode taking the real part of a complex feasible
+lift preserves the real constraint and cannot increase energy.
+
+For arbitrary phi put b=Q_0 phi and psi=phi-H_b. Then
+Q_0 psi=0, P_0 Delta_0 psi=P_0 Delta_0 phi=g, and
+||D psi||^2=<psi,g>. Poincare and(5) imply
+
+ ||D phi||^2<=2 C_P K^2 ||P_0 Delta_0 phi||^2
+                +2 C_lift K^2 ||D_c Q_0 phi||^2.            (6)
+
+Use the orthogonal Hodge decomposition x=x_T+D phi. Then
+P_0 Delta_0 phi=P_0 D^T x, d_1 x_T=d_1 x, and
+P_c A x_T=P_c A x by(1). Also
+||D_c Q_0 phi||<=||A x||+mu||x_T||.
+Substitution into(6), followed by(4), gives
+
+ ||x||^2<=C_gap K^2[||d_1 x||^2+||P_0 D^T x||^2+||A x||^2]. (7)
+
+For example take C_gap to be the maximum of
+(1+4 C_lift)B_0, 2 C_P, and (1+4 C_lift)A_0+4 C_lift.
+The classical and coarse inputs in(2) imply
+<x,Q_B x> >= ||d_1 x||^2+||P_0 D^T x||^2+||A x||^2.
+Thus Q_B>=C_gap^-1 mu^2 I. All mean and Hodge zero modes have
+been kept. On the infinite lattice the inequalities follow by
+Fourier/finite-support limits; no uniform global Hodge inverse is
+being asserted on arbitrary unweighted bounded data.
+
+3. TENT LIFT, FULL ENERGY COMPARISON, AND BOTH COARSE GAPS
+
+A block-local smooth lift controls the missing mean divergence.
+For K=2h+1>=3 define, on -h<=r<=h,
+
+ f(r)=K/(h+1) [1-|r|/(h+1)].
+
+Its average is one, mean square is bounded by two, and its endpoint
+value and adjacent differences are <=4/K. For e block constant,
+define E e(Ky+r)=e_y product_alpha f(r_alpha). Then
+
+ Pi_0 E e=e,     ||E||<=C_0,     ||D E||<=C_1 mu.             (8)
+
+Internal edges use the O(K^-1) differences of f. Crossing edges
+use its O(K^-1) endpoint values and
+sum_y|e_(y+alpha)-e_y|^2<=4 sum_y|e_y|^2. Dividing by the
+block counting norm K^4 sum_y|e_y|^2 proves(8), uniformly also
+when periodic interfaces coincide. For K=1 use E=I.
+
+Since E e-e is in ran P_0,
+<Pi_0 D^T x,e>=<x,D E e>-<P_0 D^T x,E e-e>. Hence
+
+ ||Pi_0 D^T x||<=C_1 mu||x||+(C_0+1)||P_0 D^T x||.          (9)
+
+Combine(9) with(7) to obtain Delta_1<=C_Delta Q_B. Together with
+the mass gap, and Q_B<=V<=C R_v from H1, this proves
+
+ c R_v<=Q_B<=C R_v,       R_v=Delta_1+mu^2 I.                (10)
+
+In particular D Pi_0 D^T<=Delta_1<=C_Delta Q_B. Woodbury in(2)
+now gives, with constants independent of m,K and volume,
+
+                 c_S I<=S_0<=I.                            (11)
+
+For the scalar coarse factor use the SAME lift: E J_0 is a right
+inverse of J_0^T, with norm <=C_0 and gradient norm <=C_1 mu.
+Let H_s be the minimum of ||D phi||^2 with J_0^T phi=b.
+Then 0<=H_s<=C_1^2 mu^2 I. The energy Schur complement of T is
+H_s+mu^2 I, so
+
+ M_0=(I+mu^-2 H_s)^-1,        c_M I<=M_0<=I.                (12)
+
+This is a genuine lower bound for both factors. Neither follows
+by replacing a compression of an inverse by the inverse of an
+uncontrolled compression. All inverse blocks here are justified by
+the positive fine energies and the explicit constrained minimum.
+
+4. WEIGHTED COARSE INVERSES
+
+Let final blocks be the spatial units, with fixed color fiber.
+H1 supplies exponentially weighted fine resolvents and energy legs.
+For the scalar these give
+
+ ||T_0^-1||_weighted<=C mu^-2,
+ ||D T_0^-1||_weighted+||T_0^-1 D^T||_weighted<=C mu^-1,
+ ||D T_0^-1 D^T||_weighted<=C.                              (13)
+
+The analogous V_0^-1 bounds use the vector energy R_v. The J_0
+columns have norm one and support in their own final block.
+Consequently M_0 and S_0 have uniform exponentially decaying
+final-block kernels. For S_0 use I-J_0^T R_f J_0 with
+R_f=D^T V_0^-1 D, whose weighted norm is bounded by H1.
+
+Because the coarse fibers have fixed color dimension, summing the
+exponential kernels shows that conjugation by a small coarse
+Lipschitz exponential weight changes M_0 or S_0 by O(|theta|).
+Equations(11)--(12) and a Neumann inverse therefore imply
+
+ ||(M_0+tI)^-1||_weighted+||(S_0+tI)^-1||_weighted
+                                         <=C/(1+t), t>=0. (14)
+
+The same conclusion follows first for linear weights and then by
+kernel Schur summation. It introduces no fine-coordinate dimension.
+This proves uniform coarse inverses and logarithm resolvents, not
+just entrywise decay of the un-inverted factors.
+
+The scalar also has a uniform physical complex ball. For bounded
+physical A, D(A)-D_0=O(mu||A||) and J(A)-J_0=O(||A||) by the
+literal T/M theorem. Expansion of T(A) relative to T_0 is therefore
+O(||A||+||A||^2). Its inverse and M(A)-M_0 inherit uniform weighted
+bounds on a smaller ball, using(13) and the own-block support of J.
+The coarse gap persists there by a complex Neumann argument. This
+is not a positivity claim for complex transpose products.
+
+5. ROOTED FIRST AND SECOND SOURCE JETS
+
+For the vector use the explicit auxiliary family already covered by
+H2,
+
+ V(A)=S_m''(exp(i mu A))+D(A)D(A)^T
+  +Cbar(A)^T[aI-S_(m+p)''(M_L^p(exp(i mu A)))]Cbar(A),
+ S_tilde(A)=I-J(A)^T D(A)^T V(A)^-1 D(A)J(A).                (15)
+
+For the scalar use T(A)=D(A)^T D(A)+mu^2 J(A)J(A)^T and
+M(A)=mu^2 J(A)^T T(A)^-1 J(A). Derivatives below are at A=0.
+Directions a_u have complete smooth physical collars of fixed
+size and bounded overlap, and norm
+ b_u=||a_u||_infty+mu^-1||nearest differences a_u||_infty.
+All collar and recursive reads are retained.
+
+H2 supplies rooted energy-sandwiched T_u,T_uv,V_u,V_uv. The T/M
+theorem supplies own-block derivatives of J, with sizes C b_u and
+C b_u b_v. D_u has size C mu b_u and D_uv has size C mu^2 b_u b_v
+on their actual local reads.
+
+Differentiate R=T^-1 by
+ R_u=-R T_u R,
+ R_uv=R T_u R T_v R+R T_v R T_u R-R T_uv R.                  (16)
+Insert(16) into mu^2 J^T R J, including every endpoint J derivative.
+All powers balance. Equivalently use the bounded energy legs
+mu R_s^-1/2 J, the bounded sandwiched inverse, and the H2 vertices.
+For an explicit generator term,
+mu^2(J^T R D^T) D_u(R J) costs
+mu^2 times mu^-1 times mu times mu^-2, namely O(1).
+At two insertions the intervening segments are R,DR,RD^T,DRD^T
+with their exact powers from(13). A projection vertex contributes
+its explicit mu^2. No unbalanced inverse remains.
+
+For the vector keep the factorization
+
+       R_f(A)=D(A)^T V(A)^-1 D(A),
+       S_tilde(A)=I-J(A)^T R_f(A)J(A).                      (17)
+
+Its first derivative is
+ (R_f)_u=D_u^T V^-1 D+D^T V^-1 D_u
+                         -D^T V^-1 V_u V^-1 D.
+The second derivative contains the two ordered V_u,V_v insertions,
+one V_uv insertion, all D_uv endpoint terms and the mixed D_u terms.
+This is simply the full product rule and(16) with T replaced by V.
+The legs R_v^-1/2 D and R_v^-1/2 D_u are bounded by C and C b_u;
+R_v^-1/2 D_uv is bounded by C b_u b_v. The flat sandwiched inverse
+and H2 vertices bound every term. Finally attach J,J_u,J_uv outside
+R_f. In particular D J_u is never estimated as a raw interface
+derivative. This is where an otherwise false K-uniform estimate
+would enter if one differentiated the sharp column too early.
+
+Insert physical-block restrictions at each differentiated factor.
+H1 weighted legs join neighboring factors, while each H2 marked
+vertex joins both matrix endpoints to its complete source roots.
+Own-block J derivatives are local endpoint insertions. A fixed
+exponent reserve pays the intermediate block sums. Consequently,
+for F=M or S_tilde and r=1,2,
+
+ ||D_(u_1,...,u_r)F(i,j)||
+ <=C_r product b_(u_l) exp[-c tree(i,j,u_1,...,u_r)].         (18)
+
+The estimates concern Hilbert operators restricted to physical blocks,
+with fixed-dimensional COARSE endpoints after J compression. The
+source direction is a whole collar direction; its fine coordinates
+are not separately counted. The rooted, weighted H2 hypothesis is
+essential here; a merely global bounded source norm would not prove
+(18). Likewise (18) retains more information than separation of the
+two source labels alone.
+
+6. LOGARITHMIC DENSITIES WITHOUT A PARTIAL-TRACE CYCLE
+
+For F_0=M_0 or S_0, let R_t=(F_0+tI)^-1. Choose the logarithm germ
+continued from the positive flat matrix. The exact first derivative
+of log F is integral_0^infty R_t F_u R_t dt. Its mixed second
+derivative is the integral of
+
+ R_t F_uv R_t
+ -R_t F_u R_t F_v R_t-R_t F_v R_t F_u R_t.                  (19)
+
+The density at a fixed coarse root o is the color trace of the
+(o,o) block of(19). DO NOT cycle this partial trace. Bounds(14),(18)
+join every displayed source back to o. The t integral is finite
+because the first term has (1+t)^-2 and the latter terms have
+(1+t)^-3. Thus
+
+ |D_(u,v) tr_color(log F)_(o,o)|
+       <=C b_u b_v exp[-c' tree(o,u,v)].                    (20)
+
+First derivatives have the corresponding one-root bound. The only
+trace factor is the fixed color dimension. Every fixed polynomial
+moment of the source distances is summable uniformly in m,K.
+Flat subtraction N0 changes none of these derivatives.
+
+7. EXACT SCALAR ALLOCATION AND COVARIANCE
+
+The finite algebraic identities, with their raw normalizations kept,
+are det Ghat=det T det M and det Q_B=det V det S. The full correction
+is therefore
+
+ N0[log det T-(1/2)log det V+log det M-(1/2)log det S].       (21)
+
+This note proves the estimates for these very factors. It does not
+independently identify some other archive determinant or a bare
+ghost ratio with(21). The actual native Gaussian/coarea reduction,
+including its gauge and pivot measures, is a separate algebraic
+registration. No background-dependent scalar is discarded by the
+operator estimates; N0 removes only the stated flat normalization.
+
+The actual moving-reference identities give gauge covariance of M
+and S in the coarse adjoint frame. The auxiliary(15) has the same
+covariance, since each relative Hessian and each moving map uses
+that frame. Thus every diagonal color trace of log F is individually
+gauge invariant. Constant semisimple color invariance kills its
+linear flat color jet. This is stronger than invariance of only the
+total trace, and is the density property required in the next step.
+
+8. BOUNDED ACTUAL MAXWELL CONTRIBUTION
+
+At each fixed m,p the native commuting-affine polynomial-jet theorem
+identifies the actual current minimum with the fine affine field,
+up to its native based gauge, through order two. Its multiplier and
+the fine/coarse currents vanish through that order. Hence the actual
+vector Schur factor and S_tilde in(15) have identical first-two
+affine jets. This uses the exact ordinary composition, not a new
+direct K average or an assumed arbitrary off-shell equality.
+
+Use the normalized physical affine potential
+ A_alpha(x)=t (x_nu/K) H, alpha!=nu, so the fine angle is
+t x_nu H/K^2 and its actual final coarse affine angle is t Y_nu H.
+A smooth physical partition of unity writes its first-order
+coefficient as a sum of complete collar directions a_u, with
+b_u<=C(1+d(o,u)). The partition is made in physical coordinates,
+so its first-difference cost is uniformly bounded in the declared
+physical C1 norm. Apply(20) and sum both source roots: the
+polynomial weights are absorbed by the rooted exponential.
+
+The native invariant-density identity beta=2[t^2]rho_o, with the
+registered trace normalization, therefore proves
+
+ |beta(N0 log det M)|+|beta((1/2)N0 log det S)|<=C,           (22)
+
+uniformly in m,K. A total-trace cyclic argument giving only decay
+in d(u,v) would not suffice for this affine polynomial test; the
+root o in(20) is essential. The affine field is used through its
+absolutely summable polynomial jets, not placed globally in a
+bounded physical analytic ball or on a torus with varying flux.
+
+The beta here is the native infinite coefficient at fixed grades.
+The bounds are uniform in those grades. If comparison with another
+finite winding or regulator prescription is desired, that matching
+needs its own argument; no such extra prescription is necessary
+for the direct native infinite-density conclusion(22).
+
+9. REMAINING WORK
+
+This closes the coarse-factor part of(H3): uniform flat gaps,
+weighted inverses, rooted first-two physical jets, and the bounded
+actual Maxwell remainder of the two coarse determinants, under the
+separately retained exact native soft reduction. It does not prove
+the differentiated fine soft-pair heat bands or their signed
+logarithmic coefficient. It does not establish a whole nonlinear
+K-uniform vector stationary domain, all histories, or continuum
+Yang--Mills existence.
+
+Primary/native input notes:
+ homogeneous_classical_rooted_taylor_kernels_20261024.txt;
+ native_affine_multiplier_and_heat_operator_interface_20261024.txt;
+ native_affine_maxwell_transport_20261024.txt;
+ native_ordinary_trajectory_and_moving_map_bounds_20261024.txt;
+ native_flat_soft_energy_bounds_20261024.txt;
+ native_physical_soft_operator_vertices_20261024.txt.
+
+Archive proof mechanisms independently checked and replayed above:
+ Notebook34/physical_quotient_determinant_fragment, flat aliases;
+ Notebook35, mean-zero spectral/tent-lift section;
+ Notebook36, scalar coarse and soft-vector coarse sections.
+The present claims use the reviewed native inputs, not merely the
+archive's theorem labels or its previously assumed structural system.

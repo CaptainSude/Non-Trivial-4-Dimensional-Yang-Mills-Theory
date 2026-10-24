@@ -1,0 +1,164 @@
+INDEPENDENT FINITE AUDIT: FULL-OMEGA NORMALIZER CURVATURE
+23 October 2026. Root review of full_omega_normalizer_curvature_probe.
+Archive unchanged. Native analytic registrations have a separate audit.
+
+VERDICT: PASS for the finite midpoint theorem, Sections1--4, under its
+explicit whole-product action, center-jet and uniform-tail hypotheses.
+The deductions in Sections5--7 are algebraically valid given the stated
+native complex-response/coefficient domains. This review does not by
+itself certify that native domain registration, the next full law, or
+a weighted covariance estimate for its nonsmooth effective action.
+
+1. THE CONSTRAINT CONVEXIFICATION IS SUFFICIENT
+
+In the actual principal-log convention put
+ phi(t,a)=cos rho-F_(v(t))(g a).
+On the containing ball the established exact SU(2) formula gives
+ phi_aa>=c g^2 I, |phi_at|<=C g |v'|, and
+ |phi_tt|<=C(|v'|^2+rho |v''|).
+The last estimate needs gR<=C rho as explicitly required; a mere fixed
+gR<1/2 with arbitrarily smaller rho would not supply it. The actual
+first family has R=4delta0/g and rho=2arcsin(delta0), so it does.
+
+The Schur complement loses at most C|v'|^2, since the square of the
+mixed term is divided by c g^2. Thus adding M_b t^2/2, with M_b as in
+(4), makes EVERY constraint jointly convex on the fixed containing
+cylinder. No active-center selector is differentiated. For endpoints
+at -h,+h this implies phi(0,a_mid)<=M_b h^2/2. This is exactly the
+old same-center intersection with cos rho decreased by M_b h^2/2.
+The midpoint inclusion (7) is therefore valid for the whole product.
+
+All Minkowski midpoints stay in the fixed containing product because
+that product is convex. The enlarged intersections stay in it for
+sufficiently small h because the original factors have a strict outer
+margin. They remain convex and contain the same B_r. The tail theorem
+was proved for EVERY such product, so it applies uniformly along the
+enlargement path rather than being assumed stable from one endpoint.
+
+2. THE ENLARGEMENT COST USES THE ACTUAL NORMALIZER
+
+For one center, differentiation of its exact radial boundary with
+respect to rho gives sin rho/sqrt(h_v^2-cos^2rho). The strict
+center-radius ratio bounds this by a constant. The rate of radius
+change when cos rho(s)=cos rho-s M_b h^2/2 is O(M_b h^2/rho).
+Rescaling to a divides by g. Thus the radial A-speed is bounded by
+C M_b h^2/(g rho), also for the minimum of finitely many centers.
+
+Along this comparison the Hamiltonian is H(0,A), not H(s,A). The
+derivative of log Z_s is therefore just the sum of normalized radial
+pressures times these speeds. Each pressure is at most C R epsilon_r
+under the ACTUAL current product law with normalizer Z_s. Integrating
+over s proves (9). No inverse probability of simultaneous cutoffs,
+independence of the sites, or conditional-on-exterior tail is used.
+The enlarged measure is only an inequality comparison; it never
+replaces the target law or its original mass in a later identity.
+
+3. BULK CONVEXITY, INTEGRAL INEQUALITY, AND SIGNS
+
+The full Schur premise (10) with H_AA>0 is equivalent to joint
+convexity of H(t,A)+A_H t^2/2 on the containing cylinder. Its midpoint
+inequality has the sign in (12): H(0,A_mid) is bounded ABOVE by the
+endpoint average plus A_H h^2/2. Consequently
+
+ e^(A_H h^2/2) 1_(K^+)(A_mid) e^(-H(0,A_mid))
+       >= sqrt[1_(K(-h))(A_minus)e^(-H(-h,A_minus))
+                 1_(K(h))(A_plus)e^(-H(h,A_plus))].
+
+The midpoint Prekopa--Leindler inequality therefore gives
+ Z^+(0)>=e^(-A_H h^2/2) sqrt[Z(-h)Z(h)].
+Using Z^+(0)<=Z(0) exp(B h^2),
+ B=C R epsilon_r/(g rho) sum_b M_b,
+then yields
+
+ (-logZ)(-h)+(-logZ)(h)-2(-logZ)(0)
+                                      >=-(A_H+2B)h^2.
+
+The producer consistently renames the fixed constant to absorb 2.
+This is a LOWER curvature bound. It does not bound positive singular
+curvature or assert twice differentiability at a switching center.
+At every midpoint with locally uniform constants, continuity plus this
+inequality implies semiconvexity and the stated distributional second-
+derivative lower bound. An interval-wise bound with a finite set I
+is enough for that implication; uniform constants give its useful
+volume-independent version.
+
+I checked the imported integral inequality directly in A. Prekopa,
+On logarithmic concave measures and functions, Acta Sci. Math.34(1973),
+335--343, Theorem3, equation(2.3), primary copy
+https://rutcor.rutgers.edu/Prekopa/pdf/SCIENT2.pdf.
+Set k=2, lambda1=lambda2=1/2, and apply the theorem to the square
+roots of the two endpoint densities. The displayed k majorizes the
+required supremum. Finite compact supports and continuous densities
+make the present application unambiguous. No quantitative curvature
+theorem is being imported from that paper.
+
+4. SECOND-JET CENSUS AND BULK PRICE: ALGEBRAIC CHECK
+
+If the complex first-response kernel is uniformly bounded on the stated
+spare coordinate polydisc, a Cauchy derivative in q' costs a_min^-1
+while retaining exp[-mu d(b,q)]. Commuting mixed derivatives and doing
+the same with q,q' reversed gives the smaller of the two exponentials.
+Since max(s,t)>=(s+t)/2, (17) follows. This is stronger than a lone
+directional Cauchy bound and avoids an uncontrolled volume factor.
+
+Consequently each directional second jet is bounded by a constant
+times a_min^-1 [sum_q exp(-mu d(b,q)/2)|w_q|]^2. The same kernel
+controls the square of the first jet. Its l2 operator norm is uniform
+on the first-step lattice, so summing over b gives (18). Uniformity
+along a sufficiently short straight path also bounds the sum of the
+suprema defining M_b: the SAME pointwise kernel majorant is available
+at every point, not merely a bound for the sum at each point.
+
+For the full action, the two background coefficient derivatives must
+be bounded BEFORE composing with the physical minimum. If (19) and
+the stated complete minimum/current/return first and second kernels
+hold, the ordinary chain rule gives
+ |H_tt|<=A2(R)(||dot theta||_2^2+||ddot theta||_1),
+ ||H_At||_2<=B0(R)||dot theta||_2.
+These imply (20) and the valid sufficient Schur choice
+ A_H=B_H+C_cross^2/c0. All factors rho_* and a_min in (20) have the
+correct order. Products from local nonlinear current/return maps are
+controlled by their finite reads and the same squared summable kernel.
+
+The independent coefficient extension must subtract the ENTIRE linear
+jet that vanishes on the physical critical graph. Since it agrees with
+the real action on that entire graph, its second total beta derivative
+also agrees; merely freezing J at one point would not justify this.
+The producer retains this condition. No background-only term extracted
+to the outer stationary action or scalar prefactor is set to zero in
+the later outer density.
+
+A normalizer needs more precision than an inner conditional ratio:
+an additive beta-only scalar changes -log Z and its curvature. The
+focused native review identified and checked the literal B119 zero-
+noise extraction H0(0;beta)=0, with sigma0 and z^(0) already outside.
+The producer now fixes that convention explicitly. Under a different
+convention H+c(beta), the curvature of c(beta) must be added, and the
+outer prefactor changes accordingly. It cannot be canceled by invoking
+the earlier normalized-score identity.
+
+Finally R/(g rho) is of order g^-2 when R/r is fixed and rho is of
+order gr. Thus the explicit boundary negative-curvature price is
+C epsilon_r g^-2(1+rho/a_min), as claimed. A fixed spare a_min and
+r of order log(1/g)^p with p>1/2 make this term smaller than any fixed
+power of g. The bulk polynomial in R remains and is not called a tail.
+
+5. A REAL LIMIT: UNWEIGHTED CURVATURE DOES NOT GIVE SPATIAL COERCIVITY
+
+The warning in Section8 is necessary. Even a positive semidefinite
+rank-one singular matrix need not have positive real part after
+conjugation by a nonconstant spatial weight. For example, take
+
+ B=[[1,1],[1,1]], W=diag(w,1), w>0, w!=1.
+
+The symmetric part of W B W^-1 is
+ [[1,(w+w^-1)/2],[(w+w^-1)/2,1]],
+whose smaller eigenvalue is 1-(w+w^-1)/2<0. Multiplying B by a large
+or singular positive coefficient does not repair this. Thus favorable
+ordinary curvature at an intersection corner is not by itself the
+weighted-Hessian hypothesis used in the spatial covariance consumers.
+
+The new result establishes one-sided normalizer curvature in the stated
+first family. The complete next coarse density, its nonlinear coordinate
+pullback, outer determinant/stationary terms, spatial control of possible
+nonsmooth terms, and other Omega sectors remain distinct obligations.

@@ -1,0 +1,204 @@
+% No preamble. Prefix mrg-. Homogeneous field domains, not a marked RG theorem.
+\section{Nonlinear current control and a finite-block radius gain}
+\label{mrg-section}
+Fix the primitive odd ratio $\ell$, gauge group and $0<\alpha<1$.
+All graphs are finite compatible periodic regulators. Constants are
+independent of preceding refinement $M=\ell^k$ and volume; constants
+subscripted $q$ may depend on a fixed number $q$ of primitive steps.
+All complex functions use the branches through the identity.
+
+\begin{proposition}[Physical current of the homogeneous minimum]
+\label{mrg-current}
+Use Hermitian Lie coordinates, normalized trace $\tau$, physical pairing
+$\langle v,w\rangle_\eta=\eta^d\sum_e\tau(v_ew_e)$, and
+\[
+ S_\eta(U)=\eta^{d-4}\sum_p\{1-\tau(P_p+P_p^{-1})/2\},\qquad
+ \left.\frac d{dt}S_\eta(e^{i\eta tv}U)\right|_{t=0}
+       =\langle J_{\rm phys}(U),v\rangle_\eta .
+\]
+The sum counts each unoriented plaquette once. Explicitly,
+\begin{equation}
+ J_{\rm phys}(U)(e)=\eta^{-3}\sum_{p\ni e}
+       \pi_{\mathfrak g}\frac{P_{p,e}-P_{p,e}^{-1}}{2i},
+ \qquad
+ \|J_{\rm phys}(U_{\rm ord}(B))\|_\infty\le C\|B\|_\infty.
+ \label{mrg-current-bound}
+\end{equation}
+Here $P_{p,e}$ is based and oriented with first edge the positive bond
+$e$, and repeated incidences count with multiplicity. The last map is
+holomorphic on a fixed coarse product ball, uniformly in $M$ and volume.
+\end{proposition}
+\begin{proof}
+Write the corrected constraint as $\mathcal F(A)=QA+\mathcal R(A)$,
+its minimum as $A_*(B)$, and its potential Euler derivative as
+$E(A)=KA+N(A)$. Notebook15's full tangent decomposition
+\texttt{ng-tangent-decomposition} and right inverse of $D\mathcal F$
+give $E(A_*)=D\mathcal F(A_*)^Tm$. Applying $H^T$ identifies
+the multiplier exactly as \texttt{nm-multiplier}:
+\[
+ m=(I+H^TD\mathcal R(A_*)^T)^{-1}
+       \{q[B-\mathcal R(A_*)]+H^TN(A_*)\}.
+\]
+The bounds \texttt{nm-adjoint-composite} and
+\texttt{nm-multiplier-bounds} give $\|E(A_*)\|_\infty\le C\|B\|$.
+The real identity extends holomorphically to the common complex ball.
+If $\partial_t e^{i(X+tY)}|_0=iT_X(Y)e^{iX}$, then
+$E(A)=T_{\eta A}^TJ_{\rm phys}(e^{i\eta A})$.
+The inverse transpose of $T_{\eta A}$ is uniformly bounded for small
+$A$ and $\eta\le1$. Finally \texttt{ot-ordinary-representative}
+conjugates the current by a bounded holomorphic gauge and its inverse.
+This proves the bound without estimating a rough outside divergence.
+Differentiating the displayed action gives the stated normalization.
+\end{proof}
+
+\paragraph{Explicit source-domain hypothesis (UF).}
+For the family of radii $(\alpha_0,\alpha_1)$ being used, assume that
+source conditions (i)--(iii), with both radii reduced by one fixed
+factor $c_{\rm src}>0$, imply the reconstructed-domain condition (iv),
+uniformly as the radii shrink and for the homogeneous restrictions in
+question. The smaller-constant paragraph of CMP109, pp.~262--263,
+alone is a fixed-radii statement and does not establish this uniformity.
+
+\begin{corollary}[Conditional source specialization]
+\label{mrg-specialization}
+Under UF, if $R_X(U,J)$ is holomorphic and bounded by $A_X$ on that
+source domain, then
+\begin{equation}
+ f_X(B)=R_X(U_{\rm ord}(B),J_{\rm phys}(U_{\rm ord}(B))),\qquad
+ |f_X(B)|\le A_X\quad
+ (\|B\|_\infty<c\min\{\alpha_0,\alpha_1,b_*\}).
+ \label{mrg-source-ball}
+\end{equation}
+The constant $c>0$ is independent of $M,X$ and volume.
+\end{corollary}
+\begin{proof}
+The ordinary potential has physical $C^{1,\alpha}$ norm at most
+$C\|B\|$ by \texttt{ot-ordinary-bound}. Plaquette multiplication gives
+$\|U(\partial p)-I\|\le C\eta^2(\|B\|+\|B\|^2)$, and
+Proposition~\ref{mrg-current} controls the current. Use real reference
+$I$ for the complex perturbation, choose $c$ to fit the reduced radii,
+and apply UF. Every collar is restricted from the same global field.
+\end{proof}
+This composition is generally nonlocal in $B$. It does not provide the
+source's independent-current or decoupling-parameter localization norm.
+
+\begin{proposition}[Exact noisy charts and fixed-block contraction]
+\label{mrg-block}
+Let $P_{M,R}(e^{iw})$ be the actual ordinary prefix of the $MR$-refined
+minimum and $a_{M,R}=\log P_{M,R}/i$. The prefix theorem
+\texttt{pgh-scale-bounds} gives $\|a_{M,R}(w)\|\le C_0\|w\|/R$,
+with $C_0$ independent of $R=\ell^s$.
+Root $V=P_{M,\ell}(e^{iw})$ by its block contour gauge $h(w)$,
+where $h(y)=I$ at coarse centers. For the actual retained pivot chart
+of Notebook19 define
+\begin{equation}
+ F_M(w,t)=\frac1i\log\left[
+       \{e^{i\Phi_{V^{h(w)}}(t)}V^{h(w)}\}^{h(w)^{-1}}\right].
+ \label{mrg-chart}
+\end{equation}
+On fixed product balls this is holomorphic and
+\begin{equation}
+ F_M(w,0)=a_{M,\ell}(w),\quad
+ \|F_M(w,t)-F_M(w,0)\|\le C_\ell\|t\|,\quad
+ \|D_wF_M(w,t)\|_{\infty\to\infty}\le C_{\rm prim}.
+ \label{mrg-primitive}
+\end{equation}
+For each fixed $q$, compose these exact maps, with depths
+$M,M\ell,\ldots,M\ell^{q-1}$, to obtain $\mathcal B_{M,q}(w;t)$.
+There are fixed $b_q,\rho_q>0$ and a bounded holomorphic gauge
+$\gamma_{M,q}(w)$, independent of all $t_a$, such that
+\begin{equation}
+ \widetilde{\mathcal B}_{M,q}
+   =\frac1i\log[(e^{i\mathcal B_{M,q}})^{\gamma_{M,q}(w)}],
+ \qquad
+ \|\widetilde{\mathcal B}_{M,q}(w;t)\|
+       \le C_0\ell^{-q}\|w\|+C_q\max_{a<q}\|t_a\|
+ \label{mrg-block-gain}
+\end{equation}
+on $\|w\|<b_q$, $\max_a\|t_a\|<\rho_q$.
+\end{proposition}
+\begin{proof}
+Undoing the same background gauge gives the exact link expression
+$e^{i\operatorname{Ad}_{h(e_-)^{-1}}\Phi(t)}e^{ia_{M,\ell}(w)}$.
+The retained-chart bound $\|\Phi(t)\|\le C_\ell\|t\|$ and the
+uniform logarithm derivative prove the first two claims of
+\eqref{mrg-primitive}; Banach Cauchy on a fixed larger ball proves
+the third. No coordinate count enters.
+For fixed $q$, shrink the input and noise balls to keep every
+intermediate field in these balls. Telescoping gives
+\[
+ \|\mathcal B_{M,q}(w;t)-\mathcal B_{M,q}(w;0)\|
+       \le C_\ell\sum_{a<q}C_{\rm prim}^{a}\|t_a\|.
+\]
+Notebook31's two-minimum comparison \texttt{csg-comparisons}
+identifies the zero-noise composition modulo gauge with
+$P_{M,\ell^q}(e^{iw})$. A holomorphic gauge choice follows from its
+explicit construction: ordinary-to-corrected transfer, flow into the
+fixed slice, and inverse transfer. The transfers are holomorphic.
+The complexified flow \texttt{ng-flow} has the exact gauge-error
+identity $R_0D^TA(t)=e^{-t}R_0D^TA(0)$ and the uniform bound
+$\|A'(t)\|_{C^{1,\alpha}}\le Ce^{-t}\|R_0D^TA(0)\|_{C^\alpha}$.
+On a smaller complex ball this gives global continuation and uniform
+holomorphic convergence. The scalar gauge generator has the same
+integrable $C^{2,\alpha}$ bound, so its gauge and inverse converge
+holomorphically as well. The finitely many scale conversions in
+\texttt{csg-rescaling} cost only $q$-dependent constants. Their
+composition supplies $\gamma_{M,q}(w)=I+O_q(\|w\|)$ uniformly in
+$M$ and volume. The real minimum identity extends to the complex ball.
+Applying this same gauge to the noisy composition changes its difference
+from zero noise by a bounded factor. The direct prefix bound proves
+\eqref{mrg-block-gain}.
+\end{proof}
+
+Choose $q$ once with $\ell^q>2C_0$ and put $\theta=C_0\ell^{-q}<1/2$.
+For actual retained variables $t_a=g_{j+a}z_a$ the noise cost is
+$e_j=C_q\max_{a<q}g_{j+a}R_{\rm cut}(g_{j+a})$.
+Thus, for $1<\lambda<\theta^{-1}$, the block-endpoint recursion
+\begin{equation}
+ r_{n+1}=\min\{\lambda r_n,b_q\},\qquad
+ e_{j+nq}\le\tfrac12(1-\theta\lambda)r_n
+ \label{mrg-radius-recursion}
+\end{equation}
+has a fixed fractional domain margin and reaches $b_q$ in
+$O(1+\log(b_q/r_0))$ blocks. If $r_0=cg_i(\log g_i^{-2})^s$,
+$R_{\rm cut}(g)\le C(\log g^{-2})^p$ with $s>p$, and
+$|g_{j+1}^{-2}-g_j^{-2}|\le D$ on the bootstrap prefix, its noise
+condition holds for small $g_i$: over $O(\log(1/g_i))$ steps,
+$g_j\asymp g_i$, while $e_j/r_0=O((\log g_i^{-2})^{p-s})$.
+For $s=p$ the available constants must be checked; $s<p$ gives no
+startup by this argument. Source parameter order and UF remain inputs.
+
+\paragraph{Exact kernel ledger: an additional matching condition.}
+For a particular retained source kernel require, for every invariant
+scalar $f$, the exact identity
+\[
+ (K_jf)(w)=\int a_j(w,z)f(F_{M_j}(w,g_jz))\,dz,
+ \qquad K_jf\ \hbox{gauge invariant}.
+\]
+Here $a_j$ retains every rooted weight, Jacobian, covariance, cutoff
+and normalization. Unrooting changes only the argument of $f$.
+Applying this identity to the invariant scalar $K_{j-1}f$ and then
+substituting its integral yields the composed $F$ maps of
+Proposition~\ref{mrg-block}; earlier weights are evaluated at the new
+coarse argument, and no gauge is commuted through them. This elementary
+iteration, with the requisite finite-cutoff Fubini majorants, proves
+the ledger if the displayed conditions hold. Covariance of a full
+conditional does not alone imply covariance of an arbitrary retained
+restriction. For the original regular source kernel, CMP109, p.~269,
+(2.16) and the adjacent paragraph establish covariance of the whole
+measure and cutoff by local orthogonal conjugations of the retained
+field. An invariant scalar insertion preserves that identity, as does
+a scalar radial cutoff on the same retained bonds. Other restrictions
+require their own check; no mixed-sector matching is inferred.
+
+\paragraph{Scope of the gain.}
+Proposition~\ref{mrg-block} proves the composed homogeneous field-domain
+bound independently of that kernel match. Its use for a scalar requires
+gauge invariance on a compatible gauge-orbit domain. No single
+large-ratio quantum step replaces the separate kernels.
+With fractional margin, Banach Cauchy gives
+$|f(B(w,z))-f(B(w,0))|\le C A_XgR_{\rm cut}/r$; converting this
+into a localized prepared-potential norm still requires the source
+support and independent $(U,J)$ decoupling bounds. The uniform marked
+history estimate, including regenerated marginal coefficients and their
+coupling feedback, is not proved by this radius gain.

@@ -1,0 +1,353 @@
+AFFINE FORCING, A WEAK CURRENT COMPANION, AND LOCAL CARRIER CONTINUATION
+18 October 2026. Independent companion audit; no repository edits.
+
+1. WHICH SOURCE PACKAGE IS BEING USED
+
+Raw I 13546--13676 defines, on the admitted hierarchy,
+
+ G0=Delta_a^-1, q0=(QG0Q*)^-1,
+ P0=I-G0 Q* q0 Q, barG=P0G0=G0P0^T,
+ H0=G0Q*q0 ell^-1.
+
+It gives P0^T Q*=0, Q barG=0, Delta_a barG=P0^T and
+Delta_a H0=Q*q0 ell^-1. Raw I 13723--13800 defines
+
+ G=Gtilde^J=(I-barG Theta_J)^-1 barG,
+
+with its weak C^1/Holder mapping, weighted bounds, and expanded
+walks. K10, Raw I 15265ff, decorates the primitive/concatenated
+walks, then forms the composites. Its exact algebraic identities
+are asserted only at sigma=1. Its primitive estimates are the
+quoted source inputs, including q0's published but not reproduced
+walk theorem. They must not be silently promoted to Laplacian
+estimates for every current-dependent operator.
+
+The affine fixed point is
+
+ A0=-G_sigma f + G_sigma[Theta_sigma H0_sigma b
+                                -V'_sigma(A0+H0_sigma b)]. (1)
+
+Here f is a current datum of weight -3, distinct from the background
+current J and from the field datum j=G_sigma f. The contraction,
+weighted response and holomorphy follow in the same weak chart norm
+as the block-only equation, with size |f|_{-3}+|b|. The operator
+coefficients and V' are precisely the existing K10 coefficients.
+The companion below is measured from f. An arbitrary small C^1
+field j alone does not control its inverse current, so that weaker
+first-slot premise is insufficient.
+
+At sigma=1, set P=A0+H0b, X=D^J(P), H=P-H^J X and
+
+ Z=-f+Theta_J P-V'^J(P).
+
+Then the forced representation identity is
+
+ Delta_a P=P0^T Z+Q*q0 ell^-1 b.                           (2)
+
+This follows by rewriting (1) as P=H0b+barG Z, without taking a
+derivative of f. For all sigma define the substituted current by
+the explicit weak formula
+
+ K_sigma=P0_sigma^T[-f+Theta_sigma P-V'_sigma(P)]
+       +Q*(q0_sigma-a)ell^-1 b
+       -Q*k_sigma X-Lambda_sigma^T j_J(H_sigma^J X)
+       -Delta' H+F(W,H).                                  (3)
+
+All terms in (3) have weight -3 using the K10 weak mappings and
+local Delta',F estimates. Thus
+
+ N_beta(H)+|K_sigma|_{-3} <= C_sigma(|f|_{-3}+|b|),          (4)
+
+with corresponding weighted Lipschitz bounds on a smaller common
+input ball. C_sigma is bounded uniformly on the specified complex
+decoupling polydisc, with the fixed e^{C kappa1} loss of K10.
+
+At sigma=1 equation (2) gives the algebraic differential expression
+for (3). It does NOT, at an arbitrary independent pair (W,J), imply
+K_1=J(e^{i eta H}W)-J(W). Physical equality needs the true-pair
+forced-chart match. In the unforced source proof this match uses
+RD*P=0 and RD*H^J=0, Raw I 15798--15824. Restoring f=J(W) restores
+the source Euler--Lagrange equation, but its gauge/critical-point
+identification must be proved or imported with its actual premises.
+This companion note does not assume it at independent currents.
+
+There is a useful broader source match: Raw I 15541ff,
+4.5:lem-true-pair-reduction, imports RD*H=0 from CMP99b(3.124)
+for a real regular true carrier satisfying CMP99b(3.35),(3.36);
+its statement does not require that carrier itself to be an old
+minimizer. If the selected new critical configuration A'_1 exists
+near that carrier with the source gauge RD*A'_1=0, then repeat
+Raw I 15735ff but RETAIN P0^T J. The critical equation becomes
+
+ P0^T[J+Delta_a A'_1-Theta A'_1+V'(A'_1)]=0,
+
+and hence A'_1=H0b+barG[-J+Theta A'_1-V'(A'_1)]. Uniqueness
+in the weak ball identifies it with (1) for f=J. The physical
+current identification then follows by the same Landau identities.
+This isolates the remaining nearby-critical-configuration and
+determining-family premise; it is not an assumption that arbitrary
+external forcing preserves gauge invariance.
+
+2. LOCALIZING THE FORCING TERM WITHOUT A DIFFERENTIATED GREEN FUNCTION
+
+Put A_sigma=P0_sigma^T. At sigma=1 the exact identity
+
+ A_1 Q*=0                                                (5)
+
+holds at every admitted independent pair: it is just QP0=0
+transposed. It requires neither the physical-current Ward identity
+nor the current-dependent Landau identity. A_sigma is order zero
+and has the same supported walk-composite construction as K10.
+
+Suppose a forcing f agrees on a deep region D with Q*lambda, using
+the ACTUAL Q of this layer. Truncate lambda on whole determining
+blocks inside D, with one block-locality collar removed. Denote the
+truncation by lambda_D. Then
+
+ f=f_out+r+Q*lambda_D,                                   (6)
+
+where f_out is f outside D and r is supported in a fixed determining-
+block collar of its boundary. The block-local bound for Q* and the
+bound for lambda=(QQ*)^-1 Qf, when this is how lambda is chosen,
+give |r|_{-3}<=C_Q |f|_{-3}. Scale weights across that collar differ
+by at most a fixed L-power on an admitted graded hierarchy. This
+is the same geometric truncation used in Raw I 92401ff.
+
+Apply A_sigma and use (5):
+
+ A_sigma f=A_sigma(f_out+r)
+                   +(A_sigma-A_1)Q*lambda_D.              (7)
+
+The last term MUST be retained. Annihilation at sigma=1 does not
+license annihilation at arbitrary complex sigma.
+
+Suppose the decoupling parameters differ from one only outside
+Lambda. For the decorated walk expansion, write a term as
+m_omega(sigma) A_omega. In A_sigma-A_1 its multiplier is
+m_omega(sigma)-1. Every surviving term has a localization domain
+meeting Lambda^c. The order-zero walk estimate, with one fixed
+fraction of the spare exponential reserved, therefore bounds its
+output in a block z in Lambda by
+
+ C exp[-delta dist_sc(z,Lambda^c)/2] |Q*lambda_D|_{-3}.     (8)
+
+This follows by splitting the anchored walk-length exponential:
+one part pays the required trip from z to Lambda^c; the remaining
+part pays the input-anchor and walk sums. The multiplier is bounded
+by |m_omega|+1, both terms already admitted by the same decoupled
+walk majorant. Constants do not count the number of input blocks.
+The first term of (7) has the ordinary distance gain from the
+support of f_out+r. Together they give the familiar source-distance
+profile relative to the union of that support and Lambda^c.
+
+No Delta A_omega is formed. This is the precise gain over trying
+to infer a differentiated defect estimate from G_sigma-G_1. It is
+the current-companion version of the retained correction in Raw I
+92401ff, and controls the -P0_sigma^T f member of (3).
+
+The geometric premise f=Q*lambda is justified by constrained
+criticality only when the determining structure there is the same
+as the Q of this layer away from the cut. If structures change,
+their comparison collar must be included in r. Equation (7) is not
+an assertion that every physical current is in the range of Q*.
+
+3. THE CUTOFF COMPANION AND THE EXACT COMMUTATOR
+
+Given H_sigma and K_sigma, define for a scalar cutoff chi
+
+ K_sigma[chi]=chi K_sigma+[D_W*D_W,chi]H_sigma
+                       +F(W,chi H_sigma)-chi F(W,H_sigma). (9)
+
+This is a definition on the independent-current complex domain.
+On any locus where K_sigma=D_W*D_W H_sigma+F(W,H_sigma), it gives
+the exact differential current of chi H_sigma, by expansion.
+In particular it preserves the physical current identity at
+sigma=1 once the true-pair forced-chart match is established.
+It does not require physical equality away from that locus.
+
+The independent audit of work/cut_current_commutator_repair_2026-10-18.txt
+passes. With T_mu the covariant shift, nabla_mu=(T_mu-I)/eta,
+nabla_mu*=(T_mu^-1-I)/eta, a_mu=partial_mu chi,
+b_mu=partial_mu^- chi, the exact identities are
+
+ [nabla_mu* nabla_mu,chi]B
+ =-(partial_mu^- partial_mu chi)B
+                  -a_mu nabla_mu B-b_mu T_mu^-1 nabla_mu B;
+
+ [nabla_mu* nabla_nu,chi]B
+ =a_nu nabla_mu* T_nu B
+  -(partial_mu^- partial_nu chi)T_mu^-1 T_nu B
+  -b_mu T_mu^-1 nabla_nu B;
+
+ nabla_mu* T_nu B
+ =-T_mu^-1 nabla_mu B+T_mu^-1 nabla_nu B-nabla_nu B.
+
+The last identity is valid for noncommuting transports. Summing
+the curl components gives c_d=(2+4tau)(d-1), tau<=5/4, for the
+first- and second-scalar-difference bound. Every field and gradient
+lies in the Chebyshev-one stencil. Therefore, if
+
+ C_chi=sup[|chi|+ell|partial chi|+ell^2|partial^2 chi|]
+
+is bounded on the declared local-scale collar, (9) gives
+
+ |K_sigma[chi]|_{-3} <= C(C_chi)(|K_sigma|_{-3}+N(H_sigma)), (10)
+
+and the corresponding difference estimate for two small H,K at
+the same base. Local analyticity of F gives its Lipschitz estimate
+on the common smaller ball. Weighted versions use only comparability
+of the weight on this fixed stencil. No Laplacian norm of H occurs.
+
+Holomorphy follows from the explicit formulas and the bounded
+contraction. Gauge covariance follows because scalar chi commutes
+with the adjoint action and D_W transforms covariantly. Support
+locality is preserved up to the one-fine-stencil collar. Exact
+separation over decoupled components follows when their declared
+domains include this collar, or when compatible zero boundary
+extension is part of the kernel convention. A collar must not be
+silently omitted if the component convention uses disjoint open
+sets without the necessary local stencil.
+
+4. FIXED-FAMILY BASIC CARRIER CONTAINMENT
+
+Let W=e^{i eta a}U, with U the admitted real regular factor and
+N_U(a)<=a1-m_a, |J|_{-3}<=gamma0-m_J. Use the same U after the
+update and write
+
+ W_new=e^{i eta chi H}W=e^{i eta a_new}U,
+ J_new=J+K_sigma[chi].                                   (11)
+
+On the common small logarithm ball the C^1 BCH estimate gives
+
+ N_U(a_new-a)<=C N_U(chi H).                              (12)
+
+For completeness, the zeroth-order estimate is the usual local
+analytic Lipschitz bound of BCH. Apply the covariant first
+difference to that same analytic map at neighboring bonds. Its
+derivatives have fixed bounds on the smaller logarithm ball;
+the difference of its derivative in the a slot is O(eta|H|).
+Consequently the cross term is bounded after scaling by
+ell^2 eta |H| |nabla a| <= (eta/ell)N(H)N(a), with eta<=ell.
+This proves (12) with no fine-mesh loss. Adjacent hierarchy units
+cost only their fixed L-comparison constant.
+
+Hence (10)--(12) preserve the same basic carrier whenever
+C N(chi H)<m_a and C(|K_sigma|_{-3}+N(H))<m_J. The real factor U
+is unchanged, so its local gauge/regularity premise is unchanged.
+Iterating a fixed number of such updates with a divided margin
+gives holomorphic basic-carrier continuation. There is no product
+over all historical levels. Exponential weighted input profiles
+are retained by the weighted chart bound and local estimates.
+
+5. EXACT SCOPE OF THE REPAIR
+
+What is proved from the actual earlier primitive package:
+  - the affine weak map and its substituted current use bounded
+    current forcing f; they do not need a Laplacian response norm;
+  - the P0^T forcing term has the exact localization identity (7),
+    with an order-zero walk tail and annihilation used only at one;
+  - the cutoff companion has the required C^1/current bounds,
+    holomorphy and gauge covariance;
+  - a fixed finite sequence preserves strict basic K109 margins
+    on one eligible determining family.
+
+What is not obtained merely by these algebraic operations:
+  - eligibility of EVERY later graded determining family for the
+    earlier propagator/averaging package. K10 is uniform over its
+    admitted nested towers. Raw I 42950ff separately assumes the
+    determining-set hypothesis and mixed-level averaging input;
+    adjacent levels differing by one does not prove the R1 M
+    collar hypotheses of the propagator tower;
+  - the true-pair identification of the forced chart on every real
+    geometry and the exact first-slot convention of each T/P/L
+    layer. These need the source variational/gauge match;
+  - derived physical-current conditions such as Q4 or CMP109(iv).
+    These evaluate currents of reconstructed configurations, not
+    just the independent J slot of (11). The earlier basic class
+    expressly does not impose or derive (iv), Raw I 13016ff;
+  - equality to a preselected complex-decoupled differential
+    partner. Equation (9) is a new holomorphic extension with the
+    correct physical endpoint once matched; if replacing the
+    deposited extension, all later analytic consumers must use
+    this extension consistently.
+
+The stronger graph-norm interface is therefore avoidable for the
+located cut-current and basic-carrier consumers. The repaired
+interface is precise enough to test the remaining source geometry
+and composite-current obligations without assuming those away.
+
+6. ADVERSARIAL CHECK: EXACT RAW-ROW PROJECTION
+
+Let R_raw be the coordinate projection onto fixed raw fine bonds
+and M=I-R_raw. Suppose the raw rows of the exact constraint Q are
+the identity on those bonds. For a symmetric constrained Green
+operator T_1, QT_1=0 implies R_raw T_1=0 and, by transpose,
+T_1 R_raw=0. Therefore M T_1 M=T_1. Likewise the exact H_1 has
+raw row ell_0^-1 b_raw, ell_0=eta. The replacements
+
+ T_sigma^new=M T_sigma M,
+ H_sigma^new=M H_sigma+L_raw,
+
+where L_raw is the exact raw-row lift, preserve sigma=1 and have
+the required raw rows for every sigma. If the nonlinear raw
+constraint is the identity, its nonlinear remainder D_raw=0.
+Using these operators in the fixed point gives P_raw=b_raw/eta
+and H_raw=b_raw/eta. Thus b_raw=0 implies H_raw=0 termwise in
+the new complex extension. This algebra is valid.
+
+Preservation of the weak norms requires a multiplier check. The
+exact first-difference formula contains (partial M) shifted(v),
+and partial M can be eta^-1. A sufficient uniform condition is
+
+ every block y whose enlarged norm stencil meets a jump of M
+                         has ell_y <= C eta.              (13)
+
+Then ell_y^2 eta^-1 |v| is bounded by C N_y(v), using the
+comparable local input unit. The localized Holder member also
+has a fixed bound: a sharp one-mesh jump costs eta^-beta,
+paid by ell_y^beta under (13). The exact raw lift is bounded
+by the same argument. Multiplication at an input forcing end is
+harmless in the weight -3 sup norm; right-divergence members
+require the analogous product-rule check in their Holder input
+norms. Support and exponential decay are not enlarged.
+
+Without (13), sharp post-projection is NOT a uniform C^1 map:
+a field of size O(ell_y^-1) cut across one fine mesh produces
+a scaled first derivative O(ell_y/eta). Adjacent-level grading
+alone does not prove (13), since an enlarged coarse observation
+block may reach across several graded layers. The actual tower
+collars may prove it, but they must be used explicitly.
+
+RAW CURRENT COUNTEREXAMPLE. Even exact H_raw=0 does not fix the
+physical current on raw bonds. Work at W=1 in a commuting Cartan
+subalgebra of SU(N), embedded in directions 1,2 of four dimensions.
+Take the raw bond (0,eta e_1) with H_1(0)=0, and let the only
+nonzero nearby field be H_2(eta e_1)=h T. Then
+
+ (D*D H)_1(0)=-nabla_2* nabla_1 H_2(0)=h T/eta^2 !=0.     (14)
+
+At small h the Wilson current has this nonzero linear term;
+equivalently its commuting plaquette formula includes a nonzero
+multiple of sin(eta h)/eta^3. The raw link stays exactly fixed,
+but the adjacent plaquette changes. Taking h=t/eta keeps the
+dimensionless local C^1 norm O(t), while the dimensionless raw
+current changes by O(t). This is an actual local Wilson effect,
+not a complex-decoupling artifact.
+
+Consequently replacing the companion's raw slots by zero cannot
+preserve its literal true-pair endpoint in general. It is valid
+only where the whole current stencil is unchanged, or where an
+additional exact cancellation has been proved. An open raw-current
+ball with no available margin can be exited by an arbitrarily
+small nonzero outward current increment; smallness alone does
+not replace a strict margin. The raw real-background gauge premise
+also is not created by projecting a response.
+
+A different possible redesign would prove that all relevant
+restricted-action consumers are insensitive to raw J, on a tangent
+space whose fields and allowed gauge variations vanish at the raw
+bonds. Then one could freeze an INDEPENDENT raw J slot while
+matching only the restricted action. This is not preservation of
+the full true pair and is not proved by M T_sigma M. It needs a
+separate audit of every current-dependent primitive, gauge term
+and consumer. No global closure is inferred here.

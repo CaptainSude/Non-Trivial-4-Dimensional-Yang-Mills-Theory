@@ -1,0 +1,71 @@
+LOCAL MASK FIRST-SOURCE LOCALIZATION: INDEPENDENT AUDIT
+24 October 2026. audit_two_root. No archive/output edits.
+
+VERDICT: scoped PASS for local_mask_source_localization_20261024,
+Sections1--7. This review imports the already audited complete first
+ordinary convex-product weighted covariance and mean bounds. It does
+not turn the finite reference identity into a polymer expansion.
+
+1. JOINT RARITY
+
+The affine-tilt Poincare argument gives the stated vector sub-Gaussian
+bound. Gaussian integration of its linear moment bound gives(4) with
+factor (1-2s/lambda)^(-mk/2). The s=lambda/4 choice and fixed coordinate
+mean bound yield an exponential cost per DISTINCT large coordinate.
+Witness multiplicity at most B and at most v choices per mask give
+rho^|J| exactly as in(6). No independence is required. The condition
+N sqrt(rho)<=1/4 is stronger than the denominator condition and is
+explicitly retained; this is a finite-box, not fixed-coupling infinite
+volume, argument.
+
+2. THE SMALL STANDARD DEVIATION SURVIVES PROJECTION
+
+Conditioning F on x_T makes the event measurable without changing its
+covariance. Differentiating the fixed complementary product gives(7)
+including its direct derivative. Apply the weighted covariance bound
+to the COMPLETE score gradient, with the weight centered at j. Its
+weighted Hessian column bounds the other factor uniformly. Summing
+the resulting squared derivative over j in T, and using a strict
+spatial exponent reserve, gives(8) with no |T| factor. The full-law
+Poincare inequality applied to f_T(x_T), followed by Cauchy--Schwarz,
+then retains sd(1_A)<=sqrt(nu A). No marginal-Hessian assertion or
+regularity of the event has been substituted for this argument.
+
+3. FINITE SUM AND MARKED READ
+
+Expanding the exact product of success indicators gives(10), with
+the SAME denominator nu(D). For each prescribed marked label j the
+subset sum is sqrt(rho)(1+sqrt(rho))^(N-1), as stated. The union-read
+distance is bounded by the sum of its member-read distances, so the
+incidence and lattice shell bounds imply(11)--(12). Ordering masks by
+source-to-read distance assigns every nonempty subset once and gives
+(13). Fixing the source support and ordering keeps each R_j linear
+and R_j(1)=0.
+
+The resulting R_j still includes all its other subset labels and the
+full reference normalizer. Its numerical one-root distance bound is
+not an assertion that its actual read is only the marked local read.
+The note explicitly retains this distinction.
+
+4. NATIVE MATCH AND ORIGINAL SOURCES
+
+Deduplicated individual P0 plaquettes and individual averaged-contour
+gauge tests have uniformly finite complete first noise reads. Fixed-L
+private-pivot reconstruction must be included; the note includes it.
+If all coordinates in such a read obey the admitted R cutoff, filling
+the other active coordinates by zero proves that this individual test
+passes. This correctly turns whole-product prior-mask admission into
+the local witness implication. The same reference separately yields
+the actual completed product law using site failures. Their difference
+is mu_z-q_z, with the original exterior mass left unchanged.
+
+On the whole containing physical chart the original plaquette source
+has cap C alpha epsilon0^2 and noise gradient sum C alpha g0 epsilon0.
+Substitution in(12) gives(A). The raw-product estimate and the exact
+two-mean subtraction give the covariance comparison in(15); there is
+no omitted contact and no extra rarity factor for a pair.
+
+No correction found. The claimed gain is removal of the active-volume
+prefactor in this smooth-source estimate, plus a marked-read distance.
+Boundary-mask differentiability, actual connected carrier control,
+source-age gain, and original-law later transport remain separate.

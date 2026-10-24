@@ -1,0 +1,204 @@
+INDEPENDENT AUDIT: CONVEX PRODUCT CUTS AND MOVING BOUNDARY RESPONSE
+23 October 2026. audit_two_root. Archive and outputs unchanged.
+
+Reviewed:
+  work/convex_product_moving_boundary_response_20261023.txt, Sections 1--9;
+  work/first_full_omega_mixture_domain_20261023.txt, Sections 1--7.
+
+VERDICT: scoped PASS. No mathematical correction is required in the
+finite theorem or its stated literal first full-Omega application.
+The result is uniform in volume under its full weighted-Hessian and
+small complete-gradient hypotheses. It includes all CURRENT success/
+failure atoms in the specified first full-Omega sector. It does not
+cover the earlier Omega mixture, a general held exterior, later inherited
+channels, or a second-derivative theorem for the next log normalizer.
+
+This audit checks the new arguments rather than treating an earlier PASS
+as a theorem. Existing primitive/minimum estimates are imported only in
+their stated finite native scope; their coordinate/domain registration
+was reread as described below. It is not an independent verification of
+the entire Yang--Mills construction.
+
+1. CONVEX PRODUCTS, PRINCIPAL RESTRICTIONS, AND CONDITIONAL RESPONSE
+
+The covariance argument extends from round factors to arbitrary convex
+factors with the stated common inner ball. In the differentiated Neumann
+problem the boundary curvature operator acts within the site's coordinate
+block. The weight is scalar on that block, so it commutes with this
+operator and preserves its normal/tangent subspaces. Convexity leaves a
+nonnegative boundary term. Smooth convex approximation and finite-integral
+convergence handle corners. There is no assertion about an arbitrary
+nonproduct conditional event.
+
+Fixing some coordinate blocks leaves a convex product and a principal
+Hessian. Weighted accretivity and the absolute row/column estimates pass
+by zero extension. Hence the projected-mean proof of (6) applies to these
+conditional laws. The constant 1+M_nu/c_nu is a valid enlargement of the
+previous sharper square-root constant. No derivative of bounded F is
+used.
+
+For a block j held at z, differentiation of the complete normalized
+conditional ratio gives the minus covariance in (7). For a unit output
+component at i, use W_k=exp[-nu d(i,k)]. The weighted column bound gives
+
+ ||W grad(v.H'_j)||_2 <= M_nu exp[-nu d(i,j)].
+
+This proves (8), with at most a fixed color conversion. The derivative
+and its integrated oscillation hold on the ENTIRE convex B_R range of z,
+including when other factors have already been restricted. For i=j the
+conditional mean is z itself. For bounded local F and j outside its read,
+the same calculation uses (6); if j lies in the read, the elementary
+oscillation bound suffices. Thus (11) is valid, including its uniformity
+in the size of the source read.
+
+2. NO NORMALIZATION LOSS IN THE MEAN BOOTSTRAP
+
+Identity (9) is exact:
+ Q(h|E)-Qh=(1-p)[Q(h|E)-Q(h|E^c)].
+It genuinely has no factor p^{-1}. The law Q at this step already has
+all previous restrictions and its own exact normalizer. Positivity of p
+follows from the inner ball and positive continuous density.
+
+The centered coupled Gaussian on the symmetric full product has zero
+mean by simultaneous x -> -x, without requiring independent sites.
+Weighted covariance during interpolation bounds its change by C_mean b.
+
+For EVERY convex product and every affine tilt, strong convexity remains
+c0. Applying its Poincare inequality to the linear statistic bounds the
+second derivative of the log moment-generating function by |v|^2/c0.
+The centered subgaussian estimate (14) follows directly. This avoids any
+unproved assertion that arbitrary cuts preserve an external log-Sobolev
+constant. The coordinate union bound in (15) is conservative and valid.
+
+At the kth restriction only the previous-stage means are used to bound
+the new bad probability. Since K_j contains B_r, that bad event lies
+outside B_r and is bounded by the weaker outside-B_(r/2) tail. The total
+mean shift to any output site is bounded by the summable kernel times
+epsilon_r, not the number of cuts. Conditions (13),(17) close the induction
+for every finite volume and every order. No circular use of the final
+tail occurs. The local comparison (18) follows by the same telescoping;
+it does not imply closeness of the full product laws in total variation.
+
+3. RADIAL PRESSURE AND THE EXACT NORMALIZED SHAPE TERM
+
+The relevant pressure (19) is radial, not Hausdorff surface measure.
+In radial coordinates the derivative of the endpoint contributes exactly
+q_j^(m-1) dot q_j. No obliqueness or missing normal factor is present.
+
+The complete decomposition H=quadratic+P and the s=0 row bound give
+|grad_j H| <= M_nu R+b. This is not inferred from a Hessian bound while
+silently ignoring a possible linear force. On a shell of thickness
+delta=min(r/2,1/(1+G)), its radial Jacobian is at least 2^{-(m-1)} of
+the boundary one and its density at least exp(-1) of the boundary density.
+The shell lies outside B_(r/2). Its FULL normalized marginal probability
+is bounded by (15), yielding B_j <= C delta^{-1} epsilon_r <= C R epsilon_r.
+No tail conditional on arbitrary other coordinates is needed.
+
+Finite radial integration proves (22) almost everywhere along a Lipschitz
+shape path. It is the derivative of the original ratio, including the
+boundary derivative of the denominator. Uniform inner radius and finite
+volume provide absolute continuity. F must have the stated meaningful
+boundary trace; the actual reconstructed plaquette is smooth on the
+containing chart, so this causes no native difficulty.
+
+The speed dot q_j depends only on the external parameter and direction,
+not on the other noise. It can therefore be left outside the conditional
+integration in those other noise variables. The centered boundary source
+is bounded by the oscillation of the normalized conditional mean from
+(11). Multiplication by the radial pressure gives (23), including the
+R^2 epsilon_r cost. The interior covariance and direct source derivative
+remain in (24). Additive action constants cancel only in the covariance;
+this calculation does not discard their outer mass.
+
+4. CONVOLUTION CONSTANTS AND SEPARATED TANGENTS
+
+The convolution in (29) has no hidden |S| factor before Cauchy--Schwarz.
+For eta<eta'<min(nu,mu), triangle inequality gives
+
+ sum_b exp[-nu d(b,S)-mu d(b,q)]
+ <= exp[-eta' d(q,S)]
+       sum_b exp[-(nu-eta')d(b,S)-(mu-eta')d(b,q)]
+ <= C exp[-eta' d(q,S)].
+
+The last sum is bounded by the kernel centered at q alone. Pairing with
+the weighted tangent and summing exp[-2(eta'-eta)d(q,S)] costs at most
+C|S|. This proves the displayed sqrt(|S|) factor. All first-step metric
+and lattice-measure conversions are fixed L-dependent constants.
+
+Consequently the boundary response is spatially localized with its
+explicit g0^{-1} R^2 epsilon_r factor. This term is not simply omitted
+because the boundary has small probability. For fixed-size original
+plaquette reads it is correctly absorbed into L_p^Omega in (31).
+
+5. NATIVE DOMAIN, COMPLETE ACTION, AND ORIGINAL SOURCE MATCH
+
+The exact full-Omega mixture identity is required: sum the current raw
+partition of unity, undo branch-dependent switches in both density and
+source, and integrate the former retained current coordinates. This
+reproduces the single prepartition integral. It is not a sum of separately
+normalized ordinary means. The original coarse/full-Omega mass and other
+Omega records remain outside this conditional law.
+
+The B119 (1.8)--(1.15) free-coordinate ledger, previously checked against
+the primary pages, makes each old mask a factor in ONE independent free
+bond. C is identity there and the nonlinear straightening changes only
+deleted pivots. Thus the product structure is actual. The principal-log
+component is essential and is stated explicitly; periodic exponential
+copies are not integrated.
+
+The SU(2) convexity proof in the domain note is Euclidean in the actual
+log coordinates, rather than an inference from geodesic convexity.
+The displayed Hessian bounds for cos|x| and sinc|x| imply D^2F_v <= -I/2
+on the stated small ball. Triangle inequality confines the entire actual
+principal set to that ball. Its intersection is convex, and the inner/
+outer radius estimates follow from the same group distance. The radial
+formula (10), denominator bound (12), and D_vF=O(rho) give a uniformly
+bounded center derivative. Taking the minimum over actual centers gives
+Lipschitz radial boundaries, including at changing active centers.
+
+I reread B119 printed246 (1.2),(1.3): the local comparison minimum is on
+the actual B1(D'~4) array, and Q* copies a coarse bond only to its incident
+fine cross-bonds while the within-block bonds are identity. Combining
+this finite input map with the registered CMP102 Proposition9/(190)
+derivative on that actual array gives the localized local-minimum response.
+The global minimum has the corresponding first-array response. The same
+fixed first-step block axial representatives and complete return blocks
+are needed, as stated in Section7; an independent gauge choice would not
+prove this assertion. The exact relative product/log derivative keeps
+BOTH minimum derivatives. No derivative estimate is inferred from the
+small scalar value of their difference. This verifies the stated native
+radial speed in (28), within the same strict first near-flat family.
+
+I also reread primitive_hessian_audit_20261022 Section3 and the complete
+background producer. Their analytic estimate holds on the full 4R
+product after ALL fixed small-input/chart conditions have been imposed,
+not only at successful noise values. One noise Cauchy estimate on the
+positive rooted cap Cg0(R+R^3) gives b <= Cg0(1+R^2). The two-derivative
+bound is Cg0(R+R^{-1}); the actual quadratic gap and a smaller spatial
+weight therefore survive the whole interpolation D+sP. Since R/r is a
+fixed constant, g0 R small and r large establish the two bootstrap
+conditions. There is no retained current exterior force or inherited
+E/R/B in this literal first complete integration.
+
+The background score (30) uses the complete physical action. Its auxiliary
+independent-coefficient extension subtracts the entire linear jet that
+vanishes on the physical critical graph, and includes variations of C
+and J. The original trace and its complete finite free/background reads
+are retained, with the present physical multiplier c_a. The direct source
+derivative is included. Changing convex factors does not change these
+pointwise derivative estimates on the fixed containing product. Hence the
+locally Lipschitz first-mixture source conclusion (31) is justified.
+
+6. PRECISE LIMITS OF THIS PASS
+
+The theorem requires the complete centered action and its small block
+gradient on the whole containing product. A later held history can create
+a linear force of order R and need not satisfy this requirement. Convexity
+alone is not a substitute for the mean bootstrap hypotheses.
+
+The moving intersections may have true parameter corners. The proof gives
+an almost-everywhere derivative and its integrated Lipschitz bound, not
+analyticity or a uniform second derivative of log Z_Omega. The next coarse
+law still has to retain and control this exact normalizer. Neither the
+earlier Omega mixture nor the next-step complete coercivity is proved by
+this result. These limitations are correctly retained in the producer.

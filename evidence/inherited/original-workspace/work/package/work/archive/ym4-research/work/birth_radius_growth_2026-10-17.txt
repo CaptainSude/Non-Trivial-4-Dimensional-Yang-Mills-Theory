@@ -1,0 +1,438 @@
+ACTUAL HOMOGENEOUS BIRTH-RADIUS GROWTH AND A NONLINEAR CURRENT BOUND
+17 October 2026. Proof module; source-locality conversion is separated below.
+
+RESULT
+
+The ordinary homogeneous minimizer has a uniformly bounded nonlinear
+physical Wilson current on its fixed coarse potential ball. With the
+explicit uniform-fraction source-domain inclusion hypothesis below, a
+source (U,J)-functional with shrinking radii specializes to a true
+current-link product ball of comparable radius, not just a formal germ.
+The exact retained chart, expressed before rooting the stationary
+background, consumes at most C_L g R_cut of that radius and contracts
+the external stationary angle by C0/L. This proves the proposed radius
+recurrence when C0/L<1. The primitive inequality C0/L<1 is not contained
+in the existing estimates: C0 is uniform in an endpoint ratio, but can
+depend on the primitive ratio. Section 5 proves a fixed finite-block
+remedy for the composed homogeneous chart maps, modulo a controlled
+holomorphic gauge. Matching those maps to a specific restricted source
+kernel requires the exact covariance/iteration ledger stated below.
+No separate quantum integrals are replaced by a large-ratio integral.
+
+1. PRECISE IMPORTS FROM THE EXISTING HOMOGENEOUS THEOREMS
+
+All graphs below are finite compatible periodic regulators. The primitive
+odd ratio ell, group, physical trace metric and Holder exponent are fixed.
+M=ell^k is arbitrary; constants are independent of M and periodic volume.
+Fine physical spacing is eta=M^{-1} when the prescribed coarse spacing
+is one. Complex transposes use the physical bilinear pairings.
+
+For the corrected constraint F(A)=QA+R(A), Notebook 15 provides:
+
+  F(A_*(B))=B,  ||A_*(B)||_{N_alpha}<=C||B||_infinity;
+  ||D F(A)^T||_{infinity->infinity}<=1+C||A||_infinity;
+  ||m(A,B)||_infinity<=C(||B||+||A||_{N_alpha}^2),            (1.1)
+
+on one fixed complex B ball. Here m is the exact multiplier defined in
+work/nonlinear_fixed_gauge_minimizer_fragment.tex, nm-multiplier, and
+the transpose estimate is nm-adjoint-composite. The formula is
+
+ m=(I+H^T D R(A)^T)^{-1}
+                 {q[B-R(A)]+H^T N(A)},                   (1.2)
+
+where E(A)=KA+N(A) is the ordinary-potential Wilson Euler derivative.
+No pointwise bound on N(A) alone is used or assumed.
+
+The tangent decomposition in work/nonlinear_gauge_slice_research.tex,
+ng-tangent-decomposition, proves stationarity on the full corrected
+constraint, not only on its gauge slice. The ordinary representative is
+U_ord(B)=U_*(B)^{h_*(B)}, where h_* and its inverse are holomorphic
+and bounded in supremum norm on a uniform ball (ot-ordinary-representative).
+
+For an endpoint ratio R=ell^s, the actual ordinary prefix P_{M,R}
+of the MR-refined minimum satisfies, with a=log P_{M,R}(exp(iw))/i,
+
+  ||a||_infinity<=C0 ||w||_infinity/R,
+  ||Delta a||_infinity<=C0 ||w||_infinity/R^2.              (1.3)
+
+These are pgh-scale-bounds in work/pregauge_holder_prefix_fragment.tex.
+Its full complete-field holomorphy and coherent strict support expansion
+are pgh-angle-norm and pgh-family-bound. C0 is uniform in M,R,volume
+for the fixed primitive ell. It is not asserted uniform in ell.
+
+2. NEW NONLINEAR CURRENT ESTIMATE
+
+PROPOSITION 1.
+Let J_phys(U) be the physical left Wilson Euler current: variations
+U(t,e)=exp(i eta t v(e))U(e) satisfy
+
+  d/dt S_eta(U(t))|_0=<J_phys(U),v>_eta.                    (2.1)
+
+This is the curvature-divergence current in the source specialization,
+with its fixed convention factors retained. On a fixed complex coarse
+ball, the ordinary minimum obeys
+
+  ||J_phys(U_ord(B))||_infinity<=C||B||_infinity,            (2.2)
+
+uniformly in refinement and volume. This current is a holomorphic
+map into fine supremum norm. Its first variation at zero is KH_ord,
+as used in Notebook 41, but (2.2) is nonlinear.
+
+Explicitly, use S_eta(U)=eta^(d-4) sum_p[1-tau(P_p+P_p^-1)/2],
+one unoriented plaquette once, and <v,w>_eta=eta^d sum_e tau(v_e w_e).
+For each incidence of a positive bond e in a plaquette, orient that
+plaquette boundary and cyclically base it so its first edge is e, and
+call its holonomy P_{p,e}. Then the analytically continued current is
+
+  J_phys(U)(e)=eta^-3 sum_{p incident e} pi_g Im P_{p,e},
+  Im P=(P-P^-1)/(2i).                                    (2.2a)
+
+Repeated periodic incidences are counted with multiplicity. Here pi_g
+is the orthogonal Lie-algebra projection in the normalized trace metric,
+complexified for analytic fields. The variational identity (2.1) fixes
+the convention even on graphs with repeated incidence. In d=4 the
+coupling-free action has no remaining eta prefactor.
+
+Proof. On a real finite regulator, full constrained stationarity and
+surjectivity of D F(A_*) imply E(A_*)=D F(A_*)^T lambda for a
+unique coarse multiplier lambda. Surjectivity follows from the explicit
+right inverse H_A=H(I+D R(A_*)H)^{-1}. Apply H^T to this equality.
+Since QH=I, H^T K A_*=q[B-R(A_*)], and E=KA_*+N(A_*), the
+result is exactly (1.2). Thus lambda=m(A_*,B), and
+
+  E(A_*(B))=D F(A_*(B))^T m(A_*(B),B).                   (2.3)
+
+Both sides are holomorphic in B on the common ball. Equality on the real
+ball therefore proves (2.3) for complex B. Equations (1.1) and the
+minimizer bound give ||E(A_*(B))||_infinity<=C||B||.
+
+Let T_X be the left logarithmic differential of the exponential, defined
+by d/dt exp(i(X+tY))|_0=i T_X(Y) exp(iX). The change from potential
+variation A+t v to (2.1) gives
+
+  E(A)=T_{eta A}^T J_phys(exp(i eta A)).                  (2.4)
+
+T_X and its inverse are uniformly bounded on a fixed small complex
+matrix ball, independently of eta<=1. Applying the inverse transpose
+proves the current bound for U_*. Under the ordinary gauge transfer,
+the current is conjugated at its basepoint. The bounded holomorphic
+gauge h_* and inverse change its supremum norm by only a fixed factor.
+This proves (2.2), including the uniform holomorphic norm. QED.
+
+This argument is not a false estimate of a rough outside divergence.
+It obtains its cancellation from the exact Euler equation before taking
+the supremum. No uniform second derivatives of the fine potential were
+needed. At each finite graph all tangent directions are legitimate
+directions inside an open norm ball after shortening the parameter;
+the full-constraint stationarity is enough for the finite-dimensional
+multiplier argument.
+
+HYPOTHESIS UF (uniform-fraction source-domain inclusion).
+For the particular family of radii alpha0,alpha1 under consideration,
+source conditions (i)--(iii), with each radius decreased by a fixed
+factor c_src>0, imply the full reconstructed subdomain condition (iv).
+The same c_src works as those radii shrink and for every relevant
+homogeneous local restriction. This is an additional uniformity input:
+the fixed-radii smaller-constant statement in CMP109 and Notebook 41
+does not alone prove it for an arbitrary shrinking-radius family.
+
+COROLLARY 2 (conditional source specialization on a comparable ball).
+Suppose a source local functional R_X(U,J) is holomorphic and bounded
+by A_X on its stated source domain with radii alpha0,alpha1, and UF
+holds. Then
+
+  f_X(B)=R_X(U_ord(B),J_phys(U_ord(B)))                    (2.5)
+
+is holomorphic and bounded by A_X on the FULL coarse-link product ball
+
+  ||B||_infinity<r,  r=c min(alpha0,alpha1,b_*),            (2.6)
+
+where c>0 is uniform in M, X and compatible volume. Required collars
+are restrictions of the same global minimizing field.
+
+Proof. The existing ordinary potential bound controls its physical C1
+norm by C||B||. Elementary plaquette multiplication gives
+||U(dp)-I||<=C eta^2(||B||+||B||^2). Proposition 1 controls the
+independent current condition after specialization. For complex fields
+take real reference configuration I and the small complex potential
+as the complex perturbation. A fixed choice of c puts these bounds
+strictly inside the smaller source conditions. The stated source
+inclusion supplies the reconstructed subdomain conditions. Composition
+is holomorphic and the source bound applies. QED.
+
+The source domain invocation is CMP109 pp262--263, (1.10)--(1.16),
+with its smaller-constant paragraph; the radii for the later class are
+CMP119 (2.28). This corollary applies to a local R_X restricted from a
+global homogeneous field even when X is an arbitrary source polymer.
+It does not prove a mixed-boundary minimizing-field theorem, or strict
+locality of f_X as a function of B. The global minimizer generally reads
+B outside X. The latter locality must be obtained by a quantitative
+localization/support argument before invoking a prepared-potential norm.
+
+3. AN EXACT NOISY HOMOGENEOUS FIBER CHART WITH RADIUS GAIN
+
+For this section let L=ell be one primitive step. Put
+V_pre(w)=P_{M,L}(exp(iw)), a_pre=log V_pre/i. Root this current
+background by its actual block contour mean:
+
+  h(w)(x)=P_{V_pre(w)}(y,x), x in the block centered at y,
+  h(w)(y)=I,  V_rt=V_pre^{h(w)}.                          (3.1)
+
+Then P_{V_rt}(y,x)=I and M_L(V_rt)=exp(iw). The block size L is
+fixed; the contour functions and h,h^{-1} are bounded holomorphic
+maps on a sufficiently small w product ball, uniform in M and volume.
+The source retained chart of Notebook 19 is
+
+  U_rt(w,z)=exp(i Phi_{V_rt(w)}(g z)) V_rt(w),             (3.2)
+
+with all retained coordinates z unchanged by pivot straightening.
+For ||z||_infinity<=R_cut, it obeys the exact coarse constraint and
+||Phi_{V_rt}(gz)||_infinity<=C_L g R_cut. Undo the SAME background
+gauge h(w), independently of z, and set
+
+  B(w,z)=log(U_rt(w,z)^{h(w)^{-1}})/i.                    (3.3)
+
+PROPOSITION 3 (actual chart radius consumption).
+There exist b_cap>0, rho_L>0 and fixed C0,C_L such that B is
+holomorphic on ||w||<b_cap, ||g z||<rho_L, satisfies B(w,0)=a_pre(w),
+and
+
+  ||B(w,z)||_infinity <= C0||w||_infinity/L
+                                      +C_L g R_cut.      (3.4)
+
+It has the prescribed ordinary coarse average exp(iw). Thus a scalar
+current functional f holomorphic on ||B||<r can be read in this actual
+chart throughout a next-scale ball ||w||<r' whenever
+
+  r'<=b_cap,  (C0/L) r'+C_L g R_cut<r.                   (3.5)
+
+The integrand inherits the same supremum bound as f.
+
+Proof. Exact equivariance and h(y)=I at coarse endpoints give the
+constraint. At zero fluctuation the gauge is undone exactly. More
+explicitly, the group field in (3.3) equals
+
+  exp(i Ad_{h(w)(e_-)^{-1}} Phi_{V_rt(w)}(gz)(e))
+                                             exp(i a_pre(w)(e)).
+
+On a smaller common chart the difference between its logarithm and
+a_pre has norm at most C times the first exponent. The bounded gauge
+adjoint and the finite-range retained-chart estimate prove (3.4).
+The first term in (3.4) uses the actual nonlinear estimate (1.3),
+not a linearization. Formula (3.5) is then direct composition. QED.
+
+The rooted stationary background itself need not have the C0/L angle
+bound: rooting can concentrate angles on crossing links. The undoing
+in (3.3) is essential. Scalar gauge invariance permits this exact change
+for the inherited functional; the gauge fixing weight, covariance and
+measure factors remain those of the actual rooted integration. No
+claim is made that a gauge-dependent interaction can be moved this way.
+
+A finite-cutoff integral of such an integrand is holomorphic in w when
+its remaining factors are holomorphic and have a finite common majorant.
+Its logarithm requires an additional zero-free or convergent-cluster
+argument. Proposition 3 proves the domain inclusion, not that logarithm
+bound or a localized activity norm.
+
+4. ITERATING THE RADII DURING A SHORT STARTUP
+
+Suppose a fixed step or verified fixed-block chart has a bound
+
+  ||B(w,z)||<=theta ||w||+e_j,  0<theta<1.                 (4.1)
+
+Choose 1<lambda<theta^{-1} and mu=1-theta lambda>0.
+If e_j<=mu r_j/2, then the choice
+
+  r_{j+1}=min(lambda r_j,b_cap)                            (4.2)
+
+lies strictly inside the old radius. Starting from r_i, a fixed ball
+is reached in at most 1+log(b_cap/r_i)/log lambda steps. There is a
+uniform fractional margin at every startup step, so Cauchy estimates
+in the normalized field variable B/r_j incur fixed constants rather
+than a new inverse power of g_i at each step.
+
+To verify the noise budget on a bootstrap prefix, suppose
+gamma_j=g_j^{-2}, |gamma_{j+1}-gamma_j|<=D and the startup length is
+at most c0+c1 log(1/g_i). For a sufficiently weak ceiling,
+
+  gamma_i/2 <= gamma_j <= 3gamma_i/2
+
+through this startup, since D(c0+c1 log(1/g_i))<=gamma_i/2.
+Hence g_j and g_i, and their large logarithms, are comparable there.
+If r_i=c g_i(log g_i^{-2})^q and e_j<=C g_j(log g_j^{-2})^p with q>p,
+then e_j/r_i tends uniformly to zero as g_i tends to zero. The whole
+startup noise budget follows, because r_j>=r_i. If q=p, a sufficiently
+large available initial radius constant can instead suffice; it must
+fit the actual source radii in (2.6). If q<p, this argument does not
+establish even its first step.
+
+The source statement that q0,q1>1 does not by itself verify q=min(q0,q1)>p.
+That source parameter compatibility must be checked or explicitly chosen
+within its allowed parameter order. Nor may the bounded-increment
+bootstrap hypothesis above be replaced by mere weakness g_j<=g_*.
+
+5. A FIXED FINITE-BLOCK NOISY CHART GAIN
+
+The bound C0/R in (1.3) is uniform in endpoint R=ell^s. Choose once
+and for all q with ell^q>2C0. Write F_M(w,t) for Proposition 3's
+nonrooted angle map with t=g z. On smaller fixed balls F_M is
+holomorphic, F_M(w,0)=a_{M,ell}(w), and
+
+  ||F_M(w,t)-F_M(w,0)||<=C_ell||t||,
+  ||D_w F_M(w,t)||_{infinity->infinity}<=C_prim.            (5.1)
+
+The second bound follows by Banach Cauchy on the fixed outer product
+ball, using the first bound and (1.3); neither bound counts coordinates.
+Their constants are independent of M and volume.
+
+PROPOSITION 4 (actual finite-block field-domain gain).
+For every fixed finite q there are b_q,rho_q,C_q>0, independent of
+M and compatible volume, and a holomorphic background-only gauge
+gamma_{M,q}(w), with gamma and inverse uniformly bounded, such that
+the exact sequential chart substitution
+
+  B_{M,q}(w;t)=F_M(F_{M ell}(...F_{M ell^(q-1)}
+                             (w,t_{q-1})...,t_1),t_0)
+
+has a gauge-equivalent representative
+
+  tilde B_{M,q}(w;t)=log[(exp(i B_{M,q}(w;t)))^
+                                         gamma_{M,q}(w)]/i
+
+holomorphic on ||w||<b_q, max_a||t_a||<rho_q, and obeying
+
+  ||tilde B_{M,q}(w;t)||
+              <=(C0/ell^q)||w||+C_q max_a||t_a||.         (5.2)
+
+All q chart variables remain present. In particular t_a=g_{i+a}z_a is
+allowed with ||z_a||<=R_cut(g_{i+a}). The proposition is a theorem
+about the specified chart composition. Its use for a particular nested
+source kernel has the additional exact matching condition below; it is
+not an identification with a single-step quantum integral at ratio ell^q.
+
+Proof. Since q is fixed, shrink the final w and noise balls so all
+intermediate F maps remain inside the fixed balls of (5.1). Telescope
+the compositions, changing one t_a at a time. The mean-value integral
+on the complex convex input ball and (5.1) give
+
+  ||B_{M,q}(w;t)-B_{M,q}(w;0)||
+                 <=C_ell sum_{a=0}^{q-1} C_prim^a||t_a||.
+                                                               (5.3)
+
+The zero-noise composition is an actual iterated ordinary classical
+prefix. The two-minimum comparison of Notebook 31, csg-comparisons,
+identifies it modulo gauge with P_{M,ell^q}(exp(iw)). We need an
+analytic choice of that gauge, not merely its pointwise existence.
+The proof there constructs it by the ordinary-to-corrected transfer
+ot-ordinary-to-corrected, the flow ng-flow into the fixed slice, and
+the inverse transfer from the common strict slice minimizer. All
+algebraic transfer maps are uniformly holomorphic. The flow has a
+holomorphic vector field on the complex X_alpha ball and retains the
+exact identity R0 D^T A(t)=exp(-t)R0 D^T A(0). The absolute estimate
+||A'(t)||_{X_alpha}<=C exp(-t)||R0 D^T A(0)||_{Y_alpha}
+therefore holds on a smaller complex ball as well. Continuation keeps
+the solution there for all t>=0; the uniform integrable speed gives
+a holomorphic limit. Its generating scalar gauge has the corresponding
+integrable Z_alpha bound, so its gauge ODE and inverse converge uniformly
+and holomorphically, with gauge minus identity O(||A(0)||).
+
+Apply these explicit maps to the finitely many comparisons on the same
+fine graph. The fixed ratio rescalings in csg-rescaling only change
+constants depending on q and ell. This constructs gamma_{M,q}(w),
+holomorphic and bounded on a common b_q ball, with gamma(0)=I and
+gamma-I=O_q(||w||), uniformly in M and volume. On the real ball the
+minimum equality identifies the transformed fields. The identity
+theorem extends that identity to the common complex ball:
+
+  (exp(i B_{M,q}(w;0)))^gamma=P_{M,ell^q}(exp(iw)).
+
+Apply the SAME gamma(w), independently of all t_a, to the noisy field.
+The group action and logarithm have a uniformly bounded derivative in
+the old angle variable on a smaller fixed ball: gamma, its inverse and
+all edge products stay uniformly bounded there. Thus (5.3) remains
+bounded by C_q max_a||t_a|| after gauge transformation. Its zero-noise
+value has norm at most C0||w||/ell^q by (1.3). This proves (5.2).
+QED.
+
+Consequently the startup recurrence of Section 4 holds at q-step
+endpoints with theta=C0/ell^q<1/2 and
+e_i=C_q max_{0<=a<q} g_{i+a}R_cut(g_{i+a}), provided its explicitly
+stated noise/radius hypotheses hold. This removes the ambiguity in
+the primitive constant C0/ell; it does not resolve the source radius
+hierarchy or UF.
+
+Gauge invariance is used for the inherited scalar functional only.
+The source (U,J) domain is interpreted as its gauge-covariant orbit
+domain; equivalently continue the scalar through the explicit small
+gauge charts. A bounded analytic representative on a B-ball, without
+this gauge invariance/domain compatibility, does not suffice. No
+gauge-dependent covariance, cutoff, insertion or Jacobian is discarded.
+
+EXACT KERNEL COMPOSITION LEDGER (conditional source matching).
+Suppose the actual one-step operator, with the specified retained
+sector, has for every gauge-invariant scalar input f the identity
+
+  (K_j f)(w)=int a_j(w,z) f(F_{M_j}(w,g_j z)) dz,          (5.4)
+
+and K_j f is gauge invariant. The weight a_j includes ALL original
+rooted gauge factors, measures, Jacobians, cutoffs and normalizations.
+The one-step identity unroots only the argument of f and is exact by
+scalar gauge invariance. Assume all intermediate arguments lie in its
+domain. Then iterating (5.4) gives the composed F fields of Proposition 4
+with the weights evaluated at the successive actual coarse arguments:
+for two steps the weight is a_{j+1}(w,z_1)
+a_j(F_{M_{j+1}}(w,g_{j+1}z_1),z_0). This follows by applying (5.4)
+first to the invariant scalar K_j f and then inserting its identity.
+No gauge has been commuted through an earlier weight. Finite-cutoff
+Fubini, when its common majorant holds, gives the corresponding nested
+integral identity. The final comparison gauge changes only f's value.
+
+The needed preservation of gauge invariance must include the chosen
+retained restriction. Full conditional gauge covariance alone does not
+prove covariance of an arbitrary extra cutoff. This matching condition
+has NOT been derived here for every retained or mixed source sector.
+For the original regular source kernel it is stated explicitly in
+CMP109 p269, (2.16) and the adjacent paragraph: all factors and the
+measure transform covariantly, B'(b) is conjugated locally at b_-,
+and the characteristic function is invariant under that orthogonal
+real transformation. An invariant scalar insertion preserves the same
+identity. A replacement retained-link cutoff prod_b 1{|B'(b)|<gR}
+also preserves this argument if |.| is the invariant trace norm and
+the retained bond set is unchanged. Extra restrictions still need their
+own covariance check. These are identities for the original regular
+homogeneous kernel and its specified radial-cutoff variant, not a proof
+of the full marked RG iteration or all mixed-sector geometry.
+The geometric bound (5.2) itself does not need this condition.
+
+Primary source checked directly:
+T. Balaban, CMP109 (1987), 249--301, DOI10.1007/BF01215223,
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+
+6. THE ACTUAL REMAINING PREPARED-NORM CONVERSION
+
+Finally, (2.6), (3.5), and (4.2) are FIELD DOMAIN facts. A prepared
+fluctuation-potential norm also requires localization, anchored sums,
+collar losses, current specialization, and any subtraction of the saddle
+value. The elementary pointwise bound for one term is
+
+  |f_X(B(w,z))-f_X(B(w,0))|<=2 A_X,                       (6.1)
+
+or, when (3.5) leaves a fractional old-radius margin,
+
+  |f_X(B(w,z))-f_X(B(w,0))|
+                           <=C A_X g R_cut/r_j.           (6.2)
+
+Equation (6.2) is Banach Cauchy along the fluctuation difference inside
+the old current product ball. Its constant has no fine-dimensional
+count. Deriving the SOURCE PREPARED-POTENTIAL norm from it needs a
+strict or localized support decomposition of the specialization and
+the exact source geometric summations. The source (U,J) localization
+does not automatically become strict locality in its current B field.
+
+After the startup, a fixed-radius invariant E class could use the
+published age-decaying fluctuation-potential estimates and a one-step
+cluster Lipschitz bound. That last route must treat regenerated marginal
+coefficients and their running-coupling feedback. The new propositions
+here prove the nonlinear homogeneous current bound and the actual
+one-step and fixed-block field-radius inequalities; they do not yet prove a
+scale-uniform marked cluster recursion or four-dimensional existence.

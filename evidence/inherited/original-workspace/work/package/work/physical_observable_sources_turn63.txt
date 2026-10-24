@@ -1,0 +1,485 @@
+PHYSICAL OBSERVABLE SOURCES AND A TRANSPORT-FREE QUADRATIC PROBE
+TURN63 -- 20 October 2026 -- tail47
+
+RESULT
+
+There is a concrete alternative to the thin transported-curvature
+probe: spatially flow each time slice, form a gauge-invariant local
+MAGNETIC curvature square, smear that scalar, and take a bounded
+positive exponential. No color connector between different points
+appears in this definition.
+
+The finite-lattice gauge invariance and positive-time support are exact.
+The free Maxwell benchmark is well defined and has a strictly positive
+centered reflection covariance, with an explicit determinant lower
+bound proved below. This is a viable target for an actual original-law
+comparison, not a proved interacting comparison or YM4 construction.
+
+There is also a precise obstruction to the simpler unflowed proposal.
+In four-dimensional free Maxwell theory, centering the ordinary
+regularized action-density square does NOT remove its self-variance:
+it diverges as epsilon^-4 after a fixed smooth spacetime smear.
+The separated reflected covariance nevertheless has a finite positive
+limit. Multiplicative normalization sufficient to bound that variance
+kills the separated covariance. Thus ordinary L2 tightness of this
+centered random square is the wrong requirement for that unsmoothed
+probe. This statement does not deny the operator-valued Wick composite
+or renormalized separated Schwinger functions. In fact Section3A
+proves that compactly regularized squares form a nonzero OS-Cauchy
+family in the free theory. The unsmoothed scalar route therefore
+remains viable at the level of reflection reconstruction, although
+its actual interacting Schwinger-function estimates are unproved.
+
+1. PRECISE PRIMARY SOURCES AND THEIR LIMITS
+
+[S] K. Sakai and S. Sasaki, Glueball spectroscopy in lattice QCD
+using gradient flow, Phys.Rev.D107(2023)034510.
+ https://arxiv.org/pdf/2211.15176
+ https://doi.org/10.1103/PhysRevD.107.034510
+
+The arXiv PDF SectionII.B, PDF page4, Eqs.(3)--(4), defines the
+spatial flow using only spatial links and spatial Wilson plaquettes.
+SectionIII constructs spatial loop operators. SectionsV--VI give
+numerical correlators and continuum extrapolations. These are useful
+definitions and numerical evidence; they do not prove cutoff-uniform
+nonperturbative flow renormalization or a continuum existence theorem.
+Its AppendixA analyzes the relation with stout smearing. No theorem
+from numerical extrapolation is used below.
+
+[T] M. Luscher, Construction of a selfadjoint, strictly positive
+transfer matrix for Euclidean lattice gauge theories,
+CMP54(1977)283--292, DOI10.1007/BF01614090.
+Primary author/institute copy:
+ https://bib-pubdb1.desy.de/record/396349/files/7611148.pdf?version=1
+
+SectionII.A describes the equal-time gauge Hilbert space; SectionII.B,
+Proposition1, gives the positive transfer matrix. I read the primary
+proposition and its character-expansion positivity argument. A bounded
+gauge-invariant function of one spatial slice acts by multiplication.
+Composing that function with a measurable equivariant map of the same
+slice changes the observable, not this transfer matrix. The exact RP
+consequence needed here is also proved directly in Section2.
+
+[W] M. Luscher, Properties and uses of the Wilson flow in lattice QCD,
+JHEP08(2010)071, arXiv:1006.4518v3.
+ https://arxiv.org/pdf/1006.4518
+
+Equation(1.4), PDF page2, and its following paragraph give finite-lattice
+existence, uniqueness and smoothness of the flow. Compactness of the
+finite product group gives the same elementary ODE conclusion for
+the spatial action. This is not a uniform estimate in the continuum
+limit: the dimension and physical flow time in lattice units grow.
+
+[LW] M. Luscher and P. Weisz, Perturbative analysis of the gradient
+flow in non-abelian gauge theories, JHEP02(2011)051.
+ https://arxiv.org/pdf/1101.0963
+
+The abstract and Section7, PDF pages20--23, prove finiteness to all
+orders of renormalized perturbation theory for the FOUR-dimensional
+flow. Section8.2, PDF page24, treats its gauge-invariant composites
+and their small-flow-time expansion. The proof uses the full flow
+and the usual underlying theory renormalization. It is neither a
+nonperturbative estimate against the tuned original Wilson laws nor
+an automatically applicable theorem for spatial-only flow. Section8.1
+also distinguishes the singular zero-flow limit from positive flow.
+
+This targeted search found no primary theorem supplying the missing
+full-law spatial-flow comparison for our tuned YM4 sequence. That is
+a report about the sources inspected, not a literature-wide assertion.
+
+2. AN EXACT ORIGINAL-LATTICE OBSERVABLE
+
+At lattice spacing a, let V^s_i(t,x;U) be the spatial Wilson flow
+of the ORIGINAL spatial links at physical flow time s>0. Its lattice
+flow parameter is s/a^2. Each time slice is evolved independently,
+using its spatial plaquette action. Initially V^0_i=U_i.
+
+On any finite spatial torus this is a globally defined smooth ODE
+on a compact product of groups. For arbitrary site gauge maps
+g(t,x), the spatial action and force are equivariant. Uniqueness
+therefore gives
+
+             V^s(U^g)=V^s(U)^g.                         (2.1)
+
+Time reflection commutes with the flow because it merely permutes
+the independent time-slice equations. In particular a function of
+flowed fields at t>0 is a function of ORIGINAL links at t>0.
+There is no flow across the reflection plane.
+
+For SU(2), put
+
+ h(P)=1-(1/2)Re Tr P,
+ Q_(a,s)(f)=8 sum_x f(ax) h(P^s_12(x)),
+ B_(a,s,u)(f)=exp[-u Q_(a,s)(f)],                         (2.2)
+
+where f>=0 is smooth with compact support in t>delta>0 and u>0.
+The plaquette P^s_12 is entirely spatial. Thus Q>=0 and
+0<B<=1 for every original field. Both are gauge invariant without
+any color alignment, gauge fixing, or thin connecting line.
+
+On the usual finite geometry admitting the Wilson time reflection,
+
+ E[(theta B)B]-(E B)^2 >=0.                              (2.3)
+
+Proof: B is a bounded element of the original positive-half algebra.
+Apply original Wilson RP to B-E B. The deterministic flow has not
+changed the measure. Equivalently it produces a bounded slice
+multiplication operator in the original transfer-matrix Hilbert space.
+
+The normalization in(2.2) is the natural CONNECTION convention:
+if U_i=exp[i a mathcalA_i^c sigma_c/2], then
+
+ h(P_12)=a^4 |mathcalF_12|^2/8+o(a^4),
+ Q_(a,s)(f) -> integral f |mathcalF^s_12|^2              (2.4)
+
+on smooth classical fields. If mathcalA=g_* A in a Gaussian reference,
+that reference quadratic observable is g_*^2 times the canonical
+one used below. It is equivalent to replace u by u g_*^2.
+
+No division by the bare g_a^2 is silently made. Along an interacting
+tuned trajectory, matching the natural flowed connection to a
+canonical field and the coupling at scale s^-1/2 is a renormalized
+physical comparison. A bare-field Taylor expansion does not prove it.
+
+Spatial support requires a separate qualification. Full spatial flow
+depends on the whole time slice. Finite-volume RP remains exact.
+Flow restricted to a spatial box also preserves gauge equivariance
+and time support, but has a different boundary-dependent Gaussian
+kernel. The whole-space benchmark below is not automatically the
+benchmark for that box. Passing to a spatial thermodynamic limit or
+obtaining a uniform influence-tail estimate is an additional task.
+
+3. WHY CENTERING THE UNFLOWED ACTION DENSITY IS INSUFFICIENT
+
+Here is a fully explicit Gaussian calculation. Take n independent
+canonical Maxwell colors on R4. Curvature is defined from a Gaussian
+potential with covariance delta_(mu nu)/p^2; its covariance is gauge
+independent. Use six components indexed by mu<nu.
+
+Let rho_epsilon have Fourier transform exp[-epsilon^2 p^2/2],
+and F_epsilon=rho_epsilon*F. The curvature covariance matrix has
+Fourier transform
+
+          G_epsilon(p)=exp[-epsilon^2 p^2] P(p),         (3.1)
+
+where P(p) is the orthogonal rank-three projection on exact two-forms:
+
+ P_(mu nu,rho sigma)(p)
+  =[p_mu p_rho delta_nu,sigma-p_mu p_sigma delta_nu,rho
+    -p_nu p_rho delta_mu,sigma+p_nu p_sigma delta_mu,rho]/p^2.
+
+For a real nonzero smooth compact f, define the centered scalar
+
+ Q_epsilon(f)=sum_(c=1)^n sum_(mu<nu)
+        integral f(x)[F^c_(epsilon,mu nu)(x)^2
+                         -E F^c_(epsilon,mu nu)(x)^2]dx.
+
+Wick's formula gives
+
+ Var Q_epsilon(f)
+   =2n integral dxdy f(x)f(y)||G_epsilon(x-y)||_F^2.
+
+Scaling G_epsilon(z)=epsilon^-4 G_1(z/epsilon), followed by
+translation continuity in L2, yields
+
+ Var Q_epsilon(f)
+   ~ [3n/(32pi^2)] epsilon^-4 ||f||_2^2.                 (3.2)
+
+For completeness, the integrable domination follows from
+|integral f(x)f(x-epsilon z)dx|<=||f||_2^2. Parseval and
+Tr P(p)^2=3 give
+
+ integral ||G_1(z)||_F^2 dz
+    =3 integral d^4p/(2pi)^4 exp[-2p^2]
+    =3/(64pi^2),
+
+which proves the constant in(3.2). For a single F_12 square,
+the analogous coefficient is n/(96pi^2), since the angular
+average of[(p_1^2+p_2^2)/p^2]^2 on S3 is1/3.
+
+By contrast, take f>=0 supported in t>delta and reflect its
+support. Away from zero, the unsmoothed covariance matrix is
+
+ G(z)=[1/(pi^2 |z|^4)] wedge^2(I-2 zhat tensor zhat).
+
+The indicated reflection on two-forms is orthogonal, so
+||G(z)||_F^2=6/(pi^4 |z|^8). The supports are separated by
+at least2delta. Smooth convergence away from the diagonal gives
+
+ lim_(epsilon->0) Cov(Q_epsilon(theta f),Q_epsilon(f))
+   =[12n/pi^4] integral dxdy
+          f(x)f(y)/|theta x-y|^8
+   =A_f,                     0<A_f<infinity.             (3.3)
+
+For the conventional energy (1/2)sum_(mu<nu,c)F_mu nu^2,
+both covariance constants are divided by4.
+
+Consequently any deterministic multiplicative factor z_epsilon
+which keeps Var[z_epsilon Q_epsilon(f)] bounded satisfies
+z_epsilon=O(epsilon^2), and its reflected covariance tends to0.
+Subtracting another deterministic constant cannot fix this.
+
+This is a diagnostic for ordinary random-variable L2 convergence.
+It does not forbid renormalized composite Schwinger distributions,
+operator-valued Wick fields, or separated-observable algebras.
+The four-dimensional mollifier is used only for this calculation;
+it does not preserve exact positive-half support at finite epsilon.
+Nor is it proved here that every nonlinear bounded function of the
+unsmoothed square must be trivial. The exact obstruction is(3.2)--(3.3).
+
+3A. A NONZERO OS LIMIT DESPITE THE ORDINARY VARIANCE DIVERGENCE
+
+There is a useful positive complement to the preceding diagnostic.
+It is a new consequence of the explicit free covariance, not an
+imported nonperturbative Yang--Mills statement.
+
+Now choose a real nonnegative radial smooth mollifier rho supported
+in the unit ball, with integral1, and put
+rho_epsilon(x)=epsilon^-4 rho(x/epsilon).
+Let f>=0 be nonzero, smooth and compactly supported in t>delta>0.
+Define Q_epsilon(f) as above with this compact mollifier.
+For epsilon<delta, it reads only the original Gaussian field in
+the positive half-space. The mollifier commutes with the tensorial
+time reflection.
+
+Write r_0=-1 and r_i=1 for spatial indices. Reflection acts on
+curvature by
+
+             (theta F)_(mu nu)(x)
+                     =r_mu r_nu F_(mu nu)(theta x).
+
+The square of each sign is1, so the scalar sum of curvature
+squares, and its translation-invariant centering, transform as
+an ordinary reflection-even scalar. There is no missing electric
+minus sign in the following scalar Wick contraction.
+
+For real random variables in the positive-half algebra use
+(A,B)_OS=E[(theta A)B]. At every fixed positive cutoff Q_epsilon
+has finite ordinary L2 norm. Reflection positivity extends from
+bounded positive-half functions to Q_epsilon by ordinary-L2
+truncation, since |E[(theta A)B]|<=||A||_2||B||_2.
+
+For two cutoffs epsilon,eta<delta/2, their mixed reflected product is
+
+ (Q_epsilon(f),Q_eta(f))_OS
+   =2n integral dxdy f(x)f(y)
+       sum_(a,b)[(rho_epsilon*rho_eta*G)_(a,b)
+                                      (theta x-y)]^2.  (3.4)
+
+Here a,b index the six curvature components. The radial real rho is
+even, so no omitted reflected convolution kernel occurs. The mixed
+covariance includes the full curvature distribution G, including
+any contact part, before it is evaluated on the separated supports.
+Those supports and the compact convolution remain a positive
+distance from the singularity at0. Thus the convolution converges
+uniformly there to the smooth kernel G, and bounded convergence gives
+
+             (Q_epsilon(f),Q_eta(f))_OS -> A_f>0         (3.5)
+
+as epsilon,eta->0, with the SAME A_f in(3.3).
+In particular,
+
+ ||Q_epsilon(f)-Q_eta(f)||_OS^2
+  =(Q_epsilon,Q_epsilon)_OS+(Q_eta,Q_eta)_OS
+                           -2(Q_epsilon,Q_eta)_OS ->0.  (3.6)
+
+The OS Hilbert-space completion therefore contains a nonzero limit
+with norm squared A_f. This is a limit of vectors in the reflection
+Hilbert space; it is not asserted to be an ordinary-L2 random-variable
+limit on Euclidean configuration space.
+Because each Q_epsilon is centered, its OS inner product with the
+vacuum1 is zero; the nonzero limiting vector is orthogonal to the vacuum.
+
+Indeed the compact regulator has the same power divergence:
+
+ Var Q_epsilon(f)
+   ~ c_(rho,n) epsilon^-4 ||f||_2^2,
+ c_(rho,n)=6n integral d^4p/(2pi)^4 |rho_hat(p)|^4>0.    (3.7)
+
+The scaling/Parseval argument for(3.2) proves(3.7), using the rank-three
+projection and the covariance multiplier |rho_hat(epsilon p)|^2.
+The numerical constant depends on the mollifier; the power and the
+separated OS limit do not.
+
+Thus the earlier failure of ordinary-L2 tightness does not require
+abandoning the unsmoothed scalar as an OS/Schwinger-function route.
+It requires the correct type of estimate. For interacting YM4 one
+would still need the properly renormalized mixed separated cutoff
+correlations, their uniform bounds and consistency, and the rest of
+the reconstruction hypotheses. None is supplied here by the Gaussian
+calculation or the existing native auxiliary count.
+
+4. SPATIAL SMOOTHING FIXES THE MAGNETIC FREE-FIELD PROBLEM
+
+For canonical Maxwell curvature define
+
+              F^s_12(t,x)=exp[s Delta_space] F_12(t,x).
+
+The magnetic curvature obeys this equation under the linearized
+spatial Yang--Mills flow, including the ungauge-damped formulation:
+the pure longitudinal mode drops out upon taking the curl.
+
+Its real one-color covariance is
+
+ K_s(t,x)=integral d^3k/(2pi)^3
+    exp(ik.x) exp[-2s k^2]
+    [(k_1^2+k_2^2)/(2|k|)] exp[-|k| |t|].               (4.1)
+
+Integrating the Euclidean frequency produced exp[-|k||t|]/(2|k|).
+In particular
+
+                    K_s(0,0)=1/(48pi^2 s^2).            (4.2)
+
+Indeed the angular average of k_1^2+k_2^2 is(2/3)k^2,
+and integral_0^infinity k^3 exp[-2s k^2]dk=1/(8s^2).
+For fixed s>0 the covariance is bounded and continuous in
+time and space. There is no remaining pointwise magnetic
+variance divergence, even at equal Euclidean time.
+
+The qualification MAGNETIC is essential. Spatial smearing
+does not damp the temporal frequency omega. Already in a
+Gaussian heat reference, an electric time derivative has a
+factor omega^2/(omega^2+k^2), which approaches1 as |omega|
+increases. It retains temporal contact noise at equal time.
+Thus one may not substitute the full electric-plus-magnetic
+action density into(4.2) merely by citing spatial flow.
+
+For nonzero f>=0 smooth and compactly supported in positive time define
+
+ Q_s(f)=sum_(c=1)^n integral f(x)|F^c_12(s,x)|^2 dx.
+
+This nonnegative random variable requires no Wick subtraction,
+and
+
+ M:=E Q_s(f)=n K_s(0,0)||f||_1<infinity.                (4.3)
+
+It has finite moments of every order. One way to see this is
+to regard sqrt(f)F^s as a Hilbert-valued Gaussian with finite
+expected norm square. Its covariance is positive trace class.
+
+5. EXACT BOUNDED QUADRATIC REFLECTION BENCHMARK
+
+Use H=L2(support f,dx). Let C and R have kernels
+
+ C(x,y)=sqrt(f(x)) K_s(t_x-t_y,mathbf x-mathbf y)sqrt(f(y)),
+ R(x,y)=sqrt(f(x)) K_s(t_x+t_y,mathbf x-mathbf y)sqrt(f(y)).
+
+C is the covariance on positive times and R is the reflected
+cross covariance. Both are positive. Positivity of R follows
+directly from(4.1): its time factors are exp[-|k|t_x]
+exp[-|k|t_y], giving a square after integrating against a test.
+The joint covariance of the positive and reflected fields is
+
+                         [ C  R ]
+                         [ R  C ].
+
+Thus C+R and C-R are positive. Also
+Tr C=K_s(0,0)||f||_1 and R is trace class. It is nonzero:
+K_s(2t,0)>0 and f is nonzero on a positive-measure set.
+
+Put B=exp[-u Q_s(f)], u>0, and
+
+ A=I+2uC,
+ D=2u A^(-1/2) R A^(-1/2).
+
+Then 0<=D<=I-A^-1, so ||D||<1. Finite-dimensional Gaussian
+integration followed by trace-class approximation gives
+
+ m=E B=det(A)^(-n/2),
+ q=E[(theta B)B]
+   =det(I+2u(C+R))^(-n/2) det(I+2u(C-R))^(-n/2)
+   =m^2 det(I-D^2)^(-n/2).                              (5.1)
+
+No commutation of C and R is assumed: factor A^(1/2) on
+both sides of each I+2u(C+-R). The remaining operators
+are I+-D, whose Fredholm determinants multiply to
+det(I-D^2).
+
+Let
+
+ A_s(f):=Cov(Q_s(theta f),Q_s(f))
+       =2n ||R||_HS^2
+       =2n integral dxdy f(x)f(y)
+             K_s(t_x+t_y,mathbf x-mathbf y)^2 >0.        (5.2)
+
+The strict positivity can also be seen near equal spatial
+points in the open set where f is positive. The Gaussian
+bounded centered reflection norm has the explicit lower bound
+
+ D_G:=q-m^2
+   >= [u^2 exp(-2uM)/(1+2u||C||)^2] A_s(f) >0.          (5.3)
+
+Proof: -log det(I-D^2)>=Tr D^2, hence
+det(I-D^2)^(-n/2)-1 >=(n/2)Tr D^2.
+Also
+Tr D^2>=4u^2||R||_HS^2/||A||^2,
+and det(A)^(-n)>=exp[-2unTr C]=exp[-2uM].
+Combining gives(5.3). Every quantity is finite at fixed
+physical s,f,u. For example u=1/M gives a concrete positive
+margin without any ultraviolet cutoff.
+
+For a free connection of covariance g_*^2 times the canonical
+one, replace C,R by g_*^2 C,g_*^2 R, equivalently replace u
+by u g_*^2. This is a fixed physical reference parameter.
+
+This quadratic field is non-Gaussian even when its underlying
+connection is Gaussian. Therefore its positive reflection norm
+proves only a nonzero physical state in that benchmark. It must
+not be advertised as proof of interacting nonabelian dynamics.
+
+6. WHAT THE NEXT ACTUAL ESTIMATE WOULD HAVE TO SAY
+
+For the ORIGINAL tuned Wilson measure and the literal bounded
+observable(2.2), a sufficient two-number comparison is
+
+ |E_a B_(a,s,u)-m_G|<=eta,
+ |E_a[(theta B_(a,s,u))B_(a,s,u)]-q_G|<=eta,              (6.1)
+
+at fixed physical s,f,u, with the SAME normalization and
+physical coupling convention in the Gaussian reference.
+Since 0<=B<=1, these estimates imply
+
+ E_a[(theta B)B]-(E_a B)^2 >=D_G-3eta.                  (6.2)
+
+Thus eta<D_G/6 preserves a positive margin D_G/2.
+This requires no exponential moment of an unsmoothed local
+F^2 random distribution and no line counterterm. The bounded
+functions also avoid a uniform-integrability issue for these
+two particular expectations once their joint laws converge.
+
+However, neither(6.1), uniform nonlinear spatial-flow control,
+nor the physical normalization is supplied by the TURN62 count.
+The latter controls a first-class history count at one date.
+It must still be coupled to actual influence/marked estimates
+for this observable and its reflected product, with the full
+original marginal retained. The four-dimensional perturbative
+flow theorem[LW] cannot be substituted for that task.
+
+Additional spatial localization/thermodynamic control is needed
+because full spatial flow is not compactly supported in space.
+Additional continuum compatibility and Euclidean-symmetry work
+is needed because this chosen smoothing direction is anisotropic.
+Boundedness alone permits a deterministic or otherwise trivial
+limit and proves none of those statements.
+
+7. DECISION
+
+The unsmoothed centered scalar density should not be pursued by
+requiring a cutoff-uniform ordinary L2 variance; the exact free
+calculation shows why that would remove its separated signal.
+
+The compact-mollifier calculation nevertheless constructs a nonzero
+free OS limit of the unflowed centered scalar. An interacting route
+through renormalized separated Schwinger functions remains distinct
+from a route through ordinary Euclidean random-variable L2 bounds.
+
+The spatially flowed magnetic scalar is a concrete, bounded,
+gauge-invariant alternative with exact time support and an
+explicit nonzero free reflection benchmark. It avoids the
+specific thin-line issue of the transported-color probe.
+The next mathematical task is its normalized original-law
+comparison(6.1), with a correctly identified physical field
+normalization and a controlled nonlinear spatial flow.
+
+No inspected primary source already proves that comparison.
+No full nontrivial YM4 existence result is claimed.

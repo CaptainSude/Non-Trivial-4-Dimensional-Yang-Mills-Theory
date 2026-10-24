@@ -1,0 +1,148 @@
+INDEPENDENT AUDIT: LOCAL SCORE CUMULANTS AND SOURCE-READ TWO JETS
+24 October 2026. compiled_source.
+
+Audited producer: work/local_score_cumulant_consumer_20261024.txt.
+Verdict: SCOPED PASS for Sections1--5 as the finite conditional
+lemma stated there. No ambient-volume factor enters its proof.
+The separate native registration of premise(4) is produced in
+work/second_success_mixed_third_source_row_20261024.txt and requires
+its own independent review; this audit does not self-certify that
+additional registration.
+
+1. CYLINDER CUMULANT AND SET GEOMETRY
+
+For bounded real f,g,h the identity
+
+ cum(f,g,h)=Cov(f,(g-Qg)(h-Qh))
+
+is exact. The product's oscillation is at most a fixed multiple
+of osc(g)osc(h), and its determining read is the union of their
+two reads. Applying the assumed two-cylinder covariance estimate
+to each of the three isolations gives decay by the maximum of
+the three pairwise minima. For any three nonnegative distances,
+that maximum is the middle value; the sum of the two smallest
+is the proposed three-set tree length. Thus the factor1/2 in
+producer(5) is valid. This argument never requires the false
+triangle inequality for distances between sets.
+
+Subtracting Qg or Qh is a scalar operation at the fixed parameter
+value, so it does not enlarge the noise read. Nor is independence
+of the three factors presumed. Complex-valued tests can be split
+into real and imaginary components with fixed constant changes.
+
+2. SCORE ANNULI AND ALL-ROOT SUMS
+
+The domain is a product of centered balls, so replacing any set
+of coordinates by0 remains admitted. S_q(0)=0 follows from the
+exact convention H(0;theta)=0. Any separately extracted scalar
+has zero noise derivative and drops out of these covariances,
+but remains part of the raw outer density.
+
+Integrating the gradient bound along the straight segment from
+the truncated configuration to x gives the omitted-coordinate
+tail C R A0 times the exponential lattice tail. This proves the
+annular expansion with A=C R A0 and a strictly smaller spatial
+rate. Finite-torus shell counting has the same upper bounds;
+after the torus diameter the increments vanish.
+
+Enlarging the two score-root supports by radii m,n can reduce
+each candidate tree length by at most2(m+n). For example the
+candidate d(T,P)+d(P,Q) loses at most2m+n; the stated upper bound
+is sufficient for all three candidates. Choose the final rate
+strictly below both the cylinder rate and half the annular rate.
+The two annular sums then converge absolutely and give(7),(8).
+
+For nonempty T,
+
+ sum_q exp[-lambda d(T,hat q)] <= C |T|.
+
+The first candidate tree exponential sums in q,r to C|T|^2;
+the two remaining candidates sum to C|T| by first summing the
+relative q-r displacement. Since exp[-lambda min(a,b,c)] is
+bounded by the sum of the three exponentials, the exact bound
+in(9) follows. A constant test, with empty read, has all the
+covariances zero and can be handled separately. There is no
+volume-extensive score norm in this argument.
+
+3. NORMALIZED SECOND DERIVATIVE
+
+On the fixed original product, differentiating the normalized
+ratio twice gives precisely
+
+ D_vw Qf=Q f_vw-Cov(f_v,S_w)-Cov(f_w,S_v)
+             -Cov(f,H_vw)+cum(f,S_v,S_w).
+
+The sign of the third cumulant is positive. The two first-source
+derivative covariances are both required and are present. The
+second action derivative term cannot be absorbed into that
+cumulant and is also present.
+
+Premise(4) implies |partial_i H_vw|<=B for every pair of sup-norm
+unit parameter directions. The profile covariance bound and its
+summable kernel then give
+
+ |Cov(f,H_vw)| <= C B sum_i sup|partial_i f|.
+
+The other terms use the absolutely summed score covariance and
+cumulant bounds from Section2. This proves(12), retaining the
+quadratic |T|^2 cost. In particular a bound on H_qr alone would
+not justify this step; the producer correctly singles out the
+mixed noise/background row as a separate premise.
+
+The C^{1,1} passage is legitimate on a strict smaller parameter
+domain. Mollify the source in its finite source-coordinate box,
+compose with the smooth admitted current map, prove the uniform
+derivative bounds for the mollified functions, and pass by weak
+compactness. This does not require the current map to have full
+rank, nor does it differentiate through any hard moving mask.
+The actual reference cut remains fixed throughout.
+
+4. THE NATIVE SOURCE READ AND NORM CHAIN
+
+For f=R_p(B1), R_p is the first rare correction with its whole
+source/mask datum W and its fixed auxiliary extension rule. Every
+output bond of B1 in W uses its actual finite current block/pivot
+noise collar. The union of those collars is the fixed finite T.
+The background minimum, current and coefficient derivatives can
+be nonlocal in theta, but they alter coefficients of this same
+finite noise reconstruction. They do not add new x variables.
+Consequently f, f_v and f_vw all have the same read T. It would
+be incorrect to infer this for an arbitrary later compiled source
+without the fixed-W representation; the application does not.
+
+The chain rule uses only the source's first and second derivatives:
+
+ f_v=DR_p(B1) B1_v,
+ f_vw=D2R_p(B1)[B1_v,B1_w]+DR_p(B1) B1_vw.
+
+The derivative with respect to any actual x variable carries g1
+from the current map. With the row-norm convention used by the
+producer this yields its prices(13). If the input W2,infinity
+norm instead bounds individual source-coordinate components,
+converting to the displayed directional norms costs at most
+fixed-degree polynomials in |W|. Such source-read factors must
+be retained; they still do not introduce ambient torus volume.
+
+All terms preserve ONE rare factor. The third-cumulant term is
+linear in the rare test and quadratic only in the reference
+score amplitude. Mixed raw sources and the subtraction of first
+means must retain their exact contact ledger separately.
+
+At joint flat data, constant-color symmetry removes the first
+colored outer jet, provided no held colored spectator breaks
+that symmetry. The integrated value Q_0f need not vanish and is
+correctly retained as a new source scalar.
+
+5. EXACT SCOPE
+
+The proof establishes the finite source-read consumer given(1)--
+(4), the entire current image, and the fixed-read source caps.
+It does not prove weighted convexity of a hard-mask mixture,
+does not identify Z_D with Z0s, and does not erase selector or
+reference-change terms in the original full-fiber source law.
+Those limits in the producer are necessary and correct.
+
+The new native mixed-row producer named at the beginning is a
+separate, concrete proposed completion of premise(4); its scalar
+catalogue, exact success radius and physical map must receive
+their independent audit before the native registration is used.

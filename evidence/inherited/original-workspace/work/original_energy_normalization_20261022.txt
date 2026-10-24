@@ -1,0 +1,261 @@
+ORIGINAL ENERGY NORMALIZATION ON ONE BARE TRAJECTORY
+22 October 2026. public_sources. Exact finite-cutoff identities and scope.
+
+RESULT
+
+The raw insertion beta_W(a) sum_p f_p h_p is a BARE canonical action
+density. It is not automatically the canonically normalized scalar at a
+FIXED physical endpoint coupling. An endpoint-conjugate definition gives
+
+ O_a(f) = t_R (d t_a/d t_R) sum_p f_p h_p,
+ Z_E(a) = [t_R (d t_a/d t_R)]/t_a,                       (A)
+
+where t_a is the ACTUAL coefficient multiplying the normalized Wilson
+plaquette sum, and t_R is the endpoint coefficient in the same convention.
+Centering can be added without changing separated covariances.
+
+If dt_a/dt_R stays bounded above and below, (A) removes the growing bare
+coefficient from the elementary insertion bound. At one-loop t_a=t_R+bN,
+so dt_a/dt_R=1 and O_a=t_R sum f h exactly. This is a substantive reason
+not to pay a bare t_a power before deciding the physical normalization.
+
+The archive supplies a uniform CONSTANT-source tangent in its homogeneous
+SELECTED frozen-window scheme. It does not supply a differentiable inverse
+of the complete native trajectory, nor local inhomogeneous source bounds.
+An analytic beta function alone would not supply those local bounds.
+
+1. KEEP THE COUPLING CONVENTIONS DISTINCT
+
+Throughout this note
+
+ h_p(U)=1-(1/2)Tr U_p,  H_f=sum_p f(x_p)h_p,
+ dmu_a=Z_a^-1 exp[-t_a H_1] product_b dU_b.               (1)
+
+Plaquettes are counted once for each mu<nu. f is sampled at the plaquette
+center, consistently with its orientation. There is no extra a^4 in H_f:
+the smooth-field expansion already places a^4 inside h_p.
+
+In conventional SU(2) notation with generators sigma_a/2,
+t_a=4/g_0,phys^2. B109(0.2), printed252, uses the normalized trace and
+starts with exp[-g_0,native^-2 A], where A=sum h_p in d=4. Thus its
+native inverse coupling IS t_a, and g_0,phys=2g_0,native under the above
+generator convention. The archive notation beta_bare=g_0^-2 is legitimate
+when g_0 is native. It must not simultaneously be read as the conventional
+physical coupling without the factor four.
+
+For U_p=exp[i g_phys a^2 F_mu,nu^a sigma_a/2+...],
+
+ h_p=(g_phys^2 a^4/8) sum_a(F_mu,nu^a)^2+...,
+ (4/g_phys^2)H_f ~ integral f E,  E=(1/2)sum_{a,mu<nu}F^2. (2)
+
+This is the E used by work/construction_route_20261021.txt, whose three-
+color Maxwell covariance is 9/(pi^4 |x-y|^8). Using g_phys^-2 H_f with
+the SAME physical g would instead give E/4, and covariance 9/(16 pi^4
+|x-y|^8). This factor-four warning is a convention audit, not a statement
+that the archive's native beta_bare is intrinsically wrong.
+
+Equation(2) is classical calibration, not a quantum composite-operator
+renormalization theorem.
+
+2. AN EXACT FINITE-CUTOFF ENDPOINT-CONJUGATE DEFINITION
+
+Fix one endpoint scale, one real endpoint t_R>0, and a chosen bare
+trajectory a -> t_a(t_R). Assume locally for the moment that t_a(T)
+is C^2 in an endpoint parameter T, with t_a(t_R) the SAME baseline bare
+coefficient used in (1). Define
+
+ q_a=t_a'(t_R), r_a=t_a''(t_R),
+ c_a=t_R q_a, d_a=t_R^2 r_a,
+ O_a(f)=c_a H_f.                                         (3)
+
+This is a literal local gauge-invariant observable under the original
+finite Wilson measure. The multiplicative renormalization relative to
+the raw action insertion t_a H_f is Z_E=c_a/t_a. One may subtract
+c_a E_mu H_f; it only changes scalar first jets.
+
+The literal exponential insertion exp[s O_a(f)+t O_a(h)] is EXACTLY
+the Wilson integral with affine plaquette coefficients
+
+                 t_a - c_a s f_p - c_a t h_p.            (4)
+
+There is no bare mixed insertion in this affine source convention.
+For f=h=1 its first tangent agrees with decreasing the endpoint T by
+t_R s. The full nonlinear endpoint curve is a different source family.
+
+To keep that distinction explicit, define the finite integral with
+plaquette coefficient t_a(t_R-t_R s f_p-t_R t h_p). Its logarithmic
+source exponent has first/mixed jets
+
+ D_f=c_a H_f,    D_h=c_a H_h,    D_fh=-d_a H_(fh).         (5)
+
+Consequently, at the SAME baseline measure,
+
+ partial_st log[Z_a(s,t)/Z_a(0,0)]|0
+       =c_a^2 Cov_mu(H_f,H_h)-d_a E_mu H_(fh).           (6)
+
+For disjoint sampled supports f_p h_p=0, the second term is exactly zero.
+If the endpoint is instead parameterized exponentially, T=t_R exp[-s f-t h],
+the mixed insertion is -(c_a+d_a)H_(fh). These are contact terms from
+parameterization; neither may be omitted when supports overlap.
+
+Equations(3)--(6) require no continuum theorem. Applying t_a pointwise to
+T(x) merely DEFINES an inhomogeneous bare source family. It does not claim
+that inhomogeneous RG is obtained by pointwise substitution into the
+homogeneous beta function.
+
+For any finite number of distinct source parameters in the affine
+convention(4), each order-n jet is multiplied by c_a^n relative to raw
+H-insertions. Relative to t_a H-insertions it is multiplied by Z_E^n.
+The elementary single-plaquette bound is 2|c_a|, not 2t_a. Raw scalar
+vacuum/contact terms remain part of the exact sourced partition integral.
+
+3. THE TANGENT OF A DISCRETE RG MAP
+
+If the full endpoint map is Phi_a:t_a -> t_R and has Phi_a'(t_a) !=0,
+the inverse-function formulas are
+
+ q_a=1/Phi_a'(t_a),
+ r_a=-Phi_a''(t_a)/(Phi_a'(t_a))^3.                       (7)
+
+Thus the missing scalar input is a uniform nonvanishing endpoint
+Jacobian, not merely existence of a tuned bare coupling. In a purely
+scalar recursion t_(j+1)=t_j-b_j(t_j),
+
+ p_(j+1)=(1-b_j'(t_j))p_j,  p_0=1,
+ v_(j+1)=(1-b_j'(t_j))v_j-b_j''(t_j)p_j^2,  v_0=0,       (8)
+
+and Phi'=p_N, Phi''=v_N. If, in addition to a positive drift,
+|b_j'|<=C t_j^-2 and |b_j''|<=C t_j^-3 uniformly, then
+sum t_j^-2=O(t_R^-1), sum t_j^-3=O(t_R^-2) give
+
+ q_a=1+O(t_R^-1),  r_a=O(t_R^-2),                       (9)
+
+uniformly in depth, at sufficiently weak endpoint. This is an elementary
+conditional deduction. The actual recursion also carries irrelevant
+actions and prior coupling dependence; its total coupled derivatives
+must replace (8). A claim that beta is analytic, without uniform derivative
+bounds on a common domain and control of that coupled response, does not
+prove (9).
+
+The exact one-loop test t_a=t_R+bN has q=1,r=0. It yields
+
+ Z_E=t_R/t_a,        c_a=t_R,
+
+while the raw insertion t_a H corresponds to (t_a/t_R) times the
+endpoint-conjugate candidate. This test exposes the potentially
+unnecessary bare-power cost; it is not a proof of the interacting limit.
+
+In physical-coupling variables, T=4/g_R^2, t_a=4/g_0^2,
+
+ Z_E=(g_R/g_0)(d g_0/d g_R),
+ O_a(f)=4 g_R^-2 q_a H_f.                               (10)
+
+If an exact autonomous RG flow were available, its tangent would be
+dg_0/dg_R=beta(g_0)/beta(g_R). Formula(10) would then agree with the
+usual beta/g ratio for the scalar density. This autonomous-flow identity
+is not an assertion that the native discrete beta_j is one such function.
+
+4. WHAT THE ARCHIVE ACTUALLY SUPPLIES FOR THE SCALAR TANGENT
+
+B109 printed255--256(0.18),(0.20) defines discrete coupling changes
+through effective-action beta coefficients. Printed259 Theorem2 announces
+endpoint tuning but says its proof will be supplied separately. LII
+printed355 explicitly retains the weak-coupling trajectory assumption
+because that perturbative proof was unpublished there. These statements
+do not supply (7)--(9).
+
+The newer archive's physical_determinant_drift_turn49.txt section10.5
+proves finite selected endpoint shooting by continuity and an intermediate
+value argument. It explicitly does not prove uniqueness or consistency
+of the tuned choices as the depth changes. Continuous shooting alone
+cannot be differentiated to obtain q_a.
+
+There IS a useful stronger local normalization device in
+constant_original_source_trajectory_turn49.txt, sections1--6. With every
+baseline window and chart frozen, the actual constant bare insertion
+exp[zeta H_1] produces a selected effective coefficient
+
+                t_R - alpha_N(zeta),
+
+where alpha_N(0)=0 and, on a depth-uniform source disk,
+alpha_N(zeta)=zeta+O(S_N zeta) in the stated Wiener norm,
+S_N=sum_j g_j^4=O(t_R^-1), under that note's hypotheses.
+
+For S_N small, alpha_N'(0) is nonzero. Define an analytic local coordinate
+by the inverse alpha_N(zeta)=t_R-T, and set
+
+ t_a,fr(T)=t_a(t_R)-zeta(T).
+
+Then at T=t_R,
+
+ q_a,fr=1/alpha_N'(0),
+ r_a,fr=alpha_N''(0)/(alpha_N'(0))^3.                    (11)
+
+The fixed source disk gives depth-uniform bounds on these derivatives;
+q_a,fr=1+O(S_N). No claim of the sharper r=O(t_R^-2) is needed here.
+This gives a concrete bounded normalization coefficient c_a=t_R q_a,fr
+for a literal ORIGINAL Wilson observable (3), with the same baseline
+bare trajectory. The coordinate's calibration was defined by the
+selected frozen-window extraction, and this qualification must remain.
+
+It is NOT the inverse of re-running all windows/cutoffs as the bare
+coupling changes. It does NOT prove that the complete original law has
+the selected endpoint response or the canonical local energy limit.
+The full-source comparison is still needed. Nevertheless it is a valid
+finite-regulator normalization convention, better justified than simply
+assuming Z_E=1, and it can avoid an unnecessary bare t_a factor in the
+next source-admission problem. A fixed multiple t_R H_f is also an
+explicit candidate; the finite calibration factor q_a,fr then remains
+to be matched in the eventual physical comparison.
+
+5. WHY TRACE ANOMALY IS A CHECK, NOT A CONSTRUCTIVE SHORTCUT
+
+Suzuki, arXiv:1304.0533, section2, uses connection curvature with action
+(4g_0^2)^-1 integral F^2. Its equations(2.15)--(2.21) relate the
+renormalized scalar operator and the trace anomaly through the beta
+function, with vacuum subtraction and an established renormalized
+theory. After converting curvature conventions this is consistent with
+the beta/g ratio in (10). It does not establish the needed nonperturbative
+Wilson local-operator limit or identify native discrete beta_j with that
+renormalization scheme. Importing that identity as an already constructed
+YM4 energy field would assume the missing local theory.
+
+The finite-cutoff coupling derivative in sections2--3 is the sound input
+here. A future local renormalization theorem must additionally identify
+its non-vacuum scalar component, control possible irrelevant/contact
+terms, and establish separated Schwinger bounds. A constant coupling
+derivative controls only an integrated response. It does not provide
+arbitrary f,h, spatial source-arm decay, all histories, or rotation limits.
+Even uniform q_a does not bound vacuum cumulants of Z_a.
+
+6. RECOMMENDED PRECISE CHANGE TO THE NEXT SOURCE TARGET
+
+Use the explicit affine original source(4), with c_a=t_R q_a from a
+DECLARED endpoint-coordinate convention. The frozen selected coordinate
+(11) is available under its recorded premises; an eventual full native
+endpoint derivative may replace it after proof. State the desired
+Maxwell comparison for THIS O_a, including any finite calibration factor.
+Retain all source descendants and original normalizers as before.
+
+Do not spend new effort paying powers of t_a merely because an earlier
+raw source was written t_a h_p. Such payments may be artifacts of a
+bare normalization. Conversely, removing t_a without declaring c_a and
+its calibration would change the observable and would not prove the
+existing 9/pi^4 benchmark. The scalar renormalization correction and the
+full local two-source estimate are distinct tasks.
+
+SOURCES
+
+B109: T. Balaban, CMP109(1987)249--301,
+https://doi.org/10.1007/BF01215223; printed252(0.2),255--256(0.18),(0.20),
+259 Theorem2. Local work/package/work/turn125_primary/b109_full.txt.
+LII: https://doi.org/10.1007/BF01238433, printed355 introduction.
+Suzuki: https://arxiv.org/abs/1304.0533, section2, equations(2.1),(2.2),
+(2.15)--(2.21). Used only as a convention/trace-anomaly cross-check.
+
+Archive, with stated selected-map premises rather than new primary claims:
+work/package/work/constant_original_source_trajectory_turn49.txt;
+work/package/work/constant_original_source_trajectory_audit_turn49.txt;
+work/package/work/physical_determinant_drift_turn49.txt section10;
+work/package/work/coupling_sources_regular_channel_synthesis_turn69.txt;
+work/construction_route_20261021.txt sections1 and5.

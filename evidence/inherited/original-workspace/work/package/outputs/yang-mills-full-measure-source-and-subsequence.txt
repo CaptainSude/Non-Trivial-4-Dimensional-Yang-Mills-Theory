@@ -1,0 +1,1982 @@
+FULL-MEASURE SOURCE COMPARISON AND SUBSEQUENTIAL LIMITS
+TURN71. 20 October 2026.
+
+THE NONTRIVIAL FOUR-DIMENSIONAL YANG--MILLS EXISTENCE PROOF IS NOT COMPLETE.
+
+The new arguments narrow two obligations without asserting the missing
+model-specific estimates. A common subsequential selected hierarchy can
+be constructed from the retained bounds. Transferring its correlations
+to the full Wilson measure is exactly a mixed selection-source
+susceptibility problem. Rare-event probabilities do not solve it.
+
+This report distinguishes:
+ (a) consequences of the recorded TURN70 selected estimates;
+ (b) exact identities for the original finite-regulator law;
+ (c) conditional spectral/reconstruction consumers whose full-law
+     hypotheses have not been established.
+
+The complete derivations and independent internal audits are appended.
+These audits are not external peer review of the entire prior archive.
+
+1. WHAT CAN NOW BE CONSTRUCTED FROM THE SELECTED ESTIMATES
+
+Fix ONE selected cutoff family, one physical torus and terminal mesh,
+and the coherent sources from its finite-dimensional terminal vertex
+profile space admitted by TURN70. At a fixed physical resolution r,
+define the centered conditional mean
+
+ Y_(a,r)(f) = E_sel,a[F_a(f)-E_sel,a F_a(f) | coarse record through r].
+
+Resolution increases with r. The fixed-resolution source range bound
+puts Y_(a,r)(f) in a compact interval independent of the ultraviolet
+cutoff a. Its interval can grow with r; this is not a uniform bound
+as r tends to infinity.
+
+Retain these conditional means for a basis of the finite terminal
+profile space. Their compact boxes at the countably many resolutions
+give a single subsequential joint law. Identified compact coarse-link
+tuples may optionally be retained too; compactness of every auxiliary
+record or continuity of a gauge section is not assumed. Every finite-
+cutoff martingale identity passes against continuous cylinder tests,
+and then against bounded measurable tests. Thus the limiting hierarchy
+retains consistent conditional expectations with respect to its
+retained coordinates. All profiles on this fixed grid follow by
+linearity from the same basis extraction.
+
+The separated fine-scale remainder from TURN70 tends uniformly to zero.
+Consequently, for its admitted separated coherent profiles,
+
+ lim_(a along subsequence) Cov_sel,a(F_a(f),F_a(h))
+       = lim_(r->infinity) E[Y_r(f)Y_r(h)].
+
+This is a stronger conclusion than extracting unrelated scalar
+correlation limits. A cross-cutoff Cauchy theorem or uniqueness of the
+limit is unnecessary for this subsequential construction.
+
+Its limitations are material:
+
+ - the hierarchy is for the SAME selected law at each cutoff;
+ - changing terminal restrictions or the selected law for different
+   observables would require a new compatibility proof;
+ - appended conditional means need not be deterministic functions of
+   the limiting coarse field, without an additional continuity input;
+ - no same-support uniform L2 bound or final random composite field
+   follows from off-diagonal estimates;
+ - the hierarchy can be trivial;
+ - selected positivity and reflection invariance do not supply
+   reflection positivity or full Euclidean symmetry.
+
+Thus this is a limited selected-sector existence result, not a
+four-dimensional Yang--Mills quantum field theory.
+
+2. THE EXACT MISSING FULL-LAW CORRECTION
+
+The selected construction already records a source-independent weight
+0<=w<=1 against the original law, with its prescribed mass-one auxiliary
+extension if needed. Write P for that augmented original probability
+law, F,H for observables of the ORIGINAL field, and p=E_P w>0.
+
+Under real source tilt define
+
+ p(s,t)= E_P[w exp(sF+tH)] / E_P[exp(sF+tH)].
+
+Keep the window w frozen. Direct differentiation gives
+
+ Cov_full(F,H)
+    = Cov_sel(F,H) - partial_s partial_t log p(s,t)|_0.       (2.1)
+
+Equivalently, only the connected part
+
+ log p(s,t)-log p(s,0)-log p(0,t)+log p(0,0)
+
+matters. Its source-independent and one-source terms cancel.
+The extensive value of log p(0,0) is not itself the obstruction.
+Indeed an independent all-good selection can have exponentially small
+probability and change no physical correlation.
+
+For a product of successive frozen selections, log p telescopes into
+the sum of the logarithms of the actual successive acceptance weights
+under earlier selections and the original source tilt. Hence a
+summable localized bound on their mixed source derivatives would
+suffice for an upper-bound transfer.
+
+This is an exact reduction, NOT an estimate of the correction.
+It retains the unboundedly many omitted histories through p(s,t).
+It also retains the covariance of conditional means under the full
+coarse law. No native R-history completion is inferred from the
+auxiliary positive completion of the selected measure.
+
+3. A PROPOSED SHORTCUT IS DEFINITIVELY INSUFFICIENT
+
+The full-law bad-bridge estimate from TURN68 suppresses a marked
+contribution on a particular rare event. It does not estimate the
+no-bridge contribution or (2.1)'s selection susceptibility.
+Moreover that result and TURN70 concern different regulator families
+whose source-preserving comparison is still unproved.
+
+Even if a common-law identification were added, the inference would
+remain invalid on those probabilistic premises alone. The appended
+finite counterexample is reflection positive. Conditional on a shared
+coarse variable, its reflected halves and rare flags are independent.
+Every specified set of bad flags has exponentially small probability,
+and a spanning bad bridge is exponentially rare.
+
+All-good selection nevertheless changes the distribution of the
+coarse variable. The selected separated covariance tends to zero
+while the original covariance stays positive. A symmetric version
+keeps both endpoint means exactly zero throughout. With an explicitly
+stated polynomial source rescaling, the original covariance can even
+diverge while both the selected covariance and the marked bad-bridge
+contribution vanish.
+
+This is not a Yang--Mills counterexample. It proves that the existing
+forms of the probability estimates cannot replace the missing
+connected-source control. The regular coarse communication must be
+estimated using additional structure of the actual model.
+
+4. A WEAKER CONVERGENCE REQUIREMENT AND A DYNAMIC NONTRIVIALITY TEST
+
+For an actual physical Hamiltonian observable, let rho_a be its positive
+centered spectral measure. Fix a positive time-window width delta and
+write
+
+ R_a(t)=integral exp(-2tE)[(1-exp(-delta E))/E]^2 rho_a(dE).
+
+At zero energy the bracket is delta. This is the reflected norm of
+the positive-time integrated insertion at each admitted finite
+regulator.
+
+If R_a(t0)<=M at one earlier positive time, then the finite measures
+
+ nu_a(dE)=exp(-2t0 E)[(1-exp(-delta E))/E]^2 rho_a(dE)
+
+have a weakly convergent subsequence on [0,infinity]. Every R_a(t)
+and all of its time derivatives converge on the SAME subsequence
+locally uniformly for t>t0. Mass at infinity is harmless at these
+strictly later times. This result requires no full-sequence
+convergence, but the required full-law upper bound is still missing.
+
+A later positive norm alone does not exclude a merely static
+zero-energy mixture. A sufficient stronger dynamic witness is
+
+ R_a(t1)-R_a(t1+s)>=m>0,   t1>t0, s>0.
+
+This and the earlier upper bound put a uniform positive amount of
+spectral mass in a fixed interval [epsilon,Lambda] contained in
+(0,infinity). The appended proof gives explicit constants. Its
+subsequential limit therefore has positive-energy spectral weight.
+This is an alternative sufficient check to using a separate
+clustering/unique-vacuum argument; it is not imposed as the only
+possible route.
+
+For the actual fixed-spatial magnetic slab source with original
+unsourced ground endpoints, the exact relation is
+
+ R_a(t)=(1/2)Delta_delta^2 partial_z^2 K_a(2t,0).
+
+Thus the needed difference is expressed at finitely many matched
+slab lengths. Affine-in-time scalar terms cancel; arbitrary mixed
+source remainders do not. For the global logarithmic coupling source
+and its specified magnetic observable the factor is 1/8. Local
+coupling profiles retain the energy-current correction.
+
+No estimates M,m uniform in the spatial cutoff were established
+for the required full Yang--Mills family. This spectral theorem is
+a precise consumer of such estimates, not their substitute.
+
+5. CURRENT PUBLIC SOURCES
+
+The public repositories were checked afresh. Both inspected main
+branches are unchanged:
+
+ Ethan Sussman / Levent Alpoge:
+ cf596e69629e0da2e25e33ab8cafc507c023a1de
+ https://github.com/ethanwsussman/Yang--Mills-LLM-experiment
+
+ CaptainSude:
+ bf484466e1e5091de6770c671f7411f8f93b9c87
+ https://github.com/CaptainSude/towards-proving-existence-of-YM4
+
+The upstream raw-II original-source lemma, label 8.21:lem-source,
+lines 145173--145213 of that pinned revision, still explicitly
+has an outstanding proof. Its positive torus two-point consequence
+assumes the relative witness estimate, continuum limits and an
+unfinished continuum-kernel input. It cannot supply those premises.
+No unpublished completion has been used.
+
+The LP1 outline concerns infinite-volume lattice positivity at fixed
+spacing. The RP1 outline assumes an already existing continuum field
+with moment bounds. Neither supplies this project's missing full-law
+continuum source estimates. Exact version and locator evidence is
+retained in the appended primary-source review.
+
+6. WHAT STILL PREVENTS COMPLETION
+
+The full nontrivial YM4 existence proof still needs:
+
+ - a bound on the actual full-law connected source correction, or
+   an independent original-law correlation estimate;
+ - physical source calibration and compatible local observables,
+   including their mixed products;
+ - a nonzero surviving physical witness, with control of vacuum
+   components or a direct positive-energy test;
+ - a common continuum limit with the required positivity, symmetries,
+   local structure and reconstruction hypotheses.
+
+The new selected hierarchy does not discharge these original-law
+obligations. The exact source identity identifies where the first
+missing estimate must enter. The two counterexamples prevent replacing
+it or nontriviality by weaker information that permits trivial limits.
+
+The goal remains active and incomplete. No complete existence proof
+is claimed, and no additional inaccessible paper is currently needed
+to state or work on these remaining mathematical estimates.
+
+
+========================================================================
+APPENDIX: Full-law source comparison and counterexamples
+========================================================================
+
+FULL-LAW COMPARISON THROUGH THE SELECTION SOURCE SUSCEPTIBILITY
+TURN71. 20 October 2026. gauge47.
+
+STATUS
+
+The exact selected/full comparison below is attached to the original
+positive selected weight recorded in TURN48 and TURN70. It does not
+construct estimates for the complementary histories or identify their
+law with the native Balaban R expansion.
+
+There is a useful precise change of target: selected mass close to one
+is NOT necessary. What is necessary for this comparison is control of
+the MIXED SOURCE SUSCEPTIBILITY of that mass. A complete finite,
+reflection-positive counterexample below shows that rare bad bridges,
+even with all prescribed-set bounds, do not supply this control.
+No counterexample to Yang--Mills existence is claimed.
+
+1. ACTUAL SOURCE AND SELECTION DICTIONARY
+
+Retained source: projected_product_sector_turn48.txt, Sections6-7,
+especially the paragraphs beginning "At each chosen integration step"
+and "There is a useful exact completion", and equation(7.1).
+
+At a fixed admitted finite regulator, the selected construction has a
+frozen measurable weight 0<=w<=1 against the ORIGINAL normalized
+Wilson law, possibly after appending its specified mass-one normal
+draws. Repeated integration retains the product of its fixed physical
+window weights and the actual terminal restriction. This is the
+positive numerator identified in selected_covariance_martingale_turn70,
+equations(1.1)-(1.4).
+
+For precision let P be that augmented probability law and U its
+original field, with original Wilson marginal mu. All required
+determining records are retained. Put
+
+ p=E_P w>0,             dP_sel=w dP/p.                       (1.1)
+
+The original observables are F=F(U), H=H(U), not functions evaluated
+on an independently redrawn reference field. The normalization p is
+Z_sel/Z_original, with the complete coarea and vacuum factors.
+
+The TURN48 construction can stop at a nonadmitted branch and assign a
+cemetery label. This supplies the positive completion needed for(1.1);
+it does not supply bounds on it. Completion outside the zero-weight
+selected chart cannot be silently identified with a particular native
+R history law. An isolated weighted coarea formula, without this
+original-law identification, would not by itself justify(1.1).
+
+We use only finite-regulator bounded F,H below. This includes literal
+finite sums of Wilson plaquette actions. A cutoff-dependent physical
+rescaling must be stated explicitly; boundedness at each regulator
+does not mean a uniform bound as the regulator is removed.
+
+2. EXACT CONNECTED SOURCE COMPARISON
+
+Define, with the unsourced law and w FIXED,
+
+ Z(s,t)=E_P exp(sF+tH),
+ Z_w(s,t)=E_P[w exp(sF+tH)],
+ p(s,t)=Z_w(s,t)/Z(s,t).                                    (2.1)
+
+For real sources near zero, p(s,t) is the probability/weight of the
+same selection under the tilted ORIGINAL law. No window or coupling
+inside w is retuned. Z(0,0)=1 and Z_w(0,0)=p.
+
+Write
+
+ K(s,t)=log Z(s,t),
+ K_sel(s,t)=log[Z_w(s,t)/p].
+
+Then exactly
+
+ K(s,t)=K_sel(s,t)-log[p(s,t)/p].                            (2.2)
+
+For any source function A with A(0,0)=0, write its connected two-source
+part as A^c(s,t)=A(s,t)-A(s,0)-A(0,t). Define
+
+ L_w^c(s,t)=log p(s,t)-log p(s,0)-log p(0,t)+log p.           (2.3)
+
+Subtracting the three instances of(2.2) gives
+
+ K^c=K_sel^c-L_w^c.
+
+Differentiating the finite integrals proves
+
+ Cov_mu(F,H)
+   =Cov_sel(F,H)-partial_s partial_t log p(s,t)|_(0,0).
+                                                               (2.4)
+
+PROOF OF THE DERIVATIVE STATEMENT. For a positive finite measure nu,
+partial_s log int exp(sF+tH)dnu is its tilted expectation of F.
+Differentiating in t gives its tilted covariance of F,H. Applying
+this once to Z and once to Z_w proves(2.4); no probability comparison
+or division estimate using a lower bound on p is involved.
+
+Consequently the following is a valid comparison inequality:
+
+ |Cov_mu(F,H)|
+ <= |Cov_sel(F,H)| + |partial_st log p|_0|.                  (2.5)
+
+This identifies exactly the additional quantity needed to transfer
+the selected upper bound. For a lower-bound transfer the same error
+must be small compared with a separately proved positive selected
+reference margin; TURN70 does not supply that margin.
+
+An optional analytic consumer is also exact. If L_w^c has a holomorphic
+extension to |s|<r_F, |t|<r_H, continuous on the corresponding circles,
+and |L_w^c|<=epsilon there, the two-variable Cauchy integral gives
+
+ |partial_st log p|_0|<=epsilon/(r_F r_H).                  (2.6)
+
+Indeed integrate L_w^c(s,t)/(s^2 t^2) over both circles and take
+absolute values. A uniform zero-free logarithm and these radii are
+additional inputs; finite-regulator entire source integrals alone
+do not supply them uniformly.
+
+3. A TINY SELECTED MASS IS NOT THE OBSTRUCTION
+
+The possibly extensive constant log p cancels exactly from(2.3).
+Pure-s and pure-t terms cancel as well. Mixed source-dependent
+scalar terms do not cancel.
+All logarithms and derivatives are taken at a finite regulator with
+p>0; no logarithm of a zero limiting selected mass is taken.
+
+For example, append N independent Bernoulli(q) flags independent of
+the original field, and select all flags. Then p=q^N can tend to zero
+exponentially. Nevertheless p(s,t)=q^N for every source, so the
+physical selected law equals mu and(2.4) has zero correction.
+
+More generally E_P[w | sigma(F,H)]=p implies p(s,t)=p by conditional
+expectation. This is sufficient, not necessary: only the mixed
+coefficient of log p is required for covariance transfer.
+
+A sequential form makes the target compatible with a chronological
+selection without assuming independent histories. Let
+
+ W_0=1,  W_j=product_(i=1)^j w_i,  W_n=w,
+ a_j(s,t)=E_P[W_j exp(sF+tH)]/
+                         E_P[W_(j-1) exp(sF+tH)].
+
+All factors are nonnegative and the denominators are positive near
+real zero on the admitted selected sequence. Algebraic telescoping
+gives
+
+ p(s,t)=product_j a_j(s,t),
+ partial_st log p|_0=sum_j partial_st log a_j|_0.             (3.1)
+
+For indicator choices, a_j is the acceptance probability of the next
+choice conditioned on all earlier acceptances, under the original
+source tilt. Weighted choices have the same formula, or can be
+realized with an extra independent uniform flag.
+
+The expected useful estimate is on these connected source
+sensitivities, possibly through a two-source localized expansion
+and a scale sum. It is not an estimate on product_j a_j(0,0) being
+near one. Unconditioned count bounds cannot be substituted for bounds
+under arbitrary earlier rare selections in(3.1).
+
+4. CONDITIONAL FIBERS RETAIN THE COARSE COVARIANCE
+
+Let Y be any retained statistic on the SAME original augmented law.
+Suppose p_Y=E_P[w|Y]>0 almost surely, so the selected conditional
+kernel is defined on the full Y support. This support hypothesis
+must not be presumed for our weak-chart selection.
+
+Set
+
+ L_Y(s,t)=log { E_P[w exp(sF+tH)|Y]/
+                              E_P[exp(sF+tH)|Y] }.
+
+Let X_F^sel(Y), X_H^sel(Y), C^sel(Y) be the mean, mean and covariance
+under the w-weighted conditional law at fixed Y. Conditional
+differentiation gives
+
+ E_P[F|Y]=X_F^sel(Y)-partial_s L_Y(0,0),
+ E_P[H|Y]=X_H^sel(Y)-partial_t L_Y(0,0),
+ Cov_P(F,H|Y)=C^sel(Y)-partial_st L_Y(0,0).
+
+The law of total covariance therefore gives the exact identity
+
+ Cov_P(F,H)
+  = E_(P_Y)[C^sel-partial_st L_Y]
+    +Cov_(P_Y)(X_F^sel-partial_s L_Y,
+                            X_H^sel-partial_t L_Y).          (4.1)
+
+PROOF. Subtract the conditional means from F,H. Their residuals have
+zero conditional expectation, hence their cross terms with any
+function of Y vanish. This yields the total covariance identity;
+insert the three differentiated conditional formulas above.
+
+The average and final covariance here use the FULL P_Y. The selected
+coarse law is instead p_Y P_Y/p. Uniform selected conditional covariance
+alone cannot control the second line. Even perfect within-fiber
+centering leaves the fluctuations of the conditional means.
+
+Where p_Y=0 one must retain the original conditional contribution
+separately. In particular, a theorem proved only for weak coarse Y
+does not apply to the whole first line of(4.1) without treating its
+complement. The unconditional formula(2.4) avoids this support problem
+but still retains its full contribution in log p.
+
+There is a useful direct covariance diagnostic. With
+f=F-E_PF and h=H-E_PH, elementary expansion gives
+
+ Cov_sel(F,H)-Cov_P(F,H)
+   = Cov_P(w,fh)/p
+       - Cov_P(w,F)Cov_P(w,H)/p^2.                          (4.2)
+
+The second term is a mean-shift term. An estimate only for w times
+the centered product does not by itself dispose of it. Equation(4.2)
+is an identity, not a proposal to bound its terms separately by 1/p.
+Such separate bounds can be extremely poor when p is small.
+
+5. WHY THE TURN68 BRIDGE BOUND DOES NOT CLOSE THIS COMPARISON
+
+The retained TURN68 estimate concerns the actual Hamiltonian ground
+path law and, through its fixed-spatial temporal approximation, a
+specified anisotropic Wilson family. For calibrated integrated
+magnetic actions Q_+,Q_- it bounds
+
+ E[ |(Q_+-EQ_+)(Q_--EQ_-)| 1_(bad bridge)]
+                   <=C a^-16 exp(-c/a).                    (5.1)
+
+It keeps the complete original denominator. Its bad events are
+time-averaged magnetic-action cells. They are neither the native
+history predicates nor the selected projected-product windows.
+The TURN70 selected construction is not already identified with
+the no-bad-bridge law of this Hamiltonian/anisotropic family.
+
+Even GRANTING a common law and an event identification as an additional
+hypothesis, (5.1) only bounds one part of the exact split
+
+ Cov(F,H)=E[fh 1_B]+E[fh 1_(B^c)].                           (5.2)
+
+The second term includes regular communication, isolated bad
+components, and fluctuations of coarse conditional means. It is not
+the selected covariance. If a selection happened to satisfy w=0 on B,
+the more explicit decomposition would be
+
+ Cov(F,H)
+  = E[fh 1_B]
+    +p Cov_sel(F,H)
+    +p(E_sel F-EF)(E_sel H-EH)
+    +E[(1-w)fh 1_(B^c)].                                  (5.3)
+
+To verify this, split 1_(B^c)=w+(1-w)1_(B^c) and expand E_sel(fh).
+The last term and the mean product remain. No assumed inequality
+between the actual TURN68 event and the TURN70 weight is used here.
+
+An event with no spanning bad component need not disconnect the
+regular field. Nothing in(5.1) bounds partial_st log p in(2.4).
+The next section verifies this failure with a complete positive model.
+
+6. FINITE COUNTEREXAMPLE WITH RARE BRIDGES AND REFLECTION POSITIVITY
+
+This is a counterexample to an inference from the stated probabilistic
+inputs, NOT to Wilson theory, locality of its action, or YM4 existence.
+
+Fix 0<rho<1 and 0<epsilon_+<epsilon_-<1. Let Z=+1 or -1 with equal
+probability. Given Z=z, independently generate two reflected halves.
+Each half has:
+
+  - an endpoint variable Y_+ or Y_- in {-1,+1} with mean rho z;
+  - N bad flags B_i, each Bernoulli(epsilon_z).
+
+All endpoint variables and flags are independent conditional on Z.
+The two endpoints occupy disjoint local slots; their support does
+not grow with N. The flags form a chain of 2N cells joining them.
+One may regard Z as the retained coarse variable.
+
+Reflection exchanges the two halves and reverses the flag chain.
+For any complex function A of one half,
+
+ E[(Theta A) A]=(1/2)sum_(z=+,-)|E[A|Z=z]|^2>=0.
+
+Thus the law is reflection positive. Its finite marginal on the
+endpoint variables and flags has full support. The all-good selection
+also preserves this mixture-of-products reflection positivity.
+
+Let w=product_i 1_(B_i=0), with all 2N flags included. Write
+
+ p_z=1-epsilon_z,  r=p_-/p_+ in(0,1).
+
+Then
+
+ p=Ew=(p_+^(2N)+p_-^(2N))/2 ->0,
+ P_sel(Z=-1)=r^(2N)/(1+r^(2N)),
+ Var_sel(Z)=4r^(2N)/(1+r^(2N))^2.                           (6.1)
+
+The endpoint means conditional on Z remain rho Z after selection.
+Their conditional covariance is zero. Therefore
+
+ Cov_full(Y_+,Y_-)=rho^2,
+ Cov_sel(Y_+,Y_-)=rho^2 4r^(2N)/(1+r^(2N))^2 ->0.           (6.2)
+
+This is exactly the coarse-mean term of(4.1), not a hidden
+within-fiber covariance.
+In this two-state example E_sel(Y_+Y_-)=rho^2 is unchanged;
+the selected mean rho E_sel Z changes. The decay in(6.2) concerns
+the CENTERED covariance, not its uncentered cross moment.
+
+For EVERY prescribed set A of flags, conditional independence gives
+
+ P(B_i=1 for all i in A)
+  =(epsilon_+^|A|+epsilon_-^|A|)/2
+  <=epsilon_-^|A|.                                        (6.3)
+
+Thus the strongest elementary prescribed-set rare-event bound holds,
+not just a one-point probability estimate. The chain has a bad bridge
+only if all 2N flags are bad, whose probability is at most
+epsilon_-^(2N). Bounded marks can be included:
+
+ E[ |Y_+Y_-| 1_(bad bridge)]<=epsilon_-^(2N).
+
+The endpoints have full-law mean zero. Hence their centered
+bad-bridge product tends to zero exponentially while their full
+covariance stays rho^2. The no-bridge channel carries the correlation.
+
+For a cutoff illustration choose N proportional to a^-1 and an
+explicit M_a=a^-Delta, Delta>0. Put F_a=M_a Y_+, H_a=M_a Y_-.
+Their supports are unchanged, though their finite-regulator bounds
+now grow. Then
+
+ Cov_full(F_a,H_a)=rho^2 a^(-2Delta),
+ Cov_sel(F_a,H_a)=rho^2 a^(-2Delta)Var_sel Z ->0,
+ E[|F_a H_a|1_(bad bridge)]
+                    <=a^(-2Delta)epsilon_-^(2N) ->0.       (6.4)
+
+The selected covariance has a uniform upper bound and the marked
+bad-bridge contribution vanishes, yet the full covariance diverges.
+This arbitrary explicit scaling is not asserted to be a Yang--Mills
+normalization. It tests a claimed comparison theorem allowing
+polynomially normalized bounded local variables.
+
+The missing susceptibility is visible exactly from(2.4):
+
+ partial_st log p(s,t)|_0
+       =M_a^2 rho^2(Var_sel Z-1).                          (6.5)
+
+It is not suppressed by the bridge probability or by subtraction of
+the extensive source-free log p. Every step of this example has a
+positive normalized denominator.
+
+The same obstruction can preserve both endpoint means exactly.
+Replace Z by {-1,0,+1}, with probabilities 1/4,1/2,1/4. Keep the
+conditionally independent endpoint means rho Z. Take bad rate
+epsilon_0 at Z=0 and epsilon_1 at |Z|=1, with
+0<epsilon_0<epsilon_1<1. Put
+
+ r=(1-epsilon_1)/(1-epsilon_0)<1.
+
+Both before and after all-good selection E Y_+=E Y_-=0 by the
+Z->-Z symmetry. Direct summation gives
+
+ Cov_full(Y_+,Y_-)=rho^2/2,
+ Cov_sel(Y_+,Y_-)=rho^2 r^(2N)/(1+r^(2N)) ->0.                (6.6)
+
+Indeed the selected probability of |Z|=1 is the last ratio and
+the conditional cross moment is rho^2 Z^2. The same
+mixture-of-products RP proof and every bad-set/bridge estimate
+hold with epsilon_1. Thus controlling the global one-point means
+would not repair the inference either: the covariance of the
+coarse conditional means still changes.
+
+7. A SOURCE-DEPENDENT NORMALIZER DIAGNOSTIC
+
+All identities above freeze w when differentiating. If one instead
+recomputes a family w_(s,t), this changes the insertion. For a smooth
+positive weight on common support, put at zero
+
+ A=partial_s log w_(s,t), B=partial_t log w_(s,t),
+ C=partial_st log w_(s,t).
+
+Differentiating its numerator directly gives
+
+ partial_st log E[w_(s,t)exp(sF+tH)]|_0
+             =Cov_sel(F+A,H+B)+E_sel C.                    (7.1)
+
+Thus a source-retuned cutoff or baseline is not harmless. For hard
+moving domains, appropriate boundary derivatives replace the smooth
+calculation and cannot simply be omitted.
+
+Even more simply, multiplying a raw source numerator by exp(lambda st)
+leaves the zero-source probability law unchanged but changes its mixed
+source derivative by lambda. Field independence alone does not justify
+discarding this factor. Pure-s and pure-t factors do cancel from the
+connected object(2.3); a mixed source vacuum does not.
+
+8. PRECISE CONCLUSION FOR THE NEXT MATHEMATICAL STEP
+
+At the original-weight identification already retained for the selected
+sector, equation(2.4) is exact. It removes an unnecessarily strong
+requirement: one need not prove the globally selected mass tends to one.
+
+A useful missing theorem would instead bound the source-connected
+selection correction L_w^c, or its mixed derivative, for the SAME
+calibrated original observables. A local, summable estimate for the
+chronological increments in(3.1) would suffice. It must include the
+actual complementary/cemetery histories and their coarse mean
+fluctuations, and retain all mixed source scalar coefficients.
+
+TURN70 bounds the selected contribution. TURN68 bounds a particular
+original-law large-action bridge contribution in its own admitted
+family. Neither currently controls this selection susceptibility;
+the finite counterexample proves that their probabilistic forms alone
+cannot do so, even if a common-law identification were supplied.
+
+This is a sharper location of the full-law comparison problem, not
+its solution. No original continuum correlation, nonzero reflection
+norm, or completed YM4 existence theorem is inferred.
+
+
+========================================================================
+APPENDIX: Selected martingale hierarchy and separated covariance limits
+========================================================================
+
+SUBSEQUENTIAL SEPARATED CORRELATIONS AND A RESOLVED MARTINGALE LAW
+TURN71. tail47. 20 October 2026.
+
+RESULT AND STATUS
+
+The TURN70 selected estimates do not require a cross-regulator Cauchy
+theorem to yield subsequential separated correlation limits. There is a
+stronger conclusion than extracting unrelated bounded scalar sequences:
+one can extract a JOINT law of the centered conditional means at every
+fixed physical resolution. This law is a consistent increasing-resolution
+martingale. The fine-scale covariance tail then identifies the limits of
+the literal original selected-source covariances with its separated
+second-moment limits.
+
+The construction uses ONE selected probability law at each regulator,
+with one common terminal grid and coherent source interpolation. It does
+not choose a different selected law for each observable. It does not
+need a common analytic chart compactness assertion: the bounded resolved
+observables themselves are included in the compact state.
+
+Without an additional equicontinuity/strict-chart hypothesis the limiting
+resolved observable need not be a deterministic function of the limiting
+unaugmented coarse field. More importantly, the limiting martingale need
+not have a terminal random variable, even for a single same-support
+profile. Only its separated second moments are controlled as resolution
+increases. This distinction is appropriate for a composite with contact
+singularities; it does not itself construct a continuum Schwinger algebra.
+
+The result is for the literal selected family admitted in TURN70. There
+is no full-Wilson comparison, reflection positivity, nonzero lower bound,
+continuum operator calibration, or full Euclidean symmetry conclusion.
+A separate conditional Gram-form theorem below states what subsequence
+compactness would give if suitable ORIGINAL-law RP bounds were supplied.
+
+INPUT FILES
+
+selected_covariance_martingale_turn70.txt, especially Sections1--3,5--7;
+selected_connected_covariance_turn70.txt, Sections3--6;
+selected_scalar_source_induction_turn70.txt;
+regular_source_modulation_turn70.txt, Sections1--4;
+periodic_projected_product_bridge_turn48.txt, equation(7);
+physical_observable_sources_turn63.txt, Section3A, for the already proved
+free composite/OS distinction. No new primary-source theorem is imported.
+
+1. FIX ONE FAMILY, ITS NORMALIZATION, AND ITS PHYSICAL SOURCES
+
+Fix the admitted periodic cubic terminal grid, macro ratio R>1, terminal
+physical spacing ell_*>0, weak-coupling ceiling, window parameters, and
+the finite terminal physical torus. Let V_* be the real vector space of
+terminal vertex profiles. Its dimension m is finite. Let
+
+              ell_r=ell_* R^(-r),       r=0,1,2,...
+
+For ultraviolet depth n, the physical fine spacing is ell_n. Use the
+actual normalized selected path probability P_n constructed in TURN70
+Section1, with the complete raw densities, coarea factors, product
+windows, and terminal restriction retained. Its coarse states are
+U_0^(n),...,U_n^(n) in the original fine-to-coarse indexing.
+
+For f in V_* write F for its continuous tensor multilinear interpolant.
+At fine-to-coarse stage j the source profile is
+
+                   f_j^(n)=I_(R^(n-j)) f.                 (1.1)
+
+Thus for fixed resolution r the profile is f^[r]=I_(R^r)f,
+independent of n. The original insertion A_n(f) is the literal weighted
+original Wilson action of TURN70, using I_(R^n)f and its four-corner
+plaquette average. No a-dependent multiplier or bare inverse coupling
+is added. A_n is a linear function of f and is bounded at each finite
+regulator. Its mean is allowed to diverge.
+
+Write G_j^(n)=sigma(U_j^(n),...,U_n^(n)). The exact raw one-mark identity is
+
+ X_j^(n)(f_j^(n),U_j^(n))=E_n[A_n(f)|G_j^(n)].          (1.2)
+
+Raw scalar source terms have not been discarded in (1.2). Define the
+CENTERED resolved observables, indexed from coarse to fine, by
+
+ Y_(n,r)(f)
+   =E_n[A_n(f)-E_n A_n(f)|G_(n-r)^(n)],  0<=r<=n.      (1.3)
+
+The strong one-mark quotient norm supplies a representative Phi_(n,r),
+normalized by subtraction at the reference field, such that
+
+ sup|Phi_(n,r)(f)| <= 2 C_X ||f^[r]||_1,
+ Y_(n,r)(f)=Phi_(n,r)(f)-E_n Phi_(n,r)(f).              (1.4)
+
+Consequently
+
+ |Y_(n,r)(f)| <= B_r(f):=4 C_X ||I_(R^r)f||_1
+                    <=4 C_X R^(4r)||f||_1.            (1.5)
+
+This estimate is valid on the actual admitted real states. It does not
+need the representative to be chosen measurably across regulators:
+(1.3) defines Y exactly, and any near-minimal representative proves its
+bound. Deterministic additive constants in different representatives
+cancel in (1.4).
+
+There is also the martingale identity, for 0<=s<=r<=n,
+
+ E_n[Y_(n,r)(f)|G_(n-s)^(n)]=Y_(n,s)(f).               (1.6)
+
+Everything up to this point is already supplied by TURN70. Positivity is
+that of the complete selected path measure; signed cluster coefficients
+are not interpreted as probabilities.
+
+2. THE RESOLVED JOINT LAW: NO MONTEL HYPOTHESIS IS NEEDED
+
+Choose a basis e_1,...,e_m of V_*. For fixed r let
+
+ Y_(n,r)=(Y_(n,r)(e_1),...,Y_(n,r)(e_m)).
+
+It lies in the fixed compact box
+
+              K_r=product_(a=1)^m[-B_r(e_a),B_r(e_a)].
+
+For r>n put Y_(n,r)=0; this arbitrary extension has no effect on any
+fixed finite set of resolutions once n is sufficiently large. The joint
+laws of (Y_(n,r))_(r>=0) are probabilities on the countable compact
+metrizable product K=product_r K_r.
+
+Here is an elementary extraction argument. On each finite product
+K_0 x ... x K_k, compactness gives a weakly convergent subsequence of
+its probability laws. Taking nested subsequences and then a diagonal
+gives convergence of every finite marginal. Their limits are consistent
+because coordinate projection is continuous. They define a probability
+P on K. Equivalently, compactness of K and approximation of continuous
+functions by continuous cylinder functions gives the same weak limit.
+
+Thus along one subsequence n_l -> infinity there are jointly defined
+random vectors (Y_r)_(r>=0) with the following properties:
+
+(i) Every finite collection of resolved mean vectors converges jointly
+    in distribution. Since each such collection is uniformly bounded,
+    all its polynomial moments converge too.
+
+(ii) Put Y_r(f)=sum_a f_a Y_r(e_a), where f=sum_a f_a e_a.
+     This is ONE linear random functional on V_* at each r. Linearity
+     and every exact linear relation hold simultaneously for all real
+     or complex coefficients. No separate subsequence is chosen for f.
+
+(iii) With H_s=sigma(Y_0,...,Y_s),
+
+          E[Y_r(f)|H_s]=Y_s(f),     r>=s.             (2.1)
+
+Proof of (iii). For a bounded continuous function h of Y_0,...,Y_s,
+the corresponding finite-n vectors are measurable with respect to
+G_(n-s)^(n). Equation(1.6) gives
+
+ E_n[(Y_(n,r)(f)-Y_(n,s)(f))h(Y_(n,0),...,Y_(n,s))]=0.
+
+The integrand is continuous and bounded on a fixed compact product, so
+the identity passes to the weak limit. Continuous functions determine
+finite signed measures on that compact product; hence it holds for all
+bounded Borel h. This is exactly (2.1). In particular E Y_r(f)=0.
+
+Optional coarse-field coordinates can be included in this SAME
+extraction whenever they lie in identified compact spaces. On a fixed
+finite coarse lattice the absolute compact-group link tuple has this
+property; normal dummy Gaussian variables need not be included. At
+resolution r its finite number of links is fixed independently of n.
+Adding those link tuples to K and to each H_s preserves the proof,
+because they are measurable with respect to G_(n-s)^(n) for s-coarse
+states. One must include their actual data/geometry if claiming more
+than the link marginal. Deterministic coarse relations pass only when
+their graphs are closed in the chosen coordinates; no continuity of
+a discontinuous gauge section is assumed.
+
+This is a jointly consistent resolved-observable probability law.
+It is not merely a collection of scalar limits. It remains weaker than
+a law of the original unresolved observables A_n: the bounds B_r grow
+with r, and nothing here makes (Y_r(f)) uniformly integrable in r.
+
+3. SEPARATED COVARIANCES CONVERGE ON THAT SAME SUBSEQUENCE
+
+Suppose f,h in V_* have continuous interpolants F,H with actual periodic
+support distance d>0. Let
+
+ C_n(f,h)=Cov_(P_n)(A_n(f),A_n(h)),
+ C_(n,r)(f,h)=E_n[Y_(n,r)(f)Y_(n,r)(h)].
+
+Splitting the exact TURN70 martingale decomposition at stage n-r gives
+
+ |C_n(f,h)-C_(n,r)(f,h)| <= tau_(f,h)(ell_r),          (3.1)
+
+for n>=r and ell_r<=min(d,ell_*), where one may take
+
+ tau_(f,h)(epsilon)
+    =C_(F,H) C_X^2 g_*^2 epsilon^(-4)
+                         exp[-c d/epsilon].           (3.2)
+
+The constant includes the fixed R,J and physical support boxes and the
+profile sup norms. The output spacings of all omitted conditional
+births are <=ell_r, so this is precisely TURN70's proved fine tail.
+There is no extra transport of a two-mark effective potential.
+
+The same estimate holds for a finite interval of resolutions:
+if n>=s>=r and ell_r is sufficiently small, then
+
+ |C_(n,s)(f,h)-C_(n,r)(f,h)| <= tau_(f,h)(ell_r).       (3.3)
+
+This follows either by summing those conditional covariance births,
+or directly by orthogonality of the corresponding martingale increments.
+The absolute value bound is essential: separated increments need not
+have either sign.
+
+Finite-resolution joint convergence from Section2 yields
+
+ C_(n_l,r)(f,h) -> C_r(f,h):=E[Y_r(f)Y_r(h)]           (3.4)
+
+for every fixed r and for ALL f,h in V_*, because these are finite
+linear combinations of the same convergent matrix of moments.
+Passing (3.3) to the limit shows
+
+ |C_s(f,h)-C_r(f,h)| <= tau_(f,h)(ell_r),   s>=r.       (3.5)
+
+Hence C_r(f,h) converges as r->infinity whenever the supports are
+separated; call its limit C(f,h). Equations(3.1),(3.4),(3.5) prove
+
+                  C_(n_l)(f,h) -> C(f,h),             (3.6)
+ |C(f,h)-C_r(f,h)| <= tau_(f,h)(ell_r).                (3.7)
+
+For example, first choose r with 2 tau(ell_r)<epsilon and then l large
+enough for the finite-resolution moment difference in (3.4) to be
+less than epsilon. This proves (3.6) without a cross-regulator Cauchy
+estimate on either the selected densities or the effective actions.
+
+The subsequence in Section2 was chosen before f,h. Therefore (3.6)
+holds simultaneously for EVERY separated pair in the fixed finite
+terminal profile space, not only for a preselected countable list.
+There is no need to assert a hat-support decomposition of a pair:
+finite-dimensional moment convergence at each r already handles every
+linear combination, and the fine-tail bound is then applied to its
+actual interpolants.
+
+The limiting C is symmetric and real for real profiles. Bilinearity
+holds on every linear configuration of profiles for which the relevant
+separations hold, by taking limits of the finite-n identities.
+It has the TURN70 separated upper bound. It need not extend as a finite
+positive semidefinite covariance form to overlapping profiles.
+
+The same argument works for a COUNTABLE vector space of source labels
+that are all defined on the SAME sequence P_n and have the required
+fixed-resolution bounds and coherent interpolation. Include all its
+basis coordinates in the countable compact product. This statement
+does not supply those hypotheses for arbitrary new source families.
+
+In particular, refining the terminal grid or changing its terminal
+restriction may change the selected law itself. Independent
+subsequences of such different regulators cannot simply be combined
+into the theorem above. At a fixed terminal grid its interpolated
+source space is not dense in all smooth continuum test functions.
+Extending the source algebra/calibration is a separate obligation.
+
+4. WHAT A COMMON ANALYTIC CHART WOULD ADD, AND WHAT WAS NOT ASSUMED
+
+The preceding theorem permits a limiting Y_r to carry randomness not
+determined by an accompanying limiting coarse link tuple. Boundedness
+alone does not preserve the graph of a varying measurable function.
+For instance U_n uniform on the circle and Y_n=sin(n U_n) have subsequences
+whose joint limit is U independent of a nondegenerate arcsine variable.
+For trigonometric polynomial tests this follows by Fourier orthogonality,
+and uniform approximation gives the assertion for continuous tests.
+Every finite-n Y_n is a deterministic function of U_n.
+
+A sufficient deterministic-function upgrade at each fixed r is:
+
+  (A) the actual real state supports lie in a common compact K_r
+      strictly inside a common finite-dimensional complex analytic
+      domain D_r;
+  (B) compatible normalized totals Phi_(n,r)(e_a) are holomorphic on
+      D_r and uniformly bounded there;
+  (C) gauge quotient/chart identifications used to express the physical
+      totals have compatible continuous transitions on these supports.
+
+On a finite cover of K_r by smaller complex polydiscs, Cauchy estimates
+give a uniform derivative bound. Arzela--Ascoli and a diagonal
+extraction give uniform convergence on K_r of all the finite source
+basis totals. Locally uniform subsequential analytic convergence on
+D_r is obtained in the same way on a compact exhaustion. Additive
+constants have already been fixed by subtraction at the common
+reference field. With simultaneous weak convergence of the coarse
+law, the centered limits are then deterministic functions of that
+coarse field, and their finite moments converge.
+
+The actual TURN48 macro bridge equation(7) does establish
+
+ ||log U_pre(w,gKxi)/i||_infinity
+                   <=C_a b/R+C_R gT < b/2
+
+on its declared output tube, in its stated smooth pre-gauge coordinates.
+This is genuine strict incoming containment. It is not by itself a
+verification of (A)--(C) for every terminal restriction, every subsequent
+coordinate identification, and every gauge quotient in a limiting
+hierarchy. TURN70 permits a specified terminal weak domain but does not
+state that every such choice has compact closure strictly inside the
+common complex tube. A smaller terminal domain can be specified as an
+additional literal selected restriction, but must be kept in its law.
+
+Accordingly the deterministic-function upgrade is conditional here.
+The actual bounded augmented-state theorem in Sections2--3 uses none
+of (A)--(C), so it does not leave this analytic premise hidden.
+
+5. WHY A RESOLVED MARTINGALE NEED NOT GIVE AN ORDINARY COMPOSITE LAW
+
+Here is an explicit probability example separating the conclusions.
+It is an inference counterexample for the bounds, not a Wilson model.
+
+Take a fixed physical torus with fine mesh a_n=R^(-n), independent
+symmetric signs epsilon_z on its fine vertices, and gamma_n=1/sqrt(n).
+For a fixed continuous profile F define
+
+                A_n(F)=gamma_n sum_z F(z)epsilon_z.   (5.1)
+
+A constant can be added to each summand to make the uncentered
+observable positive, without changing any statement below.
+All coarse variables can be deterministic, so every conditional mean
+after the first integration is zero. The first conditional covariance is
+
+       gamma_n^2 sum_z F(z)H(z).                     (5.2)
+
+It has only local connected source carriers, with a rooted coefficient
+norm O(gamma_n^2). Each fine summand is a bounded analytic linear
+coordinate on a fixed chart if the coordinate takes values
++gamma_n and -gamma_n. Grouping its source roots onto the next fixed-R
+grid only changes the local carrier constants. Thus the example has
+the relevant uniform one-mark bound, a local small two-mark birth,
+and zero separated covariance/fine tail for disjoint profiles.
+
+For any nonzero smooth real F,
+
+ V_n:=Var A_n(F)=gamma_n^2 sum_z F(z)^2
+                      ~a_n^(-4)n^(-1) integral F^2 ->infinity.
+
+Independence gives
+ E A_n(F)^4=3 V_n^2-2 gamma_n^4 sum_z F(z)^4 <=3 V_n^2.
+Applying Cauchy--Schwarz to A_n(F)^2 on the event
+A_n(F)^2>=V_n/4, or the elementary Paley--Zygmund inequality, gives
+
+             P(|A_n(F)|>=sqrt(V_n)/2) >=3/16.         (5.3)
+
+Hence A_n(F) is not tight. No subsequence yields its ordinary real
+random-variable law, despite exact convergence of every disjoint
+covariance to zero and trivial compactness of all fixed coarse means.
+The unresolved contact noise is invisible to those coarse means.
+
+This example does not prove failure of tightness for the actual selected
+action. It proves that the TURN70 estimates alone do not imply it.
+The independent FREE Maxwell calculation in TURN63 Section3A gives the
+physically relevant warning: centered regularized F^2 can have divergent
+ordinary variance while its separated reflection forms have a nonzero
+OS-Cauchy limit. Demanding an ordinary-L2 random composite as the only
+route to a QFT would therefore be unnecessarily restrictive.
+
+6. COMMON POSITIVE-TIME GRAM LIMITS: A DIFFERENT, CONDITIONAL ENDPOINT
+
+Suppose one instead has actual cutoff probability laws mu_n with
+reflection positivity, and a countable family of positive-half
+observables B_(n,i), i>=1. Include in the index set all products and
+linear combinations needed by the proposed local algebra, if bounds
+for those objects are available. Define
+
+ G_n(i,j)=E_mu_n[(Theta B_(n,i)) B_(n,j)],             (6.1)
+
+with Theta the antilinear reflection. Centering may be imposed at the
+cutoff if that is the physical source convention. Assume the diagonal
+entries satisfy
+
+                   0<=G_n(i,i)<=M_i<infinity          (6.2)
+
+uniformly in n for each fixed i. These are separated REFLECTED
+self-pairings when B_i is supported at positive distance from the
+reflection plane, not ordinary same-support variances.
+
+RP makes each finite G_n positive semidefinite. Its two-by-two minors
+give |G_n(i,j)|<=sqrt(M_i M_j). Countable diagonal extraction therefore
+gives one subsequence on which all entries converge to G(i,j).
+For every finitely supported complex c,
+
+       sum_(i,j) conjugate(c_i)G(i,j)c_j
+          =lim_n sum_(i,j) conjugate(c_i)G_n(i,j)c_j >=0.       (6.3)
+
+Thus the formal finite span of the labels has a positive semidefinite
+sesquilinear form. Quotient by its null space and complete to obtain a
+Hilbert space. Any fixed exact linear relation with zero cutoff norm
+passes to the quotient. An asymptotically vanishing-norm relation does
+too. No common cutoff Hilbert space and no full-sequence Cauchy theorem
+were assumed.
+
+This gives a compatible Gram form, not an automatic local operator
+algebra or a reconstructed four-dimensional theory. Products require
+their own labels and estimates; multiplication on equivalence classes,
+domains of unbounded fields, locality, time-translation contraction and
+continuity, spatial symmetries, and reconstruction need the corresponding
+identities/bounds. A nonzero diagonal limit must also be shown, and even
+that alone need not exclude a static zero-energy sector; the separate
+root note turn71_spectral_subsequence_root gives a quantitative
+positive-energy criterion.
+
+The selected law in Sections1--3 has not been proved RP. Its ordinary
+probability positivity proves its finite ordinary moment matrices are
+positive, but not its reflected matrices. For example the exchange-
+symmetric two-half law (Y_+,Y_-)=(xi,-xi), xi=+/-1 equally likely,
+has positive probability and reflection invariance, while
+E[Y_-Y_+]=-1. Its reflected one-vector form is negative.
+Accordingly (6.2)--(6.3) cannot presently be attached to the selected
+correlation limit just constructed.
+
+7. NARROWING OF THE EXISTENCE OBLIGATIONS
+
+What is now established, at the exact admitted TURN70 hypotheses:
+
+  * A common subsequence for a JOINT resolved mean hierarchy under one
+    selected regulator family, with its martingale consistency.
+  * Simultaneous subsequential limits of all its separated covariances
+    on the fixed terminal profile space.
+  * Quantitative approximation of those limits by finite-resolution
+    covariances, with the already proved ultraviolet tail.
+
+Therefore uniqueness of the UV limit and a direct Cauchy comparison of
+the varying selected coarse laws are not prerequisites for this scoped
+existence result. The coarse means can be retained as coordinates when
+a deterministic-function compactness theorem is unavailable.
+
+What has NOT been established:
+
+  * An unresolved random field or all its same-support moments;
+  * a dense, coherently calibrated continuum source algebra under the
+    same cutoff laws, or all its separated higher Schwinger functions;
+  * RP of the selected family, continuum translations/rotations, or
+    reconstruction of a nontrivial quantum theory;
+  * a nonzero dynamic limiting observable;
+  * any transfer of these selected results to the full original Wilson
+    measure, whose omitted mass and coarse channels remain.
+
+All physical covariance claims here concern the literal action source
+normalization of TURN70. Multiplicative renormalizations depending on
+cutoff must be checked in the bounds; divergent additive deterministic
+constants cancel in the centered quantities. The finite terminal grid,
+fixed physical torus, and absence of any thermodynamic-uniform
+continuum-source conclusion are part of the result.
+
+
+========================================================================
+APPENDIX: Physical spectral subsequence and positive-energy criterion
+========================================================================
+
+ONE-OBSERVABLE SPECTRAL COMPACTNESS AND A DYNAMIC WITNESS
+TURN71. Root derivation. 20 October 2026.
+
+This is a conditional consumer theorem, not a Yang--Mills estimate.
+Its purpose is to avoid requiring a full cross-cutoff Cauchy theorem
+when a subsequential existence construction would suffice, and to
+distinguish a surviving positive-energy state from a frozen mixture.
+
+1. SETUP
+
+For every cutoff a, let A_a be a nonnegative self-adjoint operator,
+Omega_a a normalized ground vector, and v_a a centered physical
+observable vector. No common Hilbert space is assumed.
+
+Let rho_a(B)=||1_B(A_a)v_a||^2. At each fixed cutoff rho_a is finite.
+The estimates below also work when this is only locally finite and
+the stated positive-time transforms exist.
+
+For a fixed time-window width delta>0 put
+
+ b_delta(E)=(1-exp(-delta E))/E,   b_delta(0)=delta,
+
+ R_a(t)=integral exp(-2tE)b_delta(E)^2 rho_a(dE).
+
+This is the squared norm of exp(-t A_a)b_delta(A_a)v_a.
+For the actual fixed-spatial Hamiltonian and a magnetic multiplication
+observable it is also the reflected covariance of the centered time
+window [t,t+delta]. Its finite-regulator source identity was derived
+in TURN67 and attached to temporal Wilson limits in TURN68--69.
+Nothing here extends those results uniformly in the spatial cutoff.
+
+2. SUBSEQUENCE WITHOUT A CAUCHY ESTIMATE
+
+Suppose for some t0>0 that R_a(t0)<=M<infinity uniformly along a
+cutoff sequence a->0. Set
+
+ nu_a(dE)=exp(-2t0 E)b_delta(E)^2 rho_a(dE).
+
+These positive measures have total mass <=M. Regard them as measures
+on the compact metrizable interval [0,infinity], including infinity.
+They have a weakly convergent subsequence nu_a -> nu_hat. Let nu be
+the restriction of nu_hat to finite energies.
+
+For every t>t0 the function exp[-2(t-t0)E], assigned value zero at
+infinity, is continuous on this compactification. Hence on the SAME
+subsequence,
+
+ R_a(t) -> R(t)
+   := integral_[0,infinity) exp[-2(t-t0)E] nu(dE).
+
+An atom of nu_hat at infinity is lost at these strictly later times.
+Thus a uniform early-time upper bound alone already gives a nonnegative
+Laplace-transform subsequential limit for this single observable.
+It does not give convergence at the boundary t=t0.
+
+For any k>=1 and t>=t0+eta,
+
+ |partial_t^k R_a(t)|
+   <= M sup_(E>=0) (2E)^k exp(-2eta E)
+   = M [k/(e eta)]^k.
+
+Weak convergence of the continuous derivative kernels and these
+bounds give convergence of every derivative locally uniformly for
+t>t0. This can also be proved by Arzela--Ascoli on compact time
+intervals, with the pointwise Laplace limit fixing every subsequential
+limit. No analyticity of a physical-source logarithm is required for
+this implication.
+
+This theorem does not produce the PREMISE R_a(t0)<=M. The available
+selected-sector upper bound is not automatically such a bound for
+the original Hamiltonian/Wilson physical source.
+
+3. WHY A LATER POSITIVE NORM ALONE CAN LEAVE ONLY ZERO ENERGY
+
+A later lower bound R_a(t1)>=m>0 prevents all weighted spectral mass
+from escaping to infinity. It need not prevent collapse to zero.
+
+For example take the two-state Markov Hamiltonian
+
+ A_epsilon=(epsilon/2)[[1,-1],[-1,1]],
+ Omega=(1,1)/sqrt(2),
+ Q=diag(1,-1),  v=Q Omega.
+
+It has a unique ground state at every epsilon>0, a positive
+semigroup, and centered spectral measure delta_epsilon. Its stationary
+reversible path law is reflection positive. Nevertheless
+
+ R_epsilon(t)=exp(-2t epsilon)b_delta(epsilon)^2 -> delta^2
+
+at every fixed t. The limiting centered state can lie in an enlarged
+zero-energy sector. Finite-regulator uniqueness does not rule this out.
+
+For a full QFT construction, vacuum clustering/ergodic-component
+control is one way to address this. The following stronger finite-
+cutoff criterion gives a directly dynamic witness instead. It is
+sufficient, not asserted necessary for every observable choice.
+
+4. A QUANTITATIVE FIXED POSITIVE-ENERGY BAND
+
+In addition to R_a(t0)<=M, suppose for fixed t1>t0 and s>0,
+
+ D_a:=R_a(t1)-R_a(t1+s)>=m>0.
+
+Let alpha=2(t1-t0)>0 and beta=2s>0. Then
+
+ D_a=integral q(E) nu_a(dE),
+ q(E)=exp(-alpha E)(1-exp(-beta E)).
+
+This q is nonnegative, bounded by one, and vanishes at BOTH zero
+and infinity. Put
+
+ epsilon=m/(4 beta M),
+ Lambda=max(2 epsilon, alpha^-1 log(4M/m)).
+
+The premises imply 0<m<=M. On E<epsilon, q(E)<=beta E, so that
+
+ integral_(E<epsilon) q(E) nu_a(dE)<=m/4.
+
+On E>Lambda, q(E)<=exp(-alpha Lambda), whence
+
+ integral_(E>Lambda) q(E) nu_a(dE)<=m/4.
+
+Therefore
+
+ integral_[epsilon,Lambda] q(E) nu_a(dE)>=m/2,
+ nu_a([epsilon,Lambda])>=m/2.
+
+This is a FIXED physical energy band, independent of cutoff. Since
+exp(-2t0 E)b_delta(E)^2<=delta^2, it also implies
+
+ rho_a([epsilon,Lambda])>=m/(2 delta^2).
+
+Passing to the weak subsequence from Section2, q is continuous on
+[0,infinity], with q(0)=q(infinity)=0, so
+
+ integral q(E)nu(dE)>=m.
+
+The same low/high estimates give nu([epsilon,Lambda])>=m/2.
+No choice of interval endpoints with zero atom is necessary for this
+conclusion; it follows by the integral estimate.
+
+The resulting single-observable spectral representation has a
+nonzero positive-energy subspace. For example on L2(nu), multiplication
+by E is a nonnegative self-adjoint generator and the vector 1 has
+nonzero projection onto [epsilon,Lambda]. Its semigroup matrix
+elements reproduce R(t0+u/2) for u>0.
+
+This is an abstract one-observable limit, not a local four-dimensional
+Yang--Mills theory: no common continuum algebra, spatial translations,
+rotations, products, or gauge-theory identification follows.
+
+5. EXACT ORIGINAL-SOURCE EXPRESSION FOR THIS CRITERION
+
+For a fixed finite-spatial magnetic observable Q, define
+
+ K_a(T,z)=log <Omega_a,
+    exp[-T(H_a-z Q_a-E_a)] Omega_a>.
+
+The endpoints are the UNSOURCED ground vector, and
+K_a(T,0)=0. Write J_a(T)=partial_z^2 K_a(T,0).
+TURN67's exact Duhamel/reflection identity is
+
+ R_a(t)=(1/2)Delta_delta^2 J_a(2t),
+ Delta_delta^2 J(T)=J(T+2delta)-2J(T+delta)+J(T).
+
+Consequently the dynamic witness in Section4 is exactly
+
+ D_a=(1/2)[Delta_delta^2 J_a(2t1)
+                   -Delta_delta^2 J_a(2t1+2s)].
+
+There are only finitely many required slab lengths. Any source scalar
+affine in T cancels in each Delta_delta^2, provided the SAME
+normalization is used at all these lengths. Source-dependent errors
+not known to be affine cannot be discarded.
+
+For the global logarithmic coupling source of TURN67, with magnetic
+observable Q_gamma=4 gamma S_sp/a and gamma=g^-2, the factor 1/2
+above is replaced by 1/8 for its source curvature. Local coupling
+profiles have the separately retained energy-current correction;
+this identity does not remove it.
+
+These formulas specify the quantitative source information that
+would suffice. No upper bound M or positive difference m uniform
+in spatial cutoff has been proved for the actual required YM family.
+
+6. ROLE IN THE EXISTENCE PROGRAM
+
+Full-sequence uniqueness and cross-cutoff Cauchy estimates are not
+logically necessary for a subsequential existence argument. One
+can instead seek compatible limits and preserve positivity along
+a common subsequence. The present theorem demonstrates this for
+one physical spectral family and supplies a sufficient positive-
+energy witness.
+
+The full proof still needs estimates for the ORIGINAL law, a common
+local observable algebra with the required products and continuum
+symmetries, and an appropriate reconstruction. Neither a scalar
+Laplace-transform limit nor compactness of unrelated correlations
+performs those steps.
+
+
+========================================================================
+APPENDIX: Fresh primary-source review
+========================================================================
+
+TURN71 PUBLIC PRIMARY-SOURCE REFRESH
+history47. 20 October 2026.
+
+RESULT
+
+No new public theorem was found that closes our full-original-law
+source estimate, convergence of coarse laws/observables, or surviving
+nonzero separated lower bound. Both inspected main branches are
+unchanged from their previously recorded versions. This is a
+version-specific finding, not a claim about unpublished work or
+every theorem in the literature.
+
+1. FRESH VERSION EVIDENCE
+
+Fresh GitHub commit/tree API responses and downloaded source files:
+ work/turn71_sources/
+Exact check time:
+ work/turn71_sources/repository-status.json
+
+Ethan Sussman / Levent Alpoge public repository:
+ https://github.com/ethanwsussman/Yang--Mills-LLM-experiment
+ main cf596e69629e0da2e25e33ab8cafc507c023a1de
+ commit timestamp 2026-10-20T12:28:35Z
+ message: Update LPO1 to the revised infinite-lattice outline.
+
+The complete recursive tree has 19 entries, is not truncated, and
+has no path/blob changes against work/remote69/sussman-tree.json.
+The latest commit is the SAME one inspected at TURN69.
+
+CaptainSude project:
+ https://github.com/CaptainSude/towards-proving-existence-of-YM4
+ main bf484466e1e5091de6770c671f7411f8f93b9c87
+ commit timestamp 2026-10-18T15:05:59Z
+ message: Publish YM4 paper, companion, sources and complete
+          research archive.
+
+Its complete recursive tree has 21 entries, is not truncated, and
+has no path/blob changes against work/remote67/project-tree.json.
+This is the older public project snapshot, not a publication of
+our subsequent local TURN70 results.
+
+I independently recomputed Git blob hashes of the retained upstream
+YM PDF and raw I--III and matched them with the fresh remote tree:
+
+ ym4_manuscript_zeroth_draft.pdf
+   9aab2f336bc078c3bf12b6a8530a28c1ab2999b6
+ theorem_0_complete_account_raw_I.tex
+   31898fb205c2990b59b7574915e82b22e08450b4
+ theorem_0_complete_account_raw_II.tex
+   f1e0aa132d23ed7f6d44f504a78ad57bd4ce38b8
+ theorem_0_complete_account_raw_III.tex
+   6012ff578fb1c67c29651f1f4192ab59a4c862a3
+
+See verified-local-blobs.json for retained paths and SHA256 values.
+This refresh does not re-audit all roughly 26 MB of unchanged raw
+TeX. It directly rereads the decisive source and lower-bound
+dependencies described below.
+
+2. UPSTREAM YM4: THE RELEVANT FULL-LAW ESTIMATE IS STILL A TASK
+
+Pinned raw-II source:
+ https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/blob/cf596e69629e0da2e25e33ab8cafc507c023a1de/theorem_0_complete_account_raw_II.tex
+
+The following locators were read directly, with line-numbered
+extracts preserved in raw_II_dependency_extract.txt.
+
+ 8.6:lem-prefactor-monotone, lines 102730--102751:
+ the common-prefactor comparison under removal is explicitly
+ marked incomplete.
+
+ 8.6:lem-healed-removal, from line 103722:
+ the healed-island estimate is an implication with stated positive
+ operation, activity, boundary and locality inputs.
+
+ 8.6:prop-live-removal, lines 105369--105435:
+ the desired comparison for live components has an outstanding
+ proof. Its proposed route explicitly still has to treat the
+ components not eligible for healing, including second-class ones.
+
+ Most directly, 8.21:lem-source, lines 145173--145213:
+ the proposed decomposition of the ORIGINAL conditional source
+ mean into a regular part and controlled live-component terms is
+ explicitly marked "Proof outstanding." The following paragraph
+ describes how a proof might be obtained; it is not that proof.
+
+ 8.21:cor-consequences-torus, lines 145312--145350:
+ the positive two-point conclusion assumes a relative witness
+ estimate, the required continuum limits, and a continuum-kernel
+ lemma whose proof is outstanding. Thus its lower conclusion
+ cannot supply those missing antecedents.
+
+The draft's own dependency ledger, lines 145589--145606, retains
+these unfinished inputs. Our later TURN62 first-class count result
+does improve a portion of the local normalization problem. This
+review neither withdraws it nor identifies it with the remaining
+all-live-source estimate.
+
+No unpublished completion is inferred from the repository README.
+
+3. LP1 AND RP1: EXACT AVAILABLE SCOPE
+
+Current LP1 blob:
+ 4522d622e14a8472e03ff6faf22e435abf3fb6bb.
+Pinned document:
+ https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/blob/cf596e69629e0da2e25e33ab8cafc507c023a1de/QED3_slop/Infinite-lattice%20reflection%20positivity%20(LP1)/LPO1.pdf
+
+Pages 1--2 were reread, including visual formula inspection.
+This is an outline for all-flux chamber QED3 at FIXED lattice
+spacing and parameters. Its target is infinite-volume lattice
+reflection positivity of the original cubic limiting law, not
+UV removal. Page 1 explicitly excludes a continuum limit.
+LPM1 remains listed as a manuscript to be added; it is absent
+from the complete inspected tree. The additive abelian flux
+construction is not an SU(2) Wilson identity.
+
+Current RP1 blob:
+ 003254250ba231d12c1b8a88d308227db961ed5a.
+Pinned document:
+ https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/blob/cf596e69629e0da2e25e33ab8cafc507c023a1de/RP%20O(d)%20trick%20(RP1)/RP1O1.pdf
+
+Downloaded afresh, extracted and visually inspected its target
+formula on p1. It assumes an already existing continuum random
+distribution, all translations, prescribed coordinate/diagonal RP,
+and a Gaussian L2 exponential bound. It targets rotation covariance
+of Schwinger functions on disjoint tests; p2 allows contact defects.
+It does not construct the random distribution, prove our physical
+moment bounds, or furnish a nonzero correlation.
+
+Version precision: the current RP1 README states a more general
+L1-plus-L2 exponential hypothesis, whereas the available PDF p1
+displays the pure Gaussian L2 hypothesis. They must not be silently
+treated as the same theorem version. RP1M1 is absent from this tree.
+Both folders label the available documents as outlines and qualify
+their verification status. No unseen manuscript is imported.
+
+The older QED3 PDFs and QEO1 are also unchanged in the tree.
+No new model-specific YM4 estimate has been deposited there since
+TURN69. This pass does not re-audit all their earlier proof cards.
+
+4. THE CAPTAINSUDE PAPER DOES NOT SUPPLY AN INDEPENDENT COMPLETION
+
+Fresh primary TeX files retained here:
+ captainsude-introduction.tex
+ captainsude-completion.tex
+ captainsude-source_map.tex
+
+Pinned completion source:
+ https://github.com/CaptainSude/towards-proving-existence-of-YM4/blob/bf484466e1e5091de6770c671f7411f8f93b9c87/source/completion.tex
+
+The Common-space completion criterion, label thm:completion,
+starts at line 23. It assumes a scalar vacuum representation and
+actual compatible fields with energy bounds, covariance,
+Yang--Mills identification and a nonzero excitation. Its
+operator-theoretic assembly does not prove these prerequisites.
+
+The introduction, lines 108--128, distinguishes exact,
+source-relative and conditional continuum statements. Lines
+166--189 explicitly retain the full mixed-history attachment and
+nontrivial vacuum phase as remaining inputs. The completion
+section's next-task list likewise asks for a literal full
+normalized source estimate and the continuum application.
+
+Some historical source-access limitations in source_map.tex
+predate our subsequently supplied complete Large-I/II PDFs.
+They are not current missing-download obligations.
+
+5. COMPARISON WITH CURRENT LOCAL STATUS AND THE 1997 PAPER
+
+Authoritative comparison:
+ outputs/yang-mills-current-status.txt, TURN70.
+New primary-paper review:
+ work/balaban3_review/correlation_identities_review_history.txt.
+
+The current selected result has a UV-uniform separated covariance
+UPPER bound for a literal original action insertion under the
+specified normalized selected law. It does not yet control every
+original Wilson history, compare the changing terminal laws across
+UV cutoffs, or produce a positive surviving lower bound.
+
+None of the unchanged public materials inspected here discharges
+one of those three obligations. In particular:
+
+ - a conditional removal/source lemma cannot be used as a
+   full-law moment estimate;
+ - a fixed-spacing infinite-volume theorem does not supply a
+   continuum scaling limit;
+ - rotation recovery from an already controlled continuum law
+   does not construct that law;
+ - a conditional positive two-point conclusion does not prove
+   its relative-error and kernel-convergence hypotheses.
+
+Balaban--O'Carroll 1997 is useful in precisely this distinction:
+its full Gaussian/source identity obtains correlations from a
+complete effective action, but the effective kernels' UV and
+infinite-volume convergence is an imported input. Its identity
+is not a reason to identify our selected law with the full Wilson
+law or to infer convergence from uniform selected bounds.
+
+RECOMMENDED USE OF THIS REFRESH
+
+Continue the mathematical full-law/source and coarse-convergence
+work from the local TURN70 frontier. The public sources remain
+useful for architecture and explicit target estimates, but there
+is no newly available theorem-level shortcut established by this
+refresh. No output or authoritative frontier was edited.
+
+
+========================================================================
+APPENDIX: Independent full-law comparison audit
+========================================================================
+
+INDEPENDENT AUDIT: FULL-LAW SELECTION SOURCE COMPARISON
+TURN71. history47. 20 October 2026.
+
+Producer reviewed in full:
+ work/turn71_full_law_gauge.txt
+SHA256:
+ D1E65CB3A5CA3F9CD6705B3F3883FB12CE246011C761BEB8426D7025650A4C1B
+
+VERDICT: PASS at the explicitly stated finite-regulator scope.
+No mathematical repair is required. The mixed selection-source
+susceptibility is identified exactly but is not estimated for the
+actual Yang--Mills family.
+
+1. ORIGINAL-WEIGHT ATTACHMENT
+
+I checked the producer's dictionary against
+projected_product_sector_turn48.txt Sections6-7 and
+selected_covariance_martingale_turn70.txt Section1.
+
+The fixed projected-product weights lie between zero and one.
+Repeated integration gives the original augmented measure with
+their product and the terminal selected restriction. Appended
+normal draws have mass one; original field and determining records
+are retained. The cemetery completion preserves this original
+marginal without estimating the complement or identifying a
+specific native R history law.
+
+Thus P_sel=wP/E_Pw is the actual selected positive sector at these
+admitted finite regulators. Its normalizer retains all raw coarea
+and vacuum factors. This does not follow from an arbitrary isolated
+weighted chart, and the producer correctly says so.
+
+2. CONNECTED SOURCE AND CONDITIONAL IDENTITIES
+
+With w frozen, log Z=log(Z_w/p)-log[p(s,t)/p] exactly. The mixed
+derivative therefore has the stated sign:
+
+ Cov_full(F,H)=Cov_sel(F,H)-partial_st log p(s,t)|0.
+
+The connected logarithm removes the source-free constant and
+purely one-source terms, but retains every mixed source scalar.
+All logs are taken before removing the regulator, with p>0.
+There is no logarithm of a limiting zero mass.
+
+The chronological ratios telescope to p(s,t), including the
+original source partition function in the first denominator.
+No independence or conditioned rare-event estimate is smuggled
+into this algebra. The optional bidisc Cauchy estimate has the
+correct factor 1/(r_F r_H), under its explicit uniform logarithm
+and boundary hypotheses.
+
+The conditional formula uses the FULL coarse marginal P_Y,
+not p_Y P_Y/p. Its conditional means retain their source scores.
+The assumption p_Y>0 almost surely is explicit and is not inferred
+for the weak-chart complement. Formula(4.2) follows by expanding
+the selected covariance of the full-law centered variables.
+
+Formula(5.3) retains both the selected mean product and the
+unselected no-bridge contribution. It assumes w=0 on the bridge
+only for that diagnostic identity; no such identification is
+claimed for the actual TURN68 event and TURN70 weight.
+
+3. REFLECTION-POSITIVE COUNTEREXAMPLES
+
+For the two-state hidden variable, conditional independence of
+the reflected halves gives the square of the conditional mean
+in the reflection form. The same argument works after all-good
+selection, with the posterior hidden-variable weights.
+
+The posterior odds are r^(2N). Hence
+Var_sel Z=4r^(2N)/(1+r^(2N))^2, and the endpoint covariance is
+rho^2 times this variance. Before selection it is rho^2.
+Every prescribed set of bad flags has probability at most
+epsilon_- to its cardinality. A spanning chain requires all 2N
+flags bad. The polynomially amplified endpoint example therefore
+has vanishing selected covariance and bridge contribution but
+diverging full covariance.
+
+The additional symmetric three-state example also checks.
+The initial total weight of |Z|=1 equals that of Z=0. Their
+selected weight ratio is r^(2N). Both endpoint means remain zero,
+and the covariance changes from rho^2/2 to
+rho^2 r^(2N)/(1+r^(2N)).
+
+These examples are finite positive reflection-positive laws
+showing that the listed probabilistic inputs alone do not imply
+the desired comparison. They are not Wilson measures, are not
+claimed to have the Wilson local action or spatial continuum
+structure, and do not obstruct Yang--Mills existence.
+
+4. MOVING SOURCES AND FINAL SCOPE
+
+For smooth source-dependent weights on a common support, the
+derivative of the logarithm is
+
+ Cov_sel(F+A,H+B)+E_sel C,
+
+with A,B,C the corresponding derivatives of log w. The formula
+and the warning about hard moving-domain boundary terms are
+correct. Multiplication by exp(lambda st) changes the mixed jet
+while preserving the zero-source law, as stated.
+
+The note does not infer a physical lower bound, a cutoff-uniform
+source susceptibility, a full-law continuum limit, or an equality
+between selected/no-bridge/native-history laws. Its useful precise
+conclusion is that global selected probability near one is not
+needed for covariance transfer; control of the exact connected
+source correction is the remaining comparison target.
+
+No producer was edited. Audit frozen at the hash above.
+
+
+========================================================================
+APPENDIX: Independent compactness audit
+========================================================================
+
+INDEPENDENT AUDIT: SELECTED RESOLVED-MEAN COMPACTNESS
+TURN71. gauge47. 20 October 2026.
+
+Producer: work/turn71_compactness_tail.txt
+Reviewed SHA256:
+4875C2573B9A45046ECDF24AF8B2C30302F53BD65AA836367534F95F4D59A89C
+
+VERDICT: PASS at the producer's stated admitted TURN70 selected scope.
+No mathematical repair requested. All seven sections were read.
+This does not independently certify every prior analytic input or
+upgrade the conclusion to the original Wilson law.
+
+1. ACTUAL CENTERING AND ONE FAMILY
+
+The producer fixes one actual selected probability law P_n at each
+regulator, a common terminal grid, and its finite-dimensional profile
+space V_*. Each source is the same physical tensor interpolant through
+the coherent interpolation rule. It does not choose the law to fit
+an individual observable.
+
+The definition
+
+ Y_(n,r)(f)=E_n[A_n(f)-E_n A_n(f) | G_(n-r)]
+
+uses the raw original insertion and its ACTUAL selected mean. If a
+normalized representative of its conditional mean has supremum at most
+2 C_X ||I_(R^r)f||_1, centering doubles this at most. Thus
+
+ |Y_(n,r)(f)|<=4 C_X ||I_(R^r)f||_1
+              <=4 C_X R^(4r)||f||_1
+
+is correct. Deterministic raw vacuum constants cancel in this bound,
+but were not removed from the finite-cutoff conditional identity.
+The bound is uniform in n at fixed r, not in r.
+
+The finite-n martingale direction is also correct. For r>=s,
+G_(n-s) is coarser than G_(n-r). The tower property gives equation(1.6).
+
+2. COMPACT EXTRACTION AND CONDITIONAL IDENTITIES
+
+For a fixed finite basis of V_*, the boxes K_r are compact. Their
+countable product is compact metrizable. Extending coordinates by zero
+for r>n does not affect any fixed finite collection eventually.
+Finite-marginal extraction and diagonalization therefore provide one
+joint subsequential law of all resolved mean vectors.
+
+The passage of conditional expectations is valid, not an appeal to
+weak convergence of conditional kernels. At finite n, every Y_(n,k)
+with k<=s is measurable with respect to the full G_(n-s). Testing
+the exact martingale difference against a continuous function of
+these vectors gives a bounded continuous integrand on a fixed finite
+compact product. Weak convergence passes that identity. Uniqueness
+of finite signed measures extends it to bounded Borel test functions,
+which proves the conditional-expectation statement for the limiting
+sigma algebra H_s.
+
+It is legitimate to append fixed-resolution compact-group link tuples
+to this extraction and to H_s: the corresponding coarser tuples were
+also G_(n-s)-measurable. The producer does not claim compactness of all
+normal Gaussian or other auxiliary records. Nor does it identify the
+limiting resolved mean as a deterministic function of those links.
+The original full G remains the finite-cutoff conditioning sigma
+algebra; the limiting augmented H is sufficient for the passed
+martingale identity.
+
+Linearity holds for all coefficients in the finite-dimensional source
+space after extraction of its basis. Thus the same subsequence works
+for all f,h in V_*, including uncountably many real coefficients.
+
+3. FINE-TAIL IDENTIFICATION
+
+At fixed resolution r, the difference between the original covariance
+and the covariance of Y_(n,r) consists of the RG births before stage
+n-r. Their output physical spacings are at most ell_r. This is exactly
+the range of the retained TURN70 fine-tail estimate.
+
+The estimate for a finite interval r<=s follows by summing the same
+conditional covariance births, with absolute values. Separated
+increments are not assumed positive.
+
+Every finite-resolution moment converges along the joint subsequence
+because its coordinates are bounded. Passing the interval estimate
+to the limit makes C_r(f,h) Cauchy as r increases for each separated
+pair. The triangle inequality with the uniform fine tail then proves
+convergence of the original selected covariances along that SAME
+subsequence and the quantitative error in(3.7).
+
+There is no interchange of an uncontrolled infinite sum and a weak
+limit. First fix r, pass the finite moment limit, and then let r grow
+using the uniform tail. No cross-regulator Cauchy estimate for the
+selected coarse densities is needed for this subsequential result.
+
+The fixed terminal profile space is not silently treated as dense in
+all continuum test functions. The optional countable extension is
+explicitly conditional on those sources already belonging to the same
+family with the required interpolation and bounds.
+
+4. THE NECESSARY LIMITATIONS ARE PRESERVED
+
+Section4 correctly distinguishes bounded augmented-state compactness
+from convergence of graphs of measurable functions. The oscillatory
+circle example demonstrates the latter failure. Its proposed common
+analytic-domain upgrade is explicitly conditional and has the usual
+Cauchy equicontinuity and compactness justification.
+
+There is no ordinary L2 or random-variable limit in the fine-resolution
+index asserted for Y_r(f). The range bound grows with r, and the
+separated second-moment estimate does not bound its same-support
+variance.
+
+The independent contact-noise diagnostic in Section5 is sound at its
+explicit logical scope. Its variance grows like a_n^-4/n, its fourth
+moment is at most three times the squared variance, and the displayed
+probability lower bound is
+(1-1/4)^2/3=3/16. Hence it indeed prevents ordinary tightness while
+its disjoint covariances and resolved coarse means can vanish.
+It is not represented as an actual Wilson or gauge-invariant model.
+
+5. CONDITIONAL GRAM STATEMENT
+
+The distinct Section6 Gram theorem is correct if the ORIGINAL cutoff
+laws have reflection positivity and the stated reflected diagonal
+bounds. Two-by-two positivity bounds the entries; a countable diagonal
+extraction passes every finite positive semidefinite matrix inequality.
+Null-vector quotient and Hilbert completion are then legitimate.
+
+The producer correctly declines to infer multiplication, local
+operator domains, time evolution, continuity, complete symmetries or
+nonzero dynamic content from the Gram matrix alone. It explicitly
+does not apply this theorem to the selected law, whose reflection
+positivity has not been proved.
+
+6. FINAL SCOPE
+
+The new conclusion is a joint probability law of bounded resolved
+conditional means and simultaneous subsequential separated-covariance
+limits on one fixed terminal profile space, at the admitted selected
+inputs. This is stronger than extraction of unrelated numbers.
+
+It is not an unresolved continuum field law, a full-law comparison,
+a dense calibrated observable algebra, a nonzero OS witness, or a
+completed YM4 construction. The producer's final list states these
+limits accurately.
+
+The reviewed producer is frozen at the hash above.
+
+
+========================================================================
+APPENDIX: Independent spectral audit
+========================================================================
+
+INDEPENDENT AUDIT: ONE-OBSERVABLE SPECTRAL COMPACTNESS
+TURN71. history47. 20 October 2026.
+
+Producer reviewed in full:
+ work/turn71_spectral_subsequence_root.txt
+SHA256:
+ 385A118854E91096D8A40DF12608104BF602CF8A4AFBF325F3793FC4CFB7AB4D
+
+VERDICT: PASS at the stated conditional, single-observable scope.
+No mathematical repair is required. The original-law upper bound
+and positive finite-time difference remain unproved hypotheses.
+
+1. COMPACTNESS AND DERIVATIVES
+
+The one-point compactification [0,infinity] is compact metrizable.
+The nonnegative nu_a have uniformly bounded total mass M, so a
+single weakly convergent subsequence exists. Every kernel
+exp[-2(t-t0)E], t>t0, continuously extends by zero at infinity.
+One weak convergence statement therefore gives convergence at ALL
+strictly later times on the same subsequence; no uncountable
+diagonal selection is needed.
+
+For k>=1 the derivative kernel is (-2E)^k exp[-2(t-t0)E].
+Its exact uniform maximum at t>=t0+eta is
+
+ sup_E (2E)^k exp(-2eta E)=[k/(e eta)]^k.
+
+These kernels also extend continuously by zero at infinity.
+The corresponding k+1 bound gives equicontinuity on every compact
+subinterval of (t0,infinity). Pointwise convergence and this
+equicontinuity give locally uniform convergence of each derivative.
+The resulting derivatives agree with those of the finite-energy
+Laplace transform by dominated differentiation.
+
+The atom at infinity can be lost, and convergence to the defined
+finite-energy R(t0) is not established. The note correctly keeps
+the strict inequality t>t0. The limit may be identically zero.
+
+2. FIXED POSITIVE-ENERGY BAND
+
+For alpha=2(t1-t0), beta=2s and q(E)=e^-alphaE(1-e^-betaE),
+q is continuous on the compactification and vanishes at both
+endpoints. The assumptions imply M>0 and 0<m<=M.
+
+epsilon=m/(4betaM) gives integral_(E<epsilon)q dnu_a<=m/4.
+Lambda>=alpha^-1 log(4M/m) gives the upper-tail bound m/4.
+The extra condition Lambda>=2epsilon ensures a nondegenerate
+interval. Hence the band has q-weight >=m/2 and nu_a-mass >=m/2.
+
+The bound e^-2t0E b_delta(E)^2<=delta^2 then yields
+rho_a([epsilon,Lambda])>=m/(2delta^2), with the stated constants.
+
+Weak convergence gives integral q dnu>=m directly. Applying the
+same tail bounds to the limit proves its band mass bound without
+an endpoint-atom assumption or an invalid use of convergence of
+interval masses. The L2(nu) multiplication-operator realization
+is valid as a single-vector spectral representation. It does not
+by itself contain the full vacuum/local observable construction.
+
+3. ZERO-ENERGY COUNTEREXAMPLE
+
+A_epsilon has eigenvalues 0 and epsilon. Its ground vector is
+unique for each epsilon>0, Q Omega is centered and unit, and its
+spectral measure is delta_epsilon. Its semigroup is a two-state
+stochastic, positivity-preserving reversible semigroup.
+Conditioning the stationary process at a reflection time proves
+reflection positivity.
+
+As epsilon tends to zero, the path law becomes a mixture of the
+two constant spin histories, and the centered observable has only
+zero-energy spectral weight. Thus later-time positive norm alone
+does not produce a dynamic excitation. This is an exact obstruction
+to that inference from these properties, not a Wilson/YM example.
+
+4. FINITE-SLAB NORMALIZATION
+
+For fixed bounded self-adjoint Q, fixed unsourced endpoints Omega,
+and A=H-E0, the literal ground-slab log satisfies
+
+ J(T)=partial_z^2 log<Omega,e^-T(A-zQ)Omega>|0
+     =2 integral_0^T (T-u) C_Q(u)du.
+
+Consequently
+
+ (1/2)Delta_delta^2 J(2t)
+   =integral e^-2tE b_delta(E)^2 rho_Q(dE).
+
+Taking the difference of this expression at t1 and t1+s gives
+exactly the producer's dynamic witness, with no lost factor two.
+The original source may be uncentered: the logarithm centers the
+second derivative. Matched scalar terms affine in T cancel before
+taking limits; arbitrary scalar remainders do not.
+
+For the TURN67 logarithmic coupling source,
+Q_gamma=4gamma S_sp/a and
+partial_tau^2 K_gamma(T,0)=4 J_Qgamma(T)-T E0.
+Thus the coefficient is 1/8 for that magnetic observable's norm.
+This matches the frozen source identities in
+separated_source_spectral_target_turn67.txt and the source/temporal
+attachments in TURN68--69. It is not a spatially uniform estimate.
+Independent local profiles retain their energy-current terms.
+
+5. SCOPE AND FINAL WORDING
+
+The note correctly replaces unnecessary full-sequence Cauchy
+convergence by a subsequence for this one spectral family. It does
+not infer compatibility of different observables, locality,
+continuum spatial symmetries, nonabelian identification or a full
+YM4 theory.
+
+The final producer includes both suggested clarity changes:
+ - "nonnegative Laplace-transform limit" emphasizes that Section2
+   alone allows the zero limit;
+ - name Q_gamma explicitly at the global log-coupling 1/8 sentence,
+   so it is not read as applying to an arbitrary local Q.
+
+Both were verified in the final producer, with the hash recorded
+above. Neither affects the mathematics. No producer was edited by
+this auditor. Final audit frozen.
+
+
+========================================================================
+APPENDIX: Independent synthesis audit
+========================================================================
+
+INDEPENDENT SYNTHESIS AND FRONTIER SCOPE AUDIT
+TURN71. history47. 20 October 2026.
+
+Reviewed:
+ work/turn71_synthesis_root.txt
+ SHA256 C4064B9E60F417C7EE69D921839B04A15648440539A58AAD581A00EF6C4334CB
+ work/current_proof_frontier_turn71.txt
+ SHA256 9042D7039EC163F983F0D9DFA2FE85D4F8F65DABDFC7F69D36DA5B3D4DEF26AE
+
+Compared with the complete TURN71 spectral and full-law producers,
+my independent audits of both, the primary public-source review,
+and turn71_compactness_tail.txt (SHA256
+4875C2573B9A45046ECDF24AF8B2C30302F53BD65AA836367534F95F4D59A89C).
+Gauge47 separately reports PASS of the compactness proof.
+
+VERDICT: PASS. The final synthesis and frontier preserve the
+producers' actual scopes. No correction remains.
+
+1. SELECTED HIERARCHY
+
+The final Section1 now explicitly uses one selected cutoff family,
+fixed physical torus/terminal mesh, and its finite-dimensional
+terminal source space. A single basis extraction therefore covers
+all profiles in that space. It does not claim a dense continuum
+test algebra or silently combine different selected laws.
+
+The cutoff conditional means use the full actual coarse sigma-field.
+Compactness is applied to their bounded coordinates, optionally with
+identified compact link tuples. It does not require compactness of
+every auxiliary record or continuity of a gauge section. The limiting
+filtration includes the retained mean coordinates, so passing the
+martingale identities against continuous cylinder tests is legitimate.
+
+The uniform separated fine-scale tail identifies the covariance
+subsequence on those same profiles. It does not control diagonal
+contact fluctuations, supply a final L2 random observable, prove
+reflection positivity, or force a nonzero limit. These distinctions
+are explicit in both synthesis and frontier.
+
+2. FULL-LAW AND SPECTRAL SCOPE
+
+The source-comparison formula has the correct minus sign, retains
+the original-field insertions and frozen selected weight, and keeps
+mixed scalar terms. The needed selection susceptibility is stated
+as unestimated. Neither small bad-bridge probabilities nor the
+auxiliary completion is identified with the full native history law.
+
+The two reflection-positive examples only refute the indicated
+probabilistic inference. They are not described as Wilson measures
+or Yang--Mills counterexamples.
+
+The spectral compactness theorem retains its full-law upper-bound
+premise and strictly later-time convergence. The positive-energy
+criterion still requires an unproved positive time difference.
+The finite-slab factors 1/2 and the specified global-coupling 1/8
+agree with the audited identities; local current terms remain.
+The corrected sentence now says a positive norm does not exclude
+a static zero-energy mixture, without excluding dynamic limits.
+
+3. SOURCE EVIDENCE AND COMPLETION STATUS
+
+Repository commits, raw-II outstanding-source dependency, LP1 fixed
+lattice scope, and RP1 already-existing continuum-field premise
+match the pinned review. No unpublished completion is imported.
+
+Both documents explicitly retain full-law source control, compatible
+physical observables/products, a surviving witness, continuum
+symmetries/local structure, and reconstruction as open obligations.
+They correctly report progress rather than a completed YM4 proof.
+
+No producer, output, or authoritative frontier was edited by this
+auditor. Final audit frozen at the hashes above.

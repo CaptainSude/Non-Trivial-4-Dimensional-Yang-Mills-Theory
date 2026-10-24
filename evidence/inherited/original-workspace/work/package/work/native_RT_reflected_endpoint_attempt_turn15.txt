@@ -1,0 +1,295 @@
+ACTUAL STOPPED RT LAW VERSUS THE REFLECTED GAUSSIAN WITNESS
+19 October 2026. Endpoint attempt; no additional abstract closure criterion.
+
+0. OUTCOME
+
+The published estimates and the reconstructed source theorems checked in
+this pass do not prove the desired complete-law comparison for the concrete
+terminal plaquette pair. The obstruction is more specific than an appeal
+to 'large fields':
+
+ (a) the exact regular Gaussian reference after prior blocking is q_M,
+     not the nearest-neighbor bare precision used in the 37/1890 witness;
+ (b) the strongest archived common-source theorem differentiates the
+     original fine Wilson action source, not the terminal plaquette
+     function of the freshly refilled RT field;
+ (c) the full stopped density still contains live component multipliers.
+     The checked estimates do not give their contribution to this pair's
+     normalized first and second moments with an error tending to zero.
+
+Item(a) has an explicit free calculation below. Item(b) follows from the
+literal source identity and the resolved replacement law. Item(c) is
+visible both in the primary final representation and in an explicit
+qualification of the reconstructed majorant-gas argument. No new native
+input has been verified that removes these three issues.
+
+The finite bare theorem remains valid. This audit does not refute the
+possibility of a different native endpoint witness or of the original
+scalar-source nontriviality route. It prevents transferring the proved
+finite bare-box number to an unidentified complete RT state.
+
+1. THE EXACT MOMENTS AT ISSUE
+
+On the free-boundary box K={-1,0,1} x {0,1}^3, let p_+,p_- be the reflected
+spatial plaquettes from full_bare_reflected_witness_turn15.txt and put
+
+ q_+(V)=g^-2 [dim(rho)-Re Tr rho(V_p+)],  q_-=q_+ composed theta.
+
+The complete bare Wilson law satisfies
+
+ Cov_bare(q_-,q_+) = kappa_0+O(g),
+ kappa_0=(dim G)/2 (37/1890)^2>0.                         (1.1)
+
+To replace 'bare' by the normalized terminal RT law mu_(M,g), the actual
+quantities to compare are
+
+ E_mu q_+, E_mu q_-, E_mu(q_- q_+).                     (1.2)
+
+All three must use the same complete denominator. A bound on the
+conditional regular Gaussian at a selected background does not give
+(1.2). A local action germ of a chosen homogeneous regular branch does
+not identify the full measure in (1.2).
+
+There is no collision-moment difficulty for THESE fixed coarse functions:
+0<=q_+<=2 dim(rho) g^-2. Thus a genuinely proved total-variation comparison
+of the two complete coarse laws with error o(g^4) would control the
+covariance. For example, if mu=(1-epsilon)nu+epsilon xi, then
+
+ |Cov_mu(q_-,q_+)-Cov_nu(q_-,q_+)|
+       <=3 epsilon [2 dim(rho) g^-2]^2.                 (1.3)
+
+This follows by bounding the joint moment and the two mean changes.
+It quantifies the actual normalization scale; it is not an assertion
+that such a comparison has been obtained. It also shows why this task
+is narrower than controlling arbitrary renormalized collision products.
+
+There is a further literal geometry mismatch: the published induction is
+on its compatible torus/domain class, whereas (1.1) is a free-boundary
+24-vertex box with no flat holonomy modes. Its local marginal inside a
+native torus is not the free-boundary box law. No boundary equivalence
+or removal of the torus modes was established in this pass.
+
+2. A FREE CALCULATION RULES OUT THE WRONG GAUSSIAN REFERENCE
+
+Use the actual homogeneous flat straight-string average Q_M with total
+odd averaging factor M, in the conventions already verified in
+archive/ym4-research/work/flat_covariance_decay_research.md Sections2--3.
+The coarse precision is
+
+ q_M(B)=inf_(Q_M A=B) ||d_eta A||^2,  eta=1/M,
+
+on the appropriate gauge quotient. Its blocked Feynman covariance has
+diagonal entries
+
+ c_mu(theta)=sum_r |omega_mu(theta+2pi r)|^2 /
+                    [4M^2 sum_nu sin^2((theta_nu+2pi r_nu)/(2M))].
+
+Consider theta=(t,0,0,0), 0<t<=pi, and a transverse component mu=2.
+Every alias with r_nu nonzero for nu!=1 is killed by the centered block
+average. The directional string in component2 equals1. Hence
+
+ c_(M,2)(t)=sin^2(t/2)/(4M^4)
+                  sum_(r in I_M) csc^4((t+2pi r)/(2M)).     (2.1)
+
+There is no gauge subtraction in this transverse entry. The elementary
+identity obtained by differentiating the finite cotangent sum gives
+
+ sum_(r in I_M) csc^4((t+2pi r)/(2M))
+   =M^4 csc^4(t/2)-(2/3)(M^4-M^2)csc^2(t/2).
+
+Consequently
+
+ c_(M,2)(t)=1/[4sin^2(t/2)]-(M^2-1)/(6M^2),
+
+ q_(M,22)(t)/q_(1,22)(t)
+   =1/[1-(2/3)(1-M^-2)sin^2(t/2)].                    (2.2)
+
+The ratio tends to1 as t tends to0, but at t=pi it is
+3M^2/(M^2+2), tending to3 as M tends to infinity. Thus the mismatch
+persists at zero coupling. A single running-coupling renormalization
+cannot remove a momentum-dependent ratio.
+
+This is not a calculation of the finite box's native covariance; its
+boundary problem would have to be specified separately. It proves the
+relevant logical point exactly: ordinary native blocking does NOT leave
+the nearest-neighbor free law unchanged. A finite-cell plaquette samples
+all coarse momenta, so a small-momentum normalization does not identify
+its two-point constant with 37/1890.
+
+The workspace's matched_free_precision_heat_turn9.txt already correctly
+retains q_M, its uniform transverse ellipticity, and the correct
+between-stage minimizing lift. Those results do not assert q_M=q_1.
+The broad-packet Maxwell comparison in broad_packet_actual_gaussian is
+compatible with this fact: broad packets suppress coarse-lattice
+dispersion. It is not a proof for the fixed one-cell pair in (1.2).
+
+3. WHAT THE PUBLISHED ENDPOINT ESTIMATES ACTUALLY CONTROL
+
+Primary sources reopened in this pass:
+
+ [B119] T. Balaban, CMP119(1988),243--285,
+ https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+ [B122II] T. Balaban, CMP122(1989),355--392,
+ https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+
+B119 Theorem1,p262 applies to the recursively produced RT densities under
+its coupling hypothesis. The action bounds (2.43)--(2.49),pp263--264,
+lead to ultraviolet stability, Corollary3(2.50), with constants depending
+on the stopping coupling. They are not a comparison of (1.2) with a
+Gaussian. B122II Theorem1 retains the weak-trajectory premise. Its opening
+discussion separates further observable analysis from the proved density
+induction. The published theorem therefore cannot simply be cited as an
+existing complete-law two-plaquette asymptotic.
+
+The precise terminal distinction is in B122II(1.103)--(1.104),pp391--392:
+the normalized boundary expansion still leaves surviving T_k(Y)1 factors.
+Those Y are held fixed during that expansion. Small healed bulk log
+activities and a normalized boundary expansion are not the normalized
+sum over all surviving geometries.
+
+The current safe consequence is the common-vacuum measure lower bound
+and integrated upper bound recorded in native_regular_sector_ratio_turn14.
+Even its uniform common coarse box remains dependent on the exact cutoff-
+tower check. Those inequalities alone do not imply regular dominance or
+the moments (1.2). Their constants have not been independently traced to
+a same-vacuum survivor numerator small relative to the regular denominator.
+
+The published fixed-geometry large-field suppression could be strong
+enough numerically on a fixed stopped volume. For example a retained
+exp[-c(log g^-2)^nu], nu>1, would beat g^-C if it survived the COMPLETE
+numerator sum while the SAME regular denominator were at least g^C.
+The missing statement here is exactly that actual common-normalization
+comparison. It is not a failure of the elementary numerical inequality.
+No such restricted survivor numerator with the required constants was
+found in the checked source passage. The source agent independently
+confirmed this limitation in this pass.
+
+4. THE RECONSTRUCTED GAS DOES NOT SUPPLY THAT MISSING COMPARISON
+
+Raw II:59645--59855 derives its last-lattice source bound as an implication
+from a listed induction package. It uses a majorant gas satisfying
+Xi_maj<=exp(e^-p0 V), and obtains an extensive upper bound for Z_tilde,
+together with a separate extensive lower floor at zero source.
+
+Crucially, Raw II:104280--104390 explicitly distinguishes that majorant
+gas from the actual normalized history measure. Its formula is an upper
+majorization of a history sum, not an identity of the actual history
+weights as a gas relative to a common empty configuration. The same
+passage explicitly leaves the general annealed live-tail statement
+unproved. It cannot be used here as a proved probability estimate.
+
+At fixed volume, a global denominator lower bound can sometimes replace
+a local surgery denominator. But the displayed constants must still be
+compared as g tends to zero. Merely knowing that E_+(g),E_-(g) are finite
+does not prove that a remaining e^-p0(g) dominates exp[(E_++E_-)V].
+The reconstructed source discussion does not give that complete
+surviving-only numerator comparison. Dropping Xi_maj's empty term without
+identifying which actual terms map to nonempty configurations is another
+unverified step.
+
+The positive refill denominator is also not this denominator. It
+normalizes a NEW reference draw at a fixed exterior. It does not compare
+the mass of an incoming live history with the mass of a competing regular
+history in the full state.
+
+5. THE STRONGEST COMMON-SOURCE THEOREM IS FOR A DIFFERENT OBSERVABLE
+
+The target's generating function is
+
+ G_k(z_-,z_+)= [integral exp(z_- q_-(V)+z_+ q_+(V)) rho_k(dV)]
+                         /[integral rho_k(dV)].             (5.1)
+
+In contrast, the archived one-run source construction starts with a
+fine plaquette-action source and preserves its partition function through
+the sourced recursion. Its identity is
+
+ Z_bare(w)/Z_bare(0)=exp(E_UV(w)) h(w).                   (5.2)
+
+See one_run_source_gradient_closure Sections14--16, especially (16.1),
+(16.3),(16.4), and Raw II:2920--2939. The resulting source derivatives
+are transported fine-source observables, including source responses of
+history weights and counterterms. They are NOT q_p(V_k).
+
+This remains true even granting every source producer premise. On a
+resolved replacement branch tau(de,dx) -> m(de) s_e(dy), differentiating
+an incoming source exp[z F(e,x)] gives the new mark
+
+                  E_old[F(e,x) | e],                     (5.3)
+
+whereas differentiating the terminal factor exp[z F(e,y)] gives F(e,y).
+The new reference draw can be independent of the old x and need not
+preserve F. Normalizing s_e preserves total mass, not equality between
+(5.3) and F(e,y). The exact joint-law audit in turn15 verifies this
+distinction without assuming a native identity beyond the branch rule.
+
+Likewise, a constant scalar source differentiates the original action
+coefficient and its running tangent. It does not say that the current
+complete law is a Wilson law with just a shifted coarse coupling.
+
+The random-sign packing theorem in the archive has a genuine different
+strength: assuming its full source producer and early comparison, it
+bounds the entire normalized REMAINDER for certain original fine-source
+packets, rather than estimating each live history. Its translation step
+uses bare Wilson translation covariance after restoring the full vacuum
+ledger. It therefore must not be dismissed as merely an inner Gaussian
+argument. But its conclusion is a covariance of the bare scalar packets
+in (5.2), not (1.2) or (5.1). It neither establishes the terminal law's RP
+nor turns its transported first mark into a local terminal plaquette.
+
+Furthermore its existing upper bound |h(w)|<=Q at a fixed stopping band
+does not assert h is close to1. For a fixed pair in fixed coarse units,
+there is no shrinking-packet packing factor that makes its second
+logarithmic germ small automatically. Its separate early-vacuum and
+late-packing mechanism uses a different scale-separated observable.
+
+The Raw correlation theorem itself, at II:2791--2812, retains admitted
+configuration/geometry inputs and an explicitly outstanding preparatory
+window input. The local project has attempted replacements for those
+inputs; the current source map must be audited on its own terms. Nothing
+in this note promotes either version to a published full terminal-source
+asymptotic. Raw II:145173ff additionally labels the live marked source
+lemma as proof outstanding.
+
+6. WHAT THE REGULAR FINITE-BLOCK THEOREM DOES GIVE
+
+regular_quantum_convex_attachment_turn11 proves, within its actual selected
+homogeneous regular sector and admitted physical overlap, a complete
+finite-block Haar density of the form
+
+        N exp[-S_(MR)(W)/g^2+F(W)],
+
+including the pivot, Haar, Gaussian, straightening and retained-window
+factors. Its local Hessian perturbation is small relative to the MATCHED
+classical precision when the stated input envelope holds. The fixed-block
+finite-jet comparison then controls that identified regular conditional
+law with all its normalization factors retained.
+
+This is substantial but stops before (1.2): the selected regular law is
+not the unrestricted RT law; its orbit-cylinder/actual-window restriction
+must remain; no relative mass of the omitted history sectors follows.
+The inner_two_mark_gaussian_prefix note expressly sets outer annular/R
+derivatives and the endpoint integral aside. Its positive Gaussian
+vacuum cannot be used as a positive lower bound on the full reflected
+covariance, since mixed coefficients and endpoint first-mark covariance
+can cancel it. The exact energy-Gaussian cancellation in
+rp_conditional_nontriviality_audit Sections1,4 remains applicable.
+
+7. FINAL ENDPOINT VERDICT
+
+No quantitative complete-law estimate for the concrete separated terminal
+plaquettes (1.2), uniform in the ultraviolet starting date, was established
+from the checked published or reconstructed bounds. The attempt stops
+at identified formulas, not at a generic demand for stronger stability:
+
+ * (2.2) requires using the actual matched Gaussian before calculating a
+   candidate native witness;
+ * (5.1) is not the partition function controlled by the existing
+   fine-action source theorem (5.2);
+ * the surviving T_k(Y)1 factors have not been compared with the same
+   complete normalized regular law at the precision needed in (1.3).
+
+The already proved finite bare reflected witness therefore supplies a
+reference example and an exact target number, but not the terminal
+witness needed by the proposed RT innovation ledger. Neither the source
+pressure upper bound, the small healed bulk R amplitude, nor the finite
+regular Gaussian comparison silently supplies that endpoint.

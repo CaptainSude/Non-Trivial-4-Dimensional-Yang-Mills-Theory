@@ -1,0 +1,145 @@
+SCALAR FUSION DETECTS ALL 21 CURVATURE-PAIR DIRECTIONS
+18 October 2026. Exact finite Gaussian algebra; not yet an operator OPE.
+
+1. The coefficient that must be used
+
+Let V=Lambda^2 R^4, with ordered orthonormal basis
+(12,13,14,23,24,34), and let S=* be the Hodge involution for the
+orientation 1234. Remove the nonzero common normalization constant
+from the separated Maxwell covariance, and write
+
+ K(x)=|x|^-4 Lambda^2(I-2xx^T/|x|^2),  x!=0.
+
+Thus K(x) is real symmetric and SK(x)=-K(x)S. For k distinct points
+define the symmetric six by six matrix
+
+ A_k(x_1,...,x_k)=sum_{pi in S_k}
+       K(x_pi1-x_pi2)...K(x_pi(k-1)-x_pik).             (1)
+
+Set A_1=I. Reversing a path transposes its product, proving symmetry.
+This is the actual coefficient of the quadratic background in the
+Gaussian conditional logarithm, not a vacuum cumulant: if a scalar
+quadratic source is placed at each point, the Schur complement
+1/2 Y^T A(z)(1-C A(z))^-1 Y has coefficient
+1/2 F^T A_k F when all slow background values are the same F.
+Powers of the coupling and of the scalar matching coefficient multiply
+(1) by nonzero scalar factors. Those factors matter for eventual OPE
+normalization, but not for the span proved here. Colour is contracted
+with its invariant inner product and does not change this matrix span.
+
+For R in O(4), covariance of K gives exactly
+
+ A_k(R x_1,...,R x_k)=Lambda^2(R) A_k(x_1,...,x_k) Lambda^2(R)^T.
+
+2. Exact span theorem
+
+THEOREM. The real linear span of the matrices (1), over configurations
+of at most five distinct points, is all Sym^2(V), of dimension 21.
+At most four points do not span it: their pseudoscalar component is zero.
+
+Proof. In the self-dual/anti-self-dual splitting V=V_+ plus V_-,
+the symmetric matrices decompose as
+
+ R I plus R S plus Sym^2_0(V_+) plus Sym^2_0(V_-)
+               plus Hom(V_-,V_+),
+ dimensions 1+1+5+5+9.                              (2)
+
+The last summand means symmetric off-diagonal blocks. A_1 gives I.
+For k=2, A_2(0,n)=2 K(n), |n|=1. If P_n=n wedge i_n is the
+orthogonal projection on n wedge n-perp in V, K(n)=I-2P_n.
+The natural action S0^[2] of S0=nn^T-I_4/4 on two-forms is
+P_n-I_6/2. Thus K(n)=-2 S0^[2]. The matrices nn^T-I_4/4 span
+Sym^2_0 R^4, and the map S0 -> S0^[2] is injective: diagonalize
+S0, and note that all pairwise eigenvalue sums can vanish only
+when every eigenvalue vanishes. Its image has dimension nine and
+is exactly the symmetric Hodge-odd summand of (2).
+
+For k=3, take (0,e_1,e_2). Direct rational multiplication gives
+
+ A_3=diag(3,-2,-2,-2,-2,3).                           (3)
+
+It commutes with S. Its trace is -2, and after subtracting (-1/3)I
+its restrictions to BOTH V_+ and V_- are nonzero traceless symmetric
+matrices with eigenvalues (10/3,-5/3,-5/3). Under SO(4), the two
+three-dimensional rotation actions on V_+ and V_- vary independently;
+equivalently Spin(4)=SU(2)xSU(2) acts through SO(3)xSO(3).
+Averaging the orbit over one factor kills that factor's traceless
+matrix and leaves the other. The rotation orbit of any nonzero
+traceless symmetric three by three matrix spans Sym^2_0 R^3:
+diagonal permutations span the traceless diagonals and planar
+rotations supply the off-diagonal entries. Hence the orbit of (3),
+together with I, supplies both five-dimensional summands separately.
+At this point the span is the 20-dimensional S-orthogonal subspace.
+
+For k=5 take
+
+ x_1=0, x_2=e_1, x_3=2e_2, x_4=3e_3, x_5=4e_4.
+
+With exactly the convention (1), finite rational arithmetic gives
+
+ Tr(S A_5)=313318719/648669531250000 != 0.             (4)
+
+Equation (4) is independently reproducible without floating point:
+for each edge vector x use the four by four rational matrix
+I_ij=delta_ij-2 x_i x_j/(sum x_l^2); its exterior square entries are
+I_ik I_jl-I_il I_jk; divide by (sum x_l^2)^2, multiply the four
+edge matrices for each of the 120 permutations, sum, and contract
+with S_(ij),(kl)=epsilon_ijkl. The exact computation is retained in
+scalar_fusion_tensor_rank_check.py --exact. Subtracting from A_5
+its already-spanned 20-dimensional component gives a nonzero multiple
+of S. This completes the full span.
+
+For the necessity of five points, any configuration of at most four
+points lies in an affine hyperplane. Reflection in that hyperplane
+fixes every point, so covariance implies A_k commutes with its induced
+exterior-square reflection. That reflection conjugates S to -S.
+Consequently Tr(S A_k)=-Tr(S A_k)=0. This also proves the missing
+pseudoscalar conclusion without numerical rank arguments. QED.
+
+3. Why this matters, and the exact unproved bridge
+
+The established scalar continuum covariance is available before tensor
+covariance. The theorem shows that scalar products have enough leading
+quadratic information to calibrate every curvature-pair direction,
+including the pseudoscalar which a total constant-source action misses.
+It rules out a purely algebraic obstruction to obtaining this sector
+from scalar fusion. It DOES NOT prove that the quantum field algebra
+generated by the constructed scalar contains these point fields.
+
+The needed statement is an actual fusion remainder: after identity
+subtractions and the appropriate finite mixing, a family of localized
+scalar products with diameter r is approximated by its 21-dimensional
+renormalized quadratic projection, uniformly against arbitrary exterior
+words, or in a common heat-damped / Hamiltonian graph norm. One useful
+target, with all short-distance normalization factors included in F_r,
+is
+
+ || e^-tH [F_r(f)-sum_a C_a(r) Q_a(f)] e^-tH ||
+       <= C_(t,f) r^epsilon (1+|log r|)^p,            (5)
+
+for fixed t>0 and some epsilon>0; equivalent sufficiently strong
+mixed correlation estimates could replace this norm. Finite-dimensional
+mixing matrices and their inverses may grow polynomially in |log r|.
+Thus a positive power of r pays their losses, but a merely o(1) vacuum
+comparison does not give (5).
+
+There is a concrete possible advantage over an independent tensor source
+construction. These fusion marks are derivatives of the SAME scalar
+source producer, so their literal original independent-pair extensions
+and large-field ancestry already exist. Causal reterminalization at the
+fusion date should give a fixed polynomial coupling bound for each fixed
+number of marks. The regular full quadratic projection and its stable
+graph can then be used on the resulting composite mark. What remains
+to prove is compatibility of that projection with original-tube reentry,
+the full mixed-history operation, and arbitrary endpoint estimates.
+The scalar vacuum four-point comparison is insufficient for this task;
+the five-point OPEN quadratic coefficient is also distinct from the
+vanishing free odd vacuum cumulant.
+
+Even after (5), a normalization issue remains: multiplying a covariant
+family by an arbitrary noncommuting matrix can change its declared tensor
+law. One must establish an invariant finite field space and its actual
+rotation representation, and choose an intertwining basis, or prove
+covariant fusion counterterms directly. The rank theorem alone does not
+authorize conjugating away this issue. These are next proof obligations,
+not assumptions labelled as completed Yang--Mills construction.

@@ -1,0 +1,135 @@
+INDEPENDENT AUDIT: FIXED NATIVE WILSON HEAT COEFFICIENT
+24 October 2026. compiled_source. Scoped PASS.
+
+Audited native_Wilson_heat_coefficient_20261024.txt directly. Recomputed
+the exact plaquette scaling, left-relative corrections, Duhamel power
+count, charged continuum densities, transverse diagram and determinant
+sign. The normalization agrees with the supplied B109252(0.2),264
+(1.20)--(1.22), and297(5.37),(5.42)--(5.43), whose extractor pixels
+were separately read in the native affine normalization audit.
+No archived PASS label is used as a premise.
+
+1. EXACT PHYSICAL SCALING AND BOTH OPERATORS
+
+The plaquette product in Section1 is exact when c,e are the forward
+physical differences of the two indicated field components. Its
+epsilon-linear term vanishes. The identity
+P+P^-1-2=(P-I)^2 P^-1 gives exactly the holomorphic continuation of
+the normalized real Wilson density after dividing by epsilon^4.
+Expanding gives F0=i(c-e)-[a,b] and hence
+L0=(1/2)tr(c-e+i[a,b])^2. The sign and the single count of each
+positive unoriented plaquette agree with the original convention.
+The removable analytic quotient justifies the fixed-order Cauchy
+remainders; no formal continuum approximation replaces the finite
+plaquette identity.
+
+The physical plane-wave forward difference is ik+O(epsilon).
+Differentiation in amplitudes therefore gives the ordinary degree-n
+vertex scaling epsilon^(4-n), n=2,3,4, with the displayed error
+epsilon^(5-n). The action Hessian must then be converted to the
+LEFT-RELATIVE chart. The producer retains both J^T S'' J and S' T.
+Its first-source corrections start at momentum degree2; its second-
+source corrections at degree1 or higher. Thus they are within, rather
+than absent from, the stated errors. The flat vector symbol is exactly
+delta(k)I after its gauge-generator term is added; the source-site
+phases in separate curl entries are not falsely assigned O(k^4).
+
+The scalar comparison follows from the same explicit expansion of
+the nearest-neighbor generator: epsilon^-1 D_(epsilon A) converges
+to partial+i ad_A, with analytic local remainders. Its first vertex
+has continuum degree1 and error degree2; its second has continuum
+degree0 and error degree1. Its flat symbol is also delta(k). Hence
+Section2's comparison applies separately to D_A^T D_A, as required
+for both terms of(2), not only to the vector action Hessian.
+
+Integration by parts in the displayed continuum action produces
+-D_c^2 for the scalar and -D_c^2 delta_munu-2i ad(F_munu) for the
+Feynman vector. This normalization gives coefficient ONE for the
+flat Laplacian. Opposite consistent signs of the generator reverse
+charges but leave all quadratic heat coefficients unchanged.
+
+2. ENDPOINT-SAFE HEAT COMPARISON
+
+The first-vertex difference order2 and second-vertex difference
+order1 follow from the preceding analytic degree statements, also
+when differentiating the shifted return vertex in BOTH arguments.
+Their two external derivatives have the powers in(5); negative
+powers there are harmless loose bounds, not nonanalytic vertices.
+
+The total-trace Hessian formula(6) is correctly normalized. Its bubble
+has s^2 times an integral from0 to1 and no further factor two. At
+positive time the continuum differential insertions may equivalently
+be justified by their Gaussian momentum integrals, which remain
+integrable at both time endpoints. No norm of an unsmoothed standalone
+continuum first-order insertion is asserted.
+
+The matrix heat difference keeps a factor t and has order rho^(4-r)
+for r<=2. After two external derivatives, a replaced bubble vertex
+has degree2+1-2=1, giving s^2 integral rho exp(-cs rho^2) in d4,
+which is O(s^-1/2). A replaced heat factor has time at most s and
+degree4+1+1-2=4, giving O(s^-1). The two heat times always add to s;
+there is no v^-a or (1-v)^-a endpoint bound. The tadpole vertex term
+is O(s^-1/2) even using its loose rho^-1 bound. The heat-difference
+tadpole is O(s^-2). The gap away from zero, and the continuum Gaussian
+tail outside the Brillouin zone, supply integrable exponential errors.
+Thus (8) follows uniformly for s>=1.
+
+The lattice density/total-Hessian relation is the already checked
+gauge-invariant diagonal-density identity h=(1/4)partial_p^2 H.
+The producer correctly avoids asserting absolute continuum spatial
+moments of contact distributions; its direct continuum diagram below
+checks precisely the same coefficient instead.
+
+3. CHARGES AND THE CONTINUUM COEFFICIENT: INDEPENDENT ARITHMETIC
+
+For one adjoint charge q, oscillator degeneracy |qf|/(2pi), levels
+|qf|(2n+1), and two free directions give
+
+ k_q=(4pi s)^-2 (qfs)/sinh(qfs).
+
+The Lorentz spin eigenvalues are 0,0,2qf,-2qf, so the vector factor
+is 2+2cosh(2qfs). Multiplying the series gives
+
+ [f^2]k_q=-q^2/(96pi^2),
+ [f^2]k_q[2+2cosh(2qfs)]=10q^2/(48pi^2).
+
+The transverse check also agrees exactly. For external momentum in
+direction nu and potential alpha!=nu, the scalar first vertex is
+2q k_alpha; the Gaussian k_alpha^2 integral is (1/(2s))(4pi s)^-2.
+The bubble is therefore 2q^2 s(4pi s)^-2 integral_0^1
+exp[-s v(1-v)p^2]dv. Its second derivative equals -q^2/(24pi^2),
+and the quarter factor gives -q^2/(96pi^2). The tadpole has no
+external-momentum derivative. For the vector, the orbital contribution
+is four copies of this scalar result. The two spin vertices have
+Lorentz trace product 8q^2 p^2. Their quarter second derivative is
+q^2/(4pi^2); adding the orbital part gives 10q^2/(48pi^2).
+One-spin mixed terms vanish by its Lorentz trace. No charge or spin
+factor is missing.
+
+The trace over the complexified adjoint equals the trace of the
+original real operator. Summing both charge signs already performs
+that trace and must not be doubled again. With normalized fundamental
+trace and tr(H^2)=1, SU(N) has sum h_i^2=N and
+sum_(i,j)(h_i-h_j)^2=2N^2. For SU(2), H can have eigenvalues +1,-1,
+so the charges are 0,+2,-2 and C_H=8. The producer's alpha_g and the
+SU(2) numerical slope are consistent with this precise normalization.
+
+Nonzero constant magnetic vector backgrounds can have negative spin
+modes. Nothing here needs an infrared determinant at such a field:
+only the fixed-time Taylor coefficient at zero is used, and the
+producer explicitly preserves that scope.
+
+4. SIGN AND WHAT THE RESULT DOES NOT CLAIM
+
+The proper-time expression for log det T-(1/2)log det V has quadratic
+density (1/2)h_v-h_s. Native beta=2[t^2]rho_0 thus has integrand
+h_v-2h_s. The continuum value is 11alpha_g>0, so the interval
+[1,K^2] contributes 22alpha_g log K. The s^-1/2 error is integrable
+against ds/s, uniformly in K. This confirms the log sign, source
+normalization, color trace and orientation count together.
+
+The fixed-reference theorem passes. It does not itself match the
+original Gaussian scalar ledger to this determinant combination or
+prove the soft pair's outer heat bands, coarse Schur traces, running
+coupling drift or a continuum Yang--Mills construction. Those remain
+separate exact identifications/comparisons as the producer states.

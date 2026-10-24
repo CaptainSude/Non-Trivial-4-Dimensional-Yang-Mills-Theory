@@ -1,0 +1,295 @@
+THE FIXED ENLARGED CAVITY: EXACT GAUGE REDUCTION AND A RARE epsilon0 TUBE
+24 October 2026. connected_energy. Finite producer; review requested.
+No archive/output edits. All constants below belong to ONE fixed cavity.
+
+RESULT
+
+The deterministic 560-link cavity from the exterior-witness construction
+has eight genuine internal vertex gauge freedoms. An exact compact Haar
+tree change removes those freedoms without a determinant, altered
+normalizer, or gauge-volume loss. The resulting552-link action has a
+unique flat global minimum and a positive flat Hessian. The already
+proved finite pinned-contour argument then gives a fixed zero-free
+boundary neighborhood for the ORIGINAL cavity partition function,
+with its exact leading beta^-828 scalar. Its original marked raw
+coefficient has a uniformly rare analytic tube of radius c epsilon0.
+
+This improves the beta^-1 tube and beta^840 elementary denominator price
+for this particular reassembled complement. It makes no claim uniform
+in a growing cavity or arbitrary exterior, and does not assert an
+event-conditioned normalizer is zero-free on the enlarged tube.
+
+Inputs:
+ work/cavity_patch_complement_exterior_witness_20261024.txt;
+ work/pinned_plaquette_cavity_enlarged_tube_20261024.txt, Sections2--4,
+ and its independent audit;
+ work/original_rare_cavity_source_projection_20261024.txt and its audit.
+The contour proof is reused only after all its fixed-cavity hypotheses
+are established below, not inferred from an unremoved gauge Hessian.
+
+1. THE ACTUAL BOX, MEASURE AND MARK
+
+Use the nonwrapping lifted vertex box
+
+ D=[-1,2]^2 x [-1,1] x [-1,2],
+ K={all fine links with both endpoints in D}, |K|=560.    (1)
+
+Let B_K contain EVERY exterior link in a plaquette meeting K. Hold
+these links fixed at y, and integrate the K links with normalized
+SU(2) Haar. The exact conditional action and partition function are
+
+ H_K(U;y)=sum_(q meeting K) h_q(U,y),
+ Z_K(y)=integral_(SU2^K) exp[-beta H_K(U;y)]dU,
+ h^hol(W)=1-(Tr W+Tr W^-1)/4.                            (2)
+
+The inverses are holomorphic group inverses, not adjoints. This is the
+original Wilson normalization, beta=C_W/g0^2. Its exterior mass is
+Z_full^-1 exp[-beta H_out,K] Z_K dy, unchanged below.
+
+Let p be the original12-plaquette at x3=x4=0 and C its four edges.
+The preceding producer proves the gauge-invariant interior event
+
+ M_p=E_p intersect{chi_B=0},
+ E_p={||U_p-I||op>=epsilon0},                            (3)
+
+forces an additional q with no edge in C, all of whose edges are in K,
+with ||U_q-I||op>=tau_*=c_C epsilon0/876. In particular
+
+ H_K(U;y)>=tau_eff^2/2 on M_p,
+ tau_eff^2=epsilon0^2+tau_*^2,                           (4)
+
+for EVERY real boundary y, because both positive plaquette energies
+are completely internal. The forest defining chi_B uses only the
+original cavity boundary B, which is now inside K. Its residual root
+conjugations preserve its norms. Thus M_p is invariant under all
+vertex gauge transformations, not just constant conjugation.
+
+For the literal source F_p=c_a f_p h_p, |F_p|<=2 alpha_p,
+alpha_p=|c_a f_p|, the coefficient to be estimated is exactly
+
+ b_K(y)=Z_K(y)^-1 integral F_p(U)1_(M_p)(U)
+                                    exp[-beta H_K(U;y)]dU. (5)
+
+Source and mark stay fixed on REAL integrated links. The result also
+applies to gauge-invariant bounded raw first/mixed coefficients on
+that same mark, with their actual amplitudes.
+
+2. EXACT COMPACT HAAR GAUGE CHANGE
+
+The strict interior vertices of D are precisely
+
+ v=(v1,v2,0,v4), v1,v2,v4 in{0,1}; there are8.            (6)
+
+Every other vertex of D has a held exterior incident link in B_K.
+Gauge transformations at the eight vertices in(6), and identity at
+all boundary/outside vertices, leave the held y unchanged. All fine
+links incident to an interior vertex belong to K, so this is a genuine
+symmetry of the COMPLETE conditional action, including crossing faces.
+
+For each v choose the direction3 edge e_v from
+w_v=(v1,v2,-1,v4) on the boundary to v. These eight distinct edges
+form a forest, each rooted at its own boundary vertex. Set g_v=U_e_v
+with orientations w_v to v, and define gamma_v=g_v, gamma=I elsewhere.
+Use the gauge convention
+
+              V_xy=gamma_x U_xy gamma_y^-1.            (7)
+
+Then every V_e_v=I. The remaining552 group variables V_e are free.
+Conversely, any g_v in SU2 and any such V reconstruct one U uniquely
+by U_xy=gamma_x^-1 V_xy gamma_y. This is a global compact group change
+of variables; no logarithm chart is used for it.
+
+Conditional on the eight g variables, every other link transformation
+is left/right multiplication by fixed unitary matrices, hence preserves
+normalized Haar. The original eight selected links are exactly g_v.
+Fubini therefore gives the product Haar identity
+
+ dU=product_v dg_v product_(e notin{e_v}) dV_e.           (8)
+
+The action and the marked source are invariant under(7), and y is
+unchanged. Consequently
+
+ Z_K(y)=integral_(SU2^552) exp[-beta H_red(V;y)]dV,
+ N_K(y)=integral_(SU2^552) F_red(V)1_(M_red)(V)
+                                  exp[-beta H_red(V;y)]dV. (9)
+
+Each of the eight normalized gauge integrals is EXACTLY1. No
+Faddeev--Popov factor, extra coarea determinant, or power of beta has
+been inserted. All scalar factors in(2) remain the original ones.
+For complex exterior y near the identity the same equality holds:
+interior gamma is real unitary, does not act on y, and the holomorphic
+Wilson trace is algebraically gauge invariant. The discontinuous mark
+is only transformed at real V and remains unchanged.
+
+3. UNIQUE REDUCED FLAT MINIMUM, INCLUDING ALL BOUNDARY FACES
+
+At y=I all terms of H_red are nonnegative. If the total action is0,
+every internal plaquette of the filled box D has holonomy I. On this
+rectangular box, adjacent-coordinate path swaps across its internal
+plaquettes and immediate backtrack cancellations show path independence.
+Thus the link field on K is a vertex pure gauge: after choosing one
+root, U_xy=t_x^-1 t_y for some t on D.
+
+Every edge tangent to a boundary face has an outward plaquette with
+that edge as its only K edge; the other three links are held at I.
+This plaquette occurs in H_K because it meets K. Flatness therefore
+forces every boundary-tangent link to I. The graph of boundary vertices
+and their tangent edges is connected: the rectangular faces meet along
+their edges and each face graph is connected. Hence t is constant on
+the ENTIRE boundary. Absorb that one common value so t=I there.
+
+The imposed edges e_v=I now give t_v=I at all eight interior vertices.
+All remaining links are I. Conversely the identity configuration has
+zero action. Hence V=I is the UNIQUE global minimum of H_red(V;I).
+There is no residual continuous or central gauge stabilizer producing
+another minimum after this rooted fixing. Constant color conjugation
+fixes the identity point and creates no zero tangent directions.
+
+The flat Hessian is also strictly positive. In local real Pauli
+coordinates V_e=exp(i A_e), h(exp i A)=|A|^2/2+O(|A|^4).
+The quadratic form is a positive fixed multiple of
+
+                sum_(q meeting K) |d A(q)|^2,           (10)
+
+with A=0 on held exterior links and on the eight fixed e_v. If this
+form vanishes, the internal zero-curl cochain is A_xy=phi_y-phi_x by
+the same coordinate-path argument. The crossing boundary faces force
+all boundary-tangent differences to vanish, so phi is constant on
+the connected boundary. Set it to0 there. The eight e_v conditions
+then force phi_v=0 inside. Thus A=0. In the remaining finite-dimensional
+space the Hessian D_* therefore satisfies D_*>=lambda_K I with some
+fixed lambda_K>0. This is a proof of positivity, not a dimension count.
+
+Compactness and uniqueness supply a positive action gap outside any
+fixed sufficiently small chart about V=I. All constants here depend
+on this ONE geometry; no uniform Dirichlet gap for growing boxes is
+asserted.
+
+4. ORIGINAL ZERO-FREE NORMALIZER IN A FIXED COMPLEX NEIGHBORHOOD
+
+There are552 SU2 links and hence d=1656 real logarithm coordinates.
+The exact Haar density is analytic near zero, positive there, with
+J(0)=(2pi^2)^-552 in the Pauli convention. All group products and
+holomorphic Wilson traces have uniform finite derivatives on a fixed
+complex neighborhood of the compact real integration variables and
+small boundary coordinates y_b=exp(i z_b).
+
+Sections2--3 verify every hypothesis of the finite pinned-contour
+argument, previously proved for the four-edge cavity: a unique flat
+global minimum, a positive reduced Hessian, an exact analytic Haar
+density, and a compact gap. The analytic implicit-function theorem
+gives a unique small stationary branch A_*(z) with
+
+ A_*(0)=0, |A_*(z)|<=C_K|z|,
+ e_*(z)=H_red(A_*(z);y(z))=O_K(|z|^2),
+ D(z)=partial_A^2 H_red(A_*(z);y(z)).                    (11)
+
+The quadratic order for e_* follows because at joint flat data each
+plaquette is I, so every first boundary derivative of the action
+vanishes. On a fixed sufficiently small complex boundary polydisc,
+D is transpose-symmetric, has positive real part on real directions,
+and its determinant has the branch continued from the positive D_*.
+
+For clarity the contour step uses only the UNMARKED integral in(9).
+Split it into a fixed real central logarithm cube and its compact
+complement. The latter has real part of its action bounded below
+after the complex boundary neighborhood is shrunk. Translate the
+central cube by A_*(z), one coordinate at a time. Every connecting
+side has a fixed real coordinate away from0 and small complex
+displacement, so its integral is exponentially small in beta. On the
+translated real cube, expand at A_*, rescale by sqrt(beta), and bound
+the cubic and Haar errors with the reserved positive Gaussian. The
+proof and order of choices are exactly those of the cited finite
+contour lemma, now in the fixed dimension1656. It gives the EQUALITY
+
+ Z_K(y(z))=exp[-beta e_*(z)] beta^-828 [L_K(z)+R_beta(z)],
+ L_K(z)=(2pi)^828 J(A_*(z)) det D(z)^(-1/2),
+ |R_beta(z)|<=C_K beta^-1/2
+                      +C_K beta^828 exp[-c_K beta].     (12)
+
+The leading L_K is holomorphic and bounded away from0 on that fixed
+neighborhood. All constants retain the actual cavity dimension and
+trace conventions. At a sufficiently large fixed beta_K,
+
+ c_K beta^-828 exp[-beta Re e_*(z)]
+ <=|Z_K(y(z))|<=C_K beta^-828 exp[-beta Re e_*(z)].        (13)
+
+In particular the ORIGINAL Z_K is zero-free on a complex boundary
+neighborhood whose radius delta_K>0 is independent of beta. This
+does not replace Z_K by its asymptotic expression in the original
+measure. The eight exact gauge Haar integrals explain the power828,
+rather than840 from the elementary all-link lower bound.
+
+5. THE UNMOVED RARE NUMERATOR AND epsilon0-SIZED TUBE
+
+Keep the reduced links V REAL in the numerator in(9). Let z=u+i v
+in the fixed boundary chart. Reality of the action at real u implies
+its first imaginary displacement is purely imaginary. Uniform second
+boundary derivatives on the compact real V domain give
+
+ Re H_red(V;y(u+i v)) >= H_red(V;y(u))-C_K |v|^2.         (14)
+
+On the unchanged M_red, the two internal original plaquettes still
+give H_red(V;y(u))>=tau_eff^2/2 for EVERY real u. Thus
+
+ |N_K(y(z))|<=2 alpha_p
+                exp[-beta tau_eff^2/2+C_K beta |v|^2].  (15)
+
+Divide by the ORIGINAL denominator lower bound(13) and use(11):
+
+ |b_K(y(z))|<=C_K alpha_p beta^828
+  exp[-beta(tau_eff^2/2-C_K|u|^2-C_K|v|^2)].             (16)
+
+Choose a fixed per-link complex radius kappa_K tau_eff, with kappa_K
+small enough to include all boundary-coordinate count/norm factors,
+and require tau_eff below the corresponding fixed delta_K margin.
+Then on that polydisc
+
+ |b_K(y(z))|<=C_K alpha_p beta^828
+                                  exp[-beta tau_eff^2/4]. (17)
+
+Since tau_eff is a fixed multiple of epsilon0, this is an actual
+epsilon0-sized analytic RAW source tube. Cauchy on a smaller fraction
+costs C_(K,m) epsilon0^-m for each fixed derivative order m, retaining
+the SAME one rare amplitude. Arbitrary fixed polynomial prices in
+beta are paid at the weak floor by the native cutoff exponent; no
+claim uniform in m, cavity size or depth is made.
+
+The selected probability numerator p_K has the same upper cap but
+has not been proved zero-free here. Do not divide a raw coefficient
+by p_K on this enlarged tube. Selected-event normalized contacts use
+the smaller relative-ratio argument if needed. Raw first/mixed rows
+and their exact connected subtraction use no such event denominator.
+
+6. ORIGINAL MASS, CONTACTS AND ADMISSION LIMITS
+
+All tree fixing and contour estimates concern the same unmarked Z_K
+in the original disintegration. The original exterior factor remains
+exp[-beta H_out,K]Z_K/Z_full. Equation(5) and the nested-cavity identity
+therefore preserve separated original correlations with exterior tests.
+They do not identify the unreplaced insertion with b_K under a later
+state that reads eliminated K links. Its selector correction remains.
+
+The flat scalar b_K(I) is generally nonzero and stays recorded. The
+first color jet of a gauge-invariant scalar vanishes, but the full
+quadratic tensor is not declared a Wilson multiple by that fact.
+For a shared marked first/mixed packet, retain every raw coefficient
+before subtracting products of first means; its contact has ONE rare
+event price, not the square of that price.
+
+The physical source boundary B_K lies in a fixed expanded box with
+at most6 sites in each transverse direction. Each native private
+interface therefore has at most216 of its links in this read, strictly
+less than L^3. The existing first-bare source-compatible constructor
+can free the complete read. A first noisy-image application may use
+the present larger tube only after comparing the actual complete
+map bound C_(B_K)(background_size+delta0) with kappa_K epsilon0,
+choosing the original A0/A1 hierarchy and restricted original coarse
+sector accordingly. A complex localizer image has its OWN complete
+domain requirement. Neither the fixed-body saddle nor the spare-pivot
+count proves arbitrary independent-current or later-image admission.
+
+The new boundary-patch complement remains an exact original observable;
+there is no uniform rare conditional cap at arbitrary exterior fields.
+No large-cluster iteration, all-age microscopic census, or continuum
+Yang--Mills conclusion is asserted.

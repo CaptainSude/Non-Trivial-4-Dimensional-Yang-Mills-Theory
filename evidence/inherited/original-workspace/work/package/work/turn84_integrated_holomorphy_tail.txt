@@ -1,0 +1,407 @@
+TURN84 -- GAUSSIAN ELIMINATION, OLD SMOOTH CUTS AND MARKED HOLOMORPHY
+20 October 2026. tail47. Independent pressure test of the raw-entry target.
+
+RESULT
+
+An analytic source-free integrated branch, even as an operator on EVERY
+remaining new-record test, need not have analytic integrated coefficients
+for an ORIGINAL analytic action insertion whose variable was eliminated
+earlier. Sections1--3 give an exact positive finite-dimensional example:
+Gaussian regular elimination, a fixed smooth partition, an exact coarse
+constraint, and a normalized analytic fresh reference all appear. The
+source parameter itself has a common analytic disc; the failure concerns
+the restarted EXTERNAL field parameter. The full sourced sum over both
+complementary branches remains analytic. No source is changed or retuned.
+
+There is also a fully nondegenerate Gaussian variant. Every marked
+coefficient is entire at each positive smoothing width, but no bound
+uniform in that width exists on any fixed complex neighborhood. Thus
+Gaussian integration alone does not supply the uniform native source norm.
+
+This is NOT an exhibited Bałaban history. The freshly transformed cut in
+Large-I(1.59) has a stronger fixed-slot property that rules out the example
+at that primitive. The unresolved question is preservation of that property
+for an ORIGINAL marked read across a stopped/restarted block. Section5
+states the exact native implications and the narrow check that is needed.
+
+1. AN EXACT POSITIVE GAUSSIAN MODEL WITH AN ORIGINAL ACTION MARK
+
+Let X,Y be independent standard real Gaussian variables, with density
+phi(x)phi(y). The original quadratic action is(X^2+Y^2)/2. The marked
+local action is
+
+                     F(X)=X^2/2.
+
+Put
+ b(x)=exp(-x^2)-1/sqrt(3),
+ chi(y)=0 for y<=0, and chi(y)=exp(-1/y^2) for y>0.
+
+The function chi is C-infinity, lies in[0,1], and is flat but not real
+analytic at0. The exact mean of b under phi is zero. For0<epsilon<=1/4,
+define the fixed positive partition
+
+ p_+(x,y)=1/2+epsilon chi(y)b(x),
+ p_-(x,y)=1-p_+(x,y).                                  (1.1)
+
+Because |b|<1, both weights lie strictly between1/4 and3/4. They sum to1
+pointwise. Equivalently introduce one independent uniform seed and accept
+the plus branch iff the seed is at most p_+(X,Y). This is a literal positive
+partition of the original Gaussian law, not a signed correction. The cuts
+are independent of the source parameter. They need not have the precise
+shape of a native ball cutoff; the example tests an implication about
+positive smooth partitions and Gaussian integration, not the exact native
+cut geometry.
+
+Take the coarse variable to be Y, impose the exact coarse constraint
+Y=z, and perform the regular Gaussian elimination of X. Its conditional
+law is still phi(x)dx. The common exterior density phi(z) may be retained;
+it is nonzero and entire and does not affect the following failure. Define
+
+ A_+(z,s)=int phi(x) p_+(x,z) exp(s F(x)) dx,
+ A_-(z,s)=int phi(x) p_-(x,z) exp(s F(x)) dx.             (1.2)
+
+These integrals are defined for real z and Re s<1. Direct Gaussian
+integration gives, with the branch of the square root positive at s=0,
+
+ A_+(z,s)=1/2(1-s)^(-1/2)
+  +epsilon chi(z)[(3-s)^(-1/2)
+                      -(1/sqrt(3))(1-s)^(-1/2)],         (1.3)
+ A_-(z,s)=1/2(1-s)^(-1/2)
+  -epsilon chi(z)[(3-s)^(-1/2)
+                      -(1/sqrt(3))(1-s)^(-1/2)].         (1.4)
+
+In particular,
+
+ A_+(z,0)=A_-(z,0)=1/2,                                 (1.5)
+ A_+(z,s)+A_-(z,s)=(1-s)^(-1/2).                         (1.6)
+
+Thus both unmarked branch masses are constant and the complete original
+source partition is analytic. Its normalization at s=0 is exactly1.
+The source family is uniformly analytic in s on every fixed disc|s|<1,
+even before adding the complementary branch. The issue is not a shrinking
+source radius, an uncontrolled original moment, or a missing denominator.
+
+2. FIRST AND MIXED ORIGINAL JETS ARE NONANALYTIC
+
+The elementary Gaussian moments are
+
+ E b=0,
+ E F=1/2,              E F^2=3/4,
+ E[F b]=-1/(3sqrt(3)), E[F^2 b]=-2/(3sqrt(3)).             (2.1)
+
+The raw plus-branch coefficients, using two independently declared source
+variables s,t for the same original action if desired, are therefore
+
+ A00=1/2,
+ A10=A01=1/4-epsilon chi(z)/(3sqrt(3)),
+ A11=3/8-2epsilon chi(z)/(3sqrt(3)).                      (2.2)
+
+Here A11 is the coefficient of st in A_+(z,s+t), namely the integral
+of the ORIGINAL product F^2. It is not A10 A01/A00.
+
+All derivatives of the chi correction at z=0 vanish, yet the correction
+is nonzero for every z>0. Consequently A10 and A11 have no holomorphic
+extension to any complex neighborhood of0 agreeing with their real values.
+Identity of the holomorphic Taylor series with its value on a neighborhood
+would otherwise make the correction vanish there.
+
+Normalizing the branch does not cure this. Its original-action mean and
+variance are exactly
+
+ E_+F=1/2-2epsilon chi(z)/(3sqrt(3)),
+ Var_+(F)=1/2-2epsilon chi(z)/(3sqrt(3))
+                         -4epsilon^2 chi(z)^2/27.        (2.3)
+
+Likewise centering the original action by its unconditional Gaussian mean
+leaves A_+(F-1/2)=-epsilon chi(z)/(3sqrt(3)). There is no discarded source
+vacuum that would restore analyticity: the troublesome scalar coefficient
+depends on the restarted external field z.
+
+One can also eliminate any concern that unbounded X^2 causes the failure.
+Let F_b(x)=1-exp(-x^2), and replace the original X density by the normalized
+Gaussian times exp[-lambda F_b(x)], with fixed lambda>0, as small as desired.
+This is a Gaussian regular integral with a bounded analytic interaction;
+F_b is a literal action-coupling insertion. Set
+ b_lambda=exp(-x^2)-E_lambda exp(-X^2)
+and use(1.1) with b_lambda. Again A00=1/2, while
+
+ A10(z)=1/2 E_lambda F_b
+                    -epsilon chi(z) Var_lambda(F_b).   (2.4)
+
+The variance is strictly positive. This coefficient is nonanalytic,
+although F_b lies in[0,1] and its source generating function is ENTIRE,
+with bound exp(|s|). Multiplying F_b by its fixed calibration lambda does
+not change the conclusion. The explicit quadratic formulas(1.3)--(2.3)
+already suffice for the main counterexample.
+
+3. NORMALIZED ANALYTIC REPLACEMENT DOES NOT RESTORE THE OLD JET
+
+After X has been eliminated, introduce a FRESH variable V with normalized
+Gaussian reference q_z(dv)=phi(v-z)dv. This is independent of the source.
+For bounded Borel tests G of the remaining new record define
+
+ (T_+^0(z)G)=A00(z) int q_z(dv)G(v)
+                         =1/2 int phi(v-z)G(v)dv.        (3.1)
+
+As an operator on ALL bounded new-record tests, this is holomorphic in z.
+For complex z=a+ib its variation bound is
+
+ |T_+^0(z)G|<=1/2 exp(b^2/2)||G||_infinity.               (3.2)
+
+The Gaussian contour shift has exactly mass1. The bound follows directly
+from |phi(v-z)|=exp(b^2/2)phi(v-a); no tiny branch normalization is used.
+
+Keep the passive original source during the SAME frozen replacement.
+Its first marked operator is
+
+ (T_+^F(z)G)=A10(z) int q_z(dv)G(v).                     (3.3)
+
+Taking G=1 proves that it is nonholomorphic. Similarly the exact mixed
+operator uses A11, with the same q_z and exactly one old mass. Thus even
+operator-valued holomorphy and uniform variation control for EVERY NEW
+test do not imply the old marked estimate. X is no longer a literal
+integration variable of(3.1). If X were retained, the joint density
+phi(x)p_+(x,z) would visibly fail the hypothesized operator holomorphy
+against all OLD X tests; the example does not contradict that stronger
+statement.
+
+Summing the plus and minus histories with the SAME source and the SAME
+future factor restores(1.6), including every mixed coefficient. This is
+an exact marked partition-of-unity cancellation. It would be invalid
+to use that identity if the future factors differ between the branches,
+or only one branch belongs to the fixed output catalogue being bounded.
+Source-free cancellation of E b=0 is weaker and does not suffice.
+
+4. NONDEGENERATE GAUSSIAN ELIMINATION: ANALYTICITY WITHOUT A UNIFORM NORM
+
+Instead of the exact coarse constraint, keep a real Gaussian variable
+Y=z+sigma Z with Z standard and sigma>0. The old smooth cut remains a
+fixed function of the REAL integrated Y. Let
+
+ c_sigma(z)=int phi_sigma(y-z) chi(y)dy.                  (4.1)
+
+For each sigma>0 this is entire in z. The proof uses the fixed real
+integral and the absolute Gaussian bound, not an evaluation chi(z).
+On compact complex z sets the kernel and all its derivatives are
+dominated by an integrable Gaussian; chi is merely bounded.
+The example's marked formulas hold with chi replaced by c_sigma,
+while A00=1/2 is unchanged. In particular all integrations can be
+nondegenerate Gaussian and every finite-regulator marked coefficient
+can be analytic.
+
+For real z, approximate-identity convergence gives c_sigma(z)->chi(z).
+Suppose these functions were uniformly bounded on ANY fixed complex
+disc about0. Montel would give a locally uniformly convergent holomorphic
+subsequence. Its real values would equal chi. It would vanish on the
+negative real interval, hence everywhere on that disc by the identity
+theorem, contradicting chi(z)>0 on its positive real interval.
+Therefore there is no such uniform complex bound. The same conclusion
+holds for A10 by(2.2). Yet the unmarked replacement operator(3.1)--(3.2)
+is independent of sigma and has its uniform bound unchanged.
+
+The elementary estimate |c_sigma(a+ib)|<=exp[b^2/(2sigma^2)] displays
+a possible upper-bound price. This is not asserted to be the exact
+growth. Shrinking the continued domain proportionally to sigma may
+restore a bound; that is an EXTRA radius/smoothing comparison. It does
+not follow from the source-free marginal. Native constraints remove
+Gaussian directions altogether, so smoothing in every old cut direction
+must not be assumed from the presence of some fluctuation Gaussian.
+
+5. WHICH ACTUAL NATIVE STRUCTURE RULES OUT THIS FAILURE?
+
+The following primary pages were visually reread for this note:
+ Large-I, CMP122(1989)175--202, printed188 and191:
+  work/turn77_sources/largeI-14.png
+  work/turn76_sources/I_printed_191.png
+ Large-II, CMP122(1989)355--392, printed379--380:
+  work/turn62_large_II/printed_379.png
+  work/turn62_large_II/printed_380.png
+The preceding Large-I(1.53) at printed187 was checked against its
+retained text and the frozen TURN79 source dictionary.
+
+(a) FRESH rejected cut. Large-I(1.53) defines the fluctuation relative
+to the current adaptive background, then flattens the coarse constraint.
+Printed188,(1.55), splits the current component into accepted/rejected
+parts. The analytic global/local shift is(1.56)--(1.58). The specified
+change of variables makes(1.59) independent of the background fields;
+the accompanying action/Jacobian terms remain. This is stronger than
+merely finding an analytic unmarked marginal. For this fresh primitive
+the cut is a function of a fixed real noise coordinate, so the explicit
+chi(z) mechanism of Sections1--3 is excluded.
+
+(b) ACCEPTED block. Printed191 gives the actual descending-domain
+inclusion for
+ exp[i eta H_k^(n)(g_j C B_j-h Dtilde(g_j C B_j))] U
+and the corresponding current. With actual real cuts/noises fixed, an
+already admitted original source composes holomorphically through ONE
+uninterrupted accepted block, with its original supremum bound. This
+is the TURN79 accepted-block theorem. It rules out the example there
+once the entrance source and complete read really have that admission.
+New rejected components are removed from this accepted block; a new
+rejected smooth switch is not silently fed into the next accepted strip.
+
+(c) FINAL raw operator. Large-II printed379 says that in(1.71) only
+the B quadratic form and V(X-tilde) carry the declared external(U,J)
+dependence. Printed380,(1.73), is an equality/comparison with an extra
+analytic exponential sigma and a function F of THAT integral's actual
+integration variables; (1.74)--(1.75) retain its mass and normalizer.
+This does bound a bounded original insertion if it is already a function
+of those literal slots, with the required analytic dependence and
+integrable/common-domain majorant. It does not reconstruct an X-like
+variable already eliminated into an old coefficient. Our(3.1) shows
+why even an all-new-test statement cannot imply that stronger claim.
+
+(d) STOP/RESTART. The bottom of printed191 states that when integration
+stops, the resulting terms remain boundary terms and their spaces are
+generalized for later operations. That source-free coefficient statement
+does not, by itself, provide a simultaneous original-record dictionary
+for all previous smooth cut coordinates. TURN79 already separates this
+issue from the valid fresh and accepted-block statements. The present
+counterexample does NOT establish that an inadmissible substitution
+actually occurs in the native algorithm; it identifies what must be
+ruled out or canceled before the marked inference can be made.
+
+There are three precise ways the desired native first/mixed entry could
+avoid the counterexample:
+
+ 1. Preserve every relevant old smooth-cut argument as its OWN fixed real
+    latent slot. Show that later backgrounds act only through analytic
+    factors and an admitted ORIGINAL source reconstruction, on the same
+    continued domain and with the actual fourth/mixed moment majorant.
+    Fixed smooth functions of these real slots need no complex extension.
+
+ 2. Prove directly an operator-valued analytic comparison for the THREE
+    integrated old coefficients A10,A01,A11 on that domain, with arbitrary
+    remaining-record tests. This can exploit a source-specific integrated
+    identity; it is weaker than requiring an analytic pointwise inverse
+    for every possible original observable.
+
+ 3. Exhibit a COMPLETE marked partition-of-unity/coordinate identity
+    through the restart. Complementary histories must have the SAME
+    original source and full future weights at the point where their
+    smooth cuts cancel. One may not infer this from their source-free
+    mass cancellation or sum incompatible output catalogues as if those
+    weights agreed. In our model this is exactly the distinction between
+    A_++A_- and the separate A_+.
+
+If the proposed remedy instead relies on Gaussian smoothing, Section4
+requires a quantitative comparison of its nondegenerate normal width
+with the actual external/localization radius. An unmarked mass bound
+does not supply that comparison. Exponentially tiny smooth-switch
+amplitudes do not repair exact holomorphy either: any fixed epsilon>0
+in(2.2) already has the failure. They may bound a real error, which is
+a different estimate and retains its full history multiplicity.
+
+6. RARE-TAIL SWITCHES AND COALESCENCE ON THE CORRECT TEST ALGEBRA
+
+The failure can be confined to a Gaussian large-field tail, while keeping
+the exact source-free sibling aggregation and a residual positive energy
+reserve. This tests a switch that vanishes on an inner ball; no reversal
+of an inner/outer native cutoff convention is used.
+
+Choose a smooth function a_R(x) in[0,1], zero for|x|<=R and one for
+|x|>=2R, with R>0. Put q_R=E a_R(X)>0 and let E_R be expectation for
+the normalized positive density a_R(x)phi(x)/q_R. Define
+
+ b_R(x)=exp(-x^2)-E_R exp(-X^2),
+ p_+(x,y)=a_R(x)[1/2+epsilon chi(y)b_R(x)],
+ p_-(x,y)=a_R(x)[1/2-epsilon chi(y)b_R(x)],
+ p_0(x,y)=1-a_R(x).                                    (6.1)
+
+These are nonnegative and sum to1. Every chi-dependent modification is
+supported in the old large-field tail. The sibling masses at Y=z are
+q_R/2, whereas their original action first jets are
+
+ A10_+(z)=q_R E_R F/2
+          +epsilon q_R chi(z) Cov_R(F,exp(-X^2)),        (6.2)
+ A10_-(z)=q_R E_R F/2
+          -epsilon q_R chi(z) Cov_R(F,exp(-X^2)).
+
+The covariance is strictly negative: with independent X,X' under E_R,
+it is half the mean of
+ [F(X)-F(X')][exp(-X^2)-exp(-X'^2)],
+which is nonpositive and strictly negative on a set of positive measure.
+Thus the nonanalyticity is still present for every finite R.
+
+Nevertheless every fixed raw action moment is exponentially small.
+For integer k>=0, with(-1)!!=1, one use of the quadratic reserve gives
+
+ int phi(x) a_R(x) F(x)^k dx
+ <= exp(-R^2/4) E[exp(X^2/4)(X^2/2)^k]
+ =sqrt(2)(2k-1)!! exp(-R^2/4).                           (6.3)
+
+Each p_+ or p_- is at most a_R, so(6.3) bounds its one/two raw jets
+before normalization. It also bounds any such real positive operator
+with a bounded remaining test, multiplied by that test's supremum.
+No division by q_R, repeated primitive-credit extraction, or restoration
+of the spent exponent occurs. This directly separates real raw smallness
+from exact background holomorphy. The example does NOT claim the exact
+shape, geometry or exponent of a native large-field family.
+
+Here is the precise coalescence requirement. On a COMMON old record x,
+let p_l(x,z) be sibling weights with sum_l p_l=a(x), and let Q_l^z be
+their FULL future/reference kernels, pulled back to a common remaining-
+test algebra A. If for every G in A the value Q_l^z G(x) is independent
+of l, then for every same original source product O(x,z),
+
+ sum_l int mu_z(dx) p_l(x,z) O(x,z) Q_l^zG(x)
+                =int mu_z(dx) a(x) O(x,z) Q^zG(x).       (6.4)
+
+This is a pointwise partition identity before integration. It applies
+to1,F,H,FH simultaneously and retains the old mass once. Equality of
+the Q_l on A is sufficient, not claimed necessary; a more specialized
+weighted cancellation can also suffice if it is actually proved. The
+relevant A must include the future outside/private tests in the desired
+operator estimate, not just the constant function1. Gauge-equivalent
+kernels could agree on an invariant A without agreeing on every test,
+but that equality also has to be established on the actual reads.
+
+Normalization alone only gives Q_l1=1. For an explicit failure take
+the two siblings(6.1) and let their fresh normalized kernels be
+q_+=N(1,1), q_-=N(-1,1), independent of x,z. For ANY remaining test G,
+their coalesced UNMARKED operator is
+
+             q_R [q_+G+q_-G]/2,                         (6.5)
+
+which is constant and analytic in z. The coalesced OLD ACTION operator is
+
+ q_R E_R F [q_+G+q_-G]/2
+ +epsilon q_R chi(z) Cov_R(F,exp(-X^2))[q_+G-q_-G].       (6.6)
+
+For G=1 the last term vanishes. For the bounded analytic test G(v)=sin v,
+
+                   q_+G-q_-G=2 exp(-1/2) sin(1) !=0,    (6.7)
+
+so the operator in(6.6) is nonholomorphic. Adding the central branch
+p_0 with any fixed analytic future kernel does not cancel this term.
+Every fresh q is positive, normalized and analytic. Thus even summing
+all sibling OLD masses with their exact source can prove too little
+when a future factor distinguishes their fresh records. The full
+original sourced total mass, tested by1, remains correct.
+
+Conversely, when q_+=q_- on the required algebra, the chi term cancels
+exactly and(6.3) leaves the complete rare-tail source bound after summing.
+This is the useful positive version of the test: aggregating a genuinely
+common raw continuation can remove a nonanalytic partition WITHOUT
+requiring the rare event to have probability close to1 or dividing by
+its tiny mass. Native application must identify that common continuation,
+the actual source/read coordinate alignment and the required test algebra.
+
+7. THE NEXT USEFUL CHECK
+
+For the first stopped/restarted branch carrying a previously regularly
+eliminated action read, write the baseline old density jet and the actual
+new coordinate change BEFORE integrating its remaining variables. Label
+each old smooth cutoff argument explicitly. Check whether it remains a
+separate real slot, is evaluated on an admitted analytic map, or disappears
+by an exact marked complementary-history identity with common future
+weights. If a source-free cancellation was used only after integration,
+repeat that same line with F and FH inserted; do not deduce it from the
+unmarked result. The four exact entries are A00,A10,A01,A11, without any
+division by A00 or replacement A11=A10 A01/A00.
+
+This pressure test strengthens the reason to pursue TURN83's integrated
+two-jet target. It does not prove that target false for Bałaban, does not
+invalidate the accepted-block pullback or(1.73), and does not establish a
+new full-law physical correlation or continuum construction. No frozen
+producer, status file or authoritative output was edited.

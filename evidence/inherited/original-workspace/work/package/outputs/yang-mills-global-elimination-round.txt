@@ -1,0 +1,605 @@
+ONE EXACT GLOBAL ELIMINATION ROUND: ACTION AND ORIGINAL SOURCES
+21 October 2026 -- TURN98
+
+For every exterior of the actual two-link Wilson fiber, its exact
+generated relative action V_beta and old source A_beta obey
+
+ |V_beta-beta D| <= C log(2+beta) D,
+ |A_beta-A_beta(flat)-D| <= C log(2+beta) D/beta.
+
+D is the actual eleven-plaquette classical minimum. These are global
+value estimates. The stronger weak-region estimates remain available,
+but cannot hold uniformly at all exteriors: an explicit degenerate
+fiber proves that the larger correction is real. The generated
+relative interaction is also exactly nonnegative, V_beta>=0.
+
+A specified periodic packing eliminates 1/24 of all original links
+simultaneously. Different pairs have independent conditional integrals
+given their common exterior; their exact generated factors may share
+retained links. Each factor reads at most32 such links and each retained
+link belongs to at most6 factors. Both action and source bounds sum
+with constants independent of volume and with no separate additive
+cost per pair after the exact flat scalar is removed.
+
+Separated original-source covariances transport exactly into this
+same generated marginal when no pair meets both source supports.
+The proof retains the conditional covariance term when that premise
+fails. No covariance comparison is inferred from pointwise value bounds.
+
+This is one actual local elimination round. Subsequent rounds have
+changed multi-link interactions; their pointwise locality/comparison
+class is not proved by repeating the same bare Wilson formula. The
+companion full-measure response report proves different, averaged
+per-coordinate bounds through arbitrary nested original integration.
+Neither result yet pays the physical connected-source sum.
+
+The detailed proof and independent root admission record are included.
+The full continuum existence goal remains active.
+
+======================================================================
+DETAILED PROOF
+======================================================================
+
+TURN98 -- GLOBAL COMPACT SOURCE/ACTION CONTROL AND A VOLUME-UNIFORM
+SPARSE INTERACTING ELIMINATION OF ORIGINAL WILSON LINKS
+21 October 2026. block98. No shared frontier changes.
+
+RESULT
+
+The fixed weak-exterior two-link theorem from TURN97 has an elementary
+GLOBAL continuation with a weaker gain. Let D be the actual classical
+minimum of the eleven affected plaquettes, A_beta their exact conditional
+mean, and V_beta their generated action relative to flat exterior data.
+For ALL ten exterior unit staples and beta>=1,
+
+ |A_beta(t)-A_beta(flat)-D(t)| <= C q_beta D(t),
+ |V_beta(t)-beta D(t)| <= C log(2+beta) D(t),                 (0.1)
+ q_beta=log(2+beta)/beta.
+
+Constants depend only on this fixed two-link fiber. Near the zero-defect
+manifold the stronger bounds are respectively C beta^-2 D and C D.
+No large-field exterior has been discarded. This is a VALUE theorem;
+it asserts no global derivative norm and does not contradict TURN97's
+conditional-response obstruction.
+
+A positive-density original-lattice packing then gives one exact
+normalized elimination round, with both the generated action and the
+old source controlled by the same classical eliminated energy. Constants
+are independent of the number of eliminated pairs and of the volume.
+The round eliminates 1/24 of all links in the explicit geometry below.
+It leaves the generated multi-link interactions intact. It does not
+prove an invariant class under subsequent rounds, a complete-block
+estimate, or a continuum source-census bound.
+
+1. THE FIXED COMPACT FIBER
+
+Retain TURN97's exact original Wilson fiber on S^3 x S^3:
+
+ S_t(x,y)=11-x dot y-sum_(i=1)^5 a_i dot x-sum_(j=1)^5 b_j dot y,
+ a_i,b_j in S^3,
+ D(t)=min S_t,
+ Z_beta(t)=int exp(-beta S_t) dx dy,
+ A_beta(t)=Z_beta(t)^-1 int S_t exp(-beta S_t) dx dy.          (1.1)
+
+All measures are normalized Haar. Each of the eleven displayed
+plaquette defects is nonnegative. Write t0 for all staples equal to a
+common n, and put
+
+ V_beta(t)=-log Z_beta(t)+log Z_beta(t0).                    (1.2)
+
+This does not replace the changed second density by a Wilson kernel.
+Equations (1.3)--(1.6) of work/turn97_two_link_source.txt remain its
+exact sequential representation. In particular
+
+ partial_beta V_beta(t)=A_beta(t)-A_beta(t0).                (1.3)
+
+We use two proved TURN97 facts only in a fixed weak neighborhood:
+
+ |A_beta(t)-A_beta(t0)-D(t)| <= C beta^-2 D(t),              (1.4)
+
+ and the parameter-C2 compact Laplace expansion for Z_beta after
+ factoring out exp(-beta D) beta^-3. This is used below for the action.
+The fixed dimension and universal dimension cancellation are older
+modules; no new general finite-dimensional Laplace principle is claimed.
+
+2. SMALL DEFECT FORCES THE REQUIRED WEAK EXTERIOR GEOMETRY
+
+Choose any global minimizer (x_*,y_*). Every nonnegative plaquette
+summand in S_t(x_*,y_*) is at most D. Since |u-v|^2=2(1-u dot v)
+for unit quaternions,
+
+ |x_*-y_*|, |a_i-x_*|, |b_j-y_*| <= sqrt(2D).                (2.1)
+
+Consequently
+
+ |a_i-a_1| <= 2 sqrt(2D),
+ |b_j-a_1| <= 3 sqrt(2D).                                 (2.2)
+
+There is a fixed delta>0 such that D<delta puts every staple in
+TURN97's weak tube after a simultaneous SO(4) rotation sending a_1 to
+n. Coordinate and compactness constants are uniform in that rotation.
+The minimum is then unique by TURN97. Conversely the complementary
+region D>=delta has a fixed positive classical cost. This conclusion
+uses the actual nonnegative plaquette decomposition, not a conjectured
+probability that typical exterior links are close to identity.
+
+3. UNIFORM FULL-COMPACT PARTITION AND ENERGY-EXCESS BOUNDS
+
+Give each S^3 its round metric and their product the product metric.
+Along a product geodesic of velocity (X,Y), the absolute second
+derivative of S_t is bounded by
+
+ 6(|X|^2+|Y|^2)+2|X||Y| <= 7(|X|^2+|Y|^2).               (3.1)
+
+Indeed the five private staples have total norm at most five at each
+spin, and the shared dot product contributes one to each diagonal
+bound and the displayed cross term. At a global minimum the first
+derivative is zero. Thus at round distances r_x,r_y from a minimizer,
+using the minimizing product geodesic,
+
+ 0<=S_t(x,y)-D(t) <= (7/2)(r_x^2+r_y^2).                   (3.2)
+
+For beta>=1 use the product of caps r_x,r_y<=beta^-1/2. On it the
+excess exponent is at most seven. A normalized S^3 cap of radius r<=1
+has mass
+
+ (2/pi) int_0^r sin^2(s) ds >= (8/(3pi^3)) r^3.
+
+Therefore, with c=e^-7[8/(3pi^3)]^2 in (0,1),
+
+ c beta^-3 <= I_beta(t):=exp(beta D(t)) Z_beta(t) <= 1       (3.3)
+
+for every exterior t and beta>=1. Nonuniqueness or degeneracy of the
+minimum causes no difficulty. This lower bound is for the FULL compact
+integral, with its actual normalizer.
+
+Let X=S_t-D and use its actual Gibbs probability. From (3.3),
+
+ P_beta,t(X>=s) <= min(1,c^-1 beta^3 exp(-beta s)).
+
+Integrating this tail on [0,infinity) gives
+
+ 0<=A_beta(t)-D(t)
+   <= [3 log beta+log(c^-1)+1]/beta.                       (3.4)
+
+The upper integration limit can be enlarged because X is nonnegative.
+This elementary estimate is deliberately logarithmic. A uniform C/beta
+claim is NOT inferred merely from finite dimension: changes of saddle
+degeneracy could invalidate an unproved uniform sharper claim.
+
+4. GLOBAL RELATIVE ORIGINAL-SOURCE BOUND
+
+At t0, (3.4) applies with D=0. For D>=delta, it follows immediately that
+
+ |A_beta(t)-A_beta(t0)-D(t)|
+ <= 2[3 log beta+log(c^-1)+1]/beta
+ <= C delta^-1 q_beta D(t).                               (4.1)
+
+For D<delta use (1.4) and beta^-2<=C q_beta. Combining the two proves
+the first assertion of (0.1), with constants independent of t. Thus for
+all sufficiently large beta,
+
+ (1-C q_beta)D <= A_beta(t)-A_beta(t0)
+                         <= (1+C q_beta)D.                (4.2)
+
+This statement includes arbitrary frustrated and large exterior data.
+It does not assert that A_beta(t)-A_beta(t0) has a uniformly bounded
+exterior derivative. It does not identify A_beta(t0) with the one-point
+expectation in the full Wilson measure.
+
+5. GLOBAL RELATIVE GENERATED-ACTION BOUND
+
+For D>=delta, (3.3) gives
+
+ V_beta(t)-beta D(t)=-log I_beta(t)+log I_beta(t0),
+ |V_beta(t)-beta D(t)| <= 3 log beta+log(c^-1)
+                     <= C log(2+beta) D(t).                (5.1)
+
+For D<delta, the parameter-uniform Laplace calculation in TURN97 gives
+
+ Z_beta(t)=exp(-beta D(t)) beta^-3 K_beta(t),
+ ||log K_beta||_C2 <= C,
+
+on a fixed weak tube, with K_beta bounded above and away from zero.
+For large beta this follows by division of the parameter-C2 Laplace
+expansion; for beta in a bounded interval it follows from compactness,
+positivity and smoothness of the exact integral. Put
+
+ L_beta(t)=-log K_beta(t)+log K_beta(t0).
+
+After rotating a_1 to n, L_beta(0)=0. The SO(3) stabilizer of n forbids
+an invariant linear functional of the remaining nine tangent staples,
+so its first jet also vanishes exactly. TURN97's positive transverse
+classical Hessian then gives
+
+ |L_beta(t)|<=C |w_slice|^2<=C D(t).                        (5.2)
+
+Combining (5.1)--(5.2) proves the second assertion of (0.1). In the
+weak tube the determinant correction is bounded relative to D with no
+log beta. Its nonzero value was computed in TURN97; it is not removed.
+
+There is also exact positivity V_beta(t)>=0 for every beta>=0. To see
+this, put a=sum_i a_i, b=sum_j b_j and f_a(x)=exp(beta a dot x).
+The kernel K_beta(x,y)=exp(beta x dot y) is positive semidefinite:
+each term (beta^k/k!)(x dot y)^k is a tensor-power Gram kernel, and
+the series converges uniformly on the compact spheres. Cauchy--Schwarz
+for its positive bilinear form gives
+
+ Z_beta(a,b)<=sqrt[Z_beta(a,a)Z_beta(b,b)].
+
+By rotation invariance Z_beta(a,a) depends only on |a|. Simultaneously
+changing x,y to -x,-y rewrites its field factor as
+cosh(beta |a| n dot (x+y)), which is nondecreasing in |a|>=0 pointwise.
+Since |a|,|b|<=5, both diagonal factors are at most Z_beta(t0). Hence
+Z_beta(t)<=Z_beta(t0). This fact does not require an asymptotic estimate.
+
+5A. AN ACTUAL DEGENERATE EXTERIOR SHOWS WHY THE GLOBAL GAIN WEAKENS
+
+Choose the five a_i to be the five equally spaced unit quaternions in
+one fixed circle, and do the same for the b_j. Their sums are a=b=0.
+These exterior staples are realizable on the original lattice: set the
+transverse links in the pair's eleven plaquettes to the identity, and
+assign the ten distinct exterior direction-1 middle links the desired
+staples (or their inverses, according to orientation). None is one of
+the two integrated links. Other, exterior-only plaquettes contribute
+only to S_out and impose no hard constraint on this conditional fiber.
+
+Then exactly
+
+ S_t(x,y)=11-x dot y,  D(t)=10,
+ Z_beta(t)=exp(-11beta) z(beta),
+ A_beta(t)=11-m(beta),
+ z(s)=2I_1(s)/s, m(s)=I_2(s)/I_1(s).                       (5A.1)
+
+The one-sphere compact Laplace expansion, or the same Bessel formulas,
+gives z(beta)=c_1 exp(beta) beta^-3/2[1+O(beta^-1)] and
+m(beta)=1-3/(2beta)+O(beta^-2), with c_1>0. TURN97 gives
+Z_beta(t0)=c_2 beta^-3[1+O(beta^-1)] and
+A_beta(t0)=3/beta+O(beta^-2), with c_2>0. Therefore
+
+ V_beta(t)=10beta-(3/2)log beta+O(1),
+ A_beta(t)-A_beta(t0)-D(t)=-(3/2)/beta+O(beta^-2).           (5A.2)
+
+The logarithmic global action cost is therefore real, and a global
+C beta^-2 D source bound is false. The source estimate in (0.1) has
+an extra logarithm not proved necessary by this example; no optimal
+global source rate is claimed. The example concerns a legitimate fixed
+exterior, not a claim about its probability in the full Wilson measure.
+
+6. DETERMINISTIC VARYING SOURCE WEIGHTS
+
+Let w_l be arbitrary real weights on the eleven plaquettes, wbar their
+mean, omega=max_l|w_l-wbar|, and
+
+ S_w=sum_l w_l h_l,
+ M_beta,w(t)=E_beta,t S_w,
+ S_w,cl(t)=S_w(x_*,y_*),                                   (6.1)
+
+where (x_*,y_*) is ANY minimum of the BASELINE UNWEIGHTED S_t. A
+minimum exists by compactness; no uniqueness is asserted globally.
+For every such choice,
+
+ |M_beta,w(t)-M_beta,w(t0)-S_w,cl(t)|
+ <= C[|wbar| q_beta+omega] D(t).                           (6.2)
+
+Proof. Split w=wbar*1+d. The constant part is Section4. For D<delta
+the exact weighted TURN97 estimate gives C omega beta^-1 D. For
+D>=delta, use |S_d|<=omega S and |S_d,cl|<=omega D to obtain
+
+ |M_beta,d(t)-M_beta,d(t0)-S_d,cl(t)|
+ <= omega[A_beta(t)+A_beta(t0)+D(t)]
+ <= omega[2D+C q_beta]
+ <= C omega D.                                           (6.3)
+
+Here q_beta is bounded on beta>=1. This proves (6.2), including the
+case of a nonunique baseline minimum. No global omega/beta improvement
+is claimed. The choice-free target wbar D also satisfies
+
+ |M_beta,w(t)-M_beta,w(t0)-wbar D(t)|
+ <= C[|wbar| q_beta+omega]D(t),                            (6.4)
+
+because |S_w,cl-wbar D|<=omega D. For a scalar Lipschitz physical
+profile sampled at the plaquette centers, omega<=2a Lip_infinity(f)
+up to the chosen norm convention. Orientation-dependent profiles use
+their actual oscillation, not a fictitious spatial derivative gain.
+
+7. AN ACTUAL POSITIVE-DENSITY PACKING, WITH NO PAIR INTERACTION
+
+Take a periodic four-dimensional hypercubic lattice with side lengths
+N_1>=4, N_2>=6 divisible by three, and N_3,N_4>=4 even. Use positively
+oriented direction-1 links. For every
+
+ x=(x_1,3k,2l,2m),
+
+select the pair P_x consisting of the links (x,1) and (x+e_2,1).
+No selected links from different pairs share a plaquette: any plaquette
+contains at most two direction-1 links, and their starting points differ
+by one unit in a transverse direction. The selected starts have isolated
+adjacent pairs in direction2 and spacing two in directions3,4. Changes
+of x1 do not couple two direction-1 links in a single plaquette.
+
+There are V/12 pairs and V/6 eliminated links, where V=prod_i N_i.
+Since the lattice has 4V positively oriented links, the eliminated
+fraction is 1/24. The periods above also avoid accidental short-torus
+identifications in the eleven-plaquette fiber.
+
+Let E be the union of selected links and xi all retained links. Every
+affected plaquette belongs to exactly one pair. Write P(P) for that
+pair's eleven affected plaquettes. Then, exactly,
+
+ S_original(U)=S_out(xi)+sum_P S_P(U_P;xi).                 (7.1)
+
+The Haar-preserving coordinates of TURN97 transform each S_P into
+(1.1) using only retained links. They may depend on common retained
+links, but never on another eliminated pair. The conditional law given
+xi therefore factors into the actual compact pair laws. Shared reads
+do not spoil conditional factorization.
+
+Each S_P and its exact Z_P read at most 32 retained links: the ten
+private plaquettes each have three exterior link occurrences, and the
+shared plaquette has two. Repetitions only reduce this count. Each
+retained link is in at most six affected plaquettes, hence in at most
+six pair read sets. Generated pair interactions thus have bounded
+support and bounded overlap, uniformly in the volume. The read sets
+include the two transverse links used in the Haar coordinate change.
+
+8. EXACT NORMALIZED MARGINAL AND UNIFORM ACTION/SOURCE COMPARISON
+
+Integrate all selected pairs simultaneously. The retained marginal is
+exactly
+
+ dnu_beta(xi) proportional
+       exp[-beta S_out(xi)] prod_P Z_beta(t_P(xi)) dxi.
+
+Remove only the field-independent product Z_beta(t0)^(#pairs) and set
+
+ V_round(xi)=beta S_out(xi)+sum_P V_beta(t_P(xi)),
+ S_cl,round(xi)=S_out(xi)+sum_P D(t_P(xi)).                 (8.1)
+
+Then dnu_beta is the normalized density proportional to exp(-V_round)
+with respect to the original retained Haar product. In particular all
+generated potentials and the full normalizer are retained, exactly.
+Sections4--5 sum without any volume-dependent constant:
+
+ |V_round-beta S_cl,round|
+   <=C log(2+beta) sum_P D_P
+   <=C log(2+beta) S_cl,round,                            (8.2)
+
+ A_round:=partial_beta V_round
+          =S_out+sum_P[A_beta(t_P)-A_beta(t0)],
+
+ |A_round-S_cl,round|
+   <=C q_beta sum_P D_P<=C q_beta S_cl,round.              (8.3)
+
+Here the original full-action conditional mean is A_round plus the
+constant (#pairs) A_beta(t0). Its removal is exact for connected
+correlations. These inequalities have no additive per-pair defect
+bound. They hold on the entire retained configuration space, and
+constants are independent of N_i and the number of pairs.
+
+For arbitrary deterministic original plaquette weights w, define
+
+ M_round,w=S_out,w+sum_P[M_beta,w_P(t_P)-M_beta,w_P(t0)],
+ S_cl,round,w=S_out,w+sum_P S_w_P,cl(t_P).
+
+Then
+
+ |M_round,w-S_cl,round,w|
+ <=C sum_P [|wbar_P| q_beta+omega_P] D_P.                  (8.4)
+
+The exact conditional source equals M_round,w plus a deterministic
+sum of flat-pair constants. Measurable choices of pair minima can be
+made if the classical weighted expression is used inside an integral;
+the choice-free version with wbar_P D_P avoids this issue entirely.
+
+9. EXACT SEPARATED-SOURCE COVARIANCE TRANSPORT
+
+For arbitrary original additive plaquette sources S_f,S_g, conditional
+factorization and the law of total covariance give
+
+ Cov_original(S_f,S_g)
+   =Cov_nu(M_round,f,M_round,g)
+      +E_nu sum_P Cov_(beta,t_P)(S_f|P,S_g|P).             (9.1)
+
+If no pair has affected plaquettes in both source supports, the last
+sum vanishes identically. In particular, it vanishes when the two
+supports of plaquette centers have l-infinity separation greater than
+2a: the eleven plaquette centers of one pair have l-infinity diameter
+at most 2a. Then
+
+ Cov_original(S_f,S_g)=Cov_nu(M_round,f,M_round,g).         (9.2)
+
+This transports the ORIGINAL source into the SAME exact retained
+marginal, with no unproved history-label measurability. It does not
+replace the right side by a covariance of S_cl,round,f and S_cl,round,g;
+pointwise errors (8.4) alone do not establish such a comparison.
+
+10. WHAT THIS CHANGES AND THE REMAINING OBSTRUCTION
+
+The prior two-link statement required weak exterior staples. Equations
+(0.1) and (8.2)--(8.4) remove that restriction for one simultaneous
+positive-density round, at explicitly weaker logarithmic and profile-
+oscillation gains. No exceptional-exterior probability is needed for
+THIS round. The full original conditional law is used everywhere.
+
+The new marginal contains exact finite-range multi-link potentials
+V_beta(t_P(xi)), in addition to the untouched Wilson plaquettes. The
+potential for a subsequent eliminated link therefore includes those
+changed factors. It is not the original Wilson one-link or two-link
+fiber. Bounded factor supports and overlap do not prove a contraction
+or an invariant source/action norm. Repeating this theorem unchanged
+on the new marginal would be invalid.
+
+Likewise S_cl,round is still a sum over microscopic positions. Bounds
+by its total value do not pay a physical source census, yield separated
+correlation decay, prove a nonzero continuum response, or identify
+Yang--Mills interactions. The global logarithmic gain is weaker than
+the weak-tube beta^-2 source gain; no summability over an unbounded
+number of scales is asserted. The complete-block and iterated native
+source assembly remain substantive work.
+
+Originality within this project: independent conditional factorization
+and finite-dimensional Laplace calculations already occur in earlier
+turns, including TURN40/TURN74. The additional results here are the
+all-exterior relative continuation using small defect versus a compact
+Gibbs tail, its action counterpart, and their literal volume-uniform
+assembly at positive lattice density with exact changed marginal and
+separated original-source covariance identity.
+
+INDEPENDENT CHECKS
+
+largefield98 independently audited Sections1--10, including the exact
+positivity lemma, and returned PASS in
+work/turn98_block_audit_largefield.txt. Section5A was added afterward;
+root independently checked its realizability, exact integral and the
+two displayed asymptotic coefficients. No other audited section was
+changed when adding Section5A.
+
+
+======================================================================
+INDEPENDENT AUDIT OF THE MAIN ROUND THEOREM
+======================================================================
+
+INDEPENDENT AUDIT OF GLOBAL PAIR ROUND -- TURN98
+21 October 2026. largefield98.
+
+STATUS: PASS at the stated original-Wilson, one-round scope. No
+mathematical correction requested. This is an internal independent
+derivation/check, not external peer review.
+
+Read work/turn98_block.txt in full, and compared the exact local model
+with work/turn97_two_link_source.txt. The following checks cover every
+principal new conclusion of the producer.
+
+1. SMALL DEFECT AND FULL COMPACT NORMALIZATION
+
+The eleven nonnegative defects imply the three-edge distance control
+through a minimum x_*,y_*. Thus sufficiently small D puts every exterior
+staple in the established common-frame weak tube. The factor 3sqrt(2D)
+used by the producer is a valid loose bound; Cauchy-Schwarz improves it
+to sqrt(6D), but that improvement is unnecessary for the theorem.
+
+For a product geodesic with fixed speeds |X|,|Y|, the private staples
+contribute at most 5|X|^2+5|Y|^2 to the second derivative magnitude.
+The shared -x.y contributes at most |X|^2+|Y|^2+2|X||Y|. Hence the
+displayed upper Hessian bound 7(|X|^2+|Y|^2) is correct globally.
+The first derivative at a minimum is zero on the compact manifold.
+Twice integrating along a minimizing product geodesic therefore gives
+S-D <= (7/2)(r_x^2+r_y^2), without any nondegeneracy assumption.
+
+Normalized S^3 cap measure is (2/pi)int_0^r sin^2 s ds. For r<=1,
+sin s>=2s/pi gives cap mass >=8r^3/(3pi^3). At r=beta^-1/2, beta>=1,
+the product cap has mass >=[8/(3pi^3)]^2 beta^-3 and excess exponent
+at most 7. The actual full compact partition therefore obeys exactly
+c beta^-3 <= exp(beta D)Z_beta <=1, with the stated c. No saddle
+partition has replaced its normalizer.
+
+The tail estimate min(1,c^-1 beta^3 exp(-beta s)) is valid. Its integral
+equals [3log beta+log(c^-1)+1]/beta. This proves the energy-excess
+bound at all exterior data, including degenerate or multiple minima.
+
+2. GLOBAL RELATIVE ACTION AND SOURCE BOUNDS
+
+On D>=delta, subtracting the two energy excesses proves an absolute
+O(log(beta)/beta) source error, which is at most C q_beta D because
+D has the fixed positive lower bound delta. On D<delta the TURN97
+relative beta^-2 theorem applies. This proves the global relative
+source estimate, and the claimed eventual two-sided bound follows
+once C q_beta<1. No exterior derivative bound is inferred.
+
+For the action, I_beta in [c beta^-3,1] means both log I values lie in
+an interval of length 3log beta+log(c^-1); thus their difference has
+that bound, with no extra factor or missing reference normalization.
+In the small tube the parameter-C2 Laplace expansion gives bounded
+C2 log K_beta, with a positive lower bound on K_beta. Bounded beta
+intervals follow from exact compact positivity/smoothness. The SO(3)
+stabilizer forbids an invariant linear functional of the nine vector
+coordinates left after fixing a_1. Accordingly the action remainder
+has vanishing constant and linear jets, and is O(|w_slice|^2)<=CD.
+The global action estimate follows. Its determinant correction is
+retained and is not asserted to vanish.
+
+The subsequently added exact positivity lemma also passes. The kernel
+exp(beta x.y) is PSD for beta>=0 by its uniformly convergent positive
+sum of tensor Gram kernels. Cauchy-Schwarz for this bilinear form gives
+Z(a,b)<=sqrt(Z(a,a)Z(b,b)); the common exp(-11beta) factor cancels in
+that statement. Common rotations reduce diagonal fields to r n, and
+simultaneous inversion (x,y)->(-x,-y) averages their field factor to
+cosh(beta r n.(x+y)). This is pointwise nondecreasing in r>=0. Since
+both aggregate norms are at most five, the flat partition maximizes
+Z, proving V_beta>=0, including beta=0. This is a value comparison,
+not a source-derivative or ordering-of-correlations assertion.
+
+3. ARBITRARY WEIGHTS
+
+The decomposition w=wbar*1+d with |d_l|<=omega gives pointwise
+|S_d|<=omega S and |S_d(min)|<=omega D for every baseline minimizer.
+For D>=delta these bounds and the global energy-excess bound give
+O(omega D); for D<delta the already proved TURN97 weighted theorem
+gives the stronger O(omega beta^-1 D). Therefore (6.2) is valid
+uniformly even at nonunique baseline minima. The choice-free target
+wbar D incurs at most omega D and satisfies (6.4). The producer does
+not claim a global omega/beta gain or global weighted derivative.
+
+4. PACKING, COUNTS, AND CONDITIONAL FACTORIZATION
+
+At starts (x1,3k,2l,2m), selecting the two direction-1 links separated
+by e2 produces isolated transverse adjacent pairs. Different x1 values
+do not place two direction-1 links in one plaquette: such a plaquette's
+parallel links have equal direction-1 starting coordinate. In direction2
+the unused row after each pair prevents another selected neighbor; in
+directions3,4 the spacing two does so. The given periods preserve these
+facts across periodic boundaries. Thus no plaquette reads two pairs.
+
+The number of pairs is N1(N2/3)(N3/2)(N4/2)=V/12. There are V/6 selected
+links out of 4V, giving the claimed fraction 1/24. Each pair has eleven
+distinct affected plaquettes. The ten private plaquettes have three
+retained-link occurrences each and the shared plaquette has two, so
+32 is a valid read upper bound. Every retained link lies in six original
+plaquettes, each assigned to at most one pair, hence in at most six
+pair reads. Shared retained variables are conditioned on, so they do
+not obstruct exact conditional product factorization.
+
+The coordinate transforms for each pair use its retained links only;
+all private opposite direction-1 links must be unselected by the same
+noninteraction property. No other eliminated pair is silently read.
+
+5. FULL MARGINAL, SOURCE, AND COVARIANCE
+
+Integrating the conditional product gives exactly exp(-beta S_out)
+times the product of the actual compact Z_P factors. Removing the
+field-independent flat product gives V_round with its exact normalized
+retained-Haar marginal. Summing relative-D bounds preserves constants
+independent of pair count because errors are summed against sum D_P,
+not against the number of pairs alone.
+
+Differentiating the exact relative log partition gives
+partial_beta V_P=A_P-A_flat. Hence A_round is the original full-action
+conditional mean minus precisely the stated deterministic flat sum.
+The arbitrary weighted source version retains its own flat constants.
+
+The law of total covariance, followed by conditional pair independence,
+gives (9.1). Outside-only source terms are conditional constants. In one
+pair the affected plaquette centers all have first coordinate x1+1/2;
+their second-coordinate range is [x2-1/2,x2+3/2], and the other two
+coordinate ranges have width at most one. Their l-infinity diameter is
+therefore at most 2a. Source center supports separated by more than 2a
+cannot occur in the same pair, and the conditional covariance term
+vanishes exactly as asserted. Flat constants do not change covariance.
+
+6. SCOPE
+
+The result is one exact positive-density elimination round of the
+original Wilson model, with all exteriors and all generated potentials
+retained. It has no hidden volume-dependent normalization cost. It
+does not identify the new potentials with a Wilson action, establish
+an invariant class for a subsequent round, obtain spatial covariance
+decay, pay a physical source census, or prove a continuum theory. The
+producer states those limits explicitly.
+
+
+ADDED SHARPNESS EXAMPLE: ROOT CHECK
+Root independently verified Section5A after the above main audit.
+The pentagon-staple realization has a=b=0, D=10 and Z=e^-11beta z(beta).
+The stated -(3/2)log beta action correction and -3/(2beta) source
+correction follow by comparison with the flat beta^-3 partition.

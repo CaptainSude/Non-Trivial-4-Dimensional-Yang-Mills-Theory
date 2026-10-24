@@ -1,0 +1,486 @@
+ENERGY-WEDGE DOMAINS AND ADDITIVE TRANSPORT OF ACTUAL WINDOW TAILS
+19 October 2026. TURN47. tail47 producer.
+
+STATUS
+
+This note removes the particular geometric energy-radius loss in
+second_regular_step_turn46, Section 9(a), by changing the LATER regular
+windows to frozen fibre-EXCESS-energy windows. The first total-energy
+window and its actual tail are unchanged. The resulting later measure
+is a precisely specified positive regular sector, with the original
+physical source, rather than an identification with the entire Wilson
+law or the former two-total-window sector.
+
+There are two mathematical results:
+
+1. The SAME first actual tail extends from |s|<E/8 to a complex energy
+   wedge with reserve h below E. Its comparison error is
+       exp(CN)[m exp(-c T^2)+exp(-c h/g^2)].
+2. A later excess-energy window of size e consumes only C e of that
+   reserve. Successive containment uses a SUM of energies, not the
+   product of coordinate-map constants appearing in TURN46 (9.1).
+
+Both results retain the separate admitted analytic chart, complete
+real-fibre coverage, and auxiliary cluster hypotheses. No uniform
+all-scale chart or locality theorem is inferred. A complex action
+sublevel alone cannot replace the admitted chart; Section 7 gives an
+explicit obstruction. Additive reserve consumption also has a genuine
+many-scale cost, made explicit in Section 8.
+
+INPUTS INSPECTED
+
+second_regular_step_turn46.txt, Sections 2--7 and 9;
+enlarged_energy_window_audit_turn46.txt, Sections 1--6;
+enlarged_constant_source_turn46.txt, especially the exact radial formula;
+generated_source_stability_turn45.txt (inherited analytic factors).
+
+1. PRECISE SETUP AND THE ENERGY WEDGE
+
+Let the actual first conditional density be
+
+ a_E(u;zeta)=integral exp[-lambda f(B,u)] J(B,u)
+                                  psi(f(B,u)/E) dB,
+ lambda=g^(-2)-zeta,   |g^2 zeta|<c_s<1/8.                 (1.1)
+
+The cutoff psi is the existing fixed real function, equal to one for
+t<=1 and zero for t>=2. All action terms carry the SAME source. The
+map, cutoff, saddle, and exterior conventions are frozen in zeta.
+Write s(u)=f(B_*(u),u), d=dim ker Q, and m for the full redundant
+ambient Gaussian dimension. As before, m, d<=C N.
+
+Fix an admitted open complex datum chart Omega_0. On that chart assume
+the actual uniform saddle, constrained-gap, covariance, coarea, and
+analytic Morse hypotheses already used in TURN46. In particular,
+
+ f(B_*+b_M(y,u),u)=s(u)+y^t y/2,
+ b_M(y,u)=H(u)^(-1/2)y+O(|y|^2),
+ |log[A(y,u)/A(0,u)]|<=C N |y|.                         (1.2)
+
+The complete Morse amplitude A includes its Jacobian. Choose E small
+enough that ALL charts in (1.2) are valid for |y|<=C sqrt(E), with
+the fixed constant C below. Require complete real supported-fibre
+coverage for f<=2E at every real datum under consideration. This is
+a separate hypothesis, not a consequence of an energy condition on s.
+
+Assume also the unchanged auxiliary local cluster on Omega_0:
+
+ a_aux=exp(-lambda s) A(0,u)(2pi)^(d/2) z^d c_T^m exp F(z,u),
+ z=g(1-g^2 zeta)^(-1/2),  lambda z^2=1,
+ |F(z,u)|<=C N,   c_T>=c_*>0.                            (1.3)
+
+The exponent m and the chosen analytic branch z^d are retained.
+
+Fix 0<eta<=1/4 and 0<h<E/2. Define
+
+ Phi_eta(w)=Re w+eta^(-1)|Im w|,
+
+ Omega(E,h)={u in Omega_0:
+               |s(u)|<2E,  Phi_eta(s(u))<E-h}.           (1.4)
+
+This is an open complex domain; it need not be circular or convex.
+The logarithm will be fixed by a uniformly small ratio, so no simple
+connectivity assumption is needed. For q=E-s(u), (1.4) gives
+
+ Re q>h,   |Im q|<eta(Re q-h)<=eta Re q,   |q|<3E.       (1.5)
+
+For real data this admits s(u)<E-h, substantially beyond E/8.
+It is still intersected with Omega_0; isotropic complex directions
+are not admitted merely because their holomorphic action is small.
+
+Require h>=C g^2 m T^2, T>=1, g T^3 sufficiently small, and the
+explicit eventual comparison error below less than 1/4. These are
+the reserve and zero-free conditions, not conclusions of (1.4).
+
+2. THE SAME TOTAL-ENERGY INTEGRAL ON THE LARGER DOMAIN
+
+For a=d/2>0 put
+
+ H(v,u)=average_theta A(sqrt(2v)theta,u)/A(0,u).
+
+Odd powers cancel in the angular average; hence H is holomorphic
+in v on |v|<C E. On this domain |H|<=exp(CN), by (1.2) and fixed
+smallness of sqrt(E). The radial formula with splitting point E is
+
+ R_E=lambda^a/Gamma(a) {
+   q^a integral_0^1 exp(-lambda q t)t^(a-1)H(qt,u)dt
+   +integral_E^(2E) exp[-lambda(t-s)](t-s)^(a-1)
+                                      H(t-s,u)psi(t/E)dt },       (2.1)
+
+where R_E is normalized by the EXACT leading factor in (1.3), without
+c_T^m exp F. For real u the first term is exactly the plateau part
+of the old integral; the second is its transition part. Thus (2.1)
+is the SAME actual density, not a replacement cutoff. Its expression
+is holomorphic in u and zeta on (1.4), with right-half-plane branches
+for q and t-s. It agrees with the previous continuation on overlap.
+
+Let omega=g^2 zeta. For q satisfying (1.5),
+
+ Re(lambda q)
+ >=g^(-2)[(1-c_s)Re q-c_s|Im q|]
+ >=(1-c_s-c_s eta)h/g^2 >=h/(2g^2).                    (2.2)
+
+The same estimate applies to q+(t-E) for E<=t<=2E. The constant
+source is absorbed in lambda throughout; exp(|zeta|E) is NEVER
+introduced as an independent amplitude cost.
+
+Set R^2=h/(8g^2). The source-dependent Morse ball y=z xi,
+|xi|<=R, ends at w=lambda(y^t y/2)=R^2/2=h/(16g^2).
+Change variable w=lambda v in the first term of (2.1). Deform its
+segment 0 to lambda q into a positive-real segment followed by a
+vertical connector. The triangle stays in |v|<=|q|<3E. Its positive
+segment includes the whole Morse-ball endpoint by (2.2).
+
+The interacting core therefore cancels EXACTLY. Every remaining
+piece has real exponential rate at least c h/g^2. The usual Gamma
+tail bound, with |lambda|/Re(lambda) bounded uniformly, gives
+
+ |R_E-M_R|<=exp(CN-c h/g^2).                             (2.3)
+
+Here polynomial powers and fixed constants raised to d are absorbed
+in exp(CN); the elementary Gamma bound is uniform once h/g^2>=C d.
+The cube-reserve condition implies this because m>=d and T>=1.
+
+The linear-to-Morse Stokes argument on |xi|=R uses
+
+ Re[lambda(f(B_*+z H^(-1/2)xi)-s)]
+                 >=|xi|^2/2-C g|xi|^3>=c|xi|^2,
+
+since gR<=C sqrt(h)<=C sqrt(E) is small. It gives the same bound
+exp(CN-c h/g^2). The redundant ambient cube lies inside that ball
+for the stated h>=C g^2 m T^2; its complement contributes
+exp(CN)m exp(-c T^2). All orthogonal Gaussian directions remain.
+
+Consequently, after division by the auxiliary lower bound from (1.3),
+
+ |R_E/R_aux-1|
+ <=exp(CN)[m exp(-c T^2)+exp(-c h/g^2)]=:delta_h.          (2.4)
+
+If delta_h<1/4, the exact logarithm
+
+ D_E(u,zeta)=log[R_E(u,zeta)/R_aux(u,zeta)]
+
+is holomorphic on Omega(E,h), with |D_E|<=C delta_h. At real zero
+source the redundant cube is contained in the plateau because
+s<=E-h and its excess action is at most C g^2 m T^2<=h/2.
+
+For d=0, the actual cutoff is identically one on (1.4)'s real family;
+its holomorphic continuation equals one after leading normalization.
+Only the redundant ambient normalizer remains in the comparison.
+
+This is the first claimed extension of the ACTUAL tail. Derivatives
+on an energy wedge require its actual complex distance to the
+boundary; one cannot reuse a ball radius without checking inclusion.
+
+3. THE LATER WINDOW THAT MAKES ADDITIVE TRANSPORT POSSIBLE
+
+Let s_j be the actual generated CLASSICAL action, Phi_(j+1) the
+literal next ordinary map, and
+
+ s_(j+1)(v)=s_j(u_*(v)),  Phi_(j+1)(u_*(v))=v.
+
+Assume its admitted regular branch and its uniform Morse map U(v,y)
+satisfy the exact identity
+
+ s_j(U(v,y))=s_(j+1)(v)+y^t y/2.                        (3.1)
+
+Choose a fixed e_j>0. On the REAL constrained fibre, define the
+following weight on the DECLARED admitted injective Morse branch,
+and set it to zero outside that branch:
+
+ chi_j(u,v)=psi([s_j(u)-s_(j+1)(v)]/e_j).               (3.2)
+
+Choose e_j so its support stays strictly inside that branch, as in
+Section 5A. Defining (3.2) instead on the entire real fibre requires
+a separate proof of complete coverage and nonnegative excess there;
+that assertion is not assumed. The declared weight is source
+independent and lies in [0,1] because the selected Morse branch has
+nonnegative real excess. It depends on the prescribed datum v,
+as an ordinary conditional weight may. Its EXACT meaning
+is a new positive regular sector with this stated weight. It is not
+silently identified with the previous total-energy window
+psi(s_j(u)/E_(j+1)), nor with the unwindowed Wilson law.
+
+If the incoming density was already the exact sourced density, its
+integration against (3.2) still inserts the ORIGINAL physical action.
+No source is reassigned to s_j alone: all source-dependent generated
+amplitudes and the inherited factor exp D remain inside the integral.
+Fubini gives an exact original measure with the product of all the
+specified regular windows and every coarea/Haar normalizer retained.
+
+In Morse variables the new radial cutoff is simply psi(t/e_j), where
+t is a FIXED REAL excess energy. Let A_j^0(y,v;zeta) be the complete
+sourced Morse/coarea/generated amplitude WITHOUT the inherited exp D.
+Factor A_j^0(0,v;zeta) exactly, together with exp(-lambda s_(j+1))
+and the Gaussian leading factor. The normalized radial expression is
+
+ B_j(v,zeta)=lambda^a/Gamma(a)
+   integral_0^(2e_j) exp(-lambda t)t^(a-1)
+              H_j(t,v;zeta)psi(t/e_j)dt.                (3.3)
+
+Here the EXACT angular amplitude is
+
+ H_j(t,v;zeta)=average_theta
+   [A_j^0(sqrt(2t)theta,v;zeta)/A_j^0(0,v;zeta)]
+        exp D_j(U(v,sqrt(2t)theta),zeta).                 (3.4)
+
+In particular H_j(0,v;zeta)=exp D_j(u_*(v),zeta), not one. No saddle
+value of D has also been placed in the leading prefactor. Alternatively
+one may factor that saddle value, but must then replace the exponent
+inside (3.4) by D_j(U(...))-D_j(u_*); both conventions give the same
+density. Equation (3.3) is holomorphic whenever the entire contour
+lies in the inherited analytic domain. No smooth cutoff is evaluated
+at a complex number. The positive real definition (3.2), followed by
+(3.3), fixes the continuation unambiguously.
+
+4. ADDITIVE DOMAIN CONTAINMENT ON EVERY COMPARISON CONTOUR
+
+Write Phi_eta(w)=Re w+eta^(-1)|Im w| as in (1.4). It satisfies
+
+ Phi_eta(w+r)<=Phi_eta(w)+(1+eta^(-1))|r|.                (4.1)
+
+For the radial contour of (3.3), (3.1) gives r=t in [0,2e_j]
+EXACTLY, also for complex v. Thus its action increment is real and
+at most 2e_j.
+
+The source-dependent linear/Morse comparison ball has radius chosen
+so |y|^2<=C e_j. On the Morse contour r=z^2|xi|^2/2, hence |r|<=C e_j.
+The linear contour has the same quadratic action plus O(e_j^(3/2));
+the Stokes homotopy has the same bound by the uniform cubic estimate.
+The auxiliary cube is included if e_j>=C g^2 m_j T_j^2. Thus, on ALL
+radial, linear, Morse, side and cube contours,
+
+ |s_j(u)-s_(j+1)(v)|<=C_0 e_j.                          (4.2)
+
+The constants in (4.2) depend on the ACTUAL admitted chart estimates,
+fixed source-disc size, and the declared smallness of sqrt(e_j).
+They are not asserted uniform in j without proof of those inputs.
+
+Suppose the old tail is bounded on the chart intersection
+
+ |s_j(u)|<B_j,  Phi_eta(s_j(u))<E-h_j.
+
+Restrict the new datum to
+
+ |s_(j+1)(v)|<B_j-C_0 e_j,
+ Phi_eta(s_(j+1)(v))<E-h_j-C_1 e_j,                    (4.3)
+
+where C_1>(1+eta^(-1))C_0, and ALSO require every actual contour
+image to lie in the old admitted chart Omega_j. Then (4.1)--(4.2)
+prove strict inherited-domain containment, with an open margin.
+
+After k steps this condition is
+
+ Phi_eta(s_k(v))<E-h_0-sum_(j<k) C_(1,j)e_j,
+ |s_k(v)|<2E-sum_(j<k) C_(0,j)e_j.                      (4.4)
+
+There is NO product of Euclidean coordinate-map constants in (4.4).
+The initial E is unchanged. Energy conservation in the exact Morse
+identity, not a bound ||U||<=C||v||+..., is what removes that product.
+
+This is a stable-domain lemma for the ACTUAL inherited D_E of
+Section 2 and all subsequently transported tails. It is conditional
+on the old chart containment just explicitly stated. In particular,
+it removes one obstruction without concealing the separate uniform
+local geometry, carrier, and generated-amplitude obstructions.
+
+5. WHAT CAN BE SAID ABOUT THE TRANSPORTED TAIL NORM
+
+Domain containment does not by itself bound a normalized complex
+integral. The following exact distinction prevents that shortcut.
+
+At real datum and zero source, with positive unsourced incoming
+amplitude, a real inherited |D|<=epsilon obeys
+
+ exp(-epsilon)<= [integral w exp D]/[integral w]
+                                      <=exp(epsilon).           (5.1)
+
+Hence its new real logarithmic contribution has magnitude at most
+epsilon. This is an exact positive-kernel contraction, no smallness
+of the unmarked amplitude being required.
+
+For complex data define, after the common leading factor is removed,
+the exact normalized contour kernel functional L_v. If its operator
+norm on bounded holomorphic amplitudes on ALL comparison contours
+is at most K_j, and the density without D is nonzero, then
+
+ | L_v(exp D)-1 |<=K_j(exp(epsilon)-1).                 (5.2)
+
+For K_j(exp(epsilon)-1)<1/2, the added logarithmic tail satisfies
+
+ |log L_v(exp D)|<=2 K_j(exp(epsilon)-1).               (5.3)
+
+The L_v normalization in (5.2) is by the complete density WITHOUT
+D, so L_v(1)=1. An absolute value integral and a denominator lower
+bound establish K_j. Under the existing TURN46 contour bounds and
+auxiliary zero-free bound, K_j<=exp(CN_j), with the exponentially
+small comparison terms included. This is an available finite-step
+bound; it is not silently replaced by 1 in complex variables.
+
+For the original two-step polylogarithmic construction, the stronger
+generated-source hypotheses of TURN45 give its sharper stated
+O(epsilon) perturbation estimate. Either estimate can be inserted
+after the NEW domain containment has actually been checked.
+
+A uniform-depth norm theorem must control these K_j, the accumulated
+new comparison errors, and their carrier charges. Equation (4.4)
+does not prove such a norm theorem by itself. It also does not put
+the inherited tail on the independent large fluctuation-parameter
+domain used for the local cluster; D remains separate.
+
+For completeness, suppose the complete generated amplitude WITHOUT
+D has the verified local cluster on the independent product domain,
+has contour bound exp(CN_j), and has the corresponding auxiliary
+lower bound exp(-CN_j). Applying the SAME linear/Morse/cube comparison
+to (3.3) gives a new error
+
+ delta_j=exp(CN_j)[m_j exp(-c T_j^2)+exp(-c e_j/g^2)].
+
+The real excess interval from 0 to e_j is the common core; after the
+change w=lambda t it is deformed exactly as in Section 2. The energy
+cutoff is fixed real and is never analytically continued. The source
+identity lambda z^2=1 again controls its ball and side sphere. Thus,
+if delta_j<1/4, the new local-plus-tail factorization is exact and its
+combined logarithmic remainder satisfies, with constants enlarged,
+
+ epsilon_(j+1)<=C delta_j+2 K_j(exp(epsilon_j)-1).         (5.4)
+
+The incoming D is actually integrated in (5.4), not evaluated only
+at its saddle. This is the explicit finite-depth transport estimate
+accompanying (4.4). Its hypotheses must be verified for the changing
+generated amplitudes; the two-step TURN46 verification does not
+establish them for every j.
+
+5A. COROLLARY: A NEW EXCESS-WINDOW TAIL IS BORN ON ITS FULL CHART
+
+Suppose Omega_next is an admitted open complex datum chart on which:
+
+ (i) the exact saddle and Morse maps in (3.1) exist uniformly for
+     |y|<=C sqrt(e_j), with complete sourced unperturbed amplitude;
+ (ii) the auxiliary local cluster and its nonzero normalized lower
+      bound hold uniformly, on the separate independent domain;
+ (iii) the REAL selected fibre with excess<=2e_j is completely
+       represented by that Morse branch, with an open margin;
+ (iv) the stated amplitude bounds and exp(CN_j) comparison bounds
+      hold on every complex radial/linear/side/cube contour.
+
+Then the excess-window density WITHOUT inherited D has an exact
+factorization with new logarithmic tail D_j,new holomorphic on ALL
+Omega_next and the full |g^2 zeta|<c_s disc, with
+
+ |D_j,new|<=C exp(CN_j)
+               [m_j exp(-cT_j^2)+exp(-c e_j/g^2)].        (5A.1)
+
+There is NO condition on the VALUE of s_(j+1)(v). Proof: set D=0 in
+(3.3)--(3.4). The leading exp(-lambda s_(j+1)) is factored exactly.
+The integration interval and cutoff use only the fixed real excess
+t. Rotate its plateau core by w=lambda t, compare to the whitened
+Morse ball, and use the linear/cube and Stokes bounds already proved.
+Every endpoint and exponential tail depends on e_j, not on s_(j+1).
+Division by the auxiliary lower bound and log(1+q) prove (5A.1) on
+the entire chart. This proves the corollary, rather than assuming a
+larger domain because the tail is small.
+
+Condition (iii) may refer to a DECLARED selected branch. Indeed,
+for real data let the sector consist of the injective Morse image
+of |y|<r_M and set its weight to (3.2) there and zero outside. Choose
+2 sqrt(e_j)<r_M with margin. The weight vanishes before the branch
+boundary, is measurable, lies in [0,1], and is source independent.
+Its exact coarea integral is (3.3) with D=0. This is an actual
+positive weighted sector of the original framed fibre, and its
+normalizer has not been dropped. It does NOT prove that all other
+real fibre components have large excess, or that their omitted mass
+is small. Those claims need a separate global coverage/energy proof.
+
+Thus the first regular sector could ALSO be defined this way: given
+the uniform first Morse and cluster hypotheses on a fixed sup chart,
+its new excess-window tail is analytic on that chart by (5A.1).
+This is a precise alternative sector, with exactly the original
+constant physical source. It is not an extension of the current
+total-window tail, and equality with the entire weak fibre or the
+complete Wilson history is not obtained. Gauge compatibility of the
+selected-branch convention remains another explicit obligation.
+
+When tails are tracked by origin instead of immediately combined,
+each NEW excess-window tail has its own full admitted chart. Only
+the inherited first total-window tail necessarily retains the energy
+wedge from Section 2. A prospective construction can use this
+distinction; assigning every later tail the first tail's shrinking
+domain would be unnecessarily restrictive. Subsequent chart-image
+containment and complex norm growth still require proof.
+
+6. WHY A REAL POSITIVE-KERNEL BOUND CANNOT REPLACE ANALYTIC CONTAINMENT
+
+Let the real conditional fibre be (v,y), with coarse map (v,y)->v
+and independent Gaussian conditional y. Take a bounded smooth but
+nonanalytic function r(v), and an incoming perturbation D(v,y)=r(v).
+Then the exact positive-kernel image is
+
+ log E_y exp D(v,y)=r(v).
+
+Thus real smallness and conditional integration alone do not produce
+analyticity in the preserved datum. The same example with r analytic
+only on a finite disc shows that the kernel need not enlarge its
+datum domain. One cannot avoid checking old complex domains merely
+by invoking positivity of the real measure.
+
+7. THE COMPLEX ACTION SUBLEVEL IS NOT A GEOMETRIC NORM
+
+Already for s(u_1,u_2)=(u_1^2+u_2^2)/2, the points
+
+ (u_1,u_2)=(R,iR)
+
+have s=0 for arbitrary R. They satisfy every action-only sublevel
+condition but leave every fixed analytic chart. The real quadratic
+form is positive; its holomorphic extension is bilinear, not positive
+Hermitian. Consequently the Omega_j intersections and actual contour
+image requirements in Sections 1 and 4 are indispensable.
+
+Using Re s alone is even less sufficient. The energy wedge is chosen
+to control complex source phases, not to supply missing coordinate
+coercivity. No independent-current or full complex gauge-orbit domain
+is obtained from this lemma.
+
+8. MANY-SCALE COST AND THE PRECISE NEXT OBLIGATION
+
+Every new excess window must at least satisfy the cube reserve
+
+ e_j>=C g_j^2 m_j T_j^2                                (8.1)
+
+if its comparison is organized with its scale's g_j. For the literal
+constant-source calculation above, g_j=g until an actual renormalized
+rate extraction is proved; this notation alone does not create one.
+
+On a hypothetical asymptotically free trajectory g_j^(-2)~x_0+bj,
+with m_j>=1 and T_j>=1, the bare sufficient sum from (8.1) grows
+at least like sum_j 1/(x_0+bj), hence logarithmically with depth.
+It cannot fit indefinitely in one fixed initial E. This is a failure
+of the stated sufficient energy-budget scheme, not a lower bound on
+the true necessary reserve or a failure theorem for Yang--Mills.
+
+In a single finite original box, the actual number of degrees of
+freedom shrinks under coarsening, and the total sum can be explicitly
+finite. That supplies a legitimate nongeometric finite-depth theorem
+when the actual chart and norm inputs are checked. It must not be
+confused with a uniform continuum construction in a fixed physical
+region, where the number of original ultraviolet degrees grows.
+
+To obtain a useful arbitrary-depth statement one still needs a proved
+local reorganization, a resetting/renewal of the analytic remainder,
+a scale-weighted energy budget justified by the actual maps, or
+another mechanism that bounds (4.4) and (5.3) uniformly. Such a
+mechanism is not postulated in this note.
+
+CONCLUSION
+
+The earlier fixed-fraction energy condition and its repeated
+coordinate-ball losses were avoidable. A variable energy reserve and
+frozen fibre-excess windows give the exact additive-domain formula
+(4.4), with the original physical source and all normalization factors
+retained. The first actual remainder is extended by a direct complex
+comparison, not inferred from real smallness.
+
+This changes a concrete next-step obstruction and supplies a revised
+regular-sector construction worth testing. It does not complete the
+uniform local class, the complete Wilson history expansion, or a
+nonzero continuum Yang--Mills observable. No full existence theorem
+is claimed.

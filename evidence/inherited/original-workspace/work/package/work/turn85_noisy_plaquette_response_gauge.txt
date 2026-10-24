@@ -1,0 +1,225 @@
+TURN85 -- COMPLETE PLAQUETTE RESPONSE WITH RETAINED FLUCTUATIONS
+20 October 2026. gauge47. New finite identities; no full-law closure.
+
+RESULT
+
+A complete Wilson plaquette with retained multiplicative fluctuations can
+respond at the fine POTENTIAL scale h=L^(-j), even when its background is
+exactly flat. Taking the trace gains a fluctuation power, but does not by
+itself gain another spatial h. An explicit SU(2) square realizes both
+orders. Integration can cancel the response, including all mixed source
+contacts, if the COMPLETE conditional measure and remaining reads admit
+the corresponding real gauge transport. Centering or global color symmetry
+is weaker. This identifies a useful integrated target instead of treating
+a coordinate-dependent pathwise row as a necessary physical bound.
+
+The native constrained response of the retained fluctuation itself is
+included algebraically below but not bounded by this note. The exact
+accepted native C/D/minimum chain is history47's complementary task.
+
+1. COMPLETE PRODUCT IDENTITY WITH PHYSICAL EDGE ORIENTATIONS
+
+Write the four positively oriented edge variables of a square as
+U_e(t)=F_e(t)B_e(t), with F_e,B_e in SU(2), and take the oriented product
+
+ P=U_1 U_2 U_3^(-1) U_4^(-1),
+ Q=B_1 B_2 B_3^(-1) B_4^(-1).
+
+All norms below are operator norms. Set
+
+ b_e=dot B_e B_e^(-1), f_e=dot F_e F_e^(-1),
+ d_e=||b_e||, rho_e=||F_e-I||,
+ D=sum_e d_e, R=sum_e rho_e, A=sum_e ||f_e||,
+ q=||Q-I||, K=||dot Q||.
+
+For the four ORIENTED factors W_l of P, with prefix P_<l,
+
+ Y_P=dot P P^(-1)=sum_l Ad_(P_<l)(dot W_l W_l^(-1)).       (1.1)
+
+There is an identical formula Y_Q for Q. A positive edge has logarithmic
+velocity f_e+Ad_(F_e)b_e. A negative traversal has velocity
+-Ad_(U_e^(-1))f_e-Ad_(B_e^(-1))b_e. In particular, keeping F_e fixed
+does NOT keep the left fluctuation in an arbitrary reversed-edge
+factorization fixed. Formula (1.1) respects the original physical edges.
+
+Telescoping unitary products gives ||P-Q||<=R. Also
+||Ad_G Z-Ad_H Z||<=2||G-H||||Z|| for unitary G,H. Comparing each term
+of (1.1) with its background term therefore gives
+
+ ||Y_P-Y_Q||<=2 R D+A,
+ ||dot P||<=K+2 R D+A.                                  (1.2)
+
+The sharper fixed-F bound is 2 sum_l d_l sum_(k<=l)rho_k; for negative
+traversals the last rho_l term can be omitted. The coarser (1.2) is
+convenient and includes every edge with its actual orientation.
+
+For w(P)=1-Tr(P)/2, the matrices Y_P,Y_Q are traceless anti-Hermitian.
+Using ||P-I||=sqrt(2w(P)) gives
+
+ |dot w(P)|<=||P-I||(K+2 R D+A),                         (1.3)
+ |dot w(P)-dot w(Q)|<=R K+(q+R)(2 R D+A).                (1.4)
+
+Indeed subtract the two traces as
+Tr[Y_Q(P-Q)+(Y_P-Y_Q)(P-I)]/2. Equations (1.2)--(1.4) are real exact
+inequalities and do not use an action minimum or a probabilistic law.
+
+For a flat background path Q=I, hence K=q=0, and FIXED retained F,
+
+             ||dot P||<=2RD,  |dot w(P)|<=2R^2 D.        (1.5)
+
+The trace has one extra fluctuation factor R. If D=O(h), R=O(g),
+these are O(gh) and O(g^2 h), not O(gh^2) and O(g^2 h^2).
+
+2. EXACT SU(2) SQUARE: BOTH ORDERS ARE ATTAINED
+
+Use Pauli matrices with U=exp(i x.sigma), and let h>0 denote a spatial
+scale, not the action. Put G(t)=exp(i h t sigma3), with
+
+ B_1=B_3=G(t), B_2=B_4=I,
+ F_1=F_3=I, F_2=exp(i rho sigma1), F_4=exp(i rho sigma2).
+
+Then Q(t)=I for every t. This background extends as a constant commuting
+horizontal connection on a rectangular patch. Nevertheless
+
+ P(t)=G(t) exp(i rho sigma1) G(t)^(-1) exp(-i rho sigma2),
+ w(P(t))=sin^2(rho)[1+sin(2ht)],
+ ||dot P(0)||=2h|sin rho|,
+ dot w(P(0))=2h sin^2(rho).                             (2.1)
+
+Conjugation sends sigma1 to cos(2ht)sigma1-sin(2ht)sigma2, fixing the
+sign in (2.1). The background curvature and all its derivatives vanish.
+Thus background curvature alone cannot bound the fixed-noise response.
+
+For the canonical microscopic source E=beta0 w and rho=g0=beta0^(-1/2),
+dot E(0)=2h beta0 sin^2(g0)->2h. The extra fluctuation power cancels the
+canonical beta0; it does not produce a curvature-counting h^4 gain.
+This is a deterministic example, not a claim that this path satisfies
+the full native coarse constraints with its retained noise fixed. The
+response of F_e through C, Dtilde, gauges and minima can change (2.1).
+
+For a local gauge change removing the flat B, F_2 must also rotate at
+its tail vertex. Holding F_2 fixed instead changes the physical full
+field. Gauge invariance of the trace therefore does not null this row.
+
+3. WHAT GAUSSIAN CENTERING DOES AND DOES NOT CANCEL
+
+First, parity alone is insufficient. In (2.1) replace rho on the two
+vertical edges by gX and gY, where (X,Y) is a centered jointly Gaussian
+scalar pair of variances v_X,v_Y and covariance c. The SAME exact square
+formula gives
+
+ E dot w(P(0))
+ =2h exp[-g^2(v_X+v_Y)/2] sinh(g^2 c).                  (3.1)
+
+This is O(g^2 h) and nonzero for c!=0. Its quadratic leading term is
+even under (X,Y)->(-X,-Y). This fixed-axis Gaussian is only a test of
+parity; it is not the flat native color-covariant Gaussian.
+
+Next assume the pair (V_2,V_4) in SU(2)^2 is invariant under SIMULTANEOUS
+conjugation. Write V_i=c_i I+i v_i.sigma, and set
+m=E(v_2.v_4)/3. Isotropy gives E[v_2 v_4^t]=m I. Consequently
+
+ E w(G(t)V_2G(t)^(-1)V_4^(-1))-E w(V_2V_4^(-1))
+                         =4m sin^2(ht).                 (3.2)
+
+The first derivative at t=0 vanishes, but the whole response need not.
+For a nondegenerate jointly isotropic Gaussian vector pair X,Y with
+Cov(X^a,Y^b)=c delta_ab, V_i=exp(i g X_i.sigma), Taylor and finite
+Gaussian moments give m=g^2 c+O(g^4). Thus the second background
+derivative is 8h^2[g^2 c+O(g^4)]. A correlated Gaussian can satisfy
+global adjoint symmetry and still fail the stronger cancellation below.
+
+These examples preserve the distinction between an uncut Gaussian
+calculation and the actual truncated correlated native Gaussian. An even
+native window preserves joint sign symmetry; it does not make correlated
+coordinates independent or impose independent site-color rotations.
+
+4. EXACT INTEGRATED GAUGE TRANSPORT, INCLUDING MIXED CONTACTS
+
+If V_2 is conjugation-invariant and independent of V_4 and the other
+retained variables, then Ad_G V_2 has exactly the law of V_2 jointly with
+those variables. Therefore the full distribution of
+G V_2 G^(-1)V_4^(-1) is independent of t. For bounded phi,psi, all four
+raw rows 1, phi(P_t), psi(P_t), phi(P_t)psi(P_t) have constant integrals.
+Equivalently the finite source normalizer E exp[s phi(P_t)+u psi(P_t)]
+is constant, including its scalar vacuum and all mixed contacts.
+
+The actual general criterion is an exact CHANGE OF REAL VARIABLES.
+Let T_t be a bijection between the relevant real record domains, let
+nu_t=(T_t)_*nu_0, and require for the complete source and remaining read
+
+ F_t(T_t xi)=F_0(xi), H_t(T_t xi)=H_0(xi),
+ G_t(T_t xi)=G_0(xi).                                  (4.1)
+
+Then int G_t exp[sF_t+uH_t]dnu_t equals its t=0 value. Normalization
+is unnecessary for this raw identity; after division by the same
+nonzero mass, it also gives the normalized first/mixed identities.
+Every cut, Jacobian, covariance, coarea and surviving read belongs in
+nu_t or G_t. Transforming only the two displayed sources is insufficient.
+
+For the square, T_t rotates V_2 by Ad_(G(t)^(-1)). An independently
+isotropic product law is invariant under T_t. A general correlated
+Gaussian is not. One can transport its covariance and cutoff along with
+T_t, but that produces the same integral only if they are the ACTUAL
+parameter-dependent covariance and cutoff, not newly chosen substitutes.
+
+Where a common smooth density k_t exists, the derivative ledger is
+
+ d E_t F_t=E_t(dot F_t)+Cov_t(F_t, dot log k_t).           (4.2)
+
+For moving hard cuts this shorthand requires the corresponding domain
+or boundary contribution; the finite real-variable identity (4.1) is
+safer. The conditional score, not a presumed zero mean of a bare
+noise monomial, supplies the possible compensation for a changed law.
+
+5. EXACT NATIVE-CONDITIONAL CONSUMER AND ITS LIMIT
+
+At a fixed admitted real regular primitive the actual normalized law is
+chi_T(x) exp[V_g(x;W)] dmu_C(W)(x)/I_g(W), with the correlated covariance,
+even window and source-independent normalizer retained. This is TURN74
+Sections1--2 / TURN83 native-action Sections1--2, not a selected product
+replacement and not an assertion about the entire original Wilson law.
+
+For a derivative varying ONLY the displayed background B and keeping
+the sampled multiplicative F fixed, (1.4) integrates under precisely that
+fixed conditional law. If its already admitted polynomial-mark module
+gives E R<=C_1 g and E R^2<=C_2 g^2 on the complete finite read support,
+then
+
+ E|dot w(P)-dot w(Q)|
+ <=C_1 g K+2D(q C_1 g+C_2 g^2).                        (5.1)
+
+For a flat path this is <=2 C_2 g^2 D. This is a usable frozen-law
+absolute partial-row bound, with no independence assumption and no
+fine-volume sum hidden in C_1,C_2. If the read carrier grows, its
+polynomial moment/support cost must be kept before the native census.
+Canonical original sources multiply (5.1) by beta0, not beta_j.
+
+The COMPLETE native derivative also has A=sum||dot F_e|| in (1.4),
+and the derivative of its normalized conditional density in (4.2).
+For the literal accepted read, dot F includes derivatives of the
+constraint solution, covariance/averaging coordinates, gauge maps and
+old-minimum dependence. Its small amplitude alone does not bound this
+derivative. This note neither drops A nor asserts (4.1) for those maps.
+
+The previously proved TURN83 cancellation sum_p L_(p,r)=0 uses the
+COMPLETE constrained action at its physical minimum, BEFORE masks and
+source weighting. It does not say that a single plaquette, a partially
+integrated old source, or the fixed-noise trace (2.1) is stationary.
+Its two-profile leading covariance gain remains valid at that distinct
+one-primitive scope and is not rederived or enlarged here.
+
+6. CONSEQUENCE FOR THE RESPONSE TARGET
+
+The exact square rules out a curvature-only deterministic estimate based
+solely on the slow background while old fluctuations are held fixed.
+It does not rule out an integrated gauge-covariant estimate for physical
+source rows. The relevant stronger target is to identify the actual real
+transport of the retained conditional records, or to estimate its defect
+including the score and constraints, with the same complete source/test
+algebra. The independent-product cancellation is an illustration of what
+must be preserved, not a substitute for the correlated native law.
+
+No claim is made that (5.1) pays the a0^(-4) original-source count. No
+nonzero reflected norm, all-history source theorem or continuum limit is
+obtained. Earlier frozen producers and authoritative status are unchanged.

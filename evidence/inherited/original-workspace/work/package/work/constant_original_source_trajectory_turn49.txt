@@ -1,0 +1,392 @@
+CONSTANT ORIGINAL ACTION SOURCE ALONG THE TUNED LOCAL TRAJECTORIES
+20 October 2026. TURN49. Producer: gauge47.
+Independent review: constant_original_source_trajectory_audit_turn49.txt
+(history47; PASS at the explicitly recorded local and trajectory premises).
+
+RESULT. On the finite homogeneous selected trajectories constructed in
+physical_determinant_drift_turn49.txt Section 10, a single constant
+source for the ORIGINAL bare action can be propagated on one fixed
+complex source disc, with every baseline window frozen. The marginal
+source coefficient stays close to its original value; the irrelevant
+source response is summable in the number of steps. The independent
+forcing is O(g^4), and classical block contraction handles the larger
+O(gT/b) coefficient multiplying the inherited irrelevant response.
+
+This is a theorem for the same actual periodic local selected maps and
+their previously stated classical/analytic premises. It neither bounds
+complementary histories nor renormalizes the extensive source vacuum
+terms. It does not construct a continuum observable or a nonzero
+separated witness. The scalar marginal coordinate uses the established
+simple color factor, not an unproved one-coupling reduction for an
+arbitrary semisimple product.
+
+1. THE SOURCE IS PHYSICAL AND EVERY WINDOW STAYS FIXED
+
+Fix one finite unsourced tuned trajectory, with n=mq steps, baseline
+gamma_j=g_j^-2, extracted activity e_j, and the actual homogeneous
+reference S_j. Its exact unsourced density is
+
+  Z_j(0) exp[-gamma_j S_j+e_j].
+
+Use the actual projected-product weight W_j belonging to this real
+baseline g_j, chart, Hessian and normal Gaussian. At every source value
+these same weights are retained. No complex coupling is substituted
+inside a window or covariance chart.
+
+For an initial original-action source exp[zeta S_0], write the EXACT
+sourced density at stage j as
+
+  Z_j(zeta) exp[-gamma_j S_j+e_j
+                         +alpha_j(zeta) S_j+u_j(zeta)],
+  beta_j(u_j)=0, alpha_j(0)=0, u_j(0)=0,
+  alpha_0(zeta)=zeta, u_0(zeta)=0.                       (1.1)
+
+For the bare starting step S_0 is the original Wilson action. All
+inherited source terms are contained in alpha_j S_j+u_j, not replaced
+by a freshly introduced source for S_j.
+
+Let F_j(g,t,E) denote the logarithm of the normalized ambient
+expectation in TURN48, after removing its field-independent value
+when regarded as a quotient class. Its exact exponent is
+
+  (t/2)xi^t P_j(w)xi
+  -(1-t)r_j(w,gK_jxi)/g^2
+  +log[J_j(w,gK_jxi)/J_j(w,0)]
+  +E(U_pre,j(w,gK_jxi))-E(V_p,j(w)).                    (1.2)
+
+The physical source sets t=g_j^2 alpha_j. In particular it couples
+to xi^t P_j xi, never to the dummy normal energy |xi|^2-xi^t P_j xi.
+E in (1.2) is e_j+u_j. The full leading log A0, classical phase and
+all Gaussian/cutoff constants are the same in source and baseline.
+
+Define the normalized fluctuation source class
+
+  N_j(alpha,u)
+    =F_j(g_j,g_j^2 alpha,e_j+u)-F_j(g_j,0,e_j).          (1.3)
+
+Exact extraction gives
+
+ alpha_(j+1)=alpha_j+beta_(j+1)[T_j u_j+N_j(alpha_j,u_j)],
+ u_(j+1)=P_(j+1)[T_j u_j+N_j(alpha_j,u_j)],             (1.4)
+
+where T_j S_j=S_(j+1) and P_j=I-S_j beta_j. Equation (1.4) retains
+the classical leakage beta T u. No exact finite-volume identity
+beta_(j+1)T_j=beta_j is assumed.
+
+2. THE ONE-STEP ESTIMATE THAT MAKES THE SOURCE SUMMABLE
+
+All bounds in this section are on the SAME fixed output field radius b
+and carrier weight as the unsourced induction. Constants may depend
+on b,T,R,J, which are fixed before the weak-coupling ceiling. An outer
+field radius for an arbitrary inherited e is not required.
+
+For every small inherited E, the strict joint catalogue proves that
+F_j(g,t,E) is Banach-valued holomorphic on
+
+        |g|<r_g, |t|<r_t, ||E||<epsilon_bar,
+
+uniformly in j, preceding classical depth and compatible volume.
+Here r_t=c/T^2 and a possible r_g is a sufficiently small constant
+times
+
+  min(T^-3, b/T, b/(epsilon_bar T), r_chart/T).
+
+Fixed norm conversions and collar constants are included. These
+choices simultaneously satisfy the base remainder, inherited
+increment and chart containment budgets. The logarithm has a
+uniform rooted bound on smaller fixed fractions of these discs.
+Complex g is only an auxiliary analytic parameter for the Cauchy
+estimate. The actual source recursion evaluates it at the fixed
+real g_j throughout; it never changes W_j as zeta varies.
+
+The transformation (g,xi)->(-g,-xi) leaves (1.2) and the centered
+ambient product measure unchanged. Thus
+
+                    F_j(-g,t,E)=F_j(g,t,E).            (2.1)
+
+At g=0, every centered nonlinear remainder and inherited difference
+vanishes. The removable g^-2 term is O(g). Hence
+
+ F_j(0,t,E)=F0_j(t)
+     =[log E_muT exp((t/2)xi^t P_j(w)xi)],              (2.2)
+
+independently of E. Brackets denote the normalized field quotient,
+not deletion of an actual vacuum term from the density.
+
+Since each color block has covariance v_T I,
+
+ d_t log E_muT exp((t/2)xi^t P_jxi)|_(t=0)
+                       =(v_T/2)Tr P_j=v_T d_j/2.
+
+The physical dimension d_j is independent of w. Therefore in the
+normalized field quotient
+
+                   F0_j(0)=0, F0_j'(0)=0.              (2.3)
+
+This is the essential cancellation. At carrier level it is justified
+by the exact representative change subtracting each first Taylor
+coefficient and retaining their summed constant as vacuum, as in
+projected_product_sector_turn48.txt. It does not assert that the
+first derivative of each original carrier was individually constant.
+
+Cauchy on the fixed t disc yields
+
+                  ||F0_j(t)||<=C |t|^2.               (2.4)
+
+The constant can be taken O(T^4) times the fixed catalogue bound.
+No small Gaussian-tail factor is needed. The explicit kappa_T
+improvement of the second mark is compatible with (2.4), but an
+all-order tail comparison is not being assumed.
+
+By (2.1)-(2.2), Banach-valued analytic division gives
+
+       F_j(g,t,E)=F0_j(t)+g^2 R_j(g,t,E),              (2.5)
+
+with R uniformly bounded by C r_g^-2 on a smaller product domain.
+Cauchy in t then proves
+
+ ||R_j(g,t,E)-R_j(g,0,E)||<=C |t|.
+
+Consequently, for an arbitrary small fixed inherited E,
+
+ ||F_j(g,g^2 alpha,E)-F_j(g,0,E)||
+                <=C g^4(|alpha|+|alpha|^2).           (2.6)
+
+The powers can be retained as exact analytic factors. Analytic
+division in t gives bounded class-valued analytic C_j,D_j such that
+
+ F0_j(g^2 alpha)=g^4 alpha^2 C_j(g^2 alpha),
+ g^2[R_j(g,g^2 alpha,E)-R_j(g,0,E)]
+                        =g^4 alpha D_j(g,g^2 alpha,E).
+
+These identities also hold after coefficient convolution in the
+Wiener space below, so the g^4 factor is not lost when promoting
+the scalar source to a holomorphic source function.
+
+The constant includes the fixed r_g,r_t factors and may depend on b.
+It is independent of j, depth, volume and trajectory length.
+This proves an actual O(g^4) force with the window frozen. It is
+stronger than estimating a source insertion by its absolute
+O(g^2) quadratic magnitude, which would lose the exact vacuum
+cancellation (2.3).
+
+For the inherited source part the same-t two-input estimate gives
+
+ ||F_j(g,t,E+u)-F_j(g,t,E)||
+                         <=C(gT/b)||u||.              (2.7)
+
+Thus, on fixed sufficiently small parameter balls,
+
+ N_j(alpha,u)=B_j(alpha)+Q_j(alpha,u),
+ ||B_j(alpha)||<=C g_j^4(|alpha|+|alpha|^2),
+ ||Q_j(alpha,u)||<=C(g_j T/b)||u||.                    (2.8)
+
+The last factor is not summable by itself. It multiplies the stable
+irrelevant variable u; the argument below never sums it as an
+independent forcing.
+
+3. FIXED SOURCE DISC, INCLUDING ACTUAL HOLOMORPHIC REPRESENTATIVES
+
+For a Banach space B let
+
+ W_eta(B)={sum_(k>=0) v_k zeta^k:
+                         sum_k eta^k ||v_k||_B<infinity}.
+
+The same eta is used at every stage. The finite activity quotient
+Q=A/N obeys the exact isometric identity
+
+                  W_eta(A)/W_eta(N)=W_eta(Q).           (3.1)
+
+This was proved in quantum_extraction_closure_turn48.txt by choosing
+coefficientwise near-minimal lifts with summable norm tolerances.
+It introduces no change in field radius, carrier weight or source
+radius and no approximation to the represented density. We may keep
+the coefficient at zeta=0 equal to an already chosen baseline
+representative and lift the nonzero source coefficients separately.
+Real conjugation symmetry can also be preserved.
+
+To use (2.8) in W_eta, pointwise supremum estimates alone are not
+sufficient. Here the actual map is jointly Banach-holomorphic in
+(t,E), and the strict cluster budget supplies uniform bounds on a
+fixed larger parameter ball. Its Taylor multilinear maps descend to
+Q, since a null input changes the raw total by a constant and leaves
+the exact inherited difference unchanged.
+
+For completeness, Cauchy plus complex polarization bounds a degree-k
+homogeneous coefficient by e^k times its diagonal bound. Coefficient
+convolution in W_eta obeys the corresponding multilinear norm
+estimate. Restrict the W_eta norm of the source activity to at most
+1/(4e) of the available E-margin around e_j, and restrict
+||alpha||_W to a fixed small fraction of an alpha ball A_*>0 with
+g_w^2 A_*<r_t/8. The resulting geometric series gives (2.8) in
+W_eta, with another fixed constant. The t dependence is handled by
+the same coefficient convolution; it costs only a fixed factor
+because ||g_j^2 alpha||_W remains a fixed fraction of r_t.
+
+Equivalently the explicitly proved estimate for an analytic
+L-Lipschitz map on an E-ball of radius a is
+
+ Lip_W <= e L/(1-e r/a)^2 <5L, r<=a/(4e).
+
+Using Cauchy also in alpha supplies a fixed further factor. This
+proves, rather than postulates, the actual sourced estimate
+
+ ||N_j(alpha,u)||_W
+   <=C g_j^4(a+a^2)+nu_j ||u||_W,
+ a=||alpha||_W, nu_j<=C g_j T/b.                       (3.2)
+
+More explicitly, put tau=||t||_W=g_j^2 a and choose a fixed E-margin
+a_E around the baseline e_j. Expand the inherited difference as
+sum_(m>=0,n>=1) A_mn[t^m,u^n]. Cauchy in the scalar t variable
+and polarization in u give
+
+ ||A_mn||<=C L_g r_t^-m e^n a_E^(1-n),
+ L_g=C g_j T/b,
+
+on fixed smaller fractions of the original parameter discs. For
+tau/r_t<=1/8 and ||u||_W/a_E<=1/(4e), direct coefficient convolution
+sums the series to at most C' L_g ||u||_W. For the independent
+forcing, the two vanishing t coefficients of F0 and the g^2 factor
+in (2.5) give the direct geometric bound
+
+ C[(tau/r_t)^2+g_j^2 r_g^-2(tau/r_t)]/(1-tau/r_t)
+                       <=C' g_j^4(a+a^2).
+
+Thus neither part of (3.2) uses a bounded-supremum-to-Wiener
+conversion at each step, which would require a fresh source-radius
+loss. The displayed power-series sums occur on one fixed eta.
+
+Linear T_j, beta_j and P_j retain their original norms in W_eta.
+The classical block telescope and contraction are coefficientwise
+exact. They do not spend eta.
+
+4. A LENGTH-INDEPENDENT SUM OF THE BASELINE g_j^4
+
+The unsourced tuned trajectory has q-block decrement between
+B_->0 and B_+, and |gamma_(j+1)-gamma_j|<=D_abs.
+It ends at Gamma_*. Put
+
+                     Gamma0=Gamma_*-qD_abs>0.
+
+Counting complete future q-blocks gives the pointwise lower bound
+
+ gamma_j>=Gamma0+B_- floor((n-j)/q).
+
+At most q indices have each value of the floor. The integral test
+therefore yields
+
+ S_n:=sum_(j=0)^(n-1) g_j^4
+     <=q[Gamma0^-2+(B_- Gamma0)^-1].                  (4.1)
+
+This bound is uniform in n, preceding depth and compatible volume.
+Increasing the fixed terminal inverse coupling makes S_n as small
+as desired. A proof of source closure using sum g_j^2 would fail
+here, because that sum can grow logarithmically with history length.
+
+5. THE COUPLED SOURCE RECURRENCE CLOSES
+
+Use the scaled irrelevant norm
+
+  a_j=||alpha_j||_W,
+  h_j=b^-2 ||u_j||_W.
+
+Assume temporarily that a_j and h_j lie in the small parameter
+balls of Section 3. Let A_j=P_(j+1)T_j. Equations (1.4),(3.2)
+give a perturbation of the SAME classical irrelevant evolution:
+
+ u_(j+1)=A_j u_j+P_(j+1)Q_j(alpha_j,u_j)
+                         +P_(j+1)B_j(alpha_j).
+
+Its homogeneous perturbation has norm at most p nu_j, which can
+be made small uniformly by increasing Gamma_*. Choose the source
+weak ceiling so the q-step variation-of-constants estimate gives
+contraction at most theta_s<1, for instance theta_s=1/2. q is fixed,
+so this is the same finite product estimate as the unsourced
+induction. It holds for any prescribed admissible alpha values
+inside the source ball; no comparison of complex couplings is used.
+
+Let H_l=h_(lq), epsilon_l=sum_(j=lq)^((l+1)q-1) g_j^4, and let
+A_max be the largest a_j in the finite prefix under discussion.
+For a_j<=1, (3.2) and finite one-step growth bounds give
+
+ H_(l+1)<=theta_s H_l+C A_max epsilon_l,               (5.1)
+ sum_(j=lq)^((l+1)q-1) h_j
+                         <=C H_l+C A_max epsilon_l.  (5.2)
+
+A partial final block satisfies the same bound with the corresponding
+truncated sum and another fixed constant. Starting with H_0=0,
+sum the geometric convolution of (5.1). This proves
+
+                 sum_j h_j<=C A_max S_n.              (5.3)
+
+No sign of the complex source coefficients is used.
+
+For the scalar part of (1.4), the actual finite extraction bounds
+give
+
+ ||alpha_(j+1)-alpha_j||_W
+                  <=C h_j+C g_j^4 a_j.               (5.4)
+
+The term C h_j includes beta T u; it is not set to zero. Summing
+(5.4) and using (5.3) gives
+
+ A_max<=eta+C A_max S_n,                               (5.5)
+
+because ||alpha_0||_W=||zeta||_W=eta. Choose Gamma_* so the
+length-independent upper bound in (4.1) obeys C S_n<=1/2. Then
+
+  sup_j ||alpha_j||_W <=2 eta,
+  sup_j ||alpha_j-zeta||_W <=C eta S_n,
+  sum_j b^-2 ||u_j||_W <=C eta S_n.                    (5.6)
+
+Choose eta>0 once so that 2eta lies strictly inside the alpha ball
+and C eta S_n lies strictly inside the source-activity margin.
+The resulting bounds improve the temporary bootstrap assumptions.
+Applying them to each successive finite prefix proves that every
+step is defined; there is no assumed existence of the final sourced
+trajectory in this argument.
+
+At each step use (3.1) to choose one exactly equivalent analytic
+carrier family with a fixed small excess norm. Its normalized total
+is unchanged at every source value. Null constants are holomorphic
+source functions and are compensated in Z_j(zeta). Thus the norm
+induction supplies actual legal input families at the SAME eta,b
+and carrier weight throughout all admitted finite histories.
+
+The estimates are uniform in the history length. They preserve the
+full source coefficient, not merely its first or second derivative.
+For example the Taylor coefficients obey the Cauchy/coefficient
+bounds associated with the one fixed disc |zeta|<eta. No repeated
+restriction of eta has been hidden in the representative choice.
+
+6. EXACT VACUUM BOOKKEEPING AND MEASURE SCOPE
+
+At a finite stage compare the sourced and unsourced raw output
+totals. After extraction,
+
+ raw_source_difference(w,zeta)
+   =alpha_(j+1)(zeta)S_(j+1)(w)
+                          +u_(j+1),raw(w,zeta)+c_j(zeta).
+
+The field-independent c_j is retained exactly in Z_(j+1)(zeta).
+It contains, among other terms, the Gaussian first source vacuum
+g_j^2 alpha_j v_T d_j/2. Neither its volume factor d_j nor its
+possible growth along the ultraviolet trajectory is bounded by
+(5.6). The normalization of a component in the original law uses
+the SAME original normalizer; it is not replaced by the selected
+sector's sourced mass.
+
+With all baseline weights frozen, exact fiber integration proves
+that (1.1) is the original insertion exp[zeta S_0] in that fixed
+finite selected history. The shifts alpha_j S_j+u_j are only an
+exact representation of its effective field dependence. This is
+not the insertion of a new independent action source at each scale.
+
+The result supplies a uniform CONSTANT original-action source budget
+for the admitted homogeneous selected trajectories. Independent
+local plaquette sources would require a spatially varying marginal
+extraction and marked norms not proved here. Nor does a bounded
+field-dependent source class bound vacuum cumulants, establish a
+renormalized local observable, control all complementary histories,
+make the tuned finite lengths projectively consistent, or prove a
+nontrivial YM4 continuum limit.

@@ -1,0 +1,275 @@
+ALL-ARITY TREE NORMS FOR THE LOCAL CLASSICAL SADDLE AND PREFACTOR
+19 October 2026. Root producer. Turn41.
+
+RESULT AND LIMITATION
+
+The local KKT branch of local_saddle_and_prefactor_turn40 has more than
+fixed-order spatial response bounds. Its analytic Taylor kernels have a
+common exponentially weighted, absolutely summable tree norm, including
+a bound with ANY external leg fixed. The same is true of the classical
+action and complete leading Haar/coarea determinant, after excluding
+their extensive vacuum constants. Thus their n-th derivatives have
+C^n n! bounds in a specified spatial norm, with constants independent
+of box volume. This is proved by an analytic tensor majorant, rather
+than inferred from a collection of constants at separate orders.
+
+This statement concerns the local classical saddle and its leading
+prefactor. It does NOT estimate the entire finite-g integral, the
+derivatives of a cutoff at arbitrary order, or repeated RG maps. It does
+not claim individual gauge invariance of the resulting Taylor monomials.
+
+1. EXACT INPUTS AND COMPLEX LOCAL VERTICES
+
+Use the actual complete ordinary averaging map, local G0 forest,
+fixed-crossing action and parameter locations of TURN40. Write
+
+ G(z;u)=(grad S_e(x)+DF_e(x)^t lambda, F_e(x)-v),
+ z=(x,lambda), u=(v,e), M0=G_z(0;0).
+
+Here e denotes retained logarithmic link coordinates. It may be held
+fixed when only framed v derivatives are wanted. The number of local
+field/color types, read radius and incidence are bounded in terms of
+fixed L and SU(N_c). Coarse rows and fine coordinates are assigned their
+actual lattice positions, with finite multiplicity per site.
+
+Each local action/map row is holomorphic in a common small complex
+polydisc. This follows by taking a smaller disc inside the local
+exponential/logarithmic ordinary-mean chart: only finitely many local
+read and boundary types occur at fixed L. Holomorphic matrix inverses
+used in that finite local chart remain nonsingular on its compact
+smaller closure. Cauchy estimates there imply common geometric bounds
+on ABSOLUTE Taylor coefficient sums, not just existence of each finite
+derivative separately. In detail a row with at most D local variables
+has coefficient sum at degree p bounded by
+C r^-p binomial(p+D-1,D-1)<=C_1^p for p>=1, after enlarging C_1.
+Transpose incidence is bounded as well, so the same bound is available
+with any input leg fixed and the output summed.
+
+The actual M0 inverse has uniform exponentially weighted row and column
+sums from TURN40. Choose a positive exponent m below that decay rate.
+No theorem concerning a massless coarse covariance is used here.
+
+2. A RE-ROOTABLE TREE TENSOR NORM
+
+For positions i_0,...,i_p let tau(i_0,...,i_p) be the shortest length
+of a connected lattice tree containing those positions; additional
+Steiner vertices are allowed. Repeated positions cause no difficulty.
+For a tensor A(i_0,...,i_p), define
+
+ ||A||_m = max_(0<=r<=p) sup_(i_r)
+      sum_(all other indices) |A(i_0,...,i_p)|
+                                  exp[m tau(i_0,...,i_p)].          (2.1)
+
+Each index also includes its finite color/type multiplicity. The norm
+of a two-leg kernel is its maximum weighted row/column sum. Kernels
+with distinguished output legs are allowed; symmetry is required only
+for the Taylor input slots where appropriate. For one-leg tensors the
+norm is a supremum. Vacuum constants are treated separately.
+
+TREE CONTRACTION LEMMA. Suppose tensors are joined by contracted legs
+so their factor graph is a tree, and at least one external leg remains.
+The norm (2.1) of the resulting tensor is at most the product of the
+norms of the factors.
+
+Proof. The union of the connecting trees inside the factors is connected
+and contains all external positions. Therefore the external tree weight
+is at most the product of their tree weights. Fix ANY chosen external
+index and root the factor graph at its incident factor. Remove the leaf
+factors successively, summing all their legs except their connection to
+the remaining graph. The corresponding summation is bounded by (2.1)
+with that connection fixed. At the last factor use the originally fixed
+external index. This proves the claimed product bound for every root.
+Symmetrizing external Taylor inputs averages such bounds and increases
+none of them. Fixing only the output in the definition would not justify
+this argument when the chosen root is an input leaf.
+
+A local degree-p vertex has all its legs within fixed radius D_L of its
+output. Its tree length is at most D_L p. The Cauchy coefficient sums
+of Section1 thus give ||A_p||_m<=C_m^p. The finite set of boundary types
+has the same bound. Local identities/inclusions have finite norm.
+
+3. COMMON ANALYTIC MAJORANT FOR THE SADDLE
+
+Expand around zero first. G(z;u)=M0 z+G_u(0;0)u+N(z,u), where N begins
+at total degree2. Put K=M0^-1. The exact equation is
+
+ z=-K G_u(0;0)u-K N(z,u).                               (3.1)
+
+Let Z_n be the symmetric degree-n Taylor tensor of z(u), so Z_n=D^n z/n!.
+Use (2.1) on ALL its external legs, including the output. The tensors
+of N have common bounds C^p, and K has norm k. Substitution and the
+tree contraction lemma bound the coefficient recursion by the scalar
+nonnegative majorant
+
+ w(t)=a t+k sum_(p>=2) C^p(w(t)+t)^p
+     =a t+k C^2(w(t)+t)^2/[1-C(w(t)+t)].                (3.2)
+
+The symmetrization factors in Taylor substitution are averages; the
+remaining ordered degree choices are exactly those in scalar series
+composition. Thus induction on n gives ||Z_n||_m<=[t^n]w(t).
+
+Equation(3.2) has a unique analytic solution with w(0)=0: its derivative
+with respect to w on the left-minus-right side equals1 at the origin.
+Its radius and coefficient bound depend only on a,k,C. Taking a smaller
+circle gives [t^n]w<=C_2^n. In particular
+
+                    ||D^n z/n!||_m<=C_2^n.            (3.3)
+
+This proves a COMMON radius and the all-arity weighted factorial bound.
+It is not an inference from real C2 locality or fixed-order estimates.
+The series converges absolutely for ||u||_infinity<C_2^-1 and agrees
+with the unique sup-small KKT solution. The sum of its majorant bounds
+also gives volume-independent operator estimates for bounded inputs.
+
+The estimate is uniform around every background in a smaller complex
+sup ball. Indeed M_*(u0)-M0 is finite range and O(||u0||_infinity) in
+the same weighted row/column norm. Choosing that ball so
+||K(M_*-M0)||_m<1/2 gives a uniformly weighted inverse by a Neumann
+series, without a self-adjointness assumption at complex data. The
+local vertex Cauchy bounds remain uniform on a smaller nested disc.
+Apply (3.2) to increments z-z(u0),u-u0, with these uniform constants.
+
+4. CLASSICAL ACTION KERNELS
+
+For framed v and fixed exterior, the exact envelope identity is
+
+                     D_v S_min=-lambda_*.             (4.1)
+
+The n-th action Taylor tensor for n>=2 is, after distinguishing one
+v leg, -1/n times the degree-(n-1) tensor of lambda(v). Consequently
+
+ max_r sup_(v_r) sum_(other n-1 indices)
+       |D^n S_min/n!| exp[m tau(all n indices)]<=C_3^n. (4.2)
+
+Symmetry of the action derivatives and the any-leg bound in (3.3)
+justify every choice of root. The first derivative is uniformly small
+on the data ball, and S_min(0,e) is a separate vacuum/background term.
+For joint retained-edge derivatives the envelope formula is instead
+S_min,e=partial_e S_e+lambda dot partial_e F_e. The partial tensors
+have bounded local incidence; substitution of (3.3) and the same tree
+contraction gives the corresponding marked joint estimates. At a
+nonzero exterior its own constant/forcing terms remain present.
+
+Passing to the LOCAL insertion q->v(q,e) of a fixed coarse forest
+section is a composition with finite-read analytic kernels, so it
+preserves a common bound of this form. Passing from an arbitrary framed
+field to its long-forest gauge representative is a different operation
+and is not justified by this sentence.
+
+5. MATRIX TAYLOR KERNELS AND THE MARKED TRACE LOG
+
+For M_*(u)=G_z(z_*(u);u), subtract M_*(0). The degree-n matrix coefficient
+B_n has two distinguished operator legs and n datum legs. Local vertex
+composition with (3.3), using the tree contraction lemma, gives
+
+                         ||B_n||_m<=C_4^n, n>=1.       (5.1)
+
+The maximum in (2.1) includes either operator leg AND every datum leg.
+This last fact is important for taking an extensive trace.
+
+On the small data ball the analytic logarithm is represented by
+
+ log det M_*(u)-log det M_*(0)
+           =sum_(p>=1)(-1)^(p+1) Tr[(K B(u))^p]/p.      (5.2)
+
+Use the determinant sign at the real base point to choose its branch;
+for complex data (5.2) specifies the holomorphic continuation. The
+unmarked constant log[(-1)^dimY det M_*(0)] is not estimated in a
+rooted norm.
+
+MARKED CYCLE ESTIMATE. A coefficient of order n>=1 in the p-th trace
+has p vertices B_nj with nj>=1 and sum nj=n, joined in a cycle by p
+K kernels. Fix any external datum index. Remove one K factor and bound
+its entries by sup|K_ab|<=k. The remaining factor graph is a tree; the
+two exposed end indices are still summed. Its union of connecting
+trees contains every external datum. The proof of Section2 then sums
+the remaining kernels with the chosen datum as root, including those
+two endpoints. The resulting norm is at most k^p product_j||B_nj||_m.
+No free vacuum volume remains, since an external datum is fixed before
+any trace summation.
+
+Therefore the all-arity coefficients of (5.2) are majorized by
+
+     sum_(p>=1) [k b(t)]^p/p=-log[1-k b(t)],
+     b(t)=sum_(n>=1) C_4^n t^n.                        (5.3)
+
+This scalar function has a positive radius independent of volume. Its
+Taylor coefficients are bounded by C_5^n. This proves the desired
+common factorial bound for every marked derivative of the log
+determinant, with the full tree weight. The inverse matrix can be
+treated by the corresponding open-chain Neumann expansion, with both
+operator legs retained; no cycle argument is needed for it.
+
+6. COMPLETE HAAR/COAREA PREFACTOR AND A PRECISE INTERACTION NORM
+
+The actual complete prefactor from TURN40 is
+
+ W=.5 log[(-1)^dimY det M_*]-log j_C(x_*)+log j_J(v).     (6.1)
+
+The two Haar logarithms are sums of fixed-range analytic link/row
+functions. Their local vertex coefficient sums have common Cauchy
+bounds. Composing with the saddle and datum response tensors, and
+fixing any datum index before summing the local vertex location, gives
+the same anchored norm by tree contraction. Thus for n>=1
+
+ max_r sup_(u_r) sum_(other n-1 indices)
+       |D^n W/n!| exp[m tau(all n indices)]<=C_6^n.      (6.2)
+
+At the identity, the linear color-invariant jets vanish where the
+previous adjoint argument applies. Equation(6.2) does not need such
+vanishing at arbitrary background. Extensive W(0) remains in the
+vacuum normalization. Every original fine/coarse Haar factor is kept.
+
+These bounds give an explicit absolutely convergent analytic expansion
+with tree-length weights. For h small, write the Taylor monomial terms
+of S_min or W about a specified background and group them by the set
+of distinct input coordinates. Assign each monomial a deterministic
+shortest connecting lattice tree and the connected hull consisting of
+that tree and its marked sites. Since the lattice spacing is fixed,
+the number of sites in this hull is at most C_L(tau+1), including the
+finite color multiplicity. For a sufficiently small positive animal
+weight kappa, exp(kappa|hull|) is paid by part of exp(m tau).
+
+For a root which is a marked coordinate, the sum of the absolute sup
+norms of these monomials, with that animal weight, is bounded by
+sum_(n>=1) n C_7^n ||h||_infinity^n. The factor n allows for occurrences
+of the root among ordered Taylor slots. This converges at a common
+radius. For an unmarked lattice root lying on the assigned connecting
+tree, summing the possible displacement from one marked site costs
+at most a polynomial in tau, absorbed by another fixed fraction of
+the exponential weight. Equivalently split into tree-length shells,
+use the marked bound with the larger exponent, and sum the shell
+volume polynomial. The same uniform rooted animal bound follows.
+
+This is an analytic spatial interaction expansion for the LOCAL
+classical action and leading prefactor, with extensive constants
+separated explicitly. Individual monomials and connecting hulls are
+not asserted gauge invariant. Native renormalization conditions and
+relevant/marginal extractions are not supplied by this decomposition.
+
+7. WHAT REMAINS FOR THE ACTUAL RG MAP
+
+The full finite-g action has the additional term -g^2 log(1+r_g).
+TURN40 controls only two data derivatives of that term on its stated
+boxes. Neither (3.3) nor (6.2) provides an all-arity tree norm for r_g.
+A fixed smooth energy cutoff or a hard finite window also needs its
+own complex-domain/large-field analysis; analyticity of the saddle
+does not establish analyticity of the entire selected density.
+
+The proof is for the already specified first-step local KKT system.
+Uniform bounds for a changing all-scale quadratic reference, exact
+gauge-compatible source transport, the actual exterior/coarse law,
+and running-coupling/relevant-part control are separate requirements.
+No continuum Yang--Mills or closed RG induction is asserted.
+
+SOURCE STATUS
+
+The finite local analytic ordinary-map structure is the B109 input
+matched in TURN39/40. The KKT inverse and complete prefactor identity
+are the explicit TURN40 results. Sections2--6 above give the new
+norm, majorant and trace proofs. The related primary literature
+includes Balaban's background-field propagator and small-field
+effective-action papers; their abstracts are not used as replacements
+for any of these norm estimates.
+https://doi.org/10.1007/BF01240355
+https://doi.org/10.1007/BF01215223

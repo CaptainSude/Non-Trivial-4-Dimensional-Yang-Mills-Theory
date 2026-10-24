@@ -1,0 +1,419 @@
+SCALAR RECONSTRUCTION, ENERGY BOUNDS, AND NONTRIVIAL PHASE SELECTION
+18 October 2026. Working proof and exact scope audit.
+
+CONCLUSION IN ADVANCE. The ordered scalar sector, once the two-frame
+rotation/slab arguments are completed, has a route to a genuine scalar
+Wightman theory and then to a nontrivial clustering vacuum phase. It does
+not require a coincident Euclidean probability law. The phase-selection
+step is NOT a generic ergodic-decomposition assertion: it uses a proved
+generalized Hamiltonian bound and Driessler--Summers Theorem 2.3. The
+operator bridge proving that bound is given below. This remains a scalar
+sector construction, not identification of the full Yang--Mills theory.
+
+1. EXACT RECONSTRUCTION INPUT; THE FACTORIAL EXPONENT IS UNRESTRICTED
+
+Primary input: Osterwalder--Schrader, CMP42 (1975), pp284,287--288,
+Section II and IV.1--2. Their S^0 consists of Schwartz tests flat on
+all full collision diagonals. E0' requires a fixed linear seminorm
+order sn and constants of factorial growth, allowing a fixed power
+of n!. E0'' is a stronger full-Schwartz/product condition and is not
+needed. The proof first constructs tempered Wightman distributions
+using E0', Euclidean covariance and RP; symmetry gives locality.
+The cluster axiom is the separate vacuum-uniqueness input. See also
+their Introduction remark6 on subsets of axioms.
+
+Our bound
+
+ |S_n(F)| <= A^n (n!)^B p_{ceil(Cn)}(F),  F in S^0,       (1)
+
+therefore has the required form. Choose an integer s>C+1 and absorb
+norm conventions and A^n into another fixed factorial power. The
+large numerical B in os_s0_whitney_extension is harmless. A bound
+with finite order separately for each n would not suffice; (1) does.
+
+If rotation_slab_operator_consumer Section7 produces S_new, use that
+hierarchy consistently. It agrees with the original physical ordered
+sector, is O(4)-invariant and symmetric, obeys (1), and is RP by the
+new off-collision kernels and their cutoff limit. It need not equal
+the first extracted S^0 distribution on equal-time contact sets.
+There is no need to choose full Euclidean contact terms first.
+
+Dropping only clustering in reconstruction gives a cyclic scalar
+Hermitian Wightman representation (H,U,Omega,phi) with positive-energy
+Poincare covariance and locality, possibly with a degenerate invariant
+subspace. Uniqueness of this representation up to the usual cyclic
+intertwiner is different from uniqueness of its vacuum vector.
+
+2. THE HILBERT SPACE USED BY THE POINT-INSERTION BOUND
+
+Let H_ord be the closure of strictly ordered Euclidean polynomial
+vectors in the source-derived reflection Hilbert space. The bounded
+insertion construction gives, for every tau>0, the full-point operator
+
+ A_tau = A_full(tau e_0,tau e_0),
+ ||A_tau|| <= C min(1,tau)^(-5).                         (2)
+
+Here the two tau factors are the left and right time paddings. This
+is the full four-dimensional point construction of Section7, not
+only a transverse-smeared planar bound. Its exact insertion/padding
+identities and mixed Gram identities are essential inputs.
+
+The Hilbert space reconstructed from S_new is canonically H_ord.
+Indeed its compact off-collision positive-time tests may be cut away
+from internal equal-time surfaces in the NEW smooth kernel norm.
+Dominated convergence of the corresponding reflected forms proves
+Hilbert-norm density of ordered tests. This does not assert their
+Schwartz density in the OLD S^0 space. Ordered Gram forms agree by
+construction, hence their isometry extends to the completion.
+
+Positive-time semigroups and spatial translations preserve H_ord.
+They also preserve its orthogonal complement because the former are
+selfadjoint and the latter include their inverses. The insertion
+operators preserve H_ord: regularize the new point by a packet, keep
+its two positive gaps, and apply it to an ordered vector; the result
+is again an ordered vector, and the bounded point limit stays in its
+closure. Thus (2) acts on the reconstructed space, rather than on an
+unrelated larger contact-sector Hilbert space.
+
+3. FROM THE EUCLIDEAN OPERATOR TO MINKOWSKI SMEARING
+
+This is the bridge that cannot be replaced by a casual invocation of
+Wick rotation of an operator norm.
+
+Use U(x)=exp(i x^0 H-i x.P) for real Minkowski translations. Define
+the bounded weakly continuous operator-valued function
+
+ B_tau(x)=U(x) A_tau U(x)^*,
+ ||B_tau(x)|| <= C min(1,tau)^(-5).                      (3)
+
+For any Schwartz Minkowski test f, its weak operator integral exists:
+
+ B_tau(f)=integral f(x) B_tau(x) dx,
+ ||B_tau(f)|| <= C min(1,tau)^(-5) ||f||_L1.             (4)
+
+Claim: on the full Borchers test domain D,
+
+ <u,B_tau(f)v>
+   = <exp(-tau H)u, phi(f) exp(-tau H)v>.                (5)
+
+Proof of the identification. Use the full Borchers domain, allowing
+Schwartz kernels of all n arguments, not only finite sums of products.
+For a vector u defined by such a kernel, give its ordered field word
+strictly positive imaginary-time gaps epsilon, and integrate the real
+Minkowski arguments against that same kernel. The joint tube/Gram
+construction gives vectors u_epsilon. The Wightman boundary-value
+construction gives
+
+ ||u_epsilon-u|| -> 0.                                  (6)
+
+More explicitly, each norm and cross norm is a 2n-point boundary
+value with positive imaginary gaps; its limit is the same Wightman
+Gram form. This proves (6), including finite sums and mixed lengths.
+Perform this separately for v.
+
+With those external gaps positive, the exact point-insertion identity
+identifies <u_epsilon,B_tau(x)v_epsilon> with the same ordered analytic
+kernel having the central insertion separated by tau on both sides.
+For real Euclidean external times this is the defining insertion
+identity. The two sides then agree for real Minkowski external times
+by uniqueness of the joint analytic continuation. This uses a JOINT
+tube and its Gram vectors, not separate one-gap analyticity.
+
+Now remove the external epsilon gaps while holding tau fixed. By (3)
+and (6) the left side converges uniformly in real x, and therefore
+after integration against every L1 test f. The right side converges
+as a tempered distribution to the partially heat-damped Wightman
+matrix element in (5). This last assertion also follows directly
+from the spectral boundary construction: the two retained central
+gaps multiply the intermediate-energy variables by exp(-tau E),
+while all removed gaps tend to one on the forward spectral support.
+The usual smooth extensions of these multipliers off that support
+have uniform polynomial derivative bounds, so the stated tempered
+boundary limit applies. Consequently (5) follows.
+
+There is no hidden domain assumption in its right side. If h is a
+Schwartz function of the energy, h(H)D is contained in D: its inverse
+Fourier transform averages common time translations of the full
+Schwartz kernel. The resulting convolution is again Schwartz. On
+the positive spectrum, exp(-tau E) agrees with a Schwartz function
+on the whole real line (choose a smooth bounded extension for E<0).
+Thus exp(-tau H)D is contained in D.
+
+Equation(5) is a bounded extension of the two-sided form. It does NOT
+yet assert that phi(f)exp(-tau H) is bounded; the following spectral
+argument supplies a one-sided bound for the required test class.
+
+Domain convention. Let D_prod denote the usual finite-product
+Schwartz-word domain and D_full the domain allowing arbitrary Schwartz
+kernels of each word length. Finite sums of tensor products are dense
+in every such kernel space by nuclearity of Schwartz space. Wightman
+continuity gives simultaneous convergence of the represented vector
+and its image under any fixed phi(f): the latter is the same continuity
+statement for the kernel with f adjoined. Thus D_prod is graph dense
+in D_full for phi(f), and their operator closures coincide. Working on
+D_full above does not replace the Wightman field by a larger closure.
+
+4. COMPACT ENERGY TRANSFER GIVES A GENERALIZED H-BOUND
+
+Fix f in Schwartz with compact Fourier support. Choose Lambda with
+supp(f_hat) contained in {|p^0|<=Lambda}. Translation covariance of
+(3)--(4) implies compact energy transfer for the BOUNDED operator
+B_tau(f):
+
+ P_I B_tau(f) P_J=0 if (I-J) intersects [-Lambda,Lambda]
+ is empty.                                               (7)
+
+One elementary proof smears exp(itH)B_tau(f)exp(-itH) with a Schwartz
+time function whose Fourier transform separates I-J from the support
+of f_hat. The operator smearing vanishes by the scalar Fourier
+support, while spectral projections express the same smearing by
+the energy differences. Approximation by compact spectral intervals
+gives (7). No unbounded-operator spectral theorem is used here.
+
+Choose smooth functions h_n, n>=0, with sum h_n(E)=1 for E>=0,
+0<=h_n<=1, and supp h_n in [n-1,n+2] (with the evident n=0 change).
+Their inverse Fourier transforms are Schwartz. Hence h_n(H)D is
+contained in D. By (5) and (7), for v in D,
+
+ phi(f)h_n(H)v
+   = exp(tau H) B_tau(f) exp(tau H)h_n(H)v,               (8)
+
+where the right side is well-defined: its intermediate output is
+supported in [0,n+2+Lambda]. To verify equality, pair against
+exp(-tau H)u, u in D, use (5), and use density of that range. Thus
+
+ ||phi(f)h_n(H)v|| <= C_tau,f exp(2 tau n)||v||.           (9)
+
+The fixed factor exp(tau(4+Lambda)) is included in C_tau,f. In
+particular each phi(f)h_n(H) extends to a bounded operator, and its
+range lies in the graph closure of the original phi(f): approximate
+v by vectors in D and use closability of the Hermitian field.
+
+Take s>2tau. Equations(8)--(9), with the spectral factor exp(-sH),
+give the norm-convergent operator series
+
+ C_f = sum_n phi(f)h_n(H)exp(-sH),
+ ||C_f|| <= C_tau,f sum_n exp[-(s-2tau)n] < infinity.      (10)
+
+The finite partial inputs sum h_n(H)exp(-sH)v tend to exp(-sH)v,
+and their images tend to C_f v. Closedness therefore proves
+
+ exp(-sH)H subset Dom(closure(phi(f))),
+ closure(phi(f))exp(-sH)=C_f.                            (11)
+
+This is the required generalized H-bound. It suffices to fix tau=1
+and s=3 once; the constants may depend on f and its energy-transfer
+width. The energy weight exp(-3E) is continuous and strictly positive
+on [0,infinity). Arbitrary f need not satisfy a one-sided bound for
+this argument; compact Fourier support is exactly the required class.
+
+4A. THE SAME ARGUMENT IN FACT GIVES A POLYNOMIAL H-BOUND
+
+The preceding fixed-tau argument is already sufficient. Keeping the
+tau-dependence in (4) improves it and makes the hypothesis particularly
+transparent. Put P_m=1_[m,m+1)(H), m=0,1,.... The same bounded-band
+argument, first with smooth spectral cutoffs and then their strong
+limits, shows P_m H is contained in Dom(closure(phi(f))) and that
+the output lies in the finitely enlarged band. Write phi_bar for
+that closure. Equation(7) gives
+
+ P_n phi_bar(f) P_m=0 unless |n-m|<=Lambda+2.
+
+For an allowed pair use (8) at tau=(1+n+m)^(-1). Both exponential
+spectral factors are now uniformly bounded, while (4) gives
+
+ ||P_n phi_bar(f)P_m||
+   <= C ||f||_L1 (1+n+m)^5.                             (15)
+
+Consequently the block operator
+
+ C_nm=P_n phi_bar(f)P_m (1+H)^(-5)P_m
+
+has norm <=C_Lambda ||f||_L1 and has only a fixed number of nonzero
+blocks in each row and column. The elementary block Schur estimate
+proves that its matrix defines a bounded operator C with
+
+ ||C|| <= C'_Lambda ||f||_L1.
+
+For clarity, the Schur step uses orthogonal energy bands: for each n,
+square the norm of the sum of its at most K_Lambda input blocks,
+use Cauchy--Schwarz, sum over n, and count that each input appears at
+most K_Lambda times. No summation of infinitely many uniform block
+norms is involved. Apply closedness to the finite-energy truncations
+(1+H)^(-5) sum_{m<=M}P_m v; their images are C sum_{m<=M}P_m v.
+This proves the stronger conclusion
+
+ (1+H)^(-5)H subset Dom(phi_bar(f)),
+ ||phi_bar(f)(1+H)^(-5)|| <= C'_Lambda ||f||_L1.          (16)
+
+The smooth-cutoff passage used above is justified in graph norm by
+the fixed-tau band estimate (9): approximate a spectral projection
+within a slightly larger compact interval and then approximate its
+argument by D. The uniform bound and closedness identify the limits.
+Thus (16) is a conclusion about the closure of the actual reconstructed
+field, not merely an arbitrarily chosen closed extension of its form.
+
+5. A PRECISE PHASE-DECOMPOSITION THEOREM NOW APPLIES
+
+Primary input: Driessler--Summers, Helvetica Physica Acta59 (1986),
+331--348, introduction p332 and Theorem2.3 p335. For a scalar Hermitian
+Wightman field, allowing nonunique vacuum, their generalized H-bound
+condition for compact-Fourier Schwartz smearings suffices for a central
+decomposition into Wightman theories with clustering and unique vacua.
+The theorem includes the field and Poincare representations and their
+vacuum expectation values, not merely a decomposition of an abstract
+commutative measure. An alternative hypothesis involving intrinsic
+locality is unnecessary here.
+
+All input roles are now explicit: reconstruction gives the tempered
+scalar field, positive-energy covariance, locality, cyclic vacuum and
+separable Hilbert space; (11) gives the additional regularity. The
+separability follows from the countable dense Schwartz test algebra.
+Apply that theorem to obtain a direct integral over a measure nu,
+
+ H = integral^direct H_z dnu(z),
+ U = integral^direct U_z dnu(z),
+ Omega = integral^direct Omega_z dnu(z),                 (12)
+
+and the corresponding disintegration of all field moments. Almost
+every resulting field theory has a unique vacuum and clusters. We
+do not infer this from positivity or an unqualified Choquet theorem.
+We also do not claim that the original mixed hierarchy itself clusters.
+
+6. KEEPING A NONTRIVIAL POSITIVE-ENERGY PHASE
+
+A positive reflected scalar covariance alone is not enough for this
+purpose: a spacetime-constant random scalar Z has such covariance,
+O(4), RP and excellent factorial growth, but all its extremal phases
+are constant fields with no excitations. Centering only against Omega
+does not remove a larger zero-energy subspace.
+
+The repaired witness is v_f=[O(f)] with f=partial_t psi, where psi is
+smooth, compact, and supported at strictly positive Euclidean time.
+The source/Maxwell comparison must prove ||v_f||^2>0 for this signed
+profile. Its free reflected norm is positive; this precise extension
+of the witness is proved in positive_energy_derivative_witness_2026-10-18.
+That note uses the stronger f=partial_t partial_(x1)psi and establishes
+v_(f_R)=-iR^2 H P_1 v_(psi_R). Its Sections4--6 have been independently
+checked here: the strong mixed derivative/domain argument, dilation
+factor, spectral projection conclusion, and phasewise disintegration
+are valid. Thus the chosen witness also avoids the zero-P1 subspace.
+
+Positive-time translation of psi differentiates strongly in the
+reflection Hilbert space, because the two-point test pair remains
+compact and separated. Its derivative identifies v_f with H v_psi,
+up to the harmless convention sign. Consequently
+
+ P_{ker H} v_f=0.                                      (13)
+
+Since H>=0, (13) and ||v_f||>0 imply that for some finite rational
+energy interval [epsilon,M] with epsilon>0,
+
+ ||1_[epsilon,M](H) v_f||^2 >0.                         (14)
+
+The direct integral (12) decomposes H and its spectral projections.
+The witness vector is a limit of the same ordered analytic field
+vectors on both sides; hence it too is decomposable. Thus (14) is
+the integral of nonnegative phase norms. A set of positive nu-measure
+has a nonzero positive-energy vector. Intersect it with the full-
+measure set of phases satisfying every conclusion of Theorem2.3 and
+choose one phase there. This phase is nontrivial and has a unique
+vacuum and clustering. Its scalar field cannot be a constant multiple
+of the identity.
+
+No uniform mass gap follows: epsilon in (14) detects SOME spectral
+weight, not a lower bound on the whole nonvacuum spectrum. No claim
+of uniqueness of the selected phase is made. Because every phase is
+translation invariant and integral f=0, phase-dependent constant
+one-point values cannot reintroduce a vacuum component into this
+witness.
+
+7. WHAT THIS WOULD FINISH, AND THE REMAINING YM IDENTIFICATION
+
+Once the actual two-frame slab/rotation input is complete, (1)--(14)
+provide a route from the ordered Wilson F^2 sector to a nontrivial
+four-dimensional scalar Wightman phase with a unique vacuum. The
+finite-lattice source producer, normalization, and covariance lower
+bound remain the construction inputs previously audited; they are
+not replaced by these functional-analytic deductions.
+
+This is still insufficient to identify a full Yang--Mills theory.
+The missing construction can be stated as TWO concrete extensions:
+
+(YM-local) Construct a compatible JOINT hierarchy, on the same
+regulator sequence, for a countable family spanning the gauge-invariant
+local curvature differential polynomials at each engineering dimension.
+It must include the tensor fields, not just the scalar trace F^2,
+their renormalization mixing, joint RP and covariance, and enough
+all-order bounds to reconstruct them together on one Hilbert space.
+Separate unrelated reconstructions of each observable do not supply
+this. The scalar phase selection alone also does not select a common
+phase for an unconstructed larger field family.
+
+(YM-match) Prove that this joint renormalization matches the chosen
+nonabelian Yang--Mills short-distance theory and its local identities.
+The positive one-loop coupling drift and the single Gaussian F^2
+witness provide only part of this input. They do not fix the missing
+tensor/operator mixing or the higher short-distance relations. A
+multi-source finite-prefix construction with the relevant local
+counterterms is the specific missing source theorem, rather than
+another scalar OS reconstruction theorem.
+
+Jaffe--Witten's problem description Section4 asks for local operators
+corresponding to gauge-invariant curvature differential polynomials
+and the specified short-distance behavior. The actual current route
+also fixes SU(2); extension to other compact simple gauge groups is
+another scope enlargement if that formulation is targeted. Mass gap
+is a separate spectral assertion and is not obtained by phase selection.
+
+8. WHAT PHASE SELECTION DOES NOT PRESERVE AUTOMATICALLY
+
+The disintegration theorem preserves Wightman axioms and the existence
+of a positive-energy witness in some phase. It does NOT turn an
+asymptotic identity proved only for the mixed vacuum expectations into
+the same identity in every selected phase. Even a scalar mixture
+phi_z=a_z phi_free has an averaged two-point normalization determined
+by integral a_z^2 dnu(z); that normalization need not equal a_z^2 in
+any specified phase. This example illustrates the inference failure,
+not a claim that the present theory is such a mixture.
+
+There are two precise ways to obtain a phasewise UV conclusion:
+
+(i) Prove a decomposable bounded operator estimate, for example a
+heat-damped short-distance/OPE remainder with norm <=epsilon(scale)
+tending to zero. A direct-integral operator norm bound passes to
+almost every fiber; a countable determining family and sequence of
+scales keeps one full-measure set. The identity leading coefficient
+then remains the same identity coefficient in each phase.
+
+(ii) Prove the proposed asymptotic equality after insertion of EVERY
+bounded central test Z in the decomposing algebra, with an integrable
+uniform error. Then the equality of all central conditional averages
+identifies the phasewise coefficient. Mere vacuum averages correspond
+only to Z=1 and cannot do this.
+
+Neither strengthening has been established by the current positive
+two-packet witness or by the scalar source vacuum estimates. A positive
+norm error with summable bounds could also provide an almost-everywhere
+subsequence statement, but one must actually construct that nonnegative
+error; a signed difference between interacting and free moments is not
+such an error. Thus selection of a clustering scalar phase does not
+by itself close (YM-match), even within the scalar subsector.
+
+PRIMARY REFERENCES
+
+Osterwalder--Schrader, CMP42 (1975), 281--305:
+https://scispace.com/pdf/axioms-for-euclidean-green-s-functions-ii-with-an-appendix-4g1guiqrrx.pdf
+Official journal record/PDF:
+https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-42/issue-3/Axioms-for-Euclidean-Greens-functions-II-with-an-Appendix-by/cmp/1103899050.pdf
+
+Driessler--Summers, HPA59 (1986), 331--348, Theorem2.3:
+https://www.e-periodica.ch/cntmng?pid=hpa-001%3A1986%3A59%3A%3A1439
+The primary indexed text of pp332,335,337,341 was inspected. Direct
+download presently returns a verification page; no claim of a local
+complete PDF inspection is made. The authors' publication listing also
+states the theorem's pure-phase scope:
+https://people.clas.ufl.edu/sjs/publications/
+
+Jaffe--Witten, Quantum Yang--Mills Theory, Section4:
+https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf

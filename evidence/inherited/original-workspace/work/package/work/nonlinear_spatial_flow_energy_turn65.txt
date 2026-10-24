@@ -1,0 +1,436 @@
+NONLINEAR SPATIAL FLOW: EXACT JACOBI ENERGY AND ITS CRITICAL SCALE -- TURN65
+20 October 2026. gauge47.
+
+RESULT
+
+The new original-Wilson energy theorem has a valid nonlinear-flow
+consumer: mean spatial action remains O(volume/beta) at every flow
+time, and the integrated squared flow force is controlled by the
+same initial energy. It also gives a quantitative initial critical
+curvature bound on boxes with radius much less than beta^(1/4)
+in lattice units.
+
+Those facts do not imply a cutoff-uniform flow-tangent bound. The
+EXACT plaquette Hessian has a negative curvature term of order
+sqrt(h_p), not h_p. The resulting physical-time Jacobi inequality
+has potential a^-2 sqrt(h_p). An explicit homogeneous SU(2) solution
+has a horizontal, gauge-orthogonal tangent whose squared norm grows
+at least as 1+c s/(a^2 sqrt(beta)), although every initial plaquette
+obeys beta h_p<=1. Gauge averaging this example produces a law
+satisfying the ENTIRE TURN64 energy moment inequality. Thus that
+inequality plus gauge/translation invariance alone cannot control
+the quotient flow-map derivative uniformly.
+
+This is an obstruction to a proposed method, not a claim of tangent
+divergence under the actual Wilson law. The radial magnetic probe's
+first variation vanishes along the particular unstable mode at the
+symmetric background. Raw tangent growth must not be mislabeled as
+divergence of that probe's first derivative.
+
+1. CONVENTIONS AND PRIMARY CHECK
+
+Use a finite nondegenerate periodic spatial cubic graph in one
+Euclidean time slice. The full law on the four-dimensional periodic
+lattice is the original SU(2) Wilson law from TURN64. Let
+
+ h(P)=1-(1/2)Tr P,  S(U)=sum_(spatial plaquettes p)h(U_p).
+
+Write a link tangent as X=i x.sigma/2, with metric |x|^2, and use
+the product metric over positively oriented spatial edges. Physical
+spatial flow time s is normalized by
+
+                dU_s/ds=-(4/a^2)grad S(U_s).             (1.1)
+
+In left-trivialized notation the gradient multiplies the link on
+the left. At the identity this normalization gives transverse
+linear heat evolution with physical time s. Thus it matches the
+Pauli/2 convention repaired in magnetic_drift_turn64 Section5.
+No bare coupling occurs in this deterministic flow vector field.
+
+The finite compact ODE is complete in both time directions and
+equivariant under local gauge transformations. These are also
+standard finite-lattice properties stated in M. Luscher,
+Properties and uses of the Wilson flow in lattice QCD,
+arXiv:1006.4518v3, PDFp2, equation(1.4) and following paragraph:
+ https://arxiv.org/pdf/1006.4518
+The present spatial-only restriction uses the spatial action in
+each time slice independently, as in TURN63.
+
+For comparison, L. Gross, Stability of the Yang-Mills heat equation
+for finite action, arXiv:1711.00114, PDFpp4--9, equations(1.4),(2.4),
+(2.6), and Theorem2.19 on PDFp13, treats the continuum variational
+equation with its curvature term and a finite-action hypothesis:
+ https://arxiv.org/pdf/1711.00114
+Its augmented equation and recovery retain vertical gauge directions.
+It is not a theorem for the rough equal-time YM4 data here; Section7
+below checks the relevant scaling. No continuum stability theorem
+is imported to replace the following finite lattice derivation.
+
+2. EXACT PLAQUETTE HESSIAN
+
+Vary all links through product-metric geodesics with initial tangent J.
+After transporting each signed link tangent to the starting vertex
+of one oriented plaquette, its word is exactly
+
+ P(t)=exp(t A_1) exp(t A_2) exp(t A_3) exp(t A_4) P,
+ A_i=i x_i.sigma/2.                                    (2.1)
+
+The transports in (2.1) use the fixed base links. An inverse edge
+contributes its negative tangent transported through that base edge.
+This is an identity for a plaquette containing each variable edge
+at most once, not a Taylor replacement of the group word.
+
+Write P=p0 I+i p.sigma, and d_U J(p)=sum_i x_i. Since
+
+ sum_i A_i^2+2sum_(i<j)A_i A_j
+             =(sum_i A_i)^2+sum_(i<j)[A_i,A_j],
+ [A_i,A_j]=-i(x_i cross x_j).sigma/2,
+
+direct differentiation yields
+
+ Hess h_p[J,J]
+    =(p0/4)|d_U J(p)|^2
+             -(1/2)p.sum_(i<j)(x_i cross x_j).           (2.2)
+
+This is the Riemannian Hessian quadratic form because the input
+curves are product geodesics. No coordinate connection term has
+been discarded.
+
+Use p0=1-h_p, |p|=sqrt(h_p(2-h_p)),
+ |sum_i x_i|^2<=4sum_i|x_i|^2, and
+ sum_(i<j)|x_i||x_j|<=(3/2)sum_i|x_i|^2.
+Then
+
+ Hess h_p[J,J] >= (1/4)|d_UJ(p)|^2
+          -[h_p+(3/4)sqrt(2h_p)]sum_(e in p)|J_e|^2.  (2.3)
+
+As0<=h_p<=2, summing proves, with one fixed numerical C,
+
+ Hess S[J,J] >= (1/4)||d_UJ||_2^2
+                  -C sum_e rho_e(U)|J_e|^2,
+ rho_e(U)=sum_(p containing e)sqrt(h_p(U)).             (2.4)
+
+Every norm here is the unscaled finite graph norm. The transports
+are isometries, so |x_i|=|J_e|; all expressions are gauge covariant.
+The positive part is a covariant CURL. It is not the full covariant
+gradient, and no gauge fixing or Hodge gap is silently inserted.
+
+The sqrt(h) loss in this local estimate is real. For one plaquette
+choose transported tangents x_1=e1,x_2=e2,x_3=-e1,x_4=-e2.
+Their sum is zero and their ordered cross sum is2e3.
+At P=cos(theta)I+i sin(theta)sigma3, (2.2) gives
+
+                  Hess h_p[J,J]=-sin(theta),           (2.5)
+
+whereas h_p=1-cos(theta)=O(theta^2). Thus an otherwise identical
+per-plaquette estimate with a negative term only C h_p sum|J|^2
+would be false for small positive theta. Other plaquettes can
+contribute in a whole-lattice variation; (2.5) alone does not assert
+a negative global eigenvalue. Section5 supplies a genuine global
+nonlinear example.
+
+3. JACOBI ENERGY AND WHAT AVERAGING DOES NOT PERMIT
+
+Let J_s=D Phi_s(U)J_0 be a tangent variation of the exact flow.
+Covariant differentiation of a gradient flow gives
+
+            nabla_s J_s=-(4/a^2)(Hess S)_(U_s)J_s.
+
+Consequently (2.4) gives the actual finite-lattice inequality
+
+ (1/2)d/ds ||J_s||_2^2
+    <=-a^-2 ||d_(U_s)J_s||_2^2
+          +(C/a^2)sum_e rho_e(U_s)|J_(s,e)|^2.           (3.1)
+
+Pure gauge variations are transported by equivariance. The curl-only
+coercivity does not justify replacing (3.1) by a scalar heat equation.
+For gauge-invariant final observables their vertical directions
+drop out, but a quantitative horizontal/augmented evolution remains
+to be controlled.
+
+Under the original Wilson law the exact averaged consequence is
+
+ (1/2)d/ds E||J_s||_2^2
+ <=-a^-2 E||d_(U_s)J_s||_2^2
+       +(C/a^2)sum_e E[rho_e(U_s)|J_(s,e)|^2].          (3.2)
+
+All quantities are smooth and bounded at each finite regulator,
+so differentiation under that finite measure is legitimate.
+The last expectation is a MARKED correlation. It cannot be replaced
+by E rho_e times E|J_e|^2: J_s depends on the same initial field.
+
+Even if such a factorization were available with
+E rho=O(beta^-1/2), the resulting crude rate would be
+C/(a^2 sqrt(beta)); at fixed s it is not cutoff uniform along
+beta comparable to log(1/a). This observation diagnoses the crude
+bound, not the true Wilson-averaged tangent growth.
+
+For the magnetic scalar B=Phi(X_s), its second derivative further
+contains the term D Phi(X_s).D^2 X_s, as recorded in TURN64.
+Neither (3.1) nor total-action monotonicity cancels that term.
+The homogeneous scalar equation in Section5 retains the full
+nonlinear dependence useful for studying it directly.
+
+4. ACTUAL ORIGINAL-LAW ENERGY CONSUMERS
+
+Let n be the number of spatial sites. There are3n spatial plaquettes.
+The exact action dissipation identity is
+
+ dS(U_s)/ds=-(4/a^2)||grad S(U_s)||_2^2.                (4.1)
+
+TURN64 gives E h_p(U)<=3/(2beta) for each original plaquette. Hence
+
+ E S(U_s)<=E S(U)<=9n/(2beta),
+ E integral_0^s ||grad S(U_r)||_2^2 dr
+                                  <=9n a^2/(8beta).   (4.2)
+
+These statements use the actual Wilson initial law and its actual
+nonlinear spatial flow; there is no Gaussian replacement.
+The entire full-slice energy moment also persists:
+
+ E exp[lambda beta S(U_s)]
+          <=(1-2lambda)^(-9n/4),     0<=lambda<1/2.     (4.3)
+
+This follows from pointwise S(U_s)<=S(U), followed by TURN64.
+It is a full-slice estimate; local subregion energy is not asserted
+to be monotone under a flow crossing that subregion's boundary.
+
+Spatial translation invariance is preserved by the flow. Therefore,
+on a rectangular spatial torus,
+
+ E sum_(i<j spatial)h(P_ij(U_s,x))<=9/(2beta),
+ E h(P_ij(U_s,x))<=9/(2beta).                           (4.4)
+
+On a cubic isotropic spatial torus, permutation symmetry improves
+the last constant to3/(2beta). In either case
+E rho_e(U_s)<=C/sqrt(beta), uniformly in s, by Cauchy--Schwarz
+and bounded plaquette incidence. This proves the unmarked estimate
+mentioned in Section3 for ALL flow times; it still does not control
+the marked expectation in (3.2).
+
+The companion physical_variance_floor_turn65.txt independently
+derives the same mean estimate and its elementary radial-probe
+consequence. That consequence has an a^-4 exponent and degenerates;
+it is not a variance floor for the flowed physical probe.
+
+There is a useful initial local high-probability estimate. Let B
+contain m plaquettes. The all-plaquette Gamma bound in TURN64 gives,
+with probability at least1-exp(-x),
+
+ beta sum_B h_p <= (3m/2)+sqrt(6mx)+2x.                 (4.5)
+
+Define the physical plaquette-strength array F_a(p)=a^-2 sqrt(h_p)
+and its discrete critical3/2 norm on B by
+
+ K_B=[a^3 sum_B F_a(p)^(3/2)]^(2/3)
+                      =(sum_B h_p^(3/4))^(2/3).
+
+Holder gives the exact inequality
+ K_B<=m^(1/6)(sum_B h_p)^(1/2). Thus (4.5) yields
+
+ K_B<=C beta^-1/2 [m^(2/3)+m^(1/6)sqrt(x)]             (4.6)
+
+on the same event. For a box of lattice radius R and x proportional
+to its volume, this is C R^2/sqrt(beta), with failure probability
+exp(-cR^3).
+
+Accordingly these energy estimates certify small critical curvature
+on boxes R much less than beta^(1/4). Their physical radius
+a beta^(1/4) and diffusive time a^2 sqrt(beta) both tend to zero
+on the logarithmic weak trajectory. Even a favorable small-critical-
+norm parabolic absorption argument based on (4.6) would begin at
+that shrinking scale, not immediately at fixed physical s.
+
+This is a statement about what the bound certifies. It is not a
+lower bound on the actual random critical norm in larger boxes.
+Using a covariant Sobolev/Gaffney estimate to consume K_B would
+require its actual gauge and boundary hypotheses in addition to
+(4.6); no such theorem is smuggled into the calculation.
+
+5. AN EXACT HOMOGENEOUS NONLINEAR FLOW
+
+Take all spatial links in direction1 equal to
+ U1=cos(alpha1/2)I+i sin(alpha1/2)n1.sigma,
+all links in direction2 equal to the analogous U2, and U3=I.
+Translation equivariance preserves this finite-dimensional family.
+Set
+
+ w_i=sin^2(alpha_i/2),       z=n1.n2.
+
+The only nontrivial spatial plaquette orientation is12. The exact
+SU(2) commutator trace gives
+
+                 h12=2 w1 w2(1-z^2).                 (5.1)
+
+The full slice action is n h12. The full link metric on this
+homogeneous submanifold is
+
+ n sum_(i=1,2) [dalpha_i^2+4w_i |dn_i|^2].             (5.2)
+
+The factor n cancels between the gradient of the action and this
+metric. The flow of the axes is
+
+ dn1/ds=(4/a^2)w2 z(n2-z n1),
+ dn2/ds=(4/a^2)w1 z(n1-z n2).                          (5.3)
+
+Equal initial amplitudes remain equal. Write w=w1=w2. Equations
+(1.1),(5.1),(5.2) then give the EXACT closed system
+
+ w'=-(8/a^2)w^2(1-w)(1-z^2),
+ z'= (8/a^2)w z(1-z^2).                               (5.4)
+
+It has the conserved quantity
+
+                       I=z w/(1-w).                   (5.5)
+
+Indeed the logarithmic derivatives of z and w/(1-w) cancel wherever
+nonzero, and continuity covers zero. Equivalently
+
+ w'=-(8/a^2)(1-w)[w^2-I^2(1-w)^2],
+ h12=2[w^2-I^2(1-w)^2].                               (5.6)
+
+These formulas retain the nonlinear angular/amplitude coupling.
+They can be used to compute observable variations without replacing
+the field by its flat linearization.
+
+At the orthogonal-axis background n1=e1,n2=e2, z=0. The axes are
+stationary and
+
+                 w'=-(8/a^2)w^2(1-w).                 (5.7)
+
+For0<w0<=1/2, w decreases and
+
+ 1/w0+4s/a^2 <=1/w(s)<=1/w0+8s/a^2.                  (5.8)
+
+This follows by differentiating1/w. It already displays a genuine
+nonlinear decay of this homogeneous background.
+
+6. HORIZONTAL TANGENT GROWTH, WITH THE FULL METRIC
+
+Perturb the axes initially by
+
+ n1(epsilon)=(cos epsilon,sin epsilon,0),
+ n2(epsilon)=(sin epsilon,cos epsilon,0),
+
+at fixed equal amplitudes. At epsilon=0, dz0/depsilon=2.
+The amplitude variation is zero to FIRST order, since w' depends
+on z^2. The relative-axis linearization obeys
+
+ (delta z)'=(8/a^2)w(s) delta z.
+
+Combining with (5.7), its exact amplification is
+
+ J_z(s)=[w0/(1-w0)]/[w(s)/(1-w(s))].                   (6.1)
+
+Each axis derivative is multiplied by J_z. In the full link metric,
+the initial tangent norm squared is8n w0 and its evolved norm
+squared is8n w(s)J_z(s)^2. Hence
+
+ R(s)^2=||D Phi_s J0||^2/||J0||^2
+        =[w0/w(s)] [(1-w(s))/(1-w0)]^2
+        >=1+4w0 s/a^2.                                (6.2)
+
+The factor n cancels exactly. This is not an artifact of measuring
+one homogeneous collective coordinate with the wrong volume metric.
+
+Nor is it a gauge direction. In LEFT-trivialized matrix coordinates,
+with c=sqrt(1-w), u=sqrt(w), the two link variations at one site are
+
+ J1=i u c sigma2-i w sigma3,
+ J2=i u c sigma1+i w sigma3,          J3=0.              (6.3)
+
+The adjoint of the periodic lattice gauge derivative, applied to a
+homogeneous field, is
+ sum_i [J_i-U_i^-1 J_i U_i].
+The i=1 term in (6.3) is-2iw sigma3, the i=2 term is+2iw sigma3,
+and the sum is exactly zero. Thus this mode is orthogonal to ALL
+local infinitesimal gauge variations. The same computation holds
+along the base flow, with w=w(s) and the factor J_z(s).
+Equation(6.2) is therefore also growth in the horizontal quotient
+metric along this mode.
+
+Choose w0=(2beta)^-1/2, beta>=2. Then
+ h12(U0)=2w0^2=1/beta, while all other spatial plaquette energies
+vanish. Equation(6.2) gives
+
+           R(s)^2>=1+(2sqrt(2))s/(a^2 sqrt(beta)).      (6.4)
+
+On a logarithmic weak sequence this diverges for fixed s.
+This is an exact deterministic finite-lattice result at arbitrarily
+small plaquette energies.
+
+The observable qualification is essential. For the radial magnetic
+point scalar, |p12|^2=h12(2-h12), and (5.1) is even in z.
+Its first variation along this mode vanishes at z=0. Consequently
+(6.4) is NOT a lower bound on that scalar's gradient norm.
+The second variation also involves the amplitude response in (5.4);
+dropping that response would be incorrect. The exact equation(5.6)
+is supplied for a separate complete second-variation computation.
+
+7. WHAT THE ENERGY THEOREM ALONE CANNOT IMPLY
+
+Extend the homogeneous configuration constantly through Euclidean
+time and set temporal links equal to I. All temporal plaquette
+energies vanish. At the initial field chosen in Section6,
+beta h_p belongs to{0,1}. Thus for every plaquette set and every
+0<=s_p<1/2,
+
+ exp(sum_p s_p beta h_p)
+       <=exp(sum_p s_p)
+       <=product_p(1-2s_p)^(-3/4).                     (7.1)
+
+The last inequality uses
+-(3/4)log(1-2s)>=3s/2>=s.
+Gauge-average this fixed configuration with the normalized product
+Haar law. The resulting probability is gauge invariant and
+translation invariant. All energy values, and the flow-map operator
+norm on the corresponding transformed horizontal direction, are
+unchanged by gauge equivariance and isometry.
+
+This law therefore satisfies the full TURN64 energy bound while its
+mean squared quotient-tangent operator norm is at least(6.4).
+It is NOT the Wilson Gibbs law and is not offered as a YM model.
+It proves the logical point that the energy moment inequality,
+gauge symmetry and translation invariance alone do not imply the
+desired uniform raw tangent control. Additional information about
+the actual Wilson distribution of coherent backgrounds is needed.
+
+The continuum stability literature does not supply that missing
+input for free. Gross's finite-action condition includes
+integral_0^T r^-1/2 ||F(r)||_2^2 dr<infinity.
+For the canonical equal-time four-dimensional Gaussian reference,
+the spatially heat-flowed magnetic variance is proportional to r^-2.
+On any fixed spatial volume, its expected action integral from
+r=a^2 to a fixed T consequently grows as C a^-3. With a bare
+factor g_a^2 it grows as C g_a^2 a^-3, still divergent along
+logarithmic weak coupling. This is a free scaling check of the
+proposed admission, not a claim about the unknown interacting
+continuum measure.
+
+The source's continuum augmented variational theorem depends on
+its admitted solution/finite-action data. Neither its hypotheses
+nor uniform constants have been proved for the actual Wilson
+spatial-flow sequence here.
+
+8. CONSEQUENCE FOR THE NEXT ESTIMATE
+
+The original-law results now available are (3.2),(4.2)--(4.6), with
+their exact normalization and scales. They support initial local
+parabolic analysis on growing lattice boxes of sub-beta^(1/4)
+radius, and they retain the correct correlated Jacobi potential.
+They do not presently give the required fixed-physical-time
+squared derivative of the bounded radial probe.
+
+The homogeneous example rules out obtaining that conclusion merely
+by a deterministic uniform bound on the full horizontal flow map
+over all configurations satisfying the energy budget. It leaves
+two materially narrower possibilities: estimate the observable's
+own contracted variations using the nonlinear equations, or use a
+genuine Wilson-weighted tangent/curvature correlation estimate that
+penalizes coherent unstable backgrounds. Both must also preserve
+the actual adjacent-slice joint law in TURN64; a one-slice gradient
+mean cannot replace that joint law without proof.
+
+No first-derivative instability of the radial probe under the
+Wilson law, no nonlinear continuum spatial flow theorem, and no
+full nontrivial YM4 existence theorem are asserted.

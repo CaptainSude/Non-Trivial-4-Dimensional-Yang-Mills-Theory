@@ -1,0 +1,220 @@
+TURN82 -- FIXED AUXILIARY SOURCE GERMS AND UNSAFE-CLUSTER GEOMETRY
+20 October 2026. Root derivation. Actual finite SU(2) Wilson lift.
+
+RESULT
+
+Combining the ACTUAL auxiliary-current tails with the weighted current
+kernel theorem gives a concrete improvement over TURN81. At every real
+safe auxiliary record, an arbitrary bounded original finite-read probe
+has a common complex AUXILIARY Hilbert-ball source germ. Its radius,
+norm and fixed-order Frechet derivative constants are independent of
+beta>=1, volume and the number of read links. This is not just a source
+parameter disk or a domain in unrelated independent currents.
+
+The real complement has a prescribed-set exponential bound in its
+connected components. This proves a microscopic-hole geometry statement
+at refining cutoffs. It does not show that an arbitrary physical source
+is insensitive to those holes, or supply a normalized source expansion
+under the full interacting auxiliary law.
+
+1. SETUP AND THE TWO VERIFIED INPUTS
+
+Use the standard positive-path, three-first/three-second HS convention
+of turn82_auxiliary_tails_tail. The zero-link marginal is the actual
+nu_beta, not its Gaussian reference. Its original conditional links are
+independent tilted Haar variables with currents
+
+ J_e=sum_(first h at e) sqrt(beta) R_h
+                +sum_(second h at e) 2 R_h^dagger G_(p(h)).
+
+The real four-vector a_e is defined by ReTr J_e^dagger U_e=a_e dot u_e,
+u_e in S3. The real-linear projection has operator norm sqrt2 from
+Frobenius matrices to R4. A standard link has six incident half-path
+records, one from each of its six incident plaquettes.
+
+Let S be the complete ORIGINAL-link read set of bounded probes B_i,
+0<=B_i<=1. Let T contain every G_p and R_h entering J_e for e in S,
+with each auxiliary coordinate counted once. The complete read set,
+not just a spatial center or a nominal source root, is used.
+
+For each e the safe event requires
+
+ |a_e|>=2 beta,
+ ||G_p||_F<=2 sqrt(beta),
+ ||R_h||_F<=(9/4)sqrt(beta)
+
+for its actual six G and six R records. These real events obey
+
+ nu_beta(all e in A are unsafe)<=p_beta^(|A|/19),
+ p_beta=min(1,192 exp(-beta/3200)),                       (1.1)
+
+for every finite set A. The bound is even uniform conditional on U.
+It follows from independent conditional Gaussian noises and disjoint
+plaquette-star extraction, not independence of nu_beta coordinates.
+
+The independent-current theorem states that, at any real current a,
+on the complex weighted Hilbert ball
+
+ ||zeta||_a^2=sum_(e in S)|zeta_e|^2/(1+|a_e|)<rho^2,
+ rho<=1/2,
+
+the normalized product-link kernel has total variation at most
+exp(4 rho^2/3). In particular for R=sum|z_i|,
+
+ C(z;a+zeta)=E_(k_(a+zeta)) exp(sum z_i B_i)
+ satisfies |C-1|<=exp(4 rho^2/3)(exp(R)-1).              (1.2)
+
+The source integral is the full conditional source, retaining all mixed
+covariances. The proof uses centered characteristic functions and the
+exact S3 covariance, not any estimate on the interacting nu measure.
+
+2. COMPLEXIFICATION AND AN EXPLICIT CURRENT-INCREMENT BOUND
+
+Complexify the REAL eight-dimensional Hilbert space of each complex
+2-by-2 matrix, with its real Frobenius norm. Thus a formal dagger is
+the complex-linear continuation of the real adjoint operation. It is
+not conjugation of new complex coordinates. Use the Hilbert product norm
+
+ d^2=sum_(p in T)||delta G_p||^2+sum_(h in T)||delta R_h||^2.
+
+The real bilinear matrix product has norm at most one. Its complex
+bilinear extension has norm at most two: expand real and imaginary
+parts and apply Cauchy--Schwarz. If one input remains real its complex
+linear extension still has norm at most that real input's Frobenius
+norm. Adjoints and the physical-current projection retain their real
+operator norms under Hilbert complexification.
+
+Fix a real center xi=(G,R) for which EVERY e in S is safe. Write
+g_p=||delta G_p||, r_h=||delta R_h||. For a first incidence the current
+increment costs sqrt(beta) r_h. For a second incidence it costs at most
+
+ 4 sqrt(beta) r_h+(9/2)sqrt(beta) g_p+4 r_h g_p.         (2.1)
+
+Here the first two terms use the safe record bounds, and the last term
+uses the factor two for complex bilinear multiplication. Consequently
+
+ |delta a_e|<=sqrt2 [5 sqrt(beta) sum_(h incident to e)(r_h+g_(p(h)))
+                         +4 sum_(second h at e) r_h g_(p(h))].
+
+The incidence matrix in the linear sum has row sum twelve and column
+sum at most four: an R belongs to two original link currents, and a G
+belongs to four. Its l2 operator norm is at most sqrt48. Hence the
+linear term has l2(S) norm less than 50 sqrt(beta) d.
+
+For the quadratic term there are at most three terms per row, and each
+half-path has one second link. Therefore
+
+ sum_e (sum_(second h at e) r_h g_(p(h)))^2
+ <=3 sum_h r_h^2 g_(p(h))^2
+ <=3 (sum_h r_h^2)(sum_p g_p^2)<=3 d^4/4.
+
+After multiplying by 4sqrt2 this is less than 5 d^2 in l2 norm.
+We have proved the explicit, dimension-independent estimate
+
+ ||delta a||_l2(S)<=50 sqrt(beta)d+5d^2.                 (2.2)
+
+For beta>=1,d<=1, the safe lower current bounds yield
+
+ ||delta a||_a<=55 sqrt(beta)d/sqrt(1+2beta)<40d.        (2.3)
+
+These estimates include all cross terms of the actual polynomial
+current map. No uniform bound on arbitrary unbounded auxiliary centers
+has been substituted for the safe-center hypothesis.
+
+3. A COMMON SOURCE GERM IN THE ACTUAL AUXILIARY COORDINATES
+
+Take d<1/80. Equations (2.3) and (1.2) give a weighted current radius
+less than1/2, and hence
+
+ |C(z;J(xi+delta xi))|<=exp(R+1/3),
+ |C(z;J(xi+delta xi))-1|<=exp(1/3)(exp(R)-1).           (3.1)
+
+For example R<1/4 is a fixed common zero-free source region: the second
+bound is less than1/2 there. The normalized source logarithm is
+holomorphic jointly in these auxiliary increments and source variables.
+At z=0 it is exactly zero. The conditional mean m_B is holomorphic
+on the same auxiliary Hilbert ball and bounded by exp(1/3)||B||infinity.
+
+At the real center, Cauchy on radius1/160 gives for a unit auxiliary
+direction v and fixed integer k>=1
+
+ |D^k m_B(xi)[v,...,v]|<=k!160^k exp(1/3)||B||infinity.
+
+Complex polarization gives the corresponding multilinear operator bound
+with k^k in place of k!. Mixed source jets follow by Cauchy in the fixed
+source region. All constants are independent of beta, |S| and volume.
+
+This is a Hilbert-ball and operator-jet statement. It is not an l1 sum
+of separate coordinate derivatives, a native analytic polymer norm, or
+a fixed per-coordinate polydisc when the number of coordinates grows.
+The probe B is merely bounded measurable in its original read set; no
+derivative of B or of an original nonlinear flow was needed to obtain
+this conditional analytic germ.
+
+The real safe indicators themselves have not been extended analytically.
+The assertion is a germ centered at a given safe real record. It does
+not claim that cutting the real integral by Safe_S is a holomorphic
+background operation. Averaging these germs under the interacting nu,
+or continuing their centers through arbitrary RG records, is a separate
+problem with its own measure/domain and locality requirements.
+
+4. CONNECTED UNSAFE SETS AND THE PHYSICAL SIZE OF HOLES
+
+Join two original links when they share a plaquette. This graph has
+maximum degree D=18. The number of connected sets of m links containing
+a fixed root is at most D^(2(m-1)): choose a spanning tree and its
+depth-first walk of length2(m-1); the walk's visited set determines
+the set, and a canonical choice gives an injection into these walks.
+
+If an unsafe component at e contains at least m links, it contains a
+connected unsafe set of exactly m links containing e. By (1.1),
+
+ nu_beta(|component(e)|>=m)
+ <=324^(m-1) p_beta^(m/19)
+ =p_beta^(1/19) q_beta^(m-1),
+ q_beta=324 p_beta^(1/19).                              (4.1)
+
+This bound is useful for q_beta<1 and does not discard any normalization.
+In a box or torus with N links, the probability of ANY such component
+is at most N times (4.1). It is an explicit connected-set census.
+
+For a fixed physical volume with N_a<=C a^-4, assume for illustration
+beta(a)>=b log(1/a), b>0, for sufficiently small dimensionless a.
+Then, for every fixed integer m,
+
+ P(any unsafe component has >=m links)
+ <=C_m a^(-4+b m/60800).                               (4.2)
+
+Choosing m>243200/b makes this tend to zero. The numerical constants
+are conservative. The physical diameter of component link centers is
+then at most2a(m-1), and the union of their geometric links has diameter
+at most2am, both tending to zero. Use the periodic metric on a torus,
+or a common nonwrapping embedding. This is conditional on the displayed
+coupling trajectory; it does not prove its renormalization prescription.
+More generally if beta(a)->infinity, (4.1) with m proportional to1/a
+shows that an unsafe component of any fixed positive physical diameter
+has probability tending to zero in a fixed physical volume.
+
+The statement concerns artificial auxiliary small-current/large-record
+holes, not large-field Wilson regions or a Yang--Mills mass scale. It
+is compatible with many isolated unsafe links and with failure of the
+global all-safe union bound N_a p_beta->0. It does not assert that an
+arbitrary bounded observable changes little when those components are
+removed. Such an observable can read all of them; a needed locality or
+stability estimate cannot be replaced by their small physical diameter.
+
+5. ROLE IN THE EXISTENCE ARGUMENT
+
+This closes a specified finite source-domain problem for the exact HS
+family: bounded original probes have uniform analytic auxiliary germs
+on real safe records, and a full-law connected-set estimate describes
+the complement. Both results are proved under the actual Wilson lift.
+There is no new assumption of global convexity of the zero-link action.
+
+What is missing is a normalized, spatially controlled integration of
+these marked germs and the unsafe components under the full interacting
+nu, or a valid comparison to an existing Bałaban source class. The old
+inverse-record analytic problem is avoided in this representation but
+has not been replaced by a proved all-scale auxiliary RG estimate.
+No nonzero physical reflected correlation, continuum limit, Euclidean
+invariance or Yang--Mills reconstruction follows from (3.1) or (4.2).

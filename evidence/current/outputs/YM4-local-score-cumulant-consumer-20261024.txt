@@ -1,0 +1,242 @@
+LOCAL SCORE CUMULANTS AND A SOURCE-READ ORDINARY TWO-JET CONSUMER
+24 October 2026. Root derivation. Finite lemma and audited native application.
+
+RESULT AND STATUS
+
+The finite ordinary C^{1,1} consumer need not use the sup norm of an
+extensive directional score. Exponential bounded-cylinder mixing gives
+a summable third-cumulant bound for two quasilocal score roots and one
+test with finite complete noise read. This removes ambient torus volume
+from that part of the second normalized derivative. A local mixed
+third derivative of the action is needed for the other term and is
+supplied by the separately audited native calculation in Section6.
+That hypothesis is stated below and is NOT inferred from a second
+background derivative bound alone. Sections1--5 keep the finite lemma
+and its original input boundary explicit. Section6 records its now
+independently audited registration for the actual second-success law.
+
+1. PRECISE FINITE REFERENCE PREMISES
+
+Let Q_theta be a positive normalized law on a fixed product of real
+color balls |x_i|<=R, with smooth Hamiltonian H(x;theta). Index sets
+are subsets of fixed-dimensional lattices with uniformly bounded
+local density. Each q footprint hat q has uniformly bounded diameter
+and incidence, as for the native fixed-grade stencils; alternatively
+assume the exponential root-sum bounds used below directly. All
+distances include the fixed native scale conversion.
+Let Q have the following two estimates, uniformly in the admitted
+physical theta domain and finite torus:
+
+ |Cov_Q(A,B)| <= C osc(A) osc(B) exp[-nu d(P_A,P_B)],       (1)
+
+for bounded cylinder functions on arbitrary complete finite reads,
+and
+
+ |Cov_Q(A,B)| <= C sum_(i,j) a_i b_j exp[-nu d(i,j)],      (2)
+
+when |partial_i A|<=a_i and |partial_j B|<=b_j. Color components
+only change fixed constants. These are assumptions supplied, when
+applicable, by the actual weighted-convex product reference. They
+are not assumptions about a normalized hard-mask mixture.
+
+Use the exact zero-noise convention H(0;theta)=0, with its subtracted
+scalar retained in the outer density. Put S_q=partial_(theta_q) H.
+Assume
+
+ |partial_i S_q| <= A0 exp[-mu d(i,hat q)],               (3)
+
+where hat q is the fixed footprint of a coarse parameter root. Thus
+S_q(0)=0. A harmless parameter-only score constant can always be
+removed for the covariances/cumulants below, without dropping its
+outer density contribution. Put A=C R A0 after fixed geometric sums.
+
+For the final second-derivative consumer we also require
+
+ sup_i sum_(q,r) |partial_i partial_(theta_q theta_r) H|
+                                      <= B,             (4)
+
+uniformly on the whole fixed product and parameter domain. A bound
+by B0 exp[-mu length(tree(i,hat q,hat r))] implies (4), but that
+stronger conclusion is not required. Finite sums here range over
+all actual background coordinates. Bounds on H_(q,r) alone do NOT
+imply (4). Neither (1) nor (3) is claimed to imply it.
+
+2. THE THREE-CYLINDER CONNECTED ESTIMATE
+
+For real bounded f,g,h, define cum(f,g,h)=Q[(f-Qf)(g-Qg)(h-Qh)].
+Let their complete reads be T,P,Qset. Write
+
+ a=d(T,P), b=d(T,Qset), c=d(P,Qset),
+ L=min(a+b,a+c,b+c).
+
+This is the minimum three-root tree length in the graph of these
+three sets; no metric triangle inequality between sets is assumed.
+Isolating any one centered factor gives an EXACT covariance with
+the product of the other two centered factors. For example
+
+ cum(f,g,h)=Cov(f,(g-Qg)(h-Qh)).
+
+The product has read P union Qset and oscillation at most
+2 osc(g)osc(h). Applying (1) in each of the three possible ways yields
+
+ |cum(f,g,h)| <= C osc(f)osc(g)osc(h)
+    exp[-nu max{min(a,b),min(a,c),min(b,c)}]
+ <= C osc(f)osc(g)osc(h) exp[-nu L/2].                    (5)
+
+The maximum in the first exponent is the middle of the three
+nonnegative numbers a,b,c. Their two smallest sum to L, so L is at
+most twice that middle value. This proves the last inequality.
+No third-cumulant estimate is presumed or inferred from a product
+of independent probabilities. Complex tests follow by decomposition.
+
+3. QUASILOCAL SCORES AND THE TWO-ROOT SUM
+
+Set S_q^[m](x)=S_q(x on B_m(hat q), 0 elsewhere). This is a
+genuine cylinder because Q's coordinate domain is a product and
+zeroing coordinates stays in it. Integrating (3) along the omitted
+coordinates gives
+
+ ||S_q-S_q^[m]||_infinity
+       <=C R A0 (1+m)^(d-1) exp(-mu m)
+       <=C A exp(-mu' m),                               (6)
+
+for any fixed mu'<mu. The annular increments Delta_q,m, starting
+with m=0, sum to S_q and have support B_m(hat q) and sup norm
+C A exp(-mu' m). This is an absolutely convergent expansion,
+including on finite periodic lattices; past the lattice diameter
+the increments are zero. No independent random-field expansion
+or change of Q is used.
+
+For bounded f with finite read T, apply (5) to f,Delta_q,m,Delta_r,n.
+Enlarging the last two roots by radii m,n reduces the three-root
+tree length by at most 2(m+n), up to fixed footprint constants.
+Choose lambda>0 small relative to nu and mu'. Absorb the resulting
+exp[2 lambda(m+n)] in (6), then sum m,n. Thus
+
+ |cum_Q(f,S_q,S_r)| <= C osc(f) A^2
+   exp[-lambda min{d(T,hat q)+d(T,hat r),
+                   d(T,hat q)+d(hat q,hat r),
+                   d(T,hat r)+d(hat q,hat r)}].           (7)
+
+The same approximation and (1) give
+
+ |Cov_Q(f,S_q)| <= C osc(f) A exp[-lambda d(T,hat q)].    (8)
+
+Both constants are independent of the finite torus. For nonempty T,
+the elementary lattice sum sum_q exp[-lambda d(T,hat q)]<=C|T|
+is sufficient. Since exp[-lambda min(u,v,w)] is at most the sum
+of the three exponentials, (7)--(8) imply
+
+ sum_q |Cov_Q(f,S_q)| <= C osc(f) A |T|,
+ sum_(q,r)|cum_Q(f,S_q,S_r)|
+                  <=C osc(f) A^2 (|T|+|T|^2).            (9)
+
+The quadratic source-read cost is deliberately retained. There is
+no count of the ambient lattice and no assumption that T is a
+single point. All determining, reconstruction and source reads
+must be included in T before these estimates are used.
+
+4. THE COMPLETE NORMALIZED SECOND DERIVATIVE
+
+Let f(x;theta) be C^{1,1} in theta and C^1 in x. Suppose f, f_v and
+f_vw have complete x-read in the SAME finite set T for all fixed
+sup-norm parameter directions |v|_infinity,|w|_infinity<=1, and
+
+ |f|<=b0, |f_v|<=b1, |f_vw|<=b2,
+ sum_i sup|partial_i f|<=L_f.                            (10)
+
+The derivatives may be weak derivatives, with bounds a.e. A strict
+image/parameter margin permits mollification, as in the admitted
+rare real source consumer. Exact differentiation of the normalized
+ratio on the FIXED original product gives
+
+ D_v Qf=Qf_v-Cov(f,S_v),
+ D_vw Qf=Qf_vw-Cov(f_v,S_w)-Cov(f_w,S_v)
+                    -Cov(f,H_vw)+cum(f,S_v,S_w).         (11)
+
+Using (4), |partial_i H_vw|<=B. Estimate (2) and its summable
+kernel imply |Cov(f,H_vw)|<=C B L_f. Finite linearity followed
+by (9) bounds the other score terms. Therefore
+
+ |Qf|<=b0,
+ |D_v Qf|<=b1+C b0 A |T|,
+ |D_vw Qf|<=b2+C b1 A |T|+C B L_f
+                         +C b0 A^2(|T|+|T|^2).         (12)
+
+These are source-read rather than ambient-volume bounds. Each
+term is included; no extensive score norm is asserted uniformly
+bounded. Uniform mollified bounds and weak compactness pass (12)
+to C^{1,1} inputs on a smaller parameter domain.
+
+5. RARE INPUT AND NATIVE ADMISSION STATUS
+
+For f=R_p(B1(x;theta)), with the entire actual next product image
+in the first hybrid box, suppose ||R_p||_(W2,infinity)<=B_p eta,
+eta=exp(-c r^2). The literal B1 noise reconstruction is local; its
+complete W-source pullback is a fixed finite T. Its background
+derivatives alter coefficients but not the x-ownership list. With
+the stated whole-map derivative caps,
+
+ b0=B_p eta, b1<=C1 B_p eta,
+ b2<=(C1^2+C2) B_p eta, L_f<=C_L g1 |T| B_p eta.          (13)
+
+Retain the actual constants if a different norm is used. Equations
+(12)--(13) would preserve ONE rare factor with polynomial price
+in |T|, local map constants, R and the score constants, independently
+of the rest of the finite torus. Constant-color invariance would
+still imply D(Qf)(0)=0 at the joint flat point; its genuinely
+integrated scalar Q_0 f must remain in the source ledger.
+
+For the registered Q1s reference, (1)--(3) and the whole B1 image
+are available from the existing convex product and third-coarse
+interface theorems. The interface explicitly provides H_(q,r),
+not (4). The additional action input therefore needs a separate
+proof. Section6 records that proof from the actual supported
+analytic coefficient catalogue. Its Cauchy estimates use that
+catalogue's admitted tube, not an assumed volume-uniform complex
+normalized probability.
+
+Even after (4) is supplied, Q1s contains Z0s. The original pre-Q1
+source with Z_D still needs its exact selector/reference corrections.
+No uniform-in-depth estimate, certificate-complement price or
+continuum existence assertion is contained in this finite lemma.
+
+6. NATIVE INPUT NOW REGISTERED AT ITS PRECISE FINITE SCOPE
+
+After the finite lemma's two independent reviews, the companion
+second_success_mixed_third_source_row_20261024 and its focused audit
+established hypothesis(4) for the actual Q1s family. They retain
+the ORIGINAL first success cut R0=r0 and derive its third background
+row by differentiating the complete analytic scalar catalogue,
+Gaussian determinant and coarea before summation. The physical
+minimum Cauchy discs are explicitly compatible with that same pair
+tube. No complex normalized-probability estimate is postulated.
+
+In the notation of that note, a valid bound is
+
+ B=B_mix=C K2bg[R1+g1(1+R1^2)]
+       +C g1[G3 K1bg^2+G2(K1bg^2+K2bg)+G1 K2bg],         (14)
+
+where G_l is the locally summed l-th beta derivative of F0+T0,
+l=1,2,3. Its complete chain rule includes the three second-chain
+terms and the third derivative of the actual reconstruction.
+The zero-noise A1 is independent of x but retained in the outer
+density. All constants in(14) are independent of ambient volume.
+
+Consequently (12)--(13) ARE now available for an admitted rare
+first hybrid row under this ACTUAL smooth second-success kernel,
+with a polynomial price in the complete source/mask read, noise
+radii and the stated fixed-grade margins. This improves the earlier
+finite ambient-volume bound. The original fixed-product image and
+outer-sector conditions are unchanged. The differentiated source
+remains real C^{1,1}; its integrated scalar and raw contacts remain.
+
+The proof does not provide local gauge invariance of the hybrid
+row, a canonical contraction under arbitrary repeated blocking,
+or the corresponding theorem for the nonsmooth Z_D law. Its exact
+Q1s/Z0s versus pre-Q1/Z_D selector distinction remains material.
+
+Reviews: local_score_cumulant_consumer_focused_audit_20261024 and
+local_score_cumulant_consumer_compiled_audit_20261024 check the finite
+lemma. second_success_mixed_third_source_row_focused_audit_20261024
+checks the native additional action input.

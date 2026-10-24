@@ -1,0 +1,334 @@
+LARGE FIELD RENORMALIZATION I: GAUGE GEOMETRY AND NORMALIZATION SCOPE
+TURN60 -- 20 October 2026
+Author: gauge47
+
+STATUS. Source review, before resuming the existence argument. The supplied
+original makes the formerly missing basic-R formula and its local gauge
+construction readable. It explicitly supplies integrated preservation and
+permits a finite coordinate-frame average. It does not assert equality of
+different current reference kernels, arbitrary inserted-observable
+preservation under forgetting the old variables, or a full continuum
+existence theorem. A reciprocal inconsistency in the printed averaging
+constant is recorded rather than silently corrected.
+
+SOURCE AND INSPECTION
+
+T. Balaban, Large Field Renormalization. I. The Basic Step of the R
+Operation, Communications in Mathematical Physics 122 (1989), 175--202,
+DOI 10.1007/BF01257412.
+
+Original supplied file:
+  [supplied PDFs]/balaban.pdf
+
+Extracted pages:
+  work/turn60_large_I/page_01.txt through page_28.txt.
+
+Printed page p is PDF page p-174 (one based). For this note I read the
+extracts for pp175--179 and pp192--202, and visually checked pp196 and201,
+in particular the tree prescription and (1.100)--(1.102). The rendered
+original, not an inferred OCR replacement, establishes the reciprocal
+inconsistency below. Earlier notes which report that these source pages
+were unreadable remain historical records; this source review supersedes
+that access limitation.
+
+1. EXACT GEOMETRIC AND HISTORICAL ADMISSION
+
+Printed p177 imposes TWO conditions on components selected for this basic
+replacement:
+
+ (i) the component is contained in a cube of size 100 M R_k;
+ (ii) during the preceding N steps no new large-field regions were created
+      inside it, and its predecessor regions satisfy (i) on their own scales.
+
+The source says its region-construction rule then makes the relevant last-N
+regions rectangular parallelepipeds. This is an admitted finite component
+with its actual history, not an arbitrary subset of a periodic lattice.
+The omitted components are left in the complementary T operation, (1.1).
+An arbitrary winding component cannot be substituted for these rectangles.
+
+The preparation on pp178--192 uses that chronology and several distinct
+cutoffs. In particular p179 explains that the old factors (1.5)--(1.9) are
+not gauge invariant for the integrations one wishes to perform. Their
+preliminary treatment is therefore substantive, not an optional gauge
+convention.
+
+After these integrations, p192 defines Lambda in (1.73). It is a union of
+M-cubes, is rectangular, and is contained in a current-scale cube of size
+100 M. The reconstructed field U_(k,Z), (1.74), is defined separately in
+each component of Z. It still has its fine-scale determining data; the
+bounded size of Lambda does not make every background-field read finite
+range automatically.
+
+The function chi_(k,Lambda), (1.75), p193, depends only on the retained
+field in Z intersect Lambda-complement. Its meaning is the existence of
+an interior extension satisfying the stated regularity. The complement
+is kept as a large-field branch. It is not the same function as the new
+reference cut chi(Lambda), (1.101).
+
+Thus the native reference is available only on an admitted real branch
+and its proved complex extension. None of the inspected pages defines
+the reconstructed fine action for every compact-group field without
+the reference cut.
+
+2. THE ACTUAL T0 GAUGE, INCLUDING ROOT AND BOUNDARY CONVENTIONS
+
+Printed pp195--196 give the missing construction, rather than just naming
+an unspecified maximal tree.
+
+The old field is written V''=V' V0 on the determining set B0 in Lambda,
+with V0 obtained from U0=U_(k,Z)(V_Lambda). Bonds crossing the boundary of
+Lambda belong to B0; bonds crossing the boundary of the excluded innermost
+domain do not. The second integral in (1.76) has the gauge invariance
+needed for the stated Faddeev--Popov insertion. This assertion follows the
+earlier preparation; it is not asserted for all the original cuts before
+that preparation.
+
+For two successive nested rectangular parallelepipeds
+
+       P1=product_mu [a_mu,b_mu],
+       P2=product_mu [a'_mu,b'_mu] subset P1,
+
+the source rescales to unit lattice, takes
+
+       y=(a_1+1/2,...,a_d+1/2),
+       a in (a'_1,b'_1),
+
+and joins each lattice point x in P1 minus P2 to y. For x_1<=a it uses the
+coordinate-ordered axial contour. For x_1>a it routes through the outer
+face x_1=b_1-1/2, as displayed on p196. Their union is the prescribed tree
+T on the shell. These paths read the rectangular endpoints and the chosen
+coordinate frame, not an ambient torus-wide graph search.
+
+The construction has the stated restriction property when P2 is enlarged:
+delete the paths for removed points and retain the original construction
+parameter a. Recomputing an unrelated a after each restriction is not what
+this statement says. The original a remains admissible when the inner
+rectangle is enlarged.
+
+Each shell tree leaves one gauge degree, removed by a specified external
+bond. For intermediate inner domains the source gives the bond
+
+ [(a'_1-1/2,a'_2+1/2,...,a'_d+1/2),
+  (a'_1+1/2,a'_2+1/2,...,a'_d+1/2)].
+
+For P1=Lambda it also adds [(y_1-1,y_2,...,y_d),y].
+The external bonds on internal interfaces are at the appropriate larger
+scale. For the last, excluded inner domain no gauge is fixed and no
+external bonds crossing its boundary are added. Their union is T0,
+described as a tree fixing the gauge completely in B0. The source then
+inserts delta_(T0)(V') in (1.76).
+
+The subsequent chi' in (1.82) is a genuine new partition of unity on each
+component. Its complementary pieces are retained among the other
+large-field terms. No assertion permits changing T0 after keeping the
+same gauge-dependent chi' on the old variables.
+
+The use of relative variables matters. For fixed V0, a gauge change of
+V'' induces the corresponding twisted gauge action on V'. A tree can
+fix V'=1 with this action as well, but this is not an excuse to drop the
+background or its boundary data. Printed p197 expressly requires the
+compensating V_h transformation and the adjoint transformation of V'
+when U0 is changed to the axial/Landau gauge. The full integrand, with
+those transformations, is invariant.
+
+3. G_i, THE COMPONENT SUM, AND THE FINITE AVERAGING LAW
+
+Printed p201 first factorizes the remaining integrations and history sums
+over components X_i. It replaces global histories by the corresponding
+localized sequences and relabels B0,T0,Lambda as B_i,T_i,Lambda_i.
+In (1.100), the summation inside EACH component bracket includes its
+localized history and BOTH G_i,T_i.
+
+Here G_i is a graph fixing the axial gauge on Lambda_i. The source does
+not enumerate a probability measure on every possible spanning tree.
+Instead, the paragraph after (1.101) expressly permits implementing the
+graph averages by the coordinate prescription acted on by
+
+                   H_d = {signed coordinate permutations},
+                   |H_d| = 2^d d!.
+
+The safe implementation is a labelled frame average of the COMPLETE
+component construction: the permitted coordinate prescription produces
+its G_i,T_i and every associated frame-dependent factor. In particular
+one must not average just the displayed reference density and leave
+the old T_i/cut factors outside that average. The product of component
+brackets supplies local component sums; it is not a single globally
+shared frame label constrained across the entire torus.
+
+The literal printed normalization is inconsistent:
+
+  - (1.100) has 1/N_i outside the graph/history sum;
+  - the following prose says N_i=1/(2^d d!).
+
+Both facts were visually checked. If the sum over frames is an ordinary
+sum, the asserted arithmetic average must instead have coefficient
+1/(2^d d!), hence N_i=2^d d! in the displayed prefactor convention.
+Using the literal prose value together with that displayed convention
+would give total coordinate weight (2^d d!)^2 for one component.
+
+The intended normalized average is supported by the source's explicit
+word "averages" and normalization identity (1.102). We therefore record
+the normalized interpretation as an explicit consistency correction,
+not as a published erratum or a change to the PDF. Retain all 2^d d!
+labels even if some produce the same physical graph; collapsing equal
+graphs without their multiplicities changes the measure.
+
+This resolves a major part of the former G0/T0-law question. One need
+not reconstruct a unique measure on all abstract trees: the source
+expressly permits this finite frame implementation. It does not say
+that an arbitrary new forest, global random spanning-tree law, soft
+orbit profile, or tree-dependent window has the same physical kernel.
+The sentence mentioning alternative Landau-type gauges is not a
+completed analytic construction of every such alternative.
+
+4. WHAT SHORT-LIFT LOCALITY NOW FOLLOWS
+
+Fix a permitted coordinate construction with all its choices, including
+the shell parameters, boundary convention and component history. Let D
+include the COMPLETE finite deciding geometry for that construction:
+all nested rectangles, their scale labels, outer and excluded-inner
+boundary bonds, roots, and the coordinate contours. Assume D has an
+injective lattice lift preserving this data and the fields on it.
+
+Then the explicit shell prescription is transported exactly: its endpoint
+inequalities, coordinate segments, exterior bonds and restrictions are
+identical after relabelling. The same is true of the ordinary axial
+prescription for G_i in the lifted rectangle. A fixed deterministic
+geometric choice of the initially free shell parameter can be used on
+both lifts; its value is transported with the data during restrictions.
+No new random choice with volume-dependent weights is needed.
+
+Apply the SAME label r in H_d to the two copies of the complete component
+construction. This is a bijection of labelled choices with identical
+weight 1/|H_d|. Haar factors, normalized tree delta functions and the
+number of constrained variables are likewise matched on those complete
+finite graphs. This proves locality of the permitted ANCILLARY CHOICE
+LAW and of these coordinate factors on complete short lifted data.
+
+The condition on D is essential. A coordinate seam on a periodic display
+causes no difficulty when D lifts; a genuinely noncontractible deciding
+component is not replaced by a local rectangle under this argument.
+The source's bounded-component criteria specify the class being treated.
+
+This is not a whole-cover theorem. Analytic reconstruction may have
+separately localized walk reads; raw history factors, global determining
+data and scalar normalizers must still be compared on their own complete
+supports. Equality of the finite gauge-choice law does not establish
+equality of all field-dependent kernels on two different tori. It also
+does not establish equality between two different choices of construction
+tree on the SAME torus.
+
+5. THE NORMALIZED REFERENCE AND REAL POSITIVITY
+
+The reference factor in (1.100), p201, is literally
+
+ q_e,dG(v) proportional to
+   delta_G(v) chi(Lambda)(v)
+   exp[-g_k^(-2) A(zeta,U_(k,X)(v V_Lambda(e)))] d v_Lambda,
+
+with the denominator the integral of EXACTLY this expression in the
+same relative field, with the same gauge graph, reference background,
+action and cut. Equation (1.101) is
+
+        chi(Lambda)
+        = chi({ |(1/i) log v(b)| < M0 epsilon_k : b in Lambda }).
+
+This is the reconstructed localized fine action, not the effective full
+old action or a freely substituted coarse Wilson action. It is evaluated
+only on the admitted reference window.
+
+Printed p176 states positivity of the densities and nonemptiness of the
+integration domains as the reason the denominators are positive. The
+detailed minimum and domain facts are attached to the weak regularity
+conditions on pp193--197: Proposition1 on p194 states a unique critical
+orbit/minimum and analytic extension for sufficiently regular exterior
+fields, and p195 connects that background with the integration and
+effective-action analytic domains. The proof of Proposition1 is expressly
+deferred. Thus accepting the published native minimum/domain module is
+still an input, not a new proof furnished by merely reading (1.100).
+
+On an admitted real branch, the gauge delta means Haar integration on
+its slice, chi is nonnegative, and the Wilson factor is positive. The
+nonempty weak neighborhood on the slice gives a strictly positive
+reference denominator (with the usual zero-dimensional interpretation).
+All cuts and background data must be those of this actual branch.
+This conclusion is not a uniform complex lower bound on an arbitrary
+larger domain or an unrestricted full-group fine-action theorem.
+
+6. EXACT INTEGRATED PRESERVATION, AND ITS INSERTION LIMIT
+
+The chronology is unusually explicit:
+
+  p193: all preceding preparations preserve the density itself;
+        the next operation is only an equivalence of integrals.
+  p194: the old field over Lambda is integrated out, and the result
+        is regarded as independent of the current field in that slot.
+  p200: the transformed density is stated to have the same integral
+        as rho_k, while generally being a different density.
+  p201: the matching normalized reference is inserted in (1.100);
+        (1.102) states integral R' rho_k = integral rho_k.
+
+Consequently the old integral and new reference quotient are not being
+identified from a heuristic similarity of two different denominators.
+The actual formula supplies their variable slots and the normalization.
+
+For a resolved positive old branch, one can retain its old variables as
+passive records while sampling this normalized reference. The resulting
+positive joint measure has the original old branch as its old marginal.
+An old, resolved count is preserved by integrating the new reference.
+This is a consequence of the literal source formula, not an assertion
+that every old observable evaluated on the NEW reference has its old
+expectation.
+
+The chosen gauge representation requires care even for retained records:
+an original gauge-noninvariant observable needs its removed gauge
+variables or the corresponding inverse reconstruction. Gauge-invariant
+observables can be transported through the stated compensating changes,
+but they still need the ORIGINAL field record after the reference
+resampling if they depend on that replaced interior. Gauge invariance
+alone does not make the old and new current reference laws equal.
+
+For a new event defined after the redraw, its indicator remains inside
+the new reference expectation. A later complex source cannot simply be
+substituted into a frozen real cut or reference background without the
+appropriate marked-domain estimates. The equality of total integrals
+does not supply such estimates.
+
+This closes the specific missing source identification of the basic
+positive replacement. It does not, by itself, prove an arbitrary-source
+renormalization theorem or transport every original observable through
+all subsequent localization and exponentiation steps.
+
+7. CONSEQUENCES FOR THE OPTIONAL FULL-ACTION REFERENCE ROUTE
+
+The native reference already contains the matched reconstructed action,
+hard weak window and exact reference normalizer. There is no longer a
+source-access reason to replace it merely to obtain a normalized positive
+basic-R step. The optional TURN59 soft-reference comparison remains a
+separate proved local perturbation at its own hypotheses.
+
+The supplied pages do not eliminate its limitations:
+
+ - the action is only known on the admitted reconstructed-field domain;
+ - the relative gauge and exterior/background chronology are real data;
+ - changing the construction gauge can change the current reference law;
+ - replacing the window/profile requires new recursive admission bounds;
+ - analytic continuation must respect the full specified native domains.
+
+In particular, the old theta-graph counterexample to automatic equality
+of different CURRENT tree kernels is unaffected. It never contradicted
+choicewise normalization or equality of retained ORIGINAL marginals.
+
+8. SCOPE REVIEW OF THE ROOT SYNTHESIS
+
+I read work/large_I_review_synthesis_turn60.txt in full. Its statements
+about basic-R normalization, the source chronology, passive records,
+the explicit reciprocal correction, and the incomplete continuum proof
+are accurate at the stated scope. I suggested only making explicit that
+the finite coordinate label acts on the complete component construction,
+including both G_i and T_i and the retained old factors.
+
+The new source resolves a concrete finite-step identity/choice issue.
+It neither supplies the missing uniform local physical observable
+estimates nor proves nontrivial continuum Yang--Mills existence.
+No old output or source PDF was changed during this review.

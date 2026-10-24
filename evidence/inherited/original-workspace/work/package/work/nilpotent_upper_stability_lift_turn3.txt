@@ -1,0 +1,238 @@
+NILPOTENT BANACH-ALGEBRA LIFT OF UPPER STABILITY: VALID SCOPE AND EARLY MARKS
+18 October 2026. Exact algebraic result; the joint producer premise is distinguished explicitly.
+
+1. DIMENSION-FREE COEFFICIENT ALGEBRA
+
+For n labels let A_n=C[eta_1,...,eta_n]/(eta_1^2,...,eta_n^2), with
+commuting generators. For positive weights w_i define
+
+ ||sum_(S subset [n]) a_S eta_S||_w=sum_S |a_S| product_(i in S)w_i.
+
+This norm is submultiplicative. Indeed the coefficient of eta_S in
+ab sums only pairs of disjoint label sets whose union is S. Taking
+absolute values and summing gives a sub-sum of ||a||_w||b||_w.
+The constant is one and independent of n. Therefore
+
+ ||exp a||<=exp||a||,
+ ||exp a-1||<=exp||a||-1,
+ ||integral f dmu||<=integral ||f||d|mu|.                    (1.1)
+
+For a scalar real action A_0 and nilpotent N, retain the scalar body:
+
+             ||exp[-A_0+N]||_w<=exp[-A_0]exp||N||_w.         (1.2)
+
+This retains positivity/coercivity of the original Wilson and Gaussian
+parts. It does not replace them by absolute values of their actions.
+
+For carrier activities the appropriate local norm is, schematically,
+
+ ||a||_(kappa,w)=sup_x sum_(X containing x) exp[kappa d(X)]
+                    sum_S w_S ||a_S(X)||_(original domain). (1.3)
+
+The label sum is INSIDE the rooted spatial norm. A sum of separate
+suprema over labels would introduce the number of copies and is the
+wrong hypothesis for a volume-uniform copied-source theorem.
+
+2. WHICH ORIGINAL PROOF OPERATIONS LIFT
+
+Keep the Gaussian kernels, integration regions, gauges, field maps,
+reference denominators and source-free Wilson action fixed. Treat the
+extra source coefficients as A_n-valued activities. Finite sums,
+products, integration, Taylor remainders, contour Cauchy estimates and
+the localizer's integral formulas obey the same norm inequalities
+as in the scalar case by (1.1). Commutativity permits the same Mayer
+identities. Ward identities are coefficientwise linear identities.
+
+Consequently an ABSOLUTELY convergent Mayer/polymer/connected expansion
+lifts with the same numerical majorant whenever its full A_n-valued
+input norm satisfies the original smallness condition. There is no
+new factorial or factor depending on the dimension 2^n merely from
+changing the coefficient algebra. The existing graph combinatorics
+already counts products and remains the same.
+
+This conclusion is a proof by the same majorants, not an appeal to
+holomorphy in arbitrarily many ordinary complex sources. Nilpotence
+is useful because the target coefficients have at most one occurrence
+of each label. It does not remove any norm-smallness hypothesis.
+
+If a normalizer is source dependent, write it as z_0(1+u), with z_0
+the original scalar normalizer. A dimension-free inverse bound follows
+from ||u||<1: ||(1+u)^-1||<=1/(1-||u||). Algebraic nilpotence alone
+only makes the inverse a finite series; when ||u|| is large, its norm
+can grow with n. One must either keep the normalizer genuinely frozen
+or obtain its logarithm/inverse from the convergent connected expansion.
+
+3. EXACT CONNECTION TO B119(2.49)--(2.50)
+
+In B119 pp263--264, (2.43)--(2.48) bound the E, R and boundary sums
+by the original dated row volumes. Formula (2.49) retains the Wilson
+part, the logarithmic terms and this row-volume error. The following
+paragraph obtains the upper stability bound by Wilson/Gaussian
+large-field gains and the existing combinatorial sum. Thus, if these
+same bounds hold with coefficient moduli replaced by (1.3), (1.2)
+gives the same upper-stability argument for the coefficient norm.
+
+Primary source, directly checked:
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+DOI 10.1007/BF01217741, (2.43)--(2.50).
+
+This does not assert that arbitrary large A_n-valued perturbations
+satisfy the inductive E/R/B bounds. Those are the hypotheses which
+must first be produced. The field domains remain the original ones;
+analyticity on a smaller physical ball is not enough.
+
+4. HUGE EARLY SINGLETONS CANNOT BE FED BLINDLY INTO MAYER
+
+Even for a singleton a=eta_i M, the Mayer activity exp(a)-1=eta_i M
+has norm w_i|M|. If that number is large, it violates the small-activity
+criterion. The finite formal series still exists, but no uniform
+cluster bound follows. Applying the generic exponential estimate to
+many such early marks gives an expense exp[sum_i w_i|M_i|], which can
+spend much more than the native stretched-log large-field reserve.
+
+There is nevertheless a useful exact alternative before a common
+integration, provided one has a JOINT INTEGRAND representation. Suppose
+the whole opened kernel has the form
+
+ K_H(eta)=K_H(0) product_i [1+eta_i M_(H,i)],                 (4.1)
+
+and on its actual complex contour
+
+ |M_(H,i)|<=P(gamma_b) n_(H,i),
+ n_(H,i) nonnegative integers,
+ sum_i n_(H,i)<=C N_H.                                     (4.2)
+
+For a common weight w,
+
+ ||product_i(1+eta_i M_(H,i))||_w
+ <=product_i[1+w P(gamma_b)n_(H,i)]
+ <=exp[C N_H log(1+w P(gamma_b))].                          (4.3)
+
+The last step uses 1+a m<=(1+a)^m for integer m>=0. This charges a
+LOGARITHM of the potentially huge amplitude per original row cell,
+rather than that amplitude itself. If the unmarked absolute kernel
+has an UNUSED row-count reserve at least the exponent in (4.3), its
+integrated A_n norm keeps the remaining small factor. The component
+can then enter the ordinary small-activity Mayer expansion.
+
+Formula (4.3) has no dependence on the number of labels other than
+their actual packed row count. It is a legitimate way to postpone
+smallness until after a large-field kernel, if (4.1)--(4.2) hold.
+
+The reserve inequality is indispensable. A one-mark proof may have
+reserved only enough to absorb one polynomial, not a per-label packed
+expense. In particular a first-date scalar factor alone cannot pay
+an arbitrary number of labels; the original spatial/lifetime ledger
+must supply the per-row debit used here.
+
+4A. AN EXPONENTIAL-ARM VERSION WITH NO INTEGER PACKING ASSUMPTION
+
+There is a useful weaker joint premise. Suppose label centers form a
+uniformly separated set in the relevant row-scale metric and
+
+ |M_(H,i)|<=P(gamma_b) sum_(x in rows(H)) exp[-kappa dist(x,label_i)].
+
+For a=w P(gamma_b), positivity gives
+
+ log(1+a sum_x k_(x,i))<=sum_x log(1+a k_(x,i)).
+
+Indeed product_x(1+a k_(x,i))>=1+a sum_x k_(x,i). Summing labels and
+using their bounded spatial density gives, in dimension d,
+
+ sum_i log(1+a exp[-kappa dist(x,label_i)])
+                          <=C[1+log(1+a)]^(d+1).             (4.4)
+
+To prove (4.4), split at R=2 kappa^-1 log(2+a). Inside the ball there
+are O((1+R)^d) centers and each summand is <=log(1+a). Outside use
+log(1+u)<=u and sum the exponential tail. Thus (4.3) is replaced by
+
+ ||product_i(1+eta_i M_(H,i))||_w
+           <=exp[C N_H(1+log(1+w P(gamma_b)))^(d+1)].         (4.5)
+
+In four dimensions this costs a fifth power of a logarithm. For a
+POLYNOMIAL weight w=G^K and gamma_b>=G, the cost is a fixed multiple
+of (log gamma_b)^5 per row. A sufficiently strong reserved native
+per-row logarithmic debit can absorb it. This would already produce
+an arbitrary fixed inverse power G^-K in the copied bound, which may
+suffice for the fusion limit. Taking w inverse to a stretched-log
+error is much more expensive and is not necessary for that purpose.
+
+This refinement still requires actual joint integrand arms, not only
+post-integration singleton bounds. Also the separation must hold in
+each row metric used; it is automatic only when the copy spacing is
+at least the row scale. If original localization arms have been summed
+away, (4.4) cannot be invoked retrospectively.
+
+5. WHY ONE-MARK OUTPUTS DO NOT ESTABLISH (4.1)
+
+Before any shared integration the original linear nilpotent source
+does have the product form product_i(1+eta_i F_i). After integrating
+shared fluctuations, however,
+
+ K[product_i(1+eta_i F_i)]
+
+contains mixed connected coefficients. It is generally different from
+product_i(1+eta_i K F_i). This is not a technical small error.
+
+For example take one centered Gaussian X of variance M^2 and labels
+1,2. Then KX=0, while
+
+ K[(1+eta_1 X)(1+eta_2 X)]=1+M^2 eta_1 eta_2.                (5.1)
+
+The singleton outputs vanish exactly and the mixed coefficient can
+be arbitrarily large. Thus an estimate proved separately for every
+one-mark producer does not imply a bound in (1.3).
+
+The same warning applies to a renormalized one-mark normal form
+produced AFTER prefix integrations. Multiplying its singleton outputs
+omits the mixed terms generated in those integrations. To use (4.3)
+one needs a simultaneously coherent integrand-level representation
+before the relevant shared integration, or a bound for its mixed
+connected coefficients. Reopening the original bare integrand restores
+the product identity, but the original insertions can then have the
+UV/contact sizes that their one-mark renormalization had removed.
+
+An actual proof can exploit separation of copied cells: before their
+first common cluster, labels may propagate separately, while mixed
+coefficients carry connecting propagator/tree factors. But this is a
+joint marked-cluster statement. Its source arms and their first joining
+scales must remain in the local norm; neither the algebra itself nor
+the individual one-mark result supplies it.
+
+6. THE COPIED-PRESSURE PAYOFF, ONCE THE JOINT PREMISE IS PROVED
+
+Suppose the lifted producer gives the original inductive bounds in
+(1.3), uniformly for n separated copies, for weights w_i=w. Restore
+the SAME scalar UV normalization in both the marked partition element
+Z(eta) and Z(0). Upper stability and the scalar lower stability then give
+
+                ||Z(eta)/Z(0)||_w<=exp[C V_stop].           (6.1)
+
+If the reflected array has n cells of fixed stopped volume v, then
+V_stop=n v. Extracting the full coefficient yields
+
+ |[eta_1...eta_n] Z(eta)/Z(0)| <=(exp[C v]/w)^n.             (6.2)
+
+Choosing w proportional to the inverse small defect amplitude makes
+(6.2) the copied bound needed before taking the chessboard root.
+This route uses no pointwise normalized probability of a surviving
+history. It is mathematically valid if the FULL coefficient algebra
+input bounds are obtained.
+
+All source-dependent vacuum coefficients must remain in Z(eta).
+They contain mixed cumulants and cannot be discarded because the
+scalar vacuum factor canceled. Likewise the source-free references
+must be identical in numerator and denominator throughout.
+
+7. AUDIT CONCLUSION
+
+The dimension-free Banach-algebra lift of the absolute majorant and
+upper-stability proof is valid. It requires the original smallness
+assumptions in the full local label norm, or an explicit delayed
+smallness argument such as (4.1)--(4.3) before Mayer expansion.
+
+The precise producer obligation is joint: control all copied-label
+coefficients generated by shared prefix integrations, keeping their
+spatial arms, and prove the packed original-row debit for any huge
+early marks. A collection of singleton bounds is insufficient, as
+(5.1) shows. No completed copied YM pressure theorem is claimed here.

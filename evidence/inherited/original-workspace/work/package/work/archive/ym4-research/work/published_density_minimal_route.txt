@@ -1,0 +1,335 @@
+PUBLISHED COMPLETE DENSITY: THE MINIMAL IMPORT ROUTE
+17 October 2026. Focused source audit and elementary reductions.
+Authoritative output files and the public checkout were not edited.
+
+DECISION
+
+The potentially shortest route through the full-density obstacle is to use
+the original complete-density construction, with its own homogeneous coupling
+recursion, and prove positive cumulative drift for that recursion. This can
+avoid transferring our entire local map to arbitrary mixed histories.
+
+Our Notebook 37 does not currently prove that source-specific assertion.
+Its positive coefficient and shooting theorem concern our actual local map.
+The word "homogeneous" alone does not identify two integrals. A different
+cutoff, contour gauge, retained window, or extraction convention requires a
+comparison theorem. The candidate below therefore is a change in proof
+strategy with a sharply defined missing input, not a claim that H2 is closed.
+
+1. WHAT THE PRIMARY PAPERS ACTUALLY PROVIDE
+
+[B109] T. Balaban, Renormalization group approach to lattice gauge field
+theories I, CMP109 (1987), 249--301, DOI10.1007/BF01215223.
+Primary copy:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+
+The homogeneous integrals and coupling updates are (0.17)--(0.20), pp255--256.
+The polarization extraction is (1.20)--(1.22), p264. Theorem3, same page,
+states preservation of the (1.1)--(1.22) class conditional on sufficiently weak
+couplings. Theorem2, p259, announces tuned SU(2) trajectories ending at a
+prescribed small coupling, but the following paragraph defers its proof.
+The source's smoothness/boundedness statement after (1.22) is relevant to
+shooting; it is not itself positive drift. The coefficient depends on the
+inherited actions/history, even when the displayed notation suppresses this.
+
+[B116] T. Balaban, Part II: Cluster expansions, CMP116 (1988), 1--22,
+DOI10.1007/BF01239022.
+Primary copy:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-4penm4k7hc.pdf
+
+The introduction explicitly identifies its task as proving B109 Theorem3.
+Lemma3/(2.38), p20, then (2.41), p21, control the non-Gaussian cluster
+remainder; the Gaussian normalization is added separately. This closes
+the original small-field induction. It does not supply the deferred proof
+of B109 Theorem2. A derivative bound on a fixed complex source domain may
+be extracted only after retaining that domain and the dependence of its
+constants on the chosen smallness parameters.
+
+[B119] T. Balaban, Convergent renormalization expansions for lattice gauge
+theories, CMP119 (1988), 243--285, DOI10.1007/BF01217741.
+Primary copy:
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+
+Theorem1, p262, explicitly refers to the recursion (0.18),(0.20) of Part I,
+and to successive RT operations on the vacuum-normalized Wilson density.
+Section2 is its complete induction class. The averaging allowance is in
+(0.1), p243; the determining-set variational problem is (2.11)--(2.12),
+p256. Coupling-radius comparisons occur at (2.6)--(2.9), pp255--256.
+Theorem2 and Corollary3, pp263--264, give action and stability bounds.
+The scalar extraction equality is checked in (3.61)--(3.64), pp282--283.
+Theorem1's printed earlier-equation reference is garbled in web extraction;
+no numerical inequality is reconstructed from that OCR here.
+
+[B122] T. Balaban, Large field renormalization II: Localization,
+exponentiation, and bounds for the R operation, CMP122 (1989), 355--392,
+DOI10.1007/BF01238433.
+Primary copy:
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+
+Theorem1, p355, completes the B119 class under weak-coupling containment.
+The next paragraph explicitly says the trajectory proof had not yet been
+published, so the hypothesis remains. The closure is at (1.98)--(1.102),
+pp389--391; (0.1), pp355--356, records ultraviolet stability. The paragraph
+on p356 places physical observable expectations among further work.
+This is not a published theorem constructing continuum Schwinger functions
+or proving nontriviality. The statement about an unpublished proof is dated
+1989; this search does not establish the absence of all later manuscripts.
+
+The primary copies above were reopened in this pass. Existing local files
+named cmp109_primary.pdf, cmp119_primary.pdf, cmp122b_primary.pdf and several
+similar names are empty or failed downloads, so they were NOT used as proof
+evidence. Web text gives the passages above. Screenshot calls did not expose
+their pixels through this tool wrapper; damaged equation constants are not
+certified. The earlier research notes remain useful location maps.
+
+2. THE EXACT SMALL TARGET WITH THE LARGE PAYOFF
+
+Fix ONE original source scheme: averaging, real cutoff, gauge normalization,
+vacuum convention, Wilson normalization, extraction, and finite/thermodynamic
+convention. Use the homogeneous action sequence defining the couplings of
+its completed RT construction. Do not quietly replace its cutoff by ours.
+
+Write gamma_j=(g_j)^(-2) and let e_j denote the complete inherited homogeneous
+state, including whatever history the source definition reads. Define d_j^B
+to be its ACTUAL inverse-coupling decrement:
+
+  gamma_(j+1)=gamma_j-d_j^B(g_j,e_j).
+
+The useful new target is the following source-specific finite-block assertion.
+
+SOURCE BLOCK DRIFT (missing model-specific proposition).
+There exist a fixed q, delta>0, D<infinity, and weak ceiling g_w>0 such that
+every q-step update of the original homogeneous action map in its admitted
+induction class, evaluated at ANY prescribed couplings in (0,g_w], satisfies
+
+  |d_j^B| <= D,
+  sum_(j=k)^(k+q-1) d_j^B >= delta.
+
+This includes the adaptively chosen clipped evaluations in Section3: the
+evaluated couplings need NOT satisfy the original scalar coupling recursion.
+Both state invariance AND the displayed drift bound must hold on these
+evaluated histories. Positivity only on self-consistent trajectories does
+not justify this clipping argument.
+
+The statements must hold uniformly in the starting depth, permitted history,
+ultraviolet horizon, and the regulators required by the original scheme.
+The state class must remain admissible under the prescribed-coupling runs
+used to establish the estimates. Its finite updates and initial Wilson curve
+must depend continuously on their positive evaluated couplings.
+
+This target does NOT demand a positive decrement at every single step, an
+exact universal coefficient at each step, a full asymptotic expansion, a
+unique tuned trajectory, or a new mixed-history density construction.
+
+The assertions about prescribed-coupling states and continuity are explicit
+interfaces, not consequences we infer just from the title of B109/B116.
+The source induction has to be read with those parameter conventions. If it
+is formulated only on self-consistent runs, use a first-passage argument
+restricted to that domain instead of pretending an arbitrary prescribed run
+has been constructed.
+
+3. ELEMENTARY CONSEQUENCE: A FINITE SOURCE TUNING THEOREM
+
+The first-passage variant in Section3a below is stronger for the present
+application: it requires positivity only along self-consistent weak runs.
+The clipped lemma retained here is valid but has unnecessarily strong
+prescribed-history hypotheses.
+
+Assume the preceding proposition, including prescribed-coupling induction
+and continuity. Put Gamma_w=g_w^(-2) and fix Gamma_*>=Gamma_w+qD.
+For every horizon N=mq there exists an original Wilson bare inverse coupling
+in
+
+  [Gamma_*+m delta, Gamma_*+m qD]
+
+whose actual source recursion stays in the weak range and ends at Gamma_*.
+
+Proof. For the argument only, evaluate the state update and decrement at
+g_eval(gamma)=max(gamma,Gamma_w)^(-1/2), while updating the real scalar by
+gamma_next=gamma-d_j^B. The state stays in the admitted class. The terminal
+scalar is continuous in its initial scalar. At the left end of the interval
+it is at most Gamma_*; at the right end it is at least Gamma_*. The intermediate
+value theorem selects a clipped trajectory ending at Gamma_*.
+
+Summing future q-blocks backward gives
+
+  Gamma_*+(m-r)delta <= gamma_(rq)
+                       <= Gamma_*+(m-r)qD.
+
+Within any block the scalar can lose at most qD. Therefore every selected
+gamma_j>=Gamma_*-qD>=Gamma_w. Clipping was absent on the selected trajectory;
+it is exactly the original recursion. Its bare g is of order N^(-1/2).
+This is the same general shooting mechanism used in Notebook37, now stated
+for the source recursion with its hypotheses retained. It proves no new
+source-specific coefficient estimate.
+
+Once the actual source constants, initial density, and all geometric
+conventions match, weak containment allows the completed source density
+theorem to be invoked for this same trajectory. This would discharge the
+unmarked complete-density portion of an existence route based on that
+scheme, without first rebuilding it for our one-shot retained-window map.
+It would not identify our different local densities with the original ones.
+
+3a. SHARPER TUNING BY A FIRST-PASSAGE COMPONENT
+
+Assume that the original scalar/state recursion is continuous wherever
+gamma_j>=Gamma_w, including the boundary, and preserves its admitted state
+class there. Assume |d_j|<=D along every such actual run, and every completed
+q-block contained in such a run has total decrement at least delta>0.
+No extension to prescribed or clipped scalar histories is required.
+
+For every finite N and every Gamma_*>Gamma_w+qD there is an actual weak
+run of length N with gamma_N=Gamma_*. For N=0 take gamma_0=Gamma_*.
+
+Proof. For N>=1 take A=Gamma_*+(N+1)D+1. The run from A is strictly weak
+through N, since gamma_j>=A-jD>Gamma_*. Let S be the set of initial a in
+[Gamma_w,A] whose actual runs remain weak through N. S is closed: if a_n
+converges in S, apply continuity of each successive update, and the closed
+inequality gamma_j>=Gamma_w, inductively through N. Let [a_*,A] be the
+connected component of S containing A. It is an interval with a_*<A,
+because the run from A is strictly weak and hence persists nearby.
+
+If a_*=Gamma_w, the run touches the boundary at j=0. Otherwise a boundary
+touch occurs at some j<=N: if every gamma_j were strictly larger than
+Gamma_w, finite-step continuity would extend the component to its left.
+If j+q<=N, the block estimate gives gamma_(j+q)<=Gamma_w-delta, contradicting
+membership in S. Thus j>N-q, and the remaining one-step estimates imply
+gamma_N<=Gamma_w+(N-j)D<=Gamma_w+qD<Gamma_*.
+
+The terminal value is continuous on [a_*,A], is below Gamma_* at its left
+endpoint, and above Gamma_* at A. The intermediate value theorem gives
+the desired self-consistent run. QED.
+
+For N=mq, summing its q-blocks backwards gives
+Gamma_*+m delta<=gamma_0<=Gamma_*+mqD, as in the clipped lemma. The final
+argument does not require monotonic dependence of gamma_N on gamma_0.
+
+This sharper lemma was proposed by the parent agent and checked here.
+It does not assert the source-specific positive block estimate itself.
+
+4. A BOUNDED COUPLING-COORDINATE CHANGE IS ENOUGH, IF IT IS REAL
+
+Here is a second elementary theorem isolating the precise transfer needed.
+It is derived here, not attributed to the papers.
+
+Suppose two genuine homogeneous RG systems O and B have state maps Phi_j^O
+and Phi_j^B. Suppose maps H_j intertwine them on a class of actual histories:
+
+  H_(j+1) o Phi_j^O = Phi_j^B o H_j.
+
+Require H_0 to map the initial Wilson bare-state curve of O into the initial
+Wilson bare-state curve of B. Suppose its scalar component is
+
+  gamma_j^B=gamma_j^O+h_j(state_j^O),   |h_j|<=C.
+
+The bound is uniform in old depth, horizon, regulator, admitted inherited
+state, and all weak couplings used. The intertwiner also has to land in the
+actual B admissible domain; scalar smallness alone is insufficient.
+
+Then the actual decrements obey the coboundary identity
+
+  d_j^B=d_j^O+h_j-h_(j+1).
+
+Consequently for any n consecutive q-blocks,
+
+  sum d_j^B >= n B_- - 2C,
+  |d_j^B| <= D_O+2C,
+
+if O has lower q-block drift B_->0 and |d_j^O|<=D_O.
+Choose n with nB_->2C. The first bound follows by telescoping; the second
+by the triangle inequality. No small per-step difference is required.
+
+If a tuned O history satisfies gamma_j^O>=Gamma_B,w+C, its image is weak for
+B. If its O endpoint is Gamma_*, its B endpoint is in
+[Gamma_*-C,Gamma_*+C]. With Gamma_*>C this is a fixed, finite positive-coupling
+interval independent of the cutoff. An exactly prescribed B endpoint needs
+the corresponding continuous endpoint shooting, not an assertion that h_N
+vanishes. Such a fixed interval is already adequate for weak containment.
+
+Approximate scalar comparison variant. If genuine paired trajectories obey
+
+  d_j^B=d_j^O+h_j-h_(j+1)+r_j,  |h_j|<=C, |r_j|<=epsilon,
+
+then sum over nq steps is at least nB_--2C-nq epsilon. This is positive for
+some n when epsilon<B_-/q, with n(B_--q epsilon)>2C. Merely bounding r_j
+does not control the states or create the paired trajectories. An approximate
+operator matching needs its own stability/shadowing theorem.
+
+What is NOT sufficient:
+* a formal perturbative change of renormalization scheme;
+* the common one-loop coefficient;
+* separately constructed weak scalar lists;
+* a bound C_j growing linearly in j;
+* a small error on one fixed finite regulator;
+* equality of averaging constraints without equality of the integration
+  windows and weights;
+* defining gamma^B by the displayed formula without verifying the B update.
+
+5. HOW TO ATTACK THE MISSING SCALAR ESTIMATE WITH EXISTING WORK
+
+The most economical comparison may be DIRECT on the source homogeneous
+recursion, rather than proving the exact intertwiner of Section4. A sufficient
+decomposition is
+
+  d_j^B=b_j^B+r_j^B,
+  sum_(j=k)^(k+q-1) b_j^B >= delta_0,
+  |r_j^B|<=epsilon, q epsilon<delta_0.
+
+Here b_j^B must be the Gaussian coefficient of the SOURCE integral, including
+its constraint/gauge determinant and measure conventions. The existing
+actual determinant calculation supplies methods and comparison targets. It
+does not identify b_j^B without checking its hypotheses for that family.
+
+Concretely, try to verify only the following source objects:
+
+(a) The exact leading Gaussian determinant and its primitive composition
+    law, with its correct finite/thermodynamic extraction. Show the block
+    coefficient grows as a positive constant times q up to a depth-uniform
+    bounded end term. The soft-penalty and heat-kernel arguments of Notebooks
+    35--37 may apply after their classical vertex and projection assumptions
+    are matched. Re-proving their numerical coefficient is unnecessary if a
+    strict positive lower bound already follows.
+
+(b) A uniform second-background-derivative bound for the source remainder,
+    on one fixed complex neighborhood, sufficient to make its extracted
+    scalar contribution small. It is enough to control the exact weighted
+    quadratic moment used by the source beta; matching every local activity
+    representative of our construction would be excess work.
+
+(c) The admissible-state, continuity, and regulator conventions needed for
+    the elementary finite tuning lemma. The source's infinite-volume beta
+    cannot silently be substituted by a finite short-lift functional, or
+    vice versa. If its couplings are defined thermodynamically, retain that
+    definition and establish continuity/uniformity there.
+
+If either (a) or (b) already follows from the exact published formulas after
+a bounded extraction, write that short proof and import it. If not, expose
+that exact estimate as the task. There is no reason yet to reconstruct every
+mixed-region minimizer as our first priority.
+
+6. OBSERVABLES AND NONTRIVIALITY DO NOT COME FOR FREE
+
+Even a successful Section3 import would give a full-density/stability result
+for the original construction. To use it for original Wilson correlations,
+one must propagate their insertions through the same transformations, retain
+all normalization and R-operation effects, and prove bounds at physical
+scales. A normalized operator fixes constants; it need not fix every
+observable. This elementary distinction is precisely why an unsourced
+partition-function theorem alone is insufficient.
+
+An effective density estimate can be strong enough to give compactness at
+one fixed coarse resolution, but without an identified compatible family of
+physical observables this is not a continuum quantum Yang--Mills theory.
+The existence route still needs sourced estimates, a common continuum
+hierarchy, Euclidean covariance/reflection positivity and reconstruction,
+and a nonzero physical normalization with Yang--Mills identification.
+None of those follows from matching the weak coupling list alone.
+
+STRATEGIC RECOMMENDATION
+
+Before extending Notebook39 to arbitrary growing bad components, attempt
+the original-scheme scalar block-drift theorem. This uses the largest already
+published theorem with the smallest new interface. The output to demand is
+one explicit proof for the source beta, not another general proof roadmap.
+Our local work remains valuable as a source of determinant and remainder
+estimates; it should be transferred only as far as that scalar task requires.

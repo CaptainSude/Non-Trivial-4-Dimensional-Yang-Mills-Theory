@@ -1,0 +1,263 @@
+NORMALIZED BARE WILSON TAILS ON BOXES GROWING POLYLOGARITHMICALLY
+19 October 2026. Root proof, turn37. Independent geometry and analysis audits.
+
+RESULT AND LIMIT
+
+The fixed-box conditional Wilson theorem can be made quantitative in
+the box side. It then applies to R(g)<=C_R[log(1/g)]^b. Its actual
+conditional normalization is retained, uniformly in the surrounding
+lattice volume. The proof below uses finite-dimensional compact-group
+geometry with explicit polynomial bounds; it does not import a
+continuum measure, a new RG trajectory, or a source theorem.
+
+This is a bare conditional-box theorem. It does NOT identify its
+unconstrained Dirichlet minimum with a Bałaban nonlinear-average fiber,
+nor prove an annealed good-boundary probability at all RG scales. The
+physical diameter of these boxes still vanishes in a usual continuum
+limit. They are not boxes of a fixed physical diameter containing
+O(a^-4) fine sites.
+
+1. STATEMENT
+
+Fix G=SU(N_c), with N_c fixed, normalized faithful trace tau, and
+
+ h(U)=1-Re tau(U)=||U-I||_tau^2/2.
+
+Let Omega_R={0,...,R}^4, R>=2. Prescribe all boundary edges V, and
+integrate the remaining edges with normalized Haar and density
+exp[-S_V/g^2], where S_V is the sum of h(U_p) over the box plaquettes.
+Pure boundary plaquette terms are constants in both integrals below.
+
+Gauge transformations are the identity at all boundary vertices.
+Fix the axial forest described in Section2, and write y for its free
+chord variables. In a small chart put y_e=exp(i x_e). Let
+||x||_infty=max_e ||x_e||_tau. Constants c,C below depend only on the
+fixed group and dimension, and may change between formulas.
+
+There are fixed c_0,c_1,c_2,C_1,C_2>0 such that, when
+
+ delta:=max_(boundary edges) ||V_e-I||_tau <= c_0 R^-24,       (1.1)
+
+S_V has a unique global minimum y_*(V)=exp(i x_*(V)) in forest gauge.
+It is real analytic in V on this neighborhood, and
+
+             ||x_*||_infty <= c_1 R^-8/4.                  (1.2)
+
+For 0<g<=c_1 R^-8/4 and 1<=T with gT<=c_1 R^-8/4, define
+
+ W={y=exp(i x): ||x-x_*||_infty<=gT}.
+
+The normalized conditional law satisfies
+
+ Prob_(V,g)(W^c)
+ <= exp[C_1 R^4 log(2+R)-c_2 R^-8 T^2]
+  + exp[C_2 R^4 log((2+R)/g)-c_2 R^-20/g^2].                (1.3)
+
+One can take the minimum of the right side with one. No constant
+depends on the enclosing lattice, and no unspecified fixed-R constant
+is used in (1.3). The deliberately conservative powers suffice here.
+
+COROLLARY. Put ell=log(1/g). Fix b>=0 and C_R>=2, and assume
+
+ R<=C_R ell^b,       T=ell^a,       a>6b+1/2.               (1.4)
+
+For sufficiently small g, depending only on these fixed parameters,
+the chart conditions hold and
+
+ Prob_(V,g)(W^c) <= C exp[-c ell^(2a-8b)].                 (1.5)
+
+The exponent 2a-8b is strictly larger than one. Consequently this
+failure probability is smaller than any fixed power of g as g->0,
+uniformly for every allowed R and boundary V in (1.1).
+
+2. EXACT FOREST GAUGE AND EXPLICIT LOOP FILLINGS
+
+For each interior vertex (x_1,x_2,x_3,x_4), follow negative x_1 edges
+to the boundary root (0,x_2,x_3,x_4). The forest consists of the edges
+in these columns with x_1=0,...,R-2 and transverse coordinates strictly
+between 0 and R. Every interior vertex belongs to one component with
+one boundary root. All other boundary vertices are separate roots.
+There are no forest edges contained in the topological boundary.
+
+Recursively gauge each forest edge to the identity. As in the previous
+fixed-box proof, this is an exact triangular product-Haar change of
+variables: each step is multiplication or inversion in G. Interior
+gauge variables integrate to one. Boundary edges remain fixed. The
+remaining coordinate dimension n is at most C R^4.
+
+For every free chord e, join its endpoints to their forest roots and
+connect those roots by a boundary path. The resulting loop reads y_e
+and the boundary-path product because every forest edge is identity.
+It has a rectangular plaquette filling with at most C R^2 plaquettes
+and a boundary connector of length at most C R:
+
+ * A transverse interior edge gives the strip between its x_1 ray
+   and the corresponding edge on x_1=0. Its area is at most R.
+ * A transverse edge reaching a side face uses the same strip; the
+   side ray is a prescribed boundary path.
+ * A top x_1 chord, from x_1=R-1 to R, closes through x_2=0, using
+   the x_1--x_2 rectangle. Its area is at most R^2 and its boundary
+   connector has length at most 3R.
+
+Orientation reversals do not affect the estimates. Discrete nonabelian
+Stokes expresses the boundary product as a product of conjugated
+plaquette holonomies. Bi-invariance and the triangle inequality give
+
+ max_e ||y_e-I||_tau <= C R sqrt(S_V(y))+C R delta.          (2.1)
+
+Indeed each rectangle has distinct plaquettes, so Cauchy--Schwarz
+costs the square root of its area. The weaker C R^2 sqrt(S) bound
+would also suffice for every exponent used below.
+
+At identity boundary the derivative at the identity of the same loop
+identity is the usual curl/filling identity. Thus, for an edge Lie
+algebra field x vanishing on forest and boundary edges,
+
+ max_e ||x_e|| <= C R ||d x||_2,
+ ||x||_2^2 <= C R^6 ||d x||_2^2 <= C R^8 ||d x||_2^2.       (2.2)
+
+The Hessian of S_I at zero is the curl quadratic form. Hence its
+least eigenvalue is at least c R^-8. Its largest eigenvalue is bounded
+by a fixed C because the number of plaquettes meeting an edge is fixed.
+This also proves the required nondegeneracy without an unspecified
+compactness constant depending on R.
+
+3. UNIFORM CHART CONVEXITY AND A POLYNOMIAL GLOBAL GAP
+
+Each plaquette action depends on at most four chord or boundary
+variables. On a fixed exponential chart its derivatives through order
+three are uniformly bounded. The bounded number of incident plaquettes
+and the row/column sum bound for sparse block matrices imply
+
+ ||D^2 S_V(x)-D^2 S_I(0)||_(2->2)
+                    <= C(||x||_infty+delta).             (3.1)
+
+This estimate concerns the product forest coordinates, in which forest
+links equal I; it introduces no derivative of a global gauge map.
+
+Choose r_R=c_1 R^-8 with c_1 sufficiently small. On ||x||_infty<=2r_R
+and under (1.1), (2.2),(3.1) imply
+
+             c R^-8 I <= D^2 S_V(x) <= C I.              (3.2)
+
+At V=I, the weaker version of (2.1) implies
+
+          S_I(y)>=c R^-4 max_e ||y_e-I||_tau^2.           (3.3)
+
+There is a group-dependent constant c such that leaving the product
+chart ||x||_infty<r_R/4 forces max_e||y_e-I||>=c r_R.
+This includes leaving the fixed injectivity neighborhood itself.
+Thus outside that chart S_I>=c R^-20.
+
+Changing the boundary data changes only O(R^4) plaquette terms, each
+by at most C delta. Also S_V(I)<=C R^4 delta^2. Consequently
+
+ |S_V(y)-S_I(y)|<=C R^4 delta,
+                   S_V(I)<=C R^4 delta^2.               (3.4)
+
+Choose c_0 in (1.1) small enough compared with the fixed constants
+in (3.3). Then outside ||x||_infty<r_R/4,
+
+                    S_V(y)-S_V(I)>=c R^-20.             (3.5)
+
+Compactness supplies a global minimum; (3.5) places it inside that
+small chart. Strict convexity in the larger chart makes it unique.
+Its Hessian is nonsingular, so the analytic implicit-function theorem
+gives its analytic dependence on V. No quantitative IFT radius is
+used to create the global gap; that radius was established directly.
+
+Let U_R be the product chart ||x||_infty<r_R. It is convex in x, and
+contains the minimum with the stated margin. Taylor's theorem yields
+
+ c R^-8 |x-x_*|^2 <= S_V(exp(i x))-S_min
+                                      <= C |x-x_*|^2    (3.6)
+
+on U_R. Outside U_R the same argument as (3.5), with S_min<=S_V(I),
+gives
+
+                   S_V(y)-S_min>=c R^-20.               (3.7)
+
+4. NORMALIZATION WITH ITS DIMENSION DEPENDENCE RETAINED
+
+The product Haar density in this chart lies between exp(-C n) and
+exp(C n) relative to Lebesgue measure, with constants independent of R.
+The Euclidean ball |x-x_*|<=g is contained in U_R under the theorem's
+conditions. Its volume is at least g^n(c/sqrt(n))^n. Using the upper
+quadratic estimate in (3.6) proves
+
+ Z_V(g)>= exp(-S_min/g^2) g^n
+                              exp[-C R^4 log(2+R)].      (4.1)
+
+Within U_R, being outside W forces |x-x_*|>=gT. Split the lower
+quadratic exponential into two equal parts and integrate one over
+all R^n. The resulting bound is
+
+ integral_(U_R\W) exp(-S_V/g^2)dy
+ <=exp(-S_min/g^2) g^n
+       exp[C R^4 log(2+R)-c R^-8 T^2].                  (4.2)
+
+The factor R^(4n) from the Gaussian integral is included in the
+displayed dimension cost. Dividing by (4.1), and increasing C,
+gives the first term of (1.3).
+
+On the rest of the compact group product, its normalized Haar mass
+is at most one. By (3.7) its integral is at most
+exp[-(S_min+cR^-20)/g^2]. Divide by (4.1), retaining g^-n. This gives
+the second term of (1.3). The minimum energy cancels exactly in both
+ratios. No unnormalized tail is being substituted for a conditional
+probability, and no ultraviolet vacuum normalization is altered.
+
+5. THE POLYLOGARITHMIC RANGE
+
+Under (1.4), R^4 log(2+R)<=C ell^(4b)log(2+ell), while
+R^-8 T^2>=c ell^(2a-8b). Since a>6b+1/2, the latter power strictly
+dominates the entropy and exceeds one. The first term of (1.3) is
+therefore at most exp[-c ell^(2a-8b)].
+
+For the second term the negative contribution is at least
+c exp(2ell)ell^(-20b), whereas the positive contribution is at most
+C ell^(4b+1)log(2+ell). It is smaller than the same stretched-log
+bound for all sufficiently large ell. Finally
+gT/r_R<=C exp(-ell)ell^(a+8b)->0, so the window and denominator ball
+stay in the original chart. This proves (1.5).
+
+There is also a range larger than polylogarithmic for which (1.3)
+is meaningful, but no fixed physical-size continuum box is asserted.
+The chosen logarithmic exponents are sufficient, not optimized.
+
+6. EXACT CONDITIONAL USE AND REMAINING MATCHING PROBLEM
+
+If the box is embedded in a larger bare lattice, every plaquette
+depending on a nonboundary edge of the box is wholly in the box.
+Fixing the exterior and all boundary links therefore gives exactly
+the conditional compact Wilson law used above, up to an additive
+action constant which cancels. The bound is uniform in every such
+exterior whose boundary obeys (1.1), in the prescribed boundary frame.
+A fixed boundary gauge change transports both the data and the event.
+
+For vertex-disjoint boxes with good prescribed boundaries, the original
+conditional interiors factor exactly. The normalized replacement and
+coupling construction of normalized_box_replacement_research therefore
+applies with the failure probability in (1.3) or (1.5). In particular
+the replacement preserves the original exterior marginal; discrepancy
+marks can be conditionally coupled below independent Bernoulli variables
+with this common failure bound. This conclusion is conditional on the
+specified good-boundary event, not a new unconditional rarity theorem
+for the boundaries themselves.
+
+At a native weak scale, the geometric growth R~polylog(1/g) alone is
+thus no longer a reason to reject this bare conditional estimate.
+There are still different substantive issues: the native local map
+has nonlinear average constraints and an effective action with dated
+terms; its conditional minimum and measure have not been identified
+with the present Dirichlet problem. A uniform annealed estimate must
+also include the actual exterior law and its bad-boundary contribution.
+No source-normalization or YM reconstruction claim follows without
+those steps.
+
+Provenance: this extends the exact gauge/normalization argument in
+archive/ym4-research/work/fixed_box_wilson_tail_fragment.tex. The new
+content is the explicit R dependence, global filling bound and
+polylogarithmically growing geometry. Companion independent audits:
+polylog_box_geometry_audit_turn37.txt and
+polylog_box_analytic_audit_turn37.txt.

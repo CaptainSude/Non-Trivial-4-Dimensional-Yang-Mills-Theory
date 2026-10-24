@@ -1,0 +1,246 @@
+TURN66 -- CONTROLLED TEMPORAL LIMIT AND PHYSICAL NONTRIVIALITY
+20 October 2026.
+
+RESULT
+
+The complete nontrivial four-dimensional Yang--Mills existence proof
+HAS NOT BEEN OBTAINED.
+
+This pass proves a controlled finite-spatial temporal limit, including
+the actual nonlinear observable's adjacent increment. It also proves
+a direct magnetic-energy bound for the resulting Hamiltonian ground
+state. The main remaining physical estimates have not been proved.
+Several other exact results identify why simpler candidate arguments
+do not furnish those estimates.
+
+The temporal limit is a useful alternative regulator construction,
+not an assertion that the isotropic Bałaban induction has already
+been extended to arbitrary anisotropy. It is also not a claim of a
+new general discovery of the lattice Hamiltonian formalism.
+The contribution here is an explicit, checked link between the
+actual Wilson measures and the precise nonlinear form needed by
+this project, with the order of limits kept explicit.
+
+1. A PROVED BRIDGE TO THE ACTUAL NONLINEAR GRADIENT
+
+Fix a finite spatial SU2 lattice, normalized Haar measure, the
+Pauli/2 link metric, K=-Delta and a smooth bounded gauge-invariant
+potential V>=0. Hold kappa>0 and this spatial model fixed.
+For temporal spacing delta set
+
+ beta_delta=2/(kappa delta),
+ M_delta=exp(-delta V/2),
+ T_delta=M_delta Q_beta_delta P M_delta.
+
+The partition function is exactly
+c(beta_delta)^(N|E|) Tr_phys T_delta^N.
+No scalar normalizer is omitted. First taking N to infinity gives
+the actual Wilson ground-state law, with leading eigenvector
+Omega_delta and eigenvalue lambda_delta.
+
+For H=kappa K+V, let Omega be its positive normalized ground state
+and E0 its ground energy. The proof establishes
+
+ Omega_delta ->Omega in L2,
+ -log(lambda_delta)/delta ->E0,
+ (T_delta/lambda_delta)^floor(t/delta)
+                            ->exp[-t(H-E0)] strongly,
+
+and, for every fixed real smooth physical observable F,
+
+ lim_(delta->0) E_delta[(F1-F0)^2]/(2delta)
+                      =kappa int Omega^2 |grad F|^2.    (1.1)
+
+This last equality controls the genuine nonlinear derivative.
+It does not replace it by a deterministic coefficient array.
+
+The finite-spatial proof has three essential estimates.
+First, exact electric eigenvalues and the uniform domination
+
+ (I-Q_beta_delta)/delta <=kappa K
+
+give convergence on smooth cores. Second, monotonicity in spin
+gives spectral-tail compactness of the ground-state vectors.
+Third, the difference between the exact pair form and its
+arithmetic--geometric-mean upper bound is
+
+ (4 lambda_delta delta)^-1 int Q_delta(U,V)
+            (F(V)-F(U))^2 (w_delta(V)-w_delta(U))^2,
+ w_delta=M_delta Omega_delta.
+
+It vanishes by the one-link comparison
+h q_beta<=C beta^-1 q_(beta/2), strong convergence of w_delta,
+and the fixed finite number of links. No unproved bound on
+derivatives of Omega_delta is used.
+
+One may choose delta separately at each spatial cutoff, then choose
+a sufficiently large finite temporal period. This approximates any
+specified finite set of bounded observable words and the quotients
+in (1.1) to a prescribed tolerance. It is a legitimate diagonal
+choice, not a spatially uniform temporal convergence rate.
+
+2. A DIRECT HAMILTONIAN ENERGY INPUT
+
+For the usual SU2 normalization on a cubic spatial torus with n sites,
+
+ H_a=[g_a^2/(2a)]K +[4/(g_a^2 a)]S_sp,
+ S_sp=sum_(spatial p)(1-Tr U_p/2),
+
+the normalized product trial vector
+
+ psi_t(U)=product_e [exp(t u0,e/2)/sqrt(Z(t))]
+
+gives an explicit upper bound. Sphere integration by parts yields
+kinetic energy at most3t/16 per edge. Centrality and the elementary
+Gamma-tilt moment bound yield magnetic energy at most6/t per
+plaquette. There are3n edges and3n plaquettes, so
+
+ E0(a) <= (n/a)[9g_a^2 t/32+72/(g_a^2 t)].
+
+Taking t=16/g_a^2 proves, for every g_a>0,
+
+ E0(a)<=9n/a,
+ E_(Omega_a^2) S_sp <=(9/4)n g_a^2,
+ <Omega_a,K Omega_a> <=18n/g_a^2.                      (2.1)
+
+Although the trial vector is not gauge invariant, the full elliptic
+ground state is uniquely positive and therefore gauge invariant.
+Its energy is exactly the physical ground energy; the variational
+bound is legitimate without an uncontrolled gauge-averaging
+normalizer.
+
+For the actual spatial flow -4a^-2 grad S_sp, (2.1) also bounds
+the expected decreasing action and the time integral of its squared
+current-action gradient. These statements concern the action along
+the flow. They do not bound the derivative of the final magnetic
+probe with respect to its initial field.
+
+The corresponding Wilson regulator is genuinely anisotropic:
+
+ beta_time=4a/(g_a^2 delta), beta_space=4delta/(g_a^2 a).
+
+The energy estimate above is proved directly for its Hamiltonian
+limit. It is not borrowed from the isotropic spatial-plaquette
+bound, which degenerates when delta tends to zero at fixed a.
+
+3. THE TWO PHYSICAL ESTIMATES NOW HAVE AN EXACT CONSUMER
+
+For a real bounded smooth physical F_a set
+
+ v_a=Var_(Omega_a^2)(F_a),
+ D_a=[g_a^2/(2a)] E_(Omega_a^2)|grad F_a|^2.
+
+Integration by parts gives the exact ground-state form
+
+ <(F_a-EF_a)Omega_a,(H_a-E0(a))(F_a-EF_a)Omega_a>=D_a.
+
+Spectral Jensen therefore gives
+
+ Cov(F_a(0),F_a(t))>=v_a exp(-t D_a/v_a).               (3.1)
+
+Thus v_a>=v_*>0 and D_a<=C would preserve a nonzero reflected
+correlation at each fixed temporal separation, in any compatible
+spatial limit. Equation (1.1) permits approximation by actual
+finite-period anisotropic Wilson measures.
+
+Neither estimate is established for the physically calibrated
+nonlinear magnetic family. In particular:
+
+ * The energy bound (2.1) does not bound the nonlinear flow Jacobian.
+ * A variance bound for a current reference field need not be a
+   variance bound for the original observable.
+ * Even both estimates would not by themselves supply a continuum
+   local algebra, spatial and Euclidean symmetry, unique vacuum,
+   Yang--Mills identification, or a positive excitation energy.
+
+The goal remains the complete nontrivial YM4 continuum construction.
+This conditional consumer is not substituted for that goal.
+
+4. A PHYSICAL-SIZE VARIANCE FLOOR THAT STILL FAILS REFLECTION
+
+For an edge-simple thin Wilson loop, a set of at least length/19
+loop edges shares no action plaquette. The original conditional
+law on these edges is an exact product of compact tilted Haar
+laws. Fundamental and adjoint representation contractions give
+
+ |EW|<=eta,
+ |EW^2-1/4|<=(3/4)eta,
+ eta=exp[-c m/(1+beta)], W=Tr U(loop)/2.
+
+These estimates hold conditionally on every exterior. Hence for
+fixed physical loop size with a(1+beta_a)->0, Var(W_a)->1/4.
+Nevertheless, any bounded test avoiding the selected edges has
+vanishing covariance with W_a. In particular,
+
+ E[(W_a(1)-W_a(0))^2]/2 ->1/4,
+ centered separated reflected covariance ->0.
+
+This is an actual example of nonzero ordinary variance without
+the required nonzero reflected state. It does not apply to
+flowed, thick, averaged or appropriately renormalized loops
+without a separate argument.
+
+On the literal admitted native replacement branch dJ=d tau q_e,
+one can likewise choose a nonconstant current-loop test centered
+under q_e. It has positive q_e variance but identically zero
+conditional expectation given all original variables. This proves
+that marginal preservation plus reference nondegeneracy alone
+does not transport the desired variance floor.
+
+5. LIMITS OF THREE NONLINEAR SHORTCUTS
+
+The exact Gaussian temporal source theorem remains valid and has
+a nonlinear Fourier consumer for every smooth finite-lattice F.
+If nu is an ambient Fourier representation, then
+
+ d(F)<=H_beta(nu)^2/2,
+ H_beta(nu)=int sqrt[2(1-exp(-sum_e|b_e|^2/(2beta_e)))] |nu|(db).
+
+However independent-site gauge averaging gives
+Var_mu(F)<=C beta_max H_beta(nu)^2 under every probability mu.
+Using this absolute norm alone to certify d=O(a) collapses variance
+when a beta_max tends to zero. The actual increment may be much
+smaller than this sufficient bound; that possibility is not excluded.
+
+A different universal shortcut, [F,[F,T]]<=C T, fails already
+for the physical plaquette character F=chi_spin1(W_p)/3 and the
+actual Wilson transfer matrix. An explicit high-spin physical
+Jacobi block has relative quadratic forms unbounded above.
+Those test states are not the actual thermal remainder, so a
+state-dependent Wilson bound is not refuted.
+
+Finally, a single smooth background for the actual nonlinear
+spatial flow has a derivative spread over order a^-3 links.
+Its center-gauge orbit requires log M>=c a^-3 to cover by
+fixed relative-error deterministic derivative templates.
+This excludes a uniform small-entropy derivative net. It does
+not exclude a consumer with a controlled original-law remainder,
+because no Wilson mass lower bound for that spread class is
+proved. Field-dependent gauge fixing also introduces a real
+drift and does not inherit the centered deterministic-source
+bound automatically.
+
+6. SOURCE AND AUDIT SCOPE
+
+The user-supplied full Bałaban Large-I and Large-II PDFs remain
+incorporated at their visually checked equations and admissions.
+The fixed-reference and old-marginal identities are retained.
+The low-reference-success second-class history ledger and
+full physical original-observable transport are still open.
+
+Creutz's primary abstract on the temporal lattice-Hamiltonian
+limit was checked for context:
+https://doi.org/10.1103/PhysRevD.15.1128
+The needed observable and spectral limit is proved directly here.
+No uninspected result is used to bridge the spatial continuum.
+
+The thin-loop perimeter phenomenon has classical primary context:
+Simon and Yaffe, Phys. Lett. B115(1982),145--147,
+https://doi.org/10.1016/0370-2693(82)90815-2
+The quantitative conditional statements used above have their
+own proof in the included producer note.
+
+Separate internal audits and the root checks are included.
+They are not external peer review. The evidence supports progress
+on the finite-regulator argument; it does not support announcing
+a completed nontrivial Yang--Mills existence proof.

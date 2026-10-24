@@ -1,0 +1,297 @@
+COMPATIBLE FINE/COARSE TREE GAUGES MAKE PATH BLOCKING A PROJECTION
+19 October 2026. Exact finite graph/group statement.
+
+0. RESULT
+
+For a coarse graph embedded by internally disjoint fine paths, compatible
+rooted spanning trees can be chosen so that coarse path-holonomy blocking,
+AFTER the exact based tree quotients, is a coordinate projection on fine
+chord group variables. In a common logarithm chart it is a linear
+coordinate projection with surjective derivative. There is no nonlinear
+gauge or constraint chart hidden in this finite construction.
+
+The map is path decimation, not the native symmetrized averaging map.
+It does not identify their effective actions, locality estimates,
+reflection properties, or continuum limits. All constants and paths
+here belong to fixed finite graphs.
+
+1. GRAPH HYPOTHESES AND NOTATION
+
+Let G_f=(V_f,E_f) be a finite connected graph with one distinguished
+root r. A finite connected coarse graph G_c=(V_c,E_c) has V_c subset V_f
+and contains r. Each oriented coarse edge c=(u,v) is represented by a
+simple fine path P_c from u to v. Distinct such unoriented edge paths
+have disjoint edge sets and disjoint internal vertices. They intersect
+only at the coarse vertices which are their endpoints. No internal
+vertex of a path belongs to V_c.
+
+These hypotheses describe a subdivision embedding of G_c into G_f.
+For a standard coarse cubical subgrid in a fine cubical box, straight
+coordinate paths have this property. Contractibility of the full
+cubical complex is NOT needed for the graph construction; it is needed
+separately for the positive Wilson Hessian/unique flat-orbit argument.
+
+Choose one orientation per fine edge and use U_(yx)=U_(xy)^(-1).
+Reversing a chosen edge orientation is harmless; Haar is inversion
+invariant. All group products below follow the indicated path order.
+
+2. THE COMPATIBLE SPANNING TREE
+
+Choose an arbitrary rooted spanning tree T_c in G_c. For every coarse
+chord c in E_c\T_c choose ONE fine edge e_c in its path P_c. Let
+
+ F = union_(c in T_c) P_c
+       union union_(c notin T_c)(P_c\{e_c}).                 (2.1)
+
+Here F includes every embedded-network vertex, including the two ends
+of each removed edge. It is a TREE on the entire embedded network.
+
+Proof. The lifted T_c is a tree: subdividing tree edges does not create
+cycles. Removing one edge from a coarse chord path splits it into two
+possibly empty end segments. Each segment is attached at exactly one
+endpoint to the lifted coarse tree and has no internal vertex shared
+with any other path. Adding the two segments therefore preserves
+connectedness and creates no cycle. Repeat independently over all
+coarse chords. Every internal vertex is included, and the result is
+connected and acyclic.
+
+Extend F to a spanning tree T_f of G_f. This is always possible for a
+forest in a finite connected graph, for example by adding edges joining
+distinct current components until all vertices are connected. None of
+the distinguished edges e_c can enter T_f: its endpoints are already
+connected in F, so adding it would make a cycle. Equivalently, deleting
+all e_c leaves G_f connected, because each deleted edge has a replacement
+path in F. Thus
+
+       F subset T_f,       {e_c:c notin T_c} subset E_f\T_f.   (2.2)
+
+One important consequence is exact: the T_f path from r to any coarse
+vertex v equals the lifted T_c path from r to v. That lifted path is
+already in F, and uniqueness of paths in the extended tree prevents
+it from changing when the tree is extended.
+
+3. EXACT GROUP TREE QUOTIENTS
+
+Let G be any compact group. The based fine gauge group consists of
+vertex maps k:V_f->G with k_r=1, acting by
+
+                  U_(xy)^k=k_x U_(xy) k_y^(-1).
+
+Define h_v(U) as the ordered holonomy along the T_f path from r to v,
+and h_r=1. Then
+
+        W_e=h_x(U) U_e h_y(U)^(-1)                    (3.1)
+
+equals1 on every tree edge. The variables W_e on E_f\T_f are exact
+coordinates for the quotient by the BASED gauge group. The inverse is
+
+        U_e=h_x^(-1) W_e h_y,     W_e=1 on T_f.       (3.2)
+
+Thus the finite configuration space is globally parametrized by the
+site variables h_v, v!=r, and the chord variables W_e. This is a smooth
+global group-coordinate transformation when G is a Lie group; no local
+logarithm or implicit constraint theorem is required.
+
+Successive tree-leaf Haar integration gives exactly
+
+ product_(e in E_f) d_H U_e
+   =product_(v!=r) d_H h_v
+       product_(e notin T_f) d_H W_e.                (3.3)
+
+There is no field-dependent Jacobian in this GROUP formula. Local
+exponential coordinates on the chord groups later contribute their
+ordinary Haar densities and must retain them.
+
+If gauges at the root are also allowed, they act on every W_e by the
+SAME conjugation. We keep that residual compact action explicitly.
+We do not identify the generally singular full conjugacy-orbit space
+with a smooth Euclidean slice near the identity. Gauge-invariant
+observables are simultaneous-conjugation-invariant functions of W.
+
+4. BLOCKING COMMUTES WITH THE COMPATIBLE TREE QUOTIENTS
+
+Define the raw path-blocking map by
+
+                  q_c(U)=product_(e in P_c) U_e.     (4.1)
+
+It is equivariant under the fine gauges restricted to coarse vertices;
+the internal gauge factors cancel in each path product.
+
+Let H_v(q(U)) be the coarse T_c path holonomy. By the final assertion
+of Section2,
+
+                  H_v(q(U))=h_v(U),  v in V_c.       (4.2)
+
+The coarse tree-quotient variable on a coarse chord c=(u,v) is
+
+       V_c=H_u(q(U)) q_c(U) H_v(q(U))^(-1).
+
+After fine tree gauge, all edges of P_c except e_c equal1. Orient e_c
+along P_c. Therefore the exact identity is
+
+                   V_c=W_(e_c),  c notin T_c.        (4.3)
+
+For c in T_c the entire path lies in T_f and its gauge-fixed value is1.
+If the preselected orientation of e_c is opposite, the right side of
+(4.3) is its inverse; one may simply orient its chord coordinate along
+the coarse edge. Distinct coarse chords select distinct fine chords.
+
+Consequently the induced group map on based quotients is the literal
+coordinate projection
+
+ G^(|E_f|-|V_f|+1) -> G^(|E_c|-|V_c|+1),
+                  (W_e)_e -> (W_(e_c))_c.           (4.4)
+
+It is surjective globally: assign the selected chord variables
+arbitrarily and set the other chord variables to1. It is a smooth
+submersion for Lie G. In a common small exponential chart W_e=exp(ix_e),
+with the selected orientations, its logarithmic expression is
+
+                          q_log(x)=(x_(e_c))_c.     (4.5)
+
+Its derivative is the same coordinate projection at EVERY point in
+that chart, with an isometric coordinate right inverse for the product
+Euclidean norms. This is not a statement about the condition number
+of a separate physical energy norm.
+
+5. EXACT FINITE JOINT LAW AND OBSERVABLES
+
+For a gauge-invariant positive finite density rho_f(U) relative to
+product Haar, (3.3) removes only the based gauge variables. The remaining
+EXACT joint density is
+
+   rho_f(W_(selected),W_(other))
+             product_selected d_H W product_other d_H W.       (5.1)
+
+The notation means evaluation in tree gauge. It does not make the two
+sets independent. Their effective marginal and conditional law are
+obtained by integrating this actual density, with all original factors.
+Unlike a fluctuation integral at an ALREADY FIXED coarse datum, (5.1)
+is a joint law in which the coarse selected chord variables vary.
+
+For the bare Wilson density on a finite cubical complex this formula
+is exact on the FULL compact tree quotient. In a small chart, Haar
+coordinate factors must be included with the action. A finite-graph
+positive Hessian follows separately from flat curl injectivity after
+tree gauge when the plaquette complex is simply connected and all
+flat configurations are in the identity orbit. The graph projection
+proof itself neither supplies a uniform gap under fine refinement nor
+identifies that local chart with the full measure without tail bounds.
+
+Every coarse loop holonomy pulls back to the fine holonomy obtained by
+substituting its complete P_c paths, and its trace is exactly preserved.
+Residual root conjugation acts simultaneously on the selected and
+unselected chord variables; (4.4) intertwines this action. Thus trace
+words, invariant polynomials of local logarithms, or a symmetry-stable
+finite polynomial space can be treated without a nonlinear-gauge
+ambiguity. Their Gram conditioning and low-reference calibration are
+additional quantitative questions.
+
+The true support of a pulled-back observable includes ALL fine edges
+on its paths. A trace of a based loop may cancel root-path conjugations,
+but arbitrary quotient coordinates and the tree-gauge action can read
+long tree paths. Those reads cannot be erased from a locality estimate.
+
+6. BOUNDARY AND TOPOLOGY QUALIFICATIONS
+
+The proof above uses one based root, not arbitrary fixed physical
+boundary links. With a boundary-fixed gauge group one may instead use
+a rooted forest; extra relative boundary transports remain physical
+coordinates. A single-tree quotient must not gauge away links or
+boundary data that the actual measure holds fixed. Such a variant
+needs its own compatible relative-forest statement.
+
+Likewise a periodic box has noncontractible loops and harmonic flat
+modes. The coordinate-projection graph statement still holds for a
+subdivision embedding, but unique flat orbit and positive Wilson
+tree-slice Hessian no longer follow. Those modes must be retained or
+conditioned. Contractibility is being used only in that separate
+action/concentration argument.
+
+Internal path overlap is another real restriction. Edge-disjoint paths
+with shared INTERNAL vertices do not in general form the subdivision
+used in Section2; the union after the proposed deletions can contain
+extra cycles. The stated internally-disjoint hypothesis avoids that
+problem and is satisfied by the specified coarse cubical embedding.
+
+7. EXACT UV OBSTRUCTION FOR THIN-PATH DECIMATION IN FOUR DIMENSIONS
+
+The lack of a uniform-refinement action bound is not merely unproved:
+there is a concrete commuting counterexample. Subdivide a straight
+coarse edge c into M fine links. Take c to be a coarse chord so that
+its holonomy is directly a selected quotient variable. Choose a fixed
+nonzero Cartan generator H in a faithful unitary representation and a
+small fixed real theta with exp(i theta H)!=1. Put
+
+ U_e=exp(i theta H/M) on those M oriented fine links,
+ U_e=1 on every other fine link.                              (7.1)
+
+The coarse c holonomy is EXACTLY exp(i theta H); every other coarse
+edge holonomy is1 because the embedded paths have disjoint edges.
+Any coarse plaquette containing c has the fixed nonidentity holonomy
+exp(+/-i theta H). Thus the prescribed coarse data are nonflat.
+
+In a nonwrapped fine cubical box, an elementary fine plaquette contains
+at most one charged link: the two parallel edges of a plaquette are
+transversely separated, while the charged links all lie on one straight
+line. Each fine link belongs to at most 2(4-1)=6 plaquettes. Hence at
+most 6M fine plaquettes are affected, each with holonomy
+exp(+/-i theta H/M). With the standard normalized Wilson plaquette term
+
+             s(U)=1-(dim rho)^(-1) Re tr rho(U),
+
+the elementary inequality 1-cos t<=t^2/2 gives
+
+ s(exp(i theta H/M))
+   <=theta^2 tr rho(H^2)/(2 dim(rho) M^2).
+
+Consequently the four-dimensional classical Wilson action obeys
+
+                       S_f(U)<=C_H theta^2/M.                 (7.2)
+
+In four dimensions the conventional fine-spacing prefactor
+eta^(d-4) is1, so no additional eta power repairs this estimate.
+If physical boundary links are fixed, choose an interior coarse edge
+and a sufficiently large fixed coarse box; the same construction leaves
+the fixed outer boundary unchanged. The full compact target in this
+note has no such obstruction to choosing the edge in any case.
+
+Compatible tree gauge changes neither the action nor the coarse loop
+values. In its quotient coordinates the selected chord equals
+exp(i theta H), as in Section4. Thus the minimum classical action at
+these fixed nonflat path-decimated coarse data is at most (7.2).
+At the origin the corresponding effective Maxwell quadratic form,
+obtained by minimizing the fine quadratic action under the linearized
+path constraints, has a value at most C_H/M in this direction. If a
+nonlinear constrained action Hessian is used, its same directional
+bound follows by taking theta->0 at each fixed M.
+
+Therefore NO uniform-in-M positive coarse precision or classical
+coercivity comparable to the ordinary fixed coarse plaquette energy
+can hold for this path-decimation map. This counterexample does not
+evaluate the quantum entropy or rule out every possible construction
+using decimation. It does rule out promoting the fixed-graph tree
+projection into the uniform classical attachment needed by the native
+averaging route. All finite-graph positive-gap statements above have
+their declared graph-dependent constants.
+
+8. WHAT THIS MAP DOES NOT PROVE
+
+This is thin-path holonomy decimation. It is NOT Bałaban's native
+symmetrized block averaging map. In particular it does not inherit
+native minimizing extensions, matched free precisions, suppression of
+thin-loop fluctuations, source domains or prescribed cutoff identities.
+No change of names can substitute (4.4) into those proofs.
+
+Nor does a fixed-graph coordinate projection give UV-uniform locality:
+the path lengths and tree-coordinate reads may grow with refinement.
+The blocked action is the exact marginal of (5.1), generally containing
+nonlocal interactions; it is not automatically a Wilson action with a
+renormalized scalar coupling. Reflection positivity, a local score norm,
+the physical low cocycle and continuum nontriviality all remain separate.
+
+The constructive result is nonetheless exact: for this specified bare
+finite graph blocking, the joint-law variables and nonlinear gauge
+quotient can be aligned so that the coarse map is a genuine coordinate
+projection. A finite real conditional theorem may then be applied to
+the ACTUAL joint law when its separate action/tail hypotheses are proved.

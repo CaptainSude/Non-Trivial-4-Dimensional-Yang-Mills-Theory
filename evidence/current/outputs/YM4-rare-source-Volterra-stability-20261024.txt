@@ -1,0 +1,152 @@
+RARE SOURCE FORCING WITH GENERIC MARGINAL FEEDBACK ON TUNED TRAJECTORIES
+24 October 2026. Root. Conditional numerical consumer, not native admission.
+
+PURPOSE
+
+A new rare source need not satisfy the complete Wilson reference's
+special O(g^4) marginal cancellation. A uniformly controlled O(g^2)
+feedback gives only polynomial amplification along the actual tuned
+trajectory. The actual logarithmic-radius rarity pays this factor,
+as well as any fixed once-born inverse-coupling and read polynomial.
+This note proves that statement for a full tensor and neutral-memory
+recurrence. It does not prove that an original selector or neighborhood
+projection satisfies the input recurrence or its microscopic census.
+
+1. FINITE RECURRENCE WITH ALL REQUIRED INPUTS EXPLICIT
+
+Let a_j>=0 bound the norm of the FULL source marginal tensor at date j.
+Let w_j>=0 bound the new neutral birth, and P_j>=0 the prepared old
+neutral sources AFTER the original four-dimensional root sum. Suppose
+
+ P_j<=sum_(i<j)K(j-i)w_i,
+ K(t)<=C_K r^t, 0<r<1,
+ w_j<=C_w v_j(a_j+P_j)+b_j,
+ a_(j+1)<= (1+C_a v_j)a_j+C_b v_j P_j+c_j,               (1)
+
+with v_j=q_j+e_j, q_j=g_j^2, and e_j,b_j,c_j nonnegative. A kernel
+bounded by a fixed polynomial times L^-sigma t has the displayed
+geometric majorant after reducing sigma. All constants must be
+uniform in the actual grade and regulator. These are hypotheses on
+the SAME actual source construction. The exact flat scalar and any
+mixed contact are retained separately, not discarded by (1).
+
+The inhomogeneous b_j,c_j may include once-born polynomial source
+radius/read prices. They may not include unaccounted repeated costs,
+an exponential support-volume loss, or the original microscopic root
+count which P_j explicitly assumes already handled. The feedback
+coefficients in (1) must be bounded by v_j with fixed constants;
+mere smallness of the raw incoming source does not prove that.
+
+2. A SINGLE POSITIVE MEMORY VARIABLE
+
+Define z_j=sum_(i<j) r^(j-i)w_i, so P_j<=C_K z_j and
+z_(j+1)=r(z_j+w_j). Start z_0=0, or retain a specified nonnegative
+initial memory with the same update. Set M_j=a_j+z_j. From (1),
+
+ a_(j+1)<= (1+C_a v_j)a_j+C_b C_K v_j z_j+c_j,
+ z_(j+1)<= r C_w v_j a_j+r(1+C_w C_K v_j)z_j+r b_j.
+
+Choose A>=max(C_a+r C_w,C_K(C_b+r C_w)). Then r<=1 gives
+
+ M_(j+1)<=(1+A v_j)M_j+f_j,  f_j=c_j+r b_j.             (2)
+
+No one-step contraction of the original source is assumed here. The
+strict r is its separately established static age kernel. Iterating
+(2), with empty products one, gives the exact upper bound
+
+ M_j<=M_i product_(l=i)^(j-1)(1+A v_l)
+       +sum_(k=i)^(j-1) f_k product_(l=k+1)^(j-1)(1+A v_l).
+                                                               (3)
+
+It also bounds a_j and P_j<=C_K M_j. This argument accommodates a
+finite-dimensional general invariant curvature tensor by taking its
+norm; no unsupported scalar Wilson reduction is used.
+
+3. THE TUNED TRAJECTORY GIVES POLYNOMIAL AMPLIFICATION
+
+Use the actual endpoint theorem at horizon N:
+
+ x_j=q_j^-1>=Y+lambda(N-j), Y=X-C_G>0, lambda>0.
+
+For 0<=i<j<=N, monotonicity of the majorant as a function of backward
+age, not monotonicity of x_j itself, gives
+
+ sum_(l=i)^(j-1) q_l
+ <= integral_(N-j)^(N-i) du/(Y+lambda u)
+ =lambda^-1 log[(Y+lambda(N-i))/(Y+lambda(N-j))].        (4)
+
+Consequently, if sum_l e_l<=E uniformly,
+
+ product_(l=i)^(j-1)(1+A v_l)
+ <=exp(AE)[(Y+lambda(N-i))/(Y+lambda(N-j))]^nu,
+ nu=A/lambda.                                          (5)
+
+Finite-period errors with a matched exponentially growing period
+have bounded E; otherwise the actual error sum is an explicit input.
+The estimates permit all signed elementary coupling fluctuations
+allowed by the drift theorem. They do not choose new trajectories.
+
+4. ACTUAL LOGARITHMIC-RADIUS RARITY PAYS THE AMPLIFICATION
+
+Suppose x_j also obeys the established upper bound X+B(N-j), and
+choose X>=2C_G+1. Then x_j is comparable, by fixed constants, to
+u_j=Y+lambda(N-j). Suppose for fixed d,c>0 and beta>1,
+
+ f_j<=C (1+x_j)^d exp[-c(log x_j)^beta].                 (6)
+
+This includes a genuine tail exp(-cT_j^2) with
+T_j=A1(log x_j)^p, p>1/2, multiplied by any FIXED polynomial in
+inverse g_j, logarithmic read size and backward date. It does not
+assert that every original complementary row has that tail.
+
+Comparability gives, after increasing the weak floor,
+f_j<=C' u_j^d exp[-c'(log u_j)^beta]. By (3)--(5), the
+forcing contribution to M_N is bounded by
+
+ C exp(AE) Y^-nu sum_(t>=1)
+       (Y+lambda t)^(d+nu) exp[-c'(log(Y+lambda t))^beta]. (7)
+
+For every prescribed H>0, the exponential eventually dominates
+u^-(d+nu+H+2), because beta>1. Comparison with the integral of
+u^-(H+2) then proves
+
+ forcing contribution to M_N <= C_H exp(AE) Y^-H,        (8)
+
+uniformly in N. The constants and weak floor can depend on H and the
+fixed once-born prices, but not on the number of elapsed dates. A
+rare initial M_0 with the same polynomial-tail cap also satisfies
+the bound after its polynomial amplification in (5).
+
+For the forcing born in the fine prefix N-j>=R+1, the same proof
+gives, with any prescribed H and an adjusted constant,
+
+ prefix contribution <=C_H exp(AE) Y^-nu
+                                      (Y+lambda R)^-H. (9)
+
+Thus this tail tends to zero for fixed terminal X as R grows. This
+is a uniform numerical tail of the specified recurrences, not yet
+convergence of different finite original probability measures.
+
+5. WHY THE SOURCE CENSUS AND ACTUAL ADMISSION REMAIN ESSENTIAL
+
+If the forcing instead carries an unremoved L^(4(N-j)) microscopic
+count, its exponential growth is not paid by (6):
+(log(Y+lambda t))^beta=o(t). Likewise replacing the feedback factor
+1+Aq_j by a fixed factor greater than one would allow exponential
+growth in t. Neither modification satisfies the theorem's intended
+source inputs. Static h^4 or h^(4+alpha) after a proved same-read
+preparation can cancel that count, but a normalized quantum average
+is not a static evaluation and can generate a new scalar and tensor.
+
+The benefit of (8) is specific: once an actual rare family is admitted
+with its full tensor, an age kernel and O(g^2) quantum feedback, the
+special complete-reference O(g^4) cancellation is unnecessary for
+that family's smallness. Polynomial inverse-radius costs may be paid
+once at the birth by the genuine rarity. Repeated fresh Cauchy prices
+are not covered. Every original mass, selector and emitted contact
+must still be attached to its own proved recurrence or kept separate.
+
+This consumer is intended for the newly investigated original rare
+source components. It does not promote the current one-step real
+quantum estimate to an analytic all-scale source theorem. It does
+not prove the original-law continuum limit or nontriviality.

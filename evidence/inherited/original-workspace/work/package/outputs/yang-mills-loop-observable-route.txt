@@ -1,0 +1,1099 @@
+YANG--MILLS RESEARCH CHECKPOINT -- 19 OCTOBER 2026 / TURN34
+No complete nontrivial four-dimensional Yang--Mills existence proof.
+Native applications retain the explicit scope and assumptions of each note.
+The turn34 field-constant vacuum projection supersedes any ambiguous
+vacuum-inclusive reading of the earlier homogeneous stable graph.
+
+CONTENTS
+1. observable_construction_route_turn33.txt
+2. loop_word_source_bridge_turn34.txt
+3. protected_cubic_hypercubic_audit_turn34.txt
+4. protected_cubic_profile_moments_turn34.txt
+
+============================================================================
+observable_construction_route_turn33.txt
+============================================================================
+
+OBSERVABLE CONSTRUCTION ALTERNATIVES -- TURN33
+19 October 2026. Primary-source search and exact finite-cutoff deductions.
+This is not a Yang--Mills existence proof.
+
+RESULT
+
+The most useful new algebraic simplification is specific to SU(2): the
+entire normalized multi-loop moment functional is a positive linear
+average of SINGLE-loop word expectations. The actual lattice loop
+equations can consequently be written linearly on this infinite word
+space. This permits a different prospective producer: uniform local
+area/shape jets of one normalized Wilson-loop functional, with complete
+contact subtractions, rather than a separate exponential source family
+for every composite. The algebra is exact; the required continuum jet
+estimate is not supplied by the papers inspected.
+
+Two precise limitations are also established below. All scalar local
+coupling jets do not determine the gauge-orbit law even at a fixed finite
+lattice. And the available random-data spatial Yang--Mills heat-flow
+theorem does not cover the equal-time roughness of a four-dimensional
+free gauge potential. Neither limitation is a no-go for interacting
+point splitting or for a future spatial-flow construction.
+
+0. PRIOR SCOPE AND PRIMARY SOURCES
+
+Read against ym_observable_algebra_minimality_turn4,
+local_observable_ope_route_turn6, MRS_alternative_scope_turn7,
+alternative_continuum_routes_turn30 and physical_diagonal_matching_turn17.
+In particular, do not repeat a sharp conditional/prepared-norm obstruction
+as an obstruction in the physical OS norm. Do not use four-dimensional
+heat smoothing as a reflection-positive pushforward. Do not identify a
+scalar net with the full invariant-polynomial hierarchy by affiliation.
+
+Primary sources actually inspected this pass:
+
+[KZ] V. Kazakov and Z. Zheng, Bootstrap for finite N lattice Yang--Mills
+ theory, JHEP03(2025)099. arXiv2404.16925v4, equations(1.1),(2.31),
+ Section2.3.1 and discussion pp32--33.
+ https://arxiv.org/pdf/2404.16925
+ https://doi.org/10.1007/JHEP03(2025)099
+
+[SSZ] H. Shen, S.A. Smith and R. Zhu, A new derivation of the finite N
+ master loop equation for lattice Yang--Mills, EJP29(2024)29.
+ arXiv2202.00880v2, Theorem1.1 and equations(1.1),(4.2)--(4.3).
+ https://arxiv.org/pdf/2202.00880
+ https://doi.org/10.1214/24-EJP1090
+
+[CC] N. Cao and S. Chatterjee, Yang--Mills heat flow with random
+ distributional initial data, arXiv2111.10652. Assumptions(A)--(E),
+ Theorem1.19, Remark1.21; G_alpha in Definition1.13.
+ https://arxiv.org/pdf/2111.10652
+
+[B] H. Bostelmann, Operator product expansions as a consequence of phase
+ space properties, arXivmath-ph/0502004, (2.7), Theorems3.2--3.3.
+ https://arxiv.org/pdf/math-ph/0502004
+
+[FH] M.B. Froeb and J. Holland, All-order existence of and recursion
+ relations for the operator product expansion in Yang--Mills theory,
+ arXiv1603.08012, Theorems1 and4.
+ https://arxiv.org/pdf/1603.08012
+
+No secondary reconstructed Raw file is used as mathematical authority.
+The checked local upstream snapshot is the one recorded in turn32.
+RawII around88910--88940 itself distinguishes scalar plane-independent
+source extraction from an extra anisotropic clause. RawIII around109509
+likewise distinguishes scalar cumulants from a tensor shell insertion.
+These are clues about its stated scope, not new primary theorems.
+
+1. AN EXACT POSITIVE SU(2) REDUCTION OF ALL MULTI-LOOP MOMENTS
+
+Use w(A)=Tr(A)/2. Cayley--Hamilton for B in SU(2) gives
+
+              w(A)w(B) = [w(AB)+w(AB^{-1})]/2.              (1.1)
+
+This is [KZ](1.1) in normalized-trace convention. Transport the based
+holonomies of any finite collection of loops to a common vertex by fixed
+lattice paths. Each trace is unchanged. Apply (1.1) successively:
+
+ product_(j=1)^n w(A_j)
+     = 2^{-(n-1)} sum_(epsilon_2,...,epsilon_n in {+,-})
+                        w(A_1 A_2^{epsilon_2}...A_n^{epsilon_n}). (1.2)
+
+The formula is pointwise, not a factorization of expectations. It holds
+under the SAME normalized Wilson law, any source-deformed positive law,
+and indeed any probability law of these matrices. The weights have total
+mass one. There is no normalization denominator to compare, no large-N
+limit and no factorial cost from this trace reduction. Ordinary joint
+moments determine cumulants by the usual partition formula if desired.
+
+Complete reads matter. The single words contain the common-base paths,
+their inverse segments and every original loop. The union may be much
+larger than an individual loop. A product supported on separated sets
+does not become a local one-loop observable in either set. The equality
+is exact despite this path dependence of the individual terms.
+
+[KZ](2.31) makes the SU(2) lattice loop equation linear on single-loop
+expectations after this reduction. It is an INFINITE loop-space equation;
+plaquette deformations increase word length. Their finite-length bootstrap
+does not prove continuum convergence or uniqueness from short-loop data.
+The discussion pp32--33 explicitly leaves convergence and selection of
+physical solutions as further questions. [SSZ] independently supplies
+the exact normalized finite-N loop identities for the Wilson law.
+
+Thus a claim that SU(2) necessarily retains an irreducible multitrace
+hierarchy would be too pessimistic. A claim of finite-jet or finite-length
+closure would be too optimistic.
+
+2. EXACT QUADRATIC AND ORIENTED CUBIC LOCAL LOOP WORDS
+
+Write P=p0 I+i p.sigma, Q=q0 I+i q.sigma and R=r0 I+i r.sigma,
+with p0^2+|p|^2=1 etc. All loops in this paragraph have a common base.
+Direct Pauli multiplication gives
+
+ p.q = w(P)w(Q)-w(PQ)
+     = [w(PQ^{-1})-w(PQ)]/2,                               (2.1)
+
+       det(p,q,r) = [w(PQR)-w(PRQ)]/2.                     (2.2)
+
+The second identity retains orientation: the vector part of PQ is
+p0 q+q0 p-p cross q, so its scalar triple product contributes with the
+displayed positive sign. These are finite local gauge-invariant loop
+observables, including when the plaquette planes have no shared edge.
+They are not functions solely of the separate plaquette traces.
+
+For smooth small plaquettes in the convention F=F^a sigma_a/2,
+P=exp(i g a^2 F_A+o(a^2)), one has p=g a^2 F_A^components/2+o(a^2)
+at FIXED nonzero g. This is a classical benchmark. Uniform use along a
+running g(a)->0 requires the stronger error o(g(a)a^2), with the
+corresponding differentiated remainder bounds if jets are taken.
+Consequently the leading terms of (2.1),(2.2) are respectively
+
+       (g^2 a^4/4) F_A.F_B,
+       (g^3 a^6/8) det(F_A,F_B,F_C).                        (2.3)
+
+The trace DIFFERENCE in (2.2) therefore has coefficient g^3 a^6/4.
+This supplies an exact orientation-sensitive lattice representative,
+without assuming that an O(3)-invariant free quadratic net contains it.
+It does not establish its interacting continuum renormalization.
+
+There is also an exact connection to link integration by parts. Suppose
+P and Q each traverse the same oriented link once and are based at that
+link's initial vertex. For left generators X_a with exp(i t sigma_a/2),
+
+ X_a w(P)=-p_a/2,
+ Gamma_e(w(P),w(Q)):=sum_a X_a w(P) X_a w(Q)=p.q/4.          (2.4)
+
+With E_P=1-w(P), |p|^2=(1-p0)(1+p0)<=2E_P, so
+
+ |Gamma_e(w(P),w(Q))| <= sqrt(E_P E_Q)/2
+                         <=(E_P+E_Q)/4.                   (2.5)
+
+This is a genuine pointwise estimate under the full Wilson law, with no
+weak-field qualification or history normalization. Opposite orientations
+require the appropriate signed/transported link derivative. If the loops
+share no link, this particular Gamma_e is zero; (2.1) still applies to
+their based loop words. We do not use a fictitious shared-edge formula.
+
+The useful limit of (2.5) is equally explicit: division by g^2 a^4 costs
+exactly those canonical factors. Scalar vacuum-subtracted correlations
+do not bound the uncentered positive E_P/a^4 by themselves. Likewise
+|det(p,q,r)|<=(8 E_P E_Q E_R)^{1/2} is not a uniform renormalized cubic
+bound. The contact/subtraction problem remains after this algebra.
+
+Independent bounded audit: public_argument_audit checked (1.1)--(2.5),
+the Pauli signs and the g^3 a^6/4 trace-difference coefficient.
+
+2A. EXACT SOURCE-NORMALIZATION PRICE
+
+At lattice spacing a define the literal canonical representatives
+
+ Qhat_(A,B)=4(g^2 a^4)^{-1}[w(P_A)w(P_B)-w(P_A P_B)],
+ That_(A,B,C)=4(g^3 a^6)^{-1}[w(P_A P_B P_C)-w(P_A P_C P_B)].
+
+Their smooth classical limits are F_A.F_B and det(F_A,F_B,F_C),
+respectively. For a physical smearing a^4 sum_x f(x), a source coupled
+to Qhat multiplies the raw loop difference by 4 f/g^2, whereas a source
+coupled to That multiplies it by 4 f/(g^3 a^2). These are the coefficients
+in the exponent, if an exponentiated deformation is used. Fixed-degree
+nilpotent differentiation avoids requiring that whole exponential disc,
+but it does NOT remove these factors from the coefficient estimates.
+
+For example the source derivative of a normalized expectation is exactly
+Cov_mu(O,Qhat(f)) or Cov_mu(O,That(f)). Formula(2.5) alone leaves an
+uncentered energy on the right after these divisions. A scalar contact
+subtraction cannot be discarded before estimating that covariance.
+Thus no inference from a bounded raw loop to an admitted canonical
+dimension-six source is hidden in the proposed route.
+
+3. NORMALIZED SCHWINGER--DYSON: WHAT IT DOES AND DOES NOT SOLVE
+
+Let S=sum_p beta_p E_p on a finite graph with product Haar measure, and
+mu_J=Z(J)^{-1}exp[-S+sum_p J_p E_p]dH. All J below are real, or complex
+near a point where the finite partition function is nonzero. Put
+Delta_e=sum_a X_a^2, Gamma_e(f,g)=sum_a(X_a f)(X_a g).
+Haar integration by parts, BEFORE any absolute value, gives
+
+ mu_J[Delta_e f-Gamma_e(S,f)+sum_p J_p Gamma_e(E_p,f)]=0.     (3.1)
+
+For f=E_q, a plaquette traversing e once, Delta_e E_q=3 w(Q)/4.
+Hence
+
+ sum_p(beta_p-J_p) mu_J[Gamma_e(E_p,E_q)]
+                            =3 mu_J[w(Q)]/4.               (3.2)
+
+Only incident plaquettes occur. This is an exact finite-volume,
+normalized, interacting identity. Differentiating produces normalized
+covariances and the explicit derivative of beta_p-J_p. No vacuum factor
+or independent conditional normalizer is introduced.
+
+But (3.2) determines a weighted sum, not all off-diagonal Gamma insertions.
+For example, one J derivative also produces unknown covariances of each
+Gamma insertion with E_r. Iteration enlarges the insertion catalogue.
+Equations(1.1) and(3.1) reduce it to loop words; they do not truncate word
+length or provide an inverse of the loop equation with a cutoff-uniform
+norm at beta~log(1/a). That inverse/estimate is the new analytic problem.
+
+An exact Langevin interpretation is possible: for L=Delta-Gamma(S,.),
+L(fg)-fLg-gLf=2Gamma(f,g). It shows which dynamic response adds Gamma to
+the scalar algebra. Static scalar-coupling moments alone do not supply
+this generator or its continuum domain. No continuum stochastic
+quantization construction is inferred.
+
+4. ALL SCALAR COUPLING JETS STILL LEAVE FIBER INFORMATION
+
+Here is an elementary finite-lattice check, independent of free color
+parity. Let a free-boundary four-dimensional cubical graph have n>=2
+vertices in each direction. It has V=n^4 vertices, E=4(n-1)n^3 links,
+and P=6(n-1)^2 n^2 elementary plaquettes. On the generic SU(2) orbit
+stratum the gauge quotient has dimension
+
+                 D=3(E-V)=9n^4-12n^3,
+                 D-P=3n^2(n^2-2)>0.                       (4.1)
+
+For completeness: tree gauge leaves E-V+1 independent SU(2) holonomies;
+generic residual simultaneous conjugation has dimension3. Two
+noncommuting cycle holonomies ensure the discrete generic stabilizer.
+
+The smooth map from this stratum to the P separate plaquette traces
+has rank at most P. Near a maximum-rank point the constant-rank theorem
+therefore gives positive-dimensional fibers. Individual plaquette traces
+do not separate all gauge orbits. Tree-gauge loop words do: pair traces
+recover vector Gram data and triple traces recover orientation, including
+degenerate cases by continuity. On a regular-rank open patch the quotient
+Haar law has a smooth positive density; disintegration in constant-rank
+coordinates has positive density along the positive-dimensional fibers.
+A loop word differing along a fiber can be chosen nonconstant on such
+an open fiber patch. Its conditional variance is positive on a set of
+positive quotient measure. Thus some bounded invariant loop observable
+is not measurable, even almost everywhere, in the plaquette-trace sigma
+field. This uses the positive-density local structure, not topological
+noninjectivity alone.
+
+Let mu_0 be product Haar on the gauge quotient, choose bounded invariant
+f not measurable in that sigma field E, and set
+
+                 h=f-E_mu0[f|E].                          (4.2)
+
+For sufficiently small real epsilon, (1+epsilon h)mu_0 is a different
+positive gauge-invariant probability law. Yet its partition function
+under EVERY plaquette-energy tilt equals the original Haar tilted
+partition function, since E_mu0[h|E]=0. All scalar local-coupling jets
+are identical, including at a Wilson tilt. The conditional fiber laws
+differ.
+
+This is an information statement, not an alternative Wilson theory or
+an RP counterexample: the modified law is not claimed to satisfy the
+complete Wilson SD identities or RP. It proves that a passage from all
+scalar source jets to all loop/curvature fields requires additional
+structure. Knowing the original lattice measure is Wilson does not
+remove the need to CONTROL its extra observables in the continuum.
+
+5. WHAT PHASE SPACE AND PERTURBATIVE OPE ACTUALLY ADD
+
+[B](2.7) requires finite-rank approximation of the energy-damped inclusion
+on the ENTIRE shrinking local-algebra unit ball, to every prescribed
+power. Theorems3.2--3.3 then give OPE approximations for finite products
+of existing fields. Neither the condition nor identification of the
+resulting field spaces with YM invariant polynomials follows from
+finitely many scalar pressure derivatives. This is the same quantifier
+identified in turn6; this pass found no primary theorem removing it.
+
+[FH] Theorems1 and4 establish asymptotic OPEs and coupling-recursion
+relations at arbitrary but FIXED perturbative order. They are useful for
+the finite mixing and contact catalogue, including gauge identities.
+They do not bound the nonperturbative remainder of the Wilson measure
+uniformly in the cutoff or prove summability of perturbation theory.
+Using their recursion as a nonperturbative definition requires existence,
+uniqueness and matching estimates not asserted by that theorem.
+
+6. A NEW PRECISE TIME-ZERO/SPATIAL-FLOW MISMATCH
+
+At finite lattice cutoff a deterministic time-slice map commuting with
+reflection preserves RP, because its pullback preserves the positive
+half-algebra. Spatial flow is compatible with this fact. On an infinite
+slice it has spatial tails; a strictly local finite-region version must
+declare its boundary data. Neither formulation by itself gives a local
+rotation-covariant continuum net.
+
+[CC] assumes covariance bounded in position space by G_alpha, whose
+Fourier coefficients are |k|^{-alpha}. Theorem1.19 requires
+
+                alpha>max(d-4/3,d/2).                     (6.1)
+
+It gives a local random-time smooth heat-flow solution and convergence
+of Fourier truncations under the additional stated moment assumptions.
+In spatial dimension3, (6.1) is alpha>5/3. This includes the 3D GFF
+covariance |k|^{-2}; it does NOT cover the time-zero restriction of a
+4D free potential. Indeed, for a transverse polarization,
+
+ integral_(R) dp0/(2pi) 1/(p0^2+|k|^2)=1/(2|k|).           (6.2)
+
+Thus its spatial covariance exponent is alpha=1, and its positive trace
+singularity is |x-y|^{-2}, too singular for the G_alpha bound with any
+alpha>5/3. The transverse projector does not improve this power.
+Already the Gaussian UV reference therefore fails this imported flow
+theorem. This calculation does not prove impossibility of renormalized
+spatial flow; it identifies the stronger random-data theory and Wilson
+estimates that would be needed. A 3D Euclidean YM state-space theorem
+cannot simply be applied to the equal-time law of 4D YM.
+
+7. THE CONCRETE NEXT ESTIMATE SUGGESTED BY THE SINGLE-LOOP ROUTE
+
+For each finite list of desired invariant-polynomial labels, choose
+actual local small-loop words such as(2.1),(2.2), parallel-transported
+finite differences for covariant derivatives, and ALL required lower
+field/contact subtractions. Denote the resulting signed loop-word
+combination for an n-point test F by nu_(a,F). Repeated(1.1) turns its
+normalized moment exactly into the LINEAR functional
+
+                    G_(a,n)(F)=m_a(nu_(a,F)),
+             m_a(C)=E_Wilson,a[w(C)].                      (7.1)
+
+This is only a representation. The coefficients of nu contain inverse
+powers of a and g; ordinary |m_a(C)|<=1 destroys the cancellations.
+The useful missing estimate is instead a bound on the COMPLETE signed
+combination, for common successive cutoffs and renormalized local words,
+
+ |m_(a/2)(nu_(a/2,F))-m_a(nu_(a,F))|
+              <= A^n (n!)^B epsilon_a p_(s n)(F),
+                  sum_(dyadic a) epsilon_a<infinity,       (7.2)
+
+with fixed s,B and the appropriate collision-test space; compatible
+one-cutoff distribution bounds and field identities must accompany it.
+One whole-correlation epsilon is sufficient for the direct OS approach;
+no arbitrary-copy operator-norm gain is claimed necessary.
+
+Equation(1.2) means that, BEFORE canonical subtractions, passage from
+joint loop moments to a single-loop functional costs total coefficient
+mass1. The problem in(7.2) is shrinking-lobe/shape regularity and local
+renormalization, not an unavoidable multitrace factorial explosion.
+A useful research target is a weak-coupling loop-equation estimate on
+this signed local-jet space. Neither [KZ] nor [SSZ] supplies it.
+
+For separated loops, common-base connectors make the representation
+nonlocal term by term. Their exact cancellations must remain before
+estimates; no perimeter-divergent thin-loop limit is silently inserted.
+Positive-flow words would still need a separate flow-to-local limit.
+
+The criterion is non-circular in the following limited sense: (7.2) is
+an inequality for explicitly given, normalized ORIGINAL Wilson integrals
+of finite loop combinations. It assumes neither a continuum cubic field
+nor its source theorem. It could be proved by a different method, such
+as a loop-equation estimate with a uniform norm on these signed jets.
+If it holds simultaneously for a countable compatible catalogue, with
+the stated fixed-arity growth and the needed coincident-point extensions,
+the moment limits are constructed directly. Local support and lattice
+reflection identities pass along those limits. Full Euclidean covariance,
+nonzero Gram matrices for the new labels and the required ultraviolet
+YM matching remain separate tests; (7.2) by itself does not assert them.
+
+In particular the nonzero classical coefficient in(2.3) is not a lower
+bound on the normalized interacting two-point function of That. Conversely
+the free quadratic O(3) closure obstruction does not invalidate(2.2):
+its ordered trace words are additional observables, not words in the
+separate quadratic trace-energy net. This is an honest enlargement of
+the finite-cutoff observable catalogue.
+
+STATUS
+
+Proved here: normalized convex single-word reduction; exact quadratic
+and oriented cubic word identities with constants; link-energy bound;
+normalized finite-graph SD formula; finite-graph information obstruction;
+and the explicit time-zero covariance mismatch for the proposed flow
+import. Primary scope checks found no ready-made nonperturbative bridge
+from the scalar sector to the full YM hierarchy. The single-loop jet
+formulation is a concrete alternative producer target, not closure of
+the existing construction or a replacement for its missing estimates.
+
+============================================================================
+loop_word_source_bridge_turn34.txt
+============================================================================
+
+SIGNED SU(2) LOOP WORDS: ONE/TWO INSERTIONS AND THE EXACT CONTACT LEDGER
+19 October 2026. Turn34, balaban_inputs. No YM existence claim.
+
+RESULT
+
+The finite signed-word route does avoid a continuum exponential cubic
+source. It yields (a) exact supported quadratic and orientation-sensitive
+cubic Schwinger--Dyson combinations, (b) arbitrarily accurate finite
+polynomial proxies on an admitted CURRENT regular chart, and (c) a
+summable ultraviolet two-support joining estimate for that conditional
+regular kernel. None requires estimating the individual loop words
+before their cancellation.
+
+It does NOT remove the one-leg renormalization problem. There is an
+explicit quantitative reason: already the normalized TWO-cubic Gaussian
+coefficient contains a nonzero quadratic background term. The complete
+coefficient is computed below, including its constant and quartic terms.
+This is an actual contact ledger, not a no-go for separated physical
+correlations. The interacting single-leg lower-kernel transport and the
+native mixed-history attachment remain outside the proved estimate.
+
+0. PRIMARY SCOPE CHECKED THIS TURN
+
+[B119] T. Balaban, Convergent renormalization expansions for lattice
+gauge theories, CMP119(1988), pp277--279, (3.44)--(3.47), and p284,
+(3.68)--(3.72).
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+The distinguished numerator retains a marked domain Z0; the unchanged
+denominator clusters cancel into clusters attached to it. Interior
+outputs and boundary outputs are separated after localization. The
+proper-layer proof explicitly retains its pointed representation.
+These are the regular normalized-insertion and rooted-read mechanisms
+used here, not a printed arbitrary tensor-source continuum theorem.
+
+[SSZ] Shen--Smith--Zhu, EJP29(2024)29, Theorem1.1 and Lemma3.3.
+https://arxiv.org/pdf/2202.00880
+This gives exact normalized finite-N lattice loop identities, including
+their local read/boundary condition. No cutoff-uniform weak-coupling
+area-jet inverse is supplied by that theorem.
+
+[KZ] Kazakov--Zheng, JHEP03(2025)099, (1.1), (2.31), discussion pp32--33.
+https://arxiv.org/pdf/2404.16925
+SU(2) trace identities reduce the equations to a linear infinite
+single-word system. The reported finite-word bootstrap bounds do not
+establish the required continuum shrinking-lobe regularity or a uniform
+inverse on signed jets. The discussion leaves convergence issues open.
+
+One targeted search also returned rigorous weak-coupling loop estimates
+for FINITE gauge groups, e.g. Forsstrom--Lenells--Viklund,
+https://arxiv.org/abs/2001.07453 . Their group is Z_n, not SU(2); their
+discrete-defect regime is not imported here. No speculative 4D existence
+claim or finite-order perturbative calculation is used as a theorem.
+
+Local inputs read: direct_primitive_admission_turn21 Sections1--6,
+proper_layer_age_domain_turn22, observable_construction_route_turn33,
+and the authoritative turn33 frontier. In particular, the independent
+(U,J) contours and complete original response reads remain explicit.
+
+1. EXACT WORDS AND A CURRENT-CHART FINITE POLYNOMIAL BRIDGE
+
+For w(P)=Tr(P)/2, write P_A=p_A,0 I+i p_A.sigma. All holonomies have
+the same declared basepoint; any transport path belongs to the read.
+Define
+
+ Q_g(A,B)=2 g^-2 [w(P_A P_B^-1)-w(P_A P_B)],
+ T_g(A,B,C)=4 g^-3 [w(P_A P_B P_C)-w(P_A P_C P_B)].        (1.1)
+
+The exact Pauli identities make these 4g^-2 p_A.p_B and
+8g^-3 det(p_A,p_B,p_C). In particular the two terms in each signed
+expression are NOT separately bounded before taking the difference.
+
+On the near-identity logarithm chart put
+P_A=exp(i g Phi_A.sigma/2). This defines an exact local holomorphic
+Phi_A; it is not an asserted continuum curvature approximation. Let
+
+ s(z)=sin(sqrt(z))/sqrt(z)=sum_(l>=0)(-1)^l z^l/(2l+1)!,
+ z_A=g^2(Phi_A.Phi_A)/4.
+
+s is entire, so this notation selects no square-root branch. Exactly,
+
+ Q_g=(Phi_A.Phi_B)s(z_A)s(z_B),
+ T_g=det(Phi_A,Phi_B,Phi_C)s(z_A)s(z_B)s(z_C).             (1.2)
+
+If all |Phi_A|<=R and |g|R<=c, entire-series estimates give
+
+ |Q_g-Phi_A.Phi_B|<=C g^2 R^4,
+ |T_g-det(Phi_A,Phi_B,Phi_C)|<=C g^2 R^5.                (1.3)
+
+Retaining all terms of total z-degree <P in (1.2) gives an invariant
+finite polynomial P_(d,P), d=2 or3, with
+
+ |W_g-P_(d,P)|<=C_P |g|^(2P) R^(d+2P).                 (1.4)
+
+The same estimate holds holomorphically on a smaller fixed log chart.
+Its complete read is unchanged. If the original response has an
+anchored Banach activity majorant, multiplication and the convergent
+series give its corresponding complete majorant with one fixed support
+enlargement/reserve. A mere unlocalized supremum is not substituted
+for that supported input.
+
+For any POSITIVE normalized law supported on this chart, (1.3)--(1.4)
+directly bound one-insertion differences. For two insertions of degrees
+d1,d2, replacing one or both by their P-th proxies changes the moment
+or covariance by at most
+
+               C_P |g|^(2P) R^(d1+d2+2P).             (1.5)
+
+For example expand W1 W2-P1 P2=(W1-P1)W2+P1(W2-P2), and likewise
+the product of the means. Thus no exponential cubic integrability is
+needed. On complex native contours use the complete normalized cluster
+operator norm instead of probability positivity; its premise is the
+already admitted regular kernel, not an arbitrary complex normalization.
+
+On the current running domain R=C(a/g+T_cut) is a fixed logarithmic
+polynomial under the existing primitive admission. A fixed P can make
+(1.4) smaller than any prescribed FIXED power g^kappa at that step.
+This only places the TAIL, in current units, in a tiny invariant slot.
+The leading degree-two/three polynomial remains. Nor does this pay an
+unlisted physical r^-2 factor for a dimension-six smeared source.
+
+2. WHAT THE ORIGINAL REGULAR INSERTION PROOF THEN GIVES
+
+Freeze one actual admitted regular step, all original auxiliary (U,J),
+localizers, cutoffs, normalization and complete read carriers H1,H2.
+The whole canonical words have anchored norms
+
+                  M_Q<=C R^2,   M_T<=C R^3.             (2.1)
+
+The normalized distinguished expansion in [B119] may be applied
+linearly to a whole such bounded analytic insertion. For two insertions,
+retain two distinguished seeds and subtract the product of the one-seed
+outputs BEFORE taking absolute values. Only clusters connecting the
+two complete reads remain. Equivalently, one can introduce two tiny
+auxiliary current-step parameters of radii c/M1,c/M2, using the existing
+bounded-potential proof, and take just their mixed coefficient. This is
+not a uniform continuum exponential-composite source assumption.
+
+The same original cluster reserve then gives, at FIXED complete retained
+datum omega,
+
+ |K_omega(W1)|<=C M1,
+ |K_omega(W1 W2)-K_omega(W1)K_omega(W2)|
+       <= C M1 M2 exp[-c dist(H1,H2)/r].                 (2.2)
+
+Here r is the current physical regular scale; fixed native M factors
+are included in c. The operator proof includes source-root containment
+and the usual reserved carrier sums. If only a weaker source kernel
+with a stated carrier metric is supplied, retain THAT metric in (2.2).
+The two-seed deduction uses exactly the admitted complete bounded-test
+extension of the original regular proof, already isolated in turn21;
+it does not promote an arbitrary physical point function to that domain.
+
+For two physical cubic point insertions the engineering factor is r^-12.
+Consequently, for their genuinely fast-connected contribution at a
+fixed positive separation d, the ultraviolet scale sum is finite:
+
+ sum_(r=L^-j<=1) r^-12 R_j^6 exp[-c d/r]
+       <= C_delta (1+d^-1)^(12+delta)                   (2.3)
+
+for every fixed delta>0, with a fixed terminal weak band. Indeed R_j is
+polylogarithmic in Gamma+Bj, hence bounded by C_delta r^-delta; the
+remaining geometric-exponential sum is bounded by C d^(-12-delta).
+The analogous Q-Q and Q-T powers are 8 and10. Smearing against separated
+tests costs their physical L1 norms; no surrounding-volume factor is
+introduced. Constants also cover d comparable with the stopped scale.
+
+This is a useful conditional fast-joining estimate, not an unconditioned
+correlation estimate. The latter still contains
+Cov_outer(K_omega W1,K_omega W2). No decay or regularity of that outer
+term follows from (2.2). Surviving large-field histories are not silently
+identified with this regular normalized kernel.
+
+3. AN EXACT TWO-CUBIC CONTACT, INCLUDING ITS QUADRATIC CHANNEL
+
+At the flat Gaussian reference let xi_A, A=1,2,3, be independent
+three-color vectors with covariance sigma^2 I, and put
+
+        T(m+xi)=det(m1+xi1,m2+xi2,m3+xi3).
+
+Color-diagonal contractions within one determinant vanish. Hence
+
+                        E T(m+xi)=det(m1,m2,m3).          (3.1)
+
+But its COMPLETE normalized two-source coefficient is
+
+ Var T(m+xi)=6 sigma^6
+       +2 sigma^4 (|m1|^2+|m2|^2+|m3|^2)
+       +sigma^2 (|m2 cross m3|^2+|m3 cross m1|^2
+                                      +|m1 cross m2|^2). (3.2)
+
+Proof: expand by noise degree. The degree-one terms have variances
+sigma^2 times the displayed cross-product squares. The degree-two
+terms have variances 2 sigma^4 |m_A|^2. Distinct noise subsets and
+Gaussian chaoses are orthogonal. The determinant of three centered
+vectors has second moment 3! sigma^6. This proves every coefficient.
+
+No exponential source exists on a full real neighborhood for the
+unbounded Gaussian cubic, but the nilpotent two-source identity is exact:
+
+ log E[(1+z1 T)(1+z2 T)]
+        =(z1+z2) ET+z1 z2 Var T,   z1^2=z2^2=0.          (3.3)
+
+Subtracting the constant contact 6 sigma^6 leaves a NONZERO quadratic
+background kernel. It has Hessian 4 sigma^4 I in these nine coordinates.
+Thus even two cubic insertions at the free point cannot be transported
+by preserving only the zero-Hessian class of each uncontracted seed.
+
+For two distinct points with species-diagonal cross-covariance c I,
+the corresponding conditional covariance is
+
+ c sum_A (m_B cross m_C).(n_B cross n_C)
+             +2 c^2 sum_A m_A.n_A+6 c^3.                (3.4)
+
+The pair (B,C) is cyclically complementary to A. This is the same
+explicit quartic/quadratic/constant ledger with spatial covariance
+retained. General species covariance gives the usual full contracted
+kernels, not just constants. At zero mean and arbitrary color-diagonal
+cross-covariance C_AB(x,y),
+
+ E[T_ABC(x)T_DEF(y)]=6 det(C_(A,B,C),(D,E,F)(x,y)).       (3.5)
+
+For comparison, centered quadratic fields satisfy
+Cov(Q_AB(x),Q_DE(y))=3(C_AD C_BE+C_AE C_BD).
+
+These calculations concern the full Gaussian reference. Native retained
+cutoffs and nonlinear interactions must still be carried; they are not
+discarded to assert an exact Gaussian native law. The nonzero quadratic
+term persists in the limit of expanding Gaussian windows, so no
+algebraic claim based only on color invariance or zero seed Hessians can
+remove it. It does NOT contradict finite separated free-field moments.
+
+4. EXACT NORMALIZED WILSON SD ELIMINATION, WITH SPECTATOR SUPPORT
+
+Let mu=Z^-1 exp(-S)dH, S=sum_p beta_p E_p, E_p=1-w(U_p), on a finite
+graph. Take an integrated link e; fixed boundary links cannot be used
+as integration variables. Set Delta_e=sum_a X_a^2 and
+Gamma_e(f,h)=sum_a X_a f X_a h, with exp(i t sigma_a/2) left derivatives.
+For every smooth F,O, exact Haar integration by parts gives
+
+ mu[(Gamma_e(S,F)-Delta_e F) O]=mu[Gamma_e(F,O)].          (4.1)
+
+All expectation values are normalized under the SAME full Wilson law.
+If the COMPLETE read of O avoids e, the right side is zero. This support
+condition includes every common-base connector, not only the visible
+plaquette interiors. The formula extends to products of separated
+spectators without changing normalization.
+
+Orient each incident action plaquette to traverse e once forward and
+base it at e's initial vertex. Since w(P)=w(P^-1), this does not change
+the action. Write its vector part p, and let Q be another such plaquette.
+Then Gamma_e(E_p,E_q)=p.q/4 and Delta_e E_q=3w(Q)/4. Therefore
+
+ mu[ O {sum_(p incident e) beta_p p.q-3w(Q)} ]=0         (4.2)
+
+when O avoids e. Each p.q is its exact signed two-word difference.
+For a spectator that reads e, the right side of (4.2) is instead
+4 mu[Gamma_e(E_q,O)]. This is the contact and may not be dropped.
+In particular this supplies an actual separated two-insertion identity
+for ONE action-weighted quadratic combination; it does not invert all
+21 curvature pairings.
+
+There is an equally explicit orientation-sensitive version. Let P
+traverse e once forward and let a based loop Q avoid e altogether.
+Write F=p.q. Direct Pauli differentiation gives
+
+ X_a F=(p0 q_a-(p cross q)_a)/2,  Delta_e F=-3F/4,
+ Gamma_e(E_R,F)=[p0 r.q-det(r,p,q)]/4.                   (4.3)
+
+Thus, for O avoiding e,
+
+ mu[O sum_R beta_R det(r,p,q)]
+       =mu[O {sum_R beta_R p0 r.q+3p.q}].               (4.4)
+
+Every determinant is its exact signed triple-word difference. If O
+reads e, subtract 4 mu[Gamma_e(F,O)] from the right side. Formula(4.4)
+is an actual interacting Wilson identity, not a perturbative expansion
+or a new analytic source theorem. It only eliminates the action-weighted
+sum over the link star; replacing that sum by an individual cubic is
+unjustified. Repeated use produces further words and contact terms.
+The finite-N master loop equation confirms that infinite catalogue.
+
+5. EXACT CANONICAL PRICE AND THE REMAINING ONE-LEG PROBLEM
+
+At physical scale r, point representatives are r^-4 Q_g and r^-6 T_g.
+The physical r^4 smearing therefore multiplies the raw quadratic word
+by O(g^-2) and the raw cubic word by O(g^-3 r^-2). Neither the SU(2)
+trace reduction nor fixed-order nilpotent differentiation removes these
+coefficients. For example, choose Phi1=R e1, Phi2=R e2, Phi3=R e3 in
+a common small chart. Then
+
+             T_g=R^3 s(g^2R^2/4)^3 >=c R^3             (5.1)
+
+for real small gR. The running-domain norm is genuinely of that size,
+not g^kappa. To insert the physically smeared seed into a tiny R slot
+by a direct norm estimate still requires
+
+                       |z|<=c r^2 g^kappa/R^3.          (5.2)
+
+This is a countertest of the crude tiny-slot inference, not of a
+renormalized cubic field. On an identity-based complete proper datum
+chart the literal one-cubic seed has the established classical h^6
+gain. Formula(3.2), and the background-dependent one-cubic covariance
+example already in turn21, show precisely why quantum contraction must
+retain the entire generated quadratic family before reusing that gain.
+
+The genuinely new progress here is limited but concrete: the exact
+supported SD combinations (4.2),(4.4), the before-absolute finite proxy
+(1.4)--(1.5), and the explicit two-cubic contact/fast-joining calculation.
+For separated two-point continuum estimates, the outstanding object is
+the interacting conditional ONE-leg output (including its full lower
+kernel and boundary/current reads), propagated on the original native
+domains, plus the already separate large-field continuation. A general
+source exponential for the cubic is unnecessary, but scalar source
+stability and |w(loop)|<=1 do not provide that one-leg estimate.
+
+Independent algebra audit: public_argument_audit checked (1.2)--(1.3)
+and (3.2), including the coefficient 2 sigma^4. The same agent checked
+the signs in (4.3)--(4.4), the +3p.q term and the complete no-e read
+condition on Q, O and their transport paths. No full native continuum
+attachment was inferred from these algebra checks.
+
+============================================================================
+protected_cubic_hypercubic_audit_turn34.txt
+============================================================================
+
+PROTECTED ONE-LEG CUBIC SECTORS: EXACT HYPERCUBIC AUDIT
+19 October 2026. public_argument_audit.
+
+Use SU(2) adjoint curvature vectors F_ab=-F_ba in R^3, or their
+complexifications. The color determinant is invariant under the
+adjoint SO(3) action, so the following are genuine gauge-invariant
+cubic polynomials. Distinct indices i,j,k,l run through the four axes.
+All statements concern the WHOLE covariant homogeneous coefficient
+catalogue. Fixed geometry/pivot summands need not have these symmetries.
+
+1. A NONZERO PATH-DIFFERENCE WITH NO QUADRATIC TARGET
+
+Define
+ C_ij;kl=det(F_ik,F_kl,F_lj),
+ D_ij;kl=det(F_il,F_lk,F_kj),
+ X_ij;kl=C_ij;kl-D_ij;kl.
+
+Under coordinate sign reflections epsilon_a=+/-1, each F_ab acquires
+epsilon_a epsilon_b, so C,D,X have character epsilon_i epsilon_j.
+The complete space of gauge-invariant quadratic curvature polynomials
+with this character is spanned by
+
+ Q_k=Tr(F_ik F_jk),              Q_l=Tr(F_il F_jl).
+
+Indeed a product of two distinct 2-form components must share exactly
+one index; its two unshared indices are i,j. Diagonal squares have
+trivial reflection character, and disjoint pairs have all-odd character.
+The unique SU(2) invariant bilinear color form is the dot product/trace.
+
+Let tau swap i and j while leaving k,l fixed. Directly,
+
+ tau C=det(F_jk,F_kl,F_li)
+      =det(F_kj,F_kl,F_il)
+      =-det(F_il,F_kl,F_kj)=D.
+
+Similarly tau D=C. Thus tau X=-X. But tau Q_k=Q_k and tau Q_l=Q_l,
+since the color bilinear form is symmetric. Any linear quadratic
+extractor Pi that intertwines the complete hypercubic action therefore
+satisfies Pi X=0. A constant/vacuum coefficient is also excluded by
+the nontrivial reflection character. This applies to a ONE-LEG linear
+transport of X under an equivariant scalar body: its entire transported
+homogeneous family remains in the same symmetry sector.
+
+For i=0,j=1,k=2,l=3,
+
+ X=det(F_02,F_13,F_23)+det(F_03,F_12,F_23).
+
+It is nonzero: take F_02=e1,F_13=e2,F_23=e3 and F_03=F_12=0.
+Arbitrary antisymmetric Lie-algebra curvature values can be prescribed
+at one point by a linear potential vanishing at that point, so this is
+not an algebraically inadmissible curvature assignment.
+
+There are six independent path-character directions, one for each
+unordered pair {i,j}. Their distinct reflection characters prove their
+linear independence. Swapping the complementary indices reverses X;
+swapping i,j also reverses X. Axis permutations permute the six lines
+with the corresponding signs, so their span is a hypercubic submodule.
+
+2. THREE MORE PROTECTED STAR DIFFERENCES
+
+Define
+
+ S_i=(1/6) sum_(j,k,l) epsilon_ijkl
+                         det(F_ij,F_ik,F_il).
+
+Only the six permutations of the other three axes contribute. For an
+ordered complement a,b,c this equals
+epsilon_iabc det(F_ia,F_ib,F_ic). Under every coordinate reflection
+it has the all-odd character product_a epsilon_a. Under a permutation
+pi of the axes,
+
+                         pi S_i=sgn(pi) S_(pi i).
+
+The four S_i are linearly independent: turn on only the three edges
+incident to i, with independent color vectors, to isolate S_i. Their
+trace-zero coefficient subspace sum_i c_i=0 therefore has dimension 3.
+
+The all-odd quadratic target is the three-dimensional disjoint-pair
+space. Choosing oriented representatives
+
+ F_01 dot F_23,    F_02 dot F_31,    F_03 dot F_12,
+
+its permutation action is sign times the permutation of the three
+pairings. There is a simple exact no-intertwiner proof without an
+irreducible-character table. The Klein four subgroup of S4 consisting
+of the identity and the three double transpositions fixes every pairing
+and has positive sign. Thus it acts trivially on that target. On the
+four-star permutation space it acts transitively on the four indices,
+so its average is projection onto the constants. Its average is ZERO
+on the trace-zero star subspace. For any intertwiner L from that
+subspace to the pairing space, L=L average_(Klein)=0.
+
+Hence the full quadratic extractor of each trace-zero star combination
+vanishes. Their nontrivial reflection character also excludes vacuum.
+The star trace itself is NOT protected by this argument.
+
+3. COMBINED NINE-DIMENSIONAL SCOPE AND PARITY
+
+The six path directions and three star differences have different
+reflection sectors and together give a protected nine-dimensional
+hypercubic module. It can be matched to the hypercubic transformation
+rules of a pseudo-traceless symmetric rank-two array by assigning the
+path with odd axes {i,j} to the complementary off-diagonal slot {k,l},
+with an epsilon convention, and the stars to diagonal slots. This
+does NOT alone prove that the polynomial span is invariant under the
+full continuous O(4) action, or identify a physical spin-(3,3) field.
+
+Full coordinate inversion -I fixes each F_ab and hence every cubic
+above. Every dimension-five quadratic curvature word with one
+covariant derivative is odd under that inversion. Therefore such
+one-derivative FF terms cannot occur in the equivariant one-leg
+homogeneous channel either. This is a symmetry selection rule, not a
+new native h^6 or h^7 Taylor estimate and not a reconstruction theorem.
+
+Two or more cubic insertions tensor these characters and can have
+allowed quadratic and vacuum contacts. None of the above forbids
+those mixed terms. Nor does it prove source admission, all-history
+continuation, a separated limiting field, or an improved engineering
+bound on original complex field/current contours. For native use,
+Pi must be the previously matched universal full quadratic extractor
+and covariance must hold for the complete catalogue with geometry
+and pivot labels transformed together.
+
+4. AN EXACT O(4) POLYNOMIAL REALIZATION OF THE NINE COMPONENTS
+
+This additional algebra identifies the polynomial module, without
+asserting rotation covariance of a limiting quantum field. Give R^4
+the orientation epsilon_0123=1 and use (*F)_ab=(1/2)epsilon_abcd F_cd.
+For each color a, regard F^a as a real antisymmetric 4 by 4 matrix. Set
+
+ U_mn=epsilon_abc (F^a F^b (*F^c))_mn,
+ T=Sym_0 U=(U+U^t)/2-(Tr U)I/4.                         (4.1)
+
+The color epsilon makes this gauge invariant. For R in O(4),
+*(RFR^t)=(det R)R(*F)R^t, hence
+
+                         T(RF)=(det R)R T(F)R^t.       (4.2)
+
+Thus T is an exact pseudo-symmetric-traceless polynomial tensor.
+Its components are precisely the protected components above, up to
+the following nonzero normalization and orientation choices:
+
+ T_ii=-2(S_i-(1/4)sum_a S_a),
+ T_kl=-epsilon_ijkl X_ij;kl       (i,j,k,l distinct).    (4.3)
+
+These identities follow by direct matrix multiplication. For example,
+write A=F01,B=F02,C=F03,D=F12,E=F13,F=F23. Then
+S0=det(A,B,C), S1=det(A,D,E), S2=det(B,D,F),
+S3=det(C,E,F), and
+
+ U00=2(S1+S2+S3),        Tr U=6 sum_i S_i,
+ U01=U10=det(A,C,D)-det(A,B,E)=-X_23;01.
+
+Axis permutations give the other entries, with the epsilon sign in
+(4.3). Consequently the nine-dimensional polynomial span actually
+IS invariant under continuous O(4), refining the deliberately weaker
+hypercubic conclusion of Section3. Nonzero follows already from
+F02=e1,F13=e2,F23=e3, all other components zero: T23=T32=-1,
+and all other entries vanish. A pointwise Bianchi constraint does not
+force this example to vanish; curvature values at one point are free.
+
+This is only an algebraic representation statement. It does not prove
+continuous rotations of the renormalized lattice source, a nonzero
+continuum tensor, protected mixed contacts, or a native high-order
+preparation bound. The exact hypercubic selection arguments remain
+the basis for the one-leg quadratic cancellation at finite cutoff.
+
+5. THE PROTECTED COMPONENT STILL HAS A QUADRATIC TWO-LEG CONTACT
+
+The preceding protection is strictly a one-leg statement. Let
+B=F02,E=F13,C=F03,D=F12 be four independent centered color Gaussian
+vectors with covariance sigma^2 I, and put F=F23=m+xi, where xi is
+independent with the same covariance. The protected component is
+
+                 T23=-det(B,E,F)-det(C,D,F).
+
+Conditionally on F the two summands are independent and centered.
+For one independent pair B,E,
+E[(B cross E)(B cross E)^t]=2 sigma^4 I; therefore
+
+ Var(T23|F)=4 sigma^4 |F|^2,
+ Var(T23)=4 sigma^4 |m|^2+12 sigma^6.                  (5.1)
+
+The background Hessian of this two-leg conditional coefficient is
+8 sigma^4 I. Hence even this specifically protected component
+generates an allowed quadratic channel when two legs meet. This is
+a finite Gaussian contact calculation, not a statement about a
+separated continuum limit or the size of an interacting native term.
+
+============================================================================
+protected_cubic_profile_moments_turn34.txt
+============================================================================
+
+TWO MOMENT CANCELLATIONS FOR A PROTECTED CUBIC PROFILE
+19 October 2026. Root. Turn34.
+
+This note proves a kernel lemma and explains its conditional relevance
+to the exact protected SU(2) cubic symmetry sector checked in
+protected_cubic_hypercubic_audit_turn34. It does not establish the required
+complete native kernel, an h^6/h^7 bound, or a continuum cubic field.
+
+1. AN ELEMENTARY SIGNED-KERNEL LEMMA
+
+Let K(y,z) be a linear-map-valued discrete kernel from a fixed source
+component to a finite-dimensional quadratic output space. The measure
+in the z sum includes its ACTUAL physical quadrature and any shifted
+source lattice. Suppose the entire source set and its weights are
+invariant under z->2y-z, and the complete kernel satisfies
+
+ sum_z K(y,z)=0,
+ K(y,2y-z)=K(y,z),
+ sum_z ||K(y,z)|| |z-y|^2 <= M_y < infinity.             (1.1)
+
+Also assume absolute summability, or a common symmetric summation with
+the corresponding first and second moments absolutely summable.
+Then for a scalar C^2 profile f on the convex hull of the reads,
+
+ ||sum_z K(y,z) f(z)|| <= (M_y/2) ||D^2 f||_infty.       (1.2)
+
+Proof. Evenness makes sum_z K(y,z)(z-y)=0 by pairing the terms.
+The zero moment removes f(y). Taylor's integral identity gives
+
+ f(z)-f(y)-Df(y)(z-y)
+  =integral_0^1 (1-t) D^2f(y+t(z-y))[z-y,z-y] dt.
+
+Insert that identity before taking absolute values and use (1.1).
+This proves (1.2) for Banach-valued output as well. A centered integral
+kernel has the identical proof. A finite periodic lattice can be used
+inside a nonwrapping chart, or with a separately justified periodic
+Taylor convention; arbitrary displacement representatives cannot be
+substituted silently.
+
+An analogous C^(1,theta) estimate costs the (1+theta)-moment. If only
+the zero moment is known, the stronger second-order claim is false:
+K=delta_(y+e)-delta_y has zero sum but acts nontrivially on linear f.
+Evenness, or an independently proved first-moment identity, is needed.
+
+2. WHY THE PROTECTED CUBIC IS A CANDIDATE
+
+For distinct axes i,j,k,l use color vectors for SU(2) curvature and set
+
+ X_ij;kl = det(F_ik,F_kl,F_lj)-det(F_il,F_lk,F_kj).       (2.1)
+
+Its exact hypercubic properties are checked in the companion note:
+it is odd under swapping i and j and has reflection character
+epsilon_i epsilon_j. Every quadratic curvature polynomial with that
+reflection character is a linear combination of
+Tr(F_ik F_jk) and Tr(F_il F_jl), both even under that swap. Thus an
+equivariant COMPLETE homogeneous linear transport has zero universal
+quadratic extraction on this source sector.
+
+If that transport has a translation-covariant pointed source kernel
+K(y,z) for its extracted low response, the constant-profile conclusion
+is precisely the first identity in (1.1). This requires the whole
+coefficient, including its static/feed/reference companions. It does
+not mean a single fixed-geometry polymer has a zero quadratic part.
+
+Full coordinate inversion -I fixes every curvature two-form component
+and hence both (2.1) and all quadratic curvature components. Therefore
+an exactly same-centered inversion-covariant source kernel is even in
+z-y. This gives the second identity in (1.1). A compatible centered
+clover/read convention and the COMPLETE transformed pivot/geometry
+catalogue are essential. If an individual near box or a surviving
+large-field history breaks that covariance, the conclusion does not
+apply to it without its missing/boundary comparison.
+
+The existing exponential carrier estimates suggest that a second
+physical moment can be paid with a reserved exponent. But this note
+does not infer a complete quadratic extraction kernel from a scalar
+norm of the homogeneous output. The original kernel must preserve
+source points, physical masses, all current reads and the actual old
+carrier metrics before its sums. For MR_i carriers, the physical
+factor is MR_i r_i, not an invented r_i reach.
+
+3. ENGINEERING MEANING AND THE REMAINING CHANNELS
+
+Suppose such a regular one-leg kernel at physical scale r has a
+positive second-moment bound
+
+ sum_z ||K(y,z)|| (|z-y|/r)^2 <= B_r.                    (3.1)
+
+Then (1.2) gives C r^2 B_r ||D^2 f||. A dimension-six cubic insertion
+in four dimensions has an r^(-2) engineering source coefficient at
+that scale. The product is consequently C B_r ||D^2 f||, rather than
+an artificial r^(-1) loss from using only a first difference.
+
+This is a cancellation of a power-counting loss. It is not convergence
+of the remaining sum over RG dates. The bound B_r can contain coupling
+powers, and even B_r proportional to g_r^2 need not be summable toward
+the ultraviolet without the appropriate renormalization/calibration.
+Second-derivative profile terms represent dimension-six descendants
+of quadratic fields. They must be retained in the finite engineering-
+dimension source frame and treated with their exact identities; they
+are not declared zero because the constant-profile quadratic coefficient
+vanishes. Possible total derivatives must likewise be handled as local
+observable identities, not removed from a variable-profile source.
+
+The symmetry statement is linear in the protected source. Products of
+two such sources can transform in a quadratic sector and can generate
+quadratic contacts. The explicit Gaussian contact in
+loop_word_source_bridge_turn34 already demonstrates the general issue.
+Separate-point joining may pay physical short-scale powers, but the
+full original mixed contact and outer conditional mean still matter.
+
+4. WHAT WOULD BE NEEDED NEXT
+
+An implementation would prove (1.1) and (3.1) for the complete native
+one-leg output on its original complex background/current domains,
+identify the dimension-six descendants and its finite source frame,
+and preserve the same matched identities through boundary and R
+comparisons. A sharper high-remainder preparation would need its own
+finite Taylor/Ward calculation. None follows merely from Pi X=0.
+
+The exact gain proved here is the signed-kernel Taylor lemma. The
+protected cubic gives a concrete candidate for its two cancellations,
+not an already constructed new Yang--Mills observable.
+
+5. AN EXPLICIT NONZERO FREE REFERENCE CHECK
+
+The algebraic tensor is also a nonzero Gaussian Wick observable, not
+merely a nonzero polynomial on unrestricted classical data. This can
+be checked at separated points without any coincident moment bound.
+Take three independent free Maxwell colors with potential covariance
+delta_ab delta_mn D(x), D(x)=1/(4 pi^2 |x|^2). Differentiate to form
+the curvature covariance; no gauge-dependent potential is used as the
+observable. On the positive time axis x=(t,0,0,0), t>0, set
+
+ E_i=F_0i, B_1=F_23, B_2=F_31, B_3=F_12,
+ c=1/(pi^2 t^4).
+
+Direct differentiation gives, for color indices a,b,
+
+ <E_i^a(x) E_j^b(0)>=-c delta_ij delta_ab,
+ <B_i^a(x) B_j^b(0)>= c delta_ij delta_ab,
+ <E_i^a(x) B_j^b(0)>=0.                                  (5.1)
+
+For example -partial_0^2 D-partial_i^2 D=-4/(4pi^2 t^4);
+for a spatial F_ij the corresponding two spatial derivatives give
++4/(4pi^2 t^4). These signs are required by time reflection.
+
+The explicit component is
+
+ T23=det(E2,B2,B1)-det(E3,B3,B1).
+
+Interpret each cubic as its Gaussian Wick polynomial. Every possible
+internal contraction is zero by the color epsilon; at separated
+points the remaining three cross-contractions give 3!=6 times the
+product of the three species covariances. The mixed term between the
+two determinants is zero on this axis, because its E2-E3 cross
+covariance is zero and E-B covariances vanish. Therefore
+
+                    <T23(x) T23(0)>=-12 c^3.             (5.2)
+
+Time reflection sends this pseudo-tensor component to -T23. Its
+reflection-paired two-point value is consequently +12c^3. Small
+nonnegative smooth test bumps supported near a fixed positive time
+retain a strictly positive reflected quadratic form by continuity
+away from the coincident diagonal.
+
+This supplies an explicit FREE reference witness only. It proves
+neither a uniform refinement comparison for the original constrained
+RG covariance nor survival of this field in the interacting limit.
+It is not a substitute for the native one-leg, descendant and mixed-
+history estimates stated above, and a nonzero free composite does
+not identify a nonabelian Yang--Mills theory.
+

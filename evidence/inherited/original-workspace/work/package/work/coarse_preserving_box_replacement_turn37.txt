@@ -1,0 +1,441 @@
+COARSE-PRESERVING NORMALIZED BARE-BOX REPLACEMENT BY DISINTEGRATION
+19 October 2026. admission_proof. Turn37 construction and exact bounds.
+
+RESULT
+
+The original normalized box replacement extends to arbitrary Borel
+coarse statistics local to each separated core. Disintegrate the ACTUAL
+conditional law, preserve its coarse marginal, and condition on the
+proved window only on fibers whose window mass is at least 1-theta.
+Leave every other fiber unchanged. This avoids identifying a singular
+fiber measure with a bounded perturbation of product Haar.
+
+The exact joint law of the exterior and all chosen coarse statistics
+is preserved. Conditional discrepancy is at most theta after fixing
+the coarse data, but its exterior-conditional mean is at most alpha,
+the original bare tail. With eta=min(1,alpha/theta), the union of a bad
+boundary, a bad fiber, and a discrepancy has joint-inclusion parameter
+beta+(1-beta)eta. No extra +alpha or +theta is needed in that bound.
+
+There is no native analytic coefficient/domain conclusion. The result
+is an almost-everywhere disintegration theorem for the first actual
+bare law and for statistics with the specified complete local reads.
+
+1. ACTUAL CONDITIONAL PRODUCT AND COMPLETE COARSE READS
+
+Let I be a finite family of separated box cores. In the bare Wilson
+application, use vertex-disjoint embedded boxes and include EVERY box
+boundary link in the common exterior omega. Then no plaquette depends
+on two core interiors, and the original probability is exactly
+
+ mu(domega,du)=mu_X(domega) product_i Q_i^omega(du_i).     (1.1)
+
+The Q_i are the normalized compact conditional Wilson kernels, not
+Gaussian replacements. The abstract proof below only requires (1.1)
+on standard Borel spaces with measurable probability kernels.
+
+For each i let B_i be an exterior-measurable bad-boundary event, and
+let W_i(omega) be a measurable subset of its original interior space.
+Assume, for a fixed 0<alpha<1,
+
+ Q_i^omega(W_i^c)<=alpha on B_i^c,                         (1.2)
+ mu_X(intersection_(i in S) B_i)<=beta^|S| for all S,       (1.3)
+
+where 0<=beta<=1. The fixed-box archived theorem and the polylog-box
+theorem supply (1.2) on their respective boundary windows. The latter
+by itself does not supply (1.3); a boundary-array theorem is a separate
+input whenever (1.3) is used.
+
+Choose any Borel map
+
+              Y_i=A_i(omega,u_i) in a standard Borel space E_i.
+
+This may be a finite collection of group-valued/real constraints and
+branch flags; it need not take finitely many values. Its COMPLETE
+read may use omega and core i, but no other core interior. Define it
+on ORIGINAL link variables. The forest gauge is used to define W_i,
+not to silently replace the prescribed coarse statistic by an average
+of gauge-transformed links.
+
+Every additional coarse observable of the form
+C(omega,Y_1,...,Y_|I|) will also be preserved exactly. Thus a constraint
+spanning more than one core is covered if it factors through the
+chosen separate local statistics. Recording all local path segments
+may suffice in a particular map. Recording each whole core is always
+possible but can make the construction trivial; see Section9.
+
+Conditioning directly on a coupled statistic such as u_1+u_2 does
+NOT in general leave the interiors independent. The product and array
+claims below require the boxwise factorization just stated.
+
+2. REGULAR CONDITIONAL PROBABILITIES AND NULL FIBERS
+
+Let nu_i^omega=(A_i(omega,.))_* Q_i^omega. Parameterized regular
+conditional probabilities give jointly measurable kernels
+R_i^(omega,y_i) with
+
+ Q_i^omega(du_i)=integral nu_i^omega(dy_i) R_i^(omega,y_i)(du_i),
+ R_i^(omega,y_i){A_i(omega,u_i)=y_i}=1                    (2.1)
+
+for the relevant almost-everywhere values. It is enough to construct
+these by disintegrating the joint law of (omega,u_i,Y_i); all claims
+then hold for mu_X-almost every omega and nu_i^omega-almost every y_i.
+
+The exact joint exterior/coarse law is
+
+ Lambda(domega,dy)=mu_X(domega) product_i nu_i^omega(dy_i). (2.2)
+
+Given (omega,y), the actual interior conditional law is product_i R_i.
+To prove this, test the proposed kernel against products of bounded
+functions of the separate pairs (u_i,y_i), use (1.1),(2.1), and extend
+by the monotone-class theorem. No independence of the boundary events
+B_i is required.
+
+Define
+
+                    p_i(omega,y_i)=R_i^(omega,y_i)(W_i^c).
+
+It is a measurable [0,1]-valued function, and the defining identity is
+
+ integral p_i(omega,y_i) nu_i^omega(dy_i)
+                         =Q_i^omega(W_i^c)<=alpha on B_i^c. (2.3)
+
+An individual fiber often has zero Q_i mass because Y_i is continuous.
+The theorem nevertheless gives an RCP for almost every coarse value;
+it does not assert a bound or a canonical kernel at EVERY prescribed
+value, including null exceptional values. Values of kernels there may
+be assigned arbitrarily, with no effect on the constructed measures.
+In particular no separate coarea or FP density formula has been proved.
+
+3. GOOD FIBERS, THE EXACT REPLACEMENT, AND NORMALIZATION
+
+Fix 0<theta<1. Put
+
+ F_i={B_i^c and p_i>theta},
+ G_i={B_i^c and p_i<=theta},
+ q_i=1_(G_i) p_i.
+
+F_i is the bad-fiber mark. Define the replacement kernel on a fiber by
+
+ P_i^(omega,y_i)=R_i^(omega,y_i)(. | W_i) on G_i,
+ P_i^(omega,y_i)=R_i^(omega,y_i) otherwise.                (3.1)
+
+The first denominator is 1-p_i>=1-theta>0. The second line includes
+both bad boundaries and bad fibers, including a fiber with p_i=1.
+Every P_i remains concentrated on the SAME coarse fiber by (2.1).
+
+The new measure is
+
+ nu(domega,dy,dv)=Lambda(domega,dy) product_i P_i^(omega,y_i)(dv_i).
+                                                                    (3.2)
+
+It is a probability and has EXACTLY the original (omega,Y) law Lambda.
+After forgetting y this remains a measure on the original fine links.
+All chosen coarse values can be preserved pointwise in the coupling
+of Section4, not merely in expectation.
+
+Its Radon--Nikodym derivative relative to the ORIGINAL bare law is
+
+ dnu/dmu=product_i M_i(omega,u_i),
+ M_i=1_(G_i^c)+1_(G_i) 1_(W_i)(u_i)/(1-p_i),              (3.3)
+
+where y_i=A_i(omega,u_i) in every coefficient. Conditional on (omega,Y),
+each factor has original R_i expectation one. Thus the product does
+too. Multiplying (3.3) into the unnormalized original Wilson measure
+retains its total partition mass EXACTLY. The denominators are genuine
+fiber probabilities; no Gaussian determinant or vacuum scalar replaces
+them, and no source-dependent normalization has been introduced.
+
+All bounded or integrable functions of (omega,Y), including their
+full generating functions where defined, have identical expectations
+under mu and nu. A global product density bound is unnecessary.
+
+The local operator 'hold omega,Y_i fixed and redraw from P_i' is
+idempotent on the supported law. Operators on different boxes commute
+because their coarse maps, windows and selection rules do not read
+another interior. All kernels and selection rules in this statement
+are frozen from the original Q_i; they are not recomputed after a
+partial replacement.
+
+4. COARSE-PRESERVING COUPLING AND TWO DISCREPANCY SCALES
+
+On G_i with p_i>0 let H_i=R_i(. | W_i^c); otherwise choose any
+measurable probability kernel on the same fiber, whose coefficient is
+zero. Then the exact identity is
+
+                  R_i=(1-q_i)P_i+q_i H_i.                (4.1)
+
+Sample (omega,Y) with Lambda. Independently across i conditional on
+these variables, sample V_i~P_i, D_i~Bernoulli(q_i), and H_i as needed;
+put U_i=V_i when D_i=0 and draw U_i~H_i when D_i=1.
+Then U has the original law, V the replacement law, and
+
+           A_i(omega,U_i)=A_i(omega,V_i)=Y_i a.s.         (4.2)
+
+On a discrepancy, U_i is outside W_i and V_i inside. Otherwise the
+fields are identical. Thus D_i is exactly the discrepancy indicator.
+
+After fixing both exterior and coarse values, the D_i are independent
+Bernoulli(q_i), with q_i<=theta. They therefore admit iid Bernoulli(theta)
+domination on this conditional level.
+
+After fixing only the exterior, the complete box experiments remain
+independent because their Y_i are independent. Their discrepancy
+parameters are
+
+ d_i(omega)=integral p_i 1_(G_i) dnu_i^omega
+                    <=alpha 1_(B_i^c).                  (4.3)
+
+Consequently the discrepancy array, with coarse values integrated,
+is stochastically dominated by iid Bernoulli(alpha), and
+
+                 P(D_i=1 for all i in S)<=alpha^|S|.     (4.4)
+
+For precision, the independent uniforms realizing theta domination
+conditional on (omega,Y) need not be the uniforms realizing alpha
+domination after integrating Y. The latter follows from the conditional
+product Bernoulli parameters d_i(omega)<=alpha, or can be realized by
+sampling those Bernoulli marks first and then the corresponding Y_i
+conditional on them. It is NOT an alpha bound at each fixed fiber.
+
+Expanding the products in (4.1) also gives the archived exact positive
+failure expansion with Lambda as base and q_i as weights. The empty
+term is weighted by product_i(1-q_i(omega,Y_i)); it is not a constant
+multiple of nu. There is no fictitious positive native-history measure.
+
+5. SHARP JOINT UNCONTROLLED-BOX BOUNDS
+
+Let eta=min(1,alpha/theta). From (2.3),
+
+              P(F_i | omega)<=eta 1_(B_i^c).             (5.1)
+
+The bad-fiber law is unchanged by replacement because it is a function
+of (omega,Y). Define the coupling's uncontrolled mark
+
+                         C_i=1_(B_i) OR 1_(F_i) OR D_i.
+
+These three alternatives are mutually exclusive at a given box. On
+a good boundary, its exterior-conditional parameter is exactly
+
+ c_i(omega)=integral [1_(p_i>theta)+p_i 1_(p_i<=theta)] dnu_i^omega.
+
+For 0<=p<=1,
+
+                1_(p>theta)+p 1_(p<=theta)<=p/theta.
+
+Hence c_i<=eta on B_i^c and c_i=1 on B_i. Conditional on omega the
+C_i are independent, so for every S
+
+ P(C_i=1 for all i in S)
+ <=E product_(i in S)[eta+(1-eta)1_(B_i)]
+ <=[eta+(1-eta)beta]^|S|.                                (5.2)
+
+The last line expands the finite product and uses only (1.3), not
+independence of bad boundaries. The resulting parameter
+
+                        kappa=beta+(1-beta)eta            (5.3)
+
+is sharper than beta+alpha/theta+alpha or beta+alpha/theta+theta.
+There is no need to charge a discrepancy separately after bounding
+bad fibers: the same mean p controls their disjoint union.
+
+The eta bound is optimal using only E[p]<=alpha. For alpha<theta,
+take p=theta+epsilon on a fraction alpha/(theta+epsilon) of fibers
+and zero elsewhere, then send epsilon down to zero. Independent
+bad-boundary marks of parameter beta show the corresponding sharpness
+of (5.3) within these probabilistic hypotheses.
+
+Equation (5.2) alone is a joint-inclusion bound, not a claim of iid
+stochastic domination for C. It implies, for t>=0 and finite A,
+
+ E exp[t sum_(i in A) C_i] <=[1+kappa(e^t-1)]^|A|.        (5.4)
+
+Choosing theta=sqrt(alpha) gives eta=sqrt(alpha), a uniform good-fiber
+denominator at least 1-sqrt(alpha), and conditional discrepancy at
+most sqrt(alpha). The annealed discrepancy bound stays alpha. Other
+theta trade the good-fiber denominator against the number of excluded
+fibers; there is no uniquely optimal threshold for all uses.
+
+6. ACTUAL WINDOW DEFECTS ARE BETTER THAN THE UNCONTROLLED LABEL
+
+On a good boundary the replacement's probability of being outside W_i
+is
+
+ r_i(omega)=integral p_i 1_(p_i>theta) dnu_i^omega<=alpha.
+
+There is the exact mass identity
+
+              d_i(omega)+r_i(omega)=Q_i^omega(W_i^c)
+                                     on B_i^c.          (6.1)
+
+Thus the original bad-window mass is divided into mass removed by
+the coupling and mass retained on bad fibers. The replacement creates
+no new window failure: in the coupling, its W_i^c indicator is at
+most the original one, pointwise.
+
+For the replacement's actual defect B_i OR {V_i outside W_i}, the
+same conditional product proof gives the stronger joint bound
+
+        [beta+(1-beta)alpha]^|S|.                         (6.2)
+
+Unlike the unconstrained archived replacement, the present operation
+cannot in general reduce the replacement defect to B_i alone. A fiber
+may be wholly outside W_i and must then be left unchanged to preserve
+its coarse value. The bound alpha in (6.2) cannot be universally
+improved: take p_i=1 on a fraction alpha of fibers and zero elsewhere.
+
+7. LOCAL COMPARISONS AND EXACT DENOMINATOR COST
+
+For the joint law of (omega,Y) and the interiors in a finite set A,
+the total variation distance, with convention sup_events, is exactly
+
+ ||mu_(omega,Y,U_A)-nu_(omega,Y,V_A)||TV
+   =E_Lambda[1-product_(i in A)(1-q_i)]
+   =E_(mu_X)[1-product_(i in A)(1-d_i(omega))]
+   <=1-(1-alpha)^|A|<=alpha |A|.                         (7.1)
+
+On the replacement support the conditional density relative to the
+original is at least one; its complement has original probability
+1-product(1-q_i). This proves the equality, as does the disjoint-support
+coupling. Forgetting some preserved coordinates gives an upper bound.
+
+For a bounded observable F depending on these interiors and arbitrary
+preserved (omega,Y),
+
+ |mu(F)-nu(F)|<=2||F||infty alpha |A|.                    (7.2)
+
+With finite/summable box oscillations the sharper bound is
+alpha sum_i osc_i(F). Pure coarse/exterior observables have zero
+error exactly, regardless of their oscillation as functions of Y.
+
+The directed relative entropy is also controlled with actual
+normalization:
+
+ D(nu_(omega,Y,V_A) || mu_(omega,Y,U_A))
+     =E_Lambda sum_(i in A) 1_(G_i)[-log(1-p_i)]
+     <=|A| alpha/(1-theta).                             (7.3)
+
+The reverse entropy can be infinite, since some original fine fields
+are removed. The bounds contain no distant-box count. They retain
+the ordinary bounded-observable norms and do not prove bounds on
+physically renormalized tensor insertions by themselves.
+
+8. GAUGE COVARIANCE AND NATIVE BRANCH QUALIFICATIONS
+
+The original Q_i transform covariantly under the finite-lattice gauge
+action. The good-boundary condition and W_i must be gauge invariant
+when lifted back from the complete boundary-tree/forest convention.
+If the coarse maps are invariant, or equivariant with a specified
+action on Y_i preserving the sigma field generated by (omega,Y), then
+conditional expectation uniqueness gives the corresponding covariance
+of p_i and the replacement density (3.3), almost everywhere. Hence
+the replacement MEASURE is gauge invariant. No assertion of a single
+pointwise equivariant RCP at every exceptional coarse value is needed.
+
+An arbitrary measurable statistic need not have this covariance, so
+gauge invariance is an additional conclusion only under the preceding
+equivariance condition. Exact preservation of that statistic itself
+does not require it to be gauge invariant.
+
+When an ordinary native average is only defined on a validity branch,
+one can record the validity flag and use a distinguished invalid value
+to make a total Borel statistic. One may also leave invalid branches
+unchanged. Such extra exclusions preserve the coarse law and decrease
+discrepancies, but an uncontrolled-box bound counting those extra
+branches needs THEIR probability bound as well. They cannot silently
+be included in beta or alpha/theta.
+
+In particular validity of an ordinary average can read an exterior
+collar larger than the bare box boundary. Good bare boundary data
+alone need not imply that validity. No invalid-selector probability
+is inferred unless W itself implies validity on the complete read,
+or a separate collar estimate supplies it.
+
+An actual finite measurable branch or density multiplier can be
+included among the retained local statistics. Whenever the resulting
+K(omega,Y) is integrable, its weighted integrals are preserved exactly:
+integral K dnu=integral K dmu. The same holds with any further retained
+coarse test. This is an equality of integrals, not a rarity bound
+under the K-weighted law. A singular delta/gauge constraint is not
+automatically such a finite measurable multiplier; evaluation on its
+null fiber needs its own disintegration/version identification.
+
+Likewise conditioning afterward on a selected coarse branch changes
+the relevant denominator. The bound E[p|omega]<=alpha does not imply
+the same bound after conditioning on an arbitrarily rare event in Y.
+The theorem preserves that branch's probability exactly, but makes
+no uniform claim about the normalized kernel within it.
+
+9. SHARPNESS AND ABSENCE OF ANALYTIC CONTROL
+
+If A_i records the entire fine core u_i, then R_i is a point mass,
+p_i is either zero or one, and the operation is identically the
+original law. It still satisfies every theorem above. Thus allowing
+all chosen constraints is logically valid but does not guarantee a
+nontrivial smoothing/resampling operation on those constraints.
+
+Small p and small normalization logs imply no coarse-coordinate
+derivative bound. Explicitly let Y be uniform on the circle, let
+B be binary with conditional probability
+
+              P(B=1|Y=y)=p(y)=alpha(1+sin(Ny)),
+              W={B=0},  2alpha<=theta<1.
+
+Then E p=alpha and EVERY fiber is good, but
+
+ d/dy[-log(1-p(y))]=alpha N cos(Ny)/(1-p(y)).              (9.1)
+
+Its supremum is at least alpha N, arbitrarily large with N. In the
+complex extension, zeros of 1-p(z) can approach the real circle on
+a distance of order N^-1, so no common holomorphic neighborhood is
+implied either. This is a countertest of an inference, not a claim
+about the particular Wilson kernel's dependence on its averages.
+
+Disintegration and Markov's inequality therefore supply exact
+normalization, preserved coarse law, and quantitative sparse marks;
+they do not supply analytic native source coefficients, current
+bounds, or an admissible complex original domain on each good fiber.
+
+10. RELATION TO THE ARCHIVE AND TO THE POLYLOG BOX THEOREM
+
+The archived normalized_box_replacement_research.txt proves the same
+conditional-product replacement when only the exterior is preserved.
+It uses the boundary-level probability Q_i(W_i^c), and therefore can
+condition every good-boundary box on W_i. Its coupling, partition
+normalization, local TV and entropy proofs are reused here after
+enlarging the preserved data to (omega,Y).
+
+The NEW step is the intervening disintegration and threshold split:
+bare tail smallness holds only on average over coarse fibers. It gives
+rare bad fibers, rather than a uniform fixed-fiber tail. The sharper
+joint uncontrolled bound (5.2) and the discrepancy/retained-failure
+identity (6.1) keep that distinction explicit.
+
+For polylogarithmically growing bare boxes, substitute the proved
+alpha from polylog_box_conditional_tail_turn37.txt, or its justified
+real perturbation extension. When alpha is superpolynomially small
+in g, theta=sqrt(alpha) preserves that property. If a compatible
+beta boundary-array bound is also available, (5.2),(6.2) give the
+corresponding sparse-array conclusions independently of ambient volume.
+
+For the FIRST bare pushforward, one can choose all locally determined
+coarse averages needed for that pushforward, together with exact
+branch/frame data as above. The resulting entire coarse marginal
+is unchanged. It does not follow that the operation equals the
+published native R replacement, that its good fibers have native
+analytic domains, or that later effective conditional laws retain
+the original box product. Those are separate matching statements.
+
+The exact coarse-law preservation has no box-count error. By contrast,
+the generic fine-law TV estimate (7.1) need not vanish for all boxes
+in a fixed physical region as the lattice is refined: their number
+may grow faster than alpha decreases, especially when g runs only
+logarithmically with the ultraviolet cutoff. No physical-region
+fine-law convergence is inferred from the phrase 'superpolynomial
+in g'. A better observable estimate would need its actual summable
+box oscillations or another argument.
+
+Independent full-text audit by public_argument_audit: PASS, recorded
+in coarse_preserving_box_audit_turn37.txt. The audit checked the RCP
+product, sharp kappa, discrepancy/actual-defect distinction, TV and
+entropy, measure-level gauge covariance, and branch/null-fiber scope.

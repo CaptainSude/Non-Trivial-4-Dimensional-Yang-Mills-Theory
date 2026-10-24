@@ -1,0 +1,300 @@
+THE ACTUAL FIRST GAUSSIAN COARSE ACTION AND ITS SPATIAL KERNEL
+19 October 2026. admission_proof. Turn40 constructive finite-lattice result.
+
+RESULT
+
+For the explicit fixed-crossing box and block-local G0 forest of turn39,
+the Gaussian fluctuation at fixed COMPLETE ordinary coarse datum has a
+spectral gap and exponential covariance decay independent of the box side
+R. L is fixed throughout. The exact minimum lift and coarse precision have
+exponentially decaying kernels as well. The coarse precision is gauge
+invariant and remains massless; its inverse is NOT asserted to have such
+decay. These statements follow from a local cochain estimate and a finite-
+range indefinite saddle matrix, rather than the polynomial gap of a global
+forest or an imported covariance-decay claim.
+
+The result is for the exact Gaussian tangent at the identity with actual
+ordinary averaging. It supplies a concrete one-step spatial ingredient for
+the next nonlinear calculation. It does not identify the non-Gaussian
+effective action, supply its counterterms, or close an RG iteration.
+
+1. PRECISE SPACES, NORMALIZATIONS AND GAUGE SCOPE
+
+K is a cube of complete first-L blocks, L odd and fixed >=11. Free fine
+edges have both endpoints in K; all crossing/outside edges are fixed.
+Every plaquette reading a free edge occurs in the quadratic Wilson action.
+The exterior strip includes the complete two-block reads of every retained
+ordinary coarse row J. At the flat tangent, variations of fixed links are
+zero. Constants below depend on L, dimension and fixed color normalization,
+but NOT R or the number of blocks.
+
+Use the block-local forest F rooted at all active coarse centers AND all
+geometric fine boundary vertices, exactly as in
+gauge_saturated_coarea_turn39. Its paths have length <=C_L. Let X be the
+real chord-coordinate space: extend a in X by zero on F and on fixed links.
+Use counting l2 norms, with one fixed orthonormal Lie-algebra basis. All
+operators below tensor with the color identity. Write d for the fine curl
+including the complete conditional plaquette set, and choose the action
+normalization so its quadratic form is
+
+                  S_2(a)=1/2 <a,H a>,       H=d* d.       (1.1)
+
+A fixed positive color/action constant can instead be retained in H.
+Let Q:X->Y=R^(J times color) be the literal angle-to-angle derivative of
+the original ordinary first-L mean. Its read range and l2 operator norm
+are bounded by C_L. It is not replaced by straight-path decimation.
+
+The compact whole-star inverse from native_interface_geometry_turn39 §5,
+projected to this local forest as in gauge_saturated_coarea39 §2, gives
+
+             QE=I,     ||E||_(2->2)<=C_L.                (1.2)
+
+Both row and column sums are bounded: each owner-block star has fixed
+size, and every row is assigned once. Thus its l2 bound does not follow
+from an l-infinity bound alone. Its physical versus angle L factor is
+fixed and retained in C_L.
+
+X is the quotient by G0, not yet by gauges at the coarse roots. Accordingly
+H can have residual coarse-gauge null directions. Q fixes these directions
+when a full datum y is prescribed. The fiber Gaussian is finite even though
+integrating its density over ALL framed y would retain an infinite linear
+gauge volume. The latter is not called a probability measure below. The
+second, coarse forest quotient is performed explicitly in Section5.
+
+2. A LOCAL RECONSTRUCTION ESTIMATE, WITH BOUNDARY LINKS RETAINED
+
+There are finite-range linear maps R_d,R_Q, of range and row/column norms
+bounded by C_L, such that on X
+
+                      a=R_d d a+R_Q Q a.                (2.1)
+
+In particular,
+
+          ||a||_2^2 <= C_L (||da||_2^2+||Qa||_2^2).     (2.2)
+
+Here is a proof which needs only the actual ordinary map's local read and
+its differentiated endpoint covariance, Q d lambda=d_c lambda|roots.
+
+Fix a fine chord e=(x,y). Its two local forest paths end at anchors A,B
+within C_L of e. Choose a contractible cubical patch of diameter C_L which
+contains these paths, the necessary one or two coarse-row reads, and any
+required fixed exterior detour. Consider a field on this patch whose curl
+is zero, whose relevant coarse Q rows are zero, and whose forest/fixed
+edges are zero. On the patch it is d lambda. Forest edges imply
+lambda(x)=lambda(A), lambda(y)=lambda(B).
+
+If A=B the chord value vanishes. If A,B are centers in adjacent owner
+blocks, the retained ordinary row gives lambda(B)-lambda(A)=0. If one
+anchor is a geometric fine boundary point, join the other center to an
+exterior coarse center by at most two retained rows. The fixed exterior
+strip connects that center to the boundary anchor, and its variation is
+zero. If both anchors are boundary points, the same fixed strip connects
+them. Hence the chord value again vanishes. Outward plaquettes used to
+close these short loops are in the ACTUAL action because they read a free
+edge; wholly fixed plaquettes have zero curl automatically.
+
+Thus the linear functional a_e vanishes on the kernel of the finite patch
+map collecting curl, those Q rows, and forest/fixed edge values. Elementary
+finite-dimensional row-space duality expresses it as a linear combination
+of those data. Restrict to X and the last values vanish. There are only
+finitely many patch/forest/boundary types for fixed L. Choose a coefficient
+representation once for each type. Their norms are finite C_L. Each patch
+has bounded overlap, so their aggregate maps have bounded row AND column
+sums. This proves (2.1)--(2.2), uniformly for all box sizes, including the
+finite small-box variants by enlarging C_L.
+
+This proof is not a global Poincare inequality on a long tree. It does not
+require a quantitative filling estimate growing with R. It does require
+ALL the coarse rows, fixed edges, and exterior/action plaquettes just
+specified; dropping a boundary row or strip would invalidate that argument.
+
+On N=ker Q the constrained Hessian H_N=P_N H|N therefore satisfies
+
+                  c_L I <= H_N <= C_L I.                (2.3)
+
+Also H+Q*Q has the same uniform positive lower bound on X. The constrained
+gap is compatible with a massless unconstrained field: its slowly varying
+degrees of freedom have been retained in y.
+
+3. EXACT CONSTRAINED GAUSSIAN AND SCHUR FORMULAS
+
+Let G=(H+Q*Q)^(-1) and A=QGQ*. By (1.2), QQ*>=c_L I. Together with the
+uniform bounds for H+Q*Q this gives c_L I<=A<=C_L I. Define
+
+    E_min=GQ*A^(-1),
+    C=G-GQ*A^(-1)QG,
+    K_c=A^(-1)-I.                                      (3.1)
+
+Then QE_min=I, QC=0, C Q*=0, and C on N is H_N^(-1). The unique minimum
+on Qa=y is a_min=E_min y and
+
+  1/2<a,H a>=1/2<y,K_c y>+1/2<xi,H_N xi>,
+  a=E_min y+xi, xi in N.                               (3.2)
+
+Indeed H E_min=Q*(A^(-1)-I), so the cross term against xi vanishes;
+E_min*H E_min=K_c. In particular K_c is positive semidefinite. These
+identities do not invert H on its gauge null space.
+
+For the exact normalized fiber law with density proportional to
+exp[-<a,H a>/(2g^2)] subject to Qa=y,
+
+             E[a|y]=E_min y,
+             Cov(a|y)=g^2 C.                           (3.3)
+
+With Euclidean chord/data measures and the ordinary delta constraint,
+the COMPLETE fiber integral equals
+
+ (2pi g^2)^((dim X-dim Y)/2)
+ [det(QQ*)]^(-1/2) [det H_N]^(-1/2)
+                 exp[-<y,K_c y>/(2g^2)].               (3.4)
+
+This follows from Euclidean coarea and translation by E_min y. Different
+fixed linear coordinate measures multiply (3.4) by their fixed Jacobians.
+The constant exponential-Haar values at the identity are likewise retained
+when identifying a compact-law tangent. The determinant term is a real
+vacuum/normalization term; it is not set equal to one. At this Gaussian
+level it is independent of y. Nonlinear field-dependent determinants are
+not covered by (3.4).
+
+4. UNIFORM SPATIAL DECAY FROM THE ACTUAL SADDLE MATRIX
+
+The most direct locality proof uses
+
+                  M=[ H  Q* ; Q  0 ].                   (4.1)
+
+It acts on fine chord and coarse-row indices with their actual positions.
+It has finite range C_L and norm <=C_L. It is uniformly invertible:
+given M(a,lambda)=(f,h), write a=Eh+v, v in N. Projection of the first
+equation to N and (2.3) give
+||v||<=C_L(||f||+||h||). Then Q*lambda=f-Ha and QQ*>=c_L I give
+||lambda||<=C_L(||f||+||h||). No box-volume constant appears. Its inverse is
+
+                   M^(-1)=[ C  E_min ; E_min*  -K_c ].   (4.2)
+
+Choose M_0>=||M|| and sigma<=||M^(-1)||^(-1), both uniform. The convergent
+operator-norm identity
+
+ M^(-1)=M_0^(-2) sum_(n>=0) M(I-M^2/M_0^2)^n            (4.3)
+
+has tail bounded C_L (1-sigma^2/M_0^2)^n. Each nth polynomial has range
+at most (2n+1)C_L. For any two sets of fine/coarse indices A,B,
+
+ ||1_A M^(-1) 1_B||_(2->2)
+           <= C_L exp[-c_L dist(A,B)/L].                (4.4)
+
+Absorb the fixed difference between C_L and L into c_L. The same bound
+holds for C,E_min,K_c, with their respective fine/coarse locations. In
+particular K_c is an exponentially local COARSE PRECISION, including its
+boundary rows. Equation(4.4) is an operator bound between arbitrary sets,
+not a volume-multiplied pointwise estimate. Pointwise bounds and the fixed
+lattice growth then imply uniform exponentially weighted row/column sums
+at a smaller exponent. Consequently E_min also maps bounded coarse data
+to bounded fine means with a uniform C_L norm.
+
+The proof tolerates real local plaquette weights bounded above and below
+by positive constants: replace H by d*Wd. The same gap, saddle proof and
+constants work with the ellipticity bounds included. This is a genuine
+Gaussian inhomogeneous scalar-action extension, with Q unchanged. It does
+not assert the nonlinear constrained Hessian equals d*Wd.
+
+5. COARSE GAUGE INVARIANCE AND THE SECOND FOREST QUOTIENT
+
+Let lambda_c vanish at exterior coarse anchors. Extend it to a fine gauge
+parameter supported at the active coarse centers, then project d lambda
+to the local G0 forest. Denote the resulting chord field by V lambda_c.
+Endpoint covariance and exactness give
+
+             d V lambda_c=0,
+             Q V lambda_c=d_c lambda_c.                 (5.1)
+
+It follows from the minimum characterization that
+
+ K_c d_c=0,   E_min d_c lambda_c=V lambda_c.              (5.2)
+
+Conversely zero coarse energy produces a flat fine minimizer. On the
+contractible box with the complete fixed exterior strip, it is a gradient
+whose potential is constant on that strip; after fixing that constant its
+coarse datum is d_c lambda_c. Thus ker K_c is exactly the residual coarse
+gauge space in this geometry. A torus would additionally require an explicit
+harmonic/holonomy sector and is not silently included.
+
+Choose the coarse rooted forest F_c used in turn39. Let J_c insert a
+coarse chord vector q with zero on F_c. The quadratic action on the TRUE
+fine-plus-coarse quotient is
+
+                    1/2 <q,J_c* K_c J_c q>.             (5.3)
+
+This precision is positive definite for the declared anchored box. Its
+entries retain the exponential bound (4.4), because J_c is just a coordinate
+insertion. The transformation from framed data to forest chord plus coarse
+gradient coordinates is triangular with constant Jacobian one in the
+standard oriented-edge normalization. At the original compact level both
+gauge Haar integrals were exactly one. One must not instead integrate an
+infinite Gaussian gauge volume and call it normalized.
+
+The change from an arbitrary framed y to its q may involve long forest
+paths. Accordingly the covariance of q, the covariance of unconstrained
+fine fields, and sensitivities to arbitrary noninvariant coarse frames do
+NOT follow from (4.4). The inverse of (5.3) need not have a uniform gap or
+exponential decay. The coarse action retains long-wavelength physical
+modes. Locality of its precision is the useful statement for iteration.
+
+6. AN ACTUAL SPATIAL TWO-SOURCE ESTIMATE ON THE GAUSSIAN FIBER
+
+Let K_A,K_B be real symmetric matrices supported on finite fine-edge sets
+A,B, and let O_A=a^t K_A a, O_B=a^t K_B a. For the normalized Gaussian fiber
+with mean mu=E_min y, Wick's identity gives EXACTLY
+
+ Cov(O_A,O_B|y)
+ =2g^4 Tr(K_A C K_B C)+4g^2 mu^t K_A C K_B mu.           (6.1)
+
+Using (4.4),
+
+ |Cov(O_A,O_B|y)|
+ <=C_L g^4 ||K_A||_HS ||K_B||_HS exp[-2c_L dist(A,B)/L]
+  +C_L g^2 ||K_A mu_A||_2 ||K_B mu_B||_2
+                                  exp[-c_L dist(A,B)/L]. (6.2)
+
+The mean term is essential and has not been replaced by a vacuum estimate.
+For canonical g^-2 quadratic marks, divide (6.1)--(6.2) by g^4. If y=gz
+with bounded z, mu/g=E_min z is uniformly bounded; each fixed-footprint
+source then has a uniform exponential spatial bound. Curvature sources
+are included by K=d*Kd with their actual finite stencil and normalization.
+
+After writing a=E_min y+g xi, the covariance of xi is C. Any fixed finite
+collection of local polynomial vertices with uniformly bounded coefficients
+and bounded mu/g therefore admits the usual connected Gaussian Wick bound
+with an exponential tree factor: each propagator is now an ACTUALLY proved
+exponentially decaying kernel. Summation of finitely many internal vertices
+retains exponential separation at a smaller exponent, by the weighted row
+sums following (4.4). This statement is at each fixed polynomial order;
+it does not sum the interacting series or control the actual compact
+complement. Unlike the earlier unconstrained one-loop forest formula, its
+spatial input has been established here rather than inferred from connected
+graph combinatorics.
+
+7. WHAT THIS DOES NOT FOLLOW FROM, AND WHAT IS STILL NEEDED
+
+A polynomial global forest bound cR^-8<=H is insufficient to obtain (4.4).
+A long axial tree can represent a link coordinate as a sum of curvature
+increments along a path; even independent increments then give covariance
+min(s,t), or min(s,t)-st/R with an endpoint constraint. Long forest gauge
+coordinates can thus have long correlations despite local curvature input.
+The uniform constrained gap here relies instead on the local G0 forest,
+all fixed-L ordinary rows, and the exact boundary strip.
+
+Likewise a small additive compact/Gaussian pressure error from turn39 does
+not inherit (6.2). To pass to the actual coarse action one still needs the
+nonlinear constraint graph, its Hessian and complete coarea density, the
+signed interacting numerator with its normalizer, and the original compact
+complement under the relevant exterior/coarse law. The determinant in (3.4)
+is part of the Gaussian vacuum, and its nonlinear analogue cannot be omitted.
+No renormalized physical-scale or later-history assertion is made.
+
+Source dictionary. The input Q is the derivative of the ordinary mean in
+B109(0.8),(0.11),(0.12), with its exact endpoint covariance and two-block
+read. The complete-star right inverse and fixed-crossing/local-forest
+geometry are the constructive turn39 results, independently audited there.
+Sections2--6 are new finite-dimensional/cochain proofs. No abstract
+finite-range-decomposition theorem or unverified primary decay theorem is
+used to replace the actual Q and boundary data.

@@ -1,0 +1,344 @@
+EXACT SCALAR-SOURCE INTERPOLATION AND CONSTANT-CHANNEL PROTECTION
+TURN70. 20 October 2026. tail47.
+
+RESULT AND SCOPE
+
+There is an exact source organization that removes the accumulating
+fine-source-offset bookkeeping from the selected physical one-mark map.
+Use a gauge-neutral scalar on the CURRENT vertex grid, prolong it by
+tensor multilinear interpolation to the finer grid, and keep the
+literal weighted original action. On nested aligned integer grids:
+
+  I_R I_S = I_(RS),             I_R 1 = 1,
+  ||I_R f||_infinity <= ||f||_infinity,
+  [I_R f]_(alpha,fine) <= R^(-alpha)[f]_(alpha,coarse)
+                       for the l1 grid metric, 0<alpha<=1.       (R1)
+
+These statements are exact, including the Holder constant1. The
+complex source sup disc is preserved at every depth. A profile on
+a fixed final physical grid defines one fixed physical multilinear
+function on all finer grids, rather than a new source at each step.
+
+The interpolation weights have row sum1 but COLUMN sum R^d. Thus
+interpolation introduces no extra 2^d source multiplicity, but it
+does not remove the ordinary volume/root-count factor R^4. That
+factor must still be paid by the four-dimensional field scaling
+in a classical source norm theorem.
+
+Evaluation of a one-mark functional at f=1 commutes EXACTLY with the
+actual selected source map. Consequently its scalar Maxwell coefficient
+follows the already proved constant-source trajectory. In particular
+the order-g^2 weighted birth from TURN69 has zero scalar-source
+marginal. This decoupling needs no bounded right inverse of an
+ordinary quotient and no arbitrary choice of a local source density.
+
+Sections 4--5 prove these statements and a controlled spatial-current
+representation of a zero-constant-profile source. They do not prove
+the remaining augmented classical contraction or gauge-invariant
+carrier relocalization. No selected branch is identified with the
+full original measure here.
+
+1. EXACT INTERPOLATION ON NESTED GRIDS
+
+First work on Z^d with an integer scale R>=2. For a coarse vertex
+function f define its tensor multilinear extension to R^d by
+
+  F(x)=sum_(z in Z^d) f(z) prod_(mu=1)^d hat(x_mu-z_mu),
+  hat(t)=max(1-|t|,0).
+
+At most 2^d weights are nonzero, all are nonnegative, and their sum
+is1. Set
+
+                    (I_R f)(m)=F(m/R), m in Z^d.              (1.1)
+
+The same definition applies to a periodic torus by periodizing the
+weights. It also applies to nested affine grids after using their
+actual common aligned coordinates. Alignment is an assumption:
+an arbitrary change of block centers is not silently identified
+with a nested vertex hierarchy.
+
+SUP NORM. Convexity of the complex modulus immediately gives
+||I_R f||infinity<=||f||infinity. In particular this is valid for
+complex source values and introduces no source-radius shrink.
+
+SEMIGROUP. Suppose a grid of spacing1/S is inserted between the
+integer grid and its spacing1/(RS) refinement. On each integer
+unit cube F is affine in each coordinate separately. Every finer
+aligned cube lies inside one such cube. Multilinear interpolation
+from the values of F at that finer cube's vertices therefore
+reproduces F throughout that cube. Evaluating on the finest grid
+proves I_R I_S=I_(RS), with the order interpreted as coarse-to-fine
+prolongation. The identity is unchanged on periodic compatible
+grids, at grid faces, or under iteration.
+
+SPATIAL SYMMETRIES. Tensor interpolation commutes with translations
+by coarse vertices and with signed permutations of the coordinate
+axes, including their induced action on the refined grid. Its use
+therefore preserves joint scalar-source/field covariance under these
+symmetries. Matching this aligned source grid to the actual ordinary
+mean's chosen lattice is part of the geometric input; no independent
+change of the physical mean or field lift is proposed.
+
+2. EXACT HOLDER CONTRACTION AND THE ROOT COUNT
+
+Use distance |x-y|_1. Suppose
+|f(z)-f(z')|<=[f]_alpha |z-z'|_1^alpha on the coarse grid.
+Let U_1,...,U_d be independent uniforms on[0,1], and put
+
+  Z(x)_mu=floor(x_mu+U_mu).
+
+Then E f(Z(x))=F(x). Coupling Z(x),Z(y) with the SAME uniforms
+gives, coordinate by coordinate,
+
+  E |Z(x)_mu-Z(y)_mu|=|x_mu-y_mu|.
+
+This uses monotonicity of floor and E floor(x+U)=x. Hence,
+by the triangle inequality and concavity for 0<alpha<=1,
+
+ |F(x)-F(y)|
+ <=[f]_alpha E|Z(x)-Z(y)|_1^alpha
+ <=[f]_alpha |x-y|_1^alpha.                            (2.1)
+
+Putting x=m/R,y=m'/R proves the Holder bound in (R1).
+For a torus, choose shortest coordinate lifts and use periodic f;
+the geodesic grid distance is no larger than the lifted distance.
+Thus the same conclusion holds. No differentiability of f is needed.
+
+Write w_R(m,z)=prod_mu hat(m_mu/R-z_mu). Besides the row identity,
+one has exactly
+
+  sum_z w_R(m,z)=1,       sum_m w_R(m,z)=R^d.           (2.2)
+
+For the second identity in one dimension,
+
+  sum_(m in Z) hat(m/R)
+     =1+2 sum_(m=1)^(R-1)(1-m/R)=R.
+
+Tensor products give (2.2), also on compatible periodic grids when
+coincident labels are combined with their actual weights.
+
+Consequences for source carriers:
+
+* A term f_m E_(m,X) becomes sum_z w_R(m,z) f_z E_(m,X).
+  The sum of coefficient absolute values does not acquire a factor
+  2^d: the weights sum to1.
+* Each new source root z is in a fixed coarse-cell collar of m/R.
+  Adding it to a complete classical/quantum read carrier costs only
+  that fixed collar and its declared connected hull.
+* A supremum over coarse incidence roots still sees R^d fine cells.
+  For example a spatially constant per-fine-vertex scalar density
+  is multiplied by R^d. Thus an unweighted rooted activity norm
+  is NOT contracted solely by source interpolation.
+
+The final point is indispensable in d=4. The field gain/root balance
+in history47's classical estimate remains a separate requirement.
+
+3. A LITERAL FIXED PHYSICAL SOURCE, INCLUDING PLAQUETTE OFFSETS
+
+To use a scalar vertex profile with the full plaquette action, define
+its weight on a plaquette by the arithmetic mean of the four corner
+values. Call this finite averaging map A_plaq. It is sup-contractive,
+gauge neutral and covariant under all the stated spatial symmetries.
+It treats all plaquette orientations by the same geometric rule.
+
+Fix a final physical grid and a profile f_n on it. At a refinement
+depth n set
+
+             f_j=I_R^(n-j) f_n,        0<=j<=n.       (3.1)
+
+These are samples of the SAME continuous piecewise multilinear
+function, expressed on finer grids. The original insertion is
+exactly
+
+     sum_(original plaquettes p) (A_plaq f_0)_p h_p(U_0).
+
+No field-strength normalization or comparison with a different
+smooth test function has been assumed. One may simply take this
+fixed compactly supported multilinear physical profile as the
+chosen probe. Source support enlarges by only the stated finite
+interpolation collar in physical coordinates.
+
+Let U_M(U) be the imported actual ordinary classical minimizer and
+S_M(U)=sum_p h_p(U_M(U)), with the original fine labels retained.
+Define the complete weighted reference
+
+ R_M(f,U)
+    =sum_p [A_plaq I_M f]_p h_p(U_M(U)).              (3.2)
+
+Then R_M(1,U)=S_M(U). Exact interpolation nesting, the retained
+classical semigroup, and gauge invariance of each original plaquette
+give the actual identity on their admitted common domains
+
+ R_M(I_R f,U_R(w))=R_(MR)(f,w).                       (3.3)
+
+This is not a replacement of a composed ordinary mean by a direct
+mean. It uses precisely the same composed minimizers as the existing
+classical input.
+
+At each step all original subcell offsets are absorbed into the
+nonnegative interpolation weights. The new source lives on the
+current vertex grid. Fine densities still carry their real M^-4
+size and M^4 multiplicity from TURN69; (2.2) does not erase them.
+
+4. CONSTANT-SOURCE EVALUATION INTERTWINES THE EXACT ONE-MARK MAP
+
+Let E(f,w) be linear in a scalar source f. A source carrier consists
+of one declared source vertex, its analytic coefficient in the
+background variables, and the complete connected read support.
+Use the rooted sum of the coefficient norms (including the sum over
+source vertices). This is a concrete norm for a source disc
+||f||infinity<=1; no separate Cauchy expansion in each source value
+is necessary.
+
+Let C E=E(1,.) be evaluation at the constant source. The triangle
+inequality makes C norm-nonincreasing. A source family which is
+field-independent for EVERY f maps to a field-independent ordinary
+family. Thus C descends to the normalized-total quotients.
+
+With the unsourced actual selected map fixed, write its exact
+one-mark pushforward as
+
+ L_j^src E(f,w)
+   = E(I_R f,V_j(w))
+       + < E(I_R f,U_j(w,xi))-E(I_R f,V_j(w)) >_j.    (4.1)
+
+Equivalently this is T_j^src E plus the inherited quantum derivative.
+The expectation includes its exact same normalized selected density,
+and every baseline window/covariance is frozen. Linearity in E
+holds because this is the derivative at zero source, not the full
+nonlinear finite-source map.
+
+Since I_R 1=1,
+
+                C L_j^src E=L_j C E                 (4.2)
+
+EXACTLY as scalar germs, including the raw source constants if
+they are filed on both sides. The same statement for a fixed
+finite source value is evaluation of the corresponding nonlinear
+map; that fact does not assert closure in the one-mark space of
+its higher source powers.
+
+Define the scalar-source extraction on this actual one-mark space by
+
+  beta_j^src(E)=beta_j(C E),
+  P_j^src E=E-R_j beta_j^src(E).
+
+Because C R_j=S_j, evaluation also commutes with these projections.
+Starting from R_0, evaluation of the entire augmented recursion is
+the exact constant-original-source derivative recursion of TURN49.
+Its scalar marginal coefficient is therefore the same alpha'_j(0),
+with that theorem's bounds. No bounded lifting of an arbitrary
+ordinary quotient class has been assumed.
+
+Near-minimal representatives in the AUGMENTED quotient do not
+change this assertion: equality there is equality for all f,
+so in particular at f=1. Conversely an ordinary null family at
+f=1 is not necessarily null in the augmented quotient. Modulating
+an arbitrary ordinary near-minimal representative is not a valid
+shortcut to an augmented representative.
+
+For the new weighted quantum birth, TURN69 gives
+
+ B_j(f)=g_j^2 A_j(f)+g_j^4 C_j(f),
+ A_j(1)=v_T rank(P_j)/2,
+
+where the displayed constant is field independent. Hence
+
+                      beta_(j+1)^src(A_j)=0.         (4.3)
+
+This exact conclusion protects the scalar marginal: its forcing
+is governed by the constant-source cancellation. Calling the
+remaining augmented field "irrelevant" in the quantitative sense
+still requires the scalar-source finite-jet classification and
+classical contraction under their actual norms. Equation (4.3)
+alone is not that norm theorem.
+
+The strict quantum analytic proof uses absolute carrier norms and
+therefore extends to this linear source space. At a fixed input
+margin the inherited response remains O(g_j^2), as in TURN69.
+Interpolation preserves its source disc and only adds the explicit
+source-root collar/root count already described. It does not
+supply the missing classical contraction.
+
+5. A CONTROLLED SPATIAL CURRENT FOR AN ORDINARY NULL TOTAL
+
+The remaining distinction between an ordinary and augmented quotient
+can be made exact without an uncontrolled all-arity Taylor expansion.
+
+Let a_(x,X)(w_X) be analytic on radius b_s, with a complete connected
+carrier X containing source vertex x. Suppose
+
+        sum_(x,X) a_(x,X)(w) is independent of w.     (5.1)
+
+Assume its absolute rooted norm at exponent a_s is K. Let
+0<b_w<b_s and 0<a_w<a_s be fixed. Each current cell has a fixed
+finite number D of scalar background coordinates. For such a
+coordinate q choose its cell vertex y(q). Differentiating (5.1)
+gives sum_(x,X) partial_q a_(x,X)=0.
+
+For arbitrary numerical f, including independent complex values,
+radial integration therefore gives the exact identity
+
+ sum_(x,X) f_x[a_(x,X)(w)-a_(x,X)(0)]
+   =sum_(x,X) sum_(q in X)(f_x-f_(y(q))) I_(x,X,q)(w),
+
+ I_(x,X,q)(w)=int_0^1 w_q partial_q a_(x,X)(t w)dt.    (5.2)
+
+Cauchy gives ||I_(x,X,q)||_(b_w)
+ <=b_w K_(x,X)/(b_s-b_w). Choose a deterministic path inside
+the connected cell carrier, with a fixed collar if necessary,
+from x to y(q). It has at most C_d|X| edges. Telescope
+f_x-f_(y(q)) along this path and collect coefficients to obtain
+
+       sum_(oriented cell edges e) (f_e+-f_e-) J_e(w). (5.3)
+
+Every current coefficient retains the original carrier X and the
+edge it uses. At most D|X| coordinates and C_d|X| path edges
+are charged. The fixed exponent reserve pays |X|^2, proving
+
+          ||J||_(a_w,b_w) <= C K.                   (5.4)
+
+Constants depend only on fixed margins and local geometry, not
+volume or original fine depth. Applying the Holder modulus
+directly in (5.2) instead gives
+
+ ||sum f_x[a_(x,X)(w)-a_(x,X)(0)]||_weak
+                  <=C ell^alpha [f]_alpha K.         (5.5)
+
+This is a bounded spatial-divergence representation of the
+modulation of a null total. It retains the true f-dependent
+vacuum separately. The proof differentiates once and integrates;
+there is no hidden factorial growth from monomials of arbitrary
+degree and no repeated source-radius loss.
+
+Gauge scope is essential. The constructed J_e need not be
+individually gauge invariant. If the original augmented total is
+gauge invariant for every f, its divergence in (5.3) has that
+invariance, but this does not prove invariant current coefficients.
+Nor does it produce a bounded right inverse from the ordinary
+gauge-invariant quotient to the augmented one. A topological
+or gauge-local cohomology issue is not solved by this spatial
+telescoping identity.
+
+6. WHAT THIS CHANGES, AND WHAT IT DOES NOT
+
+The current-grid interpolation is an exact physical source choice,
+not an approximation which accumulates with RG depth. It removes
+the need to keep M^4 independent source arguments as independent
+variables at every new scale, while retaining their actual
+coefficients, offsets, and volume balance. A common complex source
+sup disc is preserved. Constant-source evaluation protects the
+scalar marginal without any ambiguous near-minimal modulation.
+
+This supplies a concrete domain and normalization interface for
+root's neutral-scalar-source finite-jet analysis and for the
+classical strict-support estimates under development. The missing
+step is still a uniform augmented classical/quantum induction on
+the actual gauge-invariant source quotient, with the required
+relocalization and carrier bounds. One-step O(g^2) response or
+zero scalar marginal alone does not imply that induction.
+
+Even an eventual selected-source induction would not automatically
+give the full original-law regular-channel covariance, control its
+remaining histories, or prove a nonzero continuum OS norm. Those
+are separate requirements of the YM4 existence objective.

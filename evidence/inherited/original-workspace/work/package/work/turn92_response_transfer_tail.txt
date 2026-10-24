@@ -1,0 +1,372 @@
+TURN92 -- NORMALIZED RESPONSE, CELL ANNIHILATION, AND ONE REAL WILSON SOURCE
+21 October 2026. tail47. Source review and finite original-law consumer.
+
+VERDICT
+
+The new full RRM1/VTM1 manuscripts expose a concrete normalized
+response chain, including the positive restricted density, its full
+complement, covering cancellation and two-volume denominator defect.
+The strongest elementary steps inspected here are sound at their
+explicit inputs. This is NOT an audit of their entire QED3 dependency
+chain and supplies no new pure-Wilson response estimate.
+
+The immediate original-Wilson target can be substantially smaller
+than that chain. For our specified bounded two-window time difference
+G_n, exact time-reflection symmetry makes its generating function even.
+A lower bound at ONE fixed positive real source value suffices for
+the missing physical variance floor. A positive submeasure can lower-
+bound the nonnegative SOURCE INCREMENT without estimating its omitted
+complement. Its original normalization and its source must be retained.
+These are the finite consumers proved in Section5. The actual positive
+increment/comparison remains unproved.
+
+The distinct-product/component lemma, fourth-cumulant algebra and
+dimension-independent pressure implication were ALREADY proved in
+TURN50. They are not claimed as new mathematics below.
+
+1. REVALIDATED STATUS, SOURCES AND REVIEW SCOPE
+
+Read current_proof_frontier_turn91_draft.txt, final SHA256
+E44326C6CBA3C40EE6863F8A422BD985F3A3C9461A600C86E8F74004F12D7689.
+The unproved target is Var_mu(G_n)>=v>0 on one intended original
+cutoff/volume sequence, with fixed physical flow/probe calibration.
+The full YM4 objective, common local field, symmetry and coupling
+identifications remain open.
+
+Primary repository commit:
+ 074ad27ee40e48cdf2e517c830d72efc4043f64e.
+RRM1: Exact source identities and normalized reference response for
+lattice QED in three dimensions, 35 PDF pages.
+ work/turn91_sources_history/files/QED3/Reference response (RR1)/RRM1.pdf
+ SHA256 DFBF43A262C759DA553F0349DCE1C8EEE8CAB919C8622563118DCFF14F04BA72
+VTM1: Volume transfer and component cumulants for lattice QED in
+three dimensions, 18 PDF pages.
+ work/turn91_sources_history/files/QED3/Volume transfer (VT1)/VTM1.pdf
+ SHA256 CCB172161ED9BCFAE1561FDB17D39237FB8B64EF2FE35B735ADF4EB4EA5E9E1B
+Immutable URLs and Git blob identities are in
+ work/turn91_sources_history/manifest.json.
+
+RRM1 read: TheoremA/definitions pp1--3; exact external/source contracts
+pp11--14; terminal inputs pp17--18; relevant free-factor discussion
+pp22--24; complete Sections9--10 pp30--33. Its middle terminal inverse
+and marked tree estimates are inspected as inputs, NOT recertified.
+VTM1 read: TheoremA pp1--3; exact-law/source contract pp4--5;
+Sections3--5 pp6--11; scale/error contracts pp11--13; complete moment
+and component passages Sections7--8 pp14--18. The scalar determinant
+bound in Section4.1 and the imported chamber reflection-positivity
+construction are NOT independently recertified here.
+Visually inspected rendered RRM1 pp31--32 and VTM1 pp6--7,16--17:
+ work/turn92_response_sources/*.png.
+Formula references below use the PDF's printed page numbers, which
+coincide with its PDF pages.
+
+Read first to avoid repetition:
+ qeo_products_nontriviality_turn50.txt;
+ qeo_pressure_transfer_audit_turn50.txt;
+the retained bounded-source and actual HS/time-average results from
+TURN81 and TURN89. The old outline-only availability assessment is
+obsolete; the model-specific dependencies have not thereby disappeared.
+
+2. RRM1: WHAT THE EXACT FINITE SOURCE FUNCTION REALLY IS
+
+On the reference torus the real curvature u is in the exact linear
+two-cochain space F_N. The base measure is its Gaussian gamma, weighted
+by the harmonic-averaged chamber-Dirac determinant at the SAME tuned
+mass for all sources and twists. For cell source a(t)=e^-1 sum t_c a_c,
+RRM1(2),p2 defines
+ Phi(t) = [int_theta int det(D_ch[q(A(u)+H_theta+a(t))]+mu_N) dgamma]
+          /[int_theta int det(D_ch[q(A(u)+H_theta)]+mu_N) dgamma]. (2.1)
+This is a normalized determinant-source RATIO, not the logarithm.
+The denominator is the full zero-flux law, including harmonic average;
+the common vacuum factor cancels. The positive free one-cell reference
+uses mass mbar*eta, not the possibly signed tuned mass mu_N.
+
+Because this curvature is additive Abelian Gaussian and the disjoint
+cell source curvatures are orthogonal, its real shift and continuation
+give the exact normal-ordered identity, RRM1(5),pp2,13--14:
+ Phi(t)=E^(0) exp[sum_c t_c X_c/e-v_eta sum_c t_c^2/(2e^2)],
+ X_c=<d a_c,u>.
+Hence
+ [prod_c(partial_(t_c)^m-c_m)]Phi(0)
+ =E^(0) prod_c[e^-m H_m(X_c;v_eta)-c_m], m=2,4.          (2.2)
+Here c_m=N_0^(m)(0) are ORDINARY free ratio derivatives. Only the
+combination c4-3c2^2 is a logarithmic fourth derivative. Dropping the
+Gaussian normal-ordering term changes the quantity in(2.2).
+
+RRM1(64),p18 imports from TPM1 TheoremB the source-dependent equality
+AGAINST EVERY bounded Borel stop-field test:
+ nu_(theta,a)(1_G Phi_test(A_*))
+ =int Phi_test(A) chi_*(A) Y_*^x(A+c_theta;C) dm_*(A).  (2.3)
+It also imports the full photon-coordinate tower and zero-sector
+Gaussian domination(65). The good event G is a FIXED event in the
+original real linear curvature coordinates, independent of the source.
+This is the substantive external-source interface. Source-free equality
+of integrated masses would not imply(2.3), or the positive marked
+density and complement used afterward.
+
+The exact Abelian change of Gaussian variables, chamber determinant,
+zero-flux restriction, harmonic twist and source calibration q=e sqrt(eta)
+are all material. The exact SU2 HS representation has an interacting
+auxiliary marginal and does not identify it with this curvature law.
+The bounded-original-probe source below needs no such identification.
+
+3. THE NEWLY AVAILABLE RRM1 SMALL-FIELD AND CELL PROOF
+
+3A. Positivity and the same full denominator.
+In Proposition9.1,pp30--31, the restricted measure is
+ v_sf(dtheta dA)=chi_*(A)Y_*^x(A+c_theta;0)
+                 dtheta dm_*(A)/bar_nu(F_N).
+Its mass is the ACTUAL probability bar_mu(G), in[1-varpi0,1]. It is
+not renormalized to mass1. For each fixed real source/twist, (2.3) and
+nonnegative Borel tests imply a nonnegative density almost everywhere.
+Continuity and the nondegenerate Gaussian on the convex stop domain
+extend positivity to its boundary; the previously proved nonvanishing
+then gives strict positivity. This sign argument is valid conditional
+on those exact identity/domain inputs; positivity is not inferred from
+a formal Grassmann polynomial.
+
+The omitted term is
+ L(t)=bar_nu_(a(t))(F_N\G)/bar_nu(F_N).
+It retains EXACTLY the same denominator. The proof lowers each cutoff
+threshold by one, bounds the probability of the enlarged complement
+under the full normalized law, and translates the real source. The
+coordinate shift has norm at most one; hence its moved complement lies
+inside the lowered-threshold complement. Gaussian domination and
+Cauchy--Schwarz give the square-root probability bound(115),p31.
+
+The complex bound follows separately from the full source identity and
+the small-field logarithm. The two-constants argument on p31 is valid:
+on a smaller polydisc of radius R/(2N_*), successive half-disc harmonic
+measure bounds leave at least the power
+ (1-(4/pi)arctan(1/(2N_*)))^N_* >=1-2/pi>1/3
+of the real-axis smallness. Cauchy then bounds the finite fourth jet.
+This does not promote background holomorphy from source holomorphy.
+
+The fine-cutoff-uniform event census uses the SUPERRENORMALIZABLE
+trajectory v_j=v_*+(k_*-j)log(L)/2. The source's p0,j growth yields
+the explicit extra14(k_*-j)log L in p0,j, and Gaussian tails beat
+L^(3(k_*-j)) coordinate multiplicity (p30). This is not the YM4
+logarithmic inverse-coupling trajectory. Substituting only
+log(1/g_j)=O(log(k_*-j)) into that counting argument does not reproduce
+its uniform near-one global event estimate. This states a failure of
+that inference, not a theorem that the actual Wilson event is rare.
+
+3B. Exact finite-ring covering cancellation.
+In J=C[t_c]/(t_c^5), the coefficient-sum norm is submultiplicative.
+RRM1(117),p32 gives the FULL normalized jet identity
+ Phi=prod_c phi0(t_c) int prod_(nonempty S)(1+k_S) dv_sf + L^[4]. (3.1)
+Every k_S uses every variable of S. The single-cell annihilator
+ ell_c(P)=partial_(t_c)^m P(0)-c_m P(0)
+satisfies ell_c(phi0)=0. An error family missing c is therefore killed
+EXACTLY, before absolute values. This concerns total degree up to4N_*,
+not a single fourth derivative and not the derivative of log Phi.
+
+The supplied bounds are ||k_{c}||<=kappa and
+||k_S||<=kappa^N_* for |S|>=2. A covering family pays cost at least
+N_*; retaining kappa^(sN_*) and summing the rest gives the stated
+bound when N_* kappa^(1-s)<=1/2. The free factors have norm<=2,
+and the complement is counted with its same full denominator. The
+factorial and N_*-th-root bookkeeping in(118),pp32--33 checks.
+
+This algebra was already proved in TURN50. The new source information
+is its complete implementation and the visible precise inputs: the
+one-cell/free comparison, separated multi-cell derivatives, positive
+Borel density identity and normalized COMPLEX complement. Sections9--10
+do not establish those preceding operator estimates by themselves.
+
+For bounded original Wilson probes the fixed-event source entire/jet
+bounds are already elementary (TURN81); a two-constants argument is
+unnecessary. What is still missing is the quantitative full normalized
+comparison, not the existence of a source-parameter disc.
+
+4. VTM1: NORMALIZATION AND COMPONENTS ARE DISTINCT STEPS
+
+4A. The actual denominator loss.
+VTM1(25)--(30),pp6--7 uses the marked folded identity
+ Z_s(O)=Tr[(Y*Y)^(s_mu/2)]
+with Y independent of that side length, plus the normalized rectangular
+chessboard inequality. Positive UNSOURCED transfer alone is not a proof
+of this identity for all marked observables. Under its admitted slab
+algebra the Schatten monotonicity, log convexity and the proof are
+sound. All carrying tori have the same local parameters.
+
+With reference cell count N_r and j>=2, set
+ D_j=j^3 log Z_ref-log Z_(j ref)>=0,
+ delta_j=D_j/[(j-1)^3 N_r].
+The separate convexity argument gives a LOWER bound for the large-torus
+denominator, and the marked numerator has the upper root-density bound.
+Their ratio gives
+ |E_outer prod_(c in C) O_c^[c]|
+ <=prod_(c in C) exp(delta_j)||O_c||_ref.                (4.1)
+The negative coefficients in the convexity expansion require upper
+bounds on the subtracted partitions; the manuscript uses the correct
+direction and does not assume log Z positive. This same general
+implication was independently proved in TURN50.
+
+The model-specific bound on D_j then uses the exact photon determinant,
+the same-mass TWO-volume matter comparison, and all-flux Gaussian
+domination. In(35)--(40),p9,
+ Z_n=Z_n^ph z_(r,n)/P_n(0),
+ D_j=D_j^ph+D_j^mat+D_j^fl.
+The photon term retains a logarithmic nonbulk term; an infinite-volume
+pressure density alone would lose it. The result costs the explicit
+inverse charge power exp(delta)~e^(-2a_L/N_*) times fixed factors,
+which is subtracted from the response exponent in TheoremA. The
+zero-flux response alone is not the all-flux result. Section5 separately
+uses high moments and the flux probability to control that complement.
+
+The current spatial-flow phi reads its whole spatial slice. It is not
+automatically in the small finite spatial-cell algebra required for
+this three-dimensional folding. A finite-box flow recipe changes the
+probe and requires its own comparison. Neither its cell admission nor
+the relevant same-parameter Wilson two-volume defect is supplied by
+our current estimates. Such volume comparison is a requirement of THIS
+method, not a universal prerequisite for any one-sequence existence
+construction.
+
+4B. What the fourth-cumulant conclusion assumes.
+VTM1 Lemma8.1/Proposition8.2,pp16--17 uses all finite distinct-translate
+products of the TWO centered Wick polynomials, joint moment passage on
+the SAME prescribed parent, and component centering. The repeated-index
+count and cumulant identity are correct. They are the TURN50 lemma and
+algebra, not a new lower estimate. The component Gaussian bound implies
+component mean zero and gives the needed moments. Then exactly
+ e^-4 kappa4=c4+d4-3(c2+d2)^2,
+ |d_m|<=u_m,
+so the error is u4+6|c2|u2+3u2^2 plus the reference-coefficient error.
+The coefficient8C+3C^2 follows correctly. A positive parent fourth
+cumulant without these product hypotheses is insufficient.
+
+The positive reference coefficient is the massive DOUBLED-DIRAC
+response of PRM1, not a pure nonabelian action coefficient. A nonzero
+fourth cumulant of our nonlinear bounded scalar would not distinguish
+an interacting underlying field from a nonlinear observable of a free
+Gaussian field. For the current positive-energy witness, the original
+second-moment route below is the appropriate smaller target.
+
+5. AN EXACT ONE-REAL-SOURCE TARGET FOR THE ORIGINAL WILSON PROBE
+
+5A. Reflection symmetry of the actual finite source.
+Keep the homogeneous original Wilson torus and the exact probe
+ G_n=n^-1 sum_(0<=t<n)phi_t-n^-1 sum_(n<=t<2n)phi_t,
+ 0<=phi_t<=1, 2n<=N.
+Each phi_t is the same spatial-flow and spatial-smear function of the
+original spatial links on its slice. Define the lattice time reflection
+ r(t)=2n-1-t modulo N.
+It swaps the two sets of n slices bijectively, even if2n<N. Spatial
+links keep their spatial orientation and are time relabeled; temporal
+links are reflected with reversed orientation. Product Haar and every
+Wilson plaquette trace are preserved. Spatial flow on each slice and
+its common spatial weights commute with this relabeling. Thus
+ G_n(rU)=-G_n(U), |G_n|<=1, E_mu G_n=0.                 (5.1)
+This uses time-reflection INVARIANCE only, not diagonal RP. The later
+strict positive-half placement still requires its ordinary physical
+buffer; the reflection used to prove(5.1) need not be that OS plane.
+
+Let
+ Z_a(s)=int exp[-beta S(U)+s G_n(U)] dHaar(U),
+ M_a(s)=Z_a(s)/Z_a(0), s real.
+There is one fixed bare action/normalizer; no source-dependent tuning.
+By(5.1), M_a(s)=M_a(-s)=E cosh(sG_n). For any s!=0,
+ (s^2/2) Var_mu G_n <= M_a(s)-1
+                   <=(cosh s-1) Var_mu G_n.            (5.2)
+Proof: expand cosh(sx)-1 in even powers. For |x|<=1 its first term
+is s^2x^2/2, and every x^(2k)<=x^2. Average. All constants are
+cutoff/volume independent.
+
+Thus a lower bound at ONE fixed positive real s suffices:
+ M_a(s)>=1+q, q>0  ==> Var_mu G_n>=q/(cosh s-1).        (5.3)
+Conversely a variance floor v gives M_a(s)>=1+s^2v/2.
+No source derivatives, shrinking complex radii, fourth cumulants or
+all-cell hierarchy are needed for this particular parent witness.
+
+For a declared symmetric bounded calibrated reference X_ref in[-1,1]
+with Var X_ref>=v_ref, a one-sided comparison
+ M_a(s)>=M_ref(s)-epsilon
+gives
+ Var_mu G_n >= [s^2 v_ref/2-epsilon]/(cosh s-1).         (5.4)
+For example epsilon<=s^2 v_ref/4 gives the positive floor
+s^2 v_ref/[4(cosh s-1)]. The reference must have the same physical
+probe/time calibration; a bare Maxwell rescaling is not an established
+Wilson comparison. A reference free coefficient is not a bound on
+epsilon. This note proves no such comparison.
+
+5B. A positive source increment needs no omitted-complement estimate.
+Let tau be ANY positive submeasure of the ORIGINAL normalized law mu,
+or a positive submeasure of its exact complete history lift with the
+same passive original G_n. Pointwise cosh(sG_n)-1>=0, so
+ Var_mu G_n
+ >= tau(cosh(sG_n)-1)/(cosh s-1).                       (5.5)
+There is no near-one mass assumption, no selected-law RP requirement,
+and no error from its omitted complement. The ORIGINAL full normalizer
+is still in tau. If tau has mass m and its normalized second moment
+tau(G_n^2)/m>=v0, then(5.5) gives
+ Var_mu G_n>=m s^2 v0/[2(cosh s-1)].                    (5.6)
+The selected submeasure need not center G_n; this is its second moment,
+not its asserted variance. If m tends to zero, this estimate can vanish.
+A normalized selected response cannot silently replace the left side
+of(5.5). Nor may a new coarse proxy replace the passive original G_n.
+
+This is the useful lower-bound distinction from RRM's absolute
+high-order error: subtract the baseline INSIDE the positive event
+integral. Trying to lower-bound tau(exp(sG_n)) alone and then subtract
+the full1 would unnecessarily demand nearly full mass. The symmetric
+increment avoids that demand. It still needs an actual positive sector
+with a quantitative original-source contribution, presently missing.
+
+5C. Exact actual-HS reduction at the same ONE source value.
+In Pi=mu kappa=nu k_xi, write m_n(xi)=E[G_n|xi]. The retained conditional
+Hoeffding estimate gives, for every real s,
+ 0<=log M_a(s)-log E_nu exp(s m_n)<=s^2/(4n).            (5.7)
+The nu in(5.7) is the full interacting auxiliary marginal. No reflection
+covariance of a particular auxiliary-label convention is needed here;
+the distribution of m_n is not asserted to be symmetric.
+
+If E_nu exp(s m_n)>=1+q, (5.3) holds with the same q. Conversely a
+variance floor v gives the explicit lower bound
+ log E_nu exp(s m_n)
+ >=log(1+s^2v/2)-s^2/(4n).                              (5.8)
+Thus for n~a^-1 the missing floor is quantitatively equivalent to a
+nonzero pressure increment at this one fixed positive real source of
+the interacting conditional mean. The exact source package remains
+C exp(sG_n); replacing it by exp(s C G_n) is justified only by the
+displayed controlled error, not by multiplicativity of conditioning.
+The known global bounded-source and fixed-record conditional estimates
+give upper bounds, not the positive increment in(5.3) or(5.8).
+
+5D. Relation to the physical and full-YM targets.
+Once a floor v from(5.3) or(5.5) is actually proved, TURN89 supplies
+the finite physical energy-band mass and buffered reflected norm on
+the SAME original sequence, with n>=4/v, L=na fixed, T0>0 and
+T0+2L<Na/2. This uses original RP and the exact transfer spectrum,
+not an RP assertion about tau or the HS conditional law.
+The filter eliminates the entire invariant/zero-energy sector; the
+result would still be a scalar witness, not a proof of full O(4),
+nonabelian interaction or a complete local Yang--Mills field theory.
+
+6. THE PRECISE REMAINING INTERFACE AND NEXT ACTION
+
+The full RRM/VTM proof organization is now genuinely accessible and
+more precise than the old outlines. The inspected strong steps do
+NOT turn a native unmarked density theorem into an original-source
+theorem: (2.3), the free-factor comparison, marked separation and the
+full normalized complement are independent quantitative inputs.
+
+For the present bounded time-filtered Wilson probe, the smaller
+concrete task is to estimate Z_a(s)/Z_a(0)-1 at ONE fixed s>0, or the
+positive full-normalized sector increment in(5.5), at physical scale.
+The required gain must stay nonzero along the intended sequence.
+An exact whole-source bound is preferable to manufacturing a high-order
+cell hierarchy whose only purpose would be a stronger every-component
+fourth-cumulant conclusion. Component selection of an existing parent
+witness is a separate retained module with its own common-law mirror
+hypotheses.
+
+The source is bounded and has a uniform entire generating function;
+those facts alone supply no gain. Unmarked partition stability,
+near-zero conditional link noise, or a nonzero reference coefficient
+does not establish it. The full interacting mean channel/positive
+original-source sector remains the exact missing estimate.
+
+No full QED3 correctness certification, source-free-to-marked inference,
+pure-Wilson lower bound or continuum YM4 completion is made here.

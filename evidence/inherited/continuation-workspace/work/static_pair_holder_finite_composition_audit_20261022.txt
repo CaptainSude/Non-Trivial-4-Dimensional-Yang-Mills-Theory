@@ -1,0 +1,157 @@
+AUDIT OF THE FINITE COMMON-FRAME HOLDER COMPOSITION LEMMA
+22 October 2026. New v20 audit; no frozen notes edited.
+Target: static_pair_holder_image_gate_20261022.txt, Section3.
+
+VERDICT
+
+PASS as a fixed-finite local chart lemma, with the precise lattice,
+path and gauge hypotheses below made explicit. It supplies NO bound
+for the actual LII return gauges, no common chart for different joined
+minima, and no proper-grade identification for the actual static image.
+Those remain native premises, not consequences of this algebra.
+
+1. PRECISE LOCAL HYPOTHESES
+
+Use born-source units, lattice spacing xi<=1 and epsilon=L^{-(r-i)}<=1.
+Assume xi epsilon is within a fixed small matrix-logarithm radius.
+Let Q be a collared local box, or a fixed-complexity branch read with
+the following explicit path property: the short contours used in its
+covariant norms remain inside the controlled collar and have length
+at most C_path |x-y| for |x-y|<=c/epsilon. All finite differences and
+their shifted arguments are included in that collar.
+
+Work in ONE frame, with matrix norms in that frame. A connection
+U_mu(x)=exp(i xi A_mu(x)) obeys
+
+ |A|<=C epsilon, |D_0 A|<=C epsilon^2,
+ [D_0 A]_alpha<=C epsilon^(2+alpha),  0<alpha<1.          (1)
+
+The Holder seminorm is needed on distances up to O(epsilon^-1);
+larger distances are bounded using the supremum norms. A claim about
+an arbitrary disconnected/nonconvex branch without controlled paths
+is not covered. Local application to the complete collared cubes is
+enough for the usual branch estimate.
+
+2. EXACT COVARIANT-TO-ORDINARY CONVERSION
+
+B99(3.3) gives, for the adjoint field components used by the native
+response,
+
+ D^U_mu H(x)=D^0_mu H(x)+C_mu(x) H(x+xi e_mu),
+ C_mu(x)=(Ad U_mu(x)-I)/xi.                              (2)
+
+The same component formula applies to a bond field after the paper's
+identification of its directional components. Smoothness of the matrix
+exponential and (1) imply, uniformly in xi,
+
+ |C|<=C epsilon, |D_0 C|<=C epsilon^2,
+                         [C]_alpha<=C epsilon^(1+alpha). (3)
+
+Suppose |H|<=C epsilon, |D^U H|<=C epsilon^2 and the covariant
+Holder seminorm of D^U H is <=C epsilon^(2+alpha), with the native
+shortest-contour convention B99(3.40). Equation(2) first gives
+|D_0 H|<=C epsilon^2. Combining this bound with |H|<=C epsilon
+gives [H]_alpha<=C epsilon^(1+alpha), by the elementary bound
+min(2||H||,C||D_0 H|| |x-y|).
+
+There is one more conversion: the assumed Holder norm compares
+Ad U(Gamma_xy) D^U H(y) with D^U H(x). For d=|x-y|<=c/epsilon,
+(1) and the controlled contour length give
+
+ ||Ad U(Gamma_xy)-I||<=C epsilon d exp(C epsilon d)
+                                      <=C' epsilon d.    (4)
+
+This is valid also for small complex connections in the specified
+frame. Therefore the ordinary difference of D^U H has the bound
+
+ C epsilon^(2+alpha) d^alpha+C epsilon^3 d
+                       <=C' epsilon^(2+alpha) d^alpha.   (5)
+
+For d>c/epsilon the same Holder bound follows from |D^U H|<=C epsilon^2.
+Finally the ordinary Holder seminorm of C H_shift in (2) is bounded by
+
+ |C|[H]_alpha+[C]_alpha|H|<=C epsilon^(2+alpha).          (6)
+
+Equations(2),(5),(6) give the required ordinary C1,alpha estimates
+for H. This proves the practical covariant version of the target
+lemma when its actual intermediate background already has (1).
+It does not convert an arbitrary covariant norm with paths outside
+the controlled read, or a norm at another determining grade.
+
+3. FINITE PRODUCT AND THE LATTICE CHAIN RULE
+
+For m fixed independently of scales, define the potential of the
+pointwise relative product by
+
+ F_xi(A_0,H_1,...,H_m)
+   =(i xi)^(-1) log(exp(i xi H_m)...exp(i xi H_1)
+                                             exp(i xi A_0)). (7)
+
+Choose the common small chart so the whole finite product remains in
+the logarithm neighborhood. F_xi has a removable singularity at xi=0.
+On this fixed neighborhood its first derivatives are uniformly bounded
+and its second derivatives are O(xi), hence bounded uniformly for
+xi<=1. Also F_xi(0)=0. These facts follow directly by the convergent
+matrix exponential/logarithm power series (or its finite-dimensional
+analytic derivatives). Thus the prefactor xi^-1 does not create an
+uncontrolled fine-mesh price.
+
+The discrete chain rule is the exact integral identity
+
+ D^0_mu F_xi(a(x))
+   =integral_0^1 DF_xi(a(x)+theta(a(x+xi e_mu)-a(x)))
+                                      D^0_mu a(x) dtheta. (8)
+
+It yields the epsilon^2 gradient bound. Subtracting (8) at x and y,
+the gradient-difference term costs epsilon^(2+alpha)|x-y|^alpha.
+The difference of the Jacobians costs at most
+C [a]_alpha |x-y|^alpha times epsilon^2, hence at most
+C epsilon^(3+alpha)|x-y|^alpha. The shifted arguments use exactly
+the collar in Section1. The value bound follows from F_xi(0)=0.
+This proves the original C1,alpha scaling for the finite product.
+
+Starting with (1), Section2 converts the first response from the
+covariant norm of its ACTUAL background. Section3 produces the next
+controlled background. Repeat only the fixed m times. Constants can
+depend on m, alpha, path constants and the stated input amplitudes;
+they do not depend on the number of old histories, r-i or xi. No
+claim for an unbounded number of response factors follows.
+
+4. WHAT THIS DOES NOT PROVE ABOUT RETURN GAUGES
+
+Covariance of (2) is an algebraic statement. Norm invariance holds
+for unitary gauges, but a general complex gauge can have an arbitrarily
+large adjoint norm. Hence the following are legitimate sufficient
+ways to apply this lemma:
+
+ (a) express the base and all response factors from the outset in one
+     native frame on which their required bounds are proved;
+ (b) pull them to that frame using actual gauge identities AND bounds
+     for the relevant conjugations/transports, retaining the prices;
+ (c) prove directly the needed bounds for the composed return gauge.
+
+Independently choosing one good gauge for each minimum is insufficient.
+Gauge invariance of F permits evaluating a complete expression in a
+chosen representative; it does not supply the bounds required to put
+all factors into that representative. The lemma proves none of (a)--(c)
+for the literal LII(1.61)--(1.64) return gauges.
+
+In particular it does not prove a global field estimate across a split
+interface. The complete branch read, interface geometry and current
+profile in any piecewise Ward application remain separate premises.
+
+5. NATIVE MATCH AND CONCLUSION
+
+B99(3.3),(3.39)--(3.40) supplies the exact difference/transport
+conventions used above. CMP102(190) and B116(1.11)--(1.23) can supply
+the response norms on their actual graded local cubes and occupied
+complex circles. The producer joined_minimum_complex_holder_registration
+separates this response import from the static base, forced-response
+and return-gauge match. That separation is necessary.
+
+No mathematical defect was found in the original fixed-finite algebra.
+Its abbreviated covariant-version paragraph should be read with the
+explicit path, chart, mesh and same-grade conditions in this audit.
+The rigorous result is a useful sufficient local lemma. It is not a
+new native full-image theorem or a replacement for the pending fiber
+restriction/complex datum proof.

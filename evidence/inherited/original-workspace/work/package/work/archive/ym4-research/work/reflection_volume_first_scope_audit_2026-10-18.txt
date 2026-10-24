@@ -1,0 +1,204 @@
+FIXED-COUPLING REFLECTION ASSEMBLY AND THE ACTUAL STOPPING REGULATORS
+18 October 2026. Independent scope/limit audit. Working note only.
+
+Verdict: the fixed-beta, volume-first scope of reflection_assembly_audit.md
+CAN be matched to the actual first-passage regulators. This does not
+require volume-independent RG coefficients. The tilt-removal and fixed-
+target convex-separation steps also pass the audit, CONDITIONAL on the
+full-array fold, operator insertion bound, and paired local reduction.
+Those three substantive inputs are being audited separately. No diagonal
+RP of a finite straight torus is assumed here.
+
+1. FINITE PREFIX, THEN VOLUME, THEN ULTRAVIOLET
+
+Fix the source scheme, odd blocking factor L, grouping q, weak floor,
+uniform primitive increment bound D, and aligned decrement d>0. Choose
+the terminal threshold H>Gamma+2qD. The finite-phase theorem supplies,
+on every sufficiently large compatible coordinate torus, the actual
+homogeneous flow starting at gamma_0=A>H. Its first aligned crossing N
+of gamma_N<H satisfies
+
+  H-qD <= gamma_N < H,
+  (A-H)/D < N <= q[1+(A-H)/d].                         (1)
+
+The strict endpoint inequalities can be replaced by weak ones without
+affecting the construction. Put n_max=q ceil(1+(A-H)/d).
+
+At this FIXED A, consider original coordinate tori of side
+
+  n_M=2 L^M,             M -> infinity.                (2)
+
+Choose the first M large enough to support all source partitions and
+collars through n_max, not only the as-yet unknown stopping date. The
+source flow remains the actual finite-torus flow; its coefficients and
+stopping date may depend on M. Since N(A,M) lies in the finite integer
+set {q,2q,...,n_max}, an infinite subsequence has
+
+  N(A,M)=N_A.                                           (3)
+
+Assign physical mesh epsilon_A=L^{-N_A} on this subsequence. It is fixed
+while M tends to infinity, and n_M epsilon_A tends to infinity. By
+compactness of the compact-group product space, a further subsequence
+of the ORIGINAL Wilson measures has a local weak limit nu_A. The bare
+Wilson coupling is fixed throughout this limit: beta is the fixed
+normalization multiple of A used by the chosen Wilson convention.
+
+Consequently any fixed-beta theorem applying to EVERY local limit of
+the coordinate tori (2) applies to nu_A. It is irrelevant that the RG
+coordinates used to establish the source estimates varied along this
+subsequence. No RG density replaces the physical Wilson measure in
+this step.
+
+The source bounds at the terminal band are uniform on these regulators
+by the finite-prefix theorem's hypotheses. A smeared observable with
+fixed compact physical support is, at fixed epsilon_A, a bounded
+function of finitely many links. Its moments, centered covariances,
+and finite polynomial RP tests therefore pass to nu_A by local weak
+convergence. If an argument also uses the separate analytic universal
+counterterms, their bounded finite-source germs may be extracted on
+smaller polydiscs. This is an auxiliary normal-family extraction; it
+does not require their equality at different volumes. Bounds proved
+directly for the restored physical moments require no counterterm
+limit at all.
+
+Now take A_l -> infinity, AFTER constructing each nu_{A_l}. Equation
+(1) implies N_{A_l}->infinity, hence epsilon_{A_l}->0. The terminal
+inverse couplings stay in [H-qD,H]. The established continuum moment
+compactness can then be applied to this volume-first family. All
+reflection inequalities already valid for each nu_{A_l} pass through
+the appropriate test-function convergence. No estimate uniform in A
+is needed from the fixed-beta reflection proof itself.
+
+This construction establishes admissible regulators and limit order,
+not the source flow estimates or the reflection theorem on its own.
+
+2. SOURCE DIVISIBILITY AND THE ODD-L GEOMETRY
+
+The relevant source partitions have sides that are powers of the SAME
+L: M_1,M_2,M and the rounded R_i are L-powers. The repository's literal
+torus-floor definition is Raw II, Definition 5.1, lines 682--715 and
+the subsequent divisibility paragraph: N_T is an arbitrary positive
+integer, the terminal site count is N_T L^m, and the floor is a lower
+bound on the L-power m. The side 100 M R_i is a component size bound,
+not a divisibility condition. Thus at fixed A and finite n_max all
+required powers divide 2L^{M-j} once M is sufficiently large. Bounded
+primitive increments give a deterministic finite range of gamma_i
+through this prefix, so the rounded radii also have a deterministic
+finite upper bound before any volume subsequence is chosen.
+
+For the old reflection geometry, h,b,H_aux are fixed powers of L,
+w=b/2, and the adapted period lattice is
+
+  <(n_M/2)e_-, n_M e_+, n_M e_3, n_M e_4>.
+
+For large M, h|b|H_aux|n_M/2. The oddness of b makes w a strict
+half-integer, so the coordinate wall family alternates site and link
+planes. All slab counts in two_frame_geometry_research.md (7),(19)
+are even. No requirement that 4 divide n_M is introduced. The source
+partitions are used ONLY on the original coordinate tori; the adapted
+and straightened comparison tori are used only in a fixed-beta Wilson
+fold and pressure comparison. They require no source RG theorem.
+
+3. THE WITNESS CAN BE KEPT AT ONE PHYSICAL SCALE
+
+Choose a fixed large witness threshold Gamma_w>H and its compact
+first-crossing band. At fixed A, the witness date s(A,M) belongs to
+another finite set, so the volume subsequence can also make it
+constant. The integer offset k=N-s is bounded above and below by
+constants depending only on Gamma_w,H,q,d,D, since both the witness
+and terminal couplings lie in fixed bands and aligned drift is
+positive. Thus after A_l->infinity another subsequence makes k fixed.
+
+A witness packet with radius rho=Gamma_w^B in witness lattice units
+then has the SAME physical radius rho L^{-k} along this UV subsequence.
+Its universal positive lower bound is uniform over the witness coupling
+band, fine refinement and lattice phase. Fix the packet profile before
+these extractions. One need not choose a new physical observable at
+each ultraviolet cutoff. The same finite-offset extraction applies to
+the early-prefix endpoint and the finite set of regulator phases used
+by the Gaussian comparison.
+
+4. TILT REMOVAL: THE ORDER OF QUANTIFIERS IS ADEQUATE
+
+Fix A and an ORIGINAL coordinate-torus cluster limit nu, then a real
+gauge-invariant local polynomial O. For each t>0 first take the adapted
+tilted volume limit lambda_t along a subsequence of the SAME original
+volume sequence. The full-array comparison gives
+
+  nu(O) <= lambda_t(O).                                (4)
+
+The pressure defect vanishes because all auxiliary lengths are fixed
+before the volume limit. At finite A the interaction is bounded and
+finite range. Removing plaquettes crossing a boundary changes log Z
+by at most a fixed beta-dependent constant times their number. This
+also explains why the required finite bounded-aspect family has a
+common qualitative pressure limit; a UV-uniform rate is unnecessary.
+
+The amplification conclusion for each fixed admissible operator X is
+
+  |lambda_t(G_X)| <= exp(C_X t) ||X||.                  (5)
+
+Choose t_l down to zero and a weak cluster limit lambda of lambda_{t_l}.
+For EACH fixed X, (5) holds for every cluster subsequence at its t_l,
+and C_X is finite. Therefore the SAME lambda satisfies the norm bound
+for all X. There is no illicit exchange of a support-dependent constant
+with a supremum over X. One may instead extract a countable dense test
+family and extend, but that is not essential to this pointwise logic.
+
+The paired local reduction has error epsilon+C_epsilon t. Keep epsilon
+and the corresponding finite operator approximants fixed until AFTER
+t->0. Then take the approximation limit and epsilon->0. This order
+permits divergent operator norms along the approximation sequence.
+It gives invariance at the eight fixed clean link planes of the source
+array, provided the two-layer operator conclusion and paired reduction
+are valid. Their adjacent-plane compositions give 2Z^4 invariance.
+
+The source array need not be invariant at a clean coordinate plane:
+the paired reduction is applied to both reflected observables with the
+same tilted source law and an O(t) error. Invariance at the target
+diagonal wall, and positivity there, come from the adapted construction.
+
+5. THE FIXED TARGET IN CONVEX SEPARATION REALLY STAYS FIXED
+
+Fix one lattice-preserving diagonal reflection theta. Let R_theta be
+the weakly compact convex set of gauge-invariant laws that are invariant
+and RP at theta. Positivity inequalities are closed affine conditions
+for each fixed continuous local half-space observable. One may impose
+extra closed conditions, but they are not needed for separation.
+
+Given O, choose an EVEN translation a so that the support of tau_a O
+lies on the required side of theta, then choose the cell width and the
+other wall offsets to enclose it. This is possible for any finite
+support. Construct lambda in R_theta for the TRANSLATED observable.
+The original nu is fully translation invariant and lambda is even-
+translation invariant. Hence
+
+  nu(O)=nu(tau_a O) <= lambda(tau_a O)=lambda(O).        (6)
+
+One does NOT translate lambda back; doing that could move its RP plane.
+The state in (6) remains in the fixed set R_theta. Although lambda may
+depend on O, (6) for all O implies nu belongs to R_theta by compact
+convex separation. Continuous cylinder functions are uniformly dense
+on the compact product; finite endpoint gauge averaging and then
+Peter--Weyl approximation reduce any separator to a real local gauge-
+invariant polynomial. Thus testing only this class loses nothing for
+the gauge-invariant probability laws at issue.
+
+The same argument can be repeated for each lattice diagonal plane.
+It does not average states reflected in different planes and does not
+infer RP from equality of free energies alone.
+
+6. SCOPE AND DEPENDENCY VERDICT
+
+PASS: first-passage volume subsequence, original 2L^M arithmetic,
+source/witness limit order, support-dependent tilt removal, and fixed-
+target convex separation. There is no new scope obstruction between a
+correct fixed-beta same-state theorem and the actual source regulators.
+
+STILL TO BE ESTABLISHED BY THE PARALLEL AUDITS: the full-array twisted
+fold; its operator insertion/Schatten implementation; and the local
+two-layer reduction with the needed gauge kernel relation. This note
+does not certify those inputs. If they hold, the finite straight-torus
+nonseparating-mirror observation does not contradict the resulting
+infinite-volume same-state conclusion. If one of them fails, neither
+the regulator construction nor pressure equality repairs that failure.

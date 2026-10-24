@@ -1,0 +1,335 @@
+CHESSBOARD TAILS FOR NATIVE BLOCK CYLINDERS: A FIXED-DEPTH THEOREM
+19 October 2026. Positive bare events, constrained partitions, and exact limits.
+
+0. RESULT
+
+Reflection positivity DOES give a normalized, surrounding-volume-uniform
+tail for an actual fixed-depth native-average cylinder. This is more
+than a bare plaquette estimate: a fixed finite native analytic defect
+can be dominated by the Wilson energy in its complete reflection cell.
+The proof below has no signed-history normalization and keeps the exact
+bare partition function throughout.
+
+It does NOT give the required UV-depth-uniform stopped/history estimate.
+The cell contains the full bare read of the fixed composite; its constants
+and its fine-volume entropy are retained. Source uniform stability gives
+a different statement and does not supply the constrained numerator
+needed to replace that entropy by stopped coarse volume. A reflection-
+positive countermodel shows why the pointwise stability sandwich alone
+cannot imply bad-cylinder rarity.
+
+1. MODEL AND REFLECTION-CELL CONVENTION
+
+Let mu_beta be the normalized positive bare Wilson law on a compatible
+four-dimensional periodic lattice:
+
+ mu_beta(dU)=Z_beta^(-1) exp[-beta S_tot(U)] product_e d_H U_e,
+ S_tot=sum_p s(U_p),                 s>=0.                    (1.1)
+
+Use a faithful unitary representation for the plaquette term, so
+s(U)=0 iff U=1. Choose an ordinary closed coordinate-reflection cell C
+whose translates/reflections tile the torus with the usual shared-face
+convention. Its side in BARE lattice units is fixed for the theorem.
+Let m be the number of cells, and let S_C be the sum of all bare
+plaquette terms wholly in C. Write q_* for the maximal multiplicity
+with which a plaquette appears in these closed-cell sums. It is a fixed
+geometric number; the crude q_*<=2^4 is sufficient. Thus
+
+                   sum_cells S_C <= q_* S_tot.                (1.2)
+
+Use the exact Wilson chessboard inequality for this cell convention.
+For a nonnegative cell function f, its disseminated product is obtained
+by the actual reflections, not by imposing that the field itself is
+reflection symmetric. Every complete read of f must lie in C.
+
+2. A FIXED-CELL DEFECT-TO-ACTION LEMMA
+
+The cell, considered as a free-boundary cubical complex, is simply
+connected. The fixed-graph theorem in full_bare_finite_graph_joint_law
+turn13 applies to S_C after a based tree gauge: the unique zero is the
+identity chord tuple, and its finite Hessian is positive.
+
+Let D be a gauge-invariant defect defined on a fixed near-flat branch,
+with complete read in C. In its finite tree coordinates x suppose
+
+                D(1)=0,       D(exp x)<=L_C |x|               (2.1)
+
+on a fixed neighborhood. This holds, for example, for the norm of an
+analytic local output difference that vanishes at the identity. No
+analyticity in a varying source or growing fine graph is asserted.
+
+Choose a smaller near-flat neighborhood O on which the map is admitted.
+Define E_delta to mean D>=delta there, and optionally also declare
+failure to belong to O to be bad. This gives a positive measurable
+cell event; outside O no undefined analytic branch is evaluated.
+For 0<delta<=delta_0, there is c_C>0 such that
+
+                    E_delta implies S_C>=c_C delta^2.        (2.2)
+
+Proof. On O, the tree-slice lower bound S_C>=lambda_C |x|^2 and
+(2.1) give (2.2). On the complement of O, compactness and the unique
+flat orbit give S_C>=Delta_C>0. Decrease c_C to at most
+Delta_C/delta_0^2. All these constants concern this fixed cell.
+
+The cell tree gauge need not agree with any RG gauge: D is a genuine
+gauge-invariant function, so the gauge is used only to prove an energy
+inequality for the original bare event. A failure branch is included
+only when small S_C actually guarantees membership in the selected
+native branch. This follows from the same finite chart bound for the
+examples in Section4; it is not automatic for an arbitrary algorithm.
+
+3. NORMALIZED REFLECTED ARRAYS: COMPLETE DENOMINATOR PROOF
+
+Let E_array be the intersection of all m reflected copies of E_delta.
+Equations(1.2),(2.2) imply on that event
+
+                 S_tot >= m c_C delta^2/q_*.
+
+Therefore the constrained periodic partition satisfies exactly
+
+ Z_beta(E_array)
+   <=exp[-beta m c_C delta^2/(2q_*)] Z_(beta/2).               (3.1)
+
+The other half of the ORIGINAL positive Wilson action is retained.
+There is no RG history expansion in this inequality.
+
+For completeness, normalize the ratio with a real lower subset.
+Restrict each independent link to a group ball of radius c beta^(-1/2).
+Its Haar volume is at least c_1 beta^(-dim G/2), and every plaquette
+action is at most C/beta. With N_0 the number of bare sites, this gives
+
+              Z_beta>=exp[-C N_0(1+log beta)],
+              Z_(beta/2)<=1.                                  (3.2)
+
+Taking the chessboard root only AFTER (3.1)--(3.2) yields
+
+ mu_beta(E_delta)
+ <=z_C(beta,delta)
+ :=min{1,exp[-c_C' beta delta^2
+                       +C_C v_C(1+log beta)]},                (3.3)
+
+where v_C=N_0/m is the number of bare sites per cell, with the fixed
+tiling normalization. It is independent of the total torus volume,
+but it is NOT omitted from the bound. The usual multilinear chessboard
+inequality also gives, for any prescribed distinct reflected event cells,
+
+       mu_beta(intersection_(a in A) E_delta,a)<=z_C^|A|.      (3.4)
+
+One can allow finitely many reflected defect types with a common
+energy threshold by applying their respective disseminated norms.
+No independence of the cells or their boundary links is assumed.
+
+If delta=beta^(-1/2)(log beta)^p, p>1/2, and C is fixed BEFORE beta
+tends to infinity, (3.3) is smaller than every fixed beta power.
+The gain beta delta^2 defeats this fixed-cell logarithmic entropy.
+
+4. AN ACTUAL NATIVE-AVERAGE CYLINDER TO WHICH THIS APPLIES
+
+Use the ordinary symmetrized group averaging of CMP109 (0.5)--(0.12),
+with a FIXED odd ratio L, and a FIXED finite number k of compositions.
+Every coarse bond reads its two endpoint L^k blocks and their original
+contours. The complete footprint of a coarse plaquette is consequently
+a fixed finite collection of such blocks. Choose C large enough that
+this whole footprint lies strictly inside it.
+
+The branch is analytic near the flat orbit, gauge covariant, sends the
+identity field to the identity field, and has a finite derivative bound
+on a reserved fixed graph. Its coarse plaquette defect
+
+              D(U)=||1-Q^k(U)(boundary p_coarse)||             (4.1)
+
+is gauge invariant, vanishes at the flat orbit and satisfies (2.1).
+Thus (3.3)--(3.4) apply. Declaring branch failure bad is legal as in
+Section2. Alternatively use the globally Borel native-on-good/fallback
+extension constructed in reflection_compatible_block_statistic_turn3;
+small S_C puts every intermediate local mean in its native branch.
+
+The prior note proves the required actual path locality and reflection
+covariance, including a global straight-path fallback only outside
+the unique-mean domain. It also proves that (Q^k)_*mu_beta is RP at
+the compatible block-face planes. For the present argument one can
+simply apply BARE chessboard to (4.1); this avoids asserting RP of
+any resampled law. Reflected event copies carry their reflected full
+path families and have the same action constant.
+
+This is an honest finite-level native-average event, not a replacement
+by thin path decimation or a condition on a chosen gauge potential.
+The new conclusion is normalized rarity of this event under the full
+bare Wilson law, uniformly in the surrounding volume. It extends the
+old bare-plaquette estimate by an explicit fixed-cell energy lemma.
+
+It does not say that a Q/R flag using a minimizing background is the
+same event. Such a flag has additional full read collars and possibly
+prior history data. The existing exact free-bond R residual proxy can
+be used only when those data have already been identified with a
+deterministic bare-local function on a correct ancestry event.
+
+5. MARKED VERSIONS THAT ARE ACTUALLY JUSTIFIED
+
+For a bounded bare mark M,
+
+ |mu_beta(M 1_E)|<=||M||_infinity z_C.                         (5.1)
+
+For a true normalized L^r bound with r>1, ordinary Holder gives
+
+ |mu_beta(M 1_E)|<=||M||_(L^r(mu_beta)) z_C^(1-1/r).           (5.2)
+
+These bounds retain the actual denominator. For a fixed finite product
+of compact Wilson-loop functions with a prescribed normalization bounded
+by C beta^D, (5.1) suffices: the fixed power is absorbed by (3.3) at a
+logarithmic threshold with p>1/2. Such a statement is uniform in total
+volume at this fixed bare geometry.
+
+Equation(5.2) cannot be applied to a renormalized continuum scalar or
+tensor insertion merely because its separated Schwinger functions are
+bounded. The coincident L^r moment in (5.2) is an additional quantity and
+can have a UV divergence. The existing scalar event-array slab consumer
+in first_contact_scalar_chessboard_turn3 Section1 is an alternative:
+an array bound such as (3.4), plus genuine positive kernel domination
+of the insertion, gives an OS-core bound without invoking that ordinary
+coincident moment. The kernel domination itself must be proved for the
+actual bare mark; a signed history-coefficient norm is not enough.
+
+6. WHY THE FIXED-DEPTH THEOREM DOES NOT SOLVE THE STOPPED-SCALE PROBLEM
+
+The constants in Section2 come from a cell with all bare read links.
+If k grows, its physical size at the stopped scale may stay fixed while
+its BARE volume v_C grows like L^(4k), up to collar factors. Neither
+c_C nor v_C was proved uniform in k. Even a hypothetical uniform
+nonlinear energy inequality would not remove v_C in the ratio (3.2).
+Weakening beta to beta/2 changes all bare ultraviolet Gaussian modes.
+Its determinant/free-energy cost is counted in bare volume.
+
+For the intended stopped event one instead needs a constrained positive
+partition estimate of the form
+
+ Z(E_array)<=exp[-E_UV] exp[-m P_b+C m v_b],
+ Z(1)>=exp[-E_UV] exp[-C' m v_b(1+log gamma_b)],                (6.1)
+
+with the SAME extracted ultraviolet factor and v_b counting stopped
+cells in ONE full event cell. Then bare chessboard would indeed give
+
+ mu(E)<=exp[-P_b+C''v_b(1+log gamma_b)].                       (6.2)
+
+The arithmetic is valid, and no RP assertion for a conditioned or
+signed-history measure is required. The unsupplied object is the first
+line of (6.1) for the literal positive event in question, on the same
+finite construction. An unconstrained upper bound for Z does not
+provide the event penalty P_b. Re-running an RG on a tilted action can
+change E_UV, so its vacuum cannot simply be canceled against the old
+one. Geometry-dependent missing vacuum terms are also not one common
+scalar.
+
+The Gaussian linearized native average has an exact coarse-rank
+determinant pressure, already proved in reflection_compatible_block_
+statistic_turn3 Section5. That is a positive benchmark, not a nonlinear
+Wilson comparison. The required nonlinear event-source comparison
+uniformly in k remains additional.
+
+7. WHAT THE INSPECTED NATIVE STABILITY STATEMENTS ACTUALLY SAY
+
+The primary/source audit in rooted_normalized_history_mass_turn3 records
+CMP122-II (1.73)--(1.75) as a positive SAME-component normalization and
+absolute survivor estimate. The lower reference integral in (1.2)--
+(1.11) is not a lower competing healed history. Equations(1.103)--
+(1.104) leave the surviving T(Y)1 multipliers outside the subsequent
+operations; their Y are fixed, not summed there as a new polymer gas.
+
+The independent primary inspection in this pass additionally reports:
+ -- CMP119 p262 defines the one-step full-lattice vacuum family, while
+    history extraction subtracts the terms actually generated in the
+    small regions. Its recursive theorem concerns the stated full
+    density class, not arbitrary positive local-source perturbations.
+ -- CMP122-II (0.1)'s UPPER sandwich is an absolute exp(E_+ times total
+    volume), with NO retained exp[-gamma S(U)] factor. Its LOWER bound
+    has a characteristic function and the classical action. Thus it
+    can give a fixed-stop-volume positive lower subset when matched,
+    but not the energy-tilted numerator of (6.1) by itself.
+
+Exact unread subscript/volume conventions in the primary stability
+statement must be settled before using a new scale-normalized bound.
+The present conclusion does not depend on filling those OCR gaps: an
+absolute upper bound lacking the event/action penalty is not the
+constrained numerator theorem. No inspected source passage supplied
+that extra estimate for the deterministic Q^k bare event.
+
+8. RP PLUS THE STABILITY SANDWICH DOES NOT FORCE RARITY
+
+There is an exact countermodel to that INFERENCE. On a reflection-
+compatible finite gauge lattice take the positive density
+
+                      rho_beta(U)=exp[-beta S_tot(U)]+1.      (8.1)
+
+Both the Wilson measure and product Haar are reflection positive;
+their positive unnormalized sum is reflection positive, and subsequent
+scalar normalization preserves RP. Pointwise,
+
+                exp[-beta S_tot]<=rho_beta<=2.               (8.2)
+
+This has a classical small-field lower bound and an absolute extensive
+upper bound of exactly the relevant qualitative type. Nevertheless,
+for a fixed local nonzero-energy event E with positive Haar mass m_E,
+
+ mu_(rho_beta)(E)>=m_E/(Z_beta+1)>=m_E/2.                      (8.3)
+
+Thus RP, positivity and that sandwich do not imply any weak-coupling
+rarity of E. The example is NOT a claim about the actual Bałaban density;
+it proves that a separate constrained/action-sensitive numerator input
+cannot be omitted from the proposed deduction.
+
+With a stretched-log coefficient epsilon_beta in place of1, one can
+retain rare-sector fixed-order bounds while destroying a fixed positive
+energy-tilt bound; that variant is already proved in
+stopped_coarse_energy_pressure_turn3 Section4. Even all fixed moments
+are not a replacement for the large positive source in (6.1).
+
+9. EVENT-LEVEL BARE ESTIMATES AND RG HISTORY ARE DISTINGUISHABLE
+
+The pure statistic Q^k(U_bare), the current field in the resampled
+RT density, and an auxiliary surviving-history label are different
+random objects. The source refill integrates current variables in
+its interior without fixing their next ordinary average; the literal
+constraint check is in reflection_compatible_block_statistic_turn3
+Section8. No identity M_*R rho=M_*rho follows from preservation of
+the total integral.
+
+A simple probabilistic test makes the distinction exact. Start with
+any RP bare law mu and augment it by an independent Bernoulli history
+label H of arbitrary parameter p. All bare cylinder probabilities,
+partition functions and their RP bounds are unchanged, while P(H=1)=p.
+One may equivalently retain a label from an earlier field and resample
+the present field independently. Then the label can persist while
+every presently inspected field statistic has the same small tail.
+This is not a model of the native RG; it proves that a theorem about
+the bare/current marginal cannot alone identify or bound a label's
+probability without an event domination or a relative-history theorem.
+
+For a genuine positive native kernel the dual function
+p_H(U)=P(H|U) lies in [0,1], but need not be a function of a closed
+reflection cell. Localized signed T coefficients are not positive
+cell-local pieces of p_H. To use the bare event theorem one needs a
+positive cell-local majorant/decomposition WITH its carrier error and
+the matching disseminated estimate, or a direct normalized surgery.
+
+The earlier 'all prior flags good' shortcut does not provide this:
+prior tests crossing a reflection-cell face are not imposed by all
+within-cell copies, and first LIVE contact can follow already healed
+R operations. The exact failure is documented in first_contact_regular_
+array_pressure_turn3 Sections4--5. Nothing in the new fixed-cell energy
+lemma removes those additional ancestry and crossing-face reads.
+
+10. PRECISE ADVANCE AND REMAINING TARGET
+
+The proved addition is (2.2)--(3.4) for an actual fixed finite native-
+average defect, with normalized marked versions at their stated scope.
+It is a full bare-measure event theorem uniform in the surrounding
+volume, and it never divides a signed component by an unknown mass.
+
+The needed larger theorem remains concrete: prove (6.1), or its
+normalized positive-source equivalent, for the complete deterministic
+native coarse cylinder at growing UV depth; then identify the positive
+event/mark which dominates the specific RG history contribution. The
+pointwise source stability sandwich and finite-graph Gaussian tails do
+not already prove either step. A fixed-volume minorization of the RT
+law is useful for a different purpose and is not contradicted by this
+audit, but it does not supply this upper rarity estimate.

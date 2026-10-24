@@ -1,0 +1,370 @@
+ACTUAL SOURCE CONTROL AND THE LOCAL ELECTRIC REMAINDER -- TURN68
+20 October 2026. gauge47. Submitted for independent audit.
+
+RESULT
+
+Two actual finite-regulator advances are established here:
+
+ (i) the new space-time action MGF gives a physical magnetic source
+     amplitude domain independent of the cutoff, with a local
+     extensive majorant and an explicit smaller zero-free disc;
+
+ (ii) localizing the log-coupling source produces an exact electric
+     local-energy remainder. Its ground Dirichlet form is bounded
+     directly by spatial differences of the source profile, without
+     a Fisher or marked-score term.
+
+The first result does not give an O(1) connected, separated-time
+source remainder. The second explains precisely why the global
+coupling identity cannot simply be asserted for a local magnetic
+source. The remaining term is identified and estimated on the
+actual ground law, not introduced as an unspecified hypothesis.
+
+1. ACTUAL LAW AND THE NEW SPACE-TIME INPUT
+
+Use the finite-spatial SU2 Hamiltonian
+
+ H=kappa K+vS,   kappa=g^2/(2a),  v=4/(g^2a),
+ S=sum_p h_p,   h_p=1-Tr U_p/2,
+
+with Pauli/2 link metric, positive ground state Omega, ground energy
+E0 and normalized law mu=Omega^2 dU. At a fixed finite graph all
+operators and derivatives below have their usual smooth compact
+elliptic meaning. A=H-E0 and
+
+              D(F)=<F Omega,A F Omega>
+                  =kappa E_mu |grad F|^2.              (1.1)
+
+A constant part of F does not affect(1.1).
+
+The companion proof hamiltonian_spacetime_moments_turn68.txt gives
+the following exact actual-ground-process bound. On its dyadic
+closed spatial board with V sites per fundamental tile, temporal
+cell length Delta, and
+
+ X_c=(a g^2)^-1 int_(I_c) S_(B_c)(U(t))dt,
+ c_Delta=9VDelta/(2a),
+
+one has, for any finite distinct cell family,
+
+ log E exp[sum_c t_c X_c] <= c_Delta sum_c t_c,
+                         0<=t_c<=2.                  (1.2)
+
+The proof retains the full thermal normalizer, uses full-trace
+Brownian loops to prove space/time RP, and then takes the ground
+limit. The full and physical ground states coincide. This is not
+an assertion about a native RG reference measure or a flowed law.
+
+For Delta=a, c_Delta=9V/2 is independent of a,g and volume.
+The same proof supplies the sharper actual energy-curve expression
+
+ log E exp[sum t_cX_c]
+ <=(VDelta/n) sum_c [E0-E_(t_c/2)],                    (1.3)
+
+where E_c=inf spec[kappa K+(1-c)vS]. Both kinetic and potential
+coefficients are retained.
+
+2. PHYSICAL LOCAL SOURCE: FIXED AMPLITUDES AND AN EXPLICIT LOG DISC
+
+For a real profile f(t,p) supported in a finite time window define
+
+ Y_f=int dt Q_f(t),
+ Q_f(t)=4/(g^2a) sum_p f(t,p)h_p(U(t)).                (2.1)
+
+Choose one containing closed spatial tile as the owner of each
+plaquette. Let F_c be the supremum of |f| on the owned plaquettes
+and times of cell c. This ownership enters only a pointwise upper
+bound, not the chessboard construction. Then
+
+                 |Y_f|<=4 sum_c F_c X_c.
+
+Set
+
+ r_* = 1/(2 max_c F_c),
+ L_f = (18VDelta/a) sum_c F_c.                         (2.2)
+
+If f=0, every conclusion is trivial and r_* may be infinite.
+For |z|<=r_*,
+
+ |Z_f(z)|=|E exp(zY_f)| <= exp(L_f |z|).               (2.3)
+
+All expectations in this section use the SAME unsourced stationary
+ground process and its complete normalizer. No selected sector,
+sourced ground vector, or source-dependent probability denominator
+has been substituted.
+
+The radius r_* is independent of the cutoff for a bounded physical
+profile. For fixed tile lengths, Delta=a, and fixed physical
+space-time support, however,
+
+                         L_f=O(a^-4).                 (2.4)
+
+Thus(2.3) supplies a genuine local extensive bound for source
+VALUES. It is stronger than the elementary stationary-Jensen bound,
+which would require |z|=O(a/T) on a slab of fixed duration T.
+It does not supply a uniform connected-log bound.
+
+There is also a proved, but shrinking, zero-free disc. Positivity
+and(1.2) give
+
+ |Z_f(z)-1|
+ <= E[exp(|z||Y_f|)-1]
+ <= exp(L_f |z|)-1.
+
+Consequently all such actual source generators have their canonical
+logarithm on
+
+ |z|<=min{r_*, log(3/2)/L_f}.                         (2.5)
+
+This radius is O(a^4) on a fixed physical support. It removes the
+extra g^2 loss in the elementary bound using the supremum of the
+unflowed Wilson action, but is still not uniform as a->0.
+
+At fixed regulator, Y_f is bounded and its generator is entire.
+Subtracting its mean or any explicitly known affine-in-time vacuum
+term multiplies Z_f by a nonzero exponential; it does NOT move its
+complex zeros. One cannot infer a larger zero-free domain by that
+subtraction alone.
+
+For a finite family of cell sources, (2.5) is naturally an l1
+budget on their coefficients. Individual cell amplitudes have
+uniform moments, while a physical test source occupies O(a^-4)
+cells. This distinction is relevant to source derivatives.
+
+3. A LOCAL LOG-COUPLING DOES NOT EQUAL A LOCAL MAGNETIC SOURCE
+
+For this section take a cubic isotropic spatial torus, so the actual
+ground energy bound and cubic symmetry give
+
+                         E_mu h_p<=3g^2/4              (3.1)
+
+for every plaquette. The rectangular variant merely has the larger
+constant9g^2/4. Let f_p be arbitrary real numerical plaquette
+weights and put
+
+ eta_e=(1/4) sum_(p incident to e) f_p,
+ Q_f=v sum_p f_p h_p,
+ T_eta=kappa sum_e eta_e K_e,
+ H_f=T_eta+Q_f.                                       (3.2)
+
+Every spatial edge has four incident plaquettes. The numerical
+weights commute with all differential operators. Consider the
+actual local elliptic coupling family
+
+ H_f^loc(tau)=kappa sum_e exp(-tau eta_e)K_e
+                   +v sum_p exp(tau f_p)h_p.           (3.3)
+
+For real tau near0 it is a positive-coefficient elliptic
+Hamiltonian; near zero in the complex plane it is an analytic
+elliptic family on the common fixed-graph domain.
+
+Here H_f^loc(0)=H; the weighted operator H_f in(3.2) is a
+different object. At tau=0,
+
+ (H_f^loc)'(0)=Q_f-T_eta=2Q_f-H_f,
+ (H_f^loc)''(0)=kappa sum_e eta_e^2 K_e
+                         +v sum_p f_p^2 h_p=:C_f.      (3.4)
+
+Write q_f=Q_f-<Q_f>. Define the real smooth centered function r_f
+by its ground vector
+
+ r_f Omega=(H_f-<H_f>)Omega.                           (3.5)
+
+Omega is strictly positive at this finite graph, so this definition
+is unambiguous. It is gauge invariant. Its expression as a function
+can read Omega globally: no finite local support for that function
+is being claimed merely because H_f is a local differential
+operator. Explicitly, r_f=Omega^-1(H_f-<H_f>)Omega. This ground
+quotient is not a magnetic multiplication insertion already
+present in the original Wilson action.
+
+The centered derivative vector is exactly
+
+ [(H_f^loc)'(0)-<(H_f^loc)'(0)>]Omega
+                         =(2q_f-r_f)Omega.             (3.6)
+
+For constant f_p=1, eta_e=1, H_f=H and r_f=0. That is the global
+identity used in TURN67. For a spatially localized profile there
+is no such cancellation in general.
+
+With fixed UNSOURCED ground endpoints define
+
+ K_f(T,tau)=log <Omega,exp[-T(H_f^loc(tau)-E0)]Omega>.
+
+At the fixed graph its local source derivatives satisfy
+
+ partial_tau^2 K_f(T,0)
+   =2 int_0^T(T-s) C_b(s)ds -T<C_f>,
+ b=2q_f-r_f,
+ C_b(s)=<b Omega,exp(-sA)b Omega>.                     (3.7)
+
+Taking the second forward time difference of step d>0 gives
+
+ Delta_d^2 partial_tau^2 K_f(T,0)
+       =2 int exp(-TE)[(1-exp(-dE))/E]^2 rho_b(dE).     (3.8)
+
+The contact term -T<C_f> cancels, but the vector b remains.
+For f=1, rho_b=4rho_Q and(3.8) becomes the established factor8
+magnetic-window formula. For a general local f, (3.8) is NOT
+eight times the magnetic Q_f window norm.
+
+4. EXACT LOCAL ENERGY CURRENT AND ITS ACTUAL DIRICHLET BOUND
+
+There is a useful estimate for the remainder r_f which avoids a
+marked Fisher term. Put d_(e,p)=f_p-eta_e for p incident to e.
+Since all K_e commute, and all h_p are multiplication operators,
+
+ [H,H_f]
+       =kappa v sum_(e,p incident) d_(e,p)[K_e,h_p].    (4.1)
+
+The ground equation gives
+
+ A(r_f Omega)=[H,H_f]Omega.                           (4.2)
+
+For any real smooth F, integration by parts in the normalized Haar
+measure gives the exact cancellation
+
+ <F Omega,[K_e,h_p]Omega>
+                      =E_mu grad_e F . grad_e h_p.   (4.3)
+
+Indeed [K_e,h_p]Omega=-(Delta_e h_p)Omega
+-2 grad_e h_p . grad_e Omega. Integrating the first term by parts
+cancels the second term containing grad Omega. No pointwise or
+weighted Fisher bound is used.
+
+Using(4.2),(4.3) and the ground transform,
+
+ E_mu grad F . grad r_f
+   =v E_mu sum_e grad_e F .
+                         sum_(p incident e)d_(e,p)grad_e h_p.
+                                                               (4.4)
+
+Thus grad r_f is the gradient-space projection, in L2(mu), of the
+explicit local one-form on the right. Taking F=r_f and applying
+Cauchy--Schwarz proves
+
+ D(r_f)<=kappa v^2 E_mu sum_e
+                       |sum_(p incident e)d_(e,p)grad_e h_p|^2.
+                                                               (4.5)
+
+For each link of a plaquette, in the Pauli/2 convention,
+
+ |grad_e h_p|^2=(2h_p-h_p^2)/4<=h_p/2.
+
+There are four terms at each spatial edge. Therefore
+
+ |sum_p d_(e,p)grad_e h_p|^2
+                   <=2 sum_p d_(e,p)^2 h_p.
+
+Combining this with(3.1), kappa v^2=8/(g^2a^3), gives the explicit
+actual-law result
+
+             D(r_f) <= (12/a^3)
+                         sum_(e,p incident) |f_p-eta_e|^2.       (4.6)
+
+No unverified conditional density or source window is involved.
+The averaging choice eta_e in(3.2) minimizes the numerical square
+sum independently at every edge.
+
+For comparison the same calculation, without the profile
+differences, gives
+
+                    D(q_f)<=(48/a^3)sum_p f_p^2.       (4.7)
+
+This agrees with the magnetic-source quadrature coefficient
+proved independently in separated_source_attachment_turn68.txt.
+
+For a fixed smooth physical profile sampled at plaquette centers,
+centers of plaquettes incident to the same edge are at mutual
+distance at most a. Consequently
+
+ |f_p-eta_e|<=a ||grad f||infinity.
+
+If N_inc is the number of affected edge-plaquette incidences,
+then(4.6) is at most12 N_inc ||grad f||infinity^2/a.
+On a fixed physical support N_inc=O(a^-3), yielding O(a^-4).
+It vanishes exactly for a constant profile, but it is not a
+cutoff-uniform local-source estimate.
+
+The bound controls the first spectral moment int E rho_r(dE).
+It does not bound rho_r near energy0 or supply the inverse-energy
+control required to discard r_f from a finite-time window. No
+cutoff-independent spectral gap has been assumed.
+
+5. WHAT THE NEW MOMENTS CANNOT IMPLY BY THEMSELVES
+
+This subsection is a logical test of an inference, not a
+counterexample to the SU2 Hamiltonian.
+
+The joint upper bound(1.2), even with reflection positivity,
+does not alone imply a uniform zero-free physical-source disc
+or a separated covariance bound. To see the information loss,
+fix Delta=a and any b with0<b<=c_Delta. Let all spatial cell
+variables be bZ(t), where Z(t) is a stationary two-state reversible
+chain taking values0,1 with equal weights and flip rate epsilon.
+Define the cell variable as its temporal average
+
+ X_(b,j)=(b/a) int_(I_j) Z(t)dt.
+
+For a cell of duration a, 0<=X_c<=b pointwise. Hence, for every
+finite nonnegative coefficient array,
+
+ E exp(sum t_cX_c)<=exp(b sum t_c)
+                                <=exp(c_Delta sum t_c).
+
+This includes all simultaneous rare-cell upper bounds derived
+solely from(1.2). The stationary process is temporally reflection
+positive, and spatial reflection positivity is trivial because
+every spatial cell reads the same variable. For epsilon>0 it has
+a unique positive two-state ground state.
+
+A source occupying N_sp spatial cells has instantaneous canonical
+amplitude alpha_a Z(t), with
+
+                      alpha_a=4b N_sp/a.
+
+On a fixed physical volume N_sp is of order a^-3, so alpha_a is of
+order a^-4. Its centered covariance is
+
+          C(t)=(alpha_a^2/4)exp(-2epsilon|t|).
+
+It can diverge like a^-8 at fixed separated times while all the
+joint MGF upper bounds above hold. This is NOT a local Wilson
+Hamiltonian: precisely that additional spatial kinetic/dynamical
+structure must be used to improve the source estimate.
+
+The zero-flip limiting diagnostic makes the source zeros explicit:
+on a time slab of length T,
+
+ Z_source(z)=(1+exp(z alpha_a T))/2,
+ exp(-z alpha_a T/2) Z_source(z)
+                         =cosh(z alpha_a T/2).
+
+The nearest zeros have modulus pi/(alpha_a T). Centering does not
+move them; nor does multiplication by any affine-in-T scalar
+normalization. The zero-flip law is used only for this elementary
+zero calculation. The preceding epsilon>0 model already supplies
+the unique-ground, separated-covariance obstruction.
+
+Thus an extensive absolute source majorant is real progress, but
+cannot be relabeled a connected source remainder estimate.
+
+6. CONSEQUENCE FOR THE CURRENT EXISTENCE ROUTE
+
+The actual new space-time moments permit polynomial action marks
+on simultaneous rare cells and can suppress a bad-cell chain
+bridging two separated source regions. The parent records that
+consumer separately. They do not estimate the no-spanning-bad-chain
+contribution to the connected correlation.
+
+The localized log-coupling calculation now identifies the exact
+additional physical vector and controls its local-current
+Dirichlet form by(4.6). The remaining source problem is not a
+missing normalization constant: it is an actual connected,
+separated-time estimate for calibrated magnetic insertions, or
+for the fully retained electric-magnetic source vector.
+
+The finite-spatial temporal source-jet attachment is separately
+proved in separated_source_attachment_turn68.txt. Its ordered
+temporal diagonal does not supply the spatial estimate missing
+here. No full Yang--Mills existence proof is claimed.

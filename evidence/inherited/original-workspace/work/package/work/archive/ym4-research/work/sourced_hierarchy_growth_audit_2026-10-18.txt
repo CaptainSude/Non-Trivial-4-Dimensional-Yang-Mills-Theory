@@ -1,0 +1,329 @@
+SOURCED HIERARCHY: ORDER DEPENDENCE AND THE OS GROWTH OBSTRUCTION
+18 October 2026. Research audit, not a publication document.
+
+This note audits the repository's actual displayed envelopes. Its
+references are to the checked local copy of Ethan Sussman and Levent's
+theorem_0_complete_account_raw_{I,II,III}.tex. It does not promote their
+conditional correlation theorem to an unconditional source theorem.
+
+1. WHAT THE EXISTING CAUCHY STEP REALLY COSTS
+
+Raw III, around line53471, Lemma9.8:lem-derivative-closeness assumes a
+normalized sourced partition h holomorphic on a norm ball of fixed
+radius R0 with |h|<=Q_w and h(0)=1. The smaller radius R1 is fixed by
+(Q_w+1)R1<=R0/2. For p observables it obtains a factor (2p/R1)^p.
+All Q_w,R0,R1 are fixed at a fixed terminal torus. This p-dependence
+is factorial: p^p<=e^p p!. A radius allocation proportional to 1/p
+is not an obstruction to the OS factorial-growth requirement.
+
+The precise same phenomenon occurs in Raw I, Theorem3.1(iii-a),
+lines2600ff:
+
+ C_n(d)=[C_UV(d)+log2 (2Q+2)^n](n/varrho)^n,
+ Q=exp[(E_+^sharp+C_low) N_T^4].
+
+At a FIXED torus, N_T and Q do not depend on n. Therefore, for n>=2,
+
+ C_n(d)<=C(d) A_T^n n!,
+
+with A_T finite and independent of n. The statement remains conditional
+on the antecedents of the repository correlation theorem. Its own
+Theorem3.1 scope paragraph lists the weight lemma, sixth-family lemma,
+and further source uniformity inputs as incomplete or stated inputs.
+
+2. THE ACTUAL VOLUME-FREE BOUND IS NOT FACTORIAL
+
+Raw II, around lines62682--62780, (6.2:eq-cell-covariance-4)--(9),
+and its explicit diagnosis in lines68088--68171, give
+
+ |h(z)|<=Q_infty^n,
+ log Q_infty=(E_+^sharp+C_low) ell(n,R,g)^4+2C_face(R)+C_cov,
+ ell(n,R,g)>=8n(R+1),
+
+and then the connected n-point bound contains
+
+ log2 * mathfrak_r^n (2Q_infty^n+2)^n (n/r)^n.                 (1)
+
+The terminal bulk and face constants are independent of n. For fixed
+R, (1) grows at least exp(c n^6) when E_+^sharp+C_low>0. The rounded
+power ell is also bounded above by a fixed multiple of the displayed
+floor, so the dominant envelope is exp(C n^6), up to factorial and
+fixed-parameter factors. This is not an exp(exp n) loss, but it is
+already much larger than C^n (n!)^beta for every fixed beta.
+
+This is a lower bound on the SUPPLIED UPPER-BOUND CONSTANT, not a lower
+bound on the actual correlations. It diagnoses an insufficient bound,
+not a no-go theorem for Yang--Mills or even for this construction.
+
+The dependence on separation is much better:
+
+ C_UV(d;R)<=C [1+(R+2)/d]^4 [1+log_L^+(32M/d)].              (2)
+
+Thus the published-in-the-repository calculation already gives a
+polynomial ultraviolet separation cost. It is the remaining normalized
+last-scale partition factor, not the 1/n Cauchy allocation or (2),
+that prevents the all-order OS estimate.
+
+3. EXACT LOCATION OF THE LOSS
+
+The chessboard argument first gives a modulus bound
+
+ log|h|<=C n ell(n,R,g)^4+O(n)=O_R(n^5)
+
+on a source norm ball of fixed radius. The bounded-logarithm lemma
+(6.2:lem-bounded-logarithm), Raw II lines62399--62490, then uses only
+h(0)=1 and |h|<=Q to infer zero-freeness on a radius of order Q^-1.
+For Q=Q_infty^n this is exp[-O_R(n^5)]. Taking n derivatives produces
+the exp[O_R(n^6)] cost.
+
+There is no generic analytic improvement of this step from those exact
+hypotheses. For example h(z)=1+A z^2 has h(0)=1, is positive for real z,
+is bounded by 1+A on the unit disc, and has zeros at +/-i A^-1/2.
+For n=2k, (d/dz)^n log h(0)=(-1)^(k+1)n! A^k/k. Taking
+A=exp(c n^5) shows the scale of the allowed loss. This is a test of the
+printed analytic assumptions, not an example of a Wilson-generated
+partition function or a coherent field hierarchy.
+
+It is not legitimate to apply a positive-mgf cumulant improvement
+directly to h: the source normalization is
+
+ h(z)=exp[-E_UV(w_z)] Z(w_z)/Z(0).
+
+Z/Z(0) is a positive-measure moment-generating function for real sources,
+but h after the source-dependent UV subtraction need not be one. The
+subtraction is essential: diagonal smeared moments have divergent UV
+pieces. Positivity of the original measure alone does not give a
+cutoff-uniform bound for these unrenormalized moments.
+
+4. THE SMALLEST QUANTITATIVE IMPROVEMENT THAT WOULD SUFFICE
+
+Suppose one proves directly for the normalized remainder a zero-free
+connected logarithm on the source norm ball of radius c n^-p, with
+|log h|<=C n^d there, where p,d are FIXED. Allocating that radius to
+n distinct sources and applying Cauchy gives
+
+ |partial_1...partial_n log h(0)|
+ <=C n^d (C' n^(p+1))^n product_i ||f_i||_sharp
+ <=C''^n (n!)^(p+1+d) product_i ||f_i||_sharp.                 (3)
+
+The final exponent is intentionally crude; n^d can be absorbed by a
+fixed exponential, so p+1 plus a small fixed reserve also works. No
+source radius uniform in n is necessary. An order-polynomial radius
+already removes the actual obstruction.
+
+A direct localized connected-source cluster estimate could give this;
+alternatively an exact terminal positive-kernel representation with a
+bounded local source log-weight and polynomial source-support cost
+could give it. Neither is contained in the currently displayed
+chessboard modulus estimate. One must track normalized denominators
+and source counterterms; repeating the zero-source ultraviolet
+stability theorem does not supply (3).
+
+5. FLAT TESTS AT COINCIDENCES AND WHAT THEY DO NOT FIX
+
+Restricting to Schwartz functions flat on the union of coincidence
+diagonals can remove the need to CHOOSE contact terms. It does not
+change the n-dependence (1). The polynomial separation estimate (2)
+is compatible with such a flat-test construction at each fixed n:
+Whitney cubes away from the diagonals have separated coordinate
+projections; the tensor C^1 bound, a blockwise Fourier expansion, and
+Taylor vanishing on the diagonals give a finite Schwartz seminorm of
+order O(n). This requires writing the tensor-to-general-test extension,
+not simply asserting that separated tensors are all Schwartz tests.
+Even after that extension, the prefactor inherited from (1) remains
+exp(C n^6), so it does not prove the all-order growth axiom.
+
+At fixed torus the n-growth issue is absent as in Section1, but passing
+to R^4 reintroduces the volume problem. A fixed torus constant may
+grow exponentially with the torus volume; it cannot be substituted
+for a position-uniform Schwartz bound in infinite volume.
+
+Full Euclidean rotations remain a logically separate obligation.
+Theorem3.1 and Raw I lines3183ff explicitly make O(4) invariance
+conditional on the far-sphere rotation-current flux hypothesis.
+Neither factorial estimates nor contact-term avoidance prove that
+hypothesis, the forward-cone spectrum condition, or nontriviality.
+
+Initial audit status: the repository's fixed-torus source derivative envelope
+has acceptable factorial order dependence. Its actual volume-free
+envelope does not. The decisive missing quantitative source statement
+is a polynomial-in-order zero-free logarithmic radius (or an equivalent
+connected-source bound), with the printed UV polynomial separation
+cost and source hypotheses retained explicitly. Sections6--9 below give
+a different consumer that avoids this zero-free-log requirement for
+FULL centered moments. They supersede any inference that the printed
+n^6 envelope is an intrinsic obstruction.
+
+6. A SHARP FACE ESTIMATE WITH A SHRINKING BUFFER
+
+Assume the repository's source producer supplies its common local
+functions e_j(X;v), with the locality, holomorphy, exponential tree
+bound, covariance/reality, and last-scale stability hypotheses used
+in Chapter6. This is a CONDITIONAL consumer of those hypotheses;
+their outstanding producer proofs are not filled by this section.
+
+Let epsilon=L^-K' be the bare spacing, s_j=ML^(j-K'), and let each
+source piece be supported in a ball of radius r_b at distance at least
+eta from the fixed chessboard faces. Suppose r_b<=C0 eta and
+epsilon<=eta/4. The '+2' in Raw II's anchor count is only the bound
+diam(plaquette)<=2epsilon<=2. Keeping the sharper first inequality,
+the anchor count is
+
+ a_j=[2(r_b+2epsilon)/s_j+6]^4.
+
+A domain X with X^+ meeting both that source and a cell face has
+
+ d_j(X)>=[eta/(8s_j)-3]_+.
+
+Indeed the plaquette-to-barycentre discrepancy is at most2epsilon,
+so the actual distance remains at least eta/2; the source diameter
+lemma then gives this bound. The original tree sum consequently gives
+
+ C_face(r_b,eta,epsilon)
+ <=C sum_{j<=K'} [2(r_b+2epsilon)/s_j+6]^4
+                   exp{-c[eta/(8s_j)-3]_+}
+ <=C'[1+log^+(M/eta)].                                      (4)
+
+Proof of the last bound: for s_j>=eta each bracket is bounded by a
+constant depending only on C0, and there are O(1+log(M/eta)) such
+scales. For s_j<eta put u=eta/s_j. The summand is bounded by a fixed
+polynomial in u times exp(-c'u); u grows geometrically by L, so this
+tail is bounded uniformly. The constants are independent of n, K',
+the torus volume, and the positions. Minimal_route independently
+checked this refinement against the source anchor and diameter proofs.
+
+The source chessboard proof needs vanishing near faces to maintain the
+bare plaquette insertion support; it does not need a fixed macroscopic
+buffer. Thus its face step remains valid with (4).
+
+7. FIXED CELLS FOR ARBITRARILY MANY SMALL SOURCE PIECES
+
+Choose once an allowed cell side ell, a power of L above the fixed
+last-scale volume floor. Let eta=c_ell/n, with c_ell sufficiently
+small and fixed, and r_b<=eta. In one coordinate the excluded shifts
+modulo ell have total length at most 2n(r_b+eta)<=4c_ell<ell/2.
+The complement of these at most n intervals contains an interval of
+length at least ell/(2n). Therefore, for epsilon<=c eta, a common
+shift a in epsilon Z^4 moves ALL n source pieces to eta-buffered
+interiors of cells of the SAME fixed chessboard grid.
+
+This is the same argument as Raw II6.2:lem-place-balls, lines61420--
+61508, with its unnecessarily fixed buffer replaced by eta. It does
+not require moving the RG scaffold: translate the entire selected
+source tuple by a, keep the scaffold and aligned cell-reflection group
+fixed, and use exact bare Wilson translation invariance. Fully centered
+moments are also invariant under this simultaneous translation. The
+UV counterterms are evaluated on the translated tuple and restored
+algebraically below, so no counterterm covariance under a fractional
+last-lattice shift is being assumed.
+
+There are at most n occupied cells. Using (4), the source chessboard
+inequality with its exact bulk covariance cancellation gives on the
+original fixed source norm ball
+
+ |h_n(z)|<=B_n,
+ B_n=exp{C n[1+log(1/eta)]+C n ell^4}
+     <=C1^n n^(C2 n).                                      (5)
+
+For a SINGLE active profile of the same tiny radius, the same argument
+has one occupied cell and gives
+
+ |h_i(z_i)|<=C eta^-C3.                                     (6)
+
+Here h=e^-E_UV Z/Z(0), h(0)=1, as in the repository. The same source
+producer is restricted to the coordinate axis in (6); no independently
+chosen or inconsistent counterterm scheme is substituted.
+
+8. FULL CENTERED MOMENTS: EXACT SQUARE-FREE RESTORATION
+
+Let m_i=partial_i h(0). Cauchy using (6) implies
+
+ |m_i|<=C r_source^-1 eta^-C3 ||f_i||_sharp.
+
+Put h_c(z)=exp(-sum_i z_i m_i) h(z). On the smaller source norm ball
+sum_i |z_i|||f_i||_sharp < c r_source eta^C3, one has
+|h_c|<=e B_n. This is only a polynomial radius shrink in n.
+
+Work temporarily in the finite algebra C[z_1,...,z_n]/(z_i^2).
+Write E_mix for the square-free part of E_UV after deleting its linear
+terms. It contains only monomials z_S with |S|>=2. Single-profile
+terms of degree>=2 vanish in this algebra; this is why they need not
+be interpreted as contact-renormalized probability-field moments.
+Since the ACTUAL mean is
+
+ <O(f_i)>=partial_i E_UV(0)+m_i,
+
+the exact full centered n-point moment is
+
+ [z_1...z_n] exp(E_mix(z)) h_c(z).                           (7)
+
+This identity restores all mixed UV counterterms. It removes only the
+actual one-point means; it does not discard multi-source terms or
+replace the physical measure by the UV-subtracted h.
+
+Let D(d)=max(1,C_UV(d;1)). The repository UV lemma applied to every
+subset S of size m>=2 gives
+
+ |[z_S]E_mix|<=D(d) (m/r_source)^m product_{i in S}||f_i||_sharp.
+
+Choose equal normalized polydisc radii
+
+ rho_i=rho_*/[n ||f_i||_sharp],
+ rho_*=c r_source min(eta^C3,D(d)^-1/2).
+
+The sum of absolute monomials of E_mix on this polydisc is bounded by
+
+ D(d) sum_{m=2}^n binom(n,m)(m/n)^m (rho_*/r_source)^m
+ <=D(d) sum_{m=2}^n (e rho_*/r_source)^m<=1
+
+after choosing c small. Thus |exp E_mix|<=e there, and |h_c|<=e B_n.
+Applying Cauchy to the actual analytic polynomial E_mix and analytic
+h_c (whose square-free product equals (7)) yields
+
+ |S_n^centered(f_1,...,f_n)|
+ <=e^2 B_n (n/rho_*)^n product_i ||f_i||_sharp
+ <=C^n (n!)^B D(d)^(n/2) product_i ||f_i||_sharp.             (8)
+
+B is a fixed finite constant. We used eta=c_ell/n and
+n^n<=e^n n!. The separation envelope (2) gives, for 0<d<=1,
+D(d)^(n/2)<=C^n d^(-A n) for a fixed A, for example any A>5/2
+after harmless enlargement. No zero-free logarithmic radius for h
+has been used. No claim that h is itself a positive mgf is needed.
+
+9. RETURN FROM TINY PIECES TO UNIT-BALL PROFILES
+
+For any Lipschitz f supported in a ball of fixed radius1, use a smooth
+partition of unity on mesh c eta. It has O(eta^-4) nonzero pieces,
+each supported in an eta-ball, with
+
+ sum_a ||f_a||_sharp<=C eta^-5 ||f||_sharp.
+
+Apply (8) to every selected n-tuple of pieces. Each tuple has its own
+good simultaneous baremesh translation from Section7; the exact
+centered moment being bounded is translation invariant, so these
+different proof translations cause no incompatibility. Piece supports
+remain subsets of the original supports, and hence retain their
+pairwise separation d. Multilinearity and the triangle inequality
+multiply the right side by at most (C eta^-5)^n. This is another fixed
+factorial power. Consequently the conditional source hypotheses imply
+
+ |S_n^centered(f_1,...,f_n)|
+ <=C^n (n!)^B' d^(-A n) product_i ||f_i||_sharp               (9)
+
+for unit-ball profiles at arbitrary locations, uniformly in the torus
+volume and in sufficiently small cutoff epsilon<=c/n. For a continuum
+subsequence and each fixed n this cutoff floor is harmless.
+
+Unlike the original exp(C n^6) consumer, (9) has acceptable factorial
+order growth and a diagonal cost linear in n. A Whitney/tensor
+decomposition on Schwartz functions flat at coincidences can now spend
+O(n) derivatives to pay d^(-A n), with n^(C n) bookkeeping absorbed
+in B'. That final extension still requires an explicit construction
+and compatibility with the OS test space. The source PRODUCER and
+continuous Euclidean rotations remain separate outstanding inputs.
+
+Revised status: factorial growth of separated FULL centered moments
+can be deduced from the repository's stated source-locality,
+chessboard, covariance, and stability hypotheses by Sections6--9.
+The previous n^6 bound was a nonoptimal consumer. This does not prove
+those source hypotheses or complete the continuum existence theorem.

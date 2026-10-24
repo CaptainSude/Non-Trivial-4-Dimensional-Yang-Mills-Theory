@@ -1,0 +1,126 @@
+SEPARATED SOURCE AND COUPLING CURVATURE AUDIT -- TURN67
+20 October 2026. gauge47. Final PASS at the stated scope.
+
+Reviewed in full:
+work/separated_source_spectral_target_turn67.txt
+SHA256 7C86C0757A4EDA90F699054E5C12D3CD3722E5950AA4256176A7B02B2371820F.
+
+1. ACTUAL COUPLING DERIVATIVES
+
+At fixed spatial regulator set T=K/(2a gamma), Q=4gamma S/a,
+H=T+Q. For the log-coupling perturbation,
+
+ H_tau=e^-tau T+e^tau Q,
+ H'_0=Q-T=2Q-H,       H''_0=H.
+
+Consequently (H'_0-E'_0)Omega=2(Q-<Q>)Omega. This is only
+a ground-vector equality, as the producer explicitly says.
+The standard differentiated eigenvalue equation gives
+
+ E_tautau=E-8<qOmega,(H-E)_perp^-1 qOmega>.
+
+Since partial_tau^2 E=gamma E_gamma'+gamma^2 E_gamma'',
+the susceptibility coefficient1/8 in(0.1) is correct.
+The direct gamma derivative check also gives
+(H_gamma'-E_gamma')Omega=(8/a)(S-<S>)Omega.
+No kinetic term or Pauli/2 factor has been omitted.
+
+The common-domain analytic elliptic family and simple ground
+eigenvalue justify the derivatives at fixed finite graph.
+Their radius need not be uniform as the cutoff changes.
+
+2. FINITE-TIME SOURCE AND ORIGINAL ENDPOINTS
+
+For the bounded magnetic multiplication source, the normalized
+ground matrix element with UNSOURCED Omega at both ends equals
+the exponential moment of its stationary path integral.
+Its second log derivative is
+
+ J_Q(T)=2 int[T/E-(1-e^-TE)/E^2]rho_Q(dE).
+
+The finite-period trace divided by the SAME original partition
+function converges to that matrix element as the period grows.
+The source does not replace the endpoint vector by a sourced
+ground state. These details are essential and retained.
+
+For a general operator perturbation at this fixed regulator,
+the two time-ordered first-derivative insertions give the
+centered H' covariance, while the second operator derivative
+gives -T<H''>. In the log-coupling family this is exactly
+
+ partial_tau^2 K_gamma(T,0)=4J_Q(T)-TE.
+
+The unbounded H' causes no unverified moment here: acting on
+Omega its centered vector is the bounded-multiplication vector
+2qOmega, which is smooth at the fixed regulator.
+The sectorial analytic family gives a local holomorphic matrix
+element; its value1 at zero gives a local nonvanishing log.
+No uniform analytic radius is inferred.
+
+3. THE SECOND TIME DIFFERENCE AND FACTOR8
+
+For a window beginning at t>0,
+
+ R_Q(t,delta)
+  =int e^-2tE [(1-e^-delta E)/E]^2 rho_Q(dE).
+
+Directly taking the second forward difference of J_Q gives
+Delta_delta^2 J_Q(T)=2R_Q(T/2,delta). The constant and linear
+terms in T cancel, including the bulk susceptibility term.
+Therefore
+
+ Delta_delta^2 partial_tau^2 K_gamma(T,0)
+                       =8R_Q(T/2,delta)>=0.
+
+The coefficient8 and the time T/2 are correct. The window-energy
+bound R_Q(t-s,delta)/(2es), 0<s<t, follows from
+sup_(E>=0) E e^-2sE=1/(2es). Its use avoids the equal-time norm.
+No equality of finite-tau coupling and magnetic-source
+functionals has been asserted.
+The final scalar-shift paragraph also checks: a matched
+H(tau)+b(tau)I shifts K by -T[b(tau)-b(0)], whose second
+time difference vanishes after source differentiation.
+The static susceptibility numerator instead needs
+E_new-E_new,tau tau-b+b_tau tau. This invariance is not
+extended to unmatched or nonaffine temporal normalization.
+
+4. SPECTRAL DIAGNOSTICS AND ERROR COSTS
+
+The two-state and two-mode examples in Section3 have positive
+stationary reversible laws, the displayed susceptibilities,
+and vanishing separated covariance. In the combined example
+the weights sum to1, their inverse-energy moment is1, and
+the observable norm is at most sqrt2. This demonstrates the
+stated limitation of susceptibility even with bounded variance.
+It does not contradict additional model-specific YM estimates.
+
+The optional fidelity estimate is also correct: the choices
+epsilon=c/(4G) and Lambda=4V/c leave at least c/2 of the
+susceptibility in that interval, hence at least c^2/(8G)
+of spectral mass and the stated positive-time lower bound.
+The inverse-square moment is explicitly additional.
+
+The absolute coefficients of the second time difference sum
+to4. Thus three curvature errors of size epsilon cost2epsilon
+in the magnetic-window norm and epsilon/2 in the coupling-window
+norm. Cauchy's second-derivative factor2/r^2 then yields
+4epsilon/r^2 and epsilon/r^2 respectively for errors initially
+controlled in the source log. All four constants check.
+
+5. LIMIT AND PHYSICAL SCOPE
+
+The final producer explicitly distinguishes convergence of fixed
+real source VALUES and finite products from convergence of their
+second derivatives. The latter requires a separate common
+analytic/differentiation estimate, including scalar normalizers.
+No derivative-limit interchange is used to assert the present
+exact Hamiltonian identities.
+
+The source Q_gamma is spatially global. An actual uniform bound
+on its finite-time remainder is not supplied, much less an
+independent local spatial-profile or composite-renormalization
+theorem. The new identity identifies a precise separated OS
+quantity that bulk source pressure alone loses. It does not
+establish a nonzero continuum YM state or the full theory.
+
+No further mathematical repair was requested.

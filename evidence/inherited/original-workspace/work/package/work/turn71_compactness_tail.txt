@@ -1,0 +1,441 @@
+SUBSEQUENTIAL SEPARATED CORRELATIONS AND A RESOLVED MARTINGALE LAW
+TURN71. tail47. 20 October 2026.
+
+RESULT AND STATUS
+
+The TURN70 selected estimates do not require a cross-regulator Cauchy
+theorem to yield subsequential separated correlation limits. There is a
+stronger conclusion than extracting unrelated bounded scalar sequences:
+one can extract a JOINT law of the centered conditional means at every
+fixed physical resolution. This law is a consistent increasing-resolution
+martingale. The fine-scale covariance tail then identifies the limits of
+the literal original selected-source covariances with its separated
+second-moment limits.
+
+The construction uses ONE selected probability law at each regulator,
+with one common terminal grid and coherent source interpolation. It does
+not choose a different selected law for each observable. It does not
+need a common analytic chart compactness assertion: the bounded resolved
+observables themselves are included in the compact state.
+
+Without an additional equicontinuity/strict-chart hypothesis the limiting
+resolved observable need not be a deterministic function of the limiting
+unaugmented coarse field. More importantly, the limiting martingale need
+not have a terminal random variable, even for a single same-support
+profile. Only its separated second moments are controlled as resolution
+increases. This distinction is appropriate for a composite with contact
+singularities; it does not itself construct a continuum Schwinger algebra.
+
+The result is for the literal selected family admitted in TURN70. There
+is no full-Wilson comparison, reflection positivity, nonzero lower bound,
+continuum operator calibration, or full Euclidean symmetry conclusion.
+A separate conditional Gram-form theorem below states what subsequence
+compactness would give if suitable ORIGINAL-law RP bounds were supplied.
+
+INPUT FILES
+
+selected_covariance_martingale_turn70.txt, especially Sections1--3,5--7;
+selected_connected_covariance_turn70.txt, Sections3--6;
+selected_scalar_source_induction_turn70.txt;
+regular_source_modulation_turn70.txt, Sections1--4;
+periodic_projected_product_bridge_turn48.txt, equation(7);
+physical_observable_sources_turn63.txt, Section3A, for the already proved
+free composite/OS distinction. No new primary-source theorem is imported.
+
+1. FIX ONE FAMILY, ITS NORMALIZATION, AND ITS PHYSICAL SOURCES
+
+Fix the admitted periodic cubic terminal grid, macro ratio R>1, terminal
+physical spacing ell_*>0, weak-coupling ceiling, window parameters, and
+the finite terminal physical torus. Let V_* be the real vector space of
+terminal vertex profiles. Its dimension m is finite. Let
+
+              ell_r=ell_* R^(-r),       r=0,1,2,...
+
+For ultraviolet depth n, the physical fine spacing is ell_n. Use the
+actual normalized selected path probability P_n constructed in TURN70
+Section1, with the complete raw densities, coarea factors, product
+windows, and terminal restriction retained. Its coarse states are
+U_0^(n),...,U_n^(n) in the original fine-to-coarse indexing.
+
+For f in V_* write F for its continuous tensor multilinear interpolant.
+At fine-to-coarse stage j the source profile is
+
+                   f_j^(n)=I_(R^(n-j)) f.                 (1.1)
+
+Thus for fixed resolution r the profile is f^[r]=I_(R^r)f,
+independent of n. The original insertion A_n(f) is the literal weighted
+original Wilson action of TURN70, using I_(R^n)f and its four-corner
+plaquette average. No a-dependent multiplier or bare inverse coupling
+is added. A_n is a linear function of f and is bounded at each finite
+regulator. Its mean is allowed to diverge.
+
+Write G_j^(n)=sigma(U_j^(n),...,U_n^(n)). The exact raw one-mark identity is
+
+ X_j^(n)(f_j^(n),U_j^(n))=E_n[A_n(f)|G_j^(n)].          (1.2)
+
+Raw scalar source terms have not been discarded in (1.2). Define the
+CENTERED resolved observables, indexed from coarse to fine, by
+
+ Y_(n,r)(f)
+   =E_n[A_n(f)-E_n A_n(f)|G_(n-r)^(n)],  0<=r<=n.      (1.3)
+
+The strong one-mark quotient norm supplies a representative Phi_(n,r),
+normalized by subtraction at the reference field, such that
+
+ sup|Phi_(n,r)(f)| <= 2 C_X ||f^[r]||_1,
+ Y_(n,r)(f)=Phi_(n,r)(f)-E_n Phi_(n,r)(f).              (1.4)
+
+Consequently
+
+ |Y_(n,r)(f)| <= B_r(f):=4 C_X ||I_(R^r)f||_1
+                    <=4 C_X R^(4r)||f||_1.            (1.5)
+
+This estimate is valid on the actual admitted real states. It does not
+need the representative to be chosen measurably across regulators:
+(1.3) defines Y exactly, and any near-minimal representative proves its
+bound. Deterministic additive constants in different representatives
+cancel in (1.4).
+
+There is also the martingale identity, for 0<=s<=r<=n,
+
+ E_n[Y_(n,r)(f)|G_(n-s)^(n)]=Y_(n,s)(f).               (1.6)
+
+Everything up to this point is already supplied by TURN70. Positivity is
+that of the complete selected path measure; signed cluster coefficients
+are not interpreted as probabilities.
+
+2. THE RESOLVED JOINT LAW: NO MONTEL HYPOTHESIS IS NEEDED
+
+Choose a basis e_1,...,e_m of V_*. For fixed r let
+
+ Y_(n,r)=(Y_(n,r)(e_1),...,Y_(n,r)(e_m)).
+
+It lies in the fixed compact box
+
+              K_r=product_(a=1)^m[-B_r(e_a),B_r(e_a)].
+
+For r>n put Y_(n,r)=0; this arbitrary extension has no effect on any
+fixed finite set of resolutions once n is sufficiently large. The joint
+laws of (Y_(n,r))_(r>=0) are probabilities on the countable compact
+metrizable product K=product_r K_r.
+
+Here is an elementary extraction argument. On each finite product
+K_0 x ... x K_k, compactness gives a weakly convergent subsequence of
+its probability laws. Taking nested subsequences and then a diagonal
+gives convergence of every finite marginal. Their limits are consistent
+because coordinate projection is continuous. They define a probability
+P on K. Equivalently, compactness of K and approximation of continuous
+functions by continuous cylinder functions gives the same weak limit.
+
+Thus along one subsequence n_l -> infinity there are jointly defined
+random vectors (Y_r)_(r>=0) with the following properties:
+
+(i) Every finite collection of resolved mean vectors converges jointly
+    in distribution. Since each such collection is uniformly bounded,
+    all its polynomial moments converge too.
+
+(ii) Put Y_r(f)=sum_a f_a Y_r(e_a), where f=sum_a f_a e_a.
+     This is ONE linear random functional on V_* at each r. Linearity
+     and every exact linear relation hold simultaneously for all real
+     or complex coefficients. No separate subsequence is chosen for f.
+
+(iii) With H_s=sigma(Y_0,...,Y_s),
+
+          E[Y_r(f)|H_s]=Y_s(f),     r>=s.             (2.1)
+
+Proof of (iii). For a bounded continuous function h of Y_0,...,Y_s,
+the corresponding finite-n vectors are measurable with respect to
+G_(n-s)^(n). Equation(1.6) gives
+
+ E_n[(Y_(n,r)(f)-Y_(n,s)(f))h(Y_(n,0),...,Y_(n,s))]=0.
+
+The integrand is continuous and bounded on a fixed compact product, so
+the identity passes to the weak limit. Continuous functions determine
+finite signed measures on that compact product; hence it holds for all
+bounded Borel h. This is exactly (2.1). In particular E Y_r(f)=0.
+
+Optional coarse-field coordinates can be included in this SAME
+extraction whenever they lie in identified compact spaces. On a fixed
+finite coarse lattice the absolute compact-group link tuple has this
+property; normal dummy Gaussian variables need not be included. At
+resolution r its finite number of links is fixed independently of n.
+Adding those link tuples to K and to each H_s preserves the proof,
+because they are measurable with respect to G_(n-s)^(n) for s-coarse
+states. One must include their actual data/geometry if claiming more
+than the link marginal. Deterministic coarse relations pass only when
+their graphs are closed in the chosen coordinates; no continuity of
+a discontinuous gauge section is assumed.
+
+This is a jointly consistent resolved-observable probability law.
+It is not merely a collection of scalar limits. It remains weaker than
+a law of the original unresolved observables A_n: the bounds B_r grow
+with r, and nothing here makes (Y_r(f)) uniformly integrable in r.
+
+3. SEPARATED COVARIANCES CONVERGE ON THAT SAME SUBSEQUENCE
+
+Suppose f,h in V_* have continuous interpolants F,H with actual periodic
+support distance d>0. Let
+
+ C_n(f,h)=Cov_(P_n)(A_n(f),A_n(h)),
+ C_(n,r)(f,h)=E_n[Y_(n,r)(f)Y_(n,r)(h)].
+
+Splitting the exact TURN70 martingale decomposition at stage n-r gives
+
+ |C_n(f,h)-C_(n,r)(f,h)| <= tau_(f,h)(ell_r),          (3.1)
+
+for n>=r and ell_r<=min(d,ell_*), where one may take
+
+ tau_(f,h)(epsilon)
+    =C_(F,H) C_X^2 g_*^2 epsilon^(-4)
+                         exp[-c d/epsilon].           (3.2)
+
+The constant includes the fixed R,J and physical support boxes and the
+profile sup norms. The output spacings of all omitted conditional
+births are <=ell_r, so this is precisely TURN70's proved fine tail.
+There is no extra transport of a two-mark effective potential.
+
+The same estimate holds for a finite interval of resolutions:
+if n>=s>=r and ell_r is sufficiently small, then
+
+ |C_(n,s)(f,h)-C_(n,r)(f,h)| <= tau_(f,h)(ell_r).       (3.3)
+
+This follows either by summing those conditional covariance births,
+or directly by orthogonality of the corresponding martingale increments.
+The absolute value bound is essential: separated increments need not
+have either sign.
+
+Finite-resolution joint convergence from Section2 yields
+
+ C_(n_l,r)(f,h) -> C_r(f,h):=E[Y_r(f)Y_r(h)]           (3.4)
+
+for every fixed r and for ALL f,h in V_*, because these are finite
+linear combinations of the same convergent matrix of moments.
+Passing (3.3) to the limit shows
+
+ |C_s(f,h)-C_r(f,h)| <= tau_(f,h)(ell_r),   s>=r.       (3.5)
+
+Hence C_r(f,h) converges as r->infinity whenever the supports are
+separated; call its limit C(f,h). Equations(3.1),(3.4),(3.5) prove
+
+                  C_(n_l)(f,h) -> C(f,h),             (3.6)
+ |C(f,h)-C_r(f,h)| <= tau_(f,h)(ell_r).                (3.7)
+
+For example, first choose r with 2 tau(ell_r)<epsilon and then l large
+enough for the finite-resolution moment difference in (3.4) to be
+less than epsilon. This proves (3.6) without a cross-regulator Cauchy
+estimate on either the selected densities or the effective actions.
+
+The subsequence in Section2 was chosen before f,h. Therefore (3.6)
+holds simultaneously for EVERY separated pair in the fixed finite
+terminal profile space, not only for a preselected countable list.
+There is no need to assert a hat-support decomposition of a pair:
+finite-dimensional moment convergence at each r already handles every
+linear combination, and the fine-tail bound is then applied to its
+actual interpolants.
+
+The limiting C is symmetric and real for real profiles. Bilinearity
+holds on every linear configuration of profiles for which the relevant
+separations hold, by taking limits of the finite-n identities.
+It has the TURN70 separated upper bound. It need not extend as a finite
+positive semidefinite covariance form to overlapping profiles.
+
+The same argument works for a COUNTABLE vector space of source labels
+that are all defined on the SAME sequence P_n and have the required
+fixed-resolution bounds and coherent interpolation. Include all its
+basis coordinates in the countable compact product. This statement
+does not supply those hypotheses for arbitrary new source families.
+
+In particular, refining the terminal grid or changing its terminal
+restriction may change the selected law itself. Independent
+subsequences of such different regulators cannot simply be combined
+into the theorem above. At a fixed terminal grid its interpolated
+source space is not dense in all smooth continuum test functions.
+Extending the source algebra/calibration is a separate obligation.
+
+4. WHAT A COMMON ANALYTIC CHART WOULD ADD, AND WHAT WAS NOT ASSUMED
+
+The preceding theorem permits a limiting Y_r to carry randomness not
+determined by an accompanying limiting coarse link tuple. Boundedness
+alone does not preserve the graph of a varying measurable function.
+For instance U_n uniform on the circle and Y_n=sin(n U_n) have subsequences
+whose joint limit is U independent of a nondegenerate arcsine variable.
+For trigonometric polynomial tests this follows by Fourier orthogonality,
+and uniform approximation gives the assertion for continuous tests.
+Every finite-n Y_n is a deterministic function of U_n.
+
+A sufficient deterministic-function upgrade at each fixed r is:
+
+  (A) the actual real state supports lie in a common compact K_r
+      strictly inside a common finite-dimensional complex analytic
+      domain D_r;
+  (B) compatible normalized totals Phi_(n,r)(e_a) are holomorphic on
+      D_r and uniformly bounded there;
+  (C) gauge quotient/chart identifications used to express the physical
+      totals have compatible continuous transitions on these supports.
+
+On a finite cover of K_r by smaller complex polydiscs, Cauchy estimates
+give a uniform derivative bound. Arzela--Ascoli and a diagonal
+extraction give uniform convergence on K_r of all the finite source
+basis totals. Locally uniform subsequential analytic convergence on
+D_r is obtained in the same way on a compact exhaustion. Additive
+constants have already been fixed by subtraction at the common
+reference field. With simultaneous weak convergence of the coarse
+law, the centered limits are then deterministic functions of that
+coarse field, and their finite moments converge.
+
+The actual TURN48 macro bridge equation(7) does establish
+
+ ||log U_pre(w,gKxi)/i||_infinity
+                   <=C_a b/R+C_R gT < b/2
+
+on its declared output tube, in its stated smooth pre-gauge coordinates.
+This is genuine strict incoming containment. It is not by itself a
+verification of (A)--(C) for every terminal restriction, every subsequent
+coordinate identification, and every gauge quotient in a limiting
+hierarchy. TURN70 permits a specified terminal weak domain but does not
+state that every such choice has compact closure strictly inside the
+common complex tube. A smaller terminal domain can be specified as an
+additional literal selected restriction, but must be kept in its law.
+
+Accordingly the deterministic-function upgrade is conditional here.
+The actual bounded augmented-state theorem in Sections2--3 uses none
+of (A)--(C), so it does not leave this analytic premise hidden.
+
+5. WHY A RESOLVED MARTINGALE NEED NOT GIVE AN ORDINARY COMPOSITE LAW
+
+Here is an explicit probability example separating the conclusions.
+It is an inference counterexample for the bounds, not a Wilson model.
+
+Take a fixed physical torus with fine mesh a_n=R^(-n), independent
+symmetric signs epsilon_z on its fine vertices, and gamma_n=1/sqrt(n).
+For a fixed continuous profile F define
+
+                A_n(F)=gamma_n sum_z F(z)epsilon_z.   (5.1)
+
+A constant can be added to each summand to make the uncentered
+observable positive, without changing any statement below.
+All coarse variables can be deterministic, so every conditional mean
+after the first integration is zero. The first conditional covariance is
+
+       gamma_n^2 sum_z F(z)H(z).                     (5.2)
+
+It has only local connected source carriers, with a rooted coefficient
+norm O(gamma_n^2). Each fine summand is a bounded analytic linear
+coordinate on a fixed chart if the coordinate takes values
++gamma_n and -gamma_n. Grouping its source roots onto the next fixed-R
+grid only changes the local carrier constants. Thus the example has
+the relevant uniform one-mark bound, a local small two-mark birth,
+and zero separated covariance/fine tail for disjoint profiles.
+
+For any nonzero smooth real F,
+
+ V_n:=Var A_n(F)=gamma_n^2 sum_z F(z)^2
+                      ~a_n^(-4)n^(-1) integral F^2 ->infinity.
+
+Independence gives
+ E A_n(F)^4=3 V_n^2-2 gamma_n^4 sum_z F(z)^4 <=3 V_n^2.
+Applying Cauchy--Schwarz to A_n(F)^2 on the event
+A_n(F)^2>=V_n/4, or the elementary Paley--Zygmund inequality, gives
+
+             P(|A_n(F)|>=sqrt(V_n)/2) >=3/16.         (5.3)
+
+Hence A_n(F) is not tight. No subsequence yields its ordinary real
+random-variable law, despite exact convergence of every disjoint
+covariance to zero and trivial compactness of all fixed coarse means.
+The unresolved contact noise is invisible to those coarse means.
+
+This example does not prove failure of tightness for the actual selected
+action. It proves that the TURN70 estimates alone do not imply it.
+The independent FREE Maxwell calculation in TURN63 Section3A gives the
+physically relevant warning: centered regularized F^2 can have divergent
+ordinary variance while its separated reflection forms have a nonzero
+OS-Cauchy limit. Demanding an ordinary-L2 random composite as the only
+route to a QFT would therefore be unnecessarily restrictive.
+
+6. COMMON POSITIVE-TIME GRAM LIMITS: A DIFFERENT, CONDITIONAL ENDPOINT
+
+Suppose one instead has actual cutoff probability laws mu_n with
+reflection positivity, and a countable family of positive-half
+observables B_(n,i), i>=1. Include in the index set all products and
+linear combinations needed by the proposed local algebra, if bounds
+for those objects are available. Define
+
+ G_n(i,j)=E_mu_n[(Theta B_(n,i)) B_(n,j)],             (6.1)
+
+with Theta the antilinear reflection. Centering may be imposed at the
+cutoff if that is the physical source convention. Assume the diagonal
+entries satisfy
+
+                   0<=G_n(i,i)<=M_i<infinity          (6.2)
+
+uniformly in n for each fixed i. These are separated REFLECTED
+self-pairings when B_i is supported at positive distance from the
+reflection plane, not ordinary same-support variances.
+
+RP makes each finite G_n positive semidefinite. Its two-by-two minors
+give |G_n(i,j)|<=sqrt(M_i M_j). Countable diagonal extraction therefore
+gives one subsequence on which all entries converge to G(i,j).
+For every finitely supported complex c,
+
+       sum_(i,j) conjugate(c_i)G(i,j)c_j
+          =lim_n sum_(i,j) conjugate(c_i)G_n(i,j)c_j >=0.       (6.3)
+
+Thus the formal finite span of the labels has a positive semidefinite
+sesquilinear form. Quotient by its null space and complete to obtain a
+Hilbert space. Any fixed exact linear relation with zero cutoff norm
+passes to the quotient. An asymptotically vanishing-norm relation does
+too. No common cutoff Hilbert space and no full-sequence Cauchy theorem
+were assumed.
+
+This gives a compatible Gram form, not an automatic local operator
+algebra or a reconstructed four-dimensional theory. Products require
+their own labels and estimates; multiplication on equivalence classes,
+domains of unbounded fields, locality, time-translation contraction and
+continuity, spatial symmetries, and reconstruction need the corresponding
+identities/bounds. A nonzero diagonal limit must also be shown, and even
+that alone need not exclude a static zero-energy sector; the separate
+root note turn71_spectral_subsequence_root gives a quantitative
+positive-energy criterion.
+
+The selected law in Sections1--3 has not been proved RP. Its ordinary
+probability positivity proves its finite ordinary moment matrices are
+positive, but not its reflected matrices. For example the exchange-
+symmetric two-half law (Y_+,Y_-)=(xi,-xi), xi=+/-1 equally likely,
+has positive probability and reflection invariance, while
+E[Y_-Y_+]=-1. Its reflected one-vector form is negative.
+Accordingly (6.2)--(6.3) cannot presently be attached to the selected
+correlation limit just constructed.
+
+7. NARROWING OF THE EXISTENCE OBLIGATIONS
+
+What is now established, at the exact admitted TURN70 hypotheses:
+
+  * A common subsequence for a JOINT resolved mean hierarchy under one
+    selected regulator family, with its martingale consistency.
+  * Simultaneous subsequential limits of all its separated covariances
+    on the fixed terminal profile space.
+  * Quantitative approximation of those limits by finite-resolution
+    covariances, with the already proved ultraviolet tail.
+
+Therefore uniqueness of the UV limit and a direct Cauchy comparison of
+the varying selected coarse laws are not prerequisites for this scoped
+existence result. The coarse means can be retained as coordinates when
+a deterministic-function compactness theorem is unavailable.
+
+What has NOT been established:
+
+  * An unresolved random field or all its same-support moments;
+  * a dense, coherently calibrated continuum source algebra under the
+    same cutoff laws, or all its separated higher Schwinger functions;
+  * RP of the selected family, continuum translations/rotations, or
+    reconstruction of a nontrivial quantum theory;
+  * a nonzero dynamic limiting observable;
+  * any transfer of these selected results to the full original Wilson
+    measure, whose omitted mass and coarse channels remain.
+
+All physical covariance claims here concern the literal action source
+normalization of TURN70. Multiplicative renormalizations depending on
+cutoff must be checked in the bounds; divergent additive deterministic
+constants cancel in the centered quantities. The finite terminal grid,
+fixed physical torus, and absence of any thermodynamic-uniform
+continuum-source conclusion are part of the result.

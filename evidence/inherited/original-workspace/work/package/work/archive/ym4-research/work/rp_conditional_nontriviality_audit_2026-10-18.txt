@@ -1,0 +1,188 @@
+REFLECTION POSITIVITY, CONDITIONAL VARIANCE, AND THE ENDPOINT SIGN
+18 October 2026. Strategic independent audit. No new full-theory claim.
+
+1. A REGULAR GAUSSIAN COUNTEREXAMPLE WITH THE EXACT F^2 WEIGHTS
+
+Let 0<a<1. Let U and V be independent centered two-component Gaussians,
+with covariance matrices
+
+        Cov(U) = [[1,a],[a,1]],
+        Cov(V) = [[1,-a],[-a,1]].
+
+Put X=U+V and reflect by interchanging components 1 and 2. The two X
+components are independent with variance 2. Their law is reflection
+positive: for any positive-half function F(X1), its reflected square
+has expectation |E F(X1)|^2. All centered OS norms are zero.
+
+The simplest linear example is
+
+ E Cov(X1,X2|V)=a,
+ Cov(E[X1|V],E[X2|V])=-a,
+
+so the positive conditional covariance is canceled exactly by the
+endpoint term. Positivity of the exact auxiliary probability law and
+reflection positivity of the original X law do not prevent this.
+
+For the relevant ENERGY-type marks put F_i=X_i^2-2. Conditional on V,
+
+       E(F_i|V)=V_i^2-1,
+       Cov(F1,F2|V)=2a^2+4a V1 V2.                    (1.1)
+
+The conditional Gaussian at V=0 gives the positive scalar 2a^2.
+The remaining mixed nonvacuum mark has expectation -4a^2, while
+the endpoint first-mark covariance is +2a^2. Hence
+
+       Cov(F1,F2)=2a^2-4a^2+2a^2=0.                  (1.2)
+
+In particular, even NONNEGATIVITY of the endpoint first-mark
+covariance alone does not save the proposed lower bound: the mixed
+conditional mark can cancel it and the positive Gaussian vacuum.
+After replacing U,V by gU,gV, the scalar is 2a^2 g^4 and the mixed
+mark is 4a g^2 V1 V2 in physical V coordinates. These are exactly
+the g^4 scalar and g^2 b^2 nonvacuum weights in the current two-mark
+ledger. No large field, cutoff failure, or nonlinear interaction is
+needed for the cancellation. This does not contradict the controlled
+regular endpoint estimate; it shows why a remaining uncontrolled
+endpoint/history contribution cannot be assigned a favorable sign.
+
+2. THE PRECISE CONDITIONAL-PROJECTION SUFFICIENT CONDITION
+
+Let mu be a reflection-invariant probability measure with reflection
+theta, and let A_+ be its positive-half observable algebra. Suppose
+mu is reflection positive on A_+. Let G be a theta-stable sigma-field
+and P=E_mu[.|G], the ORDINARY conditional expectation in L2(mu).
+Require the additional locality property
+
+                         P A_+ subset A_+.              (2.1)
+
+Then P commutes with theta, is self-adjoint and idempotent in L2(mu),
+and is also self-adjoint for the OS sesquilinear form
+
+          (F,H)_OS = E_mu[(theta conjugate F) H].
+
+Indeed, use L2 self-adjointness and P theta=theta P to move P from
+one factor to the other. Therefore P F and (1-P)F are OS orthogonal.
+Both belong to A_+ by (2.1), so reflection positivity gives
+
+ ||F||_OS^2 = ||PF||_OS^2 + ||(1-P)F||_OS^2,
+                         both summands >=0.             (2.2)
+
+The centered statement follows because P1=1. Either summand can give
+a rigorous lower bound if it is quantitatively identified with the
+computed regular Gaussian contribution.
+
+Theta-stability of G, positivity of the conditional probability, or
+reflection covariance of the blocking map is NOT enough for (2.1).
+Conditional expectation onto the full global coarse configuration
+generally depends on coarse variables on both sides of the plane,
+even when the original observable lies on just one side. The ordinary
+minimizing reconstruction already has this nonlocal dependence at
+linear Gaussian level. Exponential decay of that dependence is not
+strict half-space locality, and the relevant packets meet their scale
+of separation precisely where the omitted dependence can matter.
+
+The current raw source recursion has not been identified with P
+satisfying (2.1). Its later R-operation is a density-dependent
+resampling/reorganization, not an established OS orthogonal projection.
+Even a resampling preserving reflection positivity of its own output
+would not by itself identify the source derivatives with PF or
+(1-P)F. The derivative of a sourced resampling includes its additional
+mixed coefficients, exactly the terms at issue in (1.1).
+
+3. WHAT BARE WILSON SITE-PLANE FACTORIZATION DOES GIVE
+
+On a compatible even periodic bare lattice, choose a coordinate SITE
+reflection. There are two fixed site planes. Let sigma comprise the
+spatial links lying in those planes, and let x,y comprise the remaining
+links in the two reflected open halves. Every plaquette is contained
+in a closed half or in a fixed plane. Haar measure factorizes. Thus,
+with the usual assignment of fixed-plane plaquettes,
+
+ dmu = Z^-1 exp[-S_0(sigma)]
+       exp[-S_+(x,sigma)] exp[-S_+(theta y,sigma)]
+       d sigma dx dy.                                 (3.1)
+
+The two halves are conditionally independent given sigma, and their
+conditional laws are reflected copies. Define
+
+ T F(sigma)=E_mu[F(x,sigma)|sigma],
+ d pi(sigma)=Z^-1 exp[-S_0(sigma)] Z_+(sigma)^2 d sigma.
+
+For centered positive-half F one obtains the exact identity
+
+                   ||F||_OS^2 = Var_pi(TF).             (3.2)
+
+This is a genuine use of variance positivity for a reflected square;
+it follows from (3.1), not from a generic cross-covariance inequality.
+Gauge invariance is not needed for this algebraic factorization.
+
+If G is generated by any measurable coarse variables of sigma alone,
+the usual variance decomposition of TF gives two nonnegative terms.
+Equivalently the projection in Section2 maps into the fixed-plane
+algebra. This supplies a possible reflection-compatible construction:
+coarsen the reflection-plane data and retain the exact half-space
+conditional amplitudes.
+
+However the Gaussian vacuum extracted by the current isotropic bulk
+RG is not identified with either term of this boundary variance
+decomposition. Establishing that identification would require control
+of TF and of the induced boundary measure pi, with its half-space
+normalizers Z_+(sigma). Those are not the normalized inner kernels
+already estimated in the current proof. This alternative can remove
+sign cancellation, but it does not automatically supply a UV-uniform
+lower bound. A positive lower bound on a good boundary sector still
+needs that sector to have a quantitatively nonvanishing pi mass.
+
+4. A SECOND SUFFICIENT INTERFACE DIRECTLY IN THE SOURCE LEDGER
+
+Suppose an exact two-source representation is
+
+ log Z(z_+,z_-)-log Z(0)
+   = c(z_+,z_-)
+     +log E_nu exp[z_+ A_+ + z_- A_- +z_+ z_- M+...].
+
+Then its mixed derivative is exactly
+
+        c_+- + E_nu M + Cov_nu(A_+,A_-).               (4.1)
+
+A sufficient sign mechanism is:
+ (a) nu is reflection positive;
+ (b) A_+ belongs to its positive-half algebra and A_-=theta conjugate A_+;
+ (c) M belongs to its OS positive cone, for example
+     M=sum_l c_l (theta conjugate B_l) B_l,
+     c_l>=0, B_l in that positive-half algebra,
+     with a convergent expectation/sum.
+
+Then the centered covariance and E_nu M are nonnegative, so (4.1)
+is at least c_+-. A direct lower bound E_nu M>=-epsilon is a weaker
+sufficient replacement for (c). Conditions (a),(b) alone are not
+enough, as the exact mixed term in (1.1) illustrates why it must be
+tracked. Pointwise positivity of M would also suffice, but is much
+stronger than the Gaussian mixed-mark structure generally provides.
+
+The present source decomposition supplies neither (a),(b),(c) for
+the complete surviving-history endpoint. Original Wilson RP does
+not pass automatically to its joint R-history law; the effective
+first marks can read both halves through the reconstruction and
+history; localized connected coefficients have signs; and the
+mixed mark is a genuine signed response. Source partition-function
+preservation for each z retains these derivatives algebraically,
+but confers no individual sign on them.
+
+5. STRATEGIC CONCLUSION
+
+There is no valid deduction from existing bare RP plus positive
+auxiliary kernels to a nonnegative unestimated endpoint remainder.
+The Gaussian example (1.1)--(1.2) rules out that deduction already
+for quadratic energy marks, including their exact mixed field term.
+
+An OS-orthogonal conditional projection satisfying (2.1), or the
+explicit coarse positive-cone factorization (4.1)(a)--(c), would be
+a concrete sufficient substitute for an absolute surviving-history
+estimate. Neither is presently matched to the raw RG/R construction.
+Bare site-plane factorization offers an exact alternative framework,
+but its boundary amplitudes and normalizers are new analytic objects.
+For the current proof, a normalized marked endpoint bound remains
+the direct unresolved interface. It may be weaker than controlling
+all bad histories in total variation, but its sign cannot simply be
+discarded by invoking reflection positivity.

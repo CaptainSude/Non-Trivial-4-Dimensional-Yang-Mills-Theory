@@ -1,0 +1,373 @@
+BIRTH SPECIALIZATION IN A LOCALIZED FINITE-JET NORM
+18 October 2026. Research proof. No public artifact changed.
+
+RESULT
+
+The actual homogeneous physical specialization of a source bulk birth
+R_X admits a strict supported decomposition on a comparable current-field
+ball, with exponential DIAMETER weight and arbitrary fixed polynomial
+support weight. Every fixed number k of current-field derivatives costs
+only C_k r_i^(-k). There is no exponential cost in the number of fine
+coordinates, or in the volume of the birth MR_i blocks.
+
+The construction uses shell differences of complete classical maps,
+not a Taylor expansion in every fine coordinate. Its physical current
+locality is proved below from the already constructed joint (A,m)
+strict-support fixed point. The source geometry is important: d_i(X)
+still refers to the fixed source M-blocks, even when X is constrained
+to be a union of the much larger MR_i blocks.
+
+For the actual one-step retained chart, the same construction localizes
+the centered observable G(B,t)=f(F_M(B,t))-f(F_M(B,0)). Its linear and
+quadratic fluctuation pieces have the fixed real jet norms requested
+by the second-background response calculation. Two background
+derivatives plus one fluctuation gradient require a fifth mixed
+analytic derivative; the fifth-derivative term comes with g and is
+bounded by C r_i^(-4) when g/r_i is bounded. The norms are L^8 under
+any actual reference law with uniform coordinate moments through order
+32. This statement supplies the localized marked-observable input;
+it does not prove uniform convexity, score bounds or stability of all
+descendants under repeated conditional expectation.
+
+1. CONVENTIONS AND SOURCE GEOMETRY
+
+Use M_ref=ell^k for the homogeneous refinement and use mathfrak M for
+the FIXED large localization-block side called M in the primary papers.
+These are different parameters. The current lattice spacing is one
+AT THE BIRTH SCALE i. M_ref is the preceding ultraviolet refinement
+at that birth, not the number of subsequent steps since the birth.
+All regulators are finite compatible periodic tori; constants below
+are uniform in M_ref and volume. The primitive ell, mathfrak M, gauge
+group and fixed exponents may enter constants.
+
+CMP109 p257 defines D_i as connected unions of fixed mathfrak M-blocks.
+The number d_i(X) is the least length, divided by mathfrak M, of a
+tree in X meeting every one of those blocks. CMP119 (2.30)--(2.31)
+restricts bulk R domains to unions of mathfrak M R_i blocks, but keeps
+X in D_i and keeps d_i(X). CMP122-II p390 before (1.100) expressly
+replaces the fresh-bulk linear size by d_k(X). There is no division
+of that bulk decay length by R_i.
+
+In particular, choose a deterministic anchor x_X and let Z_X be all
+current cells needed to restrict the source field to X and its fixed
+collar. If D_X=max_{x in Z_X}dist(x_X,x), then
+
+  D_X <= C mathfrak M [1+d_i(X)].                         (1.1)
+
+The number of fixed source blocks is also at most C[1+d_i(X)]. A tree
+of length t can be covered by C(1+t) unit graph balls; each meets a
+bounded number of unit cubes. Conversely the domain is connected.
+The standard connected-set count is exponential in its block count.
+Thus, after spending a fixed part of a sufficiently large source
+exponent kappa_s, for every fixed P one has
+
+  sup_x sum_{X: x_X=x} (1+D_X)^P exp(-kappa_s d_i(X)/2)
+                                                    <= C_P.   (1.2)
+
+The same bound holds on compatible tori, counting incidences as usual.
+Requiring X to be a union of larger blocks restricts the sum and
+does not worsen it. No factor exp(C R_i^4) is introduced.
+
+The source input for a birth is
+
+  |R_X(U,J)| <= epsilon_i exp(-kappa_s d_i(X))=:A_X,       (1.3)
+
+on its independent source domain, with the stated gauge invariance.
+It may be vacuum-subtracted at the cost of two. One may take the
+published epsilon_i=g_i^K or any established sharper birth envelope.
+The argument is linear in epsilon_i.
+
+2. STRICT SUPPORTS FOR THE NONLINEAR PHYSICAL CURRENT
+
+PROPOSITION 1. Fix any finite cardinality reserve a and sufficiently
+small classical spatial exponent kappa_cl>0. On a fixed complex coarse
+ball the complete physical field
+
+ T(B)=(A_ord(B),J_phys(U_ord(B)))                         (2.1)
+
+has coherent strict families T_{v;S}(B_S), zero at B=0, with
+
+  sup_v sum_S exp(kappa_cl tau({v} union S)+a|S|)
+                 ||T_{v;S}||_{E_v;b} <= C_a b.           (2.2)
+
+E_v is the joint maximum of the full C^(1,alpha) potential norm and
+the supremum of the physical current on a fixed physical collar of v.
+The fine coordinate count stays inside this Banach output norm.
+
+Proof. Theorem cl-fixed-point-theorem already constructs a JOINT
+strict family for (A_*,m), with the first component in its complete
+physical C^(1,alpha) space, the second in current supremum norm.
+The exact physical Euler identity is
+
+  E(A_*)=Q^T m + D R(A_*)^T m,
+  J_phys(exp(i eta A_*))=T_{eta A_*}^{-T} E(A_*).           (2.3)
+
+Here R is the corrected-constraint remainder and T_X the left
+exponential differential. The physical adjoint Q^T is local in a
+fixed physical collar with uniform fine supremum output bound.
+The primitive V(A,m)=D R(A)^T m is precisely the finite-range analytic
+vertex already controlled in cl-fixed-point and cl-local-cauchy;
+the input needed is holomorphy in its physical absolute-row norm.
+Thus support substitution gives families for both terms on the right
+of the first identity. Multiplication by the pointwise analytic
+matrix T_{eta A}^{-T} preserves the support algebra uniformly for
+eta<=1. It introduces no outside derivative.
+
+The ordinary gauge transfer conjugates J at its basepoint. That gauge
+and A_ord are the uniformly holomorphic complete-field maps used in
+the proof of pgh-support-proposition: their dependency range is a
+fixed number of physical cells. Their local Taylor vertices therefore
+have geometric majorants independent of fine dimension. Substitute
+the joint (A_*,m) families and use the rooted support gluing inequality.
+All resulting sums are absolute. Choosing one global coefficient
+assignment before restricting collars proves coherence. The norm is
+O(b) because J(0)=0. This proves (2.2). QED.
+
+Consequently, for B,B' equal on the n-neighborhood Z^n of a source
+region Z, with both fields bounded by b, one has
+
+  ||T(B)-T(B')||_{E(Z)} <= C b exp(-kappa_cl n).           (2.4)
+
+Indeed any strict support S producing a difference has a point outside
+Z^n, so tau({v} union S)>n for every output v in Z. Bound that
+coefficient difference by twice its norm and sum (2.2), then take
+the maximum over v in Z. There is NO |Z| factor in this step.
+
+3. THE SOURCE BALL AND A SHELL CONSTRUCTION
+
+Write r_i for the common physical input radius, comparable to
+min(alpha_0,i,alpha_1,i). The homogeneous source-domain inclusion
+proved separately from CMP109 pp262--263 is used in the following
+precise form: an independent pair (A,J), with the complete physical
+C^1 potential and current supremum smaller than c_src r_i, gives
+(exp(i eta A),J) in the source domain on every required collar.
+This is a convex product ball in (A,J), so it also contains straight
+segments between smaller pairs. It is the only source-domain input
+needed below. Its constant must be uniform as r_i shrinks.
+This input is now derived in work/source_response_inputs_2026-10-18.txt
+from the primary source's explicit reconstruction bounds; it is not
+being assumed solely from the fixed-radii Notebook41 statement.
+
+Put f_X(B)=R_X(T(B))-R_X(0). Choose b_i=c r_i, with c fixed so small
+that (2.2), and straight segments between the resulting pairs, lie
+in a fixed fraction of the independent source ball on ||B||<2b_i.
+Banach Cauchy on that ball yields
+
+  ||D R_X|| <= C A_X/r_i.                                (3.1)
+
+Choose integer D_X including the collar. Set H_{X,n} to the current
+graph ball centered at x_X with radius D_X+n, and let P_H B retain
+B inside H and set it to zero elsewhere. Define
+
+  f_{X,0}(B)=f_X(P_{H_{X,0}}B),
+  f_{X,n}(B)=f_X(P_{H_{X,n}}B)-f_X(P_{H_{X,n-1}}B), n>=1.
+                                                               (3.2)
+
+On a torus the balls eventually fill the graph and further terms
+are zero. Every coefficient depends STRICTLY only on B in H_{X,n}.
+The coarse truncation P_H need not be smooth: the minimizer theorem
+takes arbitrary coarse supremum data and returns a complete smooth
+fine field. No sharp fine field has been differentiated.
+
+By (2.4), (3.1) and b_i/r_i=O(1),
+
+  ||f_{X,n}||_{2b_i} <= C A_X exp(-kappa_cl n),            (3.3)
+
+with an increased constant also covering n=0. The sum over n equals
+f_X(B) exactly. On finite tori it is a finite telescoping identity;
+the displayed bounds also give regulator-uniform absolute sums.
+
+Let a=(a_1,...,a_k) be an ordered tuple of fixed-dimensional current
+scalar coordinates. On ||B||<b_i, Cauchy gives
+
+  ||partial_a f_{X,n}||_{b_i}
+       <= C_k A_X r_i^(-k) exp(-kappa_cl n),              (3.4)
+
+and that derivative is zero unless every a_j is in H_{X,n}.
+Repeated coordinates are allowed. A fixed k uses a fixed C_k; no
+all-degree coordinate expansion is being summed.
+
+THEOREM 2 (uniform rooted diameter-jet conversion).
+For every fixed p>=0 and integer k>=0, there exists mu>0 and C_{p,k},
+independent of r_i, M_ref, R_i and compatible volume, such that
+
+ sup_z sum_{X,n:H_{X,n} contains z}
+   (1+|H_{X,n}|)^p exp(mu diam H_{X,n})
+   sum_{a_1,...,a_k in H_{X,n}} ||partial_a f_{X,n}||_{b_i}
+                         <= C_{p,k} epsilon_i r_i^(-k). (3.5)
+
+For k=0 the innermost sum means the single function norm. Finite sums
+over 0<=k<=k_* obey the corresponding sum of bounds. One may keep the
+birth label X on the pieces or add pieces with equal H; both preserve
+the estimate. Individual shell pieces need not be gauge invariant;
+their total retains the source scalar's gauge invariance.
+
+Proof. A graph ball in four dimensions obeys
+|H_{X,n}|<=C(1+D_X+n)^4 and diam H_{X,n}<=2(D_X+n).
+There are at most C_k |H|^k scalar-coordinate k-tuples, with a fixed
+color/orientation factor. Choose delta,mu>0 such that
+
+  2mu+2delta < kappa_cl/2,
+  C mathfrak M(2mu+2delta) < kappa_s/4.                  (3.6)
+
+When z in H, insert the elementary bound
+1<=exp(-delta dist(z,x_X)) exp(delta(D_X+n)).
+Pay the fixed polynomial (1+D_X+n)^(4(p+k)) with a further
+exp(delta(D_X+n)) and a fixed constant. Use (1.1) to pay all
+remaining D_X exponentials with kappa_s d_i(X)/4. The n sum is
+bounded by a convergent geometric series using (3.6). The remaining
+sum of source domains anchored at x_X is bounded by (1.2), leaving
+sum_x exp(-delta dist(z,x)), uniformly bounded on periodic tori.
+Insert (3.4). This proves (3.5). QED.
+
+Thus k=2 supplies an exponentially summable quadratic response kernel,
+and polynomial spatial moments such as the Maxwell second moment are
+bounded by C epsilon_i r_i^-2. Gauge invariance of the total yields
+its usual Ward identities; tensor/scalar extraction still requires
+the relevant complete spatial symmetries. The theorem alone does not
+identify the coefficient or its sign.
+
+4. ACTUAL ONE-STEP FLUCTUATION INSERTIONS
+
+Fix the primitive ell and use the exact unrooted scalar chart F_M(B,t)
+of Notebook42, retaining all original kernel weights. Define
+
+  G_X(B,t)=f_X(F_M(B,t))-f_X(F_M(B,0)).                   (4.1)
+
+There are c_1,c_2>0, fixed independently of i,M_ref and volume, such
+that this is holomorphic and bounded by 2A_X on
+||B||<c_1 r_i, ||t||<c_2 r_i. This first uses a conservative common
+one-step ball; it does not assert the larger fixed-block ball here.
+
+The joint map (B,t) -> T(F_M(B,t)) has strict complete-output families
+with bound C(||B||+||t||) on a fixed outer ball. To see this, root
+and unroot by the actual finite-range contour maps, use the actual
+local pivot chart, and use the classical strict supports for the
+stationary prefix and T. Group the retained t cells and their coarse
+B cell in an ell-block; its coordinate count is fixed at fixed ell.
+The local Banach-valued Taylor majorants and cl-substitution apply
+to the joint field. Spatial lengths change by fixed ell factors only.
+Hence (2.4) holds for this joint map, with a fixed positive exponent.
+
+Apply (3.2) to joint truncations of B AND t, and subtract the same
+truncated expression at t=0. This gives strict functions G_{X,n}
+with G_{X,n}(B,0)=0 and
+
+  ||G_{X,n}|| <= C A_X exp(-kappa_1 n).                  (4.2)
+
+The support geometry and rooted summation are those of Theorem 2,
+now in fixed ell-blocks with both species as spectators in the support.
+This is an actual local fluctuation substitution, not an independently
+postulated source-current extension.
+
+For real t=gx, with g||x|| on the retained domain less than a fixed
+fraction of c_2 r_i, write exactly
+
+  G_{X,n}(B,gx)=g L_{X,n}(B,x)+g^2 Q_{g;X,n}(B,x),
+  L_{X,n}=D_t G_{X,n}(B,0)[x],
+  Q_{g;X,n}=int_0^1(1-s)D_t^2G_{X,n}(B,sgx)[x,x] ds.    (4.3)
+
+For |J|<=2 background derivatives, Cauchy and (4.2) give
+
+ ||partial_B^J L|| <= C_J A_X e^-kappa_1 n
+                                      r_i^(-|J|-1)||x_H||,
+ ||partial_B^J Q_g|| <= C_J A_X e^-kappa_1 n
+                                      r_i^(-|J|-2)||x_H||^2.
+                                                               (4.4)
+
+Use any fixed coordinate norm for x_H; below its Euclidean norm is
+convenient. One x-gradient of L has the same coefficient and no x.
+One x-gradient of Q has both terms
+
+  O(A_X e^-kappa_1 n r_i^(-|J|-2)) ||x_H||,
+  O(g A_X e^-kappa_1 n r_i^(-|J|-3)) ||x_H||^2.           (4.5)
+
+The second term uses a fifth mixed derivative when |J|=2. It is not
+omitted. Since r_i<=1 and g/r_i is bounded in the retained regime,
+both (4.4)--(4.5) are bounded by C A_X e^-kappa_1 n r_i^-4
+times 1+||x_H||+||x_H||^2. Coordinate sums for J and the x-gradient
+cost only a fixed additional polynomial in |H|.
+
+COROLLARY 3 (localized real marked-observable input).
+Assume the actual retained support obeys g||x||_infinity<=c r_i,
+with c chosen inside the fractional t-domain of (4.1), and take B
+inside the specified fractional B-domain. Suppose further that the
+actual reference measure on those retained coordinates has
+sup_a ||x_a||_{L^32}<=C_32, uniformly in regulator. Then the joint
+supported family (4.3), all |J|<=2 background derivatives and one
+x-gradient of each have rooted L^8 norms
+
+ sup_z sum_{J,H containing z and J}
+     |H|^3 exp(mu diam H)
+       [||F_{J,H}||_8+||grad_x F_{J,H}||_8]
+                              <= C epsilon_i r_i^-4,     (4.6)
+
+for F=L and F=Q_g, with fixed positive mu. The gradient can use its
+Euclidean norm, or the stronger sum of component L^8 norms, by
+spending another polynomial support factor in Theorem 2.
+
+Proof. Minkowski gives || ||x_H||_2 ||_32<=C|H|^1/2, and therefore
+|| ||x_H||_2^2 ||_8<=C|H|, without independence. Insert these in
+(4.4)--(4.5). Sum the finitely many J coordinate slots and gradient
+components. Theorem 2 allows any fixed polynomial support weight,
+which pays these extra powers. Its geometric sums use a possibly
+smaller fixed mu but never a volume-dependent constant. QED.
+
+The moment premise in this corollary is exactly a premise about the
+actual real law. A uniform Gaussian coordinate-moment estimate suffices;
+uniform convexity/locality methods may supply it for a perturbed law.
+The support premise is separate: moment bounds alone do not keep the
+analytic Taylor segment sgx inside the birth ball. For an older mark,
+establishing it may require the distinct startup-radius mechanism.
+No complex-coupling disc or full source decoupling-polydisc norm is
+needed to establish this birth input.
+
+5. RELATION TO FIXED-BLOCK DOMAIN GROWTH AND REMAINING WORK
+
+Theorem 2 constructs a genuine rooted supported current-field family
+on a fixed fraction of the birth radius. It meets the finite-order
+diameter norm required by the real second-background response route.
+The joint version supplies the centered actual one-step observable,
+including its fifth-derivative contribution. These results remove the
+initial source-to-physical-jet localization gap for homogeneous births.
+
+All spatial sums in Theorem 2 are on the BIRTH-scale unit lattice.
+Section 4 makes one primitive step from that scale, so its geometric
+rescaling costs only fixed ell factors. Uniformity in M_ref refers to
+the prior ultraviolet refinement, not arbitrary birth age. At a much
+later scale j, one current cell contains h^-4 birth-scale cells with
+h=ell^(i-j). Such an anchor multiplicity must be retained and, where
+appropriate, canceled by the canonical h^4 scaling of a curvature
+quadratic observable. Theorem 2 does not establish that historical
+rescaling or a sum over old births at their later common scale.
+
+Notebook42's fixed-block gain proves a larger field domain modulo a
+controlled holomorphic gauge. It does not by itself propagate the
+above localized norm through a quantum conditional expectation.
+Two distinct further tasks remain: the real measure must satisfy the
+uniform moment/convexity and background-score bounds used in the
+response estimate, and that estimate must preserve a finite collection
+of derivative norms for every descendant, with sufficiently small
+per-step amplification. The birth estimate C epsilon_i r_i^-4 pays
+a FIXED power at entry; it must not be charged anew at every step.
+
+For full analytic source-prepared closure, independent-current and
+decoupling extensions remain a separate issue. Our shell functions
+are physical current-field functions and generally fail individual
+gauge invariance. Their sum is the correct gauge-invariant scalar.
+This is deliberate and adequate for the indicated real derivative
+norm, but it is not an assertion that the pieces meet every hypothesis
+of the published E-sector preparation theorem.
+
+PRIMARY REFERENCES
+
+T. Balaban, CMP109 (1987), 249--301, DOI10.1007/BF01215223:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+T. Balaban, CMP119 (1988), 243--285, DOI10.1007/BF01217741:
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+T. Balaban, CMP122 (1989), 355--392, DOI10.1007/BF01238433:
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+
+Local exact inputs: cl-fixed-point, cl-local-cauchy,
+cl-fixed-point-theorem, cl-substitution, pgh-support-proposition,
+ot-ordinary-representative, mrg-current and mrg-chart.

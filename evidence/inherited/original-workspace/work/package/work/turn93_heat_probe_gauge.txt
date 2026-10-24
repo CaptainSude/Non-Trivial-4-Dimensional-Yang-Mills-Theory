@@ -1,0 +1,357 @@
+TURN93 -- A CONTRACTIVE ORIGINAL HEAT PROBE AND ITS UV COLLAPSE
+gauge47. 21 October 2026. New finite original-Wilson result.
+
+RESULT
+
+The normalized diagonal heat trace of the original spatial covariant
+Laplacian is a bounded gauge-invariant forward observable. Its exact
+finite-change influence is bounded by FREE random-walk bridge occupation,
+with no exponential nonlinear-flow stability factor. For a physical
+spatial smear, each link influence is O(a), their sum is <=6s/a^2.
+
+However this particular unrenormalized probe collapses under the ACTUAL
+original Wilson law at fixed positive physical heat time. More precisely,
+if spatial periods have physical lengths bounded below, then
+
+ E_W Phi_(a,s)(x) <= C(s/a^2)^(-1/5)
+                      +exp[-c s/(a^2(1+beta))].             (0.1)
+
+Constants can depend on s and the positive lower size bound, but not on
+the cutoff, beta or a growing spatial volume. Thus a^2(1+beta)->0 forces
+its variance, reflected covariance and bounded two-window witness to
+vanish. The argument uses many singly traversed edges of a three-
+dimensional random-walk bridge and the retained exact conditional Wilson
+link damping. Repeated/backtracking walks are not treated as simple loops.
+
+This excludes this specified raw heat probe in the intended logarithmic
+coupling regime. It does not exclude renormalized heat ratios, other
+gauge-invariant smoothing, native RG, or Yang--Mills. A scalar-shift-
+invariant spectral ratio is recorded in Section7 as an unestimated option.
+
+0. INPUTS AND PROVENANCE
+
+Revalidated work/current_proof_frontier_turn92.txt: the physical original
+two-window variance floor and full YM4 construction remain unproved.
+Searched existing notes for covariant heat traces/random-walk observables.
+TURN49's heat comparisons are controlled-background determinant estimates;
+TURN6's heat tensor is an equation-of-motion construction. Neither is
+the original-law random-walk probe below.
+
+The only non-elementary-looking original-Wilson input used here has a
+complete retained proof in physical_coarse_variance_turn66.txt Sections1--2:
+conditional links on a plaquette-disjoint set factor into tilted SU2
+Haar laws, whose fundamental coefficient is <=exp[-c/(1+beta)].
+We restate its precise application in Section3. All walk estimates needed
+below are proved from finite Fourier sums and transience, rather than
+imported as a random-environment theorem.
+
+1. EXACT FORWARD OBSERVABLE AND POSITIVITY
+
+Take a finite periodic spatial three-torus with N_i>=4 sites per direction,
+lattice spacing a, and original SU2 spatial links on one time slice.
+The full probability is the original four-dimensional homogeneous Wilson
+law exp[-beta sum_ALL4Dplaquettes h_p]/Z, beta>=0, h_p=1-ReTr(U_p)/2.
+Every temporal/spatial period of that original law is at least4.
+Let V_3 be the number of spatial sites. On C^2-valued site functions set
+
+ (L_U f)(x)=a^-2 sum_(i=1)^3
+   [2f(x)-U_(x,i)f(x+i)-U_(x-i,i)^dagger f(x-i)].          (1.1)
+
+Its quadratic form is a^-2 sum_(x,i)|f(x)-U_(x,i)f(x+i)|^2,
+so L_U>=0. Write H_s^U=exp(-s L_U), and let p_s(x,y) be the
+scalar heat kernel for U=I. Translation invariance makes p_s(x,x)=p_s(0).
+
+ Phi_(a,s)(x;U)=Tr_C2 H_s^U(x,x)/(2p_s(0)),  s>0.          (1.2)
+
+Uniformization gives a direct path formula. Define the lazy covariant
+step Q_U=(1/2)I+(1/12)sum_(six oriented neighbors) U_step T_step.
+Then L_U=12a^-2(I-Q_U). With lambda=12s/a^2,
+
+ H_s^U=e^-lambda sum_(m>=0) lambda^m Q_U^m/m!.             (1.3)
+
+The underlying scalar walk stays with probability1/2 and moves along
+each oriented edge with probability1/12. Each path contributes its actual
+ordered original-link holonomy, with inverse links on reversed steps.
+The conditional scalar path law given return to x at time s is denoted
+P_br. Equation(1.2) becomes exactly
+
+ Phi_(a,s)(x;U)=E_br[ReTr U(walk)/2].                      (1.4)
+
+The block kernel satisfies ||H_s^U(x,y)||op<=p_s(x,y) by the positive
+path weights. Since H_s^U is a positive operator, its diagonal block is
+positive semidefinite. Consequently 0<=Phi<=1, even though individual
+loop traces in(1.4) can be negative. Gauge covariance of H gives exact
+gauge invariance of Phi. It is a function of original links on this slice,
+not an auxiliary or new reference field. It reads the whole spatial slice;
+its spatial influence can decay, but it has no strict finite spatial read.
+At strictly positive times it is admissible for the original temporal RP
+form. This is not a common O(4)-covariant local observable construction.
+
+For nonnegative weights w_x with sum_x w_x=1 define phi_s=sum_x w_x Phi_s(x).
+A physical smear can have w_x<=C_w a^3. Pure-gauge link fields give Phi=1
+exactly. This deterministic calibration is not an original-law response
+floor; limits beta->infinity at fixed lattice and a->0 are different.
+
+2. EXACT LOCAL INFLUENCE WITHOUT AN EXPONENTIAL STABILITY FACTOR
+
+For arbitrary original link fields U,V on the SAME slice, Duhamel and
+the preceding scalar domination give
+
+ |Phi_s(x;U)-Phi_s(x;V)|
+       <=sum_e I_e(x) ||U_e-V_e||op,                      (2.1)
+
+where e=(y,z) is an unoriented nearest-neighbor link and
+
+ I_e(x)=[a^-2/p_s(0)] integral_0^s
+   [p_(s-t)(x,y)p_t(z,x)+p_(s-t)(x,z)p_t(y,x)]dt.           (2.2)
+
+Both off-diagonal changed blocks of L are included. The normalized color
+trace is bounded by the operator norm, so no missing color factor occurs.
+This is a finite-change identity/inequality; it needs neither a weak chart
+nor differentiability of a nonlinear flow. I_e is the free bridge's edge
+occupation weight. Summing over all unoriented spatial links and using
+the scalar semigroup gives
+
+ sum_e I_e(x)= [2s/(a^2 p_s(0))]sum_i p_s(e_i)
+                                      <=6s/a^2.           (2.3)
+
+The last inequality follows, for example, from positivity of the scalar
+heat operator and Cauchy--Schwarz: p_s(x,y)<=p_s(0).
+For I_e^w=sum_x w_x I_e(x), w_x<=C_w a^3, another semigroup contraction
+gives the genuinely dimension-free per-edge bound
+
+ I_e^w<=2 C_w s a,
+ sum_e I_e^w<=6s/a^2,
+ sum_e (I_e^w)^2<=12 C_w s^2/a.                           (2.4)
+
+Thus the sensitivity is polynomial rather than exp(Cs/a^2). It is still
+not a uniform summed influence. Using TURN63's existing first-replacement
+census with this envelope retains the a^-2 price and requires the actual
+same-original-read displacement. No later native reconstruction estimate
+is inferred from(2.1).
+
+3. ORIGINAL WILSON DAMPING FOR A WALK WITH SINGLE EDGES
+
+For a closed spatial walk let N_1 be the number of its unoriented lattice
+edges traversed EXACTLY once, in either orientation. Select among these
+edges a set I with no two in a common four-dimensional action plaquette.
+The conflict degree is at most18 (six plaquettes, three other edges), so
+|I|>=N_1/19. This selection is deterministic given the scalar walk.
+
+Condition on every original Wilson link outside I. Its conditional density
+is exactly a product of tilted-Haar laws with strengths kappa_e<=6beta.
+Each selected link occurs once in the walk word. All other segments,
+including any repeated/backtracking portions, are fixed under this
+conditioning. The fundamental representation integral replaces each
+selected link or inverse by its unitary staple center times a scalar
+<=exp[-c/(1+beta)]. Therefore
+
+ |E_W ReTr U(walk)/2|<=exp[-c_0 N_1/(1+beta)].             (3.1)
+
+This uses the original full partition function; there is no weak exterior,
+selected history, conditional normalizer estimate or independent-plaquette
+approximation. It is the TURN66 proof applied ONLY to genuinely single
+edges. Applying it to the total length of a repeatedly traversed walk
+would be false.
+
+4. MANY SINGLE EDGES IN A THREE-DIMENSIONAL CLOSED WALK
+
+Lemma. Let the lazy walk of(1.3) be conditioned to return after m steps on
+a periodic three-torus, with N_min=min_i N_i. Fix C0<infinity and assume
+m<=C0 N_min^2. There are q>0 and C=C(C0)<infinity such that, for all
+sufficiently large m,
+
+ P_br,m{N_1<q m/2}<=C m^(-1/5).                          (4.1)
+
+The constants are uniform in larger individual periods; no bounded aspect
+ratio is needed. Here q can be any sufficiently small fixed lower bound
+constructed in the transience argument below.
+
+4A. Finite Fourier estimates and the exact bridge ratio
+
+On this torus the lazy symbol is
+ qhat(theta)=1/2+(1/6)sum_i cos(theta_i),  0<=qhat<=1.
+On [-pi,pi]^3, 1-qhat is comparable to |theta|^2. Gaussian grid sums give,
+for 1<=l<=C0 N_min^2,
+
+ sup_z p_l(z)<=C(C0)(l+1)^(-3/2),
+ p_l(0)>=c(l+1)^(-3/2),
+ (1/V_3)sum_theta |theta|^2 qhat(theta)^l
+                                      <=C(C0)(l+1)^(-5/2). (4.2)
+
+For completeness the upper bounds follow from qhat^l<=exp(-c l|theta|^2)
+and the one-dimensional sums bounded by C(l^-1/2+N_i^-1); insertion of
+theta_i^2 costs l^-1. Since l<=C0 N_min^2, each N_i^-1 is bounded by
+sqrt(C0) l^-1/2. The lower bound follows by lifting walks to Z^3:
+p_l^torus(0)>=p_l^Z3(0), and the latter Fourier integral over
+|theta|<=c/sqrt(l+1) is >=c(l+1)^(-3/2), with nonnegative integrand.
+
+If k<=m/2 increments, at any specified distinct times, are fixed with
+total displacement z in Z^3, their bridge density relative to the product
+increment law is EXACTLY p_(m-k)(-z)/p_m(0), with z read modulo the torus.
+Evenness of the Fourier sum, 1-cos(theta.z)<=|z|^2|theta|^2/2 and
+1-qhat^k<=k(1-qhat) imply
+
+ |p_(m-k)(-z)/p_m(0)-1|<=C(C0)(k+|z|^2)/m.              (4.3)
+
+This controls full finite-increment patterns, not just their marginals.
+It is also valid for sets of times crossing the cyclic bridge seam.
+
+4B. Local uniqueness and transience
+
+On the two-sided infinite lazy Z^3 walk, let I_i^R indicate a nonzero
+central step whose unoriented edge is not traversed at any other time
+within cyclic/ordinary temporal distance R. It depends on at most2R+1
+increments. Let q_R=E I_0^R in the two-sided infinite product-increment
+law. There is a uniform q_R>=q>0, as follows without a range theorem.
+
+The Green sum G(0)=sum_l p_l^Z3(0) is finite: its Fourier integral has
+integrand (1-qhat)^-1, integrable at0 in three dimensions. The probability
+of never returning to one's starting vertex after time0 is zeta=1/G(0)>0
+by the geometric return decomposition. Given a central nonzero edge,
+the independent forward and reversed-past walks each have probability
+at least(5/6)zeta to leave their endpoint in one of the other five
+directions and never return to that endpoint. Then neither can traverse
+the central edge again. Since the central step is nonzero with probability
+1/2, q_R>=q:=25 zeta^2/72>0 for every R.
+
+On the torus bridge use cyclic time distance and the same definition.
+Take R with 4R+2<N_min and 4R+2<=m/2. Local edge equalities then agree
+with the lifted Z^3 window. Equation(4.3) gives
+
+ |E_br,m I_i^R-q_R|<=C R^2/m.
+
+For two disjoint increment windows, their joint density is within
+C R^2/m of the infinite product law, uniformly in their positions.
+There the two events are independent. At most O(Rm) pairs of windows
+overlap, including at the seam. Hence
+
+ Var_br,m[(1/m)sum_i I_i^R]<=C R^2/m.                    (4.4)
+
+4C. Long repeats and the choice of window
+
+Let I_i indicate that the i-th edge is nonzero and is traversed exactly
+once in the ENTIRE closed walk. Then N_1=sum_i I_i and I_i<=I_i^R.
+If an edge repeats at lag l, its starting vertices differ by either0 or
+one unit vector. For |z|<=1 the exact bridge position law is
+
+ P_br,m(S_l-S_0=z)=p_l(z)p_(m-l)(-z)/p_m(0).
+
+For R<l<=m/2, (4.2) bounds this by C(l+1)^(-3/2); the other half is
+symmetric. Summing the seven possible z and both halves gives
+
+ E_br,m[(1/m)sum_i(I_i^R-I_i)]<=C R^(-1/2).               (4.5)
+
+Choose R=floor(m^(2/5)). The two window restrictions above hold for
+large m, uniformly under m<=C0 N_min^2. The local mean is then at least
+7q/8. Chebyshev using(4.4) bounds the chance that the local average is
+below3q/4 by C R^2/m. Markov using(4.5) bounds a lost fraction aboveq/4
+by C R^-1/2. Their sum proves(4.1). This proof explicitly handles the
+torus, cyclic bridge seam and all repeated edges.
+
+5. POISSONIZATION AND ACTUAL ORIGINAL-LAW COLLAPSE
+
+Assume N_min a>=ell0>0, s fixed positive, and a->0. Thus
+lambda=12s/a^2<=C0 N_min^2. The continuous-time return bridge has length
+law proportional to Pois_lambda(m)p_m(0). Its scalar return probability
+is >=c lambda^-3/2, by(4.2) and the Poisson mass near lambda. Hence the
+conditional chance of m outside[lambda/2,2lambda] is at most
+C lambda^(3/2)exp(-c lambda). On that interval the walk lemma is uniform
+with the slightly enlarged C0.
+
+Combine(1.4), (3.1), (4.1), and 0<=Phi<=1. On the good walk event,
+N_1>=q m/2>=q lambda/4. The bad event has probability <=C lambda^-1/5.
+Therefore
+
+ 0<=E_W Phi_s(x)
+ <=C lambda^-1/5+exp[-c lambda/(1+beta)],                 (5.1)
+
+after absorbing the exponentially small Poisson tail. This proves(0.1).
+The original Wilson lattice may have arbitrary temporal length>=4; the
+walk uses just one spatial slice while conditional link integration uses
+the FULL four-dimensional action.
+
+For any nonnegative normalized spatial smear, E_W phi_s obeys the same
+bound. Since 0<=phi_s<=1, Var(phi_s)<=E phi_s. By Cauchy--Schwarz its
+centered reflected covariance tends to0. If G_n is the usual difference
+of two time-window averages of phi_s, write the two averages as A,B in
+[0,1]. Then (A-B)^2<=A+B gives
+
+ E_W G_n^2<=2 E_W phi_s ->0                              (5.2)
+
+whenever a^2(1+beta)->0, uniformly in the window length. A deficit probe
+1-phi_s has the identical centered/two-window collapse. Any fixed
+Lipschitz scalar transform also tends to its value at0; an amplification
+depending on a is a different source with new sensitivity/calibration
+requirements. No ordinary-variance-to-OS lower inference is made.
+
+6. AN EXACT FREE CARTAN DIAGNOSTIC AND THE NORMALIZATION ISSUE
+
+The same effect is already visible in a precisely specified Gaussian
+reference; it is not merely a nonlinear-flow instability. Let A_e be
+independent-direction real Gaussian link-coordinate fields on the full
+four-torus with covariance C=Delta_lat^dagger, where Delta_lat is the
+dimensionless scalar nearest-neighbor Laplacian and constants are
+removed. Set U_e=exp(i g A_e sigma3/2). This is an Abelian Cartan Gaussian
+diagnostic, not the interacting SU2 measure or a proved YM scaling law.
+
+For any closed walk, let J_e be its signed net edge count and J0 its
+constant-mode-free part. Commutativity gives exactly
+
+ E_A ReTr U(walk)/2=exp[-g^2 <J0,CJ0>/8].                 (6.1)
+
+Since the nonzero eigenvalues of Delta_lat are <=16,
+<J0,CJ0> >=||J0||^2/16. Every singly traversed edge contributes1 to
+||J||^2, whereas removing constants subtracts at most m^2/V_4. Thus
+
+ <J0,CJ0>>=[N_1-m^2/V_4]/16.                            (6.2)
+
+In the same spatial physical-size regime, V_4>=4N_min^3 and
+m=O(N_min^2), so m/V_4->0. On the typical single-edge event the right
+side is >=c m for large m. The same bridge proof therefore gives a
+Gaussian expectation bound C lambda^-1/5+exp(-c g^2 lambda). If
+g^2 is comparable to1/beta and a^2 beta->0, this diagnostic also
+collapses. It retains exact path correlations; it is not an independent
+per-step Gaussian approximation.
+
+At g=0 the probe equals1 identically. Its fixed-lattice quadratic response
+is obtained by expanding(6.1). Its magnitude is bounded below by a
+constant times lambda, using the typical single-edge event; no matching
+upper bound is asserted here. Thus a naive small-g expansion is
+not uniform at fixed physical heat time lambda=12s/a^2. This identifies
+the ultraviolet/perimeter problem which a physical heat observable must
+renormalize or cancel. The original-law theorem(5.1), not this diagnostic,
+is what excludes the raw bounded probe in the stated Wilson regime.
+
+7. A SURVIVING OPTION IS NOT COVERED BY THE RAW-TRACE PROOF
+
+For the finite spatial covariant spectrum define
+ Z_s(U)=Tr exp(-s L_U)>0,
+ P_s(U)=Z_(2s)(U)/Z_s(U)^2.
+It is gauge invariant, reads the original time slice, and satisfies
+1/(2V_3)<=P_s<=1. It is invariant under a scalar shift L_U->L_U+m^2 I,
+because numerator and denominator acquire the same factor. Thus the
+collapse of Z_s relative to its free value does NOT prove collapse of
+P_s: both its numerator and denominator can vanish simultaneously.
+
+For a differentiable Hermitian variation of L, the exact identity is
+ d log P_s=2s[<dL>_s-<dL>_(2s)],
+ <B>_t=Tr(B exp(-tL))/Z_t.
+Consequently |d log P_s|<=4s||dL||op. This elementary bound does not
+recover the free local occupation envelope(2.2); the spectral Gibbs
+weights now depend on the original field. Localization, degeneracy,
+physical-volume normalization and a nonzero original response remain
+unestimated. A deterministic flat-reference value is not such a response.
+No extensive investigation or successful renormalization of this option
+is claimed here.
+
+CONCLUSION
+
+There is a new exact polynomial sensitivity bound for a forward original
+gauge-invariant heat observable. There is also a stronger, actual-law
+reason that its simplest bounded normalization is not the desired source:
+it vanishes because closed diffusive walks carry many independent single
+Wilson link factors. The proof is specific to this heat trace and the
+regime a^2(1+beta)->0. It leaves renormalized ratios and other forward
+observables open, and supplies no nonzero physical channel or full YM4
+existence claim.

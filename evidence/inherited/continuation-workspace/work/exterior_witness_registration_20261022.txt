@@ -1,0 +1,200 @@
+ACTUAL EXTERIOR WITNESS FOR THE COMPLETE JOINED REFERENCE READ
+22 October2026. New proof note; original sources unchanged.
+
+RESULT
+
+For the native eligible geometry, LI Proposition1 controls the joined
+baseline plaquettes intersecting Lambda, including free/frozen crossings.
+The complementary plaquettes are actual frozen current plaquettes.
+Consequently the stronger exterior criterion below implies the complete
+joined-read event G. Its contrapositive produces an actual exterior
+plaquette witness to G^c. The exterior set must include BOTH the input
+collar of Proposition1 and all frozen final-helper reads outside Z.
+
+This is a deterministic witness registration. It supplies no action cost,
+no new primitive bad record, and no repeated-use ownership by itself.
+
+1. SOURCES AND THE DOMAIN CONVENTION
+
+All primary files are in the original root
+ evidence/inherited/original-workspace/
+under work/package/work/.
+
+* CMP109 printed251, Section0: a continuous domain (a union of the
+  compatible cubes) determines bonds and plaquettes INTERSECTING that
+  domain; all are denoted by the same domain symbol. Text personally
+  read in turn125_primary/b109_full.txt, PDFpage3.
+* B119 printed255, after(2.2), explicitly adopts this Section0 convention
+  for points, bonds and plaquettes. See turn111_primary/B119_page_13.txt.
+  CMP102 printed277 gives its equivalent endpoint/corner formulation.
+* B119 printed254, (2.1), gives
+    Omega_1 superset Lambda_1 superset ... superset Omega_k superset Lambda_k.
+  Pixel personally read: turn112_primary/B119254.png. B119(2.3) defines
+  the historical large-field domain Z_k=Lambda_k^c.
+* LI printed177 selects Z as a union of components of that current
+  large-field region. LI printed192,(1.73), defines the local refresh
+  domain Lambda=(Omega_(k0+1)^(~4))^c intersect Z; it is a union of
+  current M-cubes. Pixel: turn76_sources/I_printed_192.png.
+* LI printed193 describes exterior fields, explicitly using plaquettes
+  p' SUBSET Z intersect Lambda^c. Its extension construction sets the
+  transformed field to1 on b IN Lambda, and keeps the given exterior
+  field. Pixel: turn60_large_I/page_19.png.
+* LI printed194,(1.77)--(1.78), varies V_k restricted to Lambda and
+  bounds |V_Lambda(partial p')-1|<B5 M^5 epsilon_b for p' IN Lambda.
+  Pixel: turn60_large_I/page_20.png. The displayed membership is IN,
+  not the all-corners-inside SUBSET condition used on the previous page.
+* LI printed201,(1.100)--(1.101), integrates dV' restricted to Lambda,
+  with the same axial graph and cutoff for every b IN Lambda.
+  Pixel: turn60_large_I/page_27.png.
+
+The convention must be used at the level of the actual integration split.
+Independently inducing both the continuous set Lambda and its continuous
+complement as bond sets would include crossing bonds twice. It is not the
+disjoint free/frozen split of(1.100). The explicit exterior-extension
+construction and the integration over b IN Lambda fix that split.
+
+2. THE ACTUAL REFRESHED SET, INCLUDING GAUGE-TREE BONDS
+
+Work on the current lattice of spacing1. Define
+
+ F_Lambda={oriented current bonds b: b intersects Lambda},
+ I_Lambda={current plaquettes p: p intersects Lambda}.        (1)
+
+For these native aligned cubes, this is equivalently the endpoint/corner
+convention: a bond has an endpoint in Lambda, or a plaquette has a corner
+in Lambda. There are no arbitrary cuts through lattice cells.
+
+F_Lambda is the complete REFRESHED bond set in LI(1.100). The graph G_ax
+of the gauge fixing lies in this set. The independent Haar coordinates
+are the non-tree coordinates, but delta_(G_ax)(V') fixes V'=1 on the
+tree. Therefore tree-bond joined values equal V_Lambda, not separately
+frozen old V_k. In discussing an exterior witness, the frozen set is
+the bond-set complement of F_Lambda, not the complement of the independent
+Haar coordinates.
+
+Let v_ext denote the actual current field on that frozen bond set. The
+joined baseline used by the already proved final-tail lemma is exactly
+
+ v0(b)=V_Lambda(b) for b in F_Lambda,
+ v0(b)=v_ext(b)   for b not in F_Lambda.                      (2)
+
+Gauge fixing chooses a representative of the same orbit. All estimates
+below are plaquette defect norms and are unchanged by the allowed gauge
+representative choices or the finite native averaging over axial graphs.
+
+For elementary plaquettes the following implication is exact:
+
+ partial p contains a bond of F_Lambda => p in I_Lambda.     (3)
+
+Indeed an endpoint of that bond belongs to Lambda and is a corner of p.
+Conversely, a plaquette in I_Lambda has boundary bonds in F_Lambda.
+Thus every p outside I_Lambda has all four bonds frozen, and
+
+                   v0(partial p)=v_ext(partial p).          (4)
+
+3. THE LOCAL MINIMUM ESTIMATE COVERS ALL CROSSINGS
+
+Lambda has a collar inside the selected component Z. To see the needed
+fact, use Lambda subset (Omega_(k0+1)^(~4))^c and
+Lambda_k subset Omega_k subset Omega_(k0+1). A path leaving a component
+of Lambda_k^c must cross Lambda_k before reaching another component.
+The four M-layers in the definition of Lambda therefore separate Lambda
+from the exterior of its selected component by much more than one
+current plaquette. In particular, every plaquette intersecting Lambda
+and all its boundary bonds lie in the domain on which the local minimum
+in LI(1.77)--(1.78) is defined. The intersection with Z in(1.73) does not
+create a fresh exposed face through Lambda.
+
+Apply LI Proposition1 with exterior regularity parameter epsilon_b.
+Its conclusion p' IN Lambda, with the registered domain convention,
+is precisely a bound on the set I_Lambda:
+
+       |v0(partial p)-1| < B5 M^5 epsilon_b,
+                                  p in I_Lambda.           (5)
+
+On a crossing plaquette, V_Lambda in(1.78) is evaluated using the joined
+connection: free/incident bonds take the minimum values, and its other
+bonds retain the prescribed exterior values. This is exactly the
+extension made explicitly on LI printed195 before(1.79). It is not a
+bound on an independent interior-only four-edge product.
+
+The input of the proposition is regularity of the actual prescribed
+exterior connection. LI printed193 states this concretely for
+p' SUBSET Z intersect Lambda^c. Those plaquettes have four frozen bonds.
+For definiteness the criterion below controls the larger set of all
+fully frozen plaquettes intersecting Z. This includes the whole stated
+exterior input and any incident plaquette at the outer boundary of Z.
+It imposes no nonexistent condition on an unknown crossing product at
+the boundary of Lambda.
+
+4. COMPLETE EXTERIOR SET AND THE SUFFICIENT CRITERION
+
+Let R be the complete raw current plaquette read used in
+work/final_test_sensitivity_20261022.txt: the union over every actual final
+B119(2.16)--(2.17) test under consideration, including full helper,
+endpoint and virtual-edge reads. No assertion that R is contained in Z
+is made or needed.
+
+Define the finite, explicit exterior set
+
+ E_ext = {p: partial p has no bond in F_Lambda and p intersects Z}
+                         union (R minus I_Lambda).          (6)
+
+Every plaquette of E_ext is an actual frozen-current plaquette by(3).
+The first set is a conservative complete input to LI Proposition1.
+The second adds all fully frozen final-helper reads, in particular every
+such read outside Z. No claim that the first set is contained in R is
+needed. Consequently the witness below may lie in the minimum's input
+collar rather than in the final helper's own raw read.
+
+Put
+ t_k = epsilon_k/[8 B3 max(1,B5 M^5)],
+ rho_ext(r)=max_(p in E_ext)|v_ext(partial p)-1|.              (7)
+
+For admitted real conditioning data and sufficiently weak coupling,
+
+                     rho_ext(r) <= t_k => G(r),             (8)
+
+where G is the previously proved joined-read event
+
+       max_(p in R)|v0(partial p)-1| <= epsilon_k/(8 B3).     (9)
+
+PROOF. First take rho_ext<epsilon_b<=t_k. On R intersect I_Lambda,
+apply(5), obtaining a bound at most B5 M^5 t_k<=epsilon_k/(8 B3).
+On R minus I_Lambda, apply(4) and(6), obtaining a bound at most
+t_k<=epsilon_k/(8 B3). These two sets exhaust R, including all crossing
+and exterior helper reads. This proves(8) with strict exterior bound.
+
+For rho_ext<=t_k, apply the proposition for every epsilon_b>t_k
+sufficiently close to t_k. The actual boundary data and their unique
+minimum are unchanged when only this bounding parameter is increased.
+Let epsilon_b decrease to t_k in the bound(5). The resulting non-strict
+bound proves(8) as stated. No limit in the conditioning data or change
+of integration kernel is being taken. All epsilon_b used here are below
+the fixed native regularity cap at sufficiently weak coupling. QED.
+
+5. THE ACTUAL-VARIABLE WITNESS
+
+The contrapositive of(8) is the registered deterministic implication
+
+ G(r)^c => exists p in E_ext:
+       |v_ext(partial p)-1| > t_k.                          (10)
+
+Replacing > by >= is harmless for any subsequent bad-event estimate.
+This is a plaquette of actual frozen current data, not a plaquette of an
+unsampled replacement minimum. If a canonical witness is useful, order
+the finite geometric set E_ext in advance and take its first violating
+plaquette. That choice does not yet allocate or multiply any action cost.
+
+This resolves the endpoint gate left in Section3 of
+work/boundary_exception_ownership_20261022.txt, provided its phrase
+"exterior criterion" means the complete set(6). A condition restricted
+only to Z intersect Lambda^c, while omitting R's frozen exterior part,
+does not yield the full joined event by this argument. Likewise a
+condition only on the frozen part of R need not supply the full
+Proposition1 input unless that containment is separately shown.
+
+Remaining work is exactly the next action question: does the actual raw
+outer law retain a positive, unspent action slice charging the actual
+plaquette witness(10), and who owns it through a later reset? Nothing
+in the deterministic implication(10) answers or assumes that question.

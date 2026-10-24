@@ -1,0 +1,211 @@
+EXACT AUXILIARY CUTOFF COMPARISON IN THE PREPARED SOURCE INTEGRAL
+18 October 2026. Working lemma and source audit, not a published artifact.
+
+1. STATEMENT
+
+Use the actual independent retained fluctuation coordinates x_e, the actual
+covariance and normalization, and the actual prepared localized potential V.
+In particular V includes the inherited regular action and the mature R
+fluctuation differences absorbed into it by CMP119, pp270--271. Let
+
+  Z_T(u)=int dmu_{C(u)}(x) prod_e chi_T(x_e) exp(sum_Y V_Y(u,x)),
+  chi_T(v)=1_{|v|<T}.
+
+All factors independent of the cutoff can be retained outside this formula;
+they cancel in the log difference. Here u denotes exactly the source complex
+background/current and decoupling variables. Assume the prepared hypotheses
+of the source cluster proof hold on the ENTIRE original retained window
+|x_e|<T, with its fixed strict Gaussian and geometric summability margins.
+These are the hypotheses on actual source states, not the stronger auxiliary
+small-b norm which is available only on a smaller window.
+
+For T>=t>=t_min there are constants a,C>0, independent of T,t, volume and
+scale, such that the connected logarithms have compatible local analytic
+representations with
+
+  ||log Z_T-log Z_t||_source <= C exp(-a t^2).                 (1)
+
+The source norm can be the rooted sum of local analytic sup norms with any
+fixed reserved fraction of the published tree-decay exponent. Constants and
+t_min can depend on the fixed source geometric parameters. This is an exact
+comparison of the two finite-dimensional integrals; it is not an estimate
+of a global event probability and has no volume prefactor in the local norm.
+
+2. PROOF BY A SINGLE CUTOFF MARKER
+
+Define for each retained bond
+
+  chi_z(v)=chi_t(v)+z[chi_T(v)-chi_t(v)],
+  Z(z)=int dmu_C prod_e chi_z(x_e) exp(sum_Y V_Y).
+
+For finite volume Z(z) is polynomial in z. Its integrals are defined since
+every retained coordinate is restricted to the original window T. For any
+a>0, choose the marker disk |z|<=R=exp(a t^2). Pointwise on real v,
+
+  |chi_z(v)| <= exp(a|v|^2) chi_T(v),
+  |1-chi_z(v)| <= 2 exp(-a t^2) exp(2a|v|^2).                (2)
+
+The second inequality follows because 1-chi_z vanishes on |v|<t, is 1-z
+on t<=|v|<T, and is 1 outside T. Thus its modulus is at most 2exp(a t^2)
+on |v|>=t. No regularity of the sharp cutoff in v or in t is used.
+
+Repeat the source Mayer expansion of exp(sum V_Y). If D is the selected
+interaction family and Y0 its support union, retain prod_{e in Y0} chi_z
+and expand the complementary cutoff as prod_{e outside Y0}[1-(1-chi_z)].
+This is the exact source identity CMP116 (2.1)--(2.3), now with chi_z.
+The potential is evaluated only where |x_e|<T on its own strict support;
+therefore its actual original prepared bound, including all inherited terms,
+remains valid. In particular no extension of that potential beyond T occurs.
+
+For a complementary bad set P, (2) gives a factor
+
+  2^{|P|} exp(-a t^2 |P|)
+
+and extra positive quadratic forms with coefficients at most 2a on Y0 union
+P. In the conditioned Gaussian proof these are absorbed in exactly the
+same quadratic stability margin as the original bad-bond estimate. Choose
+a first, small enough that adding O(a) to alpha5 preserves both the Gaussian
+positivity and the source small-volume-cost inequalities. The determinant
+cost is exp[O(a)|Z|], of precisely the same kind as the original alpha5
+cost. The source coefficients/decoupling analyticity are otherwise unchanged.
+Choose t_min last so that the remaining bad-bond gain pays the finite source
+P-set entropy conditions, including the case of empty D. Constants such as
+2^{|P|} are absorbed by increasing t_min. Thus the original connected cluster
+series converges normally, uniformly for |z|<=R, and defines
+
+  Z(z)=exp(sum_X H_X(z)),       ||H(z)||_source<=C.            (3)
+
+As usual, a field-independent reference normalization may be factored out
+before (3). It is z-independent. This proves zero-freeness on the marker
+disk and fixes the logarithm consistently; no independently estimated
+denominator or branch choice is being suppressed.
+
+The same coefficientwise source construction makes H a Banach-valued
+holomorphic family. On a slightly smaller marker disk if necessary, Cauchy
+gives ||[z^n]H||<=C R^{-n}. Since Z(0)=Z_t and Z(1)=Z_T,
+
+  ||H(1)-H(0)|| <= C sum_{n>=1}R^{-n}
+                  =C/(R-1) <=2C exp(-a t^2).
+
+This proves (1), after a harmless decrease of a if the proof uses an open
+marker disk. Normal convergence justifies all coefficientwise operations.
+
+3. PRIMARY SOURCE MATCH
+
+CMP116 (1988), 1--22, DOI 10.1007/BF01239022:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-4penm4k7hc.pdf
+
+The applicable ingredients are Lemma2/(1.41)--(1.43), Mayer and cutoff
+expansion (2.1)--(2.3), complex Gaussian comparison (2.14)--(2.25), bad-set
+geometry (2.31)--(2.37), and the connected logarithm estimate (2.41).
+At pp16--17 the quadratic margin is expressed through alpha5; at pp19--20
+the determinant-volume cost is controlled by making (LM)^4 alpha5 small.
+The modification (2) changes only this adjustable coefficient by O(a) and
+replaces the scalar bad-bond gain by 2exp(-a t^2). It does not require a new
+uncontrolled coordinate-count constant per source cell.
+
+CMP119 (1988), 243--285, DOI 10.1007/BF01217741:
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+
+The retained-coordinate identity is (1.14)--(1.18), pp249--250, and its
+general version (3.16)--(3.20), pp268--269. The regular integral is (3.28),
+p272, after old R fluctuation expressions have been included with E at p271.
+The localization discussion at pp275--276 states that interior terms satisfy
+the earlier preparation lemmas; boundary terms have their separately
+specified domains. Thus, for an ACTUAL source-admissible homogeneous step,
+the original annulus is covered by the source preparation. It is not covered
+by merely assuming ||E||_{a,b}<=K b^2. The source induction/admissibility
+hypotheses remain explicit; this lemma does not prove that induction from an
+unverified coupling history.
+
+4. USE WITH MOVING RADII; WHAT IS AND IS NOT CLOSED
+
+Let q_min=min(q0,q1)>1 be the printed source exponents. Select
+
+  1/2 < t_exp < s < q_min,
+  t=(log gamma)^{t_exp},  b=c gamma^{-1/2}(log gamma)^s.
+
+Then g t/b=c^{-1}(log gamma)^{t_exp-s}->0. The independent physical noise
+window g t fits the moving field radius b, and the latter fits the original
+source background/current domain after fixed chart constants are allowed.
+The cutoff replacement error satisfies for every fixed A,K,
+
+  gamma^A (log gamma)^K exp[-a(log gamma)^{2t_exp}] ->0.       (4)
+
+In particular Maxwell extraction with cost O(b^-2) preserves an error
+smaller than every fixed inverse power of gamma. The original threshold
+T=A1(log gamma)^{p0}, p0>=5r, stays unchanged in the source RG. Only the
+analysis splits its integral as an inner integral plus the exact analytic
+log ratio (1). Consequently p0<s is unnecessary for this one-step split.
+
+A q-step LITERAL JOINT kernel can use the same proof on all retained
+coordinate copies if its exact joint preparation has the same stable
+Gaussian/interaction bounds on the original outer window. This must be
+checked by the joint-kernel construction; it does not follow by calling the
+one-step estimate q times. Replacing an early cutoff changes intermediate
+normalized states. An alternative finite-q telescope must control those
+insertions with the actual fixed source counterterm schedule. Any fixed
+inverse-g loss in that finite comparison is harmless by (4), but the exact
+identification remains necessary. This note does not claim that joint
+preparation or the moving regular-action induction has thereby been proved.
+
+5. EXACT ACTUAL-STATE OUTPUT INSERTION: NO OUTER q-KERNEL IS NEEDED
+
+There is a simpler exact way to use (1) in a finite block. Fix an already
+constructed actual source prefix. Write K_r^o and K_r^i for the SAME raw
+one-step kernel, with its actual geometric/gauge/coupling parameters frozen,
+using respectively the original outer cutoff and the auxiliary inner cutoff.
+For the actual incoming homogeneous source density coordinate rho_r define
+
+  h_r(w)=log[(K_r^o rho_r)(w)/(K_r^i rho_r)(w)].             (5)
+
+The source's zero-noise static factor and all cutoff-independent raw
+normalizers cancel in this ratio. Formula (1) controls it on the source
+output background/current domain. If F_r denotes the actual subsequent
+homogeneous bulk R-operation contribution, the source identity becomes
+
+  rho_{r+1}=exp(F_r+h_r) K_r^i rho_r.                       (6)
+
+Equality is exact; if densities are represented modulo vacuum constants,
+the field-independent part of h_r is retained in the corresponding scalar.
+The function h_r is computed at the ACTUAL incoming rho_r, then frozen as
+an output insertion. It is not redefined on a hybrid density. Substitute
+(6) recursively through a fixed block of q steps. The result contains
+only inner kernels, and the fixed functions exp(F_r+h_r) inserted at their
+actual intermediate output fields. Every equality in this substitution
+uses an actual source state. No assertion that a cutoff-modified state
+belongs to the original source inductive class is needed.
+
+The annular estimate covers the full inherited action here. CMP119 p276,
+following (3.43), discusses the action defining the measure (3.27), and
+treats the R_k contribution by the same preparation as E_k except for the
+second coupling renormalization. Together with the old-R absorption at
+p271, this includes BOTH old and young R fluctuation expressions. Fixing
+the source interpolation at s=1 suffices. No analytic continuation in s
+or comparison with the zero-R trajectory is required. The Mayer cutoff
+marker only uses the actual prepared potential estimates and their
+Gaussian margins; Euclidean symmetry of each young term is unnecessary.
+
+Its localized h_r coefficients have the independent source (U,J) analytic
+extension and the source fixed-M tree decay. Therefore the already audited
+block-Banach analytic seed conversion applies to h_r just as to a new
+small local family. On a physical moving radius b below a fixed fraction
+of the true source radius r_source it gives
+
+  ||h_r||_{a,b} <= C exp(-a t_r^2),                         (7)
+
+with the necessary fixed support/decay reserves chosen first. This is a
+conversion of the source analytic extension, not a bare Hessian estimate.
+
+For insertion at an intermediate field of the inner q-kernel, its supported
+chart has size at most C_q[b_out+g(log gamma)^t_exp]. The true source radius
+at each of these finitely many comparable scales is at least a fixed
+multiple of g(log gamma)^q_min. Since t_exp<s<q_min, this chart fits with
+a strict analytic margin for all sufficiently large gamma. The complete
+support substitution has a fixed finite-q bound, using the same seed
+conversion/prefix support reserves; any finite partial-prefix constant
+is paid once. Thus the h_r insertions remain superpolynomially small,
+including after b^-2 Maxwell extraction. This replaces the q-outer-window
+extension discussed at the end of Section4. It does not prove the separate
+inner q-species cluster estimate, but it removes the need for an outer
+q-species prepared domain or for hybrid-state stability.

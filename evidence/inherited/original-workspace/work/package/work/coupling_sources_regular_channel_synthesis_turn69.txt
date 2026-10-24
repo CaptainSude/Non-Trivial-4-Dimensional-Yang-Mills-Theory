@@ -1,0 +1,297 @@
+COUPLING SOURCES AND THE REGULAR PHYSICAL CORRELATION
+TURN69. 20 October 2026.
+
+THE NONTRIVIAL FOUR-DIMENSIONAL YANG--MILLS EXISTENCE PROOF IS NOT COMPLETE.
+
+This turn closes a specific source-limit gap and strengthens the local
+source estimates. It does not close the spatial continuum correlation
+problem. The distinctions below are part of the mathematical statements.
+
+1. WHAT IS NOW ATTACHED TO THE ORIGINAL WILSON MODEL
+
+The temporal construction previously handled bounded magnetic sources.
+It now handles analytic changes of electric AND magnetic couplings on
+every fixed finite spatial SU2 graph.
+
+Let the sourced transfer operator be
+
+ T_(delta,z)=M_(delta,z) Q_(delta,z) P M_(delta,z),
+ M_(delta,z)=exp(-delta V_z/2),
+ beta_e(delta,z)=2/[delta kappa_e(z)].
+
+The proof's new ingredient is the uniform additive estimate
+
+ sup_(nu>=1)|I_nu(beta)/I_1(beta)
+             -exp[-(nu^2-1)/(2beta)]| <= C/|beta|
+
+in a fixed right complex sector at large |beta|. It follows by
+comparing the exact Fourier integral to a Gaussian in L1. The
+error is additive, so it remains valid at arbitrarily large spin;
+there is no assertion of uniform relative error against a tiny
+Gaussian coefficient.
+
+With finitely many links this gives
+
+ ||T_(delta,z)^n|| <= exp(C n delta)
+
+on one complex source disc at the fixed spatial regulator.
+Real-source transfer convergence supplies the limit on a real
+interval. Holomorphic compactness and uniqueness then give
+locally uniform complex convergence and every fixed source jet.
+The uniform O(delta) electric error is used for stability;
+it is not incorrectly summed to prove convergence.
+
+All endpoint ground states and the baseline energy stay unsourced.
+No sourced complex ground-state convergence is needed.
+
+The original Wilson expectation differs from the normalized transfer
+expression by an explicit source-dependent scalar:
+
+ Z_orig,delta,N,n(z)=exp[n L_delta(z)] F_delta,N,n(z),
+ L_delta(z)=sum_e log[c(beta_e(delta,z))/c(beta_e(delta,0))],
+ c(beta)=2 exp(-beta) I_1(beta)/beta.
+
+The changed spatial action has half weights on each slab boundary
+and full weights on its interior slices. The changed electric action
+occupies precisely the n time intervals. Haar and Gauss normalizations
+stay fixed. Thus this is a literal original Wilson source.
+
+The scalar n L_delta generally diverges in the temporal limit.
+At the SAME finite period and temporal spacing it satisfies
+
+ Delta_h^2 log Z_orig,delta,N,n
+                   =Delta_h^2 log F_delta,N,n
+
+EXACTLY, because it is affine in the slab length n. No divergent
+term is silently discarded. The second action derivative for a
+nonlinear source parametrization is also affine in n and cancels.
+
+Choosing the period after the temporal spacing controls the trace
+remainder uniformly on the fixed source disc. With n delta -> T and
+h delta -> d, all fixed derivatives of this length difference
+converge to those of the fixed-endpoint Hamiltonian source.
+
+This closes the fixed-spatial electric/coupling source-jet gate left
+in TURN68. The source disc and convergence rate need not be uniform
+as the spatial spacing goes to zero.
+
+2. THE EXACT SEPARATED PHYSICAL CONSUMER
+
+For A=H_0-E0 and B=(H'_0-<H'_0>)Omega, define
+
+ F_T(z)=<Omega,exp[-T(H_z-E0)]Omega>,
+ J(T)=partial_z^2 log F_T(z)|_(z=0).
+
+At a fixed spatial regulator,
+
+ J(T)=2 integral_0^T (T-s)<B,exp(-sA)B> ds
+                                  -T<Omega,H''_0 Omega>.
+
+Hence
+
+ (1/2)Delta_d^2 J(T)
+       =integral exp(-TE)[(1-exp(-dE))/E]^2 rho_B(dE).
+
+This is a separated spectral window, with both the source contact
+term and the temporal scalar already canceled. On the original
+time lattice, a source lives at interval centers. For even n,
+reflection at time0 sends interval j to -j-1. The positive window
+j=n/2,...,n/2+h-1 has the required triangular covariance weights.
+One retains circular covariances until the period is long enough
+for the stated nonwrapping interpretation.
+
+For the global additive inverse-coupling family
+
+ H_(gamma+z)=K/[2a(gamma+z)]+4(gamma+z)S/a,
+ gamma=g^-2,
+
+the literal original source is the full geometric Wilson action,
+including temporal plaquettes. Its centered derivative vector is
+
+ B=2q_* Omega,    Q_*=4S/a,    q_*=Q_*-<Q_*>.
+
+Thus, with baseline endpoints and E0 frozen,
+
+ R_Q*(T/2,d)=(1/8)Delta_d^2 partial_z^2 log F_T(z)|_(z=0).
+
+The original full-action centered reflected window tends to 4 R_Q*.
+An unscaled original action, or its fixed physical-scale multiple,
+is therefore a legitimate source candidate. This does not prove
+its continuum calibration or a nonzero limit.
+
+For a local profile the derivative is instead (2q_f-r_f)Omega,
+where r_f Omega=(H_f-<H_f>)Omega. The new theorem attaches this
+complete electric-magnetic combination. It does not replace it
+by a purely magnetic local insertion.
+
+3. WHAT THE ACTUAL SELECTED REGULAR STEP NOW GIVES
+
+On the admitted fixed-window selected map, all baseline windows,
+charts and couplings stay frozen under the original action source.
+The classical source retains the original plaquette labels:
+
+ S_(M,f)=sum_p f(x_p)h_p(U_M).
+
+The complete-field minimizer bounds make each pulled-back fine
+plaquette O(M^-4), while O(M^4) such plaquettes occur per current
+four-dimensional cell. Their rooted density norm is therefore
+uniform in the preceding classical depth. The classical composition
+identity holds for this weighted sum because every original
+plaquette trace is separately gauge invariant.
+
+For the exact one-mark quantum birth, write
+
+ J_f=g J_(f,1)+g^2 J_(f,2)+...,
+ V_g=g V_1+....
+
+The order-g^2 coefficient is
+
+ A(f)=E J_(f,2)+E[J_(f,1)V_1].
+
+The weighted saddle first jet in the second term is generally
+nonzero and is retained. For f=1, stationarity removes that jet
+and the physical Hessian projector has constant rank. Thus A(1)
+is field independent.
+
+Differentiating this exact constant identity with respect to each
+field coordinate before integrating radially produces factors
+f(x_p)-f(x_q). Fixed analytic and support reserves therefore give
+the field-dependent one-mark birth estimate
+
+ ||B_j(f)||_weak
+    <= C g_j^4 ||f||_infinity
+          +C g_j^2 ell_j^alpha [f]_(C^alpha),  0<alpha<=1.
+
+The source vacuum term is retained separately. For a sharp profile,
+the order-g^2 field term is exponentially localized near its
+interfaces; no uniform sum at an interface root is inferred.
+
+If gamma_j>=Gamma+b(n-j) and ell_j=ell_* L^(j-n),
+
+ sum_j g_j^4 <= Gamma^-2+(b Gamma)^-1,
+ sum_j g_j^2 ell_j^alpha
+            <=ell_*^alpha/[Gamma(1-L^-alpha)].
+
+Thus the NEWLY GENERATED one-mark terms are ultraviolet summable.
+On a strict fixed input margin the inherited quantum derivative
+is O(g_j^2), by evenness in g and analytic division, without a
+native inverse power of g. Direct mixed births from sources which
+are still physically separated have an exponential separation
+factor exp[-c d/ell_j], with their raw scalar part retained.
+
+There is a further exact leading mixed cancellation:
+
+ partial_s partial_t log E exp[V_g+sJ_f+tJ_h]|_(s=t=0)
+       =g^2 E[J_(f,1)J_(h,1)]+g^4 C_4.
+
+Constrained stationarity removes a constant profile from EACH
+linear jet, before expectation. Its leading carrier norm is at
+most C ell^(alpha+beta)[f]_(C^alpha)[h]_(C^beta); it vanishes if
+either profile is constant. Complete support retention preserves
+the separation factor. The raw scalar term is included, but the
+bound does not eliminate coincident-source vacuum divergences
+or estimate marks after their later transport.
+
+These conclusions remain statements about the actual ADMITTED
+SELECTED map and its stated classical/analytic inputs. They do
+not cover every native history or the full original Wilson law.
+
+4. WHY THE SPATIAL SOURCE PROBLEM IS STILL OPEN
+
+The exact selected source recursion contains
+
+ u_(j+1)=T_j u_j+D_E F_j(g_j,E_j)[u_j]+B_j(f).
+
+Summing the birth terms alone does not control this recursion.
+The existing contractive extracted space assumes translation and
+hypercubic invariance. A varying profile breaks these symmetries.
+The classical weighted-action identity does not itself give a
+bounded propagator for every generated inhomogeneous error.
+
+A possible next step is a bounded classical propagator on a
+position-dependent marginal tensor space, combined with an exact
+modulation of the already controlled constant-source solution.
+Such a theorem has not been established here. Mere curvature
+power counting or a carrierwise gauge transformation of a
+noninvariant representative would not suffice.
+
+There is also an independent full-history admission problem:
+the fixed analytic selected-map discs are not already available
+on every mixed native R/B domain. Old-source and denominator
+factors remain in the exact replacement identity. Neither this
+turn's birth bounds nor TURN68's simple action-cell bridge bound
+removes those obligations.
+
+5. THE LOCAL HAMILTONIAN REMAINDER HAS AN EXACT TARGET OPERATOR
+
+For the actual ground law mu=Omega^2 dU, put
+
+ L=Omega^-1(H-E0)Omega=kappa d_mu^*d,
+ L1=kappa(d d_mu^*+d_mu^*d),
+ (j_f)_e=sum_(p incident e)(f_p-eta_e)d_e h_p.
+
+The exact current identity is
+
+ dr_f=v P_ex j_f,
+
+where P_ex projects onto exact one-forms in L2(mu). Consequently
+
+ R_(r_f)(t,d)=kappa v^2 <P_ex j_f,
+     L1^-3 exp(-2tL1)(1-exp(-dL1))^2 P_ex j_f>_mu.
+
+This is an actual configuration-space identity. L1 contains
+Ric-2 Hess log Omega; the bare Wilson Hessian cannot replace the
+actual ground Hessian. Even the harmonic model has the spatial
+square-root kernel in this location.
+
+The known actual Dirichlet bounds imply
+
+ R_F^(>Lambda)(t,d)
+       <=D(F) exp(-2t Lambda)/Lambda^3.
+
+For fixed smooth physical supports, D(q_f)=O(a^-6) and
+D(r_f)=O(a^-4). Choosing
+Lambda_a=[p/(2t)]log(a0/a), p>6, removes both high-energy tails.
+The projected current norm in the remaining band
+0<E<=Lambda_a is still uncontrolled.
+
+A separate exact force Ward estimate was checked. Its deterministic
+color-displacement vector is annihilated by Gauss projection.
+Making that displacement field dependent and gauge covariant
+introduces a kinetic commutator. Thus it cannot be used as a
+physical scalar bound after dropping that term.
+
+6. PRIMARY SOURCE CHECK AND THE REMAINING FINISH LINE
+
+The public Sussman repository was refreshed at the recorded time
+in work/remote69. Its tree is unchanged from TURN67. No unpublished
+completion is inferred.
+
+A focused review of the published 2025 plaquette-source paper
+found a normalization issue relevant to a proposed shortcut.
+Its printed action field A_p/(a^4 g) cannot be silently replaced
+by A_p/(a^4 g^2) while importing the same entire bound. The exact
+one-plaquette SU2 identity
+
+ E exp[J beta h]=c((1-J)beta)/c(beta)
+                 ->(1-J)^(-3/2),   J<1,
+
+has a singular cutoff limit at J=1. This does not contradict a
+small fixed-disc source bound, or the paper's stated SU(N) scope.
+The review did not locate the missing separated pure-YM estimate
+in the other inspected primary sources.
+
+The central physical task remains a cutoff-uniform separated
+source/correlation estimate with a nonzero surviving physical
+spectral component. Both an earlier-time upper bound and a
+later-time positive lower bound are needed for the retained
+nontriviality route. The regular contribution is not bounded
+by suppression of spanning large-action bridges alone.
+
+Compatible local observables, continuum symmetries, and the
+reconstruction hypotheses also remain to be proved. The temporal
+source theorem and selected birth estimates are concrete progress
+within that program, not a nontrivial YM4 existence theorem.
+
+The accompanying audits are internal mathematical checks. They are
+not external peer review and do not certify the entire prior archive.

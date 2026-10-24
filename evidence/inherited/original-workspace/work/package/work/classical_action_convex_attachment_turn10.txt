@@ -1,0 +1,123 @@
+THE ACTUAL HOMOGENEOUS CLASSICAL ACTION ENTERS THE CONVEX BLOCK LEMMA
+19 October 2026. Root attachment; quantum density is not identified here.
+
+1. AN ALREADY PROVED NONABELIAN INPUT
+
+The archived classical_coarse_action_research.md, Section1, constructs
+the actual homogeneous constrained Wilson action V_M(B) using the
+nonlinear minimizing extension with its complete nonlinear averaging
+constraint. Its fixed-slice multiplier m_M=DV_M obeys, on a common
+complex coarse-field ball,
+
+ m_M(0)=0,  Dm_M(0)=q_M,
+ ||Dm_M(B)-q_M||_(infinity->infinity)<=C ||B||_infinity.   (1.1)
+
+The constant is independent of the fine refinement M and volume.
+The action is real on the real field space, and Dm_M is its symmetric
+ordinary-coordinate Hessian with the stated physical pairing. These
+are classical statements; the cited archive explicitly excludes the
+fluctuation determinant and quantum effective action. The prior source
+gauge/minimizer provenance qualifications remain in force.
+
+The physical fine plaquette count does not destroy (1.1): its action
+density carries eta^4, and each fixed physical cell contains O(eta^-4)
+plaquettes. The archived classical_local_vertex_bounds_research.md,
+Section4.2, proves this normalization before taking vertex derivatives.
+
+2. A FIXED FINITE GAUGE/HARMONIC SLICE
+
+Fix a finite coarse block/periodic regulator before taking M large.
+Use a FIXED LINEAR flat transverse slice and remove or fix the harmonic
+coordinates. Denote its isometric embedding by J_R. On that slice put
+
+ P_(M,R)=J_R^T q_M J_R.
+
+The uniform ellipticity comparison of matched_free_precision_heat_turn9
+gives lambda_R I<=P_(M,R)<=Lambda_R I, with lambda_R>0 independent of M.
+The finite regulator and its boundary/quotient convention are part of R;
+no volume-uniform infrared gap is asserted. If an actual chosen boundary
+does not give these inequalities, this argument requires its own gap.
+
+Restrict the classical action to B=J_R x. Symmetry and the row-norm
+bound in (1.1) give
+
+ ||J_R^T[D^2V_M(B)-q_M]J_R||_(2->2)
+                                      <=C_R ||B||_infinity.
+
+Here a fixed component/norm-equivalence factor is allowed; it is
+independent of M. Now y=P_(M,R)^(1/2)x and
+
+ U_(M,R)(y)=V_M(J_R P_(M,R)^(-1/2)y).
+
+The constant and linear jets vanish and its quadratic jet is |y|^2/2.
+For |y|<=2b, ||B||_infinity<=C_R b. Hence
+
+ ||D_y^2[U_(M,R)(y)-|y|^2/2]||<=C_R b.                  (2.1)
+
+All constants are uniform in M for fixed R. Choosing b small puts the
+whole ellipsoid inside the original common analytic branch. Higher
+derivatives on a reserved fraction follow by ordinary finite-dimensional
+Cauchy estimates; their constants may depend on R and derivative order.
+
+Thus local_convex_completion_exit_turn10 applies to this ACTUAL
+homogeneous nonabelian classical reduced action with delta=C_R b.
+In particular a real convex completion agrees with it on the smaller
+ellipsoid, and has the quantitative exit bounds stated there. The
+classical perturbation is not an arbitrarily chosen toy potential.
+
+3. A QUANTITATIVE REGULAR-CORRECTION CRITERION
+
+Suppose, additionally and on the same actual finite chart, a regular
+quantum density has the literal form
+
+ exp[-V_M(B)/g^2+E(B)] dB,
+
+with all relevant Jacobian factors included in E. Let E be holomorphic
+on a coordinate domain of radius a, and suppose its local analytic bound
+on the COMPLETE block and collar is K(g). On a fixed smaller domain,
+Cauchy gives ||D^2E||<=C_R K(g)/a^2. Its contribution to the reduced
+action U=V_M-g^2E therefore has relative Hessian size
+
+                   delta_E<=C_R g^2 K(g)/a^2.           (3.1)
+
+If a=g(log g^-2)^q and K(g)<=C(log g^-2)^P, this becomes
+delta_E<=C_R(log g^-2)^(P-2q), which tends to zero if P<2q.
+The smaller b=g(log g^-2)^s ellipsoid fits in the reserved a domain
+when s<q, beyond a fixed floor. This is enough for small high-sector
+operator errors after choosing R. It is NOT an O(g^2) marginal-flow
+estimate, and summation over scales needs its own reference transport.
+
+A general E also has constant and affine jets. The constant changes
+normalization only. Its affine jet must be retained and its actual
+critical point/shift controlled before using an origin-centered exit
+estimate. Gauge-invariant total actions may supply a zero linear jet
+at the zero field in some homogeneous settings, but fixed exterior or
+individual localized components do not acquire it by declaration.
+
+The preceding P<2q condition concerns the REAL small-Hessian/finite-jet
+route. It does not imply that the completed law's GLOBAL density ratio
+to the Gaussian tends to one. That stronger comparison uses
+delta_E b^2/g^2=O((log g^-2)^(P-2q+2s)) and requires P+2s<2q.
+The real conditional-jet argument in
+interacting_finite_block_jet_stability_turn10 instead translates each
+fiber to its actual constrained critical point. The critical-action
+factor cancels between the conditional numerator and denominator,
+leaving a Gaussian quadratic remainder of size O_R(delta_E). Hence
+that finite-jet result does not require the stronger density-ratio
+condition. Its finite scaled higher derivatives, common chart and
+affine-force hypotheses still have to be checked.
+
+Section3 is a criterion, not a checked assertion about the complete
+native E or T history sum. The specific K(g), original domain, matching
+volume/Jacobian, and all read supports still have to be supplied.
+
+4. PRECISE LIMIT
+
+Section2 attaches the classical part of the proposed finite-block
+perturbation theorem to an existing actual Wilson-minimizer result.
+It does not show that restricting the action to a flat linear slice
+already constructs the physical nonlinear gauge-quotient measure.
+It does not integrate fluctuations, prove their Jacobian bounds, or
+control the surviving large-field histories. Those are measure inputs,
+not consequences of classical convexity. The new completion is an
+auxiliary real construction and does not alter old frozen native kernels.

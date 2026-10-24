@@ -1,0 +1,253 @@
+ANNEALED GROWING-BOX CONTROL AND NORMALIZED REPLACEMENT
+19 October 2026. Root derivation, turn37. Companion to the conditional tail.
+
+RESULT AND SCOPE
+
+The bad-boundary mass in the bare Wilson growing-box theorem can itself
+be bounded uniformly in total lattice volume. A polynomial geometric
+energy threshold, the original bare Wilson chessboard inequality, and
+the exact conditional normalization give a sparse positive replacement
+theorem on boxes of side R <= C_R [log(1/g)]^b. Neither independence of
+the boundaries nor reflection positivity of the replacement is assumed.
+
+This is still a theorem about one original bare Wilson measure and a
+separated family of boxes. It does not identify a nonlinear averaging
+fiber, supply an iterated effective conditional law, or control fields
+with divergent renormalized sup norms. Its physical boxes shrink in
+the usual ultraviolet scaling.
+
+1. BOUNDARY GAUGE WITH AN EXPLICIT POLYNOMIAL ENERGY COST
+
+Let Omega_R={0,...,R}^4. On its entire graph choose the ordinary
+coordinate tree based at 0: the root-to-x path first changes x4, then
+x3, then x2, then x1. These paths have a common-prefix tree structure.
+In its tree gauge, denote the complete link field by y. A non-tree
+edge in direction mu closes its tree loop by commuting that single
+mu step past the lower-index coordinate legs. The loop is filled by
+at most three coordinate strips of width at most R and height one.
+Each strip uses distinct plaquettes; their directions differ. In
+particular, the total filling area is <=3R, and the weaker <=C R^2
+estimate is enough below. Tree links themselves equal identity.
+
+The same nonabelian product and Cauchy--Schwarz argument as in the
+conditional geometry audit yields
+
+              max_e ||y_e-I|| <= C R sqrt(S_Omega(U)).       (1.1)
+
+Here S_Omega is the uncentered nonnegative sum over ALL plaquettes
+wholly inside the cube, including its boundary plaquettes. No boundary
+values have been fixed in (1.1), and every vertex may be gauged.
+
+Now choose a breadth-first spanning tree of the BOUNDARY graph, rooted
+at 0. Every boundary vertex has intrinsic boundary-graph distance
+<=4R from 0. To see this, keep one zero coordinate fixed while reducing
+the others; if the available boundary coordinate equals R instead,
+keep it fixed while reducing the others to zero, and then reduce it
+while one of the other zero coordinates keeps the path on the boundary.
+Consequently every fundamental boundary-tree loop has length <=8R+1.
+
+Let B(V) be the unique boundary tree representative, up to conjugation
+at the root, of the given boundary-link data V. Define
+
+                 d_B(V)=max_(boundary e)||B(V)_e-I||.
+
+This is continuous and gauge invariant, and depends ONLY on boundary
+links. Compute it after the full-cube tree gauge used in (1.1).
+Each boundary chord holonomy is a product along a boundary-tree loop;
+its distance to identity is at most (8R+1) max_e||y_e-I||.
+It follows, for every extension of V to the interior, that
+
+             d_B(V) <= C R^2 sqrt(S_Omega(U)).               (1.2)
+
+No filling inside the boundary sphere and no boundary-only action
+coercivity is needed for this comparison. The full-cube energy is used
+only to prove an inequality for the boundary-measurable event.
+
+Use the constant c_0 from the conditional theorem and set
+
+ delta_R=c_0 R^-24,       B={d_B(V)>delta_R}.
+
+Then the contrapositive of (1.2) gives the literal positive-event bound
+
+                     B implies S_Omega >= c R^-52.          (1.3)
+
+The constant contains c_0^2 and is fixed independently of R and g.
+On B^c the boundary tree representative meets exactly the boundary
+hypothesis of the conditional tail theorem, in that fixed frame.
+
+2. COMPATIBLE BARE REFLECTION CELLS AND THE ACTUAL DENOMINATOR
+
+Use the positive normalized Wilson law exp[-S_tot/g^2]/Z_g on a
+compatible periodic four-dimensional lattice, with normalized Haar
+measure per link. Choose a standard Wilson chessboard tiling by closed
+cells of side L=4R (any fixed integer multiple with a buffer works).
+Require the torus periods to be compatible with this tiling and the
+reflection/chessboard theorem. Place Omega_R strictly inside one cell,
+at integer coordinates, and reflect it to obtain the other core boxes.
+These cores have pairwise disjoint vertex sets. Boundary trees and
+axial forests are reflected with their core, not reset independently.
+
+Let m be the number of cells, C_j their closed copies, and S_Cj their
+within-cell plaquette sums. A plaquette can belong to at most a fixed
+q_* (for example 16) of these closed-cell sums, so
+
+                  sum_j S_Cj <= q_* S_tot.
+
+Disseminate the positive boundary event B by the actual reflections.
+Its support is entirely in the core boundary, hence in the cell.
+On the event that every reflected copy is bad, (1.3) implies
+
+                      S_tot >= c m R^-52.
+
+Reserve half the action and integrate the rest to obtain
+
+ Z_g(all bad) <= exp[-c m g^-2 R^-52] Z_(sqrt(2)g).
+
+For completeness, the old elementary lower subset is uniform in R:
+restrict every bare link to a ball of radius c g. Its Haar volume is
+>=c' g^(dim G), and each plaquette action is <=C g^2. If N_0 is the
+total number of bare sites, then for 0<g<g_0
+
+                Z_g >= exp[-C N_0(1+log(1/g))],
+                Z_(sqrt(2)g) <= 1.
+
+Take the chessboard root AFTER this normalized ratio. Since
+N_0/m=L^4=O(R^4), each prescribed intersection of distinct reflected
+bad-boundary cells satisfies
+
+ mu_g(intersection_(i in A) B_i) <= beta_(R,g)^|A|,           (2.1)
+
+ beta_(R,g)=min{1,
+   exp[C R^4(1+log(1/g))-c g^-2 R^-52]}.                    (2.2)
+
+The multilinear chessboard inequality is applied with the event in
+the selected cells and the constant one elsewhere. No independent
+boundary law, effective-action sandwich, or new ultraviolet vacuum
+cancellation is used. The entire coarse-cell entropy R^4 remains.
+For R<=C_R ell^b, ell=log(1/g), the negative term in (2.2) has order
+at least exp(2ell) ell^(-52b), which defeats this entropy. In particular
+beta is smaller than exp[-c ell^p] for EVERY fixed p at small g.
+
+3. ACTUAL CONDITIONING, WINDOW, AND COMBINED BAD EVENT
+
+Let X contain every link other than the nonboundary interiors of the
+selected core boxes, in particular all their boundary links. Since
+the cores are vertex-disjoint and embedded cubes, every plaquette
+reading an integrated interior edge lies wholly in that box. Thus
+the ORIGINAL Wilson conditional measure factors exactly:
+
+                 mu_g(domega,du)=mu_X(domega) product_i Q_i^omega(du_i).
+
+On B_i^c use B(V_i) as the boundary frame. Extend that boundary gauge
+to the box in any fixed covariant tree construction, then use the
+anchored forest gauge of the conditional theorem. Define W_i to be
+the window about the ACTUAL conditional minimum x_*(B(V_i)):
+
+                    max_e |x_e-x_*,e|<=gT.
+
+The complete resulting tree representative, minimum and invariant
+norm transform only by constant root conjugation, so the lifted
+event is gauge invariant. The transforms are finite products, and
+the minimum is analytic on the admitted boundary chart, hence this
+is a measurable conditional window. No identity centering is used.
+
+The conditional theorem gives, uniformly for all good boundaries,
+
+ Q_i^omega(W_i^c)<=alpha_(R,g,T),
+
+ alpha=min{1,
+  exp[C R^4 log(2+R)-c R^-8 T^2]
+ +exp[C R^4 log((2+R)/g)-c R^-20/g^2]}.                    (3.1)
+
+Let C_i be the actual original-box defect: B_i, or (B_i^c and W_i^c).
+Conditional independence, (2.1), and expansion over the boundary-bad
+subset give the normalized, unconditional joint estimate
+
+              mu_g(C_i for every i in A) <= (alpha+beta)^|A|. (3.2)
+
+Indeed for a chosen boundary-bad subset J the conditional factors
+for A\J are <=alpha, leaving E[product_(i in J)1_Bi], bounded by
+beta^|J|. The other good-boundary restrictions can be dropped.
+This proves a literal bare-event estimate, not just one for auxiliary
+failure labels. It does not assert iid domination of C_i.
+
+4. NORMALIZED REPLACEMENT WITH NO EXTERIOR REWEIGHTING
+
+The archived exact conditional replacement now applies with the
+explicit growing-geometry constants above. For small g so alpha<1,
+put P_i=Q_i(.|W_i) on B_i^c and P_i=Q_i on B_i. Set
+
+                   nu(domega,du)=mu_X(domega) product_i P_i^omega(du_i).
+
+Writing p_i=1_(B_i^c) Q_i(W_i^c), the density is
+
+                 dnu/dmu=product_(i:B_i^c) 1_Wi/(1-p_i).
+
+Each factor has conditional expectation one. Therefore nu preserves
+the EXACT original exterior marginal, and the same operation on the
+unnormalized measure preserves the exact raw partition mass Z_g.
+The factors (1-p_i)^-1 depend on the boundaries and are retained.
+
+The explicit mixture coupling Q_i=(1-p_i)P_i+p_i Q_i(.|W_i^c)
+(with an arbitrary unused last kernel when p_i=0) produces discrepancy
+marks D_i dominated by iid Bernoulli(alpha), conditionally and jointly
+with the exterior. On bad boundaries the two samples are identical.
+The uncontrolled marks B_i OR D_i obey the joint bound (alpha+beta)^|A|.
+In nu the actual box defect C_i is just B_i almost surely, so its
+joint inclusion bound improves to beta^|A|.
+
+For bounded f depending on the exterior and at most |A| selected
+interiors,
+
+                  |mu(f)-nu(f)|<=2 ||f||_infty |A| alpha.
+
+The exact joint-with-exterior total variation is
+E_muX[1-product_(i in A)(1-p_i)], at most |A|alpha.
+The forward relative entropy D(nu||mu) on this retained marginal is
+E_muX sum_(i in A)[-log(1-p_i)],
+at most |A|alpha/(1-alpha). All archived finite bounded-source
+identities and local cumulant comparisons remain valid with these
+same constants. None is a statement about a renormalized unbounded
+field without its own norm estimate.
+
+On a deterministic adjacency graph of maximum degree Delta, the
+joint bound also gives connected-defect-cluster tails <=
+[Delta^2 min(1,alpha+beta)]^k for size at least k at a specified root,
+using the elementary spanning-tree traversal count. This is useful
+when the bracket is less than one; otherwise it is only a trivial
+upper bound. It is not an identification with native RG determining
+sets or history components.
+
+5. POLYLOGARITHMIC CONSEQUENCE AND PRECISE LIMIT
+
+For R<=C_R ell^b and T=ell^a with a>6b+1/2, the conditional theorem
+gives alpha<=C exp[-c ell^(2a-8b)]. Equation(2.2) gives a smaller beta.
+Thus (3.2), the replacement error, and the sparse-cluster estimates
+all hold uniformly in total volume with
+
+                    epsilon<=C exp[-c ell^(2a-8b)].
+
+This closes the GOOD-BOUNDARY MASS issue for this separated growing
+bare-box operation. It does not close the corresponding issue for
+an iterated effective action or a coarse constrained fiber. The bare
+chessboard entropy is still the number of fine sites in the cell.
+If R is of order a_uv^-1 at a fixed physical size while g follows
+asymptotic freedom, this entropy estimate gives no useful conclusion.
+Nor has the replacement law been shown to preserve the native block
+average, all observables, or reflection positivity. It preserves exactly
+the exterior marginal and the partition mass stated above. The full
+Yang--Mills continuum existence theorem remains unproved.
+
+In particular the comparison |A|alpha is not claimed to vanish when A
+contains all boxes in a fixed physical region. Under g^2 of order
+1/log(1/a_uv), ell is of order log log(1/a_uv), whereas that region
+contains order a_uv^-4/R^4 boxes. The displayed alpha majorant does
+not beat this count. Local comparisons require the actual product
+|A|alpha to tend to zero. The joint sparse-array estimates remain
+uniform in total volume, a different conclusion.
+
+Inputs: polylog_box_conditional_tail_turn37 and its two audits;
+chessboard_native_joint_tail_turn14, Sections1 and3 (the exact bare
+Wilson chessboard convention and elementary denominator);
+archive/ym4-research/work/normalized_box_replacement_research and its
+rotation audit (the exact conditional replacement/coupling algebra).

@@ -1,0 +1,314 @@
+TURN88 -- THE ACTUAL FLOWED SCALAR: INFLUENCE, COHERENCE AND WILSON WEIGHT
+gauge47. 20 October 2026. New finite-lattice derivation; prior files unchanged.
+
+RESULT
+
+The declared bounded spatially flowed magnetic scalar has no cutoff-uniform
+pointwise modulus in the unweighted original-link sup metric, even when
+EVERY original plaquette satisfies beta h_p<=1. Two explicitly constructed
+fields differ by O(a^2 beta^(1/4)) per link, but their physically calibrated
+flowed scalars have different order-one limits. Away from the symmetric
+configuration used in TURN65, this also gives a genuine FIRST-derivative
+lower bound for the scalar, not only for its raw flow or its Hessian.
+
+This is NOT an annealed counterexample. The existing exact Wilson
+conditional-window estimate suppresses a whole neighborhood of these
+fields by exp(-c a^-3). That cost beats the global flow derivative bound,
+so their expected contribution actually vanishes. The remaining problem
+is the original-law weighted influence on the complement and, in a
+replacement proof, the law of the interpolation paths. Total energy
+dissipation does not estimate either quantity.
+
+The deterministic calculation below is new relative to TURN65's symmetric
+Hessian test. The coherent-window probability theorem is explicitly an
+OLD result, reused here with the new actual probe derivatives. No claim
+of a positive original reflected channel or of full YM4 existence follows.
+
+1. EXACT PROBE AND SOURCE NORMALIZATION
+
+Use a nondegenerate four-dimensional periodic SU(2) Wilson lattice with
+isotropic spacing a and original beta>=1. In one spatial slice let
+ S_sp=sum_(spatial plaquettes) h_p, h(P)=1-Tr P/2,
+ d Phi_s(U)/ds=-(4/a^2) grad S_sp(Phi_s(U)).                 (1.1)
+The tangent metric is the Pauli/2 metric: i x.sigma/2 has norm |x|.
+The spatial flow is applied separately to each original time slice.
+
+For fixed physical s,alpha,g_*>0 and P12(Phi_s U)=p0 I+i p.sigma, put
+ b_(s,a,x)(U)=exp[-alpha |2p/(g_*a^2)|^2].                  (1.2)
+This is exactly the TURN63/87 radial family, with alpha denoting the
+parameter called h in the minimal-source note. In particular g_* is FIXED;
+it is not silently replaced by the vanishing bare coupling. For a
+nonnegative smooth unit-mass physical profile f, let
+ O_a(f)=sum_(t,x) w_(t,x) b_(s,a,x)(U(t)),
+ w_(t,x)=integral_(cell(t,x)) f, sum w=1.                  (1.3)
+All bounds below concern these original observables. Multiplying an
+action source by a^4 is not involved.
+
+2. EXACT HOMOGENEOUS FLOW AND ITS ASYMMETRIC RADIAL LIMIT
+
+On a spatial cubic torus with n=(L/a)^3 vertices set
+ U1=sqrt(1-w)I+i sqrt(w) n1.sigma,
+ U2=sqrt(1-w)I+i sqrt(w) n2.sigma, U3=I,
+ z=n1.n2, r=w/(1-w), I=zr, tau=8s/a^2.
+The exact equations, including the full-link metric normalization, are
+proved in radial_flow_hessian_turn65.txt Section1:
+ h12=2w^2(1-z^2), h13=h23=0,
+ dr/dtau=-(r^2-I^2)/(1+r), I constant,
+ h12(s)=2(r^2-I^2)/(1+r)^2,
+ tau=integral_r^r0 (1+x)/(x^2-I^2) dx.                    (2.1)
+No continuum approximation is used to define this solution.
+
+Take beta(a)->infinity with beta(a)=o(a^-2), and set
+ w0=(2beta)^(-1/2), r0=w0/(1-w0), I=q/tau,
+ z0=q/(tau r0),                                         (2.2)
+where q is in a fixed compact subinterval of (0,infinity). For all small
+a, |z0|<1 and the initial configuration exists. It has
+ beta h12(initial)=1-z0^2<=1.                            (2.3)
+Take the same spatial field at every original time and all temporal
+links I; then every other original plaquette has energy zero.
+
+Write R=tau r and M=tau r0. Equation(2.1) is exactly
+ 1=integral_R^M (1+y/tau)/(y^2-q^2) dy.                   (2.4)
+Here M->infinity, r0->0. Uniformly for q in the fixed compact interval,
+ R->q coth q, with convergence of the first q derivative. (2.5)
+Proof: let J_M(R)=integral_R^M (y^2-q^2)^(-1)dy. Since
+1<=1+y/tau<=1+r0 on the integration range, (2.4) implies
+1/(1+r0)<=J_M(R)<=1. The omitted tail to infinity is O(1/M), uniformly
+once M is larger than twice the largest q. Thus J_infinity(R)->1,
+whose unique solution is R=q coth q. This also places R a fixed
+positive distance above q and bounds it above. Differentiating(2.4)
+now gives the claimed C1 convergence by dominated convergence: the
+q derivative of the integrand is 2q(1+y/tau)/(y^2-q^2)^2, integrable
+uniformly on these ranges, and the lower-endpoint derivative stays
+bounded away from zero. M and tau are independent of q.
+
+Consequently the actual finite-lattice scalar, as a function F_a(q),
+obeys the following C1 limit:
+ h12(s)/a^4 -> q^2 csch^2(q)/(32s^2),
+ F_a(q) -> F(q)=exp[-A q^2 csch^2(q)],
+ A=alpha/(4g_*^2s^2),
+ F'(q)=2A F(q) q csch^2(q)(q coth q-1)>0.                (2.6)
+The exact identity used here is |p|^2=2h12-h12^2. Thus the h12^2/a^4
+term tends to zero with its first q derivative. The limit is the
+calibrated nonlinear observable itself, not its small-field surrogate.
+
+3. FIRST INFLUENCE AND A FINITE DISPLACEMENT OBSTRUCTION
+
+Use n1(theta)=(cos theta,sin theta,0) and
+n2(theta)=(sin theta,cos theta,0), so z0=sin(2theta).
+Evaluate at theta_a=(1/2)arcsin(q/(tau r0)), holding w0 fixed.
+The full spatial tangent J=dU/dtheta has
+ ||J||_2^2=8n w0, ||J||_infinity=2sqrt(w0),
+ dq/dtheta=2tau r0 cos(2theta_a).                       (3.1)
+These are first derivatives; the path need not be a geodesic.
+For the unit tangent j=J/sqrt(8n w0), at any final spatial point,
+ |D b_(s,a,x)[j]|^2
+   =tau^2 r0^2 cos^2(2theta_a) F_a'(q)^2/(2n w0)
+   =[32s^2 F'(q)^2/(sqrt(2)L^3)]
+                         (a sqrt(beta))^(-1)[1+o(1)].  (3.2)
+The same holds for any normalized spatial average at that time, since
+all its point responses agree on this homogeneous family. This diverges
+on the displayed sequence. Gauge invariance annihilates the vertical
+part of J; projecting onto the horizontal tangent can only reduce its
+norm. Thus(3.2) is not produced solely by a gauge direction. No claim
+that J itself is horizontal at nonzero z0 is needed.
+
+Time smearing matters. Write W_t=sum_x w_(t,x). Independent slice
+directions give only the lower bound
+ ||grad O_a(f)||_2^2 >= RHS(3.2) sum_t W_t^2.             (3.3)
+For a fixed smooth temporal profile, sum W_t^2=O(a), with the usual
+nonzero continuum limit after dividing by a. Thus this particular
+calculation is of order beta^(-1/2) after time smearing, NOT a divergent
+four-dimensional squared-gradient lower bound. It must not be used
+to disprove the time-smeared L2 influence target.
+
+The SUMMED influence relevant to a uniform per-link perturbation is
+different. Apply the same theta variation on every time slice in the
+support of f and use duality between l-infinity and l1:
+ sum_e |grad_e O_a(f)|
+   >=tau r0 cos(2theta_a)|F_a'(q)|/sqrt(w0)
+   =8s F'(q) a^-2 (2beta)^(-1/4)[1+o(1)].               (3.4)
+Only spatial links enter this sum. The physical source weights sum to1;
+they therefore do not remove this coherent response.
+
+There is also a finite version with no differentiation. Choose two
+fixed 0<q1<q2. Their initial configurations have per-link Pauli/2
+distance at most
+ 2sqrt(w0)|theta_a(q2)-theta_a(q1)|
+                      <=C a^2 beta^(1/4),              (3.5)
+which tends to zero. Both obey(2.3), including all temporal plaquettes.
+Yet their smeared observables differ by
+ O_a(f;U(q2))-O_a(f;U(q1))->F(q2)-F(q1)>0.               (3.6)
+Thus plaquette smallness alone does not give equicontinuity of this
+physical scalar in the unweighted original-link sup metric. This
+excludes any uniform Lipschitz or fixed positive Holder modulus of
+that particular type on the entire energy sublevel. It says nothing
+about the probability of this comparison under a native coupling.
+
+4. THE ACTUAL WILSON LAW SUPPRESSES THIS WHOLE WINDOW
+
+The following input is already proved in
+coherent_energy_window_suppression_turn65.txt Sections1--2. Given all
+links but one edge e, its original Wilson conditional density on S^3
+is proportional to exp(z.q), |z|<=6beta. A cap lower bound for its
+normalizer gives a density supremum C beta^(3/2). Haar h_p=1-a.q
+has density (2/pi)sqrt(h_p(2-h_p)). Therefore
+ P_W(|beta h_p-1|<=epsilon | outside e)<=C epsilon        (4.1)
+for epsilon<=1/2, uniformly in beta>=1, exterior and volume.
+Choose at least n/5 edge-disjoint 12-plaquettes in one spatial slice.
+Repeated conditioning applies(4.1) without independence. For fixed
+sufficiently small epsilon0>0,
+ E_t={all spatial x: |beta h12(t,x)-1|<=epsilon0}
+ satisfies P_W(E_t)<=exp(-c n).                         (4.2)
+This is an ORIGINAL-law estimate, not an energy-MGF countermodel.
+
+By(2.2)--(2.3), the entire family at any fixed compact set of q values
+lies in the INTERIOR of E_t for all small a. The event includes a
+gauge-invariant open neighborhood of those configurations. Thus the
+new first-derivative obstruction has the same rare coherent geometry
+as the old symmetric Hessian example.
+
+For completeness the final radial function has the sharper elementary
+terminal gradient bound
+ ||grad_V b_(0,a,x)||_2 <=2sqrt(2alpha/e)/(g_*a^2).        (4.3)
+Indeed the maximum gradient of exp(-alpha|X|^2) is sqrt(2alpha/e);
+the Pauli/2-to-quaternion derivative of each of four links is1/2,
+so the product-plaquette p map has l2 operator norm at most1, followed
+by the factor2/(g_*a^2). Bounded local incidence in the exact flow
+vector field gives ||D Phi_s||<=exp(Cs/a^2), as already proved in
+the TURN65 window note. It follows that, for every fixed p>0,
+ E_W[1_Et ||grad b_(s,a,x)||_2^p]
+       <=C_p a^(-2p) exp(C_p s/a^2-c(L/a)^3)->0.        (4.4)
+For the l1 influence insert at most (3n)^(p/2) on the right, by
+Cauchy--Schwarz; its limit is still zero. Convex spatial averages
+have the same l2 bound. The crude exponential derivative estimate
+is useful HERE only because it is multiplied by the proved a^-3
+probability cost; it is not a full-measure continuity estimate.
+
+For a fixed physical time period, let E be the union of E_t over the
+slices read by f. Its probability is at most N_t exp(-cn), N_t=O(a^-1).
+The deterministic l2 gradient of O_a(f) is at most C a^-2 exp(Cs/a^2)
+by convexity (or better by the disjoint-slice weights), and its l1
+norm is at most sqrt(3n N_t) times this. Hence the analogue of(4.4)
+for O_a(f), with E and either norm, also tends to zero. A polynomial
+number of time slices is equally admissible. No arbitrary time-volume
+limit is absorbed in this union bound.
+
+This controls the stated coherent windows, not every large-influence
+configuration. A covering of the entire bad derivative set by such
+windows with a paid entropy has NOT been proved. Treating(3.2) as a
+Wilson-average divergence would contradict the available estimate(4.4).
+
+5. THE REMAINING ORIGINAL-LAW MARK, WITH THE ACTUAL PROBE AT ITS END
+
+Here is the precise place where the existing energy estimates stop.
+Let V_r=Phi_r(U) and let Y_r be the adjoint of the remaining tangent
+flow applied to the final probe gradient:
+ Y_r=(D Phi_(s-r)(V_r))^* grad b_(0,a,x)(V_s).
+Then Y_0=grad b_(s,a,x)(U), Y_s=grad b_(0,a,x)(V_s), and
+ nabla_r Y_r=(4/a^2) Hess S_sp(V_r)Y_r.                  (5.1)
+The sign is positive because this is the backward adjoint variable;
+its pairing with each forward Jacobi field is constant.
+
+The exact plaquette Hessian calculation in
+nonlinear_spatial_flow_energy_turn65.txt Section2 gives
+ Hess S_sp[Y,Y]>= (1/4)||d_VY||_2^2
+                      -C sum_e rho_e(V)|Y_e|^2,
+ rho_e(V)=sum_(p containing e)sqrt(h_p(V)).
+Integrating(5.1) BACKWARD and averaging under the SAME original law,
+ E_W||grad b_(s,a,x)||_2^2
+ <=E_W||grad b_(0,a,x)(V_s)||_2^2
+    -(2/a^2)int_0^s E_W||d_(V_r)Y_r||_2^2 dr
+    +(C/a^2)int_0^s sum_e E_W[rho_e(V_r)|Y_(r,e)|^2]dr. (5.2)
+The last correlation is rooted at the actual final plaquette, through
+Y_s, and includes the physical a^-2 terminal derivative(4.3).
+Replacing it by E rho_e E|Y_e|^2 is unjustified.
+
+The actual TURN64/65 consumers provide
+ E S_sp(V_r)<=9n/(2beta),
+ E int_0^s ||grad S_sp(V_r)||_2^2 dr<=9n a^2/(8beta),
+ E rho_e(V_r)<=C beta^(-1/2).                            (5.3)
+They give no marked bound on the last line of(5.2), nor an estimate
+on its complement after removing E. Even a fictitious factorization
+would produce the nonuniform rate C/(a^2 sqrt(beta)). The dissipated
+force grad S_sp in(5.3) is different from this probe-dependent adjoint
+Y. Ground-state-law entropy/Fisher identities from TURN67 must not be
+substituted for the original isotropic Wilson law in(5.2).
+
+An exact original-law integration-by-parts reformulation shows another
+issue. Set c=4/a^2, F_r=b_(0,a,x) composed with Phi_r, and let S_4 be
+the beta-free sum of ALL four-dimensional plaquette deficits, so the
+original law is dmu_W=Z^(-1)exp(-beta S_4)dHaar. On the product of compact
+groups, the transport equation is partial_r F_r=-c grad S_sp.grad F_r.
+Weighted integration by parts yields
+ d/dr E_W|grad_sp F_r|^2
+ =-2c E_W Hess S_sp(grad F_r,grad F_r)
+   +c E_W[(Delta_sp S_sp-beta grad_sp S_4.grad_sp S_sp)
+                                      |grad F_r|^2].   (5.4)
+All derivatives are finite-lattice derivatives, so this identity is
+legitimate. The temporal plaquettes in grad_sp S_4 are essential.
+Neither this score nor its correlation with |grad F_r|^2 is controlled
+by(5.3). Dropping it, or replacing S_4 by S_sp, would change the law.
+Formula(5.4) is a diagnosis, not an additional smoothing estimate.
+
+6. WHAT A REPLACEMENT ARGUMENT WOULD ACTUALLY NEED
+
+For any real path of original fields U_v joining U and U', at fixed
+cutoff the fundamental theorem of calculus gives the exact bound
+ |O_a(U')-O_a(U)|
+ <=int_0^1 sum_e |grad_e O_a(U_v)| |dot U_(v,e)| dv.     (6.1)
+It is valid for the complete probe and keeps the physical source
+weights. To average(6.1) in a native/basic-R coupling one needs the
+JOINT marked influence on the path's actual distribution. An endpoint
+having original Wilson law does not make every U_v Wilson distributed.
+Even a proved estimate E_W sum_e|grad_e O_a| would require a justified
+change-of-measure or a different exact conditional transport consumer
+before it could be inserted into(6.1).
+
+The old coarse-preserving/half-local oscillation consumer in
+turn75_full_law_tail.txt Section3 is exact at its own admitted kernels.
+Replacing its deterministic oscillations by an original-law gradient
+mean is not a formal improvement: the conditional replacement paths
+and their marked laws must be supplied. Likewise TURN84 bounds for
+cumulative ORIGINAL plaquette displacement do not directly bound the
+flowed plaquette displacement; doing so requires precisely this
+nonlinear influence estimate.
+
+The actual comparison norm need not be stronger than an L1 error for
+this specified source. For a coupling of two laws and bounded source
+values O_+,O_-,O'_+,O'_- in[0,1], direct expansion gives
+ |Cov(O_-,O_+)-Cov(O'_-,O'_+)|
+       <=2 E(|O_--O'_-|+|O_+-O'_+|).                   (6.2)
+Thus a reflection-compatible coupling with each source error at most
+epsilon has connected two-source error at most4epsilon. This is the
+elementary existing bounded-probe consumer, not a newly proved coupling.
+It retains both means and requires the SAME calibrated physical source
+on both sides. The influence problem is to bound its right side for
+an actual original-law comparison, not all future bounded tests.
+
+For the minimal TURN87 source, one only needs a sufficiently accurate
+comparison of ONE connected reflected two-source coefficient, not an
+arbitrary bounded-test norm. Equations(3.5)--(3.6) show why even that
+bounded source cannot be handled by a universal energy-sublevel link
+modulus. Equation(4.4) also shows why the pointwise failure does not
+rule out a more selective original-law comparison. A useful next
+estimate must control the rooted mark in(5.2), or directly the joint
+coupling functional(6.1), on configurations outside the already paid
+coherent window. No such bound is established here.
+
+PROVENANCE AND EXACT LIMITS
+
+The spatial-flow definition and calibration are TURN63. The homogeneous
+ODE, exact Hessian and Wilson coherent-window theorem are TURN65. Their
+reuse is explicit above. The new results are the C1 asymmetric radial
+limit, its finite original-link displacement consequence, the source
+smearing distinction and the application of the existing ORIGINAL-law
+coherence bound to those actual probe influences. The adjoint and Wilson
+IBP formulas are finite-dimensional derivations, not imported continuum
+regularity theorems.
+
+No claim is made about the original reflected covariance's lower bound,
+nonlinear continuum-flow existence, tightness of a full gauge-invariant
+YM algebra, O(4) invariance, uniqueness of vacuum, a mass gap, or YM4
+existence. The bounded scalar's elementary compactness does not supply
+any of those missing conclusions.

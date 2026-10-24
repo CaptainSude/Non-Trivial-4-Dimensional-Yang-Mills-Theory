@@ -1,0 +1,365 @@
+NONLINEAR FOURIER CONSUMERS AND A PHYSICAL OPERATOR OBSTRUCTION -- TURN66
+20 October 2026. tail47.
+
+RESULT
+
+Two exact statements identify the scope of the TURN65 Gaussian
+feature factorization.
+
+A. Every smooth bounded gauge-invariant finite-lattice observable
+has a finite ambient Fourier representation to which the original
+Wilson source theorem applies. Section2 proves the resulting
+nonlinear adjacent-time inequality with the COMPLETE denominator.
+However, Section3 proves that certifying d(F)=O(a) solely by its
+absolute Fourier norm forces Var(F)->0 whenever a beta_max->0.
+This is a limitation of that certification, not of the actual
+observable or its actual increment.
+
+B. There is no finite operator constant C such that
+
+ [F,[F,T]] <= C T                                    (0.1)
+
+for the exact finite-volume SU2 Wilson transfer matrix, already
+for the bounded analytic physical plaquette observable
+
+ F(U)=chi_2(W_p(U))/3
+     =(4[Tr W_p(U)/2]^2-1)/3.                        (0.2)
+
+Here chi_n is the character of the SU2 irrep of dimension n+1;
+thus chi_2 is spin1. The obstruction holds with the ACTUAL spatial
+Wilson multiplication in T. It follows from an explicit high-spin
+physical subspace, not from changing the spatial potential.
+
+The statement concerns an operator inequality over all physical
+vectors. It does NOT say that the actual thermal trace of this
+double commutator is unbounded, or disprove a state-dependent
+Wilson estimate for a flowed magnetic observable. Bounded F has
+bounded actual adjacent increment. The result explains why a
+bounded feature-space multiplier or uniform relative commutator
+shortcut cannot handle even all elementary nonlinear observables.
+
+1. EXACT INPUTS AND CONVENTIONS
+
+I read current_proof_frontier.txt (TURN65),
+temporal_quadratic_increment_turn65.txt, and
+temporal_multislab_addendum_turn65.txt. Those producers remain frozen.
+
+The imported finite transfer factorization is the previously
+checked pure-gauge specialization of Luscher, CMP54(1977),283--292,
+DOI https://doi.org/10.1007/BF01614090, SectionsII.A--II.C.
+No identification of -log T with a differential Hamiltonian is used.
+
+The slice space X=(SU2)^E is embedded as (S^3)^E in R^(4|E|).
+All Haar measures are normalized. Temporal coefficients beta_e>0
+and the real gauge-invariant spatial multiplication M are constant
+from slab to slab. The periodic temporal length is N>=4. On the
+physical Hilbert space,
+
+ T=M Q M,
+
+where Q is the product Wilson electric convolution. With
+h(W)=1-Tr W/2 and c(beta)=2 exp[-beta]I_1(beta)/beta,
+
+ Q(u,v)=product_e c(beta_e)^-1
+                         exp[-beta_e|u_e-v_e|^2/2].
+
+The full original partition denominator is
+[product_e c(beta_e)]^N Tr_phys T^N.
+The actual temporal links align the adjacent slice V as V^h.
+All source expectations below use u-v^h, not arbitrary gauge choices.
+
+The single-slab TURN65 Fourier theorem gives, for deterministic b,
+
+ E cos[b.(u-v^h)] >= exp[-sigma_b^2/2],
+ sigma_b^2=sum_e |b_e|^2/beta_e.                      (1.1)
+
+The full real moment-generating inequality also holds on all slabs.
+Only the proved ONE-slab characteristic lower bound(1.1) is needed
+for Section2.
+
+For real bounded physical F, the exact adjacent increment is
+
+ d_N(F)=(1/2)E[(F(V)-F(U))^2]
+       =[2 Tr T^N]^-1 Tr[T^(N-1)[F,[F,T]]].           (1.2)
+
+The positive thermal remainder in(1.2) is a particular operator.
+Replacing it by every positive operator is a strictly stronger
+assertion, and Section5 disproves the corresponding uniform bound.
+
+2. AN ACTUAL NONLINEAR FOURIER-CONSUMER INEQUALITY
+
+Suppose a bounded physical observable has, on X, a representation
+
+ F(u)=int_R^D exp[i b.u] nu(db),   D=4|E|,            (2.1)
+
+with finite complex measure nu. A real F is the case needed in(1.2).
+Define
+
+ H_beta(nu)=int sqrt[2(1-exp[-sigma_b^2/2])] |nu|(db),
+ R_beta(nu)=int min(1,sigma_b)|nu|(db).                (2.2)
+
+Both are finite. Then
+
+ d_N(F)<= (1/2) H_beta(nu)^2 <= R_beta(nu)^2.          (2.3)
+
+For complex F the same proof bounds(1/2)E|F(V)-F(U)|^2.
+
+Proof. Gauge invariance gives F(V)=F(V^h) for the actual temporal
+alignment. Minkowski's inequality in the original normalized L2 law
+and(1.1) yield
+
+ sqrt[2d_N(F)]
+  <=int ||exp[i b.u]-exp[i b.v^h]||_L2 |nu|(db)
+  <=int sqrt[2(1-exp[-sigma_b^2/2])] |nu|(db).
+
+The last integrand is at most sqrt2 min(1,sigma_b), proving the
+second bound. All expectations retain the original Wilson
+denominator. No independence, random-Jacobian substitution, or
+intermediate-field equilibrium law is used.
+
+This applies to EVERY smooth finite-lattice observable, including
+the finite spatial-flow magnetic observables, as a finite bound.
+Indeed choose a smooth radial cutoff equal to1 near radius1 and
+supported inside(1/2,3/2). On the product of these annuli define
+
+ F_ext(x)=product_e cut(|x_e|)
+                       F((x_e/|x_e|)_e),
+
+and set it to0 outside. This is a smooth compactly supported ambient
+extension. Its ordinary Fourier transform is rapidly decreasing
+and defines a finite measure nu in(2.1), with every polynomial
+moment finite. This extension statement supplies no useful
+cutoff-uniform control of H_beta or R_beta.
+
+3. WHY AN ABSOLUTE FOURIER-NORM CERTIFICATE COLLAPSES THE VARIANCE
+
+Assume the spatial graph has distinct edges, no loops and no
+parallel edges, as for the ordinary periodic lattice with periods
+at least4. Put beta_max=max_e beta_e and assume beta_max>=1.
+
+For fixed u, independent site gauge averaging gives
+
+ E_g u_e^g=0,
+ E_g[(b_e.u_e^g)(b_f.u_f^g)]=0 if e!=f,
+ E_g(b_e.u_e^g)^2=|b_e|^2/4.                         (3.1)
+
+A distinct pair has an endpoint appearing in just one edge; its
+normalized Haar average kills the cross term. Each single transformed
+quaternion is uniform on S^3. Since F is gauge invariant, average
+(2.1) over g and subtract the constant F_ext(0)=nu(R^D):
+
+ |F(u)-nu(R^D)|
+  <=int min(2, |b|/2)|nu|(db)
+  <=2 sqrt(beta_max) R_beta(nu).                     (3.2)
+
+The first bound uses Cauchy--Schwarz and(3.1); the second follows
+from |b|<=sqrt(beta_max)sigma_b, separately for sigma_b<=1 and
+sigma_b>=1. Consequently under EVERY probability mu on the links,
+
+ Var_mu(F)<=4 beta_max R_beta(nu)^2.                  (3.3)
+
+The sharper norm H_beta has the same limitation. Put
+c0=sqrt[2(1-exp[-1/2])]>0. For all sigma>=0,
+
+ sqrt[2(1-exp[-sigma^2/2])]>=c0 min(1,sigma).
+
+Thus
+
+ Var_mu(F)<= (4 beta_max/c0^2) H_beta(nu)^2.           (3.4)
+
+In particular, if one certifies d_N(F)<=C a by demanding the
+right side of either inequality(2.3) be O(a), then(3.3)--(3.4)
+force Var_mu(F)=O(a beta_max). On logarithmic weak-coupling
+sequences this tends to0.
+
+This conclusion holds for any chosen finite Fourier representation,
+and therefore also prevents evasion by taking an infimum over
+representations with the same absolute-norm certificate. It does
+not assert that a small actual d_N(F) forces small variance:
+the losses from taking absolute values in(2.3) can be substantial.
+State-specific cancellation or a different nonlinear representation
+would have to do additional work.
+
+4. AN EXACT PHYSICAL PLAQUETTE SUBSPACE
+
+For the operator obstruction take homogeneous temporal beta>0.
+Let p be one elementary spatial plaquette with its four distinct
+links, and W=W_p its oriented holonomy. More generally the following
+argument uses any simple loop of length ell>=1 with distinct edges;
+the actual plaquette has ell=4.
+
+Let chi_n be the SU2 character of dimension n+1, and set
+
+ psi_n(U)=chi_n(W(U)),  n=0,1,2,...
+
+These are physical gauge-invariant functions. Because one can
+integrate one loop link while fixing the others, W has normalized
+Haar law under the product slice Haar measure. Character
+orthogonality therefore gives
+
+ <psi_n,psi_m>=delta_nm.                              (4.1)
+
+The central one-link electric convolution has spin-n/2 eigenvalue
+
+ r_n=I_(n+1)(beta)/I_1(beta)>0.
+
+Each of the ell loop links carries this same representation,
+including oppositely oriented links by the conjugate representation.
+All other links carry the trivial representation. Hence
+
+ Q psi_n=a_n psi_n,   a_n=r_n^ell.                    (4.2)
+
+This closed physical subspace is invariant under multiplication by
+
+ F=chi_2(W)/3,   -1/3<=F<=1.
+
+The elementary SU2 character product formula gives, for n>=2,
+
+ F psi_n=(psi_(n-2)+psi_n+psi_(n+2))/3.                (4.3)
+
+It follows either by multiplying the finite weight sums, or by
+the spin1 tensor-product rule. Low-index boundary variants will
+not enter the high-index test vectors below.
+
+5. THE RELATIVE DOUBLE COMMUTATOR IS UNBOUNDED ABOVE
+
+Write Gamma_Q(F)=[F,[F,Q]]. On finite sums of the psi_n define
+the relative form
+
+ G=Q^(-1/2) Gamma_Q(F) Q^(-1/2).                      (5.1)
+
+No boundedness of this relative form is assumed. A form bound
+Gamma_Q(F)<=C Q would require <u,Gu><=C||u||^2 on every
+such finite sum.
+
+The constant part of(4.3) cancels from the double commutator.
+Direct multiplication gives, for n away from the boundary,
+
+ d_n:=G_(n,n)
+       =[4-2(a_(n-2)+a_(n+2))/a_n]/9,
+
+ t_n:=G_(n,n+4)
+       =[a_n+a_(n+4)-2a_(n+2)]
+                            /[9 sqrt(a_n a_(n+4))].  (5.2)
+
+All n to n+2 entries cancel exactly. There are no other off-diagonal
+entries. Thus each residue class modulo4 is a scalar Jacobi block.
+
+Here are the required asymptotics, proved directly from the positive
+Bessel series at fixed beta. With m=n+1,
+
+ I_m(beta)=(beta/2)^m/m! times
+             [1+beta^2/(4(m+1))+O_beta(m^-2)].
+
+For any fixed integer shift q the ratio of the bracketed factors
+at m+q and m is 1+O_beta(m^-2). Put
+
+ kappa=(2/beta)^(2ell).
+
+Factorial expansion gives
+
+ a_(n-2)/a_n
+   =kappa[m^(2ell)-ell m^(2ell-1)+O_beta,ell(m^(2ell-2))],
+
+ sqrt[a_n/a_(n+4)]
+   =kappa[m^(2ell)+5ell m^(2ell-1)
+                                  +O_beta,ell(m^(2ell-2))],
+
+ sqrt[a_(n-4)/a_n]
+   =kappa[m^(2ell)-3ell m^(2ell-1)
+                                  +O_beta,ell(m^(2ell-2))].
+
+Also a_(n+2)/a_n=O_beta,ell(m^-2ell), and
+a_(n+2)/sqrt[a_n a_(n+4)]=1+O_beta,ell(m^-1).
+Substitution into(5.2) proves
+
+ t_n=(kappa/9)m^(2ell)(1+O_beta,ell(m^-1))>0,
+
+ V_n:=d_n+t_n+t_(n-4)
+      =(4ell kappa/9)m^(2ell-1)
+                            +O_beta,ell(m^(2ell-2)). (5.3)
+
+For ell=4 the positive leading term is
+(16/9)(2/beta)^8 m^7.
+
+For a finitely supported real sequence u in one residue class,
+the Jacobi identity is
+
+ <u,Gu>=sum_n V_n u_n^2
+                 -sum_n t_n(u_(n+4)-u_n)^2.          (5.4)
+
+Take a packet supported on n=K+4j, 1<=j<=J, where
+J=floor(K^(3/4)), with normalized sine coefficients
+u_(K+4j)=sqrt[2/(J+1)]sin[pi j/(J+1)], zero elsewhere.
+Its squared nearest-neighbor difference sum is at most
+pi^2/(J+1)^2. Uniformly over this packet, n is comparable to K.
+Equations(5.3)--(5.4) give, for fixed beta and ell,
+
+ <u,Gu>
+   >=c_(beta,ell) K^(2ell-1)
+                  -C_(beta,ell) K^(2ell)/J^2
+   >=c_(beta,ell) K^(2ell-1)
+                  -C_(beta,ell) K^(2ell-3/2)
+     ->+infinity.                                   (5.5)
+
+Every packet is a legitimate finite vector in the form domain:
+the corresponding test f=Q^(-1/2)u is a finite character sum,
+although its ordinary L2 norm may be large. Its Rayleigh quotient
+is
+
+ <f,Gamma_Q(F)f>/<f,Qf>=<u,Gu>.
+
+Thus no finite relative operator upper bound exists for Q.
+
+6. THE ACTUAL SPATIAL WILSON POTENTIAL DOES NOT REPAIR THAT OPERATOR BOUND
+
+The preceding construction is already in the physical Hilbert space
+of the original spatial lattice. On any fixed finite lattice, the
+actual Wilson M=exp[-V_sp/2] is bounded, strictly positive and has
+bounded inverse. F, M and the gauge projection are multiplication/
+physical operators with the needed commutations. Exactly,
+
+ [F,[F,T]]=M Gamma_Q(F) M.                            (6.1)
+
+If(0.1) held, set h=M^(-1)f in its quadratic form. One would obtain
+
+ <f,Gamma_Q(F)f><=C<f,Qf>
+
+for every physical f, contradicting(5.5). This proves the failure
+of(0.1) for the ACTUAL spatial Wilson potential, not just an
+arbitrary replacement potential.
+
+It also rules out any proposed feature factorization
+
+ Gamma_Q(F)=F_feature* B_F F_feature,
+ F_feature*F_feature=Q,
+ B_F<=C I
+
+with a finite uniform upper constant, since that would imply the
+already disproved relative operator bound.
+
+There is no contradiction with(1.2) or boundedness of actual d_N(F).
+The high-spin test vectors are oscillatory physical states, not the
+particular positive thermal remainder T^(N-1). To exploit that
+remainder one must use additional state-specific information.
+The trace may remain small even though the relative form has
+arbitrarily large positive values on other states.
+
+7. CONSEQUENCE FOR THE NEXT PROOF STEP
+
+The Fourier-feature theorem does have a rigorous nonlinear consumer,
+but its direct absolute Fourier-norm certification loses the desired
+variance on the logarithmic ultraviolet sequence. A universal
+relative commutator domination is not an available substitute:
+it fails already for a simple bounded analytic plaquette character
+with the actual finite Wilson transfer operator.
+
+This does not obstruct a carefully proved temporal-continuum limit
+at fixed spatial graph, nor a state-sensitive Wilson estimate for
+the spatially flowed magnetic observable. Such arguments must retain
+their limiting order or their actual state information; they cannot
+be replaced by the false operator bound(0.1).
+
+No nonlinear physical increment estimate of the desired cutoff-
+uniform size, physical variance lower bound, or nontrivial YM4
+existence proof has been established by these results.

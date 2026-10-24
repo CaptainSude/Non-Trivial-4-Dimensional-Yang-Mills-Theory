@@ -1,0 +1,80 @@
+TURN82 -- INDEPENDENT AUDIT OF THE CONDITIONAL CURRENT TUBE
+20 October 2026. gauge47.
+
+Producer: work/turn82_current_tube_history.txt
+SHA256: 841725917AAC7F6BC5CC17BA5EE9FCB8D80A141964026982489BFBD965ABDDAB
+
+VERDICT: PASS at the stated finite conditional-kernel scope. I read the
+complete producer, independently checked Sections2--5A, and checked the
+two cited primary special-function formulas. No repair requested.
+
+1. COVARIANCE CONSTANTS
+
+The x=q.n marginal has density exp(rx)sqrt(1-x^2), so integration by
+parts gives r E(1-x^2)=3c. Rotational symmetry then gives transverse
+variance c/r and longitudinal variance c'=1-c^2-3c/r. The small-r
+series c=r/4-r^3/96 agrees with the normalized I_1 series.
+
+The comparison b=r/(sqrt(r^2+4)+2) has b=r/4-r^3/64+... and at a
+crossing c=b, c'-b'=b/r-b'>0 for r>0. This proves c>=b and hence
+c'<=c/r. The positive c' gives the stated upper root for c, implying
+c/r<=min(1/4,1/(1+r)). The Gamma(shape3/2) decreasing-tilt argument
+gives E(1-x)<=3/(2r), and substitution in the decreasing Riccati
+right side gives c'<=9/(4r^2) for r>=3/2. Together with1/4 this proves
+the global4/(1+r)^2 bound; at r<=3 use1/4, at r>=3 use9/(4r^2).
+All r=0 statements are continuous. In particular
+Tr Cov(q)=1-c^2<=4/(1+r), the input used by the noise consumer.
+
+2. NORMALIZATION, VARIANCE TUBE, AND SOURCE LOG
+
+Absorbing the real perturbation into k_c is exact. The total variation
+of the normalized complex product is precisely the reciprocal modulus
+of its characteristic-function product. Centering each phase leaves
+that modulus unchanged, and |E e^(iX)-1|<=EX^2/2 proves the claimed
+lower bound. The scalar -log(1-v/2)/v is increasing for0<v<2, so the
+complete product costs exp(C_* sum v), not a sum of absolute linear
+current sizes. In(3.3), C(0)=1 is used before taking absolute values;
+the resulting disk around1 legitimately supplies the source logarithm.
+
+For the fixed weighted Hilbert ball, the real-part shift gives
+1+|a+Re zeta|>=(1-rho)(1+|a|). Thus V<=rho^2/(1-rho), and rho<=1/2
+allows v_*=1/2 with C_*=2log(4/3)<2/3. The final exp(4rho^2/3)
+constant checks. The directional Cauchy versus multilinear-polarization
+distinction is explicit and correct; no unrestricted coefficient-sum
+claim is made.
+
+3. BESSEL PRODUCT AND SHARP STRIP
+
+I opened the primary DLMF pages during this audit:
+  https://dlmf.nist.gov/10.21.E15
+  https://dlmf.nist.gov/10.21#i
+  https://dlmf.nist.gov/10.25.E2
+They supply the product for J_nu (nu>=0), real zeros for nu>=-1,
+simplicity away from the exceptional zero locations, and the I_nu
+series. At nu=1 they give exactly the producer's entire product in
+z.z. Its zero condition is c.b=0 and |b|^2=|c|^2+j_(1,m)^2. Therefore
+the strip with width j_(1,1) is genuinely uniform and sharp.
+
+The normalized factor estimate uses its positive real part
+1-|b|^2/(r^2+j_m^2), and the differentiated product gives
+sum_m(r^2+j_m^2)^-1=c/(2r). These verify(4.4)--(4.5), including the
+factor1/2. The explicit bounded probe at the first zero has nonzero
+numerator by simplicity of J_1's zero, so the possible pole statement
+is not just a zero-denominator formality.
+
+4. EXACT CURRENT JETS AND SCOPE
+
+The second normalized derivative is the three-variable cumulant
+E[(B-EB)X_h X_k]; this includes the derivative of both conditional
+normalizers. Independence supplies E X_h^2=sum_e v_e(h_e). The factors
+1/2 and1 in(5.4) follow from Var(B)<=1/4 and |B-EB|<=1 respectively.
+They require no analytic extension of B in the compact link variables.
+
+The producer correctly keeps the interacting auxiliary marginal nu,
+its complete denominator, and original overlapping read contacts
+separate. Uniform current-tube bounds do not assert a uniform ball in
+the unbounded auxiliary variables, nor provide spatial mixing or a
+nonzero continuum reflected channel. Those limitations are essential
+and are stated in the final section.
+
+Producer unchanged. Audit frozen against the hash above.

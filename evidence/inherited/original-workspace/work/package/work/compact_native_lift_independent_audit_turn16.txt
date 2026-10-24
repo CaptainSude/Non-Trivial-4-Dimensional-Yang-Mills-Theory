@@ -1,0 +1,267 @@
+COMPACT EXACT ORDINARY-AVERAGE LIFT: INDEPENDENT AUDIT
+19 October 2026. Admission-proof agent. Turn 16.
+
+Audited note: primary_reference_field_class_turn16.txt, Sections 4--8.
+Primary averaging formula: B109, pp253--254, (0.8),(0.11),(0.12).
+Primary current identity: B109, p272, (3.11).
+Primary full-domain implication: B109, p263, paragraph after (1.16).
+
+Verdict
+
+The proposed compact construction passes at its stated coherent-patch
+scope. The missing uniform nonlinear inverse is now proved from the
+literal ordinary averaging operation, rather than assumed in a finite
+dimensional inverse-function argument. It gives an exact one-coordinate
+coarse lift with fixed fine exterior, uniform in refinement, at a real
+anchor which already has strict margin in the smaller physical-current
+subclass throughout the TARGET field domain. Its coherent small potential
+is needed on the complete dependency patch. All other affected coarse
+coordinates are fixed simultaneously.
+
+This does not prove that every actual selected reference has such an
+anchor or such a coherent patch. It does not preserve independent finer
+constraints of an arbitrary mixed determining family. These are separate
+coverage/slot questions, not defects in the local construction below.
+
+1. The auxiliary corrected map is legitimate
+
+Use the convention V^g(c)=g(c_-)V(c)g(c_+)^{-1}. Let a(V;y) be the
+exponential of the arithmetic mean of the small logarithms of the
+source's averaged contour variables U_V(y,x), for x in B(y). Put
+
+ C(V)(c)=a(V;c_-)^{-1} M(V)(c) a(V;c_+).
+
+This is an AUXILIARY map. It need not equal the corrected Q used in
+the variational theorem, and no such identification is needed.
+
+Differentiating primary (0.12) at the identity gives the average of
+the straight translated strings and two endpoint-contour terms.
+Primary (0.8) says the derivative of the contour group mean is the
+arithmetic mean. Thus the two factors a in C remove exactly the two
+endpoint terms. With input physical lattice spacing h,
+
+ F_h(A)=(i Lh)^{-1} log C(exp(i hA))
+
+satisfies DF_h(0)=Q_st, where Q_st is a positive normalized average
+of input physical components, of sup operator norm one.
+
+At fixed primitive L every output read contains a fixed finite number
+of links. Holomorphy on a fixed dimensionless angle ball therefore gives
+
+ ||DF_h(A)|| <= 1+C_L h ||A||,
+ ||F_h(A)|| <= ||A||+C_L h||A||^2.                       (1.1)
+
+The h factor is indispensable and is present: degree n in the input
+angles contributes h^(n-1) after division by Lh. The constants do not
+depend on the number of earlier averaging steps or on total volume.
+
+2. The ordinary iterate has a bounded holomorphic physical radius
+
+Let eta=L^{-k}, h_t=L^t eta, C_0=U, C_{t+1}=C(C_t), and write
+C_t=exp(i h_t A_t). Since sum_{t<k}h_t<1/(L-1), (1.1) gives
+||A_t||<=2||A_0|| on one sufficiently small complex sup ball, uniformly
+in k,t. This is a summable-scale bootstrap, not a C^k estimate.
+
+The ordinary map M is gauge covariant, including for the small complex
+gauge transformations used here. This follows directly from (0.12),
+similarity covariance of its logarithm, and the left/right covariance
+of the contour mean. Define, at surviving coarse vertices,
+
+ g_0=1,                  g_{t+1}=g_t a(C_t).
+
+Then M^t(U)=C_t^{g_t} exactly. The order of this product matters.
+Moreover ||log a(C_t)||<=C_L h_t ||A_0||, so both g_t and its inverse
+differ from 1 by at most C_L h_t||A_0||. The sum through t is of order
+h_t, rather than of order one. Consequently
+
+ ||(i h_t)^{-1} log M^t(exp(i eta A))|| <= K_L||A||.       (2.1)
+
+One fixed reduction of the input radius keeps every logarithm on its
+original branch. The proof is valid for complex A. It does not use
+current estimates, stationarity, or a derivative of A.
+
+Banach-valued Cauchy applied to (2.1), at h_k=1, bounds the first two
+derivatives of the complete physical ordinary-average logarithm on a
+strictly smaller sup ball, uniformly in k. This remains dimension
+independent: the input norm is the link sup norm and each Cauchy
+restriction is along finitely many prescribed directions.
+
+For U_*=exp(i eta A_*), the relative perturbation exp(i eta a)U_*
+is represented by the BCH input coordinate
+
+ (i eta)^{-1} log[exp(i eta a) exp(i eta A_*)].
+
+Its derivatives are uniform in eta. The output relative logarithm is
+another bounded BCH change at M^kU_*. Thus, on any fixed uniformly
+bounded bubble space E,
+
+ ||D(M^k)_{U_*}E-D(M^k)_1E|| <= C||A_*||,
+ ||D^2(M^k)_{U_*}[E,E]|| <= C.                          (2.2)
+
+Both expressions mean the specified relative logarithmic coordinates.
+No dimension-dependent or refinement-dependent inverse is hidden here.
+
+3. The flat complete-star moment calculation
+
+Set N=L^k=2m+1, and use physical current spacing one. On a component
+mu, the k-fold straight-string average is EXACTLY
+
+ (Q_st,N a)_mu(y)
+   =N^{-(d+1)} sum_{u in [-m,m]^d} sum_{s=0}^{N-1}
+                  a_mu(Ny+u+s e_mu).                   (3.1)
+
+To verify the semigroup identity, combine the base-L digits of the
+successive start offsets into the unique centered offset u, and the
+successive path indices into s in {0,...,N-1}. Both combinations are
+bijective. This proves (3.1); an approximate continuum kernel is not
+being substituted.
+
+Restrict a to fine bonds strictly inside the owner block at y=0.
+For a longitudinal fine tail coordinate j=-m,...,m, the outgoing
+coarse row has multiplicity j+m+1, and the incoming row has multiplicity
+m-j. Hence, relative to physical fine counting N^{-d}, the two weights
+are
+
+        w_+(j)=(j+m+1)/N,       w_-(j)=(m-j)/N.          (3.2)
+
+They sum to one. Other directions read no a_mu at this straight level.
+
+Choose smooth nonnegative longitudinal bumps on (1/8,3/8) and
+(-3/8,-1/8), and a smooth transverse bump strictly inside the block.
+Use bumps positive throughout those open intervals, or explicitly
+check the finitely many shallow meshes. Their physical discrete masses
+are bounded above and below uniformly for N=L^k, k>=1. One proof is
+Riemann convergence for large N plus the finitely many positive shallow
+mass values. Normalizing the masses has uniformly bounded C^2 cost.
+
+The normalized w_+ means differ by at least 1/4. Since the w_- means
+are their complements, the 2 by 2 moment determinant is bounded away
+from zero. Repeating per direction and Lie-algebra coordinate gives
+a right inverse for ALL 2d incident oriented coarse rows, with uniformly
+bounded physical C^2 norm. It is not merely an inverse of the single
+target row.
+
+For k=0, averaging is the identity. Use the target link coordinate and
+its complete protected Wilson stencil. This separate fixed-mesh case
+does not have a strictly interior continuum bubble, and should not be
+described as having one. Its constants are fixed.
+
+4. Ordinary endpoint terms and exact support
+
+The final flat ordinary average has the form
+
+        Q_ord,k a=Q_st,N a+d_c chi_k(a).
+
+The ordered gauge construction proves this identity and bounds chi_k
+uniformly. Its value at a coarse vertex reads only that vertex's final
+fine block. This support statement follows from the literal contour
+paths: they stay in the owner block, and nested aligned blocks compose
+without leaving that final block.
+
+For a bubble in one owner block, chi_k is therefore supported at its
+one coarse vertex. Take a smooth compact fine gauge parameter lambda
+equal to -chi_k at that vertex and zero at all other coarse vertices.
+Its physical C^3 norm is uniformly bounded. Exact ordinary gauge
+covariance implies
+
+                   Q_ord,k d_eta lambda=d_c lambda.
+
+Adding this fine gauge gradient to the straight-average bubble cancels
+the endpoint term. It produces an ordinary right inverse E_ord with
+uniform C^2 norm and the same compact owner-block support. In particular
+one does not assume the ordinary and straight averages coincide.
+
+An ordinary output row depends on the two fine endpoint blocks. The
+same statement holds for the complete iterate by aligned composition.
+Thus a compact perturbation inside one owner block can affect only the
+incident star. This is why controlling the whole finite star suffices
+to fix every other coarse link exactly, including at nonlinear order.
+
+5. Quantitative finite inversion
+
+Let F_*(v) be the vector of all incident relative output logarithms
+for exp(i eta E_ord v)U_*. At the identity its derivative is the identity.
+Equations (2.2) imply
+
+             ||DF_*(0)-I||<=C a_*,     ||D^2F_*||<=C.
+
+Choose a_* below a fixed constant making the first bound less than 1/4.
+The holomorphic inverse theorem, now with a verified uniform inverse
+and uniform nonlinear remainder, gives v=v(z), |v|<=C|z|, on a fixed
+radius. Prescribe z only in the desired coarse coordinate and zero in
+every other incident coordinate. Then a(z)=E_ord v(z) is holomorphic,
+real on real z, compactly supported, and satisfies
+
+   ||a(z)||+||nabla_eta a(z)||+||nabla_eta^2 a(z)||<=C|z|.
+
+Every coarse coordinate except the target is fixed exactly. The fine
+exterior is fixed exactly as well. This is the requested refinement-
+uniform inverse, not an application of an unquantified finite IFT.
+
+6. Physical current and complete analytic domain
+
+All current stencils of the perturbation must lie inside one coherent
+real gauge patch. Its potential/first-difference bounds are sufficient
+for the current increment: the exact B109(3.11) expansion is
+
+ J_W(exp(i eta a)U_*)-J_W(U_*)=D_{U_*}^*D_{U_*}a+F(U_*,a).
+
+The remaining term reads U_*, its plaquettes, a and the first covariant
+differences of a. The C^2 bound on a and the C^1 anchor bound control
+the displayed second-order term uniformly. No second derivative of
+the anchor is inferred or needed. Thus the physical curvature/current
+increments are O(|z|), uniformly in eta.
+
+Choose the disk below a fixed constant times the smallest reserved
+radius in the smaller (i)--(iii) physical field subclass. The fixed
+real factor is the original anchor. The primary sufficient-subclass
+statement after B109(1.16) then gives EVERY derived-minimum condition.
+This step would fail if one supplied only an unqualified C^1 anchor;
+its original physical current and real-factor margin are explicit.
+
+The target-domain quantifier matters. To obtain all derived tests on X,
+the anchor must satisfy the smaller (i)--(iii) conditions on ALL X.
+Only the coherent gauge and the perturbation estimates are local to
+the read/stencil patch. If outside that patch the anchor is known merely
+to belong to a weaker admitted class, unchanged exterior field values
+do not imply unchanged derived minima, whose dependence is nonlocal.
+In that case the present argument establishes admission only on a target
+contained in the patch, unless another quantitative derived-test response
+is proved. No such exterior response is silently imported here.
+
+For the averaging estimate only, extend the coherent potential by zero
+past its COMPLETE dependency collar. Discontinuity there is harmless
+because (2.1) uses only a sup norm. No current estimate is made at that
+artificial extension. The actual fine perturbation vanishes before the
+edge of the original patch, and the actual fine exterior is unchanged.
+
+7. Reference attachment and remaining limits
+
+Before B122-II(1.10), the reference is analytically extended by replacing
+its current coarse argument Vk by Mk(U). Its local boundary datum is
+copied from Vk according to the displayed reference rule. The auxiliary
+lift is not substituted as an independent finer boundary field. Thus
+the compact lift supplies exactly the prescribed current-coordinate
+disk for this fixed reference, while preserving actual fine exterior
+if that is additionally desired.
+
+The turn15 fixed-reference moment/score proof then applies on that disk:
+score standard deviation C/r; the current-link Lipschitz covariance
+term C g Lip/r. The deterministic baseline derivative remains separate.
+Geometry, window and gauge slice are frozen. No branch gate is varied.
+
+This audit does not assert (a) one coherent weak patch exists at every
+mixed-history read, (b) arbitrary independent finer constraints stay
+fixed, (c) remote decay of this inverse, (d) a positive normalized law
+for the entire R operation, or (e) a complete backward-source influence
+bound. Those claims need their own actual geometry and law attachments.
+
+Audit status
+
+Primary formula and algebra checks pass. The shallow-mesh bump and
+k=0 clarifications above are routine finite details, not a missing
+uniform-in-depth theorem. Root independently passed the complementary
+homogeneous CMP102(190)/B109(3.11) current-lift route in
+protected_native_current_admission_turn16.txt. These are two consistent
+ways to supply the fixed-reference analytic disk in their respective
+stated scopes.

@@ -1,0 +1,358 @@
+PERMANENTLY DATED PERIODIC MARGINALS: AN EXACT ROOT-LATTICE REPAIR
+18 October 2026. Finite algebra and its precise prepared-read application.
+
+The problem. Maturation of a complete cohort makes its physical marginal
+constant. It does not set the marginal of each old phase-root to zero.
+The following keeps those old functions, their dates, their source masks,
+and the SAME original fine clover. It uses no new original-pair semigroup.
+
+1. A BOUNDED PERIODIC DISCRETE PRIMITIVE
+
+Let a:Z^4 -> V be p-periodic in every coordinate, with values in any normed
+finite-dimensional tensor or coefficient algebra, and mean zero on
+{0,...,p-1}^4. The argument also works for rectangular periods, replacing
+p by their maximum. Write A_mu for averaging in coordinate mu, and set
+
+ f_mu=A_1...A_(mu-1)a - A_1...A_mu a,  mu=1,...,4.
+
+Then a=sum_mu f_mu, every f_mu has zero sum along its mu-line, and
+||f_mu||_infinity<=2||a||_infinity. For each line define
+
+ b_mu(z)=sum_(t=0)^(z_mu) f_mu(z_1,...,t,...,z_4),
+
+using representatives 0<=z_mu<p and then periodic extension. The zero
+line sum gives, including the wrap at zero,
+
+ a(z)=sum_mu D^-_mu b_mu(z),
+ D^-_mu b(z)=b(z)-b(z-e_mu),
+ ||b_mu||_infinity<=2p||a||_infinity.                (1)
+
+Subtracting the line mean of b is optional. All these operations are
+linear contractions except the displayed factor p. They therefore act
+coefficientwise in the copy-label l1 algebra, with that sum inside the
+spatial norm. No factor equal to the number of copies is introduced.
+
+For any finitely supported, or compatible periodic, root family F_z,
+
+ sum_z a(z)F_z = -sum_(mu,z) b_mu(z)D^+_mu F_z.     (2)
+
+This is summation by parts on the BIRTH ROOT lattice. It is not a bare
+mesh derivative. Taking a primitive on mesh eta instead would give a
+factor p r_i/eta and would be inappropriate for a Holder estimate.
+
+2. EXACT SAME-FINE-FIELD REFERENCE IDENTITY
+
+In birth-i physical units put
+
+ Q_(i,z)(U)=sum_(x in fine mesh) h_z^i(x) q_AB(U,x),
+ h_z^i(x)=prod_mu max(1-|x_mu/r_i-z_mu|,0).
+
+Here q_AB is the original fine clover tensor, including its fine volume
+factor eta^4. All dates use this SAME q_AB(U,x). The clover is defined at
+one common base point, so its traced tensor product is gauge invariant.
+The tensor hats are the literal tents of CMP119(3.40), with the unit-scale
+version in (3.65). Since r_i/eta is an integer,
+
+ Q_(i,z+e_mu)(U)-Q_(i,z)(U)
+   =sum_x h_z^i(x)[q_AB(U,x+r_i e_mu)-q_AB(U,x)].     (3)
+
+Equation(3) is a change of the fine summation index, not a change of U or
+an assumption that its values at the two points coincide. It is exact on
+the torus; for a restricted sum the omitted boundary terms are retained.
+
+For any fixed smooth envelope f and actual root eligibility mask chi,
+apply(2) to F_z=chi(z)f(r_i z)Q_(i,z)(U). The exact product rule is
+
+ D^+(chi f Q)_z
+  =chi(z)f(r_i z)D^+Q_z
+    +[chi(z+e)f(r_i(z+e))-chi(z)f(r_i z)]Q_(i,z+e). (4)
+
+Split the bracket into chi(z+e)[f(r_i(z+e))-f(r_i z)]
+and [chi(z+e)-chi(z)]f(r_i z). Thus the three lanes are, exactly:
+the differentiated original clover; a profile commutator; and an actual
+eligibility/cut boundary commutator. The last two are not discarded.
+
+3. NEUTRAL AND IMPROVED BOUNDS ON THE ACTUAL PREPARED IMAGE
+
+Let h=r_i/r_n<=1. On one common admitted complex prepared read patch,
+suppose in n units the curvature has size C a_n and Holder modulus
+C a_n |x-y|^beta, 0<beta<1, in one of the complete source C1,beta gauges.
+The usual nonabelian clover product estimate in that same gauge gives
+
+ |q_AB(U,x)|<=C eta^4 r_n^-4 a_n^2,
+ |q_AB(U,x+r_i e)-q_AB(U,x)|
+       <=C eta^4 r_n^-4 a_n^2 h^beta.               (5)
+
+Fine-discretization terms are bounded by the same expression because
+eta<=r_i. Parallel transports in the local clover contribute at most
+C a_n^3 h, which is bounded by C a_n^2 h^beta on the weak ball. These
+are estimates of the SAME gauge-invariant function on the SAME contour;
+no comparison of unrelated local gauges or physical-current identity is
+being used. They follow equally from a uniformly bounded complete C1,beta
+read family. Membership in an arbitrary original tube alone is NOT(5).
+
+The hat has fine mass r_i^4/eta^4. Hence
+
+ |Q_(i,z)|<=C a_n^2 h^4,
+ |D^+Q_(i,z)|<=C a_n^2 h^(4+beta).                  (6)
+
+Combining(1),(2),(6), an n-cell root sum of a mean-zero periodic marginal
+is bounded by
+
+       C p ||a||_infinity a_n^2 h^beta,             (7)
+
+plus the two explicit terms in(4). The sum contains O(h^-4) roots; this
+is the only fine-root count. Its neutral bound is C||a|| a_n^2. Thus one
+may always take the minimum of the neutral bound and(7).
+
+The profile term is bounded by
+C p||a|| a_n^2 r_i^theta [f]_(C^theta), with the same root normalization.
+The mask term is supported within C r_i of its ACTUAL boundary, enlarged
+by the fixed original clover/hat collar. A boundary with N_p own-p faces
+on a proper p patch contributes
+
+       C p||a|| ||f|| a_p^2 N_p r_i/r_p.            (8)
+
+If the actual source collar has MR_i width, retain that factor. Genuine
+older raw strata are charged at their own scales by the original read/
+occupation estimate; they are not treated as smooth p patches. A fixed
+event boundary is counted once. Repeated reading of the same mask does
+not create a new boundary event. This is the same exact event accounting
+as abel_mask_strip_audit, now with the extra polynomial p.
+
+The root sum can be restricted to a fixed complete localization chain.
+If all Q_z in that chain have a common read map on their full stencils,
+linearity permits(2) before that map and before its contour integrals.
+Crossing a seam of that chain gives its explicit boundary term in(4).
+For static X deep inside a fixed component Z, the source's Y1=cover(Z)
+and nested Y2,Y3,Y4 supply precisely this common chain; crossing-X and
+large-X terms stay in the existing strip/tail lanes. This is a grouping
+statement, not termwise Pi-zero for arbitrary localized activities.
+
+4. GRADED COLLARS DO NOT REQUIRE UNIFORM SMOOTHNESS UP TO A SEAM
+
+If only an own-m smooth patch of size d r_n is available, the safe complete
+functional Ward estimate is used, with its original radius/weight ratio.
+The phase primitive multiplies its constant by at most C p. Together
+with the original n-neutral estimate, the rootwise bound is of the form
+
+ C||a|| a_n^2 h^4 min(1,K p h^beta d^(-4-beta)).      (9)
+
+Here K retains the actual radius and ring/preparation factors. Integrating
+the fixed-chain collar shells gives the already proved minimum-shell
+gain with exponent beta/(4+beta), and a factor (Kp)^(1/(4+beta)), plus
+the capped-core and innermost neutral-strip terms. It is also legitimate
+to use the cruder factor p throughout. No inverse bare-mesh power occurs.
+
+When p is a fixed power of log gamma_i, it only changes the fixed
+polynomial/logarithmic prefactor in the midpoint gain. For a very young
+birth with p h not small, take the neutral estimate; the finite startup
+lasts O(log p) dates and is kept in the actual young-birth ledger.
+
+5. THE MATURED MEAN IS EXACTLY THE HAT-WEIGHTED MARGINAL
+
+Let R=r_j/r_i be an integer multiple of p and H_Z(z)=prod_mu
+max(1-|z_mu/R-Z_mu|,0). For every residue vector alpha mod p,
+
+ R^-4 sum_(z congruent alpha mod p) H_Z(z)=p^-4.     (10)
+
+Proof in one dimension. Write R=pq and t=Z-alpha/R. The sum is
+sum_k max(1-|k/q-t|,0)=q. This is the sum of the q partition-of-unity
+tent families, indexed by k modulo q. Products prove(10). It holds
+for every coarse Z and every phase alpha, not merely after averaging Z.
+
+Consequently, for any periodic tensor d(z),
+
+ R^-4 sum_z H_Z(z)d(z)=p^-4 sum_(alpha mod p)d(alpha)=bar d. (11)
+
+On an affine Cartan curvature jet, Q_(i,z) is independent of z and its
+mass is R^-4 times the normalized j-reference mass. Thus(11) identifies
+the physical Pi of the exact grouped old reference with bar d. The
+oscillating d-bar d has exactly zero grouped affine Pi once R is a
+multiple of p, but its full function is still present and is estimated
+by(2)--(9). No old phase-root has been declared Pi-zero.
+
+Quantum contributions to Pi are the actual new dated d_l, not part of
+this classical hat identity. For all matured cohorts, the common physical
+marginal is the sum of their bar d_l, together with the separately kept
+young cohorts and actual new quantum coordinates. Old means can therefore
+use the common-fine Abel identity. Young unmatched periods are not silently
+replaced by their mean. The complete regular stable envelope must include
+their original finite-startup budget before claiming midpoint smallness.
+
+An equally exact interpretation is to subtract Pi at each original phase
+root at creation: B_(i,z)=v_(i,z)+Q_(i,z)d_i(z)+Z_(i,z), Pi Z_(i,z)=0.
+This need not be a source Euclidean-scalar subtraction; it is the full
+21-component affine curvature projection of the own-invariant pointed
+function, with complete pointed carrier sums kept. Equation(1) handles
+the periodic part of the retained reference afterward. Individual strict
+carrier coefficients are never assumed locally gauge invariant.
+
+6. STATUS
+
+Equations(1)--(4),(10)--(11) are unconditional finite algebra for the
+literal tents and common fine clover. Equations(5)--(9) use the actual
+same-contour prepared smooth/neutral inputs already isolated in
+static_original_tube_first_contact_audit and graded_collar_interpolation.
+They do not give a small norm on an arbitrary original independent-pair
+tube. They resolve the phase-root/maturity objection without redating,
+MR hulls, a positive spatial tensor kernel, or changing an old extension.
+The scalar companions and the full copied chronological pressure estimate
+remain subject to their separate causal and connected majorants.
+
+7. ACTUAL NEW PHASE BIRTHS AND THE SOURCE DIFFERENCE CONSTRUCTION
+
+The phase estimate is not applied to unrelated root-dependent analytic
+extensions. In CMP109(3.4), first fix the ORIGINAL output-scale cover cube
+Pi and its noise partition function. The near reconstruction in(3.18)--
+(3.25) uses the fixed Pi5 collar. It depends on Pi and the common outer
+pair/noise, not on the old root z or old activity X. For Q_(i,z) whose
+full old hat/clover support lies in Pi2, this is a common read map for the
+root sum. Sum(2) on that set BEFORE this map and its linear source
+localizers. The boundary terms of the finite sum are explicit.
+
+An old support crossing Pi2 is either large on the old scale or far from
+the noise-supported Pi. Those are precisely the two cases in source
+(3.5)--(3.9); the response has an old-scale exponential factor. The near
+replacement tails(3.21)--(3.23) have the same factor. No original free-J
+far term is reset or identified with the near one. Their supremum bound,
+with the original radius comparisons, pays a fixed power of the age.
+The spatial partition functions are also fixed at this stage; a root
+difference of any retained pointing weight is the profile/hat term(4).
+
+On the original enlarged retained-amplitude disc, source(3.27),(3.31),
+CMP116(1.11)--(1.22) give the same prepared C1,beta bounds, including the
+independent current companions and complex localizers. Thus BOTH the
+neutral estimate and the improved root-difference estimate hold on that
+one disc. Cauchy differentiation for the actual fluctuation DIFFERENCE
+adds the source factor delta_j=g_j T_aux,j/a_j. Its output is the literal
+new source-prepared coefficient, with the far/current terms just retained.
+
+For the old periodic reference, the resulting contribution to(9.7) is
+therefore bounded by
+
+ C delta_j (1+j-i)^q
+       min{1,C p_i exp[-beta_0(j-i)]} m_i,            (12)
+
+plus a standard exponential far kernel. The period enters ONLY the
+improved member: the neutral estimate uses |a_i(z)Q_(i,z)| directly,
+before solving the divergence, and so has no p_i factor.
+
+At a NEW birth, take the full pointed affine-curvature projection at
+each of its finitely periodic phases. In the original a_i^2-normalized
+norm, Pi costs C a_i^-2 and restoring Qhat costs C a_i^2. Subtracting
+the phase mean costs at most two. None of these extraction bounds costs
+the number of phases or p_i. In particular a polynomial period factor
+is not multiplied into every successive birth. The zero-Pi residual
+keeps the standard exponential source age kernel; its phase reference
+keeps(12). Unmatured phase means can be bounded in the neutral part of
+the same finite memory window. Once the period divides the current
+mesh, equations(10)--(11) identify their common marginal exactly.
+
+For p_i<=C(1+log gamma_i)^r, the kernel row sum is a fixed power of
+1+log log gamma_j. The proof and positive recurrence are in the parent
+note phase_kernel_positive_volterra_2026-10-18.txt, independently checked
+here: split age at C log log gamma_j, use neutral below and the exponential
+tail above; for ages greater than gamma_j use gamma_i<=gamma_j+D age.
+Any fixed negative logarithmic power of delta_j pays this row sum.
+On gamma comparable to G, exponential weighting at rate
+c/(1+log log G) gives the same row bound and decay
+exp[-c age/(1+log log G)]. This is enough to pay a fixed exp(polylog G)
+prepared-image loss on an age of order G. A native power-law forcing
+floor cannot be multiplied by that loss; it must remain separate.
+
+This verifies the recurrent phase-lane application of the elementary
+Volterra lemma. It uses precisely the complete fixed-Pi source near map
+and original far bounds; it does not infer contour equality from equality
+on a physical minimizing graph.
+
+8. IDENTIFYING THE EXTERNAL PHYSICAL MARGINAL IN THE RECURRENCE
+
+For this step define M_l to majorize the WHOLE new nonconstant birth
+before Pi extraction, in its original a_l^2-normalized norm. Then
+sup_z|d_l(z)|+a_l^-2||Z_l||<=C M_l. A norm of Z_l ALONE would not
+majorize d_l for a purely marginal birth and is not sufficient here.
+The source(9.7) bounds exactly the whole birth, so this replacement of
+the scalar majorant does not change that inequality.
+
+At a common physical current root Z, the exact dated creation ledger
+and affine reproduction give
+
+ Pi_j W_j(Z)
+   =sum_(l<=j) R_lj^-4 sum_z h_Z(z/R_lj) d_l(z),
+                   R_lj=ell^(j-l).                 (13)
+
+Enter the initial cohort at l=i as one birth. Constants have zero Pi.
+Every Z_(l,z) has zero affine quadratic curvature jet; after the actual
+ordinary prefix its quadratic jet is evaluated on the affine-reproducing
+LINEAR prefix. There is no contribution from the nonlinear second
+derivative of the prefix because the first jet of Z is zero. Thus its
+contribution to(13) vanishes exactly. Loop/noise changes of the marginal
+are already the actual d_l of later births; they are not omitted from
+this formula or folded into a new old-root coefficient.
+
+Let O_j contain dates for which p_l divides R_lj and Y_j its complement.
+Equation(11) gives
+
+ Pi_j W_j(Z)=sum_(l in O_j) bar d_l
+      +sum_(l in Y_j) R_lj^-4 sum_z h_Z(z/R_lj)d_l(z). (14)
+
+The normalized hat sum is a positive average of total mass one.
+Consequently the young sum has norm <=C sum_(l in Y_j)M_l; replacing
+any young term by its mean has error at most 2C M_l. In particular the
+matured sum is bounded by |c_j|+C sum_(l in Y_j)M_l whenever the complete
+unweighted C0 cohort has the common physical marginal c_j. The source
+C0 covariance ensures this once the ORIGINAL complete cohort has
+matured. It does not assert each d_l is constant.
+
+Since a date remains young only while j-l<=C(1+log p_l), the extra sum
+is contained in the neutral part of the phase kernel(12), with a fixed
+enlargement of its constants. Thus using c_j as the external forcing in
+the positive Volterra estimate is legitimate. All young phase corrections
+are still feedback through whole creation norms M_l. There is no extra
+period factor at each step and no unaccounted phase-dependent marginal.
+
+This is an unrestricted regular-cohort identity. Restricted historical
+weights have exactly the masks/commutators of(4) and abel_mask_strip_audit;
+the identity does not erase their boundary entries or extend the C0
+stable envelope to an already contacted arbitrary history.
+
+9. FAR RAW DATA AND THE EXISTING DETERMINING TIER
+
+An old root z near its copy support is not assigned to a distant raw cell
+merely because the global read map depends on that cell. If the complete
+short old stencil about z avoids every ACTUAL pre-midpoint determining
+cell and its fixed read collar, the original determining tier on that
+stencil is at least the midpoint tier. Otherwise the smaller tier itself
+would supply a nearby actual old cell. The complete patch theorem uses
+this EXISTING tier, the artificial erosion tier, and the preparation cap.
+It does not require introducing a new tau-sized minimizer or modifying a
+source collar. Remote raw dependence remains in the admitted minimum/H
+response. Artificial fine tiers are treated by the graded collar sum,
+not assigned an occupation charge.
+
+If the old root is far from the support of its copy, retain its original
+dated birth/read carrier to that root. A path first generated by a much
+later coarse localizer is not a substitute. Roots actually introduced by
+a new birth after midpoint instead have the small WHOLE creation norm
+from the phase-corrected recurrence; they do not need a fictitious early
+path. Long old carriers are in the original retained tail. The phase
+primitive in(2) adds only one old-root step to a field stencil, despite
+its numerical factor p, so it does not invalidate this distinction.
+
+For mean marginal/profile terms the corresponding exact Abel formula is
+sum_l d_l I_l f=c_j I_j f+sum_(l<j)c_l(I_l-I_(l+1))f, with the initial
+coordinate included. It is an identity of weights on the SAME fine
+clover before any read substitution. Early interpolation differences
+retain their old r_l support width/profile modulus; late coordinates
+have the compensated regular stable envelope. Historical masks leave
+the exact actual-eligibility and same-region interpolation commutators
+of abel_mask_strip_audit. None of these terms creates a broad current
+hat carrying an unattenuated old coefficient. Thus a broad current
+read cannot be used to retroactively classify an old root as contacting
+a distant component at its birth.
+
+Primary hat definition and pointed decomposition: CMP119(3.40)--(3.43),
+(3.65)--(3.67). The full tensor Ward projection is taken before the
+Euclidean-scalar reduction in(3.58)--(3.61).
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf

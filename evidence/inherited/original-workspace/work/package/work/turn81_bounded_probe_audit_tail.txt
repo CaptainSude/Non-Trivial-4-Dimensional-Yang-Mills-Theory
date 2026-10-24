@@ -1,0 +1,268 @@
+TURN81. BOUNDED ORIGINAL PROBES: UNIFORM SOURCE RADII AND EXACT HS CHANNEL
+20 October 2026. tail47. Elementary audit and finite-regulator consumer.
+
+VERDICT
+
+The proposed bounds are correct. Bounded original probes remove the
+shrinking SOURCE-PARAMETER radius and source-growth cost, without using
+complex inverse records. They do not produce a small complement
+probability or an analytic native BACKGROUND domain. A further exact
+consumer is available in the new two-HS law: disjoint original link
+reads have zero conditional covariance given the auxiliaries. Their
+original correlation equals the correlation of bounded conditional
+means in the interacting zero-link law. With the stated half-space
+read conditions, this identifies the same original reflected channel.
+It supplies no positive lower bound for that channel.
+Section 4A also gives a uniform complex tube in the finite conditional
+CURRENT coordinates. It is not a uniform auxiliary or native RG domain.
+
+1. FULL ORIGINAL SOURCE AND A COMMON ZERO-FREE DOMAIN
+
+Let mu_a be any normalized original Wilson probability law, and let
+B_1,...,B_m be measurable original observables with 0<=B_i<=1. For the
+physical use they are gauge invariant and have complete reads in the
+specified positive-time half. Define
+
+ M_a(z)=E_mu_a exp(sum_i z_i B_i),   R=sum_i |z_i|.
+
+At every regulator M_a is entire, and uniformly in regulator, beta,
+volume, and the choices of B_i,
+
+ |M_a(z)|<=e^R,     |M_a(z)-1|<=e^R-1.                  (1.1)
+
+Indeed |sum z_i B_i|<=R and |e^w-1|<=e^{|w|}-1 pointwise.
+For R<log 2, M_a lies in the open disk centered at1 with radius<1.
+The logarithm with log M_a(0)=0 is therefore holomorphic there, and
+
+ |log M_a(z)|<=-log(2-e^R).                              (1.2)
+
+This follows from the absolutely convergent log(1+w) series. Cauchy
+estimates on any fixed smaller polydisc give cutoff-uniform bounds on
+every fixed finite source jet. The domain is the L1 source ball; this
+does not give a fixed per-coordinate polydisc independent of m as
+m tends to infinity. Raw moment derivatives at zero satisfy
+
+ |partial^alpha M_a(0)|=E product_i B_i^{alpha_i}<=1.     (1.3)
+
+No factorial is omitted in (1.3): these are derivatives, not power-series
+coefficients. Cumulants are derivatives of log M and have their usual
+order-dependent bounds; they are not all bounded by1.
+
+The same argument is valid for every real positive conditional law.
+It gives source-parameter analyticity even if its dependence on its
+conditioning background is merely measurable.
+
+2. FIXED POSITIVE HISTORY EVENTS AND NORMALIZED COMPARISON
+
+Let P_a(dU,dh)=mu_a(dU)K_a(U,dh), where K_a is an ACTUAL probability
+kernel, and freeze a measurable event E in this augmented law. Set
+delta=P_a(E) and
+
+ J_E(z)=E_P_a[1_E exp(sum z_i B_i(U))].
+
+The exact estimates are
+
+ |J_E(z)|<=delta e^R,
+ |partial^alpha J_E(0)|<=delta.                          (2.1)
+
+These estimates require neither raw ownership of B_i nor background
+holomorphy; they retain the full original denominator. They apply to
+a positive all-history event only if that joint positive law has
+actually been identified. Signed walk decorations are not events.
+
+For delta<1 let nu=Law(U|E^c), with its exact conditional normalizer.
+The convex decomposition mu=(1-delta)nu+delta Law(U|E) implies, for
+any B,H in[0,1],
+
+ |Cov_mu(B,H)-Cov_nu(B,H)|<=3 delta.                     (2.2)
+
+Proof: the cross moment changes by at most delta, and the product of
+means changes by at most2delta. The same statement applies to B and
+its reflected copy. It retains the mean correction; it is not just a
+bound on an uncentered numerator. No RP assumption on nu is needed
+for this numerical comparison. A bound on a different local bad event
+does not identify nu with an all-good selected regulator.
+
+There is also an exact uniform log-source consumer. Let M_nu be the
+conditional generating function. For R<log2,
+
+ |log M_mu(z)-log M_nu(z)|
+     <=2 delta (e^R-1)/(2-e^R).                         (2.3)
+
+Use M_mu-M_nu=delta(M_E-M_nu), subtract1 from each generating
+function, and integrate the logarithmic derivative along their segment
+inside the disk |w-1|<=e^R-1. Cauchy on a fixed smaller polydisc then
+bounds each fixed mixed cumulant difference by a fixed constant times
+delta. At delta=0 the formulas follow directly. The conditional law
+is undefined at delta=1.
+
+The same reasoning works for an actual retained weight 0<=w<=1 by
+adding a Bernoulli label of conditional success probability w: delta
+is then 1-Ew, and nu is the exactly normalized w-weighted law. This
+does not make delta small. In particular the TURN71 coarse-reweighting
+and rare-bridge counterexamples are not bypassed by (2.1)--(2.3).
+
+3. EXACT CONDITIONAL SOURCE IN THE TWO-HS LAW
+
+Use the actual positive joint law of turn81_external_source_history,
+Sections2--5, with xi=(G,R), zero-link marginal nu_beta, and full
+normalizer D_beta. Given REAL xi, the ORIGINAL links are independent:
+
+ k_xi(dU)=product_e [e^{Re Tr J_e(xi)^dagger U_e}/I(J_e(xi))]dU_e.
+                                                               (3.1)
+
+Every factor is positive and normalized. In particular no D_beta occurs
+in this conditional kernel; it remains in the interacting xi marginal.
+Define the exact conditional source
+
+ C_z(xi)=integral exp(sum_i z_i B_i(U)) k_xi(dU).          (3.2)
+
+For EVERY real xi, including arbitrarily large auxiliaries, (1.1)--(1.2)
+hold for C_z with precisely the same constants and source domain. Also
+
+ M_mu(z)=E_nu_beta C_z,
+ partial_i C_0= m_i(xi):=E_kxi B_i,
+ partial_i partial_j log C_z|0=Cov_kxi(B_i,B_j).         (3.3)
+
+Consequently the full mixed cumulant is
+
+ Cov_mu(B_i,B_j)
+   =E_nu Cov_kxi(B_i,B_j)+Cov_nu(m_i,m_j).               (3.4)
+
+Replacing C_z by exp(sum z_i m_i) would discard the first term.
+Equations (3.1)--(3.4) use the UNSOURCED original joint measure; the
+conditional link-product assertion need not survive conditioning on
+an extra native history event. No complex-xi estimate follows from
+the uniform bounds on this real conditional source.
+
+4. A LOCAL READ AND REFLECTED-CHANNEL CONSUMER
+
+Suppose B reads only a set S of independent original links. Integrating
+the other normalized factors in (3.1) shows that m_B and C_z for this
+one probe depend only on currents J_e, e in S. Each J_e reads the finite
+auxiliary plaquette-star explicitly given in (5.2) of the HS producer.
+This is an exact read statement. If S is an entire spatial slice after
+finite-lattice spatial flow, it does not become a bounded spatial box.
+
+If the original link read sets of B and H are disjoint, (3.1) implies
+conditional independence, even if the auxiliary stars overlap. Hence
+
+ Cov_mu(B,H)=Cov_nu(m_B,m_H).                            (4.1)
+
+Now require B to have complete original read in a strict positive half,
+and require its complete auxiliary star to stay in that half too.
+Choose the HS path conventions in the negative half by reflection of
+the positive conventions. Then m_(theta B)=theta m_B and, provided
+the original reflected read sets are disjoint,
+
+ Cov_mu(theta B,B)=Cov_nu(theta m_B,m_B),   0<=m_B<=1.    (4.2)
+
+For multiple probes, the same identity holds for the reflected Gram
+matrix: negative original reads must be disjoint from positive ones;
+the positive probes may overlap among themselves. The conditional
+kernel is gauge covariant, so a gauge-invariant B gives a gauge-invariant
+m_B under the induced auxiliary gauge action.
+
+The half-space RP of the auxiliary marginal follows by applying the
+root's local-augmentation theorem successively to the first and second
+HS kernels on these admitted halves, or directly by factoring their
+conditional coordinates given the original half. Crossing auxiliary
+variables are excluded from strict-half reads and integrated out.
+Thus (4.2) identifies the SAME centered original OS channel. This
+reverse conditional map is not multiplicative for overlapping original
+read sets. Ordinary same-side covariances still require (3.4).
+
+For a physical limit, impose a fixed positive physical distance from
+BOTH fixed slices of a periodic site reflection on the complete reads.
+The additional one-plaquette star collar then fits for sufficiently
+small spacing. A covariance identity for an interior probe is not a
+claim about probes touching the reflection plane. No full-law source
+comparison or lower bound is created by changing variables to xi.
+
+4A. A UNIFORM COMPLEX CURRENT TUBE ABOUT EVERY REAL CONDITIONAL LAW
+
+There is a further genuine, but specific, analyticity statement. Write
+the real link coupling as l_e(J_e,U_e)=Re Tr J_e^dagger U_e. First choose
+REAL coordinates for J_e and regard l_e as a real-linear function of
+those coordinates. Complexify that linear function, not the operation
+of taking Re or complex conjugates of new complex coordinates. Let
+delta l_e(U_e) be the resulting complex linear perturbation and set
+
+ L=sum_(e in S) sup_(U_e in SU(2)) |delta l_e(U_e)|.
+
+For the normalized product kernel k_J on the relevant original link
+set S, define
+
+ D_J(delta)=E_kJ exp(sum_e delta l_e(U_e)),
+ N_J(delta,z)=E_kJ exp(sum_e delta l_e(U_e)+sum_i z_i B_i(U)).
+
+All B_i here read S. These finite integrals are entire in the indicated
+complex current and source coordinates. Positivity of the REAL base
+kernel gives, uniformly over every real current J,
+
+ |D_J(delta)-1|<=e^L-1,
+ |N_J(delta,z)|<=e^{L+R},
+ |N_J(delta,z)-1|<=e^{L+R}-1.                           (4.3)
+
+The first expression is precisely the perturbed product of compact
+link integrals divided by its unperturbed product. Thus for L<log2,
+
+ C_J(delta,z)=N_J(delta,z)/D_J(delta)
+   is holomorphic and |C_J(delta,z)|<=e^{L+R}/(2-e^L).   (4.4)
+
+It is entire in z on this current tube. On L+R<log2 its logarithm
+with value0 at z=0 is the difference of the two zero-free logarithms,
+log N_J(delta,z)-log D_J(delta). In particular the conditional means
+and their finite current derivatives have uniform bounds on each
+strictly smaller L-tube, by Cauchy. For example
+
+ |m_B(J+delta)|<=e^L/(2-e^L),
+
+where m_B uses the holomorphic normalized integral. The real case
+still has the stronger 0<=m_B<=1. No analytic regularity of B as a
+function of U is required for this conditional-current result; its
+boundedness suffices for dominated integration.
+
+This is a total L1 perturbation budget. For growing |S| it does not
+give a fixed per-link complex radius. Moreover J_e(G,R) contains
+bilinear terms R_h^dagger G_p: a fixed auxiliary-coordinate change
+need not have bounded L on all unbounded real auxiliary records.
+Composition on a desired complex auxiliary domain requires an actual
+bound on these current increments. No estimate on the interacting
+nu_beta marginal, its derivatives, or a native localized (U,J) map
+follows merely from (4.3)--(4.4).
+
+5. RELATION TO THE EXISTING PHYSICAL TARGET
+
+The literal spatial-flow magnetic probe B_a=exp[-u Q_a], with Q_a>=0,
+already lies in[0,1]; physical_observable_sources_turn63, Section2,
+establishes its finite-lattice gauge invariance and time-half support.
+Its flow acts within original spatial slices, not across time. One
+must retain its chosen fixed physical s,f,u and field calibration.
+The same note's Sections4--6 prove a positive FREE benchmark but leave
+the interacting original-law comparison open. This note supplies no
+such comparison. Nor does it replace an unbounded canonical action
+source by B_a while pretending the observable is unchanged.
+
+TURN71 already distinguishes simultaneous bounded/Gram subsequences
+from a compatible continuum local field theory, and shows why small
+bad-bridge contributions do not control selected coarse reweighting.
+The present uniform source domain sharpens neither conclusion into
+nontriviality. TURN75 identifies the original reflected norm as the
+variance of an original boundary conditional mean, and gives a model
+with controlled positive marginals but vanishing channel. Equations
+(4.1)--(4.2) merely express that still-unknown channel in the exact
+interacting auxiliary variables.
+
+The actual simplification is therefore specific: for these bounded
+original probes, no shrinking source-parameter disc, inverse-radius
+jet cost, or polynomial canonical-source numerator factor is needed.
+One still needs an actual local/full comparison or a positive physical
+channel estimate. The specific conditional-current tube in Section 4A
+does not settle event probabilities, source-rooted spatial control,
+native background-localization domains, or nontrivial continuum
+identification.
+
+Inputs inspected: physical_observable_sources_turn63; turn71_compactness_tail;
+turn71_full_law_gauge; turn75_full_law_tail; turn81_external_source_history;
+turn81_auxiliary_os_root. No previous files or authoritative outputs changed.

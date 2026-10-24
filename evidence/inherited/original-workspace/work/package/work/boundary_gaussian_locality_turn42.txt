@@ -1,0 +1,385 @@
+ARBITRARY-DEPTH GAUSSIAN BOUNDARY SCREENING
+19 October 2026. balaban_inputs. Turn42 bounded constructive result.
+
+RESULT AND LIMIT
+
+On the actual aligned fixed-fine-crossing box, with ALL inherited incident
+coarse rows retained, let K_K be its direct total-M ordinary-average
+Maxwell precision. Compare it to the unrestricted periodic precision
+K_per on an auxiliary larger compatible torus, restricted to these rows.
+Then, uniformly in M=L^k>=L>=11 and box size,
+
+ D:=K_K-K_per|J >=0,
+ ||1_A D 1_B||_(2->2)
+       <= C exp[-c(depth(A)+depth(B))].                 (0.1)
+
+Depth is distance in FINAL coarse cells to the original fine boundary,
+with a fixed collar subtracted and negative depths replaced by zero.
+Consequently
+
+ ||1_A K_K 1_B|| <= C { exp[-c dist(A,B)]
+                      +exp[-c(depth(A)+depth(B))] }.     (0.2)
+
+These are genuine arbitrary-depth boundary estimates, not consequences
+of spectral comparison alone. The periodic minimizing-lift estimate used
+below is reverified from its explicit canceled alias formulas in Sections
+2--3; it is not merely inherited from an unaudited symbol assertion.
+
+This does NOT prove exponential locality between two distant shallow
+boundary sets. The precise remaining operator is an energy-orthogonal
+projection in (5.2). Section7 gives a countertest to inferring its required
+tangential locality from positivity, normal screening and spectral bounds.
+No finite-g measure, nonflat minimum or nonlinear remainder is considered.
+
+1. GEOMETRY, NORMALIZATION AND PROVENANCE
+
+The final coarse spacing is one; fine spacing is eta=1/M. Fine potentials
+are physical potentials, so d_eta includes eta^-1 and the fine energy
+uses eta^d. In d=4 this is the rescaled quadratic Wilson energy with no
+extra power of eta. Color coordinates are independent copies.
+
+K is a cube made of complete aligned total-M blocks. A fine variation
+is free only when BOTH endpoints belong to K. All crossing and exterior
+fine variations are zero. The energy includes every plaquette reading a
+free edge, including outward plaquettes. J consists of every coarse row
+with at least one active endpoint. Its crossing rows are VARIABLES.
+Extend fine fields and coarse data by zero outside these sets. A new
+freezing of coarse crossing rows would change the assertion.
+
+Embed K in a compatible periodic torus with side at least four times
+its diameter plus a fixed collar. All distances below may first be read
+in that torus. This torus is a comparison construction; it does not change
+the conditional action or exterior values in K. Their tangent is zero.
+
+R_M denotes the derivative at identity of the ACTUAL successive ordinary
+averages. The following previously proved inputs are retained:
+
+ * gaussian_iteration_energy_turn41.txt, Sections2,6: exact composition,
+   R_M=Q_M^st+d Psi_M, inherited incident-row geometry, and direct-total-M
+   variational energy identity.
+ * primary_reference_field_class_turn16.txt, Sections5,7, and
+   compact_native_lift_independent_audit_turn16.txt, Sections3--4:
+   compact ordinary whole-star inverse E_M supported strictly inside the
+   active owner blocks, uniform physical C2 bounds, all other star rows
+   zero, including the accumulated endpoint correction.
+ * native_interface_geometry_turn39.txt: fixed crossing convention and
+   complete determining rows. No different incident-fine-edge convention
+   from the older boundary notes is substituted.
+
+The periodic algebra checked here is from the following mathematical
+archive derivations, not quoted as primary-source theorems:
+
+ work/archive/ym4-research/work/flat_covariance_decay_research.md,
+      Sections2--6;
+ work/archive/ym4-research/work/flat_minimizer_locality_research.md,
+      Sections2--8.
+
+Primary definition checked again: Balaban, CMP109 (1987)249--301,
+pp253--254, (0.8),(0.11),(0.12). The arithmetic derivative and endpoint
+covariance specify the ordinary linear average used here. Public PDF:
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+The nonlinear source theorem is not invoked to establish these flat
+estimates. No identification with its separately gauge-fixed propagator
+is needed.
+
+2. REVERIFIED PERIODIC PRECISION AND MINIMIZING LIFT
+
+Put I_M={-(M-1)/2,...,(M-1)/2}, p_r=z+2pi r, r in I_M^d. Define
+
+ a_r=prod_nu [M^-1 sum_(s in I_M) exp(i p_(r,nu)s/M)],
+ ell_(r,mu)=M^-1 sum_(s=0)^(M-1) exp(i p_(r,mu)s/M),
+ omega_(r,mu)=a_r ell_(r,mu),
+ u_(r,mu)^+=M(exp(i p_(r,mu)/M)-1),
+ u_(r,mu)^-=M(exp(-i p_(r,mu)/M)-1),
+ P_r=sum_mu u_(r,mu)^+u_(r,mu)^-,
+ d_mu^+=exp(i z_mu)-1,  d_mu^-=exp(-i z_mu)-1.
+
+The superscript minus on a or omega below means evaluation at -p_r,
+not Hermitian conjugation at complex z. On real z it is the conjugate.
+The physical normalization gives the exact identity
+
+                  omega_(r,mu) u_(r,mu)^+=a_r d_mu^+.
+
+Set A=a_0 a_0^-, g_mu=omega_(0,mu)omega_(0,mu)^-, and
+
+ R_mu=sum_(r!=0) omega_(r,mu)omega_(r,mu)^-/P_r,
+ D_mu=g_mu+P_0 R_mu, h_mu=D_mu^-1,
+ E=A^-1-sum_mu d_mu^+d_mu^- R_mu/(g_mu D_mu),
+ R_s=sum_(r!=0) a_r a_r^-/P_r, D_s=A+P_0 R_s.
+
+Direct subtraction of 1/D_mu and 1/g_mu proves
+
+ d^- h d^+=P_0 E,
+ K_per(z)=P_0 h-h d^+d^- h/E.                          (2.1)
+
+There is NO central denominator P_0 in this formula. This cancellation
+is necessary because P_0 has a complex null cone arbitrarily near zero.
+
+For input B put S=d^- h B. A straight-average minimizing right inverse
+is defined by the following already canceled formulas:
+
+ (H_0 B)_mu=omega_(0,mu)^- h_mu B_mu
+       +(u_(0,mu)^+/a_0)(R_mu h_mu-R_s/D_s) S/E;
+
+ H_r B=P_r^-1 {P_0 diag(omega_r^-)h B
+       +[u_r^+a_r^-/D_s-diag(omega_r^-)h d^+]S/E},
+                                      r!=0.            (2.2)
+
+Here and below products are ordered as written. For real z!=0 these
+are equivalently
+
+ F_r=P_r^-1 diag(omega_r^-) K_per B,
+ theta=S/(P_0 E),
+ t_0=a_0^-/D_s, t_r=P_0 a_r^-/(P_r D_s),
+ H_r B=F_r+u_r^+ t_r theta.
+
+The identity sum_r a_r t_r=1 and d^-K_per=0 imply Q^st H=I
+and u_r^- F_r=0. The transverse F part has the minimum Maxwell
+energy; the other part is an exact fine gradient. Thus
+
+ Q^st H=I,  ||d_eta H B||^2=<B,K_per B>.                (2.3)
+
+One can verify the last equality by first minimizing the diagonal fine
+Feynman form with blocked covariance diag(sum omega omega^-/P_r),
+then minimizing the resulting coarse form over B+d theta. This yields
+exactly(2.1). At z=0 take H_0=I and all high aliases zero. Constant
+coarse fields have zero energy; harmonic modes have not been deleted.
+
+3. WHY THE PERIODIC LOCALITY CONSTANTS ARE UNIFORM IN M
+
+Here are the analytic estimates needed for(2.2), including the steps
+that would fail if one simply counted M^d aliases.
+
+Use an enlarged real zone |Re z_mu|<pi+delta_0<2pi and a sufficiently
+small fixed imaginary width. For r!=0, direct sine estimates, including
+the wrapped fine-zone endpoint, give
+
+ |P_r(z)|>=c |r|^2,   |u_r(z)|<=C(1+|r|).
+
+Discrete Fourier orthogonality of the scalar block weights gives
+sum_r|a_r|^2<=C; multiplication by a bounded string average gives
+sum_r|omega_(r,mu)|^2<=C. The same holds for the minus factors.
+Consequently R_mu and R_s are uniformly bounded holomorphic functions.
+All central factors are uniformly bounded as well.
+
+On the enlarged REAL zone, a_0 and the central string factors are
+uniformly separated from zero. Positivity then gives A,g_mu,D_mu,D_s
+bounded above and below by positive constants. For z!=0,
+
+ E=(sum_mu |d_mu|^2/D_mu)/P_0 >=c>0,
+
+because sum|d_mu|^2>=c|z|^2 and P_0<=|z|^2. At zero E=1.
+First shrink the complex tube to preserve the real gaps for A,g,D,D_s
+using Cauchy derivative bounds; then use the displayed analytic formula
+for E and shrink once more to preserve its gap. All shrinkages are fixed,
+independent of M. Hence (2.1),(2.2) are uniformly holomorphic and bounded
+in one common momentum strip.
+
+For pointwise within-cell norms a stronger alias estimate is useful. Put
+w(r)=prod_nu(1+|r_nu|)^-1. The finite geometric sums give
+
+ |a_r|<=Cw(r),
+ |omega_(r,mu)|<=Cw(r)/(1+|r_mu|).
+
+Therefore (2.2), and the curl formula
+
+ (d_eta H)_r=P_r^-1 u_r^+ wedge[diag(omega_r^-)K_per]
+
+for high aliases, imply
+
+ ||H_r||+||(d_eta H)_r||<=C w(r)/(1+|r|_infty).         (3.1)
+
+The dyadic shell sum of w(r) is at most C(1+j)^(d-1); the extra
+factor 2^-j makes(3.1) absolutely summable, uniformly in M. Even a
+factor(1+|r|)^alpha is allowed for every fixed alpha<1.
+
+Reconstruct at a fine location x=n+s/M by
+
+ H_cell(z;s)=sum_r exp(i(z+2pi r).s/M)H_r(z).
+
+On one cell or any fixed physical collar, the absolute sum proves
+uniform potential and curl supremum bounds, and physical C^alpha bounds
+if wanted. These are bounded holomorphic operator-valued cell symbols.
+Under z->z+2pi e_mu aliases relabel modulo M and the reconstruction
+phase cancels the relabeling; a wrapped alias has phase exp(i2pi s_mu)=1.
+The formulas agree on real overlaps and hence glue holomorphically.
+Fourier contour shifting gives
+
+ ||1_x H 1_c||_(coarse component -> cell sup)
+ +||1_x d_eta H 1_c||_(coarse component -> cell sup)
+       <=C exp[-m dist(x,c)].                          (3.2)
+
+Cell physical L2 follows. Formula(2.1) gives the corresponding exponential
+kernel of K_per. Finite tori are exact periodizations; constants and
+weighted row/column sums are uniform in their side lengths. This proves
+the precise periodic locality input used below; it is more than the
+spectral comparison from turn41.
+
+4. LITERAL ORDINARY LIFT AND A BOUNDARY-RESPECTING TRIAL FIELD
+
+The periodic lift above is for Q^st. The actual composed ordinary map
+satisfies R_M=Q_M^st+d Psi_M. Besides the earlier exact identity, a
+uniform LOCAL bound for Psi_M is needed here.
+
+At an intermediate physical spacing h, the flat endpoint-contour
+functional has norm at most C_L h and reads a fixed next-block collar.
+Its input in the accumulated correction is the STRAIGHT partial average,
+whose physical sup norm is at most one. The gradient covariance of the
+ordinary next map simply restricts the previous scalar correction to
+its next centers. Thus the correction is a sum of such terms, and
+sum_(intermediate h) h<=C_L in final units. Its read radius is also a
+fixed final-scale radius. Hence
+
+ ||Psi_M A||_infty<=C_L||A||_infty
+
+with fixed cellwise row/column locality. No C^k product is introduced.
+This is also the linear version of the cumulative endpoint construction
+in the turn16 proof. That proof supplies the sharper owner-star support
+needed for E_M below.
+
+Choose smooth scalar bumps beta_z supported strictly in their final
+owner blocks, beta_z(z)=1, with uniform physical C2 bounds. The fine
+gradient of lambda=-sum_z beta_z Psi_M(HB)(z) has zero curl and ordinary
+average -d Psi_M(HB), by exact endpoint covariance. Therefore
+
+ H_ord B=H B+d_eta lambda
+
+is an ordinary right inverse with the same minimum energy. Its potential
+and curl kernels satisfy(3.2), with changed fixed constants. It is NOT a
+long rooted-forest representative. Conversely a rooted-feasible field
+can be changed by a fine gradient to straight-feasible data of the same
+coarse curl, so the two infima agree, as in turn41.
+
+Choose a scalar fine cutoff chi which vanishes in a fixed physical
+boundary collar and equals one more than a fixed distance inside K.
+It has |d_eta chi|<=C uniformly in M. It is applied to oriented bonds
+with one fixed endpoint/midpoint convention; the zero collar includes
+their full stencils. Then A0=chi H_ord y belongs to the fixed-crossing
+space. The defect
+
+ b=y-R_M A0=R_M[(1-chi)H_ord y]
+
+is zero except in a fixed coarse boundary collar of J. This follows
+from the complete row footprint, not from the datum y alone. Rows outside
+J vanish for both y and R_M A0. Use the compact whole-star inverse on
+these actual rows and set
+
+ A_trial=A0+E_M b,   h_y=A_trial-H_ord y,
+                       L y=d_eta h_y.                 (4.1)
+
+All original fine crossings remain fixed, and R_M A_trial=y exactly.
+The lift E_M has physical potential/curl bounds and fixed cell overlap;
+its owner blocks lie in a fixed boundary collar. Consequently L is
+supported, as a curvature field, outside a fixed inner bulk K^deep.
+Discrete product rule plus(3.2) and the bounded local R_M,E_M give
+
+ ||1_x L 1_c||_(coarse component -> cell L2)
+       <= C exp[-m dist(x,c)]                         (4.2)
+
+and it vanishes when x lies in K^deep. The fixed collar may be enlarged
+once to absorb all endpoint, repair and plaquette stencils. No M-dependent
+fine-bond census appears: the target norm is physical cell L2.
+
+In this calculation the path/endpoint functionals are applied to the
+FINE-POINT SUP bounds of H_ord from the absolutely summable alias estimate,
+not to an arbitrary fine L2 field. They are bounded from physical sup
+norm because their path lengths are bounded in physical units. Likewise
+d_eta(chi H_ord) is estimated by the discrete product rule using the
+pointwise potential and curl on a fixed collar, then converted to the
+physical cell L2 norm. No uniform arbitrary-L2-to-path trace bound is
+assumed; such a bound would be false as M grows.
+
+Define depth(A)=dist(A,(K^deep)^c), with the fixed support offsets
+subtracted. Applying exponential row AND column sums to(4.2) gives
+
+                 ||L 1_A||_(2->2)<=C exp[-m' depth(A)]. (4.3)
+
+This is a Schur bound between coarse l2 and the direct sum of physical
+fine curl cell spaces. It holds for arbitrary sets A, not merely one
+point, after reducing m once to absorb polynomial shell counts.
+
+5. THE EXACT ENERGY-PROJECTION IDENTITY
+
+Work in the finite-dimensional fine CURL Hilbert space, so pure-gauge
+null directions cause no inverse or gauge convention issue. Define
+
+ W_K={d_eta a: a is fixed-crossing supported in K, R_M a=0},
+
+and let Pi_K be its orthogonal projection. Every fixed-crossing feasible
+field differs from A_trial by an allowed zero-datum field. Thus the
+possible curvature corrections to the global minimum are exactly
+
+                           L y+W_K.                   (5.1)
+
+The global minimum curvature d H_ord y is orthogonal to d ker R_M.
+In particular it is orthogonal to both Ly and W_K. Subtracting its
+energy and minimizing(5.1) proves the EXACT matrix identity
+
+       K_K-K_per|J=L^*(I-Pi_K)L.                       (5.2)
+
+This is the promised place where the actual boundary problem enters.
+It follows that D>=0 and, using only ||I-Pi_K||<=1 and(4.3),
+
+ ||1_A D1_B||<=||L1_A|| ||L1_B||
+          <=C exp[-m'(depth(A)+depth(B))].              (5.3)
+
+The unique minimizing curvature also obeys
+
+ ||d H_K 1_A-d H_ord 1_A||_(2->2)
+            =||(I-Pi_K)L1_A||<=C exp[-m' depth(A)].     (5.4)
+
+No representative-specific potential estimate for H_K is claimed.
+Adding the periodic precision kernel bound proves(0.2). The bounds are
+uniform over the chosen trial lift and auxiliary large torus. K_K is
+the same restricted variational form in each embedding; K_per and its
+comparison difference may depend on the auxiliary period. No equality
+of those different periodic comparison kernels is claimed.
+
+6. ACTUAL ITERATION CONTENT
+
+The constraint in this result is the direct composition of the ordinary
+averages. Exact nested infima from turn41 identify it with the generated
+Gaussian precision after any number of those steps, provided intermediate
+states retain ALL incident rows. Thus(5.3) is an actual hierarchy bound,
+not an estimate for an unrelated straight-average surrogate.
+
+It says that a datum supported deep inside the physical box has an
+exponentially small boundary correction in precision and in total
+minimum-curvature energy norm. Combined with the periodic locality this
+gives a useful bulk comparison on every depth, uniformly in prior UV
+refinement. It does not give a uniform exponentially weighted boundary
+KKT inverse: boundary-to-boundary entries of Pi_K remain uncontrolled.
+The one-step fixed-L finite-range KKT proof from turn40 cannot simply be
+reused after many steps without that extra information.
+
+7. A SHARP TEST OF WHAT THE REMAINING PREMISES CANNOT IMPLY
+
+Take N disjoint coarse plaquettes along a boundary layer, spread over a
+box of side R, and put u=N^-1/2 sum_p e_p in two-form space. Define
+
+                    D_test=d_c^* u u^* d_c.
+
+Then D_test>=0, D_test d_c(on scalars)=0, and
+D_test<=d_c^*d_c. It has only boundary support, so it satisfies every
+normal-depth screening statement above. But selected edge entries from
+two remote plaquettes have magnitude 1/N, while their separation can be
+of order R. With N polynomial in R this is not bounded by C exp(-cR)
+uniformly in R. Adding D_test to a local Maxwell precision preserves
+uniform energy comparisons and the gauge null space.
+
+This is NOT a counterexample to the actual K_K. It demonstrates that
+the already proved spectral, gauge and normal-screening properties do
+not determine along-boundary locality. The precise additional task is
+to establish a local approximation/weighted estimate for the ACTUAL
+Pi_K in(5.2), or an equivalent boundary Schur complement. Its norm-one
+property alone is insufficient. No missing boundary estimate has been
+hidden in a choice of fine forest.
+
+STATUS
+
+Newly established here: the explicit periodic lift/locality calculation
+has been checked; together with the previously audited compact ordinary
+star inverse it proves uniform arbitrary-depth boundary screening on
+the declared inherited incident-row geometry. The full boundary spatial
+iteration remains open at the tangential projection stated in Section7.
+This note adds no finite-g claim and changes no previously saved files.

@@ -1,0 +1,167 @@
+CURRENT PROOF FRONTIER -- TURN90 -- 21 OCTOBER 2026 UTC / 20 OCTOBER LOCAL
+
+THE NONTRIVIAL CONTINUUM YM4 EXISTENCE PROOF IS NOT COMPLETE.
+Goal active. No cutoff-uniform nonzero physical source or variance lower
+bound has been proved. No external paper-access blocker is identified.
+
+New report: outputs/yang-mills-physical-block-tests.txt
+TURN89 and all previous nonstatus outputs are preserved.
+
+1. TWO ORIGINAL-LAW LOWER-BOUND ATTEMPTS TESTED
+
+Keep the original bounded spatial-flow slice probe phi_t in [0,1], with
+fixed physical flow time, spatial smear, h and g_*. The last parameter
+is an observable parameter, not a matched renormalized coupling. Let
+ G_n=(1/n)sum_(0<=t<n)phi_t-(1/n)sum_(n<=t<2n)phi_t,
+with 2n<=N and L=na in a fixed positive physical interval, where N is
+the temporal period in lattice units. The unproved target is
+ Var_(full original Wilson law)(G_n)>=v>0
+on one intended cutoff/volume sequence. Equal-time positivity is weaker.
+
+For an embedded bare lattice cube of side R, let E_R(delta) mean that
+some boundary vertex gauge makes every fine boundary edge delta-close
+to I in operator norm. Under the original SU2 Wilson law,
+ P(E_R(delta)) <= [min(1,C(1+beta)^(3/2)delta^3)]^m_R,
+ m_R=floor(R/2)^2(R+1)>=R^3/16, R>=2, delta<=1/4.
+This follows from necessary small boundary plaquettes, the exact
+one-edge tilted-Haar density bound, and repeated conditional bounds on
+edge-disjoint face plaquettes. No plaquette independence is assumed.
+
+The retained bare Dirichlet comparison requires delta<=cR^-24 and
+gT<=cR^-8, T>=1, beta=g^-2. Its domain forces beta>=c'R^16.
+For R comparable to a^-1 and polylogarithmic beta, this domain fails;
+also P(E_R(cR^-24))<=exp(-c'R^3 log R). The contribution of that event
+to the conditional variance of G_n is at most its probability. The
+complement and outer conditional-mean variance remain uncontrolled.
+This excludes that particular bare fine-boundary argument, not a
+native coarse-boundary comparison and not the variance floor itself.
+A microscopic block affecting K slice probes has conditional range
+at most K/n, hence conditional variance at most K^2/(4n^2).
+
+2. EXACT COLLECTIVE SCORE AND A LIMITATION OF ITS COARSE BOUND
+
+For every smooth original vector field X on the product of SU2 links,
+ sigma_X=beta X S4-div_Haar X,
+ E sigma_X=0, E XG_n=E G_n sigma_X.
+S4 includes all four-dimensional plaquettes without beta. In the
+Pauli/2 metric, with the two-form norm summing i<j, exactly
+ E sigma_X^2=E[|nabla X|^2-|dXflat|^2+|X|^2/2
+                                      +beta Hess S4(X,X)].
+The signed covariant-curl/curvature Hessian and the kinematic terms
+retain cancellations. They remain correlated with X under the law.
+
+The uniform Hess S4<=6 Id gives the upper bound
+ B_X=E|nabla X|^2+(6beta+1/2)E|X|^2.
+NEW: for beta>=1, every such original X obeys
+ |E XG_n|^2/B_X<=4/n (with the zero-field case interpreted as zero).
+This bounds the lower-bound CERTIFICATE using B_X. It is NOT an upper
+bound on Var G_n and does not bound the true-score quotient that way.
+
+In the exact HS joint Pi=mu(U)kappa_U(xi)=nu(xi)k_xi(U), let C denote
+conditioning on the entire real auxiliary record xi. Original links
+are conditionally independent and E Var(G_n|xi)<=1/(2n).
+Every joint score with C sigma=0 therefore has
+ |E G_n sigma|^2<=E sigma^2/(2n).
+For original X, the fixed-xi deformation score is
+ sigma_cond=sigma_X-X log kappa_U,
+ E sigma_cond^2=E sigma_X^2+E I_U(X),
+ I_U(X)<= (18beta+24)|X|^2 pointwise in U.
+This proves the 4/n bound above.
+
+The exact Fisher identity in the standard three-first/three-second
+HS convention is
+ I_U(X)=sum_e D_e(U)|X_e|^2-beta Hess S4(X,X),
+ D_e=6+(beta/4)[27-sum_first h_p-3sum_second h_p].
+The Wilson Hessian cancels in E sigma_cond^2. This explains why the
+fixed-auxiliary score loses the structure needed for physical response.
+Moving U while keeping independent Gaussian innovations fixed gives a
+joint lift with score sigma_X itself; xi then moves. That lift is outside
+the exclusion, but supplies neither a score bound nor a response floor.
+Exactly, the difference between E XG_n and E_nu[(CG_n)(C sigma_X)]
+has absolute value at most sqrt(E sigma_X^2/(2n)). The interacting
+conditional-mean response is still unproved.
+
+3. RETAINED FINITE THERMAL AND AUXILIARY RESULTS
+
+TURN89, outputs/yang-mills-thermal-spectral-channel.txt, proves the
+exact finite thermal energy-difference representation. Its positive
+measure mu_N has mass<=1/4. It is not a finite thermal vacuum spectrum.
+With r=exp(-aE), A_n(r)=n+2sum_(d=1)^(n-1)(n-d)r^d,
+C_n(r)=r(1-r^n)^2/(1-r)^2 and w_n=2(A_n-C_n)/n^2,
+ Var_W G_n=int[w_n(exp(-aE))+exp(-NaE)w_n(exp(aE))]mu_N.
+The backward term is nonpositive, and
+ 0<=w_n(exp(-aE))<=min(2,8LE,2/n+4/(LE)).
+IF Var_W G_n>=v and n>=4/v, then at fixed L,
+ epsilon=v/(8L), Lambda=max(2epsilon,8/(Lv)),
+ mu_N([epsilon,Lambda])>=v/4.
+A buffered translation to time T0>0, T0+2L<Na/2, then has reflected
+norm at least (v/4)exp[-2(T0+L)Lambda](1-exp(-L epsilon))^2.
+TURN89 gives constants for L in a fixed positive interval and uniform
+thermal backward errors on simultaneous sequences with Na->infinity.
+No ground-state-first limit is required for those particular formulas.
+The variance premise remains unproved; this is a conditional consequence.
+
+For m_t=C phi_t and epsilon_phi=E Var(phi_t|xi)<=1/4, exactly
+ Var_W G_n=Var_nu(CG_n)+2epsilon_phi/n.
+For every real s,
+ 0<=log E_W exp(sG_n)-log E_nu exp(sCG_n)<=s^2/(4n).
+The curvature identity is independently exact, not obtained by
+differentiating that bound. nu is the full interacting auxiliary law.
+TURN89 also proves the same-original-law quadratic conditional-noise
+bound E_nu Var(B|xi)<=20 A_beta E_W sum_e |D_e B|^2,
+A_beta=(1+2beta)^-1+min(1,192exp(-beta/3200)). The required physical-scale
+bounds on the adjacent mean increment E_nu(m_1-m_0)^2 and marked flow
+gradients remain unproved.
+
+4. SOURCE AND NATIVE RG REQUIREMENTS ARE STILL PRESENT
+
+The original signed row is Z^-1 int w_B G Z_+ Z_F dB,
+Z=int w_B Z_+^2 dB. Global centering is not boundarywise centering.
+On a complete positive old-record lift, normalized new-slot references
+cancel for passive old sources. Signed localized polymer factors are
+not normalized Markov kernels. Replacing the old source by a new proxy
+retains their difference against the actual unfinished continuation.
+The first eligible Balaban R component carries prior RG history;
+the bare fine-boundary test does not estimate all its native predicates.
+The Gaussian one-filter target and its full-law error threshold from
+TURN88 remain sufficient but unproved. No all-future-test TV estimate
+is demanded for the one row.
+
+5. PRIMARY LITERATURE CHECK AND FULL-GOAL LIMITS
+
+Chatterjee's pure U(N) free-energy proof has direct box parameter
+delta=n^((d+1)/2)sqrt(logbeta/beta) and pressure error beta delta^3.
+At d=4 their squared sizes are n^5 logbeta/beta and
+n^15(logbeta)^3/beta. They do not become small on a physical box at
+polylogarithmic beta. Its box decomposition estimates pressure, not the
+required normalized physical source; U(N) is not silently replaced by
+SU2. The primary displayed pages were visually checked.
+The MRS fixed-IR construction uses a different measure and does not
+provide the original Wilson/RP matching. The inspected introduction
+itself qualifies the proof status. Deng--Shen's newly checked critical
+4D Anderson resolvent result leaves Yang--Mills to future work. None
+supplies the missing lower bound at the inspected scope. This is not
+a literature-wide impossibility claim.
+
+Bounded scalar smears have common local weak-* compactness. The retained
+infinite-time stationary RP scalar limit gives exp(-tH), H>=0. The
+time-difference filter kills the entire ker H; a uniform positive
+filtered norm would witness positive energy, but has not been proved.
+Spatial flow is nonlocal in space and
+selects a time axis. Even that scalar result would leave local gauge-
+invariant YM observables, scale/coupling identification, nonabelian
+interaction, O(4) covariance, full joint/contact/separated sources,
+common continuum/volume limits, and reconstruction.
+
+The next unresolved mathematical estimate is original-law correlated
+physical-scale response, whether through a genuinely coarse conditional
+law with its actual boundary/source weights or a true collective score
+retaining its cancellations and a nonzero response. Neither is supplied.
+
+Last external repository refresh was TURN88 at head
+2a42da2e0677948ea48fbfe7126b94be5e884f79. This pass makes no fresh-head
+claim. PRO1/RRO1/RGO1/RNO1 were already covered by TURN83. QED3 model
+restrictions remain. No requested paper or permission is missing.
+Scoped producers/reviews are recorded in work/turn90_package_manifest.json.
+Their checks certify only the stated finite results and implications.
+Full YM4 remains unproved; goal active, not complete, paused or blocked.

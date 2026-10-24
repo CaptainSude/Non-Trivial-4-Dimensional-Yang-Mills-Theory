@@ -1,0 +1,187 @@
+\section{A sufficient completion theorem and the remaining programme}
+\label{sec:completion}
+
+The purpose of a completion criterion is to identify precisely what the
+remaining estimates have to deliver. It is not a theorem that assumes
+Yang--Mills existence and then renames it. Its useful content is the
+operator-theoretic assembly: once the scalar vacuum representation and
+common-domain estimates are available, adding fields does not require
+a new independent Euclidean reconstruction at every engineering degree.
+The actual construction of those fields and their Yang--Mills
+identification remain substantive premises.
+
+\subsection{Completion in one vacuum representation}
+
+Let \(V_D\) be increasing finite-dimensional label spaces for a chosen
+basis of gauge-invariant \(SU(2)\) curvature/jet polynomials of engineering
+dimension at most \(D\). Fix the algebraic relations, adjoints,
+derivatives, and allowed renormalization mixing before defining these
+spaces. The scalar family is among the labels. Bare multiplication of
+symbols is not assumed to equal multiplication of renormalized fields at
+the same point.
+
+\begin{theorem}[Common-space completion criterion]\label{thm:completion}
+Suppose a scalar vacuum theory \((\HH,U,\Omega)\) has been constructed,
+where \(U\) is strongly continuous and Poincar\'e covariant, its spectrum
+lies in the forward cone, and \(\Omega\) is its unique invariant unit
+vector. Let \(H\geq0\) be the Hamiltonian and put
+\(\DD_\infty=\bigcap_{r\geq0}\Dom(1+H)^r\).
+For every \(D\), suppose that the actual lattice/fusion construction
+gives linear operator distributions \(\Phi_D(v,f)\), \(v\in V_D\),
+compatible under increasing \(D\), with the following properties.
+\begin{enumerate}[label=(\alph*)]
+ \item The fields and their adjoint companions preserve \(\DD_\infty\).
+ For each \(r\geq0\) there exist \(p,s,C\), uniform on the finite label
+ space, for which
+ \begin{equation}
+ \|(1+H)^r\Phi_D(v,f)(1+H)^{-p}\|
+       \leq C|v|p_s(f). \label{eq:energybound}
+ \end{equation}
+ Here \(p_s\) is a Schwartz seminorm. The fields are jointly local on
+ \(\DD_\infty\), and the scalar subfamily makes \(\Omega\) cyclic.
+ \item The fields intertwine \(U\) with the declared tensor
+ representations on their label spaces and obey the declared adjoint
+ and derivative relations.
+ \item The field map is nondegenerate on the chosen operator quotient
+ and satisfies the claimed renormalized local identities, including
+ the equation-of-motion/contact and Ward identities in their declared
+ schemes. Its ultraviolet correlations and local operator products,
+ with the fixed coupling and mixing convention, have the Yang--Mills
+ coefficients and controlled remainders at each requested finite
+ perturbative order. The stress-tensor Ward normalization is included
+ when claiming that part of the identification.
+ \item Some centered field creates a vacuum vector with a nonzero
+ component outside the translation-invariant subspace.
+\end{enumerate}
+Then these data define a nontrivial local \(SU(2)\) observable quantum
+field theory with the stated Yang--Mills identification. No mass gap
+is implied.
+\end{theorem}
+\begin{proof}
+The vacuum is in \(\DD_\infty\). Because that domain is invariant,
+every finite product of smeared fields on the vacuum is defined.
+Apply \eqref{eq:energybound} successively, choosing the input exponent
+for one factor to absorb the output exponent required by the next.
+For every fixed finite list of labels this gives
+\begin{equation}
+ |\langle\Omega,\Phi(v_1,f_1)\cdots\Phi(v_n,f_n)\Omega\rangle|
+ \leq C_{D,n}\prod_{j=1}^n p_{s_j}(f_j). \label{eq:wordbound}
+\end{equation}
+The Schwartz kernel theorem yields a tempered distribution on the
+product test space. Positivity follows from the Hilbert inner product,
+the spectral condition from \(U\), covariance from (b), and locality
+from (a). The adjoint companions give the adjoint relations; a densely
+defined operator with a densely defined adjoint restriction is closable.
+Cyclicity holds because the scalar subfamily already generates \(\HH\).
+Vacuum uniqueness is part of the representation hypothesis. Thus the
+fields satisfy the stated Wightman requirements. Property (c) supplies
+the additional Yang--Mills identification, which is not a consequence
+of those axioms alone. Property (d) excludes a theory consisting only of
+invariant vectors.\end{proof}
+
+There is no need for constants in \eqref{eq:wordbound} uniform in \(n\)
+to establish the temperedness of each Wightman distribution in this
+already constructed representation. This does not say that arbitrary
+fixed-order Euclidean estimates suffice to perform the original
+reconstruction. That earlier step requires its own growth condition.
+
+\subsection{A concrete tensor-covariance test}
+
+For actual approximants \(\Phi_{D,G}\), a sufficient calibration estimate
+is, uniformly for Lorentz transformations \(\Lambda\) in compact sets,
+\begin{multline}
+ \big\|(1+H)^{-p}\big[
+ U(\Lambda)\Phi_{D,G}(v,f)U(\Lambda)^{-1}\\
+ -\Phi_{D,G}(\rho_D(\Lambda)v,f\circ\Lambda^{-1})
+ \big](1+H)^{-p}\big\|\longrightarrow0. \label{eq:covdefect}
+\end{multline}
+The approximants must converge in a compatible energy-form topology.
+On compact Lorentz sets the forward-cone spectral condition makes the
+transformed energies comparable, so the conjugations respect
+\(\DD_\infty\). Passing to the limit in \eqref{eq:covdefect} proves
+covariance. An alternative is to prove the corresponding ordered
+Euclidean covariance and then continue analytically. Euclidean rotations
+are not being represented here by unitary operators on the physical
+Hilbert space.
+
+A positive 21-dimensional Gram matrix establishes independence, not
+\eqref{eq:covdefect}. The Lorentz orbit may otherwise leave the proposed
+finite field space or carry a different representation. An intrinsic
+finite-dimensional completeness theorem with an equivariant injective
+symbol map would be another route; its hypotheses are not supplied by
+Gaussian rank alone.
+
+\subsection{What an ultraviolet identification estimate must say}
+
+At a fixed nonexceptional rescaled configuration, a typical required
+statement, after the declared canonical scaling and logarithmic mixing,
+is
+\begin{equation}
+ S_{\mathrm{rescaled},\lambda}
+  -\sum_{k=0}^K g(\lambda)^k S_k^{\mathrm{YM}}
+ =O\!\left(g(\lambda)^{K+1}|\log g(\lambda)|^{q_K}\right)
+ \label{eq:uvmatch}
+\end{equation}
+in a specified distribution or energy topology, for every fixed requested
+order \(K\). Exceptional configurations require their own local OPE
+subtractions and remainders. Equation~\eqref{eq:uvmatch} is a target
+form, not a result established by the present one-loop calculation.
+The latter fixes a useful leading coupling coordinate but does not
+identify every composite field or contact normalization.
+
+The first genuinely nonabelian algebraic test beyond the 21 quadratic
+directions is an oriented triple. A purely Gaussian scalar construction
+preserves improper color-reflection symmetry and cannot generate it.
+The fixed-\(q\) interaction calculation supplies a candidate first-order
+coefficient. To construct a field, its coefficient must be identified
+for the actual long prefix with a remainder smaller than that coefficient
+in the common operator topology. Dividing by a small coefficient before
+proving a relative bound is not justified.
+
+\subsection{The next mathematical tasks, in dependency order}
+
+\begin{enumerate}
+ \item \textbf{Attach the modified intrinsic minima.}
+ Prove Problem~\ref{prob:admission} on preparation-changed slots,
+ including complete paths, crossing plaquettes, retained gauges and
+ simultaneous contour margins. The unchanged-slot identity
+ Lemma~\ref{lem:slots} is already available. Apply the local current
+ and complex-margin lemmas only after their patch hypotheses hold.
+ \item \textbf{Close the literal all-spectator history estimate.}
+ Use the original birth dates, root masks, causal periods and complete
+ source-dependent scalar ledger. Include the native \(R\)-errors and
+ the full marked \(T\)-operators, with all first-mark cross terms.
+ The output must dominate the original normalized connected response,
+ rather than an isolated regular numerator.
+ \item \textbf{Complete the scalar continuum application.}
+ Verify one hierarchy with the required all-order growth, positivity,
+ continuous rotations, domain estimates and a positive-energy witness.
+ Fixed-coupling, volume-first diagonal reflection positivity is useful
+ but must be matched to the chosen ultraviolet limit; a different
+ thermodynamic state cannot be substituted without proof.
+ \item \textbf{Construct and calibrate the quadratic frame.}
+ Establish the actual relative 21-field Gram bound, the matching matrix
+ and the convergent heat/energy limits, then prove tensor covariance
+ by \eqref{eq:covdefect} or a genuine completeness theorem.
+ \item \textbf{Close cubic transport and production.}
+ Prove dated \(h^6\) transport of the rooted cubic projection, paying
+ the \(h^{-4}\) root census, and control the normalized remainder
+ feedback in one common spatial reserve. Match actual production to
+ the nonzero first-order coefficient with a relative remainder.
+ Include annular errors, winding tails and equation-of-motion contact
+ terms. One-step constants alone do not yield this induction.
+ \item \textbf{Extend to the higher observable hierarchy.}
+ Add curvature jets and renormalized products with energy bounds,
+ locality, tensor calibration, and the Yang--Mills matching
+ \eqref{eq:uvmatch}. Apply Theorem~\ref{thm:completion} to the resulting
+ compatible fields. This completes the stated existence goal if all
+ its premises are verified; a mass gap remains a further theorem.
+\end{enumerate}
+
+The list specifies sufficient work, not a claim that every item is
+logically necessary for every conceivable construction. A different
+route may replace an item by a theorem with the same conclusion. It
+must preserve the actual measure, the common state, the full observable
+algebra and the normalization which the present route requires.
+
+\researchfile{work/full_theory_after_21_obstruction_and_completion_2026-10-18.txt}

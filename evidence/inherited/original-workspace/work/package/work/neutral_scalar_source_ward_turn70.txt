@@ -1,0 +1,404 @@
+NEUTRAL SCALAR SOURCE WARD IDENTITIES AND CLASSICAL SCALE GAINS
+TURN70. 20 October 2026. Root producer, submitted for independent audit.
+
+RESULT AND SCOPE
+
+A linear neutral scalar test source can be kept as an external
+argument of the effective action. Joint translation and full
+hypercubic covariance then remain available even though evaluating
+that argument at a particular profile breaks these symmetries.
+The source is a numerical probe, not a new dynamical field.
+
+At this level the unique reflection-even marginal field vertex is
+the scalar source times the Yang--Mills action. It is determined
+by setting the source equal to one. A residual with that marginal
+removed has the same joint low-momentum orders 4,3,2 at field
+degrees 2,3,4 as in the homogeneous extraction.
+
+There is an additional useful identity absent from the usual
+momentum-conserving two-field vertex: the two field momenta are
+independent, the source carries their negative sum, and both
+one-leg marginal kernels vanish. The quadratic density can thus
+be written with TWO field increments, anchored at the source.
+No integration by parts is performed onto the test function.
+
+This note proves the algebra and the scalar classical scale
+estimate under precise kernel hypotheses. A separate carrier
+localization proof and the exact source interpolation/update
+admission are needed before claiming a complete sourced RG
+induction. Neither an original full-law correlation theorem nor
+YM4 existence follows from this lemma alone.
+
+1. SOURCE MODULE AND ITS SYMMETRIES
+
+For definiteness take SU2 on a four-dimensional cubic lattice.
+Use positive-bond Hermitian angle coordinates A_mu(y), with
+midpoint xi(y,mu)=y+e_mu/2. Let f_x be a scalar at lattice sites.
+Consider a family linear in f,
+
+ E(f,A)=sum_x f_x e_x(A).                              (1.1)
+
+The field-independent term E(f,0) is tracked separately. The
+following statements concern E(f,A)-E(f,0).
+
+The density may have a carrier representation
+
+ e_x(A)=sum_(H contains x) E_(H,x)(A|H),               (1.2)
+
+with complete connected carriers, fixed cell size J, a positive
+exponential support reserve and a fixed holomorphic field radius.
+Individual E_(H,x) need not be gauge invariant.
+
+Assume the TOTAL E(f,A) is gauge invariant for every finitely
+supported f, on its actual common weak-field domain. Equivalently
+each summed density e_x is gauge invariant there. Also assume
+joint lattice translation, full signed-permutation covariance
+and reality:
+
+ E(Tf,TA)=E(f,A),   E(Rf,RA)=E(f,A).                  (1.3)
+
+The scalar f has no color or pseudoscalar transformation.
+Gauge transformations act on A and leave f fixed.
+
+These conditions define a linear source module. Quotient
+equivalence must mean equality for EVERY f and A (with source
+vacua handled separately). Equality after f=1 alone is weaker
+and is not used as the definition of this module.
+
+Semisimple color invariance gives D_A e_x(0)=0. Write its
+field Taylor tensors as K_(n,x), n>=2. Exponential carrier
+bounds imply finite source-anchored spatial moments of every
+fixed order at fixed field degree. All constants can retain
+dependence on J and the fixed field radius.
+
+For an infinite translation-covariant family, anchor x=0 and
+take the Fourier transform in ALL n field displacements:
+
+ Gamma_n(p_1,...,p_n).
+
+The source momentum is -(p_1+...+p_n); there is no constraint
+on the n displayed momenta. Their independence is essential.
+Field midpoint phases are used. The scalar source is anchored
+at its site, so joint inversion gives
+
+ Gamma_n(-p_1,...,-p_n)=(-1)^n Gamma_n(p_1,...,p_n).
+                                                               (1.4)
+
+All field slots remain permutation symmetric. For SU2 the
+quadratic color tensor is a multiple of the invariant form.
+
+2. WARD EQUATIONS WITH THE NEUTRAL LEG
+
+At each fixed f, differentiate exact lattice gauge invariance
+at A=0. The Ward equations through field degree four are the
+same equations for K2,K3,K4 as in the retained total-kernel
+theorem, with the scalar source position carried along:
+
+ K2(A,d lambda)=0,
+ K3(A,B,d lambda)
+     =K2(A,L_lambda B)+K2(B,L_lambda A),
+ K4(A,B,C,d lambda)
+     =sum_cyclic K3(A,B,L_lambda C)
+        +2sum_cyclic K2(A,Q_lambda(B,C)).             (2.1)
+
+Here d,L,Q are the fixed lattice gauge generators in the
+positive-bond convention. They are nearest-neighbor linear
+operations on the kernel list. There is no derivative or
+gauge variation of f in these equations.
+
+The quadratic Fourier relations are therefore
+
+ sum_mu hat p_mu Gamma_(2,mu nu)(p,q)=0,
+ sum_nu hat q_nu Gamma_(2,mu nu)(p,q)=0,
+ hat p_mu=2sin(p_mu/2).                               (2.2)
+
+Differentiate the second relation in q_alpha at q=0.
+Since q is independent of p and d hat q_nu/dq_alpha|0
+=delta_(nu alpha), one obtains
+
+ Gamma_(2,mu alpha)(p,0)=0.
+
+The other leg gives, identically on the analytic domain,
+
+                    Gamma_2(p,0)=Gamma_2(0,q)=0.      (2.3)
+
+In position space, each source-anchored quadratic kernel has
+zero marginal sum in either field leg, with color and bond
+direction fixed. This is an exact cancellation of the summed
+density, not of each original carrier.
+
+3. THE UNIQUE SCALAR MARGINAL
+
+The constant quadratic momentum coefficient vanishes by (2.2).
+Joint inversion removes odd total degrees. At total degree two,
+(2.3) removes the pure p^2 and pure q^2 parts. Thus
+
+ Gamma_(2,mu nu)^[2](p,q)
+       =sum_(alpha,beta) T_(mu alpha nu beta)
+                                      p_alpha q_beta.          (3.1)
+
+Equation (2.2) at degree three makes T antisymmetric in
+(mu,alpha) and in (nu,beta). Full signed-permutation covariance
+then gives exactly
+
+ Gamma_(2,mu nu)^[2](p,q)
+       =c_E[(p.q)delta_(mu nu)-q_mu p_nu].             (3.2)
+
+To check the tensor classification directly, a coordinate
+reflection forces every coordinate label in a nonzero invariant
+rank-four tensor to occur an even number of times. The possible
+pairings are the three Kronecker pairings and the all-equal
+hypercubic tensor. Antisymmetry kills the latter and the pairing
+internal to each antisymmetric pair; it fixes the relative signs
+of the remaining two. Permutations of axes leave one coefficient.
+
+A Levi-Civita tensor would be an additional possibility with
+only orientation-preserving rotations. It changes sign under
+a single coordinate reflection and is excluded here. Joint
+inversion alone would NOT exclude it in dimension four.
+
+Setting f=1 imposes q=-p, and (3.2) becomes minus c_E times
+the transverse Maxwell polynomial. Hence c_E is determined by
+the ordinary constant-source Maxwell coefficient.
+
+Let S(f,A) be the actual gauge-invariant jointly covariant
+weighted reference, with nonzero corresponding c_S. Define
+
+ alpha(E)=c_E/c_S,
+ F(f,A)=E(f,A)-alpha(E)S(f,A).                        (3.3)
+
+This subtracts the COMPLETE reference, not just its quadratic
+jet. F remains gauge invariant for every f.
+
+Its quadratic vertex has no joint momentum terms below
+degree four. In the cubic Ward equation, the right side then
+has no degree-two term. The degree-one polynomial P1 of the
+residual cubic vertex is separately transverse in the three
+independent field momenta. Such a polynomial is zero:
+write P1=A p+B q+C k; p-transversality first forces B=C=0
+from mixed monomials, and q-transversality then forces A=0.
+Parity already removed the cubic constant term.
+
+In the quartic Ward equation the residual lower vertices
+produce no degree-one term on the right. Contracting the
+constant quartic tensor with an arbitrary independent gauge
+momentum therefore forces that constant tensor to zero.
+Parity removes the degree-one quartic term.
+
+Consequently, in the exact infinite-kernel setting,
+
+ Gamma_2^F=O(p_*^4),
+ Gamma_3^F=O(p_*^3),
+ Gamma_4^F=O(p_*^2),                                  (3.4)
+
+with p_* the maximum of the field momentum magnitudes.
+The constants are bounded by the corresponding absolute
+source-anchored kernel moments. These are simultaneous
+low-momentum statements, not estimates at arbitrary momentum.
+
+4. THE EXACT TWO-INCREMENT QUADRATIC REPRESENTATIVE
+
+Fix a source site x. For each field direction mu choose its
+base bond (x,mu), and put a_mu=A_mu(x). By (2.3),
+
+ (1/2)sum_(mu,nu;y,z) K_(2,x;mu nu)(y,z)
+                              A_mu(y)A_nu(z)
+  =(1/2)sum K_(2,x;mu nu)(y,z)
+             [A_mu(y)-a_mu][A_nu(z)-a_nu].            (4.1)
+
+Color contractions are understood. Both cross subtractions
+and the added base-base term vanish by the one-leg marginal
+identities. The test factor f_x is untouched.
+
+Using tails rather than midpoints in the displacements of
+(4.1) does not alter the mixed first moment: the shift in
+each direction is constant and is multiplied by a zero
+one-leg marginal. Thus the absent degree-two tensor in (3.4)
+implies
+
+ sum_(y,z) K_(2,x;mu nu)(y,z)
+                    (y-x)_alpha (z-x)_beta=0         (4.2)
+
+in every relevant color/direction component.
+
+This anchored identity is stronger than merely controlling
+the homogeneous restriction Gamma_2(p,-p). It is the useful
+reason for retaining the neutral source argument.
+
+5. CLASSICAL SCALAR SCALE ESTIMATE
+
+Let L>=1 be an endpoint scale ratio. On the admitted ordinary
+classical prefix, the retained complete C^(1,alpha) bounds give
+current link angles A satisfying, with 0<alpha<1,
+
+ ||A|| <= C b/L,
+ ||Delta A|| <= C b/L^2,
+ |A_mu(y)-A_mu(x)-(y-x).Delta A_mu(x)|
+       <= C b L^(-2-alpha)|y-x|^(1+alpha).            (5.1)
+
+Use consistent coordinate paths and periodic lifts. The
+bounds hold in the complete supported output norm as well
+as pointwise under the earlier classical input theorem.
+For the present section only their pointwise consequence
+is being claimed.
+
+In (4.1) write each increment as its displayed linear
+spatial Taylor term plus Rem. The product of the two linear
+terms vanishes by (4.2). A linear term times Rem is bounded
+by C b^2 L^(-4-alpha) times its displacement moments; the
+two-remainder product is smaller. Therefore
+
+ |F_2(f,A)| per source root
+       <= C ||f||infinity M_2 b^2 L^(-4-alpha),       (5.2)
+
+where M_2 is a sufficiently high fixed absolute kernel
+moment. No spatial derivative of f was used.
+
+For the cubic term expand its three fields about x. The
+constant and all terms linear in spatial displacements
+cancel by the zero degree-zero and degree-one moments
+from (3.4). A single Rem times two base fields costs
+b^3 L^(-4-alpha); terms with two or more increments
+cost at most C b^3 L^-5. Thus
+
+ |F_3(f,A)| per root
+       <= C ||f||infinity M_3 b^3 L^(-4-alpha).       (5.3)
+
+For the quartic term the constant spatial moment is zero.
+Subtracting its base-field product leaves at least one
+increment, so its bound is C ||f|| M_4 b^4 L^-5.
+The sum of field Taylor orders n>=5 also has scalar
+size C epsilon L^-5 on an admitted smaller field domain,
+by radial analytic projection, once L exceeds its fixed
+classical containment constant.
+
+Fixed-order Cauchy makes M_n<=C_n b^-n epsilon from a
+carrier norm epsilon. Hence after the O(L^4) fine-root
+count per final four-dimensional cell, these scalar
+bounds have size
+
+                  C epsilon ||f||infinity L^-alpha. (5.4)
+
+This is the scalar power gain. To use it as an operator
+contraction in the source quotient, the new representatives
+must be localized in the same prescribed output carrier
+norm, with all source roots and complete classical reads.
+That construction is not replaced by this pointwise bound.
+
+6. FINITE-PERIOD VERSION AND WHAT IS ONLY APPROXIMATE
+
+On a finite compatible torus, form the short source-anchored
+lift of K_(n,x), cutting off the diameter of the tuple that
+includes x and ALL field slots. Use a cutoff T=floor(N/16),
+as in the retained finite-volume Ward extraction.
+This preserves joint translations, signed permutations and
+field-slot permutations. The source root is never discarded.
+
+For kernels with uniform exponential source-anchored moments,
+the lifted Ward defect and each required weighted moment
+are O(epsilon exp(-cN)). Indeed Ward operations only shift
+or merge finitely many neighboring slots and commute with
+periodization; their short lifted range is injective under
+periodization. The discarded tail has the displayed bound.
+This is the same geometric argument as the finite-volume
+extraction, now retaining the additional source leg.
+
+Differentiating the lifted quadratic Ward defect in the
+second momentum at zero bounds Gamma_2(p,0), and in
+position space its one-leg marginal, by the corresponding
+defect moment. Thus (2.3) is only approximately zero for
+this finite lift. Both the marginal defect and its spatial
+moments must be kept in (4.1).
+
+For exact compatibility with the established finite constant
+channel, define alpha_N(E) to be its existing extraction
+applied to E(1), with the existing reference S(1). Its reference
+normalization is bounded away from zero by the retained
+classical flat-reference theorem. This is a definition of
+the augmented finite-regulator extraction.
+
+The source-anchored short lift and the old constant-source
+field-only short lift need not commute with evaluation at
+one. Their difference consists of terms for which the source
+is far from the field tuple or the tuple itself lies in the
+discarded tail. Source-anchored exponential bounds control
+the required fixed moments of that difference by
+C epsilon exp(-cN), with a fixed exponent reserve. Thus the
+two extraction prescriptions agree only up to that error.
+It is not permissible to declare them exactly identical.
+
+With alpha_N defined through the old constant extraction,
+the source-anchored finite-dimensional tensor algebra
+then gives residual low jets O(epsilon exp(-cN)).
+All new remainder terms have their scalar field-size
+bounds and explicit exponentially small kernel factors.
+For example a quadratic marginal error at the classical
+prefix is bounded per source root by
+C epsilon exp(-cN)L^-2; after a root count it is bounded
+by C epsilon L^2 exp(-cN).
+
+For a direct prefix from N=L N_out current sites per side,
+N_out>=N_min, this displayed error tends to zero uniformly
+as L grows. Finite composition also has extraction leakage
+and its already defined reference normalization. Neither
+exact finite-torus vanishing nor regulator consistency is
+asserted merely by proving the infinite-kernel polynomial
+identity. A full iteration must retain these errors.
+
+7. CONSEQUENCE FOR THE ACTUAL ORDER-g^2 SOURCE BIRTH
+
+In TURN69 the actual selected one-mark birth has
+
+ B_g(f)=g^2 A_E(f)+g^4 C_g,E(f),
+ A_E(f)=E J_(f,2)+E[J_(f,1)V_(1,E)].
+
+The full saddle first-jet term is retained. For f=1,
+stationarity and constant projector rank make A_E(1)
+field independent for every admitted inherited E.
+
+If this birth is represented on the neutral scalar source
+module with the exact joint covariance and source update
+admitted, its constant-source Maxwell coefficient is zero.
+The theorem above therefore makes its order-g^2 field
+coefficient an IRRELEVANT source class: it has no new
+scalar marginal. This conclusion uses full reflection
+covariance; it would be false to infer the same unique
+marginal from orientation-preserving symmetry alone.
+
+Moreover the source Maxwell extraction satisfies
+
+                  alpha(E)=alpha_constant(E(1)).      (7.1)
+
+This equality follows from the exact kernel identity in
+the infinite setting and is imposed by the consistent
+definition in Section 6 at finite regulator. The finite
+source-anchored low-jet cancellation still retains its
+exponentially small defect.
+
+Evaluation at f=1 is expected to intertwine the exact
+source update when the prolongation preserves constants.
+That intertwining and its quotient/domain conditions
+must be proved before importing the protected constant
+source trajectory as an all-scale marginal control.
+
+An augmented classical contraction plus a bounded quantum
+source derivative could then control an O(g^2) irrelevant
+birth without summing those births in an uncontracted
+inhomogeneous space. This is a concrete proposed consumer
+of the present lemma, not an already completed induction.
+
+8. RETAINED SCOPE
+
+No new scalar matter field is introduced. The neutral f is
+only a bookkeeping argument for physical action insertions.
+No source-dependent windows or covariance charts are varied.
+The original full Wilson probability law is not replaced by
+the selected branch, and an isotropic-to-anisotropic source
+identification remains a separate obligation.
+
+The proof above does not control the source vacuum cumulants,
+the mixed contribution after separately transported marks
+meet, every native R/B history, or a nonzero continuum
+correlation. It supplies a new algebraic and scalar scale
+estimate for the actual source problem when its stated
+module hypotheses have been verified.

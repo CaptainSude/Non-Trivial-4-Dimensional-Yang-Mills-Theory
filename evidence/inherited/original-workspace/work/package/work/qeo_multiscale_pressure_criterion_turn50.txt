@@ -1,0 +1,334 @@
+AN EXACT LOCAL-COVER CRITERION FOR UV-UNIFORM TWO-REFERENCE PRESSURE
+20 October 2026. TURN50. history47.
+
+RESULT
+
+An exact multiscale decomposition with the SAME universal-cover local
+coefficients at both reference volumes has a cutoff-uniform pressure
+defect if its rooted long-cluster tails are exponentially small in
+the current torus period, up to fixed powers of that period and of
+the scale index. The ultraviolet bulk terms may diverge; they cancel
+EXACTLY in j^4 log Z_a(L)-log Z_a(jL).
+
+The primitive sufficient hypotheses below concern rooted connected
+objects with their complete spatial paths/reads declared. They are
+stronger and more concrete than a bound on an already assembled
+pressure remainder. No small total bad probability is assumed.
+These full-law cluster/local-cover hypotheses have NOT been proved
+for the present YM4 construction.
+
+1. SCALES, SAME PARAMETERS, AND RAW IDENTITIES
+
+Fix an integer ratio ell>=2 and a terminal physical scale a_*>0.
+Fix theta in (0,1/4), used in the local-cover hypotheses below.
+Let s_k=a_* ell^-k, k=0,...,K, and a=s_K. Let
+
+         x=L/a_* >=x_min>=theta^-1, n_k=L/s_k=x ell^k
+
+be compatible integer periods. Fix an integer cover j>=2. Both
+reference volumes L and jL use the SAME bare parameters, counterterm
+prescription, measure normalization and blocking conventions.
+Scale coefficients are allowed to depend on a and on those common
+parameters. They may not be tuned independently at the two volumes.
+
+Suppose the full positive partition functions have the EXACT raw
+decomposition
+
+ log Z_a(L)
+    =sum_(k=0)^K [n_k^4 v_(a,k)+F_(a,k)(n_k)]
+                                  +T_a(x),                    (1.1)
+
+and the identical formula at jL with n_k replaced by jn_k.
+The numbers v_(a,k) are field-independent bulk normalization factors
+per current cell and are the SAME at both volumes. All determinants,
+gauge/constraint factors, cutoff masses, and extracted vacuum terms
+must be assigned either here, to F, or explicitly to T. No
+normalization may be discarded by working only in a field quotient.
+
+For the simplest version assume
+
+ T_a(x)=x^4 t_a+r_a(x),  |r_a(x)|<=C_terminal,           (1.2)
+
+with the same t_a at both x and jx, uniformly in a and admitted
+periods. Section6 gives alternatives derived from primitive terminal
+models, including an explicit terminal cover bound without (1.2).
+
+2. PRIMITIVE ROOTED LOCAL-COVER HYPOTHESES
+
+For each scale (a,k), let Omega_infinity be a countable collection
+of rooted, connected, finite spatial objects on Z4. They may contain
+polymer supports, propagator paths, trees, graph decorations and
+orientation labels. Their root is the origin. Give them a nonnegative
+geometric length ell(omega), which controls every declared read and
+path displacement. Finite torus objects form Omega_n.
+
+The coefficient w_(a,k)(omega) includes its proper rooting/symmetry
+factor. For example if
+
+ F(n)=sum_(connected X in torus) Phi_n(X)
+
+with translation-covariant coefficients, then
+
+ F(n)/n^4=sum_(X contains 0) Phi_n(X)/|X|.
+
+This is a standard way to obtain the rooted w's, not a further
+normalization approximation.
+
+Assume the following for the fixed theta above, A,c>0 and
+nonnegative integers p,m, independent of a,k,n.
+
+(LC1) Exact connected representation:
+
+        F_(a,k)(n)=n^4 sum_(omega in Omega_n) w_(a,k,n)(omega),
+
+with absolute convergence. There is a corresponding absolutely
+convergent infinite-root sum
+
+                 p_(a,k)=sum_(omega in Omega_infinity)
+                                             w_(a,k)(omega).  (2.1)
+
+(LC2) Common short-object coefficients:
+Objects of length <theta n on the torus are in bijection with
+infinite rooted objects of that length, and their coefficients agree
+EXACTLY under that bijection. The identification is the canonical
+lift fixing the root, and uses the same a and bare parameters.
+
+(LC3) Uniform tails on BOTH catalogues:
+For every t>=1,
+
+ sum_(Omega_infinity, ell(omega)>=t) |w_(a,k)(omega)|
+ +sup_n sum_(Omega_n, ell(omega)>=t) |w_(a,k,n)(omega)|
+                  <=A (1+k)^m (1+t)^p exp(-ct).                (2.2)
+
+The minimum-period assumption x>=theta^-1 ensures that every
+threshold theta n_k used below is at least1. Extending the result
+to smaller periods would require a separate cutoff-uniform bound
+on tails at thresholds below1; LC3 alone does not supply it.
+
+A simpler, stronger sufficient input for LC3 is the exponential
+root norm
+
+ sum_omega exp(c ell(omega))|w(omega)|<=A(1+k)^m
+
+on each catalogue, in which case p=0. A fixed polynomial shell or
+derivative loss gives the displayed version (2.2).
+
+WHY LC2 IS A LOCAL ASSUMPTION.
+
+For finite-range lattice vertices and fully declared connected paths,
+a connected object of total length <theta n cannot wind around the
+torus. Its root-fixed lift is unique, and evaluating the same local
+vertex rules gives the same coefficient. Conversely every such
+infinite object embeds in the torus. Expanding a periodized
+propagator into its individual lifted paths likewise assigns every
+nontrivial winding contribution length at least a fixed multiple
+of n; it is then paid by LC3.
+
+A bare assertion of exponential decay of a matrix entry does NOT
+establish this property. Nor does the cardinality of two endpoint
+reads detect a long or winding propagator path. The declared geometric
+length must include those paths, or an equivalent distance/winding
+certificate. Volume-dependent backgrounds or bare retuning can also
+destroy LC2 even when each separate catalogue has exponential decay.
+
+One may replace exact LC2 by a proved local comparison whose TOTAL
+short-object rooted discrepancy is bounded by the right side of
+(2.2) at t=theta n. The proof below then has one additional copy
+of that bound. Such a comparison remains an obligation on local
+coefficients, not something inferred from the eventual pressure
+cancellation.
+
+3. ONE SCALE: THE COMMON BULK COEFFICIENT AND ITS ERROR
+
+Subtract the finite and infinite rooted sums in LC1. Their short
+parts cancel term by term by LC2. Both remaining sums are controlled
+by LC3. After changing fixed constants,
+
+ |F_(a,k)(n)-n^4 p_(a,k)|
+          <=C A n^4(1+k)^m(1+n)^p exp(-c_1 n),       (3.1)
+
+where c_1=c theta and C is independent of a,k,n. Complex or signed
+cluster coefficients cause no issue because the estimate is absolute.
+Only the original partition function must have the fixed real log
+in (1.1).
+
+Define q_(a,k)=v_(a,k)+p_(a,k) for k>0 and
+q_(a,0)=v_(a,0)+p_(a,0)+t_a.
+Equations(1.1),(1.2),(3.1) give the exact common-bulk decomposition
+
+ log Z_a(L)
+       =L^4 sum_(k=0)^K s_k^-4 q_(a,k)+R_a(L),       (3.2)
+
+with
+
+ |R_a(L)|<=C A sum_(k=0)^K
+       (L/s_k)^4 (1+k)^m (1+L/s_k)^p exp(-c_1 L/s_k)
+                                                   +C_terminal. (3.3)
+
+Since k=log(a_*/s_k)/log ell, this is the requested polynomial-in-
+period-and-log-scale form. The coefficients q_(a,k) need not have
+an ultraviolet limit and need not be bounded uniformly in k.
+Their EXACT equality at the two volumes is what will be used.
+
+4. THE SCALE SUM IS UNIFORMLY SMALL IN THE UV CUTOFF
+
+For x>=1, n_k=x ell^k, and k>=0, one has
+
+ n_k^4(1+n_k)^p(1+k)^m exp(-c_1 n_k)
+ <=2^p x^(4+p) exp(-c_1 x/2)
+       ell^(k(4+p))(1+k)^m exp[-(c_1/2)ell^k].
+
+The last series in k converges. For example its successive ratio
+tends to zero, because the exponential change
+exp[-(c_1/2)(ell-1)ell^k] beats every fixed factor ell^(4+p)
+and every polynomial in k. Consequently there is a finite
+C_sum=C_sum(ell,p,m,c_1), fixed before K, such that
+
+ sum_(k=0)^K n_k^4(1+n_k)^p(1+k)^m exp(-c_1 n_k)
+                <=C_sum x^(4+p) exp(-c_1 x/2).        (4.1)
+
+Thus
+
+ |R_a(L)|<=C_bulk x^(4+p) exp(-c_2 x)+C_terminal,
+                  c_2=c_1/2,                        (4.2)
+
+uniformly as a goes to zero. Any fixed polynomial
+P(n,log(a_*/s)) is covered by a finite combination of these bounds.
+
+This is the substantive ultraviolet summability: at finer physical
+scales, the SAME reference torus has geometrically increasing current
+period, so winding costs decrease faster than exponentially in k.
+A small but scale-independent error per volume would not suffice.
+
+5. THE TWO-REFERENCE DEFECT
+
+Let
+
+            D_(a,j)(L)=j^4 log Z_a(L)-log Z_a(jL).
+
+The bulk sums in (3.2) cancel exactly, with no asymptotic replacement:
+j^4 L^4=(jL)^4 and the q_(a,k) are the same. Therefore
+
+ D_(a,j)(L)=j^4 R_a(L)-R_a(jL),
+
+and
+
+ |D_(a,j)(L)|
+ <=C_bulk[j^4 x^(4+p)e^(-c_2 x)
+                  +(jx)^(4+p)e^(-c_2 jx)]
+                         +(j^4+1)C_terminal.         (5.1)
+
+The right side is independent of K and hence of a. It is also
+bounded by C' j^4 x^(4+p)e^(-c_2 x)+(j^4+1)C_terminal, with
+C' independent of j>=2, since
+j^p exp[-c_2(j-1)x] is bounded uniformly for x>=1.
+
+This criterion supplies an ABSOLUTE bound. If an independent exact
+chessboard/trace argument proves D_(a,j)(L)>=0, one may combine it
+with (5.1). The local-cover argument alone does not manufacture that
+sign or a reflection-positive chessboard estimate.
+
+If a normalized product-transfer theorem charges a known multiple
+of D_(a,j)(L), insert (5.1) into that proved normalization formula.
+No exponent of j or of the number of cells in such a transfer
+formula is inferred from this pressure criterion.
+
+6. PRIMITIVE WAYS TO HANDLE THE TERMINAL FACTOR
+
+The terminal scale is fixed in physical units. It must not hide a
+cutoff-dependent global normalization. There are several concrete
+sufficient alternatives.
+
+6A. Terminal connected expansion.
+If its exact logarithm also has LC1--LC3 with k=0, include it in
+F_(a,0). Then no separate terminal remainder is needed. A remaining
+raw scalar factor with uniformly bounded logarithm contributes
+the C_terminal in (1.2).
+
+6B. Uniformly bounded terminal density.
+Suppose
+
+ exp T_a(x)=c_a(x) integral exp[V_(a,x)] dnu_x,
+
+where nu_x is a probability measure, c_a(x)>0,
+|log c_a(x)|<=C_t, and V_(a,x) is real-valued with
+|V_(a,x)|<=B_t x^4 uniformly in a. Pointwise positivity gives
+|T_a(x)|<=C_t+B_t x^4. One may set no terminal bulk term and obtain
+the UV-uniform cover error
+
+ |j^4 T_a(x)-T_a(jx)|
+                    <=(j^4+1)C_t+2B_t j^4 x^4.       (6.1)
+
+This replaces the last term in (5.1). It is weaker in large x but
+already sufficient for a fixed physical two-reference comparison.
+It follows from an actual terminal integral bound, not from a
+postulated pressure remainder.
+
+6C. Finite-range product-reference terminal interaction.
+Suppose instead nu_x and nu_(jx) are products of the SAME local
+probability law at the common bare parameters; this local law may
+depend on a but may not depend on the outer side length. Suppose
+V_(a,x) is real-valued and is the periodization of the SAME
+finite-range translation-invariant interaction, of range r0 and bounded rooted absolute
+norm B_t, with x>4r0. Tile the jx torus by j^4 x-tori. Compare
+the large-torus interaction with the sum of the small periodic
+ones on the same product probability space.
+
+Only terms within distance r0 of the artificial tile faces can
+change. There are at most C(r0)j^4 x^3 such rooted locations.
+The exact interaction difference is bounded by
+C(r0)B_t j^4 x^3. Since both positive integrals use the same
+product reference measure,
+
+ |log Z_terminal(jx)-j^4 log Z_terminal(x)|
+                              <=C(r0)B_t j^4 x^3.    (6.2)
+
+Include any separately bounded scalar normalizers. This is again
+UV uniform and does not require a terminal cluster expansion.
+For a quasilocal interaction the analogous proof follows by a
+summable range decomposition, with the explicit boundary/root tails
+retained. It is not automatic for a correlated reference measure,
+global constraints, or an unbounded terminal action.
+
+7. NON-TAUTOLOGICAL CONTENT AND WHAT WOULD HAVE TO BE VERIFIED
+
+The criterion does not say "assume the pressure defect is bounded".
+It asks for:
+
+ (a) an exact raw multiscale identity for the SAME full partition
+     function and bare parameters at both volumes;
+ (b) actual connected local objects with declared paths/reads;
+ (c) local equality under the covering lift for short objects;
+ (d) an absolute rooted tail bound for long and winding objects;
+ (e) a terminal factor controlled by one of the explicit mechanisms.
+
+It then DERIVES both a common bulk coefficient at each scale and
+the cutoff-uniform two-reference pressure defect. Common bulk
+coefficients are not extracted separately from each finite torus
+after the fact.
+
+The current YM4 work has selected-sector local catalogues, exact
+vacuum bookkeeping, finite tuned trajectories and conditional
+weak-chart label tails. These do not yet provide (a)--(d) for
+the full original measure. In particular:
+
+* Good-conditioned joint bad-label bounds do not yield connected
+  defect activities or their spatial/path decay.
+* A finite quotient representative may be globally supported and
+  depend on the regulator. Its small normalized field norm does
+  not identify a common raw pressure catalogue across covers.
+* A trajectory retuned separately for each outer volume violates
+  the SAME-parameter premise unless an additional comparison
+  explicitly repairs it.
+* Scalar normalizations from zero modes, gauge stabilizers or flux
+  sectors must be retained. An unaccounted log(1/a) term outside
+  the common bulk would survive with coefficient j^4-1 and defeat
+  UV uniformity.
+* A finite-volume kernel's decay estimate alone is not its equality
+  to the same universal-cover coefficient. Exact liftability or a
+  quantitatively controlled comparison is required.
+
+No claim that these remaining full-law hypotheses have been proved
+is made here. The theorem isolates a precise sufficient pressure
+input which can be pursued at the level of actual local clusters,
+without requiring the total bad-event probability to be small.

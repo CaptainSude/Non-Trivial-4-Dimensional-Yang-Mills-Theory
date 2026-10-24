@@ -1,0 +1,593 @@
+NEUTRAL TRANSPORT OF LOCALLY GAUGE-INVARIANT SOURCE ACTIVITIES
+18 October 2026. Working proof. Sections 1--5 prove physical homogeneous
+output and independent-product-ball dilation. Section 8 closes ORIGINAL
+homogeneous full-tube static reentry for the actual common-exponent
+parameters. Section 7 records the broader anisotropic candidate, which
+is not needed for that conclusion. No public artifact changed.
+
+1. INPUT NORM AND PRECISE CLAIM
+
+Fix the group SU(N), primitive ratio ell, and a source fixed block size
+mathfrak M. The same proof applies to compact semisimple matrix groups.
+An old activity F_X(U,J), with connected source carrier X, is holomorphic
+on its ORIGINAL independent-pair source domain, locally gauge invariant,
+and bounded there by epsilon exp[-kappa_s d(X)]. Subtract F_X(I,0).
+The domain contains the uniform physical product ball
+
+  ||A||_C1 + ||J||_sup < c_src r, U=exp(i eta_old A).       (1)
+
+It is invariant under real G-valued gauge transformations. The source
+conditions after CMP119(2.27), and (2.30)--(2.31), provide these properties
+for the literal E/R representatives; see source_response_inputs for (1).
+No invariance of an individual strict seed coefficient is assumed.
+
+Let h=ell^-q. Evaluate on the actual MR-refined homogeneous ordinary
+minimizer with final coarse link variables B, ||B||<b. There exist fixed
+c,b0>0, independent of h, M, volume and r, such that b<=min(b0,c r)
+gives a connected strict output family with
+
+   ||T_h F||_(a,b) <= C (b/r)^2 epsilon.                   (2)
+
+The norm is sup_z sum_{H contains z} exp(a|H|)||F_H||_b on fixed final
+J-blocks. One can include a fixed small spatial reserve. Constants may
+depend on the fixed source and grouping constants, not on q. There is
+no translation symmetry or Maxwell-zero hypothesis, and epsilon may be
+the original fixed E0. The output coefficients need not be invariant.
+
+The input exponent must have sufficient fixed reserve to pay source
+counting, output carriers and the fixed polynomials below. Parameter
+order is target a/spatial reserve, source kappa_s, source mathfrak M,
+then J>=mathfrak M large enough for the classical spatial reserve,
+then the fixed fraction c and ceiling b0. No parameter depends on q.
+
+2. THE COMPLETE FIELD ESTIMATES AND CURRENT UNITS
+
+Use final physical units first, eta_new=(MR)^-1, R=h^-1. The joint
+classical fixed point and ordinary transfer have coherent strict
+families for (A_new,J_new), in complete C1 potential/current-sup fibers,
+bounded by C_a b with prescribed fixed cardinal reserve. The current
+claim is Proposition 1 of marked_localization_conversion, using the
+exact multiplier identity and inverse transpose of dexp; it does not
+bound a rough divergence by the C1 norm alone.
+
+In OLD physical units eta_old=M^-1, the same fine link field has
+
+ A_old(x)=h A_new(hx),  nabla_old A_old=h^2 nabla_new A_new,
+ J_old(x)=h^3 J_new(hx).                                  (3)
+
+The last equality is exact: J_eta(U)=eta^-3 sum pi_g Im P_{p,e}.
+Thus the weighted supported norms, before any coordinate sum, obey
+
+ |A|<=C h b, |nabla_old A|<=C h^2 b, |J|<=C h^3 b.        (4)
+
+These bounds are for the full fine minimizing field. If its prefix
+description is used, ordinary classical transitivity identifies that
+same field modulo the controlled gauge already included in the ordinary
+transfer. Use one coherent global coefficient assignment before collar
+restriction. This is the complete-fiber support theorem, not a sum of
+fine-coordinate derivative bounds.
+
+3. A LOCAL GAUGE THAT NEEDS ONLY ONE SPATIAL DERIVATIVE
+
+Choose an anchor x0 and let D>=1 bound the old physical diameter of X
+and its required fixed collars. First suppose hD<=c0, fixed. Set
+A0_mu=A_mu(x0) and, in an oriented lifted coordinate box containing X,
+
+       g(x)=product_{mu=1}^4 exp[i(x_mu-x0_mu) A0_mu].     (5)
+
+Use U^g(x,x+eta e_mu)=g(x)U(x,x+eta e_mu)g(x+eta e_mu)^-1.
+The fixed ordering in (5) is immaterial. Since D|A0|<=C c0 b, all
+exponentials and logarithms lie in fixed analytic matrix charts. Let
+A^g=(i eta_old)^-1 log U^g and J^g=Ad_g J. Then
+
+ ||A^g||_C1 + ||J^g||_sup <= C(1+D) h^2 b.               (6)
+
+Here and below the assertion holds in the absolute strict-support norm
+of the complete output fibers, with fixed root-weight comparisons.
+
+Proof of the estimate, including the mesh issue. Write A=A0+E. For the
+commuting linearization at A0=E=0, (5) cancels A0 exactly, so A^g=E.
+Separate the transformed constant-link field
+V0_mu(x)=g(x) exp(i eta_old A0_mu) g(x+eta_old e_mu)^-1
+from its analytic perturbation by E. The log potential of V0 starts
+quadratically in A0 and is O(D|A0|^2); its first difference is
+O(|A0|^2), uniformly on a fixed D|A0| ball. Inserting one fine
+bond changes an exponent in (5) by eta_old A0. Therefore division by
+eta_old in the link logarithm is harmless; its difference quotient is
+an integral of an analytic differential on a fixed matrix ball.
+One spatial difference of that formula likewise costs only nabla E
+or A0. More robustly, on fixed small D|A0| and |E| balls the bounds are
+|A^g|<=C[|E|+D|A0|^2] and
+|nabla A^g|<=C[|nabla E|+|A0|^2+|A0||E|]. In particular the
+term Ad_g E-E, which can cost D|A0||E|, is included in the first
+bound with a bounded coefficient; it is not erroneously assigned an
+extra |A0|. The differentiated adjoint costs |A0||E|, while its
+coefficient on nabla E is bounded on the same D|A0| ball.
+The exact path identity E(x)=sum of first differences gives
+|E|<=C D h^2 b and |nabla E|<=C h^2 b. Also
+|A0||E|<=C D h^3 b^2<=C c0 h^2 b^2. This proves (6),
+enlarging a constant for D>=1 and b<=b0. It never differentiates
+curvature or assumes a second derivative of A.
+
+For support norms perform the same identities in the rooted absolute
+support algebra. The coherent first-difference family bounds E by
+C D h^2 b. Every point used lies within final physical distance hD<=c0
+of the anchor, so comparing rooted tree weights costs only exp(C c0).
+The analytic vertex series for (5) and the difference quotients have
+geometric dimension-free majorants. Their terms with two A0 factors
+carry h^2 b^2, before support summation. Hence exactly the same bound
+holds coefficientwise after absolute summation. There is no fine
+coordinate count or hidden loss h^-1. Current conjugation is another
+bounded analytic local vertex and preserves its h^3 b bound. QED.
+
+Gauge equality does not require g-I=O(h^2 b). For REAL B, (5) is a
+G-valued gauge and source invariance gives F_X(U,J)=F_X(U^g,J^g).
+Both sides are holomorphic in complex B; their independent pairs lie
+in (1) by (4),(6), b/r small, and hD<=c0. The identity theorem from
+the real open B ball gives equality throughout that complex ball.
+No arbitrary-complex-gauge invariance of the original domain is used.
+
+4. DEGREE TWO AND STRICT SUPPORT SUMMATION
+
+At the identity the differential of F_X is an invariant linear form
+on copies of the adjoint Lie algebra, because constant color rotations
+are among its gauge symmetries. Semisimplicity makes that form zero.
+Thus F_X(I,0)=0 and DF_X(I,0)=0 jointly in independent A,J variables.
+
+Reconstruct the pair from complete Banach slots on fixed old J-blocks
+using the smooth partition of unity of analytic_birth_seed_closure.
+Let N_X be their number and C_X a connected source tree. Then
+N_X+|C_X|<=C(1+d(X)), D<=C mathfrak M(1+d(X)). The function in these
+slots is bounded by A_X=2 epsilon exp[-kappa_s d(X)] on a product
+radius rho=c_1 r. Its separately polarized homogeneous coefficients
+have norms at most A_X (e/rho)^n, up to the product of the standard
+n_v^{n_v}/n_v! factors already bounded by e^n. There are no terms
+of total degree zero or one.
+
+Substitute the gauge-centered supported slots from (6). With
+u=C_J (1+D) h^2 b/r, their absolute sum is bounded by
+
+ A_X sum_{n>=2} binom(N_X+n-1,n) u^n
+ <= C A_X (N_X u)^2 exp(C N_X u),   0<=u<=1/4.            (7)
+
+All support trees are attached to their projected slot roots and to
+the projected old source tree. The target carrier weight and rerooting
+reserve cost exp[C(1+d(X))], independent of h. For hD<=c0, choosing
+b/r small gives u<=1/4 and C N_X u<=delta d(X)+C, where delta is
+a fixed spent source reserve. The polynomial N_X^2(1+D)^2 is paid
+by another fixed reserve. Hence the small-carrier bound, with enough
+tree decay still left for the source sum, is
+
+             C epsilon (b/r)^2 h^4 exp[-kappa' d(X)].    (8)
+
+For hD>c0 use no coordinate gauge. The original complete slots from
+(4) have u=C_J h b/r, and the same degree-two expansion yields a bound
+C A_X N_X^2 h^2(b/r)^2 exp(C u N_X), with the same carrier costs.
+Since d(X)>=c/h-C, its unused exponential tail gives h^2 times an
+additional h^2 at uniform cost. This again proves (8), decreasing
+kappa' once. There is no e^{Cq|X|} cost: the raw support estimate (4)
+is uniform in the endpoint ratio, and the product entropy is exp(CuN_X).
+
+Finally root an output carrier at z. Its trees provide exp[-delta
+dist(z,pi_h x_X)] after the target weight is paid. The number of old
+anchors over a final cell is O(h^-4). Summing the source tree count
+and this rerooting kernel costs at most C h^-4. This cancels (8) and
+proves (2). Periodic incidences obey the same count. Small carriers
+use local lifts; a winding carrier is put in the tail case whenever
+the lift is not contained in the fixed final local box. Compatible
+tori have a fixed lower physical period for this convention.
+
+5. GAUGE AVERAGING AND AN INDEPENDENT-PAIR VARIANT
+
+If a representative is bounded on the ENTIRE original real-gauge-
+invariant source domain, compact gauge averaging over its finite
+vertex set preserves its supremum, holomorphy and support. For a
+complete invariant family, averaging each term preserves its total.
+There is no group-dimension factor because Haar is normalized.
+Vacuum-subtract afterward. This can make original-domain representatives
+termwise invariant. It CANNOT be applied to arbitrary strict activities
+known only on a small potential polydisc: nonconstant real gauges leave
+that polydisc. It also does not repair a missing independent extension.
+
+The same proof applies directly to an arbitrary independent target pair
+(A_new,J_new) on a complete C1/sup product ball, with the EXACT unit
+dilation (3), instead of the minimizing map. Use independent smooth
+block slots as target variables; their support is local. The gauge
+equality follows first for real independent A,J, then holomorphically.
+Thus independence of J itself presents no obstruction to neutral
+transport. This variant supplies a bound on the smaller target product
+ball and its compatible localizations, not the entire source tube.
+
+6. REMAINING REENTRY ISSUE: NOT A CONSEQUENCE OF (2)
+
+The next original source induction evaluates activity extensions on
+its full U_j^c domains and the assigned complex decoupling families.
+A strict physical output, or even the smaller independent product-ball
+variant of Section 5, does NOT bound that entire extension. Equality on
+the physical minimizing graph is lower-dimensional and cannot identify
+or bound an arbitrary independent-current extension. To use (2) in the
+literal one-run source induction, its actual q-map/reconstruction must
+be shown to admit (4), locally up to a gauge, with all required collars
+and complex decouplings. Alternatively that induction must be rebuilt
+on the smaller complete product-ball class with its exact integral
+identities. Neither assertion is inferred here.
+
+CMP119 p260 after (2.31) explicitly describes vacuum-subtracted R terms
+as marginal with factor (L^j eta)^4. That supports the underlying power
+count and its independence of translation symmetry. It is not, without
+its detailed source-domain argument, a proof of the strict full-tube
+operator estimate needed for reentry. The present theorem closes the
+physical homogeneous neutral norm, including its support summation;
+the actual independent/decoupled source-tube matching remains distinct.
+
+7. BROADER ANISOTROPIC FULL-TUBE DILATION: CANDIDATE ONLY
+
+The estimates below identify an anisotropic route to original-tube
+reentry for the STATIC original representatives by direct unit dilation.
+Its unequal-radius reconstruction implication in 7B/7C is not needed
+or promoted here: Section 8 proves the ACTUAL common-exponent case
+using only the previously audited common-radius implication. This
+section does not replace a noisy
+chart's separate target-tube containment theorem. Unlike Sections 1--5,
+it keeps the original local independent-pair functions and does not
+first pass through a strict physical quotient representative.
+
+Use old scale i and new scale k, h=ell^{i-k}. Write alpha_a,i and
+alpha_a,k for the two source radii, and put
+
+ m=min(1,alpha_0,i/alpha_0,k,alpha_1,i/alpha_1,k).           (9)
+
+Fix all source geometry constants and a fixed collar convention first.
+There are c0,c1,c2>0, independent of i,k, such that if
+
+ h<=c1 m,   alpha_1,i^2<=c2 alpha_0,i,                    (10)
+
+and the source fixed smallness/compatibility conditions hold, then the
+vacuum-subtracted original F_X, evaluated on the unit-dilated target
+pair, satisfies throughout the ORIGINAL target source tube
+
+ |F_X(dil_h(U,J))-F_X(I,0)|
+ <=C epsilon h^4 m^-2 (1+D_X)^2 exp[-kappa_s d(X)]        (11)
+
+for hD_X<=c0. For larger carriers it obeys the same bound with a fixed
+part of kappa_s spent; the D_X polynomial may then be omitted. After
+source-tree summation and reblocking this gives
+
+        ||T_h F||_(original target tube) <= C m^-2 epsilon. (12)
+
+The norm in (12) is the rooted sum of local supremum norms on original
+target tubes, with a fixed spent exponential carrier reserve. Output
+terms retain local gauge invariance and analytic independent-current
+extensions. It can therefore be consumed again by the same original
+source class. No assertion of individual invariance after a different
+strict quotient decomposition is needed.
+
+Domain convention. Enclose hX in its connected final fixed-block hull
+and add a fixed collar wide enough for every source cube used below,
+including the source O(ell mathfrak M) cube gauges. The target pair is
+read on that enlarged carrier. Adding this collar costs at most
+exp[C(1+d(X))] in target carrier weight; there is no h-dependent collar
+constant. Localized functions may retain this larger declared carrier.
+All towers/restrictions here are the homogeneous original source class,
+not arbitrary arrested mixed-scale predecessor towers. A pair on an
+arbitrary thin carrier is NOT silently extended: the stated target
+domain is on this enlarged carrier from the outset. If a regional
+small-field boundary prevents the enlargement, that term requires the
+separate boundary ledger; the present homogeneous bulk theorem does
+not prove its boundary transport.
+
+7A. FULL-TUBE LOCAL REPRESENTATIVE
+
+The primary definition CMP109(1.10)--(1.16) writes a representative as
+U=exp(i eta_new A') Ubar, Ubar G-valued. On the target tube:
+
+ |A'|+|nabla_Ubar A'|<=C alpha_1,k,
+ eta_new^-2 |partial U-I|<=C alpha_0,k, |J|<=C alpha_0,k.
+
+On each fixed target cube (1.12) supplies a REAL gauge u with
+Ubar^u=exp(i eta_new Abar), ||Abar||_C1<=C_geom alpha_0,k.
+In this gauge the covariant gradient of A'^u differs from its ordinary
+gradient by O(|Abar||A'^u|). The local logarithm
+A_new=(i eta_new)^-1 log(U^u) therefore has
+
+                  ||A_new||_C1<=C_geom alpha_1,k,         (13)
+
+using the source alpha_0,k<=C alpha_1,k and smallness ceilings. This
+uses only the covariant FIRST derivative in (1.13), not a second
+derivative of A' or curvature. Real u is unitary, so current norm and
+curvature norm are preserved. The product-log estimates are uniform
+in eta_new. A fixed target cube contains hX when hD_X<=c0, by the
+collar convention above.
+
+In old units A_old=h A_new and nabla_old A_old=h^2 nabla_new A_new;
+J_old=h^3 J. Apply (5) locally to the constant A_old(x0). Its exponents
+have size O(hD_X alpha_1,k), uniformly small. The resulting a=A_old^g
+and j=J_old^g satisfy
+
+ ||a||_C1<=C(1+D_X)h^2 alpha_1,k,
+ |partial exp(i eta_old a)-I|<=C eta_old^2 h^2 alpha_0,k,
+ |j|<=C h^3 alpha_0,k.                                  (14)
+
+Complex conjugation by g has bounded norm because hD_X alpha_1,k is
+small. Here it is useful that CMP109 actually defines U_j^c as a
+UNION OF FULL G^c GAUGE ORBITS and assumes invariance (1.19) under
+all these gauges. Thus the use of g on a complex target representative
+is licensed directly, not inferred from a gauge-fixed polydisc.
+
+7B. AMPLIFICATION INSIDE THE OLD ORIGINAL DOMAIN
+
+Define a scalar analytic disc of independent pairs
+
+    U_lambda=exp(i eta_old lambda a), J_lambda=lambda j,
+    |lambda|<Lambda=c m/[(1+D_X)h^2].                    (15)
+
+Choose c fixed small; (10), with c1 small enough relative to c/c0,
+ensures Lambda>=2 for small carriers. The potential and its gradient
+are <=C c alpha_1,i; the current is <=C c h alpha_0,i.
+
+For the curvature use the discrete exterior derivative d a. Multiplying
+four link exponentials and isolating their linear term gives, uniformly
+in eta_old,
+
+ |d a|<=C[eta_old^-2|partial U^g-I|+|a|^2],
+ eta_old^-2|partial U_lambda-I|
+             <=C[|lambda||d a|+|lambda|^2|a|^2].         (16)
+
+The first term after (14),(15) is <=C c alpha_0,i.
+The remaining terms are <=C(c+c^2) alpha_1,i^2: indeed
+Lambda|a|^2<=C c m(1+D_X)h^2 alpha_1,k^2, and
+(1+D_X)h<=C c0 while h alpha_1,k<=c1 alpha_1,i by (10).
+The Lambda^2 term is <=C c^2 m^2 alpha_1,k^2.
+Choose c and then the fixed c2 ceiling so all of (16) is below the
+desired small fraction of alpha_0,i. These are independent pairs;
+J_lambda is not replaced by their physical current.
+
+Take real reference I. Conditions (i)--(iii) of the old source domain
+now hold with a fixed small common fraction of alpha_0,i,alpha_1,i
+(and gamma_0=alpha_0,i). To deduce condition (iv) in this general
+unequal-radius formulation, one would need the quantitative
+smaller-constants implication printed on CMP109 p263: reconstructed
+curvature/current bounds are <=2B3 alpha'_0 in its exact mesh weights.
+B3 is fixed by the source geometry. The intended choice is
+alpha'_0<=alpha_0,i/(4B3)
+and the common fraction small enough for (ii). The same fraction
+preserves the source linear alpha0/alpha1 compatibility restrictions;
+the quadratic smallness restrictions improve. No uniform arbitrary
+ratio alpha_1/alpha_0 is assumed. The weak-coupling condition in (10)
+is what pays the nonlinear curvature term above. This general
+unequal-radius use is not inferred from our common-radius UF result;
+the verified Section 8 avoids it entirely.
+
+Hence F_X(U_lambda,J_lambda)-F_X(I,0) is bounded by 2A_X throughout
+the disc. Its first derivative at lambda=0 vanishes by global color
+invariance and semisimplicity, even with independent current. The
+one-variable Schwarz lemma gives 2A_X Lambda^-2 at lambda=1. This
+is (11). Gauge invariance identifies that value with the direct
+unit-dilated target pair.
+
+7C. LARGE CARRIERS: ORIGINAL-DOMAIN INCLUSION WITHOUT ONE GLOBAL GAUGE
+
+Keep the target representative U=exp(i eta_new A')Ubar on the entire
+read set; do not seek a global small potential. Its unit dilation has
+
+ |A'_old|<=C h alpha_1,k,
+ |nabla_Ubar A'_old|<=C h^2 alpha_1,k,
+ curvature<=C h^2 alpha_0,k,  |J_old|<=C h^3 alpha_0,k.
+
+Each required old O(ell mathfrak M) cube maps into a target cube, where
+the real gauge above restricts to give potential <=C_geom h alpha_0,k
+and gradient <=C_geom h^2 alpha_0,k in old units. Thus old conditions
+(i)--(iii) hold with alpha'_0=C_geom h alpha_0,k and
+alpha'_1=C_geom h alpha_1,k (enlarge the fixed C_geom as necessary).
+Condition h<=c1 m makes these fixed small fractions of the old radii.
+The same quantitative source implication supplies (iv), for all the
+old maximal reconstruction subsequences in its stated geometry.
+Consequently the original source sup bound applies globally to X.
+
+For hD_X>c0, D_X<=C mathfrak M(1+d(X)) implies d(X)>=c/h-C.
+Spending a fixed exponential fraction gives
+exp[-delta d(X)]<=C h^4<=C h^4 m^-2. This is the required large-carrier
+version of (11), with no global gauge or e^{Cq|X|} factor.
+
+7D. REBLOCKING, EXACTNESS AND SCOPE
+
+Assign F_X(dil_h(U,J))-F_X(I,0) to the enlarged final carrier from
+the domain convention. It is an ORIGINAL analytic local independent-
+pair function there, still gauge invariant. Its input fine links are
+the same links before and after the change of units. Thus on the
+physical graph it is exactly the static old activity evaluated on the
+later minimizing background; the Wilson-current factor h^3 is exact.
+This is a choice of the static original extension itself, not an
+inference about an arbitrary extension agreeing on that graph.
+
+Source counting, reanchoring and the h^-4 old-anchor multiplicity are
+as in Section 4. They cancel the h^4 in (11) and prove (12). A fixed
+source exponential reserve pays D_X^2 and the collar carrier cost.
+
+For bounded coupling increments the ratios in m^-1 grow at most a
+fixed power of 1+k-i (with fixed logarithmic factors from the source
+radii). Geometric source weights can absorb that age cost. For a
+chosen fixed q, increasing the weak-coupling floor makes the two
+radii at i,k comparable and alpha_1,i^2/alpha_0,i arbitrarily small.
+One can first choose q so h satisfies (10), then that floor.
+
+To apply this to complex retained fluctuation/decoupling parameters,
+one still uses the PUBLISHED prepared-chart assertion that the output
+independent pair remains in the target tube throughout its amplitude
+disc and all assigned decouplings. If that assertion is available,
+(11) is uniform on the whole disc and Cauchy gives the extra
+g T_aux/alpha_0,k factor for a fluctuation difference. The present
+argument neither infers that containment from a physical field bound
+nor asserts it for unproved arrested/mixed-scale repository extensions.
+
+8. VERIFIED ORIGINAL-TUBE THEOREM FOR THE ACTUAL COMMON EXPONENT
+
+Raw II Definition 5.1:def-analyticity-spaces, lines 1764--1785, expressly
+chooses q0=q1=q in the source radii, with fixed coefficients C0,C1 and
+C1>=2B3^2 O(1) mathfrak M C0. Thus, with a_j=alpha_0,j,
+
+            alpha_1,j=A a_j, A=C1/C0 fixed >=1.           (17)
+
+A may be very large, but it does not grow with j, q-step length, volume
+or the weak-coupling floor. The source allows this parameter choice.
+Fix that A and all geometry constants before choosing the block length.
+In this section let m=min(1,a_i/a_k) and h=ell^{i-k}.
+
+THEOREM. For sufficiently small fixed c_A>0, if h<=c_A m and all a_j
+are below their fixed source ceilings, the original-tube transport
+estimate (12) holds. This statement uses only common-radius UF as
+proved in source_response_inputs, not an unequal-radius extension of
+that result. It has exactly the carrier/collar and homogeneous bulk
+scope stated in 7D. Its constant depends on fixed A and geometry.
+
+Proof for a small carrier. The local real gauge and product logarithm
+in 7A yield ||A_new||_C1<=C_A a_k. After old-unit dilation and coordinate
+centering, (6) gives
+
+      ||a||_C1<=C_A(1+D)h^2 a_k, |j|<=C_A h^3 a_k.
+
+Write c_ball for the C1/current product-ball constant of Proposition 2
+in source_response_inputs; it can be smaller than its Proposition 1
+constant c_src. Take Lambda=c m/[C_A(1+D)h^2], with c<=c_ball/4.
+On |lambda|<Lambda,
+
+           ||lambda a||_C1+|lambda j|<=c_ball a_i/2.      (18)
+
+The common-radius product-ball Proposition 2 in source_response_inputs
+puts every pair (exp(i eta_old lambda a),lambda j) in the OLD ORIGINAL
+source domain (radii a_i,A a_i), including its reconstructed condition
+(iv), with a fixed margin. This is the already proved UF and does not
+use a new ratio assertion. Choosing c_A in h<=c_A m sufficiently small
+makes Lambda>=2 on hD<=c0. The degree-two Schwarz argument proves
+
+ |F_X(dil_h(U,J))-F_X(I,0)|
+ <=C_A epsilon h^4 m^-2 (1+D)^2 exp[-kappa_s d(X)].       (19)
+
+No separate curvature amplification calculation is necessary: (18)
+implies the needed curvature estimate by the uniform product-ball
+proof. In particular no alpha1/alpha0 ratio is sent to infinity.
+
+Proof for a large carrier. Use the original target representative
+U=exp(i eta_new A')Ubar globally on the enlarged read set. Its
+old-unit complex perturbation has COVARIANT C1 norm <=C_A h a_k.
+Its real reference has old curvature <=C h^2 a_k and, on every
+required old cube, a real local gauge with C1 potential <=C_A h a_k.
+The independent current is <=C h^3 a_k. Consequently all OLD
+conditions (i)--(iii) hold with the COMMON smaller parameters
+
+     alpha'_0=alpha'_1=gamma'_0=C'_A h a_k.              (20)
+
+All prescribed fixed factors in (1.12) are included in C'_A. Take
+c_A<=c_src/(2C'_A). Equation (20) is then at most c_src a_i/2, so
+Proposition 1 in source_response_inputs supplies the old condition
+(iv). This is a global original-domain inclusion, using its local
+real cube gauges, without a global small logarithm. Hence |F_X|<=A_X.
+The large-carrier source tail yields h^4 as in 7C. Reblocking and the
+h^-4 anchor count prove (12). QED.
+
+This is actual original-tube reentry: the output representative is the
+same local invariant function of unit-dilated independent (U,J), with
+the fixed declared collar. Nothing is reconstructed from its restriction
+to physical minimizing fields. For the original bulk static ledger,
+ordinary classical transitivity identifies its physical value exactly.
+
+For all ages a=k-i beyond a fixed threshold, bounded source coupling
+increments imply m^-1<=C(1+a)^p for fixed p. Thus h/m tends to zero
+geometrically; (20) applies uniformly for sufficiently old terms. The
+finitely many shorter ages are handled in their original creation/
+preparation domains, or by a fixed finite block before invoking this
+theorem. With source weights chi_i=chi_k ell^{-(k-i)/2}, the original
+target-tube norm of all older statically transported births obeys
+
+ sum_i C m_ik^-2 E0 chi_i
+          <= C E0 chi_k sum_{a>=a0}(1+a)^{2p}ell^-a/2
+          <= C' E0 chi_k.                               (21)
+
+More precisely, for gamma_j=g_j^-2>=Gamma>exp(2q), the radius
+a(gamma)=C gamma^-1/2(log gamma)^q decreases with gamma. If
+|gamma_i-gamma_k|<=D(k-i), then
+
+             m_ik^-2<=1+D(k-i)/gamma_k.                 (22)
+
+For gamma_i>=gamma_k this follows by dropping the logarithmic ratio,
+which is <=1, in (a_k/a_i)^2. For gamma_i<gamma_k, m=1. Thus a linear
+age cost suffices in (21); no positive primitive monotonicity is used.
+
+This is a neutral all-age bound; it is not a Maxwell extraction or an
+irrelevant contraction. It remains valid for arbitrary spatially
+inhomogeneous own-configuration invariant original activities. Terms
+which are invariant only JOINTLY with live exterior fields (Raw II,
+Definition 5.2:def-sites-units(b)) are excluded: frozen exterior slots
+can make the field differential at the identity nonzero. Their source
+boundary treatment is separate.
+
+9. FINITELY YOUNG TERMS USE THE ORIGINAL PREPARED DOMAINS
+
+The threshold a0 in Section 8 is fixed by A, geometry and ell. Do NOT
+identify the maximal reconstruction tower of an arbitrary old X with
+the tower of an enlarged new carrier. For 0<=k-i<a0 keep the literal
+dated function F_i on its original U_i^c domain and use the original
+published preparation/localization maps.
+
+The exact primary inputs are CMP109(3.13)--(3.17): the old original
+domain, its intersection (3.16) with new-scale conditions, and the
+response bounds. The near-group construction (3.24)--(3.36) supplies
+an output-domain extension. CMP116(1.21) controls H(s,B') in every
+admissible norm uniformly in its complex decouplings; (1.22) explicitly
+gives the amplitude radius alpha2/(C g|B|). The paragraph following
+(1.25) puts each localized expression on the common NEW original tube
+before summing its old scale index. These geometric/analytic steps do
+not use a Maxwell-zero jet. That subtraction is used subsequently for
+the infinite-age degree-five summation, which is not invoked here.
+
+For the finite young range choose the chart size
+alpha2=c_a0 min_{k-a0<i<=k} alpha_0,i, with c_a0 fixed small enough
+for those finitely many original constraints. Bounded primitive
+coupling increments and a sufficiently large weak-coupling floor give
+min alpha_0,i>=c'_a0 alpha_0,k. Thus the actual retained field |B|<=T_aux
+admits the common amplitude disc
+
+            |t|<R_t=c''_a0 alpha_0,k/(g_k T_aux).        (23)
+
+Background slack is explicit as well. Fix the source beta>0 and set
+a_star=alpha_0,k+1/(1+beta). For the fixed young range, a sufficiently
+large floor makes alpha_0,k+1/min_i alpha_0,i<=1+beta/2, so
+a_star<min_i alpha_0,i. The actual U/background entries lie in the
+published enlarged new tube with parameters
+((1+beta)a_star,(1+beta)A a_star). The inclusion following CMP116(1.30)
+places them in the dated old half-radius domains used by CMP109(3.13).
+The last current entry is treated separately below. Primitive response
+operators remain in the larger fixed alpha-prime envelope stated on
+CMP116 p6, so this current-radius adjustment loses no operator margin.
+
+The last independent-current slot has genuine slack even though its
+radius in the source output tube is not enlarged by 1+beta: a term
+i<=k is evaluated at output k+1, so its old-unit current is
+h^3 J_out with h=ell^{i-(k+1)}<=ell^-1. For the fixed young range,
+alpha_0,k+1/alpha_0,i<=2 at a large enough floor. Consequently the
+background current is <=2ell^-3 alpha_0,i<alpha_0,i/2 for ell>=3.
+The response current increment is made <=alpha_0,i/4 by the fixed
+choice in (23). The source current extension is the whole current
+increment in (3.13), not a separately bounded rough D*D term.
+
+On (23), each prepared old function has its original supremum bound.
+Localizing by the same source decoupling construction spends a fixed
+source exponential reserve. Since there are at most a0 old scale
+indices, old-to-new reanchoring costs at most ell^{4(a0+1)} times a
+fixed source/collar constant. Therefore
+
+ ||sum_young prepared F_i|| <=C_a0 sum_young epsilon_i,
+ ||sum_young [prepared F_i(t=1)-prepared F_i(t=0)]||
+       <=C_a0 (g_k T_aux/alpha_0,k) sum_young epsilon_i. (24)
+
+The second line is Cauchy on (23), after shrinking the disc by a fixed
+factor. If epsilon_i<=E0 chi_i and chi_i<=chi_k, the right side is
+<=C'_a0 delta_k E0 chi_k. Constants depend on fixed a0 but not on k,
+the regulator, or the weak-coupling floor. No false common-tower
+restriction identity or infinite-age irrelevant gain is used.
+
+Together, (21)--(24) provide the old own-invariant bulk-source input
+for the published one-step marked cluster response: old ages use the
+new direct neutral estimate on the full tube; young ages use the
+literal finite prepared construction. Boundary/live-exterior and
+unproved mixed-scale source extensions remain outside this statement.

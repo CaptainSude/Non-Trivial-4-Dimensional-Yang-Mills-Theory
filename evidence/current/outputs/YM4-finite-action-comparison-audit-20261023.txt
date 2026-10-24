@@ -1,0 +1,150 @@
+INDEPENDENT AUDIT: FINITE ENDPOINT ACTION COMPARISON
+23 October 2026. Reviewer: connected_energy agent; not the note's author.
+Reviewed: work/finite_action_local_comparison_20261023.txt, Sections 1--5.
+Also checked the current local-marginal-response and normalized-ordinary-
+response outputs and the previously independently audited projected-mean
+consumer.
+
+VERDICT: PASS at the explicitly stated common-coordinate, common-product-
+cut, complete-action and uniform pointwise Hessian scope. No material
+correction is required. The theorem does not establish that arbitrary
+geometry-changing native branches meet those hypotheses.
+
+1. INTERPOLATION AND PRINCIPAL RESTRICTION
+
+H_tau''=(1-tau)H_0''+tau H_1''. Unweighted coercivity is preserved with
+the same c0. For each allowed fixed diagonal spatial weight W and vector v,
+the real quadratic form of W H_tau'' W^-1 is the convex combination of
+the endpoint forms. Hence the same c_nu accretivity is preserved.
+
+Each weighted absolute block row/column sum is bounded by the corresponding
+convex combination of the endpoint sums, hence by M_nu. This uses actual
+pointwise Hessian bounds on the entire common K. It would not follow merely
+from endpoint covariance estimates; the reviewed note states this correctly.
+
+For C subset I, zero extension of a vector on C proves the same accretivity
+for the principal Hessian, with the restricted diagonal weight. Deleting
+indices decreases the nonnegative absolute row/column sums. Fixing the
+complement changes neither K_C nor its product-convex geometry. The inherited
+Neumann conditional theorem therefore has the same constants on these
+principal fibers. Block-scalar spatial weights are the required type for
+the block-ball boundary conditions; no arbitrary coordinate matrix weight
+has been introduced.
+
+Intermediate H_tau need not represent a physical background. Its normalized
+finite-dimensional density is legitimate, and the pointwise hypotheses just
+proved are sufficient for the same inherited covariance theorem. Thus the
+absence of an admitted physical background path is genuinely harmless here.
+
+2. PROJECTED MEAN AND THE CONSTANT IN EQUATION (5)
+
+Fix tau and let C=I\R. Write w_i=exp[-nu d(i,R)], so w=1 on R. On a
+conditional fiber x_R=r put
+
+ A(r)^2=E_r |grad_R G|^2,
+ B(r)^2=E_r |w_C grad_C G|^2.
+
+For every vector v on R, exact differentiation of the conditional ratio is
+
+ D_v m_R=E_r[v.grad_R G]-Cov_r(G,v.grad_R H_tau).
+
+Use the complementary weighted covariance theorem with its weight w_C^-1.
+The complete row/column bound and Schur's test give
+
+ ||w_C^-1 H_CR'' v||_2 <= M_nu ||v||_2,
+
+because w_R=1. Therefore
+
+ |D_v m_R| <= ||v|| [A(r)+(M_nu/c_nu) B(r)]
+ <= ||v|| sqrt[1+(M_nu/c_nu)^2] sqrt[A(r)^2+B(r)^2].
+
+Take the vector dual norm BEFORE integrating over r. The tower property
+gives exactly
+
+ ||grad_R m_R||_(L2(q_tau))
+ <= sqrt[1+(M_nu/c_nu)^2] ||w grad G||_(L2(q_tau)).
+
+Thus equation (5) has the correct constant, no extra square-root read-size
+factor, and no missing direct-gradient term. If C is empty the covariance
+term vanishes and the same bound is immediate. An empty R is a trivial
+constant-observable case and may be separated before introducing distance
+weights; it has zero response and zero marginal TV.
+
+3. NORMALIZATION, POINCARE AND TOTAL VARIATION
+
+On the fixed finite product domain, differentiation of the normalized ratio
+gives d_tau q_tau F=-Cov_(q_tau)(F,Delta H). Delta H is the COMPLETE action
+difference, with its actual sign. Constants disappear only through centering.
+
+Since F is R-measurable, Cov(F,Delta H)=Cov(F,E[Delta H|x_R]). Apply the
+FULL-law Poincare inequality to this projected function, whose gradient is
+zero outside R, then use sd(F)<=osc(F)/2. This proves equation (6) with
+the factor C_nu/sqrt(c0), exactly as displayed. No assertion concerning
+the curvature of a separate marginal is required.
+
+The test F need not be differentiable. For an indicator, b_F=1/2. Taking
+the supremum after integrating the common bound gives TV defined as half
+the L1 distance, with exactly the factor 1/2 in equation (7). The cap at
+one is correct.
+
+The spatial-arm implication uses
+d(i,R)+d(i,D)>=d(R,D), so
+e^[-nu d(i,R)]<=e^[-nu d(R,D)]e^[nu d(i,D)].
+When the proposed arm is stated as an L2 bound rather than pointwise, its
+uniformity over q_tau, or its integrated tau bound, must be retained. The
+reviewed note presents the arm as a verified extra input, not a consequence
+of endpoint coercivity.
+
+4. LOCAL ACTION WORDS
+
+The inherited two-bounded-test estimate applies uniformly to each q_tau.
+For disjoint reads it is b_F b_w min{1,(K_nu/c0)e^(-nu distance)} with
+K_nu=M_nu+M_nu^2/c_nu. For intersecting reads, distance is zero and the
+elementary b_F b_w bound suffices. Consequently A_nu=max{1,K_nu/c0}
+validly combines both cases. Equations (9)--(10) have the correct constants.
+
+Subtract one constant from each G_w. The summability of half-oscillations
+then yields an absolutely uniformly convergent bounded series, so covariance
+and the tau integral commute with its sum. Constants contribute zero. The
+words themselves may be merely bounded measurable even though their sum is
+the smooth endpoint difference. Complete coordinate reads and actual
+endpoint cancellation remain essential; two separate endpoint action caps
+do not imply a small comparison.
+
+5. MIXTURES AND DIRECT READ CHANGES
+
+For actual mixtures beta_sigma=integral q_(sigma,z)^R alpha_sigma(dz),
+any pairwise coupling pi of alpha_0,alpha_1 gives
+
+ TV(beta_1,beta_0)
+ <= integral TV(q_(1,z')^R,q_(0,z)^R) pi(dz,dz').
+
+In particular the product coupling used in the note is valid. This is only
+a comparison coupling between measures; it does not reconstruct a physical
+joint history or pay incompatible action costs. The local marginals must
+be interpreted on the same consistently identified coordinate space across
+the outer records, as required by the common-coordinate hypothesis. Separate
+pairwise coordinate identifications with no common observable meaning would
+not suffice.
+
+Equation (11), q_1 F_1-q_0 F_0=q_1(F_1-F_0)+(q_1-q_0)F_0, is exact.
+The direct source/chart/selector change is correctly retained. Different
+interior cuts need an actual common pullback with its Jacobian and source
+change; they are not handled merely by intersecting domains. Outer scalar
+masses cancel from individual conditional ratios only and remain in the
+actual mixture weights.
+
+6. NATIVE SCOPE
+
+The concrete fixed ordinary geometry/current-retained-coordinate slice
+inherits the complete-law, strict-chart and same-trajectory profile premises
+of the normalized-score note. Its weighted gap is produced by the full
+precision/perturbation/commutator control, which supplies the pointwise
+accretivity required here. That inherited admission is not reproved by this
+finite comparison theorem.
+
+The reviewed note correctly leaves arbitrary LII removed-versus-empty pairs,
+changing old histories, common-chart identification, full action-difference
+locality, retained-debt payment and compiled-source closure unproved. The
+finite interpolation removes only the requirement to invent and control a
+physical path once the two actual endpoint laws have been matched.

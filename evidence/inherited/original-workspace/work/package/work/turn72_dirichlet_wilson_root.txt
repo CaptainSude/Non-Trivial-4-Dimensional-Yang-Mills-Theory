@@ -1,0 +1,303 @@
+AN ACTUAL NONLINEAR WILSON BLOCK: FROZEN-WINDOW SOURCE CORRECTION
+TURN72. Root derivation. 20 October 2026. Pending independent audit.
+
+This note proves a finite-block full-versus-selected source estimate
+for the actual compact SU(2) Wilson measure with Dirichlet boundary
+links close to identity. It uses global action coercivity on that
+fixed block, not an extension of a local analytic effective action.
+Constants depend on the block, but not on a larger exterior volume.
+
+It is NOT yet a theorem for arbitrary boundaries, generated effective
+densities, Bałaban's full constrained fibers, or all RG histories.
+The distinction from those missing hypotheses is part of the result.
+
+1. THE ORIGINAL FINITE CONDITIONAL MEASURE
+
+Let B be a fixed nondegenerate finite rectangular cubical box of
+dimension d>=2, with its plaquettes and edges. Fix all edge variables
+in its boundary subcomplex to prescribed SU(2) values b_e. Integrate
+the remaining edge variables with product normalized Haar measure,
+and put
+
+ h(U)=1-(1/2)Tr U,                 S_b(U)=sum_(p in B) h(U_p).
+
+Thus h>=0, with equality exactly at U=I. The normalized conditional
+Wilson law is
+
+ dmu_(g,b)(U)=Z_(g,b)^-1 exp[-S_b(U)/g^2] product_e dU_e.
+
+Changing the fixed overall action coefficient only changes constants
+and the convention for g. Plaquettes depending only on boundary
+variables are allowed; their scalar contribution cancels from this
+probability law and from the action differences used below.
+
+Choose a rooted forest containing one edge per interior vertex, each
+component anchored at a boundary vertex. It contains no boundary edge.
+Fix its edge variables to identity by gauge transformations equal
+to identity at boundary vertices. Leaf-to-root Haar changes of
+variables show that integrating the forest variables gives mass one;
+the remaining link variables x have product Haar measure on
+
+                         M=SU(2)^m.
+
+The gauge-fixed action and every gauge-invariant plaquette observable
+are therefore integrated with EXACTLY this quotient probability law.
+There is no Faddeev--Popov approximation. If m=0 the law is a point
+mass and the covariance assertions below are trivial. Assume m>0.
+
+The box is contractible, and its boundary edge graph is connected.
+When all b_e=I, a configuration with S_I=0 is flat: every plaquette
+product is I. Path independence on a simply connected cubical box
+expresses it as a pure gauge. Boundary edge identities force its
+vertex gauges to be equal on the boundary, so that gauge can be
+chosen equal to I there. The forest gauge then forces every interior
+vertex gauge to be I too. Hence x=I is the UNIQUE zero of S_I on M.
+
+This global uniqueness is what excludes remote equal-depth wells.
+It is not inferred merely from a small-field Taylor expansion.
+
+2. UNIFORM GLOBAL COERCIVITY FOR WEAK BOUNDARY DATA
+
+Use fixed exponential coordinates for x near I and for boundary
+links b near I. The quadratic part of S_I is a positive multiple of
+
+                         ||d_lat a||^2,
+
+on edge variations vanishing on the boundary and the fixed forest.
+If d_lat a=0, simple connectivity makes a=d_lat phi. Boundary edge
+zeros make phi constant on the connected boundary; choose it zero
+there. Forest edge zeros then make phi zero at every interior
+vertex. Thus a=0. The Hessian on these independent coordinates is
+strictly positive definite because the vector space is finite.
+
+Smoothness and the implicit-function theorem give a unique critical
+point x_b near I for all sufficiently weak boundary tuples b.
+The coordinate Hessian is uniformly positive on a fixed small
+convex coordinate neighborhood. The point x_b is a strict local
+minimum there and depends smoothly on b.
+
+To make this global, choose a smaller fixed neighborhood of I.
+On its compact complement, S_I has a strictly positive minimum.
+Uniform continuity of S_b in b, and S_b(x_b)->0 as b->I, leave a
+uniform positive action gap on that complement. Inside the chosen
+coordinate neighborhood, the positive Hessian gives the quadratic
+lower bound. Shrinking the boundary neighborhood once if needed,
+these two statements give constants c,C>0 such that
+
+ c dist_M(x,x_b)^2 <= S_b(x)-S_b(x_b)
+                         <= C dist_M(x,x_b)^2             (2.1)
+
+for EVERY x in M and all admitted b. The upper bound follows from
+the vanishing gradient at x_b and the bounded Hessian on the compact
+manifold, by a minimizing geodesic. The lower bound outside the
+coordinate neighborhood uses its action gap divided by the square
+of the finite diameter of M. In particular x_b is the unique global
+minimum for these boundary tuples.
+
+All constants here depend on the fixed box, forest and metric.
+This proof supplies no box-size-uniform Hessian or coercivity bound.
+
+Let D=3m and r_b(x)=dist_M(x,x_b). Uniform small-ball Haar volume
+bounds, (2.1), and a local ball of radius g give, for 0<g<=g0,
+
+ c_Z g^D <= integral exp[-(S_b(x)-S_b(x_b))/g^2]dx
+                                                <= C_Z g^D.   (2.2)
+
+Indeed the lower integral is bounded on r_b<=g using the upper
+quadratic bound. For the upper integral, finite-dimensional volume
+growth on the compact product group gives a radial bound by
+C r^(D-1)dr near zero; the complement has an exponentially small
+factor and is absorbed into C_Z g^D.
+
+For every fixed integer k>=0, the same radial integration gives
+
+ E_mu r_b^k <= C_k g^k,
+ E_mu[r_b^k 1_(r_b>=gT)] <= C_k g^k exp(-c_k T^2),
+                                      T>=1.             (2.3)
+
+If gT exceeds the diameter the second expression is zero. In the
+other cases polynomial tail factors can be absorbed by reducing
+c_k once. The finite list k<=4 will suffice below.
+
+These are full conditional Wilson expectations with their original
+normalizer. They are uniform over the stated weak boundary set.
+
+3. BOTH A METRIC WINDOW AND A PROJECTED GAUSSIAN WINDOW
+
+The simpler selection is w=1_(r_b<=gT). Equation(2.3) directly
+controls its omitted weighted moments.
+
+A projected product window of the form used in the small-field
+program can be treated too, on this BLOCK. In a fixed local chart
+centered at x_b, write z_b(x) in R^D, with z_b(x_b)=0 and
+|z_b(x)|<=C r_b(x). Let L_b be a whitening matrix with uniformly
+bounded operator norm and inverse on the boundary neighborhood.
+Let J_b:R^D -> R^N be an isometric embedding, with N fixed by the
+block, and P_b=J_b J_b^T. Divide the ambient coordinates into fixed
+finite-dimensional color blocks.
+
+Conditionally on x, append a centered Gaussian eta_b of covariance
+I-P_b in the orthogonal complement of ran J_b. In the local chart
+put
+
+ xi = J_b L_b z_b(x)/g + eta_b,
+ w_(g,b,T)(x)=P_eta(max_i |xi_i|<=T).                   (3.1)
+
+Set w=0 outside the chart. This is a literal weight 0<=w<=1
+against mu_(g,b); the auxiliary Gaussian has mass one. The chart,
+embedding, whitening and window are fixed when sources are
+differentiated.
+
+There are constants c0,c1,C1>0 such that if T>=T0, g<=g0 and
+gT<=c0, then
+
+ 1-w(x) <= 1_(r_b(x)>c1 gT)+C1 exp(-c1 T^2).          (3.2)
+
+To prove it, when r_b<=c1 gT choose c1 small enough that x lies in
+the chart and every color block of the deterministic mean in (3.1)
+has norm <=T/2. Every Gaussian block of eta has covariance bounded
+above by identity. A finite union of its usual Gaussian radial
+tails is <=C1 exp(-c1 T^2), whether or not those blocks are
+independent. Outside this small ball the bound by one is enough.
+
+It follows from (2.3) and (3.2) that, for k=0,1,2,3,4,
+
+ E_mu[r_b^k(1-w)] <= C_k g^k exp(-c T^2).              (3.3)
+
+The restriction gT<=c0 accounts for the zero weight outside the
+coordinate chart. No unbounded Gaussian extension of the physical
+interaction has been used.
+
+The projected form (3.1) matches the abstract geometric form of
+the earlier window, but it is not asserted to identify a Dirichlet
+block with Bałaban's constrained periodic coarse fiber. Such an
+identification would require its own geometry and action estimate.
+
+4. A MIXED ORIGINAL-SOURCE ESTIMATE WITH ITS NORMALIZER
+
+Let F,H be real smooth gauge-invariant observables on this fixed
+block, evaluated with the fixed boundary b. Define
+
+ a_F=|dF(x_b)|,
+ b_F=(1/2) sup_M ||Hess F||,
+ A_F(g)=g a_F+g^2 b_F,
+
+and likewise for H. Hessians and gradients use the product metric;
+allow uniform upper bounds in b if preferred. Taylor's formula
+along a minimizing geodesic gives globally
+
+ |F(x)-F(x_b)| <= a_F r_b(x)+b_F r_b(x)^2.              (4.1)
+
+By (2.3) and (3.3), for f=F-F(x_b), h=H-H(x_b),
+
+ E|f| <= C A_F,                  E f^2 <= C A_F^2,
+ E[|f|(1-w)] <= C A_F exp(-cT^2),
+ E[f^2(1-w)] <= C A_F^2 exp(-cT^2),                   (4.2)
+
+and the same bounds hold for h. Cauchy--Schwarz for the measure
+(1-w)dmu gives
+
+ E[|fh|(1-w)] <= C A_F A_H exp(-cT^2).                (4.3)
+
+Choose T0 large enough that q=E(1-w)<=1/2. Write p=1-q and
+dnu=w dmu/p. For any integrable G, the exact difference is
+
+ E_nu G-E_mu G
+      = [q E_mu G-E_mu((1-w)G)]/p.                    (4.4)
+
+Apply (4.4) to f, h and fh. Equations(4.2)--(4.3) give
+
+ |E_nu f-E_mu f| <= C A_F exp(-cT^2),
+ |E_nu fh-E_mu fh| <= C A_F A_H exp(-cT^2).
+
+Since both means are O(A_F), subtracting their products proves
+
+ |Cov_mu(F,H)-Cov_nu(F,H)|
+           <= C A_F(g) A_H(g) exp(-cT^2).             (4.5)
+
+For the ORIGINAL source-tilted selection weight
+
+ p(s,t)=E_mu[w exp(sF+tH)]/E_mu[exp(sF+tH)],
+
+all integrals are finite at this fixed regulator and
+
+ partial_st log p|_0 = Cov_nu(F,H)-Cov_mu(F,H).
+
+Thus (4.5) is an ACTUAL mixed selection-source susceptibility bound
+for the nonlinear full conditional Wilson block, with the raw
+normalizer retained. Source-independent constants F(x_b),H(x_b)
+cancel from covariance; no mixed source vacuum was removed.
+
+This argument does not require a complex zero-free disc uniform
+in g, a perturbative expansion, or a Gaussian approximation to
+the actual conditional law.
+
+5. ACTION MARKS AND WHAT THE SCALE FACTORS MEAN
+
+For weighted plaquette actions
+
+ F_b(x)=sum_p f_p h(U_p(x,b)),
+ H_b(x)=sum_p h_p h(U_p(x,b)),
+
+the fixed-block Hessian norms are bounded by constants times the
+respective finite coefficient norms. At identity boundary the
+minimizer is flat, and every plaquette action has zero first
+derivative. Therefore a_F=a_H=0 and
+
+ |Cov_mu(F,H)-Cov_nu(F,H)|
+       <= C_f,h g^4 exp(-cT^2),             b=I.       (5.1)
+
+For the canonically divided block actions F/g^2,H/g^2, the same
+bound is C_f,h exp(-cT^2). This is just the stated observable
+rescaling of (5.1), not a claim about its continuum calibration.
+
+For small nonflat boundary tuples, smoothness of x_b and of the
+plaquettes gives a_F<=C_f |log b| and a_H<=C_h |log b|.
+Consequently the general estimate is bounded by a constant times
+
+ [g |log b|+g^2]^2 exp(-cT^2).                         (5.2)
+
+The boundary term cannot be dropped. A boundary small by a fixed
+amount independent of g is not automatically a field of size O(g).
+
+The choice T^2=A log(1/g), for g sufficiently small, satisfies
+gT<=c0 and also the earlier bounded-window condition gT^3<<1.
+The exponential error can then be made smaller than any prescribed
+fixed power of g by increasing the fixed A. Constants remain
+block-dependent; no whole-volume selected-mass claim follows.
+
+6. WHAT THIS DOES AND DOES NOT CLOSE
+
+The new estimate is for an actual original positive conditional
+Wilson measure. It shows that the frozen-window correction can
+be proved small in a nonlinear gauge model when GLOBAL coercivity
+and a weak boundary have been established. It goes beyond the
+untruncated Gaussian-reference calculation.
+
+It can be applied inside an arbitrary larger Wilson volume to a
+fixed block whose conditioned exterior supplies the prescribed
+weak boundary, provided every action term involving a variable
+interior edge is included in the block conditional action. One
+can take the fixed boundary collar large enough to ensure that
+property. Constants then depend only on this fixed conditional
+block/collar, not the larger volume.
+
+It does not prove:
+
+ - that boundaries of all relevant blocks are weak under the full law;
+ - uniform versions for growing blocks or arbitrarily fine
+   substructures inside an effective block;
+ - the same global coercivity for a generated effective density
+   specified only by a local analytic germ;
+ - compatibility with every coarse constraint and private history
+   of the native R operation;
+ - summable connected corrections after conditioning on many
+   previous selections, including coarse mean fluctuations;
+ - the full-law separated continuum bound, a nonzero physical
+   witness or a Yang--Mills existence theorem.
+
+In particular, summing (4.5) over unrelated conditionings would not
+bound TURN71's global log-selection derivative. Its chronological
+conditional laws can have nonweak boundaries and additional
+effective interactions; those are precisely the new estimates
+still needed.

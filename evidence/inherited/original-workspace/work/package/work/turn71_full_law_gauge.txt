@@ -1,0 +1,410 @@
+FULL-LAW COMPARISON THROUGH THE SELECTION SOURCE SUSCEPTIBILITY
+TURN71. 20 October 2026. gauge47.
+
+STATUS
+
+The exact selected/full comparison below is attached to the original
+positive selected weight recorded in TURN48 and TURN70. It does not
+construct estimates for the complementary histories or identify their
+law with the native Balaban R expansion.
+
+There is a useful precise change of target: selected mass close to one
+is NOT necessary. What is necessary for this comparison is control of
+the MIXED SOURCE SUSCEPTIBILITY of that mass. A complete finite,
+reflection-positive counterexample below shows that rare bad bridges,
+even with all prescribed-set bounds, do not supply this control.
+No counterexample to Yang--Mills existence is claimed.
+
+1. ACTUAL SOURCE AND SELECTION DICTIONARY
+
+Retained source: projected_product_sector_turn48.txt, Sections6-7,
+especially the paragraphs beginning "At each chosen integration step"
+and "There is a useful exact completion", and equation(7.1).
+
+At a fixed admitted finite regulator, the selected construction has a
+frozen measurable weight 0<=w<=1 against the ORIGINAL normalized
+Wilson law, possibly after appending its specified mass-one normal
+draws. Repeated integration retains the product of its fixed physical
+window weights and the actual terminal restriction. This is the
+positive numerator identified in selected_covariance_martingale_turn70,
+equations(1.1)-(1.4).
+
+For precision let P be that augmented probability law and U its
+original field, with original Wilson marginal mu. All required
+determining records are retained. Put
+
+ p=E_P w>0,             dP_sel=w dP/p.                       (1.1)
+
+The original observables are F=F(U), H=H(U), not functions evaluated
+on an independently redrawn reference field. The normalization p is
+Z_sel/Z_original, with the complete coarea and vacuum factors.
+
+The TURN48 construction can stop at a nonadmitted branch and assign a
+cemetery label. This supplies the positive completion needed for(1.1);
+it does not supply bounds on it. Completion outside the zero-weight
+selected chart cannot be silently identified with a particular native
+R history law. An isolated weighted coarea formula, without this
+original-law identification, would not by itself justify(1.1).
+
+We use only finite-regulator bounded F,H below. This includes literal
+finite sums of Wilson plaquette actions. A cutoff-dependent physical
+rescaling must be stated explicitly; boundedness at each regulator
+does not mean a uniform bound as the regulator is removed.
+
+2. EXACT CONNECTED SOURCE COMPARISON
+
+Define, with the unsourced law and w FIXED,
+
+ Z(s,t)=E_P exp(sF+tH),
+ Z_w(s,t)=E_P[w exp(sF+tH)],
+ p(s,t)=Z_w(s,t)/Z(s,t).                                    (2.1)
+
+For real sources near zero, p(s,t) is the probability/weight of the
+same selection under the tilted ORIGINAL law. No window or coupling
+inside w is retuned. Z(0,0)=1 and Z_w(0,0)=p.
+
+Write
+
+ K(s,t)=log Z(s,t),
+ K_sel(s,t)=log[Z_w(s,t)/p].
+
+Then exactly
+
+ K(s,t)=K_sel(s,t)-log[p(s,t)/p].                            (2.2)
+
+For any source function A with A(0,0)=0, write its connected two-source
+part as A^c(s,t)=A(s,t)-A(s,0)-A(0,t). Define
+
+ L_w^c(s,t)=log p(s,t)-log p(s,0)-log p(0,t)+log p.           (2.3)
+
+Subtracting the three instances of(2.2) gives
+
+ K^c=K_sel^c-L_w^c.
+
+Differentiating the finite integrals proves
+
+ Cov_mu(F,H)
+   =Cov_sel(F,H)-partial_s partial_t log p(s,t)|_(0,0).
+                                                               (2.4)
+
+PROOF OF THE DERIVATIVE STATEMENT. For a positive finite measure nu,
+partial_s log int exp(sF+tH)dnu is its tilted expectation of F.
+Differentiating in t gives its tilted covariance of F,H. Applying
+this once to Z and once to Z_w proves(2.4); no probability comparison
+or division estimate using a lower bound on p is involved.
+
+Consequently the following is a valid comparison inequality:
+
+ |Cov_mu(F,H)|
+ <= |Cov_sel(F,H)| + |partial_st log p|_0|.                  (2.5)
+
+This identifies exactly the additional quantity needed to transfer
+the selected upper bound. For a lower-bound transfer the same error
+must be small compared with a separately proved positive selected
+reference margin; TURN70 does not supply that margin.
+
+An optional analytic consumer is also exact. If L_w^c has a holomorphic
+extension to |s|<r_F, |t|<r_H, continuous on the corresponding circles,
+and |L_w^c|<=epsilon there, the two-variable Cauchy integral gives
+
+ |partial_st log p|_0|<=epsilon/(r_F r_H).                  (2.6)
+
+Indeed integrate L_w^c(s,t)/(s^2 t^2) over both circles and take
+absolute values. A uniform zero-free logarithm and these radii are
+additional inputs; finite-regulator entire source integrals alone
+do not supply them uniformly.
+
+3. A TINY SELECTED MASS IS NOT THE OBSTRUCTION
+
+The possibly extensive constant log p cancels exactly from(2.3).
+Pure-s and pure-t terms cancel as well. Mixed source-dependent
+scalar terms do not cancel.
+All logarithms and derivatives are taken at a finite regulator with
+p>0; no logarithm of a zero limiting selected mass is taken.
+
+For example, append N independent Bernoulli(q) flags independent of
+the original field, and select all flags. Then p=q^N can tend to zero
+exponentially. Nevertheless p(s,t)=q^N for every source, so the
+physical selected law equals mu and(2.4) has zero correction.
+
+More generally E_P[w | sigma(F,H)]=p implies p(s,t)=p by conditional
+expectation. This is sufficient, not necessary: only the mixed
+coefficient of log p is required for covariance transfer.
+
+A sequential form makes the target compatible with a chronological
+selection without assuming independent histories. Let
+
+ W_0=1,  W_j=product_(i=1)^j w_i,  W_n=w,
+ a_j(s,t)=E_P[W_j exp(sF+tH)]/
+                         E_P[W_(j-1) exp(sF+tH)].
+
+All factors are nonnegative and the denominators are positive near
+real zero on the admitted selected sequence. Algebraic telescoping
+gives
+
+ p(s,t)=product_j a_j(s,t),
+ partial_st log p|_0=sum_j partial_st log a_j|_0.             (3.1)
+
+For indicator choices, a_j is the acceptance probability of the next
+choice conditioned on all earlier acceptances, under the original
+source tilt. Weighted choices have the same formula, or can be
+realized with an extra independent uniform flag.
+
+The expected useful estimate is on these connected source
+sensitivities, possibly through a two-source localized expansion
+and a scale sum. It is not an estimate on product_j a_j(0,0) being
+near one. Unconditioned count bounds cannot be substituted for bounds
+under arbitrary earlier rare selections in(3.1).
+
+4. CONDITIONAL FIBERS RETAIN THE COARSE COVARIANCE
+
+Let Y be any retained statistic on the SAME original augmented law.
+Suppose p_Y=E_P[w|Y]>0 almost surely, so the selected conditional
+kernel is defined on the full Y support. This support hypothesis
+must not be presumed for our weak-chart selection.
+
+Set
+
+ L_Y(s,t)=log { E_P[w exp(sF+tH)|Y]/
+                              E_P[exp(sF+tH)|Y] }.
+
+Let X_F^sel(Y), X_H^sel(Y), C^sel(Y) be the mean, mean and covariance
+under the w-weighted conditional law at fixed Y. Conditional
+differentiation gives
+
+ E_P[F|Y]=X_F^sel(Y)-partial_s L_Y(0,0),
+ E_P[H|Y]=X_H^sel(Y)-partial_t L_Y(0,0),
+ Cov_P(F,H|Y)=C^sel(Y)-partial_st L_Y(0,0).
+
+The law of total covariance therefore gives the exact identity
+
+ Cov_P(F,H)
+  = E_(P_Y)[C^sel-partial_st L_Y]
+    +Cov_(P_Y)(X_F^sel-partial_s L_Y,
+                            X_H^sel-partial_t L_Y).          (4.1)
+
+PROOF. Subtract the conditional means from F,H. Their residuals have
+zero conditional expectation, hence their cross terms with any
+function of Y vanish. This yields the total covariance identity;
+insert the three differentiated conditional formulas above.
+
+The average and final covariance here use the FULL P_Y. The selected
+coarse law is instead p_Y P_Y/p. Uniform selected conditional covariance
+alone cannot control the second line. Even perfect within-fiber
+centering leaves the fluctuations of the conditional means.
+
+Where p_Y=0 one must retain the original conditional contribution
+separately. In particular, a theorem proved only for weak coarse Y
+does not apply to the whole first line of(4.1) without treating its
+complement. The unconditional formula(2.4) avoids this support problem
+but still retains its full contribution in log p.
+
+There is a useful direct covariance diagnostic. With
+f=F-E_PF and h=H-E_PH, elementary expansion gives
+
+ Cov_sel(F,H)-Cov_P(F,H)
+   = Cov_P(w,fh)/p
+       - Cov_P(w,F)Cov_P(w,H)/p^2.                          (4.2)
+
+The second term is a mean-shift term. An estimate only for w times
+the centered product does not by itself dispose of it. Equation(4.2)
+is an identity, not a proposal to bound its terms separately by 1/p.
+Such separate bounds can be extremely poor when p is small.
+
+5. WHY THE TURN68 BRIDGE BOUND DOES NOT CLOSE THIS COMPARISON
+
+The retained TURN68 estimate concerns the actual Hamiltonian ground
+path law and, through its fixed-spatial temporal approximation, a
+specified anisotropic Wilson family. For calibrated integrated
+magnetic actions Q_+,Q_- it bounds
+
+ E[ |(Q_+-EQ_+)(Q_--EQ_-)| 1_(bad bridge)]
+                   <=C a^-16 exp(-c/a).                    (5.1)
+
+It keeps the complete original denominator. Its bad events are
+time-averaged magnetic-action cells. They are neither the native
+history predicates nor the selected projected-product windows.
+The TURN70 selected construction is not already identified with
+the no-bad-bridge law of this Hamiltonian/anisotropic family.
+
+Even GRANTING a common law and an event identification as an additional
+hypothesis, (5.1) only bounds one part of the exact split
+
+ Cov(F,H)=E[fh 1_B]+E[fh 1_(B^c)].                           (5.2)
+
+The second term includes regular communication, isolated bad
+components, and fluctuations of coarse conditional means. It is not
+the selected covariance. If a selection happened to satisfy w=0 on B,
+the more explicit decomposition would be
+
+ Cov(F,H)
+  = E[fh 1_B]
+    +p Cov_sel(F,H)
+    +p(E_sel F-EF)(E_sel H-EH)
+    +E[(1-w)fh 1_(B^c)].                                  (5.3)
+
+To verify this, split 1_(B^c)=w+(1-w)1_(B^c) and expand E_sel(fh).
+The last term and the mean product remain. No assumed inequality
+between the actual TURN68 event and the TURN70 weight is used here.
+
+An event with no spanning bad component need not disconnect the
+regular field. Nothing in(5.1) bounds partial_st log p in(2.4).
+The next section verifies this failure with a complete positive model.
+
+6. FINITE COUNTEREXAMPLE WITH RARE BRIDGES AND REFLECTION POSITIVITY
+
+This is a counterexample to an inference from the stated probabilistic
+inputs, NOT to Wilson theory, locality of its action, or YM4 existence.
+
+Fix 0<rho<1 and 0<epsilon_+<epsilon_-<1. Let Z=+1 or -1 with equal
+probability. Given Z=z, independently generate two reflected halves.
+Each half has:
+
+  - an endpoint variable Y_+ or Y_- in {-1,+1} with mean rho z;
+  - N bad flags B_i, each Bernoulli(epsilon_z).
+
+All endpoint variables and flags are independent conditional on Z.
+The two endpoints occupy disjoint local slots; their support does
+not grow with N. The flags form a chain of 2N cells joining them.
+One may regard Z as the retained coarse variable.
+
+Reflection exchanges the two halves and reverses the flag chain.
+For any complex function A of one half,
+
+ E[(Theta A) A]=(1/2)sum_(z=+,-)|E[A|Z=z]|^2>=0.
+
+Thus the law is reflection positive. Its finite marginal on the
+endpoint variables and flags has full support. The all-good selection
+also preserves this mixture-of-products reflection positivity.
+
+Let w=product_i 1_(B_i=0), with all 2N flags included. Write
+
+ p_z=1-epsilon_z,  r=p_-/p_+ in(0,1).
+
+Then
+
+ p=Ew=(p_+^(2N)+p_-^(2N))/2 ->0,
+ P_sel(Z=-1)=r^(2N)/(1+r^(2N)),
+ Var_sel(Z)=4r^(2N)/(1+r^(2N))^2.                           (6.1)
+
+The endpoint means conditional on Z remain rho Z after selection.
+Their conditional covariance is zero. Therefore
+
+ Cov_full(Y_+,Y_-)=rho^2,
+ Cov_sel(Y_+,Y_-)=rho^2 4r^(2N)/(1+r^(2N))^2 ->0.           (6.2)
+
+This is exactly the coarse-mean term of(4.1), not a hidden
+within-fiber covariance.
+In this two-state example E_sel(Y_+Y_-)=rho^2 is unchanged;
+the selected mean rho E_sel Z changes. The decay in(6.2) concerns
+the CENTERED covariance, not its uncentered cross moment.
+
+For EVERY prescribed set A of flags, conditional independence gives
+
+ P(B_i=1 for all i in A)
+  =(epsilon_+^|A|+epsilon_-^|A|)/2
+  <=epsilon_-^|A|.                                        (6.3)
+
+Thus the strongest elementary prescribed-set rare-event bound holds,
+not just a one-point probability estimate. The chain has a bad bridge
+only if all 2N flags are bad, whose probability is at most
+epsilon_-^(2N). Bounded marks can be included:
+
+ E[ |Y_+Y_-| 1_(bad bridge)]<=epsilon_-^(2N).
+
+The endpoints have full-law mean zero. Hence their centered
+bad-bridge product tends to zero exponentially while their full
+covariance stays rho^2. The no-bridge channel carries the correlation.
+
+For a cutoff illustration choose N proportional to a^-1 and an
+explicit M_a=a^-Delta, Delta>0. Put F_a=M_a Y_+, H_a=M_a Y_-.
+Their supports are unchanged, though their finite-regulator bounds
+now grow. Then
+
+ Cov_full(F_a,H_a)=rho^2 a^(-2Delta),
+ Cov_sel(F_a,H_a)=rho^2 a^(-2Delta)Var_sel Z ->0,
+ E[|F_a H_a|1_(bad bridge)]
+                    <=a^(-2Delta)epsilon_-^(2N) ->0.       (6.4)
+
+The selected covariance has a uniform upper bound and the marked
+bad-bridge contribution vanishes, yet the full covariance diverges.
+This arbitrary explicit scaling is not asserted to be a Yang--Mills
+normalization. It tests a claimed comparison theorem allowing
+polynomially normalized bounded local variables.
+
+The missing susceptibility is visible exactly from(2.4):
+
+ partial_st log p(s,t)|_0
+       =M_a^2 rho^2(Var_sel Z-1).                          (6.5)
+
+It is not suppressed by the bridge probability or by subtraction of
+the extensive source-free log p. Every step of this example has a
+positive normalized denominator.
+
+The same obstruction can preserve both endpoint means exactly.
+Replace Z by {-1,0,+1}, with probabilities 1/4,1/2,1/4. Keep the
+conditionally independent endpoint means rho Z. Take bad rate
+epsilon_0 at Z=0 and epsilon_1 at |Z|=1, with
+0<epsilon_0<epsilon_1<1. Put
+
+ r=(1-epsilon_1)/(1-epsilon_0)<1.
+
+Both before and after all-good selection E Y_+=E Y_-=0 by the
+Z->-Z symmetry. Direct summation gives
+
+ Cov_full(Y_+,Y_-)=rho^2/2,
+ Cov_sel(Y_+,Y_-)=rho^2 r^(2N)/(1+r^(2N)) ->0.                (6.6)
+
+Indeed the selected probability of |Z|=1 is the last ratio and
+the conditional cross moment is rho^2 Z^2. The same
+mixture-of-products RP proof and every bad-set/bridge estimate
+hold with epsilon_1. Thus controlling the global one-point means
+would not repair the inference either: the covariance of the
+coarse conditional means still changes.
+
+7. A SOURCE-DEPENDENT NORMALIZER DIAGNOSTIC
+
+All identities above freeze w when differentiating. If one instead
+recomputes a family w_(s,t), this changes the insertion. For a smooth
+positive weight on common support, put at zero
+
+ A=partial_s log w_(s,t), B=partial_t log w_(s,t),
+ C=partial_st log w_(s,t).
+
+Differentiating its numerator directly gives
+
+ partial_st log E[w_(s,t)exp(sF+tH)]|_0
+             =Cov_sel(F+A,H+B)+E_sel C.                    (7.1)
+
+Thus a source-retuned cutoff or baseline is not harmless. For hard
+moving domains, appropriate boundary derivatives replace the smooth
+calculation and cannot simply be omitted.
+
+Even more simply, multiplying a raw source numerator by exp(lambda st)
+leaves the zero-source probability law unchanged but changes its mixed
+source derivative by lambda. Field independence alone does not justify
+discarding this factor. Pure-s and pure-t factors do cancel from the
+connected object(2.3); a mixed source vacuum does not.
+
+8. PRECISE CONCLUSION FOR THE NEXT MATHEMATICAL STEP
+
+At the original-weight identification already retained for the selected
+sector, equation(2.4) is exact. It removes an unnecessarily strong
+requirement: one need not prove the globally selected mass tends to one.
+
+A useful missing theorem would instead bound the source-connected
+selection correction L_w^c, or its mixed derivative, for the SAME
+calibrated original observables. A local, summable estimate for the
+chronological increments in(3.1) would suffice. It must include the
+actual complementary/cemetery histories and their coarse mean
+fluctuations, and retain all mixed source scalar coefficients.
+
+TURN70 bounds the selected contribution. TURN68 bounds a particular
+original-law large-action bridge contribution in its own admitted
+family. Neither currently controls this selection susceptibility;
+the finite counterexample proves that their probabilistic forms alone
+cannot do so, even if a common-law identification were supplied.
+
+This is a sharper location of the full-law comparison problem, not
+its solution. No original continuum correlation, nonzero reflection
+norm, or completed YM4 existence theorem is inferred.

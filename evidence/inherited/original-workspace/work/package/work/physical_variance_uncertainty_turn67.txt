@@ -1,0 +1,364 @@
+PHYSICAL VARIANCE, GAUGE-EQUIVARIANT UNCERTAINTY, AND THE ENERGY BUDGET
+TURN67. 20 October 2026. history47.
+Status: frozen after tail47's focused mathematical audit PASS.
+
+RESULT AND SCOPE
+
+There is no proved uniform physical variance floor in this note.
+There are two concrete conclusions on the ACTUAL finite-spatial
+Hamiltonian, and an exact variational obstruction to using only its
+known energy estimates:
+
+(a) A deterministic smooth color displacement has a relatively cheap
+    ground-state score, with cost bounded by C g^-2 sum_e |v_e|^2.
+    Its mean response to EVERY gauge-invariant observable is exactly
+    zero. Making the displacement horizontal by gauge projection
+    does not change this response. A field-dependent equivariant
+    displacement can have a nonzero response, but the inexpensive
+    cross-site score cancellation no longer follows from gauge
+    symmetry. The available localized kinetic estimate gives the
+    explicit, more expensive bound (3.3).
+
+(b) For the SAME bounded smooth gauge-invariant physical observable F,
+    ground-state localization constructs actual smooth, strictly
+    positive, gauge-invariant quantum states with arbitrarily small
+    Var(F), energy at most E0+C D_Omega(F)/epsilon^2, and F-Dirichlet
+    form at most C D_Omega(F). This keeps both the physical probe and
+    its normalization fixed. No auxiliary reference variance is used.
+
+In particular, if the desired bound D_Omega(F_a)=O(1) is established,
+then at fixed physical spatial volume these states can have
+Var(F_a)->0 while retaining the SAME leading extensive magnetic,
+electric, and total-energy bounds from TURN66 and a uniform
+F_a-Dirichlet upper bound. They are not asserted to be ground states.
+This proves that those estimates alone cannot supply the missing
+ground-state variance floor. The full ground-state equation, or an
+additional actual response/nonconcentration estimate, must do work
+beyond the extensive energy budget.
+
+All results below are finite-lattice identities or inequalities.
+No extension of a native reference conditional law to the original
+ground state, and no Gaussian approximation, is made.
+
+1. ACTUAL LAW, METRIC, AND LOCAL KINETIC BUDGET
+
+Take the finite nondegenerate periodic cubic spatial SU2 lattice
+with n sites, 3n positively oriented links, spacing a, and
+
+ H = kappa K+V,
+ kappa=g^2/(2a),  K=-Delta,
+ V=4 S_sp/(g^2 a).                                      (1.1)
+
+Use the Pauli/2 link metric throughout. The unique normalized positive
+ground state Omega is smooth and gauge invariant; write
+
+ rho=Omega^2,  mu(dU)=rho(U)dHaar(U).
+
+The actual TURN66 trial-state argument proved
+
+ E0<=9n/a,
+ int |grad Omega|^2<=18n/g^2,
+ E_mu S_sp<=(9/4)n g^2.                                 (1.2)
+
+Cubic translations and orientation permutations preserve H, so by
+uniqueness they preserve Omega. Consequently EACH link obeys
+
+ int |grad_e Omega|^2 <=6/g^2,
+ E_mu |s_e|^2<=24/g^2,
+ s_e=grad_e log rho.                                    (1.3)
+
+Here s_e is written in the left-invariant orthonormal frame at e.
+For a deterministic set D of links,
+
+ int sum_(e in D)|grad_e Omega|^2<=6|D|/g^2.              (1.4)
+
+This is independent of the size of the exterior. It is an integrated
+estimate, not a pointwise score estimate or a product conditional law.
+On a rectangular spatial torus the per-orientation budget gives
+the weaker kinetic constant18 and score constant72 in (1.3),
+and constant18 in (1.4); nothing essential changes.
+
+For real smooth F, define its actual physical Dirichlet form
+
+ D_mu(F)=kappa E_mu |grad F|^2
+       =<F Omega,(H-E0)F Omega>.                         (1.5)
+
+The last equality is the ground-state transformation and is exact.
+Subtracting E_mu F leaves both sides unchanged.
+
+2. THE CHEAP DETERMINISTIC COLOR SHIFT HAS ZERO PHYSICAL RESPONSE
+
+Let v_e be deterministic elements of su2, and let
+
+ V_v=sum_e v_e . grad_e^L.
+
+The vector field is divergence free for product Haar. Thus its
+rho-score is
+
+ sigma_v=-sum_e v_e . s_e,
+ E_mu(V_v F)=E_mu(F sigma_v).                            (2.1)
+
+For an edge e=(x,x+hat i), the left score s_e transforms in the
+adjoint representation at x. Under an independent gauge rotation
+at x, scores rooted at different vertices are unchanged. Adjoint
+averaging therefore gives
+
+ E_mu s_e=0,
+ E_mu(s_e^A s_f^B)=0 if e,f have different initial vertices. (2.2)
+
+This includes incoming links: right multiplication at their terminal
+vertex does not rotate their left-frame scores. There are no self
+loops in the admitted lattice.
+
+There are three outgoing positive links per vertex. Cauchy--Schwarz
+within each such triple, followed by (1.3), gives the uniform bound
+
+ E_mu sigma_v^2 <=72 g^-2 sum_e |v_e|^2.                 (2.3)
+
+The constant is deliberately not optimized. Adjoint isotropy can
+reduce it. The important fact is the sum of squares instead of the
+square of a sum across the spatial region.
+
+However, for EVERY gauge-invariant F,
+
+                         E_mu(V_v F)=0.                 (2.4)
+
+Proof: F rho is gauge invariant. The vector grad_e^L F transforms
+adjointly at the initial vertex, so its expectation is an invariant
+vector in su2 and hence zero. Equivalently, average (2.1) over the
+independent gauge rotation at that vertex.
+
+The result applies, in particular, to the flowed radial magnetic
+probe and to any prescribed gauge-invariant thick/coarse probe.
+For a smooth continuum displacement with link coefficients
+v_e=a f_i(x_e), supported in a fixed physical region,
+sum |v_e|^2 is of order a^-1. The appealing Fisher cost
+O((g^2 a)^-1) is real, but its physical-response numerator is zero.
+
+Nor does orthogonally projecting V_v onto the horizontal tangent
+space repair the numerator: the difference is vertical, and every
+vertical tangent annihilates F. Thus V_v^hor F=V_v F pointwise
+where the projection is defined, and (2.4) still holds.
+
+This is a statement about this deformation, not an assertion that
+all gauge-equivariant coarse deformations have zero response.
+
+3. THE EXACT COST OF A FIELD-DEPENDENT EQUIVARIANT DEFORMATION
+
+Let W be a real smooth vector field on the full compact link manifold.
+It may be field dependent and gauge equivariant. Its exact score is
+
+ sigma_W=-div W-W log rho,
+ E_mu sigma_W=0,
+ E_mu(WF)=E_mu[(F-E_mu F)sigma_W].                        (3.1)
+
+The Haar divergence cannot be dropped. Cauchy--Schwarz proves
+
+ Var_mu(F) >= |E_mu(WF)|^2 / E_mu sigma_W^2               (3.2)
+
+when the denominator is positive. These identities hold for the
+actual Omega^2 law, without any history or source normalization.
+
+Suppose W is supported on a deterministic set D of m links, and set
+v_2^2=sup_U sum_(e in D)|W_e(U)|^2. Then (1.4) gives
+
+ E_mu sigma_W^2
+ <=2 E_mu(div W)^2+8 int |W Omega|^2
+ <=2 E_mu(div W)^2+48 m v_2^2/g^2.                       (3.3)
+
+The first inequality follows from
+W log rho=2 W Omega/Omega. The second is pointwise Cauchy--Schwarz
+in the tangent slots, followed by the actual local kinetic budget.
+If only an L-infinity divergence bound is known, it can replace its
+expectation; a pointwise bound is not required in (3.3).
+
+For a genuinely gauge-equivariant W, each scalar W_e.s_e is gauge
+invariant. Independent site gauge rotations consequently do NOT
+kill correlations between those scalars at different sites.
+Applying (2.3) after substituting field-dependent W_e would be invalid.
+
+For the natural amplitude of a physical connection displacement,
+assume |W_e|<=C a on m<=C a^-3 links in a fixed physical region.
+Then v_2^2<=C a^-1 and the kinetic term in (3.3) is O(g^-2 a^-4).
+Even if a separate construction supplied a nonzero response bounded
+below and a harmless divergence, this available estimate would only
+certify a lower bound of order g^2 a^4. It would not give a uniform
+physical variance floor. This is the scaling of the proved bound,
+not a claim that the actual score grows at this rate.
+
+The radial choice W=grad F does make E(WF)=E|grad F|^2 nonnegative.
+For the nonlinear flowed probe its divergence and norm contain the
+flow's first and second derivatives. The known TURN66 magnetic
+energy estimate controls neither this score nor a lower bound on
+its response. Calling W a coarse direction does not remove these
+terms.
+
+4. EXACT LOCALIZATION IN THE SAME PHYSICAL OBSERVABLE
+
+This section gives a concrete variational test of what the known
+energy estimates can imply. Let F be ANY prescribed smooth real
+gauge-invariant function with0<=F<=1, and put
+
+                         D=D_mu(F).
+
+For0<epsilon<=1 choose a smooth partition of unity on the real line
+in squared form
+
+ sum_j chi_j(t)^2=1,
+ supp chi_j subset (j epsilon-epsilon,j epsilon+epsilon),
+ sum_j |chi_j'(t)|^2<=C_0 epsilon^-2.                    (4.1)
+
+One explicit construction starts with a fixed nonnegative smooth
+bump supported in(-1,1), positive on[-1/2,1/2], translates it at
+integer centers, and divides every translate by the square root
+of the sum of their squares. Only finitely many translates meet
+the range of F. The constant C_0 is numerical and independent of
+the graph, F, epsilon, a, and g.
+
+Set
+
+ psi_j=chi_j(F)Omega,  p_j=||psi_j||_2^2.
+
+The exact ground-state identity gives, for p_j>0,
+
+ E_j-E0
+ :=<psi_j,H psi_j>/p_j-E0
+ =kappa E_mu[chi_j'(F)^2 |grad F|^2]/p_j,               (4.2)
+
+ D_j
+ :=kappa int |grad F|^2 psi_j^2/p_j.
+
+Summing before dividing yields
+
+ sum_j p_j=1,
+ sum_j p_j(E_j-E0)<=C_0 epsilon^-2 D,
+ sum_j p_j D_j=D.                                      (4.3)
+
+There is therefore an index j with p_j>0 for which BOTH
+
+ E_j-E0<=(C_0+1)epsilon^-2 D,
+ D_j<=(C_0+1)D.                                        (4.4)
+
+Indeed, choose j for which
+(E_j-E0)+epsilon^-2 D_j
+does not exceed its p-weighted mean. Each summand is nonnegative.
+This avoids selecting a low-energy window whose F-Dirichlet form
+has secretly become uncontrolled.
+
+The normalized gauge-invariant state psi_j/sqrt(p_j) is supported
+where F lies in an interval of length2epsilon. Hence
+
+              Var_(psi_j^2/p_j)(F)<=epsilon^2.          (4.5)
+
+Equations(4.2)--(4.5) retain exactly the same F, including its
+physical smearing/flow time and normalization. Only the quantum
+state is changed. The proof uses no reference-field redraw,
+selected-sector denominator, or classical configuration estimate.
+
+5. STRICT POSITIVITY AND PHYSICAL-SPACING SCALING
+
+If a strictly positive density is desired, replace psi_j by
+
+ psi^+=(chi_j(F)+delta)Omega,
+ delta=epsilon sqrt(p_j),
+
+and normalize in L2. Since chi_j is nonnegative,
+||psi^+||_2^2>=p_j. Its ground-energy excess is still bounded by
+the first expression in (4.4), because grad(chi_j+delta)=grad chi_j.
+Using (chi_j+delta)^2<=2chi_j^2+2delta^2 gives
+
+ D_(psi^+) (F)<=2(C_0+1)D+2epsilon^2 D
+               <=2(C_0+2)D.                            (5.1)
+
+Choose the center c=j epsilon of the selected window. Since that
+window meets[0,1], |F-c|<=2 for0<epsilon<=1, and on its chi_j
+support |F-c|<=epsilon. Therefore
+
+ Var_(psi^+)(F)
+ <=E_(psi^+)(F-c)^2<=10epsilon^2.                       (5.2)
+
+The normalized psi^+ is smooth, strictly positive, and gauge
+invariant. Thus the examples do not rely on a singular measure,
+gauge breaking, a chart boundary, or failure of elliptic regularity.
+They are quantum states for the SAME Hamiltonian, not its claimed
+ground states.
+
+Now hold a physical cubic side L fixed, with n=(L/a)^3, and take
+the SAME proposed physical family F_a. If
+
+                         D_mu_a(F_a)<=D_*              (5.3)
+
+has been established, choose epsilon_a=(a/L)^r for any0<r<2.
+Equations(4.4)--(5.2) construct positive gauge-invariant states nu_a
+such that
+
+ Var_nu_a(F_a)<=10(a/L)^(2r) ->0,
+ D_nu_a(F_a)<=2(C_0+2)D_*,
+
+ <H_a>_nu_a <=9n/a+C D_* (L/a)^(2r)
+             =[9+o(1)] n/a.                            (5.4)
+
+Nonnegativity of the two Hamiltonian terms then also gives
+
+ E_nu_a S_sp <=[9/4+o(1)]n g_a^2,
+ int |grad sqrt(nu_a)|^2 <=[18+o(1)]n/g_a^2,
+ I(nu_a)<= [72+o(1)]n/g_a^2.                            (5.5)
+
+Here nu_a denotes its Haar density where used under the square root.
+All error estimates are independent of the rate g_a>0, since it
+cancels in comparison with the leading extensive budgets.
+The construction works in particular on a logarithmic weak-coupling
+sequence. No claim of convergence of nu_a to the ground-state law
+is made. Its excitation energy can diverge, despite being negligible
+relative to n/a.
+Nor are these comparison states asserted to arise as stationary,
+reflection-positive original Wilson Euclidean laws. The limitation
+concerns the listed energy, state, and Dirichlet estimates; it does
+not refute an argument that also uses such additional structures.
+
+This is a decisive limitation on an inference from the currently
+known bounds: extensive energy, magnetic energy, electric energy,
+gauge invariance, positivity, and EVEN a uniformly bounded physical
+F-Dirichlet form do not force a uniform Var(F) floor. A proof for
+Omega must use additional information particular to the minimizer.
+
+6. WHAT THIS LEAVES AS A CONCRETE GROUND-STATE TARGET
+
+For an actual smooth equivariant physical deformation W_a, a
+genuine uncertainty proof would establish, in the ORIGINAL ground
+state and at the prescribed normalization,
+
+ |E_mu_a W_a F_a|>=r_*>0,
+ E_mu_a[-div W_a-2 W_a log Omega_a]^2<=C_*<infinity.      (6.1)
+
+Then(3.2) would give the desired floor. Neither numerator nor
+denominator is replaced by a variance in a native fresh reference
+field. Equations(2.4),(3.3),(5.4)--(5.5) identify three specific
+reasons the currently available estimates do not verify(6.1):
+the deterministic response vanishes, the general equivariant
+score bound has the wrong physical scaling, and the extensive
+energy budget allows concentration of this same physical F.
+
+This is not an assertion that every route requires(6.1). In
+particular a direct lower bound on a separated ground-state
+correlation, or a quantitative minimizer-specific coarse response,
+could avoid it. The new Hamiltonian energy and local marked-energy
+estimates remain useful for the upper-gradient task. They do not
+yet constitute the nontriviality input for a YM4 existence proof.
+
+SOURCES AND PROVENANCE
+
+All displayed results are proved here from compact Haar integration,
+gauge covariance, the Rayleigh principle, and the actual ground-state
+identity. The model and constants come from frozen
+work/controlled_temporal_limit_turn66.txt and
+work/hamiltonian_energy_turn66.txt.
+
+The earlier work/covariant_fisher_witness_turn45.txt proves the
+corresponding original-Wilson microscopic score identity and its
+OS-null local-score limitation. No microscopic variance statement
+from that note is promoted here to a physical-scale floor.
+
+Primary-literature searches did not supply an additional applicable
+nonabelian coarse-observable variance theorem; no unseen theorem
+has been imported.

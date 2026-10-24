@@ -1,0 +1,836 @@
+AVERAGED ACTION AND SOURCE RESPONSE THROUGH ORIGINAL WILSON BLOCKS
+21 October 2026 -- TURN98
+
+MAIN ADVANCE
+
+An arbitrary deterministic block of original SU(2) Wilson links can now
+be integrated with quantitative bounds for both its exact generated
+action and its transported original energy source. The bounds include
+first and second exterior-coordinate derivatives, use the full original
+normalized measure, and have constants independent of the eliminated
+block size and surrounding volume.
+
+For G=sum_p w_p h_p, W=sum_p|w_p|, conditional expectation P_B over
+the eliminated links, and any fixed finite q>=1, the simplified bounds are
+
+ ||P_B G||_q <= C_q W/beta,
+ ||X_f P_B G||_q <= C_q W/sqrt(beta),
+ ||X_g X_f P_B G||_q <= C_q W.
+
+X_f and X_g are fixed unit derivatives in retained original-link
+coordinates. The exact marginal action H_B satisfies
+
+ ||X_f H_B||_q <= C_q sqrt(beta),
+ ||X_g X_f H_B||_q <= C_q beta.
+
+All generated interactions and normalizer derivatives are included.
+Exact nested original-link eliminations preserve these constants by
+Fubini and the conditional-expectation tower property. The second
+source derivative includes the conditional third cumulant; it is not
+obtained by freezing the measure during differentiation.
+
+These are averaged per-coordinate estimates. They do not assert uniform
+pointwise bounds over exteriors, a bound on the full Hessian operator
+norm, spatial decay, or control after a new coarse-field coordinate map.
+The weight W remains explicit. For a profile of fixed physical support,
+its microscopic plaquette sum can have W of order a^-4. Removing that
+loss in connected correlations is now the precise next requirement.
+
+TWO FURTHER CONSEQUENCES
+
+An arbitrarily long deterministic single-pass sequence of original-law
+heatbath projections also retains the first-derivative scale at a link
+never updated. At most eighteen local commutator incidences affect that
+link. This is distinct from nested integration of all updated links.
+
+The exceptional exterior in the previous two-link calculation has a
+fixed original action cost. Its actual Wilson probability is now paid,
+uniformly in volume. Consequently the sharp weak-region comparison
+extends to the full original measure:
+
+ ||A_beta-A_beta(flat)-D||_q <= C_q beta^-3,
+ ||X_f(A_beta-D)||_q <= C_q beta^-5/2.
+
+Here D is the true two-link classical minimum. The second statement
+uses its almost-everywhere derivative; the exact averaged source is
+smooth. Varying source weights are included in the detailed value bound.
+
+The companion report, yang-mills-global-elimination-round.txt, supplies
+a different control: all-exterior relative VALUE estimates for the
+action and source in one exact positive-density elimination round.
+Together these results address the earlier finite-block/exceptional-
+exterior gaps at their stated norms. The spatially summable connected
+source bound and nontrivial continuum response remain to be proved.
+
+The proofs and their scopes passed independent internal mathematical
+checks. The TURN64 original energy moment theorem is the input; no new
+unavailable paper was needed. The full YM4 existence goal remains active.
+
+======================================================================
+ARBITRARY BLOCKS, SWEEPS AND FULL-MEASURE TWO-LINK COMPARISON
+======================================================================
+
+TURN98 -- FULL-WILSON AVERAGED RESPONSE THROUGH ARBITRARY ORIGINAL BLOCKS
+21 October 2026. largefield98. New finite-regulator estimates.
+
+RESULT
+
+For a fixed original energy mark G=sum_p w_p h_p, arbitrary simultaneous
+integration of original links preserves an L^q exterior derivative bound
+of size C_q beta^(-1/2) sum|w_p|. The constant is independent of the
+number of integrated links and the surrounding periodic volume. All
+exteriors are included under the same original normalized Wilson law.
+
+An arbitrarily long deterministic single-pass sequence of original
+heatbath projections also preserves this bound, at an exterior link
+which is never updated. Only the at most eighteen links sharing one of
+its six plaquettes contribute to its derivative commutator. This does
+not claim that a heatbath sweep is simultaneous decimation.
+
+The particular bad exteriors in TURN97 are exponentially rare under the
+full original law. Combining that fact with TURN97's weak-exterior
+theorem upgrades its centered two-link source/classical-minimum comparison
+to a full-measure L^q error O(beta^-3), and its exterior gradient error
+to O(beta^-5/2). These constants are volume-uniform for that fixed pair.
+
+Source weight W=sum|w_p| is retained throughout. No spatial decay,
+physical source census, native history attachment or continuum existence
+claim follows merely from these estimates.
+
+INPUTS READ TO AVOID DUPLICATION
+ work/current_proof_frontier.txt (TURN97);
+ work/turn97_two_link_source.txt;
+ work/turn97_conditional_iteration.txt;
+ work/finite_volume_wilson_energy_turn64.txt and its independent audit;
+ work/turn85_full_wilson_profile_tail.txt;
+ work/chessboard_native_joint_tail_turn14.txt;
+ work/archive/ym4-research/work/full_wilson_large_field_peierls_research.txt;
+ outputs/yang-mills-integrated-boundary-response.txt.
+
+The TURN64 full original-law exponential estimate is the quantitative
+input, not a new claim of this note. The added content is its use with
+the exact conditional response and fixed-pair exterior geometry. No
+external theorem or newly inaccessible paper is invoked.
+
+1. MODEL, DERIVATIVES, AND MOMENTS
+
+Use the finite periodic four-dimensional SU(2) Wilson law with periods
+at least four, normalized link Haar measure, and homogeneous beta>0:
+
+ mu_beta(dU)=Z_beta^-1 exp[-beta S(U)]dU,
+ S=sum_p h_p,                 h_p=1-Tr(U_p)/2 in [0,2].
+
+For a deterministic link f and fixed unit Lie-algebra generator T, let
+X_f act by U_f -> exp(tT)U_f, holding every other original link fixed.
+The norm convention identifies SU(2) with the unit quaternion sphere,
+so this flow has unit speed. No field-dependent coefficient, stopping
+decision, source-dependent update order or auxiliary record is used.
+
+For a plaquette p containing f, quaternion differentiation gives
+
+ |X_f h_p| <= sqrt(2 h_p).                              (1.1)
+
+Indeed the scalar component derivative has magnitude at most the length
+of the vector part of U_p, which is sqrt(1-(1-h_p)^2)<=sqrt(2h_p).
+Left/right placements and inverse link orientations preserve the norm.
+If p does not read f the derivative is zero.
+
+TURN64 proves, for every finite plaquette set E,
+
+ E_mu exp[(beta/4)sum_(p in E)h_p] <= 2^(3|E|/4).       (1.2)
+
+In particular, for every real r>0, integration of the exponential tail
+gives
+
+ E h_p^r <= 2^(3/4) Gamma(r+1) (4/beta)^r.              (1.3)
+
+The constants in (1.2)-(1.3) do not depend on the torus volume. Define
+C_r as any finite constants covering these moment bounds; all constants
+below may depend on q but never on beta, the torus or an eliminated
+block's size. For r>=1, Minkowski therefore gives
+
+ ||sum_p w_p h_p||_r <= C_r W/beta,
+ W=sum_p |w_p|.                                       (1.4)
+
+Likewise for q>=1, including q/2<1 by (1.3),
+
+ ||X_f G||_q <= C_q W_f beta^-1/2,
+ W_f=sum_(p reading f)|w_p|.                           (1.5)
+
+The weights are arbitrary deterministic real numbers on the finite
+torus. W is explicit and may be large. We are not asserting bounded W
+for a fixed physical support as the microscopic mesh tends to zero.
+
+2. ANY SIMULTANEOUS BLOCK: THE EXACT NORMALIZED COMMUTATOR
+
+Let B be ANY deterministic set of original links. Denote by P_B the
+conditional expectation given all links outside B, under the original
+mu_beta. Let S_B be the sum of all distinct original plaquettes reading
+at least one link of B, counted once. The literal conditional density is
+
+ q_B(dU_B|U_out) = exp[-beta S_B]dU_B / int exp[-beta S_B]dU_B.
+
+Every exterior-only action term cancels from this conditional ratio.
+For f outside B, differentiating this finite compact positive integral
+gives the exact identity
+
+ X_f P_B G = P_B(X_f G) - beta Cov_B(G,X_f S_B).          (2.1)
+
+All normalization and action-score terms are present. It is not a
+derivative of a frozen conditional measure. Set
+
+ H_B,f=X_f S_B=sum_(p reading f and at least one B link)X_f h_p.
+
+There are at most SIX terms in H_B,f, independently of |B|. Equations
+(1.1)-(1.3) give ||H_B,f||_(2q)<=C_q beta^-1/2.
+
+Conditional expectations are contractions in L^r(mu) for r>=1. Holder
+and these contractions give, without a conditional pointwise bound,
+
+ ||Cov_B(G,H)||_q
+ <= ||P_B(GH)||_q + ||(P_BG)(P_BH)||_q
+ <= 2 ||G||_(2q) ||H||_(2q).                            (2.2)
+
+Substitute (1.4)-(1.5) into (2.1)-(2.2):
+
+ ||X_f P_B G||_q <= C_q beta^-1/2 (W_f+W).              (2.3)
+
+This holds for every beta>0 and finite 1<=q<infinity, every deterministic B and exterior
+link f. In particular its constant is uniform in both block and torus
+size. Its norm is the FULL original mu norm, equivalently the actual
+exterior marginal norm. That marginal contains the exact conditional
+partition function; it is not replaced by Haar or a prescribed exterior.
+
+If B touches no plaquette containing f, H_B,f=0 exactly and only the
+first term in (2.1) remains. The estimate is an averaged first-derivative
+theorem for an original energy mark. It does not say the generated
+effective action is Wilson, or that its higher derivatives satisfy the
+same norm, or that an arbitrary effective/history-conditioned measure
+has the moments (1.3).
+
+3. ARBITRARILY LONG SINGLE-PASS ORIGINAL HEATBATH SEQUENCES
+
+Let e_1,...,e_n be a deterministic sequence of original links with
+e_k != f for every k. Repetitions are allowed for the first statement.
+Write P_e for the actual original Wilson heatbath projection and
+
+ G_0=G,             G_k=P_(e_k)G_(k-1).
+
+These are smooth functions at every fixed beta and finite regulator.
+Original-law contraction gives
+
+ ||G_k||_r<=||G||_r<=C_r W/beta                         (3.1)
+
+for every r>=1. Let n(e,f) be the number of plaquettes containing both
+distinct links e and f. It is zero unless they share a plaquette.
+The one-link version of (2.1) gives
+
+ X_f G_k=P_(e_k)X_fG_(k-1)
+              -beta Cov_(e_k)(G_(k-1),H_(e_k),f),
+ H_e,f=sum_(p containing e and f)X_f h_p.                (3.2)
+
+Each H_e,f satisfies ||H_e,f||_(2q)<=C_q n(e,f)beta^-1/2.
+Using (2.2) and (3.1) at each step, then iterating the real inequality,
+proves
+
+ ||X_fG_n||_q <= C_q beta^-1/2
+             [ W_f + W sum_(k=1)^n n(e_k,f) ].          (3.3)
+
+If every updated link occurs at most R times, then
+
+ sum_k n(e_k,f) <= 18R.                                (3.4)
+
+Indeed f lies in six plaquettes and each has three other links. Counting
+these eighteen incidences also handles any repeated neighbor across
+plaquettes; no assumption about their being distinct is needed. Thus
+for a SINGLE PASS (R=1), the right side of (3.3) is independent of the
+number and order of updated links. The bound permits an arbitrarily
+large integrated region for a fixed mark G and an exterior derivative.
+
+A later P_e can reintroduce an earlier coordinate, exactly as TURN97
+showed. No nested-sigma-algebra identity is asserted. Deterministic
+composition and the actual original law suffice for (3.2)-(3.3).
+If F reads none of the updated links, the usual conditional identity
+also retains Cov(F,G_n)=Cov(F,G). This observation does not itself give
+decay or a summable estimate on that covariance.
+
+For a field-dependent order or decisions depending on updated links,
+the differentiation would also read those decisions. For a native
+record, the conditioning density need not be q_e. Those cases are not
+included in (3.3). For canonical marks beta G, multiply all displayed
+source and response bounds by beta; the response scale is then sqrt(beta).
+
+4. THE TWO-LINK EXCEPTIONAL EXTERIOR HAS A FIXED ENERGY COST
+
+Use the actual TURN97 pair of opposite parallel links, and its ten
+exterior staples a_i,b_j in S^3 after the exact Haar changes. Its eleven
+distinct plaquettes have local action
+
+ S_pair(x,y;t)=11-x.y-sum_i a_i.x-sum_j b_j.y,
+ D(t)=min_(x,y) S_pair(x,y;t).
+
+All eleven summands are nonnegative. For every original configuration,
+
+ 0<=D(U_out)<=S_pair(U)<=sum_(p in pair stars)h_p(U).    (4.1)
+
+Choose epsilon>0 small enough that all ten staples within epsilon of
+their first staple a_1 is inside TURN97's fixed weak-exterior tube.
+Let E_bad be the exterior event
+
+ max_i |a_i-a_1| >= epsilon OR max_j |b_j-a_1| >= epsilon.
+
+This is a statement about their common conditional coordinate frame,
+not a raw-link identity window. A change of that common orthogonal
+frame leaves all the distances invariant. For any minimizing x,y,
+
+ |a_i-a_1|^2 <=2(|a_i-x|^2+|x-a_1|^2)<=4D,
+ |b_j-a_1|^2 <=3(|b_j-y|^2+|y-x|^2+|x-a_1|^2)<=6D.
+
+Each squared edge equals twice its corresponding plaquette defect.
+Therefore, globally on compact staple space,
+
+ E_bad implies D>=d_epsilon:=epsilon^2/6.              (4.2)
+
+Equations (1.2), (4.1) and exponential Markov now give the actual
+original-law exterior bound
+
+ P_mu(D>=d) <= min(1, 2^(33/4) exp[-beta d/4]),
+ P_mu(E_bad) <= min(1, 2^(33/4) exp[-beta epsilon^2/24]). (4.3)
+
+This is uniform in the surrounding volume. No arbitrary conditioned
+exterior theorem has been used. The bound applies to this exterior
+marginal precisely because the deterministic D lower bound forces
+the original energy on eleven actual plaquettes for EVERY x,y.
+
+For the TURN97 obstruction, a=sum_i a_i=I, b=sum_j b_j=-I.
+Maximizing x.y+x_0-y_0 first over x gives max_(s in [-1,1])
+sqrt(2+2s)-s=3/2 (attained at s=-1/2). Hence D=19/2 exactly.
+Moreover D is 1-Lipschitz separately in the aggregate vectors a,b,
+so |a-I|+|b+I|<=eta implies D>=19/2-eta. The probability of this actual
+aggregate-staple neighborhood is at most
+
+ min(1, 2^(33/4)exp[-beta(19/2-eta)/4]), 0<eta<19/2.     (4.4)
+
+Thus the explicit order-beta pointwise response is compatible with
+(2.3)-(3.3). It occurs on exteriors with a fixed large action cost.
+Those bounds concern the full original average, not the conditional
+Haar transition layer with exterior frozen.
+
+5. FULL-MEASURE UPGRADE OF THE TURN97 SOURCE COMPARISON
+
+Let A_beta=P_pair S_pair, let a_beta=A_beta(flat), and retain D from
+Section4. Jensen, (1.3), and (4.1) give for each r>=1
+
+ ||A_beta||_r+||D||_r <= C_r/beta,
+ 0<=a_beta<=C/beta for beta>=1.                         (5.1)
+
+The last inequality follows from TURN97's flat expansion (and a compact
+beta interval if needed). On E_bad^c, TURN97 proves
+
+ |A_beta-a_beta-D|<=C beta^-2 D.                        (5.2)
+
+On E_bad use |A_beta-a_beta-D|<=2A_beta+a_beta. Holder with (5.1), (4.3)
+therefore gives, for q>=1 and beta above the TURN97 threshold,
+
+ ||A_beta-a_beta-D||_q
+ <= C_q beta^-3
+    +C_q beta^-1 exp[-beta d_epsilon/(8q)]
+ <= C'_q beta^-3.                                     (5.3)
+
+The exponential prefactor 2^(33/(8q)) is absorbed into C_q. This is a
+full original-law estimate, not a weak-sector conditional estimate.
+The constants depend on the fixed weak tube and pair, but not on the
+surrounding volume. In particular, for any original test F in L^(q')
+with 1/q+1/q'=1, the norm yields the absolute covariance error
+
+ |Cov(F,A_beta)-Cov(F,D)|
+       <= 2||F||_(q') ||A_beta-a_beta-D||_q.             (5.4)
+
+The harmless flat constant has zero covariance. Equation (5.4) has no
+spatial decay and no covariance sign or multiplicative comparison.
+
+There is also a full-measure first-gradient upgrade for a fixed exterior
+link f and unit X_f. The compact minimum D is globally Lipschitz in the
+exterior variables; where differentiable, the envelope bound at a
+minimizer and (1.1) give
+
+ |X_fD|<=sqrt(12D),                                    (5.5)
+
+since at most six pair-star plaquettes read f. At points with multiple
+minimizers the same bound holds for every directional envelope slope;
+the ordinary derivative exists Haar-almost everywhere by local
+Rademacher, hence almost everywhere under the smooth positive exterior
+marginal. No chosen minimizer needs to be differentiated.
+
+In the good tube, TURN97's invariant quotient gradient bound, and the
+uniformly smooth finite staple maps, give
+
+ |X_f(A_beta-D)|<=C beta^-2 sqrt(D).                    (5.6)
+
+Common frame rotations contribute zero; the quotient slice bounds are
+uniform after covering the common S^3 frame. The original staple maps
+are finite products of unit quaternions, so their first derivatives
+are bounded independently of beta and volume. On the bad set apply
+Holder to (2.3), (5.5) and (5.1). This proves
+
+ ||X_f(A_beta-D)||_q
+ <=C_q beta^-5/2+C_q beta^-1/2 exp[-beta d_epsilon/(8q)]
+ <=C'_q beta^-5/2.                                    (5.7)
+
+The gradient conclusion is a weak/a.e. derivative statement for D.
+A_beta itself is smooth everywhere. Neither (5.3) nor (5.7) reclassifies
+all nonflat exteriors as weak; their actual original-law weight is paid.
+
+6. VARYING ELEVEN-PLAQUETTE WEIGHTS
+
+This optional extension uses the already independently audited TURN97
+weighted weak-tube estimate, with wbar the eleven-weight mean and
+omega=max_p|w_p-wbar|. Let M_w=P_pair S_w. To define a global classical
+weighted value even at nonunique baseline minimizers, use
+
+ C_w(t)=min{S_w(x,y;t): S_pair(x,y;t)=D(t)}.              (6.1)
+
+It agrees with TURN97's S_w,cl on the good tube. It is measurable: it
+equals the right derivative at s=0 of the continuous compact-minimum
+value min_(x,y)[S_pair+s S_w]. To verify the derivative, compare to a
+baseline minimizer with smallest S_w, choose minimizing points for
+s>0, use compact subsequences, and note their limiting S_pair is D.
+This is also gauge/frame invariant. Pointwise |C_w|<=||w||_infinity D.
+No source-dependent minimizer is substituted for the baseline one in
+the good tube.
+
+Since |M_w|<=||w||_infinity A_beta and its flat value has the same bound,
+the bad-sector argument of Section5 applies. On the good set TURN97
+gives |M_w-M_w(flat)-C_w|<=C[|wbar|beta^-2+omega beta^-1]D.
+Consequently
+
+ ||M_w-M_w(flat)-C_w||_q
+ <=C_q[|wbar|beta^-3+omega beta^-2]
+   +C_q||w||_infinity beta^-1 exp[-beta d_epsilon/(8q)]
+ <=C'_q[|wbar|beta^-3+omega beta^-2].                    (6.2)
+
+Here beta is above a fixed threshold, and ||w||_infinity<=|wbar|+omega.
+The final absorption uses exponential decay; it does not discard an
+unpaid per-pair constant. A varying-profile gradient theorem is NOT
+claimed globally: C_w can have worse regularity where minimizers split.
+
+7. WHAT THIS CHANGES AT THE PROOF FRONTIER
+
+The TURN97 exceptional-exterior probability is now quantitatively paid
+for its actual fixed pair, including its explicit bad aggregate-staple
+neighborhood. Its source approximation holds in the full original law.
+Separately, an actual arbitrary original block and an arbitrary-length
+single-pass heatbath sequence admit first L^q response bounds uniform
+in eliminated-link count for a fixed original local energy mark.
+
+These are not another assumed sufficient criterion: (2.3), (3.3),
+(4.3), (5.3), and (5.7) follow directly from the actual original density
+and the already proved original moment theorem.
+
+What remains is sharply visible. The estimate retains W for a source
+summed over microscopic sites, gives no distance decay between distinct
+marks, and does not prepare the generated action/source for another
+scale with a new running domain. An actual RG history may read updated
+links and changes the conditional score. The exact conditional formulas
+here cannot be applied after such conditioning without its additional
+scores. A fixed-tail factor exp(-c beta) alone is not asserted to pay
+the a^-4 physical root census along an unspecified trajectory beta(a).
+
+No prior file or authoritative frontier was edited by this producer.
+Independent audit of this new note was requested after its completion.
+
+
+======================================================================
+SECOND EXTERIOR DERIVATIVES AND THE GENERATED ACTION
+======================================================================
+
+TURN98 -- THE GENERATED ACTION AND ORIGINAL SOURCE: AVERAGED TWO-JET
+CONTROL THROUGH ARBITRARY ORIGINAL-LINK DECIMATION
+21 October 2026. Root derivation.
+
+RESULT
+
+For any deterministic set B of integrated original Wilson links, the
+exact generated marginal action has first exterior-coordinate derivatives
+bounded in L^q by C_q sqrt(beta) and ordered second derivatives by C_q beta.
+For an original local energy mark G=sum_p w_p h_p with W=sum|w_p|, its
+exact conditional average P_B G has first derivatives bounded by
+C_q W/sqrt(beta) and second derivatives by C_q W. Constants are
+independent of the number of integrated links and of the lattice volume.
+These are norms in the actual retained marginal of the original measure.
+
+Both action and source, including all normalization scores, are present.
+The conclusions also hold after any number of nested deterministic
+original-link eliminations, by exact conditional-expectation composition.
+They are per-coordinate and per-coordinate-pair estimates, not a bound
+on a full derivative matrix operator norm or a decay estimate in the
+distance between its coordinates. The original source weight W is not
+removed. No change to a native constrained/history-conditioned law is
+included. These qualifications matter for the remaining physical sum.
+
+1. DEFINITIONS AND ALREADY PROVED MOMENT INPUT
+
+Use the full finite periodic four-dimensional SU(2) Wilson measure with
+periods at least four, beta>0, normalized link Haar measure,
+
+ mu_beta(dU)=Z_beta^-1 exp[-beta S(U)]dU,
+ S=sum_p h_p,       h_p=1-Tr U_p/2.
+
+B is any deterministic subset of original links. Write
+S=S_out+S_B, where S_B contains every distinct plaquette reading B once,
+and S_out contains the remaining plaquettes. The exact partial partition
+and conditional expectation are
+
+ Z_B(xi)=int exp[-beta S_B(U_B,xi)]dU_B,
+ P_B F=Z_B(xi)^-1 int F(U_B,xi)exp[-beta S_B(U_B,xi)]dU_B.
+
+The exterior marginal has density proportional to exp(-H_B) with
+
+ H_B(xi)=beta S_out(xi)-log Z_B(xi).                    (1.1)
+
+Adding a field-independent constant to H_B has no effect below. The
+measure used for every displayed L^q norm is the original mu_beta; for
+exterior functions this equals its actual exterior marginal norm.
+
+Let f and g be exterior links. X_f and X_g are fixed unit left-invariant
+Lie-algebra derivatives on their original link coordinates. If the
+links coincide, keep the indicated order of derivatives; no symmetry
+of noncommuting vector fields is asserted. The generators are not
+field-dependent and no differentiated history decision is hidden in them.
+
+The full original-law energy bound from TURN64 and the derivative
+calculation in work/turn98_largefield.txt give, for every finite r>=1,
+
+ ||G||_r <= C_r W/beta,
+ ||X_f G||_r <= C_r W_f/sqrt(beta),
+ |X_g X_f G| <= W_fg,
+
+ W_f=sum_(p reading f)|w_p|,
+ W_fg=sum_(p reading both f and g)|w_p|.                (1.2)
+
+For f=g, the last sum is over plaquettes reading f. The second derivative
+of an individual plaquette defect has magnitude at most one under the
+chosen unit generators: multiplication by unit quaternions is isometric,
+and each differentiated factor or inverse factor has norm one. Each
+original plaquette reads a given link at most once in this geometry.
+
+Put K_f=X_f S_B, K_g=X_g S_B, and L_gf=X_g X_f S_B. Each K has at most
+six plaquette terms. Therefore
+
+ ||K_f||_r+||K_g||_r <= C_r beta^-1/2,
+ ||L_gf||_infinity <= 6.                              (1.3)
+
+The bounds are independent of |B|. L_gf vanishes when no touched
+plaquette reads both f and g. K_f vanishes if f shares no plaquette
+with B. The underlying moment bound is a full-measure theorem, not
+a uniform bound under arbitrary frozen exterior data.
+
+2. EXACT SECOND DERIVATIVE OF THE NORMALIZED ORIGINAL SOURCE
+
+The first conditional response is
+
+ X_f P_B G=P_B(X_fG)-beta Cov_B(G,K_f).                 (2.1)
+
+For three functions, write the conditional third cumulant as
+
+ kappa_B(A,C,D)=P_B(ACD)-P_B A P_B(CD)
+               -P_B C P_B(AD)-P_B D P_B(AC)
+               +2P_B A P_B C P_B D.
+
+Differentiation of a normalized covariance gives exactly
+
+ X_g Cov_B(A,C)=Cov_B(X_g A,C)+Cov_B(A,X_g C)
+                       -beta kappa_B(A,C,K_g).        (2.2)
+
+Apply (2.1) to its first term and (2.2) to its second term. The result is
+
+ X_g X_f P_B G
+  =P_B(X_g X_f G)
+   -beta Cov_B(X_fG,K_g)
+   -beta Cov_B(X_gG,K_f)
+   -beta Cov_B(G,L_gf)
+   +beta^2 kappa_B(G,K_f,K_g).                         (2.3)
+
+All five terms are needed. This is an identity of smooth functions on
+the compact exterior space at every finite regulator. In particular
+the last term is part of differentiating the conditional normalizer.
+
+For q finite with q>=1, conditional contraction and Holder give
+
+ ||Cov_B(A,C)||_q <=2||A||_(2q)||C||_(2q),
+ ||kappa_B(A,C,D)||_q
+                 <=6||A||_(3q)||C||_(3q)||D||_(3q).   (2.4)
+
+The factor six is the sum of the absolute cumulant coefficients.
+For example ||(P_B A)(P_B(CD))||_q is bounded using exponents 3q and
+3q/2, followed by contraction and Holder for CD. The three-single-factor
+product is handled with three factors of exponent 3q.
+
+Inserting (1.2)-(1.3) into (2.3)-(2.4) yields
+
+ ||X_g X_f P_B G||_q
+       <= C_q (W_fg+W_f+W_g+W).                       (2.5)
+
+The beta powers cancel: in the third cumulant term they are
+beta^2 times beta^-1 times beta^-1/2 times beta^-1/2. The other terms
+obey the same bound. This estimate holds for every beta>0, with no
+weak-exterior restriction or growth of the constant with |B|.
+Together with TURN98's first-derivative theorem, it gives
+
+ ||P_B G||_q <= C_q W/beta,
+ ||X_f P_B G||_q <= C_q(W_f+W)/sqrt(beta),
+ ||X_g X_f P_B G||_q <= C_q(W_fg+W_f+W_g+W).            (2.6)
+
+For a source normalized as beta G, multiply these bounds by beta.
+The coupling here is the original beta, not a substituted running
+coupling. A deterministic beta-dependent source weight can be used at
+each fixed beta; (2.3) differentiates exterior fields, not that weight.
+
+3. THE ACTUAL GENERATED ACTION, IN THE SAME MARGINAL
+
+Differentiate (1.1) while keeping all generated factors in Z_B. Since
+S_out is exterior measurable,
+
+ X_f H_B=beta X_f S_out+beta P_B(X_f S_B)
+        =beta P_B(X_f S).                             (3.1)
+
+Its next ordered derivative is
+
+ X_g X_f H_B
+   =beta P_B(X_g X_f S)
+          -beta^2 Cov_B(X_f S,X_g S).                 (3.2)
+
+To see the second score in this form, first differentiate using K_g.
+Then X_g S-K_g=X_g S_out is a conditional constant, so replacing K_g
+by X_g S does not change the covariance. This is an exact cancellation
+of exterior-only terms, not an omission of the action outside B.
+
+Each full X_f S still has only the six original plaquettes at f; each
+X_g X_f S has at most six terms of magnitude at most one. The same
+full-law moments and (2.4) therefore prove
+
+ ||X_f H_B||_q <= C_q sqrt(beta),
+ ||X_g X_f H_B||_q <= C_q beta.                        (3.3)
+
+No assertion that H_B remains a Wilson action or a finite-range action
+is used. Its generated interactions may have long range, and these
+coordinate bounds do not constrain that range or imply convexity.
+The exact scalar value of H_B, which may contain an extensive vacuum
+term, is not bounded by (3.3).
+
+4. NESTED ORIGINAL-LINK DECIMATION DOES NOT ACCUMULATE THESE CONSTANTS
+
+Let B_1 subset B_2 subset ... subset B_m be any deterministic sequence
+of eliminated link sets. At stage j, use the EXACT marginal obtained
+from the original measure and integrate the additional retained links
+B_(j+1) minus B_j. Fubini and the tower property give
+
+ E_(stage j)[P_(B_j)G | original links outside B_(j+1)]
+                           =P_(B_(j+1))G.             (4.1)
+
+The resulting density is exactly exp(-H_(B_(j+1))) up to its scalar
+normalizer. Thus (2.6) and (3.3) hold at every stage with the SAME
+constants, for coordinates still retained. They do not accumulate an
+error proportional to the number of stages. This is a true nested
+integration statement; it is distinct from the original-state-space
+single-link heatbath projections studied in TURN97 and TURN98 Section3.
+
+The proof retains the source's identity as the conditional expectation
+of the ORIGINAL G. It does not assert the same result for an arbitrary
+new effective source supplied only through an unrelated norm. It also
+does not include a change of variables to rescaled coarse connections,
+adaptive large-field decisions, or replacing part of a density by a
+fresh reference. Each such operation would need its own controlled
+transformation and score.
+
+5. WHAT THIS RESOLVES AND WHAT IS STILL MISSING
+
+At the level of averaged coordinate derivatives, growth in the number
+of exactly integrated original links is no longer an unproved source
+of divergence for a fixed energy mark. Both the original source and
+the exact marginal action have a controlled two-jet in the same
+normalized marginal, and the statement survives nested integrations.
+
+The estimates retain the original W=sum|w_p| and contain no spatial
+decay when f and g are far apart. A smooth profile on a fixed physical
+region can have W of order a^-4. The corresponding separated covariance
+sum is not controlled by these bounds. Nor does boundedness of each
+Hessian entry bound an operator norm on an increasing number of links.
+
+The next useful strengthening must resolve spatial dependence or the
+cancellation of local scalar contributions in the original connected
+source sum, and must retain that gain under the actual coarse-field map.
+An unqualified stronger pointwise estimate is not the target: TURN97
+already exhibits why such an estimate can fail. The global pair-round
+value theorem and the full-measure derivative theorem address different
+norms and should be used at their proved scopes.
+
+Independent audit of this note's algebra and bounds was requested from
+native98 before packaging. Its detailed verdict is recorded separately
+in work/turn98_second_jet_audit.txt. No prior file was overwritten.
+
+
+======================================================================
+ROOT CHECKS, ADMISSION RECORD AND REMAINING TARGET
+======================================================================
+
+TURN98 -- RESEARCH SYNTHESIS AND ROOT ADMISSION RECORD
+21 October 2026
+
+PREVIOUS GOAL TURN CLASSIFICATION: PROGRESS
+TURN97 produced and independently checked the actual two-link source
+theorem, weighted extension, explicit generated-action coefficients and
+original-law conditional-iteration obstruction. Its frontier, producers
+and deliverables were frozen. TURN98 begins from those inspected files.
+
+CURRENT GOAL TURN CLASSIFICATION: PROGRESS
+New full-measure and all-exterior estimates are proved below and in the
+admitted producers. The YM4 existence goal remains active; the continuum
+construction requirements have not been reduced to these finite results.
+
+1. ADMITTED FULL-MEASURE BLOCK AND SWEEP ESTIMATES
+
+work/turn98_largefield.txt is admitted at its stated full-original-law
+finite periodic SU(2) scopes. Root reread the TURN64 energy producer and
+audit before relying on its moment bound, including the exact transfer
+normalization, positive operator comparison and Schatten Holder step.
+The moment bound is not assumed for arbitrary conditioned exteriors.
+
+Root independently checked the block commutator, conditional contraction,
+Holder, the retained W=sum|w| dependence, and the count of at most six
+plaquette scores at an exterior link. Thus arbitrary original block
+integration has first exterior derivative bounded by C_q W/sqrt(beta),
+independently of the number of integrated links and the torus volume.
+
+The deterministic sweep estimate follows by telescoping the one-link
+commutator. Each fixed nonupdated exterior link belongs to six plaquettes,
+with three other link incidences per plaquette. Hence at most eighteen
+commutator incidences occur in a single pass, independently of sweep
+length. This is an averaged norm theorem, not the false pointwise theorem
+excluded in TURN97, and a sweep is not called a nested decimation.
+
+The actual two-link minimum D is bounded by the original eleven-plaquette
+energy. Root checked both the sqrt(6D) three-edge staple estimate and
+the explicit obstructing aggregate's minimum D=19/2. The TURN64 bound
+therefore pays the actual exterior probability, with the exact original
+normalizer, by 2^(33/4)exp(-beta d/4). Holder on this bad set plus the
+TURN97 weak theorem gives full-law source error O(beta^-3) and weak/a.e.
+gradient error O(beta^-5/2). For the weighted classical value, root
+checked the compact minimum's right-derivative representation and its
+measurability; no unjustified global gradient for that value is admitted.
+
+native98 independently read and audited the entire producer: PASS,
+recorded in work/turn98_largefield_audit_native.txt. The phrase finite
+q is explicit; no L-infinity response estimate is asserted.
+
+2. ADMITTED GENERATED ACTION AND SOURCE TWO-JET
+
+work/turn98_second_jet_root.txt is a root derivation of the next exterior
+derivative, including the derivative of the normalized conditional score.
+For G=sum w h the conditional source has norms O(W/beta),
+O(W/sqrt(beta)), O(W) at derivative orders zero, one, two respectively.
+For the exact generated action H_B=beta S_out-log Z_B the first and
+second derivatives are O(sqrt(beta)) and O(beta), in the same marginal.
+
+The five-term second source derivative contains the positive beta^2
+third cumulant, with a norm bound of six times the three input norms.
+The exterior-only action terms cancel inside the conditional covariance,
+but are retained in H_B itself. These facts and the signs were checked
+independently by native98 in work/turn98_second_jet_audit.txt.
+
+Nested deterministic original-link eliminations are exactly composed by
+Fubini and the tower property, so these estimates do not accumulate a
+block-size or stage-count constant. This is a preservation theorem for
+these particular original-coordinate averaged derivatives, with the
+source represented as P_B of its original mark. It is not a theorem for
+an arbitrary effective-source norm or for a constrained RG replacement.
+Every bound is per coordinate or coordinate pair. No spatial decay,
+full Hessian operator bound, rescaled-coordinate bound, or removal of
+the original source weight W is inferred.
+
+3. ADMITTED GLOBAL VALUE THEOREM AND EXACT PARALLEL ROUND
+
+work/turn98_block.txt is admitted for all pair exteriors and its explicitly
+specified periodic packing. Root checked the uniform compact Hessian
+bound, the S^3 cap lower bound, and the true partition lower bound
+exp(beta D)Z>=c beta^-3. Tail integration gives the O(log(beta)/beta)
+energy excess with no saddle nondegeneracy premise. Small D forces
+the common-staple weak tube, so combining its stronger relative estimate
+with D>=delta on the complement gives the global relative bound.
+
+The action remainder is similarly O(log(2+beta)D) globally and O(D)
+in the weak tube. The exact V>=0 lemma follows by the positive kernel
+exp(beta x.y), Cauchy-Schwarz, simultaneous sign reversal and monotonicity
+of cosh in the common field amplitude. No monotonicity in beta of V is
+inferred just from V>=0.
+
+Root checked the packing: direction-1 pairs at starts (x1,3k,2l,2m),
+period2 divisible by three and periods3,4 even, eliminate V/6 links
+out of 4V. Different pairs share no plaquette, so the conditional law
+factors exactly. Each generated factor reads at most32 retained links
+and each retained link belongs to at most6 pair factors. The exact
+retained marginal keeps all generated potentials. Source identities
+subtract only their deterministic flat values. Summing relative-D
+errors introduces no separate constant proportional to pair count.
+
+The law of total covariance has a retained conditional covariance term;
+it vanishes when no pair meets both source supports, in particular for
+plaquette-center supports separated by more than2a in l-infinity norm.
+No covariance comparison with the classical minimum is deduced solely
+from the pointwise bounds. largefield98 independently audited all main
+sections and returned PASS in work/turn98_block_audit_largefield.txt.
+
+Root additionally checked the later Section5A sharpness example:
+five regular-pentagon staples at each spin give aggregate a=b=0, hence
+S=11-x.y, D=10, Z=e^-11beta z(beta). Comparing the three-dimensional
+minimizer manifold here with the isolated flat minimum yields
+
+ V=10beta-(3/2)log beta+O(1),
+ A-A_flat-D=-3/(2beta)+O(beta^-2).
+
+This proves a uniform O(D) action error and a uniform beta^-2 D source
+error cannot replace the stated all-exterior bounds. It is consistent
+with the sharper full-Wilson averaged estimate, because this exterior
+has a fixed large original energy cost.
+
+4. AUXILIARY REAL-PRESSURE DIAGNOSTIC
+
+work/turn98_native.txt records a scoped inference check. Root verified
+its compact example: density 1+n^-1 sin z sin w on [-1,1]^2, positive
+marks n(1+z), n(1+w), gives uniformly O(1/n) real interaction pressure
+but covariance n(sin1-cos1)^2 at zero source. The mixed covariance stays
+positive at every finite real source. Thus even that positivity does
+not allow differentiation of a uniform real pressure bound without a
+source-regularity estimate. This is a counterexample to an inference,
+not a claim about the Wilson model. The source marks grow with n.
+
+The earlier native-source scope statements are retained as documented
+input audits. No new primary-paper theorem or visual PDF verification
+is claimed in TURN98. This diagnostic is supplementary; the positive
+block estimates do not depend on it.
+
+5. PRECISE NEXT MATHEMATICAL GATE
+
+There are now two different valid controls: full-law per-coordinate
+two-jets through arbitrary original-link integration, and pointwise
+relative action/source values for one local elimination round. Neither
+alone gives a spatially summable connected-source bound after coarsening.
+The averaged theorem still costs W=sum|w_p|; a physical profile may have
+W of order a^-4. The local-round theorem creates finite-range multi-link
+potentials, and iteration has not retained its particular pointwise
+comparison/locality class at a new lattice scale.
+
+The next advance must quantify spatial dependence or the cancellation
+in the original connected source sum, with a controlled transformation
+to actual coarse fields. Simply taking more derivatives in the same
+nonspatial norm, proving another fixed finite-block Laplace expansion,
+or summing these absolute bounds will not pay the physical census.
+
+Preserve the selected TURN70 closures and all scoped older results.
+The required coupling calibration, compatible local hierarchy/contact
+extensions, continuum and volume limits, reconstruction properties,
+positive-energy response and non-Abelian identification remain the
+same full objective. No mass gap or regulator universality is added.
+
+No new unavailable paper was needed for the admitted finite estimates.
+The tools goal remains active. TURN97 files are frozen and preserved.

@@ -1,0 +1,92 @@
+INDEPENDENT AUDIT: NATIVE FLAT SOFT ENERGY BOUNDS
+24 October 2026. audit_two_root. Scoped PASS. The two minor
+complex-weight/energy-leg clarifications below have been applied
+to the producer and checked by final readback.
+
+Audited producer: work/native_flat_soft_energy_bounds_20261024.txt.
+Inputs independently checked in this pass: the actual native flat curl
+contraction and the uniform homogeneous classical quadratic kernels.
+No nonzero-source heat estimate or signed beta coefficient is audited.
+
+1. Actual averages and mass estimates
+
+The corrected native flat average is the componentwise straight-string
+mean. Literal primitive composition has exactly the centered balanced
+block digits and the ordinary segment digits, giving producer(2).
+Its counting operator norm is at most K times K^-2=K^-1. This is an
+operator estimate; no internal K^4 fiber is counted again.
+
+Scalar block Poincare uses only internal block differences and proves
+the mass estimate for Delta_0+mu^2 Pi. The vector proof is also sound:
+translation by s unit steps differs from the identity by at most s
+times the corresponding difference norm. Multiplying by ||Q_0||=K^-2
+and summing s=0,...,K-1 gives a constant independent of K. Applied
+componentwise, this compares the actual A with K Q_0 and gives(8).
+It avoids any unproved inverse for a pinned or mean-zero ghost.
+
+For a>=R_q+1, the coarse correction aI-q_(m+p) is at least I.
+The already established q_m>=q_W then makes V>=Delta_1+A^*A.
+Equation(8) supplies the vector mass. The upper estimate follows from
+q_m<=C q_W and ||A||<=mu. The distinction between R_s and R_v is
+essential: the elliptic vector reference includes DD^*, in addition
+to the curl form. The producer makes this explicit.
+
+2. Twists and inverse bounds
+
+The averages and their adjoints have bounded physical displacement.
+Entrywise domination of their nonnegative scalar coefficients proves
+the O(|theta|) relative changes, retaining the actual mu factor for A.
+The uniform analytic quadratic rows and Ward identity give a double
+zero of q_m at momentum zero, and hence(12). Away from zero its
+uniform strip bound gives the same inequality. Dividing by
+delta(k)+mu^2 is uniformly bounded, since
+mu sqrt(delta)/(delta+mu^2)<=1/2.
+
+The complete coarse correction changes by O(mu^2 |theta|), because
+both A legs keep their mu factor. The scalar projection term has the
+same mass scale. This proves the energy-sandwiched perturbation(13).
+The lower energy bounds give the Neumann inversion(14), without
+requiring the reference energy to commute with block operators.
+
+Two harmless details, now explicit in the producer, are:
+(a) (A^*)_theta=(A_(-theta))^* is literal for real theta. For complex
+    theta and the Hermitian adjoint, the right argument is
+    -conjugate(theta); alternatively use the holomorphic continuation
+    of the real transpose identity. Real weights already suffice for
+    exponential kernel estimates.
+(b) To pass from(14) to a literal twisted ENERGY-LEG operator, the
+    ratios R_theta^(1/2)R^(-1/2) and their inverses are uniformly
+    bounded in a fixed smaller physical strip. Here this follows
+    directly from the scalar multiplier delta(k)+mu^2 and its
+    positive square-root branch: its twisted relative change is
+    O(|theta|), so the square-root ratios have uniform bounds.
+    With this observation, the stated block Fourier strip/decay
+    conclusion is justified; (13)--(14) themselves require no addition.
+
+3. Heat trace and regulator scope
+
+The heat-trace proof correctly uses ordered eigenvalues from the
+quadratic-form lower bound, not operator monotonicity of the
+exponential. The lattice heat sum in four directions is bounded by
+C[1+(NK)^4/(1+K^2 u)^2]. After division by N^4 this is exactly the
+displayed K^4 term plus the separate N^-4 zero-mode contribution.
+The soft mass supplies exp(-c u). The estimate is valid at u=0,
+for K=1, and on compatible finite tori of the declared periodization.
+
+The producer begins with infinite-lattice kernels and their specified
+periodizations. It does not identify unrelated finite-volume native
+winding kernels with them. Thus there is no hidden regulator passage
+in its finite heat sum. This limitation must remain when the result
+is used in a beta comparison.
+
+4. Verdict
+
+At the stated infinite-lattice/periodized scope, the proof establishes
+the flat soft scalar and vector energy bounds, their physical-weight
+inverse bounds, and the undifferentiated heat trace. The two details
+in Section2 above are routine clarifications, not new hypotheses.
+The proof does not supply moving-reference derivatives, localized
+source vertices, differentiated coarse Schur estimates, the complete
+Gaussian determinant identification, or its signed logarithmic
+coefficient. Multiplying a bounded inverse by its K^4-dimensional
+fiber is expressly not an allowed replacement for those estimates.

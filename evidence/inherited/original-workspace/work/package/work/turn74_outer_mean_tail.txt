@@ -1,0 +1,428 @@
+ORIGINAL CONDITIONAL MEANS, ADDITIVE SOURCE ERRORS, AND REFLECTION
+TURN74. tail47. 20 October 2026.
+
+RESULT
+
+There is a new quantitative ORIGINAL-law consequence of the actual
+TURN37 bare-box replacement and TURN64 Wilson energy theorem. For an
+additive canonically normalized plaquette source, its coarse conditional-
+mean error has an orthogonal fiber part and an exterior-dependent drift.
+The all-order original energy moments control these parts respectively
+by sqrt(alpha) log(1/alpha) and alpha log(1/alpha), with no exponential
+factor in the number of read boxes. For sources in disjoint read boxes,
+the fiber parts cancel from the covariance comparison EXACTLY. Only
+the exterior drifts remain. Sections 1--4 prove this result.
+
+This avoids the large local chi-square product in TURN73. It does not
+provide decay with the physical distance between the sources. The
+remaining physical weight count defeats the available bare alpha at
+asymptotically free scaling. It is not a full-law continuum bound.
+
+Ordinary conditional L2 contraction does avoid analytic-norm losses
+when applied to the SAME original probability law. It cannot create
+the needed localization or replace actual source conditional means
+by selected ones. Section 5 spells out the exact chronology and cost.
+
+There is also an exact full-Wilson positive-time route: site reflection
+identifies the centered reflected covariance with the variance of an
+original conditional mean on the two boundary slices. Any further
+coarse projection of those boundary data gives a lower bound. This
+is useful because it does not require ordinary L2 convergence of an
+unsmeared composite. It still needs an actual nonzero original-law
+coarse conditional mean; current estimates do not supply one.
+
+All statements below are at a finite regulator unless a limit is
+explicitly stated. No prior frozen note is changed.
+
+INPUTS AND SCOPE
+
+Read:
+ turn73_coarse_preserving_tail.txt;
+ coarse_preserving_box_replacement_turn37.txt;
+ polylog_box_annealed_replacement_turn37.txt;
+ finite_volume_wilson_energy_turn64.txt;
+ regular_source_transport_turn69.txt;
+ selected_covariance_martingale_turn70.txt;
+ turn73_native_marked_history.txt;
+ current_proof_frontier_turn73.txt.
+
+The native source bounds of TURN73 remain private, complete-history,
+one-date bounds. The regular source theorem of TURN69 has its admitted
+selected kernel. Neither is silently used as a theorem about all
+conditional means of the original Wilson law.
+
+1. THE EXACT BARE CONDITIONAL PRODUCT
+
+Use the SAME notation and actual bare-box hypotheses as TURN73:
+
+ mu(domega,du)=mu_X(domega) product_i Q_i^omega(du_i),
+ Q_i^omega=integral nu_i^omega(dy_i) R_i^(omega,y_i)(du_i),
+ Lambda(domega,dy)=mu_X(domega) product_i nu_i^omega(dy_i).
+
+Every boundary link is in omega, no plaquette reads two active core
+interiors, and Y_i only reads omega and core i. Set Z=(omega,Y).
+The original conditional law at Z is product R_i.
+
+Let W_i be the frozen original weak window and B_i an exterior bad-
+boundary event. Assume Q_i^omega(W_i^c)<=alpha on B_i^c. With
+p_i=R_i(W_i^c), 0<theta<1, let
+
+ G_i={B_i^c,p_i<=theta},
+ M_i=1_(G_i^c)+1_(G_i)1_(W_i)/(1-p_i),
+ P_i=M_i R_i.
+
+The replacement nu=Lambda product P_i preserves Lambda exactly.
+It also preserves omega. All definitions are frozen at zero source.
+There is no global all-good conditioning or its denominator.
+
+Write L_i=1-M_i and
+
+ c_theta=max(1,theta/(1-theta)).
+
+At fixed omega, viewing Y_i as its actual function of U_i, direct
+integration of the two values on W_i and W_i^c gives
+
+ Q_i L_i=0,
+ |L_i|<=c_theta,
+ Q_i |L_i|=2 integral 1_(G_i) p_i dnu_i^omega <=2alpha,
+ Q_i L_i^2=integral 1_(G_i) p_i/(1-p_i) dnu_i^omega
+                                            <=alpha/(1-theta). (1.1)
+
+On a bad boundary the left sides in the last two lines are zero.
+Thus these are conditional bounds uniform in omega, despite the lack
+of a small rejection probability at every individual coarse fiber.
+Boundary events need not be independent.
+
+A frozen soft weight w_i in[0,1] has the same conclusion after adding
+an independent local uniform flag and setting W_i={flag<=w_i}. Original
+sources do not read the flag; forgetting it leaves the same source
+means. The same product/coarse-read hypotheses must still hold.
+
+2. TWO DIFFERENT CONDITIONAL-MEAN ERRORS
+
+Take an original additive source
+
+ F=F_ext(omega)+sum_(i in A) F_i(omega,U_i).
+
+The actual plaquette assignment has this form: assign a plaquette
+reading an interior to its unique core, and assign an entirely
+exterior plaquette to F_ext. In this section F_i is not allowed an
+extra read of another core's Y_j. Let
+
+ m_F(Z)=E_mu[F|Z],       m_F^nu(Z)=E_nu[F|Z],
+ delta_i(Z)=R_i F_i-P_i F_i=R_i(L_i F_i),
+ delta_F=m_F-m_F^nu=sum_i delta_i,
+ b_i(omega)=E_Lambda[delta_i|omega]=Q_i(L_i F_i),
+ xi_i=delta_i-b_i.
+
+The xi_i are independent and mean zero CONDITIONAL ON omega, since
+each is a function of omega,Y_i. Their cross terms and their cross
+terms against any exterior-measurable function vanish. Consequently
+
+ ||delta_F||_2^2
+   =sum_i E Var(delta_i|omega)+||sum_i b_i||_2^2,           (2.1)
+
+and
+
+ Var(delta_F)
+   =sum_i E Var(delta_i|omega)+Var(sum_i b_i).             (2.2)
+
+The b_i are not independent. No square-sum estimate is asserted for
+their sum. They represent precisely the coherent exterior response.
+
+Here are useful general estimates, before specializing the source.
+For any integer r>=2, conditional Jensen followed by Holder and(1.1)
+gives
+
+ ||delta_i||_2
+ <= c_theta^(1/r) [alpha/(1-theta)]^((1-1/r)/2)
+                                         ||F_i||_(2r,mu). (2.3)
+
+Indeed ||E[L_i F_i|Z]||_2^2<=E[L_i^2 F_i^2]. Use Holder with
+exponents q=r/(r-1),r and the bound
+E|L_i|^(2q)<=c_theta^(2q-2)alpha/(1-theta).
+
+The exterior drift has a better estimate:
+
+ ||b_i||_2
+ <=c_theta^(1/r)(2alpha)^(1-1/r)||F_i||_(r,mu).            (2.4)
+
+To prove it apply Holder first at each omega:
+|Q_i(L_i F_i)|<=[Q_i|L_i|^q]^(1/q)[Q_i|F_i|^r]^(1/r).
+Use Q_i|L_i|^q<=c_theta^(q-1)2alpha. Then the L2(mu_X)
+norm of [Q_i|F_i|^r]^(1/r) is at most ||F_i||_(r,mu), since
+r>=2. No arbitrary-exterior Wilson moment estimate was used.
+
+Any exterior-measurable constant can be subtracted from F_i in
+(2.3)--(2.4), because R_i L_i=0. Below it is convenient simply to
+bound the unshifted canonical original plaquette source. Subsequent
+deterministic vacuum centering does not change delta_i or b_i.
+
+3. ACTUAL WILSON ACTION MOMENTS REMOVE THE BARE BETA FACTOR
+
+For the original periodic SU(2) Wilson probability at homogeneous
+beta>0, put h_p=1-Tr(U_p)/2. The actual TURN64 theorem gives
+
+ E_mu exp(beta h_p/4)<=2^(3/4).
+
+Tail integration, valid for every positive integer s, yields
+
+ ||beta h_p||_s<=C_s,
+ C_s=4[2^(3/4)s!]^(1/s)<=4*2^(3/(4s))*s.                 (3.1)
+
+The last inequality uses s!<=s^s. We are not differentiating an
+inequality of generating functions. The explicit bound on ALL s is
+important: the order r below grows as alpha decreases. This is not
+an application of a native fixed-jet constant at an increasing order.
+
+For deterministic real plaquette weights let
+
+ F_i=beta sum_(p assigned to i) f_p h_p,
+ W_i=sum_(p assigned to i)|f_p|.
+
+Minkowski gives ||F_i||_s<=C_s W_i under the SAME full original
+law, with its exact normalizer. Put
+
+ L_alpha=2+log(1/alpha),
+ r=max(2,ceil(log(1/alpha))).
+
+Then r<=L_alpha and alpha^(-1/r)<=e. Inserting(3.1) into
+(2.3)--(2.4) proves, for a constant depending only on theta,
+
+ ||delta_i||_2<=C_theta sqrt(alpha) L_alpha W_i,
+ ||b_i||_2<=C_theta alpha L_alpha W_i.                    (3.2)
+
+For example any sufficiently large fixed multiple of
+e max(1,sqrt(c_theta))/sqrt(1-theta) is a valid C_theta.
+The exact order-dependent formulas(2.3)--(2.4),(3.1) specify
+the constants if needed. There is no remaining beta factor.
+
+Combining(2.1) with Minkowski only for the b_i sum gives
+
+ ||delta_F||_2^2
+ <=C_theta^2 L_alpha^2
+       [alpha sum_i W_i^2+alpha^2(sum_i W_i)^2].          (3.3)
+
+The same upper bound applies to Var(delta_F). This holds for any
+finite number of cores; no condition |A|alpha<=1 is needed.
+It improves the exponential read-count estimate for these additive
+sources. It does not replace the square of the sum in the drift term
+by the sum of squares.
+
+For an unscaled action sum f_p h_p, divide the right sides of
+(3.2) by beta and(3.3) by beta^2. For any other calibration the
+observable's actual factors must similarly be retained.
+
+4. DISJOINT SOURCE CORES: ONLY EXTERIOR DRIFTS SURVIVE
+
+Let F,H be original additive sources as in Section2 with disjoint
+interior read-core sets A,B. Their physical supports must have enough
+separation to ensure this after the actual plaquette/core collars.
+Their exterior pieces may read any preserved exterior links.
+
+Set
+
+ a_F(omega)=E_mu[F|omega],   a_H(omega)=E_mu[H|omega],
+ b_F=sum_(i in A)b_i,       b_H=sum_(j in B)b_j.
+
+Given omega the interiors, and after replacement the pairs(Y_i,V_i),
+are independent across cores. Therefore exactly
+
+ Cov_mu(F,H)=Cov_(mu_X)(a_F,a_H),
+ Cov_nu(F,H)=Cov_(mu_X)(a_F-b_F,a_H-b_H).                  (4.1)
+
+In particular
+
+ Cov_mu(F,H)-Cov_nu(F,H)
+ =Cov(b_F,a_H)+Cov(a_F,b_H)-Cov(b_F,b_H).                 (4.2)
+
+This is stronger than merely applying Cauchy--Schwarz to delta_F.
+The centered fiber pieces xi_i do not occur at all: at fixed omega
+they have zero covariance with the disjoint source's coarse means.
+There is still no independence assumption on the exterior drifts.
+
+For canonical action sources let W_F,W_H include all their weights,
+including exterior plaquettes, and W_F,int,W_H,int include only their
+respective core weights. Conditional L2 contraction and(3.1) give
+
+ ||a_F-E F||_2<=2 C_2 W_F,
+ ||a_H-E H||_2<=2 C_2 W_H.
+
+Together with(3.2), this proves the actual original-source comparison
+
+ |Cov_mu(F,H)-Cov_nu(F,H)|
+ <=2 C_2 C_theta alpha L_alpha
+                [W_F,int W_H+W_F W_H,int]
+    +C_theta^2 alpha^2 L_alpha^2 W_F,int W_H,int.          (4.3)
+
+The normalizer is the full original Wilson normalizer. Replacement
+preserves the exact coarse and exterior marginals. This theorem has
+no global no-bad probability, no growing product of fiber normalizers,
+and no exponentially large read-core factor. It is an actual bare-
+Wilson two-source result, not a statement about selected RG kernels.
+
+It does not contain exp[-c distance/scale]. Disjointness is used only
+to obtain(4.1). It gives no decay as two nonintersecting source regions
+are moved farther apart. All their correlations may reside in omega.
+
+5. WHAT FULL-LAW MARTINGALE CONTRACTION REALLY SAVES
+
+At a finite regulator, retain an ACTUAL positive augmentation P of
+the original Wilson law, with every needed old read and future
+auxiliary draw. Choose decreasing sigma-fields G_0 superset ...
+superset G_n from that SAME joint law, with F,H measurable at G_0.
+For example retaining complete future records after each actual
+elimination defines such sigma-fields; the current coarse field
+alone need not give the conditional law if old records remain read.
+
+Define
+
+ X_j(F)=E_P[F|G_j],       D_j(F)=X_j(F)-X_(j+1)(F).
+
+Then exactly
+
+ Cov_P(F,H)=sum_(j<n) E_P[D_j(F)D_j(H)]
+                   +Cov_P(X_n(F),X_n(H)),                 (5.1)
+ sum_(j<n)||D_j(F)||_2^2
+           =Var_P(F)-Var_P(X_n(F))<=Var_P(F).             (5.2)
+
+Proof: E[D_j(F)|G_(j+1)]=0, which gives orthogonality of
+different dates and of each increment with the terminal variable.
+Expand F=X_n(F)+sum D_j(F), with its original mean retained.
+The finite action source is bounded at each finite regulator,
+so no integrability assumption is being guessed here.
+
+If an actual inherited source error Z has been identified in L2(P),
+then ||E_P[Z|G_j]||_2<=||Z||_2 at every later date. This removes
+repeated analytic-norm losses for that SAME error. But errors born
+at different dates are not orthogonal just because they are called
+births. Without their identification as the D_j above, Minkowski
+only gives the sum of their norms, not a square-sum.
+
+The retained native private theorem controls only a specified part
+of an original source at a fixed complete outer datum. Its regular,
+healed and mixed-source pieces are not thereby identified with D_j.
+The original regular conditional mean X_j is also not the one-mark
+map on the TURN70 selected path. That path has the original density
+multiplied by the declared windows and a different normalizer.
+
+Finally L2 contraction has no spatial localization conclusion.
+For separated original sources, (5.2) and Cauchy--Schwarz give only
+sqrt(Var(F)Var(H)), not a decay factor joining their supports.
+The known energy moments bound Var(F) by C W_F^2, with W_F of
+order a^-4 for an unscaled fixed-physical canonical action profile.
+This does not provide a useful continuum bound on(5.1).
+
+6. PHYSICAL SCALING AND THE CONTACT ISSUE
+
+Consider bounded nonzero profiles on fixed separated four-dimensional
+physical regions, with canonical original source
+
+ F_a=beta(a) sum_p f(x_p) h_p.
+
+There is no additional a^4 in this source: for a smooth classical
+field, h_p has its a^4 factor already, and the sum approximates the
+integrated action density in its stated field convention. Its
+quantum vacuum and contact terms are a separate renormalization
+question. The absolute weight W_F is of order a^-4.
+
+For boxes of polylogarithmic fine diameter R, bounded profiles give
+sum_i W_i^2=O(a^-4 R^4), while (sum_i W_i)^2=O(a^-8).
+Thus(3.3) has terms of order
+
+ L_alpha^2[alpha a^-4 R^4+alpha^2 a^-8].                  (6.1)
+
+The separated covariance bound(4.3) is at best of order
+alpha L_alpha a^-8 by these estimates. In the admitted bare
+polylog regime alpha behaves as exp[-c(log(1/g))^p] for fixed
+p, whereas beta(a) is of order log(1/a). Therefore log(1/g)
+is of order log log(1/a). Such an alpha does not beat any fixed
+power of a. The displayed bounds do not tend to zero or remain
+bounded for these physical canonical sources. This is a failure
+of the estimates, not a proof that the actual covariance diverges.
+
+The damped source a^4 F_a has W=O(1), and(4.3) does give a
+vanishing replacement error as alpha tends to zero. That is a
+valid comparison for a differently normalized observable, not
+a nontriviality result for the calibrated action-density source.
+
+Nor is ordinary same-support L2 convergence a necessary condition
+for the desired composite. TURN63 explicitly proves, in free Maxwell
+theory, that compactly mollified centered action squares have divergent
+ordinary variance while their positive-time reflected mixed norms
+converge to a nonzero OS vector. Replacing every separated estimate
+by the diagonal bound in(5.2) can lose this distinction. The present
+analysis does not impose ordinary random-distribution tightness on
+the unsmoothed composite as a necessary route to YM4.
+
+7. AN EXACT FULL-WILSON REFLECTION TARGET
+
+There is a positive original-law formulation of the remaining mean
+problem. Take a finite periodic Wilson lattice with even temporal
+period N>=4. Reflect t to -t. Condition on B, the spatial link
+variables in the two fixed slices t=0 and t=N/2. The remaining link
+variables split into two reflected open half-cylinders. Every Wilson
+plaquette belongs to one half or to a fixed slice; no plaquette reads
+interior link variables from both halves. Conditional on B, the two
+halves are independent and have reflected identical laws.
+
+Let F be a real gauge-invariant original observable whose COMPLETE
+read is in the positive half and its boundary, and let theta F be
+its reflected copy. The original conditional densities and their
+normalizers therefore give
+
+ C_OS(F):=Cov_mu(theta F,F)
+       =Var_mu(E_mu[F|B])>=0.                            (7.1)
+
+Indeed the conditional expectation of the reflected copy is the
+same function m(B), and E[theta F F|B]=m(B)^2. The two boundary
+slices are both retained; replacing this finite periodic geometry
+by only one conditioning slice would require a separate argument.
+
+For ANY sub-sigma-field C of B, conditional orthogonal projection
+gives the exact further decomposition
+
+ C_OS(F)=Var(E[F|C])+E Var(E[F|B]|C)
+                                          >=Var(E[F|C]). (7.2)
+
+Thus an original coarse conditional mean at the reflection boundary
+can certify a nonzero full reflected norm from below. For a real
+square-integrable C-measurable test G of nonzero variance,
+
+ C_OS(F)>=Cov_mu(F,G)^2/Var_mu(G).                        (7.3)
+
+These statements are derived directly from the finite Wilson
+conditional product; no selected law or replacement reference
+appears. They apply to the literal finite-regulator action sources
+as well as bounded gauge-invariant positive-time probes.
+
+They do not furnish a cutoff-uniform lower bound on the right side.
+The available energy estimates are upper bounds, and neither the
+selected source theorem nor the private raw-source theorem computes
+this full original boundary conditional mean. A coarse-preserving
+replacement preserves the boundary distribution but not the function
+E[F|B], exactly as the drift calculation above shows. Therefore its
+preserved marginal is not already a nontriviality certificate.
+
+Even a uniform nonzero bound in(7.2) alone would not establish positive
+energy in a continuum limit or interacting Yang--Mills dynamics. Its
+time dependence and spectral content would still have to be controlled.
+
+8. PRECISE NEXT ATTACHMENT
+
+The new useful estimate is(4.3), with the stronger error structure
+(3.3), for actual original bare conditional boxes. It controls the
+outer means directly and improves their source/count dependence.
+It does not close the physical support count or repeated full-law
+conditional-source problem.
+
+To use full-law martingale contraction constructively, a mark must
+first be identified with the SAME original conditional source and
+given a physical L2 or separated/OS bound. Then later conditional
+expectations cost no additional L2 factor. What remains unproved is
+that first localized bound, its complete scalar and cross terms,
+and an actual reflection-compatible nonzero mean such as(7.2).
+
+The current native/selected estimates do not permit an original
+full-source closure by L2 contraction alone. No completed continuum
+existence or nontriviality proof is asserted.

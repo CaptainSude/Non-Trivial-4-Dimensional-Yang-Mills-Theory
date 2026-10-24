@@ -1,0 +1,80 @@
+TURN82. INDEPENDENT AUDIT OF THE CONDITIONAL CURRENT TUBE
+20 October 2026. tail47.
+
+VERDICT: PASS at the stated independent-current conditional-kernel scope.
+
+Producer: work/turn82_current_tube_history.txt
+SHA256: 841725917AAC7F6BC5CC17BA5EE9FCB8D80A141964026982489BFBD965ABDDAB
+
+The full note was read. Particular attention was given to Sections4,
+5A and6; the supporting covariance and normalized-source bounds in
+Sections1--3 and5 were also independently checked.
+
+1. Conditional normalization and covariance.
+
+Absorbing the real perturbation into the positive base leaves a pure
+phase with denominator D_c(b). Its total-variation norm is exactly
+1/|D_c(b)|. This retains the normalizer and does not replace the
+interacting auxiliary marginal by a product measure. The covariance
+decomposition follows from the S3 tilted density and the displayed
+integration by parts. The barrier b=r/(sqrt(r^2+4)+2) starts below c
+and has strictly smaller derivative at any positive crossing; it
+therefore proves c'<=c/r. The separate Gamma tilt bound gives the
+claimed 4/(1+r)^2 longitudinal upper estimate, with the split at r=3.
+No covariance lower estimate is inferred.
+
+2. Quadratic variation and source bounds.
+
+Centering the phase before the Taylor inequality gives
+|phi|>=1-Var(b dot q)/2. Taking the product and using the increasing
+ratio -log(1-v/2)/v proves (3.2). The estimate for C(z)-1 uses the
+mass-one normalized complex measure before absolute values; this
+justifies the source logarithm in (3.4). Real-coordinate
+complexification, rather than an antiholomorphic Re operation, is
+explicitly retained.
+
+3. Bessel product, sharp strip, and constants.
+
+The cited primary special-function facts were directly checked in
+NIST DLMF: 10.21.15 and the real-zero statement in10.21(i), together
+with the series10.25.2:
+ https://dlmf.nist.gov/10.21.E15
+ https://dlmf.nist.gov/10.21#i
+ https://dlmf.nist.gov/10.25.E2
+They apply to order1. The entire spherical integral is the function
+of the BILINEAR z dot z in (4.1), with no square-root branch needed.
+Its zeros require c dot b=0 and |b|^2=r^2+j_(1,m)^2. This proves the
+uniform strip and its sharpness. The bounded probe used to demonstrate
+a genuine pole has a numerator proportional to the nonzero derivative
+at a simple first Bessel zero.
+
+In the normalized product, each modulus is at least
+1-|b|^2/(r^2+j_m^2). Condition (4.3) makes these factors positive.
+The logarithmic bound and the exact sum w(r)/2 then give precisely
+the coefficient 1/[2(1-eta)] in (4.4)--(4.5). Local convergence of
+the Bessel product legitimizes differentiation. At r=0 the sum is1/8,
+matching w(0)/2. The product estimate and the longitudinal variance
+estimate are correctly kept as distinct alternatives.
+
+4. Hilbert-ball and finite current jets.
+
+The absorbed real radius satisfies 1+|a+Re zeta|>=(1-rho)(1+|a|).
+This gives V<=rho^2/(1-rho) and the stated uniform total variation
+on rho<=1/2. Fixed-order Cauchy/polarization controls operator jets;
+the producer correctly does not infer a coefficient-sum norm over
+arbitrarily many link labels. Direct differentiation gives the complete
+third cumulant E[(B-E B)X_h X_k] in (5.3), including the normalizer.
+The two inequalities (5.4) then follow from Var(B)<=1/4 and
+|B-E B|<=1, respectively.
+
+5. Actual-law interface and scaling.
+
+Section6's N epsilon^2/(1+r) and longitudinal N epsilon^2/(1+r)^2
+budgets follow from the proved estimates. A fixed nonzero imaginary
+shift on N zero-current links indeed has exponentially growing complex
+measure norm. The bilinear map J(G,R) and unbounded real auxiliaries
+prevent an automatic uniform auxiliary-coordinate domain. Actual
+current concentration can be used only after specifying and bounding
+the composed current increments on the chosen records. No estimate
+on the interacting nu marginal or its spatial covariance is proved
+by this conditional tube. The final text preserves all these limits.

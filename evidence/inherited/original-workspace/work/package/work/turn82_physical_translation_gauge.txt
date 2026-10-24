@@ -1,0 +1,230 @@
+TURN82 -- PRESSURE TEST: WHAT BUFFERED SMOOTHING SAYS ABOUT PHYSICAL TIME
+20 October 2026. gauge47. Separate transfer lemma and actual obstruction.
+
+RESULT
+There IS a cutoff-uniform physical-time OS continuity estimate for a
+bounded observable with a fixed positive time buffer. It follows from
+the ACTUAL positive Wilson transfer matrix and that buffer alone; HS
+smoothing is unnecessary. At finite periodic time it controls the
+thermal energy-DIFFERENCE generator, not a positive vacuum Hamiltonian.
+It does not propagate equal-time variance to a positive separation.
+
+The new full-four-dimensional HS gradient estimate therefore does not
+by itself close the one-slice energy/variance witness. An already proved
+ORIGINAL-Wilson thin-loop family supplies a concrete test: the initial
+ordinary variance stays positive; its buffered HS representatives have
+the new O(beta a) gradient bound and all the new fixed-order bounds;
+yet their centered OS norms go to zero. This is an actual example at
+the same Wilson law, not a changed auxiliary reference measure.
+
+1. ACTUAL TRANSFER INPUT, INCLUDING GAUGE PROJECTION
+
+Use a finite spatial lattice, beta>0, and a periodic temporal extent2N
+steps of spacing a. Let X=SU(2)^(spatial edges), with normalized Haar. Write
+P_G for normalized site-gauge averaging and H_phys=P_G L2(X).
+Let V be the spatial Wilson action on one time slice, M=exp(-V/2),
+and let Q be product convolution by
+  q_beta(U)=exp[-beta(1-Tr U/2)]/c(beta),
+  c(beta)=2 exp(-beta)I_1(beta)/beta.
+On H_phys the transfer operator is T=M Q M; on all L2(X) retain
+T=M Q P_G M. Its kernel is
+  T(U,V)=M(U)M(V) integral dg
+       product_(e=(x,y)) q_beta[U_e g_y V_e^-1 g_x^-1].   (1.1)
+The g variables are the actual temporal links. The two endpoint M
+factors give half of each spatial action per incident slab, and hence
+the complete action on multiplying slabs. All gauge volumes are1.
+Consequently
+  Z_W=c(beta)^(2N |E|) Tr_phys T^(2N).                   (1.2)
+No boundary potential, temporal gauge projection or partition scalar
+is discarded in using the transfer trace.
+
+This construction and its normalization were independently derived in
+work/transfer_matrix_witness_turn64.txt Section2. The primary construction
+is Luscher, CMP54(1977),283--292, SectionII.B Proposition1 and II.C:
+  https://doi.org/10.1007/BF01614090
+Here the required pure-SU(2) positivity also follows directly: the
+convolution eigenvalues are I_(2j+1)(beta)/I_1(beta)>0, summable with
+representation multiplicities; M is positive, bounded and invertible
+at this finite volume. Thus T is positive trace class, injective on
+H_phys, with eigenvalues lambda_i>0. The projection only annihilates
+nonphysical states, which are not included in that spectrum.
+
+Define the exact finite-spacing Hamiltonian and thermal normalizer
+  H=-a^-1 log(T/lambda_0), E_i=-a^-1 log(lambda_i/lambda_0),
+  Z_T=Tr_phys T^(2N), lambda_0=||T||.                    (1.3)
+H>=0 may be unbounded. It is not replaced by a differential electric
+Hamiltonian. The scalar lambda_0 cancels from the differences below.
+
+2. A BUFFERED BLOCK OBSERVABLE AS AN ACTUAL OS VECTOR
+
+Let F be a bounded, gauge-invariant function of the complete ORIGINAL
+links in the positive temporal half. Choose an integer q>=1 such that
+all its translates by m steps, |m|<=q, remain in that half. Retain
+at least q unmarked transfer slabs at each end; endpoint reads can be
+placed one slab farther inside to avoid an ambiguous boundary crossing.
+Assume 2q<N. The site reflection planes are times0 and N a.
+
+Integrating the central block of length N-2q with insertion F defines
+an operator K_F on H_phys. It contains the actual temporal-link Haar
+integrations and the endpoint half-spatial potentials, exactly as in
+(1.1). In the unprojected configuration kernel it obeys
+  |K_F(U,V)|<=||F||infinity T^(N-2q)(U,V).               (2.1)
+Gauge invariance, including at the block endpoints, makes it an operator
+on H_phys. Reflection of the whole block replaces K_F by K_F^dagger.
+It follows by multiplying the two half-path kernels that the literal
+original OS form is the Hilbert--Schmidt inner product of
+  A_F=T^q K_F T^q/sqrt(Z_T):
+  OS(F,G)=E_mu[overline(RF)G]=Tr(A_F^dagger A_G).         (2.2)
+R is the LINEAR geometric reflection; conjugation occurs exactly once.
+The equality holds for block observables, not just products of slice
+multiplication operators. It is the same finite path integral with F
+inserted before integration. Positivity of T and the actual gauge
+projection are the transfer input; they are not consequences of Pbar.
+
+Let tau_m shift F forward by m steps. The central kernel is translated
+without alteration, while the two free margins change oppositely:
+  A_(tau_m F)=T^(q+m)K_F T^(q-m)/sqrt(Z_T).             (2.3)
+This is a physical lattice-time translation of all original reads.
+Let F be centered in the ORIGINAL periodic law and put
+v=E_mu|F|^2. Stationarity and ordinary Cauchy--Schwarz give, for |m|<=q,
+  ||A_(tau_m F)||_HS^2=OS(tau_m F,tau_m F)<=v.           (2.4)
+For F=B-E_mu B with0<=B<=1, v<=1/4. The mean subtraction uses the
+same law at every translate and is not a source-dependent centering.
+
+3. A UNIFORM PHYSICAL-TIME CONTINUITY MODULUS
+
+In the transfer eigenbasis, let L be the selfadjoint Hilbert--Schmidt
+energy-difference generator
+  (L A)_ij=(E_i-E_j)A_ij,
+and let nu_F be its positive spectral measure for A_F:
+  nu_F=sum_(i,j)|(A_F)_ij|^2 delta_(E_i-E_j).
+Equation(2.3) says A_(tau_m F)=exp(-ma L)A_F. This identity is asserted
+only on the buffered vector and allowed integer translations; it does
+not claim that exp(-ma L) is bounded on the entire thermal OS space.
+
+Set d_a=q a. The two endpoint bounds m=+q and m=-q in(2.4) imply
+  integral cosh(2d_a lambda) dnu_F(lambda)<=v.           (3.1)
+Both signs matter: the thermal L spectrum contains positive and negative
+energy differences. No positivity assumption on L has been made.
+In particular, since cosh(2x)>=2x^2,
+  ||L A_F||_HS^2<=v/(2d_a^2).                            (3.2)
+This is an UNNORMALIZED state estimate. It gives no normalized bound
+without a lower bound on ||A_F||_HS^2.
+
+For a physical lattice increment t=ma with |m|<=q/2,
+  ||A_(tau_m F)-A_F||_HS^2
+      =integral |exp(-t lambda)-1|^2 dnu_F(lambda)
+      <=(8/e^2) v (|t|/d_a)^2.                          (3.3)
+Indeed |exp(-t lambda)-1|<=|t lambda|exp(|t lambda|).
+Writing x=d_a lambda, the ratio to cosh(2x) is bounded by
+(t/d_a)^2 2x^2 exp(-|x|)<=(8/e^2)(t/d_a)^2. Integrating
+uses(3.1). This proof includes all spectral sums by nonnegative summation.
+It also defines a continuous interpolated vector exp(-tL)A_F for
+|t|<d_a, although only integer t/a are literal Wilson lattice translates.
+
+Thus a bounded family with a fixed positive physical buffer has a uniform
+OS time-translation modulus along the actual lattice translations.
+This can be retained in an extracted continuum OS family if that family
+and its translation identification have otherwise been constructed.
+It does not itself supply convergence or a nonzero state. In particular,
+it concerns the centered OS state already at a positive separation from
+the reflection planes, not the ordinary equal-time slice variance.
+
+4. RELATION TO THE NEW HS REPRESENTATIVES
+
+By work/turn82_auxiliary_channel_gauge.txt, F_n=Pbar^n B-E_mu B is
+bounded and has the SAME original OS vector as B-E_mu B whenever all
+halos remain positive. It obeys
+  E_mu|grad Pbar^n B|^2<=C(beta+1)Var_mu(B)/n,           (4.1)
+and the separate global-source note proves the corresponding fixed-order
+operator-jet bounds. Choose n of order d/a while retaining another fixed
+margin d'>0. Section3 then applies to F_n with that remaining margin.
+
+But(3.3) already applies to the original B with its original buffer.
+The four-dimensional gradient estimate is not used in its proof. The
+new smoothing therefore does not improve this particular transfer
+continuity estimate or establish the one-slice adjacent-increment bound
+  (1/2)E[(B_(t+a)-B_t)^2]=O(a)
+for the ORIGINAL equal-time probe. A full-configuration coordinate
+derivative is not the physical translation generator L. Treating a
+random link interpolation between times as though its law remained mu
+would require a separate estimate, not provided by(4.1).
+
+At finite temperature, L is the two-boundary thermal energy difference,
+not a positive vacuum Hamiltonian. At a fixed spatial lattice one may
+additionally take the original temporal period to infinity. The positive
+ground state Omega and the resulting Markov path law then give a vacuum
+version: if a bounded future observable is buffered by d_a, its state is
+  exp(-d_a H) f Omega,
+where f is its conditional expectation at that buffer slice and
+||f Omega||^2<=E|F|^2=v. The spectral theorem gives
+  <state,H state><=v/(2e d_a),
+  ||H state||^2<=v/(e^2 d_a^2).                          (4.2)
+This is ordinary positive-time damping of an already constructed state.
+It is neither a bound on H acting on the unbuffered creation state
+f Omega nor a cutoff-uniform variance lower bound. Taking this
+fixed-spatial temporal limit is an additional step, not an identification
+of finite-period thermal L with H.
+
+5. AN ACTUAL ORIGINAL-WILSON OBSTRUCTION TO THE STRONGER INFERENCE
+
+Use the independently proved original-law theorem in
+work/physical_coarse_variance_turn66.txt Sections1--4. Let W_a be the
+normalized trace of an edge-simple spatial square of fixed physical
+side length, placed a fixed positive distance from the reflection
+planes. Choose m_a>=length(C_a)/19 edges sharing no action plaquette.
+Their exact conditional product integration gives
+  |E(W_a|exterior)|<=eta_a,
+  |E(W_a^2|exterior)-1/4|<=(3/4)eta_a,
+  eta_a=exp[-c m_a/(1+beta_a)].                           (5.1)
+Thus when a(1+beta_a)->0, which includes logarithmic beta_a,
+  Var_mu(W_a)->1/4,
+  0<=OS(W_a-EW_a,W_a-EW_a)<=2eta_a->0.                  (5.2)
+Every fixed separated time translate has the same covariance collapse.
+All these are statements about the full original finite Wilson law,
+uniform in allowed volume, not about a selected or auxiliary marginal.
+
+Take B_a=(1+W_a)/2. Then0<=B_a<=1 and Var_mu(B_a)->1/16.
+For n_a of order1/a inside its fixed buffer, the ACTUAL HS representative
+G_a=Pbar^(n_a)B_a satisfies
+  E_mu|grad G_a|^2<=C(beta_a+1)a,
+  0<=OS(G_a-EG_a,G_a-EG_a)<=eta_a/2->0.                 (5.3)
+It also satisfies the new holomorphic-domain and fixed-order averaged
+operator-jet estimates. Consequently those estimates, boundedness,
+gauge invariance, fixed physical support collars, and even a positive
+ordinary variance of the original input do not imply a nonzero
+separated reflected signal. The example does not say that the spatially
+flowed magnetic probe fails: it says that its particular physical
+calibration/nonzero channel must still be proved, rather than inferred
+from generic smoothing.
+
+An independent exact fixed-spatial illustration explains the normalized
+energy issue. In the original infinite-time Wilson transfer law, take
+real physical eigenfunctions phi_j of T, orthogonal to Omega, with
+energies E_j->infinity. The real symmetric positive kernel permits this
+choice. The
+positive analytic ground eigenfunction Omega is bounded below on the
+compact configuration space. Hence
+  M_j=||phi_j/Omega||infinity<infinity,
+  B_j=1/2+phi_j/(2M_j Omega)
+is an original bounded gauge-invariant slice function. Its centered
+state placed at d_a is exp(-d_a E_j)phi_j/(2M_j); its normalized
+physical energy is EXACTLY E_j. Its unnormalized norm tends to zero,
+consistently with(4.2). Thus the buffered transfer estimate alone gives
+no uniform normalized physical energy estimate without control of the
+state norm. No extension of the HS theorem to the infinite-time measure
+is needed or asserted in this illustration. It stays at a fixed spatial
+regulator and does not assert a new continuum spectrum.
+
+6. PRECISE CONCLUSION
+
+Physical OS time continuity for uniformly bounded, buffered observables
+can be supplied by the actual transfer lemma(3.3); it need not remain
+an additional derivative task. What remains is a uniform nonzero
+physical channel, and the required joint continuum construction and
+symmetries. Neither the new HS full-field derivatives nor the transfer
+buffer lemma propagate a slice variance floor through a fixed positive
+physical separation. The exact original thin-loop example proves that
+such an inference would be false.
+
+No frozen producer or authoritative file was modified.

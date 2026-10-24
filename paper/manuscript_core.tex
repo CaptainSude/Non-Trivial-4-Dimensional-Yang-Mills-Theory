@@ -1,0 +1,765 @@
+% LaTeX body for the collaborator manuscript. 24 October 2026.
+% Requires the standard environments and macros supplied by paper/main.tex.
+% This file synthesizes existing evidence; it introduces no new proof claim.
+\newcommand{\trn}{\operatorname{tr}}
+\newcommand{\evref}[1]{\textup{[\textsf{#1}]}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+
+\section{Purpose, status, and the meaning of the results}
+
+The intended endpoint of this program is a nontrivial, interacting four-dimensional Yang--Mills theory, initially for $\SU(2)$ on $\R^4$. That endpoint has not been reached. This manuscript records a finite, checkable portion of the construction and identifies the interfaces at which further estimates are needed. It is neither an announcement of existence nor a replacement for the original articles on which its analytic modules depend.
+
+There are three kinds of statement below. Exact finite identities follow from the original lattice integral and disintegration. Scoped deductions combine those identities with explicitly identified regularity, localization, or Gaussian estimates. Conditional consumers explain what a specified source estimate would accomplish once its actual domain and normalization have been matched. Keeping these kinds distinct matters: a correct consumer does not prove that a new source belongs to its input class.
+
+The principal new finite chain described here starts with a rare event in a four-edge physical cavity. Its conditional numerator becomes a gauge-invariant boundary observable of the \emph{original} Wilson law. A pinned finite-dimensional saddle gives this observable a useful complex tube of physical radius proportional to the first curvature cutoff. On a declared shrinking independent-field domain it has a first native ordinary connected source column. Separately, an exact tower of original-action minima controls the same original cavity observable through a real homogeneous prefix without multiplying a loss at every scale. The latter real result does not yet supply the complex source-column induction.
+
+The homogeneous source-zero coupling problem and a previously typed regular source core are substantially further developed. Their reviewed finite conclusions are summarized in Sections~\ref{sec:tuning}--\ref{sec:volterra}, with their imported analytic modules retained. They concern homogeneous regular histories. A full Wilson measure includes complementary histories and their sources; their omission would change the problem.
+
+An internal audit in this corpus means that another calculation checked a specified statement against named inputs and, where recorded, primary pages. It is useful evidence, not independent certification of the entire program. The appendix maps evidence identifiers to the packaged files and their audits. Public working material by Alpoge and Sussman was used as a guide to possible arguments. No unpublished completion or unfinished assertion in that material is assumed here.
+
+\section{Finite model and exact source bookkeeping}
+\label{sec:finite-law}
+
+\subsection{The original Wilson law}
+
+Let $\Lambda_a$ be a finite periodic four-dimensional hypercubic lattice, with nonwrapping local packets whenever a local filling is used. Fix one orientation for each unoriented edge. A field is $U=(U_b)$ with $U_b\in\SU(2)$ and $U_{-b}=U_b^{-1}$. Haar measure on each independent edge is normalized to mass one. Write
+\[
+ \trn A=\tfrac12\Tr A,\qquad
+ h(U_p)=1-\trn U_p,\qquad
+ S_W(U)=\sum_p h(U_p),
+\]
+where $U_p$ is the ordered plaquette holonomy. On $\SU(2)$, $\trn U_p$ is real. For $\beta>0$ the original finite law is
+\begin{equation}\label{eq:Wilson-law}
+ d\mu_{\beta,a}(U)=Z_{\beta,a}^{-1}e^{-\beta S_W(U)}\prod_b dU_b.
+\end{equation}
+The relation $\beta=C_Wg_0^{-2}$ includes the convention-dependent constant $C_W$. It must not be changed in the middle of an extraction. An original observable $O_{p,a}=c_a f_p(U)$ retains its physical multiplier $c_a$, including any cutoff dependence. In particular, no additional factor $a^4$ is inserted merely to improve a source estimate.
+
+A local gauge transformation acts by $U_{xy}\mapsto u_xU_{xy}u_y^{-1}$. Both the original action and Haar measure are invariant. Later gauge-fixed coordinates, constraint deltas, pivot determinants, and real success windows are additional parts of an exact representation of \eqref{eq:Wilson-law}. Their invariance or covariance must be verified in that representation, rather than inferred from invariance of the original group integral.
+
+\subsection{Actual backward kernels and the terminal covariance}
+
+Let $\mu_e$ denote the law on the complete state exposed at stage $e$. Retained fields, record labels, and variables not integrated at that stage are included in the state. Let $F_e$ be the original normalized positive backward kernel, so that $\mu_{e+1}F_e=\mu_e$. For two integrable source rows define
+\begin{equation}\label{eq:source-evolution}
+ f_{e+1}=F_ef_e,\qquad g_{e+1}=F_eg_e,\qquad
+ c_e=F_e(f_eg_e)-(F_ef_e)(F_eg_e).
+\end{equation}
+Products and expectations below are assumed integrable. Covariance is bilinear, without complex conjugation.
+
+\begin{proposition}[Exact connected-source identity]\label{prop:covariance}
+For every finite sequence of the actual kernels,
+\begin{equation}\label{eq:covariance-tower}
+ \Cov_{\mu_b}(f_b,g_b)
+ =\sum_{e=b}^{T-1}\mu_{e+1}c_e+
+       \Cov_{\mu_T}(f_T,g_T).
+\end{equation}
+If $h_b$ is an independent logarithmic mixed contact, its exact evolution is
+\begin{equation}\label{eq:contact}
+ h_{e+1}=F_eh_e+c_e,
+ \qquad
+ \mu_bh_b+\Cov_{\mu_b}(f_b,g_b)
+ =\mu_Th_T+\Cov_{\mu_T}(f_T,g_T).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Add and subtract $\mu_{e+1}[(F_ef_e)(F_eg_e)]$ in $\mu_e(f_eg_e)$ and use preservation of the two means. This proves the one-step total-covariance identity, which telescopes. For the contact formula, use formal variables $s,t$ with $s^2=t^2=0$. The raw $st$ coefficient of $\exp(sf+tg+st h)$ is $h+fg$. Its image is $F_e(h_e+f_eg_e)=h_{e+1}+f_{e+1}g_{e+1}$, proving \eqref{eq:contact}.
+\end{proof}
+
+The terminal term in \eqref{eq:covariance-tower} is not an error that can be omitted. Nor may $f_e$ be replaced by the original source evaluated at a newly chosen static minimum: $f_e$ is its actual conditional mean. If a kernel leaves a variable $y$ held, a contribution constant in the variables integrated by that kernel can still vary under a later kernel integrating $y$. Such a later stage has its own covariance contribution. Evidence \evref{COV} proves precisely this algebra; it does not assert smallness of every $c_e$.
+
+For comparison, if $p_0=Np$, $q_0=Nq$ are chosen static rows and $D_p=Fp-p_0$, $D_q=Fq-q_0$, then with the \emph{same} output law $\nu$,
+\begin{align}\label{eq:static-comparison}
+ \Cov_{\nu F}(p,q)-\Cov_\nu(p_0,q_0)
+ ={}&\nu\Cov_F(p,q)+\Cov_\nu(p_0,D_q)\\
+ &+\Cov_\nu(D_p,q_0)+\Cov_\nu(D_p,D_q).\nonumber
+\end{align}
+A joining-distance estimate for the first term does not estimate the other three.
+
+\subsection{Raw transfer and exact scalar allocation}
+
+On a retained finite history $\mathfrak h$, write $R_j^{\mathfrak h}$ for the unnormalized transfer in group variables. It includes the actual averaging delta, normalized gauge insertion, all original event indicators, and source-zero scalar factors. If
+\begin{equation}\label{eq:raw-transfer}
+ w_{j+1}(v)=\int R_j^{\mathfrak h}(dV;v)w_j(V),\qquad
+ Q_j^{\mathfrak h}(dV\mid v)=
+       \frac{R_j^{\mathfrak h}(dV;v)w_j(V)}{w_{j+1}(v)},
+\end{equation}
+the displayed ratio defines $Q_j^{\mathfrak h}$ on outputs with $w_{j+1}(v)>0$. Conditional versions on zero-mass outputs may be chosen arbitrarily and are not used in any estimate. The joint backward law then obeys, almost surely on its positive-mass support,
+\begin{equation}\label{eq:raw-telescope}
+ \prod_{j=t-1}^{0}Q_j^{\mathfrak h}
+ =\frac{w_0(V_0)}{w_t(v)}\prod_{j=t-1}^{0}R_j^{\mathfrak h}.
+\end{equation}
+This identity cancels intermediate normalizers exactly. It does not erase intermediate cuts or turn the law into an unrestricted fine Gaussian conditioned only on a final average. After deltas are solved, each coarea or pivot Jacobian is included once. A source-independent scalar may cancel in one normalized fiber and still belong to the outer density. A source-dependent flat scalar remains in the source and contact bookkeeping.
+
+\section{An original rare source from a four-edge cavity}
+\label{sec:cavity}
+
+\subsection{Exact disintegration and the complete read}
+
+Fix an elementary plaquette $p$ and let $I$ be its four physical edges. Assume the local lattice does not identify distinct edges in this packet. Let $x=U_I$ and let $y$ denote the exterior field. Decompose the original action into the plaquettes incident to $I$ and the exterior action:
+\[
+ S_W(x,y)=H_I(x;y_B)+H_{\mathrm{out}}(y).
+\]
+Only a fixed exterior edge set $B$ enters $H_I$. In four dimensions each edge belongs to six plaquettes. The central plaquette is the only plaquette containing more than one of the four selected edges. There are therefore $1+4\cdot5=21$ incident plaquettes and at most $60$ exterior edge occurrences in their noncentral parts. Keeping repetitions would be harmless; the actual set satisfies $|B|\le60$.
+
+Let
+\begin{equation}\label{eq:cavity-law}
+ Z_I(y_B)=\int_{\SU(2)^4}e^{-\beta H_I(x;y_B)}dx,
+ \quad
+ \nu_y(dx)=Z_I(y_B)^{-1}e^{-\beta H_I(x;y_B)}dx.
+\end{equation}
+For a fixed bounded Borel interior mark $F=F(x)$, independent of the continued exterior parameter, with $|F|\le A$ and the fixed real event
+\[
+ E_p=\{x:\norm{U_p(x)-1}_{\mathrm{op}}\ge\tau\},
+\]
+define the raw conditional source
+\begin{equation}\label{eq:cavity-source}
+ a_F(y_B)=\nu_y(F\mathbf1_{E_p}).
+\end{equation}
+The exact exterior law is
+\begin{equation}\label{eq:exterior-law}
+ d\mu_{\mathrm{out}}(y)=Z_{\beta,a}^{-1}
+ e^{-\beta H_{\mathrm{out}}(y)}Z_I(y_B)\,dy.
+\end{equation}
+Consequently, for every exterior-measurable $G$,
+\begin{equation}\label{eq:cavity-identity}
+ \E_{\mu_{\beta,a}}[F\mathbf1_{E_p}G]
+ =\E_{\mu_{\mathrm{out}}}[a_FG].
+\end{equation}
+The normalizer $Z_I$ is part of the exterior mass in this formula. There is no division by the rare probability $\nu_y(E_p)$.
+
+If $F$ and $E_p$ are gauge invariant, an exact interior Haar change of variables shows that $a_F$ is invariant under the induced exterior gauge action. If a second source reads the cavity interior, one instead retains its full conditional raw first and mixed rows and the contact in \eqref{eq:contact}. Formula \eqref{eq:cavity-identity} alone does not authorize replacing a marked numerator separately on a later history whose selectors read the eliminated interior. The reassembly is performed before that history partition. These distinctions are part of evidence \evref{CAV}.
+
+\subsection{The pinned minimum and its Hessian}
+
+At flat exterior data the cavity action is exactly
+\begin{equation}\label{eq:pinned-action}
+ H_I(U_1,U_2,U_3,U_4;1)=5\sum_{i=1}^{4}h(U_i)+h(U_p).
+\end{equation}
+All terms are nonnegative, and the first sum vanishes only at $U_i=1$ for every $i$. Thus the unique global minimum is pinned at the identity; there is no residual continuous gauge orbit in this conditional integral.
+
+Use Pauli coordinates $U_i=\exp(iq_i\cdot\sigma)$, with $\trn(\sigma_a\sigma_b)=\delta_{ab}$. Up to orientation signs,
+\[
+ T(q_1,q_2,q_3,q_4)=q_1+q_2-q_3-q_4.
+\]
+The Hessian at the minimum is
+\begin{equation}\label{eq:pinned-Hessian}
+ D_*=5I_{12}+T^*T,
+\end{equation}
+with eigenvalue $9$ of multiplicity three and $5$ of multiplicity nine. Normalized Haar has coordinate density $(2\pi^2)^{-4}$ at the origin. These facts make the following finite-dimensional estimate quantitative.
+
+\begin{theorem}[Pinned cavity tube, finite original law]\label{thm:cavity-tube}
+There are fixed constants $\delta_Z,\kappa,c,C,\beta_*>0$, independent of the surrounding lattice, such that the following holds. Write boundary links as $y_b=\exp(iz_b)$ in fixed local coordinates. The unmarked $Z_I(z)$ has a holomorphic zero-free continuation for $\norm z_\infty<\delta_Z$ and $\beta\ge\beta_*$. For sufficiently small $\tau$ and
+\[
+ \norm{\Re z}_\infty+\norm{\Im z}_\infty\le\kappa\tau,
+\]
+the source \eqref{eq:cavity-source}, continued by keeping $F\mathbf1_{E_p}$ on the real interior integration domain, satisfies
+\begin{equation}\label{eq:rare-tube}
+ |a_F(z)|\le C A\beta^6e^{-c\beta\tau^2}=:\eta_F.
+\end{equation}
+Every fixed order of boundary derivative on a smaller tube costs only its corresponding power of $\tau^{-1}$ and a fixed finite-dimensional constant.
+\end{theorem}
+
+\begin{proof}
+For the holomorphic action use inverses, not conjugate transposes:
+\[
+ h_{\mathrm{hol}}(W)=1-\tfrac14\bigl(\Tr W+\Tr W^{-1}\bigr).
+\]
+It agrees with the real action, and on $\mathrm{SL}(2,\C)$ the two traces agree. The analytic implicit-function theorem at \eqref{eq:pinned-Hessian} gives a critical point $q_*(z)=O(z)$, critical value $e_*(z)=O(z^2)$, and a nondegenerate Hessian $D(z)$ on a fixed boundary polydisc. The Hessian has uniformly positive real part after that disc is reduced.
+
+Here a contour argument is needed only for the unmarked denominator. Choose a fixed small coordinate cube $D$ around the unique minimum. Its real complement in the compact group has a positive action gap at $z=0$, which persists for sufficiently small complex $z$. Translate $D$ to $q_*(z)+D$ by successive coordinate contours. Cauchy's theorem supplies the finite connecting side integrals. On every such side at least one real coordinate stays away from zero, while the imaginary displacement is small; its real action remains above $e_*(z)$ by a fixed positive amount. No nonanalytic cutoff is deformed.
+
+On the translated cube, put $q=q_*(z)+u$. Uniformly there,
+\[
+ H_I(q;z)=e_*(z)+\tfrac12u^TD(z)u+O(|u|^3).
+\]
+After $u=\beta^{-1/2}v$, positivity of the quadratic real part, a fixed small cube, and Gaussian moments control the remainder. The Haar top form is holomorphic in this chart. Including the side and exterior terms gives
+\begin{equation}\label{eq:saddle}
+ Z_I(z)=e^{-\beta e_*(z)}\beta^{-6}
+       \bigl[L(z)+\mathcal E_\beta(z)\bigr],\qquad
+ |\mathcal E_\beta|\le C\beta^{-1/2}+C\beta^6e^{-c\beta}.
+\end{equation}
+The analytic leading coefficient is
+\[
+ L(z)=(2\pi)^6J(q_*(z))\det D(z)^{-1/2},\qquad
+ L(0)=\frac{(2\pi)^6(2\pi^2)^{-4}}{\sqrt{9^3 5^9}}>0,
+\]
+on the branch selected at the identity. It is uniformly separated from zero on a smaller fixed tube. Thus \eqref{eq:saddle} proves zero-freeness and
+\[
+ |Z_I(z)|\asymp\beta^{-6}e^{-\beta\Re e_*(z)}.
+\]
+
+The marked numerator is not deformed. Write $z=u+iv$ with $u,v$ real. Since the action is real for real coordinates, its first purely imaginary variation has zero real part. Bounded finite-dimensional second derivatives on the compact real interior give
+\[
+ \Re H_I(x;u+iv)\ge H_I(x;u)-C|v|^2,
+ \qquad \Re e_*(u+iv)\le C(|u|^2+|v|^2).
+\]
+The central plaquette is wholly interior. On $E_p$,
+$h(U_p)=\tfrac12\norm{U_p-1}_{\mathrm{op}}^2\ge\tau^2/2$;
+all real Wilson terms are nonnegative. Divide the marked numerator bound by \eqref{eq:saddle} to obtain
+\[
+ |a_F(u+iv)|\le CA\beta^6
+ \exp\{-\beta[\tau^2/2-C|u|^2-C|v|^2]\}.
+\]
+The dimension $3|B|\le180$ is fixed and is included in $C$. Choosing $\kappa$ small proves \eqref{eq:rare-tube}. Cauchy's formula on smaller tubes proves the derivative assertion.
+\end{proof}
+
+\begin{remark}[Only the unmarked denominator is controlled]
+The proof does not show that the marked numerator or $p(z)=\nu_z(E_p)$ is nonzero. In particular, a branch-normalized mean $a_F/p$ and a selected contact containing $\Xi_F\Xi_G/p$ cannot be carried to this larger tube by this argument. Raw marked first and mixed rows are legitimate. Directly marked covariances use only $Z_I$; after a further fixed shrinking of $\kappa$ they have a bound of the form
+\[
+ C A B(\beta^6+\beta^{12})e^{-c\beta\tau^2}
+\]
+for a second bounded mark of size $B$. The extra polynomial allows for the unmarked complex mean; positivity does not bound that mean on a complex tube.
+\end{remark}
+
+For the native first cutoff
+\begin{equation}\label{eq:running-cutoffs}
+ \tau=\epsilon_0=A_0g_0(\log g_0^{-2})^{p_0},\qquad
+ \delta_0=A_1g_0(\log g_0^{-2})^{p_0},
+\end{equation}
+with $p_0>1/2$, \eqref{eq:rare-tube} beats every fixed inverse power of $g_0$ at a sufficiently weak floor. The fixed hierarchy $A_0/A_1$ is important: reducing $g_0$ alone does not improve the ratio $\delta_0/\epsilon_0$.
+
+\section{The first native independent-pair source column}
+\label{sec:first-column}
+
+This section states a scoped source entry, not an all-date induction. It uses the actual independent-pair domains and localized ordinary integral of \cite{B109,B116,B119}. The detailed first-column matching and its independent audit are \evref{PAIR}. The normalized marked expansion is an imported native module; the domain match described here is the additional finite step.
+
+For this section the fixed interior mark $F(x)$ and the event are assumed gauge invariant, as for an original plaquette class function with its physical multiplier. The saddle theorem itself permitted a general bounded interior mark; that generality does not imply the gauge invariance required by the native source extension.
+
+\subsection{Domain, gauge extension, and the complete source read}
+
+Let $X_p$ contain the cavity boundary, a fixed spanning forest, plaquette fillings of its fundamental loops, and every native determining or gauge collar used by the substitution. At the first output use fine mesh $\xi=L^{-1}$. A native independent pair $(U,J)$ consists of a connection on this complete read and an independently varied current, with real-reference, complex-connection, curvature, current, and reconstructed comparison tests. Schematically,
+\[
+ U=e^{i\xi A'}\bar U,\quad \bar U\text{ unitary},\qquad
+ \norm{dU-1}\lesssim\alpha_0\xi^2,\quad
+ \norm{A'}+\norm{\nabla A'}\lesssim\alpha_1,
+\]
+with a specified current allowance $\gamma$ and all the further tests in B109(1.10)--(1.17), including its reconstructed condition (iv). These schematic inequalities do not replace those additional tests.
+
+The fixed finite tree construction gives, on that domain,
+\begin{equation}\label{eq:tree-pair-bound}
+ \max_{b\in B}\left|\log\mathcal C_T(U)_b/i\right|
+ \le C_Be^{C_B\xi\alpha_1}\alpha_0\xi^2.
+\end{equation}
+The bound uses plaquette curvature and complete loop fillings; it is not obtained by requiring every raw link logarithm to be $O(\tau)$. Restricting $\alpha_0\xi^2\le c\tau$ therefore defines
+\begin{equation}\label{eq:pair-source}
+ \mathcal A_p(U,J)=a_F(\mathcal C_T(U)|_B).
+\end{equation}
+The expression ignores $J$, but $J$ is not removed from the domain certificate or from subsequent native maps.
+
+There is a genuine chart-gluing issue for complex gauge representatives. Two canonical representatives differ by a constant root conjugation. Compact color invariance of $a_F$ extends infinitesimally by holomorphy. To integrate this statement along the polar part of a complex root conjugation, use convexity of the squared Hilbert--Schmidt norm of each conjugated Lie-algebra coordinate. The path remains in the reserved complex coordinate ball when both endpoints do. This supplies equality on the relevant overlaps; it does not assume a global principal logarithm on arbitrary complex fields.
+
+\subsection{Actual noise and localization}
+
+In the original independent noise variables the first reconstructed fluctuation is
+\begin{equation}\label{eq:actual-noise}
+ B'=g_0Cx-h\widetilde D(g_0Cx),\qquad
+ \norm{B'}\le C_{\mathrm{rec}}\delta_0.
+\end{equation}
+Here $C$ is the actual free-coordinate embedding, $h$ solves the native private pivots, and $\widetilde D$ begins quadratically. All solved physical links are included. The whole original product window is retained.
+
+The source has its own physical analytic noise radius $a_{\mathrm{noise}}\asymp\tau$. Its whole-function source localization obeys the finite bound
+\begin{equation}\label{eq:source-image}
+ C_B[\alpha_0\xi^2+C_{\mathrm{loc}}\delta_0]<c\tau
+\end{equation}
+after choosing a smaller source curvature slice and the fixed hierarchy $A_0/A_1$. This does not feed the source into the potentially larger auxiliary $t_D$ response circles used solely to prepare unmarked action derivatives. Those circles belong to a different operation.
+
+The occupied-cut Gaussian expansion also has a precise protection property: the marked function remains evaluated on protected real $B$ coordinates with the corresponding cut present. The subsequent covariance, square-root, and exterior Gaussian localizers change Gaussian factors; they do not substitute an unrestricted whitened exterior variable into the source. This distinction is essential when the source tube shrinks with $g_0$.
+
+\begin{proposition}[First shrinking-domain column]\label{prop:first-column}
+On the complete first source certificate just described, let $S$ be the fixed protected seed and let $\eta_F$ be as in \eqref{eq:rare-tube}. The native one-source connected expansion gives the exact first ordinary mean as its static part plus a quantum column. With the declared spare tree reserve, the full column has norm at most $C_{\mathrm{seed}}\eta_F$, and the quantum difference has bound
+\begin{equation}\label{eq:first-quantum-bound}
+ \sum_{K\supset S}e^{\kappa_{\mathrm{out}}d_1(K)}
+       \norm{\mathcal B_{1,p,K}}
+ \le C_{\mathrm{seed}}\eta_F\left(\frac{g_0}{\tau}\right)^2,
+ \quad
+ C_{\mathrm{seed}}=C\exp\{c_{\mathrm{seed}}|S|+
+                           \kappa_{\mathrm{in}}d_1(S)\}.
+\end{equation}
+The norms are suprema on the recorded shrinking independent-pair domain of each complete carrier. They are not assertions on a larger running domain or on an arbitrary post-reset source.
+\end{proposition}
+
+\begin{proof}[Proof with the native marked module explicit]
+Freeze the source-zero cut, maps, coupling, and denominator. Expand the reconstructed mark at zero noise:
+\[
+ \Delta\mathcal A_p(g_0x)=g_0\mathcal L(x)+g_0^2\mathcal R(x),
+ \quad |\mathcal L|\lesssim\eta_Fa_{\mathrm{noise}}^{-1}|x|,
+ \quad |\mathcal R|\lesssim\eta_Fa_{\mathrm{noise}}^{-2}|x|^2.
+\]
+The leading $\mathcal L$ is odd. After the \emph{complete} stationary linear-current cancellation, the first action primitive has the form $V_0=g_0\mathcal U_0$ with its registered cubic growth. The even constrained Gaussian and retained color-ball cut annihilate the expectation of $\mathcal L$ at zero interaction. Interpolating the primitive therefore writes the quantum difference as $g_0^2$ times a quadratic-mark mean plus an integral of a covariance of $\mathcal L$ and $\mathcal U_0$; the sign depends on the chosen primitive convention and is immaterial for the norm.
+
+The same-domain one- and two-mark module, for the resulting total polynomial degree at most four, controls these terms on the actual source image. Its connected numerator/denominator cancellation is performed before absolute values, as in B119(3.44)--(3.47). The mark's supremum is charged once, and the protected seed pays the explicit $C_{\mathrm{seed}}$. With $a_{\mathrm{noise}}\asymp\tau$ this yields \eqref{eq:first-quantum-bound}. Independent $J$ must be introduced using the registered reduced continuation after the entire linear cancellation; an arbitrary uncancelled off-graph current would invalidate the cubic premise.
+\end{proof}
+
+There is a nonempty near-flat first all-success sector on which this analytic expression agrees with the actual cavity source on every original product-window point. Its outer weight and its complement remain. The generated coefficients have new current, operator, and carrier reads. They are not still the fixed boundary function $a_F$. In particular, \eqref{eq:first-quantum-bound} is the running-radius factor $(g_0/\epsilon_0)^2$, not a fixed-core $g_0^2$ estimate.
+
+\section{The exact homogeneous tower of original-action minima}
+\label{sec:tower}
+
+The next result follows the original $a_F$ in the full numerator rather than asserting that every intermediate generated coefficient remains in its original domain. It is a real statement. Its two reviewed evidence files are \evref{TOWER} and \evref{PRODUCT}.
+
+\subsection{Literal averages, fibers, and regular uniqueness}
+
+Fix a finite homogeneous no-hole periodic array admitting $t$ native blockings. Let $\mathcal B_j$ be the literal ordinary one-step group average at grade $j$, in the averaged-contour convention used by B109. Define
+\begin{equation}\label{eq:recursive-average}
+ \mathcal M_0=\mathrm{id},\qquad
+ \mathcal M_j=\mathcal B_{j-1}\circ\cdots\circ\mathcal B_0.
+\end{equation}
+This is B98's recursive averaging construction, with complete two-endpoint block reads. It is not replaced by a single larger-block average merely because the two have a related flat linearization.
+
+Let $\mathcal U_j(v)$ be the regular critical orbit of the \emph{original Wilson action} with $\mathcal M_jU=v$, and set $\mathcal U_0(v)=v$. The variational theorem \cite[Theorem 1 and Section G]{B102} supplies existence, uniqueness of the regular critical orbit, and analytic relative response on stated regular arrays and reserved neighborhoods. It does not claim uniqueness among rough fields, nor is $\mathcal U_j$ a minimum of a quantum effective action.
+
+\begin{lemma}[Exact minimum tower]\label{lem:tower}
+Suppose $W=\mathcal U_{j+1}(v)$ and $c=\mathcal M_jW$ belong to the matched native regular classes. Then
+\begin{equation}\label{eq:min-tower}
+ \mathcal U_j(c)\sim W,
+\end{equation}
+where $\sim$ denotes the permitted real gauge equivalence of the regular critical orbits.
+\end{lemma}
+
+\begin{proof}
+Literal composition gives the inclusion of constrained fibers
+\[
+ \{U:\mathcal M_jU=c\}\subset
+ \{U:\mathcal M_{j+1}U=\mathcal B_jc=v\}.
+\]
+Hence every tangent variation in the first fiber is allowed in the second. Constrained criticality of $W$ for the original action restricts to the first fiber. The fine curvature and current bounds of the grade-$(j+1)$ minimum place it in the weaker common grade-$j$ regular uniqueness class. The native averaging bound, applied at partial scale $j$ with its complete read, bounds the curvature of $c$ by $2B_3a_v/L^2$ when the top datum has allowance $a_v$. Thus $c$ is admitted after the fixed caps are chosen. Existence and uniqueness of the regular critical orbit imply \eqref{eq:min-tower}.
+\end{proof}
+
+B109(2.3) identifies the actual ordinary center as $V^{(j)}=\mathcal M_j\mathcal U_{j+1}$. Its following relative-gauge construction is consistent with Lemma~\ref{lem:tower}. The relative axial map and subsequent Landau return are different maps; the latter has its own averaged normalization. The argument below uses real gauge-invariant norms and does not silently identify either return with a map fixing every ordinary coarse vertex.
+
+\subsection{The actual reconstruction and the comparison segment}
+
+For a real history let $V_0,\ldots,V_t$ satisfy $\mathcal B_jV_j=V_{j+1}$, and put
+\begin{equation}\label{eq:history-fields}
+ W_j=\mathcal U_j(V_j),\quad W_0=V_0,\quad
+ c_j=\mathcal M_jW_{j+1},\quad V_j=e^{iB'_j}c_j.
+\end{equation}
+The physical fluctuation, including the solved pivots, is
+\begin{equation}\label{eq:prefix-noise}
+ B'_j=g_jC_jx_j-h_j\widetilde D_j(g_jC_jx_j),\qquad
+ \norm{B'_j}_\infty\le C_{\mathrm{rec}}\delta_j.
+\end{equation}
+These are the actual current constraint operators. The bound is not a product of $j$ inverse-minimum norms. Quantum inherited actions change the density of $x_j$, not the defining original-action centers in \eqref{eq:history-fields}.
+
+Choose a fixed variational reserve $e_*$, a smaller regularity allowance $e_{\mathrm{reg}}$, and a physical noise ceiling $\delta_*$ so that
+\begin{equation}\label{eq:segment-margins}
+ \frac{2B_3e_{\mathrm{reg}}}{L^2}<c_1e_*,\qquad
+ C_{\mathrm{rec}}\delta_*<b_*/4,\qquad
+ \frac{2B_3e_{\mathrm{reg}}}{L^2}+C_{\mathrm{pl}}C_{\mathrm{rec}}\delta_*<c_2e_*.
+\end{equation}
+Here $b_*$ is a reserved relative-coarse radius from the variational theorem and all constants are fixed at the native $L$. These inequalities ensure that
+\begin{equation}\label{eq:comparison-segment}
+ v_j(s)=e^{isB'_j}c_j,\qquad0\le s\le1,
+\end{equation}
+stays in one common regular relative chart when $\delta_j\le\delta_*$. Endpoint success alone would not establish this. The artificial segment need not satisfy the next average constraint or all original indicators; it is used only to compare minima and does not change the original integration domain.
+
+\subsection{The two powers of the fine mesh}
+
+In grade-$j$ units the original fine mesh is $\eta_j=L^{-j}$. In relative Landau gauge write
+\[
+ \mathcal U_j(v_j(s))\sim
+       e^{i\eta_j H_j(sB'_j)}W_{j+1},\qquad H_j(0)=0.
+\]
+The homogeneous specialization of CMP102(190) has all factors $(L^j\eta_j)^{-1}$, $(L^j\eta_j)^{-2}$, and the input density $(L^j\eta_j)^{-4}$ equal to one. Its connection and covariant-gradient rows therefore give
+\begin{equation}\label{eq:minimum-row}
+ |\partial_qH_j(B,x)|+|\nabla_{\eta_j}\partial_qH_j(B,x)|
+ \le Ce^{-\mu d_j(x,q)},
+\end{equation}
+uniformly on the reserved chart. The determining cells have unit volume in these coordinates. Summing in $q$ and integrating the radial segment gives
+\begin{equation}\label{eq:H-bound}
+ \norm{H_j}+\norm{\nabla_{\eta_j}H_j}\le C\delta_j.
+\end{equation}
+The factor $\eta_j^{-1}$ in the gradient is essential.
+
+\begin{theorem}[Additive real fine-curvature bound]\label{thm:real-prefix}
+Under the complete regularity and segment hypotheses above, if the terminal datum has curvature at most $a_{\mathrm{core}}$, then
+\begin{equation}\label{eq:prefix-curvature}
+ \norm{dV_0-1}_\infty
+ \le B_3a_{\mathrm{core}}L^{-2t}
+       +C\sum_{j=0}^{t-1}L^{-2j}\delta_j.
+\end{equation}
+At fixed $L$ and strict reserves, $C$ is independent of $t$ and the volume.
+\end{theorem}
+
+\begin{proof}
+Fix one original fine plaquette. Transport the four relative $H_j$ fields to the same corner using the unitary background $W_{j+1}$. Their signed sum is bounded by
+\[
+ C\eta_j\norm{\nabla_{\eta_j}H_j}
+  +C\norm{W_{j+1}(\partial p)-1}\norm{H_j}.
+\]
+In the four-exponential product this linear sum is multiplied by $\eta_j$. The remaining terms are bounded by $C\eta_j^2\norm{H_j}^2$. The regular background curvature is $O(\eta_j^2)$; therefore \eqref{eq:H-bound} implies
+\[
+ \norm{[e^{i\eta_jH_j}W_{j+1}](\partial p)
+                         -W_{j+1}(\partial p)}
+ \le C\eta_j^2\delta_j.
+\]
+Returning to the actual real representative conjugates the plaquette by a unitary matrix. At the same fine plaquette,
+\begin{equation}\label{eq:one-curv-step}
+ \norm{W_j(\partial p)-1}
+ \le\norm{W_{j+1}(\partial p)-1}+CL^{-2j}\delta_j.
+\end{equation}
+The coefficient of the old curvature is exactly one. Different real gauges at successive scales do not multiply its norm. The case $j=0$ is the direct four-link estimate. Telescoping \eqref{eq:one-curv-step} and using the terminal variational bound proves \eqref{eq:prefix-curvature}.
+\end{proof}
+
+Estimating four independent link differences would lose one mesh power. Iterating a generic Lipschitz inverse bound would introduce an artificial $C^t$. Neither loss occurs in this proof because the covariant derivative and the unitary plaquette norm are used before summing scales.
+
+\section{A whole real product continuation and the delayed cavity bound}
+\label{sec:whole-product}
+
+The previous theorem is stated on admitted real histories. A separate reviewed addendum proves that the underlying physical maps can be continued on the whole product of the original noise balls, with a sufficiently small fixed terminal curvature and small physical noise ceilings. This does not say that all original history indicators are one there.
+
+Define, in original unit-lattice conventions,
+\[
+ \mathfrak k(W)=\sup_p\norm{W(\partial p)-1},\qquad
+ \mathfrak j(W)=\norm{D_{W,\mathrm{unit}}^*\partial W}_\infty.
+\]
+The second quantity is the full matrix divergence before trace or Lie-algebra projection. CMP102(190) also controls the fixed-reference row
+$D_U^{\eta *}D_U^\eta\partial_BH$. Integrating with $U=W_{j+1}$ held fixed gives its norm $O(\delta_j)$. B99 gauge-fixing (1.54) is the full matrix identity
+\begin{equation}\label{eq:full-current-expansion}
+ D_{(e^{i\eta H}U)}^{\eta *}\partial(e^{i\eta H}U)
+ -D_U^{\eta *}\partial U
+ =i\eta^2D_U^{\eta *}D_U^\eta H
+ +O\!\left(\eta^2[\norm H\norm{\nabla_\eta H}
+                     +\norm H^3+\alpha_0\norm H]\right).
+\end{equation}
+No derivative of a moving reference operator is omitted: each response integration keeps its reference fixed. Since $D_{\mathrm{unit}}^*=\eta D^{\eta *}$, \eqref{eq:full-current-expansion} yields
+\begin{equation}\label{eq:current-step}
+ \mathfrak j(W_j)\le\mathfrak j(W_{j+1})+CL^{-3j}\delta_j.
+\end{equation}
+Again real gauge return preserves the full matrix norm.
+
+Set
+\begin{align}\label{eq:bootstrap-KJ}
+ K_j&=B_3a_{\mathrm{core}}L^{-2t}
+                +C\sum_{\ell=j}^{t-1}L^{-2\ell}\delta_\ell,\\
+ J_j&=B_3a_{\mathrm{core}}L^{-3t}
+                +C\sum_{\ell=j}^{t-1}L^{-3\ell}\delta_\ell.\nonumber
+\end{align}
+Then $L^{2j}K_j$ and $L^{3j}J_j$ are bounded by fixed multiples of $a_{\mathrm{core}}+\delta_*$, independently of $t$. Choose these caps inside the common variational, averaging, and private-pivot margins. Starting from $W_t$, a descending induction constructs the center $c_j=\mathcal M_jW_{j+1}$, identifies it by Lemma~\ref{lem:tower}, solves the actual current pivots for every original $x_j$, and uses the admitted segment to construct $W_j$. Equations \eqref{eq:one-curv-step} and \eqref{eq:current-step} close the induction with \eqref{eq:bootstrap-KJ}. This is the real whole-product assertion of \evref{PRODUCT}.
+
+The original effective density need not be defined or positive as a physical history on every point of this auxiliary map continuation. Original predicates remain in \eqref{eq:raw-transfer}; no selected history mass lower bound follows. Nor does the argument establish all carrierwise reconstructed independent-pair tests, which contain more information than the two direct regularity quantities.
+
+For the fixed cavity packet, compact tree gauge and its finite fillings give
+\[
+ \max_{b\in B}\left|\log\mathcal C_T(V_0)_b/i\right|
+ \le C_p\norm{dV_0-1}_{X_p}.
+\]
+Consequently a sufficient condition for the rare cavity value on the entire real product is
+\begin{equation}\label{eq:cavity-delay-condition}
+ C_p\left[B_3a_{\mathrm{core}}L^{-2t}
+              +C\sum_{j<t}L^{-2j}\delta_j\right]
+ \le\kappa\tau/4.
+\end{equation}
+Suppose the actual cut profile is
+$\delta_j=A_1g_j(\log g_j^{-2})^{p_0}$, or a registered uniformly comparable profile, and $|g_j^{-2}-g_0^{-2}|\le Dj$. For $t\le C\log(g_0^{-2})$, the $\delta_j$ are uniformly comparable to $\delta_0$ after a fixed weak floor. The geometric sum is therefore $O(\delta_0)$. The fixed hierarchy $A_0/A_1$ pays that term, while
+\begin{equation}\label{eq:delay-time}
+ t\ge\max\left\{0,\left\lceil
+    \frac12\log_L\frac{8C_pB_3a_{\mathrm{core}}}{\kappa\tau}
+                  \right\rceil\right\}
+ =O(\log g_0^{-1})
+\end{equation}
+pays the terminal term.
+
+On any original positive history law whose full support satisfies these hypotheses,
+\begin{equation}\label{eq:real-prefix-value}
+ \left|Q_{t-1}^{\mathfrak h}\cdots Q_0^{\mathfrak h}a_F(v)\right|
+ \le\eta_F.
+\end{equation}
+This follows from positivity and the pointwise cap, with the exact terminal normalizer. If an extra family selector is needed, the unnormalized selected numerator is bounded by $\eta_F$ times its actual mass; that mass must remain explicit. The conclusion is a real value estimate for the \emph{original} cavity function in the iterated numerator. It is neither a complex normalized norm nor a connected carrier bound for the successive emitted catalogues.
+
+\section{Homogeneous coupling control: a finite reviewed subsystem}
+\label{sec:tuning}
+
+The following is a summary of an independently reviewed assembly, not a new derivation of each heat-kernel input. Its exact convention and dependency ledger are \evref{TUNE}. It is included because the source recurrences need an actual weak coupling trajectory rather than an arbitrarily prescribed sequence.
+
+Let $S_m$ be the homogeneous classical action generated by the literal original-action minimum at old grade $m$. Let $G_{m,p}$ be the normalized logarithm of the \emph{complete} leading Gaussian amplitude for $p$ ordinary blockings, and let $\mathfrak b$ be the native infinite-kernel Maxwell extractor. The reviewed Gaussian reduction retains the corrected constrained Hessian, actual coarea and gauge factors, and yields
+\begin{equation}\label{eq:gaussian-four}
+ G_{m,p}=\mathcal N_0\left[
+ \log\det T-\tfrac12\log\det V+
+ \log\det M-\tfrac12\log\det S\right].
+\end{equation}
+$T,V$ are the scalar and vector soft operators, $M,S$ their coarse Schur factors, and $\mathcal N_0$ subtracts the actual flat value. The coefficients in this formula are fixed by the original delta integral.
+
+The assembly imports uniform rooted classical jets, nonlinear Ward identities, the actual affine Maxwell transport, the corrected soft vertices, weighted Schur bounds, and endpoint-safe heat estimates. With $K=L^p$, those estimates give a bounded ultraviolet contribution, an integrated soft/base error $O(1)$ from an $O(s/K^2)$ bound on $0<s\le K^2$, a bounded infrared contribution, and a native/classical-to-Wilson vector heat error $O(s^{-1})$ for $s\ge1$. The two coarse factors contribute $O(1)$ to $\mathfrak b$, uniformly in $m,p$.
+
+In the registered trace convention the Wilson vector and scalar coefficients are $10\alpha_g$ and $-\alpha_g/2$, with
+\[
+ \alpha_g=\frac{\Tr_{\mathrm{ad}}(\mathrm{ad}_H^2)}{48\pi^2}>0,
+ \qquad\trn(H^2)=1.
+\]
+The determinant signs in \eqref{eq:gaussian-four} and the extractor normalization give vector minus twice scalar, so the constant heat integrand is $11\alpha_g$. Integrating $ds/s$ from $1$ to $K^2$ gives the reviewed stretch estimate
+\begin{equation}\label{eq:stretch}
+ \left|\mathfrak b(G_{m,p})-22\alpha_g p\log L\right|\le C_G,
+\end{equation}
+uniformly in old grade and stretch length. In this fundamental trace convention $\Tr_{\mathrm{ad}}(\mathrm{ad}_H^2)=8$ for $\SU(2)$. This normalization is not silently identified with a differently normalized continuum coupling.
+
+The exact Gaussian cocycle and affine transport identify
+\[
+ \mathfrak b(G_{m,p})=\sum_{\ell=m+1}^{m+p}d_\ell,
+ \qquad d_{m+1}=\mathfrak b(G_{m,1}).
+\]
+The error $C_G$ is charged to the \emph{whole stretch}, not once at each date. Write $\vartheta_{j+1}$ for the extracted coupling increment, to distinguish it from the original Wilson parameter $\beta=C_Wg_0^{-2}$. The homogeneous fixed-tube replay supplies the actual non-Gaussian increment error
+\[
+ \vartheta_{j+1}=d_{j+1}+e_{j+1},\qquad
+ |e_{j+1}|\le C A_1g_j(\log g_j^{-2})^r.
+\]
+On a sufficiently weak admitted lane, $x_j=g_j^{-2}$ and $x_{j+1}=x_j-\vartheta_{j+1}$ therefore satisfy
+\begin{equation}\label{eq:coupling-stretch}
+ \lambda(j-i)-C_G\le x_i-x_j\le B(j-i),\qquad\lambda>0.
+\end{equation}
+Individual increments need not be positive, and the effective-action state may have causal memory.
+
+\begin{proposition}[Finite endpoint tuning, under the registered homogeneous inputs]
+For every finite horizon $N$ and sufficiently weak terminal inverse coupling $X$, the genuine homogeneous recursion has an admissible trajectory with $x_N=X$ and
+\begin{equation}\label{eq:tuned}
+ X+\lambda(N-j)-C_G\le x_j\le X+B(N-j),\qquad0\le j\le N.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Fix a strict weak input floor $a$ and $X>a+C_G$. Finite causal continuity of the actual step maps, with their continuous original radii, makes the set of bare values whose first $N$ inputs exceed $a$ open. Its unbounded component contains all sufficiently large bare values. At the left boundary, finite continuity gives a history with inputs at least $a$ and one input equal to $a$. The bounded-recovery consequence of \eqref{eq:coupling-stretch} gives final value at most $a+C_G<X$. At bare value $X+BN$ the final value is at least $X$. The intermediate value theorem on this finite component yields a genuine interior trajectory ending at $X$. Applying \eqref{eq:coupling-stretch} to each suffix proves \eqref{eq:tuned}.
+\end{proof}
+
+This does not select compatible or unique roots as $N$ varies, and does not construct a continuum state. The Gaussian coefficient convention is the native infinite one; finite periodic representatives require their separately recorded nonwrapping-read comparison. No Gaussian drift statement here is extended to arbitrary mixed large-field histories.
+
+\section{The admitted regular source core and a conditional rare-source consumer}
+\label{sec:volterra}
+
+\subsection{The regular dated recurrence}
+
+Evidence \evref{CORE} registers the tuned trajectory in the inherited TURN77 source theorem. The input is a \emph{typed complete coherent Wilson family} with fixed own-field domains, complete current/minimum responses, exact source calibration, and its native preparation. In particular, a newly constructed bounded or shrinking-domain mark is not admitted merely because its value is small.
+
+Let $\mathcal T_j=\mathcal S_j+\mathcal Q_j$ be the same-read static/quantum decomposition. Its exact variation-of-constants identity is
+\begin{equation}\label{eq:dated-identity}
+ X_n=\mathcal S_{n,0}X_0+
+       \sum_{i<n}\mathcal S_{n,i+1}B_{i+1},\qquad
+ B_{i+1}=\mathcal Q_iX_i.
+\end{equation}
+The whole inherited $X_i$ enters the new birth. Each birth keeps its own domain, vacuum scalar, marginal tensor, and date. Let $\alpha_j$ be the reference coefficient relative to the original multiplier $c_a$, and $P_j$ the prepared neutral norm \emph{after} the four-dimensional original root census. The registered bounds are of the form
+\begin{align}\label{eq:regular-volterra}
+ P_j&\le\sum_{i<j}K(j-i)w_i,
+ &K(t)&\le C(1+t)^mL^{-\sigma(t-1)},\nonumber\\
+ w_j&\le C_bq_j(|\alpha_j|+P_j),
+ &q_j&=g_j^2,\\
+ |\alpha_{j+1}-\alpha_j|
+ &\le C_a\bigl[(q_j^2+\tau_jq_j)|\alpha_j|
+                       +(q_j+\varepsilon_j)P_j\bigr].\nonumber
+\end{align}
+The $q_j^2$ term is a special complete-action rank cancellation. It is not a generic masked-source estimate. The actual running Gaussian window gives
+\[
+ \tau_j\le C\exp[-cA_1^2(\log x_j)^{2p}],\qquad p>\tfrac12.
+\]
+The universal homogeneous extractor has exact static marginal transport, so $\varepsilon_j=0$ at that coefficient scope. A finite periodic version retains its exact wrapping-read error; it is not obtained by imposing an affine magnetic field on a torus.
+
+Set $G=X-C_G$ in \eqref{eq:tuned}. Then
+\[
+ \sum_{j<N}q_j^2\le\frac{C}{G},\qquad
+ \sum_{j<N}\tau_jq_j\le\frac{C}{G},\qquad
+ \frac{q_i}{q_j}\le1+\frac{D(j-i)}G\quad(i<j).
+\]
+An elementary positive convolution induction gives $P_j\le Cq_jM_j$, where $M_j=\max_{i\le j}|\alpha_i|$. Substitution in \eqref{eq:regular-volterra}, followed by a finite product estimate, gives
+\[
+ M_N\le e^{C\mathcal A_N},\qquad
+ |\alpha_N-1|\le C\mathcal A_Ne^{C\mathcal A_N},\qquad
+ \mathcal A_N=\sum_{j<N}[q_j^2+(\tau_j+\varepsilon_j)q_j].
+\]
+Thus the already registered regular core has a nonzero relative coefficient, for example $1/2\le\alpha_N\le3/2$ on the real convention at a sufficiently weak terminal floor, uniformly in $N$. All bounds retain $c_a$ when the physical source is restored. A nonzero core coefficient is not a lower bound for a full original reflection norm or a proof of interaction.
+
+\subsection{Rare forcing need not have the special reference cancellation}
+
+A rare family may carry a general curvature tensor and only $O(g_j^2)$ marginal feedback. The numerical result \evref{RARE} shows why this could still be sufficient, once native admission and source census are proved. Suppose, for the \emph{same} actual source family,
+\begin{align}\label{eq:rare-recursion}
+ P_j&\le C_K\sum_{i<j}\rho^{j-i}w_i,\quad0<\rho<1,\nonumber\\
+ w_j&\le C_wv_j(a_j+P_j)+b_j,\\
+ a_{j+1}&\le(1+C_av_j)a_j+C_bv_jP_j+c_j,
+ \quad v_j=q_j+e_j,\nonumber
+\end{align}
+with $e_j,b_j,c_j\ge0$. Here $a_j$ bounds the full marginal tensor. All constants must be uniform; the original root count has already been paid in $P_j$.
+
+Define $z_j=\sum_{i<j}\rho^{j-i}w_i$ and $M_j=a_j+z_j$. Direct substitution gives
+\begin{equation}\label{eq:rare-memory}
+ M_{j+1}\le(1+Av_j)M_j+f_j,\qquad f_j=c_j+\rho b_j.
+\end{equation}
+Along \eqref{eq:tuned}, if $\sum e_j\le E$, then
+\begin{equation}\label{eq:polynomial-amplification}
+ \prod_{\ell=i}^{j-1}(1+Av_\ell)
+ \le e^{AE}\left(
+ \frac{G+\lambda(N-i)}{G+\lambda(N-j)}\right)^{A/\lambda}.
+\end{equation}
+Indeed the sum of the $q_\ell$ is bounded by the corresponding logarithmic integral. If the actual forcing has a once-born bound
+\[
+ f_j\le C(1+x_j)^d\exp[-c(\log x_j)^\zeta],\qquad\zeta>1,
+\]
+then \eqref{eq:rare-memory}--\eqref{eq:polynomial-amplification} imply a terminal forcing bound $C_H e^{AE}G^{-H}$ for any fixed $H>0$, uniformly in the horizon. The exponential of a power of $\log x$ greater than one beats every fixed polynomial.
+
+This consumer pays fixed inverse-coupling and read-polynomial prices once at birth. It cannot pay an unremoved $L^{4(N-j)}$ original root count, an uncontrolled exponential in a growing read volume, or a new inverse-radius charge at every later age. These are hypotheses to be verified, not consequences of \eqref{eq:rare-memory}.
+
+\section{What an analytic source induction still has to establish}
+\label{sec:gates}
+
+\subsection{A real delay is not a complex domain theorem}
+
+Theorem~\ref{thm:real-prefix} and the whole-product continuation explain how the \emph{original} cavity read can become small in physical curvature after $O(\log g_0^{-1})$ ordinary dates. They do not justify the same conclusion on every complex localizer contour. The needed extension must retain a single coherent parameter family for the literal nested averages and original minima, including the actual gauge returns and all determining reads.
+
+The independent current is especially restrictive. In B109(3.13) the selected descendant current is an analytic companion of the form
+\begin{equation}\label{eq:current-companion}
+ J_{\mathrm{new}}=\theta^3J+\Delta_U^\xi A-P_1A+F_1(U,A),
+\end{equation}
+with the scale factor $\theta$ and operators fixed by that reconstruction. The physical Landau identity is used before localization to obtain this continuation. After a source weakening parameter is complexified, replacing \eqref{eq:current-companion} by a freshly computed physical current changes the analytic function. Complete old-pair tests, local comparison arrays, and near/far terms must be verified for the carried companion on every relevant contour.
+
+The real proof used unitary conjugations to preserve a plaquette norm with coefficient one. Complex return maps are not unitary. A successful complex-prefix proof must control their action on complete cavity loops, rather than multiply a crude norm for each return and lose a factor $C^t$. Individual analytic minimum charts at real centers do not automatically form the required joint tube. The unfinished common-frame exploration is not used as a theorem in this manuscript.
+
+There is also an exact representative gate before estimates are applied. The ordinary group-average constraint and the background-relative $Q$ constraint are different coordinate descriptions. A relative axial or Landau return does not, by itself, prove preservation of the ordinary averages off the physical graph. The proposed prefix needs an explicit endpoint and coarse-frame record identifying the original reconstruction with its analytic relative representative, including any coarse-center return. The real orbit and norm identities above avoid this extra assertion; they do not establish it.
+
+\subsection{Generated reads and normalized complex costs}
+
+The protected one-source module applies to an arbitrary bounded holomorphic mark only when its entire substituted image, including the zero-noise map, stays in its recorded domain. Its explicit protected seed cost is generally exponential in the current read size. It is not replaced by a polynomial merely because the insertion is linear in a source parameter.
+
+Conditionally, genuine localization and reblocking with spare spatial reserve can control a finite delay. If all inverse-margin prices are polynomial and the number of dates is $t\le C\log(g_0^{-2})$, a crude total cost of order $\exp[C(\log g_0^{-2})^2]$ can be absorbed by the native rare exponent with its registered stronger logarithmic cutoff parameters. Evidence \evref{TRANSPORT} proves that cost statement under explicit image and carrier hypotheses. It does not prove those hypotheses for the generated cavity catalogue.
+
+There is a quantitative domain warning. A direct-to-reconstructed inclusion obtained only by reducing the source radius by a fixed factor at each step cannot provide the required logarithmic delay. At best its usable dates are limited by the ratio of the initial source radius to the actual noise. The variational constant $B_3$ depends on $L$, so increasing $L$ alone does not show that an apparent $L^2$ scaling beats that shrink. Genuine image enlargement or a coherent direct prefix construction is needed. Rarity can pay amplitude losses; it cannot make an undefined substitution meaningful.
+
+Nor does real positivity control a complex normalized expectation. Phase cancellations can make the unmarked denominator small, and on a large read even a small per-site phase cost can exponentiate. A zero-free theorem, a protected connected expansion, or another proved normalized complex estimate is required with the complete original cut and denominator. The finite cavity saddle supplies such a denominator theorem only for its fixed four-edge integral.
+
+\subsection{Hard masks and exact completion}
+
+Original small-field partitions produce moving intersections of cut sets. They may have corners even when the action is analytic and strictly convex. A simple diagnostic is a Gaussian restricted to $B_R(tv)\cap B_R(-tv)$: the radial boundary moves to first order as $R-|t||n\cdot v|$, and normalized smooth observables can have a nonzero $|t|$ term. This is a warning against inferring holomorphic source jets from value or Lipschitz bounds, not a substitute for a native calculation.
+
+The corpus contains exact finite completions in which all atoms of a specified partition are summed on a common fiber before normalization. In such a completed sector the internal moving boundaries cancel. The original complement of the chosen fiber, prior-record failures, and retained exterior still remain. These local finite results are useful components of a possible full proof, but they cannot be used as if the all-success sector had probability one. Evidence \evref{COMP} records the actual source/contact decomposition and the scope of the first analytic completion.
+
+\subsection{Scaling, the original census, and mixed contacts}
+
+For a local gauge-invariant \emph{analytic} scalar, the total Ward identities and fixed carrier moments organize the low-order terms into a constant and an invariant curvature tensor. After extracting the complete dimension-four tensor, a neutral remainder has an improved engineering power. One must retain the full tensor for an asymmetric marked source; reduction to a scalar Wilson coefficient uses additional coherent density symmetries.
+
+This static statement is not the quantum estimate by itself. An ordinary conditional integration creates a new scalar, marginal tensor, and connected contact. Its source can have a narrow tube, so a Cauchy estimate may cost $\tau^{-k}$ or another recorded inverse radius. The first column in \eqref{eq:first-quantum-bound} demonstrates the difference concretely. The inherited recurrence may be invoked only after the actual birth, own-field domain, age preparation, and original four-dimensional density census have all been matched.
+
+The root census is a material constraint. At a separation of $s$ blocking dates, there are typically $L^{4s}$ fine roots per current cell. For arbitrary-age transport, a rare factor depending only on a weak-coupling logarithm does not alone pay this exponential in $s$. This does not exclude the separately stated finite admission budget $t\le C\log x_0$: its finite $L^{4t}$ factor can be included in a once-paid $\exp[C(\log x_0)^2]$ loss when the required image and reblocking estimates have been proved. For subsequent all-depth transport, the static fourth-power gain or another proved source estimate must handle the census before a recurrence such as \eqref{eq:rare-recursion} is used. In parallel, every emitted contact in \eqref{eq:contact} and the terminal covariance in \eqref{eq:covariance-tower} needs its own estimate under the actual output law.
+
+\section{The incomplete continuum architecture}
+
+The finite results suggest a concrete division of the remaining work. The regular homogeneous subsystem supplies a tuned weak trajectory and an admitted reference source recurrence. The original cavity construction supplies a genuinely rare, gauge-invariant boundary source with a larger useful tube and a first native column. The real minimum tower supplies a possible delayed-image mechanism for that original source. The missing connection is a quantitative complex prefix or generated-source theorem that preserves the complete current, gauge, localizer, normalization, and read data and enters the dated recurrence with the original census already controlled.
+
+The observable and reconstruction contract is itself still incomplete. The retained Wilson variance audit \evref{VAR} rules out assuming a uniform $L^2$ bound for the full raw Wilson energy at the unchanged physical calibration: its self-variance diverges in the tested scaling. A successful limit must instead specify and justify separated or collision-flat observables, or a suitable renormalized distributional topology, together with its contact prescriptions. This manuscript does not choose one of those options by fiat, and does not turn a separated-covariance estimate into a bound at coincident points.
+
+That connection would still not finish the existence argument. A complete construction would have to establish, for the same finite original measures and physical observables:
+\begin{enumerate}
+ \item A decomposition covering all original records, with exact masses and all complementary source/contact terms, and uniform bounds that survive removal of the ultraviolet cutoff.
+ \item Tightness or an appropriate convergent construction of a common family of gauge-invariant correlation functions, with controlled collision behavior and an infinite-volume limit or other stated volume procedure.
+ \item The required Euclidean properties, including reflection positivity in the chosen observables and regulator scheme, covariance, consistency, and the hypotheses needed for reconstruction. Positivity of individual real conditional kernels is not a replacement for these properties of the limiting theory.
+ \item Identification of the resulting theory with the intended nonabelian Yang--Mills dynamics, using a stated continuum observable algebra and a justified dynamical criterion. Existence of some Euclidean random-field limit would not alone establish this identification.
+ \item A nonzero observable in that same limit. A nonvanishing regular-core coefficient alone does not show that the full original reflection norm is bounded below after complementary sectors and contacts are included.
+ \item A genuine interaction criterion, with normalization and contact terms specified, that excludes the relevant free or generalized-free alternatives and is appropriate to the identified Yang--Mills observable algebra. A nonzero higher cumulant of a selected nonlinear observable is insufficient by itself: composite observables of free fields can have such cumulants. A two-point nontriviality criterion alone is also insufficient.
+\end{enumerate}
+Mass gap, uniqueness, and universality are not asserted here. None is being silently substituted for the stated objective. Conversely, the absence of a mass-gap proof does not remove the need to establish the basic existence and interaction claims actually requested.
+
+The useful stopping point of this manuscript is therefore a set of exact finite laws, a proved pinned analytic source, a scoped first source-column admission, a reviewed real prefix estimate, and conditional uniform consumers with explicit missing interfaces. Continuing work should target those interfaces rather than repeat the finite saddle, replace actual sources by fresh static rows, or count a numerical recurrence as proof of its native hypotheses.
+
+\appendix
+\section{Evidence map and review boundaries}
+
+Paths below are relative to the root of this collaborator package. The listed current producer files have matching scoped audit files in the same evidence directories unless a separate path is specified. The source notes contain the detailed primary-page readings and older dependency locators. Their historical status labels do not enlarge the statements used here.
+
+\paragraph{COV: exact connected propagation.}
+\path{evidence/inherited/continuation-workspace/work/connected_covariance_actual_kernel_consumer_20261023.txt} and its independent audit. Used only for the exact actual-kernel identities, contacts, and terminal term in Section~\ref{sec:finite-law}.
+
+\paragraph{CAV: original cavity and pinned tube.}
+\path{evidence/current/outputs/YM4-original-rare-cavity-source-projection-20261024.txt};
+\path{evidence/current/outputs/YM4-pinned-plaquette-cavity-enlarged-tube-20261024.txt} and their audits. These give the exact original disintegration, finite pinning/saddle proof, marked raw tube, and explicit exclusion of a marked-denominator nonvanishing claim.
+
+\paragraph{PAIR: first independent-pair column.}
+\path{evidence/current/outputs/YM4-pinned-cavity-native-pair-first-column-20261024.txt} and its audit. Used with its shrinking source domain, current tests, protected real variables, source-specific localizer, explicit seed price, and $(g_0/\epsilon_0)^2$ quantum bound.
+
+\paragraph{TOWER: admitted real prefix.}
+\path{evidence/current/work/original_cavity_real_prefix_minimum_tower_20261024.txt} and its audit. Sections 1--8 prove the exact recursive minimum identity and additive real curvature bound with the full segment, law, and source-reassembly qualifications.
+
+\paragraph{PRODUCT: separate real whole-product continuation.}
+\path{evidence/current/work/original_cavity_real_prefix_whole_product_20261024.txt} and its separate audit. Used only for the full-matrix current estimate and real descending map construction. It does not certify complex pair tests or redundancy of original masks.
+
+\paragraph{TUNE: homogeneous signed drift and tuning.}
+\path{evidence/current/outputs/YM4-native-signed-drift-and-homogeneous-tuning-20261024.txt} and
+\path{evidence/current/outputs/YM4-native-signed-drift-and-tuning-audit-20261024.txt}. The producer lists the Gaussian reduction, classical jets, soft/Schur/heat estimates, normalization, cocycle, homogeneous non-Gaussian replay, and continuity inputs. Section~\ref{sec:tuning} summarizes that assembly; it is not a fresh independent proof of each dependency.
+
+\paragraph{CORE: typed regular source recurrence.}
+\path{evidence/current/outputs/YM4-tuned-regular-core-Volterra-registration-20261024.txt} and its audit. The inherited source typing and preparation are in
+\path{evidence/inherited/original-workspace/work/package/work/turn77_homogeneous_typing_gauge.txt},
+\path{turn77_neutral_native_preparation_history.txt}, and
+\path{turn77_dated_volterra_root.txt} in that same directory, with their recorded audits. This is a conditional import on the already typed complete regular source class.
+
+\paragraph{RARE: numerical forcing stability.}
+\path{evidence/current/outputs/YM4-rare-source-Volterra-stability-20261024.txt} and its audit. The theorem assumes native admission, uniform feedback constants, and the completed root census. It does not prove them for a new family.
+
+\paragraph{TRANSPORT: finite admitted analytic-mark transport.}
+\path{evidence/current/outputs/YM4-analytic-mark-finite-admission-transport-20261024.txt} and its audit. Every actual substituted image and its complete current read must be admitted. Its finite-delay cost does not establish that domain hypothesis.
+
+\paragraph{COMP: complementary sources and finite completion.}
+\path{evidence/current/outputs/YM4-original-source-rare-complement-20261024.txt} and its audit, including their later explicitly scoped attachment addenda. Exact local completion preserves the outer and prior-record complements.
+
+\paragraph{VAR: original Wilson self-variance.}
+\path{evidence/current/outputs/YM4-Wilson-variance-and-locality-20261023.txt} and
+\path{evidence/current/outputs/YM4-Wilson-variance-audit-20261023.txt}.
+The obstruction concerns the unchanged physical calibration of the raw energy. The limiting observable class and collision/contact prescription remain to be specified and proved.
+
+\paragraph{Provenance and current status.}
+\path{evidence/current/outputs/YM4-current-checkpoint-20261023.txt} records the frozen checkpoint through its stated deliveries; the separately reviewed real-prefix notes are identified above. Primary source identities and path history are preserved in
+\path{evidence/inherited/guide/sources-and-provenance.txt}.
+The packaging provenance/status document distinguishes reviewed additions from unfinished exploratory files. In particular, no unfinished complex-prefix common-frame calculation is an input to a theorem above.
+
+\begin{thebibliography}{99}
+
+\bibitem{B98}
+T.~Balaban, \emph{Averaging Operations for Lattice Gauge Theories},
+Communications in Mathematical Physics \textbf{98} (1985), 17--51.
+\href{https://doi.org/10.1007/BF01211042}{doi:10.1007/BF01211042}.
+
+\bibitem{B99gauge}
+T.~Balaban, \emph{Spaces of Regular Gauge Field Configurations on a Lattice and Gauge Fixing Conditions},
+Communications in Mathematical Physics \textbf{99} (1985), 75--102.
+\href{https://doi.org/10.1007/BF01466594}{doi:10.1007/BF01466594}.
+
+\bibitem{B99prop}
+T.~Balaban, \emph{Propagators for Lattice Gauge Theories in a Background Field},
+Communications in Mathematical Physics \textbf{99} (1985), 389--434.
+\href{https://doi.org/10.1007/BF01240355}{doi:10.1007/BF01240355}.
+
+\bibitem{B102}
+T.~Balaban, \emph{The Variational Problem and Background Fields in Renormalization Group Method for Lattice Gauge Theories},
+Communications in Mathematical Physics \textbf{102} (1985), 277--309.
+\href{https://doi.org/10.1007/BF01229381}{doi:10.1007/BF01229381}.
+
+\bibitem{B109}
+T.~Balaban, \emph{Renormalization Group Approach to Lattice Gauge Field Theories. I. Generation of Effective Actions in a Small Field Approximation and a Coupling Constant Renormalization in Four Dimensions},
+Communications in Mathematical Physics \textbf{109} (1987), 249--301.
+\href{https://doi.org/10.1007/BF01215223}{doi:10.1007/BF01215223}.
+
+\bibitem{B116}
+T.~Balaban, \emph{Renormalization Group Approach to Lattice Gauge Field Theories. II. Cluster Expansions},
+Communications in Mathematical Physics \textbf{116} (1988), 1--22.
+\href{https://doi.org/10.1007/BF01239022}{doi:10.1007/BF01239022}.
+
+\bibitem{B119}
+T.~Balaban, \emph{Convergent Renormalization Expansions for Lattice Gauge Theories},
+Communications in Mathematical Physics \textbf{119} (1988), 243--285.
+\href{https://doi.org/10.1007/BF01217741}{doi:10.1007/BF01217741}.
+
+\bibitem{LI}
+T.~Balaban, \emph{Large Field Renormalization. I. The Basic Step of the R Operation},
+Communications in Mathematical Physics \textbf{122} (1989), 175--202.
+\href{https://doi.org/10.1007/BF01257412}{doi:10.1007/BF01257412}.
+
+\bibitem{LII}
+T.~Balaban, \emph{Large Field Renormalization. II. Localization, Exponentiation, and Bounds for the R Operation},
+Communications in Mathematical Physics \textbf{122} (1989), 355--392.
+\href{https://doi.org/10.1007/BF01238433}{doi:10.1007/BF01238433}.
+
+\bibitem{BOC}
+T.~Balaban and M.~O'Carroll, \emph{A Simple Method for Correlation Functions via the Effective Actions in the Renormalization Group Framework},
+Annals of Physics \textbf{260} (1997), 1--8.
+\href{https://doi.org/10.1006/aphy.1997.5690}{doi:10.1006/aphy.1997.5690}.
+
+\bibitem{ASworking}
+L.~Alpoge and E.~Sussman, public working material in
+\emph{Yang--Mills LLM experiment},
+\url{https://github.com/ethanwsussman/Yang--Mills-LLM-experiment}.
+The local source catalogue records the inspected revisions. Used as working guidance, not as an imported completed existence theorem.
+
+\end{thebibliography}

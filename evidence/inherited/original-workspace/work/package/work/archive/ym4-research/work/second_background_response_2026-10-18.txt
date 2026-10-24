@@ -1,0 +1,386 @@
+REAL LOCAL SECOND-BACKGROUND RESPONSE WITH A g^2 GAIN
+18 October 2026. Research theorem; actual-source hypotheses isolated.
+
+RESULT
+
+We upgrade Notebook42's real scalar response estimate to a weighted
+second-background derivative estimate. The theorem uses only finite-order
+real local jets, uniform convexity, and the weighted Hessian hypothesis
+already used for the real covariance lemma. It does not assume a complex
+polymer norm or a complex probability measure. Derivatives of the
+background-dependent quadratic Gaussian precision are included.
+
+The new ingredients proved here are: (i) connected cumulant clustering
+through order four from the weighted two-function covariance estimate;
+(ii) rooted summability of these cumulants in a diameter-weighted jet
+norm; (iii) an exact twice-differentiated interpolation formula in which
+one interaction factor g remains in every connected term. Together they
+give a volume-independent g^2 bound for the actual Hessian kernel and
+its second spatial moment. Verifying the finite-order jet and convexity
+hypotheses for all ACTUAL inherited source states is still required.
+
+1. REAL MEASURES AND LOCAL JETS
+
+Let I be a finite compatible lattice or metric regulator, with a fixed
+number of real fluctuation components x_i at each site. The same metric
+also locates the external background indices a,b; a fixed finite number
+of color/link components per site only changes constants. Assume
+
+  K_lambda=sup_i sum_j exp[-lambda d(i,j)]<infinity         (1.1)
+
+uniformly in the regulator for the positive lambda used below. Polynomial
+growth lattices have this property. For B in a fixed REAL neighborhood,
+consider
+
+  F_s(B,x)=onehalf <x,A(B)x>+sum_i b_i(x_i)+s V_g(B,x),
+  dmu_(s,B)=Z_s(B)^-1 exp[-F_s(B,x)]dx,   0<=s<=1.          (1.2)
+
+The barriers b_i are even, convex and independent of B and s. Hard
+symmetric product cutoffs are allowed as limits of smooth barriers,
+provided the interaction has smooth extensions on which all bounds
+below hold uniformly, and the differentiated observables are uniformly
+integrable during that limit. The cutoff is not differentiated in B.
+
+Assume uniformly in s,B,x and the regulator that
+
+  Hess_x F_s>=m I,
+  sup_i sum_(j!=i)||H_ij||(exp[kappa d(i,j)]-1)<=m/2,       (1.3)
+
+and the same column bound, where H=Hess_x F_s. No upper bound on its
+diagonal blocks is needed. Notebook42's weighted resolvent proof gives,
+for observables f,h supported in sets X,Y,
+
+  |Cov(f,h)| <=(2/m)exp[-kappa d(X,Y)]
+                        ||grad_x f||_2 ||grad_x h||_2.     (1.4)
+
+Use the weight exp[-kappa d(i,X)] in that proof to obtain (1.4) without
+a support-cardinality prefactor. All expectations and cumulants below
+are for the current REAL normalized measure mu_(s,B).
+
+For a scalar observable f define
+
+  N_8(f)=||f||_(L^8)+||grad_x f||_(L^8(ell^2)).            (1.5)
+
+Only fixed finite moments are requested. The previous real-response
+note proves uniform local moments under (1.3), bounded local score at
+zero, and a bounded row-sum Hessian of V_g. Alternatively uniform local
+moments may be verified directly. Polynomial local observables with
+bounded coefficient kernels then have the required N_8 norms. Smooth
+finite-regulator differentiation is assumed dominated on smaller real
+B neighborhoods. The estimates below make its subsequent spatial
+summations uniform.
+
+2. CUMULANTS THROUGH ORDER FOUR FROM PAIR COVARIANCE
+
+For n>=2 the joint cumulant is the finite moment polynomial
+
+  cum_n(f_1,...,f_n)
+   =sum_(pi partition of {1,...,n})
+       (|pi|-1)! (-1)^(|pi|-1) product_(C in pi) E product_(i in C)f_i.
+                                                               (2.1)
+
+No nonzero auxiliary exponential moment is needed for this definition.
+Let T(X_1,...,X_n) be the minimum spanning-tree length of the n declared
+support sets, where the weight of an edge uv is d(X_u,X_v). This set
+distance need not satisfy a triangle inequality.
+
+LEMMA 1 (finite-order connected clustering).
+For 2<=n<=4, observables f_i supported in nonempty X_i satisfy
+
+  |cum_n(f_1,...,f_n)|
+     <=C_n exp[-kappa T(X_1,...,X_n)/(n-1)]
+                              product_i N_8(f_i),         (2.2)
+
+where C_n depends on n,m only, independently of volume and support sizes.
+
+Proof. Cut a longest edge of a minimum spanning tree. This partitions
+the labels into two nonempty groups A,B. The smallest distance between
+their union supports is at least the removed edge length: a shorter
+cross-edge would replace it and contradict minimality. The removed
+edge has length at least T/(n-1).
+
+Let q(S)=E product_(i in S)f_i. Compare it with
+q_0(S)=q(S intersect A)q(S intersect B), the moments of a law in which
+the two groups have their original marginal distributions but are
+independent. The joint n-cumulant for q_0 is zero. For a set S meeting
+both groups, q(S)-q_0(S) is exactly the covariance of the two products.
+Apply (1.4). The product gradient rule and Holder give
+
+  ||grad product_(i in C) f_i||_2
+       <=|C| product_(i in C)N_8(f_i),
+
+because at most four factors occur and exponents 2|C|<=8 suffice.
+The undifferentiated moments are bounded by the corresponding products
+of N_8. In the cumulant polynomial telescope each product of block
+moments between q and q_0. Every nonzero difference has the covariance
+factor exp[-kappa T/(n-1)], while the other moments supply the remaining
+N_8 factors. There are finitely many terms depending only on n. For
+example the loose constant
+
+  C_n=(2/m)n^2 sum_pi |pi| (|pi|-1)!
+
+suffices. This proves (2.2). QED.
+
+This argument gives the clustering needed here without differentiating
+the Helffer--Sjostrand inverse and without a separate high-order
+mixing assumption. At most L^8 moments and first x-gradients are used.
+
+3. ROOTED DIAMETER-WEIGHTED JET NORMS
+
+Use connected finite sets X of lattice sites as declared supports.
+An observable may depend on only some sites of its declared support.
+Write diam X for its metric diameter. The exponential below is in
+DIAMETER, not in the number of sites or in a spanning tree of every
+site. Put
+
+  omega(X)=|X|^3 exp[kappa diam X].                        (3.1)
+
+A background multi-index J is an ordered tuple of length 0,1 or2.
+The components are included in all sums; repeated indices are allowed.
+For a marked function f rooted at r, suppose its real jets have
+decompositions
+
+  partial_J f=sum_(X contains {r} union J) f_(J,X),
+  f_(J,X) depends only on x_X,
+  sum_(|J|<=2) sum_(X contains {r} union J)
+                  omega(X) N_8(f_(J,X)) <= A_f.           (3.2)
+
+For an unrooted action family v_J=sum_X v_(J,X), require
+
+  sup_z sum_(|J|<=2) sum_(X contains {z} union J)
+                  omega(X) N_8(v_(J,X)) <= A_v.           (3.3)
+
+These are bounds on derivatives of the SAME scalar functions. No
+identity of unrelated activity coefficients is assumed. Suprema over
+s,B and regulators are understood. Constants in x may be removed from
+V_g before taking the norm, since they change no normalized measure.
+
+For the two reference Gaussian background scores
+
+  G_a=onehalf <x,(partial_a A(B))x>,
+  G_ab=onehalf <x,(partial_ab A(B))x>,                     (3.4)
+
+assume decompositions supported in X containing the indicated background
+indices, with (3.3) bounded by H_1 for the |J|=1 family and H_2 for the
+|J|=2 family. Such norms follow, for example, from diameter-weighted
+coefficient sums for (partial_J A)_(kl), taking X to contain J,k,l,
+and uniform local moments through order sixteen. This is an explicit
+condition on Gaussian background derivatives, not their omission.
+
+LEMMA 2 (summable rooted cumulants).
+Let 1<=n<=4, with one family rooted at r as in (3.2) and n-1 unrooted
+families as in (3.3). Assign at most two external labels a,b among
+their jets in any fixed pattern. Then, for mu=kappa/32,
+
+  sum_(a,b) exp[mu tau(r,a,b)]
+     |sum_(support sets) cum_n(f_0,...,f_(n-1))|
+        <= C A_(f_0) product_(v=1)^(n-1) A_(f_v).          (3.5)
+
+For n=1, cum_1 means expectation. The sums are restricted to whichever
+external labels are present; the application below has both. Here
+tau(r,a,b) is the minimum spanning-tree length of the three points.
+The constant depends only on m,kappa,K_(kappa/4) and n<=4.
+
+Proof. For n>=2 use (2.2). Join the support sets by a minimal tree and
+connect the marked root and external labels inside their containing
+sets. There are at most 2(n-1)+3 selected incidence/label points. After
+merging coincident ones, connecting those in each set costs at most
+five times its diameter when n<=4. This first constructs a connected
+network which may have extra Steiner vertices. Doubling that network
+and shortcutting in the metric gives a tree on the three external
+points of at most twice its length. Consequently
+
+  tau(r,a,b) <= 10 sum_v diam X_v + 2T(X_0,...,X_(n-1)).
+
+The outside exponential in (3.5) is therefore paid by part of (3.1)
+and part of the connected decay in (2.2). At least kappa/4 times the
+inter-set tree length remains, because
+kappa/(n-1)-2mu >= kappa/3-kappa/16 > kappa/4.
+
+Bound exp[-(kappa/4)T] by the sum over the finitely many labelled
+trees of products exp[-(kappa/4)d(X_u,X_v)]. Each edge factor is at
+most sum_(p in X_u,q in X_v)exp[-(kappa/4)d(p,q)]. Sum each resulting
+tree from its leaves toward the marked root. The anchor norm (3.3)
+and (1.1) sum a leaf; each edge can cost one cardinality factor at its
+parent. No vertex has degree larger than three, so the |X|^3 in (3.1)
+pays all such factors. The root sum is then (3.2). Summing the external
+labels is already included in the jet norms; dropping any equality
+constraints between labels only increases this positive majorant.
+This proves (3.5). For n=1, both labels and r are in one support and
+tau(r,a,b)<=2 diam X; its own norm pays the weight. QED.
+
+The norms in (3.2)--(3.3) are sufficient, not claimed optimal. They
+allow large birth supports at a polynomial cardinality cost. There
+can still be an exp[kappa times birth diameter] cost when converting
+from a source norm measured in larger birth cubes. That conversion
+must be quantified; this theorem does not suppress it.
+
+4. EXACT TWICE-DIFFERENTIATED NORMALIZED INTERPOLATION
+
+Suppose the marked static-subtracted insertion is
+
+  F_g(B,x)=W(Phi(B,gx))-W(Phi(B,0))
+          =g L(B,x)+g^2 Q_g(B,x),                         (4.1)
+
+with L(B,-x)=-L(B,x) for EVERY real B in the neighborhood. The
+reference mu_(0,B) is even for every B, although A(B) can vary.
+Consequently E_(0,B)L(B,x)=0 as an identity in B. Exact real
+interpolation gives
+
+  R_g(B):=E_(1,B)F_g(B,x)
+     =-g integral_0^1 cum_2,s(L,V_g) ds+g^2 E_(1,B)Q_g.  (4.2)
+
+Using (4.2) BEFORE differentiating is important: it retains the
+parity cancellation and prevents a spurious order-g contribution
+from derivatives of the Gaussian covariance.
+
+Write S_a=partial_a F_s=G_a+s partial_a V_g and
+S_ab=G_ab+s partial_ab V_g. For any smooth observables,
+
+  partial_a cum_n(f_1,...,f_n)
+   =sum_i cum_n(f_1,...,partial_a f_i,...,f_n)
+                 -cum_(n+1)(f_1,...,f_n,S_a).            (4.3)
+
+This follows by differentiating the normalized moment polynomial;
+it is also the finite-order formal logarithmic generating identity.
+For n=1 it is the usual expectation/covariance derivative formula.
+
+In particular, writing V=V_g, one obtains EXACTLY
+
+  partial_ab cum_2(L,V)
+   =cum_2(L_ab,V)+cum_2(L_a,V_b)+cum_2(L_b,V_a)
+       +cum_2(L,V_ab)
+    -cum_3(L_a,V,S_b)-cum_3(L,V_a,S_b)
+    -cum_3(L_b,V,S_a)-cum_3(L,V_b,S_a)
+    -cum_3(L,V,S_ab)
+    +cum_4(L,V,S_a,S_b),                                 (4.4)
+
+and
+
+  partial_ab E Q
+   =E Q_ab-cum_2(Q_a,S_b)-cum_2(Q_b,S_a)
+      -cum_2(Q,S_ab)+cum_3(Q,S_a,S_b).                    (4.5)
+
+The five negative connected terms in (4.4) and its fourth cumulant
+are the normalized-law response. The quadratic G_a,G_ab are retained
+in EVERY occurrence of S. No fixed-covariance shortcut is taken.
+
+5. THE SECOND-BACKGROUND RESPONSE THEOREM
+
+THEOREM 3.
+Assume (1.1)--(1.3), dominated finite-regulator differentiability,
+and the following jet bounds uniformly in s,B,regulator:
+
+  L has rooted norm A_L in (3.2);
+  Q_g has rooted norm A_Q in (3.2);
+  V_g has unrooted norm at most g A_V in (3.3);
+  G_a,G_ab have the bounds H_1,H_2 in (3.4).
+
+Put H=H_1+g A_V and H'=H_2+g A_V. Then the exact normalized
+static-subtracted response (4.2) satisfies
+
+  sum_(a,b) exp[(kappa/32)tau(r,a,b)] |partial_ab R_g(B)|
+   <= C g^2 (A_Q+A_L A_V)(1+H+H'+H^2).                  (5.1)
+
+The constant is independent of volume, regulator, and the cutoff
+radius whenever the stated constants are. It can depend on the fixed
+number of components and the fixed locality parameters.
+
+Proof. Apply Lemma2 term by term to (4.4). Each of its ten terms has
+one V or differentiated V, so retains a factor g A_V. The two-score
+term costs H^2, single-score terms H, and the double score costs H'.
+Thus the weighted kernel sum of partial_ab cum_2(L,V) is at most
+C g A_L A_V(1+H+H'+H^2). Multiply by the first g in (4.2) and
+integrate s. Apply Lemma2 to the five terms of (4.5); this costs
+C A_Q(1+H+H'+H^2), multiplied by the second g^2 in (4.2). These
+are exactly (5.1). Absolute summability justifies all interchanges.
+QED.
+
+This is stronger than a real-background sup bound: it directly controls
+the spatial Hessian kernel, with every derivative of the normalized law
+and the Gaussian background included. No inference from a real bound
+to a complex Cauchy estimate is used. The bounds are on real jets of
+the very functions inserted into the same conditional measure.
+
+6. MAXWELL MOMENTS AND REGULATOR REMOVAL
+
+The weighted sum in (5.1) controls any fixed polynomial spatial moment,
+in particular
+
+  sum_(a,b) d(a,b)^2 |partial_ab R_g(B)|
+       <= C g^2 (A_Q+A_L A_V)(1+H+H'+H^2).                (6.1)
+
+It also gives uniform exponentially small tails when either external
+index leaves a ball about r. If finite-regulator kernels have a common
+pointwise local limit on cofinal regulators, these tails justify passage
+of their second moments to the limit. The existence and identification
+of that local limit remain separate requirements; the theorem supplies
+the uniform tail bound, not arbitrary regulator consistency.
+
+For a translation-covariant family R=sum_r R_r, reindexing gives
+the per-cell two-point moment from the rooted kernel:
+
+  sum_u |u|^2 sum_r |partial_0 partial_u R_r|
+     <=sum_(a,b)|b-a|^2 |partial_a partial_b R_0|.          (6.2)
+
+The indices include the appropriate bond/color directions. Therefore
+once the source Maxwell functional is identified with that transverse
+second moment in the same normalization, (6.1) bounds the actual
+Maxwell coefficient by the same g^2 majorant. Gauge invariance and
+the relevant Euclidean symmetry must hold for the complete family;
+otherwise retain the whole allowed quadratic tensor. Those are the
+same identification conditions already isolated in Notebook42.
+
+7. THE EXACT SOURCE INPUTS STILL TO VERIFY
+
+For one fixed-radius marked input, smooth chart Taylor formulas give
+the required L and Q jets from a finite number of derivatives of W
+and Phi, with constants depending on that FIXED radius. In particular
+Q_ab and its first x-gradient may use higher derivatives of W; they
+must be bounded explicitly, not inferred from W's Hessian alone.
+Uniform local fluctuation moments pay polynomial x factors without
+powers of the logarithmic cutoff. This is a finite-order preparation
+problem and can be approached with shell/local-response decompositions
+rather than a full analytic activity norm.
+
+The actual-source obligations are now precise:
+
+  (a) Uniform real convexity and the weighted Hessian condition (1.3)
+      for the true conditional integrand along all required real
+      interpolations, with its independent retained variables.
+
+  (b) The local jet decompositions through two B derivatives and one
+      x-gradient in (3.2)--(3.4), including the ACTUAL background-dependent
+      retained Gaussian precision and its derivatives. Norm conversion
+      must account for birth supports, refinement, and running radii.
+
+  (c) The O(g) bound for V_g and its first two B jets in the normalized
+      local moment norm. The printed E_0 bound on a radius of order
+      g(log g^-2)^q does not establish it: a fluctuation derivative
+      incurs g/r, and higher inherited jets can give only inverse-log
+      gains. Renormalization removes the Maxwell coefficient, not
+      all higher jets. A fixed-radius regular part plus separately
+      controlled small marks is one possible source representation.
+
+  (d) Propagation of these finite-order norms along the actual descendant
+      directions and control of static pullback, or another estimate
+      bounding their sizes for all ages. Theorem3 proves the one-step
+      projected response once those input norms are known. It does not
+      replace their iterated stability by assumption.
+
+      There is a real derivative mismatch: the stated full Q-jet norm
+      can require up to five derivatives of the inserted W, whereas
+      the conclusion controls only its output Hessian. This is NOT a
+      closed C^5-to-C^5 stability theorem. Asking the same method for
+      five output background derivatives would require still higher
+      input jets. A separate propagation argument, analytic-radius
+      mechanism, or directly bounded actual descendant family is needed.
+
+  (e) The same source map, gauge/trace conventions, local thermodynamic
+      limit, and coefficient normalization used in Notebook41/42.
+
+Thus the REAL-TO-SECOND-BACKGROUND-DERIVATIVE step is proved under explicit
+real local hypotheses. It no longer requires a separate complex-norm
+upgrade. Actual marked-history closure and full four-dimensional
+existence remain open until the source verification and propagation
+above are completed.

@@ -1,0 +1,259 @@
+INDEPENDENT MIXED-PATTERN CHESSBOARD PROOF -- TURN67
+20 October 2026. history47.
+Status: frozen independent proof and producer-specific audit PASS.
+
+INPUTS
+
+Use the ACTUAL finite-spatial Hamiltonian ground law mu=Omega^2 dU
+from hamiltonian_marked_derivative_turn67.txt. Its Section3 establishes
+invariance and reflection positivity for each spatial site plane by
+the finite anisotropic Wilson conditional-square argument, followed
+by the two fixed-spatial-lattice ground-state limits.
+
+Let the even spatial periods N_i be divided into tile lengths l_i>=2
+with M_i=N_i/l_i=2^(k_i). Write K=product_i M_i=n/V_B.
+All functions below read only links in the strict interior of the
+tile. Therefore a reflection plane through a tile boundary never
+cuts one of their read sets. No conditional independence of the
+tile functions or of the ground law is used.
+
+1. CANONICAL REFLECTED PLACEMENTS
+
+In one coordinate, place the base interval[0,l] into tile b by
+
+ T_b(u)=b l+u                 if b is even,
+ T_b(u)=(b+1)l-u              if b is odd.
+
+Take the product map in all three coordinates, including the
+induced link orientation reversal/inversion. Denote the resulting
+placement of a scalar block function f by theta_b f.
+
+Reflection R across the site plane x_i=j l_i maps tile index b_i
+to2j-b_i-1 modulo M_i. If M_i>=2 it is even, so this reflection
+reverses its parity and
+
+             R(theta_b f)=theta_(R b) f                 (1.1)
+
+exactly. Thus a finite alphabet of block functions is closed under
+all half-board reflections: they permute the labels and do not
+create new types of function. Coordinates with M_i=1 need no
+reflection or dissemination.
+
+This orientation convention is relevant for general block
+functions. For the nonnegative plaquette action and its bad
+events, the reflected version is also their literal reflected
+geometric copy.
+
+2. MIXED-PATTERN THEOREM
+
+For bounded nonnegative base-block functions f_1,...,f_r define
+their full dissemination values and norms by
+
+ Z_l=E_mu product_(b in board) theta_b f_l,
+ a_l=Z_l^(1/K).
+
+For every assignment of a label alpha_b in{1,...,r} to each tile,
+
+ E_mu product_b theta_b f_(alpha_b)
+                         <=product_b a_(alpha_b).       (2.1)
+
+PROOF, positive functions first.
+Assume f_l>=epsilon>0. Put g_l=f_l/a_l; their disseminated
+expectations are exactly1. For a label pattern alpha define
+
+                   Z(alpha)=E_mu product_b theta_b g_(alpha_b).
+
+The alphabet and board are finite, so a maximizing pattern exists;
+write M=max_alpha Z(alpha)>0. Fix any site reflection along a
+tile boundary. Separate the maximizing product into its two
+closed-half products, called A and theta B. Neither product
+reads the plane-boundary links, by strict interior.
+
+Reflection positivity and Cauchy--Schwarz give
+
+ M^2=|E_mu A theta B|^2
+       <=(E_mu A theta A)(E_mu B theta B)
+       <=M^2.                                           (2.2)
+
+Both factors on the right are expectations of allowed label
+patterns, by(1.1), so each is at most M. Since M>0, equality of
+the endpoints forces BOTH reflected-half patterns to attain M.
+Consequently reflecting EITHER half of a maximizing pattern
+onto the other half preserves maximality.
+
+Take the label at tile0 in such a pattern. Reflect the half
+containing it across the right boundary of that tile. It now
+occupies two adjacent tiles along direction1. Reflect the half
+containing that pair across its right boundary, then continue.
+At every stage the uniform-label rectangle in that direction
+has width at most N_1/2; hence it lies in the chosen closed half.
+The dyadic lengths make it possible to double until it fills
+direction1. Repeat in directions2 and3. Every operation
+preserves the maximal expectation by(2.2). The final pattern
+has the chosen label on the entire board, so its expectation
+is exactly1 by normalization. Therefore M=1.
+
+Undoing the normalization proves(2.1) for positive functions.
+For merely nonnegative bounded functions replace every f_l
+by f_l+epsilon. Apply the result and let epsilon down to0.
+Bounded convergence passes both the mixed expectation and the
+full dissemination norms to their limits. This also handles
+zero dissemination norms without dividing by zero.
+
+This proof establishes the multipoint inequality itself.
+It does not infer it from a series of unrelated one-function
+bounds, which would not be sufficient.
+
+3. ACTUAL JOINT ACTION MOMENTS
+
+Let S_b be the reflected copy of the strict-interior tile action
+S_B. For any0<=t_b<2, apply(2.1) to the finite alphabet
+f_b=exp(t_b S_B/g^2). The copies of the strict-interior plaquettes
+are disjoint and their union is a subset of all plaquettes.
+The actual global MGF from the producer therefore gives
+
+ log E_mu exp[sum_b t_b S_b/g^2]
+       <=sum_b (9V_B/2) artanh(t_b/2).                   (3.1)
+
+Indeed each dissemination is bounded by E_mu exp(t_b S/g^2),
+whose logarithm is at most(9n/2)artanh(t_b/2), and the K-th
+root replaces n by V_B. This is a simultaneous MGF inequality,
+not factorization of the joint distribution.
+
+4. JOINT BAD-BLOCK BOUND
+
+For thresholds r_b>=0 and A any set of distinct tiles, let
+
+                  B_b={S_b/g^2>=r_b}.
+
+For any t_b in[0,2),
+
+ P_mu(intersection_(b in A) B_b)
+ <=exp[-sum_(b in A)
+           {t_b r_b-(9V_B/2)artanh(t_b/2)}].             (4.1)
+
+This follows either from(3.1) and Markov's inequality or from
+(2.1) applied to the corresponding indicator alphabet, with
+the remaining tiles assigned the constant function1.
+The bound can be capped at1. Optimizing each parameter separately
+is legitimate; no independence has been asserted.
+
+In particular for t_b=1 and a common threshold r,
+
+ P_mu(intersection_(b in A) B_b)
+               <=[exp(-r)3^(9V_B/4)]^(|A|).             (4.2)
+
+The scale here is a fixed tile in current lattice units. Its
+dependence on V_B is retained, and this is the original ground
+law at that spatial cutoff, not its deterministic flow pushforward.
+It does not by itself bound derivative-weighted bad blocks.
+
+AUDIT BOUNDARY
+
+This closes the logical gap between the one-function dissemination
+and the mixed-pattern estimate for the stated geometry and law.
+The actual-site-RP proof is essential. Merely having a one-block
+MGF, or even all one-function dissemination bounds without the
+underlying reflection-positive pairing, would not justify(2.1).
+No claim is made for arbitrary nondyadic periods or for a
+nonlinear-flowed law not known to retain spatial RP.
+
+5. CLOSED-TILE EXTENSION: SHARED BOUNDARY LINKS ARE ALLOWED
+
+The same multipoint proof applies to functions reading the CLOSED
+tile. The two half-products in(2.2) can then share links lying in
+the reflection planes. This is allowed by the actual site-RP
+proof: condition on these links first, and the two conditional
+half integrals are functions of the common boundary record.
+Their pairing is an integral against the same positive boundary
+weight; Cauchy--Schwarz remains valid. Reflecting one half simply
+duplicates its boundary dependence, exactly as the corresponding
+allowed reflected label pattern does. No boundary variable is
+integrated twice and no product-law assertion is being used.
+
+Let S_B^cl contain every plaquette whose vertices lie in the closed
+tile. In three spatial dimensions each plaquette varies in two
+coordinate directions. In either varying direction its unit
+edge interval belongs to only one tile interval. Its third
+coordinate can lie on a tile boundary and then allow two tiles.
+Therefore, including the induced periodic identifications,
+
+              S<=sum_b theta_b S_B^cl<=2S.              (5.1)
+
+The bound is also valid if a coordinate has only one tile.
+In particular every plaquette is covered; seams are not omitted.
+This overlap changes the useful MGF radius to0<=t<1:
+
+ log E exp[sum_b t_b S_b^cl/g^2]
+              <=sum_b (9V_B/2)artanh(t_b).              (5.2)
+
+For distinct tiles A and threshold r,
+
+ P(for every b in A: S_b^cl/g^2>=r)
+             <=[3^(9V_B/4)exp(-r/2)]^(|A|),             (5.3)
+
+using t_b=1/2. The constant in brackets may be capped at1.
+These are genuine simultaneous bounds under the unflowed
+Hamiltonian ground law.
+
+6. CLUSTER AND PHYSICAL-DIAMETER CONSEQUENCE
+
+Give the block board any fixed bounded-degree adjacency in which
+one step moves by at most C_B tile diameters; face or touching
+adjacency both suffice. Let its degree be at most D_B and
+q denote the bracket in(5.3). The number of rooted connected
+k-tile sets is at most A_D^k for a numerical A_D depending only
+on D_B. For example ordered rooted tree enumeration supplies a
+conservative A_D=4 max(1,D_B), enlarged if necessary.
+
+A bad component at a given root with at least k vertices contains
+a connected k-subset through that root. The simultaneous bound
+and a union bound consequently give
+
+ P(root bad component has size>=k)<=(A_D q)^k.           (6.1)
+
+A component of physical torus diameter at least d_*>0 requires
+at least c d_*/(a max_i l_i) vertices: a connected k-vertex set
+has a spanning tree of k-1 adjacency edges, each of bounded
+physical length C_B a max_i l_i. If the tile lengths and q are
+fixed with A_D q<1, union over all K=O(a^-3) roots proves
+
+ P(any bad component has physical diameter>=d_*) ->0.    (6.2)
+
+This is a statement about spatial bad-action blocks in Omega^2.
+It is not a statement of stochastic domination, conditional
+independence, a physical observable variance floor, or control
+of the derivative-weighted flowed law.
+
+7. FINAL PRODUCER-SPECIFIC AUDIT
+
+Read work/hamiltonian_bad_clusters_turn67.txt, Sections1--6,
+including the explicit even-period repair in Section1.
+Reviewed mathematical-version SHA256:
+F56F3875AD827EA61D50C19092C3AF2DDBADCC78A9F4565A05309DE4E8C4D1CD.
+
+PASS. Its normalized-maximizer argument agrees with the independent
+proof above. The closed-tile set convention correctly collapses
+periodic duplicates. Formula(4.2) uses t_b/(2g^2), so its radius
+0<=t_b<2 and its q_closed exponent -L^2/2 agree with(5.2)--(5.3).
+Clipping individual rare-event factors at1 is legitimate by omitting
+those events and using monotonicity before applying the product bound.
+
+The producer's sharper count D^(2(k-1)) is valid: a fixed canonical
+spanning tree followed by depth-first traversal gives a length2(k-1)
+walk whose visited set is exactly the original connected set.
+Different vertex sets therefore have different walks. The resulting
+q(D^2 q)^(k-1), its geometric-series moment formulas, the all-count
+Laplace comparison, and the whole-volume factor K_board all check.
+
+With k_a=ceil[(4/c0)log(1/a)]+1 and K_board<=C a^-3, the upper
+probability is O(a). The physical diameter of a connected union
+of fewer than k_a closed tiles is O(l_max a k_a), including the
+individual tile diameters. This tends to zero. The logarithmic
+coupling example g_a^2 comparable to1/log(1/a) indeed has
+g_a^2 log(1/g_a)^2->0 and q_closed->0.
+
+The scope is precise: the events are actual unflowed ground-law
+action events, not native RG history labels; the proof gives
+neither a conditional domination statement nor derivative-weighted
+flow control. No further correction requested.

@@ -1,0 +1,469 @@
+AN EXACT QUADRATIC TEMPORAL-INCREMENT BOUND -- TURN65
+20 October 2026. tail47.
+
+RESULT AND LIMIT
+
+There is a new quadratic estimate for the ORIGINAL finite-volume SU2
+Wilson law. It retains its complete partition denominator and arbitrary
+time-independent, real gauge-invariant spatial action. Write a spatial
+link as U_e=u_e^0 I+i sum_(c=1)^3 u_e^c sigma_c, so u_e is in S^3.
+Use the actual temporal links on one slab to align the next spatial
+slice V with the present slice U; denote the aligned quaternion by
+v_e^h. For deterministic real vectors b_e in R^4,
+
+ E exp[sum_e b_e.(u_e-v_e^h)]
+      <= exp[(1/2)sum_e |b_e|^2/beta_e].                 (0.1)
+
+The expectation is normalized by the full original Wilson partition
+function. In particular, for deterministic matrices A_e:R^4->R^r,
+
+ E |sum_e A_e(u_e-v_e^h)|^2
+                    <= sum_e ||A_e||_HS^2/beta_e.      (0.2)
+
+Thus a sum of squared coefficients, with no number-of-links factor,
+is available for fixed ambient linear coordinates. Neither the
+time spacing nor the spatial action has been approximated.
+
+The actual nonlinear magnetic observable is not yet attached to this
+estimate. Its Jacobian is a function of the field; replacing A_e by
+that Jacobian is invalid. Section4 proves a bounded, gauge-invariant
+observable class to which (0.2) does apply exactly. Section5 explains
+the remaining magnetic issue, including why raw gauge-variant
+coordinate covariance is not a physical magnetic covariance.
+
+Section6 also proves the electric-only Haar Dirichlet comparison
+with constant 2/beta. Section7 gives an exact analytic positive-transfer
+counterexample to transporting that inequality as an equilibrium-
+weighted local-gradient bound through arbitrary spatial multiplication.
+The counterexample is not asserted to have the homogeneous Wilson
+spatial potential. It rules out a purely positive-kernel/ground-state
+argument that ignores that potential.
+
+1. INPUTS, NORMALIZATION AND ACTUAL TEMPORAL ALIGNMENT
+
+I read current_proof_frontier.txt (TURN64) and
+transfer_matrix_witness_turn64.txt. The transfer factorization is the
+same actual pure-gauge factorization used there:
+
+ M. Luscher, Construction of a selfadjoint, strictly positive transfer
+ matrix for Euclidean lattice gauge theories, CMP54(1977),283--292,
+ DOI https://doi.org/10.1007/BF01614090.
+ SectionII.A (9)--(10), SectionII.B (17),(20)--(23), Proposition1,
+ printed p288, and SectionII.C (24)--(26).
+
+The primary factorization and trace identification, not any claim
+that -log T is a differential operator, are the imported facts.
+All new inequalities below have direct proofs.
+
+Let E be the finite spatial edge set; all Haar measures, including
+the site gauge average, are normalized. Fix beta_e>0, a real bounded
+gauge-invariant spatial potential V_sp, and
+
+ M(U)=exp[-V_sp(U)/2].
+
+The ordinary homogeneous, or orientation-dependent, Wilson spatial
+potential is included. It must be the same at every time slice for
+the positive remainder T^(N-1) used below. Take periodic temporal
+length N>=4, and ordinary nondegenerate periodic spatial geometry.
+
+For W=w0 I+i w.sigma, set h(W)=1-w0. With normalized SU2 Haar,
+
+ c(beta)=int exp[-beta h(W)]dW
+        =2 exp[-beta] I_1(beta)/beta,
+ q_beta(W)=exp[-beta h(W)]/c(beta).
+
+For quaternions u,v in S^3,
+
+ Tr(UV^-1)/2=u.v,
+ h(UV^-1)=|u-v|^2/2,
+ q_beta(UV^-1)=exp[-beta|u-v|^2/2]/c(beta).            (1.1)
+
+The normalized electric operator Q is the tensor product of these
+convolutions. P is the orthogonal projection onto the gauge-invariant
+subspace. Q and M commute with P. On the full slice space, use
+
+ T=M Q P M=P T P.
+
+On the physical space it is M Q M. It is positive and trace class
+for finite volume. The exact Wilson partition function is
+
+ Z_W=[product_e c(beta_e)]^N Tr_phys(T^N).             (1.2)
+
+On a selected temporal slab, the integrated temporal links implement
+the site gauge element h. With one consistent orientation their
+electric factors are q_beta_e(U_e (V^h)_e^-1). Reversing the convention
+for h only changes variables in normalized Haar. The increment in
+(0.1) is precisely u_e-v_e^h, not an increment between two independently
+chosen gauge representatives.
+
+2. A GAUSSIAN FOURIER KERNEL INEQUALITY ON (S^3)^E
+
+This section uses only (1.1); it does not use character monotonicity
+or a small-angle approximation.
+
+For deterministic b=(b_e), put
+
+ B(b)=sum_e |b_e|^2/beta_e,
+ z_b(u,v)=sum_e b_e.(u_e-v_e),
+ Q_b^+(u,v)=Q(u,v) cosh z_b(u,v),
+ Q_b^0(u,v)=Q(u,v) cos z_b(u,v).
+
+These are real self-adjoint continuous-kernel operators. Q_b^+ is
+not assumed to be a positive operator, despite its positive kernel.
+As quadratic-form inequalities on the full slice L2 space,
+
+ Q_b^+ <= exp[B(b)/2] Q,                              (2.1)
+ Q_b^0 >= exp[-B(b)/2] Q.                             (2.2)
+
+Proof. Regard a slice as the compact submanifold (S^3)^E of
+R^(4|E|). Apart from the fixed positive normalization in (1.1),
+the kernel is
+
+ k(x-y)=exp[-(1/2)sum_e beta_e |x_e-y_e|^2].
+
+Its ambient Fourier transform is a strictly positive Gaussian.
+Multiplication by cosh[b.(x-y)] changes this transform to
+
+ exp[B(b)/2] khat(xi)
+        cos[sum_e b_e.xi_e/beta_e].
+
+The cosine is at most1. Multiplication by cos[b.(x-y)] instead changes
+it to
+
+ exp[-B(b)/2] khat(xi)
+        cosh[sum_e b_e.xi_e/beta_e],
+
+which is at least exp[-B(b)/2] khat(xi). For any complex L2 function
+f on the compact slice, f times its Haar measure is a finite complex
+measure on the ambient Euclidean space. Fourier inversion evaluates
+each quadratic form as the integral of the displayed Fourier
+multiplier against the nonnegative squared modulus of the Fourier
+transform of that measure. This proves both inequalities.
+Gaussian integrability justifies inversion and the finite measure
+justifies all exchanges. No ambient Lebesgue density is required.
+
+This argument permits signed/complex test functions. It is therefore
+an operator inequality, not just an estimate for a product of positive
+endpoint weights.
+
+3. THE FULL WILSON DENOMINATOR AND THE NONCOMMUTING GAUGE PROJECTION
+
+Q_b need not commute with P. This commutation is not used.
+
+For any scalar insertion s(u,v) in the aligned one-slab electric
+kernel, let Q_s have kernel Q(u,v)s(u,v). Its exact original-law
+numerator, after removing the same constants as in (1.2), is
+
+ Tr[M Q_s P M T^(N-1)].
+
+Set
+
+ R=M T^(N-1) M.
+
+Then R>=0, it is trace class, and R=P R P because M commutes with P
+and T=P T P. Cyclicity therefore gives
+
+ Tr[M Q_s P M T^(N-1)]
+       =Tr[Q_s R]
+       =Tr[(P Q_s P)R].                              (3.1)
+
+Thus the extra projection can be inserted inside the trace. There
+is no assertion that a noninvariant source commutes with P.
+For s=1 the denominator is Tr[Q R]=Tr[T^N]>0.
+
+The kernel of R is real symmetric. The antisymmetric part of
+exp[z_b(u,v)] is sinh z_b, so its trace against R is zero. Equivalently
+the aligned increment law is symmetric under exchanging its endpoints.
+Using (2.1)--(2.2) against the positive operator R in (3.1) gives
+
+ E exp[Z_b]=E cosh[Z_b]<=exp[B(b)/2],                  (3.2)
+ E sin[Z_b]=0,
+ E cos[Z_b]>=exp[-B(b)/2],                            (3.3)
+
+where Z_b=sum b_e.(u_e-v_e^h). These are the fully normalized original
+Wilson expectations, proving (0.1).
+
+Since Z_b is bounded at finite volume, replace b by t b and compare
+the even Taylor expansions at t=0. They have the same constant and
+zero linear term. This yields
+
+ E Z_b=0,      E Z_b^2<=B(b).                         (3.4)
+
+This second-order comparison is justified by the even zero-source
+normalization; it does not differentiate a generic moment-generating
+upper bound to infer all higher mixed moments. Applying (3.4) to
+the rows of A proves (0.2). Chernoff also gives
+
+ Pr(|Z_b|>=r)<=2 exp[-r^2/(2B(b))]                    (3.5)
+
+when B(b)>0. If B(b)=0 then Z_b=0.
+
+The new estimates hold for one temporal slab with arbitrary
+deterministic simultaneous sources there. A product of different
+non-self-adjoint exponentially tilted kernels on multiple slabs
+has not been controlled here. The independent TURN64 energy theorem
+does control its own different, real plaquette-energy sources on
+arbitrary slabs.
+
+4. AN EXACT BOUNDED GAUGE-INVARIANT OBSERVABLE CONSEQUENCE
+
+Let A_e:R^4->R^r be deterministic, and let Phi:R^r->R be bounded
+and globally Lipschitz with constant L_Phi. More generally it suffices
+to have this Lipschitz property on all attained arguments together
+with0, the latter needed for(4.4). Define
+
+ Z_A(U)=sum_e A_e u_e,
+ F_A(U)=int Phi[Z_A(U^g)] dg,                         (4.1)
+
+where dg is normalized Haar on the spatial site gauge group.
+F_A is a bounded continuous gauge-invariant slice observable.
+
+Then for the original Wilson law,
+
+ (1/2)E[(F_A(V)-F_A(U))^2]
+            <=(L_Phi^2/2)sum_e ||A_e||_HS^2/beta_e.  (4.2)
+
+Proof. Gauge invariance permits replacing V by V^h, with the same
+actual temporal alignment as above. For every pair U,V^h, use the
+same integration variable g in the two gauge averages and Jensen:
+
+ |F_A(U)-F_A(V^h)|^2
+  <= L_Phi^2 int |sum_e A_e(u_e^g-(v_e^h)^g)|^2 dg.
+
+Left and right multiplication of a quaternion by unit quaternions
+give an orthogonal real4x4 matrix O_e(g). For each fixed g, the
+coefficients A_e O_e(g) are deterministic and have the same
+Hilbert--Schmidt norms as A_e. Equation(0.2), followed by integration
+over g, proves (4.2).
+
+For a complex-valued Phi, the same statement holds with modulus
+squared, using its Euclidean Lipschitz constant. The centered
+spectral witness in TURN64 uses the stated real case.
+
+This is an exact class of physical, bounded original observables.
+It does not claim that gauge averaging leaves a proposed weak-field
+magnetic signal intact. In particular it supplies no nonzero
+cutoff-uniform variance. The nonlinear spatially flowed magnetic
+observable has not been represented by (4.1) with coefficients and
+Lipschitz constant having the required physical scaling.
+
+There is an exact limitation of certifying this ridge class solely
+by making the right side of(4.2) small. Suppose E consists of distinct
+positively oriented edges in a graph with no loops or parallel edges,
+as for the present nondegenerate periodic lattice. For fixed U,
+independent site Haar integration gives
+
+ int u_e^g dg=0,
+ int (A_e u_e^g).(A_f u_f^g)dg=0  if e!=f,
+ int |A_e u_e^g|^2 dg=||A_e||_HS^2/4.                 (4.3)
+
+For different edges there is an endpoint belonging to just one of
+them; integrating that site's gauge element proves the cross-term
+identity. For a single edge its transformed quaternion is uniform
+on S^3, with covariance I_4/4. Consequently
+
+ sup_U |F_A(U)-Phi(0)|
+            <=(L_Phi/2) sqrt[sum_e ||A_e||_HS^2],
+ Var_mu(F_A)<= (L_Phi^2/4)sum_e ||A_e||_HS^2          (4.4)
+
+for EVERY probability mu on the original links.
+
+For homogeneous beta, making the right side of(4.2) at most C a
+by imposing L_Phi^2 sum||A_e||_HS^2<=2 C a beta also
+forces Var_mu(F_A)<=C a beta/2. Along logarithmic beta, or more
+generally a beta->0, that variance vanishes. With differing beta_e,
+replace beta in this conclusion by max_e beta_e.
+
+Thus shrinking deterministic ridge coefficients to obtain the
+desired temporal bound by(4.2) does not also give a nontrivial
+fixed-scale witness. This limits that sufficient certification,
+not every ridge observable or a smaller actual increment obtainable
+by other cancellations.
+
+5. WHAT THIS DOES AND DOES NOT DO FOR A MAGNETIC PROBE
+
+In the canonical linear spatial-heat curl benchmark, Pauli/2 angle
+coefficients c_e obey
+
+ sum_e c_e^2 <= C a/(g_*^2 s^(5/2))                   (5.1)
+
+at fixed physical spatial flow time s>0. Near identity, the imaginary
+quaternion coordinate is theta/2+O(|theta|^3). For a deterministic
+linear quaternion surrogate with the corresponding factor2 in its
+coefficients, (0.2) has the desired quadratic scaling O(a/beta).
+The factor2 is mandatory if translating the Pauli/2 angle convention.
+
+This is a scaling diagnostic, not an estimate for the original
+nonlinear magnetic field. There are three distinct issues.
+
+(i) On an unfixed ordinary gauge graph, covariance between many
+different raw quaternion link coordinates already vanishes by
+independent site gauge symmetries. The bound for their deterministic
+linear combinations is not a covariance estimate for colors
+transported to a common physical frame. It remains a useful exact
+kernel bound, including after a fixed linear embedding, but physical
+gauge-covariant derivatives involve field-dependent frames.
+
+(ii) A path expansion of a flowed field difference contains
+
+ int_0^1 sum_e D_e X(U_r)[velocity_e] dr.
+
+D_e X(U_r) is random and correlated with the aligned increment.
+Equations(0.1)--(0.2) cannot be applied with those coefficients.
+Nor is U_r distributed by the original Wilson law. The original
+TURN64 weighted-geodesic inequality remains valid, but none of the
+new Fourier algebra removes these dependencies.
+
+(iii) The Haar Dirichlet estimate in Section6 does not automatically
+transfer into an equilibrium-weighted local-gradient bound after
+spatial multiplication. Section7 gives a sharp counterexample to
+that specific inference. It does not refute every possible estimate
+using uniform gradient suprema. Controlling nonlinear Jacobian
+variation, or deriving a model-specific conditional quadratic
+estimate with the actual spatial potential retained, remains
+necessary for the proposed magnetic attachment.
+
+Even the adjacent increment bound, once obtained, would have to be
+paired with a lower variance at the fixed physical calibration
+g_*. Sending the calibration to the vanishing bare coupling cannot
+silently supply a nontrivial fixed-scale witness.
+
+6. A SEPARATE EXACT HAAR ELECTRIC DIRICHLET COMPARISON
+
+For completeness there is a genuine quadratic local-gradient
+comparison for the unsandwiched electric convolution itself.
+Use the left invariant Pauli/2 derivatives D_(e,c), so the spin-j
+Casimir is j(j+1). For every F in H1 of the slice Haar space,
+
+ <F,(I-Q)F>_Haar
+   <= sum_e (2/beta_e) sum_c ||D_(e,c)F||_Haar^2.     (6.1)
+
+Proof. Write U=exp(i theta n.sigma). In spin j,
+
+ chi_j(U)/(2j+1)=(2j+1)^-1 sum_(m=-j)^j cos(2m theta).
+
+For every integer k, 1-cos(k theta)<=k^2(1-cos theta).
+Since 2m is an integer and the mean of m^2 is j(j+1)/3,
+
+ 1-chi_j(U)/(2j+1)
+            <=(4/3)j(j+1)h(U).
+
+Integrating against q_beta and using the directly proved TURN64
+bound E_q h<=3/(2 beta) gives
+
+ 1-I_(2j+1)(beta)/I_1(beta)<=2j(j+1)/beta.             (6.2)
+
+The positive electric eigenvalues lie in(0,1]. Thus
+1-product_e r_(j_e)<=sum_e(1-r_(j_e)). Peter--Weyl
+and the Casimir identity prove (6.1), first on finite sums and
+then on H1 by spectral approximation.
+
+In particular (6.1) is the adjacent increment estimate for the
+Haar stationary electric process. Its gauge-invariant restriction
+also describes the constant-M ground-state case. It has not been
+identified with the finite-period physical slice marginal for
+M=1, which can have a nonconstant diagonal gauge-projected density.
+It also does not pass unchanged through arbitrary nonconstant M.
+
+7. AN EXACT OBSTRUCTION TO A WEIGHTED-GRADIENT SHORTCUT
+
+The following counterexample concerns the proposed inference
+
+ positivity of Q and M, plus the electric bound(6.1)
+   => d(F) <= C_beta E_pi sum_c|D_c F|^2             (7.1)
+
+with C_beta independent of the spatial multiplication. This
+inference is false, even with analytic positive multipliers and
+a bounded analytic gauge-invariant observable.
+
+Work on a single SU2 loop with conjugation as its residual gauge
+group. Fix beta>0, keep the actual Wilson electric q_beta, and put
+
+ psi_k(U)=cosh(k u0)/int cosh(k w0)dW,
+ a_k(U)=(Q psi_k)(U),
+ M_k(U)=sqrt[psi_k(U)/a_k(U)],
+ Omega_k(U)=sqrt[psi_k(U)a_k(U)].
+
+All these functions are positive, real analytic and conjugation
+invariant. For each finite k, M_k and its inverse are bounded.
+Set T_k=M_k Q M_k. Then
+
+ T_k Omega_k=Omega_k.                                 (7.2)
+
+Its ground-state transform is the Markov kernel
+
+ P_k(U,dV)=q_beta(UV^-1)psi_k(V)dV/a_k(U),             (7.3)
+
+with reversible invariant probability
+
+ pi_k(dU)=psi_k(U)a_k(U)dU/D_k,
+ D_k=<psi_k,Q psi_k>.
+
+The transformed Markov operator is an L2 contraction, so1 is the
+largest eigenvalue of T_k. Strict kernel positivity makes it simple.
+The operator is trace class. One may rescale M_k by a scalar to
+have M_k<=1 and hence a nonnegative spatial potential; this changes
+no normalized ground-state law or increment below.
+
+Take the analytic class function F(U)=u0=Tr(U)/2. As k->infinity,
+psi_k dU converges to (delta_I+delta_(-I))/2. Write
+
+ q_+=q_beta(I)=1/c(beta),
+ q_-=q_beta(-I)=exp[-2beta]/c(beta).
+
+By continuity of q_beta,
+
+ D_k -> (q_++q_-)/2,
+ Var_pi_k F ->1,
+ d_k(F):=(1/2)int pi_k(dU)P_k(U,dV)[F(U)-F(V)]^2
+        -> 2q_-/(q_++q_-)
+         = 2/(exp[2beta]+1)>0.                        (7.4)
+
+On the other hand, in the same Pauli/2 convention,
+
+ sum_c |D_c F(U)|^2=(1-u0^2)/4.
+
+Since q_min<=a_k<=q_max and q_min<=D_k<=q_max,
+the expectation of this bounded function under pi_k tends to0:
+
+ E_pi_k sum_c |D_cF|^2 ->0.                           (7.5)
+
+Equations(7.4)--(7.5) disprove (7.1) for every finite C_beta.
+For each k the finite-period transfer law tends to this unique
+ground-state law as N->infinity. Thus an alleged bound uniform
+in temporal period and in M would give the same contradiction.
+The conjugation projection causes no change to these class-function
+ground-state statements.
+
+The counterexample keeps a Wilson electric kernel but chooses a
+different analytic spatial potential. It does not refute a
+comparison that uses specific, quantitatively controlled properties
+of the homogeneous four-dimensional Wilson spatial action.
+
+Its mechanism is concrete: the exact transfer kernel makes a
+positive-probability nonlocal jump between two narrow wells, while
+a local derivative vanishes at both wells. An exact differential
+Hamiltonian has a local double commutator; the logarithm of this
+finite-step transfer matrix cannot be replaced by that local form.
+
+There is no conflict with the new deterministic bound(0.2):
+F=u0 is linear in the ambient quaternion, and(0.2) bounds d_k by
+1/(2beta), using a fixed ambient coefficient, not the arbitrarily
+small equilibrium average of its tangent gradient.
+
+8. CHANGED NEXT MATHEMATICAL ACTION
+
+The normalized Wilson energy estimate is now complemented by an
+exact quadratic aligned-link source inequality. This removes the
+need to estimate such deterministic linear increments by their
+absolute sums. A physical magnetic attachment must nevertheless
+retain the actual nonlinear coordinate/frame dependence.
+
+The precise remaining task is to prove a model-specific estimate
+for that dependence (or exhibit a bounded gauge-invariant
+observable in the class(4.1) with a physical, nonvanishing variance).
+Neither positivity, the Bessel spectral ordering, nor the local
+Haar Dirichlet inequality alone supplies it.
+
+No continuum limit, cutoff-uniform magnetic variance, or complete
+nontrivial YM4 existence theorem is claimed here.

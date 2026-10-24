@@ -1,0 +1,177 @@
+TURN98 -- REAL COUPLING DIFFERENCES: EXACT GAINS AND THEIR LIMIT
+21 October 2026. native98. Scoped auxiliary result; no frontier edit.
+
+RESULT
+
+The real-positive finite-difference route gives exact integrated source
+identities and an elementary mark-absorption bound. It does not remove
+the native old-source entry problem. In fact even a uniformly vanishing
+two-source INTERACTION pressure, with all separate-source terms canceled,
+does not bound its mixed two-jet at the baseline. Section 3 proves this
+with compact positive marks and a positive smooth density. The mixed
+covariance is nonnegative at EVERY real source in that example, so an
+additional association/monotonicity premise would not repair the issue.
+
+This is a diagnostic of an inference, not a Wilson-theory counterexample.
+The more promising real estimate currently being developed separately in
+TURN98 is an actual full-Wilson averaged exterior-response identity.
+
+1. VERIFIED NATIVE SCOPE
+
+Read current_proof_frontier_turn97.txt; turn83_native_action_history.txt;
+turn95_local_sources.txt; turn95_source_extension.txt; primary Large-II
+local text pages25--26 (printed379--380), especially (1.71)--(1.75); and
+the opening quantitative statement of the repository's RRO1 text.
+
+The original additive coupling deformation is exact:
+
+ Z(s,t)=int exp[-beta sum_p h_p+s S_f+t S_g] dHaar,
+ S_f=sum_p f_p h_p, h_p=1-Tr(U_p)/2.
+
+At a fixed finite regulator, partial_s partial_t log Z is the original
+normalized Cov(S_f,S_g). Keeping the transformation and all cuts frozen
+gives that literal old mark. Retuning the unmarked transformation instead
+produces derivatives of its normalized replacement kernels. If an output
+factor is A_s(e)q_s(dy|e), then its density score is
+
+ partial_s log A_s(e)+partial_s log q_s(y|e).
+
+The latter has zero q_s mean, but cannot be discarded against a later
+factor which reads y. This is exactly the already established TURN83
+distinction, retained here rather than rediscovered as a new obstacle.
+
+Large-II printed379--380 controls its analytically extended operator by
+comparison with the REAL positive operator and sup|F| for an insertion F
+in its ACTUAL integration variables. It does not identify an arbitrary
+previously transported original source with that F on every later
+localization contour. The text's small complex exponential perturbation
+also has to be bounded; positivity of the baseline alone does not bound
+that perturbation. No fresh visual verification of these pages is claimed.
+
+TURN95's recorded B109 scope is unchanged: homogeneous scalar marginal
+extraction uses lattice translation invariance and a one-momentum Fourier
+kernel. No inhomogeneous-coupling theorem was found in the primary texts
+actually inspected in this check. RRO1 explicitly imports its marked
+terminal operator bounds; its source identities do not prove those bounds.
+
+2. EXACT POSITIVE MARK ABSORPTION
+
+Let nu be ANY positive finite measure, including a frozen positive
+history-augmented Wilson representation. Let F,H>=0 be the literal old
+marks, and set Z(s,t)=int e^(sF+tH)dnu. For lambda,eta>0 and integers m,n>=0,
+
+ int F^m H^n dnu
+ <= (m/(e lambda))^m (n/(e eta))^n Z(lambda,eta).          (2.1)
+
+A zero exponent has factor1. Proof: x^m exp(-lambda x) is bounded by
+(m/(e lambda))^m on [0,infinity), applied separately to F,H. Division by
+Z(0,0) gives the FULL normalized moment bound. A bounded remaining test T
+costs ||T||infinity on the right. Nothing is replaced by a current mark,
+and neither the reference normalizer nor the original normalizer is lost.
+
+For nonnegative plaquette profiles, the right side is precisely the
+partition function with the specified local inverse couplings decreased
+by lambda f_p+eta g_p. Signed profiles may be dominated using |f|,|g|.
+Thus a sufficiently strong REAL bound on the corresponding absolute mass
+ratio would give finite marked control without complex source discs.
+
+However a physical-support energy contains O(a^-4) microscopic marks.
+Its source-only vacuum/mean terms occur in this mass ratio. Suppression
+of a native raw event and its once-owned polynomial reserve does not
+remove that census. Subtracting a nonlinear local vacuum functional also
+destroys the simple positivity premise used in (2.1). This estimate is
+useful only when the required ratio is independently bounded with its
+correct source calibration and supported census; it is not such a bound.
+
+3. A COMPACT POSITIVE COUNTEREXAMPLE TO THE UNMARKED REAL-PRESSURE SHORTCUT
+
+Take Z,W independent uniform variables on [-1,1]. For n>=2 put epsilon=1/n
+and use the positive probability density
+
+ dmu_n(z,w)=[1+epsilon sin z sin w] dz dw/4.              (3.1)
+
+It lies between 1-epsilon and 1+epsilon times the product probability;
+normalization and unchanged uniform marginals follow by oddness. Define
+the POSITIVE compact marks F_n=n(1+Z), H_n=n(1+W), each in [0,2n].
+
+Write M(u)=E exp(uZ), a(u)=E[exp(uZ)sin Z]/M(u). Direct integration gives
+
+ Z_n(s,t)=exp[n(s+t)]M(ns)M(nt)
+          [1+epsilon a(ns)a(nt)].                      (3.2)
+
+The source-only terms cancel EXACTLY from the interaction pressure
+
+ R_n(s,t)=log[Z_n(s,t)Z_n(0,0)/(Z_n(s,0)Z_n(0,t))]
+         =log[1+epsilon a(ns)a(nt)].                    (3.3)
+
+Since |a(u)|<=sin1<1, for ALL real s,t,
+
+ |R_n(s,t)|<=-log(1-epsilon sin^2 1)<=C/n.               (3.4)
+
+But a(0)=0 and a'(0)=E[Z sin Z]=sin1-cos1=:c>0. Consequently
+
+ Cov_mu_n(F_n,H_n)=partial_s partial_t R_n(0,0)
+                  =epsilon n^2 c^2=n c^2 -> infinity. (3.5)
+
+This is not due to sign oscillation of the covariance. Under the tilted
+one-variable law, a'(u)=Cov_u(Z,sin Z)>0: for independent copies Z,Z',
+twice that covariance is E[(Z-Z')(sin Z-sin Z')], positive off the diagonal
+because sin is increasing on [-1,1]. Therefore at ALL finite real s,t,
+
+ partial_s partial_t R_n(s,t)
+ =epsilon n^2 a'(ns)a'(nt)
+   /[1+epsilon a(ns)a(nt)]^2 >0.                        (3.6)
+
+It is a positive response concentrated in a narrowing real-source region.
+For any fixed r>0, oddness of a yields the exact integrated response
+
+ int_[-r,r]^2 partial_s partial_t R_n ds dt
+ =2 log[(1+epsilon a(nr)^2)/(1-epsilon a(nr)^2)]
+ =O(1/n),                                              (3.7)
+
+despite the divergence at the baseline. Thus uniform control of connected
+real finite differences does give a smeared estimate here, but cannot be
+differentiated to a uniform pointwise mixed jet. The construction is fully
+compact; no Gaussian approximation, truncation limit, complex posterior,
+or unbounded original integration space is used.
+
+The marks' ranges grow with n. This is precisely the regime relevant to
+an unrenormalized sum over an increasing number of microscopic plaquettes.
+This example does NOT assert that Wilson sources realize (3.1), nor rule
+out a model-specific bound supplying the missing source regularity.
+
+4. WHAT A REAL PRESSURE ESTIMATE ACTUALLY PROVES WITHOUT EXTRA REGULARITY
+
+For any finite Wilson regulator and disjoint deterministic source profiles,
+let R(s,t) be its interaction pressure as in (3.3). Then for compactly
+supported smooth real test functions phi,psi,
+
+ int Cov_(s,t)(S_f,S_g) phi(s)psi(t) dsdt
+ =int R(s,t) phi'(s)psi'(t) dsdt.                        (4.1)
+
+If |R|<=K on their support, the absolute value of the LEFT INTEGRAL is
+at most K ||phi'||_1 ||psi'||_1. This is a signed, source-averaged bound;
+without a separately proved sign it is NOT an integral of the absolute
+covariance. If the mixed covariance is nonnegative on a rectangle, its
+integral there is its four-corner pressure difference, bounded by4K.
+
+Equations (3.4)--(3.7) prove that neither statement determines the value
+at a prescribed baseline source. A pointwise bound therefore requires
+additional quantitative source regularity or direct finite-mark estimates.
+For an existence construction at a fixed physical coupling, averaging in
+an artificial source parameter is a changed target unless an independent
+argument recovers the baseline hierarchy and its axioms.
+
+5. ACTIONABLE CONSEQUENCE
+
+Do not spend the next native step trying to deduce marked estimates merely
+by differentiating real unmarked stability. A valid real bypass should
+bound the ACTUAL averaged exterior derivative or covariance in the same
+Wilson law, with a spatial/read census suitable for summation. The current
+TURN98 full-law conditional-score route addresses that concrete object.
+The source finite-difference identity and (2.1) remain useful as checks
+and as positive comparison tools once a sufficiently local mass-ratio
+bound is separately available. They do not close the native old-mark gate.
+
+No claim of a full normalized block/source estimate, cutoff-uniform local
+hierarchy, or continuum existence is made by this auxiliary note.

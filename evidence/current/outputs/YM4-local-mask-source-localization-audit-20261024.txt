@@ -1,0 +1,160 @@
+INDEPENDENT AUDIT: LOCAL HARD MASKS AND ORIGINAL SOURCE LOCALIZATION
+24 October 2026. compiled_source. Scoped PASS.
+Archive, producer and outputs unchanged.
+
+Reviewed local_mask_source_localization_20261024 in full against the
+authoritative local-original-source-entry producer/audit and the
+native first private-pivot read in B119 printed249, (1.14)--(1.16).
+The previously audited complete first weighted-Hessian, containing
+chart and supported-guard estimates are imported at exactly that
+scope. This note checks the new finite argument, its original-mask
+match and its limitations; it does not infer an all-scale theorem.
+
+1. JOINT RARITY IS VALID WITHOUT INDEPENDENCE
+
+The convex product has a uniform Poincare constant under every
+linear tilt because the Hessian is unchanged. Integrating the tilted
+variance inequality twice gives the centered multivariate Gaussian
+moment bound (3). Averaging it against an independent standard
+Gaussian vector on Q yields (4) exactly: the factor is
+(1-2s/lambda)^(-m|Q|/2), not a product-independence assumption.
+At s=lambda/4, the supported-guard mean bound and K>M+3 make the
+simultaneous radial tail at distinct sites exponentially small in
+r^2 times their number.
+
+Each of n failed elementary masks has at least one witnessing site
+in its complete active read. There are at most v^n choices, and
+incidence B ensures at least n/B distinct witnesses. The union bound
+therefore gives rho^n with rho=v exp(-c r^2/B), after one fixed floor.
+No conditional rarity under already failed masks is needed. The
+normalizer is the original finite reference probability nu(D);
+nu(D)>=1-Nrho follows directly and N sqrt(rho)<=1/4 keeps it >=3/4.
+
+2. THE EVENT STANDARD DEVIATION AND SPATIAL ARM CAN COEXIST
+
+For A measurable on x_T, exact conditioning replaces F by
+f_T=nu(F|x_T) in Cov(F,1_A). Complementary integration is over a
+FIXED product, so differentiating with respect to x_j, j in T,
+produces the full normalized score formula (7). There is no indicator
+derivative. The conditional weighted covariance theorem applies on
+every principal complement, including complements with holes.
+The complete mixed Hessian column at j has a bounded exponentially
+weighted l2 norm, giving
+
+ |grad_j f_T| <= L_j+C(sum_(i notin T)L_i^2
+                                      exp(-2eta d(i,j)))^(1/2).
+
+Squaring and summing in j does not introduce |T|. For eta'<eta,
+the lattice shell estimate
+
+ sum_(j in T) exp(-2eta d(i,j))
+       <=C_(eta,eta') exp(-2eta' d(i,T))
+
+is uniform in T and volume. The direct L_j terms have the same
+bound. Apply the Poincare inequality of the FULL law to f_T(x_T),
+then Cauchy--Schwarz with sd(1_A)<=sqrt(nu A). This proves (9).
+It avoids an unproved marginal Hessian assertion and retains both
+the rare-event square root and the spatial arm. Product boundaries
+are handled by the same Lipschitz/Sobolev approximation as in the
+underlying convex-product inequality; measurable events require no
+additional approximation of their boundaries. The empty conditional
+complement causes no difficulty.
+
+3. THE FINITE SUBSET SUM REMOVES ONLY THE DISPLAYED VOLUME COST
+
+Expanding product_j(1-1_Ej) and normalizing gives (10) with the
+displayed sign (-1)^|J|. Bound its covariance by (9) and (6).
+Replacing distance to the union by the sum of distances to its
+members and using
+
+ sum_(J containing j)rho^(|J|/2)
+       =sqrt(rho)(1+sqrt(rho))^(N-1)
+
+gives (11). Bounded incidence then bounds the spatial sum by a
+fixed lattice shell constant times ||L||_1. The resulting (12)
+has no active-volume prefactor, but its assumption N sqrt(rho)
+small is essential and correctly retained. This proof is not
+uniform for an infinite mask product at fixed coupling.
+
+For (13), fix the support envelope H_F and the deterministic order
+by dist(H_F,T_j). If j is the first label of J, then
+dist(H_F,T_J)=dist(H_F,T_j). The L1 version of (9) gives the stated
+arm for every such J. Summing all remaining labels costs at most
+(1+sqrt(rho))^(N-1). Thus the signed one-mark decomposition is
+exact, linear for this fixed order, and annihilates constants.
+The producer correctly does not claim that R_j reads only the
+marked support: its full reference normalizer and integration remain.
+
+4. NATIVE FIRST-STEP ATTACHMENT
+
+The old all-good P0 cube conditions can be refined into their literal
+individual plaquette inequalities without changing their product.
+Identical repeated inequalities are counted once. This is necessary:
+counting the same plaquette once for every large cube would introduce
+an artificial incidence depending on the large native mask size.
+The averaged-gauge conditions similarly split into their actual
+(y,x) contour tests inside a fixed L-block.
+
+B119 printed249 specifies that the private nonlinear correction
+changes only b0(c), while the linear constrained reconstruction C
+uses the other bonds of the two neighboring blocks. Together with
+the audited exact first noisy map, every physical plaquette/gauge
+test has a complete noise read with fixed-L size and fixed-L
+incidence, including all private-pivot inputs. The held background
+and current do not acquire x-dependence here. P1 and unaffected
+tests are exterior-only. There is no use of the later nonlocal
+blocked precision or of an inherited action channel.
+
+The previously proved inclusion B_R^I subset D_C(z) holds on EVERY
+supported guarded exterior. If all coordinates in one elementary
+read lie in B_R, setting the remaining active coordinates to0
+leaves this test unchanged and puts the full vector inside the
+admitted product. This proves the local witness implication (2)
+without differentiating its nonlinear threshold. Empty active reads
+must be passing on the supported exterior, so they are discarded.
+
+The larger B_S reference and its complete action are valid on a
+strict surrounding chart. Its old masks are allowed to fail.
+Conditioning that same reference on D_C gives the ORIGINAL local
+law mu_z, while conditioning on all site bounds B_R gives q_z.
+Applying the finite proof separately and subtracting is therefore
+an exact comparison of those two laws. The original outer weight
+proportional to Z_D remains unchanged. No reference failure is
+silently registered as an original bad-record activity.
+
+5. ORIGINAL PLAQUETTE AND MIXED PRICE
+
+On the entire B_S reference chart, g0S=C_pre epsilon0 and the
+near-flat held background imply |U_p-I|<=C epsilon0. The exact SU(2)
+identity 1-Tr(U_p)/2=||U_p-I||_op^2/2 gives the stated cap.
+For dU_p=iT U_p, Tr T=0, the derivative is
+-(i/2)Tr[T(U_p-I)]. The complete fixed-read noisy map contributes
+Cg0, including its private-pivot derivatives. Thus
+
+ ||F_p||<=C alpha_p epsilon0^2,
+ ||L(F_p)||_1<=C alpha_p g0 epsilon0.
+
+Substitution in (12), first for mu_z-nu_z and then for nu_z-q_z,
+proves (A), with a weaker fixed rarity exponent absorbing sqrt(rho).
+The product rule gives ||L(F_pF_q)||_1 bounded by
+C alpha_p alpha_q g0 epsilon0^3. Subtracting the two exact mean
+products, using their caps, proves both mixed bounds (15).
+These are bounds with the original calibration retained; no
+source-to-source distance or fourth-order age factor follows.
+
+VERDICT AND LIMIT
+
+Scoped PASS for the finite joint rarity, rare-event/spatial covariance
+bound, source-zero one-mark comparison, original first-mask matching,
+and the stated original-source/mixed prices. The gain is a
+volume-independent local source error on polynomial-size admitted
+buffers, subject to N sqrt(rho) small. It is not a cluster/tree
+localization of the entire signed coefficient. The old exterior
+covariance/contact, guard and prior-record complements, later source
+transport and fourth-power density/age requirement remain open.
+
+The newly written remote-prior-defect extension may allow the same
+proof on its certified local records, because affected earlier masks
+are still successes and failed masks have no active read. That is a
+separate possible attachment: this audit's native PASS is confined
+to the global P0=P1=empty entry explicitly used by this producer.

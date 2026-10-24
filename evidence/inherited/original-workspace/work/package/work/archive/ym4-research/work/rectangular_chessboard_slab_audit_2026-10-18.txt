@@ -1,0 +1,422 @@
+RECTANGULAR CHESSBOARD BOUND FOR ONE PLANAR-PACKET CHAIN
+18 October 2026. Working source-consumer proof.
+
+SCOPE: all established chessboard/reflection estimates in this note
+use COORDINATE mirrors. They do not supply tilted-frame slab bounds
+or diagonal RP of a straight periodic-torus thermodynamic limit.
+The latter is an additional open state-selection/shape issue; see
+work/diagonal_torus_state_audit_2026-10-18.txt. In particular a diamond
+tiling of a straight torus does not automatically have the positive
+halfspace decomposition used by the rectangular proof below.
+
+1. SETUP AND THE ORDER OF LIMITS
+
+At each fixed bare spacing epsilon use the SAME source-free running
+coupling sequence and fixed terminal weak band as in the source
+producer. Let ell_cell be a fixed length compatible with every original
+MR_j partition and every coordinate reflection centre. It may depend
+on the fixed stopping band, but not on UV depth, chain length or torus
+volume. The bound and nesting of these physical partition lengths are
+proved in the one-run source note Section16(v).
+
+Consider cubic periodic tori of side 2 ell_cell L^P with P increasing.
+All coordinate reflection planes used below are lattice mirrors. If
+necessary enlarge ell_cell once to meet the source parity/alignment
+convention. Compactness of the compact-group product state space gives
+a subsequential thermodynamic limit of the positive Wilson states at
+this fixed epsilon. Take one diagonal subsequence for all local
+continuous observables; the limit is translation invariant and has all
+finite-local RP inequalities inherited from these periodic states.
+This limit is taken BEFORE allowing arbitrarily long packet chains.
+
+There is a compatible sourced normalization in the same limit. For
+fixed epsilon the number of RG levels is finite. The local universal
+vacuum functions e_j(X;v) are uniformly bounded and holomorphic on
+fixed local source domains; each fixed carrier contains finitely many
+bare source values. Montel compactness and a diagonal subsequence over
+scales and countably many carriers give common limiting coefficient
+functions, simultaneously with the Wilson state. Rooted exponential
+tree bounds make the sum over carriers meeting a fixed compact source
+uniformly convergent. Thus E_UV^infty(v) is the limit of the same
+coherent finite-volume E_UV(v), and
+
+ h(v)=exp[-E_UV^infty(v)] <exp A(v)>_infty.             (1.1)
+
+This selection avoids assuming uniqueness of the thermodynamic state
+or literal ambient-volume independence of every coefficient. Locality,
+reflection covariance, reality and all coefficient bounds pass to the
+limit. The coefficient and state subsequence is fixed once for all
+local sources at this epsilon, not chosen separately for each m.
+
+2. THE RECTANGULAR CHESSBOARD ESTIMATE IS THE SAME RP PROOF
+
+Let C=product_mu[0,d_mu], d_mu=ell_cell L^{p_mu}, and choose P>=max p_mu.
+The cubic torus of side 2 ell_cell L^P is tiled by translated copies of
+C, with counts N_mu=2L^{P-p_mu}. Every N_mu is even; the N_mu need not
+be equal. Let B=product_mu N_mu and V_C=product_mu d_mu.
+
+Coordinate face reflections map this rectangular tiling into itself.
+Their antilinear action on observables conjugates coefficients in odd
+reflection parity. For an observable F supported strictly inside C,
+reflection positivity gives, by repeated reflected Cauchy--Schwarz,
+
+ |<F>| <= <product_{C'} F^[C']>^(1/B).                (2.1)
+
+The expectation on the right is nonnegative. The proof in RawII's
+chessboard-estimate lemma applies literally with N_mu in direction mu:
+normalize a finite array by its chessboard values, take a maximizer,
+and spread one cell's copies successively along each coordinate. A
+reflected maximizer remains a maximizer by Cauchy--Schwarz; the final
+array consists entirely of that cell's chessboard copies and has
+normalized value1. The spreading is a separate one-dimensional even-
+cycle operation in each coordinate. It never equates different N_mu,
+uses a bound on aspect ratio, or replaces C by a containing cube.
+The zero chessboard-value case follows by regularization/continuity.
+Hence there is no dimension or anisotropy constant growing with m.
+
+This is also the standard rectangular-block form: Biskup--Chayes--
+Nussinov, arXiv/math-ph manuscript mp_arc03-445, Section6.1 explicitly
+starts with rectangular V of side lengths a_1,a_2,a_3. The argument
+here is the original gauge-link RP/chessboard proof, not a change of
+model; the extra fourth coordinate is handled by one further fold.
+Primary-source URL: https://web.ma.utexas.edu/mp_arc/c/03/03-445.pdf
+
+3. PUT THE ENTIRE CHAIN IN ONE CELL
+
+Let m>=1 planar packets have width delta, pairwise support separation
+at least c_sep delta, centres along the time direction with consecutive
+distances bounded above and below by fixed multiples of delta. Their
+transverse smear f has fixed compact support, and their other planar
+coordinate stays in a fixed-width delta strip. Thus the whole source
+fits in a rectangular envelope of dimensions
+
+ C(1+m delta), C(1+delta), C_f, C_f.
+
+Choose a fixed physical buffer b>0. The spatial cell sides are fixed
+powers of L times ell_cell, large enough to fit the fixed transverse
+support and planar strip with buffer 2b. Choose the time side as the
+SMALLEST allowed power times ell_cell above chain length+4b. Rounding
+costs at most the fixed factor L, so
+
+ V_C <= C_f,b (1+m delta).                            (3.1)
+
+A common bare-lattice translation places the chain at distance at
+least b from every cell face, provided epsilon is sufficiently small
+compared with b. No translation proportional to the number of torus
+cells is involved. At finite UV the plaquette stencil is also inside
+the open cell when 2epsilon<b. Its source exponential is therefore an
+admissible bounded complex observable for(2.1).
+
+Write w=sum_l z_l f_{l,delta}, where each z_l is either z or conjugate z
+(or is independently in that disc). Disjoint supports and vanishing
+at their boundaries give
+
+ ||w||_infty<=C_f |z|delta^-2,
+ Lip(w)<=C_f |z|delta^-3,                             (3.2)
+
+with NO factor m. Reflected copies vanish on whole face buffers; their
+piecewise union w_ch has exactly the same supremum and Lipschitz
+bounds, again with no number-of-cells factor. For
+
+                  |z|<=c delta^(7/2),                (3.3)
+
+and delta<=delta0, choose c so that (3.2) lies in the fixed W_N ball.
+The actual requirement for this particular step is only O(delta^3);
+(3.3) is the smaller radius needed by the slab route. This uses the
+full local-source CLASS estimate, not a triangle-inequality source
+polydisc sum_l |z_l| ||f_l|| that would introduce m.
+
+4. EXACT BULK VACUUM CANCELLATION AND FACE COST
+
+Use the SAME coefficient family E_UV and its reality/covariance on w
+and w_ch. The normalized source identity and upper/floor stability give
+
+ log |h(w)| <= C V_C + B^-1 Re E_UV(w_ch)-Re E_UV(w).  (4.1)
+
+Here the volume factor is V_torus/B=V_C exactly. No lower bound at a
+nonzero source is needed. If the disseminated expectation vanishes,
+the chessboard estimate already makes the left side trivial.
+
+Partition vacuum carriers into those whose complete read enlargement
+is contained in an open cell and those meeting a cell face. On each
+interior carrier source locality identifies its coefficient with the
+appropriate reflected copy of the coefficient for w. Reflection
+covariance and complex conjugation make their REAL parts identical.
+Their B copies cancel EXACTLY in the difference of(4.1). Empty-source
+cells of w contribute zero. This step uses the universal vacuum
+family, not history-dependent boundary constants factored as scalars.
+
+For a remaining carrier, nonzero source dependence requires that it
+also meet a source packet. The packet-to-face distance is at least b,
+up to the fixed plaquette enlargement. At physical scale a_j this
+forces d_j(X)>=c b/a_j-C. Retain a tree exponent for that distance,
+and use the other exponent for the rooted source tree sum. The number
+of eligible roots per cell is bounded by
+
+ C product_mu(d_mu/a_j+1) <= C V_C a_j^-4,             (4.2)
+
+because all d_mu exceed the fixed coarsest localization length. This
+crude volume count is enough; counting surface area is unnecessary.
+Thus the two face sums in(4.1), after the factor1/B for w_ch, are at
+most
+
+ C V_C sum_j a_j^-4 exp[-c (b/a_j-C)_+] <= C_b V_C.   (4.3)
+
+The scale sequence is geometric and bounded above by the fixed
+stopping scale. The sum converges uniformly as epsilon decreases;
+there is no UV-depth or m factor beyond V_C. Enlarging a carrier by
+a fixed number of cells changes only C. Each crossing carrier is
+assigned to one of its source roots, so (4.2) is an overcount, not an
+assumption that the carrier is contained in the cell.
+
+Combining(3.1),(4.1),(4.3) yields
+
+ |h_m(z,conjugate z)| <= exp[C_f,b(1+m delta)]
+                       <= exp(C' m)                 (4.4)
+
+for m>=1, 0<delta<=delta0, |z|<=c delta^(7/2), uniformly in epsilon
+sufficiently small relative to delta and in all compatible tori.
+The same proof works for independent complex packet coefficients in
+the common SUPREMUM disc; when writing h_m(z,conjugate z), it is the
+restriction of this holomorphic multiparameter function. No claim of
+holomorphy in z of an expression containing conjugate z is made.
+
+5. LIMIT, PLACEMENT AND SCOPE
+
+At fixed epsilon first pass(4.4) to the single selected thermodynamic
+state and its coherent vacuum family from Section1. Compact sources
+have bounded exponential insertions at fixed epsilon, and the local
+vacuum sum convergence was already established. The resulting bound
+holds for EVERY finite m in that one infinite-volume state. One may
+therefore consider arbitrarily long chains after this limit without
+running into a finite torus seam or changing states with m.
+
+If the chain was translated to fit C, h in(4.4) is evaluated for the
+TRANSLATED source using its own counterterm in the same fixed scaffold.
+The original and translated raw expectations agree by Wilson
+translation invariance. Their UV-subtracted h's need not agree.
+For a restored full-moment or positivity argument use the translated
+h together with its OWN mixed UV coefficients, then identify the raw
+expectation with the original one. The uniform source estimates make
+that legitimate; it is not an invariance assertion about E_UV.
+
+The rectangular shape introduces no new source-domain, cell-count,
+reflection-positivity or tree-summation condition beyond those checked
+above. In particular its cost is exp(Cm), not exp(Cm^4). The argument
+supplies the requested normalized remainder bound. Restoring all
+mixed UV coefficients, controlling their chain sum, and deriving the
+operator/spectral or angular consequence are separate steps; this
+note does not infer them from(4.4) alone.
+
+
+6. FIXED ENDPOINT POLYNOMIALS AT FIXED UV -- INSUFFICIENT FOR OPERATOR NORM
+
+AUDIT CORRECTION. The argument in this section only proves a bound
+C_epsilon,P exp(C_P m), because enlarging the rectangle's transverse
+cross-section for an arbitrary endpoint polynomial P changes its
+volume coefficient. Thus (6.5) below is valid only with C=C_P. The
+claim that its exponential rate is independent of P is withdrawn.
+It cannot by itself prove a uniform operator norm. The replacement
+under development uses generalized bare-grid chessboard Holder:
+one fixed-cross-section array cell, endpoint bond factors in other
+closed cells, and their sup norms. See the independent slab note of
+minimal_route for the completed replacement when available.
+
+Add a finite list of endpoint source profiles q_1,...,q_d supported in
+fixed-size regions at fixed offsets from the two ends of the chain.
+Their number, individual norms and support sizes are independent of m;
+the right endpoint may move with the end of the chain. Choose a fixed
+endpoint parameter polydisc |lambda_l|<r_l so that their combined
+sharp norm is at most one reserved fraction of r. Choose the array
+constant c in(3.3) to use another reserved fraction. The whole weight
+w_array+sum lambda_l q_l then belongs to the SAME W_N ball uniformly
+in m. Enlarge the rectangle by fixed endpoint margins if needed:
+
+                 V_C<=C(1+m delta+C_endpoint).        (6.1)
+
+The proof of Sections2--4 consequently gives
+
+ |h(w_array+sum lambda_l q_l)|
+ <=exp[C(1+m delta+C_endpoint)]                     (6.2)
+
+uniformly on that endpoint polydisc, for the same finite-volume and
+thermodynamic-limit coefficient conventions.
+
+At FIXED bare spacing epsilon the difference
+
+ D_end(lambda)=E_UV(w_array+sum lambda_l q_l)
+                                      -E_UV(w_array) (6.3)
+
+has a uniform bound |D_end|<=C_epsilon,end, independent of m, z and the
+volume. By locality only carriers meeting an endpoint support can
+contribute. At each of the FINITELY MANY source scales their rooted
+tree sum is bounded by the fixed number of cells meeting the endpoint
+support times the uniform local vacuum bound. Endpoint locations do
+not enter that count. Sum the finite scale range. This deliberately
+allows the constant to diverge as epsilon->0. It is holomorphic on
+the endpoint polydisc and its bound is uniform there; no separation
+between an endpoint and the array is required.
+
+The exact identity is
+
+ e^-E_UV(w_array) <exp A(w_array+sum lambda_l q_l)>
+                 = exp(D_end(lambda)) h(w_array+sum lambda_l q_l).
+                                                               (6.4)
+
+Apply finite-dimensional Cauchy in the endpoint parameters, not an
+absolute-value replacement of the complex array by its real part.
+It follows for every fixed endpoint polynomial P generated by these
+profiles that
+
+ |e^-E_UV(w_array) <P exp A(w_array)>|
+                         <= C_epsilon,P exp(C_P m).  (6.5)
+
+The array coefficients may alternate z and conjugate z. They are held
+fixed in this Cauchy operation; analyticity is in the independent
+lambda variables. Thus no invalid holomorphy in z/conjugate z is used.
+The polynomial may be a finite sum and may include profiles at both
+ends. At fixed epsilon a general compactly supported lattice-smeared
+finite polynomial can be expressed as a finite polynomial in local
+plaquette variables, so the assertion covers it with an epsilon-
+dependent constant. Translation of an endpoint with its end of the
+chain does not change that constant.
+
+The order of limits in this attempted reflection-doubling argument is:
+fix epsilon and the thermodynamic state, then let the chain length m
+grow so constants C_epsilon,P independent of m disappear under m-th
+roots. Only afterward may epsilon decrease. Interchanging those limits
+would require an additional uniform endpoint estimate and is NOT used.
+Even in the stated order, C_P in the exponential survives the m-th
+root. The generalized chessboard replacement is needed to remove it.
+
+
+7. THE BARE-GRID REPLACEMENT: PRESSURE AND ENDPOINT FACTORIZATION
+
+This records the independently checked ingredients for the replacement
+being assembled by minimal_route. The array lies in one time cell
+[0,mD], with a fixed spatial cross-section determined only by its
+transverse test f. Its first/last packets have c delta face buffers.
+The endpoint polynomial has all its bonds strictly before0 or after
+mD. This is the placement supplied by the positive-time endpoint
+vectors in the reflection-doubling argument; it is a genuine support
+condition, not a consequence of compactness alone.
+
+Use cell faces THROUGH bare lattice sites. The Wilson site-reflection
+positive form is valid for arbitrary complex functions of bonds in
+the closed halfspace, without gauge invariance. It follows either
+by conditioning on the boundary links in the decomposition
+S=S_+ +theta S_+ +S_0, or by the explicit proof in RawII
+8.7:lem-chessboard-torus(a), lines108696ff. The generalized complex
+chessboard Holder inequality follows from the same reflected
+Cauchy--Schwarz argument for arrays of closed-cell functions. Shared
+boundary bonds cause no problem: functions on either closed side
+remain in its positive-form algebra. The abstract statement is also
+Frohlich--Israel--Lieb--Simon, CMP62(1978), Theorem4.1. Its hypotheses
+are cyclicity and reflected Cauchy--Schwarz on an even cycle; unequal
+even cell counts in different coordinate directions are allowed.
+Primary preprint:
+https://repo-archives.ihes.fr/FONDS_IHES/I_Prepublications/FROHLICH/1978-1980/P_78_224/P_78_224_web.pdf
+
+Every fixed-UV endpoint polynomial is a finite sum of bond-matrix-entry
+monomials. Split each monomial into products assigned to closed cells.
+Each bond has both endpoints in some closed cell, including bonds
+lying in faces. Since the endpoint times are outside the array cell,
+none of these factors is assigned to that cell, irrespective of the
+endpoint's transverse diameter. Their chessboard seminorms are bounded
+by their ordinary sup norms. The finite sum of the products of these
+bounds is a constant C_epsilon,A, independent of m. No absolute value
+is moved inside the expectation of the complex array exponential.
+
+The source-free thermodynamic sequence can be chosen ONCE so every
+finite integer bare-cell length divides every sufficiently late torus
+side with even quotient. For example take the freely chosen N_T to
+contain twice k! and the fixed RG partition period. RawII682--715
+allows arbitrary integer N_T; the partition conditions at767--882
+do not bound it. Select the state and vacuum-coefficient subsequence
+along this sequence. A new state for each m is unnecessary.
+
+Here is the pressure bound which removes any need for the bare cell
+grid to preserve the RG scaffold. For a single packet v_l let
+
+ d_l=log <exp A(v_l)>, with the analytic branch d_l(0)=0.
+
+This branch exists uniformly on |z|<=c delta^(7/2): the fixed-buffer
+aligned-cell proof gives |h_l(z)|<=M on the larger disc |z|<=c0 delta^3,
+and h_l(0)=1. Cauchy gives |h_l(z)-1|<=C delta^(1/2), after choosing
+the smaller constant if necessary. Hence |log h_l|<=C and
+
+                    d_l=E_UV(v_l)+log h_l.           (7.1)
+
+The single-packet h estimate is uniform in placement. For each
+placement use an aligned cell with origin a multiple of ell_cell and
+fixed sufficiently large side, leaving a fixed buffer. The raw moment
+and thus d_l transform exactly under every bare lattice isometry.
+The scaffold-dependent E_UV and h need NOT transform separately.
+
+For any separated union v=sum_l v_l of M packets, possibly reflected
+and placed on this bare grid, the original source-tree bound gives
+
+ |E_UV(v)-sum_l E_UV(v_l)| <= C M |z|^2 delta^-7.      (7.2)
+
+A direct all-orders proof is short. At physical source scale a the
+norm of the FULL union on its source domain is at most
+u_a=C|z|max(delta^-2,sqrt(a)delta^-3); disjoint packet supports remove
+the factor M. The local activity's source Taylor remainder after its
+linear part is bounded by C u_a^2 exp(-kappa d_a(X)), by scalar Cauchy
+on the full local source class. The linear parts add exactly. A
+carrier reading only one packet cancels exactly in (7.2). Every
+remaining carrier joins two packets and therefore has complete
+carrier diameter at least c delta (epsilon is a sufficiently small
+fraction of delta). Retain half the source-tree decay for this
+distance. Rooting the union term at all packet supports is a harmless
+overcount; root the singleton remainders similarly. Per packet the
+number of possible roots is C delta^2 a^-4 for a<=delta and C a^-2
+for a>=delta. Thus the scale sum is bounded by
+
+ C|z|^2 sum_(a<=delta)
+   [delta^-2 a^-4 +delta^-4 a^-3]exp(-c delta/a)
+ + C|z|^2 sum_(a>=delta) a^-1 delta^-6
+                  <= C|z|^2 delta^-7.               (7.3)
+
+All scale sums are geometric up to the fixed stopping scale. No
+expansion over source order or assumption on factorial constants is
+hidden here. The linear cancellation is exact even when one carrier
+reads many packets. For (7.2) summed over all reflected cell copies,
+apply this proof to the complete array of M=mB packets. Its separation
+and local source norm have the same constants.
+
+Let W be exp[A(v_array)-sum_(l=1)^m d_l] in the single array cell.
+Disseminate W to B cells with the usual complex conjugation. The
+normalized source upper/floor estimate, (7.1), and (7.2) imply
+
+ log ||W||_ch
+ <= C V_cell + B^-1 Re[E_UV(v_dissem)-sum_copies d_l]
+ <= C V_cell + C m
+ <= C' m,                                           (7.4)
+
+since V_cell<=C_f mD and D is a fixed multiple of delta (or a fixed
+bounded allowed spacing), with fixed spatial cross-section. Exact
+single-packet d copies are justified by raw Wilson invariance.
+Only their real parts occur after conjugate dissemination. Equation
+(7.2), rather than a covariance statement about counterterms, bounds
+the first difference. Constants in (7.4) are independent of endpoints.
+
+Generalized chessboard Holder and the endpoint factorization above
+now give
+
+ |<P W>| <= C_epsilon,P exp(C' m),                    (7.5)
+
+with C' independent of P, its support diameter, epsilon and m. The
+same conclusion holds for vacuum-subtracted array normalization:
+by (7.1)--(7.2), replacing sum d_l by E_UV(v_array) costs at most
+another exp(Cm). Equations(7.4)--(7.5) are the needed correction to
+Section6. Endpoint constants can depend on epsilon because m tends
+to infinity first in the one fixed-UV thermodynamic state.
+
+Scope: these estimates consume the already established source
+locality/stability and the exact packet separation/endpoint-time
+placement. They do not by themselves prove the reflection-doubling
+operator identity or its continuum limit; those are checked in the
+slab-operator note. In particular no claim is made that general
+endpoint supports can be put into separate cells without the stated
+time separation.

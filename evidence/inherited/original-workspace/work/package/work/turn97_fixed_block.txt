@@ -1,0 +1,320 @@
+TURN97 -- TWO-LINK GENERATED ACTION: AN INDEPENDENT COEFFICIENT AUDIT
+21 October 2026. Producer block97. Fixed finite block only.
+
+PURPOSE AND STATUS
+
+This note independently audits the concrete two-link construction of
+two_link97 and computes its first nontrivial coefficients. It does not
+present the familiar finite-dimensional Laplace method as a new general
+RG theorem. TURN13 already proves full compact free-boundary finite-graph
+Laplace concentration; TURN40 proves a real C2 constrained-window version.
+The new calculation here concerns the ACTUAL generated compact two-link
+action and source with exterior fields multiplied by the same large beta.
+
+The exact finite-block statements below retain the complete compact Haar
+integral. They are uniform on a sufficiently small fixed real boundary
+tube. Constants depend on this fixed block and this tube. No native
+coarse constraint, branch indicator, multiscale source census, or
+cutoff-uniform history statement is supplied.
+
+1. THE LITERAL WILSON TWO-LINK FIBER
+
+Use unit quaternion coordinates x,y in S^3 after orienting/inverting one
+of the two integrated links and absorbing the two exterior sides of
+their shared plaquette. There are five remaining unit exterior staples
+a_i for x and five b_j for y. The affected eleven-plaquette action is
+
+ S_t(x,y)=11-x.y-sum_(i=1)^5 a_i.x-sum_(j=1)^5 b_j.y.
+ Z_beta(t)=int exp[-beta S_t(x,y)] dHaar(x)dHaar(y).
+
+All eleven plaquettes have the original homogeneous coefficient beta.
+This is not a model with bounded external couplings as beta tends to
+infinity. Near a common flat staple n, write a_i,b_j in tangent charts.
+Put s(t)=min_(x,y) S_t(x,y), and A_beta(t)=E_beta,t S_t.
+
+At t=0 all staples are e0=(1,0,0,0). The action is
+
+ S_0=5(1-x0)+5(1-y0)+(1-x.y).
+
+Every summand is nonnegative; equality forces x=y=e0. The complete
+compact configuration space therefore has a positive action gap outside
+every neighborhood of this point. Its Hessian on the six tangent
+coordinates is H=[[6,-1],[-1,6]] tensor I_3, with eigenvalues 5 and 7.
+The implicit function theorem, local strict convexity, and the compact
+gap give a unique smooth global minimum throughout a sufficiently small
+fixed boundary tube. Thus the full compact integral has the uniform
+parameter-smooth Laplace expansion used below. This also supplies a
+direct check that no alternative zero-action saddle or gauge zero mode
+was omitted for this fiber.
+
+2. CHECK OF THE MOMENT ARGUMENT, INCLUDING THE BETA DERIVATIVE
+
+In parameter-dependent Morse coordinates centered at the true minimum,
+S_t-s(t)=|z|^2/2. Let B(z,t) be the complete positive Haar density in these
+coordinates. A smooth fixed radial cutoff separates the Morse core from
+the compact complement. That complement and its first two t derivatives
+are exponentially small after normalization; the fixed positive action
+gap pays the polynomial beta factors produced by differentiation.
+
+Odd monomials in the core have zero Gaussian integral. Taylor expansion
+with parameter derivatives performed BEFORE estimation gives, in
+dimension d=6,
+
+ Z_beta(t)=exp[-beta s(t)] (2pi/beta)^3 B(0,t)
+           [1+c1(t)/beta+O_C2(t)(beta^-2)],
+ c1(t)=Delta_z B(0,t)/(2 B(0,t)).
+
+For the source one should not simply differentiate an unspecified error.
+Instead insert |z|^2/2 into the same Gaussian integral. Gaussian moments
+give its numerator coefficients (3/beta)B(0,t) and
+(4/beta^2)(Delta B(0,t)/2). Dividing by the denominator gives directly
+
+ A_beta(t)=s(t)+3/beta+c1(t)/beta^2+O_C2(t)(beta^-3).
+
+To obtain the stated source remainder, expand the smooth even part of B
+through degree four, retaining its first two parameter derivatives, and
+bound its next Taylor remainder by Gaussian moments. The omitted odd
+terms vanish. All needed derivatives exist because the action and Haar
+density are smooth and the saddle stays in the same strict chart.
+
+Consequently, with the EXACT flat conditional value removed,
+
+ A_beta(t)-A_beta(0)
+   =s(t)-s(0)+[c1(t)-c1(0)]/beta^2+O_C2(t)(beta^-3).
+
+The universal 3/beta term cancels because the physical dimension of the
+integrated fiber is six at every boundary datum. The determinant factor
+is field dependent but beta independent, so it contributes to the
+generated action while disappearing from this constant-coupling source.
+Neither statement permits dropping it from subsequent integrations.
+
+3. WHY THE RELATIVE ERROR IS QUADRATIC IN STAPLE DISAGREEMENT
+
+The action, Haar integral, classical minimum, and normalized source are
+invariant under a simultaneous O(4) rotation of x,y and all ten staples.
+On the common-staple diagonal a_i=b_j=n, the integral is exactly the flat
+integral after a rotation, s=0, and A_beta-A_beta(0)=0.
+
+At such a diagonal point the stabilizer O(3) rotates each of the ten
+staple tangent spaces by its standard three-dimensional representation.
+No nonzero invariant linear functional exists. Therefore all first
+derivatives of the source, of s, and of their difference vanish at every
+point of this diagonal. Taylor's theorem with the C2 bound from Section2
+gives
+
+ |A_beta(t)-A_beta(0)-s(t)|
+       <= C beta^-2 dist(t, common-staple diagonal)^2.
+
+The classical Hessian normal to that diagonal is positive. A direct
+check is to write tangent staples u_i,v_j and minimize
+
+ (1/2)|X-Y|^2 +(1/2)sum_i|X-u_i|^2
+                         +(1/2)sum_j|Y-v_j|^2.
+
+This quadratic form has zero minimum precisely when every u_i and v_j
+equals the same X=Y. Its restriction normal to the diagonal is strictly
+positive in this fixed finite dimension. The minimum and diagonal are
+smooth, so, after shrinking the tube,
+
+ c dist(t,diagonal)^2 <= s(t) <= C dist(t,diagonal)^2.
+
+This proves the useful stronger comparison
+
+ |A_beta(t)-A_beta(0)-s(t)| <= C beta^-2 s(t).
+
+This reasoning applies to independent unit staples. Restriction to the
+subset realized by actual Wilson exterior links preserves the inequality.
+It does not require their independence as random variables. It also does
+not yield a relative comparison of connected covariances.
+
+4. EXPLICIT FLAT COEFFICIENT
+
+Use north-pole tangent coordinates
+x=(sqrt(1-|X|^2),X), y=(sqrt(1-|Y|^2),Y). The action and Haar amplitudes
+have the expansions
+
+ S_2=3(|X|^2+|Y|^2)-X.Y,
+ S_4=(3/4)(|X|^4+|Y|^4)-(1/4)|X|^2|Y|^2,
+ j_2=(|X|^2+|Y|^2)/2.
+
+There is no cubic action term at this datum. With the Gaussian covariance
+H^-1=[[6,1],[1,6]]/35 tensor I_3, put v=6/35, w=1/35. Then
+
+ E|X|^2=18/35,
+ E|X|^4=15v^2=108/245,
+ E|X|^2|Y|^2=9v^2+6w^2=66/245.
+
+Therefore
+
+ c1(0)=E(j_2-S_4)=-39/490.
+
+Normalized S^3 Haar density at the north pole is 1/(2pi^2). Thus the
+complete leading coefficient, including both Haar measures, is
+
+ A0(0)=2/(pi 35^(3/2)),
+ Z_beta(0)=A0(0) beta^-3[1-39/(490beta)+O(beta^-2)],
+ A_beta(0)=3/beta-39/(490beta^2)+O(beta^-3).
+
+5. AN EXPLICIT CHANGED-ACTION FAMILY AND ITS SOURCE
+
+Let n(theta)=(cos theta,sin theta,0,0). Set all a_i=n(theta) and all
+b_j=n(-theta). This family can be realized with two opposite parallel
+Wilson links in a plaquette: keep the two exterior sides of that
+plaquette equal to identity and set the distinct opposite links in their
+ten other plaquettes to realize these staples. Periods at least four
+avoid the relevant identifications. The unused exterior links can be I.
+
+The unique weak minimum is x=n(phi),y=n(-phi). Its stationarity equation
+and small-angle expansion are
+
+ sin(2phi)=5sin(theta-phi),
+ phi=5theta/7+O(theta^3),
+ s(theta)=11-cos(2phi)-10cos(theta-phi)
+         =(10/7)theta^2+O(theta^4).
+
+Use rotated north-pole charts centered at these two minimizers. Write
+
+ C=cos(2phi), D=sin(2phi), P=5cos(theta-phi), k=P+C.
+
+The Hessian consists of three two-by-two blocks [[k,-c_i],[-c_i,k]],
+where c_1=C and c_2=c_3=1. In particular
+
+ det H=(k^2-C^2)(k^2-1)^2,
+ log[A0(theta)/A0(0)]=(206/343)theta^2+O(theta^4).
+
+The cubic and quartic terms, with the same density j_2 as above, are
+
+ S_3=(D/2)(|X|^2 Y_1-X_1 |Y|^2),
+ S_4=(k/8)(|X|^4+|Y|^4)-(C/4)|X|^2|Y|^2.
+
+Thus c1=E[j_2-S_4+S_3^2/2] in this centered Gaussian. Let
+v_i=k/(k^2-c_i^2), w_i=c_i/(k^2-c_i^2), m=sum_i v_i. The first two
+terms are exactly
+
+ m -[(k-C)/4]m^2 -(k/2)sum_i v_i^2 +(C/2)sum_i w_i^2.
+
+For the cubic contribution at order theta^2 only the flat Gaussian is
+needed. Wick's formula gives
+
+ E[(|X|^2Y_1-X_1|Y|^2)^2]=4/35,
+ (1/2)E S_3^2=D^2/70+O(theta^4).
+
+Here C=1-50theta^2/49+O(theta^4),
+k=6-60theta^2/49+O(theta^4), D^2=100theta^2/49+O(theta^4).
+The resulting covariance variations (coefficients of theta^2) are
+
+ delta v_1=324/12005,  delta v_2=delta v_3=444/12005,
+ delta w_1=-226/12005, delta w_2=delta w_3=144/12005.
+
+Substitution gives the explicit finite-block coefficient
+
+ c1(theta)=-39/490-(3123/84035)theta^2+O(theta^4).
+
+Define the exact generated relative action
+V_beta(theta)=-log Z_beta(theta)+log Z_beta(0). The coefficient of
+theta^2 in its Taylor expansion is
+
+ [theta^2]V_beta = 10beta/7 -206/343
+                          +3123/(84035beta)+O(beta^-2).
+
+The coefficient in the corresponding exact flat-subtracted source is
+
+ [theta^2](A_beta(theta)-A_beta(0))
+                 =10/7-3123/(84035beta^2)+O(beta^-3).
+
+The source formula is obtained by the moment argument of Section2,
+not by differentiating an unproved remainder. A parameter-smooth
+expansion through the displayed order justifies extracting each
+theta-quadratic coefficient.
+
+6. WHAT THIS AUDIT ESTABLISHES AND WHAT IT DOES NOT
+
+The two-link integration has a genuine field-dependent one-loop action
+term: the coefficient -206/343 is nonzero. Constant-source protection
+removes that term from the beta derivative, leaving a nonzero correction
+only at order beta^-2. This explicitly verifies that both action and
+source must be propagated. Replacing the generated action by the
+classical minimum would alter the next conditional measure even though
+the source has the stronger estimate.
+
+The positive normal Hessian plus simultaneous rotation symmetry checks
+the stronger relative C beta^-2 s bound without an independent constant
+error per microscopic block. No global all-real-field gradient estimate
+was proved here; only the quantified existence of a fixed weak tube and
+its finite-block C2 control. The existing all-real one-link estimate is
+not implicitly extended to this two-link block.
+
+The remaining multiscale problem is to control the accumulated generated
+action and transported sources with actual coarse constraints and bad
+regions, while paying the physical source census. Fixed-block Laplace
+constants and a positive fixed-block Hessian do not provide that result.
+
+7. INDEPENDENT RADIAL CHECK OF THE NONFLAT COEFFICIENT
+
+The exact flat radial law from two_link97, Section6, gives
+
+ C_o=(1/3) E[(1-c^2)m(beta sqrt(26+10c))/sqrt(26+10c)],
+
+where c has density proportional to
+sqrt(1-c^2) exp(5beta c) z(beta sqrt(26+10c)). Simultaneous rotation
+in the (0,i) plane gives the exact Ward identity C_d+C_o=M/(5beta).
+Consequently the theta-quadratic coefficient for the opposing-staple
+family is EXACTLY 50 beta^2 C_o at every beta>0.
+
+Put h=1/beta and T=beta(1-c). Its leading normalized density is Gamma
+with shape 3/2 and rate 35/6. Write r=sqrt(36-10Th). Relative to that
+Gamma density, an unnormalized weight through h^2 is
+
+ W(T,h)=(1-Th/2)^(1/2) (r/6)^(-3/2)
+   *[1-3h/(8r)-15h^2/(128r^2)]
+   *exp[-25T^2h/432-125T^3h^2/15552] +O(h^3).
+
+The corresponding observable is
+
+ F(T,h)=(2Th-T^2h^2)/(3r)
+                *[1-3h/(2r)+3h^2/(8r^2)]+O(h^4).
+
+These Bessel coefficients can also be obtained directly by expanding
+the S^3 Haar radial integral against a Gamma(3/2,1) density. Restricting
+first to a fixed small neighborhood of c=1 and controlling its compact
+complement by the strict phase gap justifies the usual Laplace
+remainders. The displayed expressions are sufficient for this
+coefficient check.
+
+Exact Gamma moments E T^j=(3/2)_j(6/35)^j give
+
+ E W=1-39h/490-57h^2/6860+O(h^3),
+ E(FW)=h/35-h^2/70+351h^3/240100+O(h^4).
+
+Division yields
+
+ C_o=1/(35beta)-103/(8575beta^2)
+                         +3123/(4201750beta^3)+O(beta^-4).
+
+Thus 50beta^2 C_o reproduces all three coefficients in Section5 by a
+different, one-dimensional calculation. This is an algebraic
+cross-check independent of the six-dimensional cubic/quartic Wick
+expansion. It also checks the signs and factors in the finite-beta
+quadratic source formula of two_link97.
+
+CHECKS
+
+The rational Wick computations in Sections4 and5 were checked using
+exact rational arithmetic, including an independent recursive pairing
+calculation of the degree-six cubic moment. Root independently obtained
+the same flat c1 and A0. The nonflat rational coefficient was then
+independently cross-checked by the radial calculation in Section7.
+The main relative estimate does not depend on that optional coefficient.
+
+Independent audit of work/turn97_two_link_source.txt Sections1--6:
+PASS at its explicitly stated fixed weak-tube scope. The exact second
+density, old source, and normalized action-score formula were checked;
+the parameter-Morse numerator argument, relative-error zero-manifold
+argument, and finite-beta quadratic formula were checked. In particular,
+expanding the exact finite integral gives
+
+ [log Z]_quadratic=-beta M(sum|u_i|^2+sum|v_j|^2)/2
+       +beta^2 C_d(|U|^2+|V|^2)/2+beta^2 C_o U.V.
+
+Its negative beta derivative is exactly formula(6.2) there. The radial
+formula for C_o follows from E[x|y]=m(beta|5n+y|)(5n+y)/|5n+y|.

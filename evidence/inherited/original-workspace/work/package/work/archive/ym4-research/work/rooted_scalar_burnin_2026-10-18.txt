@@ -1,0 +1,389 @@
+ROOTED SCALAR NORMAL FORM AND A FINITE BURN-IN
+18 October 2026. Working proof for audit; no public artifact.
+
+Purpose. The small strict norm of a whole packet does not give small
+separately invariant point-rooted marks. This route keeps the literal
+invariant rooted source marks, permits a polynomially large initial
+norm, and contracts their irrelevant part before the two packets meet.
+It does not assert a bounded invariant localization of an arbitrary
+interaction quotient. A Chern--Simons descent would obstruct that claim.
+
+1. ROOT CLASS AND REFERENCE DENSITY
+
+Use fixed coarse J-cells, fixed finite color/link multiplicity, and a
+translation-covariant family W_z of WHOLE invariant marks, each supplied
+with a strict analytic carrier representation rooted at z. The complete
+function W_z, not each coefficient, is locally gauge invariant. Require
+covariance under the full hypercubic stabilizer of z, including coordinate
+reflections. Let its reserved rooted norm on the b-ball be M b^2.
+Vacuum-subtract W_z and constant-color-average its strict coefficients;
+every coefficient then starts in field degree two.
+
+The classical input is the actual dated ordinary minimizing prefix P_h,
+h=ell^{-q}, with its COMPLETE supported C^{1,alpha} family. In OLD units
+
+ ||A|| <= C h b,   ||nabla A|| <= C h^2 b,
+ ||nabla A(x)-nabla A(y)|| <= C h^{2+alpha} b |x-y|^alpha.
+
+These are the pregauge_holder_prefix / classical_marginal_transport
+inputs, with the full fiber seminorm taken before the carrier sum.
+Scalar C1 estimates alone would not suffice below.
+
+Choose the local reference S_{M,z} using the literal tensor hats h_z
+of CMP119 (3.40), applied to the ORIGINAL fine plaquette energy of the
+constrained minimizer U_M. These hats are Lipschitz, scalar about their
+centers, form a partition of unity, and obey exact tensor-hat refinement.
+Each S_{M,z} is gauge invariant, scalar under its stabilizer, has uniformly
+bounded rooted norm C b^2, and sum_z S_{M,z}=S_M. Normalize the Maxwell
+coefficient to one. Cube indicator sources are NOT used.
+
+There is an exact GROUPED reference identity
+
+ sum_z h_Z(hz) S_{M,z}(P_h B) = S_{M/h,Z}(B).                    (1.1)
+
+The notation h_Z(hz) is the coarse tensor hat sampled at the old center.
+It has bounded overlap, sum_Z h_Z(hz)=1, and sum_z h_Z(hz)=h^-4.
+To prove (1.1),
+use the two-minimum identity U_M(P_h B)~U_{M/h}(B) on the SAME original
+fine graph; each fine plaquette energy is invariant under that gauge.
+then use h_Z(hX)=sum_z h_Z(hz)h_z(X) at every fine plaquette X.
+No point-root semigroup is
+assumed, and the reference is not a fresh nearest-neighbor Wilson action.
+
+2. ROOTED IRRELEVANT ESTIMATE
+
+Claim. Write beta(W) for the Maxwell coefficient of the translation sum
+of W_z. For sufficiently small fixed h and comparable input/output b,
+the grouped dated classical map obeys
+
+ || sum_z h_Z(hz)[W_z-beta(W)S_{M,z}](P_h B) ||
+       <= C h^alpha M b^2.                                  (2.1)
+
+The output is a whole invariant, scalar rooted mark at Z. Input/output
+can use the same fixed carrier exponents: compression of old connected
+carriers pays the output weights; a fixed unused input reserve pays
+the polynomial diameter factors. The prefix's support constants are
+chosen for these exponents before h is decreased.
+
+Proof mechanism in detail. On a root-centered old cube of radius c/h,
+take the coordinate-path tree gauge, with a fixed coordinate ordering.
+At a vertex x its gauge is the ordered transporter along the coordinate
+path from the root. Its logarithm exists on the common small supported
+ball: the path has O(1/h) links, each O(hb), so its complete norm is O(b).
+Multiply that logarithm by a fixed cutoff chi(h(x-z)) and exponentiate.
+This gives a genuine compact gauge for real fields, holomorphic for
+complex fields, globally supported in a fixed FINAL cube. Adjacent
+coordinate paths differ by at most C D plaquettes, where D is their
+distance from the root; hence the transformed global link potential
+remains O(hb). Whole-mark gauge invariance may therefore be applied
+before any support expansion. No individual coefficient is gauged as
+an independent invariant function.
+
+Where chi=1 the transformed link is the rooted loop holonomy. Decompose
+this loop into its coordinate-path plaquettes, retaining their parallel
+transports. Its logarithm has the expansion
+
+ A^v_e = sum_{mu<nu} c_e^{mu nu} F_{mu nu}(z) + R_e,
+ ||R_e|| <= C h^{2+alpha} P(D) b + C h^3 P(D) b^2,          (2.2)
+
+with |c_e|<=P(D), fixed polynomial P. F is the actual small plaquette
+curvature at the root (equivalently its logarithm); it includes the
+nonabelian commutator term. The linear part of the product is the
+oriented plaquette sum. The C^{1,alpha} estimate controls variation
+of its derivative term; transport conjugations change it by
+O(h^3 P(D)b^2), and higher plaquette products cost O(h^4P(D)b^2).
+All statements hold in the complete supported algebra: use the exact
+oriented path differences and product remainders before expanding.
+
+For D<=c/h, F=O(h^2b). The degree-two Taylor part of W_z evaluated on
+the first term of (2.2) is a bilinear form in the constant-curvature
+affine jet. Classify that jet, not an actual tuple of plaquettes with
+chosen bases: reflections may shift those bases, and their differences
+are already in the controlled remainder of (2.2). Color invariance makes
+the affine-jet color tensor the normalized invariant metric. Reflection
+in any coordinate eliminates products of distinct curvature orientations;
+coordinate permutations make all diagonal coefficients equal. Thus
+this term is exactly c_W sum_{mu<nu} tr(F_{mu nu}^2).
+The parity-odd F wedge F tensor is excluded by the reflections.
+The Taylor terms of degree at least three cost C M h^6 P(D)b^2.
+The cross term with R costs C M h^{4+alpha}P(D)b^2. The same calculation
+for S_{M,z} has c_S=1 in the chosen normalization.
+
+The coefficient c_W equals beta(W): apply the quadratic response to a
+small affine Cartan connection, sum the translated roots, and use the
+same infinite Maxwell moment used for beta. Exponential rooted moments
+justify the affine polynomial test and the summation. The exact affine
+reproduction by the ordinary minimizing lift fixes c_S uniformly in M.
+Thus subtracting beta(W) S_{M,z} cancels the full order-h^4 term.
+
+For carriers D>c/h use the globally admitted O(hb) field and the
+quadratic Taylor bound. Their retained exponential diameter tail pays
+every missing power of h. Blockwise analytic expansion introduces only
+fixed polynomial powers of carrier size, paid by cardinality reserve.
+The positive grouping weights have total h^-4; this cancels the canonical
+h^4, leaving (2.1). The finite symmetry average of the path construction
+is allowed AFTER the scalar identity; it keeps the reference and the
+bound. This also makes the output representative equivariant.
+
+This mechanism agrees with the literal pointed subtraction and
+h^{5-beta} estimate in CMP119 (3.56)--(3.62), and its point-stabilizer
+covariance (2.29). The present proof is on the physical coarse-link
+analytic class, rather than an asserted independent-current extension.
+
+3. GROUPED MARK RECURRENCE
+
+For the contraction use Kbar_j=Kcore_j, the exactly hypercubic-covariant
+regular-core inner q-block kernel proved covariant in Section5. Its
+base E_j is the ACTUAL homogeneous E at that date; no alternate E
+trajectory is constructed. Static R uses its published fixed-power
+bound; genuinely new F/annular insertions retain fixed stretched-log bounds.
+Keep all gauge, Jacobian, cutoff and frozen reference factors of each
+regular-core kernel, and keep the external mark labels. Its action is
+
+ Kbar_j = T_j + Qbar_j,
+ ||group Q_j W|| <= C_q eta_j ||W||,                     (3.1)
+
+on the literal rooted class, using the SHARP normalized polynomial-moment
+bound in externally_rooted_physical_mark_transport Section8. In particular
+the actual homogeneous radius b=c g log(gamma) is retained: choose
+1/2<t<1 for the inner cutoff, and eta=C[(g/b)^2+g^2+exp(-cT^2)].
+Then O(log gamma) eta tends to zero. The earlier crude (gT/b)^2
+estimate alone would not prove this at s=1.
+Group all old centers with the symmetric hat mask before
+classifying its scalar tensor. Individual transported old roots lie
+at fractional positions and need not have the output stabilizer.
+The full weighted group has that stabilizer because Kcore is exactly
+covariant and the mask is symmetric. The original
+source E_j is fully covariant by (2.29)/(3.39). Young static R_j need not
+have that covariance and is therefore NOT left in this symmetry argument.
+The exact source retained-coordinate covariance is used here; it is not
+inferred from symmetry of the output effective action alone.
+
+Define Phi_{j+1,Z}=sum_z h_Z(hz) Kbar_j Phi_{j,z}, and
+
+ beta_j=beta(sum_z Phi_{j,z}),
+ I_{j,z}=Phi_{j,z}-beta_j S_{M_j,z}.
+
+Its translation sum is the propagated constant-profile insertion.
+At every stage the local root coefficient equals this SAME beta_j,
+by Section2. Subtracting it preserves whole-root invariance and scalar
+symmetry. Equations (1.1), (2.1), (3.1), and bounded Maxwell extraction
+give, for m_j=||I_j||/b_j^2,
+
+ m_{j+1} <= (lambda+C_q eta_j)m_j + C_q eta_j |beta_j|,
+ lambda=C h^alpha.                                     (3.2)
+
+Small variations of b_j during O(log gamma) steps are absorbed by a
+fixed interior margin and 1+O(log gamma/gamma) factors. First choose
+fixed q so lambda<1/4, then choose gamma sufficiently large that
+C_q eta_j<1/4. If |beta_j|<=C, then
+
+ m_n <= 2^-n m_0 + C sup_{j<n} eta_j.                   (3.3)
+
+An initial polynomial bound m_0<=C gamma^K is enough. With
+n_burn=ceil[(K+2)log_2 gamma], the output m is o(1).
+No smallness of the initial pointed representative was inferred from
+the total quotient norm. Its large irrelevant part is actually removed.
+
+Here is the exact constant-tangent ledger. At a PRIMITIVE date r, in the frozen geometric
+operator convention of raw_q_block_cluster_response and constant_source_
+shift, write, at the ACTUAL sourced state,
+
+ rho_{r+1}(w)=exp(G_r(w)) K_inner,r rho_r(w),
+ G_r=F_r+h_r,  h_r=log[K_outer,r rho_r(w)/K_inner,r rho_r(w)].
+
+Every geometric K_inner,r, including its reference inverse, is independent
+of w. Differentiate and unroll the fixed q primitive dates. This gives
+
+ Psi_{j+1}=Kfull_j Psi_j+mathcal_G'_j,
+ Psi_j=partial_w log rho_j|_0.                                (3.4)
+
+The density coordinate is
+ Psi_j=-Gamma'_j S_j+E'_j+R'_j-v'_j. The Maxwell coefficient of E'_j
+is zero because the extraction functional is source independent. Thus
+beta(Psi_j)=-Gamma'_j+beta(R'_j), with this SIGN convention. Reversing
+all first marks changes both minus signs; their covariance is unchanged.
+constant_source_shift (7.1) bounds this coefficient uniformly, and its
+(7.2) keeps the Wilson response close to its initial value.
+
+Here j again labels q-blocks. mathcal_G'_j is the SUM of the conditional
+expectations of the primitive G'_r at their actual intermediate fields,
+including the endpoint term. It is not only the derivative of a final
+multiplicative factor. Kfull_j is the normalized ACTUAL joint inner
+conditional kernel, retaining the actual R/intermediate factors.
+The regular-core averaged Phi has
+the exact error recurrence
+
+ Psi_{j+1}-Phi_{j+1}
+   =Kbar_j(Psi_j-Phi_j)+(Kfull_j-Kbar_j)Psi_j+mathcal_G'_j.    (3.5)
+
+The operator difference is bounded as in Section5 on these actual
+prepared marks. Consequently the error is a finite Duhamel sum; it
+does not compare nonlinear RG histories or require a hypothetical
+autonomous regular trajectory.
+For genuinely new R' and annular terms use the FIXED stretched-log birth estimates,
+not a later choice of an arbitrary source power. Their common weaker
+form is gamma^D exp[-c(log gamma)^nu], with fixed nu>1; physical seed and
+fixed-source-disc Cauchy losses only change D. For a family with an
+ALREADY ESTABLISHED polynomial static ancestral transport, positive
+past drift and polynomial radius/age costs give, by integral comparison,
+
+ sum_{i<=j} gamma_i^D exp[-c(log gamma_i)^nu]
+       <= C gamma_j^{D+1} exp[-c'(log gamma_j)^nu],
+
+for any fixed c'<c after increasing the weak threshold. This integral
+lemma does NOT itself prove such ancestral transport for R'' quantum
+renewals. The published fixed-power bound remains the presently justified
+bound for the complete static R aggregate. Keep the genuine new R'
+ancestry; an R'' contribution is not relabeled a fresh independent
+tail. Over O(log gamma) steps a crude fixed-q norm bound and the child
+counts lose only a fixed power of gamma, paid by this already FIXED
+suppression. All geometric constants and q are fixed before increasing
+gamma; no source power is chosen in response to those constants.
+Bounded Maxwell extraction then shows |beta(Phi_j)|<=C, independently
+of the possibly large initial irrelevant norm. This is the bound used
+in (3.2); it is not inferred from eta_j times that large norm.
+
+This argument uses the already specified actual source derivative
+estimate for G'_j. Freezing an UNMARKED h_j after taking an unmarked
+identity would remove h'_j and would be wrong. No complex normalization
+denominator or reference-kernel derivative has been silently dropped.
+
+4. BROAD-PACKET WEIGHTS DURING THE BURN-IN
+
+Use rho=gamma^B. Replace f(z/rho) by its coarse hat interpolation from
+the final burn-in grid, whose mesh is ell^{q n_burn}=gamma^{C_burn}.
+The input coefficient error is at most C gamma^{C_burn}/rho. Propagate
+this error for only n_burn steps with the CRUDE rooted operator bound;
+its total loss, child count, and initial norm are all gamma^{C_fixed}.
+Therefore the final root error is at most C gamma^{C_*}/rho. Each
+error mark remains individually invariant because it is a scalar
+combination of literal invariant marked insertions; no Möbius gauge
+invariantization is used. Its symmetry is not needed after the burn-in,
+when the already proved neutral rooted transport handles small marks.
+
+Choose B>C_*+2. The coarse packet width rho'=rho/ell^{q n_burn} is still
+a positive large power of gamma, and both the weighting error and
+irrelevant residue (3.3) are small. The exact grouped reference identity
+turns the leading insertion into beta_n times the actual fine plaquette
+energy with the coarse hat-interpolated packet profile. Replacing this
+by the smooth rescaled profile has the same small invariant rooted error.
+
+The original smooth observable need not be replaced in the continuum
+definition. At the initial witness grid its tensor-hat interpolant has
+supremum error O(rho^-2) and Lipschitz error O(rho^-2), for a fixed smooth
+shape with bounded second derivatives. The ORIGINAL pointed homogeneous
+source family and the own-invariant source-gradient family give a crude
+rooted bound C E_src(b/a)^2(||e||_infinity+Lip(e)) for this error e.
+This is the large literal bound, with no small quotient representative.
+Each original own-field activity and its source derivative is invariant;
+assigning its carrier an anchor keeps that invariance. Thus its physical
+root norm is at most C E_src b^2/(a^2 rho^2), with the packet envelope.
+Finite burn-in propagation loses only a fixed power of gamma, already
+covered by increasing B. The Wilson energy part has the easier bound
+C b^2 ||e||_infinity. This explicitly compares the smooth witness to
+the admissible hat-profile calculation; no density claim in a Lipschitz
+test-function topology is needed.
+
+Every mixed connected scalar or nonvacuum birth before n_burn must
+join the two packets, whose separation is at least c rho'. Its norm
+has exp(-c rho') times polynomial gamma losses and the fixed powers
+of the source chi_s inverse. The latter are exp(C(N-s)) with
+N-s<=C gamma_s. Increasing B so rho'>>gamma pays these factors too.
+Mixed vacuum terms are retained, not discarded. After the burn-in the
+inner_two_mark_gaussian_prefix argument can start with the now SMALL
+literal invariant root residuals and its unchanged Maxwell reference.
+
+Status: Sections1--2 give the proposed physical rooted normal form
+for independent audit. The source-specific constant-tangent matching
+in Section3 is explicit. No actual outer/large-field observable tail
+or final infrared endpoint has been certified merely by this note.
+
+5. REGULAR CORE, EXACT SPATIAL SYMMETRY, AND DELETION ERROR
+
+At each actual date freeze E_j, all real couplings, reference inverses,
+constraints, and geometry. Delete only the explicit static R and small
+intermediate F/annular weights from the q kernel, obtaining Kcore_j.
+Do NOT replace E_j by an independently generated zero-R trajectory.
+Genuinely new F/annular insertions have the fixed stretched-log bound.
+For the entire old static R aggregate use the established fixed-power
+bound ||R_j||/b_j^2 <= rho_R,j=C gamma_j^{2-kappa0/2}(log gamma_j)^D.
+Do not upgrade it without a proof controlling R'' renewal ancestries.
+Below rho_j denotes the appropriate actual bound for the deleted family.
+
+The two-parameter whole-family connected-log estimate proves
+
+ ||(Kfull_j-Kcore_j)W|| <= C_q rho_j ||W||.                    (5.1)
+
+Indeed insert a spectator uW and interpolate the deleted activity vR.
+On discs |u|<=c b^2/||W|| and |v|<=c b^2/||R|| the same reserved
+logarithm is bounded by C b^2. Its mixed derivative is bounded by
+C||W||||R||/b^2. Integrate v from0 to1. Root labels remain on W in
+the connected expansion; there is no ambient-volume factor. The same
+nilpotent degree-two argument gives the two-mark difference with size
+C rho_j(M_12+M_1 M_2) in the appropriate marked normalizations.
+
+The former proposed symmetry-average comparison is unnecessary. The
+exact proof is in retained_kernel_exact_spatial_covariance_2026-10-18.txt,
+independently checked against CMP109 pp253--255,267,269. The averaged
+ALL-path gauge and ordinary map are spatially covariant. The chosen
+G=0 saddle is therefore covariant by uniqueness. A reversed positive
+bond transforms its left-relative fluctuation EXACTLY by
+
+              x(e) -> -Ad_(V_*(e)^(-1)) x(e).
+
+This is orthogonal for real backgrounds. The source middle-interface
+pivot set is invariant as an unoriented set. Its retained complement
+is therefore transformed by a bond permutation and linkwise orthogonal
+maps. Pivot-only straightening does not change those retained values.
+Every product of retained radial balls is preserved at ANY threshold,
+including our inner threshold. CMP109(2.17)--(2.18) states this exact
+finite-g transformation and its preservation through the remaining
+operations; this is stronger evidence than CMP119(3.39) alone.
+
+Our auxiliary and raw-q kernels use precisely the original independent
+retained variables, with only scalar g/g_r rescalings; they are not cut
+in whitened Gaussian coordinates. All Haar, pivot/coarea, straightening,
+gauge normalization and normalized-ratio denominator factors transform.
+For q layers the joint coordinate change is triangular with orthogonal
+diagonal blocks, so all individual windows and the full measure are
+preserved. Real-background equality extends holomorphically on the
+common source domain; complex Ad need not preserve the real cutoff.
+
+Thus, for every final-root hypercubic symmetry r,
+
+        r^-1 Kcore_j r=Kcore_j,  Kbar_j=Kcore_j.              (5.2)
+
+The finite conjugate average equals this kernel. There is no rotated-
+window error and no extra covariance-of-mixture-means term. This is an
+identity of the controlled regular kernel, not a comparison with the
+unrestricted compact fiber or with a normalized large-field component.
+Its frozen E_j is actual and source covariant; no such covariance of
+arbitrary young static R is assumed. Deleting R and genuine new F/h
+insertions still requires (5.1) and the separate tail ledger. For the
+latter keep original prepared mark extensions during the logarithmic
+prefix; their fixed stretched-log suppression pays crude polynomial
+propagation losses. Static R instead uses the fixed-power argument below.
+
+6. FIXED-POWER R REPAIR WITHOUT A C^n LOSS
+
+The whole-age neutral rooted transport in externally_rooted_physical_
+mark_transport uses a DIRECT classical prefix between Q insertions.
+It gives a bounded Volterra propagator over n=O(log gamma) when
+sum_j eta_j=o(1), even without scalar/hypercubic symmetry of each base.
+Thus regular R deletion forces need not be propagated with C^n.
+The initial literal root norm is O(E_src/a^2)=O(gamma) up to fixed logs.
+Combining (5.1) with that neutral propagator bounds a first-mark deletion
+error by C gamma rho_R log gamma. Fixed kappa0>6, with a strict margin
+for logarithmic factors, makes it small; no geometry-dependent power
+exponent is chosen afterwards.
+
+The connected two-root extension is proved in connected_fixed_power_R_
+deletion_audit_2026-10-18.txt. Its complex base-activity Cauchy argument
+is applied to the already weighted marked moment estimates, retaining
+g^4 scalar and g^2 b^2 mixed norms and the joining-root exponential.
+Direct-age overlap summation gives relative scalar error
+C gamma rho_R log gamma=o(1) for fixed kappa0>6. No packet-volume
+rho_packet^8 factor is imposed on that connected regular perturbation.
+Genuine outer/new-operation tails and the normalized surviving endpoint
+remain separate consumers. This is not inferred from (5.1) alone.

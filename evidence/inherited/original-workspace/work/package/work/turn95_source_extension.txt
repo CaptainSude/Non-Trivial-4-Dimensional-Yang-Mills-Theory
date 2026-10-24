@@ -1,0 +1,314 @@
+TURN95 -- LOCAL COUPLING JETS WITHOUT AN UNNECESSARY BARE-COUPLING FACTOR
+21 October 2026. sources95. Research note for root; no frontier change.
+
+STATUS
+
+There is a useful simplification of the proposed local-source target:
+start with the coupling-free original plaquette insertion S_f, not with
+gamma_0 S_f. The former is exactly an additive bare inverse-coupling
+derivative. A physically calibrated derivative can require a Jacobian,
+but that Jacobian is not, by definition, gamma_0.
+
+The finite identities and scope checks below are proved or verified.
+No new full-history correlation estimate is proved. In particular,
+removing gamma_0 does not settle transport of the generated native
+running-domain descendants, live raw-source analytic continuation, or
+terminal physical response. The selected scalar one-mark induction was
+already closed in TURN70 at its stated selected inputs; it is preserved.
+
+1. EXACT ORIGINAL FINITE-LATTICE OBJECT
+
+For SU(2), write h_p(U)=1-Tr(U_p)/2 and
+
+ Z_a[gamma]=integral exp[-sum_p gamma_p h_p(U)] dHaar(U),
+ S_f(U)=sum_p f_p h_p(U).
+
+All sums use the complete original finite lattice and its original
+positive Wilson measure. For the homogeneous baseline gamma_p=gamma_0,
+define
+
+ W_a(s,t)=log Z_a[gamma_0-s f-t h]-log Z_a[gamma_0].       (1)
+
+At every fixed regulator this is a real analytic function near zero,
+and direct differentiation on the compact integration space gives
+
+ d_s W_a(0,0)=E S_f,
+ d_s d_t W_a(0,0)=Cov(S_f,S_h).                           (2)
+
+No gamma_0 multiplies these insertions. This is a literal change of
+the inverse coupling by an additive amount. A source for gamma_0 S_f
+instead changes it by a relative amount. These are different choices
+of source coordinate, and their two-jets differ by gamma_0 squared.
+
+The proof of (2) needs only finite differentiation. Although the finite
+partition function is entire in its finitely many coupling variables,
+this does not give a cutoff-uniform zero-free domain for its logarithm.
+No such domain is used here, and none is needed to state a fixed two-jet
+problem. The exact R/T coefficient algebra 1,e,t,et with e^2=t^2=0
+already retains all terms needed for that problem.
+
+Every source-free deciding map, chart, covariance, window and coupling
+used to represent the baseline integral can remain frozen while taking
+these derivatives. This avoids differentiating geometric branch choices.
+It does not turn a source-free estimate into a marked estimate.
+
+2. THE PHYSICAL COUPLING JACOBIAN, AND WHY DISJOINT SUPPORTS HELP
+
+Suppose a physical inverse-coupling coordinate theta is implemented at
+cutoff a by a twice differentiable bare tuning function Gamma_a(theta).
+This hypothesis is not asserted for the current complete construction;
+at the baseline require Gamma_a(theta)=gamma_0.
+Write q for the second test profile in this paragraph, to distinguish
+it from the plaquette action h_p(U). At finite a consider the deformation
+
+ gamma_p(s,t)=Gamma_a(theta+s f_p+t q_p).
+
+The exact chain rule gives
+
+ d_s d_t log Z_a[gamma(s,t)]|_0
+  =Gamma_a'(theta)^2 Cov(S_f,S_q)
+   -Gamma_a''(theta) E sum_p f_p q_p h_p(U).              (3)
+
+For disjoint profile supports the second term is exactly zero. Thus the
+physical mixed derivative is Gamma_a'(theta)^2 times the coupling-free
+covariance. A derivative |Gamma_a'| uniformly bounded above and bounded
+away from zero in the cutoff would suffice for uniform comparison and
+nontriviality transfer; it need not grow as gamma_0.
+
+This is an identity for any specified differentiable Gamma_a. It neither
+constructs Gamma_a nor proves a bounded Jacobian for the full native map.
+If physical coupling is parameterized by g_* instead of g_*^-2, there is
+an additional fixed coordinate derivative; at a fixed positive g_* that
+does not introduce a cutoff-diverging factor by itself.
+
+For an observable centered by a source-linear scalar counterterm, the
+mixed covariance is unchanged. More generally, local source-only terms
+whose functional second derivatives are supported on the source diagonal
+do not contribute when the closed supports have positive separation.
+Finite derivatives of profiles do not change this support statement.
+This does not eliminate field-dependent mixing or prove later contact
+extensions for intersecting supports.
+
+3. COUPLING-FREE IS NOT AUTOMATICALLY A VANISHING PHYSICAL NORMALIZATION
+
+For smooth geometric connections with anti-Hermitian curvature F,
+U_p=exp(a^2 F_munu(x_p)+O(a^3)) implies, in the displayed SU(2) trace
+convention,
+
+ h_p(U)=-a^4 Tr(F_munu(x_p)^2)/4+O(a^5).
+
+Consequently S_f already has the classical dimension-four integral
+normalization. There is no additional a^4 to insert in the sum.
+This smooth-field calculation identifies the intended local insertion;
+it is not a probabilistic approximation for typical ultraviolet fields.
+
+At a fixed weak physical stop g_*>0, the geometric fluctuation field is
+g_* times its canonical Gaussian normalization to first order. Hence a
+coupling-free action insertion has leading quadratic term g_*^2 Q_f.
+For nonnegative profiles f,h in separated regions its free connected
+covariance is
+
+ 2 g_*^4 ||sqrt(f) P sqrt(h)||_HS^2,                     (4)
+
+up to the fixed convention for Q, with P the relevant curvature
+covariance/projection. The separated free benchmark in TURN30 proves
+that the Hilbert--Schmidt quantity can be finite and strictly positive.
+Since g_* is fixed, this signal does not vanish merely because gamma_0
+tends to infinity. The required non-Abelian full-measure comparison is
+still absent. In particular, (4) is not a lower bound for the Wilson
+theory and does not certify an interacting continuum limit.
+
+4. WHAT OUR EXISTING CONSTANT-SOURCE THEOREM ACTUALLY GIVES
+
+constant_original_source_trajectory_turn49.txt takes exactly
+
+ exp[zeta S_0], alpha_0(zeta)=zeta,
+ t_j=g_j^2 alpha_j(zeta).
+
+Its selected periodic fixed-window trajectory has a protected scalar
+marginal and summable O(g_j^4) independent forcing. Thus the simplification
+above is already compatible with an established option in this project;
+it is not a newly discovered full source theorem.
+
+The statement is for that selected map with its classical and analytic
+premises. It does not prove the corresponding constant-source theorem
+for the complete native R/T histories. In particular, the conditional
+native shadowing theorem TURN52 deliberately does not assume continuity
+of the full map in its geometric choices. Its endpoint existence result
+cannot by itself be differentiated to obtain Gamma_a' or Gamma_a''.
+
+Within a family where the exact sourced terminal marginal alpha_n(zeta)
+is controlled on a fixed disc and alpha_n'(0) is bounded away from zero,
+one can instead define a local terminal coupling coordinate by inverting
+alpha_n. The inverse-function statement is elementary. Its application
+to the full measure still needs the actual source estimates; it is not
+a replacement for them.
+
+Removing gamma_0 removes its first- and second-jet prefactors throughout
+TURN74 and TURN78. It also avoids demanding a uniform source disc for an
+insertion scaled by a diverging gamma_0. It does not remove the extensive
+source vacuum term, which must still be kept until connected cancellation.
+
+5. PRIMARY BALABAN CHECK: WHERE THE HOMOGENEOUS THEOREM STOPS
+
+The B109 primary text was rechecked at printed pp259,263--264 and293--294.
+Theorem 1 assumes a controlled weak-coupling sequence. Its inductive
+class imposes lattice Euclidean invariance; the vacuum-polarization
+extraction uses a translation-invariant kernel Pi(x-y), then a single
+Fourier momentum, to extract the scalar marginal. A spatially varying
+coupling is not covered by that conclusion merely because its amplitude
+is small. Treating the profile as a transforming external label gives
+covariance of a family, not the translation invariance used there.
+
+Source: T. Balaban, CMP109 (1987),249--301, especially (1.19)--(1.22)
+and Section5, (5.8)--(5.16):
+https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+https://doi.org/10.1007/BF01215223
+
+This scope check is consistent with our existing source notes, rather
+than a new objection. The local retained PDF placeholders were empty;
+the primary text was read through the web extraction. No fresh visual
+formula verification is claimed.
+
+6. SELECTED REGULAR TRANSPORT IS ALREADY CLOSED; THE NATIVE GATE IS DIFFERENT
+
+It would be a regression to report TURN69's proposed invariant-modulation
+problem as the present selected-map bottleneck. TURN70 subsequently
+proved the actual leading-source projector repair in
+invariant_source_relocalization_turn70.txt Section9, augmented fixed-norm
+classical contraction in augmented_source_classical_contraction_turn70.txt,
+and the selected one-mark induction in selected_scalar_source_induction_turn70.txt.
+
+The augmented quotient identifies totals for EVERY scalar profile,
+retains source roots in its strong coefficient sum, and extracts its
+marginal by evaluation at f=1. Its exact interpolation and classical
+reference identities yield, on the admitted selected trajectory,
+
+ X_j=alpha_j R_j+u_j,
+ alpha_j=alpha_j^constant=1+O(sum_(i<j)g_i^4),
+ ||u_j||_src <= C max_(i<j)g_i^2.                       (5)
+
+The O(g^2) inhomogeneous birth is handled by the augmented irrelevant
+contraction, not summed as an independent force. Individual carrier
+gauge invariance is not required for this selected augmented quotient.
+No new general invariant-localization theorem is needed to recover (5).
+
+What must still be attached is the analogue for the ACTUAL generated
+native source family. TURN74 gives the native fixed-core finite one/two
+mark calculation but distinguishes the physical graph, independent
+pair germs, boundary masks and running domains. TURN78 proves static
+born-germ preparation and a protected-age current response domain for
+the same frozen germ. It explicitly does not assert that EVERY later
+quantum descendant carrying that germ's ancestral label has acquired
+the same fixed-core preparation.
+
+Thus the remaining estimate should target the generated native family:
+which old-domain descendants enter a fixed current response domain,
+with what complete supported norm, at their ACTUAL near-read scales?
+The source-rooted one/two jets, off-pair terms, vacuum scalars and
+boundary types must remain in that statement. A new proof of arbitrary
+invariant relocalization would be unnecessarily broad. Conversely,
+copying (5) to the native running-domain family without its preparation
+would omit precisely the missing input.
+
+7. WHY SEPARATION ALONE DOES NOT CLOSE THIS GAP
+
+A connected, exponentially localized one-step two-mark catalogue has a
+small direct cross birth when its two complete reads are separated by
+many current cells. This controls short-scale communications between
+the two regions. It does not uniformly bound the separately evolved
+one-mark coefficients at the scale where the regions communicate.
+
+For example, a generic inherited-mark estimate can grow with the number
+of earlier ultraviolet steps. At a fixed physical communication scale,
+that number tends to infinity while the separation in current units is
+fixed. A factor exp[-c distance/ell_j] at that final scale cannot pay an
+unbounded earlier-age factor. Thus removing source-only contacts and
+using separated supports does not dispense with one-mark renormalization.
+
+Likewise a full source-free vacuum bound is not a bound on this mixed
+derivative: differentiating requires uniform control in the appropriate
+source directions, or direct finite-mark estimates. Real positivity
+and finite-lattice analyticity alone do not supply a cutoff-uniform
+derivative bound after the necessary local cancellations.
+
+8. THE CLOSED TRACE HELPS AT ENTRY BUT DOES NOT BY ITSELF ESTIMATE THE
+   INTEGRATED LIVE COEFFICIENT
+
+On SL(2,C), inverse entries are polynomial because det U=1, and
+Tr U=Tr U^-1. The original oriented plaquette trace is therefore a
+holomorphic polynomial of its four original link matrices. Exact
+complex gauge transformations telescope around the closed loop, so
+their internal factors cancel before estimating that trace.
+
+If, after that cancellation, the four actual reconstructed original
+links and the needed inverses obey ||U_e||,||U_e^-1||<=exp(epsilon_e)
+on a specified common complex contour, then
+
+ |h_p(U)|<=1+exp(sum_(e in boundary p)epsilon_e).         (6)
+
+This simple estimate is global in the polynomial; no small action chart
+or infinite source series is needed. Its first partial-entry application
+is already in TURN78 Section2. With c0=1 it has no gamma_0 multiplier.
+
+The outstanding task is to establish an appropriate bound for the SAME
+four reconstructed original links, or their closed holonomy directly,
+on every later native localization contour after intervening regular
+integrations, and to retain the supported derivative/read census of
+the complete old integral. A current-link bound is not automatically a
+bound for this old reconstructed holonomy. Gauge cancellation removes
+pure gauge factors; it does not remove background reconstruction,
+the integrated conditional weight, or derivatives of that weight.
+
+Nor does a bounded entire original mark bound its normalized complex
+posterior. A finite two-point example illustrates the logical issue:
+take x=+/-1, positive real weights exp(n z x), and mark F(x)=x. For real
+z its posterior is bounded by one, while its analytic continuation is
+tanh(n z), with poles at z=i pi/(2n). The original mark is bounded and
+independent of z, but the complex posterior radius shrinks. This is not
+a counterexample to the native theory; it shows why (6) alone does not
+prove the needed propagated complex response estimate.
+
+The unnormalized route avoids dividing by that posterior denominator,
+as the native programme already does. It still requires the absolute
+localized marked-integral estimate, including all mixed products and
+the actual ancestral/read/domain charges. If a uniform (6) on the full
+history-localization polydomain can be proved, inserting it into that
+unnormalized majorant is a promising direct route. This note does not
+prove that history-polydomain bound or the ensuing complete census.
+
+9. THE LARGE-FIELD AND TERMINAL GATES REMAIN DISTINCT
+
+TURN78 supplies exact first entry of a straddling original plaquette,
+arbitrary real raw persistence, and finite admitted analytic prefixes.
+The still missing quantitative bridge is its equation (6.2): a bound
+for the SAME partially integrated coefficient on every actual future
+complex localization contour, with source reads, age costs and owners.
+Setting c0=1 reduces its prefactors but does not prove this bridge.
+
+At an old-interior R integration, a literal source remains in the old
+integral against the complete continuation. Fresh reference variance
+does not become original variance through a scalar partition-function
+identity. The mixed coefficient must retain the outer covariance of
+the one-point conditional means. TURN83's exact finite-jet support
+theorem and separated conditional-independence identity show this
+explicitly, rather than estimating the remaining outer channel.
+
+No argument here turns the local two-source target into a full local
+field hierarchy, proves Euclidean rotations, or settles infinite volume.
+
+CONCLUSION FOR THE NEXT ATTACK
+
+Use S_f=sum f h_p, or a bounded calibrated multiple justified by an actual
+physical coupling coordinate. Do not impose gamma_0 S_f as a mandatory
+normalization. Work with the finite 1,e,t,et algebra and separated supports.
+Retain every scalar until the exact connected subtraction.
+
+Preserve the completed selected one-mark induction of TURN70. The next
+genuine theorem is the required fixed-core/running-domain preparation
+for the ACTUAL generated native marked family and its live-source
+complex bound, or an alternative direct full-measure estimate proving
+the same separated response. Existing finite jets and the selected
+source theorem make that target concrete; they do not complete it.
+This note records a useful choice of normalization and the precise
+remaining native estimates, not a new nontrivial YM4 existence result.

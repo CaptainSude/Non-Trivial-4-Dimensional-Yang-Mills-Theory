@@ -1,0 +1,265 @@
+AN EXACT NONLINEAR RADIAL-FLOW HESSIAN TEST -- TURN65
+20 October 2026. Root derivation; independent audit required.
+
+STATUS
+
+This is a finite-dimensional deterministic theorem for the spatial
+SU(2) Wilson flow used in TURN63--65. It is not a claim about the
+probability of the tested configurations under the Wilson law.
+
+The raw flow-map tangent growth found by gauge47 does not automatically
+imply growth of the derivative of a radial magnetic observable: its
+first derivative vanishes in the direction tested below. Nevertheless,
+the actual radial observable has a growing SECOND derivative along a
+unit, gauge-orthogonal initial tangent, on configurations with
+beta h_p <= 1 for every plaquette.
+
+Consequently a cutoff-uniform pointwise Hessian bound for this observable
+cannot be obtained merely by imposing that microscopic energy condition.
+An averaged, weighted, or more structured derivative estimate could
+still hold in the original Wilson law. No failure of that estimate,
+or of a Yang--Mills continuum limit, is asserted.
+
+1. NORMALIZATION AND THE HOMOGENEOUS INVARIANT FAMILY
+
+Take a cubic spatial torus with n vertices and spacing a. Every oriented
+positive link has the Pauli/2 metric: i x.sigma/2 has squared norm |x|^2.
+In quaternion coordinates q=(q0,qvec) on the unit S^3, this metric is
+four times the round metric.
+
+Let S_sp=sum of h_p over elementary spatial plaquettes, with
+h_p=1-Tr U_p/2. Define physical flow time s by
+
+                 dV_s/ds = -4 a^-2 grad S_sp(V_s).        (1.1)
+
+Use homogeneous links
+
+ U1=c I+i sqrt(w) n1.sigma,
+ U2=c I+i sqrt(w) n2.sigma,  U3=I,
+ c=sqrt(1-w),  |n1|=|n2|=1,  z=n1.n2.                   (1.2)
+
+Then
+
+                    h12=2 w^2(1-z^2), h13=h23=0.        (1.3)
+
+Translation symmetry, interchange symmetry of the first two links,
+and the gradient equations preserve this equal-amplitude family.
+For clarity, each link's metric in alpha,n coordinates, w=sin^2(alpha/2),
+is dalpha^2+4w|dn|^2. Differentiating S_sp=n h12 gives
+
+ w_s=-8 a^-2 w^2(1-w)(1-z^2),
+ z_s= 8 a^-2 w z(1-z^2).                                (1.4)
+
+These equations also follow directly from the full link gradient:
+the homogeneous restriction has the same factors n in its metric
+and its action. The other links remain the identity.
+
+Set
+
+ r=w/(1-w),  I=z r,  u=I^2,  tau=8s/a^2.
+
+The quantity I is constant along the flow, and
+
+ dr/dtau=-(r^2-u)/(1+r),
+ h12(s)=H(r,u):=2(r^2-u)/(1+r)^2.                        (1.5)
+
+Initial r0>0 is held fixed when differentiating with respect to u.
+For |I|<r0 and finite tau, the scalar equation is smooth, including
+at u=0. On its decreasing solution,
+
+             tau=int_r^r0 (1+x)/(x^2-u) dx.              (1.6)
+
+The subsequent derivatives are derivatives of this finite-dimensional
+equation, with all constants and metric factors retained.
+
+2. EXACT SECOND RESPONSE TO RELATIVE AXIS ANGLE
+
+At the orthogonal baseline z0=0, hence u=0, equation (1.6) becomes
+
+             tau=1/r-1/r0+log(r0/r).                    (2.1)
+
+Write r_u for the derivative of the solution at fixed tau,r0, evaluated
+at u=0. Differentiating (1.6),
+
+ r_u = r^2/(1+r) int_r^r0 (1+x)/x^4 dx
+     = [1/(3r)+1/2-C0 r^2]/(1+r),
+ C0=1/(3r0^3)+1/(2r0^2).                               (2.2)
+
+Here and below a derivative of h12 includes the solution r(tau;r0,u);
+it is not a partial derivative of H(r,u) at fixed r. Thus
+
+ d h12/du
+   = 4r r_u/(1+r)^3 - 2/(1+r)^2
+   = [-2/3-2r-2r^2-4C0 r^3]/(1+r)^4.                  (2.3)
+
+Similarly,
+
+ d h12/dr0 = 4r^3(1+r0)/[r0^2(1+r)^4].                 (2.4)
+
+If r -> 0 and r/r0 -> 0, with r0 bounded, then
+
+              d h12/du -> -2/3.                        (2.5)
+
+Indeed C0 r^3=(r/r0)^3/3+(r/r0)^3 r0/2 ->0.
+This response is strictly negative. There is no cancellation that
+would follow merely from the vanishing of the first radial variation.
+
+3. A GENUINE GEODESIC, RATHER THAN AN AXIS PARAMETRIZATION
+
+One must distinguish a second derivative on a curved coordinate
+path from a Riemannian Hessian. Use the following exact product
+geodesic through the baseline n1=e1,n2=e2. At every spatial site,
+in quaternion coordinates,
+
+ q1(epsilon)=(c,sqrt(w0)e1) cos(sqrt(w0)epsilon)
+                                +(0,e2)sin(sqrt(w0)epsilon),
+ q2(epsilon)=(c,sqrt(w0)e2) cos(sqrt(w0)epsilon)
+                                +(0,e1)sin(sqrt(w0)epsilon),
+ q3(epsilon)=(1,0),  c=sqrt(1-w0).                      (3.1)
+
+The summands in each expression are orthogonal unit vectors.
+Thus (3.1) is a constant-speed great circle on each S^3 factor,
+and hence a geodesic for the Pauli/2 metric too. Its initial full
+spatial norm is
+
+                         |J|^2=8n w0.                  (3.2)
+
+Along this initial geodesic the amplitudes stay equal, so the exact
+flow reduction above applies for every sufficiently small epsilon.
+Its initial quantities obey
+
+ w0(epsilon)=w0+w0(1-w0)epsilon^2+O(epsilon^4),
+ r0'(0)=0, r0''(0)=2r0,
+ z0(0)=0, z0'(0)=2,
+ u'(0)=0, u''(0)=8r0^2.                                (3.3)
+
+Therefore the ordinary second derivative along (3.1) is exactly the
+Riemannian Hessian in direction J, and
+
+ Hess(h12 circ V_s)(J,J)
+        =2r0 (d h12/dr0)+8r0^2(d h12/du).                (3.4)
+
+All first derivatives in this direction vanish.
+If r/r0 ->0 and r->0, equations (2.3)--(2.4) imply
+
+ Hess(h12 circ V_s)(J,J) = -(16/3)r0^2[1+o(1)].          (3.5)
+
+The relative error here follows because
+2r0(d h12/dr0)/r0^2=8(r/r0)^3(1+r0)/(1+r)^4 ->0.
+
+The direction is physical in the elementary gauge-quotient sense.
+With left-trivialization J_i=U_i' U_i^-1, its matrices are
+
+ J1=i sqrt(w0(1-w0))sigma2-i w0 sigma3,
+ J2=i sqrt(w0(1-w0))sigma1+i w0 sigma3,  J3=0.            (3.6)
+
+At every vertex the adjoint of the infinitesimal gauge action is
+sum_i(J_i-U_i^-1 J_i U_i). The first two contributions are
+-2i w0 sigma3 and +2i w0 sigma3, respectively, so their sum is zero.
+Thus J is orthogonal to all local periodic gauge directions.
+No claim that the full nonlinear quotient is nonsingular is needed.
+
+4. THE ACTUAL BOUNDED RADIAL MAGNETIC OBSERVABLE
+
+Write the flowed plaquette as P12^s=p0 I+i p.sigma. Then
+|p|^2=1-p0^2=2h12-h12^2 exactly. For fixed g_*>0 and alpha>0 use
+the same type of bounded physical probe proposed in TURN63:
+
+ F_s,a(U)=exp[-alpha |2p12(V_s;x)/(g_* a^2)|^2]
+        =exp[-4alpha(2h12-h12^2)/(g_*^2 a^4)].            (4.1)
+
+It is a smooth gauge-invariant function at finite cutoff, with values
+in (0,1]. The chosen point x is immaterial on the homogeneous family.
+For the unit initial tangent j=J/sqrt(8n w0), (3.4) gives the exact
+Hessian formula
+
+ Hess F_s,a(j,j)
+   = -[8alpha(1-h12)/(g_*^2 a^4)] F_s,a
+       [2r0(d h12/dr0)+8r0^2(d h12/du)]/(8n w0).         (4.2)
+
+There is no squared-first-derivative term: that derivative is zero.
+
+Take a sequence of cubic tori of fixed physical side L, so n=(L/a)^3.
+Fix s>0 and let beta(a)->infinity with beta(a)=o(a^-2). Choose
+
+                w0=(2beta)^-1/2, r0=w0/(1-w0).           (4.3)
+
+Every initial spatial 12-plaquette has beta h12=1, and every other
+initial spatial plaquette has h=0. With constant temporal links I
+and the same spatial configuration on every time slice, the same
+statement holds for every four-dimensional plaquette.
+
+The condition on beta ensures tau r0 ->infinity. Equation (2.1)
+then implies r tau ->1 and r/r0 ->0. In particular,
+
+ h12(s)/a^4 -> 1/(32s^2),
+ F_s,a -> exp[-alpha/(4g_*^2s^2)].                       (4.4)
+
+Using r0^2/w0=w0[1+o(1)] in (4.2), obtain
+
+ Hess F_s,a(j,j)
+  = [16alpha/(3g_*^2 L^3)]
+       exp[-alpha/(4g_*^2s^2)] (w0/a)[1+o(1)]
+  = [16alpha/(3sqrt(2)g_*^2 L^3)]
+       exp[-alpha/(4g_*^2s^2)]
+          (a sqrt(beta))^-1[1+o(1)] -> +infinity.        (4.5)
+
+The baseline expectation is not involved in this calculation.
+In particular logarithmic beta growth meets the displayed conditions,
+but no running-coupling theorem or identification of beta(a) is assumed.
+
+The limit r tau ->1 can be checked directly from (2.1): with y=tau r,
+the equation is 1=1/y-1/(tau r0)+tau^-1 log(tau r0/y).
+Since r<=r0 and r0 is bounded, the logarithmic contribution tends
+to zero; the same equation bounds y away from zero and infinity.
+Alternatively integrate r_tau=-r^2/(1+r), then bound 1+r between
+1 and 1+r0, and use r0->0 to squeeze tau r to one.
+
+5. EXACT LIMITS OF THE COUNTEREXAMPLE
+
+This disproves any deterministic bound
+
+ sup_(all configurations with every beta h_p<=1)
+                   ||Hess F_s,a||op <= C(s,L,g_*,alpha)
+
+uniformly along the displayed sequences. The direction is a unit
+vector in the complete spatial product metric and is gauge orthogonal.
+It is not a pure gauge artifact, nor the Hessian of a coordinate path
+whose connection correction was omitted.
+
+It also shows why the original-law plaquette exponential estimate,
+viewed ALONE as information about a probability measure, is insufficient
+to establish such an averaged supremum-Hessian bound. Put a point mass
+on the four-dimensional homogeneous configuration and, if desired,
+average over all site gauge transformations. For any finite set B and
+0<=s_p<1/2,
+
+ exp[sum_B s_p beta h_p] <= exp[sum_B s_p]
+                        <= product_B(1-2s_p)^(-3/4),     (5.1)
+
+because -(3/4)log(1-2s)>=3s/2>=s. Thus this family obeys the entire
+TURN64 energy-moment inequality, while the observable's Hessian
+operator norm grows as in (4.5). Gauge averaging preserves the energy
+and the gauge-invariant Hessian operator norm.
+
+This auxiliary measure is NOT the Wilson measure. It is not asserted
+to be reflection positive or to obey the Wilson conditional link law.
+There is consequently no claim that the averaged Hessian in the
+actual Wilson law diverges.
+
+Nor does (4.5) disprove a bound on a weighted diagonal trace, a
+second-variation contraction against a particular innovation
+covariance, a fixed single-link derivative, or the actual temporal
+increment d=E(F1-F0)^2/2. The tested direction is a coherent spatial
+variation. Those more structured quantities may have cancellations
+or may suppress this geometry probabilistically.
+
+The useful conclusion is narrower: the proposed physical radial
+observable cannot be attached to the earlier affine squared-influence
+argument simply by claiming that its entire nonlinear Hessian is
+uniformly bounded on configurations with bounded beta h.
+
+An actual-law derivative estimate must use additional Wilson
+structure, multiscale restrictions stronger than plaquette smallness,
+or a consumer that does not require this false uniform Hessian bound.
+The complete nontrivial YM4 existence proof remains unproved.

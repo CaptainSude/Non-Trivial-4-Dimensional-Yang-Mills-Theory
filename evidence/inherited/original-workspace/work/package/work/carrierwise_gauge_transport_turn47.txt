@@ -1,0 +1,720 @@
+CARRIERWISE GAUGE LOCALIZATION BY A COVARIANT KKT WALK EXPANSION
+19 October 2026. TURN47. gauge47. Producer note.
+Independent internal reviews: carrierwise_gauge_transport_audit_turn47
+(Sections1--8) and direct_coarse_anchor_audit_turn47 (Section9).
+Both reviews are conditional on the stated earlier geometric inputs;
+neither certifies the entire accumulated Yang--Mills programme.
+
+RESULT AND SCOPE
+
+The first-step auxiliary generator of TURN46 has a carrierwise locally
+gauge-invariant decomposition with a positive exponential SIZE norm,
+uniform in the enclosing volume. Sections1--8 first construct it after
+pullback to the coherent weak fine background U, with Y=M(U) and every
+retained exterior link equal to its value in U. Section9 gives a separate
+direct construction in the independent coarse data Y,e, using bounded
+paths in the already retained mixed coarse/exterior datum graph. It is
+an exact decomposition of the same auxiliary integral, not a new
+approximation to it. Its coefficients are independent of the independent
+current J. The complete leading determinant is localized in Section8;
+the actual comparison tail remains its controlled invariant whole-box
+carrier. The direct coarse-data extension is independently reviewed
+separately from the initial fine-background construction.
+
+The construction avoids Taylor expansion in the background link angles.
+Instead it expands the relative KKT equation about the feasible background
+U itself. A finite polynomial, covariant preconditioner gives a walk
+kernel contracting in absolute row AND column norms. Each walk coefficient
+reads only a fixed-size neighborhood, and is covariant before summation.
+Nonlinear trees and scalar loops then preserve covariance carrier by
+carrier. This supplies the missing localization of saddle/background reads
+on ONE COHERENT WEAK-BACKGROUND DOMAIN and its gauge saturation.
+
+The theorem does not extend that domain to the entire native domains
+whose representatives have only local curvature/reconstruction bounds.
+It does not prove that composing a carrier with the nonlocal B116 response
+preserves its carrier norm; that requires a compatible localization of the
+response. It is not arbitrary-depth RG closure or a continuum theorem.
+
+All constants below may depend on fixed L, group, and the finitely many
+bulk/boundary read types, but not on the number N of active blocks.
+
+1. INPUTS AND A LITERAL FEASIBLE ANCHOR
+
+Use the first ordinary step and complete fixed-crossing geometry of
+gaussian_coarse_kernel_turn40, local_saddle_and_prefactor_turn40, and
+TURN46's gauge-covariant color-ball auxiliary integral. The G0 forest
+has paths of length <=C_L, with roots at every active coarse center and
+every geometric boundary anchor. This is the BLOCK-LOCAL forest, not the
+long forest used in the earlier global coverage estimate.
+
+Let U be a fine-link background on the full action/average read collar.
+Restrict first to ||log U||_infinity<r, with r fixed sufficiently small.
+Apply its block-local forest section, denoted V=S_F(U). Each V chord is
+a product along two bounded forest paths and the chord; this is finite
+read and analytic, with ||log V||_infinity<=C_L r. Exterior slots are
+retained and transformed in precisely the convention of TURN46. Set
+
+        Y=M(U)=M(V),   e=U_fixed,                         (1.1)
+
+where the equality of framed ordinary rows uses the root-fixed section.
+More generally one retains the explicit transformed e under the section;
+no exterior value is silently replaced by I. The formula is exactly the
+map Phi of native_domain_attachment_turn46, expressed in its local forest
+section. The independent J is unused.
+
+Write the free chord field in relative coordinates W_b=exp(c_b)V_b, with
+forest links fixed to I and the retained exterior links fixed to e.
+Define the full constraint and stationarity map
+
+ F_V(c)=log[M(exp(c)V)Y^-1],
+ G_V(c,lambda)=(d_c S_e(exp(c)V)+DF_V(c)^t lambda, F_V(c)).       (1.2)
+
+All charged plaquettes, including boundary-crossing ones, occur in S_e.
+The logarithm is the same ordinary-mean branch as before. Its output is
+zero at c=0. Put z=(c,lambda), b_V=G_V(0), M_V=D_zG_V(0).
+Then b_V=(d_c S_e(V),0)=O(r), while
+
+              M_V=[L_V Q_V^t; Q_V 0]                 (1.3)
+
+is symmetric in the holomorphic bilinear convention. Here L_V is the
+relative-coordinate Wilson Hessian and Q_V=DF_V(0). Both have bounded
+operator-index range, finite background reads, and uniform local analytic
+Taylor bounds. M_V differs from the known flat KKT matrix by O(r) in
+both absolute row and column norms. In particular it has the old uniform
+inverse bound on a smaller real and complex weak domain.
+
+The actual residual gauge action is the section-preserving lift of
+TURN46. It acts on c by block adjoints R_h and on lambda by block adjoints
+S_h; write D_h=R_h direct-sum S_h. Exactly, whenever both weak chart
+representatives exist,
+
+ G_(V^h)(D_h z)=D_h G_V(z),
+ b_(V^h)=D_h b_V,   M_(V^h)=D_h M_V D_h^-1.             (1.4)
+
+For complex h, D_h^t=D_h^-1 because the invariant bilinear color form is
+preserved. No complex conjugate transpose is taken. The identities are
+identities of local analytic expressions, not norm assertions under a
+large complex gauge. The principal logarithm is similarity equivariant
+on its common spectral branch. Hence (1.4) holds whenever both endpoints
+are in the weak domain, even if a path of gauge transformations would
+leave that domain.
+
+2. THE FINITE POLYNOMIAL THAT PRODUCES AN ABSOLUTELY CONVERGENT WALK
+
+This is the essential additional step beyond simply saying that a
+covariant operator has an exponentially decaying inverse.
+
+At U=I, M_0 is a real symmetric, finite-range KKT matrix with
+
+       ||M_0||_2<=b,   ||M_0^-1||_2<=a^-1,    a>0.    (2.1)
+
+Choose a fixed tau>0 for which B_0=I-tau M_0^t M_0 has spectral norm
+q<1. For example tau=b^-2 gives q<=1-a^2/b^2. Let R_0 bound its range.
+At fixed L, a row of B_0^p reads at most C(1+p)^4 color/location blocks.
+Cauchy--Schwarz and the spectral bound therefore give
+
+ max(row absolute sum, column absolute sum of B_0^p)
+                         <= C(1+p)^2 q^p.             (2.2)
+
+Block operator norms may be used throughout; the fixed color factor is
+included in C. Choose the integer p ONCE so that (2.2)<1/16. Define the
+covariant finite-range matrices
+
+ B_V=I-tau M_V^t M_V,
+ K_V=B_V^p,
+ A_V=tau sum_(j=0)^(p-1) B_V^j M_V^t.                 (2.3)
+
+They obey A_V M_V=I-K_V exactly. All entries of K_V and A_V are local
+analytic functions of V in a fixed neighborhood of their operator legs.
+Their read sets have cardinality at most D_p, where p and D_p are FIXED
+independently of N. Summing internal matrix indices before estimating an
+entry is allowed and essential: it preserves covariance and its fixed
+read set while retaining the cancellation in (2.2).
+
+For complex weak V, the finite polynomial perturbation estimate gives
+
+ ||K_V-K_0||_row,col <= C_p r.
+
+The same estimate with entrywise suprema over the weak domain holds:
+there are only a fixed number of possible nonzero columns in each row,
+and each entry has a uniform O(r) bound. Reduce r so that the resulting
+absolute row/column sums are <1/8. Assign each matrix entry to the full
+fixed neighborhood containing its two legs and all its background reads.
+Choose kappa_0>0 with exp(kappa_0 D_p)<2. Then
+
+     ||K||_(matrix carrier,kappa_0)<1/4.               (2.4)
+
+The norm sums exp(kappa_0|X|) times the supremum of each matrix coefficient
+over its local weak background domain, with either operator leg fixed.
+Thus it is a STRICT SUPPORT SIZE norm, not merely a distance-weighted
+kernel estimate. Each entry is covariant between its two color legs,
+because every polynomial factor in (2.3) is. The entries of A have a
+finite, possibly large norm in the same algebra.
+
+Products are assigned to unions of their connected read sets. The shared
+operator index makes those unions connected and exp(kappa|union|) is at
+most the product of the weights. Row and column sums consequently give
+the usual submultiplicative matrix-carrier norm. Therefore
+
+            M_V^-1=sum_(n>=0) K_V^n A_V               (2.5)
+
+converges absolutely in this carrier algebra. Each walk is separately
+covariant, has its literal background support, and carries no flat
+noncovariant inverse. Equation (2.5) is an exact inverse by (2.3).
+
+3. NONLINEAR SADDLE TREES WITH LOCAL BACKGROUND COEFFICIENTS
+
+Expand (1.2) in the RELATIVE VARIABLES z, holding V independent:
+
+       G_V(z)=b_V+M_V z+N_V(z),     N_V(z)=sum_(n>=2) N_(V,n)[z^n].
+
+Each N_(V,n) is finite read, analytic in the local V, and equivariant
+as a multilinear tensor. Its absolute coefficients have a common bound
+C^n. This follows directly from the finite-read local exponential,
+ordinary mean and logarithm, on a fixed smaller complex relative ball.
+No Taylor expansion in V is made. All tensor color indices at a given
+site are kept together, so covariance is not broken by choosing separate
+color monomials as carriers.
+
+Using (2.3), the stationarity equation is exactly
+
+        z=K_V z-A_V b_V-A_V N_V(z),
+        z=-R_V b_V-R_V N_V(z),   R_V=sum K_V^n A_V.     (3.1)
+
+Expand (3.1) in rooted trees, with seeds -R b and nonlinear vertices
+-R N_n. Every R is its convergent walk expansion (2.5). Each diagram is
+covariant, reads the union of its finite background vertex/read sets,
+and its support is connected after including its output position.
+
+Here are sufficient quantitative majorants, including the support roots
+that are absent from an ordinary output-only norm. Use both external-leg
+rooted bounds for all tensors, just as in analytic_tree_norm_turn41.
+The finite local tensors have these bounds because their read sizes and
+transpose incidences are bounded. For a scalar majorant, first take
+kappa_1<kappa_0 and leave a fixed positive difference unused. Summing
+walk lengths gives at most (1-k)^-1 for k=||K||_(kappa_0)<1/4. The rooted
+tree sum is bounded by the solution of
+
+       w(t)=a t+b sum_(n>=2) C^n w(t)^n,               (3.2)
+
+where t bounds r, and a,b,C are fixed carrier constants. It has w(0)=0
+and an analytic small solution w(t)=O(t) on a common t-disc. Choose r
+inside that disc.
+
+To root a summed scalar graph at ANY background cell in its read set,
+mark a vertex or walk segment whose fixed read set contains that cell.
+The finite read incidence bounds the choices at a mark. Cut the diagram
+at that mark and use the any-leg tensor bounds on its branches. A marked
+walk sum is bounded by sum_(n>=0)(n+1) k^n=(1-k)^-2. A marked nonlinear
+tree sum is bounded by the derivative of (3.2), whose denominator
+1-b sum_(n>=2)n C^n w^(n-1) stays positive. A spare fraction of
+kappa_0-kappa_1 also pays the finite multiplicity of possible sites in
+a support. This is the explicit rooted-support argument; a bare
+unmarked l2 bound would not suffice.
+
+Consequently z_*(V) has a common-radius covariant, connected carrier
+catalogue, with norm O(r), uniform in N. Its sum solves the literal KKT
+equation and is sup-small. The existing uniqueness theorem identifies it
+with the actual branch previously constructed in angle coordinates.
+The physical fine saddle is exp(c_*(V))V. Thus the procedure has changed
+the REPRESENTATION of the actual saddle, not its value.
+
+Every scalar local action vertex, physical plaquette insertion, or their
+relative derivatives can now be composed with these covariant trees.
+All color legs are contracted in an invariant bilinear form; the resulting
+scalar diagrams are individually gauge invariant and strictly supported
+on their assigned read unions. In particular the classical action has
+an invariant scalar carrier decomposition with a rooted size bound.
+
+4. MOVING CONSTRAINT, COVARIANCE AND COMPLETE LOCAL JACOBIAN
+
+The auxiliary integral uses the moving orthogonal chart of TURN46; its
+coefficients also admit covariant carrier catalogues, as follows.
+
+At the actual saddle, let Q_*=DF(0) in left relative saddle coordinates,
+and let L_* be the relative Lagrangian Hessian including its multiplier
+term. Q_* and L_* are finite RANGE in their operator legs. Their background
+reads are the covariant saddle trees just constructed. Their differences
+from their finite-read anchor versions are O(r) in the carrier norm.
+The change from relative-anchor coordinates to relative-saddle coordinates
+is linkwise analytic and covariant, hence has the same catalogue.
+
+(i) The positive matrix Q_*Q_*^t is the finite-read anchor matrix Q_VQ_V^t
+plus a covariant carrier perturbation of norm O(r). The anchor inverse
+has the blocked-walk construction of Section2, using its known uniform
+gap. Neumann expansion in the O(r) perturbation then gives an exact
+covariant carrier inverse. Therefore
+
+ E_*=Q_*^t(Q_*Q_*^t)^-1,    P_*=I-E_*Q_*              (4.1)
+
+have such catalogues. Reduce r and the positive carrier exponent a fixed
+number of times as required. There is no volume-dependent loss.
+
+(ii) The constraint chart c_*(b)=b+E_* tau_*(b), with b=P_*b, is the
+unique small solution of F(c_*(b))=0. Its tau equation has derivative I
+and starts at degree two in b. The same relative-variable tree recursion
+gives a covariant catalogue, geometric at all arities, with tau=O(b^2).
+This is exactly the moving chart of TURN46, including its ambient P_*.
+
+(iii) The constrained precision is H_T=P_* L_* P_* on T=ker Q_*, and
+the required moving square root is K=P_*H_T^-1/2 P_*. There is a concrete
+covariant support expansion for K; no unsupported statement that spectral
+locality automatically implies background locality is needed. Use
+
+       K=(2/pi) int_0^infinity C_t dt,
+ C_t=[(L_*+t^2 I, Q_*^t; Q_*,0)^-1]_(fine,fine).     (4.2)
+
+The upper-left block is precisely (H_T+t^2)^-1 on T and zero on T^perp.
+This follows by solving the lower constraint equation before the upper
+equation. For t in a fixed bounded interval [0,T_0], the corresponding
+FLAT KKT matrices have a uniform inverse bound: Q has its fixed right
+inverse and H+t^2 remains uniformly positive on ker Q. Their norms and
+index ranges are also uniform. Section2 therefore gives a common fixed
+polynomial degree and covariance-preserving carrier expansion for their
+finite-read anchor inverses. The O(r) saddle perturbation is treated by
+a uniformly convergent Neumann series. This proves a uniformly bounded
+covariant catalogue for C_t on [0,T_0].
+
+For t>=T_0 instead use
+
+        C_t=t^-2 sum_(n>=0)(-t^-2 P_*L_*P_*)^n P_*.   (4.3)
+
+First construct P_*,L_* and bound their carrier norms. Choose T_0^2 larger
+than twice the resulting norm of P_*L_*P_*. Then (4.3) converges in that
+algebra and is integrable in t. Shrinking the exponent later cannot
+increase this norm, so this order of choices is not circular. Integrating
+individual coefficients in (4.2)--(4.3) preserves their supports and
+covariance and gives the exact positive square-root branch on real data,
+hence its analytic continuation. A fixed further exponent reserve handles
+marked/rooted scalar contractions. All relative-variable derivatives can
+be treated on a smaller common disc by the same analytic expansions.
+
+(iv) Keep the FULL coarea factor from TURN46,
+
+ J(b)=c_geo det[A(b)^t A(b)+I-P_*]^(1/2)
+                         det[Q_phi(b)Q_phi(b)^t]^(-1/2).      (4.4)
+
+Here A is the derivative into invariant fine tangent frames and includes
+the ambient projection; at b=0 its metric matrix is P_*. Thus the first
+embedded matrix in (4.4) equals I at b=0 and has a convergent covariant
+trace-log series for small b. For the denominator write B(b)=Q_phi(b)
+Q_phi(b)^t. Its inverse has the same anchor/perturbation construction
+as (i), uniformly on the small relative b-disc. The exact centered log is
+
+ log det B(b)-log det B(0)
+             =int_0^1 Tr[B(t b)^-1 D_bB(t b)[b]] dt.  (4.5)
+
+All factors have covariant strict-support catalogues. Traces close color
+legs and give invariant loops, supported on the connected unions of
+their factors. The rooted-mark argument of Section3 bounds their scalar
+carrier norm. Equation (4.5) keeps every constraint/output Jacobian and
+requires no global determinant estimate per carrier. It gives the entire
+centered log J needed in the fluctuation potential. Its value at b=0 and
+the leading Gaussian normalization remain their exact invariant factors;
+they have not been set to one or reassigned to the fluctuation interaction.
+
+5. EXACT INVARIANT FLUCTUATION CARRIERS AND CLUSTER LOGARITHM
+
+Let f(b)=S_e(exp(c_*(b))U_*), s=f(0), ell=log J, and K as above. Use the
+ambient color-ball law mu_T of TURN46. Its complete scalar normalizer is
+c_(q,T)^(n_ch), with n_ch the number of ambient chord color blocks.
+
+Expand only in the relative fluctuation b, not in U. With all physical
+zero-, first-, and second-order terms extracted exactly, write
+
+ f(b)=s+.5 b^t H_T b+sum_(n>=3) f_n[b^n],
+ ell(b)-ell(0)=sum_(n>=1) ell_n[b^n].
+
+The coefficients just constructed are covariant tensors. The zero
+linear term follows from actual constrained stationarity. The quadratic
+term is the actual constrained Hessian. These vanishings are imposed
+before assigning higher-degree diagrams, so no spurious lower-degree
+pieces need to cancel across carriers. Then
+
+ V_z(xi,U)=-sum_(n>=3) z^(n-2) f_n[(K xi)^n]
+                         +sum_(n>=1) z^n ell_n[(K xi)^n]       (5.1)
+
+is EXACTLY the old centered auxiliary phase. Keep each full color tensor
+and its contractions together. Each resulting V_(z,X)(U,xi) is invariant
+under simultaneous U->U^h and xi->R_h xi, reads only the background and
+xi slots in X, and satisfies, on a fixed smaller weak U domain,
+
+       sup_i sum_(X contains i) e^(kappa_2 |X|)
+                 sup |V_(z,X)| <= C |z| T^3,          (5.2)
+
+for C|z|T<1/2. This follows from the geometric arity majorants above and
+the same absolute scalar sums used in whitened_local_cluster_turn42.
+The only new constants are fixed block-preconditioner constants and
+fixed exponent/radius losses. A positive kappa_2 remains. In particular
+the weak r is independent of N and g. If desired all original finite
+reads through S_F can be pulled back to U at a fixed support cost C_L.
+
+The existing bounded-potential cluster expansion applies with arbitrary
+small positive exponent reserves below kappa_2. Product color-ball
+integration is invariant under all REAL compact adjoint rotations at
+each color block. Each overlap activity and connected logarithmic carrier
+therefore satisfies the local gauge identity individually. Holomorphic
+continuation gives the complex local identity on the weak domain. The
+graph expressions themselves show independence of the chosen weak orbit
+representative as explained below. Thus
+
+ log E_muT exp V_z = sum_X F_X(z,U),
+    ||F(z,.)||_kappa <= C |z|^2 T^6,                 (5.3)
+
+on |z|<=c/T^3, after reducing constants as in TURN42. The parity identity
+V_(-z,X)(xi,U)=V_(z,X)(-xi,U) holds carrierwise because relative degree is
+retained. Hence every integrated cluster carrier is even in z and zero
+at z=0, giving the square in (5.3). The complete ambient cutoff mass has
+not disappeared; (5.3) concerns the NORMALIZED expectation.
+
+For physical scalar plaquette sources, attach the literal invariant
+insertions h_p(exp(c_*(zKxi))U_*). To claim TURN45's enlarged independent
+plaquette-source radius, RESTRICT the weak-background radius here to
+r_U<=c rho/C_L; it is not a radius claim on the fixed r_0 datum ball of
+the source-free F. The plaquette value at the anchor is O(r_U^2), its
+first relative derivative is O(r_U), and its higher relative derivatives
+have uniform geometric bounds. Together with ||c_*||=O(r_U), this gives
+the rooted carrier bound C(r_U+|z|T)^2 for the insertion family. Hence
+the physical source radius ||w||<c/(rho+gT)^2 follows on that smaller
+background domain, after fixed changes of constants. Source labels at p
+and source-only terms stay in their nonempty carriers. The joint auxiliary
+source logarithm is therefore carrierwise invariant as well. There is
+no large independent-w disc asserted simultaneously with a fixed datum
+radius independent of g.
+
+For the constant physical source z(zeta)=g(1-g^2 zeta)^-1/2, the exact
+source formula remains
+
+ L_E(U,zeta)=zeta s(U)-(d/2)log(1-g^2 zeta)
+           +sum_X [F_X(z(zeta),U)-F_X(g,U)]
+           +D(U,zeta)-D(U,0).                         (5.4)
+
+The actual tail D is unchanged, separately invariant by TURN46, and
+retains its paid whole-box carrier. The invariant local family obeys
+
+ ||partial_zeta^n [F(z(zeta),.)-F(g,.)]_(zeta=0)||_kappa
+                       <=n! C^n g^(2n+2) T^6.         (5.5)
+
+These statements use the OLD polylogarithmic comparison regime of TURN46;
+the separately enlarged energy window is not silently imported.
+
+6. WHICH GAUGE DOMAIN IS ACTUALLY OBTAINED
+
+Each elementary coefficient is defined on its strictly local weak U
+read set. Its covariance is an algebraic covariance identity of (1.2),
+local derivatives, polynomial preconditioners and invariant contractions.
+For real compact gauges the color-ball integral has an exact real
+change-of-variables identity. For a complex gauge taking two weak
+representatives into each other, extend that identity as follows.
+
+Take a fixed joint Taylor order in z, the physical scalar sources, and
+the bounded cluster amplitudes. At that fixed order the integrand has
+finite maximal degree in xi: (5.1) pairs relative degree n with positive
+z degree n-2 or n, and each fixed source order also has a finite xi degree
+at fixed z order. The resulting integrated coefficients are contractions
+of invariant Gaussian-ball moment tensors. This is a coefficient-level
+argument; no value of V at a possibly huge complex-transformed xi is used.
+The q-dimensional truncated Gaussian ball has O(q)-invariant moments;
+each even moment is a scalar multiple of the sum of pairings of the
+invariant bilinear form and odd moments vanish. These tensors are also
+invariant under the complexified orthogonal adjoint action. Every
+coefficient is therefore an algebraic invariant for ANY such complex
+gauge with both local weak representatives defined. The convergent
+amplitude series proves the identity for the activities, and the
+convergent cluster series proves it for F_X. One does not deform a real
+Gaussian ball by a nonunitary complex gauge.
+
+It follows that F_X defines a consistent invariant analytic function on
+the gauge saturation of its local weak-background tube: choose a weak
+representative, evaluate there, and use the just-proved identity on
+overlaps. Its bound is the same representative supremum. Pulling back
+through the bounded forest section promotes the residual-root identity
+to the full fine gauge identity, with the complete forest paths included
+in the carrier. Independent J can be adjoined with arbitrary admitted
+radius since this pullback does not read J.
+
+THIS IS A RESTRICTED DOMAIN THEOREM. It does not show that every field in
+the full B109/B116/B119 regular orbit domains has a weak representative
+on every large carrier with a radius independent of its size. It also
+does not localize the composite U_s=exp(i chi_s(U,J,B))U: admissibility
+of that endpoint, proved in TURN46, is a value/domain statement and
+does not make chi_s a finite-read substitution. The new catalogue gives
+an actual gauge-invariant input family to investigate there; it is not
+an automatic import of the native theorem.
+
+7. CONSEQUENCES AND LIMITS
+
+This closes a specific finite-step defect: the actual weak-background
+auxiliary generator now has individual local gauge identities, exact sum
+identity, and a uniform positive exponential carrier-size norm. The
+previous global-color-only averaging can be omitted on this domain.
+The carriers here are functions of the pulled-back FINE background U.
+Their sum depends on U only through Y=M(U) and the retained exterior,
+but individual carriers need not be constant on a fiber of this map.
+Thus this is not yet a strict-support decomposition solely in independent
+coarse link coordinates Y. Descending individual carriers requires a
+specified local covariant coarse-to-fine anchor, or another argument.
+For a semisimple group, each invariant carrier's linear datum jet at
+identity vanishes, since simultaneous constant conjugation has no
+invariant one-color covector. Its value at identity need not vanish;
+source/vacuum constants are retained explicitly.
+
+The cycle obstruction in TURN46 is not contradicted: that obstruction
+concerned a uniformly bounded support-preserving projector on arbitrary
+decompositions. This construction rebuilds the actual saddle and
+auxiliary potential from local covariant equations, allows bounded
+neighborhood support enlargement, and uses a possibly small positive
+localization exponent. It is specialized to the gapped first-step KKT
+geometry and a coherent weak representative.
+
+It does not prove the same uniform KKT gap, polynomial degree, carrier
+exponent, weak radius or cutoff transport at arbitrarily many scales.
+No bad-history branch, original-measure summation, nonzero separated
+continuum witness, or Yang--Mills existence theorem follows from this
+one-step localization alone.
+
+8. THE COMPLETE LEADING PREFACTOR ALSO HAS INVARIANT LOCAL CARRIERS
+
+This addition addresses the unmarked generated action, not only the
+normalized source logarithm. It was suggested in the root review and
+uses the SAME covariant blocked walk, so requires no new domain.
+
+Let m_out be the number of real coarse output coordinates, let D_KKT
+be the real dimension of the full fine-chord/multiplier KKT space, and
+let M_*=[L_* Q_*^t;Q_* 0] be the actual Lagrangian KKT matrix in LEFT
+RELATIVE SADDLE COORDINATES. Its constrained Hessian is H_T. Relative
+left tangent frames are invariant orthonormal frames at b=0, and the
+relative coarse log derivative at Y is the identity in the coarse Haar
+tangent frames. Therefore the exact TURN46 coarea calculation gives
+
+      A0(U)=J_*(U)/sqrt(det_T H_T)
+            =c_geo/[det(Q_*Q_*^t) det_T H_T]^(1/2).    (8.1)
+
+There is no exponential-coordinate Haar factor at this origin: the
+derivative of exp at zero is identity and left multiplication is an
+isometry preserving Haar. c_geo retains the normalized Haar-volume
+conventions and the already integrated G0 factor. This is the reason
+that a determinant formula in other, absolute angle coordinates cannot
+simply be copied without its metric/coordinate factors.
+
+The elementary KKT determinant identity in these frames is
+
+       (-1)^m_out det M_* = det(Q_*Q_*^t) det_T H_T.   (8.2)
+
+For proof, choose a real orthonormal decomposition X=T direct-sum N.
+In the order T,N,Y the first block is H_T. Eliminate its off-diagonal
+blocks; the remaining N,Y determinant has the form
+det[(C,Q_N^t;Q_N,0)]=(-1)^m_out(det Q_N)^2, independently of C.
+Also Q_N Q_N^t=Q_*Q_*^t. Equation (8.2) follows on real weak data,
+and analytically continues to the chosen weak complex branch. Hence
+
+     -log A0=-log c_geo+.5 log[(-1)^m_out det M_*],    (8.3)
+
+with the branch positive inside the logarithm at the real reference.
+
+The anchor M_V has the same determinant sign. Using B_V from (2.3),
+
+ log[(-1)^m_out det M_V]
+       =-(D_KKT/2)log tau-.5 sum_(n>=1) Tr B_V^n/n.  (8.4)
+
+Indeed I-B_V=tau M_V^t M_V=tau M_V^2; the real-flat equality follows
+by its positive spectral logarithm. Both sides analytically continue
+on the connected weak domain where K_V=B_V^p has norm <1/4. That bound
+places the spectrum of B_V in the open unit disc and fixes the analytic
+log branch. Formula (8.4) does not assume ||B_V||_row<1.
+
+To obtain a locally summable scalar catalogue, group n=kp+r with
+1<=r<=p and k>=0 before estimating. Then
+
+            B_V^n=K_V^k B_V^r.                       (8.5)
+
+Every B_V^r with r<=p is a fixed finite-range, finite-read covariant
+matrix with a finite carrier norm C_p. K_V has carrier norm theta<1/4.
+Expand (8.5) as the walk catalogue and close its operator/color legs by
+the trace. Each term is an invariant loop with its connected read union.
+The scalar rooted-support bound is controlled by
+
+       C_p sum_(r=1)^p sum_(k>=0) (k+1) theta^k/(kp+r),
+
+which is finite. The factor k+1 marks a segment whose bounded read
+contains the prescribed support root. Thus (8.4) is an absolutely
+convergent INVARIANT SIZE-CARRIER expansion, uniform in N.
+
+Finally put Delta=M_*-M_V, in the shared relative color index spaces.
+The saddle tree construction gives ||Delta||_carrier<=Cr. After reducing
+r once, ||M_V^-1 Delta||_carrier<1/2. Consequently
+
+ log[(-1)^m_out det M_*]
+   =log[(-1)^m_out det M_V]
+       +sum_(n>=1) (-1)^(n+1) Tr[(M_V^-1 Delta)^n]/n.  (8.6)
+
+The identity is the exact determinant identity and its branch is fixed
+by continuous interpolation in Delta. Each term in its convergent walk/
+tree expansion is invariant and strictly supported. The same rooted
+loop marking proves the uniform scalar carrier bound.
+
+All constants in (8.3)--(8.6) are retained. The D_KKT log tau constant
+can be assigned to the corresponding single coordinate blocks;
+-log c_geo remains its exact geometric vacuum constant or its literal
+local Haar-volume decomposition. Nothing is normalized to one. The
+dependence on the artificial tau cancels in the exact total (8.4).
+
+Combining this invariant prefactor with s, F and D gives a carrierwise
+invariant decomposition of the PULLBACK of the actual first regular-step
+generated action on the stated fine-background domain, including its
+complete leading determinant. Individual carriers are not asserted to
+descend separately through U->(M(U),e(U)), as explained in Section7.
+The prefactor family has an O(1) rooted value bound and is multiplied
+by g^2 in the effective action. An O(g^2) bound is not asserted for the
+prefactor logarithm itself. All caveats about the restricted coherent
+domain and further RG steps continue to apply.
+
+9. DIRECT COARSE-DATUM CARRIERS BY A BOUNDED PATH ANCHOR
+
+This separately labeled extension removes the descent issue stated in
+Section7 for the PRECISE first-step box/collar geometry already used.
+It does so by rerunning the covariant construction with a different
+anchor; it does not assert that the individual fine-U carriers of
+Sections1--8 happen to be constant on ordinary-average fibers.
+
+9.1. Exact local datum graph and its connectivity.
+
+The input is now the independent framed ordinary coarse links Y on ALL
+coarse bonds with at least one active block endpoint, together with the
+retained fine exterior links e on the COMPLETE two-block read collar.
+Make the mixed datum graph with those coarse bonds as edges joining
+coarse centers and the retained exterior fine bonds as fine edges. A
+fine vertex that is also a coarse center is one and the same vertex.
+Every coarse-root frame and exterior fine-vertex frame is retained.
+
+For each free fine chord b=(x,y), its block-forest paths end at roots
+r_x,r_y within distance C_L. The following bounded path statement is
+already established in gaussian_coarse_kernel_turn40 Section2 (the
+proof of (2.1)--(2.2)), using exactly this complete collar:
+
+ * If r_x=r_y, the empty path suffices.
+ * If both roots are active centers, they are in the same or adjacent
+   owner blocks, so retained ordinary coarse rows connect them by a
+   path with at most a fixed number of coarse edges.
+ * If one is a geometric fine boundary root, join the active center
+   to an exterior coarse center by at most two retained coarse rows,
+   then use the fixed exterior strip to the boundary root.
+ * If both are geometric boundary roots, the same fixed exterior
+   strip connects them.
+
+All paths have length <=C_L and lie within distance C_L of b. In the
+last two cases a boundary vertex first moves out through its retained
+crossing edge, travels in the exterior layer/collar, and returns if
+necessary. The fixed odd L, cubical union of complete owner blocks,
+and retained two-block footprint ensure that the exterior center and
+this detour are available. This is also the exact path connectivity
+used by the preceding Gaussian-gap proof; it introduces no new collar.
+Small boxes have only finitely many extra local types and are included
+by the same fixed C_L. Choose one such path gamma_b for each local
+geometry/orientation type; reverse paths for reversed chords.
+
+Each path is a path in the MIXED DATUM GRAPH. An ordinary Y edge is
+used as a datum group element, not replaced by the fine straight-path
+product that happens to join its endpoints. This does not alter the
+ordinary averaging map M appearing in the constraint.
+
+9.2. A covariant anchor that need not be feasible.
+
+Define the section field V(Y,e) by
+
+  V_b=ordered product of Y and e along gamma_b on free chords,
+  V_b=I on G0 forest edges,       V_b=e_b on fixed edges.      (9.1)
+
+All values are in the compact group for real data and in its complex
+extension for complex data. Each chord has finite read, bounded transpose
+incidence, and a uniform analytic radius. On a coherent weak product
+domain ||log Y||+||log e||<r_d,
+
+        ||log V||<=C_L r_d.                          (9.2)
+
+The constants are independent of the enclosing box. Endpoint gauge
+factors cancel along gamma_b. Hence
+
+ V(Y^h,e^h)_b=h(r_x)V(Y,e)_b h(r_y)^-1,              (9.3)
+
+while the forest links remain I under the usual root-constant lift.
+The gauges at exterior coarse centers agree with their fine-vertex
+gauges because these are the same vertices in the mixed graph. Exterior
+links are transformed jointly when those frames are moved. No identity
+is asserted at a frozen noninvariant exterior.
+
+In general M(V(Y,e)) is NOT Y. This is harmless and is retained. Set
+
+ F_(Y,e)(c)=log[M(exp(c)V(Y,e))Y^-1],
+ G_(Y,e)(c,lambda)=(d_c S_e(exp(c)V)+DF(c)^t lambda,F(c)).   (9.4)
+
+Then G(0) has BOTH components:
+
+     G(0)=(d_c S_e(V), log[M(V)Y^-1])=O(r_d).        (9.5)
+
+These components are local analytic covariant functions. M_d=D_zG(0)
+has the same finite range/read and equals the original flat KKT matrix
+at (Y,e)=(I,I). Its difference from that matrix is O(r_d) in row and
+column sums. Equation (1.4) remains exact, with the same adjoint actions.
+The coarse constraint logarithm transforms by conjugation at the initial
+coarse endpoint, including when its value at c=0 is nonzero.
+
+9.3. Apply the existing proof, with the new seed retained.
+
+Sections2--3 never used b_V's second component being zero: they used
+only its covariance, finite reads, and O(r) bound. Thus use M_d in
+the variable polynomial preconditioner and use all of (9.5) as its
+seed. Every walk/tree now reads ONLY the independent data Y,e in its
+bounded path/read union. The exact summed solution solves the literal
+constrained stationarity equation for Y and the actual exterior e.
+Uniqueness identifies it with the same first-step classical saddle.
+
+At that saddle switch to LEFT RELATIVE SADDLE coordinates exactly as
+in Section4. The matrices Q_*,L_*,P_*, the covariance square root, and
+the complete coarea factor are those of the actual fiber. Their anchor
+versions now use (9.4) and may be evaluated off the fiber, but remain
+uniformly close to their flat versions and differ from the saddle
+versions by a covariant O(r_d) catalogue. Every inverse, functional
+calculus, relative-variable chart, and trace-log argument in Sections4
+and8 therefore applies unchanged with fixed new constants. In (8.1)
+and (8.2) it is still the PHYSICAL relative-saddle M_* that enters the
+Gaussian prefactor, not a Hessian in the anchor coordinates at c_*.
+
+The invariant color-ball cluster expansion of Section5 now yields
+
+       F(z,Y,e)=sum_X F_X(z,Y,e),
+       ||F(z,.)||_kappa<=C |z|^2 T^6,                (9.6)
+
+where each carrier is a function solely of the independent coarse Y
+and retained e slots in its connected read set and is locally gauge
+invariant on the stated coherent domain. The scalar source and leading
+prefactor identities are exact. The complete action, with all normalizers
+retained, has an invariant carrier decomposition there. The actual tail
+D has its original whole-box carrier and the same gauge identity.
+
+Carrier sizes may be counted either in mixed-graph cells or in fixed-L
+fine cells: one coarse edge and all fixed path extensions have bounded
+size C_L and bounded incidence, so the exponent changes by only a fixed
+factor. The new kappa and r_d may be small but remain positive and are
+independent of N. The independent J slot may still be adjoined unused.
+For the enlarged independent-profile source disc, restrict r_d=O(rho)
+as in the correction in Section5; the constant-source catalogue retains
+its fixed datum radius.
+
+The domain is the gauge saturation of a coherent weak product domain
+in Y,e. Section6's invariant-moment argument gives consistency on its
+overlaps for the local auxiliary/source carriers and the invariant
+prefactor loop catalogues. The actual-density identity itself is taken
+on the INTERSECTION with the separately established smaller actual-tail
+domain. A fixed local catalogue radius does not enlarge the domain of
+the smooth energy-window remainder D. For D retain exactly TURN46's
+compatible local gauge identity; the moment argument for F is not a new
+proof of a larger complex-orbit domain for the actual window integral.
+This remains smaller than the general native regular orbit
+domain; a locally small curvature does not by itself supply one such
+weak representative on an arbitrarily large carrier. Furthermore the
+next actual coarse classical action is no longer the finite-range
+Wilson sum used to build (9.4). This extension alone does not reproduce
+the same finite-range KKT preconditioner at every later scale. Those
+uniform repeated-step issues remain unresolved.

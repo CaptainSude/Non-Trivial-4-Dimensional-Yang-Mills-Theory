@@ -1,0 +1,199 @@
+INDEPENDENT AUDIT: ORIGINAL WILSON MARKED-BRIDGE ATTACHMENT
+TURN68. 20 October 2026. tail47.
+
+VERDICT: PASS after the two scope clarifications, including Section6A.
+
+Producer read in full:
+ work/wilson_marked_bridge_attachment_turn68.txt
+ SHA256 9DA411C81CB399488013C215975A21695F833E0782998A545F49C24BFE76BEE9
+
+Inputs retained at their stated scopes:
+ work/spacetime_marked_bridges_turn68.txt
+ SHA256 A2F4FC210090BFD683C5D92BC70EE0480A3869D86229530445FAD2E62E018269
+ work/separated_source_attachment_turn68.txt
+ SHA256 C2BC4B0A45D2B8743B1864AF3D4CD9709EB76021711315418B6FF327FB2E5091
+
+The first has my separate marked-bridge audit. The second is my
+fixed-spatial-regulator source producer, independently audited by
+gauge47. This audit checks the new combination and its finite-event
+and whole-time-circle reasoning; it does not replace the independent
+audits of those inputs.
+
+1. THE COMMON THRESHOLD
+
+At each of a countable set of spatial regulators there are countably
+many spacetime action cells. Each one-dimensional law has at most
+countably many atoms. Their union is countable, so an R in the
+nonempty open interval (R0,R0+1) avoids every atom. This argument
+does not require stationarity or any unproved density theorem.
+
+Taking R0>c+log D makes q=exp(c-R) satisfy Dq<1 with a uniform
+strict margin. A Boolean event on finitely many comparisons
+X_c>=R has its discontinuity set contained in the finite union
+of threshold hyperplanes. The limiting ground vector assigns
+that set zero mass. No uniform thin-shell estimate is needed
+because the temporal approximation is selected separately at
+each fixed spatial regulator.
+
+2. THE TWO FINITE-SLAB EXPECTATIONS
+
+The observation slab contains all spatial tiles and both source
+supports. It has only two temporal boundary layers. A local
+touching-graph step changes the time-cell index by at most one.
+
+For source-cell marks c in A_+, d in A_-, the supports are disjoint,
+so the distinct-mark estimate applies. Each actual centered source
+cell is bounded by 4M_+(X_c+c) or 4M_-(X_d+c).
+
+For the inside event one sums over:
+ - N_+ N_- source-mark pairs;
+ - N_+ N_- possible endpoints of a spanning path.
+
+This gives N_+^2 N_-^2 in (4.1).
+For exit, replace the second pair count by N_+ N_B, giving
+N_+^2 N_- N_B in (4.2). The marks need not lie on that path.
+The constants, the leading factor16, the geometric series
+q/(1-Dq), and the distance exponents are unchanged.
+
+Both source means are those of the same actual Hamiltonian
+ground law. The source is not tilted, independently sampled,
+or centered in a conditional reference measure.
+
+At fixed physical spatial volume, N_+,N_-=O(a^-4) and N_B=O(a^-3).
+Hence the two prefactors are a^-16 and a^-15 respectively.
+For arbitrary finite spatial volume the actual N_B remains in
+the formula until the adaptive-buffer argument is used.
+
+3. FIXED-REGULATOR CONVERGENCE OF THE FINITE VECTOR
+
+Fix a once and for all. Restrict delta=a/m with m tending to
+infinity. Every coarse time cell then contains exactly m
+temporal intervals. The left-sampled X_c and Q_+,Q_- are literal
+gauge-invariant original Wilson multiplication observables.
+Their temporal transfer parameters are exactly
+
+ beta_time=4a/(g_a^2 delta),  beta_space=4delta/(g_a^2 a).
+
+The final text explicitly assumes continuous or bounded piecewise
+continuous time profiles, so the stated quadrature converges.
+This precision is necessary: arbitrary bounded profiles sampled
+at mesh points would not suffice.
+
+At fixed a, all these coordinates have common compact bounds:
+h_p<=2, all relevant time intervals are finite, and each source
+reads finitely many plaquettes. The bound may depend arbitrarily
+badly on a, g_a and the chosen slab; this causes no logical
+problem for the fixed-a temporal limit.
+
+For each m the list of monomials of total degree at most m in
+this fixed finite vector is finite. The positive transfer
+ground limit permits selection of an arbitrarily large original
+period after delta, matching that finite list to the corresponding
+ground-chain moments. Requiring this period to be a multiple
+of2m, to contain the observation slab without wraparound, and
+to have diverging physical length only restricts it to a cofinal
+set of large periods. The transfer ground limit remains valid.
+
+For each fixed monomial, its degree eventually appears in the
+list; fixed-spatial source convergence then identifies its
+continuous-time ground expectation. Polynomials are dense on the
+common compact box, hence these finite-period vectors converge
+in law to the actual ground vector.
+
+This uses the exact original Wilson normalizer supplied by the
+source theorem. It does not identify finite-temperature full
+Hamiltonian path laws with finite-temperature Gauss-projected
+Wilson path laws. Only their gauge-invariant ground limits
+are identified, as required.
+
+4. WEIGHTED CONTINUITY SETS AND CHANGING CENTERS
+
+The finite events E_in and E_exit have zero-probability boundaries
+under the limiting vector. The weight
+
+ |(Q_+-E Q_+)(Q_--E Q_-)|
+
+is continuous on its compact coordinate box. First-moment
+convergence makes the finite-period ORIGINAL means converge
+to the ground means. Replacing those centers changes the weight
+uniformly on the fixed-a box.
+
+Weak convergence therefore proves both assertions (5.1).
+There is no hidden cutoff-uniform integrability assertion:
+boundedness is used only with a fixed spatial regulator.
+The finite mesh or finite-period laws may have atoms at R;
+only the limiting continuity-set condition is needed.
+
+5. THE ENTIRE TIME CIRCLE
+
+The full bridge event is defined on the literal complete
+periodic time board. Any finite self-avoiding path from A_+
+to A_- either stays in the observation slab or has a first
+exit. In the second case its initial segment lies in the slab,
+is entirely bad, and ends on one of its boundary time layers.
+Local adjacency cannot skip that layer. The chosen period
+keeps the two layers and their outside neighbors distinct.
+
+Thus E_full is pointwise contained in E_in union E_exit.
+This is a deterministic graph argument. It does not exchange
+an infinite-time event limit with convergence of finite
+observables, and does not assume anything about the law outside
+the observation slab.
+
+Multiplying by the nonnegative centered source weight and
+using the two convergent finite-window expectations gives
+exactly (6.2), with any specified error epsilon_a after
+choosing delta and then the finite period. The shrinking
+temporal mesh can satisfy delta<=a^2 simultaneously.
+
+6. ADAPTIVE BUFFER: CHECK OF THE NEW VOLUME-INDEPENDENT DIAGONAL
+
+Let eta=Dq<1. The boundary count N_B is twice the number of
+spatial tiles, independent of the time duration of the slab.
+Choose its integer buffer distance k_a so that
+
+ k_a >= d0/a + log(max(1,N_B))/|log eta|.
+
+Because eta is less than one, exponentiation gives
+
+ N_B eta^k_a <= eta^(d0/a).
+
+The exit bound then has prefactor N_+^2 N_-=O(a^-12),
+independent of the total spatial volume. The inside bound
+has the already established O(a^-16) prefactor. With fixed
+compact source geometry satisfying (3.1), both are bounded
+by K a^-16 exp(-k/a).
+
+At each a the enlarged observation slab is still finite.
+All of its action cells are covered by the original countable
+threshold choice. Its larger finite vector may require a much
+smaller delta and much larger period, but those choices occur
+after the slab is fixed. The proof is therefore valid on any
+countable sequence of finite spatial volumes satisfying the
+source geometry assumptions.
+
+This does not establish a rate uniform in a prescribed temporal
+period, nor an infinite-volume local limit. The final text
+preserves this distinction explicitly.
+
+7. SCOPE AND FINAL VERDICT
+
+The result controls the full original-law, centered magnetic
+source product restricted to a precisely defined bad-action
+bridge event, along a selectable anisotropic Wilson diagonal.
+It covers bridges anywhere on each entire finite time circle.
+The exponential beats explicitly polynomial or logarithmic
+calibrations; unknown operator mixing is not thereby bounded.
+
+It does not supply:
+ - the covariance on the complementary event;
+ - a uniform spatial source norm or nonzero physical covariance;
+ - isotropic/anisotropic RG matching or Euclidean rotation symmetry;
+ - a prescribed coupling trajectory or continuum observable algebra;
+ - identification of action cells with native history predicates.
+
+Both requested scope repairs are present in the final version:
+time-profile regularity and the initial volume qualification.
+Section6A then gives the valid stronger selectable-diagonal
+result through its explicitly volume-dependent time buffer.
+No further correction is needed. Frozen against the hashes above.

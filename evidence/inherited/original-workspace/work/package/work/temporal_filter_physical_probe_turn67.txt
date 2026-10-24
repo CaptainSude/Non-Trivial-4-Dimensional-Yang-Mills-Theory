@@ -1,0 +1,448 @@
+TEMPORAL FILTERS, PRIVATE THIN-LOOP READS, AND PHYSICAL COMPOSITES -- TURN67
+20 October 2026. tail47.
+
+STATUS
+
+These are finite-regulator results and a precise change of the next
+physical estimate to seek. A nontrivial YM4 theory is NOT constructed.
+No isotropic Wilson estimate is transferred to the Hamiltonian ground
+law without the temporal-limit admission already proved in TURN66.
+
+The strongest new original-law conclusion is Section3: arbitrarily
+chosen bounded nonlinear functions of polynomially many time-translated
+physical thin loops still have vanishing centered reflected norm on
+the logarithmic weak-coupling sequence. Sequential private-edge
+integration proves this, with the complete original denominator.
+Temporal processing of that data cannot manufacture the missing signal.
+
+Section4 supplies an exact Hamiltonian energy estimate for a different
+bounded spatial phase family, but its normalization is a^3 times the
+canonically normalized magnetic-energy insertion. Its free variance
+collapses. This is a useful diagnosis, not a physical witness.
+
+Sections6--7 retain a potentially useful alternative: renormalized
+UNBOUNDED local scalar insertions with separated two-point estimates.
+Their temporally filtered OS vectors have bounded energy without
+an ordinary equal-time L2 bound or the nonlinear spatial-flow Jacobian
+estimate. The actual interacting separated-source estimate remains
+missing. The free Maxwell calculation is proved explicitly below.
+
+INPUTS USED
+
+controlled_temporal_limit_turn66.txt: the actual fixed-spatial temporal
+limit, ground law and exact ground-state quadratic form.
+hamiltonian_energy_turn66.txt: E h_p<=3g^2/4 on a cubic spatial torus.
+physical_coarse_variance_turn66.txt, Sections1--5: the actual original
+isotropic Wilson private-edge conditional law, its fundamental moment
+bound eta, and its full conditional Haar L1 bound epsilon.
+physical_observable_sources_turn63.txt, Section3A: the distinct
+four-dimensional free composite OS-Cauchy construction.
+
+All further assertions below are proved here. The preceding notes,
+not a new uninspected literature theorem, are the source admissions.
+
+1. EXACT FILTER IDENTITIES IN THE ACTUAL HAMILTONIAN GROUND LAW
+
+Fix a finite spatial graph and the actual Hamiltonian
+
+ H=kappa K+V,  kappa=g^2/(2a),  V=4S_sp/(g^2a),
+ H Omega=E0 Omega,  Omega>0,  int Omega^2=1.
+
+The ground-state transformation on L2(pi), pi=Omega^2 dHaar, gives
+
+ A=Omega^-1(H-E0)Omega >=0,       P_t=exp(-tA).
+
+The transformation is unitary between L2(pi) and the original physical
+Hilbert space. P_t is a conservative positivity-preserving contraction,
+preserves gauge invariance, and satisfies the exact form identity
+
+ <F,AF>_pi=kappa int|grad F|^2 dpi.                       (1.1)
+
+For centered F in L2(pi), let rho_F be its positive spectral measure.
+Set C_F(t)=<F,P_tF>_pi. Direct spectral integration gives
+
+ Var_pi(P_tF)=C_F(2t)=int exp(-2tE)rho_F(dE),
+ D(P_tF)=int E exp(-2tE)rho_F(dE)
+                         <=Var_pi(F)/(2 e t), t>0.      (1.2)
+
+No differentiability of the original F is needed for the filtered
+form. Bounded F remains bounded with the same supremum bound.
+But a uniform filtered variance floor IS a separated covariance
+floor for the original F. Filtering alone does not prove that floor.
+
+More generally, a real signed finite measure nu supported on[t0,infinity)
+defines F_nu=int P_tF nu(dt), with
+
+ ||F_nu||_infinity<=||nu||TV ||F||_infinity,
+ Var(F_nu)<=||nu||TV^2 C_F(2t0).                         (1.3)
+
+This follows from
+|int exp(-tE)nu(dt)|<=||nu||TV exp(-t0E).
+It includes signed time averages with uniformly bounded total mass.
+An arbitrarily large amplification is not covered by this boundedness.
+
+2. EXACT ISOTROPIC THIN-LOOP SPECTRAL COLLAPSE
+
+This section uses the ORIGINAL isotropic finite Wilson laws and their
+fixed-lattice infinite-time ground limit, not pi=Omega_a^2 above.
+Let W=Tr U(C)/2 for an edge-simple spatial loop of length l, and choose
+its sparse private edge set of size m>=l/19 as in the TURN66 input.
+Write
+
+ eta=exp[-c m/(1+beta)].
+
+For every different time translate W_j, the selected edges of W_0
+are absent from its read, and the exact conditional theorem gives
+
+ |Cov(W_0,W_j)|<=2eta,       j!=0.                       (2.1)
+
+The bound is uniform in the original finite time period whenever the
+two slices are distinct; it passes to the fixed-spacing ground limit.
+For that limit write T_hat=T/lambda and
+A_iso=-a_t^-1 log T_hat on the physical space. It is the EXACT
+transfer logarithm, not the differential Hamiltonian of Section1.
+Its centered spectral measure rho_W obeys
+
+ int exp(-a_t E)rho_W(dE)<=2eta,
+ rho_W([0,Lambda])<=2 exp(a_t Lambda)eta.                (2.2)
+
+Thus all uniformly bounded-energy spectral weight of this particular
+unrenormalized loop disappears when eta->0 and a_t stays bounded.
+For every fixed t>0 with2t>=a_t,
+
+ Var(P_t^iso(W-EW))<=2eta.                               (2.3)
+
+The same holds, up to ||nu||TV^2, for (1.3) with fixed t0>0.
+More generally, if spectral multipliers f_a have uniformly bounded
+supremum and
+lim_(Lambda->infinity) sup_a sup_(E>Lambda)|f_a(E)|=0,
+then ||f_a(A_iso)(W-EW)||2->0: split the spectral integral at
+Lambda, use(2.2) below it, and then send Lambda to infinity.
+
+This does NOT prove an analogous result for the anisotropic
+Hamiltonian law: the thin-loop proof used the isotropic staple
+strength bound6beta, which degenerates differently in that limit.
+
+There is also an entirely finite-period path statement. For distinct
+time slices and deterministic weights c_j, stationarity and(2.1) give
+
+ Var(sum_j c_j W_j)
+       <=Var(W) sum_j c_j^2+2eta (sum_j|c_j|)^2.         (2.4)
+
+In particular the average over q~T/a_t slices in a fixed physical
+window has variance <=1/q+2eta. This controls the actual temporal
+average as a path observable, not only its conditional slice version.
+
+3. NEW: ARBITRARY BOUNDED PROCESSING OF MANY PRIVATE THIN LOOPS
+
+The full conditional Haar theorem is stronger than the first moments.
+For loop j with a private sparse set I_j of m_j edges it gives
+
+ ||Law(G_j | all links outside I_j)-Haar||L1
+       <=epsilon_j
+       =C(1+beta)^(3/4) exp[-c(m_j-1)/(1+beta)],         (3.1)
+
+where G_j is the full SU2 holonomy. Constants are uniform in ALL
+conditioned original links, and min(2,epsilon_j) may always be used.
+
+Assume the I_j are pairwise disjoint and NO other loop G_k reads a
+link in I_j. Distinct-time copies of a spatial loop satisfy this.
+Let Z be any original-link observable not reading any I_j.
+For every bounded measurable Phi on SU2^q,
+
+ |E[Z Phi(G_1,...,G_q)]
+       -E[Z] int Phi(g_1,...,g_q) product_j dg_j|
+       <=||Z||infinity ||Phi||infinity sum_j epsilon_j. (3.2)
+
+PROOF. Condition on all links outside I_1. All G_j for j>1 and Z
+are then fixed. Apply the total-variation test inequality obtained
+from(3.1) to the bounded function
+g_1 ->Phi(g_1,G_2,...,G_q), uniformly in its other arguments.
+The replacement integral removes every read of G_1 and leaves an
+ordinary bounded test of G_2,...,G_q and Z. Its error has the stated
+epsilon_1 bound. Repeat with I_2,...,I_q and add the errors.
+No assertion that the PRIVATE EDGE VARIABLES are mutually independent
+after unconditioning is made. Exact conditional expectations at each
+stage retain the full Wilson normalizer. The intervening nonprivate
+links in each holonomy can be arbitrary shared original variables.
+
+Now put all G_j in the positive half and let
+B=Phi(G_1,...,G_q), ||Phi||infinity<=1. Assume their reflected reads
+avoid all positive private sets I_j, as for strictly separated
+time-half supports. Set c=int Phi product Haar. Formula(3.2) gives
+
+ |EB-c|<=epsilon_sum,
+ |E[(Theta B)B]-c E[Theta B]|<=epsilon_sum.
+
+Here Theta includes complex conjugation. Reflection invariance gives
+E[Theta B]=overline(EB). Subtracting |EB|^2 proves
+
+ 0<=||B-EB||OS^2
+     =E[(Theta B)B]-|EB|^2
+     <=2 epsilon_sum.                                  (3.3)
+
+The lower inequality uses the actual reflection positivity admission.
+The absolute upper bound follows even before invoking RP.
+Phi can depend on the regulator, be nonlinear, select time samples
+adaptively as a function of this finite data, or include a very large
+numerical rescaling followed by a bounded function. Its supremum
+bound, not its derivative or Lipschitz constant, is used.
+
+For physical loops with m_j>=c_ell/a, beta=O(log(1/a)), and a polynomial
+number q(a) of distinct time slices, sum epsilon_j->0. Hence NONE of
+these bounded finite-data processing rules gives a nonzero separated
+reflected state. This includes attempts to normalize a small temporal
+average and then apply a bounded phase or threshold.
+
+The result does not cover thick/flowed loops, reading a continuum
+cloud with no private edges, nonlinear native group averages, or
+unbounded insertions with a growing norm. It is an actual-law
+decision for the thin-loop route, not a general YM no-go theorem.
+
+4. NEW ACTUAL HAMILTONIAN PHASE ENERGY BOUND, WITH ITS SCALING
+
+Return to the cubic spatial Hamiltonian ground law of Section1.
+For arbitrary real deterministic plaquette weights w_p put
+
+ f_w=sum_p w_p h_p,            F_w=exp(i t f_w).
+
+F_w is a bounded gauge-invariant spatially supported observable.
+Every spatial edge meets four plaquettes and
+|grad_e h_p|^2<=h_p/2. Cauchy--Schwarz at each edge gives
+
+ |grad f_w|^2
+    <=4 sum_e sum_(p containing e)w_p^2|grad_e h_p|^2
+    <=8 sum_p w_p^2 h_p.
+
+Using the ACTUAL E_pi h_p<=3g^2/4 from TURN66 yields
+
+ D(F_w)=kappa t^2 E_pi|grad f_w|^2
+           <=3 t^2 g^4 a^-1 sum_p w_p^2.               (4.1)
+
+This is exact and has no unknown flow Jacobian. Real/imaginary parts
+have no larger form individually. On a fixed physical spatial region,
+w_p=(a^2/g^2)f(x_p) for a bounded compactly supported smooth test has
+sum w_p^2=O(a/g^4), and (4.1) is uniformly bounded.
+
+HOWEVER the canonically normalized magnetic-energy insertion is
+
+ Q_a(f)=[4/(g^2a)]sum_p f(x_p)(h_p-E_pi h_p).            (4.2)
+
+At the bare quadratic level it approximates
+one-half int f |B|^2 d^3x; a nonperturbative composite field would
+still require its own operator/mixing renormalization. The centered
+phase variable with weight a^2/g^2 is a^3 Q_a(f)/4.
+It has been attenuated by a^3, not calibrated at fixed physical size.
+
+Here is an explicit free diagnosis with no interacting substitution.
+On the unit spatial lattice, the quadratic Maxwell ground law has
+dimensionless plaquette-curvature covariance C with
+
+ C=(g^2/2)|d| times the transverse rank-two projector,
+ ||C||op<=sqrt(3)g^2,
+
+because |d(k)|<=sqrt(12). There are q=3 independent color copies;
+gauge and zero modes are removed before forming the curvature,
+which vanishes on those modes. Since h_quad=|curl theta|^2/8,
+Gaussian Wick contraction gives, for any real w,
+
+ Var_free(f_w)=(1/32)Tr(W C W C)
+                    <=(9/32)g^4 sum_p w_p^2.            (4.3)
+
+The trace includes all three color copies; W repeats each w_p on
+these copies. The bound follows from the Hilbert--Schmidt norm of
+C^(1/2) W C^(1/2), valid also for signed weights.
+Consequently
+
+ Var_free(exp(i t f_w))<=t^2 Var_free(f_w)=O(a)           (4.4)
+
+for the low-energy normalization above. Thus(4.1) alone is not a
+finish-line witness. The actual interacting variance has not been
+bounded above or below by this free calculation.
+
+5. WHAT TEMPORAL FILTERING DOES TO SPATIAL SUPPORT
+
+The actual transformed generator is
+
+ L=-A=kappa Delta+2kappa grad log Omega . grad.           (5.1)
+
+For F reading a spatial set S, its first derivative in time involves
+grad_e log Omega for e in S. Existing total energy and Fisher bounds
+do not control how these coefficients depend on distant links.
+They therefore do not imply a cutoff-uniform quasilocality theorem.
+
+Even strict preservation of the original support fails in an actual
+finite SU2 plaquette Hamiltonian. This can be checked without an
+uncontrolled weak-coupling expansion. On a fixed periodic spatial
+graph with side periods at least4 consider the genuine strong-coupling
+analytic neighborhood
+
+ kappa^-1 H=K+epsilon sum_p(1-W_p), epsilon=8/g^4.
+
+At epsilon=0 the normalized full ground state is1. Its eigenvalue is
+simple and isolated. Bounded analytic perturbation, followed by elliptic
+regularity on this fixed compact manifold, gives a C^k expansion for
+any fixed k:
+
+ log Omega_epsilon=(epsilon/3)sum_p W_p+O(epsilon^2).    (5.2)
+
+Indeed E_Haar W_p=0 and K W_p=3W_p (four spin-one-half links).
+Insert(5.2) into(5.1), for F=W_p:
+
+ kappa^-1 L F
+  =Delta F+(2epsilon/3)sum_q grad W_q . grad W_p
+        +O(epsilon^2).                                (5.3)
+
+For adjacent plaquettes p,q sharing one edge, the q summand reads
+the edge opposite that shared edge, which lies outside p. It is not
+constant in that edge. At a shared link equal to I, write the
+remaining p and q products as A=a0 I+i a.sigma and B=b0 I+i b.sigma.
+The shared-edge contribution is +/- a.b/4; varying an exclusive
+opposite q edge can change b while leaving p unchanged.
+In a sufficiently large cubic graph that opposite edge is in no
+other plaquette which also shares a p edge. Hence this exterior
+dependence cannot cancel in the first-order sum. Choosing a nonzero
+a gives a nonzero effect, stable for sufficiently small epsilon>0.
+
+Thus P_t W_p depends on links outside p for all sufficiently small
+positive t in such an actual model. This disproves strict support
+preservation, not quasilocality. It is a rigorous strong-coupling
+example and is NOT continued to weak coupling by assertion.
+
+For a fixed contractible lattice cube and an unrenormalized
+gauge-invariant Lipschitz observable, a complete cube tree gauge also
+gives a simple separate limitation. The tree-gauged chord matrices
+are products of finitely many transported plaquettes, so
+
+ dist(U^G,I)^2<=C_cube sum_(p in cube) h_p.
+
+The constant is fixed for that fixed lattice cube. Therefore
+E_pi|F(U)-F(I)|^2<=C_cube Lip(F)^2 g^2. L2 contraction gives the same
+upper bound for the variance of every P_tF. This excludes a variance
+floor for that uniformly Lipschitz, fixed-lattice-size class as g->0.
+It does not cover growing physical cubes or physically rescaled
+curvature observables, whose constants/derivatives grow with a^-1.
+
+6. UNBOUNDED COMPOSITES: A DIFFERENT, PRECISE SOURCE TARGET
+
+Equal-time L2 divergence need not forbid a local OS vector.
+Let Q_a be a centered real local insertion, finite at every regulator
+but with no uniform supremum or ordinary L2 bound. For the SAME actual
+ground law let
+
+ C_a(t)=<Q_a,P_t Q_a>_pi,       t>0.
+
+For fixed t0>0, spectral calculus gives the improved bound
+
+ Var(P_t0 Q_a)=C_a(2t0),
+ D(P_t0 Q_a)<=C_a(t0)/(e t0).                            (6.1)
+
+This uses E exp(-t0 E)<=1/(e t0) and leaves the other
+exp(-t0 E) factor inside the spectral integral. It does not use
+the divergent C_a(0).
+
+Accordingly an ACTUAL normalized source estimate
+
+ 0<c<=C_a(2t0),                 C_a(t0)<=C               (6.2)
+
+would simultaneously give a nonzero norm and bounded energy for
+these filtered vectors. Both are then original-state quantities.
+It would avoid the initial-field derivative of the nonlinear
+spatial-flow observable. The family could be (4.2) with the necessary
+composite renormalizations, or genuinely spacetime-smeared local
+action-density insertions. No such renormalization is fixed here.
+
+There is no need to call P_t0 Q_a a spatially local multiplication
+observable: the vector Omega P_t0 Q_a is exactly
+exp[-t0(H-E0)] Q_a Omega, represented by a local original insertion
+at positive Euclidean time. Its spatial support is that of the
+insertion in the path algebra, even though its conditional slice
+representative may be spatially nonlocal.
+
+Constructing the full local theory still needs compatible mixed
+insertions/Schwinger distributions, renormalization, appropriate
+regularity bounds, and symmetry. A two-point bound alone is not
+that construction. In particular a positive norm of one vector
+does not identify an interacting Yang--Mills continuum.
+
+What is presently absent is (6.2) for a physically calibrated
+original insertion, with its complete denominator and separated
+spatial/time support. A constant original-action source, the full
+one-point action-energy bound, and selected-sector analytic sources
+do not supply this mixed local estimate.
+
+7. FREE MAXWELL CHECK: FINITE POSITIVE-TIME COMPOSITE NORM
+
+This is a calculation in the free comparison theory, not an estimate
+for the interacting law. It shows why Section6 is not excluded by
+the free ultraviolet scaling that defeats Section4's small phase.
+
+In R^3 let B_i^c be q independent color copies of the free magnetic
+field, with time-separated covariance
+
+ C_t,ij(x)=int_(R^3) [d^3p/(2pi)^3] exp(i p.x-t|p|)
+                  (|p|/2)(delta_ij-p_i p_j/|p|^2).      (7.1)
+
+Take a real NONZERO f in C_c^infinity(R^3), f>=0, and the Wick-centered
+magnetic energy Q(f)=one-half sum_(c,i) int f(x):B_i^c(x)^2: dx.
+Define the separated covariance by removing a smooth ultraviolet
+cutoff at positive time t. Wick's identity gives
+
+ C_Q(t)=(q/2) int dx dy f(x)f(y)
+                         sum_ij C_t,ij(x-y)^2.         (7.2)
+
+The multiplier in(7.1) is exponentially integrable. The covariance
+is real, smooth, and square integrable at every t>0, so this removal
+and the following integral estimates are justified.
+
+The projector has rank2. Parseval and spherical integration give
+
+ int sum_ij |C_t,ij(x)|^2 dx
+    =int [d^3p/(2pi)^3] (|p|^2/2)exp(-2t|p|)
+    =3/(16 pi^2 t^5).
+
+Young's convolution inequality therefore proves the explicit bound
+
+       0<C_Q(t)<= [3q/(32pi^2 t^5)] ||f||L2^2.          (7.3)
+
+Strict positivity follows because f is nonnegative and nonzero,
+C_t(0) is a nonzero scalar matrix, and its continuous squared norm
+is positive in a neighborhood of zero. The integral of f(x)f(y)
+over sufficiently close pairs is positive.
+
+Thus (6.1) gives a finite energy bound
+3q||f||2^2/(32 e pi^2 t0^6), while C_Q(2t0)>0.
+Ordinary equal-time Q(f) is not an L2 random variable: the ultraviolet
+spectral integral has its familiar fifth-power divergence.
+The finite positive-time vector is fully consistent with that.
+
+This is the spatial magnetic companion of TURN63's four-dimensional
+compact-mollifier OS-Cauchy calculation. Neither calculation proves
+the interacting counterparts. They show that abandoning unbounded
+renormalized local composites solely because of equal-time variance
+divergence would impose an unnecessary restriction.
+
+8. NEXT MATHEMATICAL DECISION
+
+The bounded private thin-loop route is excluded by an actual-law
+multi-read theorem, not merely by failure of one variance argument.
+Temporal filtering retains the zero separated signal for that route.
+
+For other physical probes, automatic filtered energy control shifts
+the needed work to a separated original-law covariance estimate.
+For renormalized local action-density insertions this is a different
+and potentially shorter target than a uniform nonlinear spatial-flow
+Jacobian bound. It is not already contained in partition stability
+or in the constant-action source flow.
+
+No variational shortcut changes this requirement. For a physical
+real phase f, the trial exp(i t f)Omega has excess energy
+kappa t^2 E_pi|grad f|^2. After subtracting its ground component,
+its normalized excess Rayleigh quotient is this numerator divided
+by1-|E_pi exp(i t f)|^2. A small unnormalized energy numerator with
+a collapsing denominator supplies no low-energy excitation.
+
+The next useful positive attachment would therefore be a
+volume/cutoff-uniform estimate of the normalized separated local
+source in(6.2), together with its physical renormalization and mixed
+insertion compatibility. No such actual attachment is claimed here.

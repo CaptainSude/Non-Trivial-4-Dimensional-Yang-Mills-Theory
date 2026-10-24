@@ -1,0 +1,322 @@
+STATIC ALL-AGE R BOUND AND THE ACTUAL SOURCE COUPLING LEDGER
+18 October 2026. Concise working derivation; no notebook/public artifact.
+
+1. THE SOURCE SPLIT MUST NOT BE REPARAMETRIZED SILENTLY
+
+Balaban CMP119 (1988), DOI10.1007/BF01217741:
+https://scispace.com/pdf/convergent-renormalization-expansions-for-lattice-gauge-29jyexd38e.pdf
+
+Equations (2.23)--(2.31) retain the classical history
+  R_j(U)=sum_{i<=j}[R^(i)(U)-R^(i)(1)].
+Each R^(i) is the actual complete birth at i, including both the new
+large-field R' contribution and the recent-R descendant R'' contribution.
+The published bound is epsilon_i=g_i^kappa0, with arbitrary fixed kappa0.
+Do not give every R'' the stretched-log bound of a genuinely new R' seed.
+
+The old/young division on pp270--271, before (3.26), is a division of
+the FLUCTUATION expressions. Old births whose partition fits the next
+coarse lattice are included with E in the regular s=0 integral. In (3.28)
+this enlarged E occurs as E(U_fluct)-E(U_background). The young terms
+enter the s-interpolated expectation in (3.26); its bulk output is called
+R''^(j+1) on p279. The classical old R background is still present in
+(2.30). The new coupling counterterm on p279 is extracted from new
+E^(j+1), not from the whole old R background. Therefore a decomposition
+of old R into a scalar Maxwell reference and an irrelevant remainder is
+an ESTIMATING decomposition only. It must not alter the source gamma.
+
+This exact source split avoids the symmetry problem in the regular
+kernel: only the old R fluctuation expressions, already covariant under
+the next coarse lattice symmetries, enter it. All young/core mixed terms
+in the s interpolation belong to R'' (or the boundary sector).
+
+2. QUANTITATIVE STATIC SUM
+
+Use the joint classical quotient system already constructed, with
+fixed cell grouping J, activity exponent a, exact semigroup T_{i,j},
+reference S_j satisfying beta_j(S_j)=1, and exact identities
+  T_{i,j} S_i=S_j,  beta_j T_{i,j}=beta_i
+on invariant classes. Let P_j=I-S_j beta_j. The fixed-q classical
+contraction is uniform in the preceding refinement. It also holds on
+slowly varying radii b_j=c gamma_j^(-1/2)(log gamma_j)^s, after shrinking
+the weak ceiling, with a common factor theta<1 on normalized norms
+  |F|_j=b_j^(-2)||F||_{a,b_j}.
+This follows from the explicit low/high jet factors in Section8 of
+analytic_birth_seed_closure_2026-10-18.txt; it is not an invariance claim
+for F(lambda B). Fixed partial transports have a fixed bound.
+
+Assume a finite weak-coupling prefix with
+  |gamma_{n+1}-gamma_n|<=D,
+  gamma_i>=gamma_j+c0(j-i)-C0 for i<=j.                 (A)
+Positive past q-block drift and bounded intermediate increments imply
+(A), with fixed c0,C0. Require gamma_j>=Gamma large. All estimates below
+are uniform in prefix length. This is the flow bootstrap input, not an
+already established property of the actual recursion.
+
+By the proved block-Banach seed conversion, the physical actual birth
+W_i=R^(i)-R^(i)(1) has a complete analytic carrier representation
+  ||W_i||_{a,b_i}<=C epsilon_i, epsilon_i<=gamma_i^(-P),
+where P=kappa0/2. It is gauge invariant, with the Euclidean symmetries
+preserving its aligned M R_i partition. Choose M an ell-power and
+R_i the smallest ell-power at least (log gamma_i)^r, as in the source.
+Let m_i be the first q-endpoint beyond i+ceil(log_ell(M R_i)), with a
+fixed extra endpoint if needed for the chosen centered-cell convention.
+Then
+  0<=m_i-i<=C1+C2 log log gamma_i.                    (B)
+At m_i the entire transported total is fully covariant under the
+current unit lattice symmetries. Individual carriers need not be.
+
+Until m_i use only bounded classical transport in the complete analytic
+activity norm, with a fixed factor B per q-block, not the invariant
+contraction. A birth inside a q-block is evaluated through only a fixed
+partial prefix; choose the seed fraction c so this prefix fits its true
+source radius r_i=b_i/c. The supported prefix estimates supply a fixed
+bound for this partial piece. More explicitly, choose a fixed A larger
+than every one of these at-most-q partial chart majorants and apply the
+same seed theorem on A b_i, choosing A c below its admissible fraction.
+The resulting norm there is still C epsilon_i. This supplies the first
+partial transport without analytically extrapolating the b_i-ball norm.
+No primitive same-radius claim is needed.
+By (A),(B), b_{m_i}/b_i=1+o(1) and
+  ||Z_i||_{a,b_{m_i}}<=C (log gamma_i)^K epsilon_i,
+  Z_i=T_{i,m_i}W_i,                                  (C)
+for a fixed finite K. Any fixed transport/reserve constants and the
+finite maturity offset are absorbed in C,K. If j<m_i, the same bound
+holds for T_{i,j}W_i. This uses only O(log log gamma_i) bounded steps.
+
+Now split the fully invariant class at maturity, for estimates only:
+  Z_i=c_i S_{m_i}+I_i, c_i=beta_{m_i}(Z_i), P_{m_i}I_i=I_i.
+The continuous Maxwell functional and bounded full-reference projection
+give
+  |c_i|+|I_i|_{m_i} <= C gamma_i^(1-P)(log gamma_i)^K', (D)
+where the factor b_i^-2=c^-2 gamma_i(log gamma_i)^(-2s) is included.
+Exact Maxwell preservation and reference transport give, for j>=m_i,
+  T_{i,j}W_i=c_i S_j+T_{m_i,j}I_i,
+  |T_{m_i,j}I_i|_j <= C theta^floor((j-m_i)/q)|I_i|_{m_i}. (E)
+The equality is of actual normalized scalar interactions/classes;
+it does not replace the source action or its coupling definition.
+
+For fixed P>2, elementary integral comparison using (A) yields
+  sum_{i<=j} gamma_i^(1-P)(log gamma_i)^K'
+       <=C gamma_j^(2-P)(log gamma_j)^K'.             (F)
+Indeed gamma_i>=gamma_j/2+c0(j-i) for Gamma>=2C0, and
+t^(1-P)(log t)^K' is eventually decreasing; compare the sum to
+its integral from gamma_j/2 to infinity. This bound is uniform in
+the number of earlier scales. For immature i, (A),(B) imply
+gamma_i comparable to gamma_j and j-i<=C(1+log log gamma_j);
+their normalized sum is at most
+  C gamma_j^(1-P)(log gamma_j)^K''.
+Combining this with (C)--(F) proves the actual static estimate
+  b_j^-2 ||sum_{i<=j} T_{i,j}W_i||_{a,b_j}
+       <=C gamma_j^(2-P)(log gamma_j)^K''' =:rho(gamma_j), (G)
+with rho(gamma)->0. The mature scalar marginal obeys the same bound.
+The same argument bounds the particular old-R subset used in (3.26).
+If its endpoint criterion differs from m_i by a bounded number of
+steps, use the bounded partial transport on those additional terms.
+
+No condition P>K''' is needed: every fixed logarithmic loss is paid
+by any fixed positive power of gamma. Thus geometry/constants may be
+fixed first and the weak threshold chosen last. In particular this
+static proof avoids the former exp(C log^2 gamma) startup loss and
+does not require that the stretched-log exponent exceed another
+parameter-dependent exponent. P>2 suffices for summability; P>3 gives
+an easy spare power. Nothing in (G) claims a bound on quantum marked
+descendants; those already appear as their actual later E or R births.
+
+3. HOW (G) ENTERS THE ACTUAL SOURCE RECURSION
+
+Let E_j be the complete current regular background interaction after
+the source counterterms. Its total Maxwell coefficient is zero by
+the exact transport identities, because every regular birth was
+projected at its creation. At a regular integration the gauge-invariant
+input is E_j+R_j^old in the fluctuation difference. An R term admitted
+by the source old criterion need only have the Euclidean covariance
+of the NEXT coarse lattice, not all current fine-lattice translations;
+that is enough for the regular OUTPUT and its scalar beta extraction.
+The analytic norm estimate needs no additional translation symmetry
+of an individual input mark. Formula (G) gives
+  |E_j+R_j^old|_j<=K+rho(gamma_j)
+whenever |E_j|_j<=K. An actual normalized q-kernel analytic estimate
+  ||N_j(X)||_{a,b_out}<=C delta_j b_out^2(1+|X|_j),
+  delta_j=O(g_j R_cut(g_j)/b_j)=o(1),                 (H)
+would therefore give only O(delta_j(1+K+rho)) error in the actual
+source Maxwell decrement. No auxiliary gamma and no comparison to
+an all-history quantum trajectory are required. Classical E transport
+is contractive; fixed-radius Gaussian forcing is O(b_out^2), so the
+regular normalized bound obeys
+  K_new<=theta K+C_D+C delta_j(1+K+rho).
+A positive Gaussian q-block decrement then survives at weak coupling.
+Here (H) must concern the actual q-step normalized regular kernel,
+including all its static subtractions, characteristic functions and
+intermediate source counterterms. It is not supplied by (G).
+
+The source conditional induction already gives the bound (2.31) for
+all actual R births, including the R'' renewal. Hence there is no need
+to infer a new renewal contraction from delta B^age; that would be an
+unnecessary and potentially false extra estimate. The correct intended
+bootstrap order is: use the already constructed finite source prefix,
+prove the next flow block using its old R bound, then extend the source
+inductive construction. To make this completely unconditional one must
+still match the precise source coupling hypotheses and the bounded
+intermediate steps. CMP119 Theorem1 cites '(I.0.33)' in the available
+text, whereas CMP109's displayed Introduction ends at (0.32), and its
+affine flow bound is (0.31). Do not conceal this reference mismatch.
+CMP119 (2.6)--(2.9) are the concrete coupling comparisons to check.
+The source theorem is not invoked on a future unverified trajectory.
+
+4. STATUS
+
+The seed conversion, static quotient identities and (A)-->(G) are
+proved estimates with explicit hypotheses and no repeated quantum
+ancestor growth. The actual E/R allocation is identified from the
+primary text. Outstanding for flow closure: actual (H), compatible
+cutoff/source-radius hierarchy, and the finite-prefix hypothesis match.
+These are smaller and different from proving all-age marked transport.
+
+5. FINITE-PREFIX COUPLING COMPARISONS FROM BLOCK DRIFT
+
+No primitive monotonicity is required for the following comparisons.
+Suppose |gamma_{n+1}-gamma_n|<=D and every completed aligned q-block
+has gamma_j-gamma_{j+q}>=d>0. For arbitrary m<n, deleting the two
+incomplete end blocks gives
+  gamma_m-gamma_n >= (d/q)(n-m)-C_q,
+  gamma_m-gamma_n <= D(n-m),                          (J)
+where C_q=2qD+2d is sufficient. Hence, for gamma_n>=Gamma>2C_q,
+  g_n/[1+D g_n^2(n-m)]^(1/2)
+       <= g_m <= [1-C_q/Gamma]^(-1/2) g_n.           (K)
+For any prescribed beta0>0 choose Gamma so the last multiplier is at
+most 1+beta0. This gives near-monotonicity with arbitrary fixed slack,
+even if some primitive increments have the wrong sign.
+
+Put t_n=log gamma_n and h=n-m>=1. Since gamma_m<=gamma_n+Dh,
+  t_m/t_n <= 1+log(1+D h/gamma_n)/log gamma_n
+            <=1+D h/Gamma                            (L)
+for Gamma>=e. The corresponding lower ratio is
+  t_m/t_n >=1+log(1-C_q/Gamma)/log Gamma.
+For each fixed p>=0, epsilon_n=A g_n (log gamma_n)^p therefore satisfies
+  epsilon_m/epsilon_n
+    <=(1+beta0)[1+D h/Gamma]^p
+    <=(1+beta0)(1+D/Gamma)^p h^p
+    <=(1+beta0)^2 h^p,                               (M)
+after a further weak threshold choice. This is the explicit structure
+of CMP119 (2.8), whose middle and final expressions are legible in the
+primary text. The same calculation applies to every fixed logarithmic
+cutoff exponent and to alpha0,alpha1. For the rounded scale
+  R_n=ell^ceil(log_ell[(log gamma_n)^r]),
+one has
+  R_m/R_n <=ell [1+D h/Gamma]^r.                      (N)
+At one primitive step, the unrounded scales have ratio between
+ell^-1 and ell once Gamma is large. Consequently R_{n+1}/R_n is one
+of ell^-1,1,ell, so the physical birth partition sizes ell^n M R_n
+are nested ell-powers. This verifies the partition compatibility used
+by the source without assuming primitive monotonicity.
+
+The source text at (2.6) explicitly ends its upper bound with
+'(1+beta0)g_n' and says beta0 can be arbitrarily small at weak coupling.
+(K) meets that property, with a fixed D in the comparison denominator.
+Its (2.8) is met by (M), and rounded geometric comparisons by (N).
+The unreadable parts of (2.6),(2.7),(2.9) in the available PDF text are
+NOT claimed here as literal transcriptions. These proved inequalities
+supply a concrete sufficient replacement for the coupling estimates
+used in the local construction. A complete source theorem import must
+verify that no additional condition is hidden behind the misnumbered
+reference '(I.0.33)'. CMP109 Theorems1 and3 explicitly assume only weak
+containment; the additional affine estimate stated in its Theorem2 is
+numbered (0.31), not (0.33), in the available primary document.
+
+The repository gives an explicit useful cross-check. Definition
+4.25:not-flow-inequalities in theorem_0_complete_account_raw_I.tex
+(near line110387) uses exactly the one-sided assumptions
+  x_i>=x_i'-2c2, x_i<=x_i'+B_sharp(i'-i),
+and alpha_{*,n}/alpha_{*,m}<=2[1+B_sharp(n-m)/x_n]^(1/2).
+The first two follow from (J). For the radius inequality, write
+alpha(x)=C x^-1/2(log x)^p. If gamma_m>=gamma_n the logarithm ratio
+in alpha_n/alpha_m is at most one; otherwise gamma_m>=gamma_n-C_q
+and its fixed p-th power is at most two at weak coupling. The square
+root factor is bounded by sqrt(1+D(n-m)/gamma_n). Thus this full
+repository radius input also follows from the block estimates.
+
+That definition uses the actual running-minimum separation envelope
+check R_i=R(min_{n<=i}gamma_n), rather than requiring the rounded raw
+function of gamma_i to be monotone. By (J),
+  gamma_i-C_q<=min_{n<=i}gamma_n<=gamma_i.
+Consequently check R_i lies between [log(gamma_i-C_q)]^r and
+ell(log gamma_i)^r. Every maturity and age bound in Section2 therefore
+holds unchanged with this envelope. The envelope is monotone, and its
+physical partitions are nested. If the source current cutoff/birth
+bound is parameterized by that envelope coupling, the ratio to g_i
+is 1+O(C_q/gamma_i), absorbed into fixed constants for fixed P.
+This is an exact match to the repository's stated flow inputs; it does
+not assume the repository's claimed proof of those flow facts.
+
+Finally, R_i eventually exceeds ell^(q+2) uniformly on a weak prefix.
+Thus a birth created within a q-block cannot enter that same block's
+old-R regular kernel. All old R which enter during the block already
+existed at its initial endpoint. This is the precise causality fact
+needed to avoid invoking the R'' bound on a future unverified block.
+
+6. CONDITIONAL STRETCHED-LOG SUM; NOT A BOUND ON R'' RENEWAL
+
+This refinement is useful when a later finite prefix costs a polynomial
+in gamma. It avoids choosing a source power P AFTER fixing constants
+which might themselves depend on P.
+
+Fix all source geometry and exponents first. Suppose each GENUINELY NEW
+healed birth has its actual stronger bound
+  t_i <= C gamma_i^D exp[-c(log gamma_i)^p],  p>1,        (O)
+in its reserved source norm. To use the calculation below for a complete
+descendant family, additionally assume that the TOTAL transport from each
+genuinely new birth to the endpoint costs only the polynomial age factors
+specified below. This extra ancestry/renewal estimate has NOT been proved
+for the actual R'' recursion. Retaining an ancestor label does not prove it.
+The factor gamma_i^D allows seed conversion,
+fixed field/source Cauchy losses and logarithmic factors. CMP122-II
+(1.100) supplies this form for new R' with its fixed p0(g); an annular
+tail has the analogous p=2t>1. This assumption is NOT imposed anew on
+the R'' descendants.
+
+The all-age STATIC estimate in Sections1--2 charges only a fixed
+polynomial in the age, the birth/end radius ratio, and gamma_i, after
+the canonical h^4 and old-root count cancel. For endpoint gamma>=Gamma,
+the drift comparisons (J) put gamma_i between fixed multiples of
+gamma+(k-i), up to a fixed additive buffer. Hence its full sum is at most
+
+ C sum_(a>=0) (gamma+a)^D' exp[-c1(log(gamma+a))^p],      (P)
+
+where c1 can be any fixed number below c once Gamma is large enough.
+The bound is uniform in the number of earlier scales. To estimate it,
+compare the eventually decreasing summand with its integral and put
+u=log x. For every c2<c1, and sufficiently large Gamma,
+
+ integral_(gamma/2)^infinity x^D' exp[-c1(log x)^p] dx
+   = integral_(log(gamma/2))^infinity
+                exp[(D'+1)u-c1 u^p] du
+   <= C exp[-c2(log gamma)^p].                           (Q)
+
+For a direct proof of the last inequality, first absorb (D'+1)u into
+an arbitrarily small fixed fraction of u^p. The derivative of the
+remaining negative exponent is bounded above by -1 on the tail;
+its integral is bounded by its value at the lower endpoint. The fixed
+shift log(gamma/2)-log gamma is absorbed by the remaining coefficient
+slack. The finite sum/integral discrepancy obeys the same bound.
+
+Consequently any family satisfying BOTH the birth bound and the extra
+total-ancestry bound, with fixed polynomial normalizations included,
+has exp[-c2(log gamma)^p] suppression. Sections1--2 instead sum the
+actual complete R^(i)=R'+R'' births using their established fixed-power
+bound; they do not establish this extra ancestry hypothesis.
+If its bounds hold on the admitted fixed constant-source disc, Cauchy
+for any fixed source order only adds its fixed inverse-disc factor.
+The same conclusion therefore holds for that whole-history derivative.
+
+Over n<=C_* log gamma further steps, a rough fixed-step bound C_0^n,
+root counts, and fixed polynomial packet sizes cost gamma^D''. The
+same estimate absorbs this loss by decreasing c2 once more. All
+constants and exponents are fixed BEFORE increasing the weak floor.
+
+The integral lemma is valid, but upgrading the complete actual R history
+to stretched-log suppression on this basis would be unjustified. The
+operative bound for that history remains the fixed-power bound (G).
+The burn-in repair in rooted_scalar_burnin Section6 uses that bound with
+the direct-prefix neutral propagator, avoiding a C^n loss and any need
+for the unproved stronger ancestry estimate. Neither argument supplies
+a normalized surviving-component probability.

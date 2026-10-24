@@ -1,0 +1,187 @@
+CURRENT PROOF FRONTIER -- TURN97 -- 21 OCTOBER 2026
+
+TOOLS GOAL: ACTIVE
+Construct a valid existence proof of a nontrivial four-dimensional
+Yang-Mills theory, proving and independently checking the necessary
+estimates. Created at the user's explicit request in TURN97, without
+a token budget. No completion or blocked status is claimed.
+
+CURRENT MATHEMATICAL RESULT
+The actual second interacting integration of a local original Wilson
+source is now controlled in a fixed weak-exterior neighborhood. It
+retains the changed action and full normalizer, has a relative
+C beta^-2 classical-defect error, and includes varying profile weights.
+A separate actual-Wilson example rules out unrestricted uniform real
+response under repeated single-link original-law projections.
+
+The full normalized block/source estimate, physical source sum, positive
+continuum response and nontrivial continuum construction remain open.
+No mass-gap claim is made.
+
+USER-FACING PROOFS
+ outputs/yang-mills-second-source-integration.txt
+ outputs/yang-mills-conditional-iteration-limit.txt
+Retained one-link and bounded-amplitude inputs:
+ outputs/yang-mills-real-source-reduction.txt
+ outputs/yang-mills-integrated-boundary-response.txt
+Strategic requirements:
+ outputs/yang-mills-proof-reassessment.txt
+Previous complete frontier is frozen in:
+ work/current_proof_frontier_turn96.txt
+
+1. EXACT SECOND INTEGRATION, WITH CHANGED ACTION
+
+Two opposite parallel raw links on a periodic 4D SU(2) Wilson lattice,
+periods>=4, share one plaquette and have five private plaquettes each.
+After a Haar-preserving change of variables, their exact affected action is
+
+ S_t(x,y)=11-x dot y-a dot x-b dot y,
+ a=sum_(i=1)^5 a_i, b=sum_(j=1)^5 b_j, a_i,b_j in S^3.
+
+All eleven plaquettes retain the original coefficient beta. With
+z(s)=2I1(s)/s and m(s)=I2(s)/I1(s), exact first integration gives
+
+ rho_beta,t(dy) proportional exp(beta b dot y)z(beta|a+y|)dy,
+ J_beta(t,y)=11-b dot y-|a+y|m(beta|a+y|),
+ A_beta(t)=E_rho J_beta(t,y).
+
+J_beta is the original source partial_beta(beta E_eff,beta), where
+E_eff,beta=11-b dot y-beta^-1 log z(beta|a+y|). It is not E_eff,beta.
+For an exterior path, its complete response is
+
+ d A_beta=E_rho(d J_beta)
+   +Cov_rho(J_beta,beta db dot y+beta m(beta r)dr), r=|a+y|.
+
+The action score and normalizer are therefore retained. If F reads
+neither integrated link, Cov_original(F,S_t)=Cov_original(F,A_beta).
+History labels that read those links are not automatically admissible F.
+
+2. PROVED WEAK-EXTERIOR SOURCE THEOREM
+
+Let all ten staples lie in a sufficiently small fixed neighborhood of
+one common n in S^3. Let D(t)=min S_t and t=0 denote flat exteriors.
+The global minimizer is unique and smooth. Uniformly in that fixed tube,
+
+ A_beta(t)=D(t)+3/beta+c1(t)/beta^2+O_C2(t)(beta^-3),
+ |A_beta(t)-A_beta(0)-D(t)| <= C beta^-2 D(t).
+
+The six-dimensional flat Hessian is [[6,-1],[-1,6]] tensor I3, with
+eigenvalues 5 and 7. A parameter Morse chart, full compact tail bound,
+and direct energy-numerator expansion prove the C2 estimate. No
+uncontrolled beta remainder is differentiated. Simultaneous rotations
+and a positive transverse classical Hessian turn it into the relative
+bound without a constant cost per pair. Its gradient and quadratic
+versions follow. The exponent fields beta a,beta b have size O(beta).
+
+For tangent staples u_i,v_j, U=sum u_i, V=sum v_j,
+
+ D^(2)=1/2 sum_i|u_i|^2+1/2 sum_j|v_j|^2
+       -[6(|U|^2+|V|^2)+2U dot V]/70.
+
+Its only zero directions have every u_i=v_j equal. The exact source
+quadratic form differs from D^(2) by at most C beta^-2 D^(2).
+
+For arbitrary deterministic weights on the eleven original plaquettes,
+let wbar be their mean, omega their maximum deviation from that mean,
+and S_w,cl the weighted source at the UNWEIGHTED baseline minimum.
+
+ |E S_w(t)-E S_w(0)-S_w,cl(t)|
+       <=C[|wbar|beta^-2+omega beta^-1]D(t).
+
+This follows from the actual marked numerator with the same rho.
+Smooth scalar physical profiles have omega<=C a Lip(f); orientation
+dependent profiles require their actual oscillation. This pointwise
+comparison does not itself compare separated connected correlations.
+
+3. NONZERO GENERATED ACTION AND SOURCE CORRECTIONS
+
+Flat normalization: A_beta(0)=3/beta-39/(490beta^2)+O(beta^-3).
+For a_i=n(theta), b_j=n(-theta), with n(theta)=(cos theta,sin theta,0,0),
+the classical minimum is D(theta)=10theta^2/7+O(theta^4). The exact
+relative generated action V_beta=-log Z_beta(theta)+log Z_beta(0) obeys
+
+ [theta^2]V_beta=10beta/7-206/343+3123/(84035beta)+O(beta^-2),
+ [theta^2](A_beta(theta)-A_beta(0))
+              =10/7-3123/(84035beta^2)+O(beta^-3).
+
+The determinant correction is nonzero in the generated action even
+though it disappears from the leading source correction. Both must be
+propagated. Independent Wick and radial calculations agree, and root
+checked all displayed rational coefficients separately.
+
+4. FAILURE OF UNRESTRICTED ORIGINAL-LAW SOURCE-ONLY ITERATION
+
+Let P_e be the actual original Wilson heatbath conditional projection.
+For F avoiding all updated links, Cov(F,G)=Cov(F,P_en...P_e1 G).
+However a later projection can reintroduce an earlier link; this is
+not a nested-sigma-algebra decimation. L2 contraction does not pay for
+the physical source sum.
+
+Actual two-link fiber exp[beta(u dot v+A dot u+B(t) dot v)] with
+A=I, B(t)=(-1+t)I is realized by ten distinct exterior unit staples
+on a period>=4 lattice, with a bounded-speed original-link path.
+For the original u-star, H_beta(v)=P_u S_u=6-|I+v|m(beta|I+v|).
+At the old u=I coordinate the second projection is
+T_beta(t)=E_(exp(beta t v0))H_beta(v). Exactly
+
+ T_beta'(0)=-64beta/(105pi)+E_beta, |E_beta|<=2/pi.
+
+After completing to the whole locally constant original source,
+
+ d_t P_v P_u S|0=beta[1/4-64/(105pi)]+R_beta,
+ |R_beta|<=2/pi+4sqrt(3).
+
+The leading coefficient is positive. Thus completion of the source
+does not restore a coupling-independent pointwise response bound.
+This bad exterior is outside the weak tube; its Wilson probability
+has NOT been estimated. No full-measure covariance obstruction follows.
+
+For the SINGLE-STAR T_beta only, monotonicity gives total path variation
+<=2, and its derivative measures converge to -2 delta_0. This is a
+one-coordinate path fact, not a bound on the actual exterior density
+and not an unchanged statement for the completed source.
+
+5. WHAT REMAINS THE NEXT SUBSTANTIVE TARGET
+
+Control an actual generated action/source pair through a complete block,
+retaining its boundaries, normalization and, if using the native route,
+constraints, continuation and all deciding/history labels. Constants
+must be suitable for iteration, and exceptional exteriors must be paid
+for in the same original normalized measure. Then estimate the physical
+source census and establish a positive separated continuum response.
+
+Another fixed finite-dimensional Laplace example alone does not close
+this gap. Do not reuse the bare one-link source law after decimation,
+or assume repeated original-law projections preserve its response norm.
+Do not upgrade a weak-exterior theorem to an averaged large-field theorem.
+
+For existence, retain the broader requirements: actual physical coupling
+trajectory/calibration; compatible local invariant hierarchy with mixing
+and contact extensions; UV and volume limits; reflection positivity,
+full Euclidean symmetry and reconstruction/vacuum properties; positive
+energy and non-Abelian Yang-Mills identification in that same theory.
+The initial SU(2) target does not require a mass gap, all regulators'
+universality, or a common ordinary S' law for all composite fields.
+
+Preserve TURN70 selected one-mark closure/contraction and covariance;
+TURN74 physical-graph vs independent-pair distinction; TURN78 real
+raw-owner estimate and unpaid complex bridge; TURN83 native regular
+primitive envelope; TURN95 first-healing exclusion and undecided native
+RP. The TURN95 one-raw/one-regular covariance remains unpaid. TURN93
+entropy/flow witness and excluded raw heat trace remain separate.
+TURN96 all-real one-link defect/response bounds and complex-posterior
+pole example remain intact at their stated scopes.
+
+Generic finite-dimensional Laplace and dimension cancellation are
+earlier results (TURN13/TURN40 and TURN74). TURN97 adds their explicit
+compact interacting two-link assembly, weighted relative-D theorem,
+generated-action coefficients, and conditional-iteration obstruction.
+No newly inaccessible paper was needed for these finite results.
+
+PRODUCERS AND AUDIT
+ work/turn97_two_link_source.txt
+ work/turn97_fixed_block.txt
+ work/turn97_conditional_iteration.txt
+ work/turn97_two_link_audit.txt
+ work/turn97_root_audit.txt
+ work/turn97_manifest.json records exact delivered versions and hashes.

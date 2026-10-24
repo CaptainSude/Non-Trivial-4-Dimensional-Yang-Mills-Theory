@@ -1,0 +1,367 @@
+DISTINCT PRODUCTS, COMPONENT CUMULANTS, AND THE YM4 INTERFACE
+20 October 2026. TURN50. tail47.
+
+SOURCE AND VERDICT
+
+Source: ethanwsussman/Yang--Mills-LLM-experiment, immutable commit
+3ef16f9f8ba0bfdc26fd7d4f7114d44bf9ebe5eb,
+QED3_slop/QEO1.pdf; local work/remote50/QEO1.pdf (107 pages).
+Page references below are PDF pages of THIS 107-page document, not
+the longer manuscript page references printed in its source cards.
+The title extracted inside the document is QE1O1. For formulas I used
+QEO1_poppler.txt, checking against QEO1_pages.json where helpful.
+
+The document calls itself a plan and contains linked statements,
+proof outlines, and detailed proof tasks. It is not a self-contained
+proof of all model-specific estimates it lists.
+
+B5/M19 (pp.8,43) is mathematically valid. Section 1 below supplies a
+complete proof and a useful separated-translate strengthening.
+The B5 conditional-cumulant identity and T18/A3 passage to components
+(pp.8,22,107) are valid at their stated hypotheses. Section 2 checks
+their constants and their use of the SAME parent law.
+
+Q4 (pp.18--19), T12--T17 (pp.96--106), and B7/T02 (pp.10,83) contain
+important additional model-specific proof obligations. This document
+does not prove all of those obligations in detail. No QED3 estimate
+or positive coefficient is imported into YM4 here.
+
+There is nevertheless one new consequence of our existing weak-chart
+label bounds: a translation-invariant infinite-volume limit of those
+label laws has the same joint bad-label bounds in almost every ergodic
+component. This label-only statement is proved in Section 6. It is
+not a full-measure or physical-field nontriviality result.
+
+1. A COMPLETE GENERAL LEMMA, WITH SEPARATION ALLOWED
+
+Let a probability space carry a measure-preserving Z^d action T_y,
+and let U(y)G=G composed with T_-y. Let I_lat be its invariant sigma-
+algebra. Assume G is real and belongs to L^p for every finite p.
+Fix a finite separation distance R>=0 and u>=0. Suppose that for
+every even J and every tuple y_1,...,y_J with pairwise distances >R,
+
+  | E product_(j=1)^J U(y_j)G | <= u^J.                 (1.1)
+
+Then
+
+  || E[G | I_lat] ||_infinity <= u.                    (1.2)
+
+For any smaller invariant sigma-algebra I contained in I_lat,
+the same bound holds for E[G|I]. No ergodicity of the lattice action,
+mixing, Gaussian domination, field space, or reflection positivity
+is needed. The source's B5 is R=0.
+
+Proof. Let C_n be a cube in Z^d, N_n its cardinality, and
+A_n=N_n^-1 sum_(y in C_n) U(y)G. Fix J=2k. At most
+
+  binomial(J,2) v_R N_n^(J-1)
+
+ordered tuples in C_n^J have a pair at distance <=R, where v_R is
+the number of lattice points in the radius-R ball. This includes
+repeated indices. By Holder, every one of their expectations has
+absolute value at most E|G|^J. The other tuples satisfy (1.1).
+Since A_n is real,
+
+  E|A_n|^J
+   <= u^J + binomial(J,2) v_R N_n^-1 E|G|^J.            (1.3)
+
+The commuting unitary mean-ergodic theorem gives A_n -> P_lat G in
+L^2. Concretely, the cube average is a product of d commuting one-
+parameter Cesaro averages, each converging strongly to its invariant
+projection; their product projects onto the joint invariant space.
+Choose an almost-surely convergent subsequence. Fatou and (1.3) give
+E|P_lat G|^(2k)<=u^(2k) for every k. If u>0, Markov at u+epsilon
+and k->infinity proves (1.2); if u=0, k=1 already proves it.
+Finally P_I=P_I P_lat and conditional expectation contracts L-infinity.
+
+Only arbitrarily high EVEN orders are needed. It suffices to assume
+the product bounds for all sufficiently large even orders. Bounds
+C_J u^J give the same conclusion only if the relevant J-th roots
+of C_J tend to at most one (or otherwise with the corresponding
+root loss). A factorial loss in J cannot be ignored.
+
+This strengthening matters for local probes: their translated
+supports may overlap for nearby lattice translates. Such tuples can
+be discarded by the same negligible-count argument. A uniform bound
+for separated copies of a fixed probe is enough.
+
+2. CONDITIONAL FOURTH CUMULANTS: EXACT ALGEBRA AND LIMIT ORDER
+
+B5 p.8 assumes E[X|I]=0. For a common deterministic v and g>0 set
+
+  G_2=g^-2(X^2-v)-c_2,
+  G_4=g^-4(X^4-6vX^2+3v^2)-c_4.
+
+If Section 1 applies to G_2 and G_4 with bounds u_2,u_4, write
+d_m=E[G_m|I]. Then |d_m|<=u_m and direct substitution gives
+
+  g^-4 kappa_4(X|I)=c_4+d_4-3(c_2+d_2)^2.              (2.1)
+
+The v and v^2 contributions cancel exactly; they must be the SAME
+v in the two Wick polynomials. Consequently
+
+ |g^-4 kappa_4-(c_4-3c_2^2)|
+       <=u_4+6|c_2|u_2+3u_2^2.                        (2.2)
+
+For 0<g<=1, u_4,(1+|c_2|)u_2,
+|c_4-3c_2^2-b|<=C g^sigma imply
+
+  |kappa_4-g^4 b| <= (8C+3C^2) g^(4+sigma).             (2.3)
+
+The constant in B5/T18 is correct: the first two error contributions
+cost C and 6C, comparison with b costs another C, and
+g^(2 sigma)<=g^sigma bounds the square term.
+
+Conditional centering is essential. Parent centering E X=0 is not
+enough. Without E[X|I]=0 the displayed fourth-moment combination is
+not the fourth cumulant. If centering is unavailable, one must control
+conditional moments of degrees 1,2,3,4 and use
+
+  kappa_4=m_4-4m_1m_3-3m_2^2+12m_1^2m_2-6m_1^4.
+
+The same-parent argument in A3/T18 (pp.22,107) is valid as an implication:
+
+* Fix a parent weak limit mu realized by a particular cutoff sequence.
+* Pass to a further subsequence on which the bounded c_2,i,c_4,i
+  converge. This does not change that parent mu.
+* For every fixed finite set of translates, pass the polynomial
+  product bound using the stated joint moment convergence and test-
+  approximation estimates. It is enough that the finite torus admits
+  that set eventually; no simultaneous cutoff threshold for all sets
+  is required.
+* Apply the lemma to the resulting continuum G_2,G_4 on the fixed
+  lattice lambda Z^d. Continuous translation invariants form a smaller
+  sigma-algebra; lattice ergodicity is unnecessary.
+* Intersect the two full-measure component sets with the centering,
+  Gaussian/moment, and independently obtained OS component sets of
+  this SAME mu.
+
+The lattice spacing lambda may depend on a fixed admitted coupling.
+It must be fixed while taking that coupling's regulator limit. One
+cannot silently replace it by a lattice diverging with the regulator.
+
+A positive PARENT fourth cumulant alone is an invalid substitute.
+For example mix two stationary ergodic Gaussian fields having different
+variances V. Conditional means are zero and every component has
+kappa_4=0, but the parent has kappa_4=3 Var(V)>0.
+
+3. WHAT Q4 ACTUALLY REQUIRES
+
+Q4 pp.18--19, T07 p.89, T12 p.96, T13 p.98, T14 p.100,
+T15 p.101, and T17 pp.105--106 expose a useful chain of inputs.
+It is substantially stronger than a one-source pressure bound.
+
+T07 specifies independent cell marks t_c and an EXACT normalized
+source identity. For orthogonal reference curvatures the Wick
+generating function is
+
+  Phi(t)=E exp(sum_c t_c X_c/g - v sum_c t_c^2/(2g^2)).
+
+The relevant quantity is
+
+  [product_c (partial_(t_c)^m-c_m)] Phi(0), m=2,4,       (3.1)
+
+NOT a one-cell derivative and NOT the derivative of log Phi.
+It has degree up to four in EACH mark and total degree 4|C|.
+
+The reference construction uses a fixed but possibly large number
+N_* of reflected source cells. T12 controls one-cell normalized free
+factors. T13 requires genuinely mixed derivatives and spatial decay
+for two separated marked cells, including differentiated field legs.
+T14 supplies a positive small-field measure with its ORIGINAL
+normalizer and a small COMPLEX marked complement. T15 applies the
+finite covering lemma only after this full jet factorization exists.
+
+The elementary covering mechanism is sound: an error family failing
+to cover one cell is killed by that cell's annihilating functional.
+Assigning singleton cost one and larger sets cost N forces cost >=N
+for every survivor. The assumption N kappa^(1-s)<=1/2 then bounds
+the leftover product sum. This algebra does not establish the required
+one-cell, mixed-cell, complement, or normalization estimates.
+
+T17 then uses rectangular chessboard/trace inequalities and a
+TWO-reference-volume normalized pressure defect to transfer the fixed
+reference product bound to arbitrary finite sets of cells in arbitrary
+large outer volumes. It explicitly pays an inverse charge power in
+the normalization. This transfer is why a fixed N_*-cell estimate can
+supply all the product orders required by B5.
+
+Thus one needs either:
+
+  (i) direct mixed-product estimates for arbitrarily many separated
+      cells with exponential constants uniform in the number of cells;
+  or
+  (ii) a proved reference-to-all-volumes transfer theorem supplying
+       those estimates from a fixed reference family.
+
+The QED3 plan records tasks for (ii). It does not make (ii) available
+for the present YM4 selected kernel. Positivity of that kernel is not
+reflection positivity or a chessboard theorem. Our bad-label estimates
+do not bound the marked complex complement in T14. The correct tuning
+sequence, normalizer, and parent law must be common to all branches.
+
+The stated model-specific Q4 estimates are not fully provable from the
+107-page cards alone: those cards refer to the longer manuscript for
+their determinant telescope, differentiated marked bounds, complex
+complement and normalized chessboard comparison. This is a proof-status
+limitation, not a demonstrated counterexample to Q4.
+
+4. B7 IS SPECIFIC TO THE ABELIAN THREE-DIMENSIONAL DIRAC RESPONSE
+
+B7 p.10 and T02 p.83 use the doubled three-dimensional Dirac
+representation and a real abelian connection:
+
+  Q_(4,M)(a)=-(1/4)Tr[(M+gamma.partial)^-1 i gamma.a]^4
+           =(240 pi M^5)^-1 integral |curl a|^4
+                + O_a(M^-7).
+
+The scaling arithmetic is consistent. Unitary dilation with
+a_l(x)=l a(x/l) gives Q_(4,m)(a_l)=l^8 Q_(4,ml)(a).
+Since b=24 Q_4, this yields
+
+  b(dd* beta_l)
+    =l^3/(10 pi m^5) integral |curl d* beta|^4
+        +O_beta(l m^-7),
+  beta_l(x)=l^2 beta(x/l).
+
+Thus the claimed positive leading integral dominates for large l,
+IF the large-mass expansion with that error has been proved.
+The leading numerical coefficient agrees with expanding the constant
+magnetic-field factor x coth x: its quartic term is -x^4/45, and
+the proper-time integral gives 1/(240 pi M^5). This consistency
+check does not prove the uniform local expansion and its O(M^-7)
+remainder for every compact varying field.
+
+Those remainder, mass-derivative, local gauge reduction, and trace
+justification steps are listed as proof work in T02. The plan itself
+does not provide their full derivation. No nonabelian/d=4 sign theorem
+is claimed there, and none follows by changing the dimension or the
+group in the displayed coefficient.
+
+5. THE PRECISE YM4 NONTRIVIALITY GAP
+
+The TURN49 theorem controls one ORIGINAL CONSTANT ACTION source,
+with frozen baseline windows, in a normalized FIELD quotient. It
+does not bound its scalar vacuum cumulants. It supplies neither the
+independent local source functions (3.1), their arbitrary mixed jets,
+nor a lower bound for a renormalized local observable.
+
+Even knowledge of a complete scalar generating function for a total
+sum would not determine separated moments. A two-site translation-
+invariant example is (O_1,O_2)=(1+Z,1-Z), Z uniform on {-1,1}, versus
+(O_1,O_2)=(1,1). Both have the same constant sum 2 and every exponential
+moment of that sum agrees; their local variances and cross moments
+differ. Both observables are nonnegative. Knowing only the diagonal
+t_1=t_2 of a generating function loses the needed marked information.
+
+For a usable YM criterion one must first specify:
+
+* real gauge-invariant physical probes X_i(y), their lattice
+  calibration/counterterms, translated support, and continuum limits;
+* a fixed translation-invariant parent law from the SAME regulator
+  sequence, with joint moment convergence and uniform integrability
+  of each finite mixed polynomial family;
+* conditional centering, or degree 1--4 conditional-moment control;
+* products (3.1) with a uniform exponential bound in |Y|, or a proved
+  transfer mechanism furnishing it;
+* a signed/nonzero comparison coefficient in the ACTUAL YM model,
+  with the error smaller than that coefficient;
+* identification with the original measure and the needed positivity/
+  symmetry statements for those same components.
+
+None of these marked observable estimates follows just from alpha_j
+remaining close to the original constant source coefficient.
+
+There is also a structural caution. QED's X=F(f) is LINEAR in a
+gauge-invariant abelian field strength. For a simple nonabelian group,
+a color-fixed linear smearing of F is not gauge invariant, and
+Tr F=0. Wilson loops or Tr(F^2) are nonlinear observables with their
+own renormalization.
+
+A nonzero fourth cumulant of a nonlinear observable does NOT by itself
+establish an interacting underlying field. If Z is a centered unit
+Gaussian, X=Z^2-1 has variance 2 and fourth cumulant 48. A free
+Gaussian theory already has such nonlinear composites. A fourth-
+cumulant test must say precisely which field is being tested and
+which free/composite comparison it excludes. Likewise a same-support
+fourth cumulant should not be called a separated physical witness
+without an argument excluding contact-only or null-state explanations.
+
+A useful generic alternative targets a separated OS norm directly.
+Suppose a limiting parent has RP components, O is a real observable
+supported strictly at positive times, and O^- is its reflected copy.
+If Section 1 gives in those components
+
+  |mu_xi(O)|<=epsilon, |mu_xi(O^-)|<=epsilon,
+  |mu_xi(O^- O)-c|<=u,   c>u+epsilon^2,                (5.1)
+
+then
+
+  mu_xi(O^- O)-mu_xi(O^-)mu_xi(O)>0.
+
+This is the positive squared OS norm of the centered O state, so
+that state is nonzero and orthogonal to the vacuum. The three bounds
+in (5.1) can be obtained by applying the separated-product lemma to
+O, O^-, and O^-O-c. This is a rigorous conditional criterion, not an
+estimate currently available for YM4. It gives a more directly
+physical nontriviality target than a composite's one-point cumulant.
+
+6. AN ACTUAL CONSEQUENCE FOR OUR EXISTING LABEL ESTIMATES
+
+Fix the homogeneous flat datum and the translation-covariant weak-
+chart law used in TURN49, with a fixed finite list of label types
+per current block. Suppose the admitted periodic volumes exhaust
+Z^4 and the constants in our existing joint estimate are uniform:
+
+  Pr(B_i=1 for every i in S)<=p^|S|,                  (6.1)
+
+for every set S of distinct ambient color-ball labels. Here B_i
+is the bad indicator. These are the weak-chart-normalized augmented
+laws; no outside-chart mass is included.
+
+Their periodic label extensions form probability measures on the
+compact product space {0,1}^(Z^4 x types). A diagonal subsequence of
+finite cylinder probabilities has a probability limit nu. Translation
+invariance passes to nu. For each FIXED finite cylinder its labels are
+distinct modulo the finite period eventually, so (6.1) passes by
+bounded cylinder convergence. The periodic extension is not asserted
+to satisfy (6.1) for infinite-lattice labels that coincide modulo its
+period. This needs no field compactness, Gaussian moment theorem, or
+continuum scaling argument.
+
+Fix a finite pattern S and put G_S=product_(i in S) B_i. For translates
+y_1,...,y_J separated by more than twice the pattern diameter, the
+translated patterns are disjoint. Hence
+
+  E_nu product_j U(y_j)G_S <= p^(J |S|).
+
+Apply Section 1 with u=p^|S|. In almost every translation-ergodic
+component nu_xi,
+
+  nu_xi(B_i=1 for all i in S)<=p^|S|.                 (6.2)
+
+There are countably many finite label patterns, so (6.2) holds for
+all of them on ONE common full-measure component set. In particular
+each component has bad-label density at most p and the same rooted
+connected-bad-component tail obtained by bounded-degree counting.
+
+This is a genuine component-level extension of the already proved
+unconditional bad-label moments. It does NOT claim that arbitrary
+GOOD-conditioned bounds automatically pass to components; their
+denominators would require a separate argument. Nor does it imply
+Bernoulli domination, factorization, or connected activity decay.
+
+The variables in (6.2) are auxiliary labels of a weak-chart law at a
+fixed scale. This is not a statement about the full Wilson measure,
+previous-scale nonlinear history constraints, continuum fields, or
+any nonzero gauge-invariant physical witness.
+
+FINAL MATHEMATICAL SCOPE
+
+The transferable new mathematical tools are the separated-product
+conditional-expectation criterion, its exact conditional-cumulant
+algebra, and the componentwise retention of our existing bad-label
+moment bounds. The QED3 plan provides a precise target for independent
+marked sources and their normalized full-measure transfer. It does
+not close those YM4 interfaces, and the single constant original-
+action source cannot replace them.

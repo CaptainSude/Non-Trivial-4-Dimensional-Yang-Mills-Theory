@@ -1,0 +1,169 @@
+RANDOM-SIGN PACKING: INDEPENDENT NORMALIZATION AND PREFIX AUDIT
+18 October 2026. Working audit by constrained_fiber; no publication.
+
+Scope. This checks the proposed packing consumer against the already
+specified one-run source producer and short-window universal scalar
+comparison. It does not independently certify their underlying source
+estimates. In particular the hypotheses are the FULL local source class,
+the coherent universal e_j of one_run_source_gradient_closure Section16,
+and the early comparison of endpoint_original_tube_neutral Section7.
+
+1. EXACT FINITE-REGULATOR SIGN IDENTITY
+
+Fix two separated smooth amplitude-one profiles f,g=theta f of diameter
+and separation comparable to R in final units. Put m disjoint translated
+copies (f_i,g_i) inside ONE fixed buffered compatible chessboard cell,
+with m>=c R^-4. Translate both lobes by the same vector. Each pair is
+reflected about its own translated plane; there is no requirement that
+all pairs share one plane. Choose translations on the bare lattice.
+For fixed R and sufficiently small bare spacing, rounded packing centres
+preserve the buffer and disjointness, including plaquette read stencils.
+
+For independent Rademacher signs eps_i set
+
+ F_eps=sum_i eps_i f_i, G_eps=sum_i eps_i g_i,
+ w=z1 F_eps+z2 G_eps,
+ h_eps(z)=exp[-E_UV(w)] Z(w)/Z(0).
+
+Disjoint supports and zero boundary values give sup norm O(|z1|+|z2|)
+and Lipschitz norm O((|z1|+|z2|)/R), independently of m and eps.
+The full source class therefore contains a bidisc |za|<c r_* R.
+Here r_* is the fixed terminal source radius. The fixed-cell chessboard
+consumer yields |h_eps|<=Q, h_eps(0)=1, with Q independent of R,m,UV.
+
+No nonzero-source zero-free disc is needed. At zero,
+
+ d12 log h_eps = h_eps,12-h_eps,1 h_eps,2,
+ |d12 log h_eps| <= C(Q+Q^2)(r_* R)^-2.
+
+It equals Cov(O(F_eps),O(G_eps))-d12 E_UV(w). Sign averaging kills
+every i!=j term in BOTH h12 and h1 h2. Exact bare translation invariance
+then gives
+
+ |Cov(O(f),O(g)) - m^-1 sum_i E_UV''(f_i,g_i)|
+       <= C(Q+Q^2) r_*^-2 R^2.                     (1)
+
+This is an identity/estimate for the restored bare covariance. Neither
+h nor E_UV is asserted invariant under arbitrary bare translations.
+
+2. THE CHESSBOARD CONSTANT COUNTS THE UNION, NOT THE PACKETS
+
+Use one fixed source-free terminal band and its fixed common scaffold
+cell from producer Section16(v). Reflected dissemination preserves the
+source sup/Lipschitz bounds and face buffer. Complete-read carriers
+inside cells cancel exactly in the UV exponent using the SAME e_j.
+Any remaining nonzero carrier meets both a face and the union of source
+supports. Assign it one source root. The rooted tree sum and the face
+distance reserve bound it by fixed cell volume times
+
+ sum_j a_j^-4 exp[-c buffer/a_j],
+
+which is finite uniformly in UV. Counting roots over the whole cell
+already covers every packet; introducing a factor m here would be an
+unnecessary overestimate. The same applies to complex signed sources.
+The fixed terminal band is essential: no uniform bound for Q as its
+terminal inverse coupling tends to infinity is used.
+
+3. SAME BIRTH COEFFICIENT, RE-TERMINALIZED ANALYTIC ESTIMATE
+
+Producer Sections14 and16 define each birth by the actual finite-prefix
+formula, with source-free maps, reference inverses, cutoffs, canonical
+localization, anchor and complete source extensions fixed. The value is
+defined from the weight itself, before a profile representation. The
+terminal-dependent chi_i and source radii are bounds/domains, not entries
+of those formulas. Consequently a coefficient born at j is the SAME
+coefficient if its finite prefix is estimated with j as terminal.
+One must keep these localization and anchor choices fixed when doing so;
+changing an extension convention would not be justified by this argument.
+
+At that terminal date chi_j=1. Section15.4 admits, explicitly,
+
+ r^(j) <= c/[K E_src (1+gamma_j)^(C_b/2)].
+
+If the stronger original-R admission r E_src g^-C_b<=g^P is retained,
+use the smaller r^(j)=c E_src^-1 g_j^(P+C_b). Both are fixed powers.
+The other restrictions are fixed scalar-disc and prepared-class margins;
+the weak floor has already been fixed. Earlier chi_i beat the polynomial
+growth gamma_i<=gamma_j+D(j-i), so this admission is UV-uniform.
+
+The local Ce in Section16.2 is not the unspecified pressure E_+(g).
+Its listed constituents are the fixed homogeneous ceiling E_src, the
+explicit source-free-subtracted log((gamma+zeta)/gamma), gradient bounds
+Cr E_src chi, and healed g^P coefficients. Shrinking r^(j) preserves
+these uniform ceilings. Fixed birth-cell geometric factors may instead
+be retained as a fixed polynomial in gamma_j; no pressure asymptotic
+or unproved normalized component estimate is used.
+
+Let mathfrak r_j=rho ell^(s-j) be packet width in j-units, to distinguish
+it from the primary source block radius R_j. For late j with
+mathfrak r_j<=1, the ENTIRE sign-packed source is admitted on a bidisc
+c r^(j) mathfrak r_j. Thus each e_j derivative is bounded by
+
+ C Ce [r^(j) mathfrak r_j]^-2 exp[-kappa d_j(X)].
+
+Its complete source carrier must meet the packed support. The support
+lies in a fixed final cell, containing O(ell^(4(N-j))) j-cells. Rooted
+tree summation covers carriers outside that cell as well: assign the
+first intersecting source cell and keep the exterior tree tail. Fixed
+enlargements or source MR_j collars only add a fixed polynomial factor;
+MR_j ell^(j-N) is uniformly bounded in the fixed final-band trajectory.
+
+Sign average first, then divide by m~mathfrak r_N^-4. Since
+mathfrak r_j=mathfrak r_N ell^(N-j), the late date j contribution is
+
+ C Ce [r^(j)]^-2 mathfrak r_j^2.                    (2)
+
+The growing number of roots has been included exactly. For j>=t0>=s,
+gamma_j<=gamma_s+C (up to fixed primitive-phase constants), so the
+polynomial factors can be bounded by a fixed polynomial in gamma_s.
+The sum of (2) is geometric and <=poly(gamma_s) mathfrak r_t0^2.
+Choose t0-s=O(log gamma_s) AFTER the fixed polynomial degree to make
+this o(g_s^4). This requires no decay of late boundary histories and
+no Gaussian approximation during the long continuation to the fixed
+terminal band. Initial UV and early-window scalars remain in the
+separate audited short-window comparison.
+
+4. EARLY COMPARISON IS UNIFORM OVER PACKET/GRID PHASE
+
+The early proof uses literal invariant root families on the unchanged
+scaffold. Translating the smooth test changes scalar weights, not those
+root families. Fixed-grid tensor-hat interpolation has error C mesh/rho,
+and the initial smooth-to-hat estimate O(rho^-2), uniformly in the
+translate. The burn-in grouping and root stabilizer are properties of
+the unweighted root family; translated weights are approximated by
+that same fixed-grid grouping. Gradient seed bounds use sup/Lipschitz
+norms, and early mixed tails use packet separation, all phase-uniform.
+Static R deletion uses uniform rooted estimates, not arbitrary scaffold
+translation symmetry. The actual Gaussian comparison (4.6) in
+broad_packet_actual_gaussian is uniform in fine relative positions u,v;
+its cellwise quadrature error is uniform in grid phase. Hence Section7's
+early c12 estimate has one constant for all packed bare translates.
+
+The pre-witness mixed bound exp[-c rho+C(N-s)] is retained. Positive
+block drift gives N-s<=C(1+gamma_s); choosing rho=Gamma_w^B, B>1
+and larger than the fixed burn-in losses, pays this source-radius cost.
+
+5. FIXED TESTS IN THE CONTINUUM LIMIT
+
+Choose a sufficiently large witness band Gamma_w ONCE, after the fixed
+source geometry and error exponents, and set rho=Gamma_w^B. Let s be
+its first aligned crossing and N the crossing of the fixed weak terminal
+band. Bounded primitive increments and positive q-block drift place
+n=N-s in a finite integer interval of order Gamma_w-Gamma_*. Extract a
+subsequence on which n is constant. Then mathfrak r_N=rho ell^-n and
+the original reflected smooth test pair are fixed as UV is removed.
+
+Bare-lattice packing translations may approximate arbitrary centres;
+the uniform estimates hold for each choice before the limit. Each
+translated pair is identified by bare translation invariance with the
+original pair reflected about plane0. Plaquette-energy orientation
+reversal and barycentre sampling preserve this reflection exactly.
+Mean subtraction does not alter covariance or this identification.
+
+The separated-hierarchy limit therefore receives a positive lower bound
+for the SAME fixed pair if the early scalar lower bound dominates (1)
+and (2). The uniform nonzero constant-source tangent suffices; convergence
+of gamma_s or of that tangent is not needed for this inequality. This
+establishes the proposed nontriviality consumer relative to its stated
+source and early-scalar inputs. It does not by itself supply continuous
+Euclidean rotations or their simultaneous reflection-positive state.

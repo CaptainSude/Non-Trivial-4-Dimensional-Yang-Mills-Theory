@@ -1,0 +1,478 @@
+ROTATION CONTINUATION THROUGH RENORMALIZED SLAB INSERTIONS
+Independent research, 18 October 2026. Scope: a complete consumer theorem
+for a precise finite-cutoff source-pressure input. The source-pressure
+input is being audited separately; this note does not declare YM4 done.
+
+LATER UPDATE: same_state_diagonal_rp_reaudit_2026-10-18.txt and the
+independent fold/volume-first audits recover the stronger SAME-STATE
+diagonal RP proof. diagonal_chain_coordinate_chessboard_2026-10-18.txt
+provides its tilted slab estimate using only original coordinate tori.
+tilted_slab_and_scalar_angular_audit_2026-10-18.txt verifies finite-ODE
+propagation beyond narrow tuples, the second-frame phase identity,
+and the new S0 extension in Section7. Thus the historical open-state
+qualifications below are discharged RELATIVE TO these proofs and their
+explicit source/spectral-cone dependencies. Full Yang--Mills observable
+identification and vacuum selection are separate; no full YM claim follows.
+
+CRITICAL STATE-SCOPE CORRECTION. The coordinate slab bound below uses
+coordinate RP of straight periodic Wilson tori and passes to their
+thermodynamic limits. Diagonal RP does NOT hold on these finite tori.
+The local diagonal-plaquette square proves positivity only when the
+diagonal mirror actually separates the domain with compatible boundary
+data. On a straight periodic torus it is nonseparating. The supplied
+RawIII explicitly records this at lines79973--79978. Therefore the
+spectral cone and the second-frame angular argument in Sections5--7
+remain conditional on a COMMON state with the required diagonal RP
+and the corresponding slab bounds. No change of state is implicit.
+
+1. WHY THE PREVIOUS REAL PACKET BOUND IS NOT YET THE TUBE BOUND
+
+The source calculation in one_run_source_gradient_closure, Section17,
+gives a real separated-packet bound with kappa=7/2. Its scale count is
+correct: the source Lipschitz allowance is sqrt(a), and the worst mixed
+UV block is the two-source block of size delta^-7. It does not by
+itself supply bounded operators or joint holomorphic kernels.
+
+In particular, analytic continuation in one time gap while all other
+gaps are real is not an application of Hartogs. The function
+1/(1+z1*z2*z3) is holomorphic and bounded by one in each right-half-plane
+variable with the other two positive real, but has a pole at
+z1=z2=z3=exp(i*pi/3). This example only defeats the cross argument; it
+is not a reflection-positive Schwinger hierarchy counterexample.
+
+The corrected Osterwalder--Schrader paper, CMP42(1975), SectionV,
+alternates continuation of scalar kernels with continuation of their
+Hilbert-space Gram vectors. Its SectionV.1 uses Euclidean rotations;
+SectionV.2 then enlarges the joint time domains by positivity. Hence
+invoking that entire theorem before proving rotations would be circular.
+Even an adapted continuation does not automatically preserve the sharp
+7/2 angular slope. The bounded-insertion construction below does.
+
+Primary reference:
+https://scispace.com/pdf/axioms-for-euclidean-green-s-functions-ii-with-an-appendix-4g1guiqrrx.pdf
+The preceding source description is intentionally brief; the actual
+proof below is independent of its cone-enlargement estimates.
+
+2. PRECISE FINITE-CUTOFF PRESSURE INPUT
+
+Fix a compact transverse profile f and a planar C1 shape phi supported
+in a fixed square. Put phi_delta(z)=delta^-2 phi(z/delta), and let
+O_a(phi_delta*f) be the finite-lattice scalar observable. Work first at
+fixed lattice spacing a and then in a reflection-positive thermodynamic
+Wilson limit. A finite periodic torus cannot be used for arbitrarily
+many doublings without taking that thermodynamic limit first.
+
+For the repeated source define the exact single-source normalizer
+
+ d_a(z;phi_delta*f)=log mu_a(exp[z O_a(phi_delta*f)]), d_a(0)=0. (2.1)
+
+It suffices that this logarithm exists on |z|<c delta^3, uniformly in a.
+This does not ask for a zero-free many-source partition function. If
+mu_a(exp[zO])=exp[E_UV,a(zphi_delta*f)] h_a(z), h_a(0)=1,
+and the fixed-support source bound gives |h_a(z)|<=C on a disc of
+radius c0 delta^3, Cauchy gives |h_a(z)-1|<=1/2 on a smaller such disc.
+Thus (2.1) has the required analytic branch. Its covariance is exact
+under Wilson translations and reflections, although the fixed-scaffold
+E_UV coefficients need not have those covariances.
+
+Let rho_delta=c delta^(7/2). Consider m copies, including reflected
+and conjugate copies, separated in their full spacetime supports by
+c_sep delta, lying in a time cylinder of length O(m delta), with
+fixed transverse cross-section. Let z_l equal z or its conjugate as
+required by reflection, |z|<=rho_delta. The needed array estimate is
+
+ |mu_a[exp(sum_l z_l O_a(phi_l)-sum_l d_a(z_l;phi_l))
+             exp(sum_b lambda_b O_a(psi_b))]|
+       <= C_{a,psi,delta} exp(C_f m),                         (2.2)
+
+on one fixed (at fixed a) polydisc in finitely many endpoint source
+variables lambda_b. The endpoint profiles occupy fixed compact regions
+outside the array, translated with its endpoints. C_f must NOT depend
+on those endpoint profiles. C_{a,psi,delta} may depend on them and on a.
+
+Why these dependencies suffice: after differentiating in lambda, the
+endpoint polynomial factor has a prefactor independent of m. The
+reflection-doubling root then removes that prefactor at fixed a.
+
+The local source ingredients suggest a direct proof of (2.2):
+
+(i) For every localized coefficient, subtract its separate single-copy
+values. The remainder vanishes for carriers meeting zero or one copy.
+On a carrier meeting r_X>=2 copies, the disjoint supports make the norm
+of their sum at most C|z| M_a, not r_X times this norm, where
+M_a=max(delta^-2,sqrt(a)delta^-3). The second-order Cauchy estimate and
+the sum of individual remainders give C r_X |z|^2 M_a^2. Charge r_X
+to the copies met by X, retain exp(-c delta/a), and perform the Section17
+scale sum. The total cross-copy UV term is <=C m |z|^2 delta^-7<=Cm.
+Singleton log h terms are O(1) per copy on the smaller disc.
+
+(ii) A bare Wilson rectangular chessboard estimate avoids reliance on
+the covariance of E_UV under an arbitrarily small chessboard cell.
+Take one time-long cell containing the array and fixed transverse cell
+sizes containing its tube. The normalized cell's disseminated source
+partition can be estimated directly: global source stability contributes
+exp(C V_total); the preceding cross-copy estimate and singleton log h
+terms contribute exp(C times total clone count). Raising to the reciprocal
+number of cells gives exp(C V_cell+Cm)<=exp(C_f m+C_delta).
+The cell boundary must leave the reflected source copies separated by
+c delta. Spatial faces can have fixed buffers. Small time end buffers
+are allowed because their endcap cost is independent of m.
+
+(iii) Endpoint sources factor over the other cells at the bare plaquette
+level. At fixed a their cell factors have finite sup norms independent
+of m; only O_psi(1) cells contain endpoints as m tends to infinity.
+They therefore cost C_{a,psi,delta}. Differentiate the finitely many
+lambda variables to obtain endpoint polynomials. The array-cell
+cross-section is determined by f, not by the endpoint observables.
+
+This last point matters: enclosing the array and arbitrary endpoint A
+in one huge rectangle gives exp(C_A m), which is insufficient for a
+uniform operator norm. Also, replacing the final complex array by its
+absolute value produces d_a(2 Re z)-2 Re d_a(z); its divergent single-
+source terms need not cancel. No such ordinary-L2 step is allowed.
+
+The following checks complete (i)--(iii), relative to the actual global
+source stability and fixed-support singleton bound of Section16.
+
+Closed-cell RP: take a coordinate reflection through bare vertices.
+There are two mirror planes on the periodic torus. No nearest-neighbor
+plaquette meets both STRICT sides of those planes. Conditional on the
+links lying in the mirror planes, write S=S_++theta S_++S_0. The Haar
+integrals on the two open halves factor, and the RP form is an integral
+of |integral F(U_+,U_0) exp(-S_+) dU_+|^2 against the positive mirror-
+link measure exp(-S_0)dU_0/Z. Thus RP holds for every complex function
+on the CLOSED half, including nongauge-invariant matrix-entry products.
+
+The abstract chessboard Holder theorem uses only cyclicity and this
+reflection Cauchy--Schwarz inequality. It applies to any even number
+of cells in each coordinate, not merely powers of two, and does not
+require the neighboring cell algebras to have disjoint boundary data.
+Reference: Froehlich--Israel--Lieb--Simon, Phase Transitions and
+Reflection Positivity I, CMP62(1978), Theorem4.1; accessible preprint:
+https://repo-archives.ihes.fr/FONDS_IHES/I_Prepublications/FROHLICH/1978-1980/P_78_224/P_78_224_web.pdf
+
+Choose the array time cell [0,mL], with L an integer multiple of a,
+and source packets buffered away from its two faces. Endpoint A is
+compact in strictly positive times, so its translated copy lies beyond
+mL and its reflected copy before zero. Its finitely many bare
+plaquette polynomials expand into finite sums of products of link
+matrix entries. Each link lies in at least one closed cell and is
+assigned to one such cell; boundary links are allowed by the preceding
+RP proof. Each monomial therefore factors into cell functions. The
+number and total coefficient size depend on a,A,delta but not m, and
+every endpoint cell factor has a finite sup norm. Their chessboard
+norms are bounded by those sup norms. Apply chessboard Holder to one
+array cell factor and these endpoint factors, then sum the expansion.
+
+For each finite torus use its OWN exact single-packet logarithm d_a,T.
+The array cell's dissemination gives many translated/reflected copies;
+its normalized partition is
+ exp(E_UV,total-sum d_a,T) h_total.
+The source global bound controls h_total by exp(C V_total). Split the
+exponent into the cross-copy remainder of (i) and the sum of
+E_UV,single-d_a,T=-log h_single. Every singleton has a bounded analytic
+log, uniformly in location: a sufficiently large compatible coarse
+cell can always surround that one bounded packet with a fixed buffer.
+The total exponent is therefore bounded by C times the number of
+clones plus C V_total. Taking the chessboard root gives
+ exp(Cm+C V_cell), V_cell=O_f(m delta)<=C_f m.
+This proves (2.2), with endpoint constants independent of m.
+
+There is no requirement that the fine chessboard faces preserve an RG
+scaffold. All scalar subtractions use exact d_a,T; local UV coefficients
+are compared by their actual source supports, rather than translated
+by an asserted covariance. The repeated raw source remains in W_j
+because its packet supports are disjoint and reflections preserve its
+Lipschitz norm. In the four-dimensional dissemination, packets in
+different transverse cells can have equal planar projections; their
+FULL supports are still separated by the fixed transverse buffer, which
+is all the cross-carrier tree bound uses.
+
+Coordinate-grid torus commensurability: RawII's initial parameter N_T is an
+arbitrary integer; the later RG divisibility conditions are powers
+of ell independent of N_T. Choose a cubic side that is an even common
+multiple of the rectangular fine cell lengths and the RG periods.
+FILS permits these arbitrary even cell counts. For fixed a and fixed
+m take a thermodynamic subsequence along such tori. More precisely,
+use ONE torus sequence whose free integer parameter is divisible by
+2 k! at its kth member; then all fixed array-cell integer lengths
+eventually divide that sequence, with even counts. Select one common
+state/source-coefficient subsequence. Compactness of
+the bond product space gives a Wilson state; local MGFs converge
+uniformly on compact z sets because the local lattice observables are
+bounded. The singleton zero-free branch and all bounds pass to this
+limit. Only after that limit is the number m sent to infinity.
+
+Consequently (2.2) follows from the specified global source stability,
+local vacuum envelope, singleton bound, and bare Wilson RP. No
+many-source zero-free theorem or normalized boundary comparison is
+required. Those source inputs retain their previously recorded proof
+dependencies; this consumer does not establish them by itself.
+
+3. REFLECTION DOUBLING WITH EXACT SINGLE-SOURCE SUBTRACTION
+
+Let the source support lie in a slab of width L=O(delta), with gaps of
+size c delta at its faces. Write U_L for positive time translation and
+
+ D_a(z)[A]=[ exp(z O_a(phi)-d_a(z;phi)) U_L A ].           (3.1)
+
+Initially A is a finite polynomial in compactly supported positive-time
+plaquette observables. At fixed a every such observable is bounded and
+the vector is holomorphic in z on the single-source disc.
+
+Reflection and a common translation turn ||D_a(z)A||^2 into the scalar
+product of [A] with a doubled insertion whose two source coefficients
+are z and conjugate(z), with the corresponding exact d's. The doubled
+slab has reflection-conjugation symmetry. For its m=2^r repetitions set
+a_r equal to the norm of the resulting vector with endpoint A, and
+b=||[A]||. Repeating the identity and Cauchy--Schwarz gives
+
+             a_r^2 <= b a_{r+1}.                       (3.2)
+
+The endpoint-source estimate (2.2), followed by finite Cauchy
+differentiation, bounds
+
+             a_r^2 <= C_{a,A,delta} exp(C_f 2^r).        (3.3)
+
+If b=0, (3.2) already gives a_0=0. Otherwise iteration yields
+a_0<=b^(1-2^-r) a_r^(2^-r). Taking r to infinity at fixed a gives
+a_0<=exp(C_f/2)b. The preliminary doubling changes only a fixed
+constant. Hence D_a(z) is uniformly bounded for |z|<=rho_delta.
+
+Cauchy at zero therefore gives
+
+ || [ (O_a(phi)-mu_a O_a(phi)) U_L . ] ||
+                 <= C_f delta^(-7/2).                 (3.4)
+
+The derivative of (2.1) is the exact mean. Higher self-counterterms
+disappear from (3.4); they were necessary to bound the holomorphic
+exponential before differentiating it.
+
+For a general planar alpha supported in a square of radius delta,
+normalizing its C1 shape gives the scale-covariant estimate
+
+ || B_delta(alpha f) || <= C_f delta^(2-kappa)
+            (||alpha||_infinity+delta||grad alpha||_infinity),
+                  kappa=7/2.                          (3.5)
+
+Here B_delta inserts the centered field in |t|<delta and leaves a
+positive time delta on either side. Fixed changes of the slab-width
+constant change only C_f. Complex f and alpha follow by linearity and
+real/imaginary decomposition.
+
+4. PASSING THE BOUNDED LINEAR INSERTION TO THE S0 HILBERT SPACE
+
+Assume the centered finite-lattice Schwinger functions converge on
+compact off-collision tests to the S0 hierarchy, and assume its RP
+Hilbert space H and translations have been constructed. For positive
+compact off-collision polynomial tests F,G, the matrix element of the
+operator in (3.4) is the corresponding centered S_{deg F+deg G+1}
+pairing with the inserted packet between two strictly separated slabs.
+It is therefore in the established convergence domain.
+
+The uniform finite-a bound passes to these pairings:
+ |<F,B_delta(alpha f)G>| <= RHS(3.5) ||F||_H ||G||_H.
+Null vectors are killed and the form extends uniquely to a bounded
+operator on H. Thus no continuum Euclidean probability measure or
+ordinary Euclidean L2 norm is required. Translation, adjoint, and time-
+padding identities pass by taking matrix elements on this dense core.
+In particular B_delta(alpha f)^*=B_delta(theta conjugate(alpha f)).
+
+5. A SHARP PLANAR POINT-INSERTION LEMMA USING C1, NOT L2
+
+Assume H and P commute, H>=|P|, and
+ V(z)=exp(-z_t H+i z_x P), q(z)=Re z_t-|Im z_x|>0.
+Then V is a norm-holomorphic contraction on W={q>0}. Assume (3.5)
+and the exact translation/padding identities for B.
+
+Take a smooth nonnegative planar mollifier j_epsilon of mass one,
+supported in a disk of radius epsilon. For q(xi),q(eta)>epsilon set
+
+ A_f,epsilon(xi,eta)=V(xi-epsilon e) B_epsilon(j_epsilon f)
+                                      V(eta-epsilon e).       (5.1)
+
+Claim: uniformly as epsilon decreases,
+
+ ||A_f,epsilon(xi,eta)|| <= C_f min(1,q(xi),q(eta))^-kappa.      (5.2)
+
+Proof. Put q0=min(q(xi),q(eta)); choose r=c min(1,q0) with c fixed
+small and epsilon<r. For unit u,v consider the holomorphic scalar
+ h_epsilon(zeta)=<u,A_f,epsilon(xi+zeta,eta-zeta)v>.
+For zeta=z+ib in a complex ball of radius r, the exact padding identity
+expresses h as a matrix element of B_{2r+epsilon}((tau_z j_epsilon)f)
+between two contraction vectors depending on b, but not on real z.
+
+Choose a smooth radial density rho_r on C^2, supported in that ball,
+with integral one. Holomorphic mean value gives
+ h_epsilon(0)=integral rho_r(z+ib) h_epsilon(z+ib) dz db.
+For fixed b, alpha_b(z)=rho_r(z+ib) satisfies
+ ||alpha_b||_infinity<=C r^-4, ||grad alpha_b||_infinity<=C r^-5.
+The real-z integral equals a matrix element of
+B_{2r+epsilon}((alpha_b*j_epsilon)f). Convolution does not increase
+these two norms. Applying (3.5) bounds that integral by
+C_f r^(2-kappa) r^-4=C_f r^(-kappa-2). The b integration has area
+O(r^2), proving (5.2). This uses a signed/complex linear source bound,
+not a pointwise probability or an L2 duality assertion.
+
+To identify the limit, fix d>0 below the neighboring cone margins.
+For every smooth planar alpha supported sufficiently near zero,
+
+ integral alpha(z) A_f,epsilon(xi+z,eta-z) dz
+   =V(xi-d e) B_d((alpha*j_epsilon)f) V(eta-d e).        (5.3)
+
+The right side converges in operator norm by (3.5), since the smooth
+convolution converges in C1. Local scalar normal-family compactness
+from (5.2) and uniqueness on the real square identify a unique weak
+limit A_f(xi,eta). It is bounded by (5.2). The exact shift identity
+factors it locally as two norm-holomorphic semigroups around a fixed
+bounded A_f, proving norm holomorphy, rather than merely weak
+holomorphy. Adjoint and arbitrary inner-gap splitting identities pass
+from the regularized operators. Equation(5.3) also proves
+
+ B_d(alpha f)=integral alpha(z) A_f(de+z,de-z) dz.       (5.4)
+
+6. JOINT TUBE AND IMAGINARY-ANGLE GRAM KERNEL
+
+For ordered complex points Z=(z1,...,zN) with each difference in W,
+form the product of N bounded A_f operators, allocating one half of
+each interior gap to each neighboring factor and padding the two ends
+with an arbitrary k in W. Pair this product with the vacuum Omega.
+The result is jointly holomorphic, independent of common translation
+and of the end padding, and satisfies
+
+ |S_N(Z;f)| <= C_f^N min(1,min_j q(z_{j+1}-z_j))^(-kappa N). (6.1)
+
+Repeated (5.4) identifies it with the original centered S0 moments on
+strictly time-ordered packet supports. This step supplies a genuine
+joint domain; it does not invoke Hartogs on a cross.
+
+The same product without its left vacuum defines Hilbert vectors
+Psi(Z;f) for positive ordered tuples. Adjoints and inner-gap splitting
+give exactly
+
+ <Psi(Z;f),Psi(W;g)>=S_{m+n}(theta conjugate(Z),W;bar f,g), (6.2)
+
+with the reflected group written in reversed order. Include the empty
+tuple as Omega. Imaginary rotations preserve W and reduce its margin
+by at most exp(-|beta|). Substitution of the imaginary-rotated points
+in Psi, followed by integration against the original real packet tests,
+therefore gives all the mixed-length imaginary-angle Gram matrices.
+Their positivity is an actual Hilbert-space identity, not analytic
+continuation of an inequality on a real line.
+
+For a scalar there is no tensor-index growth. Thus (6.1) gives angular
+growth exp(kappa N|beta|). The quarter-turn gluing and narrow-orbit
+argument in rotation_research supplies entire angular continuation;
+its two-frame frequency theorem applies IF the same construction is
+available in the diagonal frame of the SAME state, because kappa=7/2<4.
+Coefficient detection remains on separated planar configurations,
+where the resulting kernels are real analytic. The original full S0
+hierarchy can still contain terms supported on planar-coincidence
+sets with distinct transverse coordinates; these are not determined
+by the planar separated kernel. The following construction avoids
+silently asserting their disappearance.
+
+7. CONDITIONAL COVARIANT EXTENSION OF THE ORDERED PHYSICAL SECTOR
+
+Assume the actual SAME state supplies both frame hypotheses above.
+Also apply the coordinate source-slab construction to fully localized
+four-dimensional packets eta_delta=delta^-4 eta(./delta). Their local
+source norm is M_a=max(delta^-4,sqrt(a)delta^-5). At a<=delta the
+anchor count is delta^4 a^-4; at a>=delta it is O(1). The quadratic
+cross-copy scale sum is therefore bounded by C delta^-10: the fine
+terms are O(delta^-8+delta^-9), and the coarse sum is
+delta^-10 sum_{a>=delta}a<=C delta^-10. The singleton zero-free radius
+is c delta^5, so the same argument gives the full-packet insertion
+norm C delta^-5, with C independent of the moment order.
+
+Since the spectral cone has |P_i|<=H for each spatial coordinate,
+V(t,x)=exp(-tH+i x.P) is a contraction for
+q_4(t,x)=Re t-sum_i |Im x_i|>0. Repeat Section5 in C^4: the radial
+reproducing density has size r^-8; its real slices cost r^(4-5)r^-8,
+and integration over four imaginary coordinates contributes r^4.
+Thus the full-point insertion has bound C min(1,q_4)^-5. Its N-fold
+product defines a real-analytic full-point kernel K_N whenever all
+times are distinct, with
+
+ |K_N(X)|<=C^N min(1,min consecutive time gaps)^(-5N).   (7.1)
+
+It represents the original hierarchy on compact strictly time-ordered
+tests. Smearing its transverse variables identifies it with the planar
+kernel of Section6: both represent the same such moments, and both
+are smooth in the remaining separated variables. Therefore the sharp
+planar rotation identities hold pointwise for K_N whenever both
+configurations have distinct times.
+
+Claim: there is a unique O(4)-invariant real-analytic extension
+K_N,new to every configuration of distinct FULL spacetime points,
+obtained by rotating the points to have distinct times.
+
+Proof. First take a generic configuration with no parallel chords.
+Along a generic path in SO(4), the time projections cross only one
+equal-time wall at a time. Inside a chamber the three (t,x_i) rotation
+derivatives of K_N vanish by the planar identities. Their commutators
+give all spatial rotation derivatives as well, so the value is constant
+on each chamber. At a wall only one pair has equal time. Some spatial
+coordinate x_i distinguishes that pair; all (t,x_i) projections are
+then distinct. Choose a small fixed rotation in that plane which
+separates every time throughout a neighborhood of the wall. Evaluate
+K_N after this rotation. Planar angular invariance identifies this
+analytic patch with the original time-ordered kernel on BOTH sides
+of the wall. Thus the chamber constants agree. This also handles the
+permutation change in their ordering, using scalar permutation symmetry.
+
+For nongeneric distinct configurations, choose two separating rotations
+and approximate the configuration by generic ones while retaining both
+strict projection gaps. Equality at the generic configurations passes
+by continuity, proving independence of the separating rotation in
+general. On a neighborhood of any distinct configuration one fixed
+rotation separates times, so the resulting extension is real analytic.
+Translation, permutations, and all proper rotations follow from the
+definition; one original coordinate reflection adds O(4).
+
+Its growth is controlled without an uncontrolled order-dependent
+analytic-continuation constant. Let d=min_{i!=j}|x_i-x_j|. A spherical
+union bound over the N(N-1)/2 pair directions supplies a unit time
+normal v with |v.(x_i-x_j)|>=c d/N^2 for every pair. Hence (7.1) gives
+
+ |K_N,new(X)|<=C^N N^(10N) [1+d^(-5N)].                (7.2)
+
+This has a fixed factorial envelope because N^(10N)<=C^N(N!)^10.
+Define S_N,new on collision-flat Schwartz tests by ordinary integration
+against K_N,new. The integral is absolute. Indeed flatness on the
+closest pair diagonal and Taylor's formula of order 5N bound the test
+by C^N d^(5N) times a seminorm with at most 5N derivatives. A polynomial
+weight of degree 4N+2 makes the remaining 4N-dimensional integral
+finite. Along the Taylor segment, for d<=1, that weight changes by
+only a factor C^N. Thus the distribution order and weight order are
+linear in N and the constants have fixed factorial growth. No choice
+of a contact distribution is made by this absolutely convergent S0
+definition.
+
+Reflection positivity of S_new follows as follows. On compact positive-
+halfspace off-collision supports, excise the INTERNAL equal-time
+hypersurfaces with smooth cutoffs. Every resulting test splits into
+strict time-order chambers, where S_new equals the original hierarchy,
+so its reflected quadratic form is nonnegative. Against the NEW smooth
+off-collision kernels these cutoffs tend to one by dominated convergence.
+This is not a claim that these cutoffs converge in the old S0 topology.
+It proves RP for all compact off-collision positive-halfspace tests.
+The new linear-order S0 bound and the standard flat-diagonal/cutoff
+approximation then extend RP to the declared positive S0 domain.
+
+The constructed covariant hierarchy agrees with the ordered Wilson
+sector. It need not equal the originally extracted S0 hierarchy on
+test functions seeing planar or equal-time contacts. That distinction
+is explicit. Nontriviality of the ordered sector, as opposed to a
+vacuum/contact sector, still requires a separate witness.
+
+STATUS. Section2 proves the COORDINATE-frame (2.2) from global source stability,
+local vacuum envelope, singleton bound, and bare Wilson RP, with the
+source-producer dependencies retained explicitly. Sections3--6 then
+give the sharp bounded-insertion, joint-tube, and imaginary-angle Gram
+consumer, conditional on the stated spectral cone and two-frame inputs.
+The exact single-MGF convention and endpoint constant
+requirements are essential. The independent S0 spectral-cone argument
+and the actual source producer must still be included in any complete
+YM4 proof; neither is silently replaced by this note. In particular,
+diagonal positivity of the actual periodic-limit state is OPEN here.

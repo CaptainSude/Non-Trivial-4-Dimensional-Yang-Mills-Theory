@@ -1,0 +1,558 @@
+QEO1'S FULL-MEASURE BRIDGE: WHAT TRANSFERS TO YM4
+20 October 2026. TURN50. Producer: gauge47.
+Independent focused review: tail47 checked Sections 4--5 and reports
+PASS at the stated trace, common-parameter and reference-model scope.
+
+RESULT AND SOURCE STATUS
+
+There is a useful, exact bridge in the QED3 plan, but its decisive
+probability premise is stronger than the current YM4 input. The bridge
+first bounds the complement of the selected RG history under the FULL
+normalized original law, then identifies the selected numerator by an
+exact density identity, and only then takes logarithms. Our existing
+tail bounds are conditional on a weak chart. Replacing the full law by
+that conditional law at this point would leave the missing normalizer
+untouched.
+
+Two abstract parts can be proved independently and do transfer:
+
+* a positive selected-numerator/full-normalizer sandwich (Section 3);
+* a general-dimensional two-reference normalized chessboard transfer
+  from positive trace powers and one common-coupling pressure defect
+  (Section 5).
+
+Neither asserts that the missing full YM4 premises hold. Section 4
+proves a quantitative reason that the current cutoff class cannot
+simply copy QED3's "the globally all-good event has probability near
+one" route. It also explains why this does NOT rule out a pressure
+comparison based on local bad-history resummation.
+
+Primary source:
+https://github.com/ethanwsussman/Yang--Mills-LLM-experiment/blob/3ef16f9f8ba0bfdc26fd7d4f7114d44bf9ebe5eb/QED3_slop/QEO1.pdf
+
+The local PDF has 107 pages. Page numbers below are physical PDF page
+numbers, which agree with the printed numbers in the inspected pages.
+The readable extraction is work/remote50/QEO1_poppler.txt. The formula
+pages 88, 93, 95 and 105 were also inspected as rendered pages.
+
+The document's internal title is "QE1O1 -- General standalone criteria
+and their QED3 applications." Its abstract calls it a "plan"; its
+appendix is "Detailed proof tasks and supporting statements." Many
+model-specific cards explicitly say Claim, Proof work, and Inputs and
+cite a different "current manuscript" at pages beyond this PDF.
+For example, T09 cites pp. 213--219 and T17 cites pp. 247--255.
+Those citations are not proofs supplied in this 107-page document.
+
+The directory README at this SAME immutable commit says:
+"these documents are largely LLM-created. Their correctness has not
+been satisfactorily verified."
+https://raw.githubusercontent.com/ethanwsussman/Yang--Mills-LLM-experiment/3ef16f9f8ba0bfdc26fd7d4f7114d44bf9ebe5eb/QED3_slop/README.md
+
+Accordingly, this note audits the displayed implications and proves
+the general lemmas below. It does not certify that Q1--Q4 have been
+established for the chamber model or accept an unpublished YM4 proof.
+
+1. WHAT THE QED3 MODEL ACTUALLY SUPPLIES OR REQUIRES
+
+1.1 D0 (p. 11).
+
+The model is an abelian Villain-type photon field coupled to a special
+chamber fermion operator. Photons are real links A and closed integer
+two-cochains z, modulo
+
+  (A,z) ~ (A+2 pi k/q,z-dk),   u=dA+2 pi z/q.
+
+The gauge weight is exactly exp(-||u||^2/2). The chamber construction
+has 48 labels and four spinor components per photon site; its four
+wall types and positive crossing weights are part of the definition.
+The claimed real weight contains det(D_ch[qA]+mu), for every real
+total mass mu. Positivity of that determinant and the slab reflection
+algebra are model-specific tasks, not consequences of the word QED.
+
+The continuum scaling is q=e sqrt(eta), with eta=L^-N. This
+superrenormalizable scaling matters in Section 4. It is different from
+the marginal logarithmic coupling trajectory currently constructed
+for the selected YM4 maps.
+
+1.2 Q1 (pp. 12--13; M01--M05, pp. 25--29).
+
+The all-flux Gaussian domination target is
+
+  E_full exp(<beta,u>) <= exp(||beta||^2/2),                (1.1)
+
+with the appropriate projection in a prescribed curvature sector.
+It is paired with coordinate reflection positivity and exact
+positive slab traces. For a reflected product O and an even cell
+count s_mu, the required representation is
+
+  Z_s(O)=Tr[(Y^*Y)^(s_mu/2)],                             (1.2)
+
+where Y is independent of this count when all other counts are fixed.
+This representation gives root-density monotonicity and log-convexity.
+
+The proof tasks retain compact gauge averaging, integer flux, crossing
+fermion signs, and the closing character. They are not established by
+an abstract statement that the covariance decays. M05 uses a special
+source factorization into a unitary translation and an unchanged
+Gaussian convolution. Schatten Holder removes the unitary; a second
+choice of time direction removes the remaining repeated magnetic
+source. Completing the EXACT Maxwell square then gives (1.1).
+
+All-flux domination alone does not imply domination after conditioning
+on zero flux. T09 explicitly includes a separate zero-sector projected
+trace argument. This distinction is relevant whenever a selected
+topological or coordinate sector is substituted for the original law.
+
+1.3 Q2 (pp. 14--15; S01--S06, pp. 49--60).
+
+The local kernel module requires covariant phase averages, the
+four-light/188-heavy chamber split, a gap for the heavy modes,
+resolvents, and uniform rows after coarse penalties. The Maxwell
+minimum is a LINEAR constrained minimizer of ||dA||^2. Its fluctuation
+coordinates and covariance roots are linear operators. The exact
+normalization, coordinate count and support identities are required
+in addition to exponential decay.
+
+The corresponding analytic lessons transfer: actual local inverse
+bounds, strict read sets, coarea factors and normalized fluctuation
+coordinates must be tracked. The specific linear photon isometry and
+commuting U(1) phase algebra do not automatically transfer to a
+background-dependent nonabelian saddle and moving tangent space.
+
+1.4 Q3 (pp. 16--17; T01, T06, T09--T11, pp. 82, 88, 92--95).
+
+The target is one pair of bare mass and vacuum counterterms chosen on
+the TOP reference torus. The SAME pair is used on the smaller reference
+torus and in the outer-volume limit. It is not separately retuned for
+each torus. Exact covering/locality identities in S16--S18
+(pp. 77--81) are used to transfer the local RG steps. The smaller
+reference retains its terminal vacuum; only the top reference has the
+chosen terminal cancellation.
+
+T06 retains the exact zero-flux real-Hodge normalization. Writing
+V=n1 n2 n3 and r_q=2 pi/q, the normalization factors are
+
+  N_n=r_q^(V+2) (det' Delta_0)^(1/2),
+  G_n=(2 pi)^(V-1)/det' Delta_0,
+  Z_n^ph=N_n G_n.                                        (1.3)
+
+The matter factor is the harmonic-angle-averaged determinant against
+the NORMALIZED transverse photon Gaussian. It is not silently divided
+by a free fermion determinant. The full zero-flux partition is
+Z_n^ph times this matter factor.
+
+The topology and harmonic seam factors in (1.3) use abelian Hodge
+theory and the integer cochain quotient. There is no corresponding
+global linear Hodge parametrization of compact nonabelian Wilson
+configurations among our current inputs.
+
+1.5 Q4 (pp. 18--19; T12--T18, pp. 96--107).
+
+The required observables are normalized full-law products of
+independently marked, separated cells, using the same tuned bare
+parameters. The local probes are linear abelian curvature pairings,
+with prescribed Wick polynomials. An exact source shift moves the
+source into the determinant while leaving the Gaussian photon
+integration fixed (T07, p. 89).
+
+T14 (p. 100) treats the discarded source-dependent numerator
+separately: real complement estimates plus a global complex bound and
+finite-dimensional holomorphic interpolation give small complex
+jets. Real small probability by itself is not a complex-source bound.
+T17 then transfers normalized reference products to large volumes.
+
+Our fixed-disc constant original-action source is not an independent
+cell-source family. It does not establish Q4's analogue. The
+independent TURN50 products audit records that each mark has bounded
+degree but the total degree grows with the number of cells. It also
+distinguishes nonlinear non-Gaussian composite probes from evidence
+that the underlying field is interacting.
+
+2. THE EXACT FULL-MEASURE BRIDGE IN T09 AND T11
+
+T09 begins with the harmonic-averaged, normalized ORIGINAL zero-flux
+law mu_bar. The displayed slice trace retains the zero-magnetic-flux
+projection P0 and the compact gauge projection P_G. For real source,
+the electric kernel must factor as
+
+  K_j,xi = z_j U_j exp(-|E-b_xi|^2/2),   |z_j|=1,
+  U_j=exp(i<beta_j^el,E>).                              (2.1)
+
+Here the E components commute and generate translations on the
+abelian slice configuration space. The trace/factorization identities
+are explicitly assumptions to verify, not an assumption of Gaussian
+domination. Under them, the stated Schatten argument gives
+
+  mu_bar(exp(<h,F>)) <= exp(||Pr_F_N h||^2/2).            (2.2)
+
+The linear photon tower has a bijective coordinate decomposition
+
+  F <--> (A_*; zeta_0,...,zeta_(k-1)),
+  ||F||^2=||d H_k^ph A_*||^2+sum_j ||zeta_j||^2,
+  gamma_N -> m_*(dA_*) product_j dmu_I(zeta_j).           (2.3)
+
+Every fluctuation coordinate in (2.3) is a norm-one LINEAR functional
+of the original curvature. A terminal plaquette row has norm at most
+one. Thus (2.2), which concerns the full determinant-weighted law,
+controls all the coordinates used to define the selected RG history.
+An independent product law for the interacting coordinates is not
+needed for the union bound.
+
+For each scale j the coordinate count is at most
+2 ell_*^3 L^[3(k-j)], and there are at most 3 ell_*^3 terminal
+plaquette coordinates. The cutoff increases as a power of
+v_*+(k-j) log L/2 toward the ultraviolet. The count and Gaussian
+one-row tails then bound the complement of the simultaneous event
+G under mu_bar. This is a probability bound for the full law before
+any selected-history normalization.
+
+The other half of T09 is an EXACT Borel density identity:
+
+  nu^(theta,a)(1_G Phi(A_*))
+    = integral m_*(dA) Phi(A) chi_*(A)
+                         Y_*^x(A+c_theta;a[k])           (2.4)
+
+for every bounded Borel Phi. The finite normalized Gaussian factors,
+Haar/Hodge factors, first-step 192 n^3 weighted fermion pairs and
+terminal 4 ell_*^3 weight-one pairs all matter. An analytic formula
+valid only after arbitrary renormalization of its mass would not
+replace (2.4).
+
+T11 controls the positive terminal density on chi_*=1:
+
+  Y_*(A+c_theta)
+    =exp(-epsilon_k^v ell_*^3) R_theta^tw (1+r_*),
+  |r_*|<=epsilon_1.                                      (2.5)
+
+The terminal reference Gaussian has chi_* complement <=epsilon_4;
+the FULL original normalized law has G complement <=epsilon_3.
+Consequently the selected numerator and the full denominator can be
+sandwiched before taking logarithms. T11 uses exactly this order.
+
+After free determinant/twist comparison and exact cancellation of a
+common bulk pressure at the SAME bare parameters, it targets
+
+  |L^3 log z_(r,n*) - log z_(r,Ln*)| <= C_mat,             (2.6)
+
+uniformly in the fine cutoff. It is not enough for both pressures
+separately to have an unspecified extensive error.
+
+3. A REUSABLE POSITIVE-NORMALIZER LEMMA, WITH THE CURRENT ATTACHMENT
+
+Lemma 3.1. Let nu be a finite positive measure, Z=nu(1)>0 and
+mu=nu/Z. Let G be an event. Suppose, for C>0 and a probability lambda,
+
+  nu(G)=C integral_B (1+r) dlambda,
+  |r|<=delta<1 on B,   lambda(B)>=1-epsilon_4,
+  mu(G^c)<=epsilon_3<1.                                 (3.1)
+
+Then
+
+ C(1-delta)(1-epsilon_4)
+      <= Z <= C(1+delta)/(1-epsilon_3).                  (3.2)
+
+Proof. Positivity and (3.1) sandwich nu(G) between
+C(1-delta)(1-epsilon_4) and C(1+delta). The full-law probability
+assumption gives (1-epsilon_3)Z<=nu(G)<=Z. Combine.
+For delta,epsilon_3,epsilon_4<=1/2,
+
+  |log Z-log C| <= 2(delta+epsilon_3+epsilon_4).           (3.3)
+
+The same proof permits a positive extra parameter theta by integrating
+C_theta and the corresponding selected identities first. Uniform
+delta and epsilon_4 suffice; epsilon_3 must concern the resulting
+normalized full mixture, not each unverified conditional law.
+
+CURRENT YM4 ATTACHMENT. Our exact projected-product W is an actual
+positive selected fiber weight. Appending a mass-one normal Gaussian
+creates exact labels inside an admitted physical chart, and the
+cemetery label covers its complement. Summing ALL labels recovers the
+original numerator, including its original source and normalizer.
+This is the analogue of exact density bookkeeping in (2.4).
+
+TURN49 bounds probabilities under the ORIGINAL law conditioned on
+the weak chart D, with the full coarea and inherited density. For
+good and bad disjoint label sets A,S, it establishes
+
+  Pr_D(all S bad | all A good)<=p^|S|,
+  p=exp(-c T^2).                                        (3.4)
+
+Consequently, with m label blocks,
+
+  0<=log(Z_D/Z_good)<=m[-log(1-p)].                       (3.5)
+
+Even if (3.4) were strengthened to a useful globally all-good
+probability inside D, Lemma 3.1 would yield Z_D, not Z_full.
+There remains the exact positive term Z_cem=Z_full-Z_D. No current
+bound controls it. Nor does (3.4) alone prove spatial decay or
+factorization of connected defect weights, or estimates after
+arbitrary previous bad histories.
+
+This is the precise missing premise in a direct T09/T11 attachment:
+a complement or partition comparison for the SAME full original law
+and SAME baseline coupling, with all chart/cemetery sectors included.
+The local kernel and selected source identities cannot supply it by
+changing their normalization.
+
+4. WHY THE PRESENT GLOBAL-ALL-GOOD STRATEGY HAS A CUTOFF OBSTRUCTION
+
+This section is a statement about the CURRENT proved admission
+conditions and an exact reference model. It is not a no-go theorem
+for YM4, nor a calculation of the full interacting probability.
+
+Take n fixed-ratio RG steps, ratio R>1, at fixed final lattice volume.
+There are m_n>=c R^(4n) ambient color blocks at the finest step.
+The selected tuned trajectories have
+
+  c_1 n <= g_0^-2 <= c_2 n                              (4.1)
+
+for large n, with fixed terminal weak coupling and fixed block
+constants. Our currently proved connected-expansion admission has
+
+  g_0 T_0^3 <= c_3.                                     (4.2)
+
+Therefore any threshold certified by (4.2) satisfies
+T_0^2<=C n^(1/3).
+
+Let X_i be independent standard fixed-dimensional color Gaussians,
+and c_T=Pr(|X_i|<=T). Their all-good probability is EXACTLY
+c_(T_0)^(m_n). For T>=1, a scalar component gives
+
+  1-c_T >= c (T+1)^-1 exp(-T^2/2).                      (4.3)
+
+For completeness, integrate the scalar Gaussian density over
+[T,T+1/T]. Its length is 1/T and its exponent differs from -T^2/2
+by a bounded amount. Decreasing the constant covers 1<=T<=2.
+If T<1, a fixed positive lower tail is even stronger.
+
+Combining (4.1)--(4.3),
+
+  m_n(1-c_(T_0))
+     >= c R^(4n) (1+C n^(1/6))^-1 exp(-C n^(1/3))
+       --> infinity,
+
+and hence
+
+  c_(T_0)^(m_n) <= exp[-m_n(1-c_(T_0))] --> 0.           (4.4)
+
+The projected-product construction gives exactly this selected mass
+in the unrestricted flat quadratic reference with constant coarea
+density, after the normal Gaussian of mass one has been appended.
+With the admitted weak-chart
+cutoff the product-ball numerator is still this exact Gaussian
+integral whenever its image lies inside the chart. One must not
+reinterpret (4.4) as the probability under the compact interacting
+Wilson law or under a separately normalized finite chart.
+
+To make an independent Gaussian all-good event overwhelmingly likely
+among R^(4n) rows, thresholds must at least be of order sqrt(n).
+The sufficient cubic admission (4.2), together with g_0~n^-1/2,
+permits only order n^(1/6). Even a hypothetical replacement by only
+g_0 T_0<c would leave a quantitative coefficient competition; it
+would not prove the desired global event automatically.
+
+WHY QED3 IS DIFFERENT HERE. Its fine charge is e_j=e sqrt(a_j).
+At depth k-j the charge decreases exponentially. Thus cutoffs that
+grow polynomially in k-j, as in T09, can defeat the exponential
+coordinate count through their Gaussian squared exponent while
+e_j times any fixed power of the cutoff remains small. The current
+YM4 marginal trajectory does not provide this separation.
+
+IMPORTANT LIMITATION OF THE OBSTRUCTION. Vanishing selected mass
+does NOT rule out a common-pressure strategy. In the exact product
+model,
+
+  log(Z_good/Z_full)=m log c_T,
+
+which is a pure bulk vacuum. For a j-fold cover in every direction,
+
+  j^d m log c_T -(j^d m)log c_T=0.                       (4.5)
+
+Thus a full bad-history resummation could produce a common extensive
+pressure whose contribution cancels in a two-reference defect.
+The missing ingredient would then be uniform boundary/winding and
+source control of that resummation, rather than probability that
+there are no bad labels anywhere. Bound (3.5) alone has no such
+cross-volume cancellation or source structure.
+
+5. A DIMENSION-INDEPENDENT NORMALIZED TRANSFER LEMMA
+
+The useful algebraic content of T17 is not abelian or
+three-dimensional. Here is a full proof with its hypotheses visible.
+
+Fix d>=1 and an even reference cell count s0. Put N_ref=s0^d.
+Let Z_s(O)>0 be the reflected-product numerator on the rectangular
+torus with even cell counts s=(s_1,...,s_d). A zero numerator is
+handled by a limit or directly by the corresponding zero
+chessboard norm. Suppose:
+
+(i) For each direction, with the other counts fixed, the
+    reflected-product partition is Tr[A^(s_mu/2)] for some positive
+    operator A independent of that count. The indicated traces
+    are finite. The same holds for O=1.
+
+(ii) The actual normalized rectangular measure satisfies
+    the chessboard estimate
+
+    |E_s product_(c in C) O_c^[c]|
+       <= product_(c in C)
+                [Z_s(O_c)/Z_s(1)]^(1/N_s),              (5.1)
+
+    for distinct cells, where N_s=product_mu s_mu.
+
+All partition functions use the SAME local action and bare parameters.
+Retuning between volumes changes the function in (i) and invalidates
+the deduction.
+
+For integer j>=2 define
+
+  D_j=j^d log Z_ref(1)-log Z_(j ref)(1),
+  delta_j=D_j/[(j-1)^d N_ref],
+  ||O||_ref=[Z_ref(O)/Z_ref(1)]^(1/N_ref).               (5.2)
+
+Then D_j>=0 and, for every s with s_mu>=j s0,
+
+  |E_s product_(c in C) O_c^[c]|
+       <= product_(c in C) exp(delta_j)||O_c||_ref.       (5.3)
+
+The reference torus itself satisfies (5.3) by (5.1), since delta_j>=0.
+
+Proof. For a positive A, (Tr A^p)^(1/p) decreases with p and
+log Tr A^p is convex in p. These follow from the l^p monotonicity
+of its nonnegative eigenvalue sequence and Holder, respectively.
+Consequently, increasing a side decreases
+(1/N_s) log Z_s(O), for every reflected O. In particular,
+
+  (1/N_s)log Z_s(O)<=(1/N_ref)log Z_ref(O).               (5.4)
+
+Write t_mu=s_mu/s0 and f(t)=log Z_s(1). On the permitted rectangular
+counts f is separately convex. No continuum lattice size is needed:
+the trace inequality supplies convexity between any three permitted
+side counts while the other counts are fixed.
+
+Define
+
+  h(t)=(product_mu t_mu) f(1,...,1)-f(t).                (5.5)
+
+Root-density monotonicity gives h(t)>=0 whenever all t_mu>=1.
+For fixed other variables h is concave in any single variable.
+For t_mu>=j, concavity between 1,j,t_mu yields
+
+  h(t_mu,hat t)
+     <= [(t_mu-1)/(j-1)] h(j,hat t),                    (5.6)
+
+because the omitted endpoint term h(1,hat t) is nonnegative.
+Iterating (5.6) in the d directions gives
+
+  h(t)<=D_j product_mu[(t_mu-1)/(j-1)].
+
+Divide by N_s=N_ref product_mu t_mu. Since (t_mu-1)/t_mu<=1,
+
+  (1/N_s)log Z_s(1)
+     >= (1/N_ref)log Z_ref(1)-delta_j.                  (5.7)
+
+Subtract (5.7) from (5.4), exponentiate, then use (5.1). This proves
+(5.3). Taking s=j ref in root monotonicity proves D_j>=0.
+
+APPLICATION STATUS. Positive transfer operators are available for
+standard nonabelian Wilson lattice models; see, for example, Luscher's
+primary construction of a strictly positive transfer matrix,
+DESY 76/54, Commun. Math. Phys. 54 (1977), 283--292:
+https://bib-pubdb1.desy.de/record/396349/files/7611148.pdf
+https://doi.org/10.1007/BF01614090
+
+That result is relevant to (i). For any intended observables one must
+still verify their reflected cell placement, the full reflected
+numerator trace, and (ii). Positivity of the unsourced transfer
+operator alone is not a proof of (i) for arbitrary complex local
+factors. None of these statements establishes a UV-uniform D_j.
+
+Our projected W and weak-history selection are not known to preserve
+these full reflected trace representations. We cannot apply (5.3)
+to them by calling the selected map reflection positive. A valid use
+for the original Wilson law would need its own full reference bounds
+and common-coupling D_j.
+
+6. WHICH FULL-REFERENCE QUANTITY WOULD SUFFICE?
+
+T17's QED3 specialization divides D_j into photon, matter and flux
+terms. It uses exact Hodge factors, a scalar-Laplacian finite-size
+estimate, (2.6), and all-flux sector bounds such as
+
+  Pr(w)<=exp[-2 pi^2 |w|^2/(q^2 n)].
+
+The dimensionless combination q^2 n=e^2 R is independent of the
+fine mesh at fixed physical reference size. The resulting normalized
+cost is controlled even though it contains an inverse power of e.
+This detailed splitting is abelian and not an available compact
+nonabelian identity.
+
+The reusable alternative for YM4 is more abstract and more precise:
+
+At one sequence of common bare couplings, establish for the FULL
+partition functions on two compatible physical reference tori
+
+  D_j^(N)=j^4 log Z_ref^(N)-log Z_(j ref)^(N)
+          <= C_ref,                                    (6.1)
+
+or a quantified cutoff-independent bound whose cost can be absorbed
+by the desired reference probe estimates. Any common local bulk
+vacuum cancels exactly in (6.1), so its absolute divergent value need
+not first converge. This is why (4.4) is not a pressure no-go theorem.
+
+Together with actual full-law reference chessboard products, (6.1)
+would propagate those products to larger tori by Section 5. The
+remaining continuum compactness, symmetry, observable calibration and
+nontriviality requirements would still have to be checked separately.
+
+CURRENT GAP. TURN49's determinant matching identifies a physical
+leading log A0 and its marginal drift for selected kernels; finite
+shooting gives a bare starting value for each specified finite
+trajectory. This does not identify that value across TWO reference
+volumes, does not compare their FULL partition functions, and does
+not sum the omitted chart/cemetery and bad histories.
+
+The retained scalar constant-action source controls neither the
+independent local probe products nor the source dependence of those
+missing histories. Even an exact selected common vacuum cancellation
+would leave these full-law and local-source premises open.
+
+7. WHAT THIS CHANGES IN THE RESEARCH ROUTE
+
+The QED3 plan supplies a clean decision:
+
+A. A direct small-complement route requires a full-law tail mechanism
+   for all coordinates used by the selected construction. QED3's
+   version is the projected slab trace plus a GLOBAL LINEAR Gaussian
+   isometry. Our local moving-saddle covariance bounds do not supply
+   this mechanism. The current marginal cutoff class moreover cannot
+   make a globally all-good reference event likely as the UV depth
+   tends to infinity.
+
+B. A pressure route can tolerate many bad blocks. It requires a
+   spatially organized full-law expansion or comparison whose bulk
+   part is common at the same bare coupling and whose remaining
+   two-reference and source errors are uniformly controlled. The
+   exact product example shows why this is logically viable even
+   when the selected fraction tends to zero. The present good-
+   conditioned probability bounds are useful inputs but do not
+   establish this organization.
+
+Thus the new reusable mathematical output is the explicit positive
+normalizer lemma and the dimension-four-compatible transfer lemma,
+plus the cutoff diagnostic that prevents spending effort on an
+unsupported global-all-good comparison. The missing premise remains
+an estimate about the ORIGINAL full measure, not another local
+selected-kernel identity. No complete nontrivial YM4 construction
+follows from QEO1 or from the current project inputs.
+
+RELATED LOCAL WORK
+
+work/current_proof_frontier.txt
+work/projected_product_sector_turn48.txt
+work/periodic_projected_product_bridge_turn48.txt
+work/physical_determinant_drift_turn49.txt
+work/constant_original_source_trajectory_turn49.txt
+work/qeo_covering_extension_turn50.txt
+work/qeo_products_nontriviality_turn50.txt
+

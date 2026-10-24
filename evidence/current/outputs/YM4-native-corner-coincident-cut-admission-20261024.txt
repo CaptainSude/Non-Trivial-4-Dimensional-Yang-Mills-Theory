@@ -1,0 +1,211 @@
+NATIVE ADMISSIBILITY OF A COINCIDENT P0 CUTOFF FACE AT AN ACTIVE CORNER
+24 October 2026. connected_energy, checking audit_two_root's construction.
+
+RESULT
+
+The proposed corner coincidence is not excluded by the actual coarse
+constraints, private pivots, averaged-gauge cuts, or successful exterior
+Q1 guards. For an allowed fixed large odd L, there is a genuine first
+pre-Q1 fiber with a codimension-two active-box corner and two distinct
+P0 plaquettes whose cutoff functions depend on the SAME single active
+free bond. Their cutoff spheres coincide at the chosen retained field
+and split under an arbitrarily small retained free-bond variation.
+All other original fine-curvature and gauge cuts can be made strict.
+
+The construction below uses the actual admissible analytic group average,
+not a replacement arithmetic averaging map. The initial coarse value is
+chosen to be the actual coarse average of the constructed field, which
+is I+O_L(epsilon0^2), and is then held fixed. Thus its smallness fits even
+the stricter O(delta0) coarse box at the weak floor. Subsequent variations
+use the actual local implicit pivot solution at that fixed coarse value.
+
+This establishes a native obstruction to a uniform pairwise active
+submersion/transversality premise. A conclusion about the differentiability
+of the entire unlocalized earlier-mask integral additionally needs its
+own analysis of all boundary terms; this note does not replace that
+analysis by a generic two-ball model.
+
+1. GEOMETRY AND AVOIDING THE ACTUAL PRIVATE PIVOTS
+
+Let L=2m+1 with m>=3, as permitted by the native fixed-large-L choice.
+Take a corner constraint block B={-m,...,m}^4 inside the active vertex
+box C. The upper faces of C in directions1 and2 end at x1=m,x2=m.
+C is a union of full constraint blocks, buffered in the other directions
+as in the actual guard construction. All fields introduced below are
+on internal links of B; the physical retained FREE links start at I.
+
+Choose k in {0,...,m-1} and h in {-m+1,...,m-1}. The positive corner
+tangential free bond is
+
+       b_+ : (m,m,k,h) -> (m,m,k+1,h),
+
+and let b_- be the corresponding direction3 bond at x1=-m. They are
+intra-block links and hence are not private crossing pivots. The two
+outward plaquettes p_1,p_2 at b_+ go in directions+1 and+2. Their other
+three edges are retained; the two normal crossing edges per plaquette
+must also be chosen not to be designated pivots.
+
+Impose the same avoidance for the outward direction-1 and direction+2
+plaquettes at b_-. Only three coarse interfaces can be involved:
+the +/-1 interfaces of B and its +2 interface. There is exactly one
+designated pivot on each. For a fixed interface, a pivot can lie on
+one of these crossing edges for at most two candidate pairs (k,h),
+because its direction3 coordinate must be k or k+1 and its direction4
+coordinate must equal h. On the +2 interface it has at most one of
+the transverse positions x1=+m,-m. Thus at most six candidate pairs
+are forbidden. There are m(2m-1)>=15 choices. Choose any remaining pair.
+
+This uses the actual pivots wherever they are placed, not a presumed
+central-face convention. Avoidance of all four initially saturated
+plaquettes will matter when the negative one is moved inward below.
+
+2. AN ABELIAN LOCAL FIELD WITH ONLY FOUR SATURATED PLAQUETTES
+
+Let T be a fixed unit su(2) generator, so
+||exp(i theta T)-I||_op=2|sin(theta/2)|. Fix 0<sigma<1/4 and put
+
+ t=2 arcsin(epsilon0/2),
+ a2(x2)=1 if x2=m, and 1-sigma otherwise,
+ a4(x4)=1 if x4=h, and 1-sigma otherwise.
+
+For internal direction3 links in B with initial x3=k set
+
+ U_3(x)=exp[i T t (x1/m) a2(x2)a4(x4)].                     (1)
+
+Set every other physical link to I, including every crossing pivot.
+All fields commute. A fine plaquette angle is therefore the ordinary
+discrete curl of this one nonzero link direction.
+
+Internal direction1 differences have absolute angle at most t/m;
+internal direction2 or4 differences have angle at most sigma t.
+Across the block boundary, the direction1 or2 difference is the field
+value, and the direction4 boundary value has the factor1-sigma because
+h is strictly inside B. Consequently EVERY plaquette has norm <=epsilon0.
+Equality occurs exactly for the two outward plaquettes at b_+ and
+the two outward plaquettes at b_-. All remaining plaquettes have a
+strict margin depending only on L,sigma, times epsilon0.
+
+In particular p_1 and p_2 at b_+ each have holonomy U(b_+) or its
+inverse, with their other three physical edges exactly I. At this
+retained field they impose exactly the same radial condition on b_+.
+
+3. THE ACTUAL AVERAGED GAUGE AND COARSE FIELD
+
+For an endpoint x in B, a shortest center-to-x contour can meet the
+nonzero direction3 layer only after its direction1 displacement has
+already occurred. If x1 is nonzero and x3>k, half of the permitted
+coordinate-order contours put direction1 before direction3; the
+others see x1=0 and contribute angle0. Every contributing angle has
+absolute value <=t. If either required displacement is absent, the
+contribution vanishes. Hence the linear arithmetic contour mean has
+absolute angle <=t/2.
+
+B109's ACTUAL analytic group average has this arithmetic first jet,
+by (0.8). On the fixed finite path family its remainder is O_L(t^2).
+Thus every original averaged-gauge contour is within angle
+t/2+C_L t^2 of I. At the weak floor this is <3t/4. All original
+averaged-gauge cutoffs are therefore STRICT, with a fixed margin.
+Outside B the intra-block contours are I.
+
+The linearized coarse average of(1) is zero. One way to see all its
+terms is to use the literal anchored formula B109(0.12). The first
+contour mean in B is odd under x1 reflection, so its average over B
+vanishes. The analogous mean in another block is zero. Parallel
+straight paths in directions other than3 have no nonzero links;
+for direction3 their contributions are odd in x1, and the condition
+of meeting the layer x3=k does not depend on x1. Their block average
+also vanishes. These observations include both adjoining direction3
+rows and all other incident rows.
+
+For the chosen actual analytic averaging operation, let
+
+                       V^0=bar U.                           (2)
+
+Its exact value consequently satisfies ||V^0-I||<=C_L t^2 on its
+finite coarse read and equals I elsewhere. This is not an arithmetic
+replacement of the native nonlinear constraint. The constructed
+physical U satisfies the original coarse constraints at V^0 EXACTLY.
+The original pivot values at this point are I.
+
+At the weak floor,
+
+        t^2/delta0 = O(epsilon0^2/delta0) ->0.               (3)
+
+Thus V^0 is inside the strict previously used near-flat box, including
+an arbitrarily small fixed multiple of delta0. Its native global
+first minimum and every relevant local comparison minimum are
+I+O_L(t^2). In particular all P1 tests are strict successes. The
+exterior physical FREE links remain I; their original Q1 tests
+compare them with these O_L(t^2) minima and are strict successes.
+Equivalently their actual relative free coordinates satisfy
+|z|=O_L(t^2/g0)=o(r), r=delta0/g0, and hence |z|<3r.
+
+No special choice of the Federbush average is necessary. For that
+choice the commuting arithmetic calculation gives V^0=I exactly;
+using (2)--(3) handles the general admitted native analytic average.
+
+4. REMOVE THE OTHER SATURATION USING THE ACTUAL PIVOT SOLUTION
+
+Now hold V^0 fixed. Reduce the magnitude of the negative bond b_-
+by an angle eta>0, leaving b_+ and all other free physical links
+unchanged. Solve all affected original coarse constraints by their
+own actual private pivots. The native local implicit solution exists
+on this small-field chart, has uniformly bounded finite-L derivative,
+and changes those pivots by at most C_L eta. Its row independence
+was checked directly from B109(0.12) in the remote-prior extension.
+
+None of these pivots lies in any of the four formerly saturated
+plaquettes, by Section1. Thus the negative pair has angle exactly
+-t+eta and becomes strict. The positive pair still has holonomy
+U(b_+) or its inverse and remains at angle t. Every other plaquette
+and gauge cutoff already had a strict fixed-L margin. Choosing eta
+sufficiently small preserves them, despite the pivot corrections.
+All retained FREE links stay I; the changed retained pivots are
+solved variables and are excluded from the original Q1 star tests.
+The original exterior guards therefore still pass.
+
+We have obtained a genuine constrained configuration at fixed V^0
+where ONLY p_1,p_2 saturate the P0 threshold. All other original
+fine-curvature and gauge cuts are strict. The densities and local
+coarea factors are smooth and strictly positive at this point.
+Since the success inequality is strict, the saturated point itself
+is interpreted as a boundary point of that fixed prior-success
+fiber, not as assigning its success bit at equality. Its guard
+definitions and eligibility are those of the same approaching
+success record; the next paragraph proves this required approach.
+
+An open neighborhood of the other active free coordinates retains
+all those strict inequalities. Their induced pivot corrections do
+not enter p_1,p_2. Lowering the magnitude of b_+ slightly, with the
+same pivot solution, puts both remaining inequalities strictly
+inside. Thus this face is in the boundary of a positive-volume
+piece of the ACTUAL prior-success active fiber, rather than an
+isolated formal configuration forbidden by its other constraints.
+
+5. A SUPPORTED RETAINED VARIATION SPLITS THE TWO FACES
+
+Choose one of the nonpivot outward direction1 edges of p_1 and vary
+that retained physical FREE link by exp(i sT). Keep all other retained
+free values and V^0 fixed, and use the exact pivot solution as usual.
+For sufficiently small |s|<c delta0 the original guards remain strict,
+and the retained coordinate remains within their actual bound3r.
+The pivots cannot enter p_1 or p_2 by the same geometric avoidance.
+
+One of the two local cutoff conditions is now a group ball translated
+by exp(i sT), while the other is the original ball. Their centers
+coincide at s=0. At that value the two cutoff functions have identical
+active dependence on the single free bond b_+ and zero dependence
+on the other active variables in the described neighborhood. Their
+active normal derivatives have rank one, not two. The degeneracy
+is therefore present in an admitted native guarded conditional fiber.
+
+This local construction validates the obstruction audit_two_root
+identified. Averaged gauge control at the smaller exterior scale
+does not prevent an active earlier-mask boundary of size epsilon0/g0:
+the gauge contours have a strict margin and the necessary balance is
+provided by other ACTIVE free variables and the actual pivot solution.
+
+For use in a complete differentiability claim, one must still account
+for the rest of the integral, its smooth weights and any other boundary
+contributions. What is already ruled out is invoking uniform pairwise
+active transversality for all supported original earlier-mask faces.

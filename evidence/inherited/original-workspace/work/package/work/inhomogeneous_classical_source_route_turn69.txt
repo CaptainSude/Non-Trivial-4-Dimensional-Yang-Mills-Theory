@@ -1,0 +1,174 @@
+NEXT ROUTE: AN INHOMOGENEOUS CLASSICAL SOURCE NORM
+TURN69. 20 October 2026. history47.
+
+STATUS
+
+This is a proposed next proof and a precise interface diagnosis.
+It is NOT a completed bounded-propagator theorem. It is separate
+from the audited birth estimates in regular_source_transport_turn69.
+Do not import the power count below as an established norm bound.
+
+1. WHY A WEAKER PROPAGATOR MAY SUFFICE
+
+The exact one-mark recursion on the selected map is
+
+ u_(j+1)=T_j u_j+D_E F_j[u_j]+B_j(f).
+
+The audited results give, in fixed norms,
+
+ ||D_E F_j[u]||<=C g_j^2 ||u||,
+ ||B_j(f)||<=C g_j^4||f||+C g_j^2 ell_j^alpha[f]_alpha.
+
+The constant source has its own already bounded exact solution
+C_j=alpha_j'(0)S_j+u_j^constant from TURN49. Its marginal scalar
+stays near one. For a variable profile, it may be more effective
+to compare the true mark with a LOCAL MODULATION of this entire
+C_j, including its quantum correction, rather than with only the
+weighted classical action.
+
+If an exact local modulation operator M_j(f) and a controlled
+representative change are available, the difference would be
+forced by commutators
+
+ (T_j+D_EF_j)M_j(f)-M_(j+1)(f)(T_j+D_EF_j),
+
+plus local null-family changes of representatives. Complete-read
+locality suggests a factor ell_j^alpha[f]_alpha. This must be
+proved in the chosen quotient; the notation alone does not do it.
+
+A classical propagator bounded by C L^(epsilon(k-j)), with one
+fixed epsilon<alpha, would already be enough to sum these
+geometric source differences, if quantum perturbation adds only
+the factor exp[C sum g_l^2]. Along the weak trajectories this
+last factor is at most polynomial in the elapsed age and Gamma.
+Geometric decay L^(-(alpha-epsilon)age) then beats it.
+
+One must use the protected CONSTANT solution in this argument.
+Summing a generic g_j^4 force after a polynomially growing
+propagator need not converge for arbitrary polynomial exponent.
+It is not legitimate to skip the modulation/commutator step.
+
+2. A CONCRETE SUBCLASS: INDIVIDUALLY INVARIANT CARRIERS
+
+Consider an input family E_H on the current lattice whose EACH
+coefficient is analytic on the b link-angle ball and invariant
+under local gauge transformations along paths remaining in that
+domain. Let its carrier norm have a positive exponential reserve.
+These are stronger hypotheses than invariance of the summed total.
+
+For the direct classical prefix of endpoint ratio L, the imported
+complete C^(1,alpha) bound gives current link angles O(b/L) and
+plaquette curvature O(b/L^2). The following split is promising.
+
+SMALL CARRIERS: |H|<=c L, with c a sufficiently small fixed number.
+A tree gauge on the vertices of H, using actual paths and a
+contractible local filling in the smooth background, has residual
+link angles bounded schematically by
+
+                   C b |H|^2/L^2.
+
+The whole interpolating gauge path has angles at most
+C b |H|/L. Thus it stays in the original b ball after choosing c
+small. Individual invariance then licenses evaluating E_H on the
+tree-gauged field. Semisimple global color invariance kills the
+first Taylor derivative of E_H at the identity; its normalized
+value begins at degree two.
+
+The elementary coordinate majorant with at most D|H| coordinates
+has small parameter t_H=C |H|^2/L^2 and gives a bound of the form
+
+ ||E_H|| times
+       C |H|^6 L^(-4) exp[C |H|^3/L^2].
+
+For |H|<=cL, the exponential is at most exp[C c^2 |H|], payable
+from a fixed small fraction of the input carrier reserve. The
+polynomial |H|^6 is paid from another fixed fraction. There are
+O(L^4) fine source roots per final physical cell, so the L^-4
+factor has exactly the needed dimension-four cancellation.
+
+LARGE CARRIERS: |H|>cL.
+Use the ungauged prefix bound O(b/L), so the original analytic
+domain remains valid. The input exponential tail should yield
+L^4 exp(-c' L), bounded uniformly in L, after the usual composition
+and root-sum costs. Winding input carriers belong in this tail
+when output periods stay above a fixed admissible threshold.
+
+The small-carrier filling need not be assigned its number of FINE
+plaquettes as output support. Its physical diameter is O(|H|/L),
+so in this split it lies in a fixed final-cell collar. The complete
+field norm is essential to avoiding a spurious fine-coordinate sum.
+
+3. WHAT A COMPLETE PROOF OF THAT SUBCLASS STILL NEEDS
+
+The preceding estimates give a plausible uniform scalar/coordinate
+majorant. A finished theorem must additionally construct:
+
+ (a) the actual covariant tree/filling map and a complete supported
+     expansion with all original read paths retained;
+ (b) coherent common-domain bounds for the whole gauge path;
+ (c) output carrier and rerooting estimates at the SAME prescribed
+     output norm for arbitrary endpoint ratio L;
+ (d) exact periodic compatibility and the large-carrier/winding
+     remainder, rather than only pointwise bounds;
+ (e) enough margin to repeat the same fixed norm construction,
+     with no radius/exponent loss after each step.
+
+The existing complete-field classical prefix theorem supplies
+important inputs to (a)--(c), but this note does not carry out
+the full inherited nonlinear carrier summation. Accordingly even
+the subclass theorem is recorded as a proposal, not as proved.
+
+If a genuinely uniform direct theorem were established, an
+adapted finite-future norm could be defined by taking a supremum
+of the direct classical transports, with an optional L^-epsilon
+weight. Uniform equivalence to the input carrier norm is required
+before this definition is useful. Merely defining such a norm
+does not prove finiteness or control the quantum derivative in it.
+
+4. THE PRECISE GAP TO THE PRESENT FINITE QUOTIENT
+
+The existing finite quantum induction chooses near-minimal
+representatives of a quotient by equality of normalized TOTALS.
+Their totals are gauge invariant. Their individual coefficients
+need not be invariant. The source derivative identity (4.2) of
+regular_source_transport_turn69 also gives a small representative
+whose individual terms generally fail gauge invariance.
+
+Therefore one cannot tree-gauge each of those coefficients by
+the argument in Section 2. Gauge invariance of a sum does not
+authorize a different gauge transformation in each summand.
+
+TURN47 supplies individually invariant ACTUAL canonical birth
+carriers on its stated coherent domain. That does not by itself
+give individually invariant, uniformly small representatives
+after every quotient minimization or local cancellation.
+
+The needed interface is a controlled invariant relocalization:
+either prove the classical bound directly for the full quotient
+of invariant totals, or show that a small class has a comparably
+small individually invariant carrier representative on one
+fixed domain. For the modulation route one also needs:
+
+ a locally weighted null family whose TOTAL is zero can be
+ represented with norm O(ell^alpha[f]_alpha), retaining the
+ appropriate gauge identities and fixed support budget.
+
+The audited derivative identity proves this last smallness in
+the ordinary analytic carrier quotient, but not in the stronger
+individually invariant-carrier norm. This distinction is the
+specific obstacle, not a missing scalar constant-source estimate.
+
+A position-dependent finite tensor of marginal curvature terms
+may be the correct normal form. The old single scalar beta
+extraction assumes translation/hypercubic symmetry and is not
+already that normal form.
+
+5. FULL-LAW SCOPE
+
+Even a completed selected-map inhomogeneous propagator would
+still need the full native mixed-history source admission and
+the correct original normalizer/scalar cumulant comparison.
+The new actual anisotropic electric-source temporal attachment
+does not automatically identify its regulator with the isotropic
+selected map. None of these separate gates is declared closed
+by this proposed classical route.

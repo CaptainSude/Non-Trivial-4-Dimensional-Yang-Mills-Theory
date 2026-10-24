@@ -1,0 +1,411 @@
+A CONTROLLED TEMPORAL LIMIT AND THE NONLINEAR GRADIENT FORM -- TURN66
+20 October 2026. Root derivation.
+
+STATUS AND PURPOSE
+
+The exact logarithm of a Wilson transfer matrix at finite isotropic
+spacing is not a differential Hamiltonian. This note does not replace
+it by one. Instead it proves, at a FIXED finite spatial lattice, the
+continuous-time limit of an actual anisotropic Wilson family, including
+its ground-state observable variance and adjacent-increment form.
+
+For every fixed smooth gauge-invariant spatial F the result is
+
+ lim_(delta->0) d_delta(F)/delta
+       =kappa int Omega(U)^2 |grad F(U)|^2 dU.            (0.1)
+
+Here d_delta is the original Wilson ground-state adjacent increment,
+delta is the actual temporal spacing, and Omega is the ground state
+of the rigorously obtained finite-spatial Hamiltonian kappa K+V.
+The coefficients are not a finite deterministic template net. They
+are the actual nonlinear derivatives of F.
+
+This permits an anisotropic diagonal construction IF the remaining
+spatial physical estimates can be proved. Those estimates, the
+physical variance floor, applicability of the existing isotropic
+Bałaban inputs to this sequence, and continuous Euclidean symmetry
+are not supplied. This is not a YM4 existence theorem.
+
+Primary context checked this turn:
+M. Creutz, Gauge fixing, the transfer matrix, and confinement on a
+lattice, Phys. Rev. D15 (1977),1128,
+ https://doi.org/10.1103/PhysRevD.15.1128
+The primary abstract explicitly identifies the Hamiltonian through
+the temporal-spacing limit. The finite-spatial spectral and
+observable-form argument below is provided directly, not imported
+from that abstract as an unverified uniform continuum theorem.
+
+1. FIXED SPATIAL MODEL AND EXACT WILSON NORMALIZATION
+
+Fix a finite nondegenerate spatial periodic graph with E positive
+edges. Let X=SU(2)^E with normalized Haar measure and Pauli/2 product
+metric. Write
+
+ K=-Delta_X=sum_e K_e >=0,
+
+so spin j on one link has K_e eigenvalue j(j+1).
+Let P be the normalized site-gauge projection. Work on H_phys=P L2(X).
+
+Fix kappa>0 and a smooth real gauge-invariant V>=0. V is bounded
+because X is compact. Its value and all derivative constants are
+FIXED during delta->0. The intended V is a finite spatial Wilson
+plaquette potential. Adding a constant to make a real V nonnegative
+would not change normalized ground-state expectations.
+
+For delta>0 define
+
+ beta_delta=2/(kappa delta),
+ M_delta=exp(-delta V/2),
+ Q_delta=product_e q_(beta_delta)*,
+ T_delta=M_delta Q_delta P M_delta.                     (1.1)
+
+The one-link normalized kernel is
+q_beta(U)=exp[-beta(1-Tr U/2)]/c(beta),
+c(beta)=2 exp(-beta) I_1(beta)/beta.
+
+On H_phys, T_delta=M_delta Q_delta M_delta. It is a positive,
+trace-class contraction with a strictly positive real kernel.
+Its leading eigenvalue lambda_delta>0 is simple, with positive
+normalized eigenvector Omega_delta. Gauge invariance follows from
+the projection (or uniqueness).
+
+For a temporal period N the ORIGINAL anisotropic Wilson integral
+has partition function
+
+ Z_(delta,N)=c(beta_delta)^(N|E|) Tr_phys(T_delta^N).     (1.2)
+
+Thus taking N->infinity at fixed delta gives the literal Wilson
+ground-state slice law Omega_delta^2 dU and its transition law.
+For a real gauge-invariant smooth F, with w_delta=M_delta Omega_delta,
+
+ d_delta(F)
+ = (1/2)E_delta[(F_1-F_0)^2]
+ = (1/(2lambda_delta)) int_X int_X
+       Q_delta(U,V)(F(V)-F(U))^2 w_delta(U)w_delta(V)dU dV.
+                                                               (1.3)
+
+The gauge projection may be removed from this integral because
+F and w_delta are gauge invariant. The electric kernel in (1.3)
+is the unprojected product Q_delta, not an altered gauge-fixed
+probability law. Its scalar normalizers are already exact.
+
+2. THE ELECTRIC GENERATOR LIMIT, WITH A DOMINATING BOUND
+
+On one-link spin j the normalized electric eigenvalue is
+
+       r_j(beta)=I_(2j+1)(beta)/I_1(beta) in(0,1].
+
+For each fixed j,
+
+ r_j(beta)=1-2j(j+1)/beta+O_j(beta^-2), beta->infinity.   (2.1)
+
+One direct verification uses U=cos(theta)I+i sin(theta)n.sigma.
+The q_beta radial density is proportional to
+exp[-beta(1-cos(theta))]sin^2(theta), 0<=theta<=pi.
+Rescaling theta by beta^-1/2 and applying Laplace expansion gives
+E theta^2=3/beta+O(beta^-2), E theta^4=O(beta^-2).
+The fixed-spin normalized character has expansion
+1-(2/3)j(j+1)theta^2+O_j(theta^4), proving (2.1).
+The complement of a fixed small angular neighborhood is exponentially
+small, so the remainders are controlled.
+
+The previously proved exact estimate, independently obtained by
+1-cos(k theta)<=k^2(1-cos theta), is
+
+              0<=1-r_j(beta)<=2j(j+1)/beta.             (2.2)
+
+For a product representation, 1-product r_j<=sum(1-r_j).
+Consequently, with B_delta=(I-Q_delta)/delta,
+
+                    0<=B_delta<=kappa K                (2.3)
+
+in their simultaneous Peter--Weyl basis, and
+
+       B_delta f ->kappa K f in L2 for every f in D(K). (2.4)
+
+Dominated convergence in that basis proves (2.4), since the absolute
+eigenvalue multiplier is bounded by kappa times the K eigenvalue.
+The same argument in every fixed Sobolev norm gives, for smooth f,
+
+       (Q_delta f-f)/delta ->kappa Delta_X f in C^0.     (2.5)
+
+Indeed choose a Sobolev exponent above dim(X)/2 and use the spectral
+domination there before applying Sobolev embedding. The dimension
+and embedding constants are fixed in this temporal limit.
+
+We shall also use that r_j(beta) decreases with j. Adjacent Bessel
+ratios I_(nu+1)/I_nu are strictly between0 and1 for nu>=1, as follows
+from their representation as the mean of x in(-1,1) under density
+proportional to exp(beta x)(1-x^2)^(nu-1/2), together with positivity.
+Their products give the required monotonicity. This is an order-in-
+spin statement, not an unproved uniform large-spin asymptotic.
+
+3. GROUND-STATE CONVERGENCE
+
+Set
+
+ A_delta=(I-T_delta)/delta,
+ e_delta=(1-lambda_delta)/delta,
+ H=kappa K+V on H_phys.                                (3.1)
+
+H is self-adjoint on D(K) intersect H_phys, with compact resolvent.
+Its heat kernel on the full compact product is strictly positive;
+its unique positive ground state Omega is gauge invariant and smooth.
+Denote its ground energy by E0.
+
+For every smooth physical phi,
+
+                        A_delta phi ->H phi in L2.     (3.2)
+
+To see this, use the exact decomposition
+
+ A_delta phi
+   =[(1-M_delta^2)/delta]phi
+                         +M_delta B_delta M_delta phi.
+
+The first term converges to V phi. The second converges to kappa K phi
+by (2.4), because M_delta phi->phi in D(K) and
+||B_delta f||2<=kappa||K f||2.
+
+The variational principle, using any fixed smooth trial vector,
+shows e_delta is bounded as delta->0. More precisely, using the
+smooth ground vector Omega of H,
+
+                         limsup e_delta<=E0.            (3.3)
+
+For compactness, the exact quadratic-form identity gives
+
+ e_delta
+  =int [(1-M_delta^2)/delta]Omega_delta^2
+                         +<w_delta,B_delta w_delta>
+  >=<w_delta,B_delta w_delta>.                          (3.4)
+
+Let Pi_R be the finite-rank spectral projection of K onto [0,R].
+Outside it, some edge Casimir is larger than R/|E|. By spin
+monotonicity, B_delta there is at least
+(1-r_(j_R)(beta_delta))/delta, where j_R is the smallest half-integer
+with j_R(j_R+1)>R/|E|. By (2.1), this lower bound tends to
+kappa j_R(j_R+1), which tends to infinity with R.
+
+Equation (3.4) therefore implies
+
+ lim_(R->infinity) limsup_(delta->0)
+                   ||(I-Pi_R)w_delta||2=0.              (3.5)
+
+Also ||w_delta-Omega_delta||2<=||M_delta-I||infty->0.
+The normalized Omega_delta are consequently precompact in L2.
+
+For any convergent subsequence with e_delta->e and Omega_delta->Psi,
+self-adjointness and (3.2) give
+<H phi,Psi>=e<phi,Psi> for every smooth physical phi.
+This core identity implies Psi in D(H), H Psi=e Psi.
+Its norm is1. Thus e>=E0, while (3.3) gives e<=E0.
+Uniqueness and positivity of the ground state imply Psi=Omega.
+Every subsequence has that limit, so
+
+ Omega_delta ->Omega in L2,
+ w_delta ->Omega in L2,
+ e_delta ->E0,
+ -delta^-1 log(lambda_delta) ->E0.                      (3.6)
+
+No uniform-in-spatial-cutoff compactness is being asserted. The
+finite-rank and Sobolev constants used here may depend on the
+fixed graph, V, and kappa.
+
+For every bounded F, (3.6) also implies convergence of its slice
+mean and variance to those in the measure Omega^2 dU.
+
+4. THE NONLINEAR ADJACENT FORM: BOTH SIDES OF THE LIMIT
+
+Define the electric squared-increment function
+
+ C_delta F(U)
+   =delta^-1 int Q_delta(U,V)(F(V)-F(U))^2 dV
+   =[Q_delta F^2-2F Q_delta F+F^2](U)/delta.
+
+For a smooth real F, (2.5) and the product rule give
+
+             C_delta F ->2kappa |grad F|^2 uniformly.   (4.1)
+
+Arithmetic--geometric mean and symmetry of Q_delta in (1.3) give
+
+ d_delta(F)/delta
+  <= (1/(2lambda_delta))int w_delta(U)^2 C_delta F(U)dU
+  =:J_delta(F).                                        (4.2)
+
+By (3.6),(4.1),
+
+              J_delta(F)->kappa int Omega^2|grad F|^2. (4.3)
+
+This proves the upper bound. The difference in (4.2) is EXACTLY
+
+ J_delta(F)-d_delta(F)/delta
+ = (1/(4lambda_delta delta))int int
+      Q_delta(U,V)(F(V)-F(U))^2
+                         (w_delta(U)-w_delta(V))^2 dU dV.
+                                                               (4.4)
+
+It is nonnegative, and tends to zero without assuming uniform
+pointwise bounds on derivatives of Omega_delta.
+
+Here are the estimates. Smooth F is Lipschitz on the fixed compact
+product, so
+
+ |F(V)-F(U)|^2<=C_F sum_e h(U_e V_e^-1).                (4.5)
+
+Indeed Pauli/2 geodesic distance squared on SU2 is at most a fixed
+constant times h, and product squared distance is the sum.
+For one link the scalar inequality
+h exp(-beta h/2)<=2/(e beta), together with the normalizer ratio
+c(beta/2)/c(beta)<=2^(3/2), gives
+
+        h(W) q_beta(W)<=C beta^-1 q_(beta/2)(W).         (4.6)
+
+The normalizer-ratio bound is the already proved decreasing
+Gamma(3/2) tilt estimate and holds for every beta>0.
+
+Let Q_delta,e^half be the product convolution with beta_delta/2
+on edge e and beta_delta on the others. It is a positive self-adjoint
+Markov contraction, and tends strongly to I as delta->0.
+Equations (4.4)--(4.6), with beta_delta delta=2/kappa, yield
+
+ 0<=J_delta(F)-d_delta(F)/delta
+   <=C_(F,kappa) sum_e
+            <w_delta,(I-Q_delta,e^half)w_delta>.         (4.7)
+
+Each summand tends to zero: w_delta->Omega strongly, the operators
+I-Q_delta,e^half are uniformly bounded, and
+Q_delta,e^half Omega->Omega. There are finitely many edges.
+This proves (0.1) as an equality.
+
+Unlike an unjustified finite-step weighted-gradient bound, this proof
+retains the exact nonlinear square, proves the limiting generator,
+and bounds the AM--GM defect in the actual ground-state pair law.
+
+5. THE TIME-CONTINUOUS CORRELATIONS ALSO CONVERGE
+
+For completeness the generator convergence above also establishes
+the actual temporal evolution. Since A_delta>=0 and (3.2) holds on
+a core of H, the resolvents converge strongly. One direct proof is
+to take f=(H+1)phi for a core vector phi:
+
+ (A_delta+1)^-1 f-phi
+       =(A_delta+1)^-1(H-A_delta)phi ->0.
+
+Such f form a dense set and the resolvent norms are at most1.
+The spectral functional calculus then yields
+exp(-t A_delta)->exp(-t H) strongly for each t>0.
+
+The spectrum of delta A_delta is contained in [0,1].
+For n->infinity, the elementary scalar estimate
+sup_(0<=x<=1)|(1-x)^n-exp(-nx)|<=C/n
+shows
+
+          T_delta^floor(t/delta) ->exp(-t H) strongly.  (5.1)
+
+Replacing floor(t/delta)delta by t in the exponential is harmless
+uniformly away from t=0. Ground-state normalization using (3.6) gives
+
+ (T_delta/lambda_delta)^floor(t/delta)
+                         ->exp[-t(H-E0)] strongly.      (5.2)
+
+Together with Omega_delta->Omega and bounded multiplication
+insertions, this gives convergence of every fixed finite
+ground-state correlation word at fixed nonnegative time gaps.
+Zero gaps are interpreted by multiplication, and (5.2) is not
+needed there. At fixed delta, finite temporal periods approximate
+these ground-state correlations by the simple leading-eigenvalue
+limit of the exact trace. The period may be chosen as large as
+needed after choosing delta.
+
+The resulting fixed-spatial theory has its positive Hamiltonian,
+time-continuous correlations and reflection-positive temporal
+forms. This is still a spatial lattice theory.
+
+6. WHAT THE DIAGONAL ARGUMENT LEGITIMATELY PERMITS
+
+Let a label a sequence of finite spatial lattices, with smooth
+bounded probes F_a, coefficients kappa_a>0 and potentials V_a>=0.
+The finite-dimensional constants may grow arbitrarily as a->0.
+For each fixed a, the preceding theorem applies.
+
+For any prescribed positive error eta_a and any specified finite
+set of bounded smooth probes/correlation words, one can choose
+delta_a small enough that their Wilson ground-state means,
+variances and fixed-time correlations approximate the Hamiltonian
+ones within eta_a, and their d_delta_a/delta_a values approximate
+the corresponding gradient forms within eta_a.
+One can then choose finite temporal periods N_a large enough to
+approximate these finitely many ground-state quantities, including
+the adjacent quotient, to the desired tolerance.
+Taking delta_a<=a^2, and N_a delta_a tending to infinity if desired,
+is compatible with these choices.
+
+This is a diagonal existence statement for the regulated temporal
+approximation. It does not assert a numerical convergence rate
+uniform in a, or justify exchanging the two limits.
+
+For the usual SU2 normalization set
+
+ kappa_a=g_a^2/(2a),
+ V_a=[4/(g_a^2 a)]sum_(spatial p) h_p.
+
+Then the actual anisotropic Wilson coefficients in this argument are
+
+ beta_time=4a/(g_a^2 delta),
+ beta_space=4delta/(g_a^2 a).                            (6.1)
+
+At delta=a both equal4/g_a^2, but our temporal argument fixes a
+and sends delta->0. It does not prove that the finite isotropic
+Hamiltonian already equals kappa_a K+V_a.
+
+In particular the isotropic Bałaban induction, its probability
+estimates and its running-coupling dictionary cannot be copied
+to (6.1) without checking their anisotropic hypotheses. The earlier
+orientation-dependent energy inequality remains true, but its
+spatial bound E beta_space h<=3/2 becomes weak as delta->0.
+No uniform spatial magnetic energy bound for Omega_a is smuggled
+in through that degenerating inequality.
+
+7. THE RESULTING PHYSICAL ESTIMATES STILL TO PROVE
+
+The finite-spatial ground-state identity is now legitimate:
+
+ <(F-mean F)Omega,(H-E0)(F-mean F)Omega>
+                       =kappa int Omega^2|grad F|^2.    (7.1)
+
+It follows by integration by parts and H Omega=E0 Omega; the
+potential and ground-energy terms cancel exactly. It also agrees
+with (0.1). For v=Var_(Omega^2)(F)>0, spectral Jensen gives
+
+ Cov(F(0),F(t))
+   >=v exp[-t kappa E_(Omega^2)|grad F|^2/v].            (7.2)
+
+Thus a physical family with
+
+ Var_(Omega_a^2)(F_a)>=v_*>0,
+ kappa_a E_(Omega_a^2)|grad F_a|^2<=C                  (7.3)
+
+would have a positive fixed-time reflected norm and could be
+approximated by actual anisotropic Wilson regulators as above.
+For kappa_a=g_a^2/(2a), the second target is
+E|grad F_a|^2<=C'a/g_a^2, in the unscaled Pauli/2 link metric.
+
+Neither estimate in (7.3) has been proved here for the physically
+calibrated nonlinear magnetic probe. The finite-template gauge
+entropy obstruction does not apply to this local gradient identity,
+but an actual Wilson/Hamiltonian averaged derivative theorem is
+still needed. The deterministic large-Hessian example does not
+by itself disprove (7.3).
+
+Even (7.3) would only supply a nonzero temporal reflection witness
+in a compatible spatial limit. It would not by itself establish
+positive excitation energy, uniqueness of vacuum, continuous
+spatial rotations, full Euclidean symmetry, a local continuum
+observable algebra, or the required Yang--Mills identification.
+
+This note closes a controlled finite-spatial temporal bridge.
+It does not replace the full goal by constructing only a
+Hamiltonian spatial lattice theory. Nontrivial YM4 existence,
+with all its remaining physical and reconstruction obligations,
+is still unproved.

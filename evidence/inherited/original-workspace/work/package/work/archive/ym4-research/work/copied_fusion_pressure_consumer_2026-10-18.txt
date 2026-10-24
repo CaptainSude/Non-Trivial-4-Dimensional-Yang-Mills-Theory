@@ -1,0 +1,275 @@
+COPIED FUSION: THE EXACT NORMALIZED PRESSURE CONSUMER
+18 October 2026. Conditional consumer theorem and independent audit.
+
+This proves the pressure/reflection implication from stated input budgets.
+It does not prove post-midpoint invariance of those budgets. In particular
+it does not resolve the original-pair/static-representative question in
+copy_weighted_variable_radius_feedback Section7.
+
+1. PRECISE INPUTS: ONE GLOBAL ALGEBRA BOUND AND THE VACUUM LEDGER
+
+Fix the bare cutoff and a finite periodic Wilson torus T. Its unmarked
+normalized expectation is mu_T and its partition function is Z_T(0).
+A copy is an ACTUAL local polynomial F_a in scalar Wilson observables,
+including its finite fusion coefficients, all lower Appell terms and
+its identity coefficient. Copies may be translated, reflected and
+complex conjugated. Their complete bond supports, including plaquette
+stencils, are separated by the prescribed physical padding tau. All
+geometry and frozen RG maps are those of the same source-free run.
+
+For a finite copy set I use eta_a^2=0 and the scalar coefficient norm
+
+ |P|_t = sum_(S subset I) |P_S| product_(a in S)t_a.                  (1)
+
+The local input norm has the label sum INSIDE the rooted spatial sum,
+as in copy_weighted_history_input_audit (4a). This local convention is
+what may make the following constants independent of |I|. It is not
+replaced by a sum of the global norms of all separate copies.
+
+Assume the exact finite-volume identity
+
+ mu_T product_a(1+eta_a F_a) = exp(U_T(eta)) H_T(eta),                 (2)
+ U_T(0)=0, H_T(0)=1.
+
+Here U_T is the sum of the UNIVERSAL marked vacuum coefficients at
+their actual birth dates. Every history-dependent constant remains
+inside its chronological expression and hence inside H_T. No division
+by T(X)1 is made. Setting labels to zero in (2), including in U_T,
+must give the same construction for the corresponding subfamily.
+Thus u_a=[eta_a]U_T depends on that one copy, not on which other copies
+were included in I. This restriction consistency is indispensable.
+
+The conditional producer outputs needed by this consumer are:
+
+ (P) |H_T|_t <= exp(C_p V_T),                                        (3)
+
+where V_T is the number of terminal-lattice cells. It suffices to have
+the unnormalized algebra upper bound exp(C_+ V_T), together with the
+SAME unmarked Z_T(0)>=exp(-C_- V_T); then C_p=C_++C_-. There is no
+local relative-boundary partition function in this hypothesis.
+
+ (V) |U_T - sum_a eta_a u_a|_t <= C_v |I|.                           (4)
+
+The constants are uniform in UV depth, torus volume, number of copies
+and their allowed phases/orientations, once the common input budgets
+are satisfied. A bound C_v|I|+C'_v V_T would work equally well. In (4)
+the entire weighted coefficient sum is bounded BEFORE extraction.
+A fixed-order estimate with an unspecified C_|I| does not suffice.
+
+Finally the literal universal construction is covariant under the
+translations and face reflections of a fixed scaffold-compatible
+chessboard cell. A cell of fixed terminal volume v_0 can contain any
+single permitted copy with a fixed buffer. Its side is a common
+multiple of all causal past partition periods. The source period
+bound makes v_0 independent of UV depth at a fixed terminal weak band.
+It can depend on that band, the fixed compact support and stencil.
+No covariance under arbitrary bare translations of one UV subtraction
+is required.
+
+Copies in full disseminations must remain in the input class. Buffers
+on the complete read supports ensure separation from reflected copies.
+The weights t_a are reflected with the copies and can depend on their
+type, but not on the clone number. These are explicit hypotheses of
+the pressure input, not consequences of the word 'small'.
+
+2. A SINGLETON RESIDUAL MEAN IS CONTROLLED WITHOUT A LOCAL RATIO
+
+Put D=F-u, where u is the singleton coefficient in (2) for F on T.
+Choose one of the compatible cells just described. Disseminate D to
+all B cells of T using the actual chessboard reflections. Compatible
+covariance and restriction consistency imply that its clones are
+exactly F_b-u_b, with u_b=[eta_b]U_T for the disseminated family.
+Conjugate reflections act on both F and u. Therefore, exactly,
+
+ mu_T product_(b=1)^B(1+eta_b D_b)
+       = exp(U_mix) H_T,     U_mix=U_T-sum_b eta_b u_b.              (5)
+
+Submultiplicativity of (1), (3) and (4) give
+
+ |mu_T product_b D_b| <= t^(-B) exp(C_p V_T+C_v B).                 (6)
+
+The full reflected product defining the chessboard seminorm is
+nonnegative by reflection positivity. Its B-th root and generalized
+chessboard Holder applied to D in one cell and 1 elsewhere yield
+
+ |mu_T F-u| <= ||D||_CB <= t^-1 exp(C_p v_0+C_v).                   (7)
+
+Thus C_0=exp(C_p v_0+C_v) is a uniform singleton residual-mean bound.
+It is a statement about the complete scalar expectation, not about
+the value of a chronological operator on 1. The argument does not
+need a zero-free disc or a logarithm of H_T. Equivalently an already
+proved compatible fixed-cell holomorphic H bound and H(0)=1 can
+supply (7) by Cauchy, but that extra local bound is unnecessary here.
+
+An arbitrary-phase copy is enclosed in a suitable compatible cell
+with the same bounded side and buffer. Its reflected clones preserve
+the same scaffold. Hence (7) is uniform in phase. Using arbitrary
+bare-cell reflection directly on F-u before this step would be wrong:
+u need not have that covariance.
+
+3. EXACT FULL CENTERING AND ARBITRARY BARE-CELL ARRAYS
+
+Set m_a=mu_T F_a, F_a^c=F_a-m_a and d_a=u_a-m_a. Nilpotence gives
+
+ mu_T product_a(1+eta_a F_a^c)
+    = exp(U_mix + sum_a eta_a d_a) H_T.                             (8)
+
+By (7), t_a|d_a|<=C_0. Therefore
+
+ |mu_T product_a(1+eta_a F_a^c)|_t
+       <= exp(C_p V_T+(C_v+C_0)|I|).                               (9)
+
+For any I, extraction of its top coefficient costs exactly
+product_a t_a^-1. There is no factorial, Bell number or new inverse
+radius for each internal scalar label of a complete copy. The latter
+losses, if present, must already be in the admitted copy weights.
+
+The centered ACTUAL polynomial transforms under every bare lattice
+isometry of mu_T, including reflected complex conjugation. Consequently
+(8)--(9) can now be used on an arbitrary bare-site cell grid. Its u_a
+are evaluated for their own phases on the same scaffold; their separate
+covariance under that grid is neither asserted nor needed. This is the
+point of taking the exact finite-T mean before the bare-grid argument.
+
+In particular replacing full centering by only a universal singleton
+subtraction on a noncompatible grid is not justified. Nor can a live
+history-dependent scalar be absorbed into U_mix to help (4).
+
+4. THE ARRAY CELL, VOLUME DIVISION AND ENDPOINT FACTORS
+
+Place m copies in a time chain, each in a slab with its fixed compact
+transverse support, with the prescribed empty gaps. Choose the array
+cell C to contain the complete chain, with its first and last supports
+strictly inside its time faces. Its spatial cross-section depends only
+on the copy test support/stencil, never on an endpoint vector. For
+0<tau<=1 the array cell can have
+
+                         v_C <= C_K m,                             (10)
+
+in terminal units. All faces pass through bare sites, and rounding is
+uniform for a bare mesh sufficiently smaller than the fixed padding.
+The reflected full dissemination of C still consists of separated
+copies. If T has B such cells, it contains mB copy labels and
+V_T=B v_C. Put W=product_(a=1)^m F_a^c in C. Apply (9) to its complete
+dissemination and extract its mB labels. The B-th root gives
+
+ ||W||_CB <= exp[C_p v_C+(C_v+C_0)m] product_(a=1)^m t_a^-1
+           <= product_(a=1)^m(C_K' t_a^-1).                         (11)
+
+This is the exact 'divide volume by number of cells' step. One must
+disseminate the actual array cell across the full torus BEFORE taking
+the root. An ambient bound for one isolated local insertion, without
+that reflection step, would still contain the ambient volume.
+
+Let A_left,A_right be fixed-UV polynomial endpoint words, whose full
+bond supports lie strictly before and after the array time faces.
+Expand them into finite sums of link-matrix-entry monomials. Assign
+each bond factor to a closed cell containing its endpoints; bonds on
+faces are allowed. None is assigned to the array cell because of the
+time separation. Site-plane Wilson RP holds for these functions even
+when a separate bond factor is not gauge invariant. Its generalized
+chessboard inequality gives each endpoint cell factor a seminorm at
+most its sup norm. The finite expansion therefore yields
+
+ |mu_T[A_left product_a F_a^c A_right]|
+       <= C_(bare,A_left,A_right) product_a(C_K' t_a^-1).            (12)
+
+The endpoint prefactor is independent of m and total volume. It may
+depend on the fixed bare regulator and the endpoint coefficients.
+Enlarging the transverse array cell to contain the endpoints would
+instead give exp(C_A m); this invalid shortcut is not used.
+
+Complex arrays are kept intact. No absolute value is moved inside
+their expectation and no complex source is replaced by its real part.
+Reflected conjugate copies are separate formal labels until their
+actual values are inserted. The argument uses ordinary Wilson RP,
+not positivity of a sourced/modified RG density.
+
+5. ORDER OF LIMITS, PHASES AND THE SLAB CONSEQUENCE
+
+At each fixed bare regulator choose ONE cubic torus sequence with free
+integer side factors divisible by 2k! and the fixed RG period. Every
+fixed finite bare-cell grid then divides every sufficiently late torus
+with even cell counts. Take a joint thermodynamic subsequence for the
+state and the finitely/local-countably many required coefficients.
+The same state serves every finite m. Formula (12) passes to that
+state. Exact finite-volume means pass with the actual local polynomial
+expectations; no identification of separately scaffold-dependent U,H
+under arbitrary translations is made.
+
+Only AFTER this thermodynamic limit perform arbitrarily many reflection
+doublings. If a_r is the norm after 2^r copies and b the norm of the
+endpoint vector, RP gives a_r^2<=b a_(r+1). Formula (12) bounds a_r^2
+by a fixed endpoint prefactor times the per-copy rate to power 2^(r+1).
+The 2^(-r) root removes that prefactor. The resulting padded slab
+operator satisfies
+
+                    ||D_tau(F^c)|| <= C_K' t^-1.                   (13)
+
+Null vectors descend by the same RP inequality. Afterwards one may
+take the bare-continuum limit on the already identified ordered scalar
+core and extend by (13). Thus the bound is not obtained by assuming a
+continuum probability field or by comparing normalized T components.
+
+If variable-copy feedback supplies
+
+          t_(a,N)^-1 <= C_Gamma epsilon_a G^B p_s(f_a),             (14)
+
+with one fixed finite test seminorm p_s, (12)--(13) give precisely that
+per-copy loss. Normalize p_s(f_a)=1 before the input proof and restore
+it by exact multilinearity. Constants must be uniform on that unit
+ball. Arbitrary fixed-f constants do not establish distribution order.
+Likewise C_K' must be uniform once the early separation threshold
+G>=A[1+log_+(1/tau)] holds, or have an explicitly fixed polynomial
+padding loss. A hidden exp(exp(1/tau)) is not harmless.
+
+Coordinate slabs need only coordinate RP. A tilted-frame use requires
+RP of the SAME limiting state in that frame plus an appropriate array
+placement. The already audited diagonal_chain_coordinate_chessboard
+construction supplies the pressure for its packet geometry using
+coordinate bare cells; it does not introduce a tilted source theorem.
+
+6. WHAT THIS CLOSES, AND WHAT REMAINS IN THE PRODUCER
+
+Given (P),(V), literal restriction/covariance and the admitted full
+disseminations, the normalized array consumer is proved. It does not
+require a normalized local large-field probability, a T/T1 score,
+local relative-Z stability, all-order Gaussian cumulant constants,
+or an additional same-phase assertion for arbitrary bare grids.
+
+The scalar vacuum budget (V) is a real part of the producer theorem.
+Early mixed universal births must keep their complete connecting tree
+and pay the scalar fine-root/engineering factor r^-4; scalar identity
+coefficients do not inherit neutral h^4. Late mixed births require the
+current copy-weighted local norm/density estimate. Nonempty labelled
+universal births must be entered only at their actual birth dates.
+If their rooted connected sum is bounded by C per copy, summing roots
+gives (4) immediately, without a copy-order combinatorial loss.
+
+Likewise (P) concerns the FULL nilpotent coefficient norm after all
+universal marked vacuum coefficients have been removed, divided by
+the original Z_T(0). A scalar modulus estimate for a different family,
+or bounds merely on T_H1, are not replacements. The original absolute
+operator/Mayer majorants lift to this norm only when the literal
+bulk and chronological inputs satisfy their original budgets on every
+date and every test function. That post-midpoint producer-class issue
+remains separate. No pressure-consumer gap is hidden by it here.
+
+Existing consumer inputs checked against:
+  one_run_source_gradient_closure Section16 (global normalization,
+  causal common cell period and compatible covariance);
+  rectangular_chessboard_slab_audit Section7 (closed-cell endpoint
+  factorization; Section6 is explicitly withdrawn);
+  diagonal_chain_coordinate_chessboard Sections1--6;
+  fusion_operator_consumer_independent_audit Sections1--3;
+  RawII 8.7:lem-chessboard-torus(a), lines108696ff (no gauge-invariance
+  condition on closed-halfspace functions), and RawII682--882 (free
+  commensurate torus factor).
+
+Independent audit: published_density adversarially checked Sections2--4
+and passed their algebra and geometry, conditional on (P),(V) and the
+stated covariance/restriction inputs. In particular the compatible
+singleton dissemination, restoration of bare-grid covariance by full
+centering, endpoint assignment and absence of a factorial extraction
+loss were checked separately. The producer requirements remain the
+ones explicitly stated above.

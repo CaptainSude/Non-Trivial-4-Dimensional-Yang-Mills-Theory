@@ -1,0 +1,206 @@
+TURN96 -- THE OLD PLAQUETTE HAS AN ADJOINT BOUNDARY CURRENT
+21 October 2026. holonomy96. Scoped mathematical note; no frontier edit.
+
+QUESTION AND RESULT
+
+Can the fact that the original source is a closed SU(2) plaquette yield
+its dimension-four coarse-background response before all old raw reads
+have been integrated? In this generality the answer is no. The exact
+closed trace has a linear adjoint boundary-current term. A real SU(2)
+plaquette with two fixed raw links and two coherent regular links attains
+an O(eta) response. Its regular background can be flat. This rules out a
+source-only argument that applies a regular curvature-square grading
+uniformly to arbitrary remaining raw records.
+
+This is a limitation of the proposed POINTWISE estimate, not an actual
+Bałaban-history counterexample, not a lower bound on a Wilson correlation,
+and not an obstruction to integrating the current with its genuine
+weight. It suggests keeping a much more explicit low-jet target: the
+adjoint boundary current and the derivative of its conditional weight.
+No uniform marked-history estimate is claimed below.
+
+1. EXACT SCALAR / ADJOINT SPLITTING
+
+For Q,V in SL(2,C), put
+
+ q0=Tr(Q)/2, Q0=Q-q0 I, v0=Tr(V)/2, V0=V-v0 I,
+ h(U)=1-Tr(U)/2.
+
+Direct multiplication, using Tr(Q0)=Tr(V0)=0, gives
+
+ h(QV)-h(Q) = q0 h(V) - (1/2) Tr(Q0 V0).                (1)
+
+This is an exact identity, with no commutativity assumption. For a
+traceless 2 by 2 matrix X, Cayley-Hamilton implies X^2 is scalar. Hence
+
+ h(exp X)=O(||X||^2),
+ (exp X)_0=X+O(||X||^3)                               (2)
+
+on each fixed matrix ball. The constants depend only on that ball.
+Consequently, if X=eta^2 B, the first term in (1) is O(eta^4), but the
+second is generally O(eta^2). The fact that the entire trace is gauge
+invariant does not remove this term: under simultaneous conjugation,
+Q0 and B both transform in the adjoint representation and Tr(Q0 B) is
+invariant. A live raw record is precisely allowed to supply Q0.
+
+For an original plaquette P(z) with P(0)=Q, let
+A=Q^{-1} P'(0), so Tr(A)=0. Its exact first jet is
+
+ d_z h(P(z))|0 = -(1/2) Tr(Q0 A).                       (3)
+
+A genuine common gauge change has P'=[Y,Q], and its trace derivative
+vanishes. A physical change of regular links with raw links held fixed
+need not have this form. Closed-loop gauge cancellation and vanishing
+physical response are different statements.
+
+2. A FINE-LINK EXAMPLE AT THE ACTUAL LIVE-READ TYPE
+
+Consider one oriented square. Let its two parallel raw links have
+fixed values Q and R^{-1}. Let its two parallel regular links be
+exp(eta t T), with the reverse traversal taking the inverse, where
+T is anti-Hermitian and traceless. Its complete original plaquette is
+
+ P(t)=Q exp(eta t T) R exp(-eta t T).                    (4)
+
+The regular links are the restriction of a constant commuting, hence
+flat, background in that direction. The raw link values stay fixed as
+t varies. Their presence can make the actual plaquette nonflat.
+
+Differentiating the closed trace yields
+
+ d_t h(P(t))|0
+   =-(eta/2) Tr(Q[T,R])
+   =-(eta/2) Tr([R,Q] T).                              (5)
+
+Thus the surviving first jet is an adjoint current [R,Q]. It is not an
+open-link gauge artifact; it occurs in the derivative of the complete
+closed original trace. Take the Pauli matrices and set
+
+ Q=i sigma_1, R=i sigma_2, T=i sigma_3.
+
+All real configurations in (4) belong to SU(2), and direct multiplication
+gives
+
+ Tr P(t)=-2 sin(2 eta t),
+ h(P(t))=1+sin(2 eta t),
+ d_t h(P(t))|0=2 eta.                                  (6)
+
+Therefore neither O(eta^4) nor O(eta^2) first-response grading follows
+uniformly from closedness, gauge invariance, a flat regular background,
+and arbitrary fixed real raw link values alone. The example does not
+assert that any specified complete native branch realizes this exact
+one-parameter family. It tests an estimate using only those local
+premises, which the example satisfies. Additional constraints from the
+actual native inverse record may improve the answer, but must be used.
+
+For general Q,R in SU(2), the second derivative in (4) is bounded by
+4 eta^2 ||T||^2 exp(2 eta |t| ||T||), in the trace normalization above.
+Taylor's integral formula consequently gives
+
+ |h(P(t))-h(P(0))-t h'(P(0))|
+ <=2 eta^2 |t|^2 ||T||^2 exp(2 eta |t| ||T||).           (7)
+
+This separates a definite linear boundary-current coefficient from a
+quadratic remainder. No source radius, logarithm of a partition function,
+or inverse g factor enters this elementary estimate.
+
+3. WHAT AN ACTUAL INTEGRATION WOULD HAVE TO CANCEL
+
+There is a precise sufficient averaging mechanism. If mu is a probability
+law on Q in SU(2), independent of V, and E_mu Q0=0, then (1) implies
+
+ E_mu h(QV)-E_mu h(Q) = E_mu q0 h(V).                    (8)
+
+In particular, a conjugation-invariant law has E Q0=0 by invariance of its
+matrix mean, so V=exp(eta^2 B) gives the desired O(eta^4) difference in
+this restricted frozen-law model. The mechanism is cancellation of the
+adjoint mean, not a pointwise curvature bound for h(QV).
+
+The native conditional integral is generally not of this form. Its law
+may depend on the surviving background, and additional retained raw or
+boundary variables can supply covariant directions. Let
+
+ A(z)=int w_z(x) F_z(x) dnu(x), Z(z)=int w_z(x) dnu(x),
+ m(z)=A(z)/Z(z),
+
+on a real admitted domain with Z>0; assume the finite differentiations
+are justified. At z=0 put S=partial_z log w_z. The exact first derivative is
+
+ m'(0)= E F'_0 + Cov(F_0,S).                            (9)
+
+The first term contains (3) or (5). The second is the weight-score term;
+it is present even if the mark's own adjoint mean vanishes. In the
+unnormalized native formulation the corresponding statement is simply
+
+ A'(0)=int [F'_0 w_0+F_0 w'_0] dnu.                    (10)
+
+No small component normalizer is needed to retain these two terms.
+
+A simultaneous gauge symmetry of (w,F,external records) does not imply
+independent conjugation symmetry of Q at fixed external records.
+Accordingly it does not establish (8) for the actual conditional law.
+After the last live record has been removed, an own-field coefficient's
+Ward identities can impose further cancellations. That is a statement
+about the integrated coefficient and its complete dependence, not
+about a trace with arbitrary remaining raw arguments.
+
+For the original source sum, the current (5) must retain its original
+plaquette root and the actual transported generators/paths. A product
+bound on four matrices does not remove the number of original roots.
+The natural candidate estimate is therefore an integrated, connected
+bound for the sum of these boundary-current terms together with their
+weight-score partners. It may be smaller than an all-observable complex
+posterior estimate, but its uniform native bound is still to be proved.
+
+4. WHAT THE PRIMARY NATIVE DOMAIN STATEMENTS DO PROVIDE
+
+I read Large-II printed374--376, especially (1.61)--(1.66), from the
+existing supplied-PDF text extracts. Printed375 explicitly states that
+the reconstructed extended U_k maps the new (U,J) domain into the old
+U'_k domain. It explains why the admitted old E/R/B effective-action
+terms may then be composed, and why the earlier terms' regularity
+requirements remain admissible. This is useful for an integrated source
+coefficient once that coefficient has been put in the same old class.
+It is not a uniform norm estimate for an arbitrary old original-source
+record which has not yet been put in that class.
+
+Large-I printed187--191, (1.53)--(1.60) and the descending-domain statement,
+were read through the existing extracts. The already proved TURN79
+accepted-block result remains valid: an admitted source composed through
+the actual nested maps has no repeated inverse-radius cost at this
+pointwise pullback step. The rejected-branch group correction also costs
+O(H), not O(H/g), and its previously proved numerical summability remains.
+
+The unresolved cross-block source admission from TURN79 is not settled
+by (1), (4), or the final source-free domain statement. In particular,
+this note does not extend a smooth real switch to a complex old noise
+coordinate. It neither assumes that the switch composition fails on an
+actual history nor assumes that it is admissible.
+
+5. CONSEQUENCE FOR THE TURN96 CHOICE OF TARGET
+
+The regular primitive's curvature-square estimate in TURN83 is untouched:
+it concerns a complete reference on its admitted regular minimizing
+background. The original partially integrated raw source has additional
+boundary currents. It is therefore unnecessarily strong, and generally
+false at the stated raw-data premises, to ask that the same dimension-four
+pointwise grading hold before those currents have been integrated.
+
+A successful direct mixed-correlation proof must control their actual
+connected response or show their cancellation with the weight-score and
+remaining source terms. The exact low-jet identities above say which
+terms are present; they do not supply their cutoff-uniform estimate.
+No new literature input or inaccessible paper was needed for this result.
+
+INPUTS
+work/turn95_source_extension.txt, section8.
+work/turn78_live_source_history.txt, sections2--6.
+work/turn83_native_action_history.txt, sections1--5.
+work/turn79_original_record_history.txt, sections1,4--6.
+work/turn82_native_pullback_history.txt, sections2--4.
+work/turn60_large_I/page_13.txt, page_14.txt, page_17.txt.
+work/turn62_large_II/page_20.txt, page_21.txt, page_22.txt.
+
+No fresh PDF-pixel verification is claimed; formulas (1)--(10) above are
+independently derived finite-dimensional matrix identities. No existing
+producer, authoritative output, or frontier was modified.

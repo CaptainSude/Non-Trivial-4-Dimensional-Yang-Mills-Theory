@@ -1,0 +1,170 @@
+INDEPENDENT AUDIT: ORIGINAL-WILSON ENERGY VARIANCE LOWER BOUND
+23 October 2026
+
+Producer: work/source_energy_calibration_20261023.txt.
+Calibration checked against original_energy_normalization_20261022.txt
+and original_source_birth_catalogue_20261022.txt in the handoff.
+
+VERDICT
+
+The finite SU(2) Wilson lower bound
+
+ Var_mu[c_a sum_p f_p h_p]>=C_f |c_a|^2 a^(-4)t_a^(-2)
+
+is correct for the stated nonzero fixed real Lipschitz scalar profile,
+its local coherent sampling convention, the ordinary periodic Wilson
+law, sufficiently small a and t_a above a fixed weak-coupling floor.
+The proof uses exact conditional-link laws and elementary finite-volume
+estimates. It does not assume independence of plaquettes, a Gaussian
+approximation, a gauge-fixing density, or an unproved correlation sign.
+
+1. UNIFORM MEAN-ENERGY INPUT
+
+An SU(2) Haar ball of radius 1/(4 sqrt(t)) has probability at least
+c t^(-3/2), uniformly for t>=1. If every link lies in this ball, the
+bi-invariant triangle inequality places every plaquette product within
+distance 1/sqrt(t) of identity. Since h=1-cos(theta), h<=1/(2t).
+Multiplying the link probabilities gives the stated partition lower
+bound and -log Z(t)<=C N_p log(2+t).
+
+For the convex function phi(t)=log Z(t), phi(0)=0 and
+phi'(t)=-E_t H. Convexity gives phi'(t)>=phi(t)/t, with the correct
+sign, hence E_t H<=-log Z(t)/t. Translation invariance at each fixed
+plaquette orientation and nonnegativity of all h_p then yield the
+uniform one-plaquette estimate. No rotation symmetry or equality of
+the torus side lengths is needed. N_p/N=6 supplies the fixed factor.
+
+2. CONDITIONAL INDEPENDENCE IS EXACT
+
+Within one fixed link orientation, the conflict graph connecting two
+links in a common plaquette has degree at most six. A greedy independent
+set therefore has at least one seventh of the candidates. The physical
+profile box contains a positive multiple of a^(-4) candidate midpoints.
+At least four sites per direction prevents degenerate wrapping issues.
+
+Conditioning on all links outside this set leaves no plaquette with two
+unconditioned links. Both the Wilson action and the weighted energy are
+therefore sums of one-link functions plus conditioned constants. The
+selected links are conditionally independent even if their stars share
+other, already conditioned links. This is sufficient for adding their
+conditional variances.
+
+3. STAPLE EVENT AND RADIAL VARIANCE
+
+For each selected link, the six plaquette traces are exactly u dot v_p
+with u in S^3 and unit outside-measurable quaternions v_p. Thus its
+conditional law is exp(t u dot w), w=sum v_p, |w|<=6.
+The event |w|<3 forces sum_(p contains link)h_p>3 for every u. The
+unconditional mean-energy bound and Markov's inequality consequently
+give P(|w|>=3)>=1/2 at a universal sufficiently large t. No energy
+estimate conditional on arbitrary fixed exterior links is used.
+
+For k=t|w|>=6, z=u dot (w/|w|) has density proportional to
+exp(kz)sqrt(1-z^2). With y=k(1-z), the density is proportional to
+exp(-y)sqrt(y)sqrt(2-y/k). Its normalizer is bounded above by
+sqrt(2)Gamma(3/2). On [1/2,1] and [2,3], the last square root is at
+least sqrt(3/2). Both interval probabilities therefore have fixed
+positive lower bounds. The independent-copy variance formula gives
+Var(y)>=p1 p2, since their distance is one. Thus Var(z)>=c/k^2.
+All constants are independent of |w| in [3,6], volume and t.
+
+4. PROFILE ERROR HAS NO DANGEROUS CROSS TERM
+
+The local sampling condition implies
+|w_f-f(x_l)w|<=6 C a Lip(f). On the chosen box f>=f_*>0.
+Taking C a Lip(f)<=f_*/4 ensures
+
+ alpha=w_f dot (w/|w|)>=(f_*/2)|w|
+
+whenever |w|>=3. The algebra uses |w|>=3 and is uniform up to |w|=6.
+
+The tilted S^3 distribution is invariant under rotations perpendicular
+to w. Radial/perpendicular covariances vanish exactly, and perpendicular
+variance is nonnegative. Consequently
+
+ Var(u dot w_f)>=alpha^2 Var(z)>=c f_*^2/(4t^2).
+
+This is stronger than a triangle estimate of the sampling error: no
+assumption such as a sqrt(t)->0 or a t->0 is necessary. The proof only
+requires a small relative to the fixed profile's Lipschitz data.
+
+5. TOTAL VARIANCE AND CALIBRATION
+
+The law of total variance bounds the original variance below by the
+expectation of this independent conditional-variance sum. Each selected
+link has the good staple event with probability at least one half.
+Together with the positive-density independent set, this proves the
+producer's (15). Outside-dependent conditional means cannot cancel it.
+
+The two calibration notes explicitly define H_f=sum f_p h_p with NO
+extra a^4. They retain c_a=t_R or, conditionally on its stated selected
+frozen-coordinate theorem, c_a=t_R/alpha_N'(0) with alpha_N'(0) close
+to one. Hence those calibrations are bounded away from zero at fixed
+weak endpoint. Under the separately stated bounded-step trajectory
+t_a<=t_R+C T and a=L^(-T) ell_T, the variance lower bound diverges.
+The source-energy note does not promote that trajectory or selected
+coordinate to an independently proved full native coupling theorem.
+
+The necessary condition |c_a|=O(a^2 t_a) for a uniform ordinary L2
+bound follows directly. It is correctly called necessary, not
+sufficient. Deterministic centering does not change the bound. A
+mixed logarithmic contact may change a differentiated generating
+functional but is not the positive variance used in the energy lemma.
+
+6. WHAT THE RESULT RULES OUT
+
+The result rules out a cutoff-uniform ordinary L2 bound for this full
+affine original Wilson energy with those calibrations on that weak
+trajectory. Consequently the proposed absorption criterion with both
+uniform reference energy and uniform residual budget cannot hold for
+this complete observable. The finite energy consumer itself remains
+valid. The lower bound does not rule out finite separated covariances,
+collision-flat tests, or useful energy estimates for genuinely coarse
+conditional means and emitted errors. Those narrower targets retain
+their own missing spatial or coarse-variance estimates.
+
+No mathematical correction to Sections 2--4 is required.
+
+SUPPLEMENT: EXACT CONDITIONAL LOCALITY, SECTION 3F
+
+The added equations (15a)--(15d) are correct at the same one-step
+independent-link elimination. No extra mixing assumption is involved.
+
+Because a plaquette contains at most one selected link, the exact
+decomposition is
+
+ H_f=C_f^S(outside)-sum_(l in S)u_l dot w_(f,l).
+
+The conditional law is a product over l. Cross terms with different
+selected links therefore have zero covariance, leaving exactly (15a).
+If no selected link star meets both actual sampled plaquette supports,
+one of the two weighted staples in each summand vanishes. This proves
+the pointwise zero statement (15b), even when the two stars share
+conditioned exterior links. A fixed physical separation exceeding
+the geometric star diameter times a is a sufficient condition. The
+original sampling/read collars must remain included, as the producer
+states.
+
+Rotational invariance of the single-link tilted Haar law gives
+E(u_l)=m(t|w_l|)w_l/|w_l|. At w_l=0 the expectation is zero and the
+formula has its continuous extension; indeed m(k)=O(k) near zero.
+Substitution in the exact decomposition proves (15c). Each normalized
+changed summand uses only the conditioned links of its own six-plaquette
+star. The unaffected original plaquette summands remain explicit.
+The global observable is a sum of these local terms, not one bounded
+support independent of the profile.
+
+The law of total covariance then proves (15d), with the actual outside
+marginal. It leaves the whole separated covariance in the covariance
+of these compiled means. Their exterior variables remain correlated;
+the zero inner term does not assert that the original covariance is
+zero. If divergent conditional self-variances are desired for BOTH
+separated nonzero profiles simultaneously, select a positive-density
+independent set in one positive box of each profile. For sufficiently
+small a the two sets have no cross star conflict, so their union is
+still independent and the previous lower-bound proof applies to each.
+
+This verifies the claimed coexistence of divergent same-source inner
+variances and identically zero separated inner covariance. Repeated
+elimination and native RG source closure are not supplied by this
+single exact elimination and are correctly excluded.

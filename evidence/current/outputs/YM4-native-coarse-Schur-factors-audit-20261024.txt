@@ -1,0 +1,157 @@
+INDEPENDENT AUDIT: NATIVE COARSE SCHUR FACTORS
+24 October 2026. connected_energy. Scoped PASS; no correction required.
+
+Audited producer:
+ work/native_coarse_schur_factors_20261024.txt, audit_two_root.
+
+I read the complete producer and checked its main new inequalities
+against the actual flat-average formula in native_flat_soft_energy_bounds,
+the native ordinary trajectory/moving-map theorem, and the complete
+physical soft-operator vertex theorem. The current proof does not replace
+the original constrained Gaussian by a new integral. Its assignment to
+that Gaussian is supplied separately by native_gaussian_soft_reduction.
+This audit distinguishes that algebraic assignment from the uniform
+operator estimates proved here.
+
+1. THE LITERAL AVERAGE AND ALIAS LOWER BOUND
+
+The actual corrected primitive flat map is the straight-string mean.
+Its literal composition is the K-block average of a K-string: balanced
+block digits and consecutive string digits enumerate the complete
+K-block and segment once each. Thus the producer uses the actual A,
+not an alternative averaging operator. With counting Hilbert norms,
+||Q_0||=K^-2, ||A||<=K^-1 and A D=D_c Q_0.
+
+In unitary alias coordinates the K factor in
+ K A x=sum_r Omega_r x_r
+is correct. A coarse normalized Fourier mode has K^-2 times the fine
+normalization, and the string contributes K. The scalar block factor
+a_r and the extra normalized string factor give exactly the displayed
+omega_(r,alpha). The central-alias lower bound (2/pi)^5 retains all
+four scalar block factors and the one extra string factor. The phases
+are harmless but may not be discarded inside the intertwining:
+ Omega_0 [K d(p/K)]=a_0 d_c(p).
+
+The central transverse inversion is correct even though Omega_0 need
+not be scalar: the coarse longitudinal component pulls back to the
+fine longitudinal span by this last identity. Projection perpendicular
+to u_0 therefore recovers x_0. At p=0 the central multiplier is I and
+all harmonic components are retained. The high aliases satisfy P_r>=4;
+the sum of squared multipliers bounds their total contribution by their
+Hilbert norm. These give precisely A_0=2 c_omega^-2 and
+B_0=(1+2 c_omega^-2)/4 in(4). No inverse of a massless fine mode has
+been introduced. The K=1 case and coarse zero mode are separately valid.
+
+2. SCALAR LIFT, TENT LIFT, AND THE FULL Q_B ENERGY
+
+The constrained scalar energy minimum fixes the constant by its block
+mean. The central-alias feasible lift has the claimed K^2 energy price:
+fine counting volume K^4 is multiplied by a frequency square O(K^-2),
+while |a_0|^-2 is bounded. Its zero-mode energy is zero. Subtracting this
+minimum leaves a block-mean-zero field, so block Neumann Poincare gives
+the P_0 Delta_0 force estimate in(6).
+
+In the Hodge decomposition, the identity A D=D_c Q_0 makes
+P_c A x_T=P_c A x, and
+ ||D_c Q_0 phi||<=||A x||+K^-1||x_T||.
+Substitution gives exactly the displayed sufficient C_gap. It follows
+that Q_B>=c K^-2 I from q_m>=d_1^T d_1 and a-q_(m+p)>=I. This does
+not infer a gap for Q_B by subtracting a positive term from V.
+
+I checked the tent normalization directly. For K=2h+1,
+ sum_(r=-h)^h (1-|r|/(h+1))=h+1;
+therefore the stated f has block mean one. Its mean square is uniformly
+bounded; its endpoint and consecutive differences are O(K^-1).
+Tensorization gives ||E||<=C and ||DE||<=C/K, including crossing edges.
+The crossing estimate uses the endpoint value of the tent and the
+coarse difference of arbitrary neighboring block constants, so it does
+not assume a continuous or slowly varying coarse scalar.
+
+Consequently E e-e is genuinely in ran P_0, and the duality identity(9)
+controls the missing Pi_0 divergence. Together with(7), it proves the
+FULL reference-energy comparison Q_B asymp Delta_1+K^-2 I. This is
+stronger than the mass bound and is the estimate needed for S.
+
+The scalar Schur complement is also exact. Since EJ_0 is a right
+inverse of J_0^T, the constrained minimum energy is <=C K^-2||b||^2;
+the projection mass adds K^-2||b||^2. Hence
+ M_0=(I+K^2 H_s)^-1
+has a uniform positive lower bound. For S, Woodbury and
+D Pi_0 D^T<=C Q_B give its lower bound. Neither argument interchanges
+compression and inverse without a justified Schur complement.
+
+3. WEIGHTS, SOURCE ROOTS, AND THE LOGARITHM
+
+The H1 inverse/energy-leg bounds are used with the actual physical
+block metric. J_0 has unit-norm columns on one block. Thus the coarse
+matrices have fixed color fibers and exponential block kernels. A
+small Lipschitz exponential twist changes them by O(|theta|); the
+uniform positive coarse gaps then give (14), also with the spectral
+shift t. There is no fine K^4 partial-trace estimate.
+
+For scalar complex perturbations the D difference has its explicit
+K^-1 and the mass term its K^-2. Together with the T/M bounds on J,
+this gives a uniform relative perturbation of the fine scalar energy.
+The complex conclusion is an analytic inverse statement, not positivity
+of a complex transpose product.
+
+The first and second inverse identities in(16) have the correct signs
+and both source orders. The scalar mu powers balance, including all J
+endpoint derivatives. In the vector proof, retaining
+ D^T V^-1 D
+between the J factors is essential and sufficient: every differentiated
+D is paid by a mu and every inverse energy leg has its stated price.
+The proof never assumes a K-uniform norm for the raw interface
+derivative D J_u. The complete rooted H2 hypotheses, rather than just
+their global operator version, provide the joined endpoint/source
+tree in(18). Fixed exponent reserves pay the intermediate sums.
+
+The logarithm formula(19) is the actual Frechet derivative under its
+resolvent integral. At second order the direct F_uv term is positive,
+and the two ordered products have negative sign. Taking the (o,o)
+color trace WITHOUT cycling keeps o connected to both source roots.
+The shifted inverse bounds give integrable (1+t)^-2 and (1+t)^-3
+factors. Hence the absolute polynomial source moments used in(20)
+are justified uniformly in old grade and K.
+
+4. FINITE SCALARS, ACTUAL BETA, AND SCOPE
+
+The scalar allocations in(21) are exactly
+ +log det T -(1/2)log det V +log det M -(1/2)log det S.
+The separate native reduction proves this for the original leading
+delta Gaussian, with normalized based Haar insertion, original
+coarea/private-pivot factors, and the constraint-current Hessian.
+In particular its exact d=4 cancellation
+ det G_B det(BB^T)^(1/2)=det Ghat
+explains the apparent block-volume scalar. N0 discards only the actual
+flat normalization. No background-dependent scalar is lost here and
+no additional fine/coarse orbit-volume factor may be appended.
+
+Each diagonal coarse color trace is gauge invariant in the moving
+coarse frame, not merely after summing all roots. This gives the first
+color-jet cancellation needed by the invariant-density affine
+extractor. The actual and auxiliary vector factors are identified
+through affine degree two by the separately proved current/multiplier
+result; arbitrary off-shell equality is neither used nor true as a
+consequence of the present estimates alone.
+
+The affine potential in Section8 has the correct scale: mu A has fine
+curvature t/K^2 and the final coarse field has curvature t. Its smooth
+physical collar decomposition has polynomially growing source norms.
+The root o in(20) makes these moments summable. With the reviewed native
+trace convention beta=2[t^2]rho_o, both coarse determinants therefore
+have bounded native Maxwell contribution.
+
+At fixed (m,p), if the individual classical structural limits have not
+been shown unique, take one compatible jointly convergent subsequence
+of their finite-jet kernels. The uniform bounds and identities above
+survive on it. The native FULL Gaussian coefficient already has the
+B109 infinite-volume limit; the reduction identifies the corresponding
+total RHS with that same coefficient on every such subsequence. This
+audit does not infer convergence merely from exponential locality.
+
+Final verdict: scoped PASS. The producer closes the stated coarse
+factor gaps, inverse/source/logarithm bounds, and O(1) Maxwell remainder
+under its explicitly retained native inputs. It does not close the
+fine soft-pair heat bands, signed logarithmic coefficient, arbitrary
+history analysis, or the Yang--Mills existence program.

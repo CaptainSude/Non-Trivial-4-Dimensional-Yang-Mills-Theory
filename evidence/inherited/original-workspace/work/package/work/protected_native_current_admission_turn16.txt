@@ -1,0 +1,368 @@
+PRIMARY NATIVE CURRENT RESPONSE AND A HOMOGENEOUS COARSE-COORDINATE LIFT
+19 October 2026. Admission-proof agent. Turn 16.
+
+Result and exact scope
+
+The missing second-order response estimate is in the ORIGINAL published
+variational theorem. It has now been read from the primary PDF, including
+the displayed formula. Thus this part of H_min is no longer an assumption
+supported only by the reconstructed account.
+
+There is a closed, uniform-in-fine-refinement result on a homogeneous
+determining lattice: a sufficiently regular real physical anchor admits
+a holomorphic lift of one prescribed coarse-coordinate perturbation,
+with all other coarse coordinates unchanged. The lifted field and its
+ACTUAL Wilson current stay in the original smaller-radius sufficient
+subclass of the analytic field domain. Every derived-minimum condition
+then follows from the explicit primary implication on B109 p263.
+
+One may first take the anchor to be a homogeneous native minimum. More
+generally the same conclusion uses the native fluctuation chart at an
+arbitrary sufficiently regular physical anchor: it is a constraint right
+inverse, not an assertion that this new field is a minimum. The reason
+is the actual zero-input identity in (179)--(180), not continuation of
+an identity from the set of minimizing fields.
+
+This theorem does NOT upgrade the original proposed graded local U0
+anchor to a homogeneous field. It does not freeze arbitrary finer-tier
+or artificial-boundary slots of a different tower. A compact local lift
+is proved separately in primary_reference_field_class_turn16.txt,
+Sections4--7, and independently audited in
+compact_native_lift_independent_audit_turn16.txt. It requires one complete
+coherent gauge patch and strict smaller-subclass/current margin;
+arbitrary mixed-anchor coverage is not asserted.
+
+1. PRIMARY SOURCE RECOVERED, WITH A REPRODUCIBLE LOCATION
+
+T. Balaban, The variational problem and background fields in
+renormalization group method for lattice gauge theories,
+Commun. Math. Phys. 102 (1985), 277--309, DOI 10.1007/BF01229381.
+
+University of Michigan public repository item:
+  handle 2027.42/46461
+  item UUID e9af57c2-30bd-4dfc-85cd-3f01956f02fa
+  original PDF bitstream 458f3d2e-742f-431d-8c7e-14f4f8ad3c3f
+  https://backend.production.deepblue-documents.lib.umich.edu/server/api/core/bitstreams/458f3d2e-742f-431d-8c7e-14f4f8ad3c3f/content
+
+Saved locally:
+  work/admission_sources/cmp102_variational_primary.pdf
+  work/admission_sources/cmp102_variational_primary.txt
+
+The PDF has 33 pages, printed pp277--309. The displays on pp278,279,
+281,282,308,309 were visually inspected. The extracted text is useful
+for finding formulas but has damaged mathematical OCR.
+
+Two other PRIMARY papers were read through their indexed PDFs:
+  B109 = CMP109 (1987), 249--301, especially pp262--263 and272--273:
+  https://scispace.com/pdf/renormalization-group-approach-to-lattice-gauge-field-3ygai0vxt1.pdf
+  B122-II = CMP122 (1989), 355--392, especially pp357--359:
+  https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+
+B109 web text locators: lines638--740 contain (1.10)--(1.16) and the
+smaller-constants implication; lines1154--1195 contain (3.10)--(3.14).
+The local attempted B109 PDF download was empty, not a primary PDF.
+No inference in this note relies on that failed file.
+
+2. THE ACTUAL RESPONSE ESTIMATE, INCLUDING ITS SCALE WEIGHTS
+
+Use current-scale units. The fine spacing is eta=L^(-k), and a tier-j
+block has side r_j=L^j eta. Let y in Lambda_j, y' in Lambda_j', and
+x in the block Delta(y). Formula (190), printed p308, bounds the five
+kernels
+
+  delta H_mu(B,x)/delta B_nu(y'),
+  nabla_x delta H_mu(B,x)/delta B_nu(y'),
+  a localized beta-Holder first-derivative seminorm,
+  D_U^{eta*} D_U^eta delta H_mu(B,x)/delta B_nu(y'),
+  Delta_U^eta delta H_mu(B,x)/delta B_nu(y')
+
+by, respectively,
+
+  C [r_j^-1, r_j^-2,
+     (||zeta||_beta^# + |zeta|) r_j^(-2-beta),
+     r_j^-3, r_j^-3]
+       r_j'^(-d) exp[-delta0 d(y,y')/8].                  (2.1)
+
+The factor r_j'^(-d) belongs to a kernel integrated against the
+source's r_j'^d counting measure. In the homogeneous current lattice
+used below both r_j and r_j' are 1. Thus changing one coarse bond does
+not introduce either a fine-site count or an eta^-d factor.
+
+Proposition 9, p309, states analyticity in the small relative datum B,
+the relative Landau-gauge bounds (19)--(21), and (190). It also extends
+the construction to an arbitrary regular external gauge field U in
+the specified spaces of the earlier propagator/gauge paper. Those
+spaces include the actual second-order/current regularity: arbitrary
+C1 fields are not being substituted for them.
+
+The real minimum theorem, p279 Theorem1, separately supplies the
+curvature/current regularity (2) and local first/second-derivative
+bounds (9),(10). It is not necessary to infer these from analyticity.
+
+3. THE CURRENT IDENTITY THAT CONVERTS (2.1) INTO ADMISSION
+
+Write
+
+  J_W(U) = D_U^{eta*} eta^-2 pi Im partial U,
+  Im W = (W-W^-1)/(2i).
+
+B109 (3.11), p272, states for any regular U the EXACT expansion
+
+  J_W(exp(i eta A) U)
+       = J_W(U) + D_U^{eta*}D_U^eta A + F(U,A).           (3.1)
+
+Here F is local and depends only on U, partial U, A, nabla_U A.
+In particular it has no uncontrolled second derivative of U or A.
+Its small-field analytic bounds are uniform in eta. The original
+derivation is referred to the lattice formulas (1.43)--(1.54) of
+the regular-field/gauge paper; the same cancellation is visible in
+CMP102 pp291--292, (90)--(96). In those formulas a discrete derivative
+of a higher lattice correction is paid by its explicit eta factor.
+The cubic-and-higher force bounds are summarized in CMP102 Prop4,
+(97)--(98), p293.
+
+Since F(U,0)=0, Cauchy on a fixed regular neighborhood, or the same
+local expansion, gives
+
+  ||F(U,A)||_infinity
+       <= C_U (||A||_infinity+||nabla_U A||_infinity)     (3.2)
+
+on a fixed small ball, with C_U uniformly bounded when the anchor
+radii are bounded by the fixed native small constants. Consequently
+
+  ||J_W(exp(i eta A)U)-J_W(U)||_infinity
+       <= ||D_U*D_U A||_infinity
+          +C (||A||_infinity+||nabla_U A||_infinity).     (3.3)
+
+The scales in (3.1) are physical: a fine plaquette is eta^2 times
+curvature, whereas J_W is a physical field of dimension three.
+There is no extra eta^-1 to append to (3.3).
+
+This is precisely the missing equation in the former C1-only
+argument. A generic C1 perturbation has no bound for D*D A; (2.1)
+supplies that bound for the native chart. No arbitrary independent
+J variable is used: along the final path J is always J_W of the
+same fine field.
+
+4. HOMOGENEOUS LIFT THEOREM
+
+Fix d,L and a finite current-scale periodic box/torus on which the
+native homogeneous construction is defined, with all its coarse
+links included in the determining datum. Its physical coarse size
+and the constants M,M1 are fixed. Refine only eta=L^(-k).
+There are no artificial finer-tier boundary rows in this construction.
+An alternative boundary version would need its own full fixed-boundary
+dictionary; it is not silently included here.
+
+Let U_* be a real anchor in the original homogeneous regular space,
+with strict margin in the smaller-(i)--(iii) sufficient subclass on
+B109 p263. Concretely keep separate the following bounds, in current
+units:
+
+  eta^-2 |partial U_*-1| <= a_*,
+  |J_W(U_*)| <= a_*,                                    (4.1)
+
+and on every required O(LM)-sized local cube a real gauge with
+
+  U_*^u=exp(i eta A_*),
+  |A_*|+|nabla A_*| <= C_patch a_* .                      (4.2)
+
+Also retain the original external-field regularity hypotheses of
+Prop9, rather than replacing them by (4.2) alone. In particular,
+a homogeneous native minimum with sufficiently small datum curvature
+has all these properties by Theorem1. For a general physical anchor
+one can state its original curvature/codivergence inequalities (2)
+directly; they are explicit source hypotheses, not a newly named norm.
+
+Let (a0',a1') be fixed smaller radii for which the implication on
+B109 p263 gives the target class U^c_k(Z,a0,a1). Assume, with a fixed
+margin nu>0,
+
+  a_* <= c_nu a0',                                      (4.3)
+
+with c_nu small enough to allow the fixed patch/minimum constants.
+The target radii may depend on g_k; the constants c_nu,C below do not
+depend on k. Let rho_native>0 be the actual relative-datum radius in
+(172), with the source constants fixed once. At a weak anchor it is
+permissible to apply that theorem on a FIXED small native radius and
+then restrict to the smaller target disk.
+
+Pick one oriented coarse bond c and a unit Lie algebra element T.
+Define V(z) by
+
+  V(z;c)=exp(i z T) M^k(U_*;c),
+  V(z;b)=M^k(U_*;b) for every other positive coarse bond b,
+
+and impose the corresponding inverse rule on reverse bonds. Then
+there is a holomorphic fine-field path U(z), real for real z, with
+
+  U(0)=U_*,                  M^k U(z)=V(z),             (4.4)
+
+on a disk |z|<r, where one may choose
+
+  r = c min(rho_native, nu a0', nu a1').                 (4.5)
+
+For a fixed common real anchor gauge, or in its native relative
+Landau representative, the estimates are
+
+  |A(z)|+|nabla_U A(z)|+|D_U*D_U A(z)|+|Delta_U A(z)|
+                                                     <= C |z|,
+  eta^-2 |partial U_L(z)-partial U_*| <= C |z|,
+  |J_W(U_L(z))-J_W(U_*)| <= C |z|.                       (4.6)
+
+Here U_L(z)=exp(i eta A(z))U_* is the relative Landau representative.
+The actual field U(z) is the original representative obtained by
+undoing the native gauge map so that the ordinary averages in (4.4)
+hold exactly. The target analytic class is a union of complex gauge
+orbits; membership is therefore proved in U_L and applies to U.
+This avoids claiming that an arbitrary representative has the same
+pointwise complex matrix norm.
+
+All constants in (4.5),(4.6) depend only on fixed native small radii,
+patch geometry, d,L and the stated margin. They are uniform in prior
+fine refinement. No growing-volume assertion is needed or made.
+
+5. PROOF, INCLUDING THE ZERO-INPUT AND EXACT-CONSTRAINT POINTS
+
+First suppose U_* is a homogeneous native minimum U_k(V_*).
+Take the original analytic U_k(V(z)) of Proposition9. SectionG,
+(172)--(173), gives its relative Landau form A(z)=H_{U_*}(B(z));
+H(0)=0 and B(z) is the one-bond logarithmic datum. All output/source
+tiers in (2.1) are k, so integrating the bounded derivative from 0
+to z proves the first line of (4.6). The elementary plaquette product
+expansion proves its curvature line. Equation (3.1) proves its
+current line. This is already a source-attached complete subcase.
+
+For the more general regular anchor, use the extension of the same
+native chart through (179)--(180), as explicitly stated on p309.
+Its zero-input identity can be checked without any minimum assumption.
+The nonlinear function V in (180) is the one in (80):
+
+  V(A') = -<H D3(A'),J>
+          -<A',Delta H D(A')>
+          +1/2 <H D(A'),Delta H D(A')>
+          +V0(A'-H D(A')).                              (5.1)
+
+D starts in degree two, D3 in degree three and V0 in degree three.
+Thus V'(0)=0 for EVERY regular physical background, including one
+that is not stationary for the averaging fiber. At B=0, equation
+(180) has the solution A0=0, and the same contraction used there
+makes it unique on the native small ball. Equation(179) then gives
+H_U(0)=0. One must not reinsert a missing forcing term G J and call
+this chart a new minimum: that is a different map.
+
+The constraint identity is likewise algebraic. SectionsA--C start
+with an arbitrary regular reference U0, subject to (14), not with
+a stationary reference. Their change of gauge converts the original
+averaging constraints into (20). The linearizing transformation is
+defined by (48)--(50), so for A=A'-H D(A') it satisfies exactly
+
+                   Q_U(eta A)=r_j Q_j A'.               (5.2)
+
+In (179), A'=A0+H0 B, Q A0=0 and r_j Q_j H0 B=B. Thus the original
+constraint (20) holds. Undo the SAME source gauge transformation
+used to obtain (20). It returns the ordinary averaged datum V(z)
+and fixes the zero perturbation. This step uses the source's
+ordinary/corrected-average dictionary and its normalized inverse
+gauge map; it does not identify those averages as the same map,
+nor infer the identity by holomorphic continuation from minimizing
+backgrounds. The original bijection is discussed on pp280--281;
+the analytic inverse gauge construction is used again on p307.
+
+Proposition9 explicitly preserves (19)--(21) and the kernel bounds
+for the regular external-U extension. With the PHYSICAL background
+current J_W(U_*), (2.1) and H_U(0)=0 therefore give (4.6) in exactly
+the same way. This is a regular constraint lift; its nonstationarity
+off the original minimum graph does not affect the argument.
+
+Finally use U_* as the REAL factor in the definition of the target
+complex field class. Its real curvature and local gauges satisfy
+(i). The first line of (4.6) gives (ii). The curvature/current lines
+give (iii), with the reserved smaller radii. The paragraph immediately
+after B109(1.16), p263, explicitly proves that sufficiently smaller
+(i)--(iii) imply all the derived-minimum conditions(iv), including
+the real-factor version. This supplies the full domain and not only
+its first-derivative part. Equation(4.5) pays each radius separately.
+
+6. CONSEQUENCE FOR ONE FIXED NATIVE REFERENCE SCORE
+
+Consider the reference of B122-II (1.2), with fixed Z,Lambda,tree/slice,
+window,action weight and every branch label. Its primary analytic
+extension before (1.10) is through V_k=M^k(U) with U in the original
+complex field class. If the reference's varying external data are the
+coarse data in (4.4), and the remaining prescribed slots are fixed
+as in that definition, the path above supplies an admitted disk.
+Its interior reference baseline V_Lambda is recomputed by the original
+rule; it is NOT asserted to equal the fixed core data of the lift.
+
+The normalized reference theorem from turn15 now yields, on an inner
+disk at a real parameter,
+
+  ||centered partial_z log w||_L2 <= C/r,
+  |Cov(f,partial_z log w)| <= C(g_k/r) Lip_Lambda(f).      (6.1)
+
+These constants include the fixed 100M-box slice dimension, quadratic
+gap and Haar/window margins of that reference. They do not count fine
+reconstruction variables. The B-independent Wilson action factor
+cancels before the score estimate. No complex zero-free denominator
+is used in that probability argument.
+
+The deterministic derivative of f(exp(i g_k B)V_Lambda(z)) is still
+separate. A fine-loop or already backward-propagated insertion needs
+its own Lipschitz/response estimate. No sharp branch gate is
+differentiated. Equation(6.1) is not a complete-law influence bound.
+
+7. WHAT THIS DOES NOT SETTLE ABOUT THE GRADED LOCAL PROPOSAL
+
+Formula(2.1) at a finer output tier j carries r_j^-3. A top-tier datum
+perturbation therefore has only the bound
+
+  C r_j^-3 exp[-delta0 d(y,c)/8] |z|                      (7.1)
+
+there. One cannot delete r_j^-3 because the source datum is protected.
+Additional distance-through-layers estimates can sometimes overcome
+it, but they must be checked on the actual tower and the original
+field-class target. More importantly, they do not repair an anchor
+which already fails that target class on its artificial boundary.
+
+The homogeneous theorem also does not fix ALL fine slots of a second
+local tower merely because it fixes all homogeneous coarse averages.
+If the reference implementation reads extra fine boundary slots
+independently, the lift must preserve those too, or its full derivative
+must retain their variation. Applying the global path in that different
+slot problem would be incorrect.
+
+The proposed compact smooth-bubble alternative can preserve genuine
+fixed fine exterior slots. Its finite-dimensional inverse theorem is
+not sufficient by itself: the inverse and analytic derivatives of the
+ACTUAL iterated ordinary averaging map must be uniform in k. In
+particular ordinary averages have an endpoint gauge term absent from
+the straight/adjusted flat average. The candidate correction by a
+compact gauge bubble has to be retained, and the nonlinear iterate
+must be estimated with physical-scale summability, not a C^k product.
+The separate completed proof is now in
+primary_reference_field_class_turn16.txt, Sections4--7. Its auxiliary
+corrected averaging trajectory has summable physical-step errors; an
+exact ordered gauge product then controls the ordinary iterate. The
+flat complete-star moment inverse, endpoint gauge correction and
+uniform Cauchy bounds give the required holomorphic finite inverse.
+The independent audit compact_native_lift_independent_audit_turn16.txt
+passes these steps. This is an additional local result, not an expansion
+of the homogeneous theorem's hypotheses.
+
+Final status
+
+Established from primary native inputs: the complete homogeneous
+coarse-coordinate/current lift, including the arbitrary regular
+physical-anchor fluctuation-chart version, and its fixed-reference
+score consequence with the stated complete slot dictionary.
+
+Still not established by this note: arbitrary mixed/local anchors,
+the artificial graded rim, complete R branch selection, a remote
+score bound for every coefficient, or a normalized full-history
+observable transport theorem.
+
+Independent source audit status: root checked B109(3.11), the sufficient
+subclass paragraph on p263, and CMP102(80),(179)--(180), and passed the
+homogeneous physical-current theorem at the stated scope. The original
+primary CMP102 PDF and displayed (190) remain the estimate's provenance.

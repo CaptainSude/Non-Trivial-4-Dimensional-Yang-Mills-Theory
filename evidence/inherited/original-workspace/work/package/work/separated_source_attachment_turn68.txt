@@ -1,0 +1,395 @@
+ACTUAL MAGNETIC SOURCE JETS THROUGH THE TEMPORAL LIMIT -- TURN68
+20 October 2026. tail47.
+
+RESULT
+
+This note removes a specific attachment gap left open in TURN67.
+At a FIXED finite spatial regulator, finite families of actual bounded
+magnetic insertions have locally uniform entire source convergence
+from the full anisotropic Wilson ground chain to the proved Hamiltonian
+ground process. ALL finite source derivatives converge. The normalized
+logs converge on an explicit common disc. Finite time periods can
+then be chosen to approximate the same derivatives.
+
+The proof uses the literal original Wilson normalizer, not an assumed
+Gaussian source law. A magnetic observable may have a supremum bound
+which grows arbitrarily fast along the spatial cutoff sequence:
+one first fixes that regulator and then chooses the temporal spacing
+and period. Thus regulator dependence of this elementary source disc
+does not obstruct the diagonal realization of a finite list of
+already physically normalized magnetic source jets.
+
+This does NOT prove a spatially uniform separated covariance bound.
+It also does NOT establish derivative convergence when the source
+changes the electric coupling/temporal kernel normalization. That
+log-coupling source is distinct from the bounded magnetic sources
+proved here. The Hamiltonian log-coupling identities of TURN67 remain
+valid at their own fixed-graph scope.
+
+1. ACTUAL MODEL AND THE UNSOURCED TEMPORAL INPUT
+
+Fix a finite spatial SU2 graph and Pauli/2 metric. Let
+
+ H=kappa K+V,     kappa>0,
+
+with V the actual smooth bounded gauge-invariant spatial potential.
+It can be shifted by a fixed scalar to be nonnegative.
+Let E,Omega denote its normalized positive ground pair.
+For temporal spacing delta take the actual Wilson transfer operator
+
+ beta_delta=2/(kappa delta),
+ M_delta=exp(-delta V/2),
+ T_delta=M_delta Q_beta_delta P M_delta,
+ S_delta=T_delta/lambda_delta,
+
+where lambda_delta,Omega_delta are the leading physical eigenpair.
+Haar and Gauss measures are normalized as in TURN66.
+The unsourced finite-period original partition function is
+
+        c(beta_delta)^(N|E_sp|) Tr_phys T_delta^N.        (1.1)
+
+The frozen controlled_temporal_limit_turn66.txt proves at this
+fixed spatial regulator
+
+ Omega_delta->Omega in L2,
+ lambda_delta=exp[-delta E+o(delta)],
+ S_delta^floor(t/delta)->exp[-t(H-E)]
+
+strongly. The last convergence is uniform on compact t intervals.
+For clarity, compact-time uniformity can also be recovered from
+the retained proof: on the smooth core,
+||(S_delta-I)f||<=C_f delta for small delta; contraction and
+telescoping give equicontinuity on mesh times. Density extends
+this to any fixed vector. Pointwise convergence then implies
+uniformity on compact times, including t=0.
+
+Strong convergence uniform on compact times is uniform on every
+COMPACT set of Hilbert-space vectors, by a finite-net argument
+and the common contraction bound. It is not operator-norm
+convergence and has no asserted spatially uniform rate.
+
+The actual ground chain has stationary slice law
+Omega_delta(U)^2 dU and transition kernel
+T_delta(U,dV)Omega_delta(V)/(lambda_delta Omega_delta(U)).
+It is the fixed-spatial infinite-time limit of the original Wilson
+measure. The source proof below also retains its finite-period
+realization explicitly.
+
+2. LITERAL MAGNETIC SOURCE INSERTIONS
+
+Let Q be a real smooth gauge-invariant function of the spatial
+links and write M=||Q||infinity. It is bounded at this finite graph.
+Its calibration can include powers of a,g and additive subtractions.
+
+For n steps and T_delta=n delta define the left-sampled time integral
+
+ I_delta=delta sum_(j=0)^(n-1) Q(X_j).
+
+Set D_delta(z)=exp(delta z Q), a multiplication operator.
+The actual ground-chain generating function is EXACTLY
+
+ Z_delta(z)
+   =<Omega_delta,(D_delta(z)S_delta)^n Omega_delta>
+   =lambda_delta^-n
+        <Omega_delta,(D_delta(z)T_delta)^n Omega_delta>.
+                                                               (2.1)
+
+No source normalization has been dropped. At z=0 this is1.
+The final S_delta acts on Omega_delta and can equivalently be
+removed after writing out the path variables.
+
+For a finite original time period N>=n, the same source has
+
+ Z_delta,N(z)
+  =Tr_phys[(D_delta(z)T_delta)^n T_delta^(N-n)]
+                               /Tr_phys T_delta^N.      (2.2)
+
+The electric scalar c(beta_delta)^(N|E_sp|) in(1.1) cancels
+IDENTICALLY because this source changes only a multiplication
+weight, not beta_delta. All spatial weights and Gauss projections
+remain those of the original measure. Since Q is gauge invariant,
+its multiplication preserves the physical space.
+
+There is also the direct symmetric potential-source placement:
+
+ T_delta,z=exp(delta z Q/2)T_delta exp(delta z Q/2).
+
+Its n-step matrix element uses the trapezoid path integral
+
+ I_delta^trap=delta[Q(X_0)/2+
+                      sum_(j=1)^(n-1)Q(X_j)+Q(X_n)/2].
+
+It satisfies
+
+ |I_delta^trap-I_delta|<=delta M.                        (2.3)
+
+Thus both literal placements have the same fixed-graph source limit.
+On |z|<=r their generating functions differ by at most
+delta r M exp[r(T_delta+delta)M].
+The trapezoid choice corresponds exactly to replacing V by V-zQ
+in the symmetric spatial multipliers.
+
+For finite families Q_l and time windows/profiles, insert at step j
+the multiplication
+
+ D_j(z)=exp[delta sum_l z_l f_l(j delta)Q_l].
+
+Here f_l can be bounded piecewise continuous fixed profiles, with
+the window endpoints rounded to the temporal mesh. The same
+trace/ground formulas hold with their ordered D_j. Their source
+bound is determined by
+sum_l |z_l| delta sum_j |f_l(j delta)| ||Q_l||infinity.
+
+3. UNIFORM ENTIRE BOUNDS AND FINITE-WORD CONVERGENCE
+
+The literal probability representation implies for ALL complex z
+
+ |Z_delta(z)|, |Z_delta,N(z)|
+                              <=exp(|z|T_delta M).      (3.1)
+
+These functions are entire. This bound is uniform in delta and N
+whenever T_delta is bounded. The corresponding continuum generating
+function is
+
+ Z(z)=E_pi exp[z int_0^T Q(X_s)ds]
+     =<Omega,exp[-T(H-zQ-E)]Omega>,                     (3.2)
+
+with the SAME unsourced ground endpoints. It is entire and obeys
+|Z(z)|<=exp(|z|TM). The equality is the finite compact
+Feynman--Kac/Dyson identity; no new ground state at source z is used.
+
+We prove convergence of moments without differentiating a merely
+pointwise limit. A k-point time-ordered ground expectation is a
+word of bounded Q multipliers and the normalized semigroups.
+For fixed k, its continuum intermediate vectors as the ordered
+times range over a compact simplex form a compact Hilbert set.
+Section1's compact-vector uniformity, boundedness of Q and
+Omega_delta->Omega imply UNIFORM convergence of these words
+over their mesh times to the continuum words.
+
+The continuum words are continuous also when adjacent times
+coincide, since the semigroup is strongly continuous and Q is
+bounded. Their Riemann sums therefore converge. It follows that
+
+                  E I_delta^k -> E I^k                 (3.3)
+
+for each fixed k, including the ordered coincidences in a
+discrete moment expansion. One can equally use an unordered
+k-dimensional Riemann sum; time ordering is piecewise continuous
+and agrees at the coincidence faces. Rounding a finite number
+of window endpoints changes each integral by O(delta M).
+
+The bounds |I_delta|<=T_delta M and |I|<=TM now justify
+termwise summation of the exponential series, uniformly on any
+compact source set. Consequently
+
+ Z_delta -> Z locally uniformly on C,
+ partial_z^k Z_delta -> partial_z^k Z
+                  locally uniformly for every finite k.         (3.4)
+
+For several Q_l the same argument applies to every mixed moment,
+with domination by the product of their time-support bounds.
+It proves locally uniform entire convergence on C^m and convergence
+of all fixed mixed source jets. No uniform bound in k is needed
+to identify any prescribed finite jet.
+
+4. EXPLICIT FINITE-WORD AND SOURCE ERROR CONSUMERS
+
+The preceding argument gives a useful error decomposition without
+claiming an unavailable spatial rate. Fix a bound A on both
+T_delta M and TM, with A>0. Suppose the first K moments have
+the actual error
+
+ e_delta,K=max_(0<=k<=K)
+                 |E I_delta^k-E I^k|/A^k.
+
+The k=0 difference is0. On |z|<=r, exponential-series tails give
+
+ sup |Z_delta(z)-Z(z)|
+  <=exp(rA)[e_delta,K+
+                         2(rA)^(K+1)/(K+1)!].          (4.1)
+
+For fixed spatial regulator, choose K to make the explicit tail
+small, and then delta so that the finite list of word/Riemann errors
+is small. This produces the claimed locally uniform convergence
+without any implicit derivative-limit exchange.
+
+For actual finite time periods there is an additional explicit
+spectral remainder. Let Pi_delta be the rank-one ground projection
+and
+
+ R_delta(m)=Tr(S_delta^m)-1.
+
+For m>=1 it is finite, nonnegative and tends to0 as m->infinity.
+Writing the source word in S_delta units and using the trace norm
+of S_delta^(N-n)-Pi_delta gives, for N>n,
+
+ |Z_delta,N(z)-Z_delta(z)|
+       <=2 exp(rA) R_delta(N-n),       |z|<=r.          (4.2)
+
+The denominator Tr S_delta^N is at least1 and remains present.
+If r_delta is the next eigenvalue of S_delta, then for m>=m0>=1,
+
+ R_delta(m)<=r_delta^(m-m0) R_delta(m0).
+
+All these constants refer to the exact fixed-regulator transfer
+operator. They are not assumed uniform as a->0 or delta->0.
+One chooses N AFTER delta. Prescribed even periods and a physical
+time period tending to infinity can also be imposed.
+
+5. EXPLICIT COMMON LOG DOMAIN AND ALL CUMULANT DERIVATIVES
+
+Subtract a deterministic scalar from Q, if useful, so that
+M=osc(Q)/2. This changes log generators only by an exactly known
+linear source term. All source cumulants of order>=2 are unchanged.
+For A>=max(T_delta,T)M, every one of the above probability laws has
+
+ |Z(z)-1|<=exp(|z|A)-1.
+
+Thus, if A>0, on the common closed disc
+
+              |z|<=r0=log(3/2)/A,                      (5.1)
+
+all generating functions lie in |w-1|<=1/2. They have the same
+canonical logarithm vanishing at zero; its derivative has modulus
+at most2 throughout that w-disc. If A=0 the observable is constant
+and all cumulants of order>=2 vanish identically.
+
+Suppose the combined right sides of(4.1),(4.2), including any
+placement/endpoint error, are at most eta on |z|<=r0. Then
+
+ sup |log Z_delta,N-log Z|<=2eta,
+ |partial_z^m log Z_delta,N(0)-partial_z^m log Z(0)|
+                          <=2m! eta/r0^m.              (5.2)
+
+The first inequality follows by integrating1/w along the line
+segment in the convex disc |w-1|<=1/2; the second is Cauchy.
+In particular the second-derivative error is at most4eta/r0^2.
+The shrinking physical source radius is retained explicitly.
+
+For a finite family, the same construction works on any polydisc
+with sum_l r_l A_l<=log(3/2). A multi-index nu gives the Cauchy
+bound2nu! eta/product_l r_l^(nu_l). This includes mixed Hessians
+of independently sourced positive and negative time windows.
+
+These statements concern a local log around zero. They do not
+assert that an entire generating function is zero free everywhere.
+
+6. DIRECT SEPARATED-WINDOW ATTACHMENT WITHOUT LOGARITHMS
+
+Let q=Q-E_pi Q and use a strictly positive window[t,t+d],
+t,d>0. The Hamiltonian centered reflected norm is
+
+ R_Q(t,d)=int_t^(t+d)dr int_t^(t+d)ds C_Q(r+s),
+ C_Q(u)=<q Omega,exp[-u(H-E)]q Omega>.                  (6.1)
+
+At the discrete regulator choose a positive-time mesh window
+and its EXACT reflected copy, with identical real weights delta.
+Use the original Wilson centering E_delta,N Q, or E_delta Q in
+the ground chain. The corresponding mixed second source cumulant
+is exactly the centered reflected norm of this discrete window.
+It is nonnegative by the original reflection positivity admission.
+
+Convergence follows directly from the finite one- and two-point
+words, their Riemann sums, and then(4.2). Thus this important
+second-order attachment does not require any zero-free argument.
+Both ways compute the same actual quantity.
+
+There is also a quantitative quadrature version. Define at the
+ground-chain stage
+
+ epsilon_delta(U)=sup_(m delta<=U)
+                 |C_delta(m delta)-C_Q(m delta)| ->0.
+
+For complete mesh intervals approximating the window with endpoint
+error at most delta, let d_delta be their total length, so
+|d_delta-d|<=2delta. Since |C_Q|<=M^2 and
+
+ |C_Q'(u)|<=D_Q:=kappa E_pi|grad Q|^2,
+
+one obtains, for delta small compared with t,d,
+
+ |R_delta(t,d)-R_Q(t,d)|
+  <=(d+2delta)^2 epsilon_delta(2t+2d+4delta)
+     +2delta(d+2delta)^2 D_Q
+     +(4d delta+4delta^2)M^2.                           (6.2)
+
+The middle term is the change of the covariance argument by at
+most2delta when each integration time is replaced by its mesh
+point. The final term bounds the symmetric difference in window
+rectangles. A harmless smaller choice of rectangles improves
+constants but is unnecessary. This estimate explicitly separates
+the temporal word error from the elementary quadrature error.
+
+For actual cubic Hamiltonian magnetic insertions
+Q=sum_p w_p h_p, TURN67's exact form estimate gives
+
+ D_Q<=3g^4 a^-1 sum_p w_p^2.                            (6.3)
+
+In particular for the bare physical magnetic-energy insertion
+
+ Q_a(f)=[4/(g^2a)]sum_p f(x_p)(h_p-<h_p>),
+
+its constant subtraction does not affect the form, and
+
+ D_Qa<=48 a^-3 sum_p f(x_p)^2.
+
+On a fixed physical region this is O(a^-6), not a uniform physical
+energy bound. It is nonetheless an explicit quadrature coefficient:
+the temporal mesh can be chosen after a. It is not substituted
+for a missing uniform value of R_Q(t,d).
+
+7. WHAT THIS NOW ATTACHES, AND WHAT IT DOES NOT
+
+Take any sequence of finite spatial regulators and any finite
+list at each regulator of already specified/calibrated smooth
+magnetic observables, source jets, and positive-time windows.
+Their norms, source radii and constants may depend on that
+spatial regulator. Sections1--6 prove:
+
+ first choose delta_a sufficiently small to approximate all the
+ prescribed Hamiltonian moments/source jets to a chosen error;
+ then choose a sufficiently long finite original time period
+ N_a to make all the corresponding finite-period errors small.
+
+Because the list is finite at each stage, the choices can enforce
+an increasing list of observables by a usual diagonal selection.
+One can impose delta_a<=a^2 and N_a delta_a->infinity.
+No spatially uniform temporal convergence rate is necessary for
+this ordered construction. The literal observables and their
+physical normalizations stay the same during each approximation.
+
+This closes the fixed-spatial temporal/source-SECOND-DERIVATIVE
+gap for bounded multiplication magnetic sources, including
+insertions whose supremum diverges only when a is subsequently
+varied. It is stronger than convergence of unsourced scalar
+partition functions or pointwise source values.
+
+It does not prove the central physical estimate
+
+ 0<c<=R_Qa(t,d),             R_Qa(t-s,d)<=C,
+
+at fixed positive physical times, nor the operator renormalization
+and mixed local compatibility needed for a continuum field.
+It does not identify the required running g(a), extend isotropic
+Balaban admissions to the anisotropic family, or restore Euclidean
+symmetry.
+
+Finally, the log-coupling source changes Q_beta_delta itself and
+its scalar normalization. Its naive finite-Wilson action bound
+is not the bounded time-integral bound(3.1). No electric-coupling
+jet convergence is smuggled into this magnetic result. The exact
+Hamiltonian identity Delta_T^2 partial_tau^2 K=8R_Q remains true
+at that level, but its direct temporal transfer needs its own
+analytic normalization argument.
+
+SOURCE PROVENANCE
+
+No additional continuum assertion is imported. The inputs are
+the frozen fixed-spatial temporal theorem and original transfer
+normalization in controlled_temporal_limit_turn66.txt, the finite
+Hamiltonian form and energy bounds in hamiltonian_energy_turn66.txt,
+and the separated-source identities in
+separated_source_spectral_target_turn67.txt.
+All source-placement, entire-convergence, common-log-domain,
+finite-period error and mixed-window statements are proved here.

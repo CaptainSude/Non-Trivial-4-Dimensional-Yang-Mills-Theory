@@ -1,0 +1,347 @@
+MERGED GROUPS: A PREFIX-FOREST CHARGE WITH ONE TREE RESERVE
+18 October 2026. Exact abstract estimate and its source interface.
+
+This treats groups AFTER a first multicolour connection. It does not
+replace the separate singleton/cohort estimate. No positive polynomial
+kernel bound is inferred from a homogeneous 21 by21 matrix estimate.
+
+1. ACTUAL RETAINED GRAPH AND THE ROUGH NORM HYPOTHESIS
+
+Work at a finite regulator, primitive dates 0,...,N and physical cell
+length r_i=ell^(i-N), ell>1. The weak terminal band is fixed. Thus
+bounded primitive coupling increments give
+
+ gamma_i <= C_Gamma (1+N-i),
+ M R_i <= C_Gamma (1+N-i)^d_R.                       (1)
+
+A polylogarithm of gamma_i satisfies this deliberately weak polynomial
+bound. Constants can depend on the fixed terminal weak band and the
+fixed source geometry, but not on N or the fusion inverse coupling.
+
+Let m complete copy supports K_a be pairwise separated by at least
+tau, 0<tau<=1, including their original source/read stencils. Consider
+ONE term of the actual connected expansion, after complete-copy
+regrouping in eta_a^2=0. Retain the original attachment/connecting
+graph, with every edge or connected carrier e stamped by its actual
+creation date b(e). Its positive dimensionless tree cost t_e obeys
+
+ physical length(e) <= C r_(b(e)) M R_(b(e)) t_e.     (2)
+
+A carrier can be replaced by one of its paid connected spanning
+trees; fixed collar factors belong to MR in (2). Paid interior cells
+may likewise be retained as atoms with their own geometric debit.
+No connection is recreated at a later date with its old cost forgotten.
+Let T_i=sum_(b(e)<=i)t_e. The prefix graph contains all connections
+actually established by date i, including the original attachments
+to its labelled supports.
+
+The per-edge condition(2) is SUFFICIENT, not necessary. Repeated S
+enlargements of one paid atom can invalidate that literal birth-scale
+length bound. The proof uses only this weaker source alternative:
+for each EARLY i<=i_cut of(5), the current propagated covers and
+retained attachments admit a network on each actual prefix label
+group with
+
+ total physical network length <= C s_i T_i,
+             s_i <= C ell^(-(N-i))(1+N-i)^d_R.        (2a)
+
+For example suppose the actual propagated cover and attachment graph
+has at most C T_i paid pieces, each of diameter at most C s_i, with
+its genuine overlaps/connecting edges retained. Choose the early
+cut so that C s_i<tau/4. Each piece then meets at most ONE copy.
+A spanning tree of the connected piece graph, together with one
+attachment point per met copy, has length <=C s_i T_i. This proves
+(2a) in exactly the range needed below. Repeated enlargement is
+estimated at i rather than charged as a fictitious new birth edge.
+
+There is deliberately NO such assertion at late dates. One old paid
+piece grown to radius s_i>>tau could contain (s_i/tau)^4 copies, whose
+spanning network need not have length O(s_i). The late estimate uses
+only b_i<=m. It is still essential in the early argument that these
+are ACTUAL paid pieces/covers and paths, not arbitrary late reference
+supports. The geometric reserve for T is separate from any fraction
+already spent on raw occupation. Source verification of this early
+cover/count assertion is the appropriate weaker geometry target.
+
+Groups may merge but not split as LABEL sets. A mixed scalar output
+retires its labels; for the estimate keep its already paid graph and
+those labels as a noninteracting 'ghost component' through date N.
+No label may occur again in another factor of this term, by eta_a^2=0.
+Let b_i be the number of labels which by date i belong to components
+containing at least two labels, counting these ghosts. Singletons
+before that event are deliberately absent from b_i.
+
+Assume the available rough regular/operator propagation estimate is
+of the following form: after first merger, a group with h labels
+loses at most exp(C h) per primitive date. A fixed number of primitive
+preparation maps per date is included in C. New same-date mergers are
+included in this whole-map estimate, or have total cost exp(C h) for
+the labels of that connected output. This is a bound on the ACTUAL
+local/group map, not on its translation-invariant projection.
+
+Polynomial source-extraction losses may be charged ONCE per original
+copy when it first joins, as (1+gamma_(i_a))^D. They may not be silently
+recharged to every old descendant at every later merge. A polynomial
+factor per new merger edge is harmless as well; a forest has at most
+m-1 such edges. The all-order connected-map/entropy bound needed to
+justify these hypotheses remains an explicit source input.
+
+2. PREFIX PACKING BOUND
+
+Under(2), put s_i=C sup_(v<=i) r_v M R_v. Every edge of the prefix
+graph has physical length at most s_i times its cost. Alternatively
+use the early network and s_i in(2a). In the latter case the following
+bound is asserted ONLY for i<=i_cut. If a component of this
+graph touches h>=2 pairwise tau-separated supports, its physical
+connected network has length at least c tau(h-1). Indeed choose one
+point in each support. Doubling and pruning the network yields a
+spanning tree on these points of length at most twice the network;
+each edge of the point tree has length at least tau. Summing over
+components and using h<=2(h-1) gives
+
+                 b_i <= C s_i T_i / tau.             (3)
+
+Components with no labelled point only increase T_i, which is safe.
+It is immaterial whether a future label meets an already long old
+carrier without adding a long new edge: the UNION prefix graph still
+contains the entire network needed in (3). No first-merger tree is
+spent separately again for each later descendant.
+
+By (1), with a=N-i,
+
+ s_i <= C ell^(-a)(1+a)^d_R,
+ sum_(N-i>=A) s_i <= C ell^(-A)(1+A)^d_R.             (4)
+
+The supremum over all earlier dates causes no UV-depth factor. To
+check this, write v=i-k and bound (1+a+k)^d_R by
+(1+a)^d_R(1+k)^d_R; the remaining ell^-k sum is finite.
+
+3. ONE RESERVE PAYS ALL EARLY ROUGH PROPAGATION
+
+Let kappa>0 be the tree exponent reserved from the original source
+majorant. Choose
+
+ A_tau=ceil[K(1+log(1/tau))],   i_cut=N-A_tau,          (5)
+
+with K fixed sufficiently large after C,kappa,d_R and the terminal
+band. If i_cut<0 there is no early range. Equations(3)--(4) imply
+
+ sum_(i<=i_cut) b_i
+   <= (C/tau) sum_(i<=i_cut) s_i T_i
+   <= C ell^(-A_tau)(1+A_tau)^d_R T_N/tau.            (6)
+
+Choose K so that the coefficient times every fixed rough-loss
+constant is <=kappa/2. The elementary function
+tau^-1 ell^-K(1+log(1/tau))(1+K(1+log(1/tau)))^d_R
+has arbitrarily small supremum on (0,1] as K tends to infinity.
+Thus a SINGLE fraction of exp(-kappa T_N) pays the complete early
+rough amplification exp(C sum b_i).
+
+For the remaining dates use b_i<=m:
+
+ sum_(i>i_cut) b_i <= m(A_tau+1).                    (7)
+
+Hence the rough amplification over the full future satisfies
+
+ exp(C sum_i b_i) exp(-kappa T_N)
+      <= C_0^m tau^(-C_1 m) exp(-kappa T_N/2).        (8)
+
+This is a global prefix charge. It does not assert that each late
+joining edge is individually long enough to pay the group history.
+Nor does it multiply exp(C h_v(N-i_v)) over nested merger vertices,
+which would count the same labelled trajectory many times.
+
+4. INITIAL POLYNOMIAL LOSSES AND SCALAR ROOT DENSITIES
+
+If i_a is the first merger date of label a, then
+log(1+gamma_(i_a))<=C(1+N-i_a) by (1). Also
+
+ sum_a(N-i_a) <= sum_i b_i <= sum_a(N-i_a+1),          (9)
+
+up to the harmless choice of inclusive endpoints. Therefore every
+ONCE-per-copy polynomial source loss at its first merger is paid by
+the same early charge and the same late polynomial tau loss.
+
+A genuinely mixed scalar output born at i has the fine-root density
+factor r_i^-4=exp(4 log(ell)(N-i)). Its h>=2 labels are retired at that
+scalar birth, so ghost continuation contributes h(N-i) to sum b_i.
+Thus its density factor costs at most exp(2 log(ell) h(N-i)). Distinct
+scalar factors in one nilpotent term have disjoint labels. All such
+scalar root factors are consequently absorbed into the constant C
+in (8). Singleton scalar densities are NOT covered: they have no
+joining tree and must be removed by exact universal extraction and
+full-state centering, as in stopped_scalar_chronological_normal_form.
+
+If a scalar pressure coefficient has a fixed extra polynomial root
+or preparation moment, retain it in (2)/(4) or in the once-per-copy
+polynomial cost. If it contains an exponential factor not bounded
+by exp(C h age), that factor needs its own estimate.
+
+5. LAMINAR BOOKKEEPING AND WHAT IS NOT BEING ASSUMED
+
+At each date the groups are disjoint label subsets. Transport over
+an interval gives exp[C sum_groups |group| times interval_length].
+Summing intervals is precisely exp(C sum_i b_i), because every label
+has one trajectory after first merger. A nonlinear merge multiplies
+the child norms and produces one union label set. An exp(C h) cost
+for that whole same-date operation is included once for that union.
+Several algorithmic binary merges at one date must first be collected
+into the original connected output/majorant; charging exp(C h) for
+each arbitrary binary rebracketing would be a false new loss.
+
+This bound also explains two limitations.
+
+(a) A homogeneous 21-dimensional transfer estimate is not a proof of
+the actual rough local/group propagation hypothesis in Section1.
+However an existing bounded source/operator map on original local
+families can supply that hypothesis even if its bound is merely C
+per primitive step; no positive polynomial spatial kernel is needed.
+
+(b) The argument is TERMWISE in the original connected expansion.
+It leaves exp(-kappa T/2), all existing anchoring and lifetime factors,
+and the original coefficient/algebra combinatorics. The original
+connected majorant must still sum those terms with the available
+reserve. Summing arbitrary newly invented labelled forests would
+introduce an uncontrolled combinatorial factor; (8) does not authorize
+that replacement. Similarly, an extra polynomial gamma_j factor
+charged anew to every old label at every late step gives potentially
+exp[C m log(1/tau) log log(1/tau)], not the fixed polynomial in (8).
+Such a map would require a sharper ledger or a different final bound.
+
+6. RELATION TO THE MIDPOINT SMALL FACTOR
+
+Let epsilon_mid be the per-copy factor already produced by the
+singleton/first-contact argument, with gamma_mid possibly much larger
+than the coupling at a later first merger. This lemma multiplies and
+transports the EXISTING factors epsilon_mid; it never manufactures
+epsilon_mid from the weaker coupling at a late join.
+
+For a connected group created before the midpoint, an early stopped
+tree/occupation estimate must establish its original per-copy budget
+before (8) is used. For a group first created after the midpoint, its
+children must already carry their singleton or subgroup budgets; the
+whole connected-algebra multiplication preserves their product.
+In particular, a history-dependent SINGLETON deficit born at l and
+first joined at v>l must already be covered by that singleton budget
+through v. A ghost starting at v cannot pay an old-root factor accrued
+before v. Universal singleton scalars factored globally never join;
+unhealed branch constants are different and remain part of this input.
+Subsequent use of (8) spends only a separate tree fraction on rough
+propagation and scalar density. This is the correct pre/post census
+dichotomy. If one of these initial budgets is absent, the forest
+estimate cannot replace it.
+
+Actual source interfaces to check are therefore concrete: the retained
+prefix graph has all original labelled attachments and satisfies (2)
+or the weaker current-cover bound(2a);
+the group map has bounded per-date growth in the same local/original
+norm; complete-copy labels are not reset at mergers; and the original
+connected majorant survives a fixed tree-exponent reduction. Under
+these inputs the first-merger spatial issue closes by (8), without a
+homogeneous-to-local l1 inference or a repeated-tree expenditure.
+
+6A. SMALL SOURCE-BALL NONLINEARITY: ONE RADIUS LOSS PER NEW EDGE
+
+The rough hypothesis need not use a fixed physical a_j^2 ball.
+Suppose the actual marked map Phi_j, with its source-free base
+subtracted, is analytic on the original local activity ball
+
+ ||X||<R_j,    R_j=c g_j^kappa,
+             sup ||Phi_j(X)||<=C R_j.                (9a)
+
+All norms include the whole new scalar coordinate and use one working
+carrier/operator norm. Cauchy on scalar multiples of X bounds its
+degree-p homogeneous Taylor polynomial by C R_j^(1-p)||X||^p.
+Polarization gives an ordered multilinear majorant
+C_1^p R_j^(1-p) product_l||X_l||; p^p/p!<=e^p is absorbed in C_1^p.
+Thus unary propagation costs only C, and a p>=2 merger loses
+R_j^(-(p-1)), one inverse radius per NEW merger edge.
+
+This last assertion is about the Taylor/ordered-tree norm majorant.
+A naked coefficient of p distinct square-free variables can also
+contain the p! permutations of its inputs. Their original algebra/
+cluster multiplicities are retained, as Section5 requires. No claim
+that an arbitrary unordered labelled coefficient has a C^p bound is
+being made just from analyticity. The radius power, however, is exactly
+p-1 irrespective of that existing combinatorics.
+
+Here is the rigorous once-only assignment of those radius powers.
+For each component of the merger forest perform the following
+induction. A leaf retains itself as one unassigned representative.
+At a vertex with p children, each child has one such representative.
+Assign p-1 of these distinct leaves to the p-1 new merger edges and
+keep the last as the parent representative. No selected leaf can be
+selected again. There are exactly m-number_of_roots selected leaves.
+
+If leaf a is selected at a date-j merger, its first merger date i_a
+satisfies i_a<=j. From(1),
+
+ log_+(R_j^-1) <= C + (kappa/2)log(1+gamma_j)
+              <= C(1+N-j) <= C(1+N-i_a).             (9b)
+
+Summing(9b) over the distinct selected leaves bounds ALL nonlinear
+radius losses by exp[C m+C sum_i b_i]. Therefore the SAME early
+prefix reserve and late polynomial padding bound(8) pay them.
+There is no inverse g_j^kappa charged to every old label at every
+date or at every later ancestor. The factors C_1^p also cost only
+C_2^m, since sum_(nonlinear v)(p_v-1)<=m-1 and
+sum_(nonlinear v)p_v<=2(m-1). Unary dates are already in sum b_i.
+
+Original field projection does not require an extra a_j^-2 factor
+when its full norm is used: ||Pi F||<=C a_j^-2||F|| and
+||Qhat_j c||<=C a_j^2|c| give ||Qhat_j Pi F||<=C||F||.
+Both sides must be measured in that SAME original norm. This algebra
+does not prove contraction or reentry of a physical-only representative.
+
+Thus (9a), if furnished by the actual fine-carrier R/connected-map
+estimate with its complete scalar and chronological coordinates,
+suffices for the nonlinear radius part of the rough merged-group
+argument. It is strictly weaker than a fixed a^2 admission ball or
+a positive polynomial propagation kernel. The source domain and
+the unchanged original connected combinatorics still must be verified.
+
+7. THE NARROW CLONE COROLLARY ACTUALLY NEEDED
+
+For the slab estimate it suffices to take translated/reflected/
+conjugated clones of ONE complete compensated E_G(f), with the same
+fusion inverse coupling G and fixed finite 21-dimensional coefficient
+combinations. Suppose its pre-join singleton history norm supplies
+epsilon(G) G^B for each clone, and suppose the actual local mixed maps
+and connected majorants satisfy Section1. Apply (8) after each first
+join, leaving the once-per-copy factor epsilon(G) G^B untouched.
+The remaining connected clone-array bound then has per-copy cost
+
+                    C tau^-D epsilon(G) G^B,        (10)
+
+besides the already stated unmarked volume pressure and universal
+mixed-vacuum ledger. All constants and B,D are fixed independently
+of clone number, G and UV depth. This is a conditional PRODUCER
+corollary to the forest lemma, not a claim that its singleton/local-map
+premises have been established by a 21-component homogeneous graph.
+
+There is no need here for a theorem about arbitrary mixed copy ages
+or source types. Once (10) gives each individual padded operator,
+ordinary operator composition can combine distinct already bounded
+operators. Conversely an original G^B extraction loss must not be
+replaced by a smaller late gamma_i^B just because first joining is
+late. It belongs to the initial singleton factor in (10).
+
+Independent published_density audit: Sections2--6 pass as an abstract
+estimate. The early cover-piece version and the pre-join scalar
+qualification were necessary repairs. The actual local/group map
+must have C^h per-date loss in the SAME norm; a fresh inverse source
+radius charged to every old label at every date would not satisfy it.
+
+Independent constrained_fiber source geometry audit: CMP122-II pp380,
+384--387 has a product of the actual current-component costs over
+successive steps(1.79), future S-cover budget(1.80), subtraction of
+the next actual cost(1.83), and the corresponding merger costs(1.85--88).
+The cumulative opened list may therefore include each actual current
+component's MR_j cube tree and fixed covers. Increasing its fixed
+geometric cost coefficient before lifetime summation retains one
+exp(-delta T_N) reserve. In the early range each such piece meets at
+most one copy and their count is bounded by C(d'_j+1), with the +1
+kept per actual component. This supplies(2a) for these source pieces,
+provided the actual labelled attachment graph is retained. It does
+not license arbitrary late reference supports or repeated counting
+of a future component on all old meshes.

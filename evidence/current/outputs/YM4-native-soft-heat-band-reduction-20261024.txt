@@ -1,0 +1,364 @@
+NATIVE SOFT HEAT BANDS: UNIFORM END BOUNDS AND PENALTY REMOVAL
+24 October 2026. Root producer. Independent review requested.
+
+STATUS
+
+The estimates below concern the explicit native classical soft families
+whose(H1),(H2),(T),(M) inputs were proved in the preceding checkpoint.
+They close the three heat estimates needed to discard the short-time
+band, the soft penalties up to physical time one, and the physical
+infrared tail. Matching these families to the complete native Gaussian
+coefficient uses the separate exact gauge/coarea reduction and coarse
+Schur theorem; it is not assumed proved by the following operator work.
+
+This note checks and registers the arguments in the supplied archive
+Notebook36, sections suv and sft, and work/soft_penalty_physical_band_
+fragment.tex. No unpublished theorem is an input. The operator estimates
+are proved below with their now matched native hypotheses.
+
+1. FAMILIES, UNITS AND RESULTS
+
+Use d=4, K=L^p, mu=K^-1, current counting pairings, old grade m, and
+the actual effective classical action S_m. Set U(A)=exp(i mu A),
+W(A)=M_L^p U(A), with literal ordinary averages. All Hessians below
+are symmetric LEFT-RELATIVE Hessians, including their current/BCH terms.
+The primitive moving-reference products define J(A), Cbar(A). Put
+
+ B_s(A)=D(A)^T D(A),
+ B_v(A)=S_m''(U(A))+D(A)D(A)^T,
+ T(A)=B_s(A)+mu^2 J(A)J(A)^T,
+ V(A)=B_v(A)+Cbar(A)^T F(A) Cbar(A),
+ F(A)=aI-S_(m+p)''(W(A)),          a>=R_q+1.                (1)
+
+At flat all four families are positive semidefinite, and T,V have a
+gap comparable to mu^2. Superscript T is the analytic bilinear transpose,
+equal to the real Hilbert adjoint at the real expansion point.
+Let P_0 project onto one final K-block, assigning bonds by initial site.
+Each block has a growing fine fiber, which is never estimated by its
+dimension after an operator bound. The coarse output fiber is fixed.
+
+The affine source means a POLYNOMIAL TEST of Taylor kernels:
+
+ A_alpha(x)=x_nu H/K, alpha!=nu, tr(H^2)=1,
+ U(tA)_alpha(x)=exp(i t x_nu H/K^2).                       (2)
+
+It is not a nonzero unbounded input to a global small-field ball and
+not a continuous magnetic-flux family on a finite torus. Infinite
+native kernels and their specified periodizations are distinguished.
+
+For E=T,V, respectively B=B_s,B_v, define the affine block coefficient
+h_E,K(s)=[t^2]Tr(P_0 exp(-s E(tA))). Then, uniformly in m,K,
+
+ integral_(0,1) |h_B,K(s)| ds/s <= C,                     (3)
+ |h_E,K(s)-h_B,K(s)| <= C s/K^2, 0<s<=K^2,               (4)
+ integral_(K^2,infty) |h_E,K(s)| ds/s <= C.               (5)
+
+In particular both soft families also satisfy the short-band bound(3).
+All estimates use complete smooth physical source collars and rooted
+kernel sums. No claim about a separately differentiated raw mean-zero
+ghost or an extensive unnormalized trace is made.
+
+2. MATCHED NATIVE HYPOTHESES
+
+The preceding reviewed notes supply:
+
+(a) Uniform exponentially rooted action jets through degree4 for S_m,
+    q_W<=q_m<=C q_W, exact gauge covariance, and q_m(0)=q_m'(0)=0.
+    All constants are uniform in old grade, in current unit coordinates.
+
+(b) A fixed complex physical input ball for the actual ordinary
+    trajectory, including its terminal output and first two derivatives.
+    J and its first-two physical derivatives have O(1) counting norm;
+    Cbar and its derivatives have O(mu) norm. Their complete reads
+    occupy a bounded number of final blocks. The composed coarse
+    Hessian has uniform rooted first-two source kernels.
+
+(c) Uniform flat soft energies c(Delta+mu^2)<=T_0,V_0<=C(Delta+mu^2)
+    and physical weighted inverses. For the bases, c Delta<=B_0<=C Delta.
+    Delta is the appropriate componentwise lattice Laplacian.
+
+(d) First and second physical C1 source jets of the classical Hessian
+    have the stronger form
+       L_r=nabla_0^T Z_r+Z_r^T nabla_0+E_r,
+    with Z_1=O(mu), Z_2=O(mu^2), E_1,E_2=O(mu^2), times the source
+    norm product, retaining every row, column and source root. The
+    generator terms have the same type of form and the coarse terms
+    are O(mu^2). These bounds hold with physical weights and complete
+    smooth source collars. They are stronger than a global relative
+    form bound.
+
+The actual input sources are homogeneous_classical_rooted_taylor_
+kernels_20261024.txt, native_affine_multiplier_and_heat_operator_
+interface_20261024.txt, native_ordinary_trajectory_and_moving_map_bounds_
+20261024.txt, native_flat_soft_energy_bounds_20261024.txt and
+native_physical_soft_operator_vertices_20261024.txt, with their
+independent audits. No missing full nonlinear stationary-response
+estimate is substituted for these finite source jets.
+
+For later use the flat energy comparison holds under arbitrary small
+Lipschitz physical weights, not only constant Fourier twists. The
+ordered Laurent factorization of q_m gives q_m=nabla_0^T H_0 nabla_0
+with uniform exponential H_0. Conjugating by exp(theta f(x/K)) changes
+each outer gradient by O(theta mu), and H_0 by O(theta mu) in Schur
+norm. Keep the latter error BETWEEN the two gradients. Multiplication
+by K^2 and sandwiching by (I+K^2 Delta)^-1/2 gives O(theta+theta^2),
+uniformly. The generator term is nearest-neighbor, and the coarse
+correction is bounded with fixed physical range and exponential
+coarse middle kernel. Its weighted error is O(theta). This proves
+the relative weighted flat estimate needed below for bounded
+truncations of any physical 1-Lipschitz distance function.
+
+3. THE BASE SHORT-TIME BAND
+
+At a fine diagonal root x, a commuting Cartan gauge subtracts the
+constant value of the affine potential there. Its source becomes
+t(z_nu-x_nu)H/K^2. Each diagonal color trace is invariant under
+that gauge. This is justified first by compact truncation of its
+formal jets and then by exponential moment summation.
+
+The flat bases and their first-two background jets have uniform
+exponential fine-coordinate Schur kernels. The semigroup power
+series therefore has weighted norm at most C exp(Cs) for 0<=s<=1.
+One degree-two insertion contributes K^-4 times a polynomial in
+the joining distances, and two first-order insertions contribute
+the same K^-4. The rooted kernels absorb these polynomial factors.
+The ordered heat insertion formulas give
+
+ |[t^2]tr_color(exp(-s B(tA)))_(x,x)|
+                    <=C K^-4(s+s^2)exp(Cs).                (6)
+
+There are K^4 original scalar roots, or a fixed multiple for bonds,
+in the final block. Summing them cancels K^-4 and proves(3).
+No gap is used in this short-time argument. The eventual proof of(4)
+then transfers the same conclusion to T,V.
+
+4. PHYSICAL SEMIGROUP JETS FOR TIMES AT MOST ONE
+
+Write X_B=K^2 B and X_E=K^2 E. Their difference factors as
+
+ X_E-X_B=C(A)^T F(A) C(A),
+ (C,F)=(J^T,I) for the scalar,
+ (C,F)=(K Cbar,aI-S_(m+p)''(W)) for the vector.             (7)
+
+Both C and its first-two source derivatives have uniformly bounded
+whole-block operator norms and finite physical reads. F has uniform
+exponentially rooted coarse kernels. These claims retain the final
+theta_p chain, including its second derivative.
+
+Let H=I+K^2 Delta and nabla=K nabla_0. For either family X=X_B,X_E,
+the flat shifted operator Y=I+X_0 satisfies cH<=Y<=CH. On the
+sectorial contour at fixed angles +/-pi/4, closed to the left of
+the positive spectrum at a fixed radius below its lower bound,
+R_z=(Y-z)^-1 obeys
+
+ ||R_z||<=C(1+|z|)^-1,
+ ||nabla R_z||+||R_z nabla^T||<=C(1+|z|)^-1/2,
+ ||nabla R_z nabla^T||<=C.                                (8)
+
+These follow from the spectral bound relative to Y+|z| and energy
+comparison. The previous weighted flat estimate, now relative to
+H+|z|, proves(8) under small physical weights by Neumann inversion.
+Restricted block kernels acquire a common exponential in their
+separation. No sharp block projection is commuted through nabla.
+
+Rescale(d). Every first or mixed-second physical vertex has form
+
+ X_j=nabla^T Zbar_j+Zbar_j^T nabla+Ebar_j,
+                  ||Zbar_j||+||Ebar_j||<=C product b_i,    (9)
+
+with complete rooted block bounds. Each summand contains at most
+ONE unbounded physical derivative. This fact, not just H-relative
+boundedness, controls the following contour powers.
+
+Differentiated resolvents contain one X_j insertion, one X_jk
+insertion or two ordered first insertions. By(8)--(9), one first-
+order insertion costs (1+|z|)^-3/2, while its zero-order part costs
+(1+|z|)^-2. Two insertions cost at worst (1+|z|)^-2: if both
+derivatives face the middle resolvent, it costs O(1) and both
+external resolvents cost (1+|z|)^-1; the other placements have
+two half-power legs and one full resolvent. All powers are
+integrable on the contour at infinity, uniformly as u decreases
+to zero. Combining weighted resolvents and rooted vertices gives
+
+ ||delta_j exp(-uX)_xy||<=C b_j exp[-c tree(x,y,j)],
+ ||delta_j delta_k exp(-uX)_xy||
+                  <=C b_j b_k exp[-c tree(x,y,j,k)],
+                                        0<u<=1.           (10)
+
+The undifferentiated semigroup has the analogous endpoint decay,
+by the weighted numerical-range estimate and exp(Cu) norm bound.
+Source directions are complete smooth physical collars; source
+norms are b_j=||A_j||_phys,1. A quadratic polynomial family with
+the same X_0,X_1,X_2 suffices to justify functional differentiation;
+no uniform full nonlinear operator domain is added here.
+
+5. PENALTY REMOVAL THROUGH A FIXED COARSE OUTPUT FIBER
+
+Decompose the affine A in(2) with a smooth physical partition into
+collars j. Its direction norms grow at most C(1+|j|). The rooted
+sums in(10) converge with these polynomial weights. Consequently
+the first two affine semigroup jets have block norms bounded by
+C(1+|x|+|y|)^b exp[-c d(x,y)], uniformly for 0<=u<=1.
+The same polynomial/exponential bounds hold for C,F and their jets.
+
+Use the exact Duhamel trace with the fine root projector retained:
+
+ Tr_f P_0(exp(-uX_E)-exp(-uX_B))
+  =-integral_0^u Tr_c[F C exp(-vX_B) P_0
+                           exp(-(u-v)X_E) C^T] dv.         (11)
+
+The right-hand side sums ALL coarse diagonal blocks. It is not a
+cyclic rearrangement of an unmarked partial trace. For compact source
+truncations it follows from ordinary finite-rank trace cyclicity;
+the following absolute sums justify the infinite continuation.
+
+Each degree-two term has finitely many ordered differentiations,
+and both coarse endpoints are linked to block zero through(10).
+The sum of their absolute trace bounds is at most
+
+ C sum_(Y,Z)(1+|Y|+|Z|)^b
+                exp[-c(|Y|+|Z|+d(Y,Z))] <= C'.            (12)
+
+The trace is in the fixed coarse color/site or color/bond fiber.
+The large fine block merely occurs as an intermediate Hilbert
+space in an operator product; its dimension is not a trace cost.
+Equation(12) is uniform at v=0,u, since the semigroup jets there
+are the identity or zero. Integrating over length u proves
+
+ |[t^2]Tr P_0(exp(-uX_E)-exp(-uX_B))|<=Cu, 0<u<=1.
+
+Substitute u=s/K^2 to obtain(4), including 0<s<1.
+
+6. UNIFORM LOCAL SCHATTEN ESTIMATE FOR THE INFRARED
+
+For X=K^2 T or K^2 V, X_0>=cH, H=I+K^2 Delta. The elementary
+flat lattice heat sum, integrated against t^2 exp(-t)/2, gives
+
+                         Tr(P_x H^-3 P_x)<=C.             (13)
+
+Indeed the per-final-volume heat sum is at most
+C{K^4/(1+K^2 t)^2+N^-4} on a declared torus; its indicated integral
+is bounded. On the infinite lattice the zero-mode term is absent.
+
+Compression is not interchanged with taking powers. For each
+eigenvector u of P_x H^-1 P_x, scalar spectral Jensen gives
+<u,H^-1u>^3<=<u,H^-3u>. Summing yields
+
+ ||P_x H^-1/2||_(S_6)^6
+   =Tr[(P_x H^-1 P_x)^3]<=Tr(P_x H^-3 P_x)<=C.
+
+Thus Schatten Holder with exponents6,infinity,6 gives
+
+ ||P_x H^-1/2 A H^-1/2 P_y||_(S_3)<=C||A||.               (14)
+
+This is the dimensional gain: three such localized resolvents form
+a trace-class product uniformly, rather than costing the fine rank.
+
+7. MARKED RESOLVENTS AND THE CUBIC HEAT FORMULA
+
+Choose 0<lambda_0<c/4 and fixed 0<phi<pi/2. Let Gamma have rays
+z=lambda_0+r exp(+/-i phi), enclosing the positive spectrum to
+their right with the positive orientation. Close beyond the finite
+spectrum first, then take the closure to infinity. For
+R_z=(z-X_0)^-1, energy comparison gives
+
+                   ||H^1/2 R_z H^1/2||<=C_Gamma.          (15)
+
+The bound follows by sandwiching the scalar spectral bound for
+X_0^1/2 R_z X_0^1/2 with the bounded energy comparison factors.
+Relative physical-weight perturbation extends(15) uniformly to
+W R_z W^-1, W=exp(theta f). The constants are independent of z
+on Gamma, K and m.
+
+The reviewed source vertices have both conjugated and two-sided
+marked bounds. In particular, for W_j the exponential of physical
+distance to the complete collar j,
+
+ ||H^-1/2 W_j V_j W_j H^-1/2||<=C b_j,
+ ||H^-1/2 W_j V_jk W_j H^-1/2||<=C b_j b_k,                (16)
+
+and the latter holds with j replaced by k. Here V denotes source
+derivatives of X, not the soft family name. The factorization(9)
+proves(16) directly: commute W_j through the outer gradient, whose
+commutator is bounded O(theta), and use two-sided rooted Zbar/Ebar
+bounds. No fractional power of H is commuted through a weight.
+
+Derivatives of R_z are R_z V_j R_z and, at second order,
+R_z V_jk R_z+R_z V_j R_z V_k R_z+R_z V_k R_z V_j R_z.
+All normalize to H^-1/2 A H^-1/2 with bounded A. For example
+
+ W_j(R V_j R V_k R)W_j
+  =(W_j R W_j^-1)(W_j V_j W_j)(W_j^-1 R W_j)
+                     (W_j^-1 V_k W_j)(W_j^-1 R W_j).
+
+Equation(16) controls the marked vertex and the conjugated bound
+controls the other. Applying(14) gives S_3 bounds with a marked
+exponential at j or k. The geometric mean of these two estimates
+connects both sources and both endpoints. Thus, for n<=2,
+
+ ||P_x delta_(j_1)...delta_(j_n) R_z P_y||_(S_3)
+ <=C product b_j exp[-c tree(x,y,j_1,...,j_n)].             (17)
+
+For n=0 a one-sided distance weight suffices. Bounded truncations
+of the distance weights justify these identities before the limit.
+
+Functional calculus now gives exactly
+
+ exp(-uX)=(2/u^2)(1/(2pi i)) integral_Gamma
+                                      exp(-uz)(z-X)^-3 dz. (18)
+
+The third-order residue is u^2 exp(-u lambda)/2, fixing the sign
+and coefficient. Differentiate the THREE resolvent factors through
+degree two, insert block resolutions between them, and keep P_0
+at the two trace ends. Schatten Holder with exponents3,3,3 and(17)
+gives an absolutely summable local trace bound
+
+ |delta_(j_1)...delta_(j_n) Tr(P_0 R_z^3 P_0)|
+ <=C product b_j exp[-c' tree(0,j_1,...,j_n)].              (19)
+
+All intermediate block sums converge after a fixed exponent loss.
+The root projector is not removed or cycled away. Since
+integral_Gamma |exp(-uz)||dz|<=C u^-1 exp(-lambda_0 u),
+(18)--(19) imply, for u>=1,
+
+ |delta_(j_1)...delta_(j_n) Tr(P_0 exp(-uX) P_0)|
+ <=C u^-3 exp(-lambda_0 u) product b_j
+                    exp[-c' tree(0,j_1,...,j_n)], n<=2.   (20)
+
+The same absolute majorants justify the contour, source and block
+sum exchanges. Affine reconstruction with b_j<=C(1+|j|) is summable,
+so |[t^2]Tr(P_0 exp(-uX(tA)))|<=C exp(-c u). Substituting
+u=s/K^2 and integrating du/u proves(5) for EACH soft family.
+
+8. EXACT CONSEQUENCE AND WHAT IS STILL NEEDED
+
+The operator work proves(3)--(5) for the explicit native families,
+uniformly in old grade and K. The native affine-multiplier theorem
+identifies their first-two polynomial affine jets with the actual
+soft pair once its exact gauge/coarea reduction is established.
+
+For that matched logarithmic Gaussian, if the coarse Schur factors
+have uniformly bounded Maxwell coefficients as separately proved,
+the integral formula for log and beta(E)=2[t^2]rho_0 give
+
+ beta(G_(m,p))=integral_1^(K^2) h_base,m(s) ds/s+O(1),      (21)
+
+where h_base,m is the vector-minus-two-scalar affine heat coefficient
+of S_m''+DD^T and D^T D with the UNSCALED current affine probe t x_nu H.
+The sign follows from log D=-integral(exp(-sD)-normalizer)ds/s:
+log T-(1/2)log V has heat integrand (1/2)heat_V-heat_T;
+the factor2 in beta cancels the one half.
+
+The source in(2) scales each fine diagonal affine coefficient by
+K^-4, while the original final block has K^4 roots. Gauge covariance
+and translation remove the constant potential at each root, so this
+census converts the base block coefficient exactly to h_base,m.
+Equation(21) is conditional ONLY on the stated determinant/coarse
+identification, not on an omitted endpoint heat estimate.
+
+The nonlinear Ward/base comparison to Wilson and the fixed Wilson
+large-time coefficient must still be checked before any signed drift
+is claimed. No full continuum construction, mixed-history source
+estimate, or interaction conclusion is obtained here. Native beta is
+an infinite-lattice coefficient; a uniform varying-depth winding
+comparison is not added unless a different-regulator argument needs it.

@@ -1,0 +1,47 @@
+INDEPENDENT MATHEMATICAL READBACK: PRODUCT-BALL L2 MEAN LEMMA
+24 October 2026. connected_energy. No archive/output changes.
+
+Reviewed: work/product_ball_L2_covariance_and_small_mean_20261024.txt.
+Verdict: SCOPED PASS, no correction. The native pointwise-force
+registration remains separate, as the producer states.
+
+I checked the sign and domain in the weak one-form identity. For
+v=grad u with scalar Neumann condition, tangential differentiation
+gives partial_n v dot w=-II(v,w). Its contribution to the positive
+form is therefore +II. On a product-ball face the normal and II
+occupy only that coordinate block. A spatial weight constant on each
+whole color block preserves every face's tangential condition and
+commutes with its II. Testing with W^2 v gives exactly the weighted
+coercivity estimate, with no cut-radius factor or negative boundary
+term. A weight varying between colors of one block would not have
+this property and is not used.
+
+The tensor Neumann eigenfunction core is a suitable product-domain
+approximation. H2 convergence yields gradient H1 convergence and
+face trace convergence; writing the right side via Lu permits its
+passage with only L2 convergence. This avoids rounding product
+corners into a domain whose normals no longer commute with the
+spatial weight. The resulting one-form form is coercive on tangent
+vector fields, so its inverse may be applied to arbitrary block
+forcing. The block decomposition in (9)--(10) does not incorrectly
+assume that a single component of a gradient is itself a gradient.
+
+Linear tilts preserve the complete Hessian and the SAME convex cut,
+so the integrated variance inequality supplies the centered Gaussian
+moment-generating bound. Fixed block dimension gives a centered
+fourth moment independent of radius and volume. The actual unknown
+mean is then retained in ||1+|x_i|^2||_2<=C(1+|m_i|^2).
+
+The normalized t derivative has the minus covariance sign. Its
+weighted L2 estimate and the stated local gradient-growth row give
+M'(t)<=Cg(1+M(t)^2) in the upper derivative sense. Global evenness
+of the correlated quadratic product gives M(0)=0 without separate
+coordinate sign symmetry. Integrating arctan M proves the stated
+tan(Cgt) bound and the small-g estimate. This is noncircular and
+does not insert a prior estimate involving S.
+
+The essential limitations are correctly retained: fixed centered
+product support, block-scalar spatial weights, the complete weighted
+gap along the interpolation, and the actual pointwise primitive force
+bound. Arbitrary earlier masks, moving cuts, nonzero exterior force,
+and later inherited actions require their own matching statements.

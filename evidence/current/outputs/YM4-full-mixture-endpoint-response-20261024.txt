@@ -1,0 +1,342 @@
+ENDPOINT SPATIAL RESPONSE FOR A NONSMOOTH MIXTURE CORRECTION
+24 October 2026. audit_two_root. Finite consumer and scale ledger.
+Archive and outputs unchanged.
+
+RESULT
+
+There is a response estimate that vanishes with the determining-data
+displacement without differentiating the nonsmooth correction's score.
+It uses BOTH its localized first-background derivative and its current-
+noise localization. For a source with a gradient arm A_F, the correction
+cost is
+
+ C A_F K_g (T s)^a (g1 R1)^(1-a) exp[-lambda_a d(P,q)],        (R)
+
+for any fixed 0<a<1, at a correspondingly smaller fixed spatial rate.
+Here s is the size of one determining-coordinate change, T its actual
+reconstruction/minimum response price, and g1 R1 is the physical current
+noise amplitude. The complete smooth-reference score and direct-source
+terms are retained separately. In particular the actual first source
+has A_F=C g1 L_p^Omega; (R) keeps that coupling factor.
+
+The proof is an exact endpoint interpolation of normalized laws and
+localization of the ENDPOINT DIFFERENCE ell_b(B_theta')-ell_b(B_theta).
+It does not differentiate D_theta ell_b, assume a localized mixed score,
+or turn a value norm into an ordinary derivative bound. After a separately
+matched next finite-read reconstruction with derivative O(g2), it gives
+a useful hybrid-metric source profile, with an explicit g2^a factor.
+The comparable adjacent-coupling case restores a product-sized small
+factor in this correction. No uniform many-scale iteration follows.
+
+1. COMMON FIXED FIBER AND THE ACTUAL AVAILABLE INPUTS
+
+Let x lie in the SAME finite product K=product_i K_i, with each K_i
+convex, containing a chosen x_i*, and diameter <=C R1. Geometry, pivot
+labels and real free-coordinate conventions remain fixed. Let theta,
+theta' differ in one determining block q by s=|theta'_q-theta_q|.
+All intermediate physical determining values and the entire x product
+must remain admitted. Write the exact normalized family as
+
+ mu_theta(dx)=Z_theta^-1 1_K(x)
+                exp[-H_theta(x)+V_theta(x)]dx,
+ V_theta(x)=sum_b ell_b(B_theta(x)).                          (1)
+
+H_theta is the COMPLETE smooth reference Hamiltonian, including every
+inherited normalizer, coarea factor and gauge/Jacobian contribution in
+its declared exact scalar convention. It has the uniform complete
+weighted gap and weighted absolute rows required by the finite consumer.
+The two endpoint reference Hamiltonians have those bounds on all K.
+
+Each V_theta has the exact small supported value interaction supplied
+by the earlier full-Omega construction, uniformly on the determining
+family. Supports can be enlarged once to a common list because the
+current geometry and finite reconstruction reads are fixed. Its norm
+is <delta_* with reserve. Its scalar terms are retained in Z_theta.
+
+The first correction terms ell_b are the SAME exact one-factor
+normalizer increments, not newly assumed local functions. On the
+admitted first-coarse Cartesian chart the proven estimate is
+
+ |D_(beta_r) ell_b|<=K_g exp[-eta d(b,r)].                     (2)
+
+It is an a.e. derivative with an integrated Lipschitz version; no second
+derivative is asserted. The available bound is
+K_g=C[sqrt(epsilon_r)rho_*^-1 B0(R0)+epsilon_r R0^2/g0].
+All statements below keep this actual price.
+
+The native reconstruction B_theta(x)=beta(Phi1(x;theta)) must provide
+the following first-order comparisons at this fixed family:
+
+ (i) |partial_(x_i) B_theta,r|<=C g1 for r in its fixed current
+     collar of i, and zero otherwise, uniformly in theta,x;
+
+ (ii) |B_theta',r(x)-B_theta,r(x)|
+                  <=T s exp[-sigma d(r,hat q)],              (3)
+
+with fixed metric/grade conversions into hat q. The constant T contains
+the ACTUAL native minimum, current, coefficient and coordinate-response
+prices, in the declared determining coordinates. No fixed physical
+radius is substituted for a shrinking one without its conversion.
+Both endpoint images and the straight first-coarse beta segments used
+with (2) must lie in its admitted Cartesian chart.
+
+For the complete reference difference Delta H=H_theta'-H_theta,
+the additional input is a genuine mixed-score comparison
+
+ sup_K |partial_(x_i) Delta H|
+                     <=B_H s exp[-sigma_H d(i,hat q)].       (4)
+
+This may be proved by integrating the complete reference mixed derivative
+along an admitted determining path. It is not inferred from the pure
+fluctuation Hessian. In the current work, the smooth next-reference
+producer is being checked separately; the theorem here does not supply
+an unverified (4).
+
+For the source family, assume the already available profiles
+
+ sup_K |partial_(x_i) F_theta|
+                       <=A_F exp[-nu_F d(i,P)],
+ sup_K |F_theta'-F_theta|
+                       <=D_F s exp[-tau d(P,hat q)].          (5)
+
+The same bound for F_theta holds on all endpoint families used below.
+The theorem needs only these first-order inputs and the small value norm.
+
+2. EXACT ENDPOINT INTERPOLATION, WITH EVERY NORMALIZER
+
+Define auxiliary measures on the SAME K by
+
+ H_t=(1-t)H_theta+t H_theta',
+ V_t=(1-t)V_theta+t V_theta',
+ mu_t(dx)=Z_t^-1 1_K exp[-H_t+V_t]dx,       0<=t<=1.           (6)
+
+The smooth reference's complete weighted Hessian bounds persist by
+convex combination. The value interaction norm of V_t stays below the
+same smallness threshold, with its common supported list and its exact
+scalar part. Thus the finite spatial consumer applies to EVERY mu_t.
+No claim that (6) is a physical intermediate RG kernel is needed.
+
+Put Delta V=V_theta'-V_theta and hold F_theta fixed inside the integral.
+Exact finite differentiation of (6) gives
+
+ mu_theta' F_theta'-mu_theta F_theta
+ =mu_theta'(F_theta'-F_theta)
+    +integral_0^1 Cov_(mu_t)(F_theta,-Delta H+Delta V)dt.       (7)
+
+The covariance in (7) is the derivative of the ORIGINAL normalized
+ratio; there is no omitted derivative of Z_t. Parameter-only scalars
+cancel in that covariance, but remain in Z_t and the raw outer mass.
+The finite product and finite-volume local norm justify differentiation.
+Countable supported sums follow by absolute convergence in each finite
+volume. No nonsmooth theta derivative of Delta V is taken.
+
+From the two-profile covariance consumer, (4),(5) imply
+
+ |Cov_(mu_t)(F_theta,Delta H)|
+        <=C A_F B_H s exp[-lambda_H d(P,hat q)].              (8)
+
+This is the COMPLETE reference term. It is not dropped because V_theta
+is small, nor replaced by a classical quadratic score alone.
+
+3. TWO INDEPENDENT BOUNDS FOR THE CORRECTION DIFFERENCE
+
+Set G_b(x)=ell_b(B_theta'(x))-ell_b(B_theta(x)). From (2),(3) and
+one exponential convolution, after a strict rate reserve,
+
+ ||G_b||_infinity
+                <=C K_g T s exp[-sigma_0 d(b,hat q)].        (9)
+
+Separately, the finite current read in (3)(i) and (2) give
+
+ sup_K |partial_(x_i) ell_b(B_theta(x))|
+                       <=C K_g g1 exp[-eta_0 d(i,b)],        (10)
+
+and the same estimate at theta'. Hence G_b has twice this gradient
+majorant. Unlike (9), (10) does not vanish with s. BOTH estimates are
+needed; neither is a localized derivative of the other.
+
+Let x^(b,n) equal x on the current coordinate ball of radius n around b
+and x* elsewhere, with a fixed collar included; x^(b,-1)=x*. These are
+all in K. Define the exact supported endpoint increments
+
+ G_(b,n)(x)=G_b(x^(b,n))-G_b(x^(b,n-1)).                      (11)
+
+Their supports are actual current-coordinate balls, of size
+C(1+n)^d and diameter <=2n+C. The endpoint reconstruction still lies
+in the first physical chart, by the whole-K admission, even though a
+partially replaced x need not equal the original x configuration.
+
+Bound (9) gives twice its supremum for each increment. Bound (10),
+integrated along the changed shell with coordinate displacement <=CR1,
+gives a second cap. Thus
+
+ ||G_(b,n)||_infinity
+ <=C K_g min{T s exp[-sigma_0 d(b,hat q)],
+              g1 R1 (1+n)^(d-1)exp[-eta_0 n]}.              (12)
+
+At n=0 use a harmless adjusted fixed collar constant. This second cap
+comes from actual current noise amplitude g1R1, not the size of an
+unrelated background extension. For finite volume the telescoping ends
+at its diameter, exactly:
+
+ Delta V(x)=sum_b G_b(x*)+sum_(b,n)G_(b,n)(x).                (13)
+
+The first sum in (13) is a real parameter-dependent scalar. It is kept
+in the interpolated partition function in (6), and only cancels inside
+the covariance in (7). This is not an approximation of the normalizer.
+
+4. SPATIAL HOLDER RESPONSE WITH A PHYSICAL NOISE FACTOR
+
+Fix 0<a<1. Use min(u,v)<=u^a v^(1-a) in (12). For a sufficiently
+small lambda below the consumer rate, nu_F, a sigma_0, and
+(1-a)eta_0, the bounded-local/profile covariance theorem gives
+
+ |Cov_(mu_t)(F_theta,G_(b,n))|
+ <=C A_F |supp G_(b,n)| ||G_(b,n)||_infinity
+                            exp[-lambda d(P,supp G_(b,n))].
+
+Use d(P,supp)>=d(P,b)-n-C. The n sum is a fixed polynomial times
+exp[-((1-a)eta_0-lambda)n] and converges. Sum b by the exponential
+convolution of exp[-lambda d(P,b)] and exp[-a sigma_0 d(b,hat q)].
+With one additional fixed spare exponent this proves uniformly in t
+
+ |Cov_(mu_t)(F_theta,Delta V)|
+ <=C_a A_F K_g (T s)^a (g1 R1)^(1-a)
+                                  exp[-lambda_a d(P,hat q)]. (14)
+
+Fixed root cardinalities and grade conversion factors are included in
+C_a. For extended roots they must be retained in the corresponding
+convolution count. Constants diverge when a approaches one or when an
+exponent reserve is removed; a is fixed before the weak floor.
+
+Combining (5),(7),(8),(14) yields the finite response theorem
+
+ |mu_theta' F_theta'-mu_theta F_theta|
+ <=C [D_F s+A_F B_H s
+          +A_F K_g (T s)^a(g1R1)^(1-a)]
+                                  exp[-lambda_a d(P,hat q)]. (15)
+
+In particular it vanishes with s. The statement is for a one-block
+determining change; a finite collection can be changed sequentially
+with its explicit sum of s_q and s_q^a. No dimension-free l2 tangent
+norm is asserted for the Holder part merely from this argument.
+
+5. THE ACTUAL FIRST FULL-MIXTURE SOURCE AND A FURTHER NOISE MAP
+
+Use the literal calibrated source p_(Omega,p) from the first full
+current mixture and F_theta(x)=p_(Omega,p)(B_theta(x)). Its already
+proved first-coarse response price is L_p^Omega. Then (3)(i) and the
+source response, with the minimum-map comparison (3)(ii), give
+
+ A_F=C g1 L_p^Omega,          D_F=C T L_p^Omega.               (16)
+
+Thus the nonsmooth part of (15) is genuinely
+
+ C_a L_p^Omega K_g g1 (T s)^a(g1R1)^(1-a)
+                                  exp[-lambda_a d(P,hat q)]. (17)
+
+The direct-source and complete-reference contributions remain
+C L_p^Omega[T+g1 B_H]s with their spatial arms. The source price has
+the original c_a calibration. The older conditional covariance/contact
+has not been replaced by a product of these means.
+
+Suppose a SEPARATELY MATCHED next reconstruction theta=Phi2(z;V3)
+has fixed finite z reads and, at fixed V3, changing z_j affects only a
+fixed collar of theta coordinates, each by at most C g2 |Delta z_j|.
+Its entire product must lie in the admitted theta family of Section1.
+Apply (15) to those finitely many coordinates. Since t^a<=1+t,
+the resulting compiled mean has a HYBRID coordinate profile with price
+
+ C_a L_p^Omega {
+     g2[T+g1 B_H]
+       +K_g g1 (T g2)^a(g1R1)^(1-a) }.                      (18)
+
+Its spatial exponent is fixed at this finite three-grade scope. The
+Holder correction now contains g1^(2-a)g2^a R1^(1-a). If the actual
+adjacent trajectory makes g2/g1 comparable, it is bounded by
+C_a K_g L_p^Omega g1 g2 T^a R1^(1-a). This is an explicit useful
+coupling-size gain despite the lack of an ordinary derivative. The
+K_g tail is retained and beats fixed radius powers at the first weak
+profile. This arithmetic does not prove the new Phi2 event/domain.
+
+Equations(17),(18) are more informative than applying a whole-source
+supremum bound: they keep the actual O(g1) current source gradient and
+the physical g1R1 localization amplitude. They are still endpoint
+Holder/hybrid bounds, not a licensed D_theta score or C1 output.
+
+6. WHAT HAS AND HAS NOT BEEN MATCHED
+
+The first ell_b derivative (2), fixed-current reconstruction derivative
+(3)(i), actual source price in (16), small value interaction and exact
+two-level normalizer convention are established in the preceding notes.
+The endpoint consumer above is fully proved from these and the precise
+family inputs (3)(ii),(4),(5). It introduces no new mixed derivative of
+the nonsmooth correction.
+
+For an actual varying V2 family, (3)(ii) must be supplied by the native
+minimum response together with variation of C1, h_piv and Dtilde1;
+holding those maps fixed while varying V2 is invalid. Estimate (4) is
+the complete SMOOTH reference mixed score, including the first exact
+F_s and coarea pullbacks. The independent smooth-reference task is
+checking those inputs. A pure fluctuation Hessian alone does not prove
+them. Likewise the next Phi2 whole-cut physical admission, exact
+outer factors, changed geometry and masks require their own match.
+
+The fixed cut in (1),(6) is indispensable. Moving K, a changed pivot
+list, a different gauge chart, or an outer event crossing adds terms
+that (7) does not contain. Such cases are excluded here, not silently
+treated as a score of H. All source-free scalars remain in the exact
+raw masses even when they disappear from a conditional covariance.
+
+Small oscillation alone cannot imply C1 response: delta sin(theta/epsilon)
+h(x) already has unbounded theta derivative as epsilon tends to zero.
+The localized first ell_b bound used here excludes that particular
+large first derivative, but supplies no localized SECOND derivative.
+That is why (14) is obtained from two endpoint caps rather than an
+unproved local D_theta score.
+
+Even the localized first bound (2) does not by itself force an ordinary
+SPATIALLY localized score. To see the distinction, let a determining
+coordinate q=b be distance D from one noise coordinate i, set
+d_D=exp(-eta D), and use the abstract positive correction
+ ell_b(beta)=K_g d_D[1+sin(beta_q/d_D)h(beta_i)]
+with |h|<=1 and |h'|<=1. Its first beta_q derivative is bounded by K_g;
+its first beta_i derivative is bounded by K_g exp(-eta D), exactly as
+in (2). Its value is <=2K_g d_D and its long-read value norm is small
+at any exponent below eta. With beta_q=theta and beta_i=g1 x_i,
+the normalized theta response at theta=0 contains
+K_g Cov(F,h(g1 x_i)), with NO factor exp(-cD). The resulting example
+meets these first-derivative/value inputs, although it is not asserted
+to satisfy every additional native normalizer curvature property.
+It pinpoints why one cannot take a derivative limit of (15) and claim
+the same spatial exponent: a mixed response or additional smoothing
+would be a substantive new input.
+
+Finally, this proof spends exponents and produces a Holder modulus.
+It does not establish that a later re-localized raw normalizer has a
+uniform local C^a interaction norm without further loss. A fixed
+physical source gain in (18) does not by itself close all subsequent
+normalizers or give a UV-depth-uniform recursion. A stable mixed
+spatial/parameter regularity class or a genuine smoothing argument
+would still be needed for that stronger iteration claim.
+
+SUBSEQUENT NATIVE INPUT REGISTRATION, 24 OCTOBER 2026
+
+The family inputs left explicit in Section6 are now supplied on a
+stricter fixed-three-grade near-flat sector by
+third_coarse_reference_interface_20261024, independently checked in
+third_coarse_reference_interface_audit_20261024. Its actual map (18)
+and complete reference score (19), integrated on one-bond determining
+segments, give T=C K1bg and B_H=S1 in (3),(4). Its Cartesian theta box
+and entire Theta2(K2) admission match the endpoint paths and the further
+finite-read reconstruction used in (18). This does not change the
+general theorem's hypotheses or enlarge them to other geometries.
+
+The endpoint mechanism has a separate scoped review in
+nonlinear_mixture_response_consumer_audit_20261024. The root note
+full_mixture_third_coarse_closure_20261024 and its independent audit
+then insert the original ell_b terms sequentially to construct the
+new exact small VALUE interaction for log M1. Combined with its complete
+Q2ss reference, this makes the source profile (18) usable for the actual
+three-level conditional covariance, retaining both previous contacts.
+The original outer-sector and nonuniform-depth limitations remain.

@@ -1,0 +1,433 @@
+COARSE-PRESERVING REPLACEMENT AND ORIGINAL TWO-SOURCE ERRORS
+TURN73. tail47. 20 October 2026.
+
+RESULT
+
+Preserving the full coarse marginal is a valid way to avoid the
+selection-induced change of that marginal. It does not require a
+global all-good probability close to one. The exact TURN37 replacement
+already performs this operation for the original bare conditional
+Wilson boxes, including arbitrary admitted boxwise coarse statistics.
+
+A new consequence is a local chi-square bound with the complete
+original denominator. Combined with the TURN64 original Wilson action
+moments, it gives an actual two-source comparison for literal original
+weighted plaquette actions, without an observable supremum bound.
+Sections2--3 prove this quantitative extension.
+
+It does NOT turn the TURN70 selected trajectory into a full-law
+trajectory. Two precise obstructions remain:
+
+ (a) even with the coarse marginal preserved, changes of conditional
+     source means contribute an outer covariance; controlling just
+     the conditional two-mark covariance is insufficient;
+ (b) preserving the full coarse marginal makes the outgoing density
+     rho_full=rho_selected/p(coarse). Its unknown acceptance factor
+     has become a coarse log-density term. The existing selected
+     analytic/source induction does not control that new term.
+
+These are exact identities and a specific missing attachment, not a
+new counterexample to Yang--Mills or a requirement that all-good mass
+must be large. The new bound applies to the actual first bare-box
+replacement at its retained TURN37 hypotheses. Its physical support
+count does not yet give a UV-summable continuum estimate.
+
+INPUTS READ
+
+ coarse_preserving_box_replacement_turn37.txt, Sections1--9;
+ polylog_box_annealed_replacement_turn37.txt;
+ coarse_preserving_box_audit_turn37.txt;
+ finite_volume_wilson_energy_turn64.txt, especially(0.1);
+ turn71_full_law_gauge.txt, Sections1--4;
+ turn72_dirichlet_wilson_root.txt;
+ current_proof_frontier_turn72.txt;
+ selected_covariance_martingale_turn70.txt.
+
+All preceding theorem imports retain their original bare/selected
+domains. No source-dependent window is substituted below.
+
+1. THE ACTUAL COARSE-PRESERVING KERNEL
+
+For the separated bare cores of TURN37, write the original normalized
+Wilson law as
+
+ mu(domega,du)=mu_X(domega) product_i Q_i^omega(du_i).    (1.1)
+
+The common exterior omega includes every boundary edge. No original
+plaquette reads two active core interiors. A coarse statistic
+Y_i=A_i(omega,u_i) may be any standard-Borel statistic whose complete
+read uses only omega and core i. If a desired coarse map spans several
+cores, it must factor through these separate recorded statistics for
+the product statement below to apply.
+
+Disintegrate Q_i^omega against Y_i:
+
+ Q_i^omega=integral nu_i^omega(dy_i) R_i^(omega,y_i),
+ Lambda(domega,dy)=mu_X(domega) product_i nu_i^omega(dy_i).  (1.2)
+
+Thus the conditional law of all interiors given Z=(omega,Y) is
+product_i R_i. The original joint law of Z is Lambda.
+
+Let B_i be the exterior bad-boundary event, W_i the original window,
+and suppose the retained bare theorem gives
+
+ Q_i^omega(W_i^c)<=alpha on B_i^c,  0<alpha<1.           (1.3)
+
+Put p_i(Z)=R_i(W_i^c), fix 0<theta<1, and set
+
+ G_i={B_i^c,p_i<=theta},
+ P_i=R_i(.|W_i) on G_i,   P_i=R_i otherwise.            (1.4)
+
+The replacement probability
+
+                     nu(dZ,dv)=Lambda(dZ) product_i P_i(dv_i)
+
+preserves Lambda exactly. Its density against the SAME original law is
+
+ M=product_i M_i,
+ M_i=1_(G_i^c)+1_(G_i)1_(W_i)/(1-p_i).                 (1.5)
+
+Each M_i has conditional R_i mean one. The denominator 1-p_i is the
+actual original fiber probability. It is bounded below by 1-theta on
+the modified fibers. Bad boundaries and bad coarse fibers are left
+unchanged. Exceptional null fibers are irrelevant to these a.e.
+measure statements; no new coarea version at every datum is claimed.
+
+In particular, the probability that all boxes lie in their windows
+can be extremely small. It does not appear as a denominator in(1.5).
+All moments of functions of Z are preserved exactly.
+
+2. NEW EXACT LOCAL CHI-SQUARE ESTIMATE
+
+Let A be a finite set of active core labels, k=|A|. Retain the full
+Z and only the interiors U_A. Integrating every other interior in
+(1.5) gives the exact marginal density
+
+                  dnu_(Z,U_A)/dmu_(Z,U_A)=M_A:=product_(i in A)M_i.
+
+At a fixed Z, a direct two-value computation gives
+
+ E_(R_i) M_i^2
+      =1+1_(G_i) p_i/(1-p_i),
+ E_(R_i)(M_i-1)^2
+      =1_(G_i) p_i/(1-p_i).                            (2.1)
+
+Conditional product and E_mu M_A=1 therefore imply
+
+ D_A:=chi^2(nu_(Z,U_A)||mu_(Z,U_A))
+    =E_Lambda[product_(i in A)(1+a_i)-1],
+ a_i=1_(G_i)p_i/(1-p_i).                              (2.2)
+
+This is an equality, not an estimate of two extensive partition
+functions. At fixed omega, the Y_i are independent and a_i depends
+only on omega,Y_i. From(1.3),
+
+ integral a_i dnu_i^omega
+       <=alpha/(1-theta) 1_(B_i^c).
+
+Hence
+
+             D_A <=[1+alpha/(1-theta)]^k-1.            (2.3)
+
+No independent law for the bad boundaries is required: they simply
+turn off the replacement. No original-law bad-boundary probability
+estimate enters(2.3). Such an estimate is needed for other claims
+about how completely the new law lies in a weak chart.
+
+For a frozen weight 0<=w_i<=1 in place of the hard event W_i, one may
+append a local uniform flag and define W_i={flag<=w_i}. The same
+theorem applies on that mass-one augmented original space; forgetting
+the flag can only decrease chi-square divergence. Directly,
+E_R[w_i^2]/(E_R w_i)^2<=1/(E_R w_i) gives the same bound.
+Its actual geometric reads and conditional product must still match
+(1.1)--(1.2).
+
+For theta=1/2 and k alpha<=1/2, (2.3) implies, for example,
+
+                         D_A<=4 k alpha.              (2.4)
+
+This is a finite-read estimate. There is no claim that the divergence
+of the complete replacement law is small when the number of all
+replaced boxes tends to infinity.
+
+2A. Exact covariance consumer for original observables
+
+Let F,H be ORIGINAL observables measurable in (Z,U_A), with finite
+fourth moments under mu. Put
+
+                 f=F-E_mu F,    h=H-E_mu H.
+
+Since M_A is the exact marginal density,
+
+ Cov_nu(F,H)-Cov_mu(F,H)
+   =E_mu[(M_A-1)fh]
+        -E_mu[(M_A-1)f] E_mu[(M_A-1)h].              (2.5)
+
+Cauchy--Schwarz proves
+
+ |Cov_nu(F,H)-Cov_mu(F,H)|
+   <=sqrt(D_A)||fh||_(L2(mu))
+                   +D_A||f||_(L2(mu))||h||_(L2(mu)).  (2.6)
+
+This retains the mean-shift term. In particular, it is not enough to
+estimate a marked product and silently discard the two mean changes.
+Neither a selected normalization nor an auxiliary-reference observable
+has been substituted. Divergent deterministic additive source constants
+cancel by the displayed ORIGINAL centering.
+
+The finite-regulator original generating functions may also be used:
+nu has density M_A frozen at the unsourced baseline, so the two-source
+covariance is the corresponding mixed logarithmic derivative. Retuning
+M_A when sources are inserted would define a different derivative.
+
+3. AN ACTUAL FULL-WILSON SOURCE APPLICATION
+
+Take the full nondegenerate periodic SU(2) Wilson law at homogeneous
+coupling beta, with h_p=1-Tr(U_p)/2. The retained TURN64 theorem gives
+for each plaquette
+
+                    E_mu exp(beta h_p/4)<=2^(3/4).    (3.1)
+
+No conditional-on-exterior version is used here. Markov's inequality
+and tail integration give, for every fixed r>=1,
+
+ ||h_p||_(Lr(mu)) <= C_r/beta,
+ C_r=4[2^(3/4) Gamma(r+1)]^(1/r).                     (3.2)
+
+Indeed P(beta h_p>t)<=2^(3/4)e^(-t/4); integrating
+r t^(r-1) times this bound proves(3.2). This does not differentiate
+an inequality of moment-generating functions to infer higher
+coefficientwise inequalities.
+
+For arbitrary deterministic real weights, let
+
+ F=sum_p f_p h_p,    H=sum_p htilde_p h_p,
+ W_F=sum_p|f_p|,     W_H=sum_p|htilde_p|.
+
+Suppose every non-exterior plaquette read by these two sources belongs
+to the chosen read cores A. Plaquettes wholly in the preserved exterior
+may be included. Minkowski and(3.2) imply
+
+ ||F||_r<=C_r W_F/beta,   ||H||_r<=C_r W_H/beta.
+
+Thus their original centered versions obey
+||f||_r<=2C_r W_F/beta and ||h||_r<=2C_r W_H/beta.
+Hölder in(2.6) gives the explicit original-source comparison
+
+ |Cov_nu(F,H)-Cov_mu(F,H)|
+  <=4 beta^(-2) W_F W_H
+                  [C_4^2 sqrt(D_A)+C_2^2 D_A].        (3.3)
+
+The replacement keeps every selected coarse statistic and the full
+exterior marginal. Equation(3.3) nevertheless compares observables of
+the ORIGINAL links and retains the complete original denominator.
+It is an actual first bare-box consequence of TURN37 plus TURN64.
+It does not require a uniform covariance estimate at every prescribed
+coarse fiber, or probability near one for all box windows.
+
+For canonically rescaled sources beta F,beta H, the beta^(-2) factor
+is removed. For another cutoff-dependent multiplicative calibration,
+both sides of(3.3) are multiplied accordingly. The l1 plaquette-weight
+counts remain; the full-law energy moment bound does not remove the
+contact contribution to those moments.
+
+For fixed read cores and fixed weights, the polylog-box alpha from
+TURN37 makes this error small. The same statement does not follow
+for a fixed physical support containing order a^(-4) fine plaquettes.
+If beta is of order log(1/a), then log(1/g) is of order log log(1/a).
+The archived polylog-box alpha is of the form
+exp[-c(log(1/g))^p] while the number of read cores is of order
+a^(-4) divided by a polylogarithmic factor. The displayed bound
+does not make k alpha small in that regime; W_F W_H can also grow
+as a^(-8). This diagnoses the estimate's failure to prove a physical
+UV limit, not the divergence of the actual covariance.
+
+4. WHAT PRESERVING THE COARSE LAW DOES, AND DOES NOT, CANCEL
+
+Consider sources of the form
+
+ F=F_ext(Z)+sum_i F_i(Z,U_i),
+ H=H_ext(Z)+sum_i H_i(Z,U_i).
+
+Define their full conditional means m_F(Z)=E_mu[F|Z],
+m_H(Z)=E_mu[H|Z] and the replacement means
+
+ m_F^nu=m_F-delta_F,     m_H^nu=m_H-delta_H.
+
+For example
+delta_F=sum_i(R_i F_i-P_i F_i). Inactive fibers contribute zero.
+The exterior contributions occur in both means unchanged.
+
+Conditional product on BOTH laws gives the exact identity
+
+ Cov_mu(F,H)-Cov_nu(F,H)
+ =E_Lambda sum_i[Cov_(R_i)(F_i,H_i)-Cov_(P_i)(F_i,H_i)]
+   +Cov_Lambda(delta_F,m_H)+Cov_Lambda(m_F,delta_H)
+   -Cov_Lambda(delta_F,delta_H).                       (4.1)
+
+This follows by expanding the two total-covariance identities with
+the SAME Lambda. The change of coarse marginal has indeed disappeared.
+Changes of the conditional means have not.
+
+In particular, if F and H read disjoint core sets, their conditional
+covariances given Z vanish in BOTH laws. The first line of(4.1) is
+then exactly zero. The entire two-point correction is in the three
+outer terms. A perfect fixed-fiber two-mark bound is not a substitute
+for this conditional-mean information.
+
+On an active fiber let a_i(s,t) be its ORIGINAL source-tilted window
+probability, with the window and the active-fiber rule frozen. Then
+
+ partial_s log a_i|0=P_i F_i-R_i F_i,
+ partial_st log a_i|0=Cov_(P_i)(F_i,H_i)-Cov_(R_i)(F_i,H_i).
+                                                               (4.2)
+
+Thus the two necessary local inputs are its one-source AND two-source
+responses, followed by the actual full coarse expectation/covariance.
+The chi-square argument in Section2 bounds their combined effect
+for the finite-read bare application without pretending that the
+three outer terms vanish.
+
+One can force mean matching by defining under nu
+
+ F_sharp=F+delta_F(Z),       H_sharp=H+delta_H(Z).
+
+Then
+
+ Cov_mu(F,H)-Cov_nu(F_sharp,H_sharp)
+    =E_Lambda sum_i[Cov_(R_i)(F_i,H_i)-Cov_(P_i)(F_i,H_i)]. (4.3)
+
+This identity is valid, but F_sharp is a modified observable using
+the UNKNOWN full conditional source means. Equation(4.3) is not a
+comparison for the unchanged physical F,H unless those added
+functions themselves have been computed and controlled.
+
+Recording F and H themselves among the preserved coarse data likewise
+makes their covariance invariant tautologically. It supplies no estimate
+of that covariance and changes the constrained fibers. The TURN70
+source/geometry theorem does not cover that augmentation automatically.
+
+5. WHY THE KNOWN SELECTED RG CANNOT SIMPLY BE USED AS THE REPLACEMENT
+
+This issue is already visible at one integration step. Let an actual
+full incoming density rho(u) be disintegrated over a coarse value v,
+with full positive coarea kernel q^0(du|v). Write
+
+ rho_full,out(v)=integral rho(u) q^0(du|v),
+ rho_sel,out(v) =integral rho(u)w(u,v) q^0(du|v),
+ p(v)=rho_sel,out(v)/rho_full,out(v).                  (5.1)
+
+Assume positive denominators on the considered fiber. Its original
+conditional law is K_full and its w-selected law is
+
+                   K_sel=w K_full/p(v).              (5.2)
+
+There are two different joint measures:
+
+ ordinary selection:
+       coarse density proportional to rho_sel,out,
+       conditional fine law K_sel;
+
+ coarse-preserving replacement:
+       coarse density proportional to rho_full,out,
+       conditional fine law K_sel.                  (5.3)
+
+On fibers not treated by (5.2), a hybrid must retain the original
+kernel, as in Section1. Choosing K_sel without changing the outer
+law is a legitimate probability construction, but it is not the
+ordinary selected law. The two coarse marginals agree only when
+p(v) is constant almost everywhere on that support.
+
+If one writes the coarse-preserving output using the known selected
+density, it is exactly
+
+            rho_full,out(v)=rho_sel,out(v) exp[-log p(v)].       (5.4)
+
+The acceptance function has not vanished. It is now an additional
+coarse log-density term -log p, including its scalar and source
+responses. If the density is written exp(-S), the corresponding
+action relation is S_full=S_selected+log p. In the pure tangent
+Gaussian reference, p=c_T^n is
+independent of v; that special case explains why its coarse law
+is unchanged. TURN72's nonlinear analysis does not establish this
+constancy for actual generated constrained fibers.
+
+At the next scale the selected TURN70 recursion uses the particular
+incoming selected density and its proven analytic marked class.
+Replacing it by rho_full,out inserts the factor in(5.4). Its class
+norm, common complex domain, original source derivatives and bad-fiber
+continuation have not been bounded by that induction. Therefore the
+already proved selected one-mark and conditional covariance maps
+cannot simply be iterated with the full marginal.
+
+Equivalently, for a multi-level path one may retain the full terminal
+marginal and choose selected backward kernels, but those kernels must
+be the conditionals of a SPECIFIED path law at every stage. Kernels
+formed from the repeatedly selected incoming densities are generally
+not the conditional replacements of the repeatedly full densities.
+The missing incoming factor is again(5.4), not a failure of basic
+probability normalization.
+
+The actual coarse variable may also lie outside every admitted selected
+chart, with p(v)=0. A coarse-preserving hybrid must leave that fiber
+unchanged or supply another kernel on the same fiber. A theorem only
+on the selected weak domain does not bound those unchanged branches.
+An arbitrary Borel completion can define a probability, but supplies
+no new small-field/source estimate.
+
+6. SOURCED NORMALIZATION DOES NOT REMOVE THE MISSING RESPONSE
+
+The factors in(1.5) and(5.2) are frozen at zero source. Their sourced
+integrals genuinely insert the original observables F,H, which is
+why(2.5) and(4.1) are the relevant comparison formulas.
+
+One might instead define at EVERY source a new balancing factor
+
+ M_(s,t)=w/a_Y(s,t),
+ a_Y(s,t)= E_mu[w exp(sF+tH)|Y]/E_mu[exp(sF+tH)|Y].
+
+Where this is defined, its exact identity is
+
+ E_mu[M_(s,t)exp(sF+tH)|Y]=E_mu[exp(sF+tH)|Y].          (6.1)
+
+This preserves the tilted coarse marginal by construction. But
+derivatives of M_(s,t) insert derivatives of -log a_Y(s,t), including
+precisely the one-source and mixed responses in(4.2). Differentiating
+(6.1) as though M were frozen would replace the physical source by
+a different one. Thus this construction is not an estimate or a
+cancellation of the unknown original-source correction.
+
+TURN37 already gives a simple warning about coarse regularity:
+p(y)=alpha(1+sin Ny) may have a small positive real range while
+the derivative of -log(1-p(y)) grows like alpha N. The almost-everywhere
+disintegration and the new real chi-square bound do not assert
+uniform holomorphy or locality of(5.4).
+
+7. PRECISE ATTACHMENT STATUS
+
+Actual retained inputs now give:
+
+  * the positive coarse-preserving bare replacement, with full
+    exterior/coarse law and raw partition mass preserved;
+  * the new exact finite-read chi-square and original two-source
+    bounds(2.3),(2.6);
+  * the explicit bare Wilson action consequence(3.3), using the
+    original normalized energy moments.
+
+They do not currently give:
+
+  * the same product/disintegration/window estimates for every
+    generated constrained fiber under chronological full histories;
+  * a UV-summable local source norm replacing the extensive l1
+    weight and read-core counts in(3.3);
+  * control of the conditional mean errors against the full coarse
+    law, or control of the new coarse term -log p in the TURN70 class;
+  * the physical nonzero witness, RP/full-law continuum identification,
+    or a completed YM4 construction.
+
+The useful next target is consequently an original-source estimate
+for the SAME full conditional kernels, including their one-mark
+coarse response, rather than an estimate of a global no-bad
+probability. Coarse-preserving normalization is a valid mechanism;
+the present selected hierarchy cannot be identified with its output
+without that additional actual model estimate.

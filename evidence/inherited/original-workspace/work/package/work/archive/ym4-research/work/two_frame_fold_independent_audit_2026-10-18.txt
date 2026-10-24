@@ -1,0 +1,144 @@
+INDEPENDENT AUDIT OF THE TWISTED TWO-FRAME FOLD
+18 October 2026. Scope: finite-volume fold and placement, fixed beta.
+
+Read diagonal_fold_research, two_frame_geometry_research, the relevant
+transfer_schatten_research slab definitions, and reflection_assembly_audit.
+No failure found in the finite-volume two-frame fold or its volume powers.
+This audit does not certify the separate paired-DLR reduction or infer
+diagonal RP of a straight finite torus.
+
+1. DIAGONAL FEATURE AND THE CLOSING TWIST
+
+At an integer diagonal mirror, the only plaquettes crossing its strict
+sides are the (1,2) squares bisected through their diagonal. Their two
+two-link paths have common fixed endpoints. The displayed real symmetric
+tensor feature has inner product exp[(beta/N)ReTr(AB*)] and constant
+squared norm exp(beta). Thus the slab operator is Hilbert--Schmidt by
+Minkowski on the finite compact link space. Sheet-contained plaquettes
+receive two square roots; touching plaquettes stay entirely on one side.
+Gluing integrates each shared boundary link once and contracts each
+feature once. No independent corner weights or gauge-volume factor occur.
+
+For a height-width b slab, reflection in the upper wall gives
+S[Theta F]=U_(bv) S[F]*, with bv an INTEGER normal translation even
+when the two boundary sheets have different tangential parity. Keep the
+two Hilbert spaces distinct. On a sheared cylinder the original torus
+integral is Tr(U_gamma^-1 S_J...S_1), with its actual closing unitary.
+Schatten Holder removes that unitary from the bound; it does NOT say
+that reflection is positive on the original sheared torus.
+
+For even J, alternately reflected copies of a single slab give
+U_((J/2)bv)(S* S)^(J/2). On the STRAIGHTENED torus the closing unitary
+cancels exactly, yielding ||S||_J^J. The normal period is (Jb/2)v,
+which is integral in every application. This proves the one-axis
+comparison with its precise unnormalized partition functions.
+
+2. REPEATED FOLDS REALLY RESTORE THE WILSON GRAPH
+
+After the first one-axis gluing, all its auxiliary boundary variables
+have been integrated/contracted and the result is an ordinary Wilson
+torus with one weight per plaquette. The next axis therefore starts a
+new exact graph classification; it does not split an uncontracted corner
+factor again. Orthogonal affine reflections preserve the other height
+coordinates and commute. A retained row of cells stays separated into
+the next family of slabs. The four Holder exponents multiply to
+1/(J_1J_2J_3J_4), with exactly that many original cell factors.
+
+An important potential trap is harmless here: coordinate reflections do
+NOT generally preserve Gamma_D. For example reflecting (a,-a) in x1
+gives (-a,-a), which is not in Gamma_D. The second fold never assumes
+that symmetry. It uses Gamma_D's twisted trace, compares to a NEW
+straightened rectangular Gamma_T, and only then reflects there.
+
+3. PERIODS, VOLUMES, AND SOURCE PARITY
+
+For n=2a, the initial diagonal height periods (n,n),(-n,n) give the
+brick [0,n) x [0,2n). Straightening the first height replaces the
+closing vector n e1 by a(e1-e2), while its parallel period is
+n(e1+e2). Thus
+
+ Gamma_D=<a e_-,2a e_+,n e3,n e4>,  covol(Gamma_D)=n^4.
+
+The second diagonal direction and transverse directions need no further
+period change. For coordinate height x1, Gamma_D's zero-height subgroup
+is <4a e2,n e3,n e4>; the actual closing vector is a e1-a e2. Its
+straightening gives
+
+ Gamma_T=<a e1,4a e2,n e3,n e4>,  covol(Gamma_T)=n^4.
+
+With odd h,H,b=qh dividing a and w=b/2, the height counts are
+
+ (n/h,2n/h,n/h,n/h),
+ (a/w,4a/w,n/w,n/w)=(2A,8A,4A,4A), A=a/b.
+
+All are even. The fundamental-domain reduction for Gamma_D in the
+second frame uses index generators (2A,-2A),(4A,4A), and hence the
+zero-first-coordinate generator (0,8A). It is bijective, not just a
+volume count. Every original/adapted period is an even-cell translation
+of the corresponding reflected array. Odd h therefore causes no
+unlicensed normal half-height translation. All copies are made by
+actual lattice wall reflections.
+
+Consequently N=2n^4/h^4, N'=2n^4/H^4, N''=n^4/w^4 exactly.
+
+4. PLACEMENT AND THE OPERATOR CUTS
+
+The displayed parity vectors of the coarse image index kappa differ
+by at most six in each coordinate, whereas H/w>=16. The index map is
+injective. Its compatibility with Gamma_D translations shows that
+exactly N' occupied coordinate cells remain after quotienting; no two
+different coarse images collide through a period.
+
+There are at most four source-center residues per relevant coordinate.
+The half-integer wall grid modulo h/2 has h classes. Each source box
+forbids at most 4R_O+2 classes, so h>16R_O+16 suffices. The placement
+interval has length at least 2h, and the image-center error is <2h;
+the strict cell margin includes that error. Thus neither a source box
+nor an insertion box is cut by a cell wall.
+
+Each original clean coordinate link plane maps to a clean coordinate
+link plane under a coarse diagonal reflection. In a complete coordinate
+fold the inserted cuts have alternating gaps 2d and 2(w-d), positive
+integers with sum 2w. The number J of cuts is even. Their integer values
+belong to a fixed finite set once h,w,H and the insertion are fixed.
+At a cut the distinct spatial boxes have disjoint link sets, so the
+tensor insertion norm is at most the product of operator norms; the
+physical gauge projection does not enlarge it.
+
+5. PRESSURE AND FULL-ARRAY POWERS
+
+For the first comparison one must use a source copy in EVERY fine
+diagonal cell. Each cell's complete fold is then exactly the SAME
+array on D_n, and the powers sum to one:
+
+ Z_C(exp(t V_C)) <= Z_D(exp(t V_D)).
+
+This has matching pressure powers at t=0. It is not the erroneous
+Z_C(exp(tO))^N comparison. The coordinate torus is invariant under
+each lattice signed permutation used to reflect O, so
+mu_C(V_C)=N mu_C(O) without assuming its diagonal RP.
+
+After coarse amplification, exactly N' occupied second-frame cells
+contribute an operator factor. Their total norm factor after Holder is
+||X||^N'. If cell c contains m_c source copies, its complete fold has
+N''m_c copies and receives exponent 1/N''. Since sum_c m_c=N, the
+unnormalized source cost is exp(t N||O||). The SINGLE original
+denominator contributes the same cost. The amplification root is
+therefore exp[2t(H/h)^4||O||], as stated.
+
+For a complete coordinate fold with time length T, cross-section Gamma
+and gaps l_j, the comparison pressure is
+(1/J)sum_j log Z_Gamma(J l_j). Its leading volume is exactly
+p_beta |Gamma| sum_j l_j=p_beta n^4. Averaging over all N'' cells
+with exponent 1/N'' retains one n^4 volume, not N'' volumes. Every
+reference shape has bounded aspect ratios fixed by the finite gap set.
+Thus its common fixed-beta pressure error is o(n^4), and the N' root
+reduces it to o(1). No uniform ultraviolet estimate is required.
+
+VERDICT. The old finite-volume fold proof survives this new adversarial
+audit. The current straight-torus diagonal-RP counterexample does not
+refute it: the proof explicitly changes the torus through unitary-twist
+Holder bounds, and uses tilt removal plus other arguments only later.
+Whether the complete same-state theorem follows still depends on the
+separate operator-functional and paired local-reduction steps. Those
+steps must not be replaced by a pressure-only argument.

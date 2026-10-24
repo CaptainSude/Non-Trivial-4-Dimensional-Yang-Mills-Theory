@@ -1,0 +1,217 @@
+AN EXPLICIT ORIGINAL-SOURCE TARGET FOR DYNAMICAL NONTRIVIALITY
+21 October 2026. Independent research note by construction_route.
+
+STATUS
+
+This note does not prove the required Yang--Mills correlation estimate or
+the existence of a continuum theory. It proves an elementary, quantitatively
+specified implication which can serve as a narrowly defined consumer of a
+future full-law source theorem. The reduction refines, and does not claim to
+replace or discover, the archive's filtered OS witness strategy. It is not
+an independent certification of any historical source theorem.
+
+The important research decision is to avoid spending further effort on
+abstract positive-kernel, finite-jet, martingale, or reflection-positivity
+shortcuts already present in the archive. They leave the actual separated
+original-law response estimate unproved. A few local analytic-domain lemmas
+cannot by themselves supply that estimate.
+
+1. PRECISE BENCHMARK AND NORMALIZATION
+
+Take three independent colors of free Maxwell field in R^4, with
+
+  E A_mu^a(x) A_nu^b(y) = delta_ab delta_munu /(4 pi^2 |x-y|^2)
+
+in a convenient covariance gauge. Only separated curvature correlations
+are used, so the formula can equivalently be interpreted through the
+gauge-independent curvature covariance. Put
+
+  E(x) = (1/2) sum_{a=1}^3 sum_{mu<nu} :F_mu,nu^a(x)^2: .       (1)
+
+This is the conventional (1/4) sum over all ordered mu,nu. At distinct
+points x,y, its connected covariance is
+
+  K_0(x,y) = A |x-y|^(-8),       A = 9/pi^4.                   (2)
+
+Derivation, including factors. If r=x-y and
+I_mu,nu(r)=delta_mu,nu-2r_mu r_nu/|r|^2, differentiation of
+(4 pi^2 |r|^2)^(-1) gives the curvature covariance matrix on the six
+coordinates mu<nu as
+
+  C_mu,nu;rho,sigma(r)
+    = [I_mu,rho I_nu,sigma-I_mu,sigma I_nu,rho]/(pi^2 |r|^4).
+
+The induced matrix wedge^2 I is orthogonal on this six-dimensional
+space. Hence sum_{mu<nu,rho<sigma} C_mu,nu;rho,sigma(r)^2
+=6/(pi^4 |r|^8). Wick's rule gives a factor 2 for each squared pair;
+the factors (1/2)^2 in (1), and three colors, yield
+3*(1/4)*2*6=9. This proves (2).
+
+No coincident value of E(x)^2 or classical probability law for E is
+asserted. All pairings below have separated supports.
+
+2. A FIXED SMOOTH PROFILE WITH AN EXPLICIT POSITIVE-ENERGY MARGIN
+
+Fix a physical length tau>0. Let rho be any nonnegative C_c^infinity
+function on R^4 of integral one, supported in the Euclidean ball of
+radius epsilon <= tau/1000 about zero. Define
+
+  f_0(x) = rho(x-tau e_0),
+  f_1(x) = rho(x-2tau e_0),
+  F = E(f_0)-E(f_1).
+
+Let theta be time reflection. The reflected Gaussian Gram norm is
+
+  D_0 = sum_{i,j=0}^1 (-1)^(i+j) K_0(theta f_i,f_j).           (3)
+
+Then
+
+                    D_0 >= A/(400 tau^8).                    (4)
+
+Proof. Replacing each profile by the point mass at its center gives
+
+  A tau^(-8) d,
+  d=2^(-8)-2*3^(-8)+4^(-8)>1/300.
+
+Every point in each reflected-positive pair lies within 2 epsilon
+of the corresponding center separation; that separation is at least
+2 tau. The function |z|^(-8) has gradient norm 8|z|^(-9).
+Thus each normalized pair average differs from its center value by at
+most 16 epsilon (2tau-2epsilon)^(-9). The sum of absolute coefficients
+in (3) is four, so the total error is at most
+
+  64 A epsilon (2tau-2epsilon)^(-9)
+    <= (64/1000) A (1.9)^(-9) tau^(-8)
+    < A tau^(-8)/1200.
+
+Consequently D_0 > A tau^(-8)(1/300-1/1200)
+=A/(400 tau^8). The inequalities are deliberately conservative.
+
+All supports in (3) are uniformly disjoint. The construction uses a
+bounded number of fixed smooth tests, not a cutoff-dependent optimization.
+The continuum source f_0-f_1 has integral zero. A translated discrete
+representative has exactly zero lattice sum as well.
+
+3. ORIGINAL-LAW COMPARISON CRITERION
+
+Let O_a(f) be a consistently defined renormalized local gauge-invariant
+energy insertion under the original normalized lattice measure mu_a.
+Its multiplicative normalization and field-dependent mixing must be
+specified by the construction. Subtracting a scalar mean has no effect
+on the connected covariances below.
+
+Let f_{0,a},f_{1,a} be compatible lattice representatives of the profiles
+in section 2, with f_{1,a} an exact positive time translate of f_{0,a}
+by tau_a tending to tau. Suppose the four reflected covariance entries
+satisfy, for all sufficiently small a,
+
+ | Cov_mu_a(O_a(theta f_{i,a}), O_a(f_{j,a}))
+                - K_0(theta f_i,f_j) |
+       <= A/(3200 tau^8),             i,j in {0,1}.           (5)
+
+Then the exact original-law reflected norm of
+
+  F_a=O_a(f_{0,a})-O_a(f_{1,a})
+
+satisfies
+
+             OS_a(F_a,F_a) >= A/(800 tau^8).                 (6)
+
+Indeed expand the connected reflected norm into its four entries.
+The error is at most four times (5), namely A/(800 tau^8).
+Subtract this from (4). Mean subtraction can be made explicitly; with
+exact time translation and translation-invariant mu_a the two means
+are equal and cancel. No diagonal same-support variance is used.
+
+If the state is translation and reflection invariant, the two off-diagonal
+entries agree, so only three real numbers need be estimated. Without that
+identity retain all four entries; nothing is discarded.
+
+For actual lattice comparison it is equally valid to replace K_0 in (5)
+by a verified lattice Maxwell benchmark, provided its four-entry error
+relative to (3) has already been allotted part of the fixed margin. A
+quadratic Taylor coefficient by itself is not this comparison theorem.
+
+4. WHY THIS IS A DYNAMICAL WITNESS, CONDITIONAL ON RECONSTRUCTION
+
+Suppose one common local continuum hierarchy and an OS reconstruction
+have separately been established, and the four entries in (3) with the
+actual interacting field are their compatible limits. Write v for the
+OS vector of O(f_0), and let H>=0 be the reconstructed time-translation
+generator. By positive time translation, the limit vector of F_a is
+
+                     w=(1-exp(-tau H))v.
+
+Equation (6) proves ||w||^2 >= A/(800 tau^8). Since
+1-exp(-tau E)=0 at E=0, w is orthogonal to the complete zero-energy
+subspace. Thus it cannot arise solely from a mixture of different
+constant vacuum values. This is positive-energy content, not a mass gap.
+
+This argument neither assumes convergence of Euclidean same-support
+variances nor a common complex disc for the full source exponential.
+The mixed source derivatives at separated supports suffice for this
+particular consumer. The local hierarchy, full Euclidean covariance,
+physical field identification and reconstruction remain independent
+obligations. A free field can pass this witness; passing it alone does
+not establish interacting non-Abelian Yang--Mills identification.
+
+5. WHICH MODEL ESTIMATE WOULD ACTUALLY ADVANCE THE CONSTRUCTION
+
+For the conventional SU(2) Wilson action beta sum_p h_p with
+h_p=1-(1/2)Tr U_p and beta=4/g_0^2, a formal classical normalization is
+
+  beta sum_p f(x_p) h_p ~ integral f(x) E(x) dx.
+
+This follows from U_p=exp(i g_0 a^2 F^a sigma_a/2+...) and
+h_p=g_0^2 a^4 |F|^2/8+... per orientation. It identifies a candidate
+insertion only. It does not determine the renormalized Z_a or mixing
+needed for (5), and no quantum estimate is inferred from the expansion.
+
+A useful next complete theorem would prove, on an actual finite-volume
+weak-coupling trajectory, a bound of the form
+
+  |C_a(f_i,f_j)-K_0(f_i,f_j)| <= eta(g_R) tau^(-8)+r_a,
+  eta(g_R) -> 0 as g_R -> 0,    r_a -> 0,
+
+for the fixed reflected pairs above, with the original denominator and
+all histories retained. Fix one sufficiently small but positive g_R
+once, then take a -> 0; do not send the entire theory to its free limit.
+The numerical threshold in (5) supplies a concrete acceptance test.
+
+The difficult estimate is exactly this full-law comparison, including
+integrated/crossing sources, used ancestry credits, normalized retained
+covariances and regenerated marginal tensors. Neither the positivity
+of the unmarked measure nor finite-jet differentiation removes it.
+The current homogeneous smaller-core result is a potential local input,
+not a proof of this comparison.
+
+6. ARCHIVE SEARCH AND NON-NOVELTY LEDGER
+
+Read: RESEARCH_GUIDE.txt, RESULT_LEDGER.txt,
+outputs/yang-mills-proof-reassessment.txt,
+outputs/yang-mills-independent-iteration-audit.txt,
+outputs/yang-mills-os-preserving-source-smoothing.txt,
+outputs/yang-mills-full-measure-block-response.txt,
+outputs/yang-mills-separated-gaussian-response.txt,
+outputs/yang-mills-bounded-quantum-witness.txt,
+work/actual_nonzero_witness_attachment_turn21.txt (witness section),
+work/scalar_positive_vacuum_attachment_turn33.txt (witness section).
+
+The following apparently attractive proposals are already in the archive:
+  - finite nilpotent source algebras and complete mixed contact transport;
+  - exact real conditional-expectation/martingale identities;
+  - the distinction between ordinary L2 and OS projections;
+  - site-plane conditional amplitudes and reflection-positive smoothing;
+  - separated Gaussian determinant/HS bounds despite divergent contacts;
+  - time-filtered positive-energy witnesses.
+
+The added content here is the explicitly normalized scalar Maxwell
+calculation, a particularly simple profile with a proved numerical
+margin, and a four-entry (three under translations) full-law criterion.
+These are elementary sharpening and target specification. No global
+source theorem has been newly established. Old claims of a completed
+scalar attachment are not reused beyond their exact currently accepted
+hypotheses; the latest handoff explicitly leaves the full source chain open.
+
+No historical package file has been modified. No unpublished claim by
+Ethan Sussman or Levent Alpoge is used as a mathematical input.

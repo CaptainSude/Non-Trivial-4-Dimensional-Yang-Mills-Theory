@@ -1,0 +1,251 @@
+TURN97 -- INDEPENDENT AUDIT OF THE JOINT TWO-LINK SOURCE THEOREM
+21 October 2026. heatbath97. Audit only; no shared frontier edit.
+
+VERDICT
+
+PASS for the precise finite, near-flat, two-link theorem in
+work/turn97_two_link_source.txt. I found no missing estimate in the
+parameter-uniform Laplace proof or the conversion to a relative error.
+The theorem integrates both links jointly in the original Wilson fiber;
+it keeps the beta-dependent changed action and the old source after the
+first integration. It is distinct from successive single-link heatbath
+projections on the unchanged state space, which need not eliminate both
+links and which were studied in work/turn97_conditional_iteration.txt.
+
+The result supplies no constants uniform in block size, no probability
+bound on bad exteriors, and no all-history/native source preparation.
+Those limitations are accurately stated in the producer.
+
+1. THE ORIGINAL FIBER AND EXACT ELIMINATION
+
+For shared plaquette Q A R^-1 B^-1, the substitution x=Q,
+y=B R A^-1 gives y^-1=A R^-1 B^-1. Hence the shared trace really is
+x dot y. Haar invariance justifies the substitution, and all private
+plaquettes are linear in their raw variable. There are six plaquettes
+per raw link and one shared plaquette, giving eleven distinct energies.
+
+The first integration of x produces exactly
+
+ exp(-11 beta) exp(beta b dot y) z(beta|a+y|).
+
+The old source after that integration is
+
+ J=11-b dot y-|a+y|m(beta|a+y|).
+
+It equals partial_beta[beta E_eff] at FIXED exterior data. It is not
+E_eff itself. The second probability in (1.5), and the normalized score
+identity (1.6), include the logarithmic Bessel contribution. In the
+near-flat region |a| is near five, so |a+y|>=|a|-1 is uniformly positive
+for every y; the displayed response formula has no hidden denominator
+singularity there.
+
+The covariance identity (1.7) is exact for a companion F measurable in
+the exterior sigma-algebra. Its application does not require independence
+of exterior staple data. It would not automatically apply after adding
+history indicators that read either raw link; the producer excludes that.
+
+2. UNIQUE MINIMUM AND THE UNIFORM GAP
+
+At flat exteriors the lower bound
+
+ S_0(x,y)>=(5/2)(|x-n|^2+|y-n|^2)
+
+is exact. The tangent Hessian is [[6I,-I],[-I,6I]], with eigenvalues 5,7.
+Choose a fixed small chart around (n,n) on which the Hessian is uniformly
+positive. The implicit-function solution of the critical-point equation
+is smooth for sufficiently small exterior data. Outside a smaller
+chart, S_0 has a strictly positive gap on the compact product sphere.
+The uniform difference |S_t-S_0| is O(|t|); shrinking the exterior ball
+preserves an energy gap above the perturbed minimum. Thus there are no
+other global minima and no uncontrolled exterior saddle contribution.
+
+The classical quadratic form (3.1) follows from the stated inverse
+Hessian. Its kernel is precisely the common tangent direction, since
+the unminimized form is a sum of squared differences along a connected
+graph. Fixing a_1=n removes that kernel and makes the quotient Hessian
+strictly positive. The exact zero set is also correctly identified:
+zero action forces equality in all eleven nonnegative summands, so all
+ten staples and both raw variables coincide.
+
+3. MORSE CHART AND TWO EXTERIOR DERIVATIVES
+
+The parameter-dependent Morse chart is valid uniformly on a fixed
+neighborhood. Write the centered energy as w^T K(w,t)w/2 using the
+integral Hessian, then set z=K(w,t)^(1/2)w. Uniform positivity and
+smoothness make this a uniformly invertible local map. Smooth Haar
+density, the chart inverse, and their derivatives give a smooth positive
+B(z,t), with uniform finite-order derivative bounds and B(0,t)>c>0.
+
+A radial cutoff fixed in z is legitimate. Returned to the original
+coordinates it is a smooth moving cutoff, whose derivative support lies
+in the uniformly gapped region. Differentiating its complement up to
+twice in t introduces only bounded coefficients and polynomial factors
+in beta. These multiply exp(-delta beta), so they are smaller than each
+required inverse power. Pulling out exp(beta D(t)) changes the centered
+energy but leaves the same uniform gap and derivative control. There is
+no omitted moving-boundary contribution.
+
+Taylor expansion of B through degree three, with a fourth-order integral
+remainder, is sufficient: all odd monomials vanish against the radial
+cutoff and centered Gaussian, while the remainder and its two t
+derivatives are bounded by C|z|^4. All needed mixed derivatives exist
+and are bounded because this is a smooth finite-dimensional compact
+family, with the exterior ball closure chosen strictly inside the chart.
+
+For dimension d=6, E|W|^2=6 and
+E[|W|^2 W_i W_j]=8 delta_ij. Therefore the two brackets in (4.1) are
+correct:
+
+ partition bracket: B_0+(Delta B)_0/(2 beta)+O_C2(beta^-2),
+ energy bracket:    3B_0+2(Delta B)_0/beta+O_C2(beta^-2).
+
+Their ratio gives
+
+ A_beta-D=3/beta+(Delta B)_0/(2 B_0 beta^2)+O_C2(beta^-3).
+
+The denominator stays bounded below after factoring beta^-3. Quotient
+differentiation twice therefore preserves the stated remainder. The
+original-source numerator was expanded directly; no derivative of an
+uncontrolled beta remainder is used. Extending the bound from beta large
+to beta>=1 is valid by compactness on a finite beta interval and positivity
+of the finite conditional partition function.
+
+4. THE RELATIVE ESTIMATE HAS NO HIDDEN ADDITIVE CONSTANT
+
+The simultaneous SO(4) invariance is exact for this fiber as a function
+of all ten staple vectors: the action consists entirely of dot products
+and S^3 Haar is rotation invariant. It need not be identified with a
+physical gauge transformation to be used as a symmetry of that function.
+
+A smooth local rotation fixing the first staple to n has uniformly
+bounded derivatives on a smaller exterior ball. On the resulting
+27-dimensional slice, the error
+
+ E_beta(w)=A_beta(w)-A_beta(0)-D(w)
+
+has C2 norm O(beta^-2), vanishes at zero, and has zero gradient there.
+The last statement is exact: SO(3) acts simultaneously on nine copies
+of its standard three-dimensional representation, whose direct sum
+has no invariant linear functional. Taylor's theorem gives
+|E_beta(w)|<=C beta^-2 |w|^2. The strictly positive quotient Hessian
+gives D(w)>=c|w|^2 after shrinking the neighborhood. This proves the
+claimed relative estimate, including along common-rotation zero modes.
+
+The response estimate (5.1) follows by integrating the error Hessian
+from zero. The relative quadratic form bound (6.1) follows by scaling
+t -> lambda t in the pointwise relative estimate and taking lambda->0.
+
+5. INDEPENDENT CHECKS OF THE TWO EXPLICIT COEFFICIENTS
+
+At the flat point the Gaussian covariance blocks are
+Cov(X)=Cov(Y)=(6/35)I_3 and Cov(X,Y)=(1/35)I_3. Therefore
+
+ E|X|^2=18/35,
+ E|X|^4=15(6/35)^2=108/245,
+ E|X|^2|Y|^2=9(6/35)^2+6(1/35)^2=66/245.
+
+The quartic energy is
+(3/4)(|X|^4+|Y|^4)-(1/4)|X|^2|Y|^2, and the quadratic Haar correction
+is (|X|^2+|Y|^2)/2. The partition coefficient is hence
+
+ 18/35-(3/2)(108/245)+(1/4)(66/245)=-39/490.
+
+It is also the beta^-2 energy coefficient, with the stated sign, because
+-partial_beta log[beta^-3(1+c/beta+...)]
+=3/beta+c/beta^2+....
+
+For (6.2), the quadratic coefficient of log Z is exactly
+
+ -(beta M/2) sum(|u_i|^2+|v_j|^2)
+ +(beta^2 C_d/2)(|U|^2+|V|^2)+beta^2 C_o U dot V.
+
+Applying -partial_beta gives all three coefficients printed in (6.2).
+The expressions for C_d and C_o follow respectively from transverse
+SO(3) invariance and the conditional identity
+E[x_i|y]=m(beta|5n+y|)y_i/|5n+y|. Exchange symmetry supplies the
+same one-point moment M for x and y. No incorrect factor of two was found.
+
+6. RELATION TO EARLIER WORK AND NOVELTY SCOPE
+
+I read the following earlier notes for comparison:
+
+ work/full_bare_finite_graph_joint_law_turn13.txt;
+ work/real_two_datum_laplace_turn40.txt;
+ work/turn74_regular_source_gauge.txt.
+
+TURN13 already established fixed finite compact-graph weak-coupling
+Laplace estimates and Gaussian limits after rooted tree gauge. TURN40
+already supplied real parameter-C2 Laplace estimates for a specified
+constrained quotient numerator, retaining its cutoff and density. TURN74
+already identified the scalar dimension-count contribution to the
+physical constant-source birth and its cancellation from the relevant
+physical quadratic coefficient under its native regular premises.
+
+Therefore neither parameter differentiation of Laplace expansions nor
+the universal dimension-term cancellation should be advertised as new
+general mechanisms. The concrete addition here is their proved assembly
+for the complete compact original two-link Wilson conditional, with
+the exact changed action and retained original action source, a fixed
+near-flat exterior neighborhood whose exponent fields have size O(beta),
+and the strong relative-to-classical-minimum bound on the quotient.
+
+This finite result is complementary to the conditional-iteration
+counterexample. Here BOTH raw variables are integrated jointly and the
+exterior staple sums stay near 5n. In the counterexample the second
+single-link projection reintroduces the first old raw coordinate, and
+its staple sum is balanced at zero. Neither theorem contradicts the
+other, and neither supplies the missing full-history source estimate.
+
+PRODUCER COMMUNICATION
+
+I notified two_link97 that the proof checks out and highlighted the
+precise novelty comparison above. No repair was requested because no
+substantive mathematical issue was found.
+
+7. ADDENDUM: WEIGHTED SOURCE EXTENSION, SECTION6A -- PASS
+
+The producer added the varying eleven-plaquette profile during this
+audit. I independently checked it as follows.
+
+Conditional on y, E x=m(beta|a+y|)(a+y)/|a+y|. The shared weighted term
+is -w_0 E x dot y, and the private x terms are -a_w dot E x. Together
+with W-b_w dot y these give exactly the displayed J_beta,w in (6.3).
+The baseline conditional density is unchanged. The weighted source is
+evaluated at the UNWEIGHTED classical minimizer, as required.
+
+For the marked Morse numerator G_w B, Gaussian expansion and division by
+the unmarked denominator give the first coefficient
+
+ [Delta(G_w B)-G_w Delta B]/(2B)
+   =(1/2)Delta G_w+grad G_w dot grad log B.
+
+This is (6.5). All mark derivatives are bounded linearly in the largest
+absolute plaquette weight because the mark is a fixed sum of eleven
+smooth functions on a compact finite-dimensional family. Tail and C2
+parameter estimates therefore have the stated dependence on the weights.
+
+For w=1, G_1=D+|z|^2/2, so the coefficient is identically three. Splitting
+the weight vector into its mean plus a residual of sup norm omega is
+then legitimate. For the residual weighted mark the flat-subtracted
+mean minus its classical value has C2 norm O(omega/beta), vanishes on
+the common-staple manifold, and has zero first derivative in the quotient
+slice by the same SO(3) invariance. The relative error bound
+
+ C[|wbar| beta^-2+omega beta^-1]D
+
+follows exactly as stated. Negative weights cause no problem: positivity
+is used only for the baseline energy D and its quotient Hessian, not for
+the marked energy. Smooth scalar profiles have omega<=C a Lip(f)
+because the eleven plaquette centers lie in a fixed-size lattice patch.
+
+I requested one minor wording clarification, not a mathematical change:
+the marked Taylor expansion should be described as through cubic order,
+with the odd terms integrating to zero and a fourth-order remainder.
+A literal expansion only through quadratic order has a cubic remainder;
+the parity argument from Section4 is what removes it here.
+
+I also checked the newly added identity C_d+C_o=M/(5 beta). Apply the
+common (0,i)-plane rotation to x_i+y_i in the flat positive integral:
+its derivative is x_0+y_0 and the action score is
+-5 beta(x_i+y_i). Integration by parts yields
+2M=5 beta E(x_i+y_i)^2=10 beta(C_d+C_o), as asserted.

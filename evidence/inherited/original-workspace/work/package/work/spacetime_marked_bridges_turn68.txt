@@ -1,0 +1,246 @@
+ACTUAL SOURCE MARKS AND SEPARATED LARGE-FIELD BRIDGES
+TURN68. 20 October 2026. Root derivation; submitted for internal audit.
+
+STATUS
+
+This is an actual normalized Hamiltonian ground-path estimate.
+It is not a Gaussian comparison or a native-reference probability.
+It controls the part of a separated magnetic-source covariance
+selected by a connected bad-action path between its support regions.
+The complementary covariance is not estimated here.
+
+INPUT AND MODEL
+
+Use the finite periodic spatial SU2 Hamiltonian
+
+ H=g^2 K/(2a)+4S/(g^2a),  S=sum_p h_p,
+ h_p=1-Tr U_p/2,  K=-Delta
+
+with the Pauli/2 metric, and its actual stationary ground-path law.
+Spatial periods are even, tile sides l_i>=2, and N_i/l_i are powers
+of2. Put V=l_1 l_2 l_3. Partition the entire time axis into intervals
+I_j of length Delta=a. The spatial closed tiles and these intervals
+form a spacetime board, finite periodically in space and infinite
+in the time direction.
+
+For a spacetime cell c=(b,j), define
+
+ X_c=(a g^2)^-1 int_(I_j) S_b^cl(U_s)ds >=0.
+
+The proved input in hamiltonian_spacetime_moments_turn68.txt is
+
+ log E exp(sum_(c in A) t_c X_c)<=c_V sum_(c in A) t_c,
+             0<=t_c<=2, c_V=9V/2,                    (0.1)
+
+for EVERY finite set of cells A. In particular E X_c<=c_V.
+The proof of that input uses the complete thermal trace,
+space/time RP and a ground limit at fixed spatial graph.
+It neither assumes independence nor exchanges the spatial
+continuum limit with the thermal limit.
+
+1. MIXED POLYNOMIAL MARKS ON A PRESCRIBED BAD SET
+
+Choose a threshold R>=0 and put
+
+ Bad_c={X_c>=R}, C_V=exp(c_V), q=exp(c_V-R).
+
+Let A be any finite set of prescribed bad cells. Let J be any
+finite set of marked cells, not necessarily contained in A,
+and let m_j>=1 be integers. Then
+
+ E[ product_(j in J) X_j^(m_j) product_(b in A)1_Bad_b]
+       <= (product_(j in J) m_j!) C_V^|J| q^|A|.        (1.1)
+
+PROOF. For x>=0, x^m<=m! exp(x). Also
+1_{x>=R}<=exp(x-R). Thus the integrand is at most
+
+ (product m_j!) exp(-R|A|)
+       exp(sum_(j in J) X_j+sum_(b in A) X_b).
+
+Every cell's exponent is0,1, or2, even when it is both marked
+and bad. Applying(0.1) gives exactly(1.1).
+All marks and the event are kept under the SAME original law.
+
+Allowing thresholds R_b simply replaces q^|A| by
+product_(b in A)exp(c_V-R_b). A nontrivial probability bound
+requires q<1; no clipping of a marked bound is performed.
+
+For two distinct marked cells i,j, expansion of the two centered
+absolute majorants also gives
+
+ E[(X_i+c_V)(X_j+c_V) product_(b in A)1_Bad_b]
+                         <=(C_V+c_V)^2 q^|A|.          (1.2)
+
+This holds even if neither marked cell lies in A. It follows
+by applying(1.1) to the four terms separately. Coincident
+marks use m=2, with the factor2! explicitly retained.
+
+2. SELF-AVOIDING BAD PATHS
+
+Give the board a fixed simple adjacency graph of degree at most D.
+Touching cells have D<=3^4-1=80; face adjacency has D<=8.
+Periodic duplicate neighbors and self-loops are removed.
+Let d_G(i,j) be graph distance. Assume Dq<1.
+
+If distinct cells i,j are connected by bad cells, there is a
+self-avoiding bad path joining them. A path of m edges has
+m+1 DISTINCT cells. There are at most D^m such paths from
+i, including those which end anywhere, so this is also an
+upper bound on paths ending at j.
+
+Applying(1.1) or(1.2) to each path and summing gives
+
+ E[X_i X_j 1_{i connected to j by bad cells}]
+   <= C_V^2 q (Dq)^(d_G(i,j))/(1-Dq),                 (2.1)
+
+ E[(X_i+c_V)(X_j+c_V)
+                   1_{i connected to j by bad cells}]
+   <= (C_V+c_V)^2 q (Dq)^(d_G(i,j))/(1-Dq).            (2.2)
+
+No claim of independence of successive path cells is used.
+An infinite bad cluster does not invalidate the union: connection
+of two specified vertices always has a finite path witness.
+The estimate itself suffices; an independent cluster-finiteness
+theorem is unnecessary.
+
+More generally, for ANY two distinct marked cells i,j, a prescribed bad
+path from u to v has the same bound(1.2), whether or not i,j
+lie on that path. Therefore the right side of(2.2), with
+d_G(u,v), also bounds the expectation of (X_i+c_V)(X_j+c_V)
+times the event that u and v are bad-connected.
+
+3. PHYSICALLY NORMALIZED MAGNETIC SOURCES
+
+Fix a deterministic ownership convention assigning each spatial
+plaquette to ONE closed tile containing it. Such a tile exists,
+and the choices may be made on the finite board once and for all.
+Its owned action is bounded above by that tile's closed action.
+No reflection covariance of this arbitrary convention is needed:
+RP was applied to the enclosing closed-cell action, not to the
+owned-source decomposition.
+
+For a real bounded spacetime plaquette profile f, define
+
+ Q_a(f)=4/(g^2 a) int_R sum_p f_p(s) h_p(U_s)ds.
+
+This is the bare, canonically scaled magnetic-energy insertion
+integrated in physical time. It is finite at every regulator.
+It is not yet a renormalized continuum composite.
+
+Write Q_a(f)=sum_(c in A_f) Q_c(f) using the ownership convention
+and the time partition. Here A_f is the finite set of cells that
+read the profile. If |f|<=M_f, then
+
+ |Q_c(f)|<=4 M_f X_c,
+ |Q_c(f)-E Q_c(f)|<=4 M_f(X_c+c_V).                    (3.1)
+
+The factor4 is exact: the time integration in X_c already
+contains(a g^2)^-1. There is no additional a^-4 multiplier
+per cell. The number of cells in a fixed physical support
+is instead O(a^-4) for fixed tile sizes.
+
+For two profiles with disjoint cell supports A_+,A_-, put
+q_c^+=Q_c(f_+)-E Q_c(f_+) and define q_d^- similarly.
+Their actual centered covariance is the exact finite sum
+
+ Cov(Q_a(f_+),Q_a(f_-))=E sum_(c in A_+,d in A_-) q_c^+ q_d^-.
+
+Define its endpoint-connected contribution
+
+ B_end=sum_(c in A_+,d in A_-) q_c^+ q_d^-
+                          1_{c connected to d by bad cells}.
+
+If all these cell pairs have graph distance at least r_a, then
+
+ E|B_end|
+ <=16 M_+M_- (C_V+c_V)^2 |A_+||A_-|
+                      q(Dq)^(r_a)/(1-Dq).             (3.2)
+
+This is an absolute bound on an explicitly defined signed
+contribution. It does not assert that B_end is itself an OS norm.
+The exact complement has the indicator of no such endpoint
+connection, and is not estimated by(3.2).
+
+4. THE WHOLE COVARIANCE RESTRICTED TO ANY SPANNING BAD BRIDGE
+
+One can control a stronger event without forcing each marked
+endpoint to belong to the bad path. Let E_bridge be the event
+that some bad path joins a cell u in A_+ to a cell v in A_-.
+Using the final assertion of Section2, first sum over u,v,
+then over the source marks c,d. Equation(3.1) gives
+
+ E[ |(Q_a(f_+)-EQ_a(f_+))(Q_a(f_-)-EQ_a(f_-))|
+                                              1_E_bridge]
+ <=16 M_+M_- (C_V+c_V)^2 |A_+|^2 |A_-|^2
+                      q(Dq)^(r_a)/(1-Dq).             (4.1)
+
+This bound deliberately overcounts paths and endpoints. The
+overcount costs only the displayed polynomial number of cells.
+It keeps the original denominator and the actual source means.
+
+There is an exact decomposition of the centered covariance
+into its E_bridge and E_bridge^c parts. Equation(4.1) controls
+the first. It does not claim that different bad components are
+independent, or that the second part equals a Gaussian covariance.
+
+5. FIXED PHYSICAL SEPARATION
+
+Take fixed compact physical source supports at positive distance
+d>0 in the periodic spatial geometry, or in a common nonwrapping
+embedding with that same separation. Use touching adjacency if
+all geometric contacts are to be
+included. One graph step moves at most a constant times a,
+where that constant depends only on the fixed spatial tile sides.
+After allowing for cells that meet the edges of the supports,
+there is c_d>0 such that r_a>=c_d/a for all sufficiently small a.
+Each |A_+|,|A_-| is at most C a^-4.
+
+Choose R so that Dq<=eta<1 uniformly. Then(4.1) is at most
+
+                  C a^-16 exp[-c_d |log eta|/a] ->0.  (5.1)
+
+The sharper endpoint contribution(3.2) costs only a^-8.
+Either bound absorbs any additional fixed power of a^-1
+and any fixed logarithmic power in a multiplicative source
+normalization. Such factors must actually be bounded by those
+powers; arbitrary unknown renormalizations are not covered.
+
+In particular choose a fixed R>c_V+log D. On a weak-coupling
+sequence g_a->0, the bad event is
+
+ (1/a)int_(I_j) S_b^cl(U_s)ds >=g_a^2 R.
+
+Its good threshold tends to zero in the dimensionless
+plaquette action. Alternatively R=R_a may tend to infinity,
+provided the displayed q condition holds; if g_a^2 R_a->0
+the threshold still remains weak in that sense.
+
+These are TIME-AVERAGED action events. They do not prohibit
+short spikes within a time cell and do not bound pointwise
+temporal electric curvature. No pointwise small-field domain,
+choice of gauge, or derivative estimate is inferred.
+
+6. THE REMAINING CHANNEL IS A GENUINE OPEN ESTIMATE
+
+The main new conclusion is an actual full-measure suppression
+of source-weighted spacetime bad bridges at fixed physical
+separation. The physical action normalization is retained.
+It is stronger than an unmarked probability or a conditional
+statement assuming an independent source.
+
+It does not show that the full separated covariance is nonzero.
+Nor does it bound that covariance's E_bridge^c part. This
+complement contains regular-field communication and communication
+through small, disconnected bad components. The ground law can
+correlate those regions through the rest of the field.
+
+Likewise these action-defined cells are not the native Bałaban
+history labels, whose extra minimizer, reconstruction, auxiliary,
+age and source-read predicates would need an explicit attachment.
+A native connected-carrier estimate cannot be claimed solely
+because its drawings resemble these paths.
+
+The theorem supplies a concrete full-law large-field source
+contribution estimate. The interacting regular-channel source
+bound, physical composite renormalization, full compatible
+continuum construction and nontriviality remain open.

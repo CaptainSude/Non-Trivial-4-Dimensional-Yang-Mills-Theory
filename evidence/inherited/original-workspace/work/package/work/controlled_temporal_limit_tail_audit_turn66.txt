@@ -1,0 +1,233 @@
+INDEPENDENT AUDIT: CONTROLLED TEMPORAL LIMIT -- TURN66
+20 October 2026. tail47.
+
+Producer read in full:
+ work/controlled_temporal_limit_turn66.txt
+SHA256:
+ BAA6BB5445796438B32A5F4765537BE1FBA986200D9C4505EAEAEE0B867A6579
+
+VERDICT: PASS at the stated fixed finite spatial lattice scope.
+No mathematical correction is requested. This audit checks the
+displayed proofs, including the ground-state compactness and the
+two-sided nonlinear increment limit; it is not a certification of
+the remaining spatial continuum problem or an import of those
+conclusions from the cited Creutz abstract.
+
+1. EXACT MODEL AND NORMALIZATION
+
+On the fixed compact product SU2^E, the Pauli/2 Casimir is
+j(j+1). With beta_delta=2/(kappa delta), the fixed-spin expansion
+
+ 1-I_(2j+1)(beta_delta)/I_1(beta_delta)
+                     =kappa delta j(j+1)+O_j(delta^2)
+
+has the stated coefficient. The exact inequality
+1-r_j<=2j(j+1)/beta gives
+0<=(I-Q_delta)/delta<=kappa K in the simultaneous spectral basis.
+
+M_delta=exp[-delta V/2] is a positive contraction because V>=0.
+Q_delta commutes with the normalized gauge projection P. Thus
+T_delta=M_delta Q_delta P M_delta is positive, trace class and
+a contraction. Its full-space positive kernel is strictly positive,
+while its physical restriction is injective. The leading vector
+is uniquely positive and gauge invariant. No positive lower
+spectral floor for T_delta is needed or asserted.
+
+The original partition scalar c(beta_delta)^(N|E|) is retained.
+The ground-state adjacent-pair density is exactly
+
+ lambda_delta^-1 Q_delta(U,V)w_delta(U)w_delta(V),
+ w_delta=M_delta Omega_delta.
+
+Its total integral is1 because
+<w_delta,Q_delta w_delta>=lambda_delta.
+The gauge projection can be removed in this expression only
+because F and w_delta are physical; that condition is stated.
+
+2. GENERATOR AND GROUND-STATE COMPACTNESS
+
+The pointwise fixed-spin convergence, dominated by kappa K,
+gives strong generator convergence on D(K). Applying the same
+diagonal argument after any fixed Sobolev multiplier gives
+C0 convergence on smooth functions by fixed-dimensional
+Sobolev embedding. This does not presume a uniform Sobolev
+constant as the spatial lattice changes.
+
+The exact decomposition
+
+ A_delta=(I-M_delta^2)/delta
+                           +M_delta B_delta M_delta
+
+proves convergence A_delta phi->(kappa K+V)phi for smooth physical
+phi. In particular M_delta phi->phi in D(K); the spectral domination
+controls B_delta applied to the changing difference. Merely
+strong convergence on fixed vectors would not have sufficed, but
+the producer supplies the needed D(K) control.
+
+The ground-state form identity(3.4) is nonnegative term by term.
+Outside the spectral subspace K<=R, at least one edge has Casimir
+>R/|E|. Monotonicity of the one-link eigenvalues in spin gives a
+lower bound on B_delta that is UNIFORM over all such high-spin
+vectors, for fixed R. Its delta->0 limit is
+kappa j_R(j_R+1), tending to infinity with R.
+
+Consequently a uniform bound on e_delta gives
+
+ limsup_(delta->0)||(I-Pi_R)w_delta||^2
+   <= C/[kappa j_R(j_R+1)]
+
+up to an immaterial factor2 for sufficiently small delta at that
+fixed R. The order of limits in(3.5) is correct. Pi_R has finite
+rank on the fixed compact product. This proves precompactness
+of w_delta and hence of Omega_delta, since M_delta->I uniformly.
+There is no reliance on a false uniform H1 bound for Omega_delta.
+
+The limiting weak eigenvector identity against a core is enough:
+it places Psi in the domain of the self-adjoint H and gives
+H Psi=e Psi. Its L2 norm is1. The variational limsup bounds e
+by E0, while the spectral lower bound bounds it below by E0.
+Positivity fixes the phase of the unique ground state. Hence the
+full sequence converges, not just a selected subsequence.
+
+The logarithmic eigenvalue conclusion follows from
+lambda_delta=1-delta e_delta with bounded e_delta->E0.
+L2 convergence of normalized positive vectors implies L1
+convergence of their squared densities, sufficient for every
+bounded observable mean and variance.
+
+3. EXACT NONLINEAR INCREMENT AND THE AM--GM DEFECT
+
+For smooth real F,
+
+ C_delta F=(Q_delta F^2-2FQ_delta F+F^2)/delta
+                  ->2kappa |grad F|^2
+
+uniformly. The coefficient follows from
+Delta(F^2)-2F Delta F=2|grad F|^2 in the Pauli/2 product metric.
+
+The upper estimate J_delta in(4.2) has the correct factor1/2.
+Symmetry of Q_delta gives EXACTLY
+
+ J_delta-d_delta(F)/delta
+   =[4 lambda_delta delta]^-1
+       int Q_delta(U,V)(F(V)-F(U))^2
+                            (w_delta(V)-w_delta(U))^2.
+
+Thus proving the defect tends to0 really gives the lower side
+of the limit; it is not just an upper semicontinuity argument.
+
+The fixed smooth F is globally Lipschitz for the compact product
+metric. On one SU2 factor, with principal angle theta,
+the Pauli/2 geodesic distance squared is4theta^2 and
+1-cos theta>=2theta^2/pi^2. Therefore
+
+ |F(V)-F(U)|^2
+   <=2pi^2 ||grad F||_infty^2 sum_e h(U_e V_e^-1)
+
+is one valid constant in(4.5).
+
+The half-beta domination can be written explicitly as
+
+ h q_beta
+ <=[2/(e beta)] [c(beta/2)/c(beta)] q_(beta/2)
+ <=[2^(5/2)/(e beta)] q_(beta/2).
+
+The ratio bound is exactly the retained Gamma(3/2) decreasing-tilt
+estimate. It holds at all beta>0. Applying the product inequality
+edge by edge changes just that one normalized convolution.
+Since
+
+ int Q_delta,e^half(U,V)(w(V)-w(U))^2
+        =2<w,(I-Q_delta,e^half)w>,
+
+the factor beta_delta delta=2/kappa cancels the temporal spacing.
+Also lambda_delta is bounded below, for example by1/2 for
+sufficiently small delta. The constants in(4.7) are therefore
+independent of small delta at this fixed graph.
+
+Each Q_delta,e^half is a self-adjoint Markov contraction and
+converges strongly to I. Since w_delta->Omega strongly and
+||I-Q_delta,e^half||<=2, each quadratic difference tends to0.
+The number of edges is FIXED. This last point is essential:
+no summation over a growing spatial lattice is justified by
+this argument without a separate rate.
+
+The equality(0.1) is proved. No uniform derivative estimate
+for Omega_delta, finite-step local commutator identity, or
+replacement of -log T_delta by a Laplacian was used.
+
+4. SEMIGROUP, WORDS AND FINITE TEMPORAL PERIOD
+
+For the nonnegative A_delta, the resolvent calculation on
+f=(H+1)phi, with phi in a core, is correct. Such f form a dense
+set, and the uniform resolvent bound extends convergence to
+all physical vectors. Standard continuous functional calculus
+then gives strong convergence of exp(-t A_delta).
+
+Since T_delta=I-delta A_delta and the spectrum of delta A_delta
+lies in[0,1], the uniform scalar estimate
+
+ sup_(x in[0,1]) |(1-x)^n-exp(-nx)|<=C/n
+
+applies directly. For fixed t>0, n=floor(t/delta) tends to
+infinity. The replacement of n delta by t is also uniform:
+for s,t bounded away from0,
+sup_(lambda>=0)|exp(-s lambda)-exp(-t lambda)|
+is bounded by a constant times |s-t|/min(s,t).
+This verifies(5.1) without an unbounded-energy approximation.
+
+Ground-state normalization gives(5.2) with the correct E0 shift.
+The normalized discrete operators and the limiting semigroup
+are contractions. Strong convergence and bounded multiplication
+insertions therefore give the fixed finite correlation words.
+Zero gaps are handled separately as stated.
+
+At a fixed delta, trace class and the simple isolated top
+eigenvalue imply the finite-period trace converges to the
+ground-state word. For each fixed delta and finite requested
+family, one can require error smaller than delta times a
+prescribed tolerance when approximating d_delta/delta.
+This requires no uniform spectral gap in delta.
+
+The order of choices in Section6 is valid:
+first fix the spatial lattice and its finite target list,
+then choose delta, and then choose finite N sufficiently large.
+N may be required to be even and N delta arbitrarily large
+without interfering with the convergence. The note correctly
+does not commute these limits.
+
+5. NORMALIZATION OF THE ANISOTROPIC FAMILY AND SCOPE
+
+For kappa_a=g_a^2/(2a) and
+V_a=4 sum h_p/(g_a^2 a), the displayed Wilson coefficients are
+
+ beta_time=4a/(g_a^2 delta),
+ beta_space=4delta/(g_a^2 a).
+
+They agree at delta=a, but the proof sends delta->0 at FIXED a.
+The electric coefficient, magnetic coefficient and factor in
+the gradient target all check.
+
+The ground-state form identity(7.1) follows directly by integration
+by parts against the smooth positive Omega. Centering F removes
+its vacuum component, and spectral Jensen gives(7.2). This supplies
+the stated sufficient temporal witness if both physical bounds
+in(7.3) are independently proved.
+
+The producer expressly retains all the important limitations:
+no uniform spatial-cutoff convergence rate; no physical variance
+floor or averaged spatial-flow derivative bound; no automatic
+anisotropic application of the isotropic Balaban induction;
+no spatial/local reconstruction or full Euclidean symmetry claim.
+The weak spatial plaquette source estimate as beta_space->0
+is correctly identified as degenerating.
+
+Finally, this controlled limit is consistent with the actual
+plaquette relative-operator obstruction in
+nonlinear_transfer_consumer_turn66.txt. That obstruction is a
+finite-step bound over all physical states. The present proof
+uses the actual converging ground states and a proved limiting
+order, and never requires that false operator inequality.
+
+PASS with these explicit scopes. Nontrivial continuum YM4
+existence remains unproved.

@@ -1,0 +1,355 @@
+CONSTANT PHYSICAL SOURCE ON THE ENLARGED ACTUAL ENERGY WINDOW
+19 October 2026. TURN46. step46 independent verification and corollary.
+
+RESULT
+
+The enlarged-window comparison of enlarged_energy_window_audit_turn46
+admits the full constant-source disc |g^2 zeta|<c_s, even when its
+general source-profile disc c/(rho+gT)^2 is much smaller. Every charged
+action term must carry the SAME constant source. The cutoff, ordinary
+map, chart, classical saddle and all exterior data conventions remain
+frozen as the source varies.
+
+The decisive identity is lambda z^2=1, where lambda=g^-2-zeta and
+z=lambda^-1/2. It keeps the normalized quadratic phase exactly real
+and positive on the complex linear contour. A small bound g Lambda
+is sufficient to absorb the cubic phase error into the Gaussian
+decay. There is no requirement g Lambda^3 or N g Lambda be small.
+
+This note rechecks the complex source contours and the zero-free
+normalization. It does NOT automatically upgrade the second-step
+theorem, establish a generated-action class on larger domains, or
+identify the entire unwindowed Wilson history density.
+
+1. PRECISE HYPOTHESES AND TWO DIFFERENT DATUM DOMAINS
+
+Retain the complete first-step conditional fiber, all its charged
+plaquettes, the original Haar/coarea factors, and the fixed energy
+cutoff of TURN45. Set
+
+ a_E(u;zeta)=integral exp[-(g^-2-zeta)f(B,u)]J(B,u)
+                                    psi(f(B,u)/E0)dB,
+ E0=g^2 Lambda^2,       rho=c0 g Lambda/sqrt(N).                   (1.1)
+
+Here psi is the same fixed REAL total-energy cutoff, equal to one
+below E0 and zero above 2E0. Let K=ker Q, d=dim K, m be the complete
+ambient Gaussian dimension, and Pi its orthogonal projector onto K.
+The nonorthogonal coordinate-chart projector is not substituted for Pi.
+
+Use the uniform saddle/Hessian/Morse chart hypotheses (1.1)--(1.2)
+of enlarged_energy_window_audit_turn46. In particular, in a fixed
+small joint neighborhood,
+
+ f(B_*+b,u)-s(u)=b^t H(u)b/2+R3(b,u),
+ |R3(b,u)|<=C||b||_2^3,
+ |log[J(B_*+b,u)/J_*(u)]|<=CN||b||_2,
+ b_M(y,u)=H(u)^-1/2 y+O(||y||_2^2),
+ f(B_*+b_M(y,u),u)-s(u)=y^t y/2.                                (1.2)
+
+The complete Morse amplitude A(y,u)/A0(u), including its Jacobian,
+has logarithmic derivative bounded by CN. The principal symmetric
+square root and its inverse are uniformly bounded. These are local
+chart inputs, not a global convexity assertion.
+
+Require all of the following:
+
+ * g Lambda<=epsilon, with epsilon small enough for every linear,
+   Morse, radial and Stokes contour used below;
+ * rho<r0, where r0 is the fixed datum radius for the auxiliary local
+   analytic catalogue, and c0 is small enough that |s(u)|<E0/8 on rho;
+ * T>=1, mT^2<=Lambda^2/16, and gT^3 sufficiently small for the
+   unchanged auxiliary product-measure cluster theorem;
+ * complete REAL supported-fiber coverage in the original G0 chart,
+   with margin, for the actual real datum family under consideration;
+ * the explicit tail smallness condition (6.1) below.
+
+The geometric coverage condition is independent of the local Taylor
+bounds. For the box considered in the preceding audit, a sufficient
+condition is its (1.5), namely a small fixed upper bound for
+C_L[g R_geom Lambda+R_geom||e||+||Y-I||], with ALL retained links and
+affected coarse rows included. This note assumes that condition or
+another proved coverage criterion. It does not infer coverage merely
+from g Lambda small.
+
+The auxiliary F(z,u) is analytic on the FIXED sup ball r0. The actual
+density and its comparison remainder are asserted on the SMALLER
+datum polydisc rho. Constant-source derivatives of the former can use
+r0; derivatives of the latter use rho. This distinction persists when
+Lambda is enlarged.
+
+2. LARGE CONSTANT-SOURCE DISC AND THE COMPLETE AUXILIARY DENSITY
+
+Fix c_s<1/8. On |g^2 zeta|<c_s define
+
+ lambda=g^-2-zeta,
+ z=g(1-g^2 zeta)^-1/2,
+ z^d=g^d exp[-(d/2)log(1-g^2 zeta)].                              (2.1)
+
+Branches are analytic and take z=g at zero source. They satisfy
+|z|<=C g, Re lambda>0 and lambda z^2=1. The energy threshold E0 is
+NOT replaced by z^2 Lambda^2. All physical cutoffs remain fixed.
+
+The auxiliary product-Gaussian theorem, evaluated at this z, gives
+
+ a_aux(u;zeta)=exp[-lambda s(u)]A0(u)(2pi)^(d/2)z^d
+                                      c_T^m exp F(z,u),          (2.2)
+ F(z,u)=sum_X F_X(z,u),
+ ||F(z,.)||_kappa<=C |z|^2 T^6.                                  (2.3)
+
+The source disc maps inside |z|<c/T^3 after reducing the fixed
+cluster smallness bound gT^3. Each F_X is even in z and vanishes at
+z=0; the exact interaction contains all its convergent terms. The
+factor c_T^m uses the FULL ambient dimension m, not d.
+
+Normalize actual and auxiliary densities by the same leading factor
+
+ A_lead(u;zeta)=exp[-lambda s(u)]A0(u)(2pi)^(d/2)z^d.
+
+Call the resulting quantities R_E and R_aux. Then
+R_aux=c_T^m exp F. This normalization is essential: zeta s(u) may
+be large on the enlarged window, and is retained exactly rather
+than estimated as a small quantum correction.
+
+3. LINEAR CONTOUR AND THE AMBIENT-CUBE COMPLEMENT
+
+Let xi be REAL in the full ambient space, r=|Pi xi|, and set
+b=z H(u)^-1/2 Pi xi. The bilinear symmetry and analytic square-root
+identity give EXACTLY
+
+ lambda b^t H(u)b=|Pi xi|^2.                                    (3.1)
+
+Thus, for r<=C0 Lambda,
+
+ Re[lambda(f(B_*+b,u)-s(u))]
+     >=r^2/2-C|z|r^3>=c r^2,                                   (3.2)
+
+provided g Lambda is small relative to fixed C0. This uses no
+Hermitian positivity for a complex H. The quadratic term becomes
+real by (3.1), and the cubic error is absorbed into it.
+
+The Jacobian factor is bounded by exp(CN |z|r)<=exp(CN). Including
+the untouched orthogonal Gaussian directions, the absolute normalized
+integrand is bounded by
+
+ exp(CN)(2pi)^(-m/2)
+       exp[-c|Pi xi|^2-|Pi_perp xi|^2/2].                        (3.3)
+
+Replace it by an isotropic Gaussian with a smaller fixed rate. Its
+normalization costs another exp(Cm)<=exp(CN). A union bound for the
+m ambient coordinates then bounds its mass off [-T,T]^m by
+
+                         exp(CN)m exp(-cT^2).                   (3.4)
+
+No product structure for Pi xi is assumed. No source factor is
+bounded separately by exp(|zeta|E0): it has already been incorporated
+EXACTLY into lambda and the whitening (3.1).
+
+Take the linear K-ball radius R=Lambda/2. The ambient cube lies in
+its cylinder by mT^2<=Lambda^2/16. Its integrand is identical to the
+auxiliary integrand there, including the K-perpendicular Gaussian.
+Therefore the normalized linear-ball integral L_R obeys
+
+                 |L_R-R_aux|<=exp(CN)m exp(-cT^2).                (3.5)
+
+This is a fixed-domain holomorphic integral estimate in u and zeta,
+not a complex positivity argument. The real positive submeasure
+interpretation at zeta=0 additionally retains the cube-in-plateau
+condition from the preceding audit; the direct action bound and the
+chosen cube/energy margins provide it for the stated weak family.
+
+4. THE SOURCE-DEPENDENT STOKES CONTOUR
+
+On real xi in K, |xi|<=R, use
+
+ b0(xi)=z H^-1/2 xi,
+ b1(xi)=b_M(z xi,u),
+ bt=b0+t(b1-b0),       0<=t<=1.                                 (4.1)
+
+All chains are inside the fixed holomorphic chart because |z|R is
+small. On the side sphere |xi|=R, uniform chart estimates give
+
+ b1-b0=O(|z|^2 R^2),
+ D_xi(b1-b0)=O(|z|^2 R),
+ lambda[f(B_*+bt,u)-s(u)]=R^2/2+O(|z|R^3).                      (4.2)
+
+Hence the real part of the last expression is at least R^2/4.
+The requirement is |z|R small, not |z|R^3 small.
+
+The normalized top-degree holomorphic form is
+
+ omega=(2pi)^(-d/2) z^-d sqrt(det H)/J_*
+           exp[-(f(B_*+b,u)-s(u))/z^2]J(B_*+b,u) db_1...db_d.
+
+Its pullbacks to b0 and b1 are precisely the normalized linear and
+Morse integrands, with the SAME chosen complex z^d branch. The form
+is closed. Stokes on the swept real chain gives a side contribution
+bounded by
+
+ exp(CN) C^d |z|R^2 (2pi)^(-d/2)
+                       |S^(d-1)| R^(d-1) exp(-R^2/4).
+
+Since |z|R<=Cepsilon, the residual factor |z|R^2 is at most C R.
+The sphere-area/Gamma bound therefore yields
+
+                    |L_R-M_R|<=exp(CN-c Lambda^2).               (4.3)
+
+All determinant, Jacobian and weakened-Gaussian costs are paid by
+exp(CN). There is no unrecorded inverse power of g. The smooth
+cutoff never enters the complex homotopy.
+
+5. FIXED REAL ENERGY CUTOFF AND THE COMPLEX RADIAL DEFORMATION
+
+Let a=d/2>0 and define the angular Morse amplitude
+
+ h(v,u)=average_theta A(sqrt(2v)theta,u)/A0(u).
+
+The angular average removes all odd powers, giving a holomorphic
+function of v on |v|<3E0. Its bound is |h|<=exp(CN), because the
+Morse chart is valid for |sqrt(2v)|<=sqrt(6)g Lambda. We do not need
+h to be close to one on the outer window.
+
+Put t0=E0/2 and q=t0-s(u). The exact normalized radial expression is
+
+ R_E=lambda^a/Gamma(a) {
+   q^a integral_0^1 exp(-lambda q t)t^(a-1)h(qt,u)dt
+   +integral_(t0)^(2E0) exp[-lambda(t-s)](t-s)^(a-1)
+                                      h(t-s,u)psi(t/E0)dt }.
+                                                                    (5.1)
+
+The cutoff is a function of the FIXED REAL outer variable t. The
+real equality follows from complete supported-fiber coverage. The
+expression then defines the holomorphic continuation on rho and
+the entire constant-source disc. Fractional powers use the same
+right-half-plane branches as the original radial construction.
+
+Change variable w=lambda v in the inner integral. Since |s|<E0/8,
+
+ Re(lambda q)>=(3-5c_s)Lambda^2/8>Lambda^2/8.                    (5.2)
+
+Deform the line from 0 to lambda q into the positive real segment
+from 0 to Re(lambda q), followed by its vertical connector. Every
+point on the triangle used by this deformation has |w|<=|lambda q|,
+so |v|=|w/lambda|<=|q|<5E0/8. Thus h remains in its actual analytic
+domain throughout, rather than merely at the path endpoints.
+
+The source-dependent Morse ball in (4.1) ends at
+
+ v=z^2 R^2/2,             w=lambda v=R^2/2=Lambda^2/8.
+
+Its radial integral is therefore the EXACT common positive-real
+segment of the transformed inner integral. The whole interacting
+core cancels. The remaining real segment starts at Lambda^2/8;
+the connector has real part bounded below by (5.2).
+
+For the fixed real outer integral, |t-s|<17E0/8<3E0 and
+
+ Re[lambda(t-s)] >= [(1-c_s)t-(1+c_s)E0/8]/g^2.
+
+At t>=E0/2 this is at least (3-5c_s)Lambda^2/8. The powers and
+the factor |lambda|^a produce at most fixed-constant-to-the-dimension
+costs in the Gamma bounds. These are exp(CN), already allowed.
+Consequently
+
+                     |R_E-M_R|<=exp(CN-c Lambda^2).               (5.3)
+
+For d=0, the actual cutoff is on its plateau and R_E=1. The auxiliary
+ratio is c_T^m, F=0. There are no radial or Stokes side integrals;
+the redundant-cube normalization gives the asserted comparison directly.
+
+6. ZERO-FREE LOGARITHM AND THE EXACT SOURCE IDENTITY
+
+The auxiliary local cluster theorem, on its unchanged fixed datum
+domain r0, gives |F(z,u)|<=CN and c_T>=c_1>0. Hence
+
+                         |R_aux|>=exp(-CN).
+
+Combine (3.5), (4.3), (5.3) and divide by this lower bound. With
+constants enlarged once,
+
+ |R_E/R_aux-1|
+   <=exp(CN)[m exp(-cT^2)+exp(-c Lambda^2)]
+   =:delta_const <1/4.                                         (6.1)
+
+The inequality on the right is a required cutoff choice, not a
+consequence of a near-one Laplace approximation. Define the exact
+holomorphic remainder
+
+ D(u,zeta)=log[R_E(u;zeta)/R_aux(u;zeta)],
+                 ||D||_(rho,|g^2zeta|<c_s)<=C delta_const.        (6.2)
+
+The actual normalized source log is
+
+ L(u,zeta)=log[a_E(u;zeta)/a_E(u;0)]
+   =zeta s(u)-(d/2)log(1-g^2zeta)
+       +F(z(zeta),u)-F(g,u)+D(u,zeta)-D(u,0).                     (6.3)
+
+The complete A0 factors cancel only in this ratio. The fixed c_T^m
+factors also cancel here. The Gaussian source-only logarithm remains
+and gives the correct Gamma energy cumulants. The classical source
+term is retained even when its value is large on the enlarged domain.
+
+7. LOCAL MARKS, DATUM DERIVATIVES, AND THE LARGE-WINDOW REGIME
+
+Define Hloc(u,zeta)=F(z(zeta),u)-F(g,u) independently on the FIXED
+auxiliary datum ball r0. Equation (6.3) identifies it with the relevant
+part of the actual generator only on rho. Equations (2.3) and (2.1),
+followed by Cauchy on the common source disc, give for all n>=1
+
+ ||partial_zeta^n Hloc(.,0)||_kappa
+                   <=n! C^n g^(2n+2)T^6.                       (7.1)
+
+In particular its first marked Hessian has exponentially weighted
+row sums O(g^4T^6), using the FIXED r0 and a spare carrier exponent.
+This bound is unchanged by enlarging Lambda because the auxiliary
+cube and its local catalogue have not been enlarged.
+
+For the actual tail, Cauchy instead gives
+
+ ||D_u^k partial_zeta^n [D(u,zeta)-D(u,0)]|_(0,0)||
+    <=k! n! C^(k+n) rho^-k g^(2n) delta_const,       n>=1,        (7.2)
+
+in the corresponding sup-direction norm. For k=2,n=1, this is
+C N Lambda^-2 delta_const, with fixed constants depending on c0.
+A full-box carrier still pays exp(kappa C_L N). Choosing T^2 and
+Lambda^2 above fixed sufficiently large multiples of N+log(1/g)
+and retaining the cube inclusion makes that charge and any specified
+fixed power target payable. Increasing Lambda alone does not decrease
+the separate cube-complement contribution m exp(-cT^2).
+
+For the enlarged-window choice
+
+ Lambda=epsilon_*/(g R_geom),
+ E0=epsilon_*^2/R_geom^2,
+ rho=c0 epsilon_*/(R_geom sqrt(N)),                              (7.3)
+
+with the coverage condition verified, the constant source still has
+the disc |g^2 zeta|<c_s. This is generally much larger than the
+arbitrary-profile disc c/(rho+gT)^2. There is no contradiction:
+the constant source is exactly absorbed into the entire action rate
+lambda and its Gaussian coordinate change, while its deterministic
+classical response is factored exactly in (6.3).
+
+The omitted-energy part of (6.1) is now
+exp[CN-c/(g^2 R_geom^2)], but the full error also contains
+exp(CN)m exp(-cT^2). The latter stays with the independently chosen
+polylogarithmic T. Taking T comparable to Lambda would generally
+violate gT^3 small and is not licensed by this corollary.
+
+8. SCOPE CHECK
+
+Verified: one actual conditional energy-window source with all charged
+action terms, the entire constant-source disc c_s/g^2, all its complex
+comparison contours, the exact Gaussian/coarea normalizers, and local
+all-order source bounds (7.1) with separate actual-tail bounds (7.2).
+
+Not verified here: enlarged-window bounds for an arbitrary generated
+source-dependent W, next-step image containment in inherited actual
+domains, uniform many-scale datum radii and carrier exponents, native
+gauge-invariant marginal extraction, or full Wilson history coverage.
+In particular the earlier second_regular_step_turn46 theorem is NOT
+silently upgraded by replacing its Lambda conditions with (7.3).
+Those generated-interaction and inherited-domain checks must be made
+for that enlarged construction separately.
+
+No nontrivial four-dimensional Yang--Mills existence theorem is
+claimed in this finite-step corollary.

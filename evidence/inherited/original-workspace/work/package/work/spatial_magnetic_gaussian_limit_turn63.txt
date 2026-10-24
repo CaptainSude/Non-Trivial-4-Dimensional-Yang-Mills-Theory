@@ -1,0 +1,261 @@
+SPATIALLY SMOOTHED MAGNETIC POINT PROBE: FREE LATTICE LIMIT -- TURN63
+20 October 2026
+
+This note proves the free-reference lattice-to-continuum calculation.
+The actual compact gauge-invariant observable is defined separately
+in spatial_flow_probe_turn63.txt. No nonperturbative comparison of
+the original Yang--Mills law with this Gaussian reference is assumed
+proved. In particular, finite positive spatial flow does not by
+itself construct a continuum nonlinear gauge connection.
+
+1. CANONICAL FREE REFERENCE AND THE MAGNETIC CHOICE
+
+Use three independent canonical Maxwell colors in Euclidean R^4.
+One may calculate gauge-invariant linear curvature covariances in
+Feynman gauge, where each potential component has Fourier covariance
+1/(p0^2+|k|^2). The gauge-dependent potential is only a calculation
+device; the following quantities use F_12.
+
+Apply the spatial heat operator exp(s Delta_space), s>0, to the
+magnetic curvature:
+
+ X_s(t,x)=exp(s Delta_space) F_12(t,x).
+
+For one color,
+
+ Cov(X_s(t,x),X_s(u,y))
+  = integral_R3 d^3k/(2pi)^3
+      exp(ik.(x-y)) (k1^2+k2^2)/(2|k|)
+      exp[-2s|k|^2-|t-u||k|].                           (1.1)
+
+This follows from
+ integral_R dp0/(2pi) exp(ip0 v)/(p0^2+|k|^2)
+                         = exp(-|k||v|)/(2|k|).
+
+The equal-point variance is finite:
+
+ v_s = (1/(6pi^2)) integral_0^infinity
+                       r^3 exp(-2sr^2) dr
+     = 1/(48pi^2 s^2).                                  (1.2)
+
+The angular average of k1^2+k2^2 is 2|k|^2/3. No temporal
+smear and no color transport are needed for this variance.
+
+This is specific to a spatial magnetic component. Spatial smoothing
+does not remove the high-p0 contribution from F_0i. For example the
+p0^2 term in its Fourier covariance tends to1 as |p0| tends to
+infinity at fixed spatial momentum. Point evaluation of that
+electric component therefore retains a temporal contact divergence.
+
+2. A NONZERO REFLECTION MARGIN AT FIXED FLOW TIME
+
+Take a physical time T>0 and the same spatial point x on both sides
+of reflection. Write X_+=X_s(T,x), X_-=X_s(-T,x), each a three-color
+vector. Then the per-color covariance is
+
+ c_s(T)=(1/(6pi^2)) integral_0^infinity
+                  r^3 exp[-2sr^2-2Tr] dr,              (2.1)
+ 0<c_s(T)<v_s.
+
+For h>0 define B_+=exp[-h|X_+|^2], B_-=exp[-h|X_-|^2].
+Their Gaussian moments are
+
+ m_s(h)=(1+2hv_s)^(-3/2),
+ q_s(h)=[(1+2hv_s)^2-4h^2 c_s(T)^2]^(-3/2).             (2.2)
+
+Choose h=h_s=1/(2v_s)=24pi^2s^2 and r_s=c_s(T)/v_s.
+The centered reflected form is
+
+ D_s(T)=q_s(h_s)-m_s(h_s)^2
+       =(4-r_s^2)^(-3/2)-1/8
+       >=3r_s^2/64>0.                                  (2.3)
+
+The lower bound follows by integrating the derivative of
+(4-u)^(-3/2) on 0<=u<=r_s^2; that derivative is at least3/64.
+
+There is an explicit scale-invariant lower bound. In the
+probability density proportional to r^3 exp(-2sr^2)dr,
+
+ E r = 3sqrt(pi)/(4sqrt(2s)).
+
+Convexity of exp(-2Tr) gives
+
+ r_s >=exp[-3sqrt(pi)T/(2sqrt(2s))],
+ D_s(T)>= (3/64) exp[-3sqrt(pi)T/sqrt(2s)].              (2.4)
+
+For example T=sqrt(s)/2 gives one fixed positive numerical margin,
+independent of a lattice cutoff. This is a FREE-reference margin.
+
+3. EXACT FREE LATTICE COVARIANCE
+
+Let a>0 be the lattice spacing. On the infinite lattice use the
+canonical massless Gaussian covariance in Feynman gauge. For
+k in B_a=[-pi/a,pi/a]^3 define
+
+ hat{k}_i=2sin(ak_i/2)/a,
+ omega_a(k)^2=sum_i hat{k}_i^2,
+ E_a(k)=(2/a)asinh(a omega_a(k)/2).
+
+Phases from forward link differences cancel in the same-point
+magnetic covariance. Linear spatial flow multiplies it by
+exp[-s omega_a(k)^2].
+
+For t=n a, temporal Fourier integration is exact:
+
+ integral_(-pi/a)^(pi/a) dp0/(2pi)
+     exp(ip0 t)/(4a^-2 sin^2(ap0/2)+omega_a^2)
+
+   = exp[-E_a |t|] /
+          [2omega_a sqrt(1+a^2 omega_a^2/4)].            (3.1)
+
+Proof: set theta=a p0 and cosh(aE_a)=1+a^2omega_a^2/2.
+The left side is
+
+ (a/2) integral_(-pi)^pi dtheta/(2pi)
+              exp(in theta)/(cosh(aE_a)-cos theta)
+ = a exp(-|n|aE_a)/(2sinh(aE_a)),
+
+which is (3.1). The zero momentum limit is interpreted in the
+integral; the magnetic numerator removes the infrared singularity.
+
+Consequently, if T_a>0 is a lattice time, the equal-point and
+reflected covariances are
+
+ v_(a,s)=integral_Ba d^3k/(2pi)^3
+     (hat{k}_1^2+hat{k}_2^2) exp[-2s omega_a^2] /
+     [2omega_a sqrt(1+a^2omega_a^2/4)],                 (3.2)
+
+ c_(a,s,T_a)=the same integral with exp[-2T_a E_a].      (3.3)
+
+The two reflected point vectors are a genuine Gaussian pair
+with these covariances; the radial determinant formulas (2.2)
+apply exactly to this reference at every a.
+
+4. UNIFORM DOMINATION AND CONTINUUM LIMIT
+
+On B_a,
+
+ 2|k|/pi <=omega_a(k)<=|k|.
+
+The nonnegative density in (3.2) is therefore bounded by
+
+ C |k| exp[-8s|k|^2/pi^2].                              (4.1)
+
+Extend the integrand by0 outside B_a. For fixed s>0, (4.1)
+is integrable on R^3 and independent of a. Pointwise the
+symbols converge to their continuum values. If T_a->T>=0,
+dominated convergence gives
+
+ v_(a,s)->v_s,       c_(a,s,T_a)->c_s(T),                (4.2)
+ sup_a v_(a,s)<=C s^-2.
+
+Thus the radial reference moments and centered reflected form
+converge to (2.2)--(2.3). With T>0 and h_s fixed, for sufficiently
+small a the reflected form is at least D_s(T)/2.
+
+A quantitative estimate is also available when a^2<=s:
+
+ |v_(a,s)-v_s| <=C a^2 s^-3,
+ |c_(a,s,T_a)-c_s(T)|
+       <=C[a^2 s^-3+|T_a-T|s^-5/2].                    (4.3)
+
+Here C can be chosen independently of T,T_a>=0. To see this,
+on B_a use
+
+ |omega_a^2-|k|^2|<=C a^2 |k|^4,
+ |omega_a-|k||<=C a^2 |k|^3,
+ |E_a-|k||<=C a^2 |k|^3,
+ E_a>=c|k|.
+
+The numerator/denominator replacement costs
+C a^2 |k|^3 exp(-cs|k|^2). The heat multiplier replacement
+costs C a^2 s |k|^5 exp(-cs|k|^2). Both integrate to
+C a^2 s^-3 in dimension3. For the temporal multiplier,
+
+ |exp(-2TE_a)-exp(-2T|k|)|
+   <=C a^2 T |k|^3 exp(-cT|k|)
+   <=C a^2 |k|^2,
+
+using sup_(u>=0) u exp(-cu)<infinity. This again costs
+C a^2 s^-3 after multiplication by the spatial density.
+Changing T to T_a costs
+C|T_a-T| integral |k|^2 exp(-cs|k|^2)d^3k
+=C|T_a-T|s^-5/2. The continuum tail outside B_a is bounded
+by C a^2 s^-3 for a^2<=s using its Gaussian decay.
+These estimates prove (4.3).
+
+5. WHY THE FLOW TIME CANNOT JUST BE REMOVED
+
+At fixed T>0, dominated convergence in (2.1) as s decreases to0
+gives
+
+ c_s(T)->(1/(6pi^2)) integral_0^infinity r^3 exp(-2Tr)dr
+        =1/(16pi^2 T^4).
+
+Together with (1.2),
+
+ r_s~3s^2/T^4,
+ D_s(T)~27s^4/(64T^8).                                 (5.1)
+
+Thus the chosen normalized bounded radial witness loses its
+reflected margin if its spatial smoothing is removed at fixed
+separation. This is not a proof that all local observables fail;
+it is an exact restriction on this particular bounded probe.
+
+Keeping positive physical s supplies a possible nontriviality
+witness for a theory already equipped with the corresponding
+observables. It does not replace the work of constructing the
+continuum local observable algebra and its Euclidean symmetries.
+
+6. PHYSICAL COUPLING NORMALIZATION
+
+For the compact SU(2) proposal, let the flowed plaquette be
+P_(a,s)=p0 I+i p.sigma and use
+
+ B_(a,s,T)=exp[-h_s |2p/(g_* a^2)|^2],                  (6.1)
+
+where g_*>0 is a fixed reference coupling at a fixed physical
+scale. This expression is literally bounded and gauge invariant.
+Its compact nonlinear definition and time-slice support are
+handled in spatial_flow_probe_turn63.txt.
+
+The Gaussian calculation here uses CANONICAL curvature.
+It matches (6.1) only if the physical flowed connection has
+leading curvature g_*F_can in this convention. Establishing
+that comparison along an actual tuned trajectory is part of
+the unresolved renormalization problem.
+
+In particular, replacing the interacting theory by a bare free
+law with connection g_a A_can and g_a->0 gives variance
+(g_a/g_*)^2 v_s in (6.1), and B tends to1. Its centered
+reflection norm tends to0. Bare weak coupling alone therefore
+does not supply the fixed-physical-coupling comparison.
+
+Equally, dividing a flowed connection observable by g_a instead
+of g_* without tracking the running normalization is unjustified.
+The finite free lattice calculation settles its reference limit,
+not this interacting normalization.
+
+7. EXACT COMPARISON TARGET
+
+For the actual reflected original-law observables from (6.1),
+suppose one can PROVE, with the same tuned trajectory and
+fixed s,T,g_*,
+
+ |E B_(a,s,T)-m_s(h_s)|<=delta_1(a),
+ |E (theta B_(a,s,T)) B_(a,s,T)-q_s(h_s)|<=delta_2(a).
+
+Since both actual and reference means lie in[0,1],
+
+ ||B_(a,s,T)-E B_(a,s,T)||_OS^2
+       >=D_s(T)-delta_2(a)-2delta_1(a).                 (7.1)
+
+Thus limsup[delta_2+2delta_1]<D_s(T) would give a nonzero
+cutoff-uniform centered reflection margin. If comparison is
+made first to the free lattice reference, (4.2) supplies its
+vanishing discretization error.
+
+The inequalities defining delta_1 and delta_2 are NOT proved
+in this note. The history count from TURN62 alone does not
+prove them, and the exact Gaussian limit must not be described
+as their interacting analogue.

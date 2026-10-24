@@ -1,0 +1,178 @@
+REAL-SLICE PROPAGATION OF A FIRST-CONTACT GAIN
+18 October 2026. Working mathematical lemma, not a completed YM application.
+
+1. A dimension-independent two-constants lemma
+
+Let X be a complex Banach space with an isometric conjugation, X_R its
+real part, and Y any complex Banach space. Let F:B_X(0,3r+eta)->Y be
+holomorphic, with eta>0. Suppose
+
+ ||F(w)||<=M on ||w||<=3r,
+ ||F(v)||<=epsilon on v in X_R, ||v||<=3r,
+
+where 0<=epsilon<=M. If w=x+i y, x,y real, ||x||,||y||<=r, then
+
+ ||F(w)|| <= M^(1-theta) epsilon^theta,
+ theta=(2/pi) arctan(3/4)>0.                         (1)
+
+Proof. For a norm-one functional l in Y*, set
+ f(z)=l(F(x+2z y)). This is holomorphic on a neighborhood of the
+closed unit disk. On the diameter [-1,1] it is bounded by epsilon,
+and on the upper semicircle by M. The two-constants inequality for
+the subharmonic log|f| bounds its value at z=i/2 by
+log M + omega log(epsilon/M), where omega is the harmonic measure
+of the diameter as seen from i/2 in the upper half unit disk.
+The conformal map z -> -(z+1/z) sends that domain to the upper
+half plane and i/2 to 3i/2. The diameter maps onto the complement
+of [-2,2] on the real axis. Thus
+
+ omega=1-(2/pi)arctan(4/3)=(2/pi)arctan(3/4)=theta.
+
+Taking the supremum over l proves (1). At epsilon=0 use the identity
+theorem, or let epsilon decrease to zero. No coordinate-by-coordinate
+continuation is used, so the exponent is independent of the number
+of field variables, localization parameters, volume, and cutoff.
+
+The same proof works on any parameter domain containing all the
+disks z -> x+2z y needed above, with real diameters in a specified
+real admissible set. An infinite-dimensional ambient ball is not
+required for a finite-cutoff application.
+
+2. Consequence for an original compensated read
+
+Suppose one WHOLE compensated Pi-zero bracket F_h, as a function of
+all source/background/localization variables, has on such disks
+
+ ||F_h||<=A h^4,
+ ||F_h||_(real diameter)<=B h^(4+beta),  0<h<=1.
+
+Then the target complex read obeys
+
+ ||F_h|| <= A^(1-theta) B^theta h^(4+theta beta).    (2)
+
+If B h^beta>A one may retain the neutral estimate instead. A common
+retained connection factor in A and B survives with its full power.
+If only A contains that factor, interpolation retains only its
+(1-theta) power: any such exponent loss must be charged explicitly.
+Finite-degree radius polynomials and exp(polylog gamma) preparatory
+constants stay of those respective types after taking these powers.
+
+For graded collars d=r_m/r_n, if the real improved estimate is
+B(h/d)^(4+beta) while the complex neutral estimate is A h^4, (1)
+instead gives
+
+A^(1-theta)B^theta h^(4+theta beta) d^(-theta(4+beta)).
+
+Its minimum with A h^4 still has a positive large-age power after
+the usual boundary-strip optimization. It is also bounded by the
+weaker same-shape expression C(h/d)^(4+theta beta) when d<=1 and
+the constant A^(1-theta)B^theta is retained. The first, sharper
+formula should be used when checking the actual collar sum.
+
+In fact it preserves the ORIGINAL optimized boundary exponent. Set
+sigma=theta(4+beta); since theta>1/4, sigma>1. With K>=0 and
+0<h<=1, a codimension-one strip sum/integral obeys
+
+ integral_0^1 min(1,K h^(theta beta) d^(-sigma)) dd
+ <=[1+1/(sigma-1)] (K h^(theta beta))^(1/sigma).      (3)
+
+For delta=(K h^(theta beta))^(1/sigma)<1, split at delta.
+The first part is <=delta; the second is at most
+K h^(theta beta) delta^(1-sigma)/(sigma-1).
+If delta>=1, the integral is <=1<=delta. Thus its h power is
+theta beta/sigma=beta/(4+beta), exactly the former shell exponent.
+A geometric discrete shell sum has the same estimate up to a fixed
+constant. This does not prove the actual patch/face census, which
+must supply the codimension-one measure and its retained constants.
+It shows that analytic propagation need not worsen that exponent.
+
+Independent check: minimal_route verified the conformal calculation,
+Banach dual argument, and normalized graded ratio on 18 October.
+
+3. What this does NOT establish
+
+This lemma replaces a COMPLEX smoothing claim only if a uniform
+improved bound is available on the FULL real diameters in the
+actual parameter chart. Equality or regularity at s=1 alone does
+not suffice. Neither does restriction to the physical graph
+J=Jphys(U), which need not contain the required real diameters in
+the independent-(U,J,s) domain.
+
+In the proposed minimum-plus-response application, an independent
+real J can remain a response datum; it is never inserted into a
+physical Euler equation. Every minimizing factor on the real
+diameter must instead be an actual admitted real constrained
+minimum, with its complete averaging stencil and local regularity
+bound. Localized responses must preserve the needed norms there.
+This real-domain admission has not been verified for all nested
+modified coarse slots of CMP122-II(1.61)--(1.64).
+
+Nor has the required factor-three parameter reserve been checked
+for the actual simultaneous source contours. One must work inside
+the existing larger analytic domain, or establish a larger domain
+before reducing the read contours. Merely shrinking the contours
+in an already fixed Cauchy/localization argument is not an identity.
+
+Thus (1) is proved, and (2) is a proved implication. The actual
+large-field bridge remains conditional on its real admission and
+contour hypotheses. This offers a weaker sufficient target than
+complex C1,beta regularity of every mixed minimizing field.
+
+4. Any fixed positive analytic margin suffices (root extension)
+
+The factor three in Section1 is convenient, not necessary. Let 0<r<R,
+F holomorphic on a neighborhood of the closed complex ball B_R, with
+norm <=M there and norm <=epsilon on its ENTIRE real ball. Put lambda=R/r.
+Let D_lambda be the upper half of the ellipse
+
+ |z-i|+|z+i|<2 lambda,
+
+whose real diameter is (-sqrt(lambda^2-1),sqrt(lambda^2-1)). Let theta_lambda
+be the harmonic measure of that diameter, viewed from i in D_lambda.
+The point i is strictly interior for every lambda>1, hence 0<theta_lambda<1.
+For every ||w||<=r,
+
+ ||F(w)|| <= M^(1-theta_lambda) epsilon^theta_lambda.        (4)
+
+Proof. Write w=x+i y with x,y real. The isometric conjugation gives
+
+ x+z y = ((1-i z)/2)w + ((1+i z)/2)bar(w),
+ ||x+z y|| <= (|z-i|+|z+i|)r/2.
+
+Thus f(z)=l(F(x+z y)) is holomorphic on D_lambda and bounded by M, while
+its real diameter maps into the real ball B_R, where the bound is epsilon.
+The two-constants inequality at z=i and duality prove (4). Open-domain
+versions use any intermediate lambda'<R/r, avoiding boundary assumptions.
+The exponent depends only on the fixed margin, never on dimension, volume,
+or refinement. A smaller fixed margin may make the exponent very small;
+it cannot be treated as bounded below if R/r tends to one with the cutoff.
+
+For the graded ratio a d^(-sigma), now a=K h^(theta_lambda beta) and
+sigma=theta_lambda(4+beta), the collar estimate has THREE cases. For 0<a<1,
+
+ integral_0^1 min(1,a d^(-sigma)) dd
+ <= C_sigma a^(1/sigma)                 if sigma>1,
+ = a[1+log(1/a)]                       if sigma=1,
+ <= [1+1/(1-sigma)]a                   if 0<sigma<1.
+
+The proof splits at a^(1/sigma). Thus the resulting large-age power is
+min(theta_lambda beta,beta/(4+beta)), with a logarithm at equality.
+Every FIXED positive analytic margin therefore gives a positive gain.
+Section2's unchanged beta/(4+beta) exponent is specific to sigma>1.
+
+Source margin check, limited scope. CMP116 pp5--7,(1.11)--(1.23), gives
+simultaneous localization analyticity |s(Delta)|<=exp(kappa1), with kernel
+norm B0 exp(16 kappa1), provided the fixed M and smallness constants are
+chosen in the displayed order. Repeating that primitive construction with
+kappa1+log(lambda) gives radius lambda exp(kappa1) while retaining the
+original Cauchy circles at exp(kappa1); its extra kernel constant is
+lambda^16. This spends a fixed parameter choice, not a loss per fine scale.
+The paper's external-field target also has a fixed (1+beta) margin versus
+the preceding (1+2beta) domain in its Section1 summation. Either type of
+margin may support (4) once represented by ONE actual real parameter chart.
+
+This source observation does not prove that EVERY mixed large-field read
+and every external field coordinate share that reserve. It does show that
+a factor-three enlargement is not intrinsically required. The remaining
+application is the uniform chart/margin and real-diameter admission, with
+the literal nested minima and complete averaging collars retained.

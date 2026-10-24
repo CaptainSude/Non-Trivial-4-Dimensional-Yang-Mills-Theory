@@ -1,0 +1,798 @@
+THE PHYSICAL DETERMINANT AND ITS COUPLING DRIFT
+20 October 2026. TURN49. Producer: gauge47.
+Companion focused review: soft_vector_affine_gate_audit_turn49.txt
+(tail47; exact soft factorization and actual affine-jet gate).
+Companion heat review: heat_comparison_audit_turn49.txt
+(tail47; uniform actual-base, Wilson-reference and soft-band chain).
+Companion induction review: finite_selected_trajectory_audit_turn49.txt
+(history47; Section 10, relative to its explicitly stated drift input).
+
+RESULT AND SCOPE
+
+The complete leading background force of the TURN48 periodic projected-
+product kernel is exactly the previously studied ordinary constrained
+Gaussian determinant D_(M,R). This identification includes the physical
+coarea, the contour gauge volume and the actual curved constraint. At
+fixed finite color-ball threshold T, its zero-input correction tends to
+D_(M,R) with error O(g^2 T^6); there is NO cutoff-only field correction.
+
+The archived Notebook37 proof chain, reread below, gives a positive
+long-block leading drift for that determinant. Its uniform heat
+comparison is substantially more than an import of the familiar continuum
+one-loop coefficient. The delicate exact mean-zero factorization and
+actual affine-jet identification have also been independently reread by
+tail47 this turn. No fault was found in the stated structural scope.
+
+Consequently a justified leading drift is available for the current
+selected periodic kernel, relative to the explicitly recorded classical
+structural modules already used by TURN48, not a new postulated
+determinant-comparison theorem. Section 10 attaches the repeated
+UNSOURCED quantum amplitude induction and finite endpoint shooting to
+this exact new map. The distinct constant original-action source step
+is proved in constant_original_source_trajectory_turn49.txt; independent
+local sources remain separate. Neither this local tuning nor the
+leading drift controls complementary Wilson histories or constructs
+a continuum theory.
+
+The statements do not certify every earlier manuscript. The argument
+below identifies exactly which earlier estimates it uses and which
+matching steps are new. All logarithms are normalized positive-real
+branches near flat data, followed by their holomorphic continuation.
+
+1. THE ACTUAL NEW OBJECT
+
+Use precisely periodic_projected_product_bridge_turn48.txt:
+the literal composed ordinary map F_R, the independent contour P_R,
+the preceding homogeneous classical action S_M, and its physical
+stationary representative V_*(w). The contour Lagrange multiplier is zero.
+Write q=dim g, n_e for current links, n_c for ordinary output links,
+n_s for based gauge sites, and
+
+  Q=(Q_F,T_R),  Tphys=ker Q,  d=q(n_e-n_c-n_s).
+
+In the canonical orthogonal physical chart U_w(b), b in Tphys,
+
+  f_w(b)=s(w)+(1/2)b^t H(w)b+r_w(b),
+  J_*(w)=h0^(n_e-n_c-n_s)/sqrt(det(QQ^t)),
+  A0(w)=J_*(w)/sqrt(det_Tphys H(w)).                    (1.1)
+
+The product is relative to NORMALIZED group Haar in the output datum.
+No j(log w) may be appended. H is the actual constrained Lagrange
+Hessian, not the unconstrained action Hessian. Haar's local value h0
+uses the same trace-orthonormal Lie-algebra coordinates as H and Q.
+
+At zero physical source and zero inherited activity, the exact new
+positive selected density is
+
+  a_W(w)=exp[-s(w)/g^2] A0(w)(2 pi g^2)^(d/2)c_T^(n_e)
+             E_muT exp V_g(w,xi),                       (1.2)
+  V_g=-r_w(g K(w)xi)/g^2
+           +log[J_w(g K(w)xi)/J_*(w)],
+  K=H^(-1/2)P,  P=orthogonal projection onto Tphys.
+
+muT is the normalized AMBIENT product color-ball Gaussian. The window
+is the normal-Gaussian averaged indicator defined in TURN48. In
+particular (1.2) is an exact physical fiber identity, not a comparison
+with an auxiliary measure.
+
+Define
+
+  Dphys_(M,R)(w)=log[A0(w)/A0(0)].                       (1.3)
+
+The factors (2 pi g^2)^(d/2), h0 powers and c_T^(n_e) remain in the
+actual law. Only their background-independent contribution disappears
+from (1.3). The cutoff mass c_T^(n_e) is not close to one uniformly
+in volume, and nothing here discards it.
+
+2. EXACT MATCH WITH THE OLD PIVOT/GAUGE DETERMINANT
+
+Let d_R(V_*) be the inverse pivot-Jacobian product of the actual
+ordinary constraint chart and let Aret(w) be the Hessian of S_M+G_R
+in its actual retained coordinates. The archived leading correction is
+
+  Dold_(M,R)(w)
+    =log[d_R(V_*(w))/d_R(1)]
+       -(1/2)log det[Aret(w) Aret(0)^(-1)].             (2.1)
+
+No replacement of F_R, the stationary branch or the contour convention
+is made. We prove
+
+                        Dphys=Dold.                    (2.2)
+
+Work first on a fixed finite regulator and a sufficiently small real
+datum germ. The based gauge action is free. The contour-zero physical
+slice gives coordinates (b,h) on the ordinary constrained fiber. Exact
+normalized orbit disintegration gives physical slice measure J_w(b)db
+times product normalized Haar dh. Equivalently, integrating the
+normalized delta P_R=I on each orbit gives one: P_R(U_w(b)^h)=h^(-1)
+site by site, so no field-dependent orbit volume has been omitted.
+
+Gauge invariance and contour covariance give the EXACT phase identity
+
+  (S_M+G_R)(U_w(b)^h)
+        =f_w(b)+sum_(x based) q_G(h_x^(-1)),
+  q_G(v)=1-Re tau(v).                                   (2.3)
+
+In trace-orthonormal coordinates q_G(exp i a)=|a|^2/2+O(a^4).
+At b=0,h=I the Hessian in (b,a) is therefore diag(H,I), with no
+mixed block, and the coordinate density is J_*(w)h0^(n_s).
+In the old retained chart the corresponding density is
+h0^(n_e-n_c)d_R(V_*) and its Hessian is Aret. Since this is a stationary
+point of the constrained phase, the usual quadratic Jacobian identity
+under coordinate change gives
+
+  h0^(n_e-n_c) d_R(V_*) /sqrt(det Aret)
+          =h0^(n_s) J_*/sqrt(det_Tphys H)
+          =h0^(n_s) A0.                                (2.4)
+
+This is equality of stationary amplitudes for the SAME measure and
+phase. An equally intrinsic verification is to insert the exact orbit
+identity
+
+  c(g)^(-n_s) integral exp[-G_R(U^h)/g^2] dh=1,
+  c(g)=integral_G exp[-q_G(v)/g^2]dv.
+
+Its small-g factor c(g)=h0(2 pi g^2)^(q/2)(1+o(1)) removes exactly
+the n_s gauge dimensions in the old retained Gaussian. All constants
+then agree with (1.1). Taking the ratio of (2.4) at w and 0 proves
+(2.2). The identity theorem extends it to every connected common
+holomorphic product domain already supplied for the two determinants.
+The finite proof uses a small comparison germ; it does not reduce the
+existing analytic domain of either expression.
+
+This argument uses the physical relative-saddle frame. Replacing Aret
+by a raw Hessian in a different anchor chart while leaving its Haar
+density unchanged would not prove (2.4).
+
+The old cutoff and new projected-product cutoff can differ at positive
+g. Equality (2.2) concerns their complete leading Gaussian amplitude,
+not equality of the cutoff measures.
+
+3. A SINGLE FINITE SPECTRAL EXPRESSION
+
+The coarea determinant and physical Hessian can also be retained in one
+actual saddle matrix. Let L(w) be the full left-relative Lagrange
+Hessian at V_*(w), including the ordinary constraint multiplier, and
+let k=q(n_c+n_s). Set
+
+  M(w) = [ L(w)  Q(w)^t ]
+         [ Q(w)     0  ] .
+
+An orthogonal decomposition into ker Q and its normal complement gives
+
+  det M(w)=(-1)^k det(Q(w)Q(w)^t) det_Tphys H(w).        (3.1)
+
+Invertibility only needs the physical gap and full row rank of Q.
+L need not be positive on the ambient space. Thus
+
+  Dphys(w)=-(1/2)log[det M(w)/det M(0)],                (3.2)
+  D^2 Dphys(0)[u,v]
+    =-(1/2)Tr[M0^(-1)M_uv
+                 -M0^(-1)M_u M0^(-1)M_v].             (3.3)
+
+The derivatives in (3.3) are TOTAL datum derivatives, including the
+stationary response, multipliers and curved constraint. There is no
+assumption M_u=0. On a finite regulator (3.3) is ordinary linear
+algebra. The strict rooted catalogues of TURN48 and the archived
+source-Hessian estimates supply absolute exponential moments for its
+infinite structural-limit kernel.
+
+With the archived Maxwell normalization, one orientation mu, one
+color a, and nu != mu,
+
+ beta(D)=-(1/2)sum_x x_nu^2
+                 D^2D(0)[e_(0,mu,a),e_(x,mu,a)].       (3.4)
+
+There is no extra sum over colors in (3.4). Formula (3.3) inserted in
+(3.4) is a directly specified spectral quantity for the actual
+physical determinant. It supplies a possible finite computation with
+exponentially controlled spatial truncation. Positivity, however,
+comes from the uniform analytic comparison below, not a numerical
+evaluation at a few depths or periods.
+
+4. THE NEW WINDOW IMPROVES THE SMALL-g ATTACHMENT
+
+Let F_g(w)=log E_muT exp V_g(w,xi). Every coefficient of r starts at
+degree three in b. Hence V_g is holomorphic at g=0 and V_0=0, exactly.
+The probability measure muT is independent of w. Consequently
+
+                   F_0(w)=0 for every w,T.             (4.1)
+
+This differs from a truncated Gaussian whose covariance and truncation
+shape vary with the background. No tau(T) cutoff-only correction is
+present here, even if T is fixed once and for all.
+
+The transformation (g,xi)->(-g,-xi) preserves muT and every argument
+gKxi, and preserves the denominator g^2. Therefore F_-g=F_g.
+The TURN48 connected expansion on |g|T^3<c_R, on a common outer datum
+radius rho, bounds F uniformly in its rooted catalogue. Evenness and
+Cauchy at radius c_R T^-3 imply
+
+       ||F_g||_rho <= C_R g^2 T^6.                     (4.2)
+
+The anchored difference F_g(w)-F_g(0) has zero total linear jet by
+global adjoint invariance and semisimplicity. Subtracting degrees zero
+and one coefficientwise before restricting to an inner radius b gives
+an equivalent representative bounded by
+
+       C_R b^2 rho^-2 g^2 T^6.                         (4.3)
+
+The norm of the Maxwell extraction is at most C_beta b^-2. Thus its
+contribution to the scalar decrement is O_R(rho^-2 g^2 T^6), uniformly
+in preceding homogeneous depth M and compatible volume.
+
+For an inherited extracted activity e in the common class, the exact
+anchored increment in TURN48 has norm
+C_R ||e|| gT/r. The connected expansion, or Cauchy in an additional
+activity parameter, gives the corresponding quantum comparison
+
+  ||G_g(e)-G_g(0)|| <= C_R ||e|| gT/r,                 (4.4)
+  G_g(0)=Dphys+F_g,
+
+with the already fixed changes of quotient and carrier norms. Here
+the full output is T_class e+G_g(e), not G alone. On an O(b^2)
+extracted envelope, applying beta to (4.4) costs O_R(gT/r). The
+radius r is fixed before g; in conventions identifying r with b this
+is the earlier O_R(gT/b).
+
+At nonzero physical source the explicit baseline term is
+(g^2 zeta/2)xi^t Pxi, not (g^2 zeta/2)|xi|^2. This note does not
+deduce a transported original-source budget from the unsourced
+estimate (4.2). In particular coupling extraction cannot retroactively
+replace the frozen baseline window by a different one.
+
+5. EXACT TELESCOPE AND THE ADAPTED COUPLING
+
+The archived classical_one_loop_cocycle_research.md proves, on finite
+compatible regulators and then in a joint structural limit,
+
+ D_(M,RL)=T_(MR,L) D_(M,R)+D_(MR,L).                   (5.1)
+
+Its proof uses an auxiliary local gauge-invariant orbit tube and exact
+Haar pushforward/Fubini, followed only by finite-dimensional leading
+Laplace asymptotics. The based gauge groups fit the exact sequence
+H_R -> H_RL -> H_L with normalized Haar disintegration. The action
+extension is consistent on the tube using paths of length O(RL) to
+a based center. No estimate uniform in RL for that comparison germ
+is required. It identifies the same leading amplitude (2.1).
+
+By (2.2), (5.1) is now an identity for Dphys of the new kernel. This
+does NOT say that successive projected windows equal one direct
+window at positive g.
+
+The actual infinite classical system has true marginal preservation
+beta_out T=beta_in, proved in classical_marginal_transport_research.md
+using the irrelevant O(p^4) remainder and the actual smooth pre-gauge
+response. Thus, within ONE joint structural system,
+
+  sum_(j=0)^(q-1) beta_(j+1)(D_(MR^j,R))
+                       =beta_(q)(D_(M,R^q)).           (5.2)
+
+There is no exact assertion (5.2) for finite short-lift beta ratios.
+They require the archived finite-moment transfer and leakage estimate.
+
+For a generic fixed countable classical system, the adapted coordinate
+instead uses
+
+ ell_j(e)=beta_(j+1)(T_j e),
+ A_j=P_(j+1)T_j|ker beta_j,
+ k_j(e)=sum_(n>=0) ell_(j+n)(A_(j+n-1)...A_j e),
+ beta_hat_j=beta_j+k_j P_j.
+
+Uniform finite-block contraction makes this series bounded by
+C b^-2 and gives beta_hat_(j+1)T_j=beta_hat_j. With the exact density
+coordinate gamma_hat=gamma-k(e), the update is
+
+ gamma_hat_(j+1)=gamma_hat_j-beta_hat_(j+1)(G_j,g(e_j)). (5.3)
+
+In the actual infinite system used for (5.2), ell_j=0, hence k_j=0
+and beta_hat=beta. The archived positive coefficient is therefore
+also the adapted coefficient there. One must not apply positivity
+computed with beta to an arbitrary different beta_hat system without
+this identification. Finite regulator control below uses vanishing
+leakage, rather than silently imposing exact infinite preservation.
+
+6. WHAT THE ARCHIVED POSITIVE-COEFFICIENT PROOF REALLY USES
+
+The sources in this section are explicit local research proofs in
+work/archive/ym4-research/work/, not a claim inferred from a handoff
+summary. They were reread in TURN49. No later correction repudiating
+Notebook37's assembled coefficient was found; the correction register
+and subsequent handoffs retain it. The displayed dependency chain is
+nevertheless essential.
+
+6.1 Exact constrained and ghost algebra.
+
+The actual residual precision is the Hessian of
+S_M-S_(MK) composed with F_K:
+
+ Hres=S_M''-lambda.F_K''-C^t q_c C.
+
+It is stationary, gauge annihilating and retains the constraint
+curvature. The moving-reference scalar average B has
+BB^t=K^-4 I. Put mu=K^-1, J=K^2 B^t, Pi=JJ^t, P0=I-Pi.
+The corrected vector average satisfies C-Cbar=D_c Z and
+Cbar D=D_c B. The exact mean-zero representation is
+
+ D=N0[log det Ghat-(1/2)log det Q_B],
+ Ghat=P0 D^tD P0+mu^2 Pi,
+ Q_B=Hres+D P0 D^t+a Cbar^t Cbar.                      (6.1)
+
+Here N0 subtracts the flat value; the notation P0 in (6.1) is a
+moving scalar mean-zero projection, not a trace root projector.
+All group/coarea/pivot factors have already been matched in deriving
+(6.1). The derivation keeps them together.
+
+Define the soft operators and fixed coarse-fiber matrices
+
+ T_s=D^tD+mu^2 Pi,       M_s=mu^2 J^t T_s^-1 J,
+ V=Q_B+D J J^t D^t,
+ S=I-J^tD^t V^-1 D J
+   =(I+J^tD^t Q_B^-1 D J)^-1.
+
+Schur/Jacobi and Woodbury give EXACTLY
+
+ det Ghat=det T_s det M_s,      det Q_B=det V det S,
+ D=N0[log det T_s-(1/2)log det V
+                      +log det M_s-(1/2)log det S].    (6.2)
+
+Sources: soft_scalar_coarse_reduction_research.txt and
+soft_vector_coarse_reduction_research.txt. Their physical weighted
+resolvent bounds give a uniform O(1) Maxwell moment for both coarse
+log determinants, independent of M,K. This is not inferred merely
+from the coarse rank. The scalar normalized tent lift bounds M_s(0)
+above and below. The vector S(0) gap follows from
+DD^t <= Delta_1 <= C Q_B(0), and the same two-sided source estimates
+control its first two jets. The raw mean-zero projection need not
+have uniformly bounded separate relative pure-gauge vertices.
+
+In particular a pinned scalar ghost with a K^-4 small eigenvalue
+has NOT been replaced alone by a mass-K^-2 ghost. Such a replacement
+is invalid; the exact coupled factors (6.2) are used instead.
+
+6.2 Actual affine stationary jets.
+
+The heat comparison probes the formal commuting affine curvature
+U_mu(t;x)=exp(i t x_nu H/K^2), mu != nu, tau(H^2)=1.
+This is a polynomial jet in a joint infinite structural system, not
+a continuously varying finite-torus flux family.
+
+cartan_determinant_moment_fragment.tex, effective-action subsection,
+uses uniqueness of the bare depth-M stationary jets and the FULL
+envelope multiplier to prove D_left S_M=O(t^3) componentwise on that
+probe. Repeating at ratio K gives lambda_(MK)=O(t^3); differentiated
+Ward identities give q_c D_c=O(t^3). Consequently the actual V in
+(6.2) and
+
+ Vtilde=S_M''+DD^t+Cbar^t[aI-S_(MK)'']Cbar              (6.3)
+
+have identical affine jets through degree two. The multiplier term
+and C-Cbar correction disappear only at this order on this probe.
+No substitution of the Wilson action for S_M has been made. tail47's
+independent focused TURN49 audit checked this specific gate.
+
+6.3 Uniform heat ends, including dimensions.
+
+The short-time proof soft_pair_short_time_research.txt first centers
+the affine gauge at each diagonal root. Each magnetic insertion
+brings K^-2 and a polynomial distance factor. Uniform fine-current
+exponential action kernels absorb those distances. A second jet is
+O(K^-4(s+s^2)) per root; summing the K^4 roots of a final block
+therefore gives O(s+s^2), for 0<s<=1.
+
+For a soft penalty C^tFC the exact rooted Duhamel trace is
+
+ Tr_f[P_root E_W C^t F C E_B]
+                     =Tr_c[F C E_B P_root E_W C^t].
+
+P_root is retained on the right. Each coarse C costs O(K^-1) as a
+whole-block Hilbert operator. Exponential source kernels make the
+coarse trace sum O(K^-2), without a K^4 dimension factor. This gives
+an integrable O(K^-2 s) short-time correction.
+
+At physical times u=s/K^2>=1, soft_pair_infrared_tail_research.txt
+uses X=K^2 T_s or K^2 Vtilde, X0>=c(I+K^2 Delta). The local trace
+bound Tr[P_root(I+K^2 Delta)^-3 P_root]<=C makes the rooted inverse
+square root Schatten-6. The twice differentiated contour formula
+
+ e^-uX=(2/u^2)(1/(2 pi i)) integral_Gamma
+                           e^-uz(z-X)^-3 dz
+
+has three resolvents. Source-localized Schatten-3 Holder bounds
+their trace products with exponentially summable root trees.
+One obtains C u^-3 exp(-c u), hence a uniformly bounded integral
+against du/u. This is the actual local source-trace estimate,
+not just a flat global heat bound.
+
+Together with the coarse O(1) corrections in (6.2), these ends give
+
+ beta(D_(M,K))=integral_1^(K^2) hsoft_(M,K)(s) ds/s+O(1), (6.4)
+
+with a constant uniform in M,K and all applicable joint limits.
+
+6.4 The middle band is an integrable comparison, not universality.
+
+soft_penalty_physical_band_complete_research.txt proves
+
+ |hsoft_(M,K)(s)-hbase_M(s)|<=C s/K^2, 1<=s<=K^2.       (6.5)
+
+Its physical rescaling and gradient-relative first-two vertices give
+uniform differentiated semigroup bounds. It uses the same rooted
+coarse trace identity above, including P_root. Fixed coarse rank is
+used only after these source estimates, so it hides no K^4 loss.
+
+actual_base_ward_heat_comparison_research.txt then proves
+
+              |hbase_M(s)-hWilson(s)|<=C/s.            (6.6)
+
+The actual S_M has current-local kernels through degree four,
+Maxwell normalization one and the full nonlinear Ward identities.
+For R=S_M-S_W these give joint low-momentum orders
+R2=O(p^4), R3=O(p^3), R4=O(p^2). All left-relative BCH terms in the
+Hessian are retained. The differences of its first and second
+magnetic vertices have orders three and two. Two external
+derivatives reduce at most two powers. The total heat trace's
+one- and two-insertion formula then bounds the difference by C/s
+in dimension four, uniformly in the Duhamel time partition and M.
+This is an explicit comparison for the actual action vertices.
+
+wilson_continuum_heat_comparison_research.txt proves
+
+        |hWilson(s)-11 alpha_g|<=C/sqrt(s).             (6.7)
+
+It expands the exact Wilson plaquette and left-relative source
+vertices at physical lattice spacing epsilon=s^-1/2. The flat
+Feynman symbol is Delta(k)I. The vector first/second vertex errors
+have respectively orders two/one, sufficient for C/sqrt(s) after
+the two external derivatives. The computation uses the combined
+heat diagrams, not an absolutely convergent uncombined continuum
+contact moment.
+
+For one normalized Cartan probe, let
+C_H=Tr_ad((ad_H)^2), with the convention in which its real charged
+eigenvalues are squared, and alpha_g=C_H/(48 pi^2)>0.
+The continuum scalar heat curvature coefficient is -alpha_g/2.
+The vector spin factor 2+2 cosh(2q_H f s), multiplied by
+(4 pi s)^-2(q_H f s)/sinh(q_H f s), gives 10 alpha_g.
+The REAL adjoint trace counts both charges once, without another
+factor two. Since D contains log det scalar minus half log det vector
+and beta is twice the affine t^2 density coefficient, the signed
+heat integrand is h_vector-2 h_scalar=11 alpha_g.
+
+Thus the explicit uniform estimate is
+
+ |hsoft_(M,K)(s)-11 alpha_g|
+               <=C[s^-1/2+s/K^2], 1<=s<=K^2.           (6.8)
+
+Its two errors integrate to at most 2C and C against ds/s. Equations
+(6.4)-(6.8) prove the actual comparison
+
+ |beta(D_(M,K))-22 alpha_g log K|<=Ccmp,                (6.9)
+
+where Ccmp is fixed BEFORE K is chosen and is independent of M,K
+and the applicable jointly obtained structural system. This is the
+assembly in actual_positive_beta_assembly_fragment.tex. It concerns
+the actual determinant now identified by (2.2).
+
+For matrix groups beyond the already established classical input
+class, (6.9) is not a substitute for extending those structural
+inputs. The color coefficient alone does not establish that extension.
+
+7. WHAT CAN BE REUSED FROM THE PUBLIC LITERATURE
+
+The current public repository was revisited:
+https://github.com/ethanwsussman/Yang--Mills-LLM-experiment .
+Its README describes an apparent construction in progress. The local
+raw-I one-loop discussion supplies a useful target and route, but its
+outlined finite-part comparison is not used as a proof of (6.9).
+
+Primary background-field references were also rechecked:
+https://arxiv.org/abs/hep-lat/9504006
+https://arxiv.org/abs/hep-lat/9505011 .
+They concern lattice background renormalization and the perturbative
+bare/MSbar coupling relation. Their amplitudes are not by themselves
+the zero-momentum constrained physical fiber normalizer in (1.1).
+The local source-interface notes explain this distinction in detail.
+Here the determinant match, soft Schur factors and integrable errors
+(6.4)-(6.8) do the needed work. No numerical continuum coefficient
+is silently assigned to an unidentified lattice determinant.
+
+8. POSITIVE BLOCK DRIFT FOR THE NEW KERNEL
+
+Fix R>1, the grouping, field radii and the existing classical activity
+return length q_a first. Choose a FIXED multiple q of q_a such that
+
+ Ccmp <= 11 alpha_g q log R,   delta=11 alpha_g q log R.
+
+Using (5.2) and (6.9), every applicable joint infinite structural
+system satisfies
+
+ sum_(j=0)^(q-1) beta_(j+1)(Dphys_(MR^j,R))>=delta.      (8.1)
+
+The archived local_positive_drift_fragment.tex supplies the exact
+finite passage: joint compactness includes all shifted depths and
+the long-ratio determinant, and uniform source-Hessian moments
+control the finite short-lift beta tails. A violating sequence
+M_n arbitrary, N_n->infinity would have a joint limiting system
+violating (8.1). Therefore some N_drift, independent of M, satisfies
+
+             B_q(M,N)>=delta/2, N>=N_drift.            (8.2)
+
+This is qualitative; it does not give a numerical threshold or
+assume exact finite scalar additivity.
+
+Suppose a q-step ACTUAL new-kernel history is in the stated extracted
+activity envelope, with all its periods at least N0 and g_j<=g_w.
+Its decrement d_j differs from the leading b0_j by
+
+ |d_j-b0_j|
+   <= C_int omega(N0)
+          +C_R rho^-2 g_j^2 T_j^6+C_R g_j T_j/r.       (8.3)
+
+The first term is finite classical marginal leakage; omega(N)->0.
+The second and third terms are (4.3)-(4.4). The old tau(T) term is
+absent. Choose N0 first so the first term is <=delta/(8q), and g_w
+so the remaining sum is <=delta/(8q). Fixed sufficiently large T
+is allowed, or a continuous T(g) with gT(g)^3->0. Then
+
+                  sum_(j=0)^(q-1)d_j>=delta/4.         (8.4)
+
+Uniform upper bounds on d_j give the corresponding B_+=qD_abs.
+No individual d_j is asserted positive.
+
+Equation (8.4) is a theorem for every admitted q-step history on the
+same actual local class. Extending it to arbitrary history length
+uses an amplitude induction for THIS new quantum map. The old
+finite-block contraction is classical and is unchanged; (4.2) and
+(4.4) are the needed new zero-input and Lipschitz estimates. Section 10
+checks the class/representative and continuity attachment explicitly,
+without declaring the old and new maps equal.
+
+With the Section 10 attachment, the archived continuous clipped
+endpoint-shooting proof applies: for m such blocks, choose
+Gamma_*>=g_w^-2+qD_abs, run the auxiliary evaluation
+g_eval(gamma)=max(gamma,g_w^-2)^-1/2, and use the intermediate value
+theorem on the interval
+
+        Gamma_*+m(delta/4) <= gamma_bare
+                              <= Gamma_*+m qD_abs.
+
+The block bounds force the resulting trajectory ending at Gamma_*
+to stay in the weak range, so clipping is inactive on that solution.
+This is finite LOCAL selected-sector tuning, not full Wilson measure
+tuning and not a transported-source theorem.
+
+9. PRECISE FRONTIER CHANGE
+
+The leading determinant in the current projected kernel is no longer
+an unidentified possible drift. Its physical coarea/gauge match is
+exact, its small-g attachment has no cutoff-only error, its leading
+cocycle is inherited, and the reread uniform heat proof supplies a
+positive long-block coefficient in the actual structural systems.
+
+Section 10 additionally supplies the unsourced repeated-map attachment.
+The companion constant_original_source_trajectory_turn49.txt supplies
+one transported constant original-action source budget on these local
+trajectories. What remains separate is spatially varying physical
+sources, the probability and locality of all complementary
+histories and nonadmitted branches, and the continuum construction
+with a nonzero separated physical witness. None is supplied by a
+positive Gaussian coefficient alone.
+
+10. NEW-MAP UNSOURCED INDUCTION AND FINITE ENDPOINT SHOOTING
+
+This section is an explicit attachment of the interface arguments in
+finite_quantum_induction_research.md and
+finite_quantum_coupling_continuity_research.md. The old window itself
+is not an input. Fix T>=T0 once for simplicity; the proof also allows
+continuous T(g) subject to the same strict estimates.
+The scalar Maxwell coordinate and scalar shooting theorem use the
+established SIMPLE color factor. For a semisimple product one would
+need the corresponding componentwise marginal extraction and a
+multi-coupling tuning argument; semisimplicity alone only removes
+the total linear jet and does not prove that extension.
+
+10.1 Spaces and exact descent.
+
+At period N use the SAME finite connected J-cell carrier space
+
+ ||E||_(N;a,b)=sup_i sum_(X contains i) exp(a|X|)||E_X||_b,
+
+and quotient by equality of the normalized total
+Phi_E(w)=sum_X E_X(w)-sum_X E_X(0) on the entire b polydisc.
+Its invariant real subspace consists of totals with the local gauge,
+translation, hypercubic and color identities. Individual coefficients
+need not be invariant. The fixed weight a and inner radius b are the
+ones in the archived classical contraction theorem.
+
+TURN48's strict joint (w,xi) catalogue maps an admissible family at
+this weight and radius to an output family at the SAME prescribed
+weight and radius after the parameter choices stated there. Whitening
+does not add undeclared reads: remote xi and datum reads are included.
+The complete old argument remains strictly inside the old b ball.
+This strict inclusion is the reason the following quotient descent
+is an actual identity.
+
+If Phi_E=Phi_E', their raw totals differ by a constant c throughout
+that ball. Hence
+E(U_pre(w,gKxi))-E(V_p(w)) is unchanged pointwise. The inherited
+background changes by c. The base action, P,K,J and the window are
+independent of the inherited input and stay fixed. The exact
+integrals therefore differ by exp(c) only, and their normalized
+logarithms agree. Thus the new F_j,g=T_j+G_j,g, its T_j and its G_j,g
+descend to this finite quotient. Real and spatial/gauge identities
+are precisely those already established for the actual TURN48 map.
+
+For two classes x,y in a quarter of the family ceiling epsilon_bar,
+choose near-minimal representatives Y of y and D of x-y, then use
+X=Y+D. Their norms stay below epsilon_bar. Linear inherited
+composition and the connected logarithm Cauchy estimate yield
+
+ ||G_j,g(x)-G_j,g(y)|| <= C_Q(gT/b)||x-y||.              (10.1)
+
+Sending the near-minimal error to zero proves the quotient bound.
+No common or continuous choice of minimizing representative is
+needed. All constants are uniform in M and compatible volume at
+fixed R,J and radii.
+
+The complete zero-input G_j,g(0)=Dphys+F_g has a uniform outer-radius
+catalogue bound H_* for weak g. This uses the full log A0 catalogue
+and (4.2). Subtract its constant and linear coefficient sectors
+before restricting to b<=rho/2. The total linear sector vanishes
+by semisimplicity. Therefore
+
+                  ||G_j,g(0)||<=C_F b^2,
+                  C_F=2H_*/rho^2,                     (10.2)
+
+after an inessential fixed norm conversion. It is crucial that this
+bound is O(b^2), not a claim that the full force is O(g^2).
+
+10.2 The fixed classical block and uniform quantum envelope.
+
+Use the actual finite reference S_j, its actual short-lift beta_j,
+and P_j=I-S_j beta_j. The already proved bounds are
+
+ ||S_j||<=C_S b^2, ||beta_j||<=C_beta b^-2,
+ ||P_j||<=p, T_j S_j=S_(j+1), ||P_(j+1)T_j||<=B.
+
+The classical semigroup and finite graded Ward estimates provide
+a fixed q_a and a period threshold N_a for which every q_a-step
+extracted classical product has norm <=1/4. The explicit bound is
+
+ p^2[C_low(J)L^-alpha+6C_high/L
+          +C_err(J)(L^2+L+1)exp(-c(J)LN)],
+ L=R^(q_a), N=output period.
+
+Choose J first, then q_a, then N_a, and then the final b within the
+fixed outer and direct-L domains. This is the archived classical
+contraction, unaffected by the changed Gaussian window.
+
+Let H_j=P_(j+1)G_j,g and A_j=P_(j+1)T_j. From (10.1)-(10.2),
+
+ Lip H_j<=nu, ||H_j(0)||<=C0 b^2,
+ nu=p C_Q gT/b, C0=p C_F.
+
+Set B>=1, K0=B+1,
+
+ L_a=sum_(l=0)^(q_a-1) K0^l,
+ K_amp=max(1,2 C0 L_a),
+ C_int=K0^(q_a)K_amp+C0 L_a.
+
+Decrease b until C_int b^2<epsilon_bar/8. Then choose g_w so every
+strict cluster/domain budget holds and
+
+       nu<=min(1,1/[4 q_a K0^(q_a-1)]).                (10.3)
+
+Starting in the extracted ball ||x_j||<=K_amp b^2, the step estimate
+gives ||x_(j+k)||<=C_int b^2 for 0<=k<=q_a, verifying each successive
+map's domain before applying it. Variation of constants between two
+such trajectories with the same prescribed couplings gives
+
+ ||delta_(q_a)|| <=
+ [1/4+(B+nu)^(q_a)-B^(q_a)]||delta_0||
+                                      <=(1/2)||delta_0||.
+
+The zero-started block output is at most C0 L_a b^2, so the block
+returns to the same radius-K_amp b^2 ball. This repeats for ANY
+prescribed weak coupling sequence and any finite number of allowed
+blocks, with all final periods >=N_a. A partial terminal block has
+the same intermediate envelope.
+
+At every stage choose a real representative with norm at most
+2 C_int b^2<epsilon_bar/4. This exists by the finite quotient norm,
+has exactly the same normalized total, the same b and a, and uses
+legitimate finite connected carriers. Compensate its raw constant
+in the vacuum normalization. Replacing the representative has zero
+effect on the next quotient map by 10.1; errors do not accumulate.
+
+This proves the required uniform UNSOURCED new-map amplitude
+induction, rather than assuming the unchanged canonical cluster
+array stays small indefinitely. It is a theorem about the specified
+periodic local selected maps, with their actual input class.
+
+10.3 Raw density and frozen windows.
+
+Writing the input as Z_j exp[-gamma_j S_j+E_j,raw], the exact new
+integral has scalar multiplier
+
+ N_j=A0_j(0)(2 pi g_j^2)^(d_j/2)c_T^(n_e,j)
+
+and raw output F_j,raw. If
+F_j,raw=beta_(j+1)([F_j]) S_(j+1)+E_(j+1),raw+c_j, then
+
+ gamma_(j+1)=gamma_j-beta_(j+1)([F_j]),
+ Z_(j+1)=Z_j N_j exp(c_j).                             (10.4)
+
+Every vacuum and color-ball mass is retained. Re-expressing the
+output with the new gamma does not change the previous window.
+It specifies the baseline for the NEXT independently defined
+selected step. Thus (10.4) is exact repeated density factorization
+in the declared local scheme.
+
+10.4 Finite continuity for the new window.
+
+Fix one finite regulator and one admissible input representative.
+The new normalized expectation is a finite integral over the
+FIXED compact product color balls with the fixed product Gaussian
+measure muT. The base exponent, J and inherited arguments depend
+continuously on positive real g, uniformly over the full output
+b ball. This follows from the strict independent chart and old-field
+margins; bounded holomorphy of the inherited input on b suffices.
+No extension of an arbitrary activity beyond its original radius
+is used.
+
+Consequently the integral varies in H-infinity(b) by uniform
+domination on each compact positive-g interval. The connected-log
+catalogue supplies a uniform finite-volume bound on its normalized
+log. Its nonzero value at w=0 and that log bound give a positive
+lower bound on the modulus throughout the entire b ball. Nearby
+integrals therefore have normalized logarithms converging uniformly
+there. Constants may depend on the finite regulator.
+
+Assigning any bounded normalized holomorphic total to the single
+full connected torus carrier gives the quotient bound
+||[h]||<=exp(a N_cells)||h||_infinity. Thus the new F_j,g is
+continuous in g in the finite quotient norm at the SAME b.
+Equation (10.1) makes it jointly continuous in (g,x). This deliberately
+finite argument needs neither a volume-uniform continuity modulus
+nor continuous representative choices. With continuous T(g), first
+dilate the integral to unit color balls; the same proof applies.
+
+10.5 Actual finite endpoint conclusion.
+
+Choose q a multiple of q_a as in Section 8, then enlarge N0 and
+decrease g_w to satisfy both the amplitude and positive-drift
+requirements. Let B_-=delta/4, B_+=qD_abs, and choose
+Gamma_*>=g_w^-2+qD_abs. For every finite m and compatible final
+period N_end>=N0, the new selected local maps admit a real starting
+inverse coupling in
+
+ [Gamma_*+mB_-, Gamma_*+mB_+]
+
+whose exact extraction trajectory ends at Gamma_* after mq steps.
+All its physical baseline couplings remain weak and all activities
+remain in the same fixed norm/radius envelope.
+
+Proof. Run the continuous auxiliary evaluation at
+g_eval(gamma)=max(gamma,g_w^-2)^-1/2, keeping the scalar decrement
+unclipped. The amplitude induction applies to every auxiliary
+history because every evaluated coupling is weak. At the lower
+endpoint of the interval the total decrement is at least mB_-,
+so the final gamma is <=Gamma_*; at the upper endpoint it is
+>=Gamma_* by the upper bound. Continuity gives equality somewhere.
+For this history, partition the future of any intermediate stage
+into complete q-blocks plus fewer than q remaining steps. The
+complete blocks have positive decrement by (8.3)-(8.4), which use
+only the uniform intermediate envelope. The leftover decrement
+is bounded below by -qD_abs. Hence gamma_j>=Gamma_*-qD_abs>=g_w^-2
+at every stage. Clipping was inactive, so this is the actual update
+(10.4). The same argument tolerates an initial extracted activity
+inside the stated endpoint ball.
+
+This is a finite, homogeneous, local selected-sector trajectory at
+every requested finite length, with g_bare of order m^-1/2 at fixed
+terminal inverse coupling. This section does not establish compatibility
+or convergence of the tuned choices as m varies, preservation of a
+uniform original-source disc, estimates for all label histories,
+or a nontrivial continuum limit. The constant original-action source
+disc is supplied separately by the companion note named above.

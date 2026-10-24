@@ -1,0 +1,218 @@
+ROOTED NORMALIZED LIVE-HISTORY MASS: PRIMARY CHECK AND TWO EXACT COMPARISON TESTS
+18 October 2026. Independent audit; this note does not assert a YM existence theorem.
+
+1. PRECISE RESULT OF THE PRIMARY CHECK
+
+Source: T. Balaban, Large field renormalization II, CMP 122 (1989),
+https://scispace.com/pdf/large-field-renormalization-ii-localization-exponentiation-h8b7ih93xo.pdf
+DOI 10.1007/BF01238433. Read the actual primary PDF text.
+
+At pp379--380, (1.73)--(1.75), T(X)1 is positive on real fields; normalized T controls a mark by its supremum. The subsequent large-field estimate is for T(X)1. At pp389--390, (1.97)--(1.100), terms avoiding surviving domains become small bulk log activities, while terms meeting them become boundary terms. The alternative representation (1.103)--(1.104), pp391--392, extracts each surviving T(Y)1 and exponentiates the normalized boundary operations. The proof explicitly dispenses with tree factors for these fixed Y because they are not summed in that expansion. The resulting multipliers depend on V_k restricted to Y; the next RG operations leave them outside their integrations.
+
+The lower bound at pp357--359, (1.2)--(1.11), is for the reference refill normalization with its constrained classical minimum extracted. It is not a lower bound for an actual history in which a specified surviving component has been removed. The lifetime argument (1.79)--(1.88) charges enlargements and mergers to the original bad regions. It supplies an absolute majorant, not a conditional denominator comparison.
+
+Therefore this source passage does NOT establish the requested normalized rooted mass estimate. It identifies exactly where an additional argument must attach.
+
+2. WHY NORMALIZING A COMPONENT DOES NOT RETAIN ITS RARITY
+
+For positive stopped history densities write
+
+ rho(V)=sum_H rho_H(V),    N(V)=sum_H rho_H(V) F_H(V).
+
+If a designated history weight has rho_H=z_H b_H with z_H small, its
+conditional mark is still F_H. A bound |T_H F_H|<=z_H B_H sup|F_H|
+and T_H1<=z_H B_H does not bound T_H F_H/T_H1 by z_H sup|F_H|.
+
+The elementary exact countermodel is
+
+ rho=a+z b,    N=z b m,    N/rho=z b m/(a+z b).
+
+For a=0 this equals m, for every z>0. This disproves the implication
+from an absolute component bound to pointwise normalized rarity. It
+is not a counterexample to the actual YM history probability: proving
+that an appropriate competing a exists with a useful size is precisely
+the additional mathematical obligation.
+
+Likewise a regular current refill kernel cannot settle the issue. If
+rho_h(V)=w_h K(V) with K normalized and common to all hidden histories,
+then P(h|V)=w_h/sum w. Any lower bound or Gaussian tail for K controls
+the new field, but it leaves the relative hidden history masses intact.
+The source's separation of T(Y)1 from normalized T is consistent with
+this distinction.
+
+3. AN EXACT SUFFICIENT LOCAL COMPARISON, INCLUDING NORMALIZATION
+
+Fix an exterior xi and integrate ALL variables in a removable merger
+hull D, including those needed to change the determining set. Suppose
+there is a map from histories containing a designated rooted bad
+component C to admissible histories without that component, preserving
+xi, such that their integrated densities satisfy
+
+ W_bad(C|xi) <= exp[-P(C)+A nu(C)] D_ref(xi) F_out(xi),
+ W_fill(C|xi) >= exp[-B nu(C)] D_ref(xi) F_out(xi).
+
+Suppose the weighted number/Jacobian of inverse surgery choices is at
+most exp[C_0 nu(C)]. The denominator of the actual conditional law
+contains the fill contributions. Summing over inverse choices gives
+
+ P(C occurs | xi) <= exp[-P(C)+(A+B+C_0)nu(C)].                 (3.1)
+
+The same argument permits a nonnegative polynomial mark M(C), provided
+the root animal sum of M(C) times the right side of (3.1) converges.
+All vacuum, reference-normalization, coarea, gauge-fixing and classical
+minimum factors must be identical in the two displayed comparisons.
+An upper bound on W_bad and normalization of the reference kernel do
+not imply the lower bound on W_fill. No global partition function is
+used in this lemma, so the conclusion is independent of total volume.
+
+A weaker integrated comparison could suffice: an exterior cost C_K(xi)
+on the right of (3.1), with precisely the normalized scalar-source
+moments needed for the exterior words. Uniformity over arbitrary complex
+source configurations is not meaningful as a probability statement;
+one needs either real positive sources or a normalized analytic
+coefficient estimate on a stated common source disc.
+
+4. A REAL LIMIT ON WHAT A 'GOOD COLLAR' CAN GUARANTEE
+
+An unrestricted uniform collar theorem at a single threshold is false
+already for a finite Dirichlet Maxwell box. Let the boundary data impose
+constant mean curvature t_g=epsilon_g-g^2, with epsilon_g=g(log g^-2)^p.
+The collar is strictly below epsilon_g. An interior curvature equals
+
+ F=t_g+g Y,
+
+where Y is a centered nondegenerate Gaussian with variance independent
+of g. Therefore
+
+ P(F>epsilon_g | this collar)=P(Y>g) -> 1/2.
+
+No bound exp[-c(log g^-2)^nu] holds uniformly over such collars. This
+does not exclude a comparison with a strict fractional safety margin,
+or with a larger interior threshold. In particular the source's final
+healing discussion uses a 2 epsilon_k curvature bound. One must check
+the literal bad cutoff and admitted collar before applying this test;
+it is not a disproof of the source's doubled-threshold geometry.
+
+Topological or coarse-average constraints can also obstruct a refill
+which keeps every coarse datum fixed. A valid surgery may need to
+integrate the whole merger hull and change some interior coarse data.
+The exact reference denominator still has to be shared after that change.
+
+5. THE BARE WILSON RP ROUTE REALLY DOES GIVE NORMALIZED RARITY
+
+Here is a direct finite-volume calculation which avoids dividing two
+extensive bounds before localization. On a reflection-compatible Wilson
+lattice with normalized Haar measure let
+
+ Z_beta = integral exp[-beta sum_p S_p(U)] dU,    S_p>=0.
+
+Choose a fixed reflection cell and one plaquette observable S in it.
+Let n be the number of reflected cells, and assume the standard
+chessboard inequality for this cell convention. Disseminating
+f=exp[(beta/2)S] yields
+
+ E_beta f <= (Z_dis/Z_beta)^(1/n)
+          <= (Z_(beta/2)/Z_beta)^(1/n).                      (5.1)
+
+The last inequality holds because only a subset of plaquettes was
+reweighted; reducing all their positive Wilson coefficients to beta/2
+increases the partition integral. Markov's inequality then gives
+
+ P_beta(S>=t) <= exp[-beta t/2]
+                  (Z_(beta/2)/Z_beta)^(1/n).                (5.2)
+
+For a fixed cell, n is comparable to the number of lattice sites.
+Restrict every link to a group ball of radius c beta^-1/2. Its Haar
+volume is at least c_1 beta^(-dim G/2). Every plaquette action is then
+at most C/beta. Thus
+
+ log Z_beta >= -C N_sites(1+log beta),   Z_(beta/2)<=1,
+
+and (5.2) implies the volume-uniform bound
+
+ P_beta(S>=t) <= exp[-beta t/2+C(1+log beta)].               (5.3)
+
+For t=c beta^-1(log beta)^(2p), p>1/2, this is the desired stretched
+logarithmic kind of rarity. Precise cell constants depend on the
+reflection-plane/plaquette convention; no claim that n equals the
+number of all oriented plaquettes is needed.
+
+This proves that extensive pressure estimates CAN be useful after a
+chessboard root. It does not identify the native auxiliary-history
+event with the bare local observable used in (5.1).
+
+6. WHAT IS MISSING IN TRANSFERRING (5.3) TO A NATIVE FIRST CONTACT
+
+There are three different mathematical objects:
+
+ (a) a local bare plaquette event under the bare Wilson measure;
+ (b) a current coarse-field event under the actual stopped positive law;
+ (c) a surviving first-contact event in the auxiliary R history.
+
+The preceding proof handles (a). For (b), sufficient inputs would be
+reflection positivity for the actual coarse law and a uniformly
+normalized pressure estimate for a fixed positive coarse Wilson-energy
+tilt, with the same UV vacuum factor canceled first. Compactness alone
+gives a cost proportional to gamma_b per cell rather than log gamma_b.
+The native absolute lifetime bound does not supply that pressure
+estimate merely by being a stability theorem.
+
+For (c), mass preservation gives a positive dual function
+
+ p_C(U_bare)=P(auxiliary first contact C | U_bare),  0<=p_C<=1.
+
+But it does not make p_C a function of the links of a closed reflection
+cell. Applying chessboard requires a positive cell-local majorant (or
+a summably localized positive decomposition) and the matching
+disseminated source estimate. Signed localized T coefficients are not
+such a decomposition of a conditional probability. A naive proxy
+'some original fine plaquette was bad in the ancestor cell' loses the
+huge number of bare plaquettes and does not retain the renewal gain.
+
+Reflection covariance and positivity of a resampling kernel alone do
+not imply reflection positivity. For example, a reflection-symmetric
+kernel may output the two-side spin pair (H,-H), H uniform in {+1,-1}.
+The output law is reflection invariant and positive, but for the
+positive-side function f=s_+ it has E[f theta f]=-1. A factorization
+of the actual refill kernel across each reflection plane, or another
+positive-kernel RP argument, must be proved rather than assumed.
+
+Finally, a zero-source probability bound cannot simply be combined with
+Holder and ordinary powers of a Wick F^2 insertion: coincident products
+need not be uniformly bounded as the UV cutoff is removed. The needed
+extension is a normalized source coefficient estimate for separated
+scalar words, retaining their counterterms and vacuum cancellation.
+
+7. DOES SURVIVING TO THE STOP SCALE FORCE AN EXTRA AGE PENALTY?
+
+A component at the stop scale has a carrier in that scale's domain
+class. This fact alone gives no diameter factor exponential in its
+first-contact age. An ancient small ancestor may merge with a newer
+neighbor, and a tree connecting two touching pieces need not contain
+a long edge. The actual lifetime ledger is stronger than this simple
+topological observation, but it is still a bound on absolute weights.
+To obtain an additional fine-to-stop suppression one must exhibit an
+unspent source factor for each such ancestral chain; it cannot be
+inferred from the current component's minimum block size.
+
+Even if a fixed-stop-scale lower density bound were available, the
+hidden-history example in section 2 shows that the bound must compare
+the SAME merger hull with a competing history. A lower bound on a
+common current refill kernel is insufficient. The native final
+representation leaves exactly this comparison between its surviving
+T(Y)1 multipliers unresolved.
+
+8. PRESENT STATUS AND THE NARROW NEXT LEMMA
+
+The normalized estimate requested for early surviving histories has
+not been proved by the source passages checked here. The valid results
+are the absolute producer estimate, the normalized sup-mark estimate,
+the healed bulk log-activity estimate, and the bare RP estimate (5.3).
+They do not combine without another locality/denominator theorem.
+
+The most direct sufficient next statement is (3.1), with the literal
+original determining sets and source cutoffs. The RP alternative is
+the positive dual-cell interface in section 6, together with the
+normalized disseminated scalar-source bound. These are specific
+additional proofs, not changes of notation for the existing absolute
+T estimate. No claim here rules out either route for actual YM.

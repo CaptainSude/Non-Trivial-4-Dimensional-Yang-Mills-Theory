@@ -1,0 +1,291 @@
+TURN82 -- EXACT PULLBACK COST OF THE NEW ORIGINAL-LINK SOURCE DOMAIN
+20 October 2026. history47. Consumer analysis, not a native admission claim.
+
+RESULT
+The new HS source germ is a genuine uniformly normalized ORIGINAL-link
+analytic germ. Its available norm does not by itself give the earlier
+native coarse/pair source norm. The loss can be quantified: a four-
+dimensional refinement h=M^-1 has fine link potential O(h b) on O(h^-4)
+links per current cell, giving an original-link Hilbert cost O(h^-1 b).
+The source-independent Gaussian bound then costs exp[C beta0 h^-2 b^2]
+per current cell. A nonflat abelian refinement attains this order for
+the absolute Gaussian kernel norm. This is a sharp limitation of that
+particular majorant, not a proof that a gauge-invariant source jet grows.
+
+There is a second, separate issue: the new annealed derivative estimate
+is averaged under the original Wilson law. Evaluating it on a deterministic
+minimum does not preserve that measure. The exact chain factors and the
+needed measure change are stated below; neither can be omitted.
+
+1. THE TWO ACTUALLY PROVED NORMS
+
+The new input is turn82_global_smoothed_source_history.txt, Sections3--4A.
+For F_n=P^n B, 0<=B<=1, n>=1 (also for the reflected mixture), it proves
+
+ |F_n(U^0 exp z)| <= exp[C(beta0+1)||Im z||_2^2],
+                       ||z||_infinity<r0,                (1.1)
+
+with local exponential-coordinate conventions as in that note. It also
+proves, for EVERY fixed k>=1,
+
+ E_mu ||D^k F_n(U)||_op^2
+          <=C_k(beta0+1)^k Var_mu(B)/(2n).                (1.2)
+
+The derivative norm is the operator norm for k Hilbert directions in
+the ORIGINAL independent links; it is not the sum of coordinate jets.
+The complete source package is P^n exp(sum s_i B_i), not exp(sum s_i F_n,i).
+
+The previous target is instead the strong source-family norm
+
+ sup_I sum_(H contains I) e^(a|H|)
+                          sum_x ||E_(H,x)||_(native domain). (1.3)
+
+See turn75_classical_native_history.txt Section2,
+augmented_source_classical_contraction_turn70.txt Section1, and
+turn77_neutral_native_preparation_history.txt Section2. Every term of
+(1.3) retains complete field, source, current, gauge and determining reads.
+Its analytic norm is a supremum on a current-link or independent-pair
+domain, before the carrier and source-label sums. The actual TURN70
+argument only converts FIXED degrees<=4 into coefficient-sum kernels;
+it handles higher degree as a whole analytic function. Therefore the
+issue here is not an invented all-arity Wiener conversion. It is the
+different background domain, the actual carrier localization, and the
+measure of the annealed estimate.
+
+2. EXACT CHAIN FACTORS ON A COMMON ADMITTED RECONSTRUCTION
+
+Let Psi(w) be an ACTUAL holomorphic reconstruction into original links
+on a declared native/current domain, and choose a common chart about
+the real center Psi(w0). Write z(w) for its original link coordinates.
+All correction gauges and current dependencies belong to this map.
+An arbitrary independent (U,J) continuation is not defined by its
+physical restriction; that separate old issue is unchanged.
+
+The available analytic estimate composes literally as
+
+ |F_n(Psi(w))| <= exp[C(beta0+1)||Im z(w)||_2^2],          (2.1)
+
+provided EVERY z_e(w) is in the indicated chart. In particular, using
+the uniform Hilbert-ball estimate to get a fixed bound M_* requires
+
+ (beta0+1) sup_w ||Im z(w)||_2^2 <= C^-1 log M_*.         (2.2)
+
+This is the admission condition for THIS MAJORANT. It is not a necessary
+condition for the actual source to have a better holomorphic bound by
+some other argument (for example a source-specific gauge cancellation).
+
+For real-coordinate jets put
+
+ L_r(w)=||D^r z(w)||_(native directions -> original l2), r>=1.
+
+Faà di Bruno gives the exact partition sum
+
+ D^k(F_n o Psi)[v_1,...,v_k]
+  =sum_(pi a partition of{1,...,k})
+    D^|pi| F_n(Psi(w))[
+          D^|A|z(w)[v_i:i in A] : A in pi].              (2.3)
+
+Equation(2.3) is first read at w0 in the fixed original chart centered at
+Psi(w0), then recentered at each real w. Coordinate charts must be
+composed consistently; if one differentiates a moving-chart expression,
+its transition derivatives are included in z.
+Thus the deterministic pullback factor is
+
+ B_k(w)=sum_pi C_|pi| (beta0+1)^(|pi|/2)
+                                   product_(A in pi) L_|A|(w). (2.4)
+
+The first two cases are sqrt(beta0+1)L_1 and
+(beta0+1)L_1^2+sqrt(beta0+1)L_2, up to fixed constants.
+There is no permission to keep only L_1^k for a nonlinear minimum.
+
+The stronger pointwise version of the new proof says
+
+ ||D^k(F_n o Psi)(w)||_op^2
+     <= B_k(w)^2 V_n(Psi(w)),
+ V_n(U)=Var_(kappa_U)(C P^(n-1)B).                       (2.5)
+
+The SAME V_n can be used for every derivative order, because the
+normalized Gaussian density jets have mean zero. We know
+
+ E_mu V_n=<B,P^(2n-1)(1-P)B> <=Var_mu(B)/(2n),            (2.6)
+
+and pointwise V_n<=1/4. Consequently (2.5) is a valid pointwise
+pullback bound, but using the factor1/n after averaging over a different
+coarse law rho requires control of
+
+                 E_rho B_k(w)^2 V_n(Psi(w)).             (2.7)
+
+For example an actual pushforward domination Psi_*rho<=A mu and a
+uniform B_k would give A sup B_k^2 times (2.6). A deterministic minimum
+map from fewer coarse coordinates has image of Haar measure zero on
+the fine configuration space and does NOT have such domination. Thus
+(1.2) cannot simply be restricted to its image. An exact random inverse
+record with original-law pushforward would retain the right measure,
+but then its complete reconstruction derivatives and their correlation
+with V_n remain in (2.7). None is supplied by (1.2) alone.
+
+3. ACTUAL REFINEMENT GRADING AND THE HILBERT COUNT
+
+The existing ordinary-prefix estimate is an estimate of individual fine
+potentials before spatial summation. In current units, with h=M^-1,
+
+ |a_e(w)|<=C h b,       |D a|<=C h^2 b,                  (3.1)
+
+on a bounded complete current collar. The strict family and its Hölder
+refinement are explicit in augmented_source_spatial_transport_turn70.txt
+(1.2)--(1.3), and the native homogeneous source-only chart comparison is
+in turn75_classical_native_history.txt Section3. A current carrier H
+has O(h^-4 |H|) fine link reads. Therefore the implication of (3.1)
+for the NEW norm is only
+
+ ||a(w)||_l2(fine) <= C h^-1 b sqrt(|H|).                 (3.2)
+
+This is the four-dimensional count h^-4 against TWO powers of h; it
+is not the four-power curvature/action cancellation of the classical
+Wilson reference. Inserting (3.2) in (2.1) gives
+
+             exp[C(beta0+1) h^-2 b^2 |H|].              (3.3)
+
+For a fixed H, a fixed O(1) bound by this estimate needs
+b=O(h/sqrt(beta0+1)). A fixed native core radius does not satisfy that
+as M grows. A current running radius g_j(log g_j^-2)^Q also has no
+automatic such extra factor h. Its own-domain admission in TURN79 is
+a different theorem and does not identify (3.3) with a small source
+activity. Even for fixed H, a prefactor growing as exp(c M^2) is not
+paid by a fixed decrease of the carrier exponent in (1.3).
+
+For finite derivatives, fixed-radius Cauchy applied to the original
+strict prefix gives a bound of the form
+
+ L_r <= C_r h^-1 sqrt(|H|) b0^(1-r)                     (3.4)
+
+when coarse directions use the UNSCALED coordinate supremum norm on
+the radius-b0 domain. They are not normalized by division by b0.
+This displays the factors entering (2.4); its product of r=1 terms is
+already of order [(beta0+1)^(1/2) h^-1 sqrt(|H|)]^k.
+Equations(3.2)--(3.4) are norm consumers at the declared classical map,
+not a reconstruction theorem for unresolved mixed/raw histories.
+
+4. A SHARP NONFLAT EXAMPLE FOR THE ABSOLUTE KERNEL MAJORANT
+
+The h^-2 exponent in (3.3) is attained by the Gaussian TV norm itself.
+Take a unit four-dimensional box subdivided into M^4 cells, and use
+commuting links, with T=sigma_3/2,
+
+ U_2(x;t)=exp(i T t x_1/M^2),
+ U_mu(x;t)=Id for mu!=2.                                 (4.1)
+
+Here x_1 is the integer fine coordinate between0 andM. For REAL t the
+elementary12 plaquette has holonomy exp(iT t/M^2), so this is a genuine
+nonflat constant-Cartan-curvature field, not a pure gauge. Its links
+have size O(t/M), its curvature O(t/M^2), exactly the grading (3.1).
+The complete boundary values can be retained. The real field is
+stationary for interior Wilson variations: opposite12 plaquette
+forces are equal and cancel, and the other forces vanish. This
+observation is not an identification of arbitrary Bałaban boundary
+data with this particular field, nor a needed uniqueness theorem.
+
+Continue t to i b, b>0 small and fixed. For a12 plaquette at x, its two
+length-two path matrices contain respectively U_2(x+e_1;i b) and
+U_2(x;i b). The complexified REAL quaternion-vector coordinate of
+their mean m_p is
+
+ (sqrt(beta0)/2) i [sinh(b(x_1+1)/(2M^2))
+                         +sinh(b x_1/(2M^2))].           (4.2)
+
+The Frobenius real-coordinate norm of a quaternion matrix carries only
+a fixed factor2. On c M^4 plaquettes with x_1>=M/2, (4.2) has magnitude
+at least c sqrt(beta0)b/M. Consequently
+
+                 ||Im m||^2 >= c beta0 b^2 M^2.         (4.3)
+
+The exact Gaussian TV formula(2.3) of the new producer has determinant
+factor>=1 and nonnegative further exponent. Hence
+
+           ||kappa_(i b)||_TV >= exp(c beta0 b^2 M^2).   (4.4)
+
+All per-link imaginary angles are O(b/M); the small per-link Gaussian
+domain is satisfied. Thus the volume-independent l2 majorant cannot be
+upgraded to a fixed coarse b supremum by dropping the fine read count.
+
+This lower bound is for the absolute auxiliary kernel. A particular
+gauge-invariant C B can cancel large complex contributions, so (4.4)
+does NOT prove that F_n o Psi, its physical derivatives, or a Wilson
+correlation diverges. It sharply identifies the loss of the available
+source-independent proof. Indeed pure complex gauge examples would be
+misleading here because gauge-invariant sources may cancel them exactly;
+the field(4.1) deliberately has nonzero curvature.
+
+5. PHYSICAL UNITS: FOUR-DIMENSIONAL VERSUS SINGLE-SLICE READS
+
+Fix a smooth physical profile A on a bounded d-dimensional support,
+sampled at spacing a. In the physical-potential convention its fine
+link angle is z_e=g_a a A_mu(x_e). Riemann summation gives
+
+ ||z||_2^2 = O(g_a^2 a^(2-d)||A||_L2^2),                 (5.1)
+
+with a matching lower order for a fixed nonzero profile. Assume beta0
+is bounded below by a fixed positive constant (in particular this holds
+in the intended beta0->infinity regime), and beta0 g_a^2 is bounded
+above and below by positive constants. Then (beta0+1)g_a^2 is also
+uniformly comparable to1, and (1.1) costs
+exp[C a^(2-d)||Im A||_L2^2]. A uniform physical Hilbert radius from this
+estimate is O(a^((d-2)/2)): O(a) for d=4 and O(sqrt(a)) for d=3.
+This calibration is explicit; omitting g_a would change the scaling.
+
+For a finite-dimensional span of fixed smooth physical profiles the
+linear sampling map has operator norm O(g_a a^(1-d/2)). Applying the
+new annealed estimate to these DETERMINISTIC ORIGINAL-law directions,
+at U still distributed according to mu, gives
+
+ E_mu ||D_A^k F_n||_op^2
+       <= C_k (beta0+1)^k g_a^(2k) a^(k(2-d))/n.
+                                                               (5.2)
+
+With n of order a^-1 allowed by a fixed temporal buffer, this is
+O_k(a^(1-2k)) for d=4 and O_k(a^(1-k)) for d=3, up to the displayed
+coupling constants. Already the four-dimensional first-derivative
+upper bound grows as a^-1; a three-dimensional first-derivative bound
+is only O(1). These are UPPER-BOUND scaling failures, not lower bounds
+on the actual source jets. The d=3 statement is for variations confined
+to one original slice. After buffered smoothing the observable reads a
+time block; a general physical variation on that block is d=4.
+
+Equation(5.2) keeps the original-law average. Replacing U by a minimum
+Psi(A) is additionally subject to (2.7). For nonlinear physical or
+native reconstructions, the higher L_r in (2.4) also remain. Linear
+sampling alone cannot certify those terms.
+
+6. WHAT WOULD HAVE TO BE SUPPLIED TO ENTER THE NATIVE PROOF
+
+There is a concrete sufficient entry for a GIVEN native coefficient:
+an actual common reconstruction on its entire admitted domain whose
+fine-link imaginary l2 distortion satisfies (2.2), plus a supported
+coefficient expansion having the strong sum(1.3). The new theorem
+then supplies its normalized source supremum and fixed-order jets.
+These are specific quantities; no auxiliary current cutoff is needed.
+But the available generic refinement bounds give (3.3), not (2.2).
+
+The sharp classical reference succeeds by another mechanism: its
+per-fine-plaquette norm is O(h^4 b^2), and h^-4 plaquettes per current
+cell cancel that cost. This is explicitly proved in
+augmented_source_classical_contraction_turn70.txt Section2. Gauge/Ward
+and curvature structure, not an l2 norm of all fine potentials, supply
+that improvement. A bounded nonlinear probe smoothed by P has not yet
+been given an analogous source-specific supported curvature estimate.
+
+Nor does finite read support alone supply (1.3). A single coefficient
+on a read of diameter n can be filed on its connected hull, but its
+weight is e^(a|H|); for n=O(a^-1) buffered rounds that hull can contain
+O(a^-4) fine cells. A bound on the total analytic function, or on its
+Hilbert operator jets, does not furnish exponentially summable
+carrier/root coefficients. Existing near/far native preparation starts
+with that source family; it does not create it from (1.1).
+
+Finally, a physical coarse restriction does not prescribe independent
+outer J dependence or simultaneous complex old-record contours. Those
+interfaces are unchanged. The new analytic theorem is useful as a
+genuine starting source on the original real configuration and as a
+dimension-free smoothing estimate, but these explicit pullback and
+localization costs prevent declaring it an already admitted Bałaban
+all-scale source. No frozen producer or authoritative output was edited.

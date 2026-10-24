@@ -1,0 +1,98 @@
+HAMILTONIAN ENERGY AND SPATIAL-FLOW AUDIT -- TURN66
+20 October 2026. gauge47. Final PASS at the stated scope.
+
+Producer reviewed in full:
+work/hamiltonian_energy_turn66.txt
+SHA256 5AE18273859A599CFC1E6C385CA63F927941C2C8AA5E894C54B960E0A824BD60.
+This final hash includes the author's status-only freeze after review;
+the mathematical text is unchanged.
+
+1. PHYSICAL HAMILTONIAN AND THE UNGAUGED TRIAL
+
+The fixed finite graph has connected configuration manifold SU2^E.
+The positive elliptic kinetic coefficient and bounded smooth Wilson
+potential give a unique positive ground eigenfunction. Gauge invariance
+of the operator and positivity/normalization of that eigenfunction make
+it gauge invariant. Hence the full and physical spectral bottoms agree.
+The ungauged product trial is therefore a legitimate upper bound on the
+physical ground energy. No gauge-average normalizer has been omitted.
+
+The Pauli/2 metric is four times the round unit-quaternion metric:
+Delta u0=-3u0/4 and |grad u0|^2=(1-u0^2)/4. These give exactly
+t E_t(1-u0^2)=3c(t) and the one-link trial kinetic form 3t c(t)/16.
+This matches the Hamiltonian convention g^2 K/(2a)+4S_sp/(g^2 a).
+
+2. TRIAL POTENTIAL, OPTIMIZATION, AND GROUND-STATE CONSEQUENCES
+
+The decreasing tilt (2-h)_+^(1/2) of Gamma(3/2,t) gives
+E_t h<=3/(2t) for every t>0. Distinct plaquette edges are independent
+only under the trial squared law; their matrix means are c(t)I for
+either orientation. Thus E_trial h_p=1-c(t)^4<=6/t.
+
+With 3n links and 3n plaquettes the trial energy is bounded by
+
+ (n/a)[9g^2t/32+72/(g^2t)].
+
+The minimizer of this displayed upper bound is t=16/g^2, giving 9n/a.
+Nonnegativity of both Hamiltonian terms then gives the actual physical
+ground-law bounds
+
+ E S_sp<=(9/4)ng^2,      <Omega,K Omega><=18n/g^2.
+
+The score identity has the correct additional factor4:
+int Omega^2|grad log Omega^2|^2=4 int|grad Omega|^2<=72n/g^2.
+The producer correctly interprets K through its quadratic form.
+
+3. NONLINEAR FLOW ESTIMATES
+
+For Phi_s'=-4a^-2 grad S_sp(Phi_s), the identity
+d_s S_sp(Phi_s)=-4a^-2|grad S_sp(Phi_s)|^2 is exact.
+Integrating and retaining S_sp>=0 gives the integrated-force bound
+(9/16)na^2g^2. The finite compact smooth flow is globally defined.
+
+An edge belongs to four spatial plaquettes, and
+|grad_e h_p|^2=(2h_p-h_p^2)/4<=h_p/2.
+Cauchy--Schwarz over the four incident plaquettes, then summing
+the four edges of each plaquette, gives |grad S_sp|^2<=8S_sp.
+The instantaneous ground-initial-law force expectation is therefore
+at most 18ng^2, including at positive flow time.
+
+Translation invariance gives the rectangular per-orientation bound
+9g^2/4; cubic permutation invariance improves this to 3g^2/4.
+The stated rho_e bounds 6g and 2sqrt(3)g follow by Jensen.
+For m plaquettes,
+
+ (sum h_p^(3/4))^(2/3)<=m^(1/6)(sum h_p)^(1/2),
+
+so the expectation bound (3/2)g m^(2/3) and its Markov consequence
+are correct. These are unmarked current-configuration estimates.
+They do not bound the initial-field flow Jacobian or allow
+E[rho |J|^2] to be replaced by (E rho)E|J|^2.
+
+4. PHYSICAL PROBE AND TEMPORAL SCOPE
+
+For X=2p/(g_*a^2), |p|^2=2h-h^2<=2h gives the constants18
+(rectangular) and6 (cubic) in the physical second-moment bound.
+Jensen yields the displayed lower bound on E exp(-alpha|X|^2).
+Its degeneration does not imply degeneration of the actual mean.
+No variance floor follows.
+The earlier coherent-window suppression argument used the isotropic
+Wilson one-edge conditional density. The Hamiltonian ground density
+has not been shown to possess that conditional law, so its suppression
+bound is correctly not imported here.
+
+The controlled temporal limit applies first with the spatial graph,
+a and g fixed. The action and its composition with any fixed spatial
+flow are bounded continuous multipliers at that regulator. Their
+ground-law expectations pass through L1 convergence of slice densities,
+and can then be approximated by long finite time periods. A diagonal
+choice across spatial regulators is legitimate for these bounded
+observables. The same argument cannot pass an unbounded K expectation;
+the producer explicitly refuses that inference.
+
+The result is a new actual full-ground-state energy estimate and its
+nonlinear action-dissipation consequences. It is not a physical
+observable-gradient estimate, a physical variance lower bound, a
+spatial continuum limit, an anisotropic extension of the native
+Bałaban theorem, or a complete nontrivial YM4 construction.
+No mathematical repair was requested.

@@ -1,0 +1,234 @@
+INDEPENDENT AUDIT: THE SMALL BOUNDED-INTERACTION SPATIAL CONSUMER
+24 October 2026. compiled_source. Archive and outputs unchanged.
+
+Target: full_omega_spatial_consumer_20261023.txt, Sections1--8.
+Verdict: scoped PASS for the finite theorem under its explicit complete
+reference Hessian and bounded interaction-norm hypotheses. The proof
+does not need smoothness or weighted Hessians of the perturbation.
+Its block size, contraction rate and spatial exponent can indeed be
+fixed independently of the individual spin-cutoff diameters and volume.
+Section8 correctly leaves the exact-law, whole-domain and reference-
+Hessian matching as separate inputs. The current first-full-Omega
+producer and next-law note supply the first two of those inputs.
+
+The full first-source application is made explicit in Section7 below:
+the two globally quasilocal compiled sources retain their TWO factors
+g1 and hence a second conditional covariance of order g1^2 Lp Lq.
+
+1. REFERENCE CONDITIONAL ESTIMATES
+
+At fixed exterior, the remaining law has a product convex domain and
+the principal restriction of the full reference Hessian. Thus the
+weighted covariance/Poincare proof applies uniformly to it. A change
+at one exterior coordinate j differentiates the exact conditional
+ratio by the complete score H'_j. Convexity of the exterior factor
+permits the entire straight segment, and the containing-product
+hypotheses cover that segment.
+
+For ANY bounded test of the joint S-marginal, the bounded-local
+projected-conditional-mean inequality bounds its score covariance.
+The absolute weighted Hessian COLUMN sum supplies
+C exp(-nu d(j,S)) without a cardinality |S|. This follows from
+d(j,S)<=d(j,i)+d(i,S), and the weighted full column bound; using its
+l1 bound also controls the required l2 norm. Taking the supremum
+over 0<=F<=1 therefore gives TV of the ENTIRE S-marginal, as required
+for the one protected-region maximal coupling. It is not a claim
+deduced by summing single-coordinate total variations.
+
+The conditional mean response for x_i follows from the same weighted
+covariance formula applied to its linear coordinates. The conditional
+variance m/c0 is direct Poincare. Both are independent of the location
+of the conditional mean and hence of the cutoff diameter. The full
+reference measure need not be diagonally dominant.
+
+2. BLOCK TILTS AND THEIR EXACT NORMALIZERS
+
+The conditional perturbation is the sum of all terms meeting B,
+including terms crossing its boundary. Its oscillation is at most
+delta|B|, since summing the per-site norm over B can only overcount
+these terms. After constants are subtracted, the finite-volume sum
+converges absolutely and uniformly even for a countable interaction.
+Thus its normalized density ratio relative to the reference is
+between exp(-a_B) and exp(a_B), a_B=delta|B|.
+
+The mean-change estimate uses
+E_nu[(x_i-m_i)(density ratio-1)]; its magnitude is bounded by the
+reference centered second moment times O(a_B). The perturbed variance
+is bounded by using the reference mean as a trial center. Neither
+step compares an uncentered variable with a uniform spin supremum.
+
+When the exterior changes only at j, only interactions containing j
+can change, and an interaction also meeting B has diameter at least
+d(j,B). The difference of its two evaluated conditional potentials
+has oscillation at most twice the original oscillation. This proves
+the exponentially small far tilt-difference (8).
+
+The far TV comparison first applies the SAME bounded tilt to the two
+reference laws and then changes the tilt. For a common positive tilt
+f, the elementary normalized-ratio estimate
+TV(T_f P,T_f Q)<=2 exp(osc log f) TV(P,Q) is valid. Hence (9)
+retains the original conditional normalizers and gains the required
+exp(-kappa d(j,B)) perturbation term. The intermediate common tilt
+need not be a separately named physical law.
+
+For a protected subregion S, using triangle inequalities through the
+two reference marginals costs O(a_B). This is legitimate even though
+the tilt reads the rest of B: full-law TV bounds its marginal TV.
+The proof correctly restricts this nondecaying a_B cost to NEAR
+blocks. It uses (9), not that triangle bound, for all far blocks.
+
+3. HYBRID COUPLING AND THE REMOVAL OF THE CUTOFF COST
+
+For one update, maximally couple the entire chosen S-marginals, then
+extend each side by its conditional complement. This produces one
+joint block coupling with P(S differs)=p. No incompatible collection
+of separate maximal couplings is requested.
+
+On the event that S agrees, every protected coordinate agrees. On
+its complement, subtract each law's own UNCONDITIONAL conditional-
+block mean, use Cauchy--Schwarz and its variance bound. This yields
+
+ E[1_(X_i!=Y_i)+|X_i-Y_i|]
+ <=p(1+|m_i-m'_i|)+2C_sigma sqrt(p).
+
+It is important that no variance conditional on coupling failure is
+assumed. The unprotected bound follows by the same triangle estimate
+without the event. The two means may be far apart, but their
+difference is at most C s exp(-nu d(i,j))+C a_B, where s is the
+input exterior displacement.
+
+Dividing by the input hybrid cost 1+s bounds sqrt(s)/(1+s) and
+s/(1+s) uniformly. This gives (15), with only O((r+1)^d)
+unprotected coordinates, and no cutoff radius. For a far block,
+using p/(1+s)<=C[exp(-nu k)+delta exp(-kappa k)] in the a_B p
+term removes a spurious a_B floor. Together with a_B<=1 it gives
+(16). Both details are needed for the infinite-volume uniform count.
+
+The cost d_i=1_(x_i!=y_i)+|x_i-y_i| is a genuine triangle-inequality
+cost. Its discontinuous part does not change the underlying standard
+Borel state space. The densities and maximal couplings have measurable
+versions there; the proof uses explicit coupling inequalities and
+does not require a separable metric topology induced by that cost.
+
+4. BLOCK CENSUS AND WEIGHTED CONTRACTION
+
+For all translates of a side-(2ell+1) cube, exactly N=(2ell+1)^d
+updates contain a specified j, on a sufficiently large torus. Their
+identical-exterior coupling erases its entire initial disagreement.
+The near missed blocks occupy a boundary shell of cardinality at
+most C ell^(d-1)(r+1). Blocks at distance k have at most
+C(ell+k)^(d-1) centers. These bounds remain upper bounds with
+periodic wrap-around or omitted inactive coordinates.
+
+Substituting the two coupling costs gives (17). After division by
+the erasure N, the leading near error is
+C(r+1)^(d+1)/ell. With r=ceil(A log(ell+2)), sufficiently large
+fixed A makes all exponential errors vanish as ell grows. Choose
+ell once so those errors consume a strict fraction of N, and then
+delta_* so delta_*N<=1 and the remaining
+C ell^(d-1)(r+1)sqrt(delta_*N) is small. These choices depend only
+on reference/spatial constants, not on spin diameters or volume.
+
+The weighted version is sound: a near updated coordinate lies at
+distance at most C_d ell from j, and a far one at most k+C_d ell.
+Choose lambda C_d ell small and lambda below half the preallocated
+far exponent. Tightening the previous strict constants yields (19).
+This is why lambda is positive and fixed, although it may be small.
+Small tori can use the whole torus as one block; since their volume
+is bounded in terms of fixed ell, all resulting constants remain
+within a fixed enlargement.
+
+For single-coordinate input pairs the weighted update metric thus
+contracts. Join arbitrary input pairs by the finite coordinate-change
+path and glue its one-step couplings; the input path cost is exactly
+the sum metric. A random-block update contracts by the asserted
+factor, and Poissonization proves the semigroup estimate (21).
+Finite diameter for each finite run is enough to infer convergence
+to the unique invariant law. No uniform diameter enters the rate.
+The invariant law is the exact perturbed mu by heat-bath reversibility.
+
+5. REVERSIBLE COVARIANCE FORMULA
+
+For L=sum_B(P_B-I),
+
+ mu[(L P_tF)G]=-sum_B mu Cov_muB(P_tF,G).
+
+Integrate the derivative of mu[(P_tF)G] from zero to infinity,
+using its limiting mean product. This gives (23) with its positive
+sign and no assumption of Langevin differentiability. All block
+conditionals are those of mu itself.
+
+For independent resamples X_B,Y_B from the SAME conditional law,
+their means cancel and E d_i(X_i,Y_i)^2<=C. This follows from the
+uniform perturbed conditional variance, not a support-diameter bound.
+The identity Cov(f,g)=1/2 E[(f(X)-f(Y))(g(X)-g(Y))] and
+Cauchy--Schwarz therefore give (24) for any stated coordinate profile.
+
+Since two coordinates in one block have comparable weights within
+exp(lambda C_d ell), summing the coefficient products over translated
+blocks costs at most C N^2 sum_j a_j w_j. Integrating the contraction
+e^(-gamma t), gamma>=N/2, costs at most 2/N. This proves (25) with
+a fixed ell-dependent constant. Reversing the two local tests gives
+the min(|S|,|T|) factor in (26). The proof does not omit a volume
+factor; the remaining sums are actual profile convolutions.
+
+6. EXACT FULL-OMEGA INPUT MATCH
+
+The separately checked local-interaction producer supplies an exact
+diameter-weighted value expansion, with any extra fixed polynomial
+support factor desired. Taking oscillations costs at most twice its
+supremum caps. Pulling back by the actual finite current read adds a
+fixed collar and metric conversion. Its norm is super-polynomially
+small at the registered weak floor and therefore lies below the
+FIXED delta_* here.
+
+The next-law identity is exactly mu=Q1^Omega and nu=Q1^s with
+V=-L composed with the actual angle-valued next map. All classical,
+gauge, determinant, scalar and constraint factors were matched before
+forming that ratio. The new event is defined after first full-Omega
+integration; it is not the native nested record that forces first
+Lambda1 full. The whole original K1 lies in the admitted Cartesian
+box. The complete second-success Hessian/row premise remains explicit
+and is not supplied by the present theorem or this audit.
+
+7. GLOBAL COMPILED SOURCES KEEP THE g1-SQUARED GAIN
+
+The proof has a slightly more general form than the displayed local
+F version. If F is d_w-Lipschitz with constant L_F, replace b_F in
+(24)--(25) by C L_F; the same semigroup and resampling proof gives
+
+ |Cov_mu(F,G)|<=C_ell L_F sum_j a_j w_j.                       (A)
+
+For the ACTUAL full-current first source and next pullback, the proved
+uniform physical beta gradient, followed by the finite current map,
+gives coordinate profiles on the entire convex K1
+
+ a_i^F<=C g1 Lp exp[-nu_p d(i,P)],
+ a_i^G<=C g1 Lq exp[-nu_q d(i,Q)].                            (B)
+
+Here F=p_Omega composed with Phi1, G=q_Omega composed with Phi1;
+Lp,Lq retain the original c_a amplitudes, all first background/direct
+source/boundary prices and fixed coordinate conversions. These are
+not the success-only conditional means. Coordinate integration along
+the product domain proves (22) from the a.e. gradient bounds, using
+only the Euclidean part of d_i.
+
+Choose the fixed consumer lambda also below nu_p,nu_q and set
+w_i=exp[-lambda d(i,P)]. Equation(B) gives L_F<=C g1 Lp; it does
+not require a local cutoff or a supremum-amplitude replacement of F.
+Insert G's profile in (A). For any fixed
+0<lambda'<min(lambda,nu_q), the lattice shell convolution yields
+
+ |Cov_Q1Omega(p_Omega composed with Phi1,
+                         q_Omega composed with Phi1)|
+       <=C g1^2 Lp Lq exp[-lambda' d(P,Q)],                   (C)
+
+with the fixed root/seed-size factors retained if P,Q are not bounded
+single plaquette covers. There are exactly two factors of g1 from
+the two current-noise derivatives. The spatial consumer adds no
+growing cutoff factor because its block size and rates are fixed.
+
+The exact earlier contact Q1^Omega[c_Omega composed with Phi1]
+still belongs to the total source covariance. Neither (C) nor the
+consumer removes it, estimates the outer V2 covariance/probability,
+adds other Omega sectors or establishes continuum nontriviality.

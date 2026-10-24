@@ -1,0 +1,105 @@
+INDEPENDENT MAGNETIC SOURCE ATTACHMENT AUDIT -- TURN68
+20 October 2026. gauge47.
+
+Producer: work/separated_source_attachment_turn68.txt
+Reviewed SHA256:
+C2BC4B0A45D2B8743B1864AF3D4CD9709EB76021711315418B6FF327FB2E5091
+
+STATUS: PASS at the producer's fixed-spatial-regulator scope.
+No correction requested. This is an internal mathematical audit,
+not external validation or a continuum existence conclusion.
+
+1. EXACT SOURCE AND NORMALIZER
+
+The left-sampled insertion gives (D_delta S_delta)^n with the
+unsourced ground vector at both ends. For a finite original time
+period, the correct expression is
+
+ Tr[(D_delta T_delta)^n T_delta^(N-n)]/Tr T_delta^N.
+
+The electric factor c(beta_delta)^(N|E_sp|) cancels because the
+source changes only the spatial multiplication weight. The source
+does not change beta_delta, the Gauss projection, or the denominator.
+Gauge-invariant Q preserves the physical Hilbert space.
+
+The symmetric placement exp(delta zQ/2)T exp(delta zQ/2) has the
+trapezoid weights, including both half endpoints. Its path-integral
+difference from left sampling is delta(Q(X_n)-Q(X_0))/2, bounded
+by delta M. The generating-function estimate following(2.3) is valid.
+
+2. ENTIRE CONVERGENCE AND THE ORDER OF LIMITS
+
+The normalized-chain probability representation proves the entire
+bound exp(|z|T_delta M), also for the finite-period law. It is uniform
+in the temporal parameters at a fixed spatial regulator.
+
+Strong contraction convergence uniform in compact time intervals
+extends uniformly to compact vector sets. Induction through finite
+words of bounded multipliers gives the stated compact-simplex
+uniformity. Coincident times cause no discontinuity: equal-time
+multiplication operators coincide in either ordered expression.
+Bounded Riemann sums therefore converge for each moment.
+
+The exponential-series domination then gives locally uniform entire
+convergence, with all finite mixed source derivatives. This proof
+does not differentiate an uncontrolled pointwise limit.
+
+In(4.1), the finite moment part is at most e_delta,K exp(rA);
+the two exponential tails each have the usual bound
+exp(rA)(rA)^(K+1)/(K+1)!. The constants are correct.
+
+For the period error, write S_delta^(N-n)=Pi_delta+R as operators.
+The source-word norm is at most exp(rA), the positive remainder has
+trace R_delta(N-n), and the exact denominator is 1+R_delta(N).
+Since R_delta(N)<=R_delta(N-n), the difference is bounded by
+2 exp(rA)R_delta(N-n), as claimed.
+
+No rate uniform in spatial cutoff is supplied or needed for the
+stated ordered finite-list diagonal realization.
+
+3. ZERO-FREE DISC AND CUMULANTS
+
+After subtracting the midpoint of the range of Q, M=osc(Q)/2
+is valid. This affects only an exactly known linear source term.
+On r0=log(3/2)/A, every generating function lies in the closed
+disc |w-1|<=1/2. The canonical logarithm is well defined there,
+and 1/|w|<=2 along the straight segment connecting two values.
+The factor2 in the log error and 2m!/r0^m in Cauchy's estimate
+are consequently correct.
+
+The A=0 constant-observable case and the multivariate polydisc
+budget are handled explicitly. The radius is not claimed uniform
+in the spatial cutoff.
+
+4. REFLECTED WINDOW AND QUADRATURE
+
+The positive-time window and its EXACT reflected copy give the
+mixed second cumulant of the literal original source law.
+The ground-chain limit and finite-period approximation use the same
+centering as their own law, so one- and two-point convergence suffice.
+
+For a variable with range length2M, Var(Q)<=M^2; hence
+|C_Q(t)|<=M^2 despite centering Q at its expectation rather than its
+range midpoint. The covariance derivative is bounded by its first
+spectral moment D_Q=kappa E|grad Q|^2.
+
+Replacing each of the two integration times by its mesh point moves
+their sum by at most2delta. The rectangle symmetric-difference area
+is at most4d delta+4delta^2. These facts give exactly the three terms
+in(6.2).
+
+The cubic ground-law estimate D_(sum w h)<=3g^4 a^-1 sum w^2
+and substitution w=4f/(g^2 a) give 48a^-3 sum f^2. The resulting
+O(a^-6) physical-region cost is openly retained as a quadrature
+coefficient, not mistaken for a uniform energy bound.
+
+5. SCOPE
+
+The result closes the previously explicit temporal source-jet gap
+for bounded magnetic multiplication insertions at each fixed spatial
+regulator, even when their calibration subsequently diverges with a.
+It does not prove a spatially uniform separated covariance estimate,
+physical composite renormalization, source-log radius uniform in a,
+or convergence of electric/log-coupling source jets.
+
+All distinctions needed for the parent proof frontier are preserved.

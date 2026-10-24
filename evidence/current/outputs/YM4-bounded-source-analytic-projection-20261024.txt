@@ -1,0 +1,356 @@
+BOUNDED SOURCES: ANALYTIC PROJECTION WITH A RARE MOVING-DOMAIN ROW
+24 October 2026. Root derivation. Independent audit requested.
+
+STATUS
+
+This is a finite, explicit conditional integration theorem, with a fully
+proved Gaussian instance and an exact source-transport identity. It is
+not yet an all-grade native Yang--Mills source theorem. The native gates
+are stated in Section7 rather than inferred from smooth action alone.
+
+The useful point is that the incoming source need only be bounded and
+measurable. An analytic rechart which holds its physical arguments fixed
+allows an analytic contribution and a bounded remainder smaller by a
+NEW tail probability. A shrinking complex tube is sufficient for this
+finite conclusion. A fixed physical complex tube is not asserted.
+
+All probability kernels and original scalar normalizers remain in the
+identity. The analytic reference below is auxiliary; its expectation
+is not substituted for the original law without its exact difference.
+
+1. FINITE KERNEL AND SOURCE-COMPATIBLE RECHART
+
+Let theta range over a real neighborhood of0 in a finite-dimensional
+parameter space. Write the ACTUAL positive normalized kernel as
+
+ T_theta f = Z(theta)^-1 integral_K f(Y_theta(x)) w_theta(x) dx,
+ Z(theta) = integral_K w_theta(x) dx.                         (1)
+
+Here K is the original fixed product of free balls, w_theta includes
+the complete original density, and Y_theta is the physical source
+argument. Outer parameter-only factors may be factored from both
+numerator and denominator of(1), but must still be retained in the
+outer density. f is a bounded real or complex Borel function defined
+on every real source argument used below. No derivative of f is assumed.
+
+Assume a source-compatible real analytic rechart on a larger noise
+neighborhood, holomorphic in complex theta near0,
+
+ t=Psi_theta(x)=(Y_theta(x),z_theta(x)),
+ x=X_theta(t),   D_theta=Psi_theta(K), D_0=Psi_0(K).           (2)
+
+The source may depend on a lower-dimensional list of physical arguments;
+these must be part of a genuine independent coordinate list in(2).
+If a constraint fixes a combination of the chosen source arguments,
+such a chart need not exist. A nonzero inverse determinant is a premise,
+not a consequence of finite dimensionality. If redundant source data
+are represented by functions of the independent y coordinates, that
+representation must be independent of theta as well.
+
+Define the transformed density on the FIXED real domain D_0 by
+
+ wtilde_theta(t)=w_theta(X_theta(t)) det D_t X_theta(t),
+ a_f(theta)=integral_(D_0) f(y) wtilde_theta(t) dt,
+ A_theta f=a_f(theta)/a_1(theta).                            (3)
+
+Choose the real orientation so the determinant is positive on the
+real connected chart. Its holomorphic determinant, not an absolute
+value applied at complex parameters, is used in(3). The formula also
+works with a positive analytic reference volume form in place of dt.
+
+For complex theta, f is evaluated ONLY at the real integration variable
+y. It is never evaluated on a complex field. All complex dependence
+in(3) lies in the analytic density. This is what permits bounded or
+nondifferentiable incoming sources.
+
+2. ANALYTICITY AND A QUANTITATIVE SHRINKING TUBE
+
+Suppose wtilde_theta(t) is holomorphic for theta in a complex polydisc
+D_rho, for a.e. t in D_0, with a measurable common integrable majorant.
+A convenient sufficient quantitative premise is
+
+ |wtilde_theta(t)/wtilde_0(t)-1| <= q < 1
+                   for all theta in D_rho, a.e. t in D_0.    (4)
+
+Then, putting z_0=a_1(0)>0,
+
+ |a_1(theta)-z_0|<=q z_0,  |a_1(theta)|>=(1-q)z_0,
+ |A_theta f|<=(1+q)/(1-q) ||f||_infinity.                    (5)
+
+Dominated holomorphic integration proves analyticity of a_f, and the
+first inequality proves its denominator is zero-free on the SAME
+tube. In particular A f is holomorphic there. This argument does not
+use a complex probability measure or infer zero-freeness merely from
+positivity on the real axis.
+
+One way to verify(4) is a common analytic logarithm of wtilde with
+
+ sup_t |log wtilde_theta(t)-log wtilde_0(t)|<=c_0,
+                 exp(c_0)-1<=q<1.                         (6)
+
+If the full sup-direction logarithmic derivative is at most M on a
+larger tube, take rho<=c_0/M, along with its actual inverse-chart and
+action-domain restrictions. M includes the NUMBER of independently
+varied parameter coordinates. This gives polynomial inverse-radius
+prices when M and the inverse chart margins have polynomial bounds.
+It is not automatically independent of ambient volume.
+
+On an inner half tube, Cauchy's estimate gives, for any fixed multiindex
+alpha,
+
+ |partial^alpha A f|<=C_q alpha! (2/rho)^|alpha| ||f||_infinity. (7)
+
+For m parameter coordinates, a sup-direction derivative of order k
+can cost a further m^k under componentwise polydisc Cauchy estimates.
+Retain that finite read price. No source derivative has entered(7).
+
+3. THE ORIGINAL REAL KERNEL MINUS THE ANALYTIC REFERENCE
+
+For real theta let
+
+ K_theta=X_theta(D_0).
+
+Change variables BACK in(3). Its normalized reference is exactly
+
+ A_theta f = [integral_(K_theta) f(Y_theta(x))w_theta(x)dx]
+                         /[integral_(K_theta)w_theta(x)dx]. (8)
+
+Assume the following ACTUAL containing-law geometry on the real box
+where the remainder estimate is to be used:
+
+ K and K_theta are subsets of one K_plus,
+ K_minus subset K intersection K_theta,
+ nu_theta^+(K_plus minus K_minus)<=epsilon<1,
+ nu_theta^+(dx)=w_theta(x)1_(K_plus)dx/Z_plus(theta).        (9)
+
+No convexity of K_theta is needed. A common sufficient arrangement is
+that K_plus enlarges each original free-ball radius R by a fixed small
+fraction, while K_minus reduces it by that fraction. If the containing
+law has coordinate means below R/4 and a uniform Gaussian concentration
+bound, its finite union bound gives
+
+ epsilon<=C |I| exp(-c R^2).                              (10)
+
+This mean/concentration premise and the actual two-sided domain
+inclusion must both be proved. Moving one cut to a nearby location is
+not itself a probability estimate.
+
+The conditional restrictions nu^+(.|K) and nu^+(.|K_theta) have common
+mass at least1-epsilon before normalization. Their total variation
+distance (half the total variation mass) is at most
+epsilon/(1-epsilon). Therefore, for real f,
+
+ E_theta f := T_theta f-A_theta f,
+ |E_theta f|<=osc(f) epsilon/(1-epsilon).                  (11)
+
+For complex f, the safe bound 2||f|| epsilon/(1-epsilon) applies.
+The argument is simply comparison of the two normalized restrictions
+of ONE positive containing measure; it does not divide by a rare atom.
+It retains the original Z(theta) in T and Z_plus only in this proof.
+
+Equations(1),(3),(11) give the EXACT decomposition T=A+E as linear
+operators on bounded sources. Also
+
+ A1=1, E1=0,  A_0 f=T_0 f,  E_0 f=0.                      (12)
+
+The new scalar A_0 f is the true quantum average T_0 f, not f at the
+zero-noise field. It must be recorded. Unlike a decomposition made
+with an unnormalized reference numerator, this normalized A preserves
+constants exactly. Its normalization has not changed the original
+outer density: the entire correction remains E in the equality T=A+E.
+
+For an incoming source with ||f||<=B eta, (10),(11) yield
+
+ ||E f||<=C B eta |I| exp(-c R^2).                         (13)
+
+This is a PRODUCT of the incoming amplitude and the new tail price.
+It does not require independence of two rare events: it follows from
+an amplitude bound multiplying the measure of the domain difference.
+The output E may be merely measurable. No two-jet bound for E has been
+claimed or used. A subsequent application of this theorem would still
+accept it if its physical read has a new source-compatible chart.
+
+3A. A LARGER FIXED SOURCE WINDOW IS ALLOWED, WITH ITS SCALAR RETAINED
+
+The special choice D_0=Psi_0(K) is not necessary for analyticity,
+constant preservation, or the tail comparison. Replace it throughout
+by ANY fixed real measurable D_star on which the holomorphic inverse
+and complete density exist with the domination/zero-free proof(4)--(6).
+For real theta put K_theta=X_theta(D_star), and verify(9) for this
+actual set. Equations(5),(7),(8),(11),(13)--(17) still hold, and
+A1=1,E1=0 still hold. Only A_0 f=T_0 f and E_0 f=0 are no longer
+automatic. Keep the exact flat scalar E_0 f as part of the remainder;
+it is bounded by(11), and is never silently erased.
+
+This version can use a physical source window larger than the original
+noise cut. It need not demand that every allowed background center lie
+within a small fraction of the old cut about the flat center. The price
+is a genuine enlarged K_plus action/chart and a tail theorem there.
+The fixed-window integration must also stay within the source's real
+definition; a globally bounded physical extension supplies this for the
+canonical rare source, with its original complement still retained.
+Neither a large containing product nor its concentration is presumed
+from this change of window. In particular, a crude mean bound g S^2
+is inadequate when S is of order a fixed physical radius divided by g.
+
+4. SCALARS, RAW MIXED ROWS, AND THE EXACT RECYCLING IDENTITY
+
+For a raw source polynomial 1+tF+uG+tu Traw, Traw=H+FG, apply the SAME
+linear A and E separately to F,G,Traw. Put a=A F,b=A G,v=A Traw and
+r=E F,s=E G,w=E Traw. The actual connected coefficient is
+
+ T Traw-(T F)(T G)
+   = v-ab + [w-a s-b r-r s].                              (14)
+
+No second rare factor is assigned to w. The last product r s is kept
+exactly, as are the outer covariances when this row is integrated in
+the original exterior law. The source-zero row is still1 by(12).
+
+There is a useful abstract iteration if the actual later normalized
+positive kernels T_j each admit such a decomposition A_j+E_j on the
+REMAINDER CLASS actually produced at the previous step. Define
+
+ f_0=f, e_j=E_j e_(j-1), e_0=f,
+ a_j=A_j e_(j-1).
+
+Then for every n,
+
+ T_n ... T_1 f
+   = sum_(j=1)^n T_n ... T_(j+1) a_j + e_n.                (15)
+
+The empty suffix is the identity. The proof is induction using
+T_j e_(j-1)=a_j+e_j, with no replacement of a suffix kernel by its
+zero-noise minimum. If ||E_j||_(bounded->bounded)<=q_j, then
+
+ ||e_n||<=||f|| product_(j=1)^n q_j.                       (16)
+
+For q_j<=L^(-4-sigma), the REMAINDER alone pays its age density:
+
+ L^(4n)||e_n||<=||f|| L^(-sigma n).                        (17)
+
+Equation(17) is only a numerical sufficient condition; (10) can make
+it plausible at a weak floor but does not prove all native charts.
+The analytic emissions in(15) are still transported by their ACTUAL
+suffixes. They require their own born-coefficient Ward/marginal theorem
+to pay microscopic density. Holomorphy alone does not prove that theorem.
+Likewise (15) is not applicable if an E_j acquires a larger/nonlocal
+physical read for which the next source-compatible chart fails.
+
+If independent geometry prices grow only polynomially in r_j and
+g_j^-1 at each emission, eta_j=exp[-c(log(1/g_j))^(2p)] with p>1/2
+absorbs any FIXED such price at birth. This does not absorb an arbitrary
+product of ordinary constants over O(g_0^-2) dates. Equations(15)--(17)
+are proposed precisely to replace that uncontrolled product by an
+actual tail contraction, if the native class can be closed.
+
+5. A COMPLETE GAUSSIAN EXAMPLE AND THE NECESSITY OF SPARE VARIABLES
+
+Let X_1,...,X_n be independent centered real Gaussians of variance g^2
+and condition their average to equal theta. For a bounded measurable
+f of the first k coordinates, with k<n, the conditional marginal is
+
+ Y~N(theta 1_k, g^2 C), C=I_k-(1/n)1_k 1_k^T,
+ C^-1=I_k+1_k 1_k^T/(n-k).                               (18)
+
+Thus T_theta f is entire in theta by integrating f(y) against the
+complex Gaussian kernel over fixed real y. Completing the real part
+of the square gives the exact bound
+
+ |T_(u+iv) f|<=||f|| exp[ k n v^2/(2(n-k)g^2) ].           (19)
+
+For vector colors, replace v^2 by its Euclidean norm squared. A tube
+rho<=c g sqrt[(n-k)/(k n)] therefore has bounded holomorphic norm
+C_c||f||. Its Cauchy costs are polynomial inverse g and a quantified
+inverse spare-coordinate margin. Analyticity has been obtained without
+any regularity of f, because the unobserved variables randomize every
+observed direction compatible with the conditioning.
+
+If k=n, choose f(x)=h(n^-1 sum_i x_i) for an arbitrary bounded
+nonsmooth h. Then T_theta f=h(theta), which need not be continuous.
+There can be no general analytic-smoothing theorem for complete-row
+sources. A source avoiding a solved pivot is a genuine rank condition.
+
+This unbounded Gaussian example has no moving-domain correction. In a
+truncated or nonlinear version, Sections1--3 state exactly the added
+chart, complex-norm and tail premises; Gaussian conditioning alone does
+not verify those premises for the native nonlinear kernel.
+
+6. LOCAL GAUGE INVARIANCE IS A FURTHER MATCH, NOT AUTOMATIC
+
+Suppose the original physical T f is gauge invariant. The fixed real
+domain D_0 in(3) need not be invariant under an arbitrary OUTER local
+gauge transformation, so A and E need not separately have that symmetry.
+It is incorrect to attach A to a Ward theorem solely because T f has it.
+
+There is a finite remedy when all relevant outer arguments lie in one
+complete contractible read W, with a deterministic rooted tree. Suppose
+A is invariant under constant conjugation and is defined on the required
+canonical chart. Then
+
+ A_can(V)=A(log C_T(V)/i)
+
+is locally gauge invariant and holomorphic on its admitted complex
+canonical patch. This is the same finite product/log construction used
+in deterministic_tree_gauge_rare_source_20261024. If the original
+T f is invariant on its actual physical gauge orbit, then
+
+ T f(V)-A_can(V) = E_(log C_T(V)/i) f                       (20)
+
+where the f, chart and density family are transported consistently.
+The right side obeys(11) only where the canonical argument is in its
+proved real domain. If f itself is transformed, its exact covariance
+must be included in(20); invariant f is the simplest instance.
+
+A shrinking analytic tube narrows this certificate. Its original-law
+complement is retained, not assigned a small mass by this argument.
+A finite conditional integration region does not automatically imply
+a finite outer parameter read: inherited minimum/action kernels may
+depend on an entire outer field. The word COMPLETE in this section
+includes those reads, or a separately proved localized coefficient
+expansion. Global holonomy and wrapping are not curls on a finite box.
+
+7. WHAT THIS DOES AND DOES NOT ESTABLISH FOR THE YM4 PROGRAM
+
+The theorem supplies a rigorous mechanism with potentially useful
+rates: bounded incoming remainder -> analytic emission plus a remainder
+smaller by a new exp(-c R^2), with no differentiation of hard source
+selectors. It also identifies a genuine obstruction when the source
+contains an entire constrained averaging row.
+
+For native Q1s, the following are still required before claiming this
+mechanism closes the original source induction:
+
+ (i) an actual physical source-compatible private-pivot/rechart on the
+ complete source read, with the original product cut represented exactly;
+
+ (ii) common real K_minus/K_plus containing the displaced cut and a
+ true original containing-law tail, uniformly over the relevant background;
+
+ (iii) holomorphic inverse/density bounds for that SAME original kernel,
+ on a quantified tube with local, not ambient-volume, norm prices;
+
+ (iv) a gauge-invariant LOCAL born analytic emission matching the native
+ Ward/current/marginal consumer, with its shrinking-radius prices paid
+ once at birth, including all geometry, vacuum and raw mixed scalars;
+
+ (v) closure of the bounded remainder read after every required step,
+ plus all original certificate complements and newly revealed histories.
+
+The current canonical hybrid has a complete filled read W which can
+contain all available pivots of a row; (i) is therefore not automatic.
+Later coarsening or a supported decomposition might create spare rows,
+but neither is proved by this finite theorem. Existing local quasilocal
+two-jets do not on their own verify (iv) or (v).
+
+SUBSEQUENT FINITE REGISTRATION: first_bare_thin_source_analytic_projection_
+20261024 supplies (i)--(iii) for a nonempty FIRST-BARE thin-source class,
+using the larger fixed window of Section3A and the independently proved
+radius-independent containing-law mean. Its original finite product,
+complete action, actual real admission and local/principal-conditional
+scope are explicit. Its finite |I| tail count and complex read prices
+remain; it is not an arbitrary-volume or full-hybrid closure. Gates(iv)
+and(v), as well as a later inherited-action registration, are still open.
+
+No full Yang--Mills existence, all-scale source contraction or calibrated
+continuum limit is claimed. The gain is an exact possible replacement
+for repeated two-jet amplification, with its native gates made concrete.

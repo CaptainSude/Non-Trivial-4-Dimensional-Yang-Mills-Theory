@@ -1,0 +1,396 @@
+THE ORIGINAL FOUR-EDGE WILSON CAVITY: A PINNED NORMALIZER AND AN epsilon0 TUBE
+24 October 2026. compiled_source. Independently reviewed finite result.
+Archive and delivered outputs unchanged.
+
+REVIEW STATUS: scoped PASS in
+work/pinned_plaquette_cavity_enlarged_tube_audit_20261024.txt.
+The review checks the exact geometry, Haar/contour normalization, rare
+numerator, direct contact, original measure and whole-real-image scope.
+Marked-event denominator nonvanishing remains explicitly unproved on
+the larger tube, as stated below.
+
+RESULT AND EXACT SCOPE
+
+For the ORIGINAL SU(2) Wilson measure, let I be the four physical links of
+one elementary plaquette p. Use a nonwrapping geometry, with torus side
+lengths large enough that its incident plaquettes are not identified.
+Integrate these four links with their exact Haar measure and hold every
+other physical link fixed. Let B be the COMPLETE exterior-link read of
+the resulting conditional Hamiltonian. Its size is bounded by 60 links.
+
+There are constants delta_Z,c,C,beta_* >0 depending only on this fixed
+cavity and the fixed trace/color conventions such that its ORIGINAL
+conditional partition function Z_I(y(z)) is zero-free for
+
+ beta>=beta_*,    max_(b in B)|z_b|<delta_Z,
+                    y_b(z)=exp(i z_b),                          (0.1)
+
+where each z_b has three complex Lie coordinates. The center is flat
+boundary. In particular delta_Z does not shrink like beta^-1 or beta^-1/2.
+This is a finite pinned-cavity result, not a zero-free theorem at arbitrary
+real exterior configurations or growing cavities.
+
+Let E_p={||U(partial p)-1||_op>=tau}, 0<tau<tau_*, and let F be ANY bounded
+Borel function of the four REAL interior links, |F|<=A. In the exact
+normalized conditional coefficient
+
+ a_F(z)=int F(x)1_Ep(x) exp[-beta H_I(x;y(z))]dx / Z_I(y(z)),     (0.2)
+
+the mark and source are never evaluated at complex x. On a fixed fraction
+of the complex boundary polydisc of radius c tau one has
+
+ |a_F(z)| <= C A beta^6 exp[-c beta tau^2].                       (0.3)
+
+Thus tau=epsilon0 gives a genuine O(epsilon0)=O(g0 log^p(g0^-2)) rare
+analytic birth tube, with the original probability law and mark unchanged.
+At the weak floor its rare cap beats every fixed inverse-g power for p>1/2.
+The old beta^-1 pointwise density-ratio estimate remains useful at arbitrary
+real boundaries; the larger conclusion here uses this actual pinned patch.
+
+The contour deformation below is used ONLY for the unmarked denominator.
+It does not move the discontinuous event or a merely Borel source.
+The original exterior density contains the exact Z_I, not its asymptotic
+expression. Selected-event normalized quotients a_F/p are NOT asserted
+zero-free on this larger tube; the event numerator p may have complex zeros.
+
+1. EXACT FOUR-DIMENSIONAL CAVITY GEOMETRY
+
+Each fine link belongs to six unoriented plaquettes in dimension four.
+Among plaquettes containing an edge of p, the plaquette p itself contains
+all four such edges. No other elementary plaquette contains two edges of p:
+two adjacent edges determine p uniquely, and the opposite edges have the
+same unique elementary square. The nonwrapping assumption avoids small-
+torus identifications. Therefore there are exactly
+
+                  1+4(6-1)=21                                  (1.1)
+
+incident plaquettes: p and twenty others. Each of the latter reads one
+interior link and three exterior links, so |B|<=60, including all repeated
+incidences only once. Orientations can invert an interior link, but h(U^-1)
+=h(U). With normalized trace tr=Tr_fund/2 and h(U)=1-tr U, the exact action
+at identity exterior is consequently
+
+ H_I(U_1,U_2,U_3,U_4;1)
+       =5 sum_(i=1)^4 h(U_i)+h(U(partial p)).                    (1.2)
+
+Every summand is nonnegative on SU(2); h(U)=0 iff U=1. Thus the identity
+quadruple is the UNIQUE global minimum. There is no residual interior
+gauge orbit to divide out: the exterior physical links are held fixed.
+Global conjugation fixes the minimum and does not create zero directions.
+
+Write U_i=exp(i A_i) near identity, with A_i in the real three-dimensional
+Hermitian traceless Lie algebra and its fixed Euclidean norm. Then
+h(exp i A_i)=1-cos|A_i|=|A_i|^2/2+O(|A_i|^4). The Hessian in these twelve
+coordinates is
+
+                  D_*=5 I + L_p^T L_p,                         (1.3)
+
+up to the explicitly fixed color norm convention; L_p is the oriented
+sum giving the linear plaquette curvature. In particular D_*>=5I in
+this convention. Globally, h(U_i)>=c dist(U_i,1)^2 for the geodesic
+distance in its principal range. Formula (1.2) gives a uniform pinning
+gap away from every fixed small neighborhood of the minimum.
+
+For an explicit normalization check take A_i=q_i.sigma with
+tr(sigma_a sigma_b)=delta_ab. Then L_p(q)=q_1+q_2-q_3-q_4 after choosing
+the four orientations consistently. D_* has eigenvalues 9 with
+multiplicity3 and 5 with multiplicity9. Normalized SU(2) Haar has
+coordinate density 1/(2pi^2) at q=0, so J(0)=(2pi^2)^-4. The leading
+flat coefficient below is therefore exactly
+(2pi)^6 (2pi^2)^-4 / sqrt(9^3 5^9), multiplying beta^-6.
+
+2. THE GENUINE HOLOMORPHIC INTEGRAND AND LOCAL STATIONARY BRANCH
+
+Use the original action from original_rare_cavity_source_projection:
+
+ H_I(x;y)=sum_(q incident to I) h_q(x,y),
+ h^hol(W)=1-(Tr W+Tr W^-1)/4.                                (2.1)
+
+The inverses in (2.1) are holomorphic group inverses, not adjoints. On
+SL(2,C), Tr W=Tr W^-1; the symmetric expression makes its real origin
+explicit. With y_b=exp(i z_b), H_I is holomorphic in z on a fixed complex
+boundary neighborhood and real for all real z and x in SU(2)^4. Its
+derivatives of any fixed order there are bounded uniformly in the real
+compact x domain. Constants include the fixed dimension 3|B|<=180.
+
+Choose one small interior coordinate cube D=[-a,a]^12, contained strictly
+inside the four logarithm charts. The exact Haar measure there is
+J(A)dA, where J is the product of the usual analytic densities
+c(sin|A_i|/|A_i|)^2. It is holomorphic on a fixed larger complex cube,
+positive for real A there, and J(0)>0. No Gaussian or chart Jacobian has
+been substituted for the actual Haar measure.
+
+The analytic implicit-function theorem applied to partial_A H_I=0 and
+(1.3) supplies a single branch
+
+ A_*(z),  A_*(0)=0,  |A_*(z)|<=C|z|,
+ e_*(z)=H_I(A_*(z);y(z)),
+ D(z)=partial_A^2 H_I(A_*(z);y(z)).                             (2.2)
+
+On a sufficiently small fixed complex z neighborhood, D is complex
+transpose-symmetric, Re(u^T D(z)u)>=c|u|^2 for real u, and J(A_*) and
+the analytic branch det D(z)^(1/2) are nonzero. The leading prefactor
+
+              L(z)=(2pi)^6 J(A_*(z)) det D(z)^(-1/2)             (2.3)
+
+is holomorphic and bounded above and away from zero. At real z the
+stationary point is real. Compactness, the flat pinning gap, and strict
+local convexity show it remains the UNIQUE global real minimum for
+small real z. At z=0 every plaquette is identity, so every first boundary
+derivative vanishes and e_*(z)=O(|z|^2).
+
+This is the finite cavity's stationary point. It is not a substitute for
+any native constrained Wilson minimum or an RG stationary field.
+
+3. COMPLETE CONTOUR ARGUMENT FOR THE ORIGINAL NORMALIZER
+
+All constants are now chosen once, independently of beta. First take
+a small enough that the cubic remainder below is dominated by its
+positive quadratic form on a somewhat larger cube. Next choose the
+complex boundary radius delta_Z sufficiently small that
+
+ |A_*(z)|_infty<a/4,
+ C delta_Z < c a^2,
+ |Re e_*(z)|<c a^2/8.                                         (3.1)
+
+The constants may be made smaller in what follows. This is a fixed
+finite-dimensional choice; no claim that delta_Z is a large native
+coefficient radius is made.
+
+Split the EXACT Haar integral into D and its real compact complement.
+At z=0 the latter has action at least c a^2. Uniform holomorphic bounds
+give |H_I(x;z)-H_I(x;0)|<=C|z| for real x. Therefore the contribution of
+the complement obeys
+
+             |Z_out(z)|<=C exp[-c beta a^2].                     (3.2)
+
+No contour chart is required on that complement.
+
+For the central integral translate D to D+A_*(z), one coordinate at a
+time. Cauchy's theorem in each coordinate gives the translated integral
+and a finite sum of connecting side integrals. This is the ordinary
+rectangle/prism contour identity, applied to the HOLOMORPHIC unmarked
+integrand J(A)exp[-beta H_I(A;z)]. It does not insert a nonanalytic cutoff
+into that integrand: D and its complement were split as integration sets.
+
+On every side prism at least one real coordinate has absolute value
+>=3a/4. All imaginary coordinates and real displacements from the flat
+side have size O(delta_Z), and the entire prism stays in the larger
+Haar chart. Flat pinning and the uniform analytic perturbation bound,
+with (3.1), give Re H_I>=c a^2 there. Side volumes and their finite
+translation lengths are bounded, hence the TOTAL side error also has
+the bound (3.2). Real and imaginary parts of the translation both enter
+this estimate. Disjoint real charts or a holomorphic partition of unity
+are unnecessary.
+
+After translation write A=A_*(z)+u, u in the REAL cube D. Stationarity
+gives the exact local expansion
+
+ H_I(A_*+u;z)=e_*(z)+1/2 u^T D(z)u+R_3(u,z),
+                         |R_3(u,z)|<=C|u|^3.                   (3.3)
+
+For real u in D, its real part above e_* is >=c|u|^2. Set v=sqrt(beta)u.
+The amplitude error satisfies
+|J(A_*+v/sqrt(beta))-J(A_*)|<=C beta^-1/2 |v|. Also
+
+ |exp[-beta R_3(v/sqrt(beta),z)]-1|
+ <= C beta^-1/2 |v|^3 exp[C a |v|^2].                         (3.4)
+
+The last factor is dominated by a reserved fraction of the Gaussian
+because a was chosen first. Gaussian moments and the Gaussian tail
+outside sqrt(beta)D are uniform for the complex matrices D(z) in this
+fixed neighborhood. Thus the central integral is
+
+ e^-beta e_*(z) beta^-6 [L(z)+O(beta^-1/2)],                    (3.5)
+
+uniformly on the whole fixed complex z neighborhood. This error estimate
+uses absolute integrals against a positive Gaussian bound, not a complex
+probability. The determinant branch in (2.3) is the one continued from
+the positive real Hessian.
+
+Adding the side and compact-complement errors from (3.2), and using the
+last bound in (3.1), proves the exact representation
+
+ Z_I(y(z))=e^-beta e_*(z) beta^-6 [L(z)+E_beta(z)],
+ |E_beta(z)|<=C beta^-1/2+C beta^6 exp[-c beta a^2].             (3.6)
+
+All terms are holomorphic. The representation is an equality with an
+estimated remainder, not a replacement of the original Z_I by an
+asymptotic density. Choose beta_* so its error is less than half the
+fixed lower bound for |L|. Then
+
+ c beta^-6 exp[-beta Re e_*(z)]
+ <= |Z_I(y(z))| <= C beta^-6 exp[-beta Re e_*(z)]               (3.7)
+
+and (0.1) follows. For any desired compact beta range [1,beta_*], a
+further fixed shrinkage follows instead from the elementary density-ratio
+argument and positivity of Z at real flat boundary. The weak-coupling
+claim only needs beta>=beta_*.
+
+4. RARITY ON AN epsilon0-SIZED COMPLEX TUBE
+
+Let z=u+iv with u,v real Lie-coordinate vectors. Reality on real
+parameters makes the first imaginary-direction derivative purely
+imaginary. Uniform second derivatives on the compact real x domain give
+
+ Re H_I(x;y(u+iv)) >= H_I(x;y(u))-C|v|^2,                     (4.1)
+
+where the norm may be Euclidean over the at most 180 real coordinates.
+For a per-bond sup norm use the explicit factor 3|B| in C. Likewise
+
+ Re e_*(u+iv) <= e_*(u)+C|v|^2,
+                         e_*(u)<=C|u|^2.                     (4.2)
+
+The real minimum bound follows already by evaluating H_I at x=identity.
+On E_p the central plaquette is wholly interior and unchanged as a mark.
+For SU(2), ||U_p-1||_op^2=2h_p, and all real Wilson terms are nonnegative,
+so H_I(x;y(u))>=tau^2/2 for x in E_p. Hence
+
+ |int F1_Ep exp[-beta H_I(x;y(z))]dx|
+ <= A exp[-beta tau^2/2+C beta |v|^2].                        (4.3)
+
+Divide (4.3) by (3.7) and use (4.2):
+
+ |a_F(z)|<=C A beta^6
+                exp[-beta(tau^2/2-C|u|^2-C|v|^2)].             (4.4)
+
+Choose a fixed per-bond color radius kappa tau with kappa sufficiently
+small relative to all the displayed constants and the ACTUAL finite
+boundary dimension. For tau<tau_* this polydisc lies in (0.1), and (4.4)
+proves (0.3), for example with a weakened exponent tau^2/4. The power
+beta^6 is the twelve-dimensional Haar Gaussian normalization and is
+displayed explicitly. It causes no difficulty in the stated logarithmic
+tail regime. No conditional uniform rarity at a rough boundary was used.
+
+Cauchy on a fixed smaller polydisc gives, for each fixed k and boundary-
+supported sup directions,
+
+ |D^k a_F| <= C_k A beta^6 exp[-c beta tau^2]
+                                   (C_B/tau)^k.               (4.5)
+
+C_B retains the fixed boundary/read and color norm conversion. This is
+the promised improvement from a beta^k derivative price to a tau^-k
+price. Centering at any real boundary in a strict inner fraction of the
+patch and retaining a fixed fraction of its complex radius gives the
+same statement. It is not necessary to recenter an interior hard event.
+
+The selected-event probability p(z) itself is holomorphic with the same
+upper bound, but (4.4) supplies no relative lower bound for it. In
+particular a_F/p and atom-normalized selected contacts are still subject
+to the SMALLER tube/proof in the cavity producer, unless an additional
+event-normalizer theorem is proved. Raw first/mixed rows remain available.
+
+For completeness the directly marked contact with another bounded real
+interior insertion G, |G|<=B0, is also safe on the larger tube:
+
+ Cov_z(F1_Ep,G)=nu_z(FG1_Ep)-a_F(z)nu_z G.                    (4.6)
+
+Its only denominator is Z_I. The first term has (4.4) with AB0. The
+unmarked mean has the conservative bound
+|nu_z G|<=C B0 beta^6 exp[C beta(|u|^2+|v|^2)], from (3.7),(4.1) and
+nonnegativity of the real action. Thus, after making kappa smaller once
+for these two factors, (4.6) has cap
+C AB0(beta^6+beta^12)exp[-c beta tau^2] and the corresponding fixed-order
+tau^-k Cauchy prices. This does not assume the unmarked mean is O(B0)
+on the enlarged complex tube. A raw prior mixed contact H+FG has its
+literal amplitude H0+AB0 in the analogous raw estimate. No formula with
+division by p(z) is justified by this argument.
+
+5. A SIMPLE beta^-1/2 CROSS-CHECK
+
+One can obtain a weaker enlarged tube without contour translation. On the
+real pinned patch, compact stability and local strict convexity give
+H_I(x;y)-min H_I>=c dist(x,x_*(y))^2 and Z_I~beta^-6 exp[-beta min H_I].
+For a boundary perturbation z, subtract its value at x_*(y) from the
+action difference. The remaining difference has modulus
+C|z|dist(x,x_*(y)), by the finite mixed x-boundary derivative bound.
+Under the real conditional law sqrt(beta)dist has uniform Gaussian
+tails. Thus for |z|<=c beta^-1/2,
+
+ E_y |exp[-beta centered_action_difference]-1|<1/4
+
+after choosing c small. Its normalization is zero-free after restoring
+the nonzero scalar exponential. On the SAME real rare patch |u|<=c tau
+used in Section4 (or with a separately proved real event gap), it also
+keeps a rare marked numerator by absorbing its linear distance tilt.
+A fixed near-flat real boundary independent of tau is not asserted to
+make that event rare. This independently explains why
+the earlier beta^-1 pointwise-in-x bound was not optimal at a pinned
+boundary. The fixed-tube denominator proof in Section3 is what permits
+the larger tau~beta^-1/2 log^p(beta) marked tube in Section4.
+
+6. ORIGINAL LAW, GAUGE COVARIANCE AND ACTUAL WHOLE-IMAGE UTILITY
+
+The exterior marginal remains EXACTLY
+
+ dP_out(y)=Z_full^-1 exp[-beta H_out(y)] Z_I(y)dy.              (6.1)
+
+For every exterior-measurable test G,
+
+ E_P[F1_Ep G]=E_(P_out)[a_F G].                              (6.2)
+
+The side integrals and stationary prefactor were used only to estimate
+the ORIGINAL Z_I. There is no Gaussian replacement of (6.1), no deletion
+of the cavity normalizer and no change of the original coupling or source
+calibration. The original c_a f_p stays inside F. All source scalars,
+raw products and conditional contacts keep their exact cavity identities.
+
+For gauge-invariant F and E_p, a_F is invariant under the corresponding
+boundary gauge action by an exact change of the four real Haar variables.
+The near-flat patch can therefore be read in an admitted local gauge,
+provided that gauge's entire determining read and the patch complement
+are retained. A fixed flat scalar does not vanish in general. Constant
+color symmetry makes the first color jet zero, but the full quadratic
+curvature tensor is not declared scalar by that fact alone.
+
+There is a concrete first-ordinary whole-image use of the new radius.
+Here tau=epsilon0=A0 g0 log^p(g0^-2), whereas the actual first independent
+noise cut has physical radius delta0=A1 g0 log^p(g0^-2). On the fixed
+complete boundary B, the genuine first native current/pivot map has
+
+ max_B |log U_reconstructed| <= C_B(background_size+delta0)     (6.3)
+
+throughout its ORIGINAL noise product. This is the same finite-block
+C,h Dtilde map and complete source read used in the first bare domain
+registration; solved boundary pivots remain solved. Integrating the
+uniform first-minimum response from flat makes its background_size
+bounded by C_min times the first coarse determining radius.
+
+Choose the original hierarchy A0/A1 larger than the fixed C_B/kappa
+price, and restrict ONLY the admitted outer coarse background to
+background_size<kappa tau/(8C_B). Then (6.3) puts the ENTIRE original
+first noise image on B inside the strict real rare patch of Section4.
+The usual first P0/P1 and approximate-mask redundancies use the same
+hierarchy and remain as in the already checked first-success family.
+The set is nonempty and open at flat coarse data; its exact outer mass
+and its complement are retained. No source-dependent shortening of the
+noise product is introduced.
+
+This is a genuine radius improvement for a fixed physical rare packet:
+the beta^-1 tube could not contain a growing-log Gaussian window g0 r0,
+whereas a fixed small multiple of epsilon0 can, after the declared
+A0/A1 choice. For a complex noisy/localizer image one must additionally
+use its ACTUAL complete image bound and compare it to kappa epsilon0;
+real admission alone does not certify every native contour. The simple
+finite first pivot map on a prescribed complex product has its analogous
+bound, but arbitrary later mixed/retained images are not included here.
+
+The source is a physical boundary function of a finite fixed read,
+independent of an auxiliary current J if one chooses such an extension.
+It is not automatically a native independent-pair germ on every old
+domain, a complete source-carrier norm, or an all-history transported
+source. The exact replacement (6.2) still requires exterior measurability
+of the tested observable; a later state reading interior links retains
+the original selector correction. None of these limitations is removed
+by the larger zero-free tube.
+
+DEPENDENCIES
+
+Only the original finite Wilson disintegration and its normalized trace
+conventions are needed for Sections1--5. The analytic implicit-function,
+finite contour and Gaussian estimates are proved above. Section6 uses the
+registered literal first current/pivot reconstruction and uniform first
+minimum response, with the same physical-cut hierarchy as the existing
+first-bare whole-domain checks. No Gaussian drift or continuum theorem
+is imported. The original_rare_cavity_source_projection_20261024 raw
+probability/source/contact identities remain unchanged.

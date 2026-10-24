@@ -1,0 +1,195 @@
+CONDITIONAL PRODUCT-BALL CONTOUR: INDEPENDENT FINITE AUDIT
+24 October 2026. audit_two_root. Archive and outputs unchanged.
+
+VERDICT
+
+Scoped PASS for conditional_product_contour_20261024.txt as a finite
+holomorphic contour identity and a localized normalized-Gaussian
+estimate. The matrix constants, growth allowance, surface factor,
+and disjoint ordinary bad-cutoff estimate are valid. The note
+correctly does not infer a native cluster expansion or zero-free
+logarithm from this lemma alone.
+
+1. PRODUCT CHAIN AND EXACT SCALARS
+
+For one ball, d/dt int_(B_R) f(y+t mu)dy equals
+int_(sphere_R) f(y+t mu)(mu dot n)dS. Holomorphy makes the real
+directional derivative equal to the complex directional derivative;
+the real divergence theorem applies to the complex-valued vector
+field componentwise. The stated compact corridor condition justifies
+differentiation. Integrating from0 to1 gives I=T-S with the displayed
+sign. The dot product is bilinear, as required for the holomorphic
+volume form. No Re mu or Im mu occurs in the identity.
+
+The tensor-product expansion is exact for finitely many coordinate
+balls, with one cylinder parameter per selected block. The mean must
+be external to the integration variable, which is explicit. At an
+unselected block, the centered variable is exactly the real y_b.
+Only selected cylinders carry -(1-t_b)mu_b. A single global homotopy
+would not have that localization and would not support the later
+per-cylinder estimate.
+
+For symmetric D and mu=-D^-1 b, completing the bilinear square gives
+the scalar +b^T D^-1 b/2 in exp(-h). Its sign and the determinant
+normalization are correct. Extracting V(mu), if done, adds that exact
+factor to the raw measure. None of these scalars is small in general.
+In the conditional application, the separately retained H0(0,z)
+baseline is not part of this completion and must not be counted twice.
+
+2. MARGINAL MATRIX BOUNDS AND NO FULL-VOLUME DETERMINANT LOSS
+
+The identity Re(D^-1)=D^-* (Re D)D^-1 and
+||D||<=Lambda imply Re(D^-1)>=lambda/Lambda^2. A principal
+restriction C_Y has this same lower bound and norm at most1/lambda.
+For Q_Y=C_Y^-1, ||Q_Y||<=Lambda^2/lambda and
+
+ Re Q_Y=Q_Y^*(Re C_Y)Q_Y
+       >=(lambda/Lambda^2)||Q_Y v||^2
+       >=(lambda^3/Lambda^2)||v||^2.
+
+Thus both conservative constants in (7) are correct. Symmetry is
+preserved by inversion and restriction. The accretive domain fixes
+the Gaussian determinant branch by continuation from the real
+positive problem. Integrating the complement of Y exactly gives
+this normalized marginal, including for complex values of the
+remaining finite coordinates by analytic continuation.
+
+Taking absolute values of its determinant costs C^(m|Y|), not
+C^(m|I|). This relies on actual full centered real Gaussian
+integration outside Y. It cannot be used as written if those
+outside variables still carry hard cutoffs or an unaccounted
+insertion. The note explicitly retains this premise.
+
+3. QUADRATIC AND GROWTH CONSTANTS
+
+For real y and complex v,
+
+ Re[(y-v)^T Q(y-v)]
+ >=q_-||y||^2-2q_+||y||||v||-q_+||v||^2
+ >=(q_-/2)||y||^2-(2q_+^2/q_-+q_+)||v||^2.
+
+This proves (9). Also ||y-v||^2<=2||y||^2+2||v||^2. With
+a<=q_-/16, multiplying by the insertion bound in(8) gives
+the exponent -q_-||y||^2/8+(C_Q/2+q_-/8)||v||^2, exactly (10).
+Here v is supported on the selected cylinder labels, so the
+positive displacement cost is only sum_(b in S)|mu_b|^2.
+
+For each selected block the surface Jacobian is bounded by |mu_b|
+and the area is |sphere_1|R^(m-1). The remaining real Gaussian
+integrals and determinant yield a fixed constant per occupied
+coordinate. This gives (11). When some retained upper cutoffs on
+Y remain, dropping them in the upper bound is legitimate; it does
+not change the separate exact-marginal premise outside Y.
+
+For a disjoint real bad-cutoff label, integration of
+1_(|y_b|>R) exp(-c|y_b|^2) is bounded by the stated conservative
+C(1+R)^m exp(-cR^2/2). This and the surface estimate use the same
+single quadratic bound. Disjointness is of actual coordinate
+labels, not containing read cubes; no quadratic gain is duplicated.
+
+With |mu_b|<=M r and R=K r, the condition
+cK^2>=2C_1 M^2 leaves a fixed negative multiple of K^2r^2. The
+factor Mr(Kr)^(m-1) is paid at the weak floor, proving (13).
+If mu_b=0 the exact surface operator vanishes, in agreement with
+the bound. The asymptotic comparison to any fixed power of
+g r^k uses 2p>1, not merely r tending to infinity.
+
+4. WHAT THIS DOES AND DOES NOT REMOVE
+
+The lemma removes the specific occupied imaginary-mean loss from
+unmarked coordinates. It is compatible with field/source Cauchy
+arguments because the exact contour formula uses holomorphic mu,
+and all corridors must stay within the actual source/primitive
+domain. A normalized source log still requires a separately proved
+zero-free domain. Finite positivity on the physical slice is not
+that proof.
+
+There is an elementary limitation on any stronger conclusion.
+For h(x,z)=x^2/2-a xz, the conditional normalizer on |x|<=K r is,
+up to a rare cutoff correction, sqrt(2pi) exp(a^2 z^2/2).
+For |z| comparable to r, the exact boundary scalar has logarithm
+of order r^2. No contour shift makes the WHOLE conditional log a
+small own-field E coefficient. The raw boundary scalar must remain.
+
+5. NATIVE MATCHING WARNING: ACTUAL NOISE SUPPORT VERSUS FIELD CARRIER
+
+The finite lemma's C_0^|Y| is a cost per actual Gaussian coordinate.
+It must not be treated automatically as harmless when Y is enlarged
+to a long complete background/mean-walk carrier. A native cube has
+order M^4 fine coordinates; a factor exp(C M^4 times walk length)
+need not be paid by the available exp(-c M times walk length).
+This is a native application issue, not a flaw in the finite estimate.
+
+A proof can address it by retaining the refined normalized Gaussian
+comparison with its SMALL alpha5 per-volume loss, or by an exact
+marginalization onto the true noise read while separately retaining
+the longer background carrier. In the latter route all unused
+noise cutoffs/integrations must be accounted for. A field read is
+not automatically an additional noise insertion.
+
+There is also an exact-consistency issue to check when using B116
+localizers. The individually localized conditional covariance,
+square root and precision in(2.5)--(2.15) are controlled by the
+published perturbative R1,R2,R3 estimates; their inverse identities
+cannot simply be assumed at arbitrary complex localizer values.
+One possible sound route is to recognize their actual joint centered
+quadratic, normalize it by its own Gaussian determinant, retain the
+published exp(O(alpha5)|Z|) determinant ratio, and then marginalize
+the normalized quadratic onto the true noise support before taking
+absolute values. That route requires its own explicit verification.
+
+The separate native audit will check which construction is actually
+used. This finite PASS does not presume it has been completed.
+
+6. SUBSEQUENT REFINEMENT READBACK
+
+The root note now includes Section6, equations(14)--(17), resolving
+the crude-volume issue at the FINITE-LEMMA level under its explicit
+additional almost-real premise. This refinement independently passes.
+
+For Q=A+iB with A,B real symmetric and ||B||<=C rho, put
+T=A^-1/2 B A^-1/2. Exact determinant algebra gives
+
+ |det Q|^(1/2)/(det A)^(1/2)
+       =product_j(1+lambda_j(T)^2)^(1/4)
+       <=exp[C rho^2 |Y|].
+
+The small Young inequality for the cross term is
+q_+||y||||v||<=tau||y||^2+q_+^2||v||^2/(4tau).
+Including the growth allowance produces exactly A_t and
+C_(tau,a) in(15). The stated condition leaves A_t with a fixed
+positive gap. Its determinant ratio to A costs
+exp[C(tau+a)|Y|]. Thus(16) is correct.
+
+Integrating unmarked coordinates in this normalized positive
+Gaussian BEFORE bounding the marked-coordinate density gives
+C^|S union P|, not C^|Y|. The surface/tail factors then yield(17).
+Only C(rho^2+tau+a)|Y| remains as a freely small body-volume loss.
+The larger fixed K pays the tau^-1 mean cost, after the Gaussian
+budget is chosen and before the weak floor. No marked label receives
+two quadratic credits.
+
+This is exactly the form that can be combined with native large
+carrier counting. Its application still requires the actual
+localized joint covariance to be normalized, bilinearly symmetric,
+uniformly almost real, and uniformly coercive. Those are checked
+in the separate native audit; they are not implied solely by the
+unlocalized physical quadratic.
+
+7. SUBSEQUENT NATIVE MATCHING
+
+The separate local_conditional_analytic_native_audit_20261024 now
+verifies these additional premises at the guarded first bare step.
+The producer explicitly symmetrizes covariance words BEFORE their
+localization parameters; this preserves the exact physical covariance
+and makes every C_s bilinearly transpose symmetric. The SAME C_s in
+B116(2.14) gives the actual normalized joint block Gaussian with Schur
+complement I, so no separate localized inverse identity is assumed.
+Its bounded triangular real form and native near-real perturbation
+bounds give the required coercivity and almost-real marginals. The
+unused centered noise cutoffs are expanded explicitly before exact
+Gaussian marginalization; the refined small body-volume loss, not
+the crude C0 per coordinate, is used. These checks resolve the
+specific consistency warning in Section5 for that native construction.
+They do not broaden this finite lemma to arbitrary inherited kernels
+or imply zero-freeness without the separate convergent cluster proof.

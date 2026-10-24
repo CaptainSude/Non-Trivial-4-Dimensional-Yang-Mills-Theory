@@ -1,0 +1,354 @@
+LOCALITY OF THE HEAT-LIMIT FIELDS FROM SHRINKING SCALAR STENCILS
+18 October 2026. Working domain proof; no tensor covariance or Gram rank.
+
+1. INPUTS THAT ARE ACTUALLY USED
+
+Work on the single reconstructed local scalar Hilbert space. The scalar
+field and its adjoint act on the smooth-energy domain D_infty and have
+polynomial energy bounds, including every fixed left energy weight.
+Its time-zero spatially smeared value a(g) is only a FORM. The existing
+scalar point/heat construction, or the finite-band argument of
+heat_form_to_operator_distribution, gives, for a fixed integer q,
+
+       ||(1+H)^-q a(g)(1+H)^-q|| <= C p_s(g).          (1)
+
+It is not assumed that a(g) sends the vacuum, or D_fin, to a vector.
+Scalar locality is used as an identity of forms after smearing, then
+at time zero by the smooth matrix elements on D_infty.
+
+For the new frame the already established data are:
+
+ (a) exact actual scalar-fusion approximants, at most five factors
+     per term, all complete lower-subset and scalar counterterms kept;
+ (b) the heat-form Cauchy error
+       d(G)=G^B[exp(-c(log G)^sigma)+G^-K], sigma>1;
+ (c) shrinking complete stencil and prefix period
+       delta_G+p_G <= exp(-cG)P(G),
+     while the smallest positive internal packet time gap, all profile
+     norms and normalization factors have inverse/absolute cost at
+     most exp(CG);
+ (d) the constructed fields Phi_v(f), with the polynomial all-weight
+     bounds and reflected companions of the operator-distribution note.
+
+The native exponent K is chosen once beyond the finitely many powers
+below. The required powers depend on the fixed scalar/frame/domain
+bounds, not on G, the bare cutoff, or the number of reflection copies.
+The construction does not rely on the native power absorbing an
+exp(polylog G) preparation loss. Here it absorbs polynomial G only.
+
+2. A DOWNSTREAM PREFIX AVERAGE, NOT A NEW PRODUCER CLAIM
+
+At each fixed G average the ACTUAL heat form under translations of
+its prefix torus, transporting back the Hilbert-space translation:
+
+ q_G^av(f)=p_G^-4 integral_[0,p_G]^4 T_-h q_G(f_h)dh.   (2)
+
+For the time coordinate T is the Euclidean conjugation, interpreted
+with positive heat slack or on finite spectral bands. This is a bounded
+normalized average. It is performed after the copied bridge; no
+arbitrary translated clone is inserted into the producer proof.
+
+The actual scalar expression is a finite sum/integral of
+
+          c_(G,S)(x;u) product_(a in S) phi(x+u_a),
+
+with each deterministic center coefficient periodic with period p_G.
+The underlying scalar factors translate continuously. Therefore (2)
+averages c_(G,S) over its period and leaves a center-independent
+coefficient (possibly still depending on the internal packet variables
+u). The resulting expression is continuously translation covariant.
+It is still a finite scalar-stencil expression, not an abstract RG
+reference or a new Appell convention. Centering and reflection commute
+with this normalized average.
+
+Because q_infty already has continuous translation covariance,
+
+       q_G^av-q_infty=average_h T_-h(q_G-q_infty)(f_h).
+
+On a sandwich with heat slack a>4p_G its norm has the SAME d(G) bound,
+with a fixed harmless change of a and of the containing compact. The
+test seminorm of f_h is bounded uniformly for |h|<=p_G. There is no
+factor p_G^-1 left: (2) is a probability average. Thus this averaging
+does not change the limiting field or require a convergence rate for
+lower limiting fusions.
+
+By the original scalar ordered-kernel identification, the time-zero
+form A_G^av is the corresponding center-independent sum of expressions
+
+ exp(s_1 H)a(g_1)exp[-(s_1-s_2)H]a(g_2)...
+                          a(g_k)exp(-s_k H),          (3)
+
+integrated over the actual packet variables, with k<=5,
+s_1>...>s_k, |s_a|<=delta_G. The packet supports preserve fixed positive
+internal gaps, whose inverse costs are <=exp(CG). This formula is a
+heat-regularized form identity. The a(g_a) are not being treated as
+ordinary operators. Terms of smaller degree and identity terms obey
+the same convention. Integrating their fixed-order seminorm bounds and
+all coefficient absolute values costs at most exp(CG).
+
+The temporal finite-band ODE gives the same A_G^av, by uniqueness.
+Thus (3) is not an independent continuation chosen after the limit.
+
+3. POINT-HEAT CONVERGENCE AT A SHRINKING HEAT SCALE
+
+Let A be the time-zero form of the limiting field. For a fixed spatial
+test g (and uniformly in a fixed spatial seminorm), the small-slab
+inverse argument gives
+
+ ||P_E(A_G^av(g)-A(g))P_E|| <= C(1+E)^p d(G)p_s(g),    (4)
+
+provided G>=C[1+log(1+E)] and p_G+delta_G<<1/(1+E).
+Indeed use the temporal test chi_tau, tau=(1+E)^-1, and undo only
+4tau of heat on P_E. The factor is exp(8tau E)<=exp(8), not exp(aE).
+The reciprocal Laplace multiplier has the same uniform Fourier-L1
+norm as in the operator-distribution note. This proves (4) without
+an exponential loss on the error d(G).
+
+There is also a crude global finite-G sandwich bound, directly from
+(3), (1), all the positive internal gaps, and the scalar coefficient
+ledger:
+
+       ||exp(-rho_G H)A_G^av(g)exp(-rho_G H)||
+                                      <= exp(CG)p_s(g), (5)
+
+where rho_G=C delta_G can be enlarged by the harmless prefix diameter.
+If different stencil widths occur, choose one rho_G bounding them all;
+it still satisfies rho_G<=exp(-cG)P(G). Internal-gap and inverse-radius
+costs are included in exp(CG), not hidden in the constant.
+
+Choose a_G=c_0 G^-1/2, where c_0>0 will later be fixed using the
+spacelike separation. Let E_G=L_0 G/a_G. The constant L_0 is fixed
+large enough compared with the C in (5). For large G, rho_G<a_G/4.
+Unit energy-band Schur sums give
+
+ ||exp(-a_G H)[A_G^av-P_EG A_G^av P_EG]exp(-a_G H)||
+                    <= C a_G^-1 exp(CG-c a_G E_G).    (6)
+
+To see this, (5) bounds its m,n block by
+exp(CG)exp[-(a_G-rho_G)(m+n)]. Every retained block has m or n>E_G;
+the row and column sums are bounded by the right side of (6), after
+reducing c. No rank/count of vectors inside an energy band is used.
+The corresponding tail of A follows from its polynomial band bound
+and is bounded by a fixed power of a_G^-1 times exp(-c a_G E_G).
+
+The low-energy piece is bounded by (4), with heat contractions. Since
+E_G=O(G^3/2), its conditions hold for all sufficiently large G. Hence
+for a fixed finite D_1,
+
+ ||exp(-a_G H)(A_G^av(g)-A(g))exp(-a_G H)||
+              <= C[G^D1 d(G)+exp(-c'G)]p_s(g).        (7)
+
+The same proof works when a_G is changed by any fixed factor. The
+constant may depend on c_0, which is fixed before G tends to infinity.
+Real-time center smearing against f preserves (7), with an integral
+spatial seminorm of f. We denote this heat-regularized finite-G real-
+time insertion by Phi_G^av(f); it need not be an undamped tempered
+operator at fixed G. The limit Phi(f) is the operator already proved.
+
+4. A GAUSSIAN TIME AVERAGE WITH CONTROLLED COMPLEX CONJUGATION
+
+Let B and its adjoint partner act continuously on D_infty and obey
+the polynomial all-weight energy bounds. Both an original scalar
+spacetime field and a new Phi(h) have this property. Write
+alpha_t(B)=exp(itH)Bexp(-itH), and
+
+ k_eps(t)=(2 pi eps^2)^-1/2 exp[-t^2/(2eps^2)],
+                B_eps=integral k_eps(t)alpha_t(B)dt.  (8)
+
+The integral is continuous as a map between the relevant energy
+Sobolev spaces. The all-weight norms of alpha_t(B) are independent
+of t, since the weights commute with exp(itH). Therefore
+
+ alpha_z(B_eps)=integral k_eps(t-z)alpha_t(B)dt        (9)
+
+defines an entire map in those same norms, with bound at most
+exp[(Im z)^2/(2eps^2)] times the norm of B. On finite spectral bands
+(9) is precisely exp(izH)B_eps exp(-izH); uniqueness and the weighted
+bounds give its heat-regularized meaning without applying exp(sH)
+to an arbitrary smooth-energy vector.
+
+Also B_eps->B on D_infty in every fixed output energy norm, and the
+same holds for its adjoint partner. This follows from strong smooth-
+energy continuity of alpha_t(B) on a fixed input vector and the Gaussian
+approximate identity. No operator-norm continuity of the unsmeared
+unbounded B is claimed.
+
+5. A LOCAL SCALAR FORM SEES ONLY THE GAUSSIAN TAIL
+
+Suppose the spatial support of g and the support of B have a fixed
+locality margin d>0, in the following precise sense:
+
+              [a(g),alpha_t(B)]=0 for |t|<d          (10)
+
+as forms on D_infty. For B=phi(h), this follows from scalar locality
+when g at time zero and supp h are strictly spacelike separated.
+To justify the time-zero evaluation, first smear the scalar in a
+small real-time interval where locality holds. Matrix elements on
+D_infty, including B(t) and its adjoint partner, are smooth in that
+time by the polynomial band bounds. Remove the temporal mollifier.
+
+Combining (9),(10), the form
+
+                C_(s,eps)=[a(g),alpha_(is)(B_eps)]
+
+is represented by the integral over |t|>=d only. Products in this
+commutator are form products on D_infty. For a fixed sufficiently
+large energy weight q', (1) and the bounds for B and its adjoint give
+
+ ||(1+H)^-q' C_(s,eps)(1+H)^-q'||
+ <= C p_s(g) N(B) exp[s^2/(2eps^2)]
+                                      exp[-d^2/(4eps^2)]. (11)
+
+Increasing q' finitely handles either order of the product. This uses
+two-sided scalar FORM bounds and one-sided/all-weight B bounds; it
+does not assert that the scalar time-zero form is an operator.
+The elementary Gaussian tail estimate proves (11). Constants can
+depend on the fixed B test and d, but not on G, eps, or s.
+
+6. COMMUTATOR OF AN ENTIRE FINITE SCALAR STENCIL
+
+For one term (3), expand its commutator with B_eps by the product
+rule. In the a-th summand the scalar form a(g_a) is replaced by
+
+             [a(g_a),alpha_(i s_a)(B_eps)],
+
+with the surrounding exp(s_a H), exp(-s_a H) left in place. Thus all
+positive internal heat gaps s_b-s_(b+1) remain positive and unchanged.
+The complex conjugation of B_eps is exactly (9).
+
+This algebra can be justified by putting finite spectral cutoffs in
+the scalar forms, using bounded identities, and passing in their
+weighted form norms with a slightly larger fixed energy exponent.
+The positive internal gaps and positive external heat make the passage
+operator-norm convergent. The Gaussian entire weighted bounds allow
+B_eps through each heat factor. No negative internal heat gap or
+ordinary time-zero operator product is introduced.
+
+More precisely, if R=(1+H)^-1 and C=(1+H)^-q a(g)(1+H)^-q is bounded,
+then the cutoff error in weight q+1 is
+R[C-P_E C P_E]R. Its norm is <=2||C||/(1+E), since
+||(1-P_E)R||<=(1+E)^-1. Thus one additional power on BOTH sides
+gives operator-norm form convergence. Increase the fixed weight again
+as needed to compose with B_eps using its all-weight bounds. The same
+estimate applies to the commutator forms; fixed positive heat gaps
+absorb every resulting fixed polynomial weight. No finite-dimensional
+energy subspace, compact resolvent, or compactness of exp(-aH) is used.
+
+If an actual packet coefficient is jointly smooth in several spatial
+stencil variables rather than already a tensor product, this step is
+still legitimate. Rescale its k<=5 fixed separated packet boxes to
+unit boxes, insert product cutoffs, and expand in a product Fourier
+series. Integrating by parts L>s+4 times in EACH three-dimensional
+slot makes the sum of coefficients times the products of the needed
+spatial p_s norms finite. Only kL derivatives are used, a fixed number.
+Rescaling and those finitely many coefficient derivatives cost at most
+exp(C'G), by the actual fixed-order packet/source bounds. Keep the
+ordered internal time variables in their disjoint intervals and
+integrate them in absolute value afterward. This yields an absolutely
+convergent nuclear sum of the expressions (3), with the same exp(CG)
+majorant after enlarging C. It is not an assumption that an arbitrary
+joint smooth kernel has a finite-rank tensor expansion.
+
+Apply (11) at the replaced position. The increase of its fixed energy
+exponent costs a fixed additional inverse power of the neighboring
+positive gaps, still at most exp(CG). All other fields are bounded
+using (1), again preserving their actual gaps. For an external heat
+a>2rho_G, summing terms and actual packet variables gives
+
+ ||exp(-aH)[Phi_G^av(f),B_eps]exp(-aH)||
+ <= C exp(CG) a^-D2 N(f)N(B)
+       exp[delta_G^2/(2eps^2)] exp[-d^2/(C_2 eps^2)].   (12)
+
+Here the spacelike margin is chosen uniformly for every center in
+supp f and every scalar stencil support, for large G. Since the
+stencils shrink, strict spacelike separation of the two compact
+center supports supplies such a d. Constants C,D2,C2 are fixed;
+the order k<=5 is fixed. The bound also covers all lower-subset terms.
+Identity terms commute exactly. Centering introduces no new term.
+
+7. SIMULTANEOUS CHOICE OF GAUSSIAN WIDTH AND HEAT
+
+Choose once c_0>0 sufficiently small that
+d^2/(C_2 c_0^2)>C+2, where C is the fixed exponential coefficient in
+(12). Put
+
+                    eps_G=a_G=c_0 G^-1/2.
+
+Then delta_G/eps_G tends to zero, and (12) tends to zero exponentially
+in G, up to fixed powers. This choice is crucial: taking eps fixed
+would leave exp(CG), while taking eps exponentially small would make
+complex heat conjugations uncontrollable.
+
+Compare the commutator in (12) to the one with Phi(f). Let
+D_G=Phi_G^av(f)-Phi(f). By (7), at a_G/2 its heat norm is bounded by
+G^D1 d(G)+exp(-cG). For example,
+
+ exp(-aH)D_G B_eps exp(-aH)
+ =exp(-aH/2)[exp(-aH/2)D_G exp(-aH/2)]
+                            [exp(aH/2)B_eps exp(-aH)].
+
+The last bracket has norm <=C a^-p_B exp[C a^2/eps^2]N(B), by (9)
+and the one-sided energy bound of B. The reversed product uses the
+adjoint companion and has the same bound. Since a/eps=1, the
+exponential is a constant. All remaining losses are fixed powers of
+G. Choosing K beyond B+D1+p_B/2 proves
+
+       ||exp(-a_GH)[Phi(f),B_epsG]exp(-a_GH)|| ->0.    (13)
+
+On D_infty, exp(-a_G H) tends to 1 in every energy norm, B_epsG tends
+to B in the required energy norms, and Phi(f) is continuous between
+the corresponding energy spaces. Thus the matrix elements of the
+left side converge to [Phi(f),B]. Equation(13) proves
+
+                         [Phi(f),B]=0 on D_infty.    (14)
+
+All variable-scale constants have been displayed. In particular the
+error d(G) was never multiplied by exp(a_G E_G), exp(CG), or by a
+preparatory exp(polylog G) loss. The only extra error factor is a
+fixed power of G. The separate finite-G scalar anchor exp(CG) was
+paid by the Gaussian locality tail in (12).
+
+8. TWO APPLICATIONS GIVE MUTUAL LOCALITY
+
+First apply (14) with B equal to the ORIGINAL scalar field phi(h),
+and then its adjoint, for compact tests f,h with strictly spacelike
+separated supports. The premise (10) is original scalar locality.
+This proves relative locality of every new field and reflected
+companion with the scalar field.
+
+Next fix B=Phi_w(h), or its reflected companion. The operator-
+distribution theorem gives all required polynomial energy bounds
+on the same D_infty. The first application gives relative locality
+of B with each scalar spacetime field. By the time-zero smoothing
+argument in Section5 this supplies (10) for every scalar constituent
+of the small stencil. Applying (14) again gives
+
+              [Phi_v(f),Phi_w(h)]=0 on D_infty         (15)
+
+for strictly spacelike separated supports, including the corresponding
+adjoint fields. No Haag duality, strong generation of a scalar von
+Neumann net, or new Lorentz covariance was used in this second step.
+The argument is about common-domain field locality.
+
+The result uses the actual finite scalar-stencil provenance as well
+as the heat Cauchy estimate. A generic nonlocal field with the same
+energy bound would not satisfy (12). Conversely mere Euclidean
+permutation symmetry would not have proved (15): the Gaussian
+commutator argument is the missing controlled crossing step.
+
+9. SCOPE
+
+Subject to the precisely listed copied/source/scalar inputs, the
+closable translation fields constructed in the preceding note are
+mutually local and relatively local to the original scalar sector.
+They and their companion family act on one invariant dense domain,
+have polynomial energy bounds, and retain the original positive-energy
+translation representation and vacuum.
+
+No conclusion about a nondegenerate 21-component Gram matrix, the
+continuous O(4)/Lorentz tensor law, full gauge-field identification,
+or the mass gap is made. The local fields may still have linear
+relations or zero directions. Finite reflections and field adjoints
+must still be matched to their tensor labels if that stronger statement
+is desired. This note closes a locality/domain interface, not those
+independent identification questions.

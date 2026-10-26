@@ -1,0 +1,330 @@
+B102 MINIMUM RESPONSE AND B109 PAIR-DOMAIN INTERFACE
+Scoped primary-source audit, 25 October 2026
+
+STATUS. This note verifies published one-response inputs and identifies their
+precise use in G1b/G1c. It does not prove a simultaneous original-noise complex
+prefix, and it does not close either gate. No frozen repository file is changed.
+
+PRIMARY EVIDENCE
+
+B102: T. Balaban, The Variational Problem and Background Fields in
+Renormalization Group Method for Lattice Gauge Theories, CMP 102 (1985),
+277--309, DOI https://doi.org/10.1007/BF01229381.
+User-supplied original: supplied-paper:paper3.pdf.
+Full extracted text: work/primary-sources/paper3.txt.
+Personally inspected printed281,305--309 (PDF5,29--33). Rendered evidence:
+work/primary-sources/B102-domain-05.png, B102-domain-31.png,
+work/primary-sources/B102-response-29.png through -33.png.
+
+B109: T. Balaban, Renormalization Group Approach to Lattice Field Theories,
+CMP109 (1987), 249--301, DOI https://doi.org/10.1007/BF01215223.
+User-supplied original: supplied-paper:paper2.pdf.
+Full extracted text: work/primary-sources/paper2.txt.
+Previously inspected printed262--263,265,272--273; additionally inspected
+printed275--276,278,280. New renders:
+work/primary-sources/B109-frame-27.png and -28.png;
+work/primary-sources/B109-domain-29.png through -32.png.
+
+1. WHAT B102 ACTUALLY PROVES
+
+Theorem1, printed279, is a theorem about a real compact-group variational
+problem on a prescribed multiscale determining geometry. The domains Omega_j,
+Lambda_j and determining bond set mathfrak B_k are fixed as on printed277--278.
+The datum V satisfies the small mixed-scale plaquette condition(7). There is
+a unique critical gauge orbit in the stated regular class; its minimum obeys
+the curvature/current tests(2) and local gauge bounds(9),(10). The constants
+B3 and the smallness constants depend on fixed d,L. Therefore an L^{-2} factor
+cannot be compared with B3 by merely declaring that L is large.
+
+SectionG fixes a base minimum U0=U_k(V0), V0 satisfying(7), and writes
+
+  V=V' V0,  V'=exp(iB),  |V'-1|<C1 epsilon1,
+  |B|<2 C1 epsilon1 on mathfrak B_k.                 [B102(172), p305]
+
+The relative Landau response H(B) is determined by
+
+  H = A1 + H1 B - Hlin D(A1+H1 B),                  [174]
+  A1 + G (delta Vnonlin/delta A')(A1+H1 B)=0,        [175]
+
+or by its second, better second-derivative representation
+
+  H = A0 + H0 B - Hlin D(A0+H0 B),                  [179]
+  A0 - Gtilde Delta^(2) H0 B
+       + Gtilde (delta Vnonlin/delta A')(A0+H0 B)=0. [180]
+
+Here Hlin is the linear propagator denoted H in the paper, distinguished from
+the nonlinear response by typography. These are native constrained equations,
+not a generic Banach-space implicit-function ansatz.
+
+Proposition9, printed309, states analyticity in complex B on the stated small
+chart, analyticity of the returned axial minimum U_k(V'V0), and analyticity in
+the external field U subject to the cited complete regularity conditions
+(3.35)--(3.38) of the propagator paper [5], or(1.7)--(1.9) of the gauge paper [6].
+It also states the regularity conditions(19)--(21) with epsilon2=B5 epsilon1,
+where(173) gives B5=6 B1 B3 C1 as a sufficient bound, and the response kernel
+estimate(190).
+
+Those external-field hypotheses must not be replaced by a curvature bound
+alone, nor by a pointwise bound on a gauge return. The paper does not state
+Proposition9 as a theorem on arbitrary independent pairs (U,J). The J in the
+SectionG stationarity equations(170),(171),(178) is the physical current of
+the base minimum. B109 later explicitly prescribes the independent-current
+extension; see Section3 below.
+
+The exact response bounds(19), printed281, are, on Omega_j and s_j=L^j eta,
+
+  |H| < epsilon2 s_j^{-1},
+  |nabla_U^eta H| < epsilon2 s_j^{-2},
+  |D_U^{eta*}D_U^eta H|, |Delta_U^eta H|
+       < epsilon2 s_j^{-3},                         [19]
+  Q_j(U,eta H)=B on Lambda_j,                       [20]
+  R(U)D_U^{eta*}H=0.                               [21]
+
+P1 H is not literally one of the displayed rows in(19).
+
+2. RESPONSE KERNELS, NORMALIZATION, AND THE FOURTH SOURCE SLOT
+
+At printed308, Eq(190), for y in Lambda_j, y' in Lambda_j', and
+x in Delta(y), the displayed rows are
+
+  delta H(x)/delta B(y'),
+  nabla_x delta H(x)/delta B(y'),
+  the localized Holder norm of nabla delta H/delta B,
+  D_U^*D_U delta H(x)/delta B(y'),
+  Delta_U delta H(x)/delta B(y').
+
+Their respective bounds are a common C times
+
+  [s_j^{-1}, s_j^{-2},
+   (||zeta||_beta+|zeta|) s_j^{-2-beta},
+   s_j^{-3}, s_j^{-3}]
+        s_j'^{-d} exp[-delta0 d(y,y')/8].           [190]
+
+The functional derivative uses the native cell-volume measure. Conversion
+to an ordinary derivative with respect to one coarse bond coordinate
+multiplies this kernel by s_j'^d. Omitting that cancellation produces a
+spurious scale loss. A sup-norm operator estimate also needs the weighted
+row sum of the exponential kernel on the actual determining geometry.
+In a homogeneous, single-coarse-grade chart this row sum is bounded by the
+usual lattice exponential sum, uniformly in volume; this observation alone
+is not a proof of every multiscale/localized row sum.
+
+If a star-shaped B chart, H(0)=0, and a native weighted kernel row-sum bound
+K are fixed, integrating(190) on the segment tB gives
+
+  |H(B)| <= CK s_j^{-1} ||B||,
+  |nabla H(B)| <= CK s_j^{-2} ||B||,
+  |D*D H(B)|+|Delta H(B)| <= CK s_j^{-3} ||B||.
+
+This is a rigorous one-response consequence, with its segment and row-sum
+hypotheses explicit. It applies equally to a difference H(B1)-H(B0) when
+the segment between the two inputs stays in the admitted chart.
+
+There is a native route to the P1 slot, rather than a new elliptic estimate.
+B109 printed272, between(3.11) and(3.12), uses
+
+  D*D+DRD* = Delta_U - P1 + L_U,                    [A]
+
+where L_U is a lower-order local operator. Since RD*H=0,
+
+  P1 H = Delta_U H - D*D H + L_U H.                [B]
+
+Consequently the two second-order rows in(190) also control P1 H, provided
+the stated native local-coefficient bound for L_U is retained on the same
+complete chart. If B varies while U is fixed, differentiating[B] gives
+the same identity for delta H/delta B, so the decay estimate transfers to
+P1 delta H/delta B with only the fixed finite-range/local coefficient loss.
+The lower-order coefficient estimate is not invented here: B102 printed298,
+(134)--(136), and printed299,(140), explicitly derive the corresponding
+covariant Hodge identity and invoke the bounded DPD* operator and curvature
+coefficients from the propagator paper. Its exact constants are an imported
+published input, not recomputed in this note.
+
+Thus B102 plus the native Hodge identity supplies the four source slots
+H,nabla H,P1 H,Delta H for an admitted unlocalized physical response. It
+does not say that an arbitrary localization preserves D*D control; B109
+introduces the selected current precisely because that claim is false.
+
+For evidentiary accuracy: B102 printed308 explicitly omits the detailed
+kernel calculation leading to(189), calling it lengthy, then states the
+bound and deduces(190). This note uses that published theorem; it has not
+independently reconstructed the omitted kernel calculation.
+
+3. THE SELECTED CURRENT AND ITS PUBLISHED ONE-STEP DOMAIN
+
+B109 printed272,(3.10)--(3.14), starts from the physical current expansion
+
+  Jphys(exp(i xi A)U)=Jphys(U)+D_U^*D_U A+F(U,A).
+
+Using[A] on a Landau response, it defines an independent-pair continuation
+by the selected companion
+
+  ( F_A, K_A ) =
+  ( exp(i xi A)U,
+    theta^3 J + Delta_U^xi A - P1 A + F1(U,A) ),     [3.13]
+  theta=L^{j-1} eta.
+
+F1 is the native lower-order local remainder; it must stay that literal
+function. In particular K_0=theta^3 J. Replacing K_A by a recomputed
+physical current after weakening changes this chosen continuation.
+
+On the full old domain
+
+  U_j^c(X, alpha0/2, alpha1/2, alpha0),
+
+the source evaluated at[3.13] is analytic if
+
+  |A|, |P1 A|, |nabla_U^xi A|, |Delta_U^xi A|<alpha2
+  on the complete X read.                          [3.14]
+
+Printed273 explicitly instructs replacing U_(k+1),J_(k+1) in the operators
+of B102(179),(180) by independent U,J. It does not infer that independence
+from the physical minimum theorem. Its displayed domain is
+
+  U_j^c(X,alpha0/2,alpha1/2,alpha0)
+    intersect {direct conditions(i)--(iii) at grade k+1,
+       with constants (1+beta)alpha0,(1+beta)alpha1,alpha0}. [3.16]
+
+It assumes epsilon1 sufficiently small that H_j(B(t)) satisfies all four
+conditions(3.14) with alpha2/3, and states that the subsequent native
+localizations retain the bounds(3.14),(3.9). This is a genuine published
+one-step independent-current input. To apply it to a prefix one still must
+put the entire actual input image in(3.16) at every descendant and on every
+source contour. The action-only t_square Cauchy circle in(3.15) is not an
+additional source-noise argument.
+
+4. DETERMINING TOWERS: TWO DIFFERENT SUFFICIENT MECHANISMS
+
+B109 printed262--263 defines U_j^c as a union of simultaneous complex
+field/current gauge orbits. A representative must satisfy all(i)--(iv):
+compact real reference and its local gauge cubes; relative complex C1
+field; complex curvature and the actual independent current allowance;
+and every specified reconstructed minimum/current on the complete
+determining tower with its collars/insets. These reconstructed tests are
+not erased by gauge invariance.
+
+First mechanism: the smaller complete direct domain at printed263 gives
+the reconstructed estimates
+
+  |partial U_n-1| <= 2B3 alpha0' xi^2,
+  |J_n| <= 2B3 alpha0' (L^n xi)^2,                  [1.17]
+
+with its corresponding relative-field conditions. One can in principle
+choose fixed strict thresholds and invoke this criterion ONCE for each
+actual input field. It is not necessary to multiply B3 at every previous
+date if direct norm bounds have independently been proved for that field.
+But every stated direct condition, every read and the actual current cap
+must be verified first. A recurrence for curvature/current alone is not
+this verification.
+
+Second mechanism: B109 printed277--280 gives a special minimum-image
+admission theorem, culminating in Lemma4,(3.53). For a full determining
+cube square0, it rebuilds U_(k+1)(square0,M'(U)), chooses a local generalized
+axial gauge and Landau gauge, forms
+
+  calA=(1/(i eta))log[ exp(i eta A)
+                      exp(i L^-1 eta H_(k+1)) ],
+  B=Q(eta calA),                                   [3.30]
+
+and assumes the C1/Holder bounds(3.31) on A. The admitted expression is
+the analytic minimum U_j(square0,exp(i(tau B+B'))) and its J_j, for a
+small independent coarse perturbation B'. The explicit reserve includes
+
+  B3 alpha3 < alpha1/2,
+  2 B3 alpha3 <= beta L^-2 alpha0,                  [p280,3.51]
+
+as well as the earlier fixed smallness assumptions.
+
+The special identity(3.38), printed278, says that reconstructing a lower
+minimum from the average of this same minimum yields that same minimum
+up to the blockwise lift of its return gauge. This converts condition(iv)
+to condition(iii) with a little reserve. It is an exact on-minimum identity,
+not U_n(M^n U)=U for arbitrary independent input U.
+
+IMPORTANT SCOPE: immediately after(3.38) the pair is displayed with the
+PHYSICAL current D*_(exp i xi H) xi^-2 pi Im partial(exp i xi H). The proof
+of(3.42) likewise uses physical minimum currents. Printed277 says the
+background expansion(3.34) involves configurations U,A only. Therefore
+Lemma4 certainly supplies a full domain theorem for its analytic-minimum
+pair, but it does not itself identify an arbitrary selected companion
+K_A from[3.13] after source weakening with that physical current. An actual
+prefix invoking this lemma must prove the selected-pair interface, or
+declare a new continuation and verify all original scalar identities and
+normalizers in it. The suppressed notation after(3.24) is not permission
+to silently change a source current.
+
+5. COHERENT FRAMES AND THE RELATIVE AXIAL OBSTACLE
+
+B102(181), printed307, is precise: for a coarse gauge v,
+
+  U_k(V^v)=U_k(V)^(vtilde),
+
+where vtilde is constant on the native blocks B^j(y) and equals v(y) at
+their centers. This formula extends the axial minimum to complex orbits
+containing an admitted local chart. It is not arbitrary-fine-gauge
+equivariance of the chosen axial representative.
+
+As verified separately from B98/B109, a native physical one-step minimum
+F_orig first goes by a relative axial h, h=1 on T^(j), to F_ax, and then
+by u^-1 to F_L. With V^g(b)=g(b_-)V(b)g(b_+)^-1,
+
+  F_orig=F_L^(h^-1 u).
+
+The B98 product bound controls u on a common physical complex chart; it
+does not automatically control h. The equation h=1 on T^(j) eliminates
+its action on current-grade coarse B only. It does not eliminate its
+restriction to T^(j-1), the finer lattice exposed by the next descent.
+As a logical test, an SL(2,C) gauge can equal1 on T^(j) while taking
+diag(exp r,exp(-r)) at a newly exposed vertex. Its adjoint norm there is
+at least exp(2r). This is not a counterexample to the actual native h;
+it proves only that the coarse normalization alone supplies no such bound.
+
+One may evaluate an already admitted invariant scalar in F_L and omit h
+from that scalar calculation. To continue the actual original-noise
+history, however, all subsequent noise/coarse increments must be transformed
+in the corresponding frame. The original real noise integration variable
+is retained; its transformed value is a deterministic complex argument.
+Before writing x -> Ad(g)x on FREE noise coordinates, one must check the
+actual embedding and solved pivots. The required covariance has the form
+
+  B'_j(U^g, Ad(g)J, T_g x)
+       =Ad(r_j g) B'_j(U,J,x),
+  B'_j=g_j C_j x-h_j Dtilde_j(g_j C_j x),
+
+with the actual coordinate transport T_g proved, not guessed. Here h_j in
+the second line is the native pivot map, not the relative axial gauge h.
+
+There is a directly relevant local repair already in B109 printed275--276:
+for the rebuilt determining-cube minimum, Eq(3.26) controls its generalized
+axial gauge v and Eq(3.27) its Landau return u_(k+1). The text then explicitly
+transforms BOTH J and B by R(u_(k+1)^-1)R(v^-1), and uses their sup bounds to
+preserve the estimates. Eq(3.29) is the simultaneous covariance statement.
+The construction is local on square0 and assumes its full domain first.
+It is not a proof that a previously chosen arbitrary fine h has the same
+bound, nor that these local frames glue into one full-prefix frame.
+
+6. WHAT HAS BEEN GAINED, AND WHAT REMAINS
+
+Established published inputs and exact deductions:
+- Native complex minimum response, both implicit representations, complete
+  fixed-grade hypotheses, and the correct derivative density normalization.
+- One-response bounds for H,nabla H,D*D H,Delta H; P1 H follows from the
+  native Hodge identity with its bounded local coefficients retained.
+- B109's explicit independent-current extension, selected theta^3J slot,
+  four response norms, and precise intersection domain(3.16).
+- Two useful tower mechanisms: one fixed direct-to-full application per
+  actual input, or the special analytic-minimum tower identity(3.38).
+- A native local frame construction that explicitly rotates both J and B.
+
+Not established by these statements:
+- Common complex chart and complete direct norm reserves for every moving
+  prefix background after all source s-localizations.
+- Covariance and bounds of the full original free-noise map including
+  every solved pivot, near/far term and actual determining read.
+- A bound for the total physical frame h^-1u, or a proved representative
+  choice that removes h throughout the literal prefix while preserving
+  its noise/scalar identities.
+- Identification of a weakened selected current with the physical-current
+  pair in the special Lemma4 tower theorem.
+- Simultaneous admission and normalized catalogue estimates through a
+  logarithmic prefix. G1b and G1c therefore remain open.

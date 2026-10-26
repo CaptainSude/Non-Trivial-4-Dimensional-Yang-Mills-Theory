@@ -1,0 +1,416 @@
+INTRINSIC COMPLETE-READ RESPONSE COEFFICIENTS AND TWO-EXTERIOR COMPARISON
+25 October 2026. Endpoint/response audit.
+
+Scope. This treats the NEW elliptic response, its selected-current map,
+and sampled hierarchical frames. The primitive coefficients can be
+defined on local native field data without a globally regular extension.
+It then gives a finite-prefix map comparison between TWO independently
+admitted global backgrounds which agree in an interior region. No
+globally regular interpolation between those backgrounds is required.
+Normalized density comparison and intrinsic normalized source coefficients
+remain separate operations. All variable reads below are complete reads.
+
+1. WHAT THE PRIMARY LOCAL DOMAIN ACTUALLY SAYS
+
+B109 printed257 defines D_j as all finite wall-connected unions of the
+fixed M-cubes. It does not require these unions to be simply connected.
+Printed262, (1.10)--(1.16), defines U_j^c(X,alpha0,alpha1,gamma0) from
+pairs specified on bonds of X. It is a union of complex gauge orbits of
+representatives satisfying: a compact reference with local gauge/C1
+tests; a small complex relative field/C1 bound; curvature and independent
+current caps; and the maximal determining-domain reconstruction tests(iv).
+These are LOCAL spaces. In particular(iv) is a local reconstruction
+bound, not a statement that U is equal to a reconstructed minimum.
+
+B109 printed263 gives a useful inclusion: sufficiently smaller direct
+caps(i)--(iii) imply all(iv), with the displayed 2 B3 alpha0' bounds.
+It applies on the declared localization domain. One must retain the
+maximal determining domains and their erosion collars; simply omitting
+the tests is not licensed. We use the smaller strict direct subdomain
+when a new interpolation or contraction needs spare margins.
+
+B99 printed394 is explicit about Dirichlet operators: G' is defined
+using Omega0 Delta'_a Omega0, and the operators depend only on U
+restricted to Omega0. Printed395 defines the elliptic field inverse
+G=(Delta_a|Omega0)^-1 in(3.26)--(3.27). Printed396 says that(3.35)
+imposes no constraint on U outside Omega0. Gauge covariance is stated
+in(3.30)--(3.34). Theorem3.4, printed400, supplies the small complex
+extension with the bounds of Theorems3.1--3.3.
+
+The local geometry remains the native one: every primitive Dirichlet
+problem has its admissible sequence of domains, full averaging paths,
+and boundary cushion. The statement does NOT license replacing it by
+an arbitrary clipped matrix on a polygonal carrier.
+
+B99 printed413, Theorem3.9(3.98)--(3.99), assigns a factor a localization
+domain X and its complete external read X^5. Printed416, Theorem3.10
+(3.107)--(3.108), gives the complete field-inverse word expansion and
+its strong norm bounds. B116 printed3--5,(1.6)--(1.11), then weights
+every cube meeting those complete reads and proves separation at zero
+exterior parameters. These statements concern the actual Dirichlet
+building blocks; a regular global completion is not a hidden hypothesis.
+
+Primary readback: B99 printed394 and396 were also checked in the rendered
+pages work/primary-sources/B99-local-domain-06.png and -08.png. All five
+papers are the user-supplied PDFs; extracts are in work/primary-sources.
+
+2. A PRECISE INTRINSIC WORD DEFINITION
+
+Fix the native geometric word catalogue, including every partition,
+Dirichlet subproblem, private pivot, orientation and transpose. For each
+primitive word omega, let Read(omega) be the UNION of its external
+coefficient domains X_i^5, its endpoint/averaging paths, and its required
+boundary collar. This may be larger than its kernel support. For a
+carrier Y retain only words whose COMPLETE read is contained in Y.
+
+Given (U,J) on Y in the smaller strict native direct subdomain, compute
+each retained primitive factor on its own declared Dirichlet domain.
+All required field values lie in Y. Its real reference/local gauge
+tests are inherited from the representative on Y; the complex relative
+field is also restricted there. The native Dirichlet bounds therefore
+apply to this factor with the SAME constants as in the global word
+majorant. No choice of U or J outside Y enters that calculation.
+
+This is an important distinction from two incorrect replacements:
+ - it is not the principal submatrix of a global inverse;
+ - it is not automatically one inverse on all of Y with a newly invented
+   boundary convention.
+The retained complete-read series is its definition. Individual local
+Dirichlet inverses are genuine inverses of their native finite problems.
+
+For example, define the primitive G0,Y,s, Q_Y,s, W_Y,s, G'_Y,s and R_Y,s
+by their PRE-EXPANDED local words. W_Y,s is the retained word family for
+the coarse Schur inverse, not (Q_Y,s G0,Y,s Q_Y,s*)^-1. That last inverse
+can be undefined at zero scalar parameters. All bilinear transposes
+are taken after the declared word construction and retain their reads.
+
+For fixed |s|<=S, the native word majorants absorb the scalar factors by
+choosing the localization size after S. Absolute convergence of the
+retained series follows from the same majorant as before: discarding
+words cannot increase its positive bound. This proves holomorphy in
+the local field/current variables and scalars. On overlapping field
+charts the coefficients agree because their finite matrix formulas
+and convergent inverse series agree; a compact-reference witness is
+used only for estimates, not as extra data in their definitions.
+
+Each local Dirichlet factor is gauge covariant on its full read, with
+the correct endpoint representations. Products, inverses, transposes
+and sums preserve these laws. Thus the definitions are intrinsic and
+covariant under a gauge on Y; no gauge outside Y has to be chosen.
+Norm bounds mean the native norms in an admitted regular representative.
+They are not uniform raw matrix bounds after an arbitrarily large
+complex gauge. Gauge-invariant scalar coefficients inherit the bound
+on the orbit; covariant fields must retain their transformed external
+arguments and their declared norms.
+
+Noncontractible carriers cause no difficulty for this definition. Local
+Dirichlet coercivity uses the mass/averaging and gauge-fixing structure,
+not a globally defined small potential or a global flattening of U.
+All local test cubes and all full reads must still fit in Y. A carrier
+which is too thin for a particular word simply contains no such word;
+its collar must not be borrowed from an unspecified exterior.
+
+3. THE NEW Hhat AND NONLINEAR RESPONSE ON THEIR OWN READS
+
+Using EXACTLY those primitive series, define
+
+ H0=G0 Q* W,       G_Q=G0-H0 Q G0,
+ S_J=(i/2) D R G' E_U* [ . ,J],
+ Hhat=sum_(n>=0)(G_Q S_J)^n H0,
+ Lambda=W[I-QG0 S_J Hhat],
+ L_Q=Q*Lambda-Q*a_Q+S_J Hhat.
+
+All expressions here carry the carrier/scalar subscripts implicitly.
+The current cap is chosen after S so the weighted Neumann ratio is
+less than one half. The original two-ended row AND column bounds for
+S_J and the elliptic left G_Q are valid on each retained complete read.
+Thus Hhat, L_Q and their transposes have the same inflated strong
+majorants as in the global new-response audit. No current derivative
+or off-graph Ward identity is used.
+
+Define E by the polarization of 2<Hhat C_U^(2)(A'),J>, retaining the
+Hhat*J read. Then define, as factor-word series,
+
+ G_c=sum_(n>=0)(G_Q E)^n G_Q,
+ K=(I+G_c E)H0.
+
+The local averaging residual and the raw plaquette gradient are taken
+with their full stencils. On the reserved field/C1 ball solve
+
+ D(A')=C_U(A'-Hhat D(A')),
+ a+G_c Vhat_raw'(KB+a)=0,
+ Aresp=KB+a-Hhat D(KB+a),
+
+where Vhat_raw is the previously audited raw remainder, including the
+Sym(Hhat*L_Q) term in its unrestricted gradient. The contractions use
+only the strong operator bounds, small current/noise caps and local
+stencils. Their Picard series are uniformly convergent local read
+series. Boundary cushions are retained: a global kernel term that
+would use a coefficient outside Y is absent, not silently completed.
+
+At zero exterior scalar parameters, every surviving primitive operator
+acts within one component with its native cushion. The local nonlinear
+terms preserve that separation, and fixed-point uniqueness preserves
+it at the solution. Equivalently, expand each fixed-point iterate into
+complete rooted read expressions and pass to the uniform limit. Every
+coefficient is computed from (U,J) on its displayed carrier only.
+
+This proves an intrinsic COMPLETE-READ COEFFICIENT family, with the
+four strong output slots, on the strict local native direct subdomain.
+By B109 p263 this subdomain is contained in the advertised U_j^c(Y)
+after the constants/collars are chosen as stated. It does not prove
+the same bounds at the outermost maximal values of every native cap;
+one uniform reserve is deliberately retained.
+
+At nontrivial weakening or after retaining only words in Y there is
+NO assertion QHhat=I, QG_c=0 or L_Q=(Delta_raw+DRD*)Hhat for the
+independently weakened factors. The localized formulas are the declared
+analytic extension. At s=1 on a full admitted problem the algebraic
+identities and the previously proved physical matching apply. An
+intrinsic coefficient on Y is not being called the native minimum of
+a new boundary-value problem on Y.
+
+For selected currents, also use the full retained P1=DPD* word family.
+Its coefficient dependence and its argument dependence are distinct
+branches, both present. Local Delta_U A and F1 are complete covariant
+stencils. For private pivots retain C=E-h LQ, the actual local inverse
+defining h, and the full implicit Dtilde. For frames retain the complete
+ordinary-average/relative-return read and the endpoint formula in the
+next section. These are genuine additions to the primitive response
+inventory, not consequences of merely localizing A.
+
+4. THE ENDPOINT FRAME IS A LOCAL OUTER OPERATION
+
+At step j, the stored input frame is Gamma_(j+1) on T^j and the stored
+output is Gamma_j on T^(j-1). For x in T^(j-1) and its T^j ancestor y,
+
+ Gamma_j(x)=Gamma_(j+1)(y) u_j(y)
+              P_(j-1)(M^(j-1)U_j;y,x).             (1)
+
+The lower paths in the full hierarchy are empty at this endpoint.
+The order in(1) is literal. Its last path has at most d(L-1) links.
+The anchor u_j(y) retains its whole depth-j read. The recursive ordinary
+averages, all relative means and all collars occupy a fine region of
+diameter C L^j, by the geometric sum of their scales. Include that full
+region in the local protected seed.
+
+Consequently the outer operation is intrinsic when its complete read
+is in Y. Its longer dependence after substitution is exactly the
+response-word dependence already accounted for. Its only old frame
+read is the sampled Gamma_(j+1)(y). Joint B98 common-chart analyticity
+gives local Cauchy bounds. This needs no fine C1 estimate on Gamma.
+
+For auxiliary localization it is enough to tag the WHOLE finite outer
+read, retaining its group operations as one analytic coefficient.
+Alternatively use the previously declared noise-transport increment
+construction. One must not clip a path or invert a zero-weakened frame.
+The actual unmarked comparison below always uses genuine frames and
+the original fixed real noise, with xsharp=Ad_(Gamma^-1)x.
+
+5. INTRINSIC COEFFICIENTS GIVE A TWO-EXTERIOR MAP COMPARISON
+
+Consider first two independently admitted REAL input states z,z' at
+one grade. Their compact/gauge references may differ outside the
+region being compared. Their original real noise array x is the SAME.
+Use collared native packets with the fixed normalized field/C1,
+current and sampled-frame norms of the first-jet audit.
+
+Define a bounded local discrepancy d_q in[0,1] as follows. If the two
+restrictions on the collared packet lie in a common reserved local
+chart, take a fixed multiple of the relative-field/C1, independent-
+current and local logarithmic frame difference, capped at1. If the
+small common relative chart does not exist, set d_q=1. The comparison
+chart is local and gauge covariant; an admitted compact representative
+of the first restriction is sufficient when the relative difference
+is small. Include cross-edge stencils in the collared packet norm.
+The definition is used for an estimate, not to redefine either map.
+
+Let f_X be one intrinsic complete-read coefficient in a component of
+the response/current/frame map, with uniform cap m_X on a larger
+reserved chart. The complete one-mark localization argument yields
+a summable connected-carrier majorant for these coefficients and for
+their one packet derivatives. Then
+
+ ||f_X(z)-f_X(z')|| <= C m_X sum_(q meeting X)d_q.   (2)
+
+Proof. If some discrepancy in X is outside the small common-chart
+range, its capped value is bounded below by a fixed positive constant;
+the two independent coefficient bounds prove(2). If every discrepancy
+is small, the relative logarithms are consistently defined on the
+full collared read X. Interpolate ONLY these local restrictions in
+the reserved chart, including J and sampled frames. Their C1 norms
+remain in the larger local direct caps; B109 p263 supplies the local
+determining tests. Cauchy and the fundamental theorem of calculus give
+(2). No field outside X occurs in this interpolation. In particular
+there is no evaluation of a nonlinear equation at a field spliced
+globally between two incompatible gauge references.
+
+One can use the maximum discrepancy in the small case; the displayed
+sum is convenient for the spatial kernel. Marking one packet in the
+connected coefficient family only adds its summable one-mark count.
+The native scalar radius and walk reserve pay that count once.
+
+Summing(2), and including the direct local field/current copies, gives
+
+ d_out(p)<=sum_q K_j(p,q)d_in(q),
+ sup_p sum_q exp[mu dist(p,q)/(M L^t)]K_j(p,q)<=C_L. (3)
+
+The same one fixed mu works at all j<=t. Native decay is on scale
+M L^j and hence is stronger than this final-scale metric. The actual
+packet/refinement count is the one proved in the first-jet audit.
+Field output comparison is in relative normalized field/C1 coordinates:
+the small product/log estimates convert response and old-field
+differences to that distance. If the right side is not small, the
+capped output distance is bounded trivially after increasing C_L.
+Selected-current comparison uses all four slots and the P1 coefficient
+branch. The frame outer operation has a fixed local derivative bound
+and fixed read, so also satisfies(3). Its sampled interpolation has an
+O(1) background derivative even at zero noise; this is included in C_L.
+
+Equation(3) is a REAL two-input stability statement. The same argument
+works for admitted complex inputs when the small local common charts
+and their reserves are supplied, but it does not assert that arbitrary
+large complex gauge orbits have comparable raw matrix norms.
+
+6. FINITE PREFIX, ONE FIXED PROFILE, NO EXPONENTIAL t-SQUARED LOSS
+
+Suppose the two terminal pairs agree on a filled region Y in one
+common gauge, and use the same original noise array at every date.
+Use the same fixed top coarse anchors and canonical hierarchy. The
+top frame then agrees wherever its complete O(L^t) read is contained
+in Y. Include this read and the packet collars once by replacing Y
+by its fixed final-scale inner region Y0.
+
+Set R_t=M L^t and
+
+ h_Y(p)=exp[-mu dist(p,Y0^c)/R_t],
+
+with h_Y=1 outside Y0. The initial capped discrepancy is zero on Y0
+and at most1 elsewhere, so it is bounded by h_Y. Distance to a set is
+1-Lipschitz, hence
+
+ h_Y(q)<=exp[mu dist(p,q)/R_t] h_Y(p).
+
+Applying(3) at successive dates proves
+
+ d_j(p)<=C_L^(t-j) h_Y(p),                        (4)
+
+with an additional fixed L^c per date only if the chosen packet norms
+require that conversion. The total cost is therefore C^t L^(ct).
+The spatial exponent is never reduced at intermediate dates; all
+collars are inside the fixed weighted row estimate. No exp(C t^2)
+or g^(-c t) cost has been introduced.
+
+For an admitted analytic source with complete seed P and a local
+Lipschitz bound supplied by its own reserved domain, (4) gives its
+pointwise fixed-noise image comparison with the corresponding source
+constant and exp[-mu dist(P,Y0^c)/R_t]. A merely bounded Borel source
+does not acquire that Lipschitz bound; it still needs its separate
+physical-source projection or aligned-coordinate comparison.
+
+This proves the map comparison input needed for a normalized hybrid
+argument. It does not compare normalized measures by itself. In
+particular, the old complete Hamiltonians, their original cuts,
+normalizers and scalar factors still need the separate density
+comparison. No positive measure or denominator is altered here.
+
+7. WHY A UNIVERSAL GLOBAL REGULAR COMPLETION IS NOT AVAILABLE
+
+There is a concrete obstruction on general native carriers. Take a
+wall-connected cubical annulus in two coordinate directions times a
+filled transverse two-dimensional box, with all widths fixed multiples
+of M. This is an allowed B109 localization domain (printed257). It
+has a loop gamma around the hole which bounds a plaquette disk D in
+the ambient lattice but not in the carrier.
+
+Choose a compact flat connection on the annulus whose holonomy around
+gamma is a fixed H!=1, in a one-parameter subgroup of SU(2), and take
+J=0. One explicit construction assigns a closed lattice one-cocycle
+with period1 around the hole and exponentiates it to H. Every plaquette
+inside the carrier is identity. Every simply connected local test cube
+contained in the carrier has a pure-gauge restriction, so its regular
+potential and all test derivatives can be zero. The complex relative
+field is zero. Thus(i)--(iii) hold for arbitrarily small positive
+direct caps. B109 p263's direct-to-full implication supplies(iv), on
+the maximal native determining domains of this carrier. We do not
+assume that a determining domain fills an absent hole.
+
+Any COMPACT extension preserving the data on gamma and having global
+plaquette cap C alpha0 xi^2 must obey the lattice nonabelian Stokes
+estimate on D:
+
+ ||H-1|| <= sum_(p in D)||U(partial p)-1||
+          <= C alpha0 xi^2 |D|.                    (5)
+
+The first inequality follows by peeling plaquettes, expressing the
+boundary holonomy as a product of unitarily conjugated plaquettes,
+and telescoping the product. The physical area xi^2|D| is fixed by
+the chosen annulus. For sufficiently small admitted alpha0, (5)
+contradicts the fixed nontrivial H. Hence no universal reality-preserving
+global completion with uniform cap inflation can exist on all native
+local domains. Enlarging an exterior buffer does not remove the
+obstruction because the same fixed disk still has to be filled.
+
+This rules out a general completion theorem in the natural compact
+real category, and hence a holomorphic completion with that reality
+property. It is not a claim about a specially restricted class of
+filled boxes or a completion allowed uncontrolled curvature in holes.
+The direct intrinsic Dirichlet-word construction is unaffected by it.
+
+8. THE EXISTING FILLED-BOX COMPLETION HAS A DIFFERENT, USEFUL SCOPE
+
+The repository's 24 October curvature-completion note works on a
+FILLED nonwrapping cube Q_(2R) of determining data V. Its fixed rooted
+coordinate tree gives canonical links O(R delta). Cutting off their
+small group logarithms gives curvature O(delta) when R^2 delta is
+small. It agrees with the canonical input on Q_R and is flat outside.
+It is holomorphic on a suitably small neighborhood and changes under
+an input gauge only by constant root conjugation.
+
+At a physical terminal minimum U_t(V_t), one may apply that construction
+to V_t, then use B102 Theorem1 to obtain a globally admitted physical
+minimum and physical current with O(delta) caps. With the running cap
+delta=O(g log^p(g^-2)) and R=O(log^(2p)(g^-2)), R^2 delta tends to zero.
+This is a useful auxiliary physical neighborhood class, and it avoids
+the annular obstruction by supplying the entire filled input box.
+
+It does NOT complete an arbitrary fine pair (U,J) while preserving
+that U on its interior. Reconstructing U_t(M^t U) need not return U;
+B109 condition(iv) only bounds this reconstruction. Even for a
+physical minimum, changing the exterior determining data changes
+its fine interior by a decaying tail, rather than by exact equality.
+Use the native minimum/common-shell response comparison for that
+tail before applying the two-exterior prefix estimate above.
+
+Nor does a curvature-only cutoff of an arbitrary FINE U automatically
+prove its native local C1 gauge tests. A coordinate-tree potential can
+have large transverse first differences even when a different gauge
+has small C1 norm. The 24 October theorem avoids this issue by applying
+the native minimum theorem to the completed coarse determining field.
+One must not transfer its conclusion to arbitrary fine inputs without
+another argument.
+
+An independent current can be transported by the same real tree gauge
+and cut off with a scalar function, preserving its sup cap. This gives
+an auxiliary independent-current extension once its fine FIELD has
+been admitted. It does not make a reconstructed fine field equal to
+an arbitrary original U. Thus the two clean interfaces are:
+ (i) intrinsic local word coefficients for strict native fine-pair data;
+ (ii) physical determining-data completions for a new finite neighborhood
+      source class, with the actual minimum comparison and complete reads.
+They should not be identified without that comparison.
+
+9. LIMITS OF THE PRESENT RESULT
+
+The intrinsic theorem is for the declared complete-read map coefficients
+and their local nonlinear contractions, with fixed strict cap reserves.
+It bypasses global regular completion and handles noncontractible
+carriers without choosing a global small gauge. It supplies (3)--(4)
+for two admitted global real prefixes using the same original noises.
+
+It does not turn the fixed-Wbar cutoff shell into an intrinsic normalized
+coefficient automatically. The normalized denominator and any inherited
+interaction must also admit a complete local construction, or their
+exterior dependence must be compared with an explicit remainder.
+The source's tree/filling packet, its own analytic domain and all
+original outer masses remain part of that separate interface.

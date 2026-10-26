@@ -1,0 +1,209 @@
+DIMENSION-FREE REAL-TO-COMPLEX PROPAGATION
+25 October 2026. Elementary analytic lemma, including real-boundary points.
+
+PURPOSE
+
+A real exponentially small neighborhood coefficient can be continued
+to a smaller complex neighborhood without paying an exponential in its
+parameter dimension. Even a coarse complex bound exp(C n^4) can be
+handled by shrinking the radius by only a fixed power of n. This is a
+conditional analytic statement: it needs a bound on a genuine full REAL
+ball/box and a holomorphic neighborhood of that ball, not merely a
+physical-current submanifold.
+
+1. ONE-SIDED SLIT-DISC LEMMA
+
+Let f be holomorphic on |zeta|<R, bounded there by M, and suppose
+|f(s)|<=epsilon<=M for real 0<=s<R. On the slit disc
+
+ Omega_R={|zeta|<R}\[0,R),
+
+choose w=sqrt(-zeta) with Re w>0, and put q=i w/sqrt(R). This maps
+Omega_R conformally onto the upper half unit disc. The two banks of
+the positive real slit map to the real diameter (-1,1). The outer
+circle maps to the upper semicircle. The harmonic function
+
+ h(q)=(2/pi) Arg((1+q)/(1-q))                       (1)
+
+is zero on the diameter and one on the semicircle: the ratio is positive
+real on the former and positive imaginary on the latter. Apply the
+subharmonic maximum principle to log|f|, with the usual removable
+corner/endpoint barrier if necessary. Zeros of f cause no problem.
+It gives
+
+ |f(zeta)| <=epsilon^(1-h(q)) M^h(q).                (2)
+
+For zeta=+/-i t, 0<t<R, put rho=t/R. Since |q|=sqrt(rho) and
+Im q=sqrt(rho/2), the EXACT exponent is
+
+ theta_im(rho)=(2/pi) atan(sqrt(2 rho)/(1-rho)).      (3)
+
+For arbitrary zeta off the slit with |zeta|<=rho R< R, the identity
+
+ Arg((1+q)/(1-q))=atan(2 Im q/(1-|q|^2))
+
+gives the uniform bound
+
+ h(q)<=theta(rho):=(4/pi)atan(sqrt(rho))
+                         <=2 sqrt(rho).             (4)
+
+The maximum in (4) occurs at zeta negative real. On the positive slit
+the stronger given bound epsilon applies. Thus (2), with h replaced
+by theta(rho), holds on the entire closed smaller disc. This is the
+boundary-point continuation estimate; it is weaker in radius than an
+interior two-constants estimate but has no dimension dependence.
+
+2. TWO INWARD REAL DIRECTIONS
+
+Let E be any finite-dimensional real normed space. Use a complexification
+norm with the same real norm, contractive real/imaginary projections,
+and ||zeta v||=|zeta| ||v|| for real v. The usual complex sup norm has
+these properties for real boxes. Let
+
+ D={x in E: ||x||<=a},
+ T_h(D)={z in E_C: dist(z,D)<h}.
+
+Assume F is holomorphic on T_h(D), |F|<=M there, and |F|<=epsilon<=M
+on the WHOLE real ball D. Fix
+
+                 0<R<min(a/2,h/4).                 (5)
+
+For a real point x in D and a unit real vector v, define
+
+ u=x/a+v,                 w=x/a-v,
+ G(zeta,eta)=F(x-zeta u-eta w).
+
+Both ||u|| and ||w|| are at most2. Hence G is holomorphic and bounded
+by M on the bidisc |zeta|,|eta|<R, by (5). For real zeta,eta in [0,R],
+
+ x-zeta u-eta w=(1-(zeta+eta)/a)x+(eta-zeta)v,
+
+whose norm is at most
+a-zeta-eta+|eta-zeta|<=a. Thus |G|<=epsilon on the real rectangle
+[0,R]^2, INCLUDING when x is on the boundary of D. Apply the slit-disc
+lemma first in zeta with eta real, then in eta with zeta fixed complex.
+For |zeta|,|eta|<=rho R the result is
+
+ |G(zeta,eta)|<=epsilon^p M^(1-p),
+ p=(1-theta(rho))^2,                               (6)
+
+provided theta(rho)<=1. In particular any rho<=1/4 is sufficient.
+
+For a purely imaginary displacement x+i r v, use zeta=-ir/2,
+eta=ir/2. The sharper exponent is p=(1-theta_im(r/(2R)))^2.
+
+3. A FULL COMPLEX NEIGHBORHOOD, NOT JUST VERTICAL POINTS
+
+Formula (6) also controls the genuine tube T_r(D), including points
+whose real parts lie just outside D. Write z=x0+i y. If ||x0||<=a,
+set x=x0 and delta=0. Otherwise set
+
+ x=a x0/||x0||,            delta=||x0||-a,
+
+so x0=x+(delta/a)x. For y!=0 put t=||y|| and v=y/t; if y=0 choose
+any unit v, which cancels from the expression below. With u,w above,
+choose
+
+ zeta=-(delta+i t)/2,       eta=-(delta-i t)/2.
+
+Then x-zeta u-eta w=z. If dist(z,D)<r, contractivity of the real and
+imaginary projections gives delta<=r and t<=r, hence
+|zeta|,|eta|<=r/sqrt(2)<=r. Consequently, for 0<r/R<=1/4,
+
+ sup_(T_r(D))|F| <=epsilon^(1-tau) M^tau,
+ tau=1-(1-theta(r/R))^2 <=4 sqrt(r/R).              (7)
+
+This proves a dimension-free bound on a FULL complex neighborhood of
+the closed real ball, with room for subsequent Cauchy derivatives.
+A real rectangular box is a ball in its weighted sup norm, so the
+same statement applies after an affine rescaling. Centers are handled
+by translation. No coordinate-by-coordinate interpolation is used.
+
+4. KEEPING THE RARE AMPLITUDE SEPARATE
+
+Suppose, for n>=1 and a positive rare amplitude eta_rare,
+
+ real cap:     |F_n|<=eta_rare P_n exp(-c n),
+ complex cap:  |F_n|<=eta_rare Q_n exp(B_n),
+
+on the real ball D_n and its proved complex tube T_(h_n)(D_n).
+Set
+
+ A_n=c n,
+ B_eff,n=max(0, B_n+log(Q_n/P_n)),
+ R_n<min(a_n/2,h_n/4).
+
+The complex cap is at most eta_rare P_n exp(B_eff,n), so (7) yields
+
+ |F_n| <=eta_rare P_n
+            exp[-A_n+tau(A_n+B_eff,n)].             (8)
+
+For any fixed 0<delta<1, choose
+
+ r_n <= R_n [delta A_n/(4(A_n+B_eff,n))]^2.          (9)
+
+This automatically has r_n/R_n<=1/16. Then
+
+ sup_(T_(r_n)(D_n))|F_n|
+                  <=eta_rare P_n exp[-(1-delta)c n]. (10)
+
+For half the original exponent, delta=1/2, the simple radius is
+R_n/64 times [A_n/(A_n+B_eff,n)]^2. The multiplicative eta_rare is
+unchanged. The method does not lose the rare factor to an uncontrolled
+complex prefactor.
+
+If B_eff,n=O(n^p), p>=1, the additional radius loss is only
+O(n^{-2(p-1)}). In particular a complex exp(C n^4) bound costs n^{-6}
+in radius. If the proved original h_n or real a_n already has a
+polynomial read-size loss, retain it in R_n; the resulting loss is
+still polynomial. For Q_n=Q_t with log Q_t=O(t)+O(log n), retain that
+term explicitly in B_eff,n. A finite delay t=O(log(1/g)) introduces
+only the corresponding fixed powers/logarithmic factors, not an
+exponential n^4 multiplier in (10).
+
+5. CAUCHY JETS AND THEIR LIMITS
+
+On T_(r_n/2)(D_n), a coordinate polydisc of radius r_n/4 remains in
+T_(r_n)(D_n) when the parameter norm is the complex sup norm. Thus
+
+ |partial^alpha F_n|
+ <=alpha! (4/r_n)^|alpha| eta_rare P_n
+                                      exp[-(1-delta)c n].
+
+For general normalized directions, allocate radii whose weighted sum
+is <=r_n/4 and use the corresponding multivariable Cauchy bound. For
+each FIXED derivative order, polynomial read-size/radius factors may
+be absorbed into an arbitrarily small additional loss of exponential
+decay in n. A growing derivative order or a sum over all fine directions
+requires its actual factorial/dimension/census cost; none is hidden.
+
+If the available complex domain is an ell2 packet tube, apply the lemma
+in that norm or retain its actual sup-norm radius (often h^{-1/2} for h
+packets). The lemma never converts an ell2 tube into a dimension-free
+fixed-radius sup box without paying that geometry.
+
+6. INTERIOR VERSION AND NATIVE APPLICATION REQUIREMENTS
+
+At a real point with a two-sided real directional reserve R, a single
+upper-half-disc argument is stronger. For F(x+zeta v), its arc harmonic
+measure at zeta=i r is (4/pi)atan(r/R), so the interpolation loss is
+O(r/R), rather than O(sqrt(r/R)). This version is useful when the
+actual real chart has an explicit interior margin. The two-direction
+argument above avoids assuming that margin at every boundary point.
+
+For the prefix application, the following remain ACTUAL prerequisites:
+
+- the localized/truncated coefficient is holomorphic on the claimed
+  uniform neighborhood, with its true old-density denominator;
+- its real exponential bound holds at EVERY point of the stated real
+  ball/box, not only at J=J(U), native minima, or another constrained
+  physical submanifold;
+- the truncation maps preserve the admitted canonical charts and all
+  source/current/frame reads, and have the stated complex neighborhood;
+- P_n,Q_n,h_n and any packet synthesis losses are the actual ones.
+
+Vanishing or smallness on a lower-dimensional physical graph cannot
+replace the full real-ball hypothesis. A holomorphic function may vanish
+on that graph and vary freely transversely. The lemma therefore supplies
+the analytic propagation step; it does not construct an admissible native
+truncation or complete a source catalogue on its own.

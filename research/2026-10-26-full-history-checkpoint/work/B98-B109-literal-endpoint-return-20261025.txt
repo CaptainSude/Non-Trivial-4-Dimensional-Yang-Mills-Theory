@@ -1,0 +1,247 @@
+B98 / B109 LITERAL ORDINARY-ENDPOINT AND RETURN-FRAME IDENTITY
+25 October 2026. Primary-source readback and exact finite proof.
+Status: established algebraic interface on the native joint branch domain;
+full G1a source-localizer/domain requirements remain open.
+
+This supersedes the lack-of-primary-identification limitation in
+work/endpoint-return-nonlinear-cocycle-20261025.txt for the finite
+ordinary/relative endpoint algebra. No complex-prefix admission theorem
+is claimed. No original evidence file has been changed.
+
+PRIMARY MATERIAL ACTUALLY INSPECTED
+
+User-supplied B98: supplied-paper:paper1.pdf.
+T. Balaban, Averaging Operations for Lattice Gauge Theories,
+Commun. Math. Phys. 98 (1985), 17-51, DOI 10.1007/BF01211042.
+Visual checks: printed30-33 (PDF14-17), printed37-38 (PDF21-22),
+printed43-45 (PDF27-29). In workspace work/primary-sources:
+B98-defs-14.png through -16.png; B98-return-17.png;
+B98-Q-21.png,-22.png; B98-gauge-27.png through -29.png.
+
+User-supplied B109: supplied-paper:paper2.pdf.
+T. Balaban, Renormalization Group Approach to Lattice Gauge Field
+Theories. I, Commun. Math. Phys. 109 (1987), 249-301,
+DOI 10.1007/BF01215223.
+Visual checks: printed252-254 (PDF4-6),265-266 (PDF17-18).
+Images B109-average-04.png through -06.png;
+B109-return-17.png,-18.png.
+
+1. NOTATION THAT AVOIDS THE MULTIPLE OVERBARS
+
+Fix depth k and fine spacing eta=L^(-k), with final lattice spacing one.
+All finite contour packets, virtual completions, branches, and regularity
+hypotheses are the native ones. Work on a joint open domain where all
+of the following literal formulas are defined; near any strict admitted
+real point a finite such domain exists by continuity, but no uniform
+prefix radius follows merely from that observation.
+
+Let W be the background fine field and X a relative fine field. Set
+F=XW and W_j=M^j W, where M is the literal recursive ordinary average.
+Write X_j for B98's double-bar relative average, with X_0=X. Thus X_j is
+NOT M^jX and NOT (M^jF)(M^jW)^(-1). Define the full corrected field
+
+                         C_j=X_j W_j.                    (1)
+
+At stage j let P_j(V;y,z) be the chosen endpoint transporter. In B98
+it is V(Gamma_(y,z)); in B109 it is the actual group mean of shortest
+coordinate-order path transporters (0.11). Define
+
+ T_j(y,z)=P_j(C_j;y,z) P_j(W_j;y,z)^(-1),
+ a_j(y)=exp[ |B(y)|^(-1) sum_(z in B(y)) Log T_j(y,z) ].  (2)
+
+For B98, T_j is exactly (R^j_(0,y) X_j)(Gamma_(y,z)) in (105), and
+a_j is its logarithmic endpoint average. Relative path multiplication
+shows this equality directly. Every product uses its original order.
+
+The exact relative averaging formula B98(89)-(91), after multiplication
+on the right by W_(j+1), is
+
+                  C_(j+1)=(M C_j)^(a_j^-1).              (3)
+
+We use V^g(e)=g(e_-)V(e)g(e_+)^-1, so (V^g)^h=V^(hg).
+
+2. EXACT COARSE-FRAME RECORD
+
+Define b_0=I and
+
+                  b_(j+1)=(r_j b_j)a_j,                 (4)
+
+where r_j restricts site gauges to the actual next coarse centers.
+Then for every j<=k,
+
+                       M^j F=C_j^(b_j).                 (5)
+
+Proof: use ordinary covariance M(V^g)=(MV)^(r_jg) and (3):
+
+ M^(j+1)F=(M C_j)^(r_jb_j)
+          =(C_(j+1)^(a_j))^(r_jb_j)
+          =C_(j+1)^((r_jb_j)a_j).
+
+This proves (5) inductively. It is B98(97)-(98), written for full fields.
+In explicit pointwise order at a final coarse vertex y,
+
+                  b_k(y)=a_0(y)a_1(y)...a_(k-1)(y),     (6)
+
+with each earlier gauge restricted to that vertex. This is not an
+unordered product and not a multiplicative-cocycle assumption for the
+logarithmic mean.
+
+3. THE LITERAL B98 RETURN GAUGE AND ITS ENDPOINT
+
+B98(104)-(106) determines the gauge u that takes the regular relative
+field X into its relative multiscale axial representative, subject to
+the averaged normalization (81). It is NOT normalized by u(y)=I.
+B98(87) and (99) give exactly
+
+                     u(y)=b_k(y)^(-1), y in Omega^(k). (7)
+
+For completeness this follows directly from the explicit product (106).
+Let x_0=x, x_k=y, and x_j be the nested block centers. Let
+P^0_(j+1)(x_(j+1),x) be the ordered background hierarchical transporter
+from x_(j+1) down to x; it is the product of the W_j,...,W_0 endpoint
+transports along the hierarchy. In the present notation, (106) reads
+
+ u(x)= product_(j=k-1 down to0)
+   Ad_(P^0_(j+1)(x_(j+1),x)^(-1))
+       [ a_j(x_(j+1))^(-1) T_j(x_(j+1),x_j) ].          (8)
+
+At a final coarse vertex x=y every nested center is y. Each endpoint
+path is trivial, so T_j(y,y)=I and P^0_(j+1)(y,y)=I. Therefore (8)
+reduces to a_(k-1)^(-1)...a_0^(-1)=b_k^(-1), proving (7).
+The B98 averaged condition (81) is compatible with these nontrivial
+point values; confusing the two conditions discards the frame record.
+
+Combining (5) and (7) gives the exact ordinary endpoint of the returned
+field:
+
+ M^k(F^u)=(M^kF)^(r_ku)
+          =(C_k^(b_k))^(b_k^-1)=C_k=X_k W_k.           (9)
+
+B98 Proposition4 defines Q_k(W,eta A)=(1/i)Log X_k when X=exp(i eta A).
+Consequently
+
+ M^k[(exp(i eta A)W)^u]
+                 =exp[i Q_k(W,eta A)] M^kW.            (10)
+
+This is an equality of representatives and ordinary endpoints on the
+native branch, not merely equality of gauge orbits. The unreturned
+Landau-type representative has endpoint
+
+ M^k[exp(i eta A)W]
+                 = (exp[i Q_k(W,eta A)] M^kW)^(b_k).   (11)
+
+Equations (10) and (11) must not be interchanged.
+
+4. WHY THE SAME ALGEBRA USES THE ACTUAL B109 AVERAGE
+
+B109(0.5)-(0.9), printed253, specifies the analytic group mean with
+left/right equivariance (0.6). Its endpoint transporter P_j from (0.11)
+therefore satisfies P_j(V^g;y,z)=g(y)P_j(V;y,z)g(z)^(-1).
+The ordinary average is the literal anchored relative-log formula(0.12),
+printed254. That page explicitly transfers all B98 results to this
+average with the indicated modifications. The endpoint algebra above
+also verifies directly: replacing the axial path transporter by this
+P_j in (2) preserves (3), ordinary covariance, and the induction(4)-(5).
+The corresponding relative axial conditions use the SAME endpoint P_j,
+not a silently substituted single path. Their return is built from the
+same endpoint ratios and hierarchical background transports. The return
+restriction(7) then follows by the same ordered cancellation.
+
+This claim is confined to the endpoint/gauge algebra. A quantitative
+comparison of all B109 source-localizer/operator reads still requires
+their actual analytic domains. Mere group-mean equivariance does not
+supply those estimates.
+
+5. B109 PRINTED265: THE TWO GAUGES AND THE MINIMUM RESPONSE
+
+Use different letters for the terminal field and the background to
+avoid B109's reused W notation. Let V_top be the next coarse field,
+W=U_(k+1)(V_top) the fine original-action minimum, and
+
+                         c=M^kW.                        (12)
+
+This is B109(2.3). Given the actual grade-k increment B', the ordinary
+minimum is
+
+                   F_orig=U_k(exp(iB')c),               (13)
+
+and it satisfies M^kF_orig=exp(iB')c.
+B109 printed265 prescribes this order:
+
+(a) first apply a relative axial gauge h with h=I on T^(k), giving
+F_ax=F_orig^h. Thus M^kF_ax=exp(iB')c remains exact;
+
+(b) apply u_k^(-1) to obtain the relative Landau representative
+
+                 F_L=exp[i eta H_k(B')]W.
+
+The same paragraph identifies u_k with B98(106), evaluated at
+X=exp[i eta H_k(B')]. Hence F_ax=F_L^(u_k), with
+r_ku_k=b_k^-1 from(7). The exact identity(10) now yields
+
+ exp[i Q_k(W,eta H_k(B'))]c=M^kF_ax=exp(iB')c,
+
+or, on the common small logarithm branch,
+
+                    Q_k(W,eta H_k(B'))=B'.              (14)
+
+Thus the B109 H response satisfies the corrected relative constraint,
+and the native B98 return supplies precisely the missing coarse
+frame that makes its ORDINARY endpoint the prescribed datum.
+No assertion u_k(y)=I is used. The first gauge h and second gauge u_k
+are distinct and cannot be conflated. The total gauge from F_L back to
+F_orig is h^-1 u_k, because action composition is reversed:
+F_orig=F_L^(h^-1u_k). Its coarse restriction remains b_k^-1.
+
+6. COMPLEX BACKGROUNDS, HOLMORPHY, AND GAUGE NORMS
+
+B98 Proposition7, printed43 (PDF27), explicitly covers
+W=exp(i eta A')W_real, W_real satisfying(52), with small complex A',A.
+It states joint analyticity of Q_k(W,eta A) and uniformity of
+Proposition4 in A'. Therefore the claim that B98 has no complex
+background extension is too narrow. Its applicability to an iterated
+noisy/source-weakened family still requires a representation with the
+uniformly small A' specified there on every required read.
+
+The endpoint equations(2)-(11) are finite analytic identities wherever
+their joint branch domains hold. They carry over to complex parameters
+without any change of real noise integration variables. This does NOT
+establish existence of a common domain for the whole downward prefix.
+
+If the ACTUAL endpoint logs in(2) satisfy ||Log a_j||<=epsilon_j on one
+such domain, submultiplicativity gives
+
+ ||b_k||,||b_k^-1|| <= exp(sum_(j<k)epsilon_j),
+ ||Ad b_k|| <= exp(2 sum_(j<k)epsilon_j).                 (15)
+
+For a real unitary background the primary bound(131) and finite endpoint
+paths imply epsilon_j <= C_L alpha_1 L^j eta for small alpha_1.
+The geometric sum eta sum_(j<k)L^j <= 1/(L-1) bounds(15) uniformly in k.
+Here C_L depends on the fixed primitive block factor; the conclusion
+concerns one native return at depth k, not an arbitrary source prefix.
+For the changing complex background, the corresponding endpoint/path
+bounds must be checked in Proposition7's class before using(15).
+
+CRITICAL LIMIT: B98 printed43 Section F explicitly says the return
+u from(104)-(106) generally does NOT satisfy the regular covariant
+finite-difference condition(165). It satisfies the multiscale averaged
+conditions(166),(167) instead, as read from(107),(108). Thus no C1
+smoothness of u may be inferred from small norm or holomorphy.
+The native Lambda_k class and its product theorem Proposition8,
+printed45, are the appropriate available return controls to investigate.
+
+7. PRECISE REMAINDER OF G1a / G1b
+
+The literal ordinary/relative endpoint identity and correct coarse
+frame are now identified for the native one-response construction.
+What remains is a simultaneous registration through the actual prefix:
+- every changing background in a common Prop7 class;
+- all return products and their native multiscale gauge conditions;
+- selected independent current under the actual source weakening;
+- all old/current reconstructed tests, collars, near/far operators;
+- original unmarked factors and normalizers on the same continuation.
+
+Equation(14) is a physical minimum-response identity, not a claim that
+U_j(M^jU_t)=U_t for arbitrary off-graph inputs. It changes no original
+noise, cut, scalar/coarea/current factor, source root count, contact,
+complement, or partition normalizer. The full G1 gate remains open.

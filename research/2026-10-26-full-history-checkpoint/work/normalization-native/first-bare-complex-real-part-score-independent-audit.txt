@@ -1,0 +1,166 @@
+INDEPENDENT SCOPED AUDIT: FIRST BARE REAL-PART COMPLEX TILT
+25 October 2026. Reviewer: experiment_hints.
+Target: first-bare-complex-real-part-score-registration.txt.
+Repository checked: work/ym4, HEAD 462cac934658cfd5ef6f68e1b62141bf58c505d0.
+
+VERDICT
+
+The deduction is valid for the specified stationarity-cancelled first-bare
+coefficient extension on a fixed common near-identity chart, with the complete
+product support and no nonzero held noise. Its R-independent L2 score bound is
+a real improvement over the pointwise cutoff bound. I found no missing inverse
+power of g, determinant, or normalization factor in this restricted result.
+It does not prove the same result for an arbitrary near-flat physical field,
+an earlier masked conditional, or the guarded cavity with retained noise of
+size O(R). These exclusions are mathematically essential.
+
+READ AND PRIMARY CROSS-CHECK
+
+Read the target in full and the following actual repository producers and
+their audits, without using their PASS labels as mathematical premises:
+YM4-first-step-background-score-20261023;
+YM4-first-bare-uniform-mean-20261024;
+YM4-product-ball-L2-covariance-and-small-mean-20261024.
+Also traced the first soft-gap conversion in
+YM4-second-success-complete-Hessian-20261024, Sections2 and4, and the
+conditional/exterior distinction in YM4-local-conditional-analytic-module.
+
+Direct primary text checks used work/primary-sources/paper1.txt (B98),
+printed35--36, (121)--(126), Proposition3; and paper2.txt (B109), printed
+252--254, (0.5)--(0.12); 262--263, (1.10)--(1.18); 267--270, (2.10)--(3.2).
+B119(1.14)--(1.16) was checked through the repository's explicit transcription
+and action decomposition, not independently against B119 page pixels in this
+audit. The uniformly positive flat quadratic is an explicit imported input;
+the cited soft/hard conversion supplies the correct relation, rather than an
+identification of the two gauges.
+
+1. FIXED CHART AND LOCAL D/P DERIVATIVES
+
+For this first step, each native averaging row uses finitely many paths in
+its two endpoint blocks and only its own interface pivot. B109 printed267
+defines h through that pivot coefficient and Dtilde by
+Dtilde(B)=C_nonlin(B-h Dtilde(B)); Dtilde begins at degree two. At identity the
+pivot coefficient is a fixed nonzero scalar color matrix. The finite-dimensional
+analytic implicit-function theorem gives a common smaller complex chart and
+uniform derivative bounds for each row; only finitely many fixed-L templates
+occur. B98 Proposition3 directly gives the analytic linear-plus-quadratic
+decomposition of the averaging map. B109(0.5)--(0.12) supplies the actual
+analytic averaged-contour convention used by the gauge term.
+
+Hence, on one global sup ball around U=1,J=0 in the fixed link/current
+coordinates, C,h,Dtilde and all first Wilson/gauge/current coefficients have
+uniform finite reads. The inverse pivot and logarithm margins are fixed before
+g or volume varies. The physical cap must include the fixed norm of C and the
+spare noise margin; this only changes the fixed eps_*.
+
+The nonlinear Jacobian is not a global unpriced determinant: the matrix
+determinant identity reduces det(I-h Dtilde') to its private-pivot color
+blocks, and the row separation gives their finite local reads. A logarithm
+branch and bounded inverse blocks exist on the same shrunk chart. Haar terms
+have the same finite-read analyticity. Thus both their noise and background
+derivatives are controlled locally, with bounded incidence.
+
+For each classical/gauge summand the remainder after orders0,1,2 vanishes to
+order3 in the PHYSICAL noise y=gx (including C in its local analytic map).
+Differentiation gives
+|grad_x[g^-2 R_z(gx)]| <= Cg sum_local |x_k|^2,
+and its Hessian has Schur norm <=CgR. The measure term has noise gradient
+O(g) and Hessian O(g^2). Differentiating in a spare normalized background
+coordinate preserves these zero jets and the same powers of g. This proves
+the complex bounds (C) and (E), rather than inferring them from a real
+supremum estimate or from the existence of a physical real path.
+
+Finite-read analyticity likewise gives the dimension-free Schur bound
+||D(z)-D(0)|| <= C||z||_infty. A fixed smaller chart preserves the imported
+flat scalar and weighted gaps for Re D. The Taylor remainder then preserves
+them for every interpolation Re D+s Re P. A smaller weight can alternatively
+be chosen from finite range and the scalar gap. Thus the complex real-part
+Hessian assertion is supplied on this chart.
+
+This chart assertion is local near IDENTITY in a common representative. It
+must not be read as a fixed tube around every small-curvature field, a global
+choice of gauge, or admission to every later nested source domain. B109
+printed262--263 explicitly has additional domain requirements; no such
+membership is obtained just from saying that a coefficient is analytic.
+
+2. STATIONARY SUBTRACTION AND UNITS
+
+Before subtraction the independent-pair exponent contains the physical
+g^-1 <C(U)x,J> linear jet. It vanishes only on the actual constrained critical
+graph. Removing that WHOLE jet, and the entire off-graph gauge linear jet
+when necessary, defines the extension used here. The full nonlinear current
+term remains: its quadratic part is in D and its cubic remainder in P.
+Along the physical graph the removed identity and its total derivative both
+vanish, including variation of C and J. Thus the claimed physical equality
+is valid on that graph. It would fail on an arbitrary noncritical real path.
+
+The scaling in (C),(E) is correct: g^-2 times a cubic physical-noise remainder
+has x gradient O(g x^2); the quadratic term has mixed gradient O(x); the
+actual logarithmic measure terms contribute O(g). No g^-1 remains after the
+specified cancellation. z is a dimensionless background coordinate with a
+fixed physical radius rho_*; converting its score to a physical-coordinate
+score costs rho_*^-1, once. The actual determining-field response and all
+source image margins are separate compositions, and are not established here.
+
+3. REAL-PART MOMENTS, SCORE, AND ORIGINAL RATIO
+
+The product-ball proof applies to the real function Re H_z even for complex
+z, because the support remains the same centered convex product. At s=0 its
+quadratic density is globally even. Weighted L2 covariance plus centered
+fourth moments gives M'(s)<=Cg(1+M(s)^2), M(0)=0, hence M=O(g). This is not
+circular: fourth moments are first centered at the actual unknown means.
+
+The mixed derivative bound is measured under the FINAL law nu_z. That law's
+uniform fourth moments control the polynomial in x in (E) for every intermediate
+w=a+sDelta. Therefore Minkowski and bounded row/column incidence give a single
+finite-range K with ||K||_2<=C independent of R and volume. Reality on the real
+coefficient slice gives grad_x Im H_a=0. The stated phase bound (A) follows.
+
+Writing Phi=Im H_z and factoring the SAME integral gives
+Z(z)=Z_abs(z) E_nu_z exp(-i Phi).
+After centering Phi, cos u>=1-u^2/2 proves modulus at least1/2 when Var Phi<=1.
+The numerator has modulus at most M Z_abs, so (B) follows with exactly2M.
+Parameter-dependent but x-independent complex scalars multiply numerator and
+denominator equally; they can be removed inside this ratio while remaining
+in the original outer mass. No x-dependent Haar or pivot term may be removed.
+Holomorphy still requires the test's full actual image and a common dominating
+bound, as the target already states.
+
+4. RETAINED NOISE AND MASKS: ESSENTIAL LIMIT
+
+A principal active restriction with held noise zero has the same centered
+quadratic reference. For a nonzero retained vector e the quadratic action is
+1/2 x^T D_II x+x^T D_IE e. Its reference mean need not be O(g). The previously
+registered boundary estimate is Cg+C sum_b exp(-nu d(i,b))|e_b|. Hence the
+R-independent K does not automatically extend to the native guarded cavity,
+whose supported e may be O(R).
+
+A one-dimensional model shows why the exclusion is substantive. With
+H_delta(x)=1/2(1+i delta)x^2-Ax, the real-part law is N(A,1), and
+Var(Im H_delta)=delta^2(A^2+1/2). Symmetric product truncation at R much larger
+than A has the same limiting obstruction. A radius-independent phase-score
+bound cannot hold uniformly for A=O(R). The x-independent square-completion
+scalar does not remove that force on the original real contour. A shifted
+contour or a separately priced boundary score is additional work.
+
+Likewise the fixed product-law Poincare theorem does not apply after an
+arbitrary earlier hard mask. A masked numerator can use (B) only after an
+exact source representation and original mass bookkeeping; a masked
+denominator is a different problem. The first all-success product normalizer
+is not the full first-step mixture normalizer. These limitations are present
+in the target's final paragraph and must remain attached to every later use.
+
+RECOMMENDED PRECISION EDITS (NO ALGEBRAIC REPAIR REQUIRED)
+
+1. Say 'fixed common near-identity coefficient chart about (U=1,J=0)' where
+'fixed near-flat chart' could suggest all regular backgrounds.
+2. Replace 'Every source-independent scalar' by 'Every x-independent scalar'
+to name exactly the cancellation used in the ratio.
+3. In the statement, specify full product with no retained noise, or principal
+restriction with retained noise zero, rather than relying only on the final
+exclusion paragraph. Call Z(z) the same-product normalizer of the specified
+extension; it agrees with the physical original product normalizer on the
+admitted physical graph. There is no physical off-graph probability assertion.
+
+No full G1d registration, source-domain enlargement, all-history normalization,
+or continuum construction is obtained by this scoped result.

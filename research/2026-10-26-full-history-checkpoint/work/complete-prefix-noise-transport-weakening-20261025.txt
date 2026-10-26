@@ -1,0 +1,273 @@
+COMPLETE PREFIX WEAKENING OF NOISE TRANSPORT AND SOURCE READS
+25 October 2026. New off-physical source-family construction and scope.
+
+This note specifies a way to weaken the WHOLE homogeneous prefix at
+one final spatial scale. It includes frame/noise transport and the
+selected-current branches. The original physical map is recovered at
+all weakening parameters equal1. No assertion is made that this is
+the earlier canonical off-physical source family or its normalization.
+
+The construction uses the already proved small-field whole-response
+bounds. It also requires their COMPLETE primitive word/read records,
+not just their numerical sup norms. The conditional source-catalogue
+consequence at the end explicitly requires a uniform admitted source
+bound on this newly constructed family.
+
+1. FIX ONE FINAL SPATIAL PARTITION
+
+Use original fine units. Let the final cells have side
+
+  R_t=M_* L^t,
+
+where M_* is a fixed sufficiently large geometric constant. Each cell
+has a complex variable s(Delta), shared by ALL dates. Fix |s|<=S>1.
+Choose S and M_* before the current and noise caps. Protect a connected
+finite set of final cells containing the ENTIRE original source
+tree/filling packet, including every nominally auxiliary filling read.
+
+For every primitive operator word at grade j, retain its full connected
+read closure: input/output localization domains, background/current
+coefficient reads, inverse/projection branches, transposes, paths and
+collars. Tag the word by the product of s(Delta) over final cells
+intersecting that complete read. Use one tag per cell of the primitive
+word, then the factor-word convention when composing words. Thus
+multiplicities across different factors are retained and paid.
+
+Do not multiply a regular output kernel by a point-dependent indicator
+and call it a localized word. Its scalar tag is constant for the entire
+native word/localization domain. This preserves its output derivative
+estimates and its vanishing collars.
+
+2. WHY THIS HAS A FIXED WORD COST
+
+Let ell(omega) be the length, in original fine units, of a connected
+tree meeting all primitive localization domains. Those domains have
+diameter at most C M_native L^j. Choose M_* to dominate this constant.
+A tubular-cover estimate for a connected tree gives
+
+  n_final(omega)<=C_d[1+ell(omega)/R_t].            (1)
+
+Indeed its thickening by a radius smaller than a fixed fraction of
+R_t can be covered by C_d(1+ell/R_t) final cells. This includes domains
+meeting a common corner; they cost only a fixed dimension constant.
+The same estimate holds for the branched current/projection words.
+Choose each added connected closure within this controlled-thickness
+neighborhood of the native connecting tree, using fixed short connectors
+for the original domains and collars. An arbitrary connected enlargement
+is not allowed: it need not satisfy (1). The full primitive read must
+fit this controlled closure before the cost (2) is asserted.
+
+Consequently the scalar tag obeys
+
+  S^n_final<=S^C exp[C log(S) ell(omega)/R_t].      (2)
+
+The native word has a distance majorant exp[-delta ell/L^j], besides
+its walk-count factors. Since j<=t, choosing M_* large enough compared
+with log(S)/delta absorbs the second factor in(2), leaving a fixed
+strict decay reserve. Short words cost at most the fixed factor S^C.
+The resulting primitive constants are uniform in j,t and volume.
+
+Subsequent current Neumann series and nonlinear fixed points use these
+inflated constants. Their smallness caps are chosen AFTER S. This is
+the same majorant logic as B116, applied to a coarser partition; it
+does not introduce a new source-radius shrink at every date.
+
+3. THE FRAME INCREMENT IS LOCAL ONLY BEFORE SUBSTITUTION
+
+Register the absolute hierarchy at the top, with fixed coarse anchors
+or an explicit local certificate for those anchors. The separate note
+noise-proportional-frame-increment-locality-20261025.txt proves
+
+  Gamma_j(x)=Gamma_(j+1)(x) R_j(x),
+  R_j=P_j(U_(j+1);y,x)^-1 u_j(y) P_j(U_j;y,x),
+  R_j(0,W)=1,  ||R_j^+/-1-1||<=C||A_j||.          (3)
+
+As a function of its CURRENT fine arguments W=U_(j+1),A_j, this
+outer formula has a finite complete read Rread_j(x) of diameter
+O(L^j), including all partial averages and return paths. Hence it
+intersects at most q_frame final cells, with q_frame fixed.
+
+This is NOT the complete read in original inputs. Substitution of
+A_j and W brings all their nonlocal response/current/frame tails.
+Those branches retain their own primitive tags. The full read is the
+union of the outer finite read AND every recursively substituted word
+branch. No claim of finite O(L^j) support is made after substitution.
+
+4. WEAKEN THE TRANSPORT OPERATOR, NOT AN ARTIFICIAL GROUP GAUGE
+
+Only the evaluated noise argument needs the transport
+
+  N_j=Ad_(Gamma_j^-1).
+
+At unweakened parameters, (3) gives exactly
+
+  N_j=(I+E_j)N_(j+1),
+  E_j=Ad_(R_j^-1)-I,  ||E_j||<=C||A_j||.          (4)
+
+For s!=1 define a bounded linear transport on the Lie algebra; it
+need not remain the adjoint action of a group element. Let w_j(x;s)
+be the product of tags of the COMPLETE OUTER read Rread_j(x), and set
+
+  N_j(s;x)=[I+w_j(x;s) E_j(U_(j+1)(s),A_j(s);x)]
+                                      N_(j+1)(s;x). (5)
+
+All substituted fields on the right already carry their full earlier
+tags. Formula(5) retains the frame/adjoint branches, but avoids an
+unjustified group interpolation. It is analytic and exactly physical
+at s=1. No inverse of a weakened N_j is used.
+
+At the top, a canonical absolute hierarchy on U_t has a complete fine
+read of diameter O(L^t). If Gamma_t is such a function of the fine
+input, define
+
+  N_t(s;x)=w_t(x;s) Ad_(Gamma_t(U_t;x)^-1),         (6)
+
+where w_t tags its full read, including any variable coarse anchors.
+Then ||N_t(s)||<=K0(S), a fixed constant, since the top read intersects
+only a fixed number of final cells. If U_t itself is reconstructed
+from coarser variables, all its response branches must also be
+substituted and tagged. An arbitrary bounded but nonlocal Gamma_t
+does not meet this assumption and supplies no locality theorem.
+
+The actual original real noise x_j stays fixed. Evaluate the response
+at x_j^sharp(s)=N_(j+1)(s)x_j, not at a changed integration variable.
+The native response accepts arbitrary small complex Lie-algebra noise,
+so it does not require N_(j+1)(s) to be an adjoint action off s=1.
+
+5. TRANSPORT DEBT AND FIELD BOUNDS ON THE WHOLE S-POLYDISC
+
+Write m_j=||N_j(s)|| and let ||g_j x_j||<=delta_j. The response bound
+with the constants from Section2 gives
+
+  ||A_j(s)||_four <= C_H(S) m_(j+1) delta_j.
+
+Since |w_j|<=S^q_frame, (5) implies
+
+  m_j<=m_(j+1)[1+C(S)m_(j+1)delta_j].              (7)
+
+Choose M_N=2K0(S). If
+
+  C(S) M_N sum_(j<t)delta_j<=log2,
+
+descending induction gives m_j<=M_N throughout. This is a bound on
+the actual transport, not a fictional frame norm at s!=1. Current and
+noise caps are additionally chosen to fit the enlarged response chart.
+
+The same BCH/curvature proof then gives the established geometric
+field and current bounds with delta_j replaced by M_N delta_j and
+fixed S-dependent constants. There is no factor S^{ct} detached from
+the noise: every extra frame update multiplies I+O(delta_j), and its
+multiplicities are paid by the total debt. The top costs K0(S) once.
+
+6. THE SELECTED CURRENT AND LOCAL CANCELLATIONS
+
+The entire current must be included. In particular P1_U A has a
+nonlocal DPD* kernel and must be replaced by its completely tagged
+operator words P1_s A. The native weak-field-to-current bound gives
+||P1_s A||<=C(S)||A||, so the current recurrence remains valid.
+
+The covariant-Laplacian and F1 terms have local complete stencils.
+Tag a WHOLE stencil expression with its common complete-read tag.
+Do not tag its large individual xi^-2 summands differently: that
+would destroy their cancellation and could lose the uniform bound.
+The tag is applied to the selected-current output, whose sup norm
+is needed; no derivative of that tag is taken. The strong derivatives
+of A itself still come from the regular output operator words.
+
+The same rule applies to local nonlinear averaging rows and pivot
+coefficients: evaluate the bounded native coefficient/inverse first,
+tag its complete row read, and keep the actual nonlinear solved-pivot
+map. At zero weakening a tagged inverse coefficient can vanish; one
+does not try to invert that vanishing weakened coefficient. Pre-expanded
+coarse inverses are used, as in the assembly.
+
+7. EXACT ZERO-PARAMETER COMPONENT PROPERTY
+
+Give every fine variable a fixed containing final-cell label. Enlarge
+each primitive tag set to a connected closure containing all its
+input/output labels and complete coefficient reads. When s=0 outside
+an occupied set Y, a nonzero primitive word has its entire connected
+read inside ONE component of Y. Hence it cannot connect two components.
+
+Pointwise products and the analytic local nonlinearities preserve this
+property when their whole local reads are tagged. The uniformly
+contractive fixed-point series preserves it term by term. The identity
+part of U_j=exp(i xi_j A_j)U_(j+1) and of(5) only carries data at the
+same point. The top input U_t,J_t is point-local in these coordinates,
+and (6) has its entire top transport read tagged.
+
+Descending induction therefore proves: the value of the reconstructed
+field/current at a root depends only on the inputs and weakening
+variables in the occupied component containing its complete protected
+root packet. All recursively substituted tails are accounted for by
+their own tags. This is a property of the DECLARED new s-family; it
+is not a property of a family that weakens only A_j.
+
+8. A CONDITIONAL ROOTED CAUCHY CATALOGUE CONSEQUENCE
+
+Suppose a fixed source f, including its entire filling packet, is
+admitted on this whole S-polydisc image and satisfies
+
+  sup_|s|<=S |f(U_0(s),J_0(s))|<=epsilon_source.    (8)
+
+This source admission/bound must be supplied; field-value bounds alone
+are not a source norm theorem. Fix s=1 on the protected connected root
+set R. The finite multivariable fundamental-theorem expansion around
+zero on the remaining cells writes the source at s=1 as a sum indexed
+by activated cell sets. By Section7, any term with a component not
+attached to R vanishes after its derivatives are taken.
+
+For a connected Y containing R, each activated variable is differentiated
+once and integrated over[0,1]. Cauchy on circles of radius r<S-1 gives
+
+  ||f_Y||<=epsilon_source r^{-|Y\R|}.              (9)
+
+The coefficient depends only on the COMPLETE data in Y. The number of
+connected sets with n additional cells is at most C_R C_an^n on the
+fixed-dimensional final-cell graph. Therefore, for any a with
+
+  C_an exp(a)<r,
+
+the rooted norm obeys
+
+  sum_(Y connected,Y superset R) exp(a|Y|)||f_Y||
+    <= C_R exp(a|R|) epsilon_source /
+                                    [1-C_an exp(a)/r]. (10)
+
+Choose S sufficiently large FIRST, then all field/current/noise caps.
+This uses one final-scale source radius, not a contraction per date.
+It is a catalogue of the raw whole-prefix source function, before
+normalized noise integration or the old native reblocking ledger.
+
+Restoring fine-root position counts for one final cell costs at most
+C R_t^4=C M_*^4 L^{4t} in four dimensions. Additional fixed-order packet
+derivative counts can introduce fixed powers of t or R_t, but not an
+unjustified exponential in R_t^4. For t=O(log(1/g)), these fixed powers
+are polynomial in1/g. This is the reason to retain connected complete
+word reads instead of replacing them by filled balls with a tree-size
+weight exponential in their volume.
+
+9. WHAT IS NOT CERTIFIED HERE
+
+The construction specifies the additional weakening work required for
+frames, top transport, P1, local current stencils and all full branches.
+Its application requires an explicit inventory showing that every
+primitive of the chosen source family follows these rules. Numerical
+map bounds alone do not establish that inventory. In particular(8)
+must be verified for the actual cavity filling tube.
+
+There is also a distinct domain interface: dependence only on data in
+Y, proved on a global admitted input chart, defines a function on the
+RESTRICTION of that chart to Y. It does not by itself extend the function
+to every element of the abstract carrier-own-field domain U^c(Y).
+Such an extension needs a bounded complete-read extension construction
+or a separate intrinsic definition. A cutoff of a relative potential
+can supply one on a specified fixed-reference chart with a sufficient
+collar, but that is not automatically every native union-of-orbits
+carrier domain. This note does not erase that distinction.
+
+No normalized complex expectation, denominator lower bound, old
+canonical scalar comparison, inherited near/far expansion, mixed-history
+contact or continuum limit is proved. The Cauchy criterion(8)--(10)
+separates a concrete complete-read locality statement from these other
+obligations.

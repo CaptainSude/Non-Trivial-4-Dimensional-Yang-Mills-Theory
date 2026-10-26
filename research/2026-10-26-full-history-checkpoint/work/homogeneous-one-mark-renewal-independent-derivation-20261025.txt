@@ -1,0 +1,254 @@
+HOMOGENEOUS ONE-MARK RENEWAL: INDEPENDENT DERIVATION
+25 October 2026. experiment_hints. Finite-prefix theorem, uniform estimates.
+
+SCOPE AND INPUTS
+
+This is a quantitative consequence of the two newly scoped homogeneous
+modules, not a mixed-history source theorem:
+
+  homogeneous-full-R-body-marked-correction-producer-20261025;
+  homogeneous-marked-correction-fixed-core-entry-20261025.
+
+Every operator below uses the same original Gaussian/cut/normalizer and
+the same admitted source maps as those modules. Source roots, profiles,
+carrier weights and calibration are part of the actual norms. The source
+is already admitted initially. No real bound on an arbitrary observable
+is substituted for that norm. There is no Reynolds average of the mark.
+
+Fix a finite actual weak prefix 0,...,N with
+
+ x_k>=Y,  |x_(k+1)-x_k|<=B,
+ x_j>=x_n+lambda(n-j)-C0  (j<=n),                 (1)
+
+where Y is larger than fixed multiples of C0+B+1. Set
+a_j=c x_j^(-1/2)(log x_j)^q, q fixed, and b_j=c_b a_j.
+All radius/mother/noise hierarchies required by the input modules are
+assumed verified. In particular b_j<rho and actual marked feedback uses
+this same marked fresh class, whereas the body lives on its larger class.
+
+Write A_j=C_j+E_j for the exact marked homogeneous ordinary operator,
+where C_j is the fixed-core comparator at the SAME actual g_j. Its
+correction is a NEW source birth at j+1 with
+
+  ||E_j F||_(birth,j+1) <= epsilon_j ||[F]||_(fresh,j),
+  epsilon_j=C_E a_j^2 chi_j,
+  chi_j<=C_body x_j^(-s)+e_j(P),   e_j(P)>=0.        (2)
+
+The output norm in (2) is a full value norm, including the scalar output;
+the input can be a quotient norm because E_j annihilates every genuine
+field-independent constant. Square brackets and their limitation are
+specified below. The native proof of (2), including its prepared body
+norm, is an input rather than an inference from a numerical beta bound.
+
+1. THE SCALAR QUOTIENT IS ONLY A DEVICE FOR THE FIELD-DEPENDENT ESTIMATE
+
+Let B_j be the actual coherent homogeneous source germ space, retaining
+all original external source labels. Divide by genuine field-independent
+constants, with quotient norm inf_c ||F-c||. This is equality of germs on
+every admitted independent pair and every source profile, not equality
+only on the physical minimum graph. Both normalized operators preserve
+constants, so they induce operators on this quotient; E_j kills them.
+
+Keep an exact scalar ledger. For a coherent bounded flat evaluation
+sigma_j with sigma_j(1)=1, write F_j=c_j+f_j, sigma_j f_j=0. Then
+
+ c_(j+1)=c_j+sigma_(j+1) C_j f_j
+                  +sigma_(j+1) E_j f_j,
+ f_(j+1)=(I-1 sigma_(j+1))(C_j+E_j)f_j.             (3)
+
+Nothing below deletes either scalar term. The renewal estimate does not
+by itself bound their total uniformly over the horizon. A scalar may be
+a nonconstant function of a later mixed history or exterior datum; such
+a quantity is NOT a constant in that larger algebra and cannot be
+discarded. The current theorem concerns one coherent homogeneous chain.
+
+2. A CORE PROPAGATOR WITH ONE ENTRY PRICE
+
+Let C_[n,i)=C_(n-1)...C_i, with the empty product the identity. A source
+born fresh at i widens through b_(i,r)=min(rho,Lambda_s^r b_i), where
+1<Lambda_s<L and Lambda_s exceeds the fresh adjacent-radius ratio.
+Its first fixed-radius age is
+
+ t_i=ceil(log(rho/b_i)/log Lambda_s).
+
+Let K=max(1,K_col L^4), nu=log K/log Lambda_s, and
+
+             H_i=max(1,(rho/b_i)^nu).                       (4)
+
+Each available pre-entry step costs at most K. Thus K^t_i<=K H_i.
+After entry use the given fixed-radius centered-family static/quantum
+bound with exponent p>=0. Take a fixed c_*>C0+B+1 and write X_j=x_j+c_*.
+There is a fixed C_P such that, on the quotient,
+
+ ||C_[n,i) F||_(fresh,n)
+       <=C_P H_i (X_i/X_n)^p ||F||_(birth,i),  n>=i.          (5)
+
+The endpoint at n may be restricted from a wider source class to the
+marked fresh class; restriction costs no value factor. For n<i+t_i,
+(5) follows directly from K^(n-i)<=K H_i and bounded recovery in (1).
+For n>=i+t_i, apply entry once and then the polynomial core bound; the
+short entry segment has x_(i+t_i) comparable with x_i. No repeated
+H_i price is charged while the same cohort ages.
+
+If the initial source is already at the fixed radius, its analogue of
+(5) has H_initial=1 (up to a fixed norm comparison). A fresh initial
+seed instead pays H_i. Every newly born E_j source always starts with
+its own H_(j+1). Do not charge H_initial to a source already at fixed
+radius, and do not omit the prices of subsequent fresh corrections.
+
+If the finite horizon ends before entry, the actual source remains in
+its admitted running class. Using the upper bound H_i in (5) does not
+perform fictitious steps beyond that horizon or assume future couplings.
+
+All constants in (5) require the actual high-to-current static bound and
+the restored current-to-birth quantum carrier estimate. Pointwise value
+contraction or a repeatedly deteriorating carrier exponent is insufficient.
+
+3. EXACT DUHAMEL FORMULA AND THE CONJUGATING WEIGHT
+
+For an initially admitted source F_i define F_n=A_[n,i)F_i. Finite product
+expansion gives the exact identity
+
+ F_n=C_[n,i)F_i
+        +sum_(j=i)^(n-1) C_[n,j+1) E_j F_j.                 (6)
+
+This uses the actual prefix F_j in each correction. It does not replace
+it by the unperturbed source or reinsert a correction twice. Each term
+is labelled by its true correction date. All source roots remain those
+of the original F_i; body labels have already been summed through the
+prepared body norm in (2).
+
+Put u_n=||[F_n]||_(fresh,n), and set
+
+ W_(n,i)=(X_i/X_n)^p,     v_n=u_n/W_(n,i).
+
+If h_i=1 for a fixed-radius initial source and h_i=H_i for a fresh one,
+(2), (5), and (6) imply
+
+ v_n<=B_i+sum_(j=i)^(n-1) k_j v_j,
+ B_i=C_P h_i ||[F_i]||,
+ k_j=C_P H_(j+1) epsilon_j (X_(j+1)/X_j)^p.                 (7)
+
+The last ratio is bounded by a fixed constant, uniformly after the weak
+floor, since |x_(j+1)-x_j|<=B. The power p cancels out of the long-age
+Volterra weight. This exact cocycle cancellation is why p does NOT enter
+the strict rare-power threshold for propagation RELATIVE to the allowed
+core polynomial growth.
+
+Discrete Gronwall, proved by induction or the expansion of a product,
+gives
+
+ v_n<=B_i product_(j=i)^(n-1)(1+k_j)
+          <=B_i exp(Q_(i,n)),
+ Q_(i,n)=sum_(j=i)^(n-1) k_j.                              (8)
+
+No smallness assumption Q<1 is needed. A finite uniform Q gives a finite
+uniform multiplier. The weak floor may subsequently make Q small when
+a perturbatively close comparison is desired. The same calculation in
+(6) bounds the actual-minus-core quotient by
+
+ ||[A_[n,i)F_i-C_[n,i)F_i]||
+   <=C_P h_i W_(n,i)||[F_i]|| [exp(Q_(i,n))-1].             (9)
+
+Enlarging the fixed constants in (7)--(9) handles the choice of bounded
+centered representatives. This does not imply a full scalar-ledger bound.
+
+4. THE SHARP POWER REQUIRED BY THIS MAJORANT
+
+Adjacent radius comparability and (4) imply, for weak x_j,
+
+ H_(j+1) a_j^2 <=C x_j^(nu/2-1)(log x_j)^r,
+                 r=q(2-nu).                               (10)
+
+Consequently the rare part of (7) is bounded by
+
+ k_j^rare<=C x_j^(-1-d)(log x_j)^r,
+                    d=s-nu/2.                             (11)
+
+For d>0 the summand is decreasing beyond a fixed floor. From (1),
+x_j>=x_n/2+lambda(n-j), so comparison with an integral gives
+
+ sum_(j=i)^(n-1) k_j^rare
+       <=C x_n^(-d)(log x_n)^r
+       <=C' Y^(-d)(log Y)^r.                               (12)
+
+Here constants can be enlarged for the finite initial part of the
+decreasing range. This proves a horizon-uniform bound, tending to zero
+with the weak floor, under the simple sufficient condition
+
+                  s>nu/2, together with s>1.               (13)
+
+The s>1 condition is inherited from the body theorem, not from the
+Volterra algebra. At the borderline s=nu/2, the same majorant is summable
+if r<-1, with bound C(log Y)^(r+1). For r>=-1 its infinite-horizon
+integral diverges. For s<nu/2 this majorant also diverges. These are
+integrability statements for the available envelope, not counterexamples
+to a stronger native cancellation theorem.
+
+In the present body notation s=(kappa0-4)/2, the strict relative condition
+is kappa0>nu+4 as well as kappa0>6. This is only a numerical requirement;
+the actual parameter-order theorem must supply kappa0 after, or in a
+compatible joint choice with, the constants defining nu.
+
+5. WHY AN ABSOLUTE FORCING ESTIMATE HAS A DIFFERENT THRESHOLD
+
+If independent births B_(j+1) satisfy
+||B_(j+1)||<=C a_j^2 x_j^(-s) with an already factored original amplitude,
+their unperturbed total at n is bounded directly by
+
+ C X_n^(-p) sum_(j<n)
+       x_j^(p+nu/2-s-1)(log x_j)^r.                         (14)
+
+Uniform absolute summation by this estimate requires
+s>p+nu/2 (or the analogous logarithmic borderline). When strict,
+(14)<=C x_n^(nu/2-s)(log x_n)^r. In contrast, (13) controls repeated
+corrections RELATIVE to the existing core growth W_(n,i); it does not
+remove the initial factor h_i W_(n,i) or make an uncalibrated UV source
+uniformly bounded. The distinction between (13) and (14) must remain.
+
+6. FINITE-PERIOD ERRORS ARE AMPLIFIED WITH THEIR TRUE ENTRY PRICE
+
+The error part of the renewal exponent is
+
+ Q^err_(i,n)(P)
+   <=C sum_(j=i)^(n-1) H_(j+1) a_j^2 e_j(P),                (15)
+
+including the bounded adjacent X ratio if desired. It is not enough to
+know merely e_j(P)->0 without retaining this weighted sum. For each
+FIXED finite prefix, all its weights are finite and e_j(P)->0, so a
+compatible period can be chosen with Q^err_(0,N)(P)<=epsilon_N for any
+specified positive tolerance. No uniform rate in N is claimed or needed
+for that diagonal choice.
+
+If a single e_N(P) bounds all dates, a sufficient explicit requirement is
+
+ e_N(P)<=epsilon_N /
+             [C sum_(j=0)^(N-1) H_(j+1) a_j^2].             (16)
+
+Alternatively the stronger datewise e_j(P)<=C x_j^(-s) absorbs the errors
+in (12). Finite-P errors must also satisfy the source-image/slack inputs;
+the body theorem already supplies those on its chosen strict domains.
+Neither (15) nor (16) assumes a limit of the new source functions.
+
+7. ROOT COUNTS, SCALARS, AND WHAT HAS NOT BEEN PROVED
+
+Every L^4 adjacent census is already in the birth/compiler constants and
+K in (4). The long-age core theorem includes the actual profile/root
+norm. Equation (6) does not introduce a new independent microscopic
+root count per correction; it retains the original marked root and sums
+body roots using the prepared local norm. A proof which erased the
+original calibration or used only a total unrooted supremum would not
+supply (7).
+
+The estimate proves homogeneous one-mark centered stability, with exact
+scalar recursion (3) retained. It does not prove uniform full-scalar
+control, two-source contact renewal, all higher cumulants, original
+mixed-history source entry, reflection positivity of a posterior-product
+algebra, or continuum nontriviality. A physical observable still needs
+its actual initial norm and its complete original mixed-history identity.
+
+The only smallness needed for the algebra is the already admitted native
+body/compiler ball. Gronwall itself requires summability, not a contraction
+norm less than one. Under the stated strict inequality, its correction
+factor can be made close to one at a further weak floor, provided that
+the parameter hierarchy is genuinely compatible with that choice.

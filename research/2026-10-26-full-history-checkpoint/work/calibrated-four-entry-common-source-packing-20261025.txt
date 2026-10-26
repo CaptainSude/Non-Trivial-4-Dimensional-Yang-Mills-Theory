@@ -1,0 +1,157 @@
+CALIBRATED FOUR-ENTRY PACKING: AN EXACT FULL-LAW CONSUMER
+25 October 2026. Root lemma; its source hypotheses remain open.
+
+PURPOSE
+
+This proves a finite-dimensional consumer for the ENTIRE normalized
+history remainder of the current calibrated original energy. It adapts
+the archived Rademacher argument to the four entries and the actual
+c_a=x_n/e_n^C. It does not import the archived one-run source theorem as
+a proved statement for these marks.
+
+1. EXACT COMMON SOURCE DATA
+
+Let mu_(a,P) be the original positive finite Wilson law. For a dimensionless
+bare weight v on its plaquette centers define
+
+ J_a(v)=c_a sum_p v(x_p) h_p,
+ Z_a(v)=E_mu exp[J_a(v)].                                (1)
+
+All geometry, coupling/stopping labels and c_a are frozen. Let E_a(v) be
+ONE holomorphic scalar function, E_a(0)=0, defined from v itself, and put
+
+ h_a(v)=exp[-E_a(v)] Z_a(v),       h_a(0)=1.              (2)
+
+No profile-by-profile choice of E_a is allowed. In the proposed RG use,
+E_a is the sum of genuinely universal completed scalar births, with all
+missing-region compensations and history-dependent scalar terms retained
+inside h_a. That identification must separately be proved.
+
+Define the bilinear second logarithmic GERM
+
+ B_h(u,v)=D^2h_a(0)[u,v]-Dh_a(0)[u]Dh_a(0)[v].           (3)
+
+Differentiating (2) at zero gives the exact identity
+
+ Cov_mu(J_a(u),J_a(v))=D^2E_a(0)[u,v]+B_h(u,v).           (4)
+
+There is no need for h_a to be zero-free away from zero. In particular,
+the product of first derivatives in (3) is not dropped. It contains the
+normalization and outer conditional-covariance terms that would be lost
+by multiplying separate posterior first marks.
+
+2. THE UNIFORM LOCAL HYPOTHESIS NEEDED
+
+Fix a terminal physical length ell_T and an endpoint-unit cell D, with
+an interior D0 separated by a fixed positive buffer from its faces.
+Suppose there exist r_*>0 and Q_*<infinity, independent of a and the
+ambient compatible period, such that
+
+ |h_a(v)|<=Q_* whenever supp v is in D0 and
+ ||v||_infty+Lip_(endpoint)(v) <= r_*.                    (5)
+
+The weight is allowed to be complex. This is ONE bound for the union of
+all its pieces, independent of their number or signs. The cell and the
+constants may depend on a fixed terminal weak floor and fixed shapes.
+They may not depend on the UV cutoff through c_a. It is enough to assume
+joint holomorphy and the bound on the particular bidiscs used below.
+
+A bare-source bound for sum v h_p does not automatically imply (5) for
+J_a(v). Under (1) its admitted radius would be divided by |c_a|, and its
+Cauchy bound would acquire c_a^2. The subsequently checked sharpened
+constant-energy calibration gives e_n=1+O(1/X) and c_a=O(X), uniformly
+in UV depth, but does not prove (5). An absolute bare radius r0(Y) at a
+later fixed terminal weak floor Y therefore gives r_*=r0(Y)/(C X).
+
+3. PACKING ALL FOUR PROFILES
+
+Use the physical unit-mass f_0,f_1 from the checkpoint contract and set
+u_i=tau^4 f_i, v_i=tau^4 theta f_i. These are amplitude-one fixed-shape
+patterns up to constants depending on kappa. Their diameter, separation
+and distance from their reflected partners are O(tau). In endpoint units
+put R=tau/ell_T. For R sufficiently small and a/tau sufficiently small,
+one can place m>=c_pack R^-4 translated FOUR-profile patterns in D0,
+with all 4m supports disjoint. Use boxes of side C_shape R and round their
+centers to exact bare-lattice translations; the buffer and packing density
+remain fixed when a/tau is small. No scaffold-preserving translations are
+required here.
+
+Let t_l be those bare translations and epsilon_l independent signs. For
+each i,j define
+
+ U_i,epsilon=sum_l epsilon_l u_i(. - t_l),
+ V_j,epsilon=sum_l epsilon_l v_j(. - t_l).
+
+Disjoint support and the fixed shape margins imply
+
+ ||U_i,epsilon||_infty+||V_j,epsilon||_infty <= C_shape,
+ Lip_T(U_i,epsilon)+Lip_T(V_j,epsilon) <= C_shape/R.       (6)
+
+These constants do not grow with m. Therefore
+z U_i,epsilon+w V_j,epsilon obeys (5) for
+
+ |z|,|w|<d_R=c_shape r_* R,
+
+with c_shape small enough and R<=1. The two-variable Cauchy bound gives
+
+ |B_h(U_i,epsilon,V_j,epsilon)|
+                          <=(Q_*+Q_*^2)/d_R^2.          (7)
+
+Because (3) is bilinear, averaging the SAME signs in the two sums cancels
+every cross-pattern entry and gives exactly
+
+ E_epsilon B_h(U_i,epsilon,V_j,epsilon)
+                =sum_l B_h(u_i(. -t_l),v_j(. -t_l)).      (8)
+
+The exact original Wilson measure is invariant under these bare lattice
+translations and c_a is common. Thus the bare covariance in (4) is the
+same for every l. No translation invariance of E_a or the RG scaffold is
+used. Combining (4), (7), (8), and m>=c_pack R^-4 yields
+
+ |Cov_mu(O_a(f_i),O_a(theta f_j))
+   -tau^-8 m^-1 sum_l D^2E_a(0)
+           [u_i(. -t_l),v_j(. -t_l)]|
+             <= C_shape (Q_*+Q_*^2) r_*^-2 tau^-8 R^2.   (9)
+
+The estimate holds for ALL FOUR entries with common constants. All
+finite-history/private/exterior mixed terms are inside the exact B_h;
+no rare-event probability or separate conditional mean is substituted.
+The proof is purely finite-dimensional once (5) and the coherent E_a
+have been supplied. It also works for each fixed periodic regulator
+large enough to contain D, with the same bound.
+
+4. THE OTHER NECESSARY SUPPLIER
+
+To compare (9) with the saved homogeneous covariance one must prove
+
+ |tau^-8 m^-1 sum_l D^2E_a(0)[u_i(. -t_l),v_j(. -t_l)]
+                           - C_hom,ij| <= epsilon_vac.   (10)
+
+The universal E_a may include healed large-field scalar births. A
+homogeneous ordinary contact calculation alone does not identify or
+bound those mixed derivatives. The true completed birth dates and both
+outer-R source operations must be retained. An unmarked R' bound is
+not a marked second-derivative bound without an admitted source ball
+or an explicit two-mark producer with its prices.
+
+If (5) and (10) are established, choose a sufficiently long but finite
+weak continuation so R is small enough, while keeping r_*,Q_* fixed
+at its terminal band. Then (9)+(10) gives the checkpoint estimate when
+their sum is below its allocated allowance. This is a quantified route,
+not a proof that those two suppliers hold for the present construction.
+
+5. WHY THE CURRENT HOMOGENEOUS ESTIMATE DOES NOT SUPPLY (5)
+
+It controls physical first-source functions and selected second jets on
+the homogeneous core, and a separate actual/core error on running
+domains. It does not bound a common nonlinear source functional on all
+retained histories. Finite-jet control cannot be promoted to such a bound:
+the elementary entire functions exp(N z^3) have the same value and first
+two derivatives at zero for every N, yet have no uniform bound on any
+fixed complex disc. This example tests the implication, not Yang--Mills.
+
+Likewise, a finite-volume upper/lower stability quotient exp(C V_stop)
+does not itself give the fixed-cell bound (5) as V_stop grows. The
+archived proof uses a separately justified reflection/chessboard passage
+and coherent vacuum cancellation. Those steps and the calibrated source
+ball must be verified before invoking this consumer.

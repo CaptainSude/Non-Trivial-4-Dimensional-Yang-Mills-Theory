@@ -1,35 +1,32 @@
 # Reading routes
 
-The [front page](../README.md) gives the current state. The [ledger](PROOF-STATUS.md) answers what each result establishes; [open problems](OPEN-PROBLEMS.md) turns the gaps into work packages. Historical checkpoints are useful search indexes, but they are a poor first reading route.
+## Current checkpoint: start here
 
-## First visit
+1. Read the [front page](../README.md) and [proof-status ledger](PROOF-STATUS.md), especially R11–R15 and the remaining gates.
+2. Read the [26 October proof draft](../research/2026-10-26-full-history-checkpoint/Proof-draft.pdf), its [status](../research/2026-10-26-full-history-checkpoint/CURRENT-STATUS.txt) and [dependency ledger](../research/2026-10-26-full-history-checkpoint/PROOF-DEPENDENCIES.txt).
+3. Read the [full four-entry assembly](../research/2026-10-26-full-history-checkpoint/work/full-history-four-entry-assembly-20261026.txt) and [main application audit](../research/2026-10-26-full-history-checkpoint/work/consolidated-main-application-independent-readback-20261026.txt).
+4. Follow the supplier relevant to the claim you want to check; inclusion in an archive is not verification of the entire dependency chain.
 
-1. Read the front page and [status definitions](../CONTRIBUTING.md#status-vocabulary).
-2. Read the manuscript's opening target and final two sections, **What an analytic source induction still has to establish** and **The incomplete continuum architecture**. [PDF](../paper/YM4-incomplete-proof.pdf) · [TeX source](../paper/manuscript_core.tex).
-3. Read the [notation bridge](NOTATION.md). In particular, a source's independent current is not always its physical current, and a full law is not the same as its regular conditional sector.
-4. Pick one work package. Follow its producer and audit links before consulting older files.
+## Audit the new full-history source argument
 
-## Working on the immediate complex-prefix gate
+Read the [from-bare constructor audit](../research/2026-10-26-full-history-checkpoint/work/from-bare-fine-M-R-constructor-independent-audit-20261025.txt), the [joint source proof](../research/2026-10-26-full-history-checkpoint/work/joint-stopped-native-source-bootstrap-20261025.txt), and its [private/source/stability readback](../research/2026-10-26-full-history-checkpoint/work/full-history-source-stability-and-packing-independent-readback-20261026.txt). Keep the original normalized Wilson reference insertion distinct from a normalized complex private posterior.
 
-Read these in order:
+The important refinements are the exact deferred private integral, positive rooted constituents charged at their original dates, and the [reterminalized source oscillation lemma](../research/2026-10-26-full-history-checkpoint/work/reterminalized-local-source-oscillation-lemma-20261026.txt) with its [independent check](../research/2026-10-26-full-history-checkpoint/work/reterminalized-local-source-oscillation-independent-readback-20261026.txt). The coefficient's value is bounded before its new spatial gradient is extracted.
 
-1. [Current snapshot](../guide/CURRENT-STATUS.txt) and [frontier report](../guide/frontier.txt), especially the exact representative/domain gate and primary formula locators.
-2. [Real minimum tower](../evidence/current/work/original_cavity_real_prefix_minimum_tower_20261024.txt) with its [audit](../evidence/current/work/original_cavity_real_prefix_minimum_tower_audit_20261024.txt).
-3. [Real whole-product continuation](../evidence/current/work/original_cavity_real_prefix_whole_product_20261024.txt) with its [audit](../evidence/current/work/original_cavity_real_prefix_whole_product_audit_20261024.txt).
-4. [First native independent-pair column](../evidence/current/outputs/YM4-pinned-cavity-native-pair-first-column-20261024.txt), then the [restricted second-step image](../evidence/current/work/pinned_cavity_second_ordinary_pair_image_20261024.txt) and its [root audit](../evidence/current/work/pinned_cavity_second_ordinary_pair_image_root_audit_20261024.txt).
-5. [Normalized complex conditional read cost](../evidence/current/work/normalized_complex_conditional_read_cost_20261024.txt) and its [root audit](../evidence/current/work/normalized_complex_conditional_read_cost_root_audit_20261024.txt).
-6. Check the printed primary formulas listed in [sources](SOURCES.md). Then work through G1a–G1d in [open problems](OPEN-PROBLEMS.md).
+Then read the [same-vacuum stability replay](../research/2026-10-26-full-history-checkpoint/work/new-vacuum-full-history-stability-replay-20261025.txt), [fixed-cell consumer](../research/2026-10-26-full-history-checkpoint/work/fixed-cell-common-source-chessboard-consumer-20261025.txt) and [packing lemma](../research/2026-10-26-full-history-checkpoint/work/calibrated-four-entry-common-source-packing-20261025.txt).
 
-## Auditing the regular lane
+## Audit the scalar and homogeneous comparison
 
-Start with [signed drift and homogeneous tuning](../evidence/current/outputs/YM4-native-signed-drift-and-homogeneous-tuning-20261024.txt) and its [audit](../evidence/current/outputs/YM4-native-signed-drift-and-tuning-audit-20261024.txt). Follow the producer's Gaussian, Schur, heat, and normalization dependencies; the numerical coefficient alone is not the proof.
+Read the [full-profile scalar comparator](../research/2026-10-26-full-history-checkpoint/work/ordinary-scalar-same-coupling-rare-comparator-20261025.txt), [scalar/reference audit](../research/2026-10-26-full-history-checkpoint/work/full-history-four-entry-scalar-and-reference-independent-readback-20261026.txt), and [uniform phase/spatial-Gamma check](../research/2026-10-26-full-history-checkpoint/work/homogeneous-phase-uniformity-and-spatial-Gamma-independent-readback-20261026.txt).
 
-Then read [regular-core registration](../evidence/current/outputs/YM4-tuned-regular-core-Volterra-registration-20261024.txt) and its [audit](../evidence/current/outputs/YM4-tuned-regular-core-Volterra-audit-20261024.txt), followed by the inherited TURN77 notes linked from the ledger. Keep the complete coherent source family distinct from arbitrary marked or masked sources.
+For the earlier homogeneous supplier use the [signed covariance assembly](../research/2026-10-26-full-history-checkpoint/work/homogeneous-signed-energy-covariance-assembly-20261025.txt), [physical reference readback](../research/2026-10-26-full-history-checkpoint/work/homogeneous-signed-energy-physical-reference-readback-20261025.txt), and the source/packet/calibration files linked in the [dependency ledger](../research/2026-10-26-full-history-checkpoint/PROOF-DEPENDENCIES.txt). The new core is a packed average, not a presumed fine-translation-invariant replacement for the original law.
 
-## Auditing the global construction
+## Work on the full construction
 
-Read the manuscript's continuum architecture, the ledger's open rows, and G2–G5. Pay particular attention to original-law sector coverage, the [raw Wilson variance obstruction](../evidence/current/outputs/YM4-Wilson-variance-and-locality-20261023.txt), and the difference between a nonzero regular-core coefficient and an interaction witness in one limiting state.
+Begin with [G3–G5](OPEN-PROBLEMS.md#g3--observable-algebra-calibration-collisions-and-volume-control). The checkpoint supplies separated finite-regulator control; a common observable algebra, collision estimates, continuum/volume compatibility, reconstruction and interaction remain open. The [raw-energy variance audit](../evidence/current/outputs/YM4-Wilson-variance-audit-20261023.txt) still rules out a shortcut through blanket unchanged-calibration L² bounds.
 
-## Finding an old reference
+## Historical cavity route and earlier evidence
 
-Use the [evidence index](../catalog/README.md). It links every included scientific file and maps duplicate current working names to delivered copies. The downloadable [archive index](../catalog/archive-index.tsv) covers all 5,999 manifested payload entries and marks files that remain available only in the original ZIP. Paths inside frozen notes retain their historical spelling; see [archive path resolution](ARCHIVE.md#resolving-historical-paths).
+The [24 October manuscript](../paper/YM4-incomplete-proof.pdf), [status](../guide/CURRENT-STATUS.txt), [frontier](../guide/frontier.txt), and [five subsequent addenda](../guide/latest-reviewed-addenda.json) are unchanged historical snapshots. Their specific cavity-prefix problem is not automatically solved by the later differently organized construction. Consult the current G1/G2 scope before transferring a result to that route.
+
+Use the [evidence catalogue](../catalog/README.md), [research addition index](../research/2026-10-26-full-history-checkpoint/README.md), and [archive path guide](ARCHIVE.md) to resolve older file references. The two dated manifests certify published bytes, not mathematical validity.

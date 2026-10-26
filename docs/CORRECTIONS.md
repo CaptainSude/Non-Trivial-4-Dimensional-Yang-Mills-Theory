@@ -1,6 +1,6 @@
 # Scope corrections and routes that do not close the proof
 
-This register prevents old or tempting shortcuts from silently re-entering the argument. It summarizes the current [status record](../guide/CURRENT-STATUS.txt), [frontier](../guide/frontier.txt), and manuscript §§9–10. It does not claim every historical proposal was false.
+This register prevents old shortcuts from re-entering the argument. The current application is in the [26 October draft](../research/2026-10-26-full-history-checkpoint/Proof-draft.pdf) and [ledger](PROOF-STATUS.md). The [24 October status](../guide/CURRENT-STATUS.txt), [frontier](../guide/frontier.txt) and earlier manuscript retain their historical scopes; not every historical proposal was false.
 
 | Shortcut or inference | What the evidence actually permits | Where to check |
 | --- | --- | --- |
@@ -19,4 +19,19 @@ This register prevents old or tempting shortcuts from silently re-entering the a
 | Separate finite-horizon tuned roots already define one continuum state. | Compatibility, convergence or compactness, and volume control are still open. | [Tuning audit](../evidence/current/outputs/YM4-native-signed-drift-and-tuning-audit-20261024.txt), [manuscript §10](../paper/manuscript_core.tex). |
 | A nonzero two-point function or a higher cumulant of a composite proves interaction. | A criterion excluding the relevant free/generalized-free alternatives must hold for the identified Yang–Mills algebra in the same state. Free-field composites may have higher cumulants. | [Manuscript §10](../paper/manuscript_core.tex). |
 
-The frozen checkpoint contains 249 distinct referenced TXT filenames plus the checkpoint itself. These are document counts, not counts of proved theorems. Five later producer/audit pairs are separately included. No completed complex-prefix theorem is among them.
+The 24 October frozen checkpoint contains 249 distinct referenced TXT filenames plus the checkpoint itself. These are document counts, not counts of proved theorems. Five later producer/audit pairs are separately included. No completed complex-prefix theorem was among that historical selection; the later declared construction is indexed separately in R11–R15.
+
+## Corrections recorded in the 26 October construction
+
+| Shortcut | Current correction | Evidence |
+| --- | --- | --- |
+| Enlarge every historical source domain by a common factor. | Preserve old rows and the literal stage allowances; small amplitude does not extend a germ. | [Mixed-domain audit, §11](../research/2026-10-26-full-history-checkpoint/work/old-mixed-noise-scalar-disc-and-phased-R-image-audit-20261025.txt). |
+| Replace a thin fine-M carrier by an MR hull at a harmless scalar cost. | Construct from bare data on actual fine-M carriers, with exact complements and new coefficients. | [Constructor audit](../research/2026-10-26-full-history-checkpoint/work/from-bare-fine-M-R-constructor-independent-audit-20261025.txt). |
+| Close shrinking-radius beta feedback by paying a polynomial at every iteration. | Close the body discrepancy at the same realized coupling first; only then use its beta error as external forcing. | [Feedback counterexample and repair](../research/2026-10-26-full-history-checkpoint/work/running-radius-beta-feedback-and-recentred-core-20261025.txt). |
+| Treat arbitrary smooth old-private dependence as a small new-noise response. | Retain the exact joint private integral, original factors and true dated costs. Do not append its integrated logarithm a second time. | [Private/source audit, §§2–3A](../research/2026-10-26-full-history-checkpoint/work/full-history-source-stability-and-packing-independent-readback-20261026.txt). |
+| Infer a linear component cost from relative boundary decay alone. | Keep original positive constituent columns and dated incidences before resummation. | [Joint proof, §5](../research/2026-10-26-full-history-checkpoint/work/joint-stopped-native-source-bootstrap-20261025.txt). |
+| Create a spatial chi factor by Cauchy on one already chi-sized ball. | Bound the same coefficient on the current-endpoint source class first; then extract its gradient. | [Oscillation lemma](../research/2026-10-26-full-history-checkpoint/work/reterminalized-local-source-oscillation-lemma-20261026.txt). |
+| Use the never-large event for a new-vacuum lower bound. | Use the final all-small effective branch, including previously healed contributions, in the same vacuum convention. | [Stability replay](../research/2026-10-26-full-history-checkpoint/work/new-vacuum-full-history-stability-replay-20261025.txt). |
+| Drop the product of first source derivatives from the covariance. | Keep `Cov = D²E + D²h − Dh Dh`, including the full posterior normalization. | [Packing proof](../research/2026-10-26-full-history-checkpoint/work/calibrated-four-entry-common-source-packing-20261025.txt). |
+| Original translation invariance makes a scaffold core translation invariant. | Compare the packed average and prove its error uniform in the scaffold phase. | [Phase audit](../research/2026-10-26-full-history-checkpoint/work/homogeneous-phase-uniformity-and-spatial-Gamma-independent-readback-20261026.txt). |
+| A constant-precision Gaussian theorem covers spatially varying Gamma. | Keep the variation as an interaction; retain its linear-noise vertex and both relative-gradient contributions. | [Spatial-Gamma audit](../research/2026-10-26-full-history-checkpoint/work/homogeneous-phase-uniformity-and-spatial-Gamma-independent-readback-20261026.txt). |

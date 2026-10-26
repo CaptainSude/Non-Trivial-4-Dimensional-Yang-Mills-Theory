@@ -1,0 +1,190 @@
+EXACT NONLINEAR ENDPOINT COCYCLE FOR A DECLARED MOVING-REFERENCE AVERAGE
+25 October 2026. Research note by endpoint_return subagent.
+Status: exact finite conditional algebra and elementary product estimates.
+Not a completed G1a native-source theorem.
+
+1. INPUTS AND DOMAIN
+
+Let Lambda_j be nested finite compatible lattices. The chosen ordinary
+one-step group average M_j and its chosen internal endpoint transporter
+P_j(V;y,z) satisfy, on the domains used,
+
+ M_j(V^g)=(M_jV)^(r_jg),
+ P_j(V^g;y,z)=g(y)P_j(V;y,z)g(z)^(-1),
+ V^g(e)=g(e_-)V(e)g(e_+)^(-1).
+
+Here r_j is restriction to the actual next coarse vertices, not scalar
+block averaging. These are the properties recorded for the literal B109
+endpoint mean in the repository's infrared-cancellation notebook,
+ccs-primitive-section, and the native affine interface / ordinary moving-map
+notes dated 2026-10-24. The present proof uses these properties as inputs;
+it does not independently verify B98(104)-(108),(130)-(135).
+
+Fix a finite length t. Work on an open set D of pairs (W,V) for which all
+maps in the recursion below are defined, every relative endpoint product
+has a single specified analytic logarithm, and all applications of the
+ordinary gauge identity stay on that branch. A sufficient local D exists
+at any pair (W,W) whose finite ordinary trajectory lies strictly inside
+these analytic charts: at the diagonal all relative products equal I,
+all correction gauges equal I, and finite continuity gives an open
+neighborhood. No radius uniform in t, volume, or source localizers is
+asserted by this observation. If W itself varies complexly, D must be a
+joint open set in (W,V), not separately chosen charts.
+
+2. DECLARED EXACT RECURSION
+
+Set W_0=W, C_0=V and b_0=I. Recursively define
+
+ W_(j+1)=M_j W_j,
+ ell_j(y)=|B_j(y)|^(-1) sum_(z in B_j(y))
+                 Log[P_j(C_j;y,z) P_j(W_j;y,z)^(-1)],
+ a_j(y)=exp(ell_j(y)),
+ C_(j+1)=(M_j C_j)^(a_j^(-1)),
+ b_(j+1)=(r_j b_j) a_j.                                  (1)
+
+The endpoint P_j is exactly the chosen native endpoint mean; it is not
+replaced by a single axial path or arbitrary large-block mean. The finite
+block set and weights are those of the chosen ordinary convention.
+On the diagonal V=W one has C_j=W_j, ell_j=0, a_j=b_j=I.
+
+THEOREM A. Let M^(j)=M_(j-1)...M_0. On D,
+
+                      M^(j)V=C_j^(b_j).                  (2)
+
+Consequently the actual ordinary endpoint is retained by the pair (C_j,b_j).
+For a bond (y,y'), formula (2) reads
+
+ M^(j)V(y,y')=b_j(y) C_j(y,y') b_j(y')^(-1).              (3)
+
+Proof. The convention gives (U^g)^h=U^(hg). The assertion at j=0 is
+immediate. Suppose (2) holds at j. Ordinary gauge covariance gives
+
+ M^(j+1)V=(M_j C_j)^(r_j b_j).
+
+By (1), M_jC_j=C_(j+1)^(a_j), so the right side equals
+C_(j+1)^((r_jb_j)a_j)=C_(j+1)^(b_(j+1)). This proves (2).
+No logarithm of a product and no cocycle property of the endpoint mean
+has been used.
+
+The ordered product is explicitly
+
+ b_t=(r_(t-1)...r_0 b_0)
+       (r_(t-1)...r_1 a_0) ... (r_(t-1)a_(t-2)) a_(t-1),
+
+with the b_0 factor equal I. Each factor is a value at the same final
+coarse vertex. No factor may be commuted through another.
+
+3. JOINT GAUGE COVARIANCE
+
+Apply one gauge g to both W and V. Write g_j=r_(j-1)...r_0g.
+Assume the transformed pair remains in the declared logarithm domain;
+then analytic matrix logarithms commute with similarity on this domain.
+Inductively W_j'=W_j^(g_j), C_j'=C_j^(g_j), and
+
+ ell_j'=Ad_(g_(j+1)) ell_j,
+ a_j'=g_(j+1)a_jg_(j+1)^(-1),
+ b_j'=g_j b_j g_j^(-1).                                 (4)
+
+To verify C covariance, use
+(M_jC_j')^((a_j')^-1)=(M_jC_j)^( (a_j')^-1 g_(j+1))
+and (a_j')^-1g_(j+1)=g_(j+1)a_j^-1. The b recursion then
+proves its transformation law. Thus a complex background does not break
+the algebra, provided the SAME joint analytic branch domain is supplied.
+This is simultaneous covariance of evaluated configurations. It says
+nothing about covariance under independent source weakening operations.
+
+4. MATCH TO THE ALREADY REGISTERED MOVING-REFERENCE TANGENTS
+
+Keep W fixed and vary V(s)=exp(i s v)W. Let Q_j be the left-relative
+differential of M_j at W_j, D_j the gauge generator at W_j, and define
+
+ Z_j v=(1/i) d/ds ell_j(W_j,exp(i s v)W_j)|_(s=0),
+ (B_j phi)(y)=|B_j(y)|^(-1) sum_z Ad_(P_j(W_j;y,z)) phi(z).
+
+Here the notation ell_j(W_j,...) means the single-step logarithmic
+endpoint mean, before inserting the recursion. Endpoint covariance gives
+
+ Z_j D_j=r_j-B_j,
+ Q_j D_j=D_(j+1)r_j,
+ Qbar_j=Q_j-D_(j+1)Z_j,
+ Qbar_jD_j=D_(j+1)B_j.                                  (5)
+
+For example, differentiation along exp(i s phi) gives the endpoint
+relative increment phi(y)-Ad_(P_j(W_j;y,z))phi(z). Its average proves
+the first formula, and ordinary covariance proves the second.
+
+Let c_j be the left-relative tangent of C_j and write
+b_j(s)=I+i s z_j+O(s^2). Direct differentiation of (1) yields
+
+ c_0=v,   c_(j+1)=Qbar_j c_j,
+ z_0=0,   z_(j+1)=r_jz_j+Z_jc_j.                        (6)
+
+If q_j=Q_(j-1)...Q_0v is the ordinary tangent, differentiation of (2)
+gives q_j=c_j+D_jz_j. Inserting this into (6), and using (5), gives
+
+                  z_(j+1)=B_jz_j+Z_jq_j.               (7)
+
+This is exactly the moving-reference scalar correction recurrence in
+the archived ccs-Z-recursion. Thus the declared nonlinear recursion
+realizes that tangent identity without replacing it by the derivative
+of the fixed-identity corrected nonlinear map.
+
+5. ELEMENTARY UNIFORM PRODUCT BUDGET, CONDITIONAL ON ENDPOINT READS
+
+Use an induced matrix operator norm and suppose the actual corrections
+in (1) obey ||ell_j||_infinity<=epsilon_j throughout one joint parameter
+domain. Restriction has supremum norm one. Therefore
+
+ ||b_t||_infinity <= exp(sum_(j<t) epsilon_j),
+ ||b_t^-1||_infinity <= exp(sum_(j<t) epsilon_j),
+ ||Ad_(b_t)|| <= exp(2 sum_(j<t) epsilon_j).              (8)
+
+A product telescope additionally gives
+
+ ||b_t-I||_infinity, ||b_t^-1-I||_infinity
+                              <= exp(sum epsilon_j)-1. (9)
+
+For example, expand a product of (I+(a_j-I)); the sum of norms is bounded
+by product exp(epsilon_j)-1. The inverse order has the same bound.
+If epsilon_j<=C delta_j and the sum delta_j stays small on a logarithmic
+prefix, (8) rules out a generic C^t loss for this coarse frame product.
+It does not prove the assumed epsilon_j estimates for the actual downward
+noisy construction, nor bounds on its fine return gauges.
+
+6. SCOPE: WHAT THIS DOES NOT IDENTIFY
+
+This note gives a literal endpoint identity for the explicitly declared
+correction (1), using the native endpoint mean P_j. The B98 relative Q,
+its axial return, and its subsequent Landau return have NOT been shown
+to equal this chosen nonlinear continuation. Matching first derivatives
+in (5)-(7) is insufficient: different nonlinear maps can have identical
+first jets. One must either establish that identification on the full
+required domain or justify a new continuation for every unmarked factor
+and normalizer by exact physical identities and verified bounds.
+
+There is no independent-current substitution in this proof. The native
+selected companion, all source localizers, complete old/current domains,
+noise contours, and normalized read costs remain separate requirements.
+All original real noise variables are fixed; no complex change of noise
+integration variables has been performed. No original mask, coarea factor,
+scalar factor, complement, contact, root count, or normalizer is altered.
+
+7. SOURCE LOCATORS
+
+Repository at 462cac934658cfd5ef6f68e1b62141bf58c505d0:
+- evidence/inherited/original-workspace/work/package/work/archive/
+  ym4-research/outputs/ym4-infrared-cancellation-notebook.tex,
+  ccs-primitive-section through ccs-composition-section (about lines
+  832-983): actual P, relative endpoint mean, corrected one-step output,
+  tangent covariance, and Z recurrence.
+- evidence/inherited/original-workspace/work/package/work/archive/
+  ym4-research/work/ordinary_constraint_transfer_fragment.tex,
+  first subsection: fixed-identity nonlinear b recursion. Its global
+  small-potential theorem is not imported here.
+- evidence/current/outputs/
+  YM4-native-affine-multiplier-and-heat-interface-20261024.txt, Section5.
+- evidence/current/outputs/
+  YM4-native-ordinary-trajectory-and-moving-maps-20261024.txt, Section5.
+
+Primary B109 locators recorded by these notes: printed252-254,
+(0.3),(0.5)-(0.12). B98 primary formulas still require direct inspection.

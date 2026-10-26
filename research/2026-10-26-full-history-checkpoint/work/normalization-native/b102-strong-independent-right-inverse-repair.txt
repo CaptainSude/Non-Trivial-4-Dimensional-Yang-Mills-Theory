@@ -1,0 +1,285 @@
+B102 STRONG INDEPENDENT-CURRENT RIGHT-INVERSE REPAIR
+25 October 2026. New continuation, not an assertion about an unspecified old one.
+
+This supplements b99-complete-precision-and-strong-response-audit.txt.
+The parent proposed this repair; the algebra and the primary formula below
+were checked independently against a rendering of B102 p299.
+
+1. The actual primary identity
+
+Write T=G' R D*, where G' is the scalar propagator from B99, and let
+
+  (L_U X)(b)=(TX)(b_-)+R_b(TX)(b_+).
+
+B102 (138) reads exactly
+
+  2 <X,Delta'_pi H B>=< i[L_U X,H B], J>.
+
+It holds for the physical H using RD*H=0. Define a NEW linear operator
+S_J on arbitrary Y by
+
+  2 <X,S_J Y>=<i[L_U X,Y],J>.                         (A)
+
+All pairings and transposes in (A) are bilinear holomorphic continuations.
+No physical-current identity is assumed in this definition.
+
+The native weighted bounds for G'RD* and its transpose imply
+
+  ||S_J Y||_(-3)<=C gamma ||Y||_(-1),                (B)
+
+for ||J||_(-3)<=gamma. Indeed the pointwise commutator of Y and J
+has weight -4, and L_U* has order -1, mapping that source to weight -3.
+There is no derivative of J. The same local-kernel proof gives an
+exponentially decaying complete read consisting of the propagator T
+and the endpoint current insertion. Native weights are essential here.
+
+2. Strong constrained inverse
+
+Let G0=(Delta_a)^(-1), Delta_a=Delta+DRD*+Q*aQ, and use the
+native-scaled averaging operator Q. Set
+
+  H0=G0Q*(QG0Q*)^(-1),
+  G_Q=G0-G0Q*(QG0Q*)^(-1)QG0.
+
+Thus QH0=I and QG_Q=0. With native scale factors these are B102
+(129),(131),(143). On one strict first-order complex-background chart,
+B99 Theorems3.3--3.4 and B102(130) give the field, gradient, P1 and
+covariant-Laplacian bounds for H0 and G_Q.
+
+Define
+
+  Hhat=H0+G_Q S_J Hhat
+      =sum_(n>=0)(G_Q S_J)^n H0.                    (C)
+
+For gamma sufficiently small, (B) makes this a contraction in the
+native strong four-slot norm. Therefore Hhat is holomorphic in the
+independent pair (U,J), has a uniform four-slot bound, and satisfies
+QHhat=I exactly. Its leftmost factor in every nonzero correction is
+G_Q; hence the covariant-Laplacian bound is not imported from the
+excluded G,G1 slot in B99 Theorem3.12.
+
+External gauge covariance is inherited factor by factor. Expanding
+all factors in native local words gives a complete exponentially local
+series, with the current J read at its actual endpoint. Weakening the
+complete words gives a B116-type holomorphic localization with all
+four bounds on fixed scalar polydiscs. The word estimates, rather
+than a localized Ward identity, are the reason the bounds survive.
+The weakened Hhat(s) need not obey QHhat(s)=I; the unweakened map does.
+
+3. Exact match on the physical-current graph
+
+For the physical constrained operator H, B102(137)--(138) imply
+
+  Delta_a H=Q*Lambda+S_J H,
+  QH=I.
+
+Apply G_Q and use G_Q Delta_a=I-H0Q. Then
+
+  H-H0=G_Q S_J H.
+
+The same smallness used in (C) implies uniqueness, hence Hhat=H
+on the physical graph for every admitted background where the primary
+identities hold. This does not assume that (3.119)=(3.120) after
+independent current substitution. It creates a new extension that
+matches physically and has the needed strong regularity.
+
+The physical equality of this construction is therefore valid. It is
+not an identity with every other continuation of H away from the
+physical-current graph. In particular it should not be silently
+identified with the separately continued GQ*(QGQ*)^(-1) in B99.
+
+4. Corrected seed K: an exact independent-current identity
+
+Use Hhat in the quadratic average term, defining E=Delta^(2) by
+
+  <A,E A>=2<Hhat C^(2)(A),J>.
+
+B99(3.136)--(3.137) applies with Hhat: its coefficient Hhat*J is
+small and exponentially local. E maps the native field (-1) norm
+to source (-3) with norm O(gamma); it has no derivatives of A.
+Set
+
+  G_new=(Delta_a-E)^(-1),
+  T_new=(QG_newQ*)^(-1),
+  G_Q,new=G_new-G_newQ*T_new QG_new,
+  K=(I+G_Q,new E)H0.
+
+Then, EXACTLY on the independent-current chart,
+
+  K=G_newQ*T_new.                                   (K)
+
+Proof: QK=I. Also
+
+  (Delta_a-E)G_Q,new=I-Q*T_new QG_new,
+
+so (Delta_a-E)K=Delta_a H0-Q*T_new QG_new E H0 is in
+the range of Q*. The constrained inverse problem has a unique
+solution, and it is the right-hand side of (K).
+
+Expand G_new=G0 sum_(n>=0)(E G0)^n. All strong output derivatives
+act on the leftmost G0. The coarse Schur inverse T_new is a small
+perturbation of T0=(QG0Q*)^(-1), in its native scaled kernel norm.
+Consequently K and G_Q,new have the same four-slot strong bounds
+as H0 and G_Q, uniformly in volume and homogeneous grade. This
+argument needs no independent-current Ward identity and no
+Laplacian bound for B99's G1.
+
+For clarity, these four slots are the native weighted field (-1),
+first covariant derivative (-2), P1 (-3), and componentwise
+covariant Laplacian (-3) slots. The action Hessian Delta is not
+the last slot. The P1 estimate uses the bounded DPD* kernel
+from B99(3.49), and retains its native powers of scale.
+
+The strong localization is obtained by expanding G_new, T_new,
+G_Q,new and K into complete native words, including every Hhat*J
+branch of E. Group identities before weighting when they are used
+to establish a strong norm. Scalar weakening of the complete words
+preserves their strong absolute bounds and their external gauge
+covariance. With the native large M condition, their tree length
+pays the fixed localizer radius as in B116(1.11). At all s=1 the
+map is exactly (K). A single chosen localization is used throughout;
+one may not identify two different weakened formulas merely because
+they agree at s=1.
+
+5. Nonlinear continuation: raw-Delta pitfall and bounded repair
+
+STATUS CORRECTION: Sections1--4 and the strong Hhat/K linear estimates
+are the verified result. The raw-Delta action construction below is an
+algebraic possibility, not a proved strong nonlinear-response theorem.
+The action Hessian Delta is not the componentwise covariant Laplacian
+Delta_U appearing in the four-slot norm. This distinction prevents the
+naive estimate indicated below. The bounded L_Q repair at the end
+of this section resolves the raw-Delta coefficient problem. Its full
+nonlinear proof is being written separately by the parent and the
+experiment_hints auditor.
+
+Use Hhat as the right inverse in the nonlinear averaging straightening
+
+  A=A'-Hhat D(A'),
+  D(A')=C(A'-Hhat D(A')).
+
+The native contraction argument still applies; D=O(A'^2). The symbol
+C here denotes the nonlinear averaging residual. QHhat=I implies
+Q(A'-Hhat D)+C(A'-Hhat D)=QA' when the fixed-point equation holds.
+Thus this is an exact averaging straightening at s=1.
+
+A subtle convention matters for the action: B102 p297, immediately
+before (126), explicitly uses functional (74) with Delta IN PLACE OF
+Delta_pi in its alternative representation. To avoid reintroducing
+derivatives of an independent current through Delta'_pi, rebuild that
+raw-Delta alternative, not a mixed formula with independently
+continued Delta_pi in some terms and raw Delta in others.
+
+Let D=D2+D3 with D2 the quadratic Taylor coefficient and D3=O(A'^3).
+Define
+
+  <A',Delta2 A'>=2<Hhat D2(A'),J>,
+
+  Vhat(A')=-<Hhat D3(A'),J>
+            -<A',Delta Hhat D(A')>
+            +(1/2)<Hhat D(A'),Delta Hhat D(A')>
+            +V0(A'-Hhat D(A')).                    (D)
+
+This follows by exact substitution into
+<A,J>+(1/2)<A,Delta A>+V0(A). The remaining explicit terms are
+<A',J>+(1/2)<A',(Delta-Delta2)A'>. Every term in (D) is at least
+cubic. The original physical construction uses P0*J=0 at its minimal
+background to remove the variable linear term on QA'=B. Off that
+physical graph, defining the same zero-based response means choosing
+the continuation with this tangent linear forcing omitted. This is
+an explicit new extension; it does not assert off-graph stationarity.
+
+The desired strong bound ||Vhat'(A')||_(-3)<=C||A'||_strong^2
+DOES NOT FOLLOW merely from the four slots. Differentiating the
+cross term produces Delta Hhat D and D'(A')*Hhat*Delta A'. Raw
+Delta=D*D+Delta' is not the componentwise covariant Laplacian.
+The strong norm need not control its DD* part in supremum norm.
+This is precisely the type of issue B109 p272 avoids. A separate
+bounded representation or an additional derivative estimate is needed.
+
+Construct G=(Delta_a-Delta2)^(-1) and its Q-constrained covariance
+tilde-G, as in B102(180). Define
+
+  K=(I+tilde-G Delta2)H0,
+  a+tilde-G Vhat'(a+K B)=0,
+  Hresponse(B)=a+K B-Hhat D(a+K B).                 (E)
+
+The previous audit proves the strong K and tilde-G bounds. The new
+strong Hhat bound handles the previously missing final term in (E).
+IF the missing strong bound on Vhat' and the physical equation match
+are supplied, a small fixed physical B cap and the usual contraction
+give a holomorphic response with all four slots. Those extra steps
+are not proved by the raw-Delta algebra in this section.
+
+The correct bounded coefficient for the RAW alternative is as follows.
+Let T0=(QG0Q*)^(-1) and define
+
+  Lambda=T0[I-QG0 S_J Hhat],
+  K_Q=Q*Lambda-Q*a,
+  L_Q=K_Q+S_J Hhat.
+
+The signs follow by multiplying (C) by Delta_a. Exactly,
+
+  (Delta_a-S_J)Hhat=Q*Lambda,
+  L_Q=Delta_a Hhat-Q*a.
+
+On the physical graph Hhat=H, RD*H=0 and QH=I, so
+
+  K_Q=Delta_pi H,
+  L_Q=Delta H.
+
+Thus replacing both occurrences of Delta Hhat in (D) by the
+bounded coefficient L_Q gives a NEW independent-current Vhat
+that agrees with the RAW physical V as a function of ALL A',
+not merely as a value on the Landau slice. Its A' derivatives
+therefore agree as well at a fixed physical background.
+
+Use the displayed bounded representation K_Q+S_J Hhat to define
+and localize L_Q off-graph, not Delta_a Hhat-Q*a with cancellations
+left unresolved. Transposed factors in its gradient are L_Q*, not
+an independently assumed Hhat*Delta estimate. Hhat*L_Q need not
+be symmetric off-graph; the gradient of its quadratic expression
+uses its bilinear symmetric part. Every occurrence must use this
+same newly chosen continuation. The separate nonlinear audit
+checks the full cubic and derivative bounds.
+
+The required linear estimates here are TWO-ENDED weighted kernel
+estimates, not forward supremum bounds alone. Keep the fine/coarse
+pairings and every native power of the block spacing in Q,Q* and
+the propagator kernels. Each complete word has the corresponding
+B99 endpoint weights and a summable tree majorant. Its bilinear
+transpose reverses the word, interchanges endpoints and has the
+same absolute majorant. The native weighted convolution/Schur
+estimates therefore supply BOTH Hhat:coarse->X1 and
+Hhat*:Y->coarse-source, and BOTH L_Q:coarse->Y and
+L_Q*:X1->coarse-source, in the paired native norms. This is also
+true after scalar weakening, which does not alter endpoint weights.
+For L_Q use its bounded coefficient representation before taking
+the transpose. No estimate of Hhat*Delta on arbitrary X1 is inferred.
+These are the paired estimates required by the full derivative in
+work/Hhat-nonlinear-raw-remainder-audit-20261025.txt.
+
+6. What this repair does and does not settle
+
+It supplies a strong independent-current RIGHT INVERSE and its
+complete-word localization, and a route toward the nonlinear response.
+It avoids an invalid use
+of additive gauge identities after independent-current substitution.
+All displayed definitions must be used consistently to obtain it.
+
+For a prefix theorem a completed new response must be explicitly selected
+as its continuation. The selected current recursion may then be
+defined by the B109 independent-current polynomial; physical agreement
+holds at unweakened physical inputs. Native pivot and return formulas
+must be evaluated using this same response. The finite original cuts
+and fixed real noise do not change merely by this analytic choice.
+
+There remains a matching obligation for inherited analytic activities,
+quadratic/action splitting, denominators, and source-localizer reads.
+Agreement on the physical-current graph alone does not force any old
+independent-pair extension to equal this new one. In particular the
+complete precision continuation in the preceding audit and the
+precision obtained by Taylor expanding (D)--(E) must not be identified
+off-graph without an actual comparison or consistent reconstruction.
+This note proves a repair mechanism; it is not a catalogue or normalized
+law closure theorem.

@@ -1,0 +1,285 @@
+PRIMARY AUDIT: B116 LOCALIZATION, SELECTED CURRENT, AND REAL FRAME CHANGE
+25 October 2026. Reviewer: experiment_hints. Research scratch, no full G1 claim.
+
+Sources: user-supplied B109 paper2.pdf and B116 paper4.pdf, with extracted
+text work/primary-sources/paper2.txt and paper4.txt. Visually checked B109
+printed272--273,280 and B116 printed5--7,9,16; read B116 Sections1--2 and
+the B109 determining-tower argument (3.18)--(3.53).
+
+MAIN FINDING
+
+B116 provides substantially more than local finite-dimensional holomorphy:
+it constructs a ONE-STEP analytic localization simultaneously on the full
+complex noise cap g_k||B||_infinity<epsilon1 and the spatial weakening
+polydisc |s(Delta)|<=exp(kappa1), uniformly in the RG date k. It preserves
+the special B109 selected-current extension, including its strong-response
+norms. It does not state an inclusion theorem for an arbitrary already-noisy
+downward prefix with independent marked sources and currents.
+
+1. THE LITERAL SELECTED PAIR IN B109
+
+At printed272, (3.10)--(3.13), the physical current expansion is
+
+ J_phys(exp(i xi A)U)=J_phys(U)+D_U^*D_U A+F(U,A).
+
+For actual Landau responses the gauge condition permits replacement of
+D^*D by D^*D+DRD^*. The latter equals Delta_U^xi-P1 plus a lower-order
+local operator. B109 therefore defines the analytic source evaluation
+
+ E^(j)(X, exp(i xi A)U,
+       (L^(j-1) eta)^3 J + Delta_U^xi A - P1 A + F1(U,A)).  (3.13)
+
+The scale factor is (L^(j-1) eta)^3, as directly checked from the pixels.
+This is the SELECTED independent-current extension. It is not obtained by
+recomputing the physical current of the weakened field. B109 explains that
+the localized responses need not retain a usable D^*D bound, whereas their
+covariant Laplacian bound is available; this is precisely why J is separated.
+
+Its sufficient response norm is
+
+ N_(j,U)(A)=max(||A||,||P1 A||,||nabla_U^xi A||,||Delta_U^xi A||)<alpha2, (3.14)
+
+and the base pair must belong to
+
+ U_j^c(X,alpha0/2,alpha1/2,alpha0)
+ intersect {grade-(k+1) conditions (i)--(iii) with
+            (1+beta)alpha0,(1+beta)alpha1,alpha0}.          (3.16)
+
+For A=H_j(B(t))+t_square delta H_j, B109 assumes the base response has
+N<=alpha2/3 and chooses the Cauchy radius by
+r N(delta H_j)=alpha2/3. Its exact bound is
+
+ |(3.15)| <= E0 exp[-kappa d_j(X)] / r
+ <= E0 exp[-kappa d_j(X)] 6 alpha2^-1 L^j eta B0 B3
+    exp[-delta0 dist^(xi)(X,square)/2
+         -delta0 M(L^j eta)^-1/2] ||zeta_square H_k(B')||.  (3.17)
+
+The text explicitly says (3.17) persists after localization provided the
+localized H_j and delta H_j satisfy (3.14),(3.9). Thus gauge covariance or
+small field sup norm alone is not the required interface.
+
+2. HOW B116 SUPPLIES THE LOCALIZED RESPONSES
+
+B116(1.2)--(1.5) defines the nonlinear response using H,H0,G and the
+contraction equations
+
+ D(A')=C_nonlin(A'-H D(A')),
+ A0+G dV(H0 B'+A0)=0.
+
+The operators may be replaced by others having the SAME native regularity
+norms and bounds. Localization multiplies each generalized random-walk word
+by the product of s(Delta) for the cubes it visits. See (1.6)--(1.11).
+For a protected seed, exterior cubes are weakened; after decomposition
+s=0 outside the selected connected component Y0 and is1 in the protected
+seed. All active s coordinates are allowed SIMULTANEOUSLY in
+
+                    |s(Delta)|<=S=exp(kappa1).
+
+Long-walk exponential decay pays the product of weakening parameters;
+short walks cost exp(16 kappa1). Taking delta1 M>=kappa1 gives the native
+operator bound B0 exp(16 kappa1), in all stated admissible norms. The
+constant does not count the number of active cubes.
+
+The contractions then give, on the stated strict smallness conditions,
+
+ ||D(H(s),A')|| <=4 C2 ||A'||^2,                          (1.14)
+ ||A0(s,H0(s)B')|| <=4 C4(B0 e^(16 kappa1))^3 ||B'||^2,  (1.16)
+ ||H_k(s,B')|| <=4 B0 e^(16 kappa1)||B'||,               (1.18)
+
+with the analogous bounds in the admissible regularity norms. These
+functions are jointly analytic in the independent (U,J) coefficient pair
+on a domain satisfying B109(i)--(iii) with larger fixed alpha0',alpha1'.
+
+The ACTUAL physical fluctuation argument remains
+
+ B'=g_k C B - h Dtilde(g_k C B),                          (1.19)
+ ||B'||<=C1 g_k||B||<C1 epsilon1.                        (1.20)
+
+Consequently, for the full cap g_k||B||<epsilon1,
+
+ ||H_k(s,B'(B))|| <=K_kappa g_k||B||,
+ K_kappa=4 B0 C1 exp(16 kappa1),                         (1.21)
+
+uniformly on the entire weakening polydisc and in every stated output
+norm. The smallness requirement includes exp(32 kappa1)epsilon1 small.
+For the near-source response in (3.31) B116 additionally requires
+K_kappa epsilon1<=alpha2/4. Its t_square Cauchy circle has
+
+ |t_square| K_kappa g_k||B||=alpha2/2.                   (1.22)
+
+All these are one-step assertions on an admitted external pair, with full
+cut noise. No alteration of the real integration variables is performed.
+
+3. GLOBAL WEAKENING REGION AND LOCAL OUTPUT DOMAINS
+
+The weakening contours in (1.23) are |sigma(Delta)|=exp(kappa1), centered
+at ZERO; the real FTC parameters s(Delta) run over [0,1], with kernels
+(sigma-s)^-2. They are not unspecified little discs around1. The same
+large polydisc controls all active spatial parameters simultaneously.
+
+For old-source far terms B116 printed8--9 explicitly localizes BOTH H_j
+and its response derivative, uses B109(3.17), and says each term is analytic
+on the corresponding (3.16) restricted to its complete carrier Y. All
+these domains contain the common subspace
+
+ U_(k+1)^c(Y,(1+beta)alpha0,(1+beta)alpha1,alpha0).
+
+For near terms the common-domain passage follows B109's determining
+tower construction and Lemma4, rather than just (i)--(iii). B116 printed7
+then restricts to this same common subspace. Lemma1 gives exactly
+
+ V'_k(Y,U,J,B) analytic on
+ U_(k+1)^c(Y,(1+beta)alpha0,(1+beta)alpha1,alpha0)
+       x {B:||B||<epsilon1/g_k on Y},                   (1.34)
+
+with physical equality at J=J_(k+1), (1.35), and cap
+E0 epsilon1 C1 M^q exp(C2 kappa1) exp[-(1-2delta)kappa d_k(Y)], (1.36).
+Lemma2 extends this to the entire homogeneous fluctuation action,
+(1.41)--(1.43), including its quadratic-in-B part.
+
+After the cluster expansion, B116 printed15 restricts the activities
+and covariance coefficient extensions to U_(k+1)^c(X,alpha0,alpha1).
+The separate Mayer parameters tau(Y) have carrier-dependent radius
+
+ |tau(Y)|^-1=E0 epsilon1 C1 alpha4^-1 M^q exp(C2 kappa1)
+                  exp[-(1-3delta)kappa d_k(Y)],          (2.18)
+
+which yields the small quadratic/body bound (2.20). These tau parameters
+are not arbitrary independent-current source perturbations. Neither family
+of weakening discs can simply be relabeled as an unrestricted prefix tube.
+
+4. THE DETERMINING-TOWER PREMISE
+
+B109(3.18)--(3.25) constructs a particular nested sequence of cubes from
+condition(iv), uses the literal M^j determining data, and replaces the
+background in H_k by the local completion U_(k+1)(square0,M'(U)). The
+selected J remains an independent variable. The large gauges in (3.26),
+(3.27) act on J and B as well as U, exactly as emphasized after(3.28).
+
+The near source is evaluated on a reconstruction from a determining
+field Bcal defined in (3.30); A must obey the regularity norm (3.31),
+including its indicated Holder control. Lemma4, (3.53), supplies membership
+of the resulting field and its selected physical reconstruction current
+in U_j^c(X,alpha0,alpha1), uniformly for tau in [0,1] and an independent
+determining perturbation B_extra of sup size alpha3 around tau Bcal.
+Its quantitative restrictions include
+
+ B3 alpha3<alpha1/2,  2 B3 alpha3<=beta L^-2 alpha0.
+
+The fourth nested condition is proved via the specific minimum identity
+(3.38). These conclusions do not follow for arbitrary noisy determining
+fields merely because each bond perturbation is small. The source and
+all its collars must match this actual determining tower.
+
+5. A USABLE ONE-STEP RESPONSE CONSEQUENCE
+
+The displayed bounds furnish dimension-free directional Cauchy estimates
+when a SPARE cap is retained. For example, if the actual noise satisfies
+g_k R<=epsilon1/2 and active |s|<=S0<S, then for any sup-unit noise
+direction v and any of the genuinely proved output norms N,
+
+ ||D_B[H_k(s,B'(B))]v||_N <=2 K_kappa g_k.
+
+This follows by the complex line B+zv of radius epsilon1/(2g_k), using
+the cap K_kappa epsilon1. Mixed fixed-order noise/weakening Cauchy
+estimates similarly cost the respective inverse spare radii, with no
+ambient dimension multiplier. They do not imply rooted spatial response
+decay; that requires the native random-walk insertion bound, which is
+separately used for delta H_j in (3.9),(3.17).
+
+If a full original cut approaches the LIMIT of the only certified analytic
+cap, the uniform spare margin cannot be assumed. It can be arranged by
+choosing the original constants with reserve and proving the same estimates
+on a larger analytic cap; no real cutoff is enlarged by doing so.
+
+6. WHAT THIS DOES NOT YET PROVE FOR G1b/G1c
+
+Uniformity in k of a one-step theorem is distinct from stability under an
+arbitrary number of already-noisy compositions. B116 treats each step with
+one admitted external pair and one fluctuation B, and all incoming E^(j)
+belong to its inductive analytic class. It does not prove that every marked
+source/history can be represented by that class, nor that arbitrary
+simultaneous weakened prefix images satisfy (3.14),(3.16), the specific
+determining towers, and all old-source collars with spare margins.
+
+Its output-domain closure suggests an alternative to composing every old
+field map: rebuild marked source coefficients into a closed analytic class
+after each step. The one-step domain proof is then already available for
+members of that class. But arbitrary sources may lack the Ward, support,
+relevance and norm structure used in the action proof, and a marked
+coefficient-sum/normalization theorem remains to be supplied.
+
+7. EXACT TRIANGULAR REAL FRAME REPARAMETRIZATION
+
+There is a valid measure-theoretic mechanism behind the proposed change of
+frames. Order free-noise blocks by descending grade. Suppose g_j is a REAL
+compact-group site gauge determined by outer data and noises at grades
+strictly above the block being changed. Set
+
+ y_l(b)=Ad_(G_l(b_-)) x_l(b),
+
+where G_l is the ordered product/restriction of those higher-grade gauges.
+The map is triangular and recursively invertible. Each diagonal block is
+orthogonal in the invariant Lie-algebra inner product, so its absolute
+Jacobian is1. Every original centered color-ball product is preserved
+exactly. Dependence of G_l on higher variables creates off-diagonal
+Jacobian entries only. Dependence on x_l itself would invalidate this
+argument and must be excluded in the actual construction.
+
+Private pivot ownership is geometric and unchanged. Let R_full,R_free,
+R_coarse be the adjoint actions on the complete, free and coarse tangent
+fields. Covariance of the literal constraint gives
+
+ Q_(U^g) R_full=R_coarse Q_U.
+
+The native C_U is uniquely characterized by Q_U C_U=0 and free projection
+P_free C_U=I. Since P_free R_full=R_free P_free, uniqueness gives
+
+ C_(U^g) R_free=R_full C_U.
+
+The private-pivot right inverse transforms in the same way by its support
+and right-inverse characterization. Equivariance and uniqueness of the
+nonlinear implicit solution give covariance of Dtilde and hence of the
+FULL reconstruction g_k C B-h Dtilde(g_k C B). This proves the needed
+coordinate matching; one must not freeze C or the nonlinear pivot.
+
+8. GAUGE FACTORS AND CONDITIONAL COVARIANCE UNDER THAT CHANGE
+
+The absolute soft gauge G(F)=sum[1-Re tr P(F;y,x)] is NOT invariant under
+arbitrary gauges away from coarse centers. However, at an actual averaged
+axial baseline W, P(W;y,x)=I. Therefore its exact value is also
+
+ G_rel(F,W)=sum[1-Re tr(P(F;y,x) P(W;y,x)^-1)].
+
+Under simultaneous transport of F,W the relative ratio conjugates by
+g(y), so G_rel is invariant. This is an exact rewriting on the original
+axial baseline, followed by a covariant coefficient continuation. The
+original gauge cutoff has the same property IF it is precisely the norm
+of this relative ratio minusI. No claim is made for other predicates.
+
+Wilson differences and the simultaneous-current term transform covariantly.
+Haar and nonlinear private-pivot factors are preserved by the corresponding
+orthogonal coordinate transformation. Consequently the transported complete
+quadratic is D_new=R_free D_old R_free^-1. Its covariance transforms the
+same way; the positive Gaussian normalization is unchanged.
+
+For an active/retained split, the block-diagonal R preserves both sets.
+The principal covariance, the conditional mean and the retained vector
+must ALL be transported. The conditional mean transforms by R_active;
+the determinant and Schur scalar stay unchanged. This does not set any
+nonzero retained noise to zero. These identities are for the transported
+relative-gauge kernel, not a new absolute gauge functional substituted
+without explanation.
+
+Every arbitrary earlier/nonlocal mask or mark can always be retained as
+its literal pullback through the triangular inverse map. This preserves
+the original real law and all normalizers exactly, but does NOT prove
+that the pullback has the required analytic source representation. Thus
+the change of frames is a legitimate exact real reparametrization and
+may remove large gauges from covariant analytic factors. To assert that
+only small B98 returns remain in the complex proof requires an actual
+factor-by-factor census, adaptedness at every grade, and common domains
+for the resulting selected fields/currents and retained predicates.
+
+No contour rotation, complex-noise substitution, mask deletion or
+replacement of an original denominator is used in the real identity.

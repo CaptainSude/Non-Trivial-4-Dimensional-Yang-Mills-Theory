@@ -1,0 +1,287 @@
+FINAL CROSS-AUDIT: NEW HHAT WHOLE-RESPONSE INPUT
+25 October 2026
+
+Audited nonlinear note:
+  work/Hhat-nonlinear-raw-remainder-audit-20261025.txt.
+Linear input:
+  work/elliptic-linear-Hhat-independent-current-audit-20261025.txt.
+
+VERDICT. The two-ended coefficient bounds(8) in the nonlinear note follow
+from the native elliptic kernels and the small-current Hhat series in
+the HOMOGENEOUS CURRENT-SCALE setting. With the explicit corrected
+quadratic covariance and seed below, the new nonlinear equation gives
+a jointly holomorphic whole response with all four required output
+slots, uniformly on the declared source-weakening polydisc. At s=1
+and physical current it is exactly the physical raw B102 response.
+
+This verifies a NEW whole-response map input. It does not identify the
+old canonical independent-pair continuation or its normalizers, and
+does not certify a complete near/far source catalogue. The nonlinear
+and linear notes' complete-read and smallness hypotheses remain part
+of the theorem; no missing native domain is replaced by a name.
+
+1. NORMALIZED HOMOGENEOUS SPACES AND TWO SCHUR BOUNDS
+
+Work in one homogeneous current scale with coarse block side1 and
+fine spacing xi=L^-j. Fine pairings include xi^d; coarse pairings
+include coarse cell volume1. Let row and column Schur bounds always
+use these measures. No count of fine sites may replace their weighted
+volume. All complete native reads and collars are retained.
+
+For a fine-to-fine kernel T, the two norms are
+
+  sup_x sum_y xi^d ||T(x,y)||,
+  sup_y sum_x xi^d ||T(x,y)||.
+
+Use the corresponding mixed coarse/fine measures for H0,Hhat,L_Q,Q.
+The same definitions with exponential block-distance weights give
+decay norms at any fixed rate below the native rate. Their convolution
+inequalities have fixed constants, independent of volume and depth.
+These are the homogeneous versions of the native weighted Schur sums.
+
+Both ends are needed. A bound of T from sup norm to sup norm alone
+would not imply the bound for T^T used in the fluctuation gradient.
+
+2. TWO-ENDED LINEAR COEFFICIENT ESTIMATES
+
+Use the elliptic G0=Delta_a^-1, not the gauge-completed propagator.
+The native G0 and G' are symmetric for the bilinear transpose, so their
+bounded kernel rows also bound their columns. Their one-derivative
+kernels are controlled on both ends by B99 Theorem3.1,(3.42)--(3.47).
+The DP kernel is controlled by(3.49). The normalized Q is block-local
+and bounded in both Schur senses, with its native cell weights.
+
+The coarse inverse W=(QG0Q^T)^-1 is symmetric and has the native coarse
+decay bound. H0=G0Q^T W has both mixed Schur bounds. Its stronger output
+regularity, including the covariant Laplacian, is B102(129),(130).
+The projected elliptic covariance
+
+  G_Q=G0-H0 QG0
+
+therefore has both weak Schur bounds and all four strong output bounds.
+The same conclusions hold term by term in its elliptic word construction:
+the leftmost G0 supplies strong output derivatives, while the remaining
+factors require only bounded decaying kernels. B99 Theorem3.10 printed416
+includes all the norms(3.42)--(3.47) for this elliptic G0; the later
+Laplacian exception for gauge-completed G,G1 is not applicable.
+
+Write E_U lambda(b)=lambda(b_-)+Ad_(U(b))lambda(b_+). The linear audit
+proved
+
+  S_JY=(i/2)D R G' E_U^T[Y,J].                     (1)
+
+The kernel D R G'=D G'-D P G' and its transpose G' R D* both have
+the required two-ended bounds. Multiplication by J is local and has
+norm gamma. Thus S_J and S_J^T have Schur norm at most C gamma.
+Equivalently in multiscale engineering weights, [Y,J] has weight-4
+and D R G' maps weight-4 to weight-3; no derivative of J is taken.
+
+Choose gamma so the row AND column norms of G_Q S_J are below a fixed
+rho<1, also in a reserved exponential-decay norm. Then
+
+  Hhat=sum_(n>=0)(G_Q S_J)^n H0                    (2)
+
+has both mixed Schur bounds. Strong output norms follow by placing the
+derivative on the leftmost G_Q, or on H0 in the n=0 term. This proves,
+in particular, the bound for Hhat^T f as well as the forward bound
+for Hhat z. It is not inferred from a forward norm alone.
+
+3. THE MULTIPLIER L_Q ALSO HAS TWO ENDS
+
+Keep the nonlinear note's exact definitions
+
+  Lambda=W[I-QG0 S_J Hhat],
+  L_Q=Q^T Lambda-Q^T a_Q+S_J Hhat.                 (3)
+
+Every factor on the right has the two-ended kernel bound just proved;
+Q^T a_Q is local. Consequently both L_Q and L_Q^T have uniform mixed
+Schur bounds with the appropriate coarse/fine measures. The same holds
+with exponential weights, after a fixed reserve in decay rate.
+
+In current homogeneous units this gives precisely nonlinear-note(8):
+
+  ||Hhat z||_(X1)<=C_H||z||_coarse,
+  ||Hhat^T f||_(coarse-source)<=C_H||f||_Y,
+  ||L_Q z||_Y<=C_L||z||_coarse,
+  ||L_Q^T A'||_(coarse-source)<=C_L||A'||_(X1).
+
+Here X1 contains field and first covariant difference, and Y is the
+forcing/current norm. At coarse scale1 their numerical sup weights
+are1. Restoring a different coarse scale uses the native pairings;
+the dimensionless coarse field's dual source has order ell^-4, as
+explained in the nonlinear note. This audit does not silently assume
+an unproved general mixed-scale extension beyond those native weights.
+
+It follows that Hhat^T L_Q and L_Q^T Hhat are bounded in the needed
+coarse norms. The symmetric combination in the exact derivative of
+the quadratic scalar is therefore bounded as well. The full current
+and other branches in(3) remain in every coefficient's complete read.
+
+4. QUADRATIC CORRECTION AND ITS STRONG COVARIANCE
+
+Define Delta2=Delta_hat^(2) by polarization of
+
+  <A',Delta2 A'>=2<Hhat C^(2)(A'),J>.              (4)
+
+This fixes a bilinear-symmetric operator even though Hhat itself need
+not be symmetric. The native local C^(2) kernel and the bound for
+Hhat^T J give the analogue of B99(3.136),(3.137):
+
+  ||Delta2 A'||_Y<=C gamma ||A'||_(X0),            (5)
+
+with both endpoint kernel bounds and complete Hhat/J branches. In
+homogeneous units X0 is the weak field sup norm. Delta2 is analytic
+in independent U,J and vanishes with J.
+
+For smaller gamma define the Q-constrained corrected covariance by
+
+  Gtilde_Q=(I-G_Q Delta2)^-1 G_Q
+           =G_Q(I-Delta2 G_Q)^-1.                 (6)
+
+All its strong output bounds again come from the leftmost G_Q.
+The same small-current majorant gives uniform decay and two-ended
+bounds. The two expressions agree by the push-through identity, and
+Gtilde_Q is bilinear symmetric because G_Q and Delta2 are symmetric.
+At unweakened coefficients QGtilde_Q=0.
+
+Equivalently(6) is the constrained covariance of Delta_a-Delta2.
+Indeed, for f fixed, y=(6)f lies in ker Q and obeys
+
+  y=G_Q f+G_Q Delta2 y.
+
+By the projection identity this is exactly the equation obtained by
+testing (Delta_a-Delta2)y=f against every vector in ker Q. Uniqueness
+in the small perturbation chart identifies it with the projected
+inverse built from (Delta_a-Delta2)^-1. Thus (6) matches B102's
+corrected projected covariance when the coefficients are physical.
+
+Define the corrected linear seed
+
+  K=(I+Gtilde_Q Delta2)H0.                         (7)
+
+It has all four strong output bounds and the two-ended kernels.
+At unweakened coefficients QK=I. The term Gtilde_Q Delta2 H0 is
+retained: it is precisely the linear term absent from the literal
+uncorrected reading of B116(1.4).
+
+5. THE NONLINEAR GRADIENT AND FIXED POINT
+
+Use exactly Vhat_raw from the audited nonlinear note, with H=Hhat
+and L=L_Q. Its full derivative is its equation(7), including
+-D'^T L^T A' and Sym(H^T L). The two-ended estimates above establish
+all the coefficient hypotheses of that gradient proof. The native
+local averaging derivative bounds, its D_3 cancellation, and the
+raw local plaquette estimate therefore give on a strict small ball
+
+  ||Vhat_raw'(A')||_Y<=C||A'||_(X1)^2,
+  ||Vhat_raw'(A')-Vhat_raw'(B')||_Y
+        <=C r ||A'-B'||_(X1)                      (8)
+
+when both inputs have X1 norm at most r. There is no differentiation
+of the independent current and no off-physical Landau identity here.
+
+For a sufficiently small coarse B, solve
+
+  a+Gtilde_Q Vhat_raw'(KB+a)=0.                    (9)
+
+Choose the ball ||a||_(X1)<=C_a||B||^2 with C_a fixed first.
+The first bound in(8) maps it into itself; the second bound, followed
+by the X1 norm of Gtilde_Q, makes it contractive after choosing the
+noise cap sufficiently small. Thus a is unique and jointly analytic
+in B,U,J. Its strong norm is also O(||B||^2), because (9) expresses
+it as Gtilde_Q acting on a forcing of that size.
+
+Let z=KB+a and solve the literal linearizing equation
+
+  D(z)=C(z-Hhat D(z)).
+
+Its native contraction gives ||D(z)||_coarse<=C||z||_(X1)^2.
+Set the new whole response
+
+  A(B)=KB+a-Hhat D(KB+a).                         (10)
+
+The strong bounds for K,Gtilde_Q,Hhat now give
+
+  max(||A||,||nabla_U A||,||P1 A||,||Delta_U A||)
+                   <=C ||B||                     (11)
+
+in the homogeneous current units, uniformly in grade and volume on
+the fixed native chart. Composing with the literal private-pivot map
+and its verified ||B'||<=C||g x|| bound gives the desired whole-map
+input C_H delta in all four slots.
+
+At unweakened independent coefficients, Qz=B and QHhat=I. Therefore
+the linearizing equation also gives the exact nonlinear relative
+constraint Q_nonlin(A)=B, on the native logarithm branch. No Landau
+condition for the independent-current response is asserted.
+
+6. EXACT PHYSICAL RAW B102 MATCH
+
+Here the physical nonlinear background is a native constrained minimum
+U=U_k(V0), J=J(U). B102(178) gives Gtilde_Q J=0, so the zero-based
+equation(180) applies. Arbitrary real regular U with its physical
+current would retain the -Gtilde_Q J term in(143) and is not included
+in this nonlinear identification.
+For these physical U,J and s=1, the linear proof gives Hhat=H. The multiplier
+identity gives L_Q=Delta_raw H, for every coarse argument. Hence
+Vhat_raw(A') equals the RAW remainder for every admitted A', not
+merely on the Landau slice. This is the remainder obtained by B102's
+explicit switch to raw Delta at printed297 before(127)--(128), and
+used in(143),(180). Its unrestricted derivative is therefore the
+correct one. The unchanged Delta_pi version of(80) would not suffice.
+
+Equation(4) is then the original quadratic Delta^(2) correction, and
+(6) is the original improved constrained covariance. Put
+
+  A0=a+Gtilde_Q Delta2 H0 B.
+
+Then KB+a=H0B+A0, and(9) becomes exactly
+
+  A0-Gtilde_Q Delta2 H0B
+       +Gtilde_Q Vraw'(H0B+A0)=0,
+
+the strong B102(180) equation. Formula(10) becomes B102(179).
+The unique small physical solution therefore agrees pointwise with
+the original nonlinear response. Its Landau property on that physical
+subfamily follows from this identification, not from an off-physical
+Ward assumption. The first derivative is K, including its quadratic-
+precision correction; the B102/B116 seed discrepancy is not glossed.
+
+7. SIMULTANEOUS SOURCE-WEAKENING POLYDISC
+
+Fix the weakening radius and the exact coefficient-word convention
+before choosing current and noise caps. The native complete word
+majorants, with scalar weights, give fixed inflated versions of all
+two-ended and strong constants above. Choose gamma small enough for
+both linear Neumann series with those inflated constants, and then
+choose the noise cap for the nonlinear contraction. The resulting
+constants are independent of the number of weakening variables and
+of lattice volume. Strict spare caps give an open holomorphic
+neighborhood of the closed indicated polydisc.
+
+Consistency is required: use the SAME weakened H in D, D_3, Vhat_raw
+and the polarized Delta2. Use the SAME declared L coefficient in the
+scalar and in its differentiated formula. A factorwise primitive-word
+weighting followed by these algebraic definitions is one explicit
+consistent choice. If a different flattened whole-word weighting is
+chosen, define every resulting coefficient exactly and redo the same
+majorants; do not silently mix two s-families.
+
+For s!=1, generic weakening loses QH(s)=I and QG_Q(s)=0, and it need
+not preserve L(s)=T_U H(s). None of these identities is used in
+the norm/gradient contraction proof. At s=1 all original algebraic
+identities and physical matching are restored. Covariance is preserved
+because every primitive coefficient and transpose intertwines the
+actual endpoint actions and every weakening weight is scalar.
+
+8. PRECISE LIMIT OF THIS CERTIFICATE
+
+This certificate supplies a consistent new whole-response N1 input
+for the common-frame MAP construction, with original physical response
+at s=1. It does not identify the prior canonical off-physical Gaussian
+precision, scalar remainder, coarea factors or normalization. Those
+objects must be rebuilt consistently if this continuation is used in
+an integral. It also does not verify every determining-cube replacement,
+near/far source response branch, normalized denominator, catalogue
+count, or mixed-history interface. No global G1 or YM4 closure is
+claimed.

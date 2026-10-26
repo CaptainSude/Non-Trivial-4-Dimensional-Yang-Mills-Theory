@@ -1,0 +1,169 @@
+INDEPENDENT AUDIT: LITERAL ENDPOINT RETURN AND UNIFORM SUP BOUND
+25 October 2026. Reviewer: experiment_hints.
+
+Reviewed in full:
+work/B98-B109-literal-endpoint-return-20261025.txt;
+work/B98-return-uniform-sup-bound-audit-20261025.txt.
+
+Directly viewed primary pixels:
+B98-defs-15.png (printed31), B98-defs-16.png (printed32),
+B98-return-17.png (printed33), B98-Q-21.png (printed37),
+B98-27.png (printed43), B109-return-17.png (printed265),
+B109-average-05.png (printed253), B109-average-06.png (printed254).
+Also checked the corresponding primary extracted text, including B98
+printed38--39 and B109 printed266.
+
+VERDICT
+
+The product and inverse orders are correct. The ordinary endpoint and
+physical minimum-response identity are established on the stated common
+native domain. The return supremum estimate follows from the cited uniform
+B98 Propositions6,7 and the literal finite product, with the claimed geometric
+scale sum and no factor exponential in depth. No algebraic repair is needed.
+The B109 version must consistently use its modified averaging convention
+throughout, and imports the p254 transfer of the uniform B98 results. The
+direct local mean estimate alone would not replace that multiscale import.
+Neither note proves source-localizer admission or a complete G1a statement.
+
+1. INVERSE ORDER CHECKED DIRECTLY AGAINST (89), (97)--(99), (106)
+
+Use V^g(e)=g(e_-)V(e)g(e_+)^-1, so (V^g)^h=V^(hg).
+Let C_j=X_j W_j and a_j be the displayed relative endpoint log mean.
+Multiplication of B98(89) on the RIGHT by W_(j+1) gives exactly
+
+ C_(j+1)=(M C_j)^(a_j^-1).
+
+Indeed the right endpoint factor transported by W_(j+1) cancels against
+that final W_(j+1); reversing this multiplication would be incorrect.
+Gauge covariance then gives
+
+ M^jF=C_j^(b_j),   b_(j+1)=(r_j b_j)a_j,
+ b_k(y)=a_0(y)a_1(y)...a_(k-1)(y),
+
+with all earlier factors restricted to the same final vertex. This is
+precisely the order visible in B98(97). B98(87),(99) give u(y)=b_k(y)^-1.
+Independently, at a final vertex every endpoint path in (106) is trivial,
+so its j=k-1 down to0 product is a_(k-1)^-1...a_0^-1. Thus
+
+ M^k(F^u)=(C_k^(b_k))^(b_k^-1)=C_k.
+
+The full-field formula for (106) is also correctly transcribed: each centered
+factor a_j^-1 T_j is conjugated by the INVERSE hierarchical background
+transporter, and those conjugated factors multiply in descending j. There
+is no commutation or multiplicative-log-mean assumption.
+
+2. B109'S TWO DISTINCT GAUGES
+
+B109 printed265 explicitly first transforms the minimum into relative axial
+gauge by a transformation equal to1 on T^(k). Call it h. Consequently
+F_ax=F_orig^h has unchanged ordinary datum exp(iB')c.
+
+The next displayed formula has the relative field raised to u_k^-1 to obtain
+exp(i eta H_k(B')). The same paragraph identifies u_k with B98(106), evaluated
+at that Landau relative field. Therefore, for FULL fields,
+
+ F_L=F_ax^(u_k^-1),   F_ax=F_L^(u_k).
+
+Applying the endpoint identity yields
+
+ M^k F_L=(exp[i Q_k(W,eta H_k(B'))]c)^(b_k),
+ M^k F_ax=exp[i Q_k(W,eta H_k(B'))]c=exp(iB')c.
+
+Right cancellation of c followed by the COMMON injective logarithm branch
+gives Q_k(W,eta H_k(B'))=B'. The total return to the original minimum is
+h^-1 u_k, since F_orig=(F_L^u_k)^(h^-1). Its coarse restriction remains
+b_k^-1. It is false to replace u_k's coarse restriction by1; the identity
+restriction belongs to the first transformation h.
+
+For this physical identity, the original fine minimum, the next minimum,
+and the small increment must be in B109's actual regularity/minimum domains.
+An arbitrary off-graph input or arbitrary complex background is not covered
+merely because the finite group equations can be written.
+
+3. MODIFIED B109 AVERAGE: WHAT IS AND IS NOT TRANSFERRED
+
+B109(0.11) uses the chosen analytic group mean of the finite family of short
+path holonomies. Formula(0.12) uses that endpoint transporter inside the
+ordinary anchored logarithmic average. Equation(0.6) gives the needed
+left/right covariance, and (0.9) preserves real unitarity. The paragraph
+immediately after(0.12) explicitly transfers B98's results to this convention.
+
+All W_j, X_j, a_j, P_j, M, Q_k and u_k in the B109 application must be computed
+using that SAME modified convention. This does not identify their numerical
+values with B98's single-path choices. In particular Q_k in the final B109
+identity is the correspondingly modified Q_k. If desired, marking it Q_k^mod
+would remove any notational ambiguity, but the companion note's Section4
+already states the convention change.
+
+The endpoint induction uses covariance and the actual relative definition,
+so it survives the replacement. For the quantitative supremum theorem,
+the multiscale estimates for W_j and X_j additionally use the p254 transfer
+of B98 Propositions6,7. Step6 correctly supplies the further finite mean
+estimate; equivariance by itself would not supply those multiscale estimates.
+
+After factoring one anchor path, all other real path differences lie in a
+fixed small neighborhood of identity by the native local curvature bound.
+The mean is analytic there and its derivatives are uniformly bounded on a
+strict smaller neighborhood. The arbitrary real anchor is unitary, so it
+does not change operator norms. At fixed L there are finitely many paths,
+and the complex perturbations remain in this neighborhood on a smaller
+a,b ball. This proves the stated finite-primitive P_j bounds and justifies
+the hierarchical product estimate for the modified endpoint convention.
+
+4. DEPTH-UNIFORM SUPREMUM ESTIMATE
+
+For the first j steps set s_j=L^j eta, eta_j=L^-j. Rescaling physical length
+by s_j gives A_res=s_j A, A'_res=s_j A', alpha0_res=s_j^2 alpha0. The same
+group-valued lattice configurations and averaging operations are retained,
+and eta_j A_res=eta A. Thus the truncation/rescaling in Step1 is valid.
+
+B98 Propositions6,7 are uniform in depth. Applied on this rescaled problem,
+they give W_j=(I+O(s_j a))W_j^real and Log X_j=O(s_j b). For the latter,
+one can make the linear dependence explicit using Schwarz on the analytic
+A_res line: Q_j vanishes at A_res=0 and is uniformly bounded on a fixed
+larger ball, uniformly in the allowed A'_res. No dimension factor or C^j
+is introduced. Choose strict a,b ceilings so all local logs are defined.
+
+Unitarity of W_j^real gives both norm and inverse-norm bounds
+exp(C s_j a). Each single-level endpoint path has at most a fixed q_L
+edges. Its relative ratio therefore differs from identity by O(s_(j+1)b),
+including reverse oriented edges, whose relative factors are transported
+inverses. The centered factors a_j^-1 T_j obey the same bound.
+
+The hierarchical background transporter contains ONE finite endpoint path
+at each grade ell<=j. Hence its norm and inverse are bounded by
+
+ exp(C q_L a sum_(ell<=j)s_ell) <= exp(C_L a s_(j+1)).
+
+Conjugating each centered factor by that transporter costs a fixed constant
+at the strict a ceiling. Its deviation from identity is C s_(j+1)b.
+Finally
+
+ sum_(j<k)s_(j+1)=L(1-L^-k)/(L-1)<=L/(L-1).
+
+Submultiplicativity and product telescoping establish exp(Cb) norm/inverse
+bounds and C'b distance-to-identity bounds. The inverse product must be
+reversed, but has the identical norm estimate. The fixed strict ceilings
+leave a slightly larger common analytic ball, so joint holomorphy and
+ordinary finite-direction Cauchy estimates follow.
+
+5. HYPOTHESES THAT MUST STAY ATTACHED
+
+- Native compatible block geometry and complete contour/virtual plaquette
+  reads, not just a bound on a smaller displayed carrier.
+- A REAL compact-group reference W_real satisfying B98(52), with curvature
+  alpha0 eta^2 on all those reads.
+- A single representation W=exp(i eta A')W_real with globally bounded A'
+  on the required reads, and X=exp(i eta A) with bounded A, inside fixed
+  strict ceilings. Separate pointwise gauges do not prove such a chart.
+- The actual common logarithm/mean branches and the same modified averaging
+  convention at every level.
+- For Q_k(W,eta H_k(B'))=B', the actual B109 minimum-response and relative
+  gauge hypotheses, plus the common injective logarithm branch.
+
+B98 printed43 expressly says (104)--(106) generally fail the covariant
+finite-difference condition(165). The supremum and holomorphy results do
+not imply that condition. Products of distinct returns in a source prefix
+require a separate sum of their costs and their native multiscale tests.
+Independent currents, source localizers, simultaneous old/new reads, masks,
+and original normalization factors are not admitted or estimated here.

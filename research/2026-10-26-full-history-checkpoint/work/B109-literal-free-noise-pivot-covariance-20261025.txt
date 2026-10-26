@@ -1,0 +1,206 @@
+LITERAL FREE-NOISE AND PRIVATE-PIVOT GAUGE COVARIANCE
+25 October 2026. Reviewer: experiment_hints. Exact map matching.
+
+PRIMARY CHECK
+
+Read and visually checked user-supplied B109, printed266--269,
+particularly (2.4),(2.5),(2.9)--(2.12),(2.16), and the paragraphs defining
+the private pivot, h, C and Dtilde. Images are B109-return-18.png and
+B109-pivot-19.png through -21.png in work/primary-sources.
+The ordinary averaging covariance follows directly from B109(0.6),
+(0.11),(0.12). The convention below is that of these actual averages.
+
+RESULT
+
+For fixed geometric private pivots and the native positive-bond Lie-algebra
+coordinates, define the FREE transformation by
+
+ (T_g x)(b)=Ad_(g(b_-))x(b),  b in I_j,                    (A)
+
+where I_j is the set of positive grade-j bonds after deleting b0(c) for
+every grade-(j+1) bond c. Here g is restricted from the fine lattice to
+grade-j sites. This is the actual transformation on free coordinates,
+not a presumed transformation of a constrained field.
+
+For the literal map
+
+ B'_U(x)=lambda C_U x-h_U Dtilde_U(lambda C_U x),
+
+where lambda=g_j is the scalar coupling, one has exactly
+
+ B'_(U^g)(T_g x)=R_j(g) B'_U(x),                         (B)
+
+with (R_j(g)A)(b)=Ad_(g(b_-))A(b). The independent current transforms
+simultaneously as J->Ad_g J, but is a spectator in this local pivot map;
+it is not recomputed. Thus (B) is precisely the requested independent-
+(U,J) map identity. Below the native pivot operator h is unrelated to
+any large gauge transformation also sometimes denoted h.
+
+1. FULL NONLINEAR CONSTRAINT
+
+Set V=M^j U. Ordinary covariance gives V^g=M^j(U^g), using the restriction
+of g to grade-j sites. B109(2.4) defines the nonlinear grade-j constraint by
+
+ exp(i Qcal_V(A))=M(exp(iA)V)(MV)^-1.
+
+The ratio at a coarse bond c transforms by conjugation at c_-, so on the
+common logarithm branch
+
+ Qcal_(V^g)(R_j(g)A)=R_(j+1)(g) Qcal_V(A).               (1)
+
+Decompose its Taylor expansion in the literal native convention as
+
+ Qcal_V(A)=L Q_V A+N_V(A),   N_V(A)=O(A^2).
+
+Differentiating (1) at0, then subtracting the linear parts, gives
+
+ Q_(V^g) R_j=R_(j+1) Q_V,
+ N_(V^g)(R_j A)=R_(j+1) N_V(A).                          (2)
+
+No minimum identity or current equation is required for (1),(2).
+
+2. THE PRIVATE PIVOT AND ITS ACTUAL ROW
+
+B109 printed267 chooses p(c)=b0(c), the grade-j bond lying in c and in
+the corridor connecting its two endpoint blocks. The set of pivots is
+fixed geometrically; a site gauge changes neither bonds nor labels.
+Endpoint paths in each averaging row stay within the two endpoint blocks,
+so that row's interface pivot is its own p(c). B109 explicitly specifies
+h by its pivot-only support and L Q_V h_V=I.
+
+Write A_c(V) for the coefficient of A(p(c)) in (Q_V A)(c). The displayed
+native formula is
+
+ (h_V d)(p(c))=h_c(V)d(c),   h_c(V)=L^-1 A_c(V)^-1.
+
+Extracting that coefficient in (2) gives the concrete transformation
+
+ A_c(V^g)=Ad_(g(c_-)) A_c(V) Ad_(g(p(c)_-))^-1,
+ h_c(V^g)=Ad_(g(p(c)_-)) h_c(V) Ad_(g(c_-))^-1.           (3)
+
+Thus, including the factor L^-1,
+
+                  h_(V^g) R_(j+1)=R_j h_V.              (4)
+
+This checks the native row formula, rather than assuming that a chosen
+right inverse would automatically transform covariantly.
+
+3. THE LITERAL FREE EMBEDDING C
+
+Let E inject the free coordinates as zero on pivot bonds, and let P_free
+be restriction to the free bonds. Both are geometric and obey
+R_j E=E T_g and P_free R_j=T_g P_free. The embedding obtained by the
+published elimination of delta(Q_V A) is exactly
+
+                  C_V=E-h_V L Q_V E.                    (5)
+
+It is characterized by P_free C_V=I and Q_V C_V=0, and uniqueness follows
+from the invertible private pivot coefficient. Using (2),(4),(5),
+
+ C_(V^g)T_g
+ =E T_g-h_(V^g)L Q_(V^g)E T_g
+ =R_j E-R_j h_V L Q_V E
+ =R_j C_V.                                              (6)
+
+In particular the free variables transform by the explicit (A), even
+though each eliminated pivot depends on a whole finite block read.
+
+4. THE NONLINEAR PIVOT SOLUTION
+
+B109 printed267 defines Dtilde as the unique small analytic solution of
+
+              Dtilde_V(A)=N_V(A-h_V Dtilde_V(A)).         (7)
+
+Let d=Dtilde_V(A). Equations(2),(4) imply
+
+ N_(V^g)(R_j A-h_(V^g)R_(j+1)d)
+ =R_(j+1)N_V(A-h_V d)=R_(j+1)d.
+
+Hence uniqueness on the native branch gives
+
+       Dtilde_(V^g)(R_j A)=R_(j+1)Dtilde_V(A).           (8)
+
+Substitute A=lambda C_V x and use(4),(6),(8). This proves(B), including
+the nonlinear correction. Since C,h,Dtilde here depend on V=M^j U and
+the local averaging constraint, they have no additional J dependence.
+Any later minimum-response operation depending on J is a distinct map
+and requires its own simultaneous-current covariance.
+
+5. THE PUBLISHED FREE CUTOFF REALLY IS PRESERVED
+
+B109(2.9) cuts precisely the nonpivot coordinates of the original physical
+increment B'. On those coordinates C_V is the identity and h_V vanishes,
+so the full nonlinear reconstruction satisfies
+
+                      B'_U(x)(b)=lambda x(b), b in I_j.
+
+The original cutoff therefore becomes the literal centered product
+|x(b)|<epsilon1/lambda (or the alternative radius specified after(2.9)).
+For real compact-group g, T_g is orthogonal in the invariant Lie-algebra
+inner product. It preserves these individual balls, including varying
+fixed radii, and its absolute real Jacobian is1. For a connected compact
+gauge group its determinant is+1. No cutoff at a pivot has been invented,
+and no pivot bound has been substituted for the actual free cut.
+
+6. SCALARS, JACOBIANS AND GAUGE FACTORS
+
+The scalar factors are not discarded. Their matching can be checked:
+
+- Linear coarea coefficients A_c transform by the two adjoints in(3).
+  Their absolute determinants are unchanged for real compact g.
+- Differentiating(8) gives Dtilde'_(V^g)(R_j A)=
+  R_(j+1)Dtilde'_V(A)R_j^-1. Consequently I-h Dtilde' transforms
+  by similarity under R_j. The actual determinant and its analytic
+  logarithm near identity in B109(2.12) are unchanged.
+- The Haar density of each reconstructed exponential is a conjugation-
+  invariant analytic density, so it has its same value under(B).
+- B109 printed266 explicitly defines the gauge variable as
+  P(exp(iB')V;y,x)P(V;y,x)^-1, immediately before(2.5).
+  Thus the necessary relative-gauge form is ALREADY native. Under
+  simultaneous transport of V and exp(iB')V this ratio conjugates by
+  g(y), preserving the real trace gauge term and its invariant-norm cut.
+  Replacing it by a new absolute gauge functional would be unjustified.
+
+These facts agree with the printed covariance (2.16), which expressly
+uses (R(u)B')(b)=Ad_(u(b_-))B'(b) and says that the characteristic
+function is preserved by the local orthogonal transformation.
+
+The complete gauge-covariant quadratic and covariance consequently
+transform in free coordinates by T_g and T_g^-1. For an active/retained
+split T_g is block diagonal and does not mix the two sets. Both retained
+data and conditional mean must be transformed; the principal determinant
+and Schur scalar are then unchanged. This does not delete a retained
+field or change the outer conditional mass.
+
+Every additional mask/mark not explicitly shown to be invariant is
+kept as its literal pullback. The map identity itself gives no right
+to remove it, redefine its event, or identify it with a native mask
+written in a different untransported frame.
+
+7. COMPLEX EXTENSION: AN IDENTITY, NOT A CONTOUR CHANGE
+
+For fixed native branches, ordinary averaging, the pivot inverse and
+Dtilde are holomorphic in the independent coefficient variables. The
+same derivation works algebraically for complex g whenever both sides
+belong to their common analytic domains: logarithms are conjugation
+equivariant, (3)--(6) are algebraic, and(8) follows from uniqueness of
+the same analytic implicit solution. Equivalently the real identity
+extends analytically to a neighborhood of every admitted real gauge.
+
+For real g, transformed small-noise norms are identical. For complex g
+near a real gauge they are inflated by the actual Ad norm, so spare
+noise/chart margins must be checked. The identity does not by itself
+provide a common prefix radius, preserve a real ball under a complex
+adjoint, or authorize any complex change of integration contour.
+
+8. TRIANGULAR USE
+
+If a grade-j gauge is determined only by higher-grade data/noises and
+is applied to grade-(j-1) free variables, (A) is an adapted real block
+rotation. The full sequence of such rotations is triangular, its
+diagonal blocks have determinant modulus1, and recursive inversion
+preserves the original product noise integration exactly. Its complete
+reconstructed arguments match by(B), not by an assumed transformation
+of pivot coordinates. All scalar and mask bookkeeping from Section6
+remains attached. This closes the literal local free/pivot map matching;
+common-frame analytic prefix admission is a separate theorem.

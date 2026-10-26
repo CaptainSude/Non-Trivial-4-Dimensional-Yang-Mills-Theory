@@ -1,0 +1,206 @@
+FIRST BARE STEP: REAL-PART COMPLEX TILT AND RADIUS-INDEPENDENT L2 SCORE
+25 October 2026. Research derivation by normalization-native subagent.
+Status: proved deduction from the explicitly listed first-bare local structure
+and uniform flat quadratic gap; independently checked in the companion
+first-bare-complex-real-part-score-independent-audit.txt. No later-kernel
+or complete G1d claim. Repository pin 462cac934658cfd5ef6f68e1b62141bf58c505d0.
+
+PURPOSE
+
+The existing normalized_complex_conditional_read_cost_20261024 note leaves
+uniform Poincare/score control for the positive real-part complex tilt as an
+unregistered premise. At the FIRST bare homogeneous step, the existing explicit
+local action formulas and force registration are sufficient to establish this
+premise on a fixed smaller near-flat independent-(U,J) chart. Furthermore the
+score's L2 Schur constant is independent of the noise cutoff R, improving the
+pointwise first-step score C[R+g(1+R^2)]. Source-image margins are separate.
+
+INPUTS AND THEIR PRECISE SCOPE
+
+1. YM4-first-step-background-score-20261023, sections 2-5: actual independent
+free-bond coordinates, fixed original product of color balls K_R, complete
+stationary-cancelled independent-pair analytic extension, and first quadratic
+D(z)=C(z)^* Delta_1(z) C(z). Here star is the real transpose continued bilinearly,
+not a conjugate transpose depending antiholomorphically on z. At this first step
+D has uniformly bounded finite local field/current and noise reads, with fixed
+L-dependent incidence. Its flat constrained/gauge-fixed quadratic has a uniform
+weighted gap. The note expressly does not establish this local formula for the
+later blocked precision.
+
+2. YM4-first-bare-uniform-mean-20261024, section 2, equations (8)-(11):
+
+  H_z(x)=1/2 x^T D(z)x + P_z(x),
+  P_z=-v_z(g C(z)x)+g^-2 V_z(g C(z)x),
+
+with the actual Haar and nonlinear private-pivot logarithmic determinant in v,
+and V consisting of local classical/gauge remainders after complete extraction
+of orders 0,1,2. The original physical linear jet is removed in the specified
+independent extension, not independently set to zero for arbitrary J. Local
+reads have bounded size and incidence, and their analytic coefficients have
+uniform bounds on a spare background chart and spare physical-noise cap.
+
+3. YM4-product-ball-L2-covariance-and-small-mean-20261024, sections 1-5: for a
+positive complete product-ball law with weighted Hessian gap and local gradient
+growth Cg(1+|x|^2), the mean is O(g), and centered fourth moments and the scalar
+Poincare constant are uniform in the number and radii of its balls. This theorem
+is applied below to Re H_z, never to a complex normalized probability.
+
+Every x-independent scalar may be subtracted from H_z in the conditional
+ratio. Its original outer-law factor remains. All x-dependent Haar/pivot factors
+are retained in P_z. The integration set is the SAME original K_R throughout.
+
+STATEMENT
+
+Fix L and the native one-step pivot, gauge, complete-read and spare-chart
+conventions. Use the full centered product, or a principal restriction with
+all other noise held exactly zero. There exist a fixed complex near-identity
+coefficient chart around (U=1,J=0), with background radius r_bg>0,
+a physical-noise cap eps_*>0, g_*>0, and constants c_*,C_* independent of volume,
+R and g, with the following property. Let 1<=R, 0<g<=g_* and gR<=eps_*.
+Write z for normalized local independent field/current coordinates in that
+chart. For every z in its smaller polydisc define
+
+  nu_z(dx)=Z_abs(z)^-1 1_KR exp[-Re H_z(x)] dx.
+
+Then nu_z has a Poincare constant at most c_*^-1. Its coordinate fourth moments
+are bounded uniformly and its coordinate means are O(g). For a real chart point
+a and a complex displacement Delta supported on T, provided the segment from a
+to z=a+Delta stays in the chart, there is a fixed finite-range nonnegative
+matrix K_iq with uniform row and column sums such that
+
+  ||grad_i Im H_z||_(L2(nu_z)) <= sum_(q in T) K_iq |Delta_q|,
+  ||K||_(ell2 -> ell2) <= C_*.
+
+Consequently
+
+  Var_(nu_z)(Im H_z) <= c_*^-1 C_*^2 ||Delta||_2^2.       (A)
+
+If ||Delta||_2 <= sqrt(c_*)/C_*, then the ORIGINAL partition function
+Z(z)=integral_KR exp[-H_z] is nonzero and, for every test satisfying
+sup_KR |F_z|<=M on its complete actual image,
+
+  |Z(z)^-1 integral_KR F_z exp[-H_z]| <= 2M.              (B)
+
+For h changed coordinate blocks with ||Delta||_infty<=rho, a sufficient radius
+is rho<=sqrt(c_*)/(C_*sqrt(h)), intersected with r_bg and EVERY actual source
+image/response/domain margin. Fixed physical rather than normalized background
+coordinates insert the fixed factor rho_*^-1 in C_*.
+
+PROOF OF THE REAL-PART HESSIAN AND MOMENTS
+
+The first-bare primitive is a sum of actual fixed-read local analytic functions.
+For each classical/gauge summand subtract its noise Taylor jets through degree
+two before summing. Holomorphic dependence on z preserves these vanishing jets.
+Uniform third-derivative bounds on a spare joint chart therefore imply, for all
+complex z in the smaller chart and real x in K_R,
+
+  |grad_i P_z(x)| <= Cg sum_(k in N(i))(1+|x_k|^2),
+  ||P_z''(x)||_(weighted Schur) <= C(gR+g^2),             (C)
+
+with bounded finite neighborhoods N(i). The measure summands supply the constant
+Cg and O(g^2) pieces. These bounds follow from the same local Taylor proof as the
+real statement; they are not obtained by changing the integration measure along
+a parameter path. Spare complex-coordinate Cauchy bounds apply to the finite
+analytic local coefficients themselves.
+
+The flat quadratic's weighted gap also follows from its ordinary uniform gap
+and finite local read: if its range is r0 and absolute row/column sums are <=M,
+then ||W D(0) W^-1-D(0)||<=M(exp(nu r0)-1). Choosing one small fixed nu preserves
+half the ordinary gap. Thus no extra weighted spectral assumption beyond the
+recorded native flat gap and first-step locality is needed.
+
+The flat quadratic has a weighted gap c_flat. Local analyticity and bounded read
+incidence give ||D(z)-D(0)||_(weighted Schur)<=C r_bg, uniformly in volume.
+Choose r_bg so this is below c_flat/4. Taking real parts is legitimate in real
+quadratic-form estimates. Choose eps_* and then g_* so the last bound in (C) is
+below c_flat/4. Thus for every 0<=s<=1 the real Hamiltonian
+
+  H_(z,s)^R(x)=1/2 x^T Re D(z)x+s Re P_z(x)
+
+has both scalar and weighted real Hessian gaps >=c_*>0 on all of K_R. This proves
+the uniform Poincare assertion on the SAME fixed convex-product support.
+
+At s=0, the real correlated truncated Gaussian is globally even, so every mean
+is zero. The complete force Re P_z satisfies (C). The existing product-ball
+mean argument therefore gives sup_i |E_(z,s)x_i|<=tan(Cgs)<=2Cg, after increasing
+the weak floor. Uniform centered fourth moments follow from the Hessian gap;
+combining them with this mean bound gives
+
+  sup_(z,s,i) ||1+|x_i|^2||_(L2(nu_(z,s))) <= C.           (D)
+
+No dependence on R survives this estimate. In particular (D) holds for the
+FINAL measure nu_z at which the phase estimate is required.
+
+PROOF OF THE COMPLETE MIXED SCORE
+
+Each derivative partial_(z_q)D_ik vanishes unless q,i,k belong to one of the
+fixed local first-step reads. The derivative is uniformly bounded by spare
+background Cauchy. Similarly, differentiating the remainder's local Taylor
+formula with respect to z retains the order-two zero in its noise gradient.
+Therefore, for w anywhere on the segment a+sDelta,
+
+  |grad_i partial_(z_q)H_w(x)|
+  <= C 1_(q in N_bg(i)) sum_(k in N_noise(i))
+                        [ |x_k|+g(1+|x_k|^2) ],        (E)
+
+with all fixed finite color/read factors absorbed in C. Both neighborhoods have
+uniformly bounded incidence. This derivative includes C, the Wilson Hessian,
+the quadratic current term, gauge, Haar and nonlinear pivot determinant.
+
+Take the L2 norm of (E) under the FINAL law nu_z. Equation (D) bounds this by
+C times the local indicator, uniformly in w. The phase has zero noise-gradient
+at the real center a because H_a is real on real x. The exact fundamental
+theorem along a+sDelta then gives
+
+  grad_i Im H_z
+   =Im integral_0^1 sum_q Delta_q grad_i partial_(z_q)H_(a+sDelta) ds.
+
+Minkowski under that single FINAL law and (E)-(D) establish the claimed finite
+range matrix K. Its Schur constant is volume- and R-independent. Poincare gives
+(A), and cos(u)>=1-u^2/2 applied after centering the phase gives
+
+  |nu_z exp[-i Im H_z]| >= 1-Var_(nu_z)(Im H_z)/2 >=1/2.
+
+This proves the zero-freeness and (B), without a new denominator or a dropped
+cut. Holomorphy of a parameter-dependent normalized source on this tube follows
+from its own holomorphy/dominating cap and the same nonzero denominator.
+
+Choosing a=Re z improves (A) to the squared ell2 norm of Im z. All real parts
+may range throughout the smaller real reference chart; physical record/mask
+admission is still a separate condition when identifying an original sector.
+
+REAL LOCAL-RESPONSE COROLLARY
+
+For an actual real admitted physical path, let F be a fixed bounded noise test
+supported on a finite read P. Let dot theta be supported in T, and b_F=osc(F)/2.
+The recorded bounded-local covariance consumer, applied with the L2 local score
+bound (E)-(D), gives
+
+  |d Q_theta F/dt| <= C b_F exp[-nu' dist(P,T)] ||dot theta||_2.
+
+Here the actual normalization, cuts and mean are unchanged, and constants are
+independent of R and volume. This removes the prior pointwise price
+B0(R)=C[R+g(1+R^2)] from that first-step response estimate. For a varying source
+F_theta the exact extra term Q_theta dot F_theta remains. A physical coarse
+determining variation must still be composed through its genuine minimum/current
+response; it is not declared a finitely supported fine-background variation.
+
+WHAT THIS ADVANCES AND WHAT REMAINS
+
+This removes a genuine first-bare registration gap in the shrinking-tube phase
+criterion, and removes its avoidable noise-radius factor. The result concerns
+the complete cancelled first action on a fixed near-flat chart, with its actual
+independent current. It uses only original fixed product cuts.
+
+It does NOT prove G1a-G1c, later blocked precision/score bounds, complex source
+image admission, fixed-radius polynomial norm for arbitrarily large carriers,
+coefficient-sum bounds from a scalar estimate, or full-history closure. The
+actual first cavity source has its independently verified image/cap; generated
+later sources do not inherit that certificate by this argument. A source's
+smaller tau-dependent curvature/response margin may dominate the h^-1/2 radius.
+
+Real masks on earlier success/history events are not replaced by one. This
+theorem applies to the specified native product conditional or containing law;
+using it for a masked numerator requires its actual source representation and
+original mass bookkeeping. An externally held nonzero noise changes the base
+mean, so that case needs its boundary-force estimate and is not included here.

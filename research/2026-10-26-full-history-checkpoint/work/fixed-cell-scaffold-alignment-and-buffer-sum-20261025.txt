@@ -1,0 +1,80 @@
+FIXED ENDPOINT CELLS FOR ALL HISTORICAL SCAFFOLDS
+25 October 2026. Root; geometric supplier, not full source stability.
+
+This note removes a possible ultraviolet-depth dependence from the cell
+choice in fixed-cell-common-source-chessboard-consumer-20261025.txt.
+It is conditional only on the explicitly stated aligned native grids and
+the completed source coefficient covariance/locality. It does not prove
+the nonlinear source family or its partition-function upper bound.
+
+1. ONE CELL SCALE CAN CONTAIN ALL HISTORICAL PARTITION PERIODS
+
+Fix a terminal band Y<=x_N<=Y+B_* and bounded steps |x_(j+1)-x_j|<=B.
+Let all native spatial R_j be powers of the same blocking integer L and
+obey R_j<=C_R[1+log(x_j)]^r, with r and C_R fixed. Let M=L^m be fixed.
+The physical length, in date-N units, of a date-i MR_i partition cube is
+
+                      p_i=M R_i L^{i-N}.                (1)
+
+For t=N-i, bounded steps imply x_i<=Y+B_*+Bt, hence
+
+ p_i<=C M L^{-t}[1+log(Y+B_*+Bt)]^r.                    (2)
+
+The supremum over nonnegative integer t is finite and depends only on
+Y,B_*,B,L,r,C_R,M. Exponential L^{-t} dominates the logarithm. Choose
+an integer K, independently of N and the ultraviolet cutoff, such that
+the right side is at most M L^K. Since every R_i is an L power,
+
+            ell=M L^K,       ell/p_i is an integer L power.  (3)
+
+Thus translation by ell in date-N units preserves EVERY historical MR_i
+partition. The ordinary M/L block grids divide it as well. Increasing K
+by a fixed integer makes room for the buffered support D_0 required by
+the packing/chessboard argument. Compatible ambient periods can be chosen
+as arbitrarily large integer multiples of this fixed cell length.
+
+Use the original aligned cell-reflection convention. If the native block
+grids are centered with odd L, the quotient in (3) is odd, so the outer
+cell faces have the same midpoint alignment as the subdividing block
+faces. For a different parity convention use its common admissible
+reflection tiling, enlarging the fixed cell by at most a fixed factor
+when that convention permits it. No reflection positivity is asserted
+for a tiling that is not a reflection-positive bare Wilson cell algebra.
+
+For source coefficients constructed by the actual covariant words,
+translations/reflections of this fixed aligned cell commute with the
+entire scaffold, including young MR grids. Consequently their completed
+vacuum sum has the covariance needed in consumer H3. This inference
+requires coefficient covariance from the construction: geometric support
+alone does not imply it.
+
+2. BUFFER LOCALITY WITH FIXED POLYNOMIAL/LOGARITHMIC COSTS
+
+Suppose a complete source carrier at date i meeting both D_0 and a face
+must have tree distance at least c eta L^{N-i}/P(x_i)-C0, where eta>0
+is the fixed face buffer. Here P can be a fixed logarithmic power; take
+P=1 for the fine-M carrier norm. Suppose its rooted coefficient bound
+has at most a fixed polynomial cost (1+x_i)^D P_1(x_i), apart from the
+exponential tree weight. The face-crossing sum is then bounded by
+
+ C sum_(t>=0) L^{4t}(1+Y+B_*+Bt)^D P_1(Y+B_*+Bt)
+      exp[-b eta L^t/P(Y+B_*+Bt)].                       (4)
+
+This series converges. Indeed the logarithm of its polynomial prefactor
+is O(t+log(1+t)), while L^t divided by any fixed logarithmic power of
+Y+B_*+Bt grows exponentially in t. Its sum depends on the fixed terminal
+band and buffer, but not on ultraviolet depth or ambient volume.
+
+Each scalar source coefficient must vanish when all source values on
+its COMPLETE read carrier vanish; subtract its source-zero value to
+ensure this. Then a coefficient contributing to the face error must
+meet the actual source support as well as the face. Source-independent
+vacua cancel before (4) is used. Counting each translated copy gives
+at most the number of copies, which is canceled by the chessboard root.
+The bound is on the entire supported weight, not on a chosen list of
+bumps or a sum of separate source normalizations.
+
+In particular a fixed polynomial birth/radius cost does not by itself
+destroy consumer H4. The actual complete-carrier exponential estimate,
+source-zero cancellation and original aligned covariance are still
+essential supplier hypotheses.

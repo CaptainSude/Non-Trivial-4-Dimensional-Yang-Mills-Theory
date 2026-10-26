@@ -1,0 +1,232 @@
+RUNNING-RADIUS BETA FEEDBACK AND AN EXOGENOUS-COUPLING CORE
+25 October 2026. Root derivation; primary application remains conditional.
+
+STATUS
+
+This note proves a failure of a proposed numerical bootstrap and a replacement
+bootstrap under explicit, stronger operator hypotheses. Neither result supplies
+the mixed T/R analytic-domain theorem. The proposed auxiliary core must be
+constructed by the original primitive maps; equality only on physical fields is
+insufficient. No original-law covariance conclusion is made here.
+
+1. THE EXTRACTION LOSS CANNOT BE ABSORBED AT EVERY FEEDBACK STEP
+
+Write x=g^{-2}, r=c g(log x)^q, theta=g^2/r^2. An analytic old-ledger
+preparation on the r-ball can give a newborn coefficient bound C theta A.
+Ordinary quadratic extraction of that NEW coefficient then gives only
+
+       |beta_new| <= C r^{-2} theta A
+                   = C g^2 r^{-4} A
+                   <= C x(log x)^{-4q} A.                 (1)
+
+The second inverse-radius factor is real. For a scalar Gaussian analogue,
+take a centred even fluctuation xi of variance one and the analytic insertion
+F(B)=a B^4/r^4. Its own quadratic coefficient is zero. Nevertheless
+
+       E[F(B+g xi)-F(B)]
+             = 6a g^2 B^2/r^4 + a g^4 E[xi^4]/r^4.       (2)
+
+The first term has precisely the size in (1). The example is an obstruction
+to an inference from analyticity and parity alone; it is not asserted to be
+the literal Yang--Mills primitive. Gauge symmetry also permits quartic
+curvature invariants and does not by itself prohibit an induced quadratic
+curvature term. An improvement requires a registered structural estimate.
+
+Consequently one must not combine the full coefficient discrepancy
+bound C|d|/x+C theta A with (1) and silently close the resulting coupling
+recurrence by calling every polynomial loss harmless.
+
+Here is a purely numerical counterexample to that argument. Fix large N,
+x_j=N-j, and examine only 0<=j<=floor(N/2), so all scales remain arbitrarily
+weak as N increases. Let m(N)=exp[-a(log N)^p], p>1, and set
+
+ a_0=m(N), d_0=0,
+ a_(j+1)=d_j/x_j,
+ d_(j+1)=d_j+x_j(log x_j)^(-4q)a_j.                     (3)
+
+These nonnegative sequences satisfy bounds of the proposed form, including
+a_(j+1)<=d_j/x_j+C theta_j a_j, with a single stretched-log initial forcing.
+They also satisfy
+
+ d_1=N(log N)^(-4q)m(N),
+ d_(j+2)>=d_(j+1)+(1/2)(log N)^(-4q)d_j
+          >=[1+(1/2)(log N)^(-4q)]d_j.                  (4)
+
+The first inequality uses x_(j+1)/x_j>=1/2 on this interval; the second
+uses monotonicity of d. Thus at an odd index comparable to N/2,
+
+ d_j >= N(log N)^(-4q)m(N)
+              exp[c N(log N)^(-4q)].                   (5)
+
+This diverges with N. The term N/log^{4q}N dominates every fixed power of
+log N. Hence those upper-bound recurrences do not imply a uniform small
+solution. This does NOT establish instability of the actual construction:
+it establishes insufficiency of those estimates. Local admission would fail
+before (5); a bootstrap must prove that it never reaches that failure.
+
+2. REFERENCE CORE ALONG THE ACTUAL COUPLING HISTORY
+
+A possible repair is to compare at the SAME coupling before taking the
+shrinking-domain discrepancy. Let Gamma_j be the actual coupling at date j.
+Define an auxiliary regular ledger C_j by the original homogeneous primitive
+using Gamma_j as an EXOGENOUS input, its previously constructed C_i, and
+their own extracted beta(C_i). Do not require Gamma to obey the autonomous
+Callan--Symanzik equation for this auxiliary ledger. Let
+
+                       E_i=C_i+D_i.                    (6)
+
+The beta extraction is linear on the completed covariant coefficient, so
+beta(E_i)=beta(C_i)+beta(D_i). Each entire old bracket, including its vacuum
+and Wilson counterterm, is decomposed using (6) on the SAME selected pair.
+The actual coupling then evolves using both beta terms. This is an exact
+algebraic split if all primitive inputs and extensions in (6) exist.
+
+Because E and C are compared at Gamma_j, the old-D contribution to a new
+D birth has the gain theta_j but no forcing |Gamma_j-x_j|/x_j from comparing
+two different Gaussian couplings. Genuine young/R/boundary-to-bulk terms
+still supply a forcing and must be estimated independently.
+
+This is not the same as substituting a homogeneous continuation for a mixed
+one. Fixed-cap C_i and shrinking-domain E_i must be restricted to an actual
+COMMON old native domain; the difference is taken there. C_i can be used
+only where that restriction is justified. All input/current, covariance,
+reference determinant and scalar choices must match in the comparison.
+
+3. SUFFICIENT OPERATOR HYPOTHESES
+
+The following theorem is conditional on these precise hypotheses, uniformly
+for all finite prefixes and strict complex input segments.
+
+(H1) The baseline x_j obeys |x_(j+1)-x_j|<=B and
+ x_i>=x_j+lambda(j-i)-C0 for i<=j, x_j>=Y, lambda>0.
+
+(H2) The actual and auxiliary core primitive families exist on common
+admitted domains. The same-coupling rare discrepancies have individual birth
+norms a_i and satisfy a closed estimate
+
+ a_(j+1)<=C theta_j sum_(i<=j) w_(j-i)a_i+f_(j+1),
+ sum_t w_t<infinity, w_t<=C(1+t)^P L^{-sigma t},
+ theta_j<=C(log x_j)^(-2q),
+ |f_(j+1)|<=C_f exp[-a0(log x_(j+1))^p].                (7)
+
+Initial discrepancy terms obey the same envelope. They may be source
+dependent, provided all bounds hold on ONE fixed source ball. A_i denotes
+the weighted old sum when needed. Homogeneous covariance is required for
+the scalar beta; an arbitrary nonconstant tensor is not covered by it.
+
+(H3) The difference eta_j of the two rare beta contributions is bounded by
+ C x_j^D exp[-a1(log x_j)^p], for fixed D and a1>0. Equation (1) is sufficient
+once (7) has closed, after lowering the envelope exponent once. Scalars
+are retained separately; this hypothesis concerns only the numerical beta.
+
+(H4) Write d_j=Gamma_j-x_j and b_j for the difference of the auxiliary
+fixed-cap core newborn from the baseline core newborn. Put
+ u_j=max_(i<j)b_i, with the initial common core ledger giving u_0=0.
+The original fixed-cap primitive estimates hold for EXOGENOUS histories:
+
+ b_j<=C_b(|d_j|+u_j)/x_j,
+ |d_(j+1)-d_j|<=C_b(|d_j|/x_j^2+u_j/x_j)+|eta_j|.       (8)
+
+These are the substantive extra hypotheses. The fixed-cap O(1/x) and
+physical beta O(1/x^2) estimates cannot be replaced with shrinking-ball
+Cauchy bounds. All changes caused by historical Gamma dependence must be
+included in u_j. The initial d_0=zeta is allowed to be complex.
+
+4. NUMERICAL CLOSURE UNDER H1--H4
+
+First (7) closes independently of d. For any fixed 0<a1<a0 and
+m1(x)=exp[-a1(log x)^p], the signed stretch implies
+sup_(i<=j)m1(x_i)/m1(x_j)<=C_Y, with C_Y tending to one as Y tends to
+infinity. The bounded adjacent step has the same property. The summable
+weights in (7) then make its inherited coefficient at most 1/2 for large
+Y. Choosing the envelope constant larger than twice the forcing and the
+initial bound proves a_i<=C m1(x_i) by induction. No coupling discrepancy
+appears in that induction.
+
+Choose 0<a2<a1 and put m2(x)=exp[-a2(log x)^p]. Hypothesis H1 gives the
+tail bounds
+
+ sum_(i<j)x_i^{-2} <= C/x_j,
+ sum_(i<j) x_i^D m1(x_i) <= C m2(x_j).                  (9)
+
+For the second inequality, compare x_i with x_j-C0+lambda(j-i). Above a
+fixed floor the function t^D m1(t) is decreasing. Integral comparison and
+t=e^v bound its tail by a polynomial in x_j times m1(x_j-C0); any such
+fixed polynomial is absorbed by m2 because a1-a2>0 and p>1. This decrease
+in exponent is made ONCE, after (7), and is never reinserted into (7).
+
+Let F(x)=|zeta|+K m2(x), with K chosen to dominate the forcing sum in (9).
+For i<=j, F(x_i)<=C_Y F(x_j), x_i>=x_j/2, after enlarging Y.
+Suppose |d_i|<=A F(x_i) and u_i<=A_u F(x_i)/x_i at previous dates.
+Taking the supremum of the first line of (8) gives
+
+ u_j <= [2C_b C_Y A+4C_b C_Y A_u/Y] F(x_j)/x_j.         (10)
+
+Choose A_u=4C_b C_Y A and Y large enough to absorb the second term.
+Sum the second line of (8); (9) and the same comparison give
+
+ |d_j| <= |zeta|+K m2(x_j)
+                       + C(A+A_u)F(x_j)/x_j.          (11)
+
+Fix A=2 and then increase Y until the last coefficient is at most 1/2.
+Equations (10)--(11) close the bootstrap strictly after harmless changes
+to fixed constants. Thus
+
+ |d_j| <= C(|zeta|+m2(x_j)),
+ u_j <= C(|zeta|+m2(x_j))/x_j,                          (12)
+
+uniformly in the ultraviolet depth. The same proof applies to differences
+between two sourced families when their initial core ledgers coincide and
+eta is the difference of the rare beta contributions.
+
+If primitive existence follows from a relative coupling/ledger neighborhood,
+choose a sufficiently small absolute source disc |zeta|<cY, then Y large
+enough for the rare term. The strict bounds keep the inductive family in
+that neighborhood. This last existence conclusion is conditional on H2/H4;
+the numerical theorem does not create a missing analytic continuation.
+
+If an application instead requires an absolute coupling-source allowance
+r_abs(Y), use a fixed fraction of that allowance for the initial source and
+require C m2(Y) to fit another fixed fraction. A fixed polynomial lower
+bound on r_abs(Y) is enough because m2 has stretched-log decay. The relative
+condition |d|<cY alone does not verify this stronger application requirement.
+
+5. APPLICATION GATES AND RELATION TO THE OTHER NOTES
+
+The running-radius preparation note establishes only the regular preparation
+and gain within its admitted scope. It cannot by itself supply H4. The
+fixed-core dated-sup proof supplies the candidate estimates for H4 on its
+fixed-cap native primitive. Extending that proof to exogenous histories
+requires checking that no autonomous beta equation was used in defining the
+primitive, its old counterterm cancellation, or its domain admission.
+
+The mixed historical phase image, fresh after-R domain reserve, coherent
+source-dependent young logarithm and complete boundary normalization remain
+separate gates to H2. This note neither proves those gates nor promotes a
+conditional full-source-family assertion to a theorem. Its main correction
+is that stretched-log beta summability is used only AFTER a discrepancy
+recurrence independent of d has been obtained.
+
+6. PINNING THE COMPARATOR TO THE PREVIOUSLY CHECKED CORE
+
+When the earlier homogeneous kernels were replayed at the actual source-zero
+sequence x_j, that sequence need not solve the autonomous equation for the
+auxiliary core alone. To reproduce those kernels exactly at source zero,
+define a fixed driver
+
+       v_j=x_j-x_(j+1)-beta_C,new[x],
+       Gamma_C,next(s)=Gamma_C,j(s)-beta_C,new(s)-v_j.    (13)
+
+Then Gamma_C,j(0)=x_j by induction. All v_j are source independent and
+retained as actual marginal action terms. If the full source-zero equation
+is x_next=x-beta_C[x]-beta_D(0), then v_j=beta_D(0). The full-versus-driven
+core difference is consequently forced by beta_D(s)-beta_D(0), besides the
+fixed-cap core response in (8). The numerical theorem applies to that
+difference. This convention avoids identifying an autonomous comparison
+trajectory with a different previously checked baseline.
+
+At a fixed independent field the driver has zero source derivative, but its
+nonflat Wilson term remains in every action identity. Its future effects
+are included through the coupling evolution, not discarded. Equality of
+the resulting global scalar source derivatives with the earlier core-chain
+covariance still uses the complete source-factor/normalizer telescoping.

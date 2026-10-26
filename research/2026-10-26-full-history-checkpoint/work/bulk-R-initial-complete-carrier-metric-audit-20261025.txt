@@ -1,0 +1,192 @@
+BULK R: INITIAL COMPLETE CURRENT-CARRIER METRIC AND SOURCE COUNT
+Independent primary-source audit, 2026-10-25
+
+STATUS. The primary bulk-R decay uses the fixed M-cell metric, not a count
+of MR_i macro-cubes. Consequently its spatial reserve pays the filled birth
+packet and a fixed-factor complete-carrier enlargement. This verifies a
+uniform initial VALUE norm for the actual unmarked bulk-R catalogue, under
+the explicit fixed spatial-exponent reserve below. It does not identify a
+new numerical root with an originally prescribed microscopic observable.
+It also does not prove the missing unmarked fixed-core C+D producer or
+extend the actual old base density to a larger analytic domain.
+
+1. EXACT PRIMARY LOCATORS
+
+B109, printed p257, definitions preceding (0.24): pi_j is the partition
+into cubes of side M in current j units; D_j consists of finite connected
+unions of those cubes. d_j(X) is the length of a shortest continuous tree
+contained in X and meeting every M-cube, divided by M. The paragraph says
+explicitly that the M-cubes become unit cubes in this metric.
+Local text: work/primary-sources/B109-layout-user.txt, lines 416-443.
+
+B119, printed pp259-260, (2.27)-(2.31): R^(j)(X) is summed over X in D_j,
+with the ADDITIONAL requirement that X be a union of MR_j-cubes. It keeps
+the same d_j(X) and obeys g_j^(kappa_0) exp[-kappa d_j(X)]. It has the
+same support, analytic pair-extension and gauge-invariance properties
+(i)-(iii) as E. The analytic domain is the RUNNING domain (2.28).
+Local text: work/primary-sources/B119-user.txt, lines 868-912.
+
+Large-II, printed p376, (1.67): even the relative metric d_(k,Z)(Y) is
+defined by M^(-1) times tree length meeting ALL M-cubes of Y\Z, not by
+MR_k macro-cube count. Local text: LargeII-user.txt, lines 1083-1086.
+
+Large-II, printed p390, (1.98)-(1.100): after connected exponentiation,
+terms intersecting the surviving large-field/old collars are B terms.
+For the disjoint BULK R terms, the relative size becomes full d_k(X),
+and the actual stronger bound is
+
+  ||R'^(k)(X)|| <= eta_k exp[-kappa d_k(X)],
+  eta_k = exp[-p_0(g_k)].                                      (1)
+
+The following line supplies Euclidean covariance, referencing B119(2.32).
+Local text: LargeII-user.txt, lines 1784-1811. This argument does not give
+(1) to the boundary B terms; their relative-metric estimate (1.99) is a
+different input.
+
+B116, printed p18, (2.30), compares M-cell volume and tree size. The
+rendered page was checked in B116-18-carrier-size.png. To avoid a harmless
+singleton degeneracy in the literal lower comparison, use only the robust
+consequence proved independently next: h(X) <= C_4(1+d(X)).
+
+2. TREE SIZE PAYS M-CELL VOLUME
+
+Write h(X) for the number of M-cells. There are dimension-dependent
+constants c_4,C_4 such that every connected M-cell animal satisfies
+
+  h(X) <= C_4(1+d(X)),          d(X) <= h(X)-1.                (2)
+
+For the upper bound, connect cell centers by a spanning tree of the
+face-adjacency graph. It stays in X, has h-1 edges of length M and meets
+all cells. This uses the ACTUAL native convention: B109 p257 expressly
+defines a connected family by chains whose consecutive cubes share a
+wall, namely a (d-1)-dimensional cube (text lines 426-430). If another
+consumer allows corner/edge contact instead, use center-to-contact-to-
+center paths; then d(X)<=C_dim(h(X)-1), and replace a by C_dim a in q
+below. The lower comparison and every conclusion are unchanged.
+For the lower bound, scale M to 1. Traverse a finite tree of
+length d twice, in total length at most 2d. Divide this traversal into
+arcs of length <=1. Each arc lies in a unit ball about its initial point,
+and that ball meets at most a dimension-dependent number of unit cells.
+Every cell met by the tree is therefore among at most C_4(1+d) cells.
+Take an approximating minimizing sequence if necessary. This also covers
+trees meeting several closed cells at a common boundary point.
+
+One MR_i cube has exactly R_i^4 M-cells (with the aligned native
+partitions). Hence its tree size is at least c_4 R_i^4-1. It is incorrect
+to charge it tree size 1 in the native estimate (1).
+
+3. COMPLETE-CARRIER ENLARGEMENT AND THE INITIAL STRONG VALUE NORM
+
+Let H_X be the complete current carrier used by the chosen source
+consumer. Required geometric registration is
+
+  X subset H_X, H_X connected, h(H_X) <= C_H h(X),             (3)
+
+with C_H independent of i,R_i and remaining fine depth. A fixed number
+of M-cell stencil/cushion layers satisfies (3). Even a fixed number of
+MR_i layers satisfies (3) for these initial sources: X is already a
+union of MR_i cubes, and each such cube adds only a fixed number of
+neighboring macro-cubes. Thus this particular initial enlargement has
+no new factor R_i^4 in the ratio of complete to original size. A new
+unbounded number of such layers or an additional unconstrained fine
+read is NOT covered by (3).
+
+Suppose the initial coefficient envelope, including explicitly
+registered roles, is bounded by
+
+  sum_roles ||F_(X,role)|| <= C R_i^s h(X)^m eta_i e^(-kappa d(X)), (4)
+
+where m,s are fixed. For the actual unmarked bulk R coefficient, m=s=0
+and C=1 in (1). For its vacuum-subtracted coefficient, C=2 suffices.
+The norms here are VALUE norms on the actual admitted running pair
+domain; no field/current/noise Cauchy derivative is taken.
+
+Allow the target complete norm to charge exp[a d(H_X)] and the
+protected seed to charge exp[c_seed h(H_X)]. Define
+
+  N_i = sup_v sum_(X:H_X contains v)
+          exp[a d(H_X)+c_seed h(H_X)] sum_roles ||F_(X,role)||. (5)
+
+There is a fixed kappa_req(a,c_seed,C_H,m,dimension) such that
+
+  kappa > kappa_req  ==>  N_i <= C' R_i^s eta_i.              (6)
+
+Proof. By (2)-(3), d(X) >= h(H_X)/(C_4 C_H)-1,
+d(H_X)<=h(H_X), and h(X)^m<=h(H_X)^m. Therefore the summand in (5) is
+bounded by C R_i^s eta_i exp(kappa) h(H_X)^m exp[-q h(H_X)], with
+
+  q = kappa/(C_4 C_H)-a-c_seed.
+
+For a fixed connected complete carrier H there are at most 2^h(H)
+subsets X contained in H, so this bounds all multiplicities of the
+map X -> H_X without an unrecorded rerooting cost. The number of
+connected M-cell animals of size h containing v is at most C_an^h.
+Consequently the remaining sum is bounded by
+
+  sum_(h>=1) h^m exp[-(q-log 2-log C_an)h],
+
+finite whenever q>log 2+log C_an. This proves (6), including cases
+where the complete carrier contains v but the original X does not.
+All constants may depend on the FIXED chosen spatial exponent kappa.
+No dependence on R_i or fine depth is introduced.
+
+The native R_i is a rounded L-power of a fixed logarithmic power:
+R_i <= C_L (log x_i)^r, x_i=g_i^(-2). Thus a separately registered
+factor R_i^s in (4) yields at most a declared polylogarithmic factor in
+(6). In particular the actual unmarked bulk catalogue has N_i<=C eta_i.
+
+This is the promised initial complete norm, not an assertion that an
+unweighted MR_i source has norm O(1). A seed exp[c R_i^4] is genuinely
+present and is paid by the spatial reserve in exp[-kappa d_i(X)].
+No sacrifice of the rarity exponent p_0 is needed for this payment.
+
+4. ROOTS, CALIBRATION, AND THE LIMIT OF THE PRIMARY STATEMENT
+
+B119(2.27) gives E^(j)(X,U,z) with an external root z. The R^(j)(X,U)
+appearing in (2.30)-(2.31) has no such observable root. This difference
+must remain explicit.
+
+For the exact UNMARKED total sum_X R_X one may choose nonnegative
+numerical weights w_(X,z), z in the current cells of X, with
+sum_z w_(X,z)=1, and set F_(X,z)=w_(X,z)R_X. Then
+
+  sum_z F_(X,z)=R_X,     sum_z ||F_(X,z)||=||R_X||.
+
+This costs 1 in the strong sum of root envelopes. Uniform cell weights
+preserve lattice symmetry. Rooting at all current unit sites instead
+costs only the fixed number M^4 of sites per M-cell if normalized in
+the same way. These are current-scale counts, with no fine-lattice
+ultraviolet multiplicity.
+
+However sum_z f(z) w_(X,z) R_X for arbitrary f is a newly prescribed
+profiled insertion. It is not automatically the original microscopic
+source/profile, its calibrated derivative, or a marked large-field
+coefficient. For an ORIGINAL marked source family the identities and
+envelope estimate (4), with its real roots/orientations/cavity roles,
+must be obtained from that family's actual definition. The unmarked
+bound (1) cannot prove such a derivative or label census by itself.
+If the original finite roles satisfy a polynomial bound as in (4),
+the proof above absorbs the h(X)^m factor in spatial reserve and
+retains only the stated polylogarithmic R_i^s factor. If instead a
+microscopic label sum is asserted, its native mesh/calibration measure
+must be supplied before invoking this argument.
+
+5. PARAMETER ORDER AND SCOPE
+
+Choose the desired complete-carrier norm/seed reserve, fixed geometry,
+and spatial kappa above kappa_req first, consistently with the native
+cluster hypothesis. Then the fixed-core VALUE column constant K is
+fixed. The amplitude rarity exp[-p_0(g)] survives unchanged in (6).
+The independently audited uniform replay N_t<=K^t N_0 can therefore
+use N_0 from (6), with no hidden exp[C R_i^4] starting price.
+
+As checked in running-source-all-cap-primary-parameter-audit-20261025.txt,
+p_0(g)=A_0(log g^(-2))^(p_0 exponent) dominates any chosen fixed
+power of g by reducing the weak-coupling floor AFTER the constants are
+fixed. This concerns the actual bulk R amplitude in Large-II(1.100).
+
+Nothing here supplies (i) the full marked/profile census, (ii) a
+same-actual-coupling unmarked fixed-core C plus small prepared D split,
+(iii) old-density analyticity on expanding source domains, (iv) the
+mixed boundary B/history catalogue, or (v) a whole-history YM4 proof.
+Those are distinct remaining interfaces, not metric-conversion costs.

@@ -22,9 +22,28 @@ This is an orientation aid, based on the preserved [notation and conventions](..
 | s-localization / t_D | Source argument weakening versus an action-only auxiliary response circle. Their admitted domains differ. |
 | Complete read / carrier | Every block, gauge, descendant, collar, and old/current datum determining a coefficient. Initial observable support alone may be smaller. |
 | M_j, U_j(v), W_j | Literal recursive ordinary average; original-Wilson constrained minimum on the fine grid; and real-prefix minimum `W_j = U_j(V_j)`. |
-| Ordinary average / relative Q | Distinct coordinate descriptions whose complex endpoint/frame relation is part of the open gate. |
+| Ordinary average / relative Q | Distinct coordinate descriptions. The current declared maps have their own scoped registration; this does not settle every alternative cavity/source extension. |
 | a_p | Raw marked cavity numerator divided by the original unmarked cavity denominator. The exterior partition weight stays in the original law. |
 | Source-zero | The original physical operation before source derivatives. An analytic source extension must agree there where physical agreement is claimed. |
 | Root census | The original number of fine source locations represented in a later block; its cost must be accounted for separately from rarity. |
 
 For status labels, see [contribution vocabulary](../CONTRIBUTING.md#status-vocabulary). A gain in amplitude, a domain margin, a root count, and an observable calibration are distinct quantities; combine them only through a proved inequality in the same setting.
+
+## Current checkpoint conventions
+
+| Symbol | Meaning in the 26 October argument |
+| --- | --- |
+| `x_j`, `y_j` | Old frozen real inverse-coupling history and new source-zero `Gamma_j^new(0)`. They are compared, not assumed identical. |
+| `C[Gamma]`, `D` | Fixed-cap core replayed at the entire realized coupling history, and the same-coupling body discrepancy. |
+| `R′`, `R″` | Fresh completed outer birth and ordinary young birth; both keep their actual function-birth dates. |
+| `A_old`, new noise | Retained real private coordinates and newly introduced noise. Pair analyticity does not imply analyticity in old smooth cutoff variables. |
+| `W_j(C)` | Actual dated component cost `M⁴ R_j⁵ (d′_j(C)+1)`, with unique primitive identifiers. |
+| `chi_j^N` | `L^(-(N-j)/2)`, the spatial-source age factor; obtained by the value-before-gradient construction. |
+| `r(x)` | A bare source radius with a fixed polynomial lower formula, independent of the desired later rarity power. |
+| `E_abs`, `E(w)` | New absolute universal vacuum and its source-zero-subtracted version. History-dependent scalars stay in the remainder. |
+| `h(w)` | One normalized source remainder, `exp(-E(w)) Z(w)/Z(0)`, with `h(0)=1`. It need not be zero-free away from zero. |
+| `c_a` | Fixed original calibration `x_n/e_n^old`; no extra `a⁴` factor in the original plaquette sum. |
+| `C_orig`, `C_old`, `C_new` | Original covariance, original registered homogeneous reference, and the auxiliary **packed average** of the nearby new-core covariances. |
+| `X`, `Y`, `tau` | Probe-entry inverse-coupling scale, later fixed weak terminal floor, and physical probe separation. Fix Y before X and keep probes fixed during regulator removal. |
+
+See the [contract](../research/2026-10-26-full-history-checkpoint/work/full-history-four-entry-checkpoint-contract-20261025.txt) and [assembly](../research/2026-10-26-full-history-checkpoint/work/full-history-four-entry-assembly-20261026.txt) for exact definitions and quantifiers.

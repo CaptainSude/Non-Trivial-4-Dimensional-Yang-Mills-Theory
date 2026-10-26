@@ -1,0 +1,141 @@
+INDEPENDENT AUDIT OF COMMON-FRAME SELECTED-PAIR BOOTSTRAP
+25 October 2026
+
+Audited target: work/common-frame-selected-pair-bootstrap-20261025.txt.
+Scope: deterministic matrix/covariant-difference estimates, assuming the
+declared uniform four-slot one-step response and native remainder bounds.
+No identification with the original prefix law or its scalar factors is audited
+or asserted here.
+
+VERDICT: CONDITIONAL PASS for the three recurrences and the fixed-domain
+induction after the compact-reference correction below. The one-step response
+input remains a hypothesis; the note is not a native G1b/G1c producer.
+
+1. REQUIRED CORRECTION TO COMPACT REFERENCE SCALING
+
+The draft initially claimed that restriction of terminal real gauge cubes and
+unit conversion give all compact tests with allowance
+L^{-2(t-j)} kbar_t. This is too strong as stated. If in one terminal gauge
+
+  Wbar=exp(i xi_t a_t),
+
+then the same gauge gives a_j=L^{-(t-j)}a_t and
+nabla^{xi_j}a_j=L^{-2(t-j)}nabla^{xi_t}a_t. Thus the potential norm shrinks
+with one power, while its derivative and curvature shrink with two powers.
+Obtaining two powers for the potential would need a new re-centering gauge
+construction on each smaller cube.
+
+No such stronger claim is needed. It suffices to assume the required compact
+real gauge-cube tests on every complete grade read with ONE fixed small cap.
+Terminal gauges restrict to smaller cubes and satisfy that fixed cap whenever
+their local stencils/collars fit. Retain the exact L^{-2(t-j)} statement only
+for curvature. The parent has accepted this correction.
+
+2. UNIT CONVERSION
+
+All group fields are on the same underlying fine bonds. With
+xi_j=L^{-j}, xi_(j+1)=xi_j/L, and
+U_(j+1)=exp(i xi_(j+1) B_(j+1))Wbar, set Y=B_(j+1)/L. Then
+
+  |Y|=L^{-1}|B_(j+1)|,
+  |nabla_Wbar^{xi_j}Y|=L^{-2}|nabla_Wbar^{xi_(j+1)}B_(j+1)|.
+
+These are exact for the same native finite difference stencil and the same
+parallel transport; no gauge comparison occurs in this unit conversion.
+Since b is the maximum of these two norms, the old contribution is at most
+L^{-1} b_(j+1), with coefficient exactly one.
+
+3. COVARIANT BCH ESTIMATE
+
+On a fixed logarithm neighborhood, write
+
+  (1/(i xi))log(exp(i xi A)exp(i xi Y))=A+Y+R_xi(A,Y).
+
+The analytic remainder vanishes on both axes. Its mixed derivative is bounded
+uniformly for xi<=1, so |R_xi|<=C xi |A||Y|. For a covariant finite difference,
+transport A and Y at the second point to the first with the SAME Wbar
+transporter. Logarithm and BCH are equivariant under this conjugation. Integrate
+the first derivative of R along the straight segment between the paired
+arguments; within a slightly enlarged chart this gives
+
+  |nabla R_xi|<=C xi (|nabla A||Y|+|A||nabla Y|).
+
+This is a finite-difference proof, not an application of a continuum chain
+rule. It requires only the stated branch reserve and fixed compact transporter
+norms. Native Lie-algebra bond fields have their usual reverse-bond convention.
+
+Replacing the U_(j+1) transporter by the Wbar transporter changes each fixed
+stencil factor by O(xi|Y|). The xi^{-1} in the difference cancels that xi,
+and hence
+
+  |nabla_Wbar A|<=|nabla_U A|+C|Y||A|.
+
+All nonlinear contributions contain at least one A factor. With the prior
+iterate inside a FIXED cap, they are bounded by C delta_j, rather than by a
+fixed multiplicative loss times the old b. This verifies
+
+  b_j<=L^{-1}b_(j+1)+C_b delta_j.
+
+4. CURVATURE ESTIMATE IN A COMPLEX BACKGROUND
+
+Compare the two ordered plaquette products in the SAME corner frame. After
+transporting the signed four A values to that corner, their oriented sum is
+a covariant curl term plus a curvature commutator term. The former is bounded
+by C xi |nabla_U A|, the latter by C |dU-1||A|. The leading exponential factor
+adds xi; product remainders contribute C xi^2 |A|^2. Therefore
+
+  |d(exp(i xi A)U)-dU|
+    <= C xi^2[|nabla_U A|+|A|^2+k_direct |A|],
+
+where xi<=1 and |dU-1|<=xi^2 k_direct were used. The finite transporter
+norms/inverses are bounded on the declared common chart; unitarity of U is not
+used. The triangle inequality comparing this difference to dU-1 has coefficient
+ONE on the previous curvature. Dividing by xi_j^2 and using
+xi_(j+1)^2/xi_j^2=L^{-2} verifies
+
+  k_j<=L^{-2}k_(j+1)+C_k delta_j.
+
+5. SELECTED CURRENT
+
+For the declared adjacent-grade recursion
+
+  J_j=L^{-3}J_(j+1)+Delta_U A-P1 A+F1(U,A),
+
+the four-slot response estimate and the native local F1 bound directly imply
+
+  c_j<=L^{-3}c_(j+1)+C_c delta_j.
+
+No stationarity or physical-current replacement is needed, and neither is
+licensed by this calculation. In particular the zero-response slot has the
+required exact scaling L^{-3}.
+
+6. INDUCTION AND DIRECT-TO-FULL CRITERION
+
+Solving the three scalar affine recurrences gives exactly the geometric sums
+displayed in the draft. Choose fixed strict caps and an enlarged holomorphic
+neighborhood first, then choose top data and a uniform noise cap so all sums
+fit. Descending induction then constructs the entire finite Cartesian family
+of all noise and source-localizer parameters. Constants are independent of
+the number of dates and volume, conditional on the uniform one-step input.
+
+B109 printed263's smaller-complete-direct-domain criterion can be applied
+ONCE to each constructed pair. It is not necessary to insert B3 into the
+recursion if the direct field bounds were proved independently. However,
+the chosen cap must satisfy ALL the direct tests for both U_j and its compact
+reference Wbar, all local gauge cubes/collars must be supplied, the relative
+complex C1 cap must meet its own comparison threshold, and the independent
+current cap must be imposed separately. The arbitrary displayed fraction
+alpha0/(8 B3) is only an example reserve, not a substitute for those conditions.
+
+The output is a complete pair-domain theorem only when the full determining
+reads in B109 are literally among the fixed complete reads. Restriction of
+a global array is harmless; extending a restricted carrier without proof
+would not be harmless.
+
+7. SCOPE NOT COVERED
+
+This audit does not prove that the B116/B109 native localized response satisfies
+the draft's fixed direct-domain input with every private pivot and all four
+slots. It does not match a common-frame history with original real noise,
+return/gauge factors, masks, Jacobians or normalization. It does not estimate
+normalized complex source expectations. Those are separate unresolved gates.

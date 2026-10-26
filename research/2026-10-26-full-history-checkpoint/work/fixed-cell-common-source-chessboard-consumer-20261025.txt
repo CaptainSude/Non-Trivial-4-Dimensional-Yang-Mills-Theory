@@ -1,0 +1,193 @@
+FIXED-CELL COMMON-SOURCE CHESSBOARD CONSUMER
+25 October 2026. Root. Exact conditional theorem, not a source producer.
+
+PURPOSE AND STATUS
+
+This records the precise local normalized estimate needed by
+calibrated-four-entry-common-source-packing-20261025.txt. It shows that
+there is no additional volume-dependent normalization problem once the
+actual common source family has the four hypotheses below. It does NOT
+assert that the full original Wilson-history source family has those
+hypotheses. In particular finite homogeneous source jets do not supply H2.
+
+The complex chessboard step uses conjugate reflected COPIES of the source,
+not its real part. Replacing a complex source by its real part before
+subtracting the ultraviolet vacuum would leave an uncontrolled counterterm
+difference. No zero-free neighborhood for a partition function is used.
+
+1. FINITE SETUP AND EXPLICIT HYPOTHESES
+
+Let mu be the ORIGINAL positive Wilson probability measure on a compatible
+finite four-torus of endpoint volume V. Tile it by m congruent cells D_c,
+each of endpoint side ell, so V=m ell^4. Require the usual reflection-positive
+cell algebra and the complex chessboard inequality for this tiling. The
+original plaquettes in a source read must lie wholly in its open cell.
+This is the bare Wilson algebra, not an effective history measure or a
+conditioned homogeneous branch. Compatible reflection tilings may be chosen
+cofinally; no arbitrary-torus chessboard assertion is needed.
+
+Fix D_0 compactly inside one open cell D, at distance eta>0 from its faces.
+The fixed ell, eta, D_0 are independent of UV depth and ambient volume.
+For complex bare weights w with support in D_0, write
+
+ J(w)=sum_original_positive_p w(x_p) h_p,
+ Z_raw(w)=Z_raw(0) E_mu exp[J(w)],
+ h(w)=exp[-E(w)] Z_raw(w)/Z_raw(0).
+
+If a source-free vacuum normalization has already been inserted, use that
+same normalization in both raw partition functions; it cancels in h.
+The calibrated substitution w=c_a v will be made only at the end.
+
+H1. There is ONE scalar family E(w)=sum_{j,X} e_j(X;w), E(0)=0,
+holomorphic on the specified complex source norm ball. Each coefficient
+depends only on the weight values in its COMPLETE source carrier X^+,
+and vanishes if those values are all zero. Its definition is independent
+of the way w is written as a sum of profiles. All completed regular and
+healed universal scalars use this same family. History-dependent scalar
+terms remain in the remainder. There is no decomposition into independently
+chosen single-profile normalizations.
+
+H2. The construction is admitted not only for a weight in D_0 but also
+for its FULL reflected/conjugated chessboard weight w^ch on all cells.
+For these weights, with the SAME E,
+
+ |Z_tilde(w^ch)| <= exp(C_+ V),
+ Z_tilde(0)=Z_raw(0) >= exp(-C_- V),
+ Z_tilde(w)=exp[-E(w)] Z_raw(w).                         (1)
+
+The constants are independent of UV depth and ambient volume. These are
+unnormalized, full-history estimates before taking any root. The source
+ball must admit arbitrarily many disjoint reflected copies without a
+radius loss depending on their number. A global l1 norm on profile
+coefficients does not have this property; the local supremum/Lipschitz
+weight norm does, since the weight vanishes in a face buffer.
+
+H3. Local coefficients are covariant under this fixed cell reflection/
+translation group and satisfy e_j(X;conj(w))=conj(e_j(X;w)). It suffices
+instead to have a bound C_cov on the SUMMED real bulk covariance defect
+per cell, uniform in UV depth. No covariance under arbitrary bare
+translations of the RG scaffold is requested.
+
+H4. There is a rooted tree majorant with fixed exponential reserve. In
+particular, for every w in the ball supported in the WHOLE D_0 (not just
+one of its possibly many pieces), its face-crossing vacuum sum obeys
+
+ |E^face(w)| <= C_face,
+ m^-1 |E^face(w^ch)| <= C_face.                         (2)
+
+These bounds follow from a complete-carrier tree norm as follows. At
+date j let s_j be its physical cell scale and assume s_j<=s_max, fixed
+by the terminal band. Root the coefficients at a scale-j cell meeting
+D_0 or one of its copies. The number of possible roots is at most
+C[1+diam(D_0)/s_j]^4. A carrier meeting both D_0 and a cell face has
+tree diameter at least [c eta/s_j-C0]_+. Thus the total is bounded by
+
+ C sum_j [1+diam(D_0)/s_j]^4 exp[-b eta/s_j]             (3)
+
+with a harmless change of C for s_j comparable to eta. For the
+geometric scales s_j<eta the exponential dominates the polynomial;
+the sum is uniformly finite as the UV cutoff is removed. There are
+only O(1+log(s_max/eta)) coarser scales. Copies multiply the root
+count by at most m, canceled by m^-1 in (2). A carrier hitting several
+copies may be overcounted, which is harmless for this upper bound.
+The bound depends on the diameter/buffer of D_0, never on the number
+of disjoint bumps used to describe w.
+
+2. COMPLEX CHESSBOARD ESTIMATE AND EXACT BULK CANCELLATION
+
+Set F=exp[J(w)] in the cell algebra of D. Repeated reflection-positive
+Cauchy-Schwarz gives the standard complex chessboard estimate
+
+ |E_mu F| <= [E_mu product_c F^[c]]^(1/m),              (4)
+
+where a reflected odd copy is conjugated. The number in brackets is
+nonnegative. The product is exactly exp[J(w^ch)], since every bare
+plaquette in these supports belongs to one cell. This is an identity
+before integrating any ordinary or large-field variable. Thus
+
+ |E_mu F| <= exp{m^-1 Re E(w^ch)+(C_++C_-)ell^4}.       (5)
+
+Equation (5) follows directly from (1). It does not estimate |E(w)|
+by an extensive absolute bound. Taking a real part at this final
+stage preserves the counterterm cancellations needed below.
+
+Split E into bulk coefficients whose complete X^+ is inside one
+open chessboard cell and face coefficients. Locality makes each
+bulk coefficient depend only on the weight copy in that cell.
+Reflection covariance and reality imply
+
+ m^-1 Re E^bulk(w^ch)=Re E^bulk(w).                     (6)
+
+For an odd cell the contribution is the conjugate of the original
+bulk contribution and hence has the same real part. The zero source
+on all other cells makes their original bulk terms vanish. With
+the bounded-defect form of H3 the difference in (6) is at most C_cov.
+Subtract Re E(w) from (5) and use (2). This proves
+
+ |h(w)| <= Q_0,
+ Q_0=exp[(C_++C_-)ell^4+2 C_face+C_cov].               (7)
+
+The estimate is uniform in UV depth, ambient volume, arbitrary signs,
+and the number of profile pieces inside D_0. It holds for complex w.
+The normalization is the full original law. h(0)=1 exactly and h is
+holomorphic by H1 and the original finite Haar integral; zeros of h
+away from zero do not affect (7) or the two-jet consumer.
+
+3. REFLECTION AND SOURCE DOMAIN DETAILS
+
+The reflected weight uses w or conj(w) on alternate cells. This is
+not holomorphic as a function of w, but it is used only as a pointwise
+comparison weight at each fixed w. H2 is a bound on all weights in a
+complex norm ball, so it applies to this comparison weight. h itself
+remains a holomorphic function of the original source coordinates.
+
+When w vanishes at distance eta from the faces, the copy operation
+preserves its supremum and Lipschitz norms up to a fixed convention
+constant. For two points in different cells, connect their segment
+through a face where w is zero; the usual two estimates bound the
+difference by Lip(w) times their separation. No sum over cells enters.
+On the lattice, retain the plaquette diameter in the buffer: take
+the fine spacing sufficiently small that the whole plaquette read
+is in its assigned open cell. Finitely many earlier cutoff values
+can be excluded when choosing the cofinal regulator sequence.
+
+The possible large value of Q_0 at a fixed weak terminal band is not
+a UV divergence. It is retained explicitly in the packing scale
+choice. This proof gives no connected clustering estimate by itself.
+
+4. INSERTION INTO THE CURRENT FOUR-ENTRY ROUTE
+
+The checked constant-energy calibration gives c_a<=C X at the chosen
+weak entry band, uniformly along its UV prefixes. If H1--H4 are proved
+for an absolute bare weight ball
+
+ ||w||_infty+Lip_endpoint(w)<r0,
+
+then use w=c_a v. The calibrated common radius is
+r_*=r0/(C X), and (7) supplies exactly Q_* required by the current
+packing lemma. Its covariance-remainder error is therefore
+
+ C_shape (Q_0+Q_0^2) X^2 r0^-2 tau^-8 R^2,             (8)
+
+where R is the probe separation in terminal-cell units. All constants
+are fixed before the UV limit. The remaining independent supplier is
+the comparison of the averaged mixed jet of this SAME E with the
+checked homogeneous covariance, including universal healed R births.
+
+The theorem is a completed CONSUMER of H1--H4. Present status: the
+full common nonlinear source producer (especially H2 and the actual
+mixed-domain source-carrier bounds in H1/H4) remains under construction.
+No original-law covariance lower bound follows until those hypotheses
+and the universal-vacuum two-jet comparison are supplied.
+
+REFERENCE CHECK
+
+The algebra was checked against the explicit cell splitting in
+work/experiment-hints/theorem_raw_II.tex, lines62536--62778, and the
+buffer counting in the archived sourced_hierarchy_growth_audit,
+Sections6--7. These are derivation guides, not additional assumptions
+that their source producers are proved. The complex chessboard theorem
+is the usual consequence of repeated reflection-positive Cauchy-Schwarz
+(Froehlich--Israel--Lieb--Simon, CMP62 (1978), Section4); its application
+is to the original Wilson measure only. No reflection positivity of a
+renormalized density or a history-conditioned law is used.

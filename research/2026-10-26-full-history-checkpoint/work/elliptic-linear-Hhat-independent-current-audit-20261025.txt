@@ -1,0 +1,278 @@
+ELLIPTIC LINEAR Hhat WITH AN INDEPENDENT CURRENT
+25 October 2026. Scoped proof and audit of the proposed linear repair.
+
+VERDICT: The proposed linear construction is valid on a reserved native
+elliptic chart with sufficiently small independent current. It gives a
+jointly holomorphic, covariant right inverse of the linearized average,
+with the required potential, first derivative, P1 and covariant-Laplacian
+bounds. It agrees with the physical linear Landau minimizer on the physical
+subfamily. It does not assert the Landau condition off that subfamily.
+Its localized version retains strong estimates and covariance, but does
+not automatically retain the right-inverse identity away from s=1.
+No nonlinear reconstruction or original scalar-law theorem is proved here.
+
+1. PRIMARY INPUTS AND CONVENTIONS
+
+B99 Propagators, CMP99 389--434 (user-supplied paper5.pdf; extracted
+work/primary-sources/paper5.txt):
+- printed396,(3.33),(3.34): covariance of G',R,Delta_a,G0;
+- printed397--399, Theorems3.1--3.3,(3.42)--(3.49): regularity, weighted
+  bounds and kernel bounds for G', the elliptic G0=Delta_a^-1 and P=1-R;
+- analytic extension on the compact-reference complex-C1 chart(3.37);
+- Theorem3.10 and the generalized random-walk construction for these
+  elliptic operators and their localized restrictions.
+
+B102, CMP102 277--309 (user-supplied paper3.pdf):
+- printed297,(129): the elliptic constrained seed H0;
+- printed298,(130): its additional covariant-Laplacian estimate;
+- printed298,(131): the projection onto ker Q;
+- printed299,(138): the exact identity defining the physical correction.
+Personally inspected renders B102-elliptic-21.png,-22.png and
+B102-SJ-23.png in work/primary-sources.
+
+All spaces are finite-dimensional native lattice spaces with the stated
+boundary conditions and complete determining reads. Use the trace-bilinear
+pairing and its transpose, denoted T. At real fields this agrees with the
+usual real adjoint. At complex fields it is NOT Hermitian conjugation.
+
+Write Q for the correctly normalized native linearized constraint, so
+the desired constraint is QA=B. If the paper's unscaled Q_j is used,
+insert the diagonal L^j eta factors exactly as in B102(129). This harmless
+normalization is fixed throughout; it is not changed between formulas.
+
+Let
+
+  Delta_a=Delta+DRD*+Q^T a Q,
+  G0=Delta_a^-1,
+  KQ=(Q G0 Q^T)^-1,
+  H0=G0 Q^T KQ,
+  GQ=G0-G0 Q^T KQ Q G0.                            (1)
+
+The letter Delta in Delta_a denotes the Hessian operator used by B102;
+Delta_U denotes the componentwise covariant Laplacian. They are distinct.
+The native elliptic chart supplies the inverses in(1), their analyticity,
+and uniform estimates. Do not replace G0 by the gauge-completed G or G1
+whose Laplacian estimates are expressly excepted in B99 Theorem3.12.
+
+Exact algebra gives
+
+  QH0=I, QGQ=0,
+  GQ Delta_a Y=Y-H0 QY.                            (2)
+
+2. AN EXPLICIT OPERATOR FOR THE PROPOSED BILINEAR FORM
+
+For a site field lambda define the endpoint-sum operator
+
+  (E_U lambda)(b)=lambda(b_-)+Ad_(U(b))lambda(b_+),
+  T_U=E_U G' R D*.
+
+Define S_J on arbitrary bond fields Y by
+
+  2<A,S_JY>=<i[T_U A,Y],J>.                         (3)
+
+The commutator and pairing on the right are summed over the native bonds.
+Cyclicity of trace gives the exact factorization
+
+  S_JY=(i/2)T_U^T[Y,J]
+      =(i/2)D R G' E_U^T[Y,J].                     (4)
+
+The second equality uses the analytically continued symmetric operators
+R and G'. Formula(4), or the first equality without symmetry notation,
+fixes the sign and factor1/2. It also shows why no derivative of J is
+required: D acts AFTER R G', not on the product [Y,J].
+
+3. SMALLNESS IN NATIVE NORMS
+
+For transparency use B99's weighted sup norms |.|_(alpha), where a field
+of norm1 behaves like (L^j eta)^alpha on the jth region. Let
+
+  X0: |Y|_(-1),       F: |F|_(-3),
+  gamma=|J|_(-3).
+
+The product commutator obeys
+
+  |[Y,J]|_(-4)<=C gamma |Y|_(-1).                   (5)
+
+The endpoint-sum transpose preserves this weighted size up to a fixed
+native constant. The global bounds(3.47) give D G' from weight-4 to
+weight-3. The identity
+
+  D R G'=D G'-D P G'
+
+and the DP kernel bound(3.49) give the same estimate for D R G'. Thus
+
+  |S_JY|_(-3)<=C_S gamma |Y|_(-1).                  (6)
+
+This derivation uses only the compact-reference complex-C1 chart and
+the independent sup/weighted current allowance. It does not assume
+that J is a physical divergence, or assume a bound on a derivative of J.
+In the homogeneous unit-block normalization, these are ordinary sup
+norm bounds with the physical scale factors already absorbed.
+
+Define the strong output norm
+
+  ||Y||_X=max(|Y|_(-1),|nabla_U Y|_(-2),
+              |Delta_U Y|_(-3),|P1 Y|_(-3)).
+
+The elliptic G0 estimates, B102(129),(130), and the bounded constraint
+maps imply
+
+  ||H0 B||_X<=C_H ||B||_coarse,
+  ||GQ F||_X<=C_G |F|_(-3).                        (7)
+
+Indeed GQ=G0-H0 QG0, so its Laplacian estimate follows from the strong
+leftmost G0/H0 estimates. The P1 estimate follows from the bounded
+DPD* kernel(3.49), with the native P1 convention registered. This is an
+elliptic estimate, not a claim about the excepted gauge-completed G1.
+
+The constants in(6),(7) are uniform in depth and volume on the prescribed
+native geometry and fixed strict chart. The underlying B99/B102 estimates
+are published inputs; this note does not reprove their kernel theorems.
+
+4. EXISTENCE, STRONG BOUNDS AND THE CONSTRAINT
+
+Assume C_G C_S gamma<=rho<1, with a strict fixed rho, for example rho=1/2.
+Then GQ S_J is a contraction on X0. Define
+
+  Hhat=(I-GQ S_J)^-1 H0
+       =sum_(n>=0)(GQ S_J)^n H0.                   (8)
+
+The series converges in operator norm and defines the unique solution of
+
+  Y=H0 B+GQ S_JY.                                 (9)
+
+The weak bound is |Y|_(-1)<=C_H(1-rho)^-1||B||.
+Use(9),(6),(7) once more to obtain
+
+  ||Hhat B||_X
+     <=C_H||B||+C_G C_S gamma C_H(1-rho)^-1||B||.  (10)
+
+Thus contraction need only be proved in the weak norm; the strong norms
+come from the left elliptic factor GQ. This avoids differentiating J.
+Applying Q to(9) and using(2) gives
+
+  Q Hhat B=B                                      (11)
+
+for every independent pair in this unweakened elliptic chart. Joint
+holomorphy in U,J follows by uniform convergence on slightly enlarged
+strict charts of analytic finite-dimensional operator functions.
+
+5. EXACT PHYSICAL MATCHING
+
+Let H be the original physical LINEAR Landau minimizer, with physical
+background current J and RD*H=0. B102 printed299,(138), states exactly
+
+  Delta'_pi H=S_JH.                               (12)
+
+The constrained equation for the original minimizer, with
+Delta_pi=Delta-Delta'_pi, implies
+
+  Delta_a HB=Q^T lambda+S_J HB,
+  QHB=B,                                         (13)
+
+where lambda includes the harmless constraint penalty contribution.
+This is also read directly from its B99(3.126) constrained-Green formula
+and RD*H=0. Multiply(13) by GQ and use(2):
+
+  HB=H0 B+GQ S_J HB.
+
+Uniqueness of(9) proves
+
+  Hhat(U,Jphys(U))=H(U).                          (14)
+
+No off-physical Landau or Ward identity was used to define Hhat. In
+particular do NOT infer RD*Hhat=0 for arbitrary independent J from(14).
+The construction provides a right inverse and the four strong norms;
+its off-physical gauge condition is a separate question.
+
+6. COVARIANCE
+
+Let R_f(g) and R_c(g) be the actual fine/coarse endpoint adjoint actions.
+The native operators D,G',R,Delta_a,Q intertwine these actions, as in
+B99(3.33),(3.34) and ordinary relative-average covariance. Inverses and
+products then give the corresponding intertwinings for H0,GQ. The trace
+pairing is invariant even for complex g: R_f(g)^T=R_f(g)^-1.
+
+The endpoint sum obeys E_(U^g) R_site(g)=R_f(g) E_U.
+The bracket [Y,J] transforms pointwise. Therefore(4) gives
+
+  S_(U^g,Ad_g J) R_f(g)=R_f(g) S_(U,J).
+
+Applying this to every term of(8) proves
+
+  Hhat(U^g,Ad_g J) R_c(g)=R_f(g) Hhat(U,J),         (15)
+
+whenever both sides are in their declared charts. The identity itself
+does not enlarge those charts or bound an arbitrary gauge.
+
+7. LOCALIZED WORDS: WHAT IS PRESERVED
+
+Expand the elliptic factors G0,G', the constrained projection and H0
+using their native localized kernel representations; use the strong
+leftmost G0/H0 bounds in the representations of GQ. The factor S_J is
+given by(4): all current multiplications are local, and its remaining
+factors are the already controlled D R G' endpoint kernel. Every factor
+is covariant, and scalar cutoffs/weakening weights commute with gauge
+endpoint actions.
+
+For a fixed complex weakening radius, B116's walk majorants give fixed
+inflated constants C_S(kappa),C_G(kappa),C_H(kappa). Choose the independent
+current allowance so C_G(kappa)C_S(kappa)gamma<1. Then the analogous
+Neumann word sum converges uniformly with the four strong output norms.
+One must specify the weighting convention:
+
+(a) Weaken the primitive factors and then sum their products. This gives
+    the literal resolvent (I-GQ(s)S_J(s))^-1 H0(s).
+(b) Flatten each entire operator word into its complete read, attach one
+    weakening factor per encountered cube, and sum the weighted words.
+    This gives a different s-family, generally without the factorized
+    resolvent formula, but the same s=1 operator. Its absolute majorant
+    is bounded by the factorwise majorant for |s|<=exp(kappa).
+
+Both conventions preserve covariance and admit the strong Neumann
+estimate when their actual complete words/collars satisfy the native
+walk bounds. Do not mix their definitions in a source expansion.
+
+For an explicit decay assertion, fix a rate delta' strictly smaller than
+the common native rate delta. Use the corresponding exponentially
+weighted kernel norm, including the native cell measures and scale
+weights. The native convolution estimates give a fixed algebra constant;
+absorb it in the norm. Equations(5)--(7) then give
+
+  ||GQ S_J||_(delta')<=C_(delta') gamma.
+
+Choose gamma so this is below1/2 as well as the earlier sup-norm cap.
+Every n-fold word is bounded by a geometric majorant rho^n in this
+weighted norm. The sum preserves decay delta', uniformly in volume and
+depth. Strong output derivatives act on the LEFTMOST GQ (or H0 for
+the zeroth term), for which the elliptic termwise estimates are available.
+This gives the same decay for all four output slots. Scalar weakening
+weights inflate the fixed word constants before this current cap is
+chosen; they do not introduce an unbounded factor per prefix date.
+
+B99 printed416, Theorem3.10, explicitly states its word estimates for
+all norms on the left-hand sides of(3.42)--(3.47). This includes the
+covariant Laplacian for the elliptic G0 used here. The later exception
+for the gauge-completed G,G1 does not apply to this leftmost factor.
+For the constrained factors, expand GQ=G0-H0 QG0 and H0=G0 Q^T KQ;
+the coarse inverse uses the same localized-inverse construction as
+B99(3.132), with the gauge-completion perturbation set to zero. The
+strong output estimate always comes from this leftmost elliptic G0;
+the remaining factors need only their native bounded/decaying kernels.
+
+CRITICAL LIMIT: generic weakening does not preserve QGQ(s)=0 or
+QH0(s)=I. Therefore QHhat_s=B is established at s=1, and for the
+unweakened independent-pair operator(8), but is NOT automatic for general
+s. This is sufficient for physical unweakened matching in the proposed
+prefix map; any stronger localized constraint claim needs its own proof.
+
+8. REMAINING NONLINEAR WORK
+
+The linear repair does not by itself verify a replacement of H inside
+B102's nonlinear D equation, V(80), Delta^(2), the corrected seed K,
+or the native selected-current continuation. Those formulas use further
+identities; off-physical RD*Hhat=0 must not be inserted. A nonlinear
+rebuild must check its coefficients, first jet, quadratic remainder,
+strong localized estimates, and agreement with the original physical
+response separately. All source domains, complete determining images,
+scalar factors and normalized denominators remain separate obligations.

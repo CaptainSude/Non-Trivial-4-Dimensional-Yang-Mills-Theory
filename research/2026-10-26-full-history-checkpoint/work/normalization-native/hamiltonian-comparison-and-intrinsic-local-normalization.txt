@@ -1,0 +1,218 @@
+HAMILTONIAN COMPARISON AND INTRINSIC LOCAL NORMALIZATION
+25 October 2026. Real comparison theorem and finite-domain construction.
+
+This follows the old-density A,C registration. It does not interpolate
+background gauge fields. The original full law is never replaced by a
+boundary reference; that reference is used to DEFINE local source
+coefficients and compare them with the original normalized expectation.
+
+1. COMPLETION COMPARISON ON THE SAME ORIGINAL PRODUCT
+
+Let H0,H1 be two REAL Hamiltonians on the SAME original product K,
+each having the complete uniform weighted Hessian gap and the same
+fixed decay constants. Let f be C1 and common to both. Set
+
+  H_s=(1-s)H0+sH1,   Q_s=exp(-H_s)dx/Z_s, 0<=s<=1.
+
+The Hessian gap, its weighted version, and the product boundary remain
+valid by convexity. The product-ball one-form argument therefore gives
+the SAME decaying gradient-covariance kernel for every s. Exactly,
+
+  d/ds Q_s f=-Cov_(Q_s)(f,H1-H0).                    (1)
+
+There is no path of fields or currents and no requirement that two
+global regular configurations lie in a common convex field chart.
+An extensive parameter-only difference has zero x-gradient and drops
+out of (1); its actual original outer scalar remains untouched.
+
+Let Y be a region containing a source seed I. Suppose
+
+  sup|grad_i f|<=a_i,
+  sup|grad_k(H1-H0)|<=B_R exp[-mu dist(k,Y^c)],      (2)
+
+where dist(k,Y^c)=0 outside Y. From(1) and the registered covariance,
+
+ |Q_1 f-Q_0 f|
+ <=C B_R sum_i a_i exp[-mu' dist(i,Y^c)]            (3)
+
+for a fixed smaller mu'>0. The proof uses the triangle inequality
+dist(i,Y^c)<=d(i,k)+dist(k,Y^c), reserves an exponent to sum k, and
+integrates s. There is no sum over the number of exterior sites.
+If a_i is supported near I or has a weighted source-root sum A_f,
+the right side is at most C B_R A_f exp[-mu''dist(I,Y^c)].
+
+For sources f0,f1 which are not identical, add
+sup|f1-f0| to this bound. Comparing the source maps is a separate
+complete-word tail estimate; it is not a consequence of convexity.
+
+2. TWO GLOBALLY ADMITTED COMPLETIONS
+
+Suppose two admitted real backgrounds/currents agree on the complete
+region Y, including any sampled endpoint frames used in the density.
+Every old interaction coefficient and every complete precision word
+whose read is contained in Y is identical. The remaining words touch
+Y^c. The old carrier majorants and the complete precision tree bound
+then give(2), with
+
+  B_R=C[R+gR^2+g(1+E0)].                            (4)
+
+Both current branches, private C/h factors and all coefficient reads
+are included. For a noise index outside Y the ordinary full force
+bound gives the same estimate with exponential1. For an index inside,
+any differing carrier/word must connect it to Y^c, giving the displayed
+tail. For a framed weight, differing frame endpoints outside Y are
+local insertions at those endpoints and obey the same bound.
+
+Thus the normalized comparison is independent of topology or a
+field-space interpolation. If the source noise gradient carries g,
+the factor g B_R is uniformly bounded on the registered weak cut.
+This provides the useful normalized locality estimate without an
+extensive supremum of H1-H0.
+
+It is approximate completion-independence, not exact locality. To
+obtain an ACTUAL function of b|Y alone, one still needs an intrinsic
+local reference or an admissible specified completion. Section3
+describes the intrinsic option and its exact native inputs.
+
+3. INTRINSIC FINITE-DOMAIN NORMALIZED REFERENCE
+
+Choose a nonwrapping carrier Lambda with all required native collars,
+and a compatible union A of complete current constraint blocks lying
+inside Lambda with the fixed native Dirichlet buffer. Its free
+coordinates I_A must be the registered subset of the original free
+coordinates, with the same individual original balls. This compatibility
+is part of the native private-pivot boundary registration.
+
+Input b_Lambda consists ONLY of field/current data on Lambda (and
+endpoint frames there if that formulation is used). Use strict direct
+caps small enough that restriction to each retained complete carrier
+Y inside Lambda belongs to its full B109 independent-pair domain by
+the smaller-direct criterion. This is an OWN domain of the local
+data, with no prescribed exterior field. It is a strict direct
+subdomain, not an assertion about every larger native orbit domain.
+
+Let D_A^Lambda be the native local Dirichlet free precision with all
+its actual pivot/soft-gauge conventions. Its required inputs are:
+
+ (D1) holomorphy on that local data domain, real symmetry and a uniform
+      compact-reference gap, surviving the small independent-current
+      perturbation;
+ (D2) two-ended exponentially local kernels, including both current
+      corrections and literal free-coordinate injection;
+ (D3) comparison with the global precision on I_A: their difference
+      has a complete tree bound reaching Lambda^c.
+
+B99's intrinsic Dirichlet construction and Theorem3.14 are the primary
+route to D1--D3. The local geometry, common free-coordinate set and
+soft-gauge version must actually be registered; simply taking a
+principal matrix block would not remove the background read outside
+Lambda. A complete-word truncation of that block would be local but
+would need its own gap proof. Neither shortcut is assumed here.
+
+More precisely, B99 printed428 gives its physical gap under BOTH
+(3.35),(3.36), on the native domain sequences of SectionE with the
+stated boundary cushion. It is not itself an independent-J gap.
+The latter needs the old complete precision small-current perturbation
+registered separately. Theorem3.14 and its following hidden-H tree
+expansion supply domain-change words only for matching native operators
+and domain sequences. See intrinsic-carrier-local-response-comparison-
+20261025.txt and finite-prefix-two-environment-native-audit.txt; neither
+statement identifies an arbitrary clipped inverse with D_A^Lambda.
+
+Using the SAME old B116 coefficient family p_Y, define
+
+  H_Lambda(x_A;b_Lambda)
+    =(1/2)<x_A,D_A^Lambda x_A>
+      +sum_(complete Y contained in Lambda) p_Y(b_Y,x_A extended by0).
+                                                               (5)
+
+Zero here is the fluctuation field in the INTERNAL buffer Lambda\A,
+not a frozen exterior gauge configuration. Coefficients are defined
+on their own complete Y by the imported B116 theorem. Their original
+signs and constants are retained; constants in x may instead be kept
+as the identical outer scalar. All retained old ages were already
+summed into that coefficient family. No E0-per-date sum is used.
+
+Absolute carrier bounds imply the same interaction force/Hessian
+bounds after this deletion and zero evaluation. If D1--D3 hold, (5)
+therefore has the uniform weighted gap and the product-ball covariance
+bound on K_A. For real admitted data its normalized integral is positive.
+For a local source f supported in an interior seed I subset A, define
+
+  Q_Lambda f(b_Lambda)
+    = integral_(K_A) f(b_I,x_I)e^(-H_Lambda) dx_A
+       /integral_(K_A)e^(-H_Lambda) dx_A.            (6)
+
+Equation(6) is intrinsically local: both numerator and denominator
+use only b_Lambda. There is NO frozen exterior reference in its read.
+It is a normalized finite-domain reference, not claimed to equal the
+original global conditional exactly.
+
+4. COMPARISON WITH THE ORIGINAL GLOBAL LAW
+
+Embed(5) in the original full K by adding any fixed decoupled positive
+quadratic Gaussian Hamiltonian on the exterior free coordinates. Its
+normalized exterior factors cancel for f supported in I. Thus its
+expectation is exactly (6). Choose the fixed exterior quadratic gap
+comparable to the interior one. The embedded law has the same uniform
+weighted covariance control.
+
+All interactions whose complete carrier is inside A agree with the
+original global interactions. Missing or zero-evaluated ones touch A^c.
+The precision comparison D3 and the missing quadratic cross terms
+also have a tail from interior sites to A^c. Consequently(2) holds
+with Y=A and B_R as in(4), up to the fixed buffer adjustment. Apply
+the affine-Hamiltonian comparison theorem to obtain
+
+  |Q_global f-Q_Lambda f|
+    <=C B_R A_f exp[-mu dist(I,A^c)].               (7)
+
+The original global variables, cuts, scalar mass and normalizer have
+not been changed. They appear on the left as the original expectation.
+The auxiliary exterior Gaussian is only a comparison device for the
+second term. No physical history mass is assigned to it.
+
+5. LOCAL NORMALIZED COEFFICIENTS AND COMPLEX DOMAINS
+
+For nested compatible carriers Lambda_n with active regions A_n,
+define q_n=Q_(Lambda_n)f and f_n=q_n-q_(n-1). With compatible real
+local domains, (7) gives exponentially small f_n, including actual
+source-gradient and B_R factors. Each f_n is a function of its OWN
+Lambda_n data. At the finite terminal carrier covering the whole
+torus use the actual periodic law; the telescope then ends exactly
+at the original normalized expectation. This last comparison retains
+the native finite-volume boundary/topology conventions.
+
+The local Hamiltonian has a holomorphic continuation and the same
+packet phase proof once D1--D3 and the old coefficient domains are
+registered. Its normalized ratio is zero-free on its OWN small
+ell2 packet tube around admitted real local data. For h_Lambda
+local packets this contains a sup tube of radius c/sqrt(h_Lambda),
+intersected with the actual direct-domain reserves. This is a
+quantitative carrier-dependent neighborhood, not the ENTIRE original
+fixed complex native domain. The real-to-complex propagation lemma
+can use this actual radius and retain its polynomial read-size cost.
+
+For f=f(Phi_new), the new source map is generally nonlocal. Then (6)
+needs an intrinsic finite-domain source map as well, with its own
+uniform admission and a comparison sup|f_global-f_Lambda| paid by
+complete response/current/return words. The one-step operator and
+component-separation estimates suggest that construction, but they
+do not by themselves register every multiscale finite-domain prefix
+and boundary frame. This is a separate explicit interface, not
+erased by the density comparison.
+
+6. WHAT IS PROVED AND WHAT STILL NEEDS NATIVE REGISTRATION
+
+Equations(1)--(4) are a proved normalized completion-comparison
+principle from the registered old A,C/complete-read estimates. They
+avoid all interpolation in gauge-field space.
+
+Equations(5)--(7) give a concrete intrinsic local normalized source
+construction conditional on D1--D3, compatible original free blocks,
+and the stated local direct domains. Old B116 carrier functions
+already have own-domain declarations. Remaining native work is the
+Dirichlet soft-gauge/free-coordinate registration and, for propagated
+sources, the intrinsic source-map/prefix boundary registration.
+There is no claim that the normalized own-domain problem has been
+solved merely by writing a principal Gaussian covariance block.

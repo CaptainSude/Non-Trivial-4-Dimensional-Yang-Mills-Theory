@@ -1,0 +1,228 @@
+ELLIPTIC RESPONSE AND HOMOGENEOUS PREFIX: NEW EXTENSION
+25 October 2026. Mathematical working result. Scoped N1 cross-audit:
+new-Hhat-whole-response-N1-audit-20261025.txt. Final scoped assembly PASS:
+elliptic-response-prefix-assembly-final-independent-audit-20261025.txt.
+These are internal mathematical reviews, not external peer review.
+
+This supplies a SPECIFIED NEW independent-current response for the
+conditional theorem homogeneous-complex-prefix-map-20261025.txt.
+It preserves the original physical response. It does not identify the
+new extension with an unspecified previous one. Analytic activities,
+action splits, source catalogues and denominators must use this same
+choice or receive an explicit comparison proof. No YM limit is claimed.
+
+1. THE MATCHING PROBLEM
+
+B102(180) contains a linear correction absent from displayed B116(1.4).
+An explicit change of seed reconciles the equations, but simply renaming
+H1 does not prove its Laplacian bound: B99 Theorem3.12 excludes that bound
+for the gauge-invariant G,G1. Physical additive Ward identities also need
+not survive substitution of an independent J. The construction here uses
+the elliptic G0 of B99 Theorems3.3--3.4 and its complete local-word bounds
+from Theorem3.10, which DO include the covariant Laplacian.
+
+2. STRONG RIGHT INVERSE
+
+Use native cell-volume bilinear pairings. Normalize the coarse Q row to
+include its L^j eta factor, so QH0=I. Set
+
+ A=Delta_a=Delta_raw+DRD*+Q*a_Q Q,
+ G0=A^{-1}, W=(QG0Q*)^{-1}, H0=G0Q*W,
+ G_Q=G0-G0Q*WQG0.
+
+Define E_U lambda(b)=lambda(b_-)+Ad_{U(b)}lambda(b_+), T=E_U G'RD*,
+and, for independent J,
+
+ 2<X,S_JY>=<i[TX,Y],J>,
+ S_JY=(i/2)DRG'E_U^*[Y,J].
+
+The commutator has weight -4; DRG' maps it to weight -3. Thus
+||S_JY||_(-3)<=C||J||_(-3)||Y||_(-1), without differentiating J.
+Two-ended kernels have a fixed exponential majorant. For a small fixed
+current cap the series
+
+ Hhat=(I-G_Q S_J)^{-1}H0
+
+converges in an exponentially weighted kernel norm, with both row and
+column Schur bounds. The leftmost G_Q supplies all four strong slots:
+field, covariant first difference, P1, and covariant Laplacian.
+QHhat=I at s=1. For physical H, B102(137)--(138) gives
+A H=Q*Lambda_phys+S_JH and QH=I. Applying G_Q proves the same contraction
+equation, so Hhat=H on that physical graph. No off-graph Landau identity
+is assumed.
+
+3. BOUNDED RAW NONLINEAR REMAINDER
+
+Set
+
+ Lambda=W[I-QG0 S_J Hhat],
+ L_Q=Q*Lambda-Q*a_Q+S_JHhat.
+
+Exactly L_Q=(Delta_raw+DRD*)Hhat. Use the bounded displayed formula
+to estimate and localize it; do not estimate its second-derivative
+representation separately. Physically Hhat=H and RD*H=0, hence
+L_Q=Delta_raw H.
+
+Let C_U be the nonlinear averaging residual, starting at degree two.
+For A' in the reserved field/C1 ball solve
+
+ D(A')=C_U(A'-Hhat D(A')),
+ Z=A'-Hhat D(A'), D3=D-C_U^(2).
+
+The native contraction and derivative kernels give D=O(r^2),
+D'^*=O(r), D3=O(r^3), D3'^*=O(r^2). Define
+
+ Vhat(A')=-<Hhat D3,J>-<A',L_QD>
+          +(1/2)<D,Hhat*L_QD>+V0(Z).                 (1)
+
+B102 p297 explicitly uses the RAW-Delta version of functional(74)
+in its alternative equation. At a physical background (1) agrees with
+that raw remainder for ALL A', so its unrestricted derivatives agree.
+Equality merely on the Landau subspace would have been insufficient.
+
+Off-graph Hhat*L_Q need not be symmetric. The exact gradient is
+
+ Vhat'=-D3'^*Hhat*J-L_QD-D'^*L_Q*A'
+       +D'^*Sym(Hhat*L_Q)D+(I-D'^*Hhat*)V0'(Z).       (2)
+
+Two-ended weighted kernels bound Hhat,L_Q and their transposes. The
+local plaquette integration by parts B102(90)--(96) bounds V0' using
+first derivatives only. Therefore, on ||A'||_{field,C1}<=r,
+
+ ||Vhat'(A')||_(-3)<=Cr^2,
+ ||Vhat'(A')-Vhat'(B')||_(-3)<=Cr||A'-B'||_{field,C1}. (3)
+
+This avoids confusing the componentwise Laplacian with the raw action
+Hessian. The full gradient proof is in the nonlinear audit listed below.
+
+4. CORRECTED SEED AND RESPONSE
+
+Define the symmetric quadratic current operator E by polarization:
+
+ <A',E A'>=2<Hhat C_U^(2)(A'),J>.
+
+Its full read includes the Hhat*J branch. It is small in the native
+weighted operator norms on the fixed current cap. Put
+
+ G=(A-E)^{-1}, G_c=G-GQ*(QGQ*)^{-1}QG,
+ K=(I+G_c E)H0=GQ*(QGQ*)^{-1}.
+
+The last equality is the exact constrained-resolvent identity; QK=I.
+The G0E Neumann series and coarse Schur inverse give strong and local
+kernel bounds. Solve
+
+ a+G_c Vhat'(KB+a)=0,
+ Aresp(B)=KB+a-Hhat D(KB+a).                          (4)
+
+After choosing the B cap, (3) is a contraction in a strong ball of
+radius C||B||^2. Thus a is holomorphic, a=O(||B||^2), and
+
+ max(||Aresp||,||nabla_U Aresp||,
+     ||P1 Aresp||,||Delta_U Aresp||)<=C||B||.         (5)
+
+At s=1, QHhat=I, QK=I and QG_c=0 give exact averaging straightening.
+For physical nonlinear matching the background is specifically a native
+constrained minimum U=U_k(V0), with J=J(U). B102(178) then gives
+G_c J=0. An arbitrary regular real U with its physical current would
+retain the -G_c J forcing in B102(143) and is NOT covered by this
+zero-based physical identification. At the constrained minimum, the
+shift a=A0-G_c E H0 B turns B102(180) into (4).
+The raw remainder and all its A' derivatives match by Section3;
+uniqueness therefore identifies Aresp with the original physical
+response. The selected independent current is still the B109 polynomial,
+not a newly recomputed physical current off this subfamily.
+
+5. SIMULTANEOUS LOCALIZATION
+
+Use the factor-word convention throughout this assembly: expand every
+elliptic, scalar, coarse inverse and correction coefficient into its
+native words, attach the B116 scalar weakening factors to each primitive
+word, then compose those expansions. If a cube occurs in several factors,
+its scalar factor occurs with that multiplicity. Keep the complete support
+union and every current/transpose branch. This convention is fixed here;
+it is not identified with a convention attaching one weight per flattened
+support union. Both agree at s=1, but only the declared one is used below.
+
+To remove any ambiguity between equal unweakened formulas, start with
+the native primitive word families G0_s,Q_s,W_s,G'_s,R_s and the local
+current/averaging coefficients. Define H0_s=G0_s Q_s* W_s and
+G_Q,s=G0_s-H0_s Q_s G0_s. Use their factor-word expressions in S_J,s,
+Hhat_s=(I-G_Q,s S_J,s)^-1 H0_s, Lambda_s and L_Q,s above. Build E_s
+from this Hhat_s and the chosen C_U,s^(2). Define, specifically,
+
+ G_c,s=sum_{n>=0}(G_Q,s E_s)^n G_Q,s,
+ K_s=(I+G_c,s E_s)H0_s.
+
+These are the DEFINITIONS at s!=1. Do not additionally impose the
+unweakened Schur-complement equalities for independently weakened
+factors. Transposes are taken after the declared word construction.
+In particular W_s is the weakened PRE-EXPANDED word series for the
+coarse inverse W, not the literal inverse of Q_s G0_s Q_s*; the latter
+may fail to exist at zero weakening parameters.
+
+The individual word bounds hold on |s(Delta)|<=exp(kappa1), with fixed
+inflated constants. Choose the current cap so every resulting Neumann
+ratio in the exponential kernel norm is below one half. These ratios
+pay all additional factor multiplicities. Then choose the nonlinear
+noise cap by (3). This proves (3)--(5) simultaneously on that polydisc,
+uniformly in homogeneous grade and volume. All coefficients are jointly
+holomorphic on strict enlarged domains. They recover the exact operators
+at s=1. No QHhat_s=I or QG_c,s=0 is asserted when s!=1; those identities
+are unnecessary for the analytic bounds and are used for physical matching
+only at s=1. Gauge covariance is inherited by every local word.
+
+6. PREFIX APPLICATION
+
+Replace the ambiguous H0/A0 response in the conditional prefix note
+by (4), with its actual private-pivot B' and original fixed noise.
+Its other ingredients remain: selected-current polynomial, hierarchical
+absolute axial frame, and deterministic argument
+x_j^sharp=Ad_{Gamma_(j+1)^-1}x_j. There is no change to the integrated
+real x_j, its cut, or its measure. The physical map matches pointwise.
+
+On the complete fixed strict top-pair caps, for a small frame reserve
+q_* and sufficiently small total sum delta_j, that theorem gives
+
+ b_j<=L^{-(t-j)}b_t+C e^{2q_*}sum_{ell>=j}L^{-(ell-j)}delta_ell,
+ k_j<=L^{-2(t-j)}k_t+C e^{2q_*}sum_{ell>=j}L^{-2(ell-j)}delta_ell,
+ c_j<=L^{-3(t-j)}c_t+C e^{2q_*}sum_{ell>=j}L^{-3(ell-j)}delta_ell.
+
+The current line applies only at grades where it has been defined.
+Frames obey max(||Gamma_j||,||Gamma_j^-1||)<=e^{q_*} in the normalized
+unitary-invariant operator norm. One direct-to-full criterion per actual
+pair supplies its determining tests, without iterating B3 in these bounds.
+For t=O(log g_0^-1), delta_j=O(g_0 log^p(g_0^-2)), the total noise debt
+is O(g_0 log^{p+1}(g_0^-2)), which tends to zero.
+
+7. WHAT REMAINS
+
+This is a whole-response complex MAP family on a new independent-current
+continuation. It does not close all of G1. Still required:
+
+- Match every determining-cube replacement and near/far response branch
+  in a complete source expansion to this chosen continuation.
+- Keep inherited analytic activities, quadratic splitting, scalar terms
+  and denominators in this same continuation, or prove a comparison.
+  Physical agreement alone is not an identity theorem in independent J.
+- Prove normalized connected catalogue estimates, complete read/root
+  counts, contacts and actual reblocking through the finite delay.
+- Retain original masks and mixed-history contributions, then establish
+  the observable and continuum/infinite-volume construction.
+
+No original mask is declared redundant. Older phase bounds remain
+separate until their precise continuation is matched here.
+
+PROOF FILES (all under work/)
+
+new-Hhat-whole-response-N1-audit-20261025.txt
+elliptic-response-prefix-assembly-final-independent-audit-20261025.txt
+elliptic-linear-Hhat-independent-current-audit-20261025.txt
+normalization-native/b102-strong-independent-right-inverse-repair.txt
+Hhat-nonlinear-raw-remainder-audit-20261025.txt
+common-frame-selected-pair-bootstrap-20261025.txt and its audit
+homogeneous-absolute-axial-total-return-20261025.txt
+B109-literal-free-noise-pivot-covariance-20261025.txt
+homogeneous-complex-prefix-map-20261025.txt and its three audits
+
+Primary sources: the five user-supplied PDFs, respectively B98 Averaging,
+B109 RG I, B102 Variational Problem, B116 RG II, and B99 Propagators.

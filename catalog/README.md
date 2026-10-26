@@ -2,14 +2,18 @@
 
 Use the [proof-status ledger](../docs/PROOF-STATUS.md) for status and the [reading guide](../docs/READING-GUIDE.md) for a short route. This catalogue is for finding a known file; inclusion does not imply that every claim is current or unconditional.
 
-This edition includes **868 source files**. The full [archive index](archive-index.tsv) covers 5,999 manifested payload files. **248 duplicate archive paths** resolve through the alias table below, including 246 current working copies. Original-byte identities, published hashes, and local-path publication edits are recorded in [published-evidence.json](published-evidence.json).
+The **original 24 October edition** includes **868 source files**. The full [archive index](archive-index.tsv) covers 5,999 manifested payload files. **248 duplicate archive paths** resolve through the alias table below, including 246 current working copies. Original-byte identities, published hashes, and local-path publication edits are recorded in [published-evidence.json](published-evidence.json).
 
 The original archive remains necessary for entries marked `original-archive-only`, including some older imports and primary-page caches. The selection is not a certification or guaranteed transitive closure of all dependencies. See [coverage and path resolution](../docs/ARCHIVE.md).
 
+## New dated research
+
+The [26 October checkpoint](../research/2026-10-26-full-history-checkpoint/README.md) has a separate manifest, proof draft and producer/audit index. Its files are additional to the historical counts below. The [current ledger](../docs/PROOF-STATUS.md#results-added-on-2526-october) records R11–R15 and their scope.
+
 ## Quick routes
 
-- [Scoped results R01–R10](../docs/PROOF-STATUS.md#available-finite-and-homogeneous-results)
-- [Latest complex-prefix frontier](../guide/frontier.txt)
+- [Earlier scoped results R01–R10](../docs/PROOF-STATUS.md#earlier-finite-and-homogeneous-results-24-october-record)
+- [Historical 24 October complex-prefix frontier](../guide/frontier.txt)
 - [Five post-checkpoint producer/audit pairs](../guide/latest-reviewed-addenda.json)
 - [Frozen checkpoint: historical index, not a theorem count](../evidence/current/outputs/YM4-current-checkpoint-20261023.txt)
 - [Primary literature and printed locators](../docs/SOURCES.md)

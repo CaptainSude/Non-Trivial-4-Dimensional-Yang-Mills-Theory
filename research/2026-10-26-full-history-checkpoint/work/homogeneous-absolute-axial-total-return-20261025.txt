@@ -1,0 +1,137 @@
+HOMOGENEOUS ABSOLUTE AXIAL TOTAL RETURN
+25 October 2026. Exact algebra and conditional uniform estimate.
+
+Scope: a homogeneous full lattice with the native nested blocks, native
+ordinary averages M^m, and the absolute hierarchical axial representative.
+This is not a statement about generalized macroscopic determining-cube gauges.
+
+PRIMARY CONVENTION CHECK
+
+B98 printed29,(64)--(69), defines the hierarchical relative axial conditions.
+Set its background U0=1. Then its relative averaged field equals the ordinary
+average M^mF, and the conditions become
+
+  P_m(M^mF;x_(m+1),x_m)=1,
+  x_m in B(x_(m+1)), m=0,...,j-1.                   (A)
+
+B98 uses one coordinate path. In B109, P_m is its actual averaged contour
+variable(0.11), with the group mean's left/right equivariance(0.6).
+B109 printed254 explicitly transfers the B98 results to this convention.
+The same algebra below follows directly from endpoint covariance of P_m.
+
+B102 printed300 explicitly uses Ax_k(square^(k),1), distinguishing this
+absolute condition from the relative Ax_k(...,U0) used in its initial
+reduction. B102(181), printed307, gives the block-constant coarse-gauge
+equivariance of the axial minimum. B109 printed256,(0.21)--(0.22), initially
+allows any representative of the unique minimum orbit. Printed265 selects
+U_(k+1) in the axial gauge and subsequently introduces the DISTINCT relative
+Ax_k(...,U_(k+1)) gauge. Thus(A) is an available canonical homogeneous
+representative convention in this native framework. Printed265 does not
+re-display its complete equations; the source chain is(64)--(69) plus this
+absolute/relative convention. A concrete frozen map must register this
+choice, not silently relabel a different representative.
+
+Verified renders: work/primary-sources/B98-absolute-13.png (printed29),
+work/primary-sources/B102-absolute-24.png (printed300), and the previously
+verified B109 printed265. Originals are user-supplied paper1.pdf,paper2.pdf,
+paper3.pdf in supplied-paper:.
+
+EXACT TOTAL-RETURN FORMULA
+
+Use V^g(b)=g(b_-)V(b)g(b_+)^-1, so (V^g)^h=V^(h g).
+Let F_abs be in(A), let F_L be any gauge-equivalent field, and write
+
+  F_abs=F_L^g.
+
+For the nested chain x=x_0,x_1,...,x_j=y, ordinary gauge covariance and
+the endpoint covariance of P_m imply
+
+  1=g(x_(m+1)) P_m(M^mF_L;x_(m+1),x_m) g(x_m)^-1.
+
+Therefore, exactly and with the displayed order,
+
+  g(x)=g(y) P_(j-1)(M^(j-1)F_L;y,x_(j-1))
+                ... P_0(F_L;x_1,x).                  (B)
+
+This determines g uniquely after its coarse anchors g(y) are specified.
+Conversely, (B) constructs a gauge satisfying(A); each noncentral point has
+one parent in the hierarchy, so no consistency cycle is introduced.
+
+For the native B109 two-stage comparison,
+F_ax=F_abs^h=F_L^u with h=1 on T^(j). Thus g=h^-1u and g(y)=u(y).
+Equation(B) gives the total return directly:
+
+  h(x)^-1u(x)=u(y) product_(m=j-1 down to 0)
+                              P_m(M^mF_L;x_(m+1),x_m). (C)
+
+Hence an independent norm bound on the intermediate relative axial h is
+unnecessary in this absolute homogeneous convention. It has been eliminated
+by an exact identity, not by pretending its coarse normalization controls
+all finer vertices.
+
+DEPTH-UNIFORM NORM BOUND ON ONE COMMON PHYSICAL CHART
+
+Use a unitarily invariant operator norm. Let xi=L^-j and suppose
+
+  F_L=exp(i xi B) Wbar,
+  Wbar compact and satisfying the native B98(52) regularity on all reads,
+  ||B||<=b in one fixed small relative chart.
+
+Apply B98 Proposition6 in truncated/rescaled form. For s_m=L^m xi,
+
+  ||M^mF_L (M^mWbar)^-1-1||<=C s_m b.              (D)
+
+The compact background ordinary averages remain compact. A primitive
+endpoint path at level m uses at most q_L=d(L-1) links; this safe bound
+covers the B98 anchored blocks as well as B109's centered blocks. Thus
+each path transporter has norm and inverse norm at most exp(C q_L s_m b).
+For B109's mean of those paths, its local analytic equivariant mean gives
+the same estimate with a fixed L-dependent constant: factor out a compact
+anchor path, use regularity to place the remaining finite path family in
+one fixed mean chart, and apply the bounded derivative there. This uses
+the actual mean's domain; a mean at arbitrary separated matrices is not
+being asserted.
+
+Consequently the hierarchical product in(B) has norm and inverse norm
+at most
+
+  exp(C b sum_(m<j) L^m xi)<=exp(C b/(L-1)).         (E)
+
+If the native relative return anchor obeys ||u(y)^+/-1||<=exp(C r), as
+given by the separately audited B98 return bound for relative response
+size r, then
+
+  ||g^+/-1||<=exp(C(r+b)).                          (F)
+
+For F_L=exp(i xi A)exp(i xi B_next/L)Wbar, BCH on the fixed cap gives
+b<=C(r+L^-1 b_next), and hence
+
+  ||g^+/-1||<=exp(C[r+L^-1 b_next]).                (G)
+
+The compact path factors need not be close to1. Their operator norm is1;
+this is why no constant per hierarchy level occurs. Another equivalent
+matrix norm can be used by converting the final bound once, not by charging
+one equivalence constant per factor.
+
+PREFIX USE AND REMAINING INTERFACE
+
+Products of successive returns obey the exponential of the SUM of their
+debts. The common-frame potential recurrence implies
+
+  sum_j b_j <= C_L (b_t+sum_j r_j).
+
+Thus the path bound yields exp[C_L(b_t+sum_j r_j)] for the total frame,
+before accounting for transformed-noise feedback. This is not uniform
+in arbitrary t under only r_j<=r_*; a bound on total response/noise debt
+is necessary. In the proposed logarithmic weak-coupling window one may
+check that debt separately rather than hide it in a generic C^t.
+
+To identify a literal original-noise prefix, the native response must be
+covariant under the recorded frame and the full free-coordinate/pivot map
+must transform correctly. In particular, uniqueness of the solution of
+the natural transformed B102 equations is needed on common admitted
+charts; a formal gauge-invariance slogan does not ensure those charts.
+The selected independent current must be transformed simultaneously and
+must remain the same continuation after source localization. None of
+these interfaces, original masks, or normalized scalar estimates is
+proved by(C)--(G) alone.

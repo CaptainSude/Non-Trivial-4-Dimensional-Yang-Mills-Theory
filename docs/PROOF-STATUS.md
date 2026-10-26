@@ -1,10 +1,10 @@
 # Proof status
 
-**Snapshot: 24 October 2026. The existence theorem is not proved.**
+**Updated: 26 October 2026. The continuum existence theorem is not proved.**
 
 The target is one nontrivial, interacting, local four-dimensional **SU(2) Yang–Mills theory on R⁴ at positive renormalized coupling**. Mass gap, universality, uniqueness and a construction for every compact gauge group are not claims of this program.
 
-This ledger reports what the supplied research records establish **at their declared scopes**. It does not independently certify the mathematics. Each producer and its latest scoped audit control the precise statement; an overview cannot enlarge its hypotheses. Read the [incomplete manuscript](../paper/YM4-incomplete-proof.pdf) for the argument connecting these modules, and the [current handoff status](../guide/CURRENT-STATUS.txt) for the snapshot authority.
+This ledger reports what the supplied research records establish **at their declared scopes**. It does not independently certify the mathematics. Each producer and its latest scoped audit control the precise statement; an overview cannot enlarge its hypotheses. Read the [new checkpoint draft](../research/2026-10-26-full-history-checkpoint/Proof-draft.pdf) and its [dependency ledger](../research/2026-10-26-full-history-checkpoint/PROOF-DEPENDENCIES.txt) for the current application. The [earlier manuscript](../paper/YM4-incomplete-proof.pdf) and [handoff status](../guide/CURRENT-STATUS.txt) remain unchanged 24 October snapshots.
 
 ## How to read the labels
 
@@ -13,12 +13,69 @@ This ledger reports what the supplied research records establish **at their decl
 | **Exact** | A finite algebraic or disintegration identity, with its stated integrability and domain assumptions. It is not a uniform estimate. |
 | **Published input** | A result imported from primary literature at its original hypotheses. This repository does not re-prove the entire input. |
 | **Internally reviewed** | A local producer has a recorded scoped internal audit. This is not peer review or certification of all inherited dependencies. |
-| **Conditional** | An implication or consumer is proved under listed premises; the required premises have not all been established for the new source family. |
+| **Conditional** | An implication or consumer is proved under listed premises; the application requires its stated premises. A separately audited application may discharge them for one declared family without proving a generic version. |
 | **Open** | The result is unavailable as a theorem input. A candidate argument or numerical budget does not change this status. |
 
 “Available” below means available under these qualifications. File counts, manuscript length, internal PASS labels and preservation hashes do not count proved theorems.
 
-## Available finite and homogeneous results
+## Results added on 25–26 October
+
+The checkpoint is **internally reviewed under the listed native estimates**, not independently certified. These rows refer to the declared construction; they do not upgrade arbitrary earlier source extensions. The [current research record](../research/2026-10-26-full-history-checkpoint/README.md) preserves producers, audits, corrections and public-file hashes.
+
+### R11 — Declared complex reconstruction and source domains
+
+**Status: Internally reviewed at the declared native-map scopes.** The source machinery keeps the reconstructed field and independently selected current, simultaneous localization contours, old determining rows and the literal preliminary stage spaces. Fixed-core, running and mixed domains are distinct.
+
+**Limit:** a physical identity or a small amplitude is not permission to substitute a different off-graph germ. This is not general admission for every cavity or arbitrary source.
+
+Evidence: [elliptic prefix assembly](../research/2026-10-26-full-history-checkpoint/work/elliptic-response-prefix-assembly-20261025.txt), [final audit](../research/2026-10-26-full-history-checkpoint/work/elliptic-response-prefix-assembly-final-independent-audit-20261025.txt), and [literal mixed-domain audit, §11](../research/2026-10-26-full-history-checkpoint/work/old-mixed-noise-scalar-disc-and-phased-R-image-audit-20261025.txt).
+
+### R12 — Canonical weak windows and numerical repair
+
+**Status: Internally reviewed with explicit imported modules.** The canonical weak-window, fixed-core replay and finite-period numerical/affine repair arguments support the stated admissible finite prefixes and calibrated entry choices.
+
+**Limit:** separately chosen finite prefixes and numerical limits do not already define a common continuum state or a source-function limit.
+
+Evidence: [canonical coupling status](../research/2026-10-26-full-history-checkpoint/work/YM4-canonical-coupling-and-weak-window-status-20261025.txt), [assembly audit](../research/2026-10-26-full-history-checkpoint/work/YM4-canonical-coupling-assembly-independent-readback-20261025.txt), [finite-prefix bridge](../research/2026-10-26-full-history-checkpoint/work/fixed-prefix-numerical-limit-coupling-bridge-20261025.txt).
+
+### R13 — Calibrated homogeneous signed energy comparison
+
+**Status: Internally reviewed at the registered homogeneous scope.** The complete energy vertex, actual cutoff/window, selected-current terms, protected moments, packet sums and terminal mixed contact give a separated four-entry comparison with `K₀(f,h) = (9/π⁴) ∫∫ f(x)h(y)|x−y|⁻⁸ dx dy`. The real calibration satisfies `e_n = 1 + O(1/X)`.
+
+**Limit:** the homogeneous statement alone is not a result for the original full history mixture. It does not assume a Gaussian terminal law.
+
+Evidence: [assembly](../research/2026-10-26-full-history-checkpoint/work/homogeneous-signed-energy-covariance-assembly-20261025.txt), [audit](../research/2026-10-26-full-history-checkpoint/work/homogeneous-signed-energy-covariance-independent-readback-20261025.txt), [physical reference](../research/2026-10-26-full-history-checkpoint/work/homogeneous-signed-energy-physical-reference-readback-20261025.txt), [calibration](../research/2026-10-26-full-history-checkpoint/work/sharpened-constant-energy-calibration-20261025.txt) and [calibration audit](../research/2026-10-26-full-history-checkpoint/work/sharpened-constant-energy-calibration-independent-readback-20261025.txt).
+
+### R14 — From-bare source family and common-vacuum stability
+
+**Status: Internally reviewed for this declared native construction.** A new fine-M coefficient representation preserves the original sourced integral using the frozen normalized Wilson reference kernels. It retains old private dependence in the exact unnormalized joint block, charges original positive constituents at their true dates, and obtains the spatial source factor from a current-endpoint value estimate before gradient extraction. The source radius has a fixed polynomial loss. Full-history upper/lower estimates use the same new vacuum.
+
+**Limit:** new source-zero coupling labels are compared with the old ones, not identified with them. No complex private source mass is divided out, and no arbitrary spatial-coupling covariance theorem is imported. This does not establish all versions of the earlier G1/G2 proposals.
+
+Evidence: [joint source proof](../research/2026-10-26-full-history-checkpoint/work/joint-stopped-native-source-bootstrap-20261025.txt), [from-bare audit](../research/2026-10-26-full-history-checkpoint/work/from-bare-fine-M-R-constructor-independent-audit-20261025.txt), [source oscillation lemma](../research/2026-10-26-full-history-checkpoint/work/reterminalized-local-source-oscillation-lemma-20261026.txt) and [readback](../research/2026-10-26-full-history-checkpoint/work/reterminalized-local-source-oscillation-independent-readback-20261026.txt), [same-vacuum replay](../research/2026-10-26-full-history-checkpoint/work/new-vacuum-full-history-stability-replay-20261025.txt), [private/source/stability audit](../research/2026-10-26-full-history-checkpoint/work/full-history-source-stability-and-packing-independent-readback-20261026.txt).
+
+### R15 — Complete original-law four-entry checkpoint
+
+**Status: Internally reviewed under R11–R14 and their listed native inputs.** For the exact finite periodic SU(2) Wilson measure, use
+
+`O_a(f) = (x_n/e_n^old) Σ_(original positive p) f(x_p) [1−Tr(U_p)/2]`.
+
+There is no extra `a⁴`, source-dependent calibration or favorable-history restriction. For the four specified separated reflected probes,
+
+`|C_orig,ij−C_old,ij| ≤ 9/(6400 π⁴ τ⁸)`, `i,j ∈ {0,1}`,
+
+after the stated finite choices and control of the named regulator errors. Together with the homogeneous comparison this leaves `E_mu[(θF)F] ≥ 9/(800 π⁴ τ⁸)`, where `F=O_a(f₀−f₁)−E_mu O_a(f₀−f₁)`.
+
+The exact source identity keeps `D²h−Dh Dh`, so posterior normalization and outer covariance are retained. The auxiliary new core is averaged over the same packed patterns, with uniform scaffold-phase estimates. The final triangle returns to the original registered homogeneous reference.
+
+**Limit:** this is a separated finite-regulator witness along the declared admissible sequence. It supplies neither collision estimates nor a common limiting observable algebra, reconstruction or interaction theorem.
+
+Evidence: [fixed contract](../research/2026-10-26-full-history-checkpoint/work/full-history-four-entry-checkpoint-contract-20261025.txt), [assembly](../research/2026-10-26-full-history-checkpoint/work/full-history-four-entry-assembly-20261026.txt), [scalar/reference audit](../research/2026-10-26-full-history-checkpoint/work/full-history-four-entry-scalar-and-reference-independent-readback-20261026.txt), [phase/spatial-source audit](../research/2026-10-26-full-history-checkpoint/work/homogeneous-phase-uniformity-and-spatial-Gamma-independent-readback-20261026.txt), [main application audit](../research/2026-10-26-full-history-checkpoint/work/consolidated-main-application-independent-readback-20261026.txt).
+
+## Earlier finite and homogeneous results (24 October record)
+
+R01–R10 below preserve their earlier claim scopes. Statements about an unclosed cavity route describe that route; R11–R15 supply a separately declared later construction, not automatic extensions of every earlier germ.
+
 
 ### R01 — Exact finite law, sources and contacts
 
@@ -130,16 +187,15 @@ The Alpoge–Sussman working repository is a source of architecture and clues. N
 
 ## What is still open
 
-| Gate | Status | Required result |
+| Gate | Current status | Required result |
 |---|---|---|
-| **G1a–G1b — Literal complex transport interface** | **Open; immediate frontier** | Identify the ordinary-average / relative-`Q` endpoint and coarse-frame return. Carry the actual independently selected current through the true maps and source localizers. Control complex gauge-return products with original real noise variables fixed. |
-| **G1c–G1d — Complete source admission and catalogue** | **Open** | Prove simultaneous old/current pair-domain inclusion, all response norms, complete primitive reads, normalized costs, radius evolution and genuine reblocking across the required finite logarithmic delay. Then match the admitted source census to the dated recurrence. |
-| **G2 — Full original law** | **Open** | Cover all original mixed histories and complementary sectors with their masses, companions, source/contact terms and terminal covariance. |
-| **G3 — Observable and contact contract** | **Open** | Specify the observable algebra, physical calibration and collision/contact topology, with calibrated joint estimates and local volume control sufficient for the limit. |
-| **G4 — Common limiting state and reconstruction** | **Open** | Construct a compatible continuum and infinite-volume state from the actual full finite laws; establish positivity, Euclidean symmetry, consistency, regularity, locality and reconstruction. Independently tuned finite horizons do not already provide this state. |
-| **G5 — Yang–Mills identification and interaction** | **Open** | Identify the intended nonabelian dynamics; prove a nonzero observable/reflection norm and a justified interaction witness in the same reconstructed state, excluding the relevant free/generalized-free alternatives. |
+| **G1 — Source-domain and catalogue interfaces** | R11/R14 address the declared checkpoint construction; generic/alternative versions remain open | Match any further source family to its actual independent-pair domains, original real noise, complete reads and normalized estimates. The old cavity route is not automatically closed. |
+| **G2 — Full original law** | R15 reaches the four-entry checkpoint; broader joint source closure remains open | Extend the full-law estimates to the observable collections and contact regimes required by a common limiting algebra. |
+| **G3 — Observable and contact contract** | **Open; immediate construction task** | Build on the fixed separated-energy contract while proving joint/collision estimates, contact prescriptions, topology and local volume bounds. |
+| **G4 — Common limiting state and reconstruction** | **Open** | Construct a compatible continuum and infinite-volume state; prove limiting consistency, reflection positivity, Euclidean covariance, regularity, locality and the reconstruction hypotheses. |
+| **G5 — Yang–Mills identification and interaction** | **Open** | Carry the finite-regulator witness into that same state, identify its nonabelian dynamics and prove an interaction criterion excluding the relevant free alternatives. |
 
-These IDs match the [open-problem work packages](OPEN-PROBLEMS.md), which give acceptance criteria. The detailed immediate contract is in [the frontier report, §§2–6](../guide/frontier.txt), with the broader architecture in manuscript §§9–10. **No completed complex common-frame producer or scoped audit was saved at this snapshot.** Proposed estimates for that route are observations, not theorem inputs.
+The [work packages](OPEN-PROBLEMS.md) give acceptance criteria. The [26 October status](../research/2026-10-26-full-history-checkpoint/CURRENT-STATUS.txt) and [draft](../research/2026-10-26-full-history-checkpoint/Proof-draft.pdf) govern the new application; the [old frontier](../guide/frontier.txt) remains a preserved 24 October investigation, not the current global status.
 
 ## Obstructions and superseded shortcuts
 
@@ -157,9 +213,9 @@ These records prevent collaborators from repeating approaches that already faile
 | “Logarithmic rarity pays every root count.” | It does not pay arbitrary-age `L^(4s)` counts or uncontrolled `C^s` amplification. C02 can pay a specified finite delay only after its image and reblocking premises are proved. |
 | “A nonzero coefficient or higher cumulant proves interaction.” | A regular-core coefficient need not survive full-law reconstruction as a nonzero reflection norm. Nonlinear observables of free fields can have higher cumulants. G5 requires a suitable witness in the same identified state. |
 
-## Snapshot and review boundaries
+## Historical snapshot and review boundaries
 
-The frozen checkpoint has **249 referenced TXT documents plus the checkpoint itself**. Its dated filename and historical ACTIVE wording do not describe a new proof result or a current instruction. Five later producer/audit pairs add ten files; [their register](../guide/latest-reviewed-addenda.json) preserves the original source paths, and the [archive path guide](ARCHIVE.md#resolving-historical-paths) explains translation into this edition.
+The **24 October** frozen checkpoint has **249 referenced TXT documents plus the checkpoint itself**. Its dated filename and historical ACTIVE wording do not describe a new proof result or a current instruction. Five later producer/audit pairs add ten files; [their register](../guide/latest-reviewed-addenda.json) preserves the original source paths, and the [archive path guide](ARCHIVE.md#resolving-historical-paths) explains translation into this edition.
 
 The manuscript is a readable synthesis. The restricted second image, complex read-cost criterion and rectangular cavity are separate addenda, so reading only the manuscript misses useful scoped results. Conversely, the [manuscript scope audit](../guide/manuscript-scope-audit.txt) checks framing and finite algebra; it explicitly does not recertify all imported Balaban or inherited TURN77 dependencies.
 

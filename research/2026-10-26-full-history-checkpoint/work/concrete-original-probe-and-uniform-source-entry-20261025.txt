@@ -1,0 +1,209 @@
+CONCRETE ORIGINAL PROBES AND UNIFORM SOURCE ENTRY
+25 October 2026. normalized_read. No observable-limit claim.
+
+RESULT
+
+There is a simple original bounded positive-time probe with an honestly
+UV-uniform INITIAL analytic source norm: a probability-weighted average
+of microscopic magnetic plaquette energies. Its normalization is explicit
+below. However this probe tends to ZERO in every finite L^p along the
+weak bare sequence, by an elementary uniform-volume estimate. It is a
+useful exact marked-transport test, not a nontriviality witness.
+
+A plaquette of a field blocked to fixed physical spacing is the better
+candidate for a nontrivial physical-resolution source. On its admitted
+coarse chart its source norm and source disc are uniform. Balaban's actual
+mean/log averaging is only locally defined, so this is not by itself a
+globally defined original full-law observable. An explicit Borel fallback
+makes a bounded original probe, but the failed-branch/full-history analytic
+entry estimate is still missing. Spatial-only flow is another legitimate
+positive-time original observable with a different unresolved UV source
+estimate. Thin Wilson loops are legitimate originals but real boundedness
+does not supply their microscopic complex source norm.
+
+1. AN UNCONDITIONAL UNIFORM INITIAL SOURCE
+
+Let a be the spacing of the ORIGINAL periodic SU(2) Wilson law
+
+ dmu_a=Z_beta^-1 exp[-beta sum_p h_p(U)] product_e dU_e,
+ beta=g_a^-2,             h_p=1-(1/2)Tr U_p in[0,2].
+
+Fix f>=0 smooth, compactly supported in a physical box K with time
+coordinate at least d>0. Use only spatial 12-plaquettes, based at x_p.
+For small a put m_a=a^4 sum_(p parallel12)f(x_p)>0 and
+
+ w_(a,p)=a^4 f(x_p)/m_a,
+ O_a(U)=sum_p w_(a,p) h_p(U)/2.                            (1)
+
+This defines ONE original function with 0<=O_a<=1, gauge invariant,
+supported in K enlarged by O(a), and using no temporal links. Reflection
+maps it to the same construction on the reflected test. Thus it belongs
+to the original positive-time observable algebra for small a; no RG or
+R transformation is used to assert that support. Any reflection-positive
+Gram inequality of the original Wilson law applies to these functions
+without changing the law. This does not prove a continuum RP theorem.
+
+The physical calibration is EXACTLY c_(a,p)=a^4 f(x_p)/(2m_a). It is NOT
+the original energy calibration c_a=t_R or a renormalized F^2 insertion.
+No extra microscopic census may be inserted after these weights.
+
+On a product complex-link chart with ||U_e||,||U_e^-1||<=exp(r_*),
+the four-link plaquette word satisfies |h_p|<=1+exp(4r_*). Therefore
+
+ sup|O_a|<=M_*=(1+exp(4r_*))/2,
+ sum_p sup|w_(a,p)h_p/2|<=M_*.                            (2)
+
+Each complete initial read contains only its four links and the fixed
+native mother/stencil closure. Its carrier/seed price is a fixed constant
+C_* independent of a. Consequently the strong initial TOTAL profile norm
+is <=C_*M_*, while a pointwise rooted density norm has the corresponding
+w_(a,p) factor. Sum the actual original root labels once. The source
+ignores J and is holomorphic on the larger complex chart, hence restricts
+to every relevant smaller native birth chart without a radius price.
+No Euclidean/Reynolds averaging of this specified magnetic probe is used.
+
+The exact ORIGINAL generating function also has a uniform source disc:
+
+ |E_mu exp(z O_a)-1|<=exp(|z|)-1.
+
+It is nonzero for |z|<log2, so its logarithm and every fixed source jet
+have UV/volume-uniform bounds on smaller discs. Joint probes have the
+same conclusion for sum|z_i|<log2. This elementary fact is distinct from
+a proof that all intermediate complex RG source norms remain bounded.
+
+2. THIS UNIFORMLY ENTERING PROBE IS TRIVIAL IN THE WEAK BARE LIMIT
+
+Here is a direct volume-uniform bound, requiring no perturbation theory.
+Let V be the number of sites, N_b=4V, N_p=6V. For beta>=2 restrict every
+link to a Haar ball ||U_e-I||<=c beta^-1/2. Its measure is at least
+c1 beta^-3/2 per link. On that event h_p<=C/beta, because a plaquette
+is a four-link word and h_p=(1/4)||U_p-I||_HS^2. Thus
+
+                 log Z_beta >= -C V log beta.               (3)
+
+The function phi(beta)=log Z_beta is convex and phi'=-E_beta sum h_p.
+The tangent inequality between beta and beta/2 gives
+
+ E_beta sum h_p <= (2/beta)[phi(beta/2)-phi(beta)]
+                <= C V log beta/beta,                        (4)
+
+using Z_(beta/2)<=1. Translation invariance makes E h_p equal within
+each orientation; positivity of the other orientations then bounds the
+chosen orientation by C log beta/beta. Therefore
+
+ E O_a<=C log beta/beta ->0,
+ E |O_a|^p<=E O_a ->0             for every fixed p>=1.        (5)
+
+The result is uniform in the periodic volume and the positive weights.
+It proves that this particular uniform-entry probe cannot witness a
+nonzero limiting field. It is NOT a statement that all bounded probes
+or the Yang-Mills theory are trivial. Multiplying (1) by beta destroys
+the uniform real bound; nonlinear rescaling may retain a real bound but
+requires a new analytic source estimate and is not covered by(2).
+
+3. THIN FIXED-PHYSICAL WILSON LOOPS
+
+For a spatial loop gamma of physical perimeter ell at time>d,
+w_gamma=(1/2)Tr product_(e in gamma)U_e is a globally defined original
+function, |w_gamma|<=1 and with exact positive-time support. But for
+n~ell/a independently perturbed links,
+
+                   |w_gamma|<=exp(n r)                      (6)
+
+on a microscopic complex-link ball of radius r. This scale is real,
+not merely a bad upper bound: take a simple loop and choose commuting
+imaginary traceless perturbations so each ORIENTED traversal contributes
+exp(r sigma3). Then w_gamma=cosh(n r). Real compact boundedness therefore
+does not imply UV-uniform holomorphic norms in that chart. A fixed cap
+requires r=O(1/n), incompatible with a naive uniform microscopic cap.
+
+This example concerns the independent-link ball. It does not disprove a
+better bound on a more restrictive graded regularity chart, or a future
+renormalized loop estimate. The initial complete carrier also has order
+ell/a microscopic cells, so its native exponential seed weight must not
+be discarded. The current source compiler has no proved uniform thin-
+loop perimeter renormalization that pays these costs.
+
+4. A NATIVE-BLOCKED PLAQUETTE: GOOD COARSE ENTRY, GLOBAL GAP
+
+Choose a fixed physical resolution ell and compatible a with ell=L^m a.
+Let Q be the ACTUAL ordinary average and consider formally
+
+             O_(a,ell)^reg(U)=[1-tr(Q^m U)(partial p_ell)]/2. (7)
+
+B109 printed253(0.5)--(0.10) defines the group mean only for sets of
+sufficiently small diameter. Its actual bond averages(0.4),(0.12)
+also use logarithms. Thus (7) is defined analytically on the admitted
+multi-grade regular branch, not on every original rough configuration.
+One cannot call it an original full-law observable without an extension.
+
+At its coarse birth grade the function F(V)=[1-tr V_p]/2 has a fixed
+four-link read and the bound(2); its source disc and complete carrier
+norm are UV-independent. On a strict near-flat coarse field chart of
+radius rho, F=O(rho^2) by the exact plaquette expansion, with a uniform
+analytic constant at that fixed resolution. Source/current derivatives
+are controlled there by Cauchy on a fixed larger chart. These are genuine
+COARSE entry estimates. They are not the estimate for F(Q^m U) through
+the entire original measure.
+
+A precise globally bounded candidate is possible. For each elementary
+average, use Q on its native real admissible branch; elsewhere use the
+straight original coarse-bond holonomy as a declared fallback. Define
+reverse bonds by inversion. The admissibility predicate uses conjugacy-
+invariant distances and all required local means/logs. Choose the fixed
+path conventions covariantly under time reflection. Both branches are
+gauge equivariant at their endpoints, so the resulting Borel map Qhat
+is gauge equivariant and time-reflection compatible. Then
+
+             O_(a,ell)(U)=[1-tr(Qhat^m U)_p]/2               (8)
+
+is a genuine bounded original observable. Its read is in a fixed multiple
+of an ell-neighborhood: the one-step read radii sum geometrically. Put
+that entire neighborhood at time>d to retain exact positive-time support.
+This specifies the observable, including failed branches; no cut is added
+to the original Wilson measure. The fallback is part of the observable's
+definition, not an assertion that a different average obeys all native RG
+theorems. Native Q is still used by the native transformations.
+
+The missing estimate is now exact: transport the full Borel function(8)
+through the original T/R reconstruction, retaining every failed branch,
+and show that its own-domain marked source family has a UV-uniform norm
+at resolution ell. The known coarse F bound alone does not prove it.
+A mask deleting all failed ancestors changes the observable and can have
+a large fine-cell census. R replaces fields, so equality to F of the
+current replacement field is false without the marked reconstruction.
+No arbitrary Reynolds projection may replace this specified mark.
+
+5. SPATIAL FLOW: SAME SUPPORT ADVANTAGE, DIFFERENT OPEN ESTIMATE
+
+Spatial-only Wilson gradient flow in a fixed spatial box at each time
+defines a smooth finite-lattice real gauge-equivariant map for every
+initial configuration. A bounded radial function of a flowed magnetic
+plaquette is therefore an original gauge-invariant positive-time probe;
+using a fixed spatial box gives exact finite spatial read. Averaging the
+scalar AFTER taking its radial gauge invariant value preserves gauge
+invariance without temporal transport strings. Four-dimensional flow
+does not automatically preserve positive-time support.
+
+At fixed physical flow time the lattice ODE runs for time O(a^-2).
+Finite-dimensional real existence/compactness does not supply an
+a-independent complex initial-field domain or complete marked derivative
+bound. The inherited spatial-flow and rough-data notes identify precisely
+that gap; their free Maxwell benchmark is not the interacting original
+Wilson estimate. No general rough-data theorem is imported here.
+
+6. BEST NEXT TARGET AND LIMIT
+
+Use(1) as a rigorous bounded-source entry/control test and(8), with its
+explicit fallback and complete physical read, as a concrete candidate
+for the new marked-history analysis. The next useful theorem for(8) is
+its exact full-history source identity plus a UV-uniform own-domain
+source bound at ell, with a separately calibrated nonconstant limiting
+covariance or reflection norm. The new small homogeneous body discrepancy
+may help compare its admitted regular pieces with the fixed core, but
+does not by itself handle the original failed branches or mixed B/R reads.
+
+This note proves the initial uniform entry lemma and its trivial-limit
+diagnostic, and specifies a nontriviality-oriented original candidate
+without concealing its unresolved entry. It does not assert a physical
+calibration, continuum flowed field, loop renormalization or YM4 state.

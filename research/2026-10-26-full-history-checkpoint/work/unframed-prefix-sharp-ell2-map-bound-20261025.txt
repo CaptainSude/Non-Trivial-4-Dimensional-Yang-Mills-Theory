@@ -1,0 +1,165 @@
+SHARP FINITE-PREFIX MAP BOUND AFTER REAL FRAME REMOVAL
+25 October 2026. Endpoint/response norm audit.
+
+Scope. This proves the deterministic sensitivity estimate for the
+UNFRAMED new response/current map. Its use for an original normalized
+gauge-invariant prefix requires the separately audited exact real
+noise-rotation identity, with every old density factor, original cut,
+private pivot and scalar term retained. The estimate does not itself
+prove that identity or justify a complex change of integration variables.
+
+1. EXACT ZERO-NOISE MAP
+
+Fix one compact reference Wbar on the original fine lattice, used at
+EVERY grade of the finite prefix. In the common chart write
+
+ U_(j+1)=exp(i xi_(j+1) B_(j+1))Wbar,
+ U_j=exp(i xi_j B_j)Wbar,       xi_j=L^-j.
+
+The unframed map uses the original free noise x_j directly in its
+literal private-pivot input. That input is zero at x_j=0. The new
+response satisfies Aresp(0;U,J)=0 IDENTICALLY for every admitted
+independent pair, since all its D and a contractions have zero seed.
+This remains true for every declared factor-word weakening.
+
+The selected-current polynomial therefore has the exact zero-noise
+value, not just an estimate,
+
+ D0_j(B,J)=(L^-1 B, L^-3 J).                       (1)
+
+The branch of the common logarithm is fixed and small. The first
+component follows from xi_(j+1)/xi_j=L^-1. No minimum/current relation
+is needed for (1); J is independent.
+
+Since Wbar is fixed, its covariant first difference has the exact grade
+conversion
+
+ nabla_j(L^-1 B)=L^-2 nabla_(j+1)B.                (2)
+
+Curvature and other admission tests are constraints on the chart, not
+additional independent coordinates in this norm. The four strong
+response slots are retained to bound the current correction.
+
+2. OWNED-TAIL PACKETS GIVE BASE NORM L EXACTLY
+
+Choose nested nonoverlapping cells: each grade-(j+1) cell has exactly
+L^4 grade-j children, with the native homogeneous torus alignment.
+Assign every original fine bond and every first-difference component
+to the cell containing its tail. A first-difference stencil may cross
+the cell boundary; its OWNERSHIP does not. Use the packet seminorm
+
+ r_q(B,J)=max{ sup_owned |B|,
+              sup_first-difference-with-owned-tail |nabla_j B|,
+              sup_owned |J| }.
+
+Use its induced counting ell2 norm, (sum_q r_q^2)^(1/2). The same
+definition applies to tangent directions. If redundant jet coordinates
+are used, restrict to jets of actual field directions; no independent
+jet-coordinate variation is assumed.
+
+Every child's owned set is contained in its parent. Equations(1),(2)
+give r_child(D0_j v)<=L^-1 r_parent(v), with the current and gradient
+slots actually smaller. Therefore
+
+ ||D0_j v||_2^2
+ <=sum_parents L^4 L^-2 r_parent(v)^2
+ =L^2 ||v||_2^2,
+
+so ||D0_j||_(2->2)<=L. No collar-overlap or partition-of-unity constant
+is multiplied into this base estimate. This is the reason for using
+owned tails rather than taking a new enlarged-cube norm at each grade.
+
+3. THE ENTIRE CORRECTION IS NOISE-PROPORTIONAL
+
+Write the actual unframed pair map as Psi_j=D0_j+R_j. With
+delta_j=g_j Rnoise,j the uniform original physical noise cap, the
+complete new response, covariant BCH field update, and selected-current
+polynomial give, on the larger reserved chart,
+
+ ||R_j||_field/C1/current <=C_L delta_j.            (3)
+
+This includes the full P1=DPD* coefficient/argument branches, the local
+Delta_U A and F1 stencils, and the actual private-pivot inverse and
+Dtilde. Each term in the selected-current correction contains Aresp.
+The pure old-current term is exactly the second component of (1).
+The field correction is the covariant BCH expression with its exact
+L^-1 B term subtracted. Hence no old-field O(1) term is hidden in(3).
+
+The scalar-localized correction has the SAME zero-noise identity:
+retain D0 unweighted, and use the declared complete factor words only
+in the correction. Its uniform cap on the fixed scalar polydisc is
+C_L(S) delta_j. Cauchy in the reserved BACKGROUND/current chart and
+the complete one-mark localization lemma consequently give a kernel
+for E_j=D Psi_j-D0_j with weighted row sum C_L delta_j and weighted
+column sum C_L L^4 delta_j. Here the finite constants may depend on
+the fixed L, localization block, scalar radius and chart reserve.
+
+A bounded-overlap C1 partition is used ONLY to synthesize local field
+directions when estimating E_j. Its constants belong to C_L in the
+small correction, not to the exact base map. Marking a current factor,
+an inverse word or a transpose is included in that same complete bound.
+The selected independent current is never replaced by a physical
+current off its graph.
+
+Schur's inequality, with the fixed powers of L absorbed in C_L, yields
+
+ ||E_j||_(2->2)<=C_L delta_j,
+ ||D Psi_j||_(2->2)<=L+C_L delta_j.                (4)
+
+There is no frame interpolation term in(4). If sampled frames remain
+as state variables, their zero-noise interpolation has an O(1)
+background derivative and the sharper proof here cannot simply be
+reused for that larger state.
+
+4. FINITE PREFIX AND PHASE-TUBE PRICE
+
+Chain rule and 1+s<=exp(s) give
+
+ ||D(Psi_j ... Psi_(t-1))||_(2->2)
+ <=L^(t-j) exp[(C_L/L) sum_(ell=j)^(t-1)delta_ell]. (5)
+
+The estimate is uniform over the original fixed real noise product
+and over the stated common complex chart. A terminal perturbation in
+h owned packets, each of norm at most rho, therefore has intermediate
+packet norm at most
+
+ L^(t-j) exp[(C_L/L)sum delta] sqrt(h)rho,          (6)
+
+up to a fixed ONCE-only synthesis constant if the external terminal
+parameters are different coordinates. Integrate the derivative along
+the admitted terminal parameter segment and bootstrap against the
+strict chart reserve. Conversion from Wbar coordinates to the real
+intermediate input's relative chart costs another uniform ONCE-only
+constant at that phase test, not a constant at every map composition.
+
+If the old normalized density has a fixed unframed phase allowance
+eps_phase in this packet norm, a sufficient terminal radius is
+
+ rho <= c eps_phase h^-1/2 L^-t
+               exp[-(C_L/L)sum delta].             (7)
+
+Any initial completion/minimum map has its own derivative and support
+price; multiply that price into(6) once. No such map is declared to
+have norm1. For t=(1/2)log_L(1/g)+O(1), L^t=O(g^-1/2). Consequently
+a running terminal radius g times a fixed power of log(1/g), with a
+polylogarithmic number of affected packets and a polynomial-in-log
+completion derivative, fits (7) for sufficiently small g. This is a
+quantitative implication of (5), not a proof that a particular completed
+input/source image satisfies every other phase or source condition.
+
+5. WEIGHTED ROW VARIANT
+
+In the common final metric dist/(M L^t), the exact base row is L^-1
+times its child-parent displacement weight. That displacement is
+O(L^(j+1)/(M L^t)); summed over all dates it is bounded by a geometric
+series. Thus its metric cost over the whole prefix is a fixed constant,
+not an unavoidable C^t. The correction retains its C_L delta_j weighted
+row bound. This observation may sharpen a later normalized first-jet
+estimate, but only after the actual score/covariance contribution has
+also been shown to be O(delta_j) on the same chart. The present proof
+only asserts the map estimate(5).
+
+The exact real frame-removal identity, inherited density admission,
+normalization, source-domain matching and intrinsic carrier gluing
+remain separate requirements. No full Yang--Mills construction is
+claimed by this finite-prefix sensitivity refinement.

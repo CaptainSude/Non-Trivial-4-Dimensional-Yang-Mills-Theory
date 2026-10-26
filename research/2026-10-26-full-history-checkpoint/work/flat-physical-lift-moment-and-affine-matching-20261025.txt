@@ -1,0 +1,358 @@
+FLAT PHYSICAL MINIMUM: PERIODIZATION, MOMENT TAILS, AND AFFINE MATCHING
+25 October 2026. endpoint_return. Fixed finite homogeneous prefix.
+
+RESULT AND LIMITS
+
+The old physical flat conditional minimum, together with its actual Wilson
+current, has a period-independent exponentially localized linear response
+at every FIXED finite homogeneous depth. Its finite-torus response is the
+exact image sum of the explicit infinite-lattice flat response, including
+the chosen local gauge return. This gives uniform TAILS of second and
+higher position moments, not just bounded moments. On affine determining
+data its field is the native affine fine field modulo the recorded gauge,
+and its linearized physical current vanishes. Consequently its current
+Bloch symbol has a double zero, with the internal fine-cell coordinates
+retained.
+
+No limit of a new independent-current continuation or of its coefficients
+is used. Constants below may depend on the fixed depth N and all frozen
+local conventions, but not on the ambient period P. This is sufficient for
+a fixed-prefix P -> infinity comparison. It is not a uniform-in-N estimate,
+a proof of convergence of arbitrary coefficient germs, or a proof that an
+independent-current AJ Hessian can be ignored solely because J(q)=O(q^2).
+The latter still needs the appropriate pair Ward identity.
+
+1. PRIMARY REGISTRATION AND CONVENTIONS
+
+B99, Propagators for Lattice Gauge Theories in a Background Field:
+  printed392 (3.10)--(3.12): physical current
+        J(U)=D_U^* eta^-2 Im(dU),
+  and the flat Wilson quadratic operator K=d_1^*d_1.
+  printed393--395 (3.18)--(3.27): Q', its scalar augmented inverse G',
+  projection R, and vector augmented inverse G.
+  printed418 (3.114)--(3.115): Qd=d_c Q' at flatness.
+  printed419 (3.119): A -> A-dG'Rd^*A is the Q-preserving Landau projection.
+  printed420 (3.122)--(3.126): H=GQ^*(QGQ^*)^-1 and Rd^*H=0.
+  printed422 (3.132)--(3.133),423 Theorem3.12: exponential kernels for
+  the coarse inverse and H, including first derivative and Holder slots.
+  printed416 (3.107)--(3.108) and Theorem3.10 supply their convergent
+  localized operator expansions. Theorem3.14 is a separate domain-change
+  estimate; it is not necessary to postulate a nonlinear infinite germ.
+
+The actual printed422 was checked again in
+work/primary-sources/B99-flat-lift-422.png. In (3.133), at homogeneous
+j=j'=N and eta=L^-N, both endpoint scales L^j eta equal one. The extra
+input conversion stated immediately below (3.133) is then one also.
+
+B102 printed305--309 (174)--(190), Proposition9: the first response of
+the actual minimum is H_1. At the trivial background J=0, the additional
+quadratic current terms vanish, so H_1=H. Equation(181) and the preceding
+paragraph retain the analytic return from relative Landau to native axial
+gauge. At fixed N this return uses the actual finite block hierarchy,
+not a spanning tree of the whole torus.
+
+B109 printed252--254 (0.3),(0.5)--(0.12): centered blocks and the
+symmetrized endpoint-contour mean; (0.8) makes its first derivative the
+arithmetic mean. The text explicitly transfers the earlier averaging
+results to this convention. It is this centered convention that is used
+below. The B98 one-sided blocks must not be silently substituted.
+
+Work in current coarse length units, with spacing one and fine spacing
+eta=L^-N. Use the native lattice pairings, including their cell measures,
+and midpoint coordinates for one-forms. A coarse bond datum is a link
+angle; with coarse spacing one it is also its potential. Let d map scalar
+fields to fine one-forms, d_1 map one-forms to plaquette curls, and d_c be
+the corresponding coarse derivative. K=d_1^*d_1. All statements hold
+colorwise at flatness. No gauge zero mode is inverted by K alone.
+
+There are two linear averages: the derivative of the ordinary group
+average, and the corrected relative average Q in the Landau problem.
+They differ by the actual endpoint-gradient correction. We keep this
+distinction. On the affine tests below they give the SAME coarse data;
+for general fields the native return, not an equality of the two Q's,
+identifies the physical ordinary minimum.
+
+2. EXPLICIT FLAT OPERATORS
+
+Write a>0 for the fixed homogeneous gauge/constraint penalty. At flatness
+the scalar and vector operators are
+
+ G'=(d^*d+Q'^*aQ')^-1,
+ R=I-G'Q'^*(Q'G'^2Q'^*)^-1 Q'G',
+ G=(K+dRd^*+Q^*aQ)^-1,
+ W=(QGQ^*)^-1,
+ H=GQ^*W.                                                     (1)
+
+These are precisely the flat instances of B99(3.25),(3.26),(3.126),
+with the same averaging and adjoint conventions. In particular
+
+             QH=I,       Rd^*H=0.                           (2)
+
+The real flat coercivity estimates and the kernel estimates cited above
+construct these inverses on the infinite periodic block lattice. This
+uses only explicit flat operators. They can equivalently be obtained by
+the native convergent local inverse expansions; no interacting infinite
+coefficient family is required.
+
+At fixed N, put all fine sites, bond types and component indices in one
+coarse cell into a finite fiber. After taking a smaller decay rate, the
+native bounds imply for each displayed kernel and required finite
+composition a weighted row/column estimate
+
+ max{sup_x sum_y exp(mu_N |x-y|)|T(x,y)|,
+     sup_y sum_x exp(mu_N |x-y|)|T(x,y)|} <= C_N.              (3)
+
+Here distance includes the bounded internal endpoint displacement; sums
+use the native measures or their fixed-N equivalent fiber weights. The
+constants can absorb any fixed finite fine-cell census. No assertion of
+uniformity as N increases is being made.
+
+The physical current derivative is especially simple:
+
+ D J(I)[A]=K A,       L_J=K H.                               (4)
+
+Indeed differentiating D_U^* introduces a factor multiplying Im(dI)=0,
+and eta^-2 Im d(exp(i eta A)) has derivative d_1 A. Thus there is no
+additional current branch at flatness. This is a statement about the
+ACTUAL physical current, not an off-graph selected-current formula.
+Multiplication by the finite-range K stencil preserves (3), with a
+possible fixed-depth factor C_N. This elementary proof avoids using a
+general-background covariant-Laplacian estimate that Theorem3.12
+explicitly excludes. It is enough for the present fixed-prefix purpose.
+
+3. EXACT PERIODIZATION, INCLUDING SCHUR FACTORS
+
+Let P be an integer number of coarse cells in each torus direction,
+compatible with the fixed block hierarchy. For a coarse-translation
+covariant fiber kernel define
+
+ (Per_P T)(x,y)=sum_{n in Z^4} T(x,y+Pn).                    (5)
+
+The sum is absolute by (3). Exact local primitives d,d_1,Q,Q' and their
+native adjoints have the same periodic quotient. Absolute sums prove
+
+       Per_P(ST)=(Per_P S)(Per_P T),  Per_P I=I_P.           (6)
+
+The same algebra holds for kernels that are only P-periodic rather than
+covariant under every coarse translation. This is the version used for
+the frozen-P tiled source Hessian in Section6; its germs need not have
+any extra translation symmetry.
+
+Apply this first to the scalar inverse, then to Q'G'^2Q'^*, its inverse,
+R, the vector augmented inverse G, QGQ^*, and its inverse W. An image sum
+of an inverse solves both finite inverse equations; uniqueness identifies
+it with the actual finite inverse. Thus every factor in (1), not merely
+H as a formal symbol, has the correct finite counterpart. In particular
+
+            H_P=Per_P H,       (KH)_P=Per_P(KH).             (7)
+
+The scalar zero mode causes no exception: Q'^*aQ' controls it. The
+unconstrained vector gauge modes are controlled by the SAME R and Q
+system. Inverting a massless ghost or K alone would be a different and
+invalid argument.
+
+The native axial return has a linearization of the form A -> A+dT_N A
+(with any explicit coarse endpoint record kept). T_N consists of the
+same finite within-block/hierarchical endpoint reads at every period.
+It commutes with (5); composition with H preserves (3), possibly with
+new C_N,mu_N. Therefore (7) also holds for the actual ordinary physical
+field representative. Its current is unchanged since Kd=0. One may
+instead use the relative Landau representative in a gauge-invariant
+Hessian, provided the corresponding fine gauge is applied in BOTH slots.
+
+There is no freedom here to introduce a period-dependent global tree or
+to forget a coarse gauge record. Such a choice would require its own
+comparison. B102(181) uses the native block-based gauge convention.
+
+4. CONSTANT AND AFFINE REPRODUCTION
+
+Let A_mu(x)=c_mu+sum_nu B_munu x_nu, evaluated at the fine bond midpoint.
+The coefficients may be in one color, or interpreted componentwise in
+the linearized Lie algebra. Its curl is constant, hence
+
+                         K A=0.                            (8)
+
+For the corrected flat Q, the literal primitive formula is the average
+of the straight parallel string, after its endpoint-gradient correction.
+The centered offset has mean zero and the mean string midpoint is the
+coarse bond midpoint. Hence Q A is exactly the affine coarse one-form
+with the same physical coefficients c,B. Equivalently in raw unit-link
+coordinates, a constant scales by L and curvature by L^2 each step.
+
+For completeness the ordinary average has the same result. Write an
+endpoint x=y+r. The two endpoint-contour linear means have translated
+offset terms that cancel. The full path from y through y+r and its
+parallel string to y+ell e_mu has affine integral
+
+ ell A_mu(y+ell e_mu/2)
+       + ell sum_nu (B_munu-B_numu) r_nu.                   (9)
+
+The anchored relative logarithm in B109(0.12) averages the second term;
+the centered r average is zero. This proves the literal ordinary result.
+Iterate the PRIMITIVE average: balanced digits still have mean zero. It
+is unnecessary and unjustified to assume nonlinear group-mean
+associativity. For the transverse Maxwell test B_mumu=0, midpoint and
+tail conventions give the identical displayed test.
+
+The scalar projection satisfies R1=0. On a finite torus this follows
+also from R projecting onto d^*d ker Q', which is orthogonal to constants.
+Directly from (1), Q'1=Q'^*1=1 with the native measures, G'1=a^-1 1,
+and (Q'G'^2Q'^*)^-1 1=a^2 1, so the subtracted term in R1 equals one.
+All these equalities extend to the cover by absolute kernel sums.
+Since d^*A is constant for an affine one-form,
+
+                  Rd^*A=0.                                (10)
+
+Thus if b=QA is the affine coarse datum,
+
+ (K+dRd^*+Q^*aQ)A=Q^*a b.
+
+The exponentially localized inverse identities extend to polynomial
+growth sequences: multiplication by (1+|y|)^p is absorbed by a moment
+of the exponential kernel, and double sums remain absolutely convergent.
+Applying G and then Q gives A=GQ^*a b and QGQ^*a b=b. Applying W yields
+a b=Wb, whence
+
+                         Hb=A.                             (11)
+
+This establishes the affine identity for the relative Landau lift with
+the native units, not only an existence argument for a Maxwell solution.
+After the ordinary axial return,
+
+             H_phys b=A+d omega_b,    L_J b=0.              (12)
+
+omega_b has at most polynomial growth with a fixed block-periodic
+pattern. The polynomial is only a test of a Taylor kernel at zero;
+an unbounded finite-amplitude field is NOT put in the nonlinear domain.
+
+In particular the Landau H(0) maps constant coarse potentials to the
+constant fine potential. The native axial representative can have pure
+gauge cell aliases already at q=0; it need not literally be constant.
+Any statement of a constant zero-mode in axial gauge must be understood
+modulo that explicit gradient.
+
+5. GAUGE INTERTWINING AND THE BLOCH FIRST JET
+
+B99(3.115) gives Qd=d_c Q'. One explicit scalar extension is obtained
+by applying the native Landau projection to dQ'^*phi:
+
+ E phi=Q'^*phi-G'R d^*d Q'^*phi.
+
+Its Q' average is phi, its gradient is Landau, and its curvature is zero.
+The constrained uniqueness or (1) therefore gives
+
+                    H d_c phi=d E phi.                    (13)
+
+This identity holds on the cover and for every allowed torus momentum
+after (5). In the native axial convention the corresponding identity
+is the derivative of B102(181), using its block-constant extension of
+the coarse gauge. It is not a claim that two arbitrary interpolations
+of a coarse scalar gauge coincide.
+
+Use Bloch fibers with ALL fine-cell indices. Input a coarse plane wave
+b_mu(y)=v_mu exp(i q.(y+e_mu/2)), and keep the actual fine bond midpoint
+in the output phase. Differentiating at q=0 produces exactly the
+constant and affine polynomial inputs of Section4. Therefore in the
+relative Landau representative the zeroth field jet is the constant
+mode, and the first jet, with the output phase restored, is the native
+fine affine field. In an axial representative these equalities hold
+with the derivative of the recorded gauge return added.
+
+Equations (8),(11) imply, in either convention,
+
+              L_J(0)=0,   partial_q L_J(0)=0,
+              ||L_J(q)|| <= C_N |q|^2                      (14)
+
+on a fixed small real or complex momentum neighborhood. The analyticity
+and Taylor bound follow from (3). This proves the double zero despite
+the fine-cell aliases. Merely observing that a scalar lattice Laplacian
+has a double zero would NOT suffice for the full internal matrix.
+
+6. UNIFORM POSITION-MOMENT TAILS
+
+For each joint response branch L=(H_phys,KH), each fixed p>=0, and
+R>=1, (3) gives
+
+ sup_x sum_{y:|x-y|>=R} (1+|x-y|)^p |L(x,y)|
+       <= C_(N,p) exp(-mu_N R/2),                           (15)
+
+and the analogous column estimate. The finite version uses the image
+displacement BEFORE summing images. Its positive majorant is bounded by
+the same cover sum, uniformly in P. Using minimal periodic displacement
+only makes this estimate smaller. A winding image with a short periodic
+endpoint is still detected if one keeps its image displacement.
+
+Now take any family of fixed-P short own-carrier pair Hessians K_P^short
+whose complete rooted exponential cell norm is bounded by M r^-2,
+with the original source roots retained. The numerical short germs may
+depend on P. Lift those finitely supported numerical germs and tile
+them according to their declared root allocation; no convergence is
+asserted. Define the physical Hessian on the cover by
+
+              G_P=L^T K_P^short L.                          (16)
+
+Use bilinear transpose and the native lattice measures. Combining the
+three read lengths, each input or output separation is bounded by their
+sum. Weighted Schur convolution, with a smaller exponent, gives a
+complete rooted bound C_N M r^-2 for (16), and
+
+ sum_{read length>=R} (1+length)^2 |G_P(root;read)|
+       <= C_N M r^-2 exp(-c_N R).                           (17)
+
+The same proof gives every fixed higher moment. This is the required
+UNIFORM TAIL, not only a bounded total second moment. Each AA,AJ,JA,JJ
+branch is included. Internal fine-cell coordinate conversions and any
+fixed collar have already been included in C_N. If stronger depth-
+uniform constants are needed later, the strong graded operator norms
+must be used; (17) alone does not provide them.
+
+By (6)--(7), the periodization of (16) is EXACTLY the actual finite
+short physical Hessian formed from that same K_P^short and actual
+physical lift. This is a comparison of one finite family with its
+declared numerical cover lift, not a comparison of different P germs.
+
+7. AFFINE EXTRACTOR AND WILSON NORMALIZATION
+
+If the short rooted scalar Hessians satisfy their actual local gauge
+Ward identities, exponential moments extend those identities to the
+polynomial gradients omega_b in (12). Testing (16) on the native affine
+datum therefore tests K_P^short on (A,0) exactly. The independent-current
+slot disappears for this AFFINE test because L_J b=0, not because a
+weakening identity was imposed or because J is zero on general inputs.
+
+This is the physical flat leg required in
+work/finite-physical-Hessian-extractor-next-interface-20261025.txt and
+the same-finite triangle. The density-to-moment conversion still needs
+the actual rooted gauge-invariant density convention, as proved in
+YM4-native-affine-Maxwell-transport-20261024.txt Sections4--5. A pointwise
+representative of a total scalar cannot be substituted arbitrarily.
+
+The reference is the SAME fine Wilson action and its actual constrained
+lift. With tr(H_color^2)=1 and one independent plaquette orientation,
+its affine quadratic density is (1/2) tr(F^2). In raw fine-link units,
+curvature scales by L^-2N and the fine-root census per coarse cell is
+L^4N, so the four-dimensional factor cancels exactly. The native
+Maxwell coefficient is one. Thus no unknown Bloch normalization or
+volume factor changes the reference denominator. This is the convention
+of B109(1.20)--(1.22),(5.37),(5.42)--(5.43), checked in the cited affine
+transport note. For a different normalized generator, apply the SAME
+trace factor to both numerator and reference.
+
+8. WHAT HAS AND HAS NOT BEEN SUPPLIED
+
+Supplied for the actual flat physical minimum at fixed finite depth:
+  - the explicit augmented/Schur operator and exact periodization;
+  - physical current KH and its periodization;
+  - exponentially small tails of all fixed position moments;
+  - ordinary/corrected affine matching with the actual centered rule;
+  - recorded gauge-return qualification, allowed-momentum gauge
+    intertwining, and the Bloch current double zero;
+  - the same finite Wilson reference normalization.
+
+Not supplied by this operator lemma: convergence of any independently
+chosen nonlinear source continuation across periods; a Ward identity for
+an arbitrary noninvariant root allocation; disposal of wrapping scalar
+functions; uniform-in-depth constants; or the full Ward/Maxwell tensor
+classification. The fixed-P short coefficient norm and its gauge/root
+registration must be checked by their own producer. Once those are
+registered, (16)--(17) require no further source-germ convergence.

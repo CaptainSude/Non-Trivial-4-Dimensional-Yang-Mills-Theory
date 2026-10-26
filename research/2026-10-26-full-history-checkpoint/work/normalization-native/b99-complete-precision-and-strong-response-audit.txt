@@ -1,0 +1,267 @@
+B99 COMPLETE PRECISION AND STRONG RESPONSE AUDIT
+25 October 2026. Primary-source audit; no repository changes.
+
+Scope
+-----
+This audits the independent-current precision import in
+strict-independent-pair-packet-phase.txt and the response input N1 in
+homogeneous-complex-prefix-map-20261025.txt. It does not assert source
+catalogue closure, a denominator bound, or a Yang--Mills construction.
+
+Primary sources are user-supplied B99 Propagators, paper5.pdf (printed
+389--434), B102 Variational, paper3.pdf, B109, paper2.pdf, and B116,
+paper4.pdf. Text and selected rendered pages were inspected. In particular
+B99 pp419 and422 and B102 pp298 and306 were visually checked.
+
+1. DEFINITE PRIMARY FACT: THE COMPLETE CURRENT BRANCH IS PRESENT
+
+Let G0 denote the first, strongly regular inverse
+
+  G0=(Delta + D R D* + Q* a Q)^(-1).
+
+B99 Theorems3.3--3.4 supply complex first-order-background analyticity and
+all the stated strong norms for G0, including the covariant Laplacian.
+Here * in a complex continuation denotes the continued bilinear transpose,
+not conjugation of the complex parameters. The native averaging scale
+factors must be retained.
+
+The later propagator G in B99 SectionD is different:
+
+  G=G0 (I-Delta'_pi G0)^(-1),                         (B99 3.130)
+
+where Delta'_pi is the explicitly current-dependent quadratic form in
+(3.120). The next current correction is
+
+  <A,Delta^(2) A>=2 <H C^(2)(A), J>,                 (3.134)
+  Delta_pi^(2)=S* Delta^(2) S,
+  S=I-DG'RD*,                                      (3.135)
+
+and G1 is expanded in (Delta'_pi+Delta_pi^(2))G0 in (3.138).
+The coefficient in Delta^(2) is H*J; (3.136)--(3.137) show that it is
+small in the proper weighted local norms. This is a block-local operator
+in A, but its coefficient is not local in the external background.
+
+B99 p427 explicitly requires expanding the H in (3.134), as well as
+the two main-line chains. The resulting walks have a main line and
+additional branches, and obey the SAME (3.108) bound with shortest-tree
+length in place of walk length. It is therefore incorrect to retain only
+the endpoints of G1 or only the current label J in the complete read.
+
+The unit-lattice quadratic form is
+
+  <B,Delta_k B>=<B,(QG1Q*)^(-1)B>-a<B,B>
+                  -2<H1 D^(2)(B),J>,                (3.156)
+
+where the last D^(2) is the unit-block nonlinear-average coefficient,
+not the previously defined Delta^(2). Eliminating the literal private
+pivot coordinates gives
+
+  D_free=C* Delta_k C,
+  C_free=D_free^(-1),                               (3.158)
+
+with the almost-local C described on p428. Every factor C, H1, and the
+H branch inside G1 belongs to the complete read.
+
+2. INDEPENDENT-CURRENT PROMOTION OF THE PRECISION WORDS
+
+This is a valid inference from the actual displayed estimates, not an
+extra claim that B99 itself formulates its main theorem with independent J.
+
+Use one strict complex direct chart with compact real reference Ubar,
+U=exp(i eta A') Ubar. The real reference satisfies the native local-cube
+first-order tests. The relative A' satisfies (3.37), with a strict cap.
+Replace every occurrence of the physical current in Delta'_pi and
+Delta^(2) by an independent J satisfying the corresponding weighted
+(-3) bound. In a homogeneous grade this is the usual small unit-scale
+current cap. Require these conditions on every complete localizing cube
+and its prescribed collar. No arbitrary extension outside a read is used.
+
+The proof of (3.131) does not differentiate J: the derivatives are assigned
+to the adjoining propagator/test factors. The estimate is therefore
+unchanged when its small current coefficient is an independent J.
+Likewise the derivation of (3.137) uses only the weighted size of H*J
+and the local averaging coefficient C^(2). The H endpoint and first
+derivative estimates suffice for this step. Consequently the two Neumann
+expansions (3.130),(3.138), together with the inverses QGQ* and QG1Q*,
+converge on a fixed small independent-current chart, uniformly in volume
+and homogeneous grade. They give a definite holomorphic continuation of
+the displayed precision formulas. No physical stationarity identity or
+D*J=0 is required for these convergence estimates.
+
+This conclusion agrees with the independent U,J operator continuation
+explicitly invoked in B109 p261 and B116 pp6 and15. At (Ubar,0), the latter
+paper explicitly uses symmetric operators and a positive Gaussian
+measure. B99 p428 supplies the uniform positive lower bound for the free
+precision on the original real chart, and B116's (Ubar,0) comparison is
+the applicable baseline for this independent-current continuation.
+Perturbative operator-norm bounds, with a strict enough complex/current
+cap, retain a positive real-part gap. One must use the same precision
+continuation in the action, Gaussian split and denominator.
+
+For a normalized background/current packet direction v_q in the strong
+relative-field/current units, fixed on its complete packet and collar,
+the complete local words yield
+
+  |D_{v_q} D_free(i,k)| <= C exp[-mu tree(i,k,q)].
+
+Proof: a localized word depends on U,J only in the union of its native
+localization domains. Its directional derivative vanishes if that union
+misses the packet. On words that meet it, use Cauchy on a fixed-radius
+packet disc contained in the strict chart, then sum the native tree
+bound. The path from the main line to q is already part of that tree.
+No fine-coordinate census occurs. Constants include the packet's fixed
+strong norm; repeated nonorthogonal packet coordinates still require
+the explicit synthesis bound stated in the packet-phase note.
+
+Thus the flagged COMPLETE D_free current-branch/root import in that note
+can be discharged for this precise literal algebraic continuation.
+This does not identify different off-physical-graph continuations of an
+action or response merely because they agree on physical minima.
+
+3. THE STRONG H0 ROUTE AND THE CORRECTED K
+
+B102 (129)--(130), pp297--298, use H0 constructed from G0, and prove
+the Laplacian bound for H0 in addition to the bounds (3.133) of B99.
+The covariance tilde-G in B102 is the Q-constrained covariance. With
+G=(Delta_a-Delta^(2))^(-1), it is
+
+  tilde-G=G-GQ*(QGQ*)^(-1)QG.
+
+This is the G used in the corrected equation B102(180):
+
+  A0 - tilde-G Delta^(2) H0 B
+       + tilde-G V'(A0+H0 B)=0.                     (180)
+
+It is not the G1 with Delta'_pi+Delta_pi^(2) in its inverse.
+Put
+
+  K=(I+tilde-G Delta^(2))H0,
+  a=A0-tilde-G Delta^(2)H0 B.
+
+Then the equation is exactly
+
+  a+tilde-G V'(a+K B)=0,
+  response=a+K B-H D(a+K B).
+
+If V'=O(A'^2), a=O(B^2), and the derivative of this response at B=0
+is K. In particular one must not omit the linear Delta^(2) term while
+keeping the unredefined original H0 and simultaneously claim the
+correct physical derivative H1.
+
+Strong K bound on an independent-current chart:
+
+Let X be the native strong norm consisting of the field, first covariant
+derivative, covariant Laplacian and P1 slots, with their native weights.
+Let Y be the native (-3) source norm. The actual estimates imply
+
+  ||G0||_(Y -> X) <= C,
+  ||H0||_(coarse -> X) <= C,
+  ||Delta^(2)||_(X -> Y) <= C gamma,
+
+for independent current cap gamma. The last estimate follows from
+B99(3.136)--(3.137); its use does not require Delta_U H. The P1 slot
+is the bounded DPD* part of B109's second-order decomposition and
+uses B99(3.49). Its native scale weights cannot be discarded.
+
+For gamma small, expand G=G0 sum_n(Delta^(2)G0)^n. Every term begins
+with a strongly regular G0, so the four-slot estimate is retained.
+The same conclusion for the Q-constrained covariance follows from its
+Schur-complement formula and the corresponding coarse inverse bounds.
+Therefore ||K||_(coarse -> X)<=C, uniformly in grade and volume.
+
+This proof also supplies a legitimate B116-type localization of K:
+expand all factors, including the H*J branch in Delta^(2), into their
+native local words, group the complete composed words, and attach scalar
+weakening parameters to those words. The leftmost strong factor and
+native cutoff bounds retain the four slots; the tree decay pays the
+finite localizer exponential as in B116(1.11). Constants depend on the
+fixed localizer radius and fixed L,M. At s=1 the sum is exactly K.
+It is a newly specified localization and must not be silently identified
+with the printed B116 H0(s) if that symbol has not been redefined.
+
+4. IMPORTANT NON-IMPLICATION: THE LAST H D TERM
+
+B99 Theorem3.12 p423 explicitly EXCLUDES the covariant Laplacian
+bound for G,G1. Its H,H1 conclusion is (3.133), which contains field,
+gradient and Holder-gradient bounds, not a Laplacian bound.
+
+B102 pp298--299 improves Delta_U H by using
+
+  RD*H=0,                                           used in (137),(138)
+
+and the cancellation in Delta'_pi H, before deriving (139),(140).
+These identities are available for the physical constrained response.
+They are not automatically identities of the literal independent-current
+continuation of the final B99 resolvent formulas.
+
+The precise issue is visible on B99 p419. Formula (3.119) defines the
+gauge-invariant projected quadratic form S*Delta(U)S. Formula (3.120)
+rewrites it as Delta(U)-Delta'_pi(U,J_physical), using the physical Ward
+identity (3.117). If J is replaced independently only in the right-hand
+side of (3.120), it is no longer legitimate to identify that expression
+with S*Delta(U)S. In particular the proof of RD*H=0 in (3.124)--(3.125)
+does not transfer by an identity theorem from the physical-current graph.
+
+This is distinct from external gauge covariance. Under a simultaneous
+external gauge transformation of U and J, the formal independent-current
+words intertwine correctly. That observation helps N2, but does not
+prove additive gauge invariance of the quadratic form or the cancellations
+needed for the stronger Laplacian slot.
+
+There is also a localization issue: an identity between full operator
+sums need not survive weakening each constituent separately. A proof
+using RD*H=0 must either preserve that identity under the chosen
+localization or localize already grouped operators with the proven
+strong bounds. B116's phrase 'all admissible norms' cannot by itself
+resolve a mismatch of H versus H0 versus K conventions, especially in
+view of its printed omission of the linear term of B102(180).
+
+Accordingly the proof of K above does not yet establish all four slots
+for the full independently continued localized response
+
+  a(s)+K(s)B-H(s)D(s,a(s)+K(s)B).
+
+The remaining concrete N1 task is a bound for
+
+  Delta_U [H(s)D(s,A')]
+
+on the SAME strict independent-pair direct domain and all fixed s
+polydiscs, using the SAME actual response and action continuation.
+A sufficient precise input is a complete localized strong H bound on
+that domain. A weaker sufficient input would exploit the special range
+of D(s,A') to prove the displayed composed bound directly.
+
+5. CONSEQUENCES FOR THE PREFIX MAP AUDIT
+
+The deterministic direct-domain recurrences in the common-frame note
+are reasonable conditional consequences of the stated four-slot input.
+The one-time smaller-direct-to-full use of B109 p263 is correctly
+separated from the descending recursion; B3 need not be multiplied at
+each date. The independent current contracts by L^-3 at zero response.
+
+However the current synthesis draft cannot treat N1 as fully discharged
+by B116(1.11)--(1.21) plus B109(3.13)--(3.17) without resolving the
+H0/K convention and the final H D issue above. B109 p273 explicitly
+requires the strong alternative representation (179),(180), not an
+arbitrary first-order-regular current-dependent propagator.
+
+Conditional on a corrected, matched N1 and the literal covariance N2,
+strict margins at every step do give finite-prefix holomorphy: a finite
+composition of holomorphic maps is holomorphic, and compact closed
+noise/localizer products lying strictly in the domains have an open
+neighborhood. This provides no dimension-independent Cauchy radius
+for an arbitrary coefficient parametrization unless its synthesis
+norm is separately controlled, and no normalization estimate.
+
+The original fixed real-noise variables can remain fixed while their
+already-evaluated arguments are conjugated as prescribed by N2. That
+is an evaluation identity, not a change of integration variables.
+No claim about cuts, determinants or conditional normalized laws is
+obtained merely from that identity. Existing masks and denominators
+still have to be evaluated with the same chosen continuation.
+
+Verdict: complete precision/root import VERIFIED on the explicit
+independent-current coefficient continuation; corrected K strong bound
+PROVABLE with the displayed native G0/Delta^(2) route; full N1 response
+and the unconditioned simultaneous native prefix theorem NOT yet
+certified by these sources alone.

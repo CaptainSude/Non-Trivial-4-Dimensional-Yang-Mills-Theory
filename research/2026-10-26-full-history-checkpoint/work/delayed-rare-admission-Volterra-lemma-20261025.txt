@@ -1,0 +1,178 @@
+DELAYED RARE-SOURCE ADMISSION ON A TUNED TRAJECTORY
+25 October 2026. Root. Numerical and bookkeeping lemma, with native
+source-registration hypotheses stated separately. This is not an
+all-history theorem or a continuum construction.
+
+1. DATA AND WHAT IS FACTORED OUT
+
+For 0 <= i <= N let x_i = g_i^(-2), and assume the already established
+finite-horizon trajectory bounds
+
+ X + lambda (N-i) - C_G <= x_i <= X + B (N-i),
+ |x_(i+1) - x_i| <= D,
+
+with lambda,B,D,C_G fixed and X sufficiently large. Write Y=X-C_G.
+A rare source born at date i takes an integer t_i >= 0 to enter its
+fixed analytic domain, with t_i <= T log x_i for one fixed T. Absorb
+any fixed additive delay into T by raising the weak floor.
+
+The finite-entry theorem supplies, at each intermediate 0 <= s <= t_i,
+an estimate of the form
+
+ N_(i,s) <= A_i C (1+x_i)^d
+   exp[-c (log x_i)^beta + C_1 (log x_i)^2
+                       + C_2 log x_i log log x_i],                 (1)
+
+where beta>2. Here A_i is the ORIGINAL source amplitude or its
+specified profile norm. It has not been absorbed by rarity. In the
+application A_i includes the original observable calibration. The
+complete finite-entry root census L^(4s), seed price, inverse-coupling
+prices and collar factors are already included in N_(i,s). Counting
+the same L^(4s) again at admission would be an error.
+
+This note also permits using a separately established real positive
+conditional bound at an unfinished terminal date. Positivity cannot
+be invoked for an arbitrary complex continued density or an isolated
+signed cluster coefficient.
+
+2. DELAY CHANGES THE RUNNING COUPLING BY A FIXED FACTOR
+
+Choose the weak floor so that D T log u <= u/2 for every u>=Y.
+For j=i+t_i <= N,
+
+ |x_j-x_i| <= D t_i <= D T log x_i <= x_i/2.
+
+Thus x_i/2 <= x_j <= 3x_i/2, and consequently
+
+ t_i <= T log(2x_j).                                             (2)
+
+All birth dates entering at a given j belong to the integer interval
+[j-T log(2x_j),j]. Its cardinality is at most 1+floor(T log(2x_j)).
+No monotonicity of t_i or of the signed coupling increments is used.
+
+Since beta>2, the two positive logarithmic costs in (1) can be
+absorbed by decreasing c. Fixed-factor comparability of x_i and x_j
+then gives fixed d',c'>0 and C' such that
+
+ N_(i,t_i) <= A_i C'(1+x_j)^d' exp[-c'(log x_j)^beta].               (3)
+
+For arbitrary amplitudes the sum at date j is bounded by the right
+side without A_i, times sum_{i:i+t_i=j} A_i. If A_i<=A uniformly in
+the specified source norm, the additional fiber factor is O(log x_j).
+It is another fixed polynomial price. This statement does NOT assert
+that arbitrary microscopic source profiles have such a uniform A.
+
+3. ADMISSION DATES ARE THE NEW AGES IN THE VOLTERRA CONSUMER
+
+Suppose EACH admitted source, with its full marginal tensor and its
+exact source-profile encoding, is registered in the recurrence of
+YM4-rare-source-Volterra-stability-20261024.txt. In particular the
+later prepared age kernel already includes the ORIGINAL remaining
+four-dimensional source-position census and is bounded by C r^age,
+0<r<1. Its age for this source starts at j=i+t_i, not at i.
+
+With A_i<=A, (3) and the fiber bound imply a forcing bound
+
+ f_j <= A C (1+x_j)^d'' exp[-c'(log x_j)^beta].                     (4)
+
+The earlier Volterra lemma, applied from the ADMISSION date, gives
+for every H>0 a total terminal contribution <= A C_H Y^(-H),
+uniformly in N, provided the declared finite-period error sum is
+bounded and the later feedback is 1+O(g_j^2). There is no additional
+assumption of O(g_j^4) marginal cancellation for a generic rare source.
+
+For completeness, a source entering at j has later amplification
+bounded by C[(Y+lambda(N-j))/Y]^nu. Since j>=i this is no larger than
+the corresponding birth-age upper bound. Thus delayed entry cannot
+increase the numerical trajectory amplification. Delayed entry by
+itself does not prove the spatial census in the hypothesis.
+
+4. UNFINISHED TERMINAL DELAYS NEED NO ARTIFICIAL EXTRA RG STEPS
+
+If i+t_i>N, put a=N-i. Then
+
+ 0 <= a < t_i <= T log x_i <= T log(X+B a).                        (5)
+
+Choose X so that X>=2BT and 2BT log X<=X, and X>2. The function
+F(a)=a-T log(X+B a) has F'(a)>=1/2 for a>=0, and
+
+ F(2T log X) >= 2T log X - T log(2X) > 0.
+
+It follows that a<2T log X. Hence there are at most
+1+floor(2T log X) unfinished birth dates, and x_i is comparable to X.
+Even the raw positional count during those remaining a dates obeys
+
+ L^(4a) <= X^(8T log L).                                         (6)
+
+Therefore a valid intermediate cap (1) at s=a, evaluated on its
+admitted PHYSICAL terminal pair, sums to <= A C_H X^(-H) for every
+H. Its root count is already in (1); (6) explains independently why
+the unfinished physical horizon cannot create an exponential-in-N
+loss. Do not multiply (1) by the same count again.
+
+If only a real positive conditional cap is used instead, its complete
+positional count must actually be supplied; (6) then pays that count.
+This alternative requires a genuine original conditional expectation.
+It is unavailable for an arbitrary signed or complex subcomponent.
+
+5. EXACT PROFILE AND CALIBRATION CONDITIONS STILL TO BE REGISTERED
+
+The elementary inequalities above do not license the following changes:
+
+* Replacing the literal interpolated fine test profile by its value at
+  one coarse root. Delayed roles must retain their exact profile
+  functional, or an explicitly estimated residual source row.
+* Replacing an asymmetric delayed role/history by a scalar Maxwell
+  coefficient. Keep the full tensor until the complete original
+  symmetry-related family and interpolation have been reassembled.
+* Paying an unremoved L^(4(N-j)) future root census with logarithmic
+  rarity. That census is exponentially larger than this rarity.
+* Absorbing a cutoff-dependent calibration into constants C_H.
+  Every conclusion carries A, and convergence of the calibrated
+  observable requires its own matching/estimate.
+* Inferring uniform convergence of different finite original laws
+  from a uniform bound on their respective finite recurrences.
+
+The new consequence is precise: once the actual later source consumer
+and profile/census interface are registered, the logarithmic delay and
+the finite terminal horizon introduce no new numerical obstruction.
+
+6. STRONGER CONSEQUENCE WHEN THE VALUE COLUMN IS UNIFORM
+
+Suppose the actual finite replay has the stronger value estimate
+N_(i,s)<=K^s N_(i,0), K>=1 fixed, without inverse source-radius
+prices. Such an estimate is being checked separately for the complete
+fixed-domain homogeneous core; it is not granted for the actual
+running-base law. Put d0=T log K. Then, for s<=t_i,
+
+ K^s <= K^(T log x_i)=x_i^d0.                              (7)
+
+The entire finite entry costs a fixed power of x_i. Accordingly a
+birth envelope A_i x_i^d exp[-c(log x_i)^beta] with beta>1, rather
+than beta>2, now retains the same logarithmic rarity after entry.
+All date-fiber and terminal-delay proofs above are unchanged.
+
+For a power-small birth N_(i,0)<=A_i C x_i^(-p), choose any fixed
+epsilon>0 to pay the logarithmic admission-date multiplicity. Under
+the same ACTUAL consumer/profile/census hypotheses, the aggregate
+entry forcing is bounded by C A x_j^(-p+d0+epsilon). Put
+s=p-d0-epsilon and suppose s>nu+1, where nu is the subsequent
+Volterra amplification power. Comparability x_j~u_j=Y+lambda(N-j)
+gives
+
+ terminal forcing <= C A Y^(-nu)
+                       sum_(a>=0)(Y+lambda a)^(-s+nu)
+                  <= C' A Y^(-s+1).                       (8)
+
+The elementary last inequality is the convergent integral comparison
+for s-nu>1; the a=0 term is also bounded at Y>=1. The same power bound
+holds for unfinished terminal delays using (7) and their O(log X)
+number. Thus a sufficiently large power-small birth can pay a proved
+uniform finite replay and subsequent polynomial feedback.
+
+This implication does not assert that the native freely chosen rarity
+power p can be made larger than d0+epsilon+nu+1 independently of all
+constants determining K and nu. That parameter order must be checked.
+Nor does it admit a general running-domain source: its field, current,
+curvature AND compact-reference domain restrictions must be transported,
+and every actual-base discrepancy must retain its original law/domain.

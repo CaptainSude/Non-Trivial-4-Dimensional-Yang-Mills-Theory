@@ -1,0 +1,249 @@
+RAW-COPY DISCRETE JET GAUGE: INDEPENDENT AUDIT
+25 October 2026. Local algebra and domain estimates for the new static proof.
+
+This note proves the local gauge/remainder input for a direct raw-copy
+age estimate on the augmented C1,alpha domain. It does not identify that
+estimate with native minimum preparation or discard source/root labels.
+It uses the Holder image theorem in
+ work/holder-response-and-raw-copy-age-domain-repair-20261025.txt.
+
+1. LOCAL HYPOTHESES AND UNITS
+
+Let eta<=1 be the old fine spacing, h=R^-1 the age scaling factor, and
+0<alpha<1 fixed. In ONE coherent real reference gauge on a complete
+current-grade mother cube, suppose the total old-unit logarithmic field
+A satisfies on an old-unit near box of diameter D>=1
+
+ |A|<=C0 b h, |partial_eta A|<=C0 b h^2,
+ [partial_eta A]_alpha<=C0 b h^(2+alpha).               (1)
+
+The box and every path, plaquette and shifted stencil used below lie in
+that mother. In current units its diameter is hD. The mother's required
+complete collar must be part of the input carrier; mere existence of
+test gauges on cubes contained elsewhere is not enough. This is a fixed
+current-scale seed/collar and has a fixed enlargement cost.
+
+The Holder norm in (1) can compare any two points in this near box when
+hD<=c<1. It comes from the current-unit Holder norm over distances<=1,
+not from a new old-unit-only Holder assumption. The total field in this
+reference gauge includes Wbar and the relative perturbation. The weighted
+reference tower, augmented relative domain, and covariant-to-ordinary
+conversion supply (1) with exact h,h^2,h^(2+alpha) powers.
+
+Let the independent old current obey |J|<=C0 b h^3. No derivative of J
+is assumed. Fix c so small that C0 b c and C0 b c^2 are in the logarithm
+chart. Assume hD<=c. Constants below may depend on this fixed c and b cap,
+but not on eta,h,D or volume.
+
+The gauge convention is U^g(x,x+eta e_mu)=g(x)U_mu(x)g(x+eta e_mu)^-1.
+Choose root x=0 by translation. Write U_mu=exp(i eta A_mu).
+
+2. FIRST GAUGE: ROOT LINKS ARE EXACTLY THE IDENTITY
+
+Put a_mu=A_mu(0) and
+
+ g1(y)=exp(i sum_mu y_mu a_mu).
+
+Then g1(0)=I, g1(eta e_mu)=exp(i eta a_mu)=U_mu(0), so
+
+ U_mu^g1(0)=I, A_mu^1(0)=0                            (2)
+
+EXACTLY on the chosen logarithm branch. This is not an O(eta) assertion.
+Differentiated finite exponential products, with hD<=c, give
+
+ |A1(y)|<=C b h^2(1+|y|),
+ |partial_eta A1|<=C b h^2,
+ [partial_eta A1]_alpha<=C_alpha b h^(2+alpha).         (3)
+
+For completeness, decompose A=a+v. Then |v(y)|<=C b h^2|y|,
+|partial v|<=C b h^2 and [partial v]_alpha<=C b h^(2+alpha).
+For v=0 the gauged constant connection has zero root links, first
+derivative O(h^2), and variation of that derivative O(h^3) per unit
+distance. The coefficients of its convergent exponential series are
+uniform for h|y|<=c. For the v-dependent difference, the ordinary lattice
+product rule puts at most one derivative on v; Holder differences use
+its stated Holder bound. Derivatives of the g1 coefficients contribute
+an extra h. The resulting error terms are O(h^3), O(h^4 D), etc., hence
+bounded by C h^(2+alpha) since hD<=c and alpha<1. Divided differences of
+the exponentials are uniform as eta decreases. This proves (3).
+
+Define b_mu,nu=partial_nu A1_mu(0). This tensor is O(h^2). Lattice Taylor
+summation on coordinate paths gives
+
+ A1_mu(y)=sum_nu b_mu,nu y_nu+r1_mu(y),
+ ||r1||_(C1,alpha;box)
+              <=C_alpha b h^(2+alpha)(1+D)^(1+alpha). (4)
+
+Indeed each first-difference increment is compared with its value at
+the root using (3); summing the differences is the discrete fundamental
+theorem. The gradient Holder seminorm is unchanged by subtracting its
+constant affine jet and is bounded directly by (3). No continuous Taylor
+formula with an uncontrolled eta*h^2 remainder is used.
+
+3. SECOND GAUGE: EXACT SHIFTED QUADRATIC
+
+Set S_mu,nu=(b_mu,nu+b_nu,mu)/2. Define the Lie-algebra-valued polynomial
+
+ phi(y)=sum_mu S_mu,mu y_mu(y_mu-eta)/2
+                         +sum_(mu<nu) S_mu,nu y_mu y_nu,
+ g2(y)=exp(i phi(y)).
+
+The exact forward difference is
+
+ partial_mu phi(y)=sum_nu S_mu,nu y_nu.                (5)
+
+The shift y_mu-eta is essential. Using y_mu^2/2 instead would leave a
+constant eta*S_mu,mu/2, which is not small enough for the desired age
+remainder. Also phi(0)=phi(eta e_mu)=0, so g2 preserves every root link
+in (2) EXACTLY.
+
+Let K_mu,nu=(b_mu,nu-b_nu,mu)/2 and L_mu(y)=sum_nu K_mu,nu y_nu.
+The transformed logarithmic field A2 satisfies
+
+ A2=L+r,
+ ||r||_(C1,alpha;box)<=C_alpha b h^(2+alpha) P(D),      (6)
+
+where a fixed polynomial, e.g. C(1+D)^4, suffices. To see this, its
+linear gauge change is A1-partial phi. This gives L+r1 by (4)--(5).
+All remaining gauge/BCH terms contain at least two of phi, partial phi,
+A1, or their first differences. Their C1 bound is C h^4 P(D), using
+|phi|<=C h^2D^2, |partial phi|<=C h^2D and |partial^2 phi|<=C h^2.
+Since h^4<=h^(2+alpha), these terms give (6). The exponential sums have
+uniform constants because |phi|<=C c^2.
+
+Separately, DIRECT product estimates give the actual domain bounds
+
+ |A2|<=C b h^2(1+D), |partial A2|<=C b h^2,
+ [partial A2]_alpha<=C_alpha b h^(2+alpha).            (7)
+
+Do not use the coarse polynomial remainder estimate (6) to infer (7)
+when D is as large as c/h. In (7) each additional derivative of the
+polynomial gauge coefficients supplies h^2, and its derivative Holder
+variation is O(h^4D)<=C h^3. These bounds combine with (3); exponentials
+are bounded by exp(C c^2). Thus the seminorm has no D^4 amplification.
+
+The total gauge is g=g2 g1, in that order for this action convention.
+Both it and its inverse have bounded norm on the near box. Therefore
+the transformed independent current J2=Ad_g J still has size C b h^3.
+There is no claim of current stationarity or a derivative bound on J2.
+
+4. INTRINSIC ROOT CURVATURE AND THE AFFINE TENSOR
+
+Use the normalized analytic plaquette curvature at the root, for example
+ F_mu,nu(U;0)=Pi[(U(dp_mu,nu)-U(dp_mu,nu)^-1)/(2i eta^2)]
+with the fixed Lie projection Pi if needed. Since the two root links of
+U^g1 are exactly I, its oriented root plaquette is exactly
+
+ exp(i eta^2 b_nu,mu) exp(-i eta^2 b_mu,nu).
+
+Consequently
+
+ F_mu,nu=b_nu,mu-b_mu,nu+O(eta^2 |b|^2)
+        =b_nu,mu-b_mu,nu+O(eta^2 h^4).                (8)
+
+The root gauge equals I, so this is the same intrinsic curvature as for
+the original U in the mother gauge. It is also unchanged by g2 there.
+Its canonical affine potential L_F,mu(y)=-(1/2)sum_nu F_mu,nu y_nu
+therefore differs from L in C1 norm by O(eta^2 h^4(1+D)). This can be
+included in (6). There is NO eta*h^2 marginal error.
+
+5. FLAT-CHART TAYLOR PATHS REALLY ARE ADMITTED
+
+Both A2 and L_F have C1 size at most C b h^2(1+D), and their Holder
+seminorms are bounded as above (L_F has constant first derivative).
+Their actual curvature is bounded by C(|partial A|+|A|^2), hence by
+C b h^2+C b^2 h^4D^2. Straight convex combinations in these logarithmic
+potentials have the same bounds. Independent currents along 0 to J2
+have sup bound C b h^3. Choose c and then h0 so these quantities fit
+strictly inside the born source's FLAT-reference domain, including its
+smaller direct-to-full constants. This choice depends on the actual
+birth radius, not on the fine mesh or volume. At the fixed core it is
+one fixed choice. The finite ages h>h0 can be bounded separately by
+the original value estimate with an enlarged fixed constant.
+
+This verifies the domain of Banach-C1 Taylor, and of the augmented
+C1,alpha source class if that stronger class is used for Cauchy. The
+small physical current allowance is not inferred from the field: the
+independent current is checked separately. All native own-tower tests
+come from the existing direct-to-full implication on this complete
+carrier. No global completion or globally regular interpolation between
+two unrelated backgrounds is needed.
+
+6. CONSEQUENCE AND REMAINING STRONG-CATALOGUE TASK
+
+For a gauge-invariant analytic coefficient F_H with envelope M_H and
+birth radius r, constant color invariance makes its linear field and
+current jets vanish. Its quadratic affine-curvature form is
+
+ q_H(F)=(1/2) D_A^2 F_H(I,0)[L_F,L_F].
+
+The bounds above and Banach-C1,alpha Taylor give, for the exact same germ,
+
+ |F_H(U,J)-F_H(I,0)-q_H(F(U;root))|
+       <= C_alpha M_H max(1,r^-3) h^(4+alpha) P_r(D),  (9)
+
+on the admitted near set. The AA difference uses h^2 times h^(2+alpha);
+AJ is h^5; JJ is h^6; the degree>=3 remainder is h^6 times a diameter
+polynomial. The curvature replacement error in (8) is also at least
+h^6 after the second quadratic factor. Radius costs are charged once.
+This is an evaluation estimate, not yet a completed source catalogue.
+
+For a full neutral ROOTED family one must sum q_H over every original
+carrier/root/role belonging to the same neutral source root BEFORE
+claiming the scalar/tensor cancellation. If that sum is zero, the local
+terms q_H(F(U;root)) can be subtracted coefficientwise and their sum is
+exactly zero for every pair, so this coalescing changes no germ. If the
+sum is a nonzero native scalar/tensor, retain its exact reference ledger.
+Physical affine extractor compatibility, not f=1 alone, identifies it.
+
+The positive carrier estimate then still has to pay P_r(D) by spare
+birth exponent, the fixed mother seed, far carriers, and the single
+four-dimensional h^-4 source/root census. These are the precise tasks
+of the separately constructed strong static-column theorem. No equality
+to the old minimum preparation or an automatic scalar extraction for
+partition-dependent young cohorts follows from this local argument.
+
+7. COMPLETED CROSS-REVIEW OF THE STRONG STATIC THEOREM
+
+Read in full:
+ work/normalization-native/direct-holder-raw-copy-neutral-static-theorem.txt.
+Its Sections3--6 pass independently under the precisely stated source,
+own-domain, affine-neutrality and positive-cover hypotheses in Section1.
+
+The intrinsic Q_H=T_H(K_root) is individually gauge invariant and has
+the original complete carrier plus one fixed root plaquette stencil.
+Its sum vanishes by the COMPLETE rooted tensor identity, so the new
+representation preserves the same independent-pair germ exactly. This
+is stronger than cancellation only on physical configurations. Section7
+correctly retains finite-extractor defects and excluded young/boundary
+roles instead of declaring their scalar tensor zero.
+
+The conservative near cutoff D_H<=h^(-1/4) fits wholly in the fixed
+current mother. Its actual C1,alpha Taylor norm is <=C h^(7/4), so
+h<=c r_i admits the entire complex segment with a fixed spare radius.
+The quadratic E_H,E_H term is also covered: on this cutoff the error
+norm is <=C h^2D_H, hence its product with the finer error bound has
+the same h^(4+alpha) polynomial majorant. The exact root curvature
+normalization error is O(h^4 xi_i^2) and produces at least h^6 in a
+quadratic coefficient. It does not leave a marginal mesh defect.
+
+For late near carriers, polynomial moments are paid by one spare birth
+exponent. The far cutoff produces exp(-c h^(-1/4)), which absorbs every
+fixed inverse h power. At early ages h>c r_i, the value bound with its
+quadratic subtraction costs h^-4+r_i^-2 after census. This is bounded
+by C r_i^-5 h^alpha because 4+alpha<5. Thus the one finite birth-radius
+price is valid without repeating it at each later date.
+
+The strong current-cell coefficient sum pays exactly one h^-4 count.
+If the new carrier meets a current cell through its added mother at x,
+then x is in a fixed enlargement of that current cell; its preimage has
+O(h^-4) born cells. Since x belonged to the old H, the original rooted
+norm covers this case as well. Additional old roots remain in their
+original measured coefficient envelope. They do not create another
+ultraviolet census. Fixed weakening of carrier exponent pays reblocking,
+the fixed mother seed and the displayed polynomial moments.
+
+This establishes the stated new static VALUE-age mechanism on the
+augmented class. It is not an equality with old minimum preparation,
+an automatic scalar Ward identity for partition-dependent cohorts, or
+a proof of a normalized quantum/history bootstrap.

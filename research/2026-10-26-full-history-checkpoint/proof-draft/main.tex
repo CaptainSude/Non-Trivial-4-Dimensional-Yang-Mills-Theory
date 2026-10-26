@@ -1,0 +1,405 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,longtable,booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{1.5em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Lip}{\operatorname{Lip}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\note}[1]{\par\smallskip\noindent\textit{Detailed proof record:} \texttt{\detokenize{#1}}.\par\smallskip}
+\title{A finite-regulator energy checkpoint for the Balaban approach to four-dimensional Yang--Mills theory\\[4pt]\large Consolidated research proof draft and dependency ledger}
+\author{Research record of this conversation}
+\date{26 October 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Status.} The finite-regulator checkpoint is assembled and internally checked within the explicitly recorded native estimates. The continuum construction remains open. This is a consolidated research argument, not a completed construction of a continuum Yang--Mills theory. Native analytic estimates are imported only at the scopes recorded below. Internal readbacks are mathematical checks, not external peer review or a certification of every inherited argument.
+
+\paragraph{Target and scope.}
+The repository's target is a nontrivial interacting local four-dimensional $SU(2)$ Yang--Mills theory at positive renormalized coupling. The present checkpoint concerns four separated energy covariances of the \emph{original finite Wilson measure}, uniformly as its regulators are removed along the stated admissible sequence. It is designed to transfer the earlier homogeneous comparison to the full history law. A common continuum state, its reconstruction, and identification of interaction remain separate obligations. A mass gap, uniqueness, universality, and extension to every compact gauge group are not added requirements of this checkpoint.
+
+This draft gives the main argument and explicit dependencies. The accompanying archive preserves the longer proof notes, source checks, counterexamples, corrections and earlier delivery bundles. Where a theorem below has hypotheses, its conclusion is not evidence for those hypotheses.
+
+\tableofcontents
+
+\section{Observable and numerical checkpoint}
+Let $\mu_{a,P}$ be the original finite periodic $SU(2)$ Wilson probability measure. The gauge variables, positive plaquettes, reflection and torus are those of the original lattice. Set
+\begin{equation}
+ h_p=1-\tfrac12\Tr U_p,\qquad
+ O_a(f)=c_a\sum_{p>0}f(x_p)h_p,\qquad
+ c_a=\frac{x_n}{e_n^{\rm old}}. \label{observable}
+\end{equation}
+There is no additional $a^4$ factor. The comparison entry date $n$, its physical mesh and the real calibration are fixed before any source derivative. The earlier calibrated homogeneous construction supplies $e_n^{\rm old}=1+O(X^{-1})$ when $x_n\asymp X$, hence $c_a=O(X)$.
+
+Choose a fixed nonnegative smooth unit-integral function $\phi$ supported in the unit ball, and $0<\kappa\leq10^{-3}$. With $\epsilon=\kappa\tau$, define
+\[
+ f_i(x)=\epsilon^{-4}\phi\bigl((x-(i+1)\tau e_0)/\epsilon\bigr),\qquad i=0,1.
+\]
+Use their exact lattice translates and the actual lattice reflection $\theta$, retaining the vanishing rounding errors. Put
+\[
+ C^{\rm orig}_{ij}=\Cov_{\mu_{a,P}}(O_a(\theta f_i),O_a(f_j)).
+\]
+The target reference $C^{\rm old}$ is the earlier registered homogeneous ordinary covariance. It is not redefined by selecting a convenient event under $\mu_{a,P}$.
+
+\begin{definition}[Checkpoint]
+The desired estimate, with the same choices for all four entries, is
+\begin{equation}
+ |C^{\rm orig}_{ij}-C^{\rm old}_{ij}|
+ \leq \frac{9}{6400\pi^4\tau^8},\qquad i,j=0,1. \label{target}
+\end{equation}
+Every posterior mark, mixed contact, selected outer operation and retained private operator belongs to the left-hand covariance.
+\end{definition}
+
+The Maxwell comparison kernel in the registered energy convention is
+\[
+ K_0(f,h)=\frac9{\pi^4}\iint\frac{f(x)h(y)}{|x-y|^8}\,dx\,dy.
+\]
+The earlier homogeneous argument supplies its amplitude and the four-entry signed lower bound
+\begin{equation}
+ \sum_{i,j=0}^1(-1)^{i+j}K_0(\theta f_i,f_j)
+ \geq\frac9{400\pi^4\tau^8}. \label{freewitness}
+\end{equation}
+Allowing at most $9/(3200\pi^4\tau^8)$ total error per original/Maxwell entry leaves
+\begin{equation}
+ \E_{\mu_{a,P}}[(\theta F)F]\geq\frac9{800\pi^4\tau^8},\quad
+ F=O_a(f_0-f_1)-\E_{\mu_{a,P}}O_a(f_0-f_1). \label{witness}
+\end{equation}
+This arithmetic uses four errors, not one. It proves no continuum convergence by itself.
+\note{full-history-four-entry-checkpoint-contract-20261025.txt}
+
+\section{What is retained from the earlier argument}
+The following are imported research modules at their stated domains and uniformities; the archive includes their derivations and scoped independent readbacks.
+\begin{enumerate}
+\item The complete reconstructed field/current pair and gauge return, including the independent current, private pivot, coarea and normalization factors. Physical identities are not substituted for identities of arbitrary independent-current germs.
+\item Native own-domain admission and simultaneous scalar-localizer contours. Old historical rows are kept on their original domains; the fresh pre-$R$ row and preliminary stage spaces retain their actual distinct allowances.
+\item A real weak-coupling trajectory with bounded steps and signed stretch,
+\[
+ |x_{j+1}-x_j|\leq B,\quad x_i\geq x_j+\lambda(j-i)-C_0\ (i\leq j),\quad x_j\geq Y.
+\]
+Monotonicity is not assumed. Finite-period errors remain explicit.
+\item Fixed-cap homogeneous core replay, complete first and mixed source transport, and constant-energy calibration. Scalars in mixed contacts are retained even when numerical first-mark constants drop out of covariances.
+\item The homogeneous signed comparison, based on the full quadratic energy vertex, protected Gaussian moments through degree eleven, packet overlap sums, actual cutoff tails, and the native Maxwell reference. It does not assume a Gaussian terminal probability measure.
+\end{enumerate}
+The current argument uses these modules to address a different issue: normalization and source control across \emph{all} original histories. A homogeneous calculation alone does not do that.
+
+\section{An exact representation constructed from the bare density}
+Write $T$ for the original ordinary integration and $R_0$ for the large-field operation with its original frozen normalized Wilson reference kernels. For each selected component the inserted kernel has the form
+\[
+ q_i(v\mid h,e)=D_i(h,e)^{-1}w_i(v\mid h,e),\qquad \int q_i(v\mid h,e)\,dv=1.
+\]
+The old incoming effective action is not inserted into $D_i$. Hence, with all branches and gauges retained,
+\begin{equation}
+ \int R_0[\rho]=\int\rho \label{masspreserving}
+\end{equation}
+for any admitted incoming density, including a complex sourced one. This is an integral identity, not equality of pointwise densities.
+
+Define the new localized coefficient representation directly from the original bare sourced Wilson density. In ordinary integration retain the literal connected expansion on complete fine-$M$ carriers: the fully interior terms are bulk, and the complementary terms remain boundary terms. Recompute every outer $R'$ from this \emph{new incoming action}, using the same $R_0$. The generic native composition formulas use the actual own-domains and $M$-tree estimates; they do not require filling every incoming fine-$M$ carrier to an $MR$ hull.
+
+This construction avoids an unjustified identification with an older off-graph $MR$ allocation. It also means that its source-zero coupling labels $y_j=\Gamma_j^{\rm new}(0)$ need not equal the earlier $x_j$. Their comparison is an additional numerical argument, not a consequence of \eqref{masspreserving}.
+\note{from-bare-fine-M-R-constructor-independent-audit-20261025.txt}
+
+\section{Boundary variables: an exact repair and its cost}
+\subsection{Why old private variables cannot be treated as small new noise}
+The native boundary coefficient is analytic in the exterior field/current pair. Its dependence on stored real private variables can contain smooth cutoffs; it is not thereby holomorphic in those variables. The preliminary construction introduces a \emph{new} variable while retaining the integral over the old one.
+
+\begin{proposition}[Failure of a generic old-private gain]
+A uniform bound on $B(U,J,A)$ and analyticity in $(U,J)$ do not imply
+\[
+ B(U,J,A)-B(U,J,0)=O(\delta'/\alpha).
+\]
+Nor do they imply such a bound after integrating $A$ against its nondegenerate private law.
+\end{proposition}
+\begin{proof}
+Take a bounded smooth nonconstant function of $A/\delta$, independent of $U,J$. Its pair analyticity is automatic. For example a smooth bounded function of $|A|^2/\delta^2$, vanishing at zero, has expectation bounded away from zero for an appropriate fixed scaled private law. This remains so while $\delta'/\alpha\to0$. Multiplication by a source parameter does not change the counterexample to the asserted gain.
+\end{proof}
+
+\subsection{Keep the unnormalized private block}
+At fixed original $A_{\rm old}$ use the exact split
+\begin{equation}
+ B_i(\Phi(b),A_{\rm old})=
+ B_i(\Phi(0),A_{\rm old})+\Delta_bB_i. \label{privatesplit}
+\end{equation}
+Retain the entire exponential of the static term inside the \emph{same original joint private integral}. Keep old/new Gaussian cross terms, cuts, gauges and reference denominators. Only $\Delta_bB_i$ is a new pair-Cauchy insertion. A conditional source-weighted private mass need not be nonzero and is never divided out.
+
+Every static term keeps its original identifier, birth date, stage and complete read. A term crossing two components stays in their joint bracket; it is not copied into independent kernels. Actual cutoff-removal shifts are separate new insertions with their own forced spatial decay. Completion, when it occurs, integrates and files the whole block once.
+
+The stage composition is exact. If $\rho_n(V)=\int da\,K_n(V,a)e^{P_n(V,a)}$, the next original change of variables gives
+\[
+ \rho_{n+1}(W)=\iint\mu_n(W,db)\,da\,
+ K_n(\Phi_n(W,b),a)e^{P_n(\Phi_n(W,b),a)}.
+\]
+The preliminary maps depend on Wilson minima, constraints and fixed geometry, not on the newly integrated interaction logarithm. Thus the private integrals can be deferred under those same maps. Do not also append the source interaction logarithm of that deferred integral. Any extracted reference exponential must retain its exact compensating inverse inside the kernel and cancel before the absolute comparison. The original Gaussian, gauge, Jacobian and window factors occur once.
+
+For a dated native component $C$ define
+\[
+ W_j(C)=M^4R_j^5\,[d'_j(C)+1].
+\]
+A complete rooted incidence sum bounds the absolute static/private potential by
+\begin{equation}
+ C_*\sum_{\text{actual dated charged identifiers}}W_j(C). \label{datedcost}
+\end{equation}
+An arbitrary old private dependence has no $L^{-4(k-j)}$ engineering gain. Thus \eqref{datedcost} cannot be replaced by one current-volume count without a separate conversion proof. Merges do not rebill old identifiers.
+
+More precisely, before component resummation retain the positive columns
+\[
+ \sup_z\sum_{X\ni z}\|B_i(X)\|e^{\kappa' d_i(X)}\leq C B_*.
+\]
+Assign each constituent to one actual incident dated root (or a partition of unity of total mass one). Its sum costs at most $CB_*$ times the number of those dated cells, bounded by $CB_*W_i(C_i)$. Crossing terms keep their outside connector columns. Resummed operators retain this primitive-origin description: a weaker bound depending only on distance outside a large component would not itself control the number of attachments to its interior.
+
+The native lifetime induction can be rerun with this fixed enlarged cost coefficient. Fix its coefficient \emph{before} the weak floor. With $\bar r\geq\max(r,r_0,2)$, the explicit choice
+\[
+ p_0=(4+9)\bar r+8,\qquad p_1=p_0-\bar r-2
+\]
+gives the strict inequalities needed for new births, quiet evolution, failed preparation and merges. In particular the forecast $CR^{6}$ is $o((\log x)^{p_0})$. This argument is about complete unnormalized component operations; it grants no normalized complex posterior theorem.
+\note{full-history-reserve-producer-20261025.txt}
+\note{source-boundary-private-slot-and-cost-audit-20261025.txt}
+
+\section{A source oscillation lemma with the correct order of proof}
+\begin{lemma}[Reterminalized source oscillation]\label{oscillation}
+Let $F_H$ have complete source read $H$ and an anchor $z\in H$. Measure distance in date-$k$ units and put $D=1+\diam_kH$. Suppose the \emph{same} coefficient is holomorphic and bounded by $M_H$ for every source $s+v$ with
+\[
+ \|v\|_\infty+\Lip_kv<r_k,
+\]
+around each admitted constant anchor $s$, on the unchanged field/current contours and real private coordinates. Suppose an independently admitted source $w$ also satisfies $|F_H(w)|\leq M_H$, with $s=w(z)$ and $\Lip_kw\leq\varepsilon_k$. Then
+\begin{equation}
+ |F_H(w)-F_H(s)|\leq C M_H\min\{1,\varepsilon_kD/r_k\}. \label{oscillbound}
+\end{equation}
+The constant is independent of the number of source pieces and lattice depth.
+\end{lemma}
+\begin{proof}
+On $H$, $v=w-s$ has supremum at most $\varepsilon_k\diam_kH$ and Lipschitz constant at most $\varepsilon_k$. Extend its real and imaginary parts by the scalar Lipschitz extension formula and clamp to their original value intervals. The resulting global $\widetilde v$ agrees with $v$ on $H$ and has shape norm at most $C_{\rm ext}\varepsilon_kD$. This extension is fixed for this $w$; no holomorphic dependence of the extension on $w$ is needed.
+
+Set $R=r_k/(2C_{\rm ext}\varepsilon_kD)$ and $\varphi(t)=F_H(s+t\widetilde v)$. It is holomorphic and bounded by $M_H$ on $|t|<2R$. If $R\geq1$, Cauchy's estimate for its power series gives
+\[
+ |\varphi(1)-\varphi(0)|\leq M_H/(2R-1)\leq M_H/R.
+\]
+Locality identifies $\varphi(1)=F_H(w)$. If $R<1$, use the two separately admitted endpoint bounds to obtain $2M_H$; do not infer admission of $t=1$ from the smaller disc. These two cases imply \eqref{oscillbound}, with a fixed enlarged constant. The zero-Lipschitz case follows directly from locality.
+\end{proof}
+
+Take $r_k=c(1+x_k)^{-d}$ with fixed $d$, and
+\[
+ \chi_k^N=L^{-(N-k)/2},\qquad\varepsilon_k\leq C r_N\chi_k^N.
+\]
+The lemma supplies a factor $r_N\chi_k^N(1+x_k)^d D$. A reserved complete-carrier exponential pays $D$. For a fresh rare value bound $M_H=m(x_k)e^{-\mu\operatorname{tree}_k(H)}$, with
+\[
+ m(x)=\exp[-a(\log(2+x))^p],\qquad p>1,
+\]
+the remaining fixed polynomial is paid by one reduction of $a$.
+
+\paragraph{Causality.}
+The source induction must run simultaneously for all final stopping labels and constant anchors, with identical finite coefficient formulas. At date $k$, earlier births and current ordinary outputs first give the new outer coefficient's \emph{value} bound on the endpoint-$k$ source class. That step uses the whole boundary bound and \eqref{datedcost}, not the yet-unproved new gradient bound. Only then is Lemma~\ref{oscillation} applied to define and bound the new gradient. A single final-$N$ ball with gradient radius already proportional to $\chi_k^N$ would not supply the extra factor by Cauchy alone.
+\note{reterminalized-local-source-oscillation-lemma-20261026.txt}
+
+\section{The joint coefficient/source induction}
+This section records the quantitative native supplier whose application is checked in the separate joint proof. All coefficients carry complete field, current and source reads. Constants are uniform in finite depth and period.
+
+\subsection{Separate coefficient types}
+Keep the exogenous fixed-cap core $C[\Gamma]$, its same-coupling discrepancy $D$, native function-date $R$ births, spatial gradients $V$, boundary births $B$, and every numerical or history-dependent scalar. The core is replayed at the \emph{entire realized coupling history}. Compare whole old brackets with their own beta and vacuum subtractions on the same pair.
+
+With $\delta_j\asymp g_j(\log x_j)^{p_{\rm cut}}$ and $\alpha_j\asymp g_j(\log x_j)^q$, choose
+\[
+ q>p_{\rm cut}+4r+1.
+\]
+The total young-$R$ birth inequality has the form
+\[
+ b_{j+1}\leq C m_0(x_j)+
+ C(\log x_j)^{p_{\rm cut}-q+4r}\sum_{i\ {\rm young}} b_i.
+\]
+There are $O(\log\log x_j)$ young dates. Their couplings are comparable, so a strict stretched-log envelope closes without relabeling old static parents as new births.
+
+At the same prescribed coupling history, old-ledger preparation gives
+\[
+ d_{j+1}\leq\theta_D(x_j)\sum_{i\leq j}w_D(j-i)d_i+f_{R,j},
+ \quad \theta_D\leq C(\log x_j)^{-2q},\quad\sum_tw_D(t)<\infty.
+\]
+Here $f_R$ has a stretched-log bound after fixed extractor prices. Mature $R$ retains its full tensor $h^4$ before the four-dimensional old-root census. Only \emph{after} this discrepancy is controlled are its beta errors used as external summable forcing for the fixed-cap core's coupling response, whose slope is $O(x^{-2})$.
+
+\paragraph{Why the order matters.}
+On shrinking field radii the new beta extraction costs an additional inverse squared radius. Coupling this prematurely to an uncontrolled $|\Gamma-x|/x$ body forcing can yield cumulative amplification of the form $\exp[cN/(\log N)^{4q}]$. Stretched-log rarity does not pay that amplification. Same-coupling comparison removes this artificial feedback before extracting beta.
+
+\subsection{Gradients, ordinary boundaries and private costs}
+Define source classes by local supremum and Lipschitz norms, not by the sum of amplitudes in a decomposition into profiles. Their nested date factors satisfy
+\[
+ \sum_{i\leq j}\chi_i^N(1+j-i)^P m_{ij}^{-2}\leq C_P\chi_j^N,
+ \qquad m_{ij}^{-2}\leq1+B(j-i)/x_j.
+\]
+The old full-tensor $h^4$ cancels the root census. The ordinary source-noise response then has the factor $\delta_j/\alpha_j\to0$.
+
+For a spatially varying Wilson coefficient, keep the original real Gaussian precision and place the variable coefficient in the actual source interaction. Only a genuinely constant restriction may be resummed using the constant-$\lambda$ Gaussian comparison. Subtract the coherent local constant on the whole independent-pair domain; the remaining nonconstant linear-noise terms keep their source-Lipschitz arm. A theorem about constant scalar multiples of the precision is not a theorem about an arbitrary spatial precision.
+
+For $B$, use \eqref{privatesplit}. The new response has a complete read consisting of the old boundary carrier \emph{and} the response path. Its native mixed-layer decay pays historical analytic margins and root counts, giving a summable age kernel:
+\[
+ \|\Delta B_{\rm old}\|\leq C(\delta_j/\alpha_j)
+ \sum_{i\leq j}(1+j-i)^P e^{-c(j-i)}b_{B,i}.
+\]
+A whole fixed birth bound $B_*$ is sufficient. Its static private cost is \eqref{datedcost}; it need not be $O(r)$ during construction of the source master disc. Smaller-disc source derivatives are taken only afterwards.
+
+The nonconstant small-$R$ input is admitted because
+\[
+ \sup_{i\leq N}\chi_i^N x_i^{\kappa_R/2}\leq C(1+x_N)^{\kappa_R/2}.
+\]
+Thus choose the master bare radius
+\begin{equation}
+ r(x_N)=c_{\rm src}(1+x_N)^{-d},\qquad d=\kappa_R/2, \label{radius}
+\end{equation}
+or a larger \emph{explicit fixed} degree if a separately quantified local price requires one. The degree is fixed before the desired rarity power. Arbitrary terminal partition constants are not inserted into this local cost estimate.
+
+The fresh outer value estimate, followed by Lemma~\ref{oscillation}, supplies the new gradient with its $\chi$ factor. Choosing fixed coefficient budgets first and then a sufficiently weak floor closes the strict inequalities for $D,R,V,B$, domain admission and coercivity. All primitive stages, including failed and retained components, are part of this assertion.
+\note{joint-stopped-native-source-bootstrap-20261025.txt}
+
+\section{One vacuum convention and a local normalized bound}
+Let $Z_{\rm bare}(w)$ be the exact original sourced Wilson integral. Let $E_{\rm abs}(w)$ be the universal scalar sum from the \emph{new} unrestricted constructor, and set
+\[
+ Z_{\rm new}(w)=e^{-E_{\rm abs}(w)}Z_{\rm bare}(w),\qquad
+ E(w)=E_{\rm abs}(w)-E_{\rm abs}(0).
+\]
+Every missing-region scalar is added back as a boundary term. History-dependent scalars remain inside their history. No absolute estimate of the difference between old and new extensive vacuum conventions is used.
+
+The source stability replay requires, on reflected/conjugated source arrays,
+\begin{equation}
+ |Z_{\rm new}(w)|\leq e^{C_+(Y)V_N},\qquad
+ Z_{\rm new}(0)\geq e^{-C_-(Y)V_N}. \label{stability}
+\end{equation}
+For the upper estimate the original frozen reference leaves the exact Wilson tag
+\[
+ (\Gamma_j-x_j)(S_{\rm new}-S_{\rm old}).
+\]
+Its old real part consumes a small fraction $C|\Gamma_j-x_j|/x_j$ of coercivity; the exterior part has its actual dated component charge. Apply the native action and enlarged lifetime estimates in the same common integral.
+
+The lower estimate uses the \emph{final all-small effective branch}, after healed large-field components have already contributed to its action. Restricting to histories that were never large would miss those contributions and would not justify the same-vacuum lower bound. The final bounded action and positive Haar volume give the lower half of \eqref{stability}.
+\note{new-vacuum-full-history-stability-replay-20261025.txt}
+
+\begin{proposition}[Fixed-cell normalized estimate]
+Assume \eqref{stability}, complete source locality, compatible cell reflection/translation covariance, reality, and a uniformly summable complete-carrier face contribution. Then, for sources supported in a fixed buffered endpoint cell,
+\begin{equation}
+ h(w)=e^{-E(w)}\frac{Z_{\rm bare}(w)}{Z_{\rm bare}(0)},
+ \qquad h(0)=1,\qquad |h(w)|\leq Q(Y), \label{localh}
+\end{equation}
+uniformly in UV depth and ambient compatible period.
+\end{proposition}
+\begin{proof}
+Apply the original Wilson reflection-positive chessboard inequality to $\exp(\sum_pw(p)h_p)$ in the cell algebra. The copied array has conjugate-reflected complex weights; it is not the real part of $w$. The root of \eqref{stability} bounds the copied integral per cell. The real parts of the bulk universal scalar contributions agree cell by cell by locality and covariance. Subtracting $\Re E(w)$ cancels them. The two face sums and any bounded covariance defect leave
+\[
+ Q(Y)=\exp\{(C_++C_-)\ell^4+2C_{\rm face}+C_{\rm cov}\}.
+\]
+The source supremum/Lipschitz norm is unchanged up to a fixed constant by buffered disjoint copies. No count of copies enters the radius. The estimate is pointwise for complex sources, while $h$ itself is holomorphic. Zeros of $h$ away from zero cause no problem.
+\end{proof}
+\note{fixed-cell-common-source-chessboard-consumer-20261025.txt}
+
+\section{The complete normalized covariance, including contacts}
+For calibrated source directions write $J(v)=c_a\sum_pv(p)h_p$ and use the corresponding calibrated $E,h$. Exact differentiation at zero gives
+\begin{equation}
+ \Cov_\mu(J(u),J(v))=D^2E(0)[u,v]+D^2h(0)[u,v]-Dh(0)[u]Dh(0)[v]. \label{jetidentity}
+\end{equation}
+The last product cannot be discarded. It retains the complete normalization, including contributions that would appear as posterior-mean covariance in an opened history calculation.
+
+Pack $M\geq cR^{-4}$ translated four-probe patterns into one buffered cell, where $R$ is their separation in endpoint units. Sum each pair using the \emph{same} independent signs. Their suprema stay bounded and their Lipschitz norms are $O(R^{-1})$, independently of $M$. Two-variable Cauchy on \eqref{localh} and sign averaging give
+\begin{equation}
+ \left|C^{\rm orig}_{ij}-\tau^{-8}M^{-1}\sum_{l=1}^M
+ D^2E(0)[u_{i,l},v_{j,l}]\right|
+ \leq C(Y)X^2\tau^{-8}R^2. \label{pack}
+\end{equation}
+Original Wilson translation invariance, not covariance of the RG scaffold under these small translations, makes the original covariance the same for each pattern. The factor $X^2$ is the price of the fixed calibration on the bare source ball.
+\note{calibrated-four-entry-common-source-packing-20261025.txt}
+
+\section{Scalar comparison and a single error budget}
+Compare the full coefficients with the core replayed at their realized coupling history, then with the core pinned to $y_j=\Gamma_j^{\rm new}(0)$. The source-independent driver
+\[
+ v_j=y_j-y_{j+1}-\beta_{C,j+1}[C[y]]
+\]
+cancels in the source-density ratio. It does not disappear from the action. This identifies the scalar source recursion with the earlier homogeneous Markov-source recursion and retains its terminal source term. In the packing argument, $C^{\rm new}$ denotes the average of these new-core covariances over the \emph{same} translated patterns. The core itself need not be invariant under those translations. Its homogeneous error bounds must be uniform in the pattern's phase relative to the scaffold, independently of the packing count; averaging then adds no factor.
+
+For general spatial profiles the difference of gradient logarithms has the exact four-log form. If $A_1-A_0=\delta A$ and $G_1-G_0=\delta G$, it equals
+\begin{align*}
+ &\int_0^1 Q_{A_1+G_0+t\delta G}(\delta G)\,dt\\
+ &\quad+\int_0^1\!\int_0^1
+ \Cov_{A_0+u\delta A+tG_0}(\delta A,G_0)\,du\,dt.
+\end{align*}
+Every denominator is the complete one. The second line is the changed body's effect on the already present core gradient. The joint source estimates give a stretched-log bound for the complete spatial scalar difference \emph{before} field subtraction.
+\note{ordinary-scalar-same-coupling-rare-comparator-20261025.txt}
+
+A scalar mixed jet surviving the same-sign average must read both members of one separated pair. Its complete carrier therefore has diameter at least $cR_j-C$. Cauchy on \eqref{radius}, the original root count and one reserved carrier exponential give the averaged dated estimate
+\[
+ C X^2(1+x_j)^{2d}A_j\max(R_j^4,R_j^2)e^{-bR_j}\,\tau^{-8}.
+\]
+The sum of the geometric factor over all dates is bounded. Early rare differences therefore give $C_BX^{-B}$ for any fixed $B$; late bounded scalar births give $CX^{2+2d}t^2L^{-2m}$.
+
+Choose the fixed weak terminal floor $Y$ first, then a large finite entry $X$, then
+\[
+ t\asymp\log X,\qquad m=\lceil A\log_LX+m_0\rceil,
+ \quad A>1+d,\quad A\beta_{\rm eff}>2.
+\]
+The original homogeneous terminal first and mixed marks contribute their separately retained bound $Ct^8X^{2-A\beta_{\rm eff}}$. The continuation to fixed $Y$ gives $R_N\leq C\log X\,e^{-cX}$. Thus the full/new-core comparison has the dimensionless bound
+\begin{align}
+ \tau^8|C^{\rm orig}_{ij}-C^{\rm new}_{ij}|
+ &\leq C_BX^{-B}+CX^{2+2d}t^2L^{-2m}
+   +C(Y)X^2R_N^2\notag\\
+ &\quad+Ct^8X^{2-A\beta_{\rm eff}}
+   +\varepsilon_{\rm prefix,profile,period}. \label{allerrors}
+\end{align}
+The full assembly records the initial matching, pre-entry and finite-period errors; they must be made small on the same chosen sequence, not suppressed by notation. After selecting $X$, all physical probes and scales are fixed during regulator removal.
+
+The nearby real core has quotient covariance exactly $y_j^{-1}q_M$ with the old gauge width retained. Its natural calibration is $c_{\rm new}=y_n/e_n^{\rm new}$, and
+\[
+ r_{\rm cal}=c_a/c_{\rm new}
+ =(x_n/y_n)(e_n^{\rm new}/e_n^{\rm old})=1+O(X^{-1}).
+\]
+Use the same original observable: $C^{\rm new}(c_a)=r_{\rm cal}^2 C^{\rm new}(c_{\rm new})$. No complex source-radius inverse is charged to this real calibration comparison.
+
+\begin{theorem}[Assembly, with explicit suppliers]
+Assume the joint native source construction, the same-vacuum stability replay and the registered homogeneous comparison at their stated scopes, including the vanishing finite-period/profile errors. Then fixed finite parameter choices give \eqref{target} and \eqref{witness} along the admissible regulator sequence.
+\end{theorem}
+\begin{proof}
+Let $\eta=9/(6400\pi^4\tau^8)$. Equations \eqref{pack}--\eqref{allerrors} make the full/new-core difference at most $\eta/3$. Reapply the uniform homogeneous theorem at $y$, including its calibration-ratio error, to make the new-core/Maxwell difference at most $\eta/3$. Make the earlier old-core/Maxwell error at most $\eta/3$ with the same sufficiently large fixed parameters. The triangle inequality gives \eqref{target} for the original registered reference. Combining with \eqref{freewitness} and the four-entry allowance proves \eqref{witness}.
+\end{proof}
+\note{full-history-four-entry-assembly-20261026.txt}
+
+\section{Status ledger and what remains}
+\subsection{Results whose content is explicit in this draft}
+The exact mass-preserving reference insertion; the counterexample to a generic old-private smallness claim; the static/new-response split; Lemma~\ref{oscillation}; the common-source differentiation identity; the sign-packing implication; and the final numerical assembly are proved here with their displayed hypotheses. The archive gives their stronger native-domain versions and independent checks.
+
+\subsection{Native analytic supplier claims}
+The detailed joint source proof must be read together with the independent current/domain audits, the whole-private dated-cost replay, the simultaneous stopping-label value-before-gradient argument, and the complete scalar comparison. These are substantive estimates, not consequences of the finite algebra. The final source/stability, scalar/reference, and uniform-phase application audits are recorded separately; they discharge the new application gaps at this declared scope. Earlier files marked conditional remain historical records; the current application ledger identifies which conditions have actually been discharged.
+
+\subsection{Open continuum obligations}
+\begin{enumerate}
+\item Specify a common gauge-invariant observable algebra and topology, with a valid treatment of collisions and contact terms. Separated energy estimates are not coincident-point $L^2$ estimates.
+\item Construct one compatible continuum and infinite-volume state (or a common subsequential correlation family) for the tuned regulators. Independent finite-horizon choices alone do not provide this.
+\item Prove the required limiting regularity, continuous Euclidean covariance, reflection positivity, consistency and locality, and then the appropriate reconstruction theorem's hypotheses.
+\item Identify the resulting dynamics as the intended nonabelian Yang--Mills theory. A controlled effective coupling label is not by itself such an identification.
+\item Establish an interaction criterion for that same state and observable algebra. Nonzero two-point energy covariance, and even higher cumulants of a nonlinear free-field composite, do not exclude free alternatives.
+\end{enumerate}
+The reflected finite-regulator witness must survive the chosen common limiting procedure before it becomes a nonzero norm in the reconstructed theory.
+
+\subsection{Corrections retained rather than erased}
+The bundle preserves the failures of: a global enlargement of historical source domains; an unproved $MR$-hull refiling; an off-graph Ward identity inferred only from physical minima; premature shrinking-radius beta feedback; a generic old-private Cauchy gain; separate normalization of crossing private blocks; creation of a spatial $\chi$ factor from only one master ball; use of the never-large event for the new-vacuum lower bound; and transfer of homogeneous covariance to the full law using rare mass alone. Each correction concerns a particular inference, not a disproof of the Yang--Mills program.
+
+\section{Provenance and reading order}
+The project snapshot is commit \texttt{462cac934658cfd5ef6f68e1b62141bf58c505d0} of the project repository:\par \url{https://github.com/CaptainSude/Non-Trivial-4-Dimensional-Yang-Mills-Theory}. The Ethan--Levent hints snapshot is \texttt{d5baf0c5304adb2df286ad37d18076c0c16c0262} of the hints repository:\par \url{https://github.com/ethanwsussman/Yang--Mills-LLM-experiment}. Those hints guide questions; they are not treated as proof suppliers merely on the strength of their claims.
+
+The user supplied the averaging, renormalization, variational, propagator and cluster papers, together with the large-field and 1988 expansion papers. In particular \texttt{paper6.pdf} is Balaban's \emph{Ultraviolet Stability of Three-Dimensional Lattice Pure Gauge Field Theories}, CMP 102, 255--275 (1985). Its finite sixth-order cumulant stability proof is not an exact all-order four-dimensional source-family theorem. Its explicit observation that the quadratic sector is marginal in four dimensions remains part of the source audit.
+
+The primary labels in the detailed records are:
+\begin{description}
+\item[B98] T. Balaban, \emph{Averaging Operations for Lattice Gauge Theories}, CMP 98, 17--51 (1985).
+\item[B99] T. Balaban, \emph{Propagators for Lattice Gauge Theories in a Background Field}, CMP 99, 389--434 (1985).
+\item[B102] T. Balaban, \emph{The Variational Problem and Background Fields in Renormalization Group Method for Lattice Gauge Theories}, CMP 102, 277--309 (1985).
+\item[B109] T. Balaban, \emph{Renormalization Group Approach to Lattice Gauge Field Theories I. Generation of Effective Actions in a Small Field Approximation and a Coupling Constant Renormalization in Four Dimensions}, CMP 109, 249--301 (1987).
+\item[B116] T. Balaban, \emph{Renormalization Group Approach to Lattice Gauge Field Theories II. Cluster Expansions}, CMP 116, 1--22 (1988).
+\item[B119] T. Balaban, \emph{Convergent Renormalization Expansions for Lattice Gauge Theories}, CMP 119, 243--285 (1988).
+\item[Large-I] T. Balaban, \emph{Large Field Renormalization I. The Basic Step of the R Operation}, CMP 122, 175--202 (1989).
+\item[Large-II] T. Balaban, \emph{Large Field Renormalization II. Localization, Exponentiation, and Bounds for the R Operation}, CMP 122, 355--392 (1989).
+\end{description}
+
+Read this draft first, then the current application/status ledger, the full four-entry assembly, the joint source proof, the private-block and reterminalized-source audits, and finally the earlier module-specific suppliers. The archive preserves original relative paths where practical and includes a file-hash manifest. Primary OCR is accompanied by checked equation-page images; OCR alone is not used to settle an ambiguous formula.
+
+\end{document}

@@ -1,0 +1,234 @@
+COMMON-FRAME SELECTED-PAIR BOOTSTRAP
+25 October 2026. New deterministic lemma; independent review pending.
+
+PURPOSE AND BOUNDARY
+
+This note proves a simultaneous direct-domain statement for a specified
+Landau-pair recursion. It isolates a way of avoiding a repeated B3 loss.
+It does NOT identify this recursion with the complete original ordinary
+prefix law. In particular, an exact choice of real noise coordinates and
+the covariance of every private-pivot/return/gauge factor must still be
+matched before this can be a producer for the project's G1 gate.
+
+The recursion uses the independent selected current, NOT the physical
+current recomputed from its output field. All complex localizer parameters
+at all dates can vary simultaneously. The result is finite dimensional
+and uniform in the number of dates and the lattice volume at fixed L.
+
+SETUP
+
+Fix a finite original fine lattice and grades j=0,...,t. In grade-j units
+the original fine mesh is xi_j=L^{-j}. All fields below are on the SAME
+original fine bonds. The spacing in a covariant difference changes with
+the grade; the group-valued field itself does not change under this
+conversion of units.
+
+Fix a compact reference Wbar on the complete fine array. Its curvature
+obeys the terminal grade-t direct bound with allowance kbar_t. Require
+its local compact gauge-cube tests at EVERY grade on the same fixed
+small cap, and retain the complete read of every later primitive,
+localizer, and determining tower. The curvature allowance converts to
+L^{-2(t-j)} kbar_t at grade j. The potential in one fixed terminal gauge
+only converts with L^{-(t-j)}, whereas its first difference converts
+with L^{-2(t-j)}; no stronger potential estimate is inferred by mere
+restriction. Smaller-cube re-gauging could supply such a stronger
+estimate, but is not required or asserted here. The construction never
+changes Wbar. Each grade may use its own UNITARY compact-reference
+gauge to verify the stated local test.
+
+Let the top pair be
+
+ U_t=exp(i xi_t B_t) Wbar,              J_t independent,
+
+with b_t=max(||B_t||,||nabla_Wbar^{xi_t} B_t||),
+ k_t=xi_t^{-2}||dU_t-1||,              c_t=||J_t||.
+
+All matrix norms are a fixed submultiplicative norm; color dimension is
+fixed. Restrict to a uniform logarithm neighborhood for the relative
+fields. Covariant differences use the same native finite stencils at all
+grades. The formulae below are interpreted on complete reads, including
+their boundary collars. We do not extend an arbitrary field outside a
+carrier by declaration.
+
+ONE-STEP RESPONSE INPUT
+
+At grade j>=1 let A_j be a holomorphic function of the current pair
+(U_{j+1},J_{j+1}), the fixed free-noise coordinate x_j, and all of that
+step's source-localizer variables s_j. Its literal intended realization is
+
+ B'_j=g_j C_j x_j-h_j Dtilde_j(g_j C_j x_j),
+ A_j=H0_j(s_j) B'_j+A0_j(s_j,H0_j(s_j) B'_j)
+       -H_j(s_j)D_j(s_j,H0_j(s_j) B'_j+A0_j(...)).       (1)
+
+Here C_j, h_j and Dtilde_j are the private-pivot objects. H_j in the last
+line is the linear propagator, not the whole response. This distinction
+is essential. Require each coefficient in (1) on its complete admitted
+current domain.
+
+The usable response bound is
+
+ max(||A_j||,||nabla_{U_{j+1}}^{xi_j} A_j||,
+     ||P1_j A_j||,||Delta_{U_{j+1}}^{xi_j} A_j||)
+                   <= C_H delta_j.                    (2)
+
+It holds on one FIXED small direct input domain, for all original
+||g_j x_j||<=delta_j and |s_j(Delta)|<=exp(kappa1).
+Constants and the input domain do not depend on j or volume. No t_D
+old-action Cauchy circle is included in (2).
+
+B116 (1.11)--(1.21), with B109 (3.13)--(3.17), are the native candidates
+for (1)--(2). Their independent-field/current and simultaneous-localizer
+uniformity is explicit. A concrete prefix application must still match
+the operator conventions and all four norms of (2), including P1.
+The present lemma also applies to any fully verified responses with (2).
+
+Set A_0=B'_0 on the original finite fine-noise stencil. For j=0 use the
+corresponding finite-stencil bound (2), which has xi_0=1; no depth-zero
+minimum response is invoked. This bottom map must be checked separately
+when identifying a concrete native prefix.
+
+RECURSION AND CLAIM
+
+Define, in this common frame,
+
+ U_j=exp(i xi_j A_j) U_{j+1},
+ J_j=L^{-3}J_{j+1}+Delta_{U_{j+1}}^{xi_j} A_j
+                   -P1_j A_j+F1_j(U_{j+1},A_j).        (3)
+
+This is the adjacent-grade B109 (3.13) selected current. In particular,
+at zero response J_j=L^{-3}J_{j+1}. No stationarity identity is imposed
+on J_j, and no weakened response is replaced by a new physical current.
+
+On a fixed small direct cap, the finite current expansion gives
+
+ ||F1_j(U,A)|| <= C[k_direct r+r^2+r^3],               (4)
+
+where r is the four-slot norm in (2). This is B109 (3.11)--(3.14), with
+the local nonlinear remainder retained. All inverse matrices are
+holomorphic inverses, not Hermitian conjugates at complex configurations.
+
+There are fixed C_b,C_k,C_c such that the recursively defined pairs obey
+
+ b_j <= L^{-1} b_{j+1}+C_b delta_j,
+ k_j <= L^{-2} k_{j+1}+C_k delta_j,
+ c_j <= L^{-3} c_{j+1}+C_c delta_j.                    (5)
+
+Here U_j=exp(i xi_j B_j) Wbar on a common logarithm branch, and b_j,
+k_j,c_j have the same meanings as at the top. Therefore
+
+ b_j <= L^{-(t-j)} b_t
+             +C_b sum_{ell=j}^{t-1} L^{-(ell-j)}delta_ell,
+ k_j <= L^{-2(t-j)} k_t
+             +C_k sum_{ell=j}^{t-1} L^{-2(ell-j)}delta_ell,
+ c_j <= L^{-3(t-j)} c_t
+             +C_c sum_{ell=j}^{t-1} L^{-3(ell-j)}delta_ell. (6)
+
+The constants use fixed strict caps, not the unknown values of later
+iterates. Choose those caps first and choose the top allowances and
+delta_* afterwards. If their geometric bounds (6), with delta_j<=delta_*,
+fit strictly inside the response domain of (2), descending induction
+constructs the entire family. The statement is uniform for the Cartesian
+product of all original noise balls and all indicated localizer polydiscs.
+For holomorphy use strict enlarged bounds around the closed polydiscs.
+
+PROOF OF THE THREE ESTIMATES
+
+At step j write Y=L^{-1}B_{j+1}. Exactly,
+
+ U_{j+1}=exp(i xi_j Y)Wbar,
+ ||Y||=L^{-1}||B_{j+1}||,
+ ||nabla_Wbar^{xi_j}Y||
+                   =L^{-2}||nabla_Wbar^{xi_{j+1}}B_{j+1}||. (7)
+
+The local logarithm gives
+
+ B_j=A_j+Y+R_{xi_j}(A_j,Y).
+
+BCH analyticity and its vanishing mixed remainder on either coordinate
+axis imply, uniformly for xi_j<=1 on the fixed cap,
+
+ ||R_xi(A,Y)|| <= C xi ||A||||Y||,
+ ||nabla R_xi(A,Y)|| <= C xi
+      (||nabla A||||Y||+||A||||nabla Y||).              (8)
+
+For the covariant finite-difference version of (8), parallel transport
+the two endpoint arguments to the same base point and use conjugation
+equivariance of the logarithm. Apply the integral first-derivative formula
+for R to that finite difference; no continuum chain rule is assumed.
+
+The difference between the U_{j+1} and Wbar covariant derivatives obeys
+
+ ||nabla_Wbar^{xi_j}A_j||
+ <= ||nabla_{U_{j+1}}^{xi_j}A_j||+C||Y||||A_j||.       (9)
+
+Indeed each changed parallel transporter differs by O(xi_j ||Y||),
+which cancels the single xi_j^{-1} in the difference operator. The
+number of links in this transporter is fixed by the native stencil.
+All remaining transporter norms are uniformly bounded on the fixed cap.
+
+Equations (2),(7)--(9) give b_j<=L^{-1}b_{j+1}+C_b delta_j.
+The terms involving Y or its derivative multiply delta_j, and Y lies
+inside a previously fixed cap. They contribute to C_b delta_j, not to
+a constant larger than one multiplying the old b_{j+1}.
+
+For curvature, compare one complete plaquette of exp(i xi_j A_j)U_{j+1}
+and U_{j+1}. Transport the four A values to one corner. The oriented
+linear sum is bounded by
+
+ C xi_j ||nabla_{U_{j+1}}^{xi_j}A_j||
+     +C||dU_{j+1}-1||||A_j||.
+
+Multiplication by xi_j and the exponential product remainder give
+
+ ||dU_j-dU_{j+1}|| <= C xi_j^2
+      [r_j+r_j^2+k_direct r_j] <= C_k xi_j^2 delta_j. (10)
+
+Finite complex transporter norms are bounded as above; their unitarity
+is not needed. The difference (10) compares the two plaquette matrices
+in the SAME corner frame, so the triangle inequality has coefficient
+one on ||dU_{j+1}-1||. Divide by xi_j^2 and use
+xi_{j+1}^2/xi_j^2=L^{-2}. This proves the second estimate in (5).
+
+The third estimate follows directly from the exact L^{-3} coefficient
+in (3), (2), and (4). It does not require a physical-current identity.
+Solving the three scalar recurrences gives (6).
+
+ONE-TIME DIRECT-TO-FULL ADMISSION
+
+Choose the fixed direct caps small enough that the B109 p263 sufficient
+criterion places every grade-j pair with those caps into its full
+U_j^c space, for each actual carrier and its prescribed maximal tower.
+In particular choose k_direct<=alpha0/(8 B3) and the relative potential
+cap below the corresponding native comparison fraction. The compact
+factor is still Wbar, so its real gauge-cube and derived tests also hold.
+The bound on independent J_j is imposed separately by the third line
+of (6). This criterion is applied once to each constructed pair. The
+factor B3 is NOT inserted into the recursion (5) or multiplied t times.
+
+This supplies the full (iv) tests only on those complete reads to which
+the B109 criterion applies; it does not identify a source localizer's
+read with a smaller original cavity packet. All reads must be present
+in the fixed complete array. Restrictions to carriers retain every
+required gauge cube and determining collar.
+
+WHAT THIS DOES NOT YET ESTABLISH
+
+The actual native minimum is related to the Landau field by a return.
+B98 controls the small relative return u; a separate relative axial h
+can occur in the total h^{-1}u. Coarse normalization h|T^j=1 controls
+neither h nor its restriction to the NEXT finer lattice. Therefore (3)
+cannot simply be asserted to equal the original fixed-noise prefix.
+
+There are two possible matching routes. One can prove covariance and
+smallness of the full literal frame/noise arguments without changing
+coordinates. Alternatively, one can prove an exact triangular REAL
+change of free-noise coordinates, including original cuts, Jacobians,
+soft gauge factors, coarea factors, masks and normalizers, and then
+define a holomorphic extension using those new fixed REAL coordinates.
+The latter never permits rotating a complex integration contour or
+declaring an arbitrary predicate invariant. Either route requires its
+own complete proof. No complex prefix law is claimed here.
+
+Even after that matching, source denominator bounds and catalogue/root
+summations remain separate. A uniform field/current image does not by
+itself prove a normalized source norm or a Yang--Mills limit.

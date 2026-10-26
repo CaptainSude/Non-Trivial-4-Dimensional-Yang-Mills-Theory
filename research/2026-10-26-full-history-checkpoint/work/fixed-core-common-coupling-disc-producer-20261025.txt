@@ -1,0 +1,456 @@
+FIXED-CORE COMMON WILSON-COUPLING DISC WITH FROZEN AUXILIARY DATA
+25 October 2026. /root/endpoint_return. Fixed finite q, homogeneous core only.
+
+RESULT AND CONVENTION
+
+The fixed-cap native core primitives admit a uniform relative complex disc in
+the physical inverse Wilson coupling while keeping the gauge width, original
+cuts, independent field/current charts, pivots, P1/response definitions and
+localization conventions fixed. The full independent-pair Gaussian extension
+is constructed below; physical gauge identities are used only for its physical
+Gaussian beta. No analyticity in an arbitrary already-existing coupling history
+is assumed. The input coefficient ledger is held fixed and q NEW primitive
+steps are actually constructed successively.
+
+With the actual growing native windows, the resulting q-step beta satisfies
+
+ beta_q(x+zeta; E)=b_G,q+O_q(x^-1),   |zeta|<c_q x,
+ |partial_x beta_q(x;E)|<=C_q x^-2,
+ ||partial_x C_q(x;E)||_(fixed-cap coefficient norm)<=C_q/x.   (1)
+
+All derivatives in this note mean the derivative of the explicitly FROZEN-
+AUXILIARY Wilson-coupling continuation. Retuning a rounded logarithmic cut or
+an auxiliary gauge width at the same time is a different derivative. The scalar
+gauge normalizations and powers of the coupling are retained. C_q denotes the
+neutral output coefficient ledger, or its prescribed finite-q assembled norm;
+it is not a claimed uniform norm of an arbitrarily long unprepared old action.
+
+The proof uses the already registered complete native Gaussian covariance and
+local Dirichlet-block bounds in the fixed-cap old core, plus its old preparation
+and protected degree-six column. These are operator bounds on independent
+pairs, not only the physical B99 gap. Section 3 specifies the precise use of
+the scalar-localizer convention and does not assume inverse identities away
+from the unweakened point. Actual C+D, mixed histories and a nonlinear common
+source ball for the original energy remain outside this result.
+
+1. FIXED INPUTS AND EXACT ONE-STEP FAMILY
+
+Fix a native homogeneous step, its numerical inverse coupling x=g0^-2, and an
+admitted old E ledger with its complete native own-beta/old-minimum preparation.
+Every stored old coefficient and its own beta is held fixed. Its full old
+fluctuation difference has the B116 Lemma 1 bound, including the summed near/
+far branches. An arbitrary global analytic function without that prepared
+ledger is not an admissible replacement for this hypothesis.
+
+Freeze the original free-coordinate window chi_R, the auxiliary gauge width
+g0, normalization factors, native constraints and pivots, and all background/
+independent-current/scalar-localization domains with their strict margins.
+In the SAME physical noise coordinates B'=g0 x_free (followed by the actual
+nonlinear pivot map), vary only the coefficient of the Wilson action:
+
+   x -> x+zeta,          lambda=1+zeta/x.                   (2)
+
+The integrand before expansion is therefore the original one with
+exp[-zeta S_Wilson] inserted; the artificial gauge-fixing term keeps its old
+width. At the physical point this is exactly the original-energy coupling
+source, not a simultaneous rescaling of the gauge term. The constraints,
+Haar/pivot/coarea factors and original cut are unchanged. The constant classical
+factor exp[-(x+zeta)S(U_next)] is filed separately as usual.
+
+The constrained Wilson minimum is independent of its positive scalar coupling.
+Its native gauge representative has G=0, so the critical point of
+lambda S+G remains the same. The cancellation of the COMPLETE constrained
+linear term in B109 printed267, after (2.10), still holds. All current times
+constraint-curvature terms in (2.6)--(2.8) must be included before continuing
+the independent current; no J/g0 term is restored.
+
+Let D_b be the actual old free precision, including the gauge-fixing quadratic,
+and let K_b be its gauge-fixing part. Thus on the free coordinates
+
+   D_b=B_b+K_b,
+   B_b=the COMPLETE constrained Wilson quadratic,
+   K_b=C_piv,b^T Q_ax,b^T Q_ax,b C_piv,b.                  (3)
+
+Here Q_ax is the linearization of the block gauge quantity B'(y,x) in B109
+(2.5), and C_piv is the actual solution of the coarse free-pivot constraint.
+B_b includes the physical action Hessian AND the multiplier/current contracted
+with the second derivative of that constraint. Scaling only the raw action
+Hessian is wrong. The new independent-pair precision is the declared analytic
+operator
+
+   D_(lambda,b)=lambda B_b+K_b
+               =D_b+(lambda-1)(D_b-K_b).                 (4)
+
+This continuation agrees with the actual deformed physical Hessian. It makes
+sense for the same independent (U,J) chart without claiming a Ward identity
+for arbitrary J. The selected-current, response and minimum maps themselves
+have no new coupling argument and are kept unchanged.
+
+The literal pivot correction was checked again in B109-pivot-19.png,
+printed267 (2.11). Before eliminating the free pivot its quadratic exponent is
+<H_1 h C_tilde^(2)(B'),J> - G^(2)(B')/2
+ -<H_1 B',Delta_1 H_1 B'>/2.
+Thus B_b in (3) includes BOTH the current correction already in Delta_1 and
+this additional coarse-pivot current term. The deformation multiplies both
+by lambda. Leaving the displayed <H_1 h C_tilde^(2),J> term unscaled would
+invalidate the physical constrained Hessian and the rank identity below.
+
+Primary check: B109 printed265 (2.1) originally multiplies BOTH G(V) and
+A(U_k(V)) by g_k^-2. The image B109-return-17.png was reread. Thus (2) is
+specifically the Wilson-only source continuation with the gauge width frozen;
+it is distinguished from retuning that native auxiliary width in Section 7.
+
+2. A UNIFORM INDEPENDENT-PAIR OPERATOR DISC
+
+Use the native current-noise lattice and its measures, not original fine-link
+counting. The old covariance C_b=D_b^-1, its local Dirichlet-block versions,
+and their complete two-ended word representations have a fixed exponentially
+weighted bound on the admitted fixed-cap independent-pair charts. This is the
+old B109/B116 Gaussian input already used in the prescribed-core replay, not a
+replacement by the new source Hhat determinant.
+
+K_b has the corresponding fixed complete-word bound. Indeed Q_ax is a sum
+along a path inside ONE current L block, of at most d(L-1) links, with native
+bounded background transports. C_piv is the current free-pivot operator from
+B109 printed267--268. Its inverse pivot coefficient and its background reads
+are among the old complete Gaussian primitives. Multiplication and transpose
+therefore give a fixed weighted bound for K. Its noise endpoints have bounded
+current-block range; its complete BACKGROUND read is retained rather than
+discarded on that account. There is no remaining fine-depth factor.
+
+In an operator norm with a fixed positive exponential reserve, write
+
+       ||C||<=B_C,  ||K||<=B_K,
+       E=I-C K,     ||E||<=B_E:=1+B_C B_K.                (5)
+
+The same bounds hold for the native local Dirichlet blocks, with their own
+boundary/collar convention. The identity at the unweakened point is
+D_lambda=D(I+(lambda-1)E). Hence, for |lambda-1|B_E<1/2,
+
+ C_lambda=sum_(n>=0) [-(lambda-1)E]^n C.                 (6)
+
+This is a convergent inverse on the FULL independent-pair domain. It gives
+analyticity, two-ended localization, all complete-read norms and the same
+strong output slots used in the old Gaussian comparison. The logdet change is
+the locally traced series
+
+ log det D_lambda-log det D
+   =sum_(n>=1) (-1)^(n+1)(lambda-1)^n Tr(E^n)/n.         (7)
+
+Field-independent identity traces/powers stay in the scalar ledger. The other
+terms keep their original density root and every C/K word read. Their complete
+coefficient norm is O(|lambda-1|), after a fixed exponent reserve. Nothing is
+estimated by a factor exponential in the ambient volume before localization.
+
+If a covariance factor is needed, put F=I-C^(1/2) K C^(1/2). The native
+two-ended C^(1/2) bound and the binomial series give
+L_lambda=C^(1/2)(I+(lambda-1)F)^(-1/2), with
+L_lambda L_lambda^T=C_lambda. Its complete words obey the same geometric
+majorant. This is a covariance-factor estimate; it does not change the original
+real integration contour or rotate the hard-cut domain.
+
+For the actual real Gaussian comparison, take the native compact-reference
+positive D_ref. The original perturbation bound compares D to D_ref. Since K
+is uniformly bounded in current-noise units and D_ref has its fixed gap,
+|<v,Kv>|<=C<v,D_ref v>. Thus the perturbation (lambda-1)(D-K) has relative form
+norm at most C|lambda-1|. Choosing the disc smaller retains a uniform positive
+real-part comparison. This justifies the Gaussian integrals and protected
+moment estimates; a gap assertion only on physical configurations would not
+have supplied (5)--(7).
+
+3. LOCALIZERS, GAUSSIAN NORMALIZATIONS, AND THE SAME DOMAINS
+
+For every exact unweakened local Dirichlet block first construct (6)--(7).
+Then expand E=I-CK and apply the native fixed scalar localizers to EACH factor
+in each word. If C_s,K_s denote the resulting factor families, the majorant
+is bounded by [1+||C_s||||K_s||]^n. The fixed enlarged scalar radius S0 has a
+finite uniform bound of this form. Shrinking the lambda disc ONCE makes the
+Neumann series converge uniformly for every required scalar copy.
+
+At s=1 this is exactly the operator/inverse/logdet above. At s!=1 it is the
+defined factor-word continuation. No identity C_s D_s=I, QH_s=I, or weakened
+Landau identity is assumed. Existing scalar contours and source/current caps
+are unchanged. New internal reads and multiplicities are paid in the geometric
+series; they are not deleted after final supports have been grouped.
+
+The native Schur cancellation in B116 (2.24) remains an algebraic identity for
+the new actual Gaussian blocks. Apply it BEFORE the absolute comparison.
+The small additional relative-form perturbation in Section 2 and the geometric
+majorants then leave the same determinant/seed reserves. This is the usual
+complex comparison with a slightly larger fixed perturbation constant, not an
+assumption that a complex Gaussian is a positive probability law.
+
+Keep the COMPLETE normalization of D_lambda, the native Haar/pivot factors,
+and every gauge normalization scalar. At fixed gauge width the latter is the
+old scalar; its value has not been retuned in (2). A normalized expectation can
+cancel an identical scalar in numerator and denominator. The complete born
+action retains its logdet/current contributions and the scalar/vacuum ledger
+until the stated subtraction. No normalization is set to one by convention.
+
+4. PHYSICAL GAUSSIAN BETA: THE ONLY PLACE A GAUGE QUOTIENT IS USED
+
+At a real physical minimizing background b, B_b annihilates the residual
+based-gauge tangent. This is the Ward Hessian of the constrained Wilson action
+at its stationary point, including the constraint-curvature term in (3).
+The gauge conditions are zero at the representative, and their linearization
+Q_ax is invertible on this anchored gauge tangent. Each nonanchor site supplies
+one coordinate, as in the explicit block-path proof in
+signed-jet-native-column-independent-readback-20261025.txt, Section A.
+
+Choose linear coordinates u on the physical quotient and phi on that tangent.
+Then B(u,phi)=B(u,0), whereas the gauge quadratic is
+||T phi+R u||^2 with T invertible. Shift phi by -T^-1 R u and integrate it.
+The Jacobian/coarea factors and T determinant are independent of lambda. Thus
+the UN-CUT Gaussian factor satisfies
+
+       Z_G,lambda(b)=lambda^(-r_phys/2) Z_G,1(b).         (8)
+
+r_phys is a fixed dimension of this finite constraint system, independent of
+b. The identity extends to the actual physical complex germ by analyticity.
+Consequently the physical field-dependent Gaussian normalization, and hence
+its native affine beta, is independent of lambda. Its individual independent-
+current coefficient functions need not be independent of lambda; (7), rather
+than a false offgraph Ward identity, bounds their variation.
+
+Equation (8) is NOT an equality of gauge-conditionally truncated laws. The
+original cut stays in the interaction normalization. Its contribution is
+estimated separately below. No gauge quotient is used to erase that cut.
+
+5. UNIFORM PARITY ESTIMATE AND THE WINDOW CONDITION
+
+At a fixed lambda in the disc, freeze the old ledger actually supplied at this
+step and use a temporary auxiliary g only in the physical noise. The centered
+score has the exact form
+
+ V_lambda(g,z)=g^-2[lambda G_phys(gz)+G_gauge(gz)]
+                  +D_old,lambda(gz),                   (9)
+
+where both geometric remainders have a cubic zero and the complete old/measure
+increment vanishes at zero. All functions have the fixed physical-noise
+analyticity and complete coefficient bounds. D_old,lambda can depend on lambda
+through earlier NEW births; at this step it is fixed while the temporary g is
+varied. No derivatives of historical couplings enter this argument.
+
+The Gaussian covariance is C_lambda and the even original chi_R is fixed.
+Taylor and parity therefore give exactly the old protected-column structure
+
+ V_lambda=g O_lambda+g^2 R_lambda,
+ O_lambda odd of degree <=3, R_lambda of degree-four growth.
+
+The degree-six normalized identity in
+normalization-native/prescribed-core-current-coupling-expansion.txt, (2), applies
+uniformly in lambda. The stable whole potential, not its cubic truncation,
+is exponentiated. At g=g0 its interaction birth has fixed-cap complete norm
+O(g0^2)=O(x^-1). The extra Gaussian perturbation merely changes fixed constants.
+
+The frozen window activity is NOT zero. The protected complementary-cut proof
+gives, uniformly on the same relative disc and complex pair chart,
+
+             ||W_(R,lambda)||<=C exp(-a R^2).             (10)
+
+Thus the complete born physical beta obeys
+
+ beta(lambda)=b_G+O(x^-1)+O(exp(-aR^2)).                 (11)
+
+To obtain the simpler first line of (1), use the ACTUAL growing native window
+and require exp(-aR^2)<=C/x. The logarithmic windows with power greater than
+1/2, as well as the original fixed physical cutoff R=epsilon1/g0, satisfy this
+after the common weak floor. The mere earlier condition R>=R_min would NOT
+imply it: with a fixed numerical R the cut-induced physical beta can vary with
+lambda by O(exp(-aR^2)), leaving a derivative O(exp(-aR^2)/x).
+
+Applying Cauchy on a smaller lambda disc to (11), and using the EXACT lambda-
+independence of b_G from (8), proves
+
+ |partial_zeta beta(0)|
+      <=C[x^-2+exp(-aR^2)/x].                            (12)
+
+The coefficient output itself has O(1) fixed-cap norm throughout the disc;
+its Gaussian independent-current part can have O(1) variation. Cauchy therefore
+gives ||partial_zeta C(0)||<=C/x, as claimed. There is no unjustified O(x^-2)
+assertion for that whole offgraph neutral coefficient norm.
+
+6. ACTUALLY CONSTRUCTING q STEPS, WITH INPUT E FIXED
+
+Let q be fixed in advance. Start with the fixed admitted old ledger E and the
+complex inverse coupling z_0=x+zeta. Construct the next complete birth from
+the actual primitive integral (9), its Gaussian logdet (7), and its original
+window activity. Extract its OWN beta by the native physical affine prescription,
+store its scalar separately, and define
+
+              z_(r+1)=z_r-beta_(r+1),    0<=r<q.         (13)
+
+The previously constructed births are then the actual old coefficients in the
+next step. Their own beta subtractions implement the same old near/far
+cancellation in B116 Lemma 1. All data before these q steps remain constant.
+The induction is algebraic/analytic in the NEW variable zeta; no separate
+analyticity theorem for an arbitrary supplied coupling history is invoked.
+
+At each step keep the baseline numerical noise scale g_(r,0), cut and gauge
+width fixed. The ratio lambda_r=z_r/z_(r,0) lies in the operator disc if the
+initial disc is chosen smaller and x is above a constant depending on fixed q:
+the uniformly bounded q beta increments change z_r by O(q). Use the prescribed-
+core strict coefficient budgets, reducing the lambda radius once so that the
+additional O(|lambda-1|) Gaussian coefficient bound fits the retained budget.
+The same argument works for complex old coefficients, since the old preparation
+uses their analytic bounds and own-beta cancellations, not positivity of E.
+
+This constructs q genuine holomorphic primitive steps on |zeta|<c_q x and
+preserves the same fixed pair/current domains and scalar-localizer radius.
+The constants can depend on q; this is not a claim uniform as q tends to infinity.
+All baseline x_(r,0) are comparable to x and the windows satisfy (10).
+
+Summing (11) gives beta_q=b_G,q+O_q(x^-1), with
+b_G,q the sum/cocycle of the SAME actual q Gaussian leading coefficients.
+The physical minimum maps and the Gaussian leading quotient do not depend on
+the Wilson scalar, so b_G,q is independent of zeta. Apply Cauchy to the whole
+constructed sum to obtain (1). Finite q static substitutions and the native
+beta projection are bounded on the retained exponent/radius; hence the neutral
+q-step output has the displayed derivative estimate too.
+
+Use the native canonical affine coefficient convention for b_G,q. If an
+application instead uses a finite torus extractor, retain its finite/wrapping
+defect and its derivative; this theorem does not set it to zero. No infinite
+nonlinear source-function convergence is being assumed.
+
+6A. GENUINE FINITE DIFFERENCES IN A NATIVE INPUT-LEDGER BALL
+
+There is also a supplied cross-input estimate, with a norm qualification that
+must be retained. Let h be a perturbation of the COMPLETE native old birth
+ledger, together with the perturbation of each birth's OWN beta counterterm.
+Beta extraction is linear, so this is an affine Banach coefficient ball. Its
+norm B(h) is one for which the native old near/far sum in B116 Lemma 1 gives
+
+ ||Delta_old h||_prepared <= C B(h),
+ Delta_old h(gz)=g h_1(z)+g^2 h_rem(g,z),                 (13a)
+
+with h_1 odd of degree one and complete linear/quadratic growth envelopes
+bounded by C B(h). For example the uniform native dated-birth bounds with
+their original geometrically summed old preparation have this property.
+The norm includes every current, marginal reference, selected minimum and
+complete old localization read. It is not merely a norm of the physical total
+function restricted to minimizing fields.
+
+Choose a fixed small ball in which E+t h remains inside the native strict old
+coefficient budget, |t|<=1; more generally use its open complex neighborhood.
+The OLD preparation is linear in that ledger. The exact derivative of the
+complete born log integral is therefore
+
+ D_E log I_(lambda,E)[h]=<Delta_old h>_(lambda,E).        (13b)
+
+The derivative includes the whole common denominator. The Gaussian and its
+logdet are independent of E. Evenness of the frozen Gaussian/cut makes the
+g h_1 expectation at zero score vanish. Write the full score as gU and
+interpolate that stable score. The normalized identity gives
+
+ <Delta_old h>_V
+  =g^2 <h_rem>_V
+       +g^2 int_0^1 Cov_(tV)(h_1,U) dt.                 (13c)
+
+The same protected degree-at-most-four column, with complete domains, yields
+an O(g^2 B(h)) NEWBORN coefficient bound, uniformly in lambda and throughout
+the open input ball. Its physical beta consequently satisfies
+
+       |D_E beta[h]|<=C x^-1 B(h).                       (13d)
+
+This is a full independent-pair prepared-coefficient estimate followed by the
+physical extractor, not a claim inferred only from physical equality. The
+covariance in (13c) retains any linear inherited score and all current branches.
+
+Integrate (13b)--(13d) along the straight segment between TWO actually admitted
+input ledgers; their own-beta subtractions and scalar conventions travel with
+that segment. This gives genuine finite differences of the new birth and beta.
+For fixed q, construct the new coefficients step by step as in Section 6;
+their derivatives satisfy a finite triangular recurrence, with bounded
+coefficients and the newborn gain O(1/x). Hence
+
+ |beta_q(E+h)-beta_q(E)|<=C_q x^-1 B(h),
+ ||newborn_difference_q||<=C_q x^-1 B(h).                 (13e)
+
+Here the second norm is the q newly produced coefficient ledger. The inherited
+static part is separate. No inverse coupling derivative of an arbitrarily
+chosen incoming history has been presumed.
+
+6B. THE REMAINING COMMON-NORM REQUIREMENT FOR NEUTRAL q-CONTRACTION
+
+Equations (13a)--(13e) do not by themselves prove that the FULL neutral state
+map is a contraction in its own input norm. In the literal stored-ledger norm,
+the old dated coefficients remain stored unchanged under static transport.
+That norm can therefore have static norm one, regardless of how their current
+physical evaluation has decayed. A strict contraction requires a different,
+coherent current static-orbit norm with BOTH of the following properties:
+
+ (i) the literal OLD prepared fluctuation map obeys (13a) with B(h) bounded
+     by that same state norm on its full independent-pair domains;
+ (ii) its literal static state extension obeys the registered neutral
+      classical contraction, with the same source quotient, all currents,
+      own-domain caps, root allocation and high/low exponent reserves.
+
+If these two properties are registered, the exact static-plus-newborn
+decomposition and (13e) give
+||D_E C_q|| <= C_static L^(-alpha q)+C_q/x,
+so a fixed q and then a weak floor yield a number below one. This last
+display is an APPLICATION FORMULA, not an unconditional conclusion of this
+file: the existing projected source theorem uses OLD density with a NEW source
+map, whereas (13b) differentiates the OLD unmarked preparation. Their equality
+on physical minima alone does not identify their complete offgraph source
+extensions or norms. The Holder/raw-copy source contraction cannot silently
+be inserted for (ii) while (i) is still measured in the larger native ledger
+norm. A new coherent unmarked continuation may solve this interface, but must
+be explicitly constructed and checked.
+
+Thus beta_E and newborn finite-difference estimates are supplied on the native
+coefficient ball. A closed nonlinear neutral q-contraction in the requested
+single current-state norm remains precisely the common preparation/static
+norm interface above. No full complex-history or original-source ball is
+claimed from these tangents.
+
+7. WHY CO-SCALING THE GAUGE WIDTH IS NOT SILENTLY SUBSTITUTED
+
+If one also changes the auxiliary gauge width, the literal B109 precision in
+the same g0 coordinates is lambda D. Its independent-pair inverse is simply
+lambda^-1 C, and its logdet change is a scalar. This is a convenient DIFFERENT
+continuation. The accompanying normalized gauge insertion z(lambda), all
+coupling powers and original masks must still be retained.
+
+On an uncut physical gauge quotient the fixed-width and co-scaled-width
+Gaussians differ only by their exactly computed gauge/scalar factors. With the
+original free-coordinate cuts present, varying the gauge width changes a
+conditional distribution. Equality of the full cut-conditioned maps does not
+follow from (8). A separate tail/matching proof would be needed to replace one
+map's derivative by the other's.
+
+The theorem above avoids this substitution: (4), (6) and (9) construct the
+Wilson-only fixed-gauge-width family directly, and all derivatives in (1)
+refer to that family. At zeta=0 it is the actual old native core. If a consumer
+defines its gamma derivative by simultaneous gauge-width or cut retuning, it
+must either use this explicit frozen-label convention or supply that comparison.
+No such extra comparison is asserted here.
+
+8. WHAT HAS AND HAS NOT BEEN SUPPLIED
+
+Supplied: a common relative complex Wilson-coupling disc for a fixed finite q
+core block with a constant old input ledger; complete independent-current
+Gaussian/operator/localizer control; its true scalar ledger; uniform O(x^-1)
+physical beta remainder and O(x^-2) frozen-label derivative under the actual
+window condition; O(x^-1) neutral coefficient derivative.
+
+Not supplied: arbitrary-history coupling analyticity; a full C+D or mixed R/B
+common disc; an all-history nonlinear original-energy source ball; retuned-cut
+derivatives; or equality of two different gauge-conditionally truncated maps.
+The fixed-width construction is useful precisely because those conclusions are
+not needed for its stated finite-q homogeneous derivative estimates.
+
+PRIMARY AND CURRENT SUPPLIERS
+
+B109 printed265--268 (2.1)--(2.13): coupling/gauge convention, actual constrained
+minimum, complete quadratic/current correction, whole linear cancellation,
+free pivot and original normalization/window.
+B116 Lemma 1 and (1.24)--(1.43): complete old preparation and geometric
+remainder; (2.15)--(2.25): complex Gaussian/Schur comparison; printed21: logdet
+generalized-walk coefficients.
+normalization-native/prescribed-coupling-fixed-core-replay-theorem.txt;
+normalization-native/prescribed-core-current-coupling-expansion.txt;
+signed-degree-eleven-native-column-producer-20261025.txt;
+signed-jet-native-column-independent-readback-20261025.txt;
+normalization-native/native-gaussian-drift-prescribed-core-tuning-audit.txt.

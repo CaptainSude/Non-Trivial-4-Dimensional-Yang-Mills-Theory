@@ -1,0 +1,199 @@
+AUDIT AND PROOF: DEPTH-UNIFORM SUPREMUM CONTROL OF THE LITERAL B98 RETURN
+25 October 2026. endpoint_return subagent.
+Status: scoped published-input deduction. Supplies no fine C1 bound and
+no complete independently-current source domain.
+
+CLAIM
+
+Let W_real be a real compact-group lattice field with the B98(52) bound
+||W_real(partial p)-I||<alpha0 eta^2 on the complete required reads,
+eta=L^-k. Let W=exp(i eta A') W_real, X=exp(i eta A), with complex
+Lie algebra A',A and ||A'||_infinity<=a, ||A||_infinity<=b. Fix a and
+alpha0 below strict small ceilings in B98 Props6,7, and take b below
+one further fixed ceiling. Let u be exactly the B98(106) return for
+relative field X over W. Then at fixed L,d and group norm,
+
+ ||u||_infinity, ||u^-1||_infinity <= exp(C b),
+ ||u-I||_infinity, ||u^-1-I||_infinity <= C' b,             (A)
+
+with constants independent of k and compatible finite volume. The maps
+are jointly holomorphic in A',A on a slightly larger common supremum
+ball. Constants may depend on the fixed strict a/alpha0 ceilings and L.
+
+The same argument applies to the B109 endpoint mean convention after
+the finite-primitive mean estimate in Step6 is inserted. The endpoint
+identity and all gauges are those in
+work/B98-B109-literal-endpoint-return-20261025.txt.
+
+STEP1. TRUNCATION / RESCALING OF THE PUBLISHED ESTIMATES
+
+Put s_j=L^j eta for 0<=j<=k. For j>=1 reinterpret the SAME first j
+averaging steps at final spacing one. Its fine spacing is eta_j=L^-j,
+with rescaled physical perturbations A'_res=s_j A', A_res=s_j A,
+and real curvature parameter alpha0_res=s_j^2 alpha0. Indeed
+eta_j A_res=eta A, and alpha0_res eta_j^2=alpha0 eta^2.
+Thus B98 Props6 and7 apply with ceilings no larger than the original
+ones, uniformly in j and k. At j=0 the claims follow directly from the
+exponentials. Denoting W_j=M^jW, W_j^r=M^jW_real, and X_j the native
+corrected relative field from(89)-(91), they give
+
+ ||W_j(W_j^r)^-1-I|| <= C s_j a,
+                    ||Log X_j|| <= C s_j b.              (1)
+
+For the second statement use Prop7's uniform Prop4 conclusion; the
+linear averaging term is uniformly bounded on the rescaled ball by
+the estimate used in (131), or by the uniform analytic bound and its
+vanishing at A=0 on a fixed larger rescaled ball. Equivalently repeat
+the proof of(131) with the Prop7 factors displayed on printed43.
+All constants are at fixed primitive L; no C^j is introduced.
+
+Because W_j^r is unitary and C s_j a is uniformly less than 1/2,
+
+ ||W_j(e)||, ||W_j(e)^-1|| <= exp(C_0 s_j a).             (2)
+
+The inverse bound uses (I+E)^-1 and -log(1-||E||)<=2||E||.
+This step controls matrices themselves in an operator norm, not only
+a formal Lie algebra coefficient.
+
+STEP2. LOCAL ENDPOINT RATIOS
+
+Correction after root primary check: B98 blocks are lower-corner anchored,
+while B109 blocks are centered. The safe bound below covers both.
+For the B98 path convention, a level-j endpoint path has at most
+q_L=d(L-1) edges. Write C_j=X_jW_j. The ratio
+
+ T_j(y,z)=C_j(Gamma_(y,z)) W_j(Gamma_(y,z))^-1
+
+is the ordered product of X_j edges conjugated by the corresponding
+W_j partial paths. Reverse oriented edges can be treated with the
+same bounds by writing their relative factor as a transported inverse;
+all path transports have at most q_L edges.
+By(2), every conjugation has norm at most exp(2C_0 q_L s_j a).
+Using ||Log X_j||<=C s_j b in the finite product yields
+
+ ||T_j-I||,||T_j^-1-I|| <= C_1 s_(j+1)b,                (3)
+
+on a fixed smaller b ball. More explicitly the pre-smallness bound is
+exp(C q_L exp(2C_0q_Ls_j a) s_j b)-1. Since q_L/L is bounded at fixed d
+and s_(j+1)<=1, this implies(3) with a fixed C_1.
+Choose b so every T_j lies within a fixed logarithm ball, say
+||T_j-I||<=1/4. Then ||Log T_j||<=2||T_j-I||.
+
+STEP3. CENTERED FACTORS IN THE ACTUAL RETURN
+
+Let m_j(y)=|B(y)|^-1 sum_z Log T_j(y,z), a_j=exp m_j.
+This is exactly B98(105). From(3), ||m_j||<=C_2 s_(j+1)b.
+The centered factor appearing in(106) is
+
+                  D_j(y,z)=a_j(y)^-1 T_j(y,z).
+
+The elementary exponential-product estimates give
+
+ ||D_j-I||,||D_j^-1-I|| <= C_3 s_(j+1)b.                (4)
+
+No assertion that a logarithmic group mean is a multiplicative cocycle
+is needed; the factor is bounded in its displayed order.
+
+STEP4. HIERARCHICAL BACKGROUND TRANSPORT
+
+The background transporter P^0_(j+1)(x_(j+1),x) in B98(106) is a
+product of one endpoint path at each level ell=0,...,j. Each such
+path has at most q_L edges OF ITS OWN LEVEL. Hence(2) implies
+
+ ||P^0_(j+1)||,||[P^0_(j+1)]^-1||
+      <= exp(C_0 q_L a sum_(ell=0)^j s_ell)
+      <= exp(C_4 a s_(j+1)),                            (5)
+
+because sum_(ell=0)^j s_ell=(s_(j+1)-eta)/(L-1).
+Counting L^j paths and bounding every edge at the largest scale would
+be a wrong estimate. The hierarchical expression contains only one
+short path at each grade; the geometric spacings already account for
+its fine-scale physical extent.
+
+STEP5. MULTIPLY THE LITERAL RETURN FACTORS
+
+B98(106), in the verified notation of the companion note, is
+
+ u(x)= product_(j=k-1 down to0)
+  Ad_([P^0_(j+1)]^-1) D_j(x_(j+1),x_j).
+
+Call each displayed factor F_j. By(4),(5),
+
+ ||F_j-I||,||F_j^-1-I||
+       <= C_3 exp(2C_4 a s_(j+1)) s_(j+1)b
+       <= C_5 s_(j+1)b.                                (6)
+
+The fixed a ceiling is absorbed in C_5. Thus
+
+ ||u||,||u^-1|| <= product_j (1+C_5s_(j+1)b)
+                 <= exp(C_5 b sum_(j<k)s_(j+1)).
+
+The geometric sum is
+
+ sum_(j<k)s_(j+1)=L(1-L^-k)/(L-1) <= L/(L-1).
+
+This proves the first bound(A). Product telescoping yields
+||u-I||<=product_j(1+C_5s_(j+1)b)-1<=exp(Cb)-1<=C'b;
+the inverse product in reverse order gives the same estimate.
+Every formula uses the same finite joint analytic branches. Strict
+smallness in Steps1-3 leaves a larger uniform ball for A',A, so the
+finite product is jointly holomorphic there, with bound(A). Uniform
+Cauchy bounds for finitely many parameter directions may then be taken
+on any strictly smaller ball; no spatial smoothness is inferred.
+
+STEP6. B109 ENDPOINT MEAN CONVENTION
+
+B109 replaces the single coordinate-order endpoint path by the analytic
+left/right-equivariant group mean of their finitely many transports,
+(0.5)-(0.11), and uses this same endpoint in (0.12). The p254 transfer
+statement imports B98's estimates for that convention.
+For the elementary estimates above, the only added finite-primitive
+fact is the following: uniformly over strict real regular local reads,
+P_j(V;y,z) is holomorphic on a fixed complex neighborhood, with bounded
+first derivatives after factoring an anchor endpoint path. This follows
+from (0.6), local analyticity of the chosen group mean on a fixed
+small-diameter neighborhood, and compactness of the finite real local
+read at fixed L. All path differences are small loops controlled on
+the native strict regularity domain. The dimension of this local read
+and its constants depend only on fixed L,d and group.
+
+Consequently(1) implies
+
+ ||P_j(W_j)(P_j(W_j^r))^-1-I|| <= C_L s_j a,
+ ||P_j(C_j)P_j(W_j)^-1-I|| <= C_L s_j b,
+
+with inverse bounds on a smaller ball. P_j(W_j^r) is unitary by(0.9).
+The same estimates as(3)-(6) follow, with fixed C_L in place of the
+single-path constants. Hierarchical P remains an ordered product of
+one such endpoint transporter at each level, so the geometric sum is
+unchanged. This is a local finite-dimensional consequence, not a claim
+of analytic domain admission for source localizers or complete currents.
+
+FAILURE TESTS AND EXCLUSIONS
+
+1. The real reference W_real and its complete curvature packets are
+   required. Arbitrary complex backgrounds are not covered.
+2. A whole noisy prefix must still be represented on ONE such chart,
+   on all required source contours. Separate charts at separate real
+   points do not furnish that representation.
+3. No C1 estimate for u is claimed. B98 printed43 explicitly states
+   returns(104)-(106) generally fail(165); native averaged tests(166),
+   (167) replace that stronger condition.
+4. Gauge invariance of a pair domain allows choosing representatives
+   only for the simultaneous evaluated field/current pair. This note
+   does not recompute the current or alter a real noise variable.
+5. This bound is for one actual depth-k return, uniform in k. Products
+   of returns from DIFFERENT ordinary-prefix stages require a separate
+   sum of their actual b_j costs; if those costs are C delta_j, their
+   product is exp(C sum delta_j), but this last hypothesis must be proved.
+6. No masks, original normalizers, Jacobians, source contacts, or
+   complement masses are removed by these pointwise estimates.
+
+SOURCE CHECK
+
+The exact product is visually checked B98 printed33(106).
+Truncated relative estimate: printed38(130)-(135), printed42(161).
+Ordinary background estimate: printed42(159)-(163), printed43 Prop6(164).
+Complex-base extension: printed43 Proposition7 and preceding paragraph.
+B109 endpoint mean: printed253(0.5)-(0.11),254(0.12) and transfer paragraph.
+

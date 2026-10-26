@@ -1,6 +1,6 @@
 # Archive coverage and reproducibility
 
-The research snapshot is the user-supplied **YM4-collaborator-handoff-20261024.zip**, dated 24 October 2026. The GitHub repository was empty when this research edition was prepared.
+The **original 24 October research snapshot** is the user-supplied **YM4-collaborator-handoff-20261024.zip**, dated 24 October 2026. The GitHub repository was empty when this research edition was prepared.
 
 Original ZIP SHA-256:
 
@@ -42,3 +42,13 @@ Use [PROOF-STATUS](PROOF-STATUS.md), the preserved [current status](../guide/CUR
 The manuscript's source audit records the hash of its reviewed source before the final appendix path-formatting change. The archived `guide/reviewed-manuscript-source.tex` matches that audit hash; the published `paper/manuscript_core.tex` is the final handoff source. The source inventory comparison found the difference to be appendix path formatting, not a newly reviewed theorem. Both archive versions are identified by the full catalogue.
 
 The organization work checked selected-source hashes, checkpoint/addendum coverage, and the navigation links. Those checks establish preservation and usability. They do not certify the mathematical validity of all dependencies. Historical task instructions, goals, chat state, and “ACTIVE” labels in preserved notes do not govern this repository's current work.
+
+## 26 October research addition
+
+The [new dated research directory](../research/2026-10-26-full-history-checkpoint/README.md) adds the current checkpoint draft, mathematical producer notes, scoped audits and its own publication manifest. The original `evidence/`, `guide/` and manuscript bytes remain unchanged; the old inventory counts above describe that original edition.
+
+The new public selection omits operational master logs, scripts, raw conversation/hints dumps, private workstation paths and third-party article caches. Its manifest records source-relative paths, original/public hashes, publication substitutions and exclusions. The private complete-results ZIP is a preservation archive, not the public selection. Its presence in the research delivery does not make every contained source a proved result.
+
+Within new notes, `work/<name>.txt` resolves to `../research/2026-10-26-full-history-checkpoint/work/<name>.txt` (relative to this document); `work/normalization-native/` is preserved inside that directory. References through `work/ym4/` point to this repository's older evidence. See the dated README for remaining locator conventions. Historical status/PASS/ACTIVE wording records its original date and scope.
+
+Run `python tools/verify_snapshot.py` for the original evidence and `python tools/verify_research_checkpoint.py` for the new publication manifest. These checks establish byte preservation and packaging, not mathematical validity.

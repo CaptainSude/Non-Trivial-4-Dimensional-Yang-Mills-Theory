@@ -1,0 +1,361 @@
+FOUR SEPARATED ENERGY ENTRIES: CONTACT CUTOFF AND TERMINAL ERROR BUDGET
+25 October 2026. Independent numerical/observable audit by experiment_hints.
+
+STATUS AND CONVENTIONS
+
+This note supplies a quantitative budget, not a signed Gaussian comparison.
+The homogeneous original-source/contact identities and their earlier UV
+upper bound are used at their established scope. The additional weak-shell
+total-column theorem is supplied at that same registered homogeneous scope
+by terminal-centered-total-root-source-contraction-20261025.txt and its
+independent readback. Both were read in full for this final version. Its
+precise support/domain/column conditions remain explicit below. The remaining signed
+finite-shell comparison requires the actual degree-eleven preparation and
+matching listed in Section7. The complete original history correction also
+remains separate. No Gaussian terminal law or nonzero signal is asserted.
+
+The original SU(2) insertion is
+
+ O_a(f)=c_a sum_(original positively oriented plaquettes p) f(x_p) h_p,
+ h_p=1-(1/2)Tr U_p,        c_a=x_n/e_n^C.                    (1)
+
+There is NO additional a^4. The horizon n is frozen for each regulator.
+Here n is the BEGINNING of the extra comparison suffix at physical ell_*;
+the original normalization is not changed again during its m further steps.
+e_n^C is the real positive CORE constant-channel coefficient, constructed
+without a target covariance or a derivative of the stopping rule. Applying
+this same c_a to the actual original marks is exact. Actual affine closeness
+is an additional estimate requiring s>nu/2+max(p_Q+p_C,1), including the last
+b_n^-2 extraction price and finite-period errors. This still does not identify
+the physical Maxwell amplitude. In the stopping-window construction x_n can
+vary inside a compact positive interval; no exact equality to a fixed x_R is
+assumed. All homogeneous first-mark constants are kept in their ledger but
+may be removed from covariances; ALL mixed/contact constants are retained.
+
+To avoid two different lambdas, lambda_ref denotes the Maxwell amplitude,
+while lambda_dec in (10) denotes a source-contraction factor strictly below1.
+
+1. THE FOUR-ENTRY TARGET
+
+Let phi be a fixed nonnegative smooth function supported in the unit 4-ball,
+with integral1. For 0<epsilon<=tau/1000 set
+
+ f_0(x)=epsilon^-4 phi((x-tau e_0)/epsilon),
+ f_1(x)=epsilon^-4 phi((x-2tau e_0)/epsilon).
+
+Use exact lattice translates at each cutoff and reflect them by the actual
+lattice reflection. Their limiting four reflected supports have gap at least
+d0=2tau-2epsilon; small lattice rounding is absorbed by replacing d0 with,
+for example, d0/2 in estimates. Let A_M=9/pi^4. The correctly normalized
+Maxwell energy covariance is
+
+ K0(f,h)=A_M integral f(x)h(y)|x-y|^-8 dx dy.
+
+The signed four-entry difference for f_0-f_1 has the checked lower bound
+
+ D0 >= A_M/(400 tau^8).                                    (2)
+
+Suppose the comparison amplitude has lambda_ref>=lambda_*>0. An error of
+at most
+
+ B_ent=lambda_*^2 A_M/(3200 tau^8)                          (3)
+
+in EACH of the four separated entries leaves a signed lower bound at least
+lambda_*^2 A_M/(800 tau^8). This is a sufficient numerical criterion, not
+a result of this note. One can use a regulator-dependent lambda_ref with a
+common positive lower bound; a subsequential amplitude limit is separate.
+
+For definiteness allocate B_ent/5 to each of: (i) the pre-comparison UV
+contacts, (ii) the final boundary remainder, (iii) the finite-shell signed
+comparison including initial matching, (iv) lattice/free/finite-period
+reference errors, (v) the full-history correction. Other allocations work.
+Every contribution must be assigned once. A source-zero pressure estimate
+does not supply item(v).
+
+2. EXACT PROBABILISTIC LEDGER, WITH NO GAUSSIAN TERMINAL REPLACEMENT
+
+At an actual homogeneous ordinary prefix, let F_j,G_j be the conditional
+first marks, and Gamma_j the full mixed conditional covariance. Then
+
+ Gamma_(j+1)=A_j Gamma_j+Cov_(A_j)(F_j^noisy,G_j^noisy),
+ Gamma_0=0,
+ Cov_hom(original F,original G)=E Gamma_n+Cov_n(F_n,G_n).   (4)
+
+The common normalizer, retained original noise window, original profiles
+and contact scalars occur in (4). This is not the law of a product of
+posterior first marks. It is also not, by itself, the full Wilson mixture
+over nonhomogeneous histories and outer R operations.
+
+For any declared terminal references Q_f,Q_h on the actual terminal space,
+one may further split the last covariance into mark error, actual-law versus
+reference-law error, and reference discretization error. Such an algebraic
+split proves none of those errors small. The route below instead suppresses
+the last boundary term through additional ACTUAL weak shells and compares
+the finite accumulated contacts with their Gaussian counterparts. It does
+not require asserting a Gaussian terminal probability law.
+
+3. PRE-COMPARISON CONTACTS: THE ORIGINAL CELL COUNT
+
+Let ell_* be the physical mesh at which the finite signed comparison would
+start. The established homogeneous centered first-mark estimate is intensive
+per current root and has size at most C x_* B_f there, with
+
+ B_f=||f||_infty+ell_*||grad f||_infty.
+
+For ell_*<=epsilon, B_f<=C_phi epsilon^-4. The number of current roots meeting
+the bump and its fixed hats/mothers is <=C_count(epsilon/ell_j)^4 at a finer
+date j. A connected two-root column gives ONE support count, not its square.
+With the actual separated old-root arms and real suffix contraction, summing
+all earlier dates gives
+
+ E_UV <= C_ct X_+^2 epsilon^-4 ell_*^-4
+                    exp(-c_ct d0/ell_*).                  (5)
+
+Here X_+ is a fixed upper bound for the endpoint window, comparable to X.
+All fixed shape, collar, source and weak-recovery constants are in C_ct.
+The proof uses the convergent series
+ sum_(r>=1) L^(4r)(1+Br/Y)^(2p_C)
+               exp[-c(d0/ell_*)L^r].
+It keeps the original root census and all contact scalars. Whole enlarged
+original-window image admission, rather than a typical-noise subset, is
+needed for the real suffix contraction used in this estimate.
+
+Put kappa=epsilon/tau, t=tau/ell_*, a_ct=c_ct d0/tau. Then
+
+ tau^8 E_UV <= C_ct X_+^2 kappa^-4 t^4 exp(-a_ct t).        (6)
+
+An explicit sufficient condition for E_UV<=B_ent/5 is as follows. Define
+ b0=lambda_*^2 A_M/16000,
+ C_R=C_ct kappa^-4/b0,
+ C_a=max(0,4 log(8/a_ct)-4).
+Since 4 log t <= (a_ct/2)t+C_a for all t>0, it suffices that
+
+ t >= t_geom AND
+ t >= (2/a_ct)[2 log X_+ + log C_R+C_a]_+.                (7)
+
+t_geom includes ell_*<=epsilon and all fixed collar/gap requirements.
+Compatible geometric rounding can enlarge t by at most a fixed L factor.
+
+IMPORTANT ORDER. Fixing ell_* and subsequently sending X to infinity does
+NOT preserve (5). A valid joint choice is
+
+ t(X) comparable to log X, t(X) >= D log X, ell_*(X)=tau/t(X),
+                     a_ct D>2+zeta                       (8)
+
+for any fixed zeta>0. Concretely choose the SMALLEST compatible geometric
+t satisfying (7), t_geom and D log X; compatible rounding changes it by at
+most a fixed L factor. Thus t(X) is bounded above as well as below by a
+constant times log X for large X. A mere lower bound on t would not control
+the t^8 factor in(12). With this choice (6)
+vanishes as X^-zeta times a fourth power of log X. The more conservative
+explicit formula (7) is sufficient without optimizing D. The physical
+ell_*(X) is strictly positive after ONE X has been selected; it is then
+held fixed as the ultraviolet cutoff is removed.
+
+4. WHY A DIRECT TERMINAL SUPREMUM ESTIMATE DOES NOT FINISH THE TASK
+
+For centered actual terminal marks m=Q+R and n=H+S, Cauchy--Schwarz gives
+
+ |Cov(m,n)-Cov(Q,H)| <= r_f q_h+q_f r_h+r_f r_h,            (9)
+
+where r_f=||R-E R||_2 and q_f=||Q-E Q||_2 under the ACTUAL terminal law.
+For q_f,q_h<=Q_* and r_f,r_h<=R_*, the right side is 2Q_*R_*+R_*^2.
+For example R_*<=min(B_ent/(15Q_*),sqrt(B_ent/15)) pays B_ent/5.
+Neither these actual moments nor their Gaussian values follow from a
+holomorphic source bound.
+
+The fixed-radius neutral cone before calibration is O(e_n^C rho_core^2/X).
+Multiplication by X/e_n^C leaves O(rho_core^2), not O(1/X), per cell on that
+whole fixed domain. A support sum can cost ell_*^-4. On a genuinely admitted
+small physical chart, zero first jets improve the calibrated neutral to
+O(g^2 B^2), but uniform actual moments of B and local chart/tail control
+remain necessary. The nonlinear Wilson/minimum remainder is generically
+O(g B^3+g^2 B^4), not merely quartic. A profile error restricted to a running
+cut is O((log X)^(2q) ell_* grad f) per cell, still with an ell_*^-4 count.
+Thus taking ell_* small alone does not make a direct terminal replacement
+small. Even the free energy's same-source variance is cutoff divergent;
+its finite separated covariance is not an ordinary continuum L2 bound.
+
+These observations motivate the finite extra-shell boundary reduction.
+
+5. ADDITIONAL WEAK SHELLS: A SUFFICIENT BOUNDARY BUDGET
+
+The actual centered TOTAL-root source/connected-contact theorem and its
+independent readback supply the following on the admitted entire suffix,
+with one common running ALL-CAP radius
+rho comparable to X^-1/2(log X)^q, strict original-noise/mother image margins,
+actual terminal chi support, and restored high carrier exponent. This is
+a restriction to a common admitted domain, not an enlargement of the
+actual density's domain. The total root interpolation has column mass1;
+there is no intensive L^4 source census in that total norm.
+
+The required estimate, including the already generated mixed conditional
+mark, is
+
+ E_boundary <= C lambda_dec^m M_(0,f) M_(0,h),
+                  0<lambda_dec<1.                         (10)
+
+The covariance of two centered first marks alone can decay as lambda_dec^(2m).
+The nonvacuum mixed contact can decay only as lambda_dec^m and must not be
+discarded. Its flat scalar is part of the accumulated signed comparison.
+For an incoming mixed mark of independent size M_(0,fh), add
+C lambda_dec^m M_(0,fh) to (10); never assume it is zero without its exact
+dating. For the comparison started after the UV part, that part is bounded
+in absolute value by (5); the new mixed mark starts at zero and then is
+generated by the literal recursion (4).
+
+The conservative initial total centered norm from the established intensive
+estimate and the actual bump root count is
+
+ M_(0,f)<=C X B_f N_f(ell_*)<=C_phi X ell_*^-4,             (11)
+
+and similarly for h. Constants may retain the fixed bump shape, kappa and
+physical geometry; (11) contains no additional ultraviolet a^-4. With
+ beta_eff=-log_L(lambda_dec)>0,
+ m=ceil(A log_L X+m0),
+the sufficient dimensionless estimate is
+
+ tau^8 E_boundary <= C_phi t(X)^8
+               X^(2-A beta_eff) L^(-beta_eff m0).         (12)
+
+Hence A beta_eff>2 is sufficient with (8). If the actual total-column or
+moment supplier adds an unavoidable X^d prefactor, the condition is instead
+A beta_eff>2+d. Record d explicitly. A polylogarithmic factor does not change
+this strict power condition. The fixed integer m0 pays remaining fixed
+constants and the fraction B_ent/5.
+
+Bounded signed increments imply |x_(n+r)-x_n|<=Bm=O(log X).
+For sufficiently large X the whole suffix lies, for example, in [X/2,2X],
+above the original weak floor; recovery/stretch controls may sharpen this.
+Its final physical mesh is ell_IR=ell_* L^m. This can exceed the probe
+separation: the signed signal is then carried by the accumulated contacts,
+not by a supposed local terminal energy field. Once X is fixed, m is finite
+and every endpoint coupling is strictly positive. This does not send the
+renormalized endpoint coupling to zero along the ultraviolet sequence.
+The weak-window regulator family has growing remaining geometric room; a
+fixed m fits for sufficiently large UV depth. Choose its compatible period
+after the FULL extended prefix and all weighted finite-period budgets.
+
+6. NUMERICAL WINDOW FOR THE PROPOSED FINITE-SHELL SIGNED COMPARISON
+
+The archived inner_two_mark_gaussian_prefix_2026-10-18.txt, Sections4--7,
+has the intended error form
+
+ epsilon_cmp <= C[epsilon0+
+      sum_(r<m){b_r+(g_r/b_r)^2+g_r^2+exp(-c T_r^2)}],    (13)
+
+with separately retained reference/covariance and finite-period errors.
+This uses the Gaussian at the STATIC BACKGROUND, whose difference from
+the flat covariance costs O(b), odd-score interpolation, actual old cuts,
+and protected moments through degree11. It is not implied by the present
+degree-four absolute one/two-mark column. Its use for the newly calibrated
+original source is therefore a pending matching theorem, as specified below.
+
+For x_r comparable to X, g_r comparable to X^-1/2,
+b_r comparable to X^-1/2(log X)^q, m=O(log X), the four sums in (13) are
+
+ O(X^-1/2(log X)^(q+1)),
+ O((log X)^(1-2q)),
+ O(X^-1 log X),
+ O(log X exp[-c T_X^2]),                                  (14)
+
+respectively. Thus q>1/2 suffices for the moment-based second term. The
+actual original cut T_X must also fit g_r T_X << b_r with the strict native
+constants/exponents; it is not replaced by a new cutoff. If only a crude
+(gT/b)^2 estimate is proved, and T_X grows as log^p_cut X, the required
+condition strengthens to q>p_cut+1/2. Which version holds must be stated.
+Comparing the slowly varying coupling to one fixed comparison coupling
+costs at least O(m/X) in the appropriate normalized finite-shell estimate.
+
+The proposed initial relative error is
+
+ epsilon0 <= C[1/X+ell_*/epsilon]+finite-period/body error. (15)
+
+Its two displayed terms come respectively from the core neutral cone after
+factoring its marginal amplitude and the profile first moment. They become
+O(1/X+1/(kappa t(X))). They are NOT yet proved to be the correct norm of the
+nonlinear invariant completion required in (13).
+
+The free finite-shell conditioning computation retains both omitted terms
+
+ R_m^4+R_m^8,             R_m=t(X)L^-m,                    (16)
+
+not just R_m^8: the nonvacuum mixed conditional mark contributes the fourth
+power. The remaining local-vertex lattice comparison has a proposed O(1/t)
+price. After correctly matching the quadratic source, c_a^2 g^4 cancels
+the leading X^2; the target scale is tau^-8. Thus the intended comparison
+budget is of the form
+
+ C_(phi,kappa) tau^-8 [epsilon_cmp+m/X+1/t+R_m^4+R_m^8]
+                  +actual finite-volume/matching errors. (17)
+
+This formula is an explicit supplier contract, not an established estimate
+for the original actual law. With UNIFORM C_(phi,kappa), (8), q>1/2, and
+m=A log_L X, every displayed error tends to zero and is compatible with
+the boundary condition A beta_eff>2. This numerical compatibility is useful.
+
+DO NOT HIDE PROFILE GROWTH IN C. If the actual signed estimate multiplies
+(17) by t^D or by an arbitrary power of log X, then the proposed 1/t initial
+profile/dispersion error may fail to vanish (already t^D/t fails for D>=1).
+An additive term X^-alpha t^D does tend to zero for any fixed D with (8),
+but a term t^D/t must be improved by an actual profile/connected cancellation
+or by a separately proved higher-order reference approximation. Likewise
+(log X)^D times the second term of (14) requires 2q>1+D, subject to the native
+radius hierarchy. A generic per-step K^m loss is not harmless: it changes a
+term X^-1/2 to X^(-1/2+A log_L K), potentially conflicting with (12). The
+archived direct-prefix/overlap estimate must really avoid that loss. An
+exp[C(epsilon/ell_*)^4] filled-volume seed cost would be still worse. No
+unproved absence of these losses is incorporated into the conclusion.
+
+7. PRECISE NEXT ANALYTIC SUPPLIERS, AND WHAT HAS NOT BEEN DONE
+
+To turn (13)--(17) into the four entry estimates, prove all of the following
+for the actual retained ordinary kernels and original calibrated profiles:
+
+ (a) The nonlinear invariant completion of the dated original fine Wilson
+ reference has the SAME physical quadratic vertex through the actual flat
+ lift/current, with actual orientation/offset census and reference amplitude.
+ The new independent-current continuation must match the old Gaussian
+ comparison's own-domain source hypotheses on every auxiliary scalar/noise
+ copy. An affine coefficient alone is not this full matching.
+
+ (b) The centered first marks AND the mixed conditional mark admit the signed
+ parity/Taylor estimate with degree-eleven protected moments, old g-score,
+ static-background Gaussian and original cut. Both one- and two-source
+ normalizers, scalar contacts and finite-period marginal/whole-long ledgers
+ remain. The present absolute degree-four compiler is not this theorem.
+
+ (c) The relative initial error(15), direct prefix bound(13), and two-packet
+ overlap sums have explicit geometry/profile dependence sufficient for the
+ joint choice (8). In particular, there is no hidden growing multiplier on
+ the sole O(1/t) gain. This is a quantitative requirement, not cosmetic
+ uniformity. The exact four-entry reference amplitude lambda_ref must be
+ identified with a positive lower bound; core calibration does not assume it.
+
+ (d) The complete original outer-R/nonhomogeneous-history contribution to
+ each original covariance is <=its allocated budget, with all actual marks,
+ contacts, exterior dependence and histories. The homogeneous source-zero
+ law alone cannot supply this. The exact marked full-R identities already
+ retained in the project identify what must be controlled.
+
+After these suppliers, select the fixed constants and rare power in their
+registered order; choose ONE sufficiently large X and the joint ell_*(X),
+m(X); then keep them fixed during UV removal. For each finite regulator
+choose the compatible volume cofinally after all finite-prefix weights,
+including calibration, the full m-step suffix, both marks and contacts.
+The positive closure of the endpoint coupling window is then retained.
+This note supplies the error arithmetic and the necessary analytic contract;
+it does not itself supply (a)--(d) or a continuum Yang--Mills state.
+
+CHECKED SOURCES
+
+calibrated-original-energy-profile-renewal-20261025.txt, Sections8,10--11;
+terminal-mark-to-Maxwell-comparison-audit-20261025.txt;
+terminal-centered-total-root-source-contraction-20261025.txt and
+terminal-centered-total-root-source-contraction-independent-readback-20261025.txt;
+original-energy-two-source-calibration-and-signal-audit-20261025.txt;
+inherited/original-workspace/work/original_energy_normalization_20261022.txt;
+inherited/original-workspace/work/construction_route_20261021.txt;
+inherited/original-workspace/work/package/work/archive/ym4-research/work/
+inner_two_mark_gaussian_prefix_2026-10-18.txt, Sections4--7.
+The three inherited paths above are under work/ym4/evidence/.

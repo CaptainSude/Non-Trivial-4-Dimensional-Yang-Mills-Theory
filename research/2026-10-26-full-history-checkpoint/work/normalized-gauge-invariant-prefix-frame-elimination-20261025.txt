@@ -1,0 +1,175 @@
+EXACT FRAME ELIMINATION FOR A NORMALIZED GAUGE-INVARIANT PREFIX
+25 October 2026. Finite homogeneous ordinary-kernel theorem.
+
+RESULT
+
+For gauge-invariant sources, the actual real frame/noise transport can
+be removed AFTER normalized integration by exact real orthogonal noise
+changes. The resulting unframed old-density/new-response kernel may be
+chosen as the complex continuation. This avoids frame growth and frame
+reads in that NORMALIZED source class. It does not identify fixed-noise
+maps, rotate a complex contour, or handle arbitrary nongauge-invariant
+history selectors.
+
+1. EXACT HYPOTHESES AND CONVENTION
+
+Write b=(U,J) for a common-frame independent pair. Let the grade-j
+original free coordinates be x, with the original centered product
+K_j of Euclidean color balls and original Lebesgue/coarea conventions.
+For a real vertex gauge g, T_j(g)x is the actual free-coordinate map
+Ad_{g(b_-)}x(b), at the proper restricted coarse sites. Its real
+Jacobian is1 and T_j(g)K_j=K_j.
+
+Let w_j(b,x) be the old declared density, with its actual denominator
+
+                   Z_j(b)=integral_(K_j) w_j(b,x) dx.
+
+Require the native simultaneous covariance on the admitted real pair
+domain,
+
+ w_j(b^g,T_j(g)x)=w_j(b,x).                          (1)
+
+This includes all old action, current, relative gauge, Haar and pivot
+channels. The old inherited activities use their stated independent-
+pair gauge invariance, B109(1.19). The pivot covariance, measure and
+scalar covariance have been separately registered. Numerical coupling
+constants and cuts are held fixed. Parameter-only outer factors remain
+in the outer physical law; (1) is not permission to erase them.
+
+Let Psi_j(b,x) be the NEW common-frame response and selected-current
+pair. Require
+
+ Psi_j(b^g,T_j(g)x)=Psi_j(b,x)^g                    (2)
+
+with the exact fine/coarse representations at that grade. This is
+the previously audited external gauge covariance, not an additive
+offgraph Ward identity. The source F obeys F(b^g)=F(b), on the relevant
+real and common holomorphic domains.
+
+The assembly convention is x^sharp=T_j(Gamma)^{-1}x. If a symbol T_Gamma
+is instead used for inverse transport, all formulas must be renamed
+consistently; an unrecorded sign/inverse change is not harmless.
+
+2. ONE-STEP FRAME REMOVAL
+
+At a real common pair b and a real compact frame Gamma, the old density
+in the original frame satisfies, by (1),
+
+ w_j(b^Gamma,x)=w_j(b,T_j(Gamma)^{-1}x).              (3)
+
+The actual reconstructed output is Psi_j(b,T_j(Gamma)^{-1}x) followed
+by its native output return/frame. Gauge invariance of F removes that
+OUTPUT frame from F, regardless of its dependence on this noise.
+Thus the framed normalized source value is
+
+ [integral_(K_j) w_j(b^Gamma,x)
+       F(Psi_j(b,T_j(Gamma)^{-1}x)) dx]/Z_j(b^Gamma).
+
+Make the REAL change y=T_j(Gamma)^{-1}x. By invariance of K_j and its
+measure, (3) gives exactly
+
+ T_j F(b):=Z_j(b)^{-1} integral_(K_j)
+                         w_j(b,y) F(Psi_j(b,y)) dy. (4)
+
+The same change proves Z_j(b^Gamma)=Z_j(b). No replacement denominator
+has been introduced. The physical integral is unchanged, while its
+integrand at an unchanged label x need not be unchanged.
+
+This argument works at fixed upper-date data. Therefore a frame which
+depends on already integrated/later-date data causes no extra Jacobian
+at this conditional step. A joint formulation is triangular with
+unit determinant; the successive conditional proof avoids needing
+any unjustified derivative of that frame.
+
+3. GAUGE INVARIANCE IS PRESERVED, SO THE ARGUMENT ITERATES
+
+For real g, insert b^g into (4) and set y=T_j(g)x. Equations (1),(2)
+and gauge invariance of F give
+
+                         T_j F(b^g)=T_j F(b).       (5)
+
+Hence the unframed kernel preserves the gauge-invariant source class.
+Starting from the gauge-invariant original rare cavity a_F, use (5)
+inductively. At each next conditional, the already integrated lower
+source is gauge invariant and its output return/frame can be removed
+as in Section2. This proves exact equality of the entire finite framed
+physical normalized prefix with
+
+                    F_t=T_(t-1)...T_0 a_F,          (6)
+
+where every T_j is the unframed formula (4).
+
+Real top-anchor choices cannot change (6). More generally the real
+frames used to represent each conditional cannot change it, provided
+they are actual gauge changes and the conditional covariance hypotheses
+hold. This is stronger than a bound on frame norms: the frames are
+absent from the resulting normalized scalar function.
+
+4. A DECLARED COMPLEX CONTINUATION WITHOUT COMPLEX NOISE ROTATIONS
+
+Define (4) directly for complex b in a proved common domain where:
+
+- w_j and Psi_j are holomorphic on the same ORIGINAL real product K_j;
+- the actual old denominator Z_j is nonzero;
+- the complete image Psi_j(b,K_j) lies in F's holomorphic source domain;
+- compact-product domination permits differentiation.
+
+Then (4) is holomorphic. The definition does not use Gamma at all.
+It is a chosen old-density/new-map continuation which has the exact
+physical values by Sections2--3. No complex change of y is made.
+
+If a framed expression is also holomorphic on a common connected
+neighborhood, equality follows there from the full real independent-
+pair/frame locus by holomorphic uniqueness. This optional observation
+does not enlarge either domain or continue through a denominator zero.
+
+Similarly, real external gauge invariance extends to local complex
+gauge transformations whenever both sides remain in their common
+holomorphic branch. It supplies the needed infinitesimal Ward identity
+without a complex rotation of the real cut.
+
+5. CONSEQUENCES FOR MAP AND SOURCE ESTIMATES
+
+For the NORMALIZED source class, the relevant step map is now simply
+Psi_j(b,x) with the original x in the common frame. Its response bound
+is C delta_j; there is no extra N_j transport argument and no frame
+debt to estimate. The common-pair field/current bootstrap is the
+appropriate image theorem. The old density and its packet/phase bounds
+are used on that same unframed pair chart, as a stated imported theorem
+where they have not been independently reproved.
+
+If each admitted complex normalized kernel has norm at most2 and the
+complete final cavity image has rare cap eta, iteration gives at most
+2^t eta. This is conditional on the ACTUAL successive image domains and
+old-denominator bounds; it is not inferred just from (4). In a delay
+t=O(log(1/g)), 2^t is a fixed inverse-g power.
+
+Weighted first-jet transport can use derivatives of Psi_j and the old
+unframed density directly. The noise derivative of the source still
+carries g_j. Removing frames does not prove those row sums, packet
+geometry or a compatible real truncation; it removes a genuine extra
+set of variables/reads from their registration.
+
+For a fresh lift on coarse physical determining data, one may use the
+resulting F_t(V) in E_new(U,J)=F_t(M^tU), independent of J, on its
+explicit averaging-image domain. This is a new source class/interface,
+not a claim of equality with every old offgraph inherited source.
+
+6. LIMITS WHICH REMAIN ESSENTIAL
+
+The theorem is for gauge-invariant normalized scalar sources and the
+homogeneous gauge-covariant ordinary kernels on their original products.
+An open-color insertion, a gauge-frame-dependent selector, a hard
+mixture with unregistered covariance, or a source whose denominator
+has changed does not satisfy its hypotheses automatically.
+
+Original sharp histories and outer unnormalized masses remain part of
+the complete theory. If they are not covered by the covariance/reassembly
+argument, they must be retained with their actual transformations and
+corrections. The raw fixed-noise source catalogue may still need frames;
+the theorem specifically eliminates them from the fully normalized
+gauge-invariant class, not from every earlier representation.
+
+No carrier-own-domain extension, complete normalized source census,
+all-history reassembly or continuum construction is proved merely by
+this frame elimination.

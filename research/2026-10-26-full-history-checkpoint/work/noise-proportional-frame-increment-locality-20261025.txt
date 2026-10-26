@@ -1,0 +1,163 @@
+NOISE-PROPORTIONAL FRAME INCREMENT AND ITS COMPLETE READ
+25 October 2026. Exact homogeneous-prefix refinement.
+
+Scope: the new common-frame homogeneous prefix, with ALL its absolute
+hierarchical frame conditions registered, including at the top grade.
+This proves an exact frame-increment identity, a sharper debt estimate,
+and locality of each increment as a function of its current fine fields.
+It does not by itself prove a connected source catalogue norm.
+
+1. REQUIRED TOP REGISTRATION
+
+For every grade j, U_j^Gamma_j must satisfy the absolute native
+hierarchical conditions through depth j. This is already how the
+descending frame is constructed, but it must also be true for the
+starting pair U_t,Gamma_t. Arbitrary bounded holomorphic Gamma_t would
+not suffice for the statement below, or for a locality assertion.
+
+One admissible top convention is the canonical absolute axialization
+of U_t with specified coarse anchors (for example1). Its hierarchical
+path formula is the same as below. Its complete read has diameter
+O(L^t) in original fine units. If other anchors are used, their own
+locality/read certificate is required explicitly.
+
+Use the original lattice bonds throughout, and let xi_j=L^-j. For
+x=x0,x1,...,xj=y the nested centers define the ordered hierarchy
+
+  P_j(F;y,x)=P_(j-1)(M^(j-1)F;xj,x_(j-1)) ...
+                                      P_0(F;x1,x0).   (1)
+
+This uses the actual B109 endpoint means and ordinary averages, not
+newly chosen single paths. Endpoint covariance gives the same formula.
+
+2. EXACT INCREMENT, WITH ALL ORDERS FIXED
+
+Let W=U_(j+1), F=U_j=exp(i xi_j A_j)W. Let u_j be the native B98
+relative return. The usual frame construction gives
+
+  Gamma_j(x)=Gamma_(j+1)(y) u_j(y) P_j(F;y,x).      (2)
+
+Because W^Gamma_(j+1) satisfies the absolute hierarchy also at every
+level below j+1, its depth-j conditions imply
+
+  Gamma_(j+1)(x)=Gamma_(j+1)(y) P_j(W;y,x).         (3)
+
+Combining(2),(3) yields the exact RIGHT increment
+
+  Gamma_j(x)=Gamma_(j+1)(x) R_j(x),
+  R_j(x)=P_j(W;y,x)^-1 u_j(y) P_j(F;y,x).          (4)
+
+The placement of u_j between the two paths is essential. In particular
+one may not replace(4) by u_j times an unordered path ratio.
+
+At A_j=0, F=W and the native relative return u_j=1. Thus
+
+  R_j(0,W)=1                                      (5)
+
+IDENTICALLY in W, including complex W in the common chart. This is
+stronger than merely observing that its value is small on real fields.
+
+3. UNIFORM NOISE-PROPORTIONAL SIZE
+
+Assume W and F are in the common compact-reference chart used in the
+previous B98/B109 return audit, with fixed strict reserves. Write r for
+the normalized sup norm of A_j. The ordinary partial-average estimate,
+and its holomorphic first-difference form on this fixed chart, give
+
+  M^mF (M^mW)^-1 =1+O(L^m xi_j r), 0<=m<j.        (6)
+
+For a complex W this follows by applying the uniformly analytic B98
+averaging estimate in a compact-reference chart with a reserved ball
+in the relative A variable; Cauchy differentiation preserves the factor
+L^m xi_j. Both inverse matrices remain in the same chart.
+
+Every native primitive endpoint uses at most d(L-1) coarse links.
+The compact-reference background path norm/inverse is bounded on this
+chart, with geometric scale sum. Multiplying the relative estimates(6)
+therefore gives
+
+  ||P_j(W)^-1 P_j(F)-1||<=C r,
+  ||P_j(W)^+/-1||<=exp(C b_cap).
+
+The native return estimate gives ||u_j^+/-1-1||<=C r. Inserting these
+estimates into the exact formula(4), and using the fixed b_cap, proves
+
+  ||R_j^+/-1-1||<=C r,
+  ||R_j^+/-1||<=exp(C r).                          (7)
+
+The constants are independent of j and volume. Matrix frame norms are
+unitary-invariant operator norms with ||I||=1. Compact path factors
+cost1 even when they are not close to1.
+
+Hence, with delta_j^sharp=exp(2q_(j+1))delta_j and the four-slot
+response bound r<=C_H delta_j^sharp,
+
+  q_j<=q_(j+1)+C delta_j exp(2q_(j+1)).            (8)
+
+The previous additional L^-1 b_(j+1) debt is unnecessary once the top
+hierarchy has been registered. Conditions
+
+  q_t<=q_*/2,
+  C exp(2q_*) sum_(j<t)delta_j<=q_*/2
+
+close the same descending induction. The original geometric field and
+selected-current estimates are unchanged.
+
+4. BACKGROUND DERIVATIVES ALSO CARRY THE NOISE FACTOR
+
+Work with normalized relative-background coordinates in a fixed
+strictly larger complex chart, with reserve rho. Since(5) is an
+identity and(7) is uniform there, Cauchy estimates imply
+
+  ||D_W^n(R_j-1)[v1,...,vn]||
+       <=C r n! rho^-n product_i ||vi||             (9)
+
+for admitted normalized directions. This is a fixed-order directional
+bound. It is not a claim that an unweighted sum over every coordinate
+derivative is controlled by the same number. A spatially rooted
+coefficient sum requires the complete kernel/read majorant.
+
+5. COMPLETE READ OF ONE INCREMENT
+
+Define Rread_j(x) as the UNION of every fine bond, current-independent
+background path, partial ordinary-average read and B98 return read
+appearing in(4). Include all native endpoint means and their path
+families, the recursive averages used by them, and all fixed collars.
+No part of P_j(W), P_j(F), u_j or an inverse/adjoint branch is omitted.
+
+This is a deterministic finite read in the fine variables (W,A_j).
+There is a constant C_read depending only on the fixed native geometry
+such that
+
+  Rread_j(x) subset {z:dist_fine(z,x)<=C_read L^j}.  (10)
+
+Proof: one ordinary averaging level has a fixed finite coarse-link
+read. If its input mesh is L^m fine units, this enlarges the previous
+read by at most C L^m. Recursing m levels costs the geometric sum
+sum_(n<=m)L^n<=C_L L^m. Each primitive hierarchy endpoint has only
+d(L-1) coarse links. Taking their union over m<j gives another such
+geometric sum. B98's u_j product has these same hierarchy/path/average
+reads. Enlarging by the fixed collars changes only C_read. The result
+may occupy several neighboring ancestor blocks; it is not asserted to
+be exactly one block.
+
+The increment has no direct read of Gamma_(j+1) other than the explicitly
+carried factor in Gamma_j=Gamma_(j+1)R_j. Its dependence on older data
+through W and A_j must still be expanded. The response A_j has the
+native exponentially decaying operator-word tails at scale L^j, so
+substituting it into(10) creates those tails around this complete local
+read; it does not make the read finite in the original top/noise data.
+
+The original cavity source must retain its entire fixed tree/filling
+packet before this propagation starts. Expanding only the nominal
+plaquette or a reduced boundary read would give a different source.
+
+6. LIMIT AND USE
+
+Equations(4),(8),(9),(10) are a rigorous frame refinement. They remove
+an unnecessary old-field debt and isolate where nonlocal dependence
+actually enters: response tails and the carried higher-grade frame.
+To obtain a full source read catalogue, one must compose their positive
+rooted word majorants with all response/background derivatives, and
+then perform the actual source Cauchy localization. Bounded field values
+or bounded Frechet derivatives alone do not supply that catalogue norm.

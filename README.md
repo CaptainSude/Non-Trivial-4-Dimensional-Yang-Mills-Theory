@@ -1,61 +1,55 @@
-# YM4: research map and collaborator entry point
+# YM4: proof status and research record
 
-**Status on 24 October 2026: the continuum existence proof is unfinished.**
+**Updated 26 October 2026. The continuum Yang–Mills existence proof remains unfinished.**
 
-The target is one **nontrivial, interacting, local four-dimensional SU(2) Yang–Mills theory on R⁴ at positive renormalized coupling**. Mass gap, uniqueness, universality, and extension to all compact gauge groups are outside this snapshot's stated target.
+The target is a nontrivial, interacting, local four-dimensional **SU(2) Yang–Mills theory on R⁴ at positive renormalized coupling**. Mass gap, uniqueness, universality and extension to all compact gauge groups are not additional requirements of this program.
 
-This repository organizes the supplied YM4 handoff into a readable proof map. The work has exact finite identities and internally reviewed local results, followed by explicit missing interfaces. An internal audit marked “PASS” is a scoped research review; it is not independent certification of the existence theorem.
+The latest research reaches a bounded checkpoint: a regulator-uniform comparison of **four separated reflected energy covariances under the complete original Wilson law**, retaining the history normalization, posterior marks, mixed contacts and outer-R operations. The argument has scoped internal audits and uses explicitly listed native analytic estimates. This is not external peer review or certification of every inherited dependency.
 
 ## Start here
 
-1. Read the table below, then the [proof-status ledger](docs/PROOF-STATUS.md).
-2. Pick a task from the [open problems and acceptance criteria](docs/OPEN-PROBLEMS.md).
-3. Read the [incomplete manuscript](paper/YM4-incomplete-proof.pdf), or its [editable source](paper/manuscript_core.tex), alongside the linked producer notes and audits.
-4. Use the [reading guide](docs/READING-GUIDE.md) and [evidence index](catalog/README.md) when a dependency sends you deeper into the archive.
+1. [New proof draft — PDF](research/2026-10-26-full-history-checkpoint/Proof-draft.pdf) · [editable LaTeX](research/2026-10-26-full-history-checkpoint/proof-draft/main.tex).
+2. [Current proof-status ledger](docs/PROOF-STATUS.md) and [remaining work](docs/OPEN-PROBLEMS.md).
+3. [Dated result, dependencies and audits](research/2026-10-26-full-history-checkpoint/README.md).
+4. [Reading routes](docs/READING-GUIDE.md), [notation](docs/NOTATION.md) and [source catalogue](docs/SOURCES.md).
 
-## What is established, and at what scope?
+## The new checkpoint
 
-“Available” below means available at the stated hypotheses in the supplied research record. These are ingredients, not completed global milestones.
+The observable remains
 
-| Ingredient | Recorded status | Boundary that matters |
+`O_a(f) = (x_n / e_n^old) Σ_(original positive plaquettes p) f(x_p) [1 − ½ Tr(U_p)]`.
+
+There is **no additional a⁴ factor**. The same real calibration is held fixed for all four probes and during source differentiation. For the two unit-mass bumps and their reflections specified in the [contract](research/2026-10-26-full-history-checkpoint/work/full-history-four-entry-checkpoint-contract-20261025.txt), the comparison gives
+
+`|C_orig,ij − C_old,ij| ≤ 9 / (6400 π⁴ τ⁸)`, for `i,j ∈ {0,1}`,
+
+after the stated finite weak-floor and scale choices and control of the named regulator errors. Together with the registered homogeneous comparison, this leaves the original-law reflected witness
+
+`E_mu[(θF)F] ≥ 9 / (800 π⁴ τ⁸)`, with `F = O_a(f₀−f₁) − E_mu O_a(f₀−f₁)`.
+
+Read the [assembly](research/2026-10-26-full-history-checkpoint/work/full-history-four-entry-assembly-20261026.txt) together with its [main application audit](research/2026-10-26-full-history-checkpoint/work/consolidated-main-application-independent-readback-20261026.txt). The conclusion concerns these separated probes on the declared admissible regulator sequence; it is not a general theorem for arbitrary sources, collisions or normalized complex private posteriors.
+
+## What is established, and what remains?
+
+| Ingredient | Current status | Scope that must remain explicit |
 | --- | --- | --- |
-| Exact normalized source transport, covariance emissions, and logarithmic contacts | Exact finite identities | Original cuts, normalizers, retained variables, and final covariance remain in the law. |
-| Homogeneous signed Gaussian drift and terminal-coupling tuning | Internally reviewed local results | Finite homogeneous horizons; no compatible continuum family or full mixed-history law yet. |
-| Coherent regular Wilson source core | Internally reviewed registration using inherited modules | Its special cancellation belongs to that complete coherent family, not arbitrary masks or rare sources. |
-| Original rare cavity mark and first native source column | Internally reviewed finite results | Fixed cavity, original denominator, shrinking complex source domain, and complete independent field/current tests. |
-| Real constrained-minimum tower and real whole-product continuation | Internally reviewed latest addenda | Real, source-zero maps under stated smallness/admission conditions; original history masks may still vanish. |
-| Rare-source stability and finite-delay transport | Conditional results | Useful conclusions only after native domains, normalized reads, carrier costs, and the root count have been supplied. |
-| Complete complex prefix, full-history estimates, continuum state, reconstruction, and interaction | **Open** | These are required steps of the requested construction. |
+| Exact finite source transport and mixed-contact identities | Exact finite identities | All original weights and final covariance remain. |
+| Canonical weak windows, calibration and homogeneous signed comparison | Internally reviewed research modules | Named domain, native estimate and finite-period premises apply. |
+| From-bare source construction, dated private-block costs and common-vacuum stability | Internally reviewed for the declared construction | Old and new coefficient conventions are compared; complex private masses are not divided out. |
+| Full original-law four-entry energy checkpoint | Internally reviewed under the listed native inputs | Four separated reflected probes, with all error allowances and the same calibration. |
+| Observable algebra, collisions and a common continuum/infinite-volume state | **Open** | The four-entry estimate is insufficient for these limits and joint bounds. |
+| Reconstruction, Yang–Mills identification and interaction | **Open** | A positive energy two-point witness does not exclude a free-field composite. |
 
-Exact evidence links, dependencies, and exceptions are in the [ledger](docs/PROOF-STATUS.md). No percentage of a completed proof is assigned.
+The [ledger](docs/PROOF-STATUS.md) separates exact statements, published inputs, internal deductions, conditional consumers and open obligations. No percentage of a completed existence proof is assigned.
 
-## The next mathematical bottleneck
+## Next work
 
-The real estimates explain how the original cavity read can shrink over a logarithmic number of ordinary steps. The missing bridge is a **complete complex source extension through that prefix**. It must track the literal ordinary-average versus background-relative-Q endpoint return, the selected independent current after localization, every reconstructed domain test, and the original normalized law.
+The immediate construction task is to specify the common observable algebra and contact topology, then prove the joint estimates and compatibility needed for one continuum and infinite-volume state. The positive witness must survive that same limiting procedure. Reconstruction, dynamical identification and a valid interaction criterion remain necessary.
 
-There is **no completed producer or scoped audit for the proposed complex common-frame prefix theorem**. A restricted second-step image lemma is available, but it does not close this gate. Begin with [G1a: endpoint and coarse-frame return](docs/OPEN-PROBLEMS.md#g1a--exact-endpoint-return-and-coarse-frame-record) and the preserved [frontier report](guide/frontier.txt).
+The former cavity-prefix route is preserved as a specific historical/alternative problem. The new construction addresses the source interface needed for this checkpoint; it does not declare every version of the older G1/G2 tasks solved. See [the work packages](docs/OPEN-PROBLEMS.md).
 
-Closing this bridge would still leave full-history source closure, observable/contact estimates, one common continuum and infinite-volume state, the required field-theory properties, Yang–Mills identification, and an interaction witness.
+## Evidence and collaboration
 
-```mermaid
-flowchart TD
-    A[Exact finite Wilson law and source identities] --> B[Regular homogeneous lane: scoped results]
-    A --> C[Rare cavity and real prefix: scoped results]
-    C --> D[OPEN: complex prefix and normalized catalogue]
-    B --> E[OPEN: full-history source and contact estimates]
-    D --> E
-    E --> F[OPEN: common continuum and volume state]
-    F --> G[OPEN: reconstruction, Yang-Mills identification, interaction]
-```
+The [26 October research addition](research/2026-10-26-full-history-checkpoint/README.md) contains the draft, mathematical producer notes, scoped audits and a publication manifest. The [24 October manuscript](paper/YM4-incomplete-proof.pdf), guides and imported evidence remain unchanged as historical snapshots. The [archive guide](docs/ARCHIVE.md) distinguishes the two editions and maps their paths.
 
-## How to help
-
-Choose one [work package](docs/OPEN-PROBLEMS.md), state the exact claim and domain, and submit a proof, counterexample, or precise dependency correction using the [contribution guide](CONTRIBUTING.md). The best first contribution may be a narrow interface lemma or an audit of one import. Keep conditional estimates conditional until their native hypotheses have been verified.
-
-For orientation: [notation](docs/NOTATION.md) · [primary literature](docs/SOURCES.md) · [failed shortcuts and scope corrections](docs/CORRECTIONS.md).
-
-## What is in this repository?
-
-The repository contains the current delivered research notes, the five latest producer/audit pairs, selected inherited dependencies, the incomplete manuscript, and a catalogue mapping the full supplied archive to the public evidence selection. Duplicate working copies are resolved through the catalogue. The original 6,000-file ZIP remains the preservation source; this repository is a curated research edition, not a claim to reproduce every archived file.
-
-See [archive provenance and coverage](docs/ARCHIVE.md). Raw conversation exports, local operational files, and third-party paper caches are not part of this edition. The new navigation records the 24 October snapshot; historical instructions and status labels inside evidence files are source material, not current contributor instructions.
+Use the [contribution guide](CONTRIBUTING.md): state the precise claim, its original law and domains, dependencies, bounds and limitations, and supply a scoped audit. [Corrections](docs/CORRECTIONS.md) records failed shortcuts. Raw conversation exports, operational logs and third-party article caches are not republished here.

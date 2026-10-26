@@ -1,0 +1,227 @@
+EXACT CORE/RUNNING-CORRECTION RENEWAL WITH POLYNOMIAL ENTRY COST
+25 October 2026. Root. Abstract finite-regulator consumer; native
+registration hypotheses are explicit and are not inferred from this lemma.
+
+1. THE SAME SOURCE OPERATORS AND THE REQUIRED NORMS
+
+At a fixed finite regulator let C_j be the comparison-core normalized
+source operator and A_j the actual normalized source operator. They use
+the same source substitution, original cuts, and their respective full
+source-zero normalizers. Put D_j=A_j-C_j. Empty ordered products are
+the identity and C_[n,i)=C_(n-1)...C_i, similarly for A.
+
+All formulas are on common admitted successive reads. They do not
+equate the two densities or extend either one beyond its own domain.
+Field-independent source terms are retained separately. Since D_j
+annihilates constants, it also acts on the source quotient by constants;
+that quotient does not delete the physical scalar ledger.
+
+Let B_i be the strong norm for an actual running-domain source born at
+date i, including its original roots, complete read, calibration and
+profile coefficients. Let H_j be a current prepared source norm in which
+both mature core components and the explicitly dated immature components
+can be read. This is a REQUIRED native construction, not an assertion
+that all components possess a common fixed analytic extension.
+
+Suppose the core transports and difference insertions have the bounds
+
+ ||C_[n,i) F||_(H_n) <= K_i W(n,i) ||F||_(B_i), n>=i,
+ ||D_j F||_(B_(j+1)) <= epsilon_j ||F||_(H_j),              (1)
+
+where K_i>=1 is the ONCE-BORN entry/read cost. It may include the finite
+uniform-value replay, initial radius normalization, terminal unfinished
+delay costs and the declared native source-density census. It may not
+omit a future exponential positional count. The constants in (1) must
+be uniform in the regulator. The same source profile convention and all
+source/current reads are used on both sides.
+
+Take u_j=Y+lambda(N-j), Y>0, and
+
+ W(n,i)=(u_i/u_n)^nu,  nu>=0.                             (2)
+
+Thus W is multiplicative and W(j+1,j)>=1. This weight may be obtained
+from the already registered marginal/neutral Volterra core, including
+its spatial census. A finite regulator error factor can be included
+by replacing u_i^nu by a positive decreasing weight with the same
+uniformly bounded comparisons. Merely bounding one classical source
+value does not supply (1).
+
+2. FINITE DYSON EXPANSION AND THE CORRECT ONCE-BORN PRICE
+
+Repeatedly expand A_j=C_j+D_j. The term with insertions at
+i<=j_1<...<j_m<n is
+
+ C_[n,j_m+1) D_(j_m) C_[j_m,j_(m-1)+1) ...
+                         D_(j_1) C_[j_1,i) F.             (3)
+
+Each insertion creates a new B_(j_r+1) birth. Its subsequent core segment
+therefore pays K_(j_r+1) ONCE, while the initial segment pays K_i.
+For a zero-length segment, (1) includes the identity embedding. Its
+bound can still be K>=1; there is no missing adjacent-insertion case.
+
+The product of the weights in (3) is
+
+ W(n,i) product_(r=1)^m [W(j_r+1,j_r)]^(-1)
+ <= W(n,i).                                             (4)
+
+Consequently the term is at most
+
+ K_i W(n,i) ||F||_(B_i)
+                    product_(r=1)^m [epsilon_(j_r) K_(j_r+1)].
+
+The finite sum over all subsets of dates factorizes, giving
+
+ ||A_[n,i)F||_(H_n)
+ <= K_i W(n,i) product_(j=i)^(n-1)(1+kappa_j) ||F||_(B_i)
+ <= K_i W(n,i) exp(sum_(j=i)^(n-1) kappa_j) ||F||_(B_i),
+ kappa_j=epsilon_j K_(j+1).                              (5)
+
+This bounds arbitrary repeated corrections, including corrections
+before a previous source has completed its admission delay. It does
+not require pretending that an immature correction is fixed-domain.
+It DOES require the actual immature-source estimate in the second
+line of (1); a bound only for already mature input is insufficient.
+
+3. HIGH-POWER PREPARED ERRORS PAY THE ENTRY PRICE
+
+Suppose K_i<=C(1+x_i)^d, where x_i=g_i^(-2) is comparable by fixed
+constants to u_i. If epsilon_j<=C x_j^(-p), bounded adjacent ratios
+give kappa_j<=C' u_j^(-p+d). Thus p-d>1 implies
+
+ sum_(j<N) kappa_j <= C Y^(-p+d+1).                       (6)
+
+This is the integral comparison on the tuned trajectory. In particular
+the exponential in (5) is uniformly bounded and tends to one as the
+weak terminal floor Y tends to infinity. If the prepared error is
+instead polynomial times exp[-c(log x_j)^beta], beta>1, it pays every
+fixed d and prescribed terminal power by decreasing c and increasing
+the weak floor.
+
+The relevant epsilon_j is the norm of the COMPLETE prepared discrepancy,
+not a pointwise bare activity. Its old-date sum, roots, localization and
+static/noisy composition costs must already be in it. If an unweighted
+initial MR_j packet costs exp(c R_j^4), that cost is not a polynomial
+unless an independent source norm estimate actually pays it.
+
+4. COMPARISON WITH A UNIFORMLY BOUNDED REFERENCE CORE TRAJECTORY
+
+The actual reference trajectory need not be estimated by applying the
+generic polynomial W to its initial fine date. Suppose the specifically
+matched core source X_j^C=C_[j,0)X_0 satisfies
+
+                 ||X_j^C||_(H_j) <= M                   (7)
+
+uniformly, after its original calibration is factored out explicitly.
+The exact telescoping identity is
+
+ X_n^A-X_n^C = sum_(j<n) A_[n,j+1) D_j X_j^C.            (8)
+
+Using (5) gives
+
+ ||X_n^A-X_n^C||_(H_n)
+ <= M exp(sum kappa) sum_(j<n) kappa_j W(n,j+1).          (9)
+
+At n=N, epsilon_j<=C x_j^(-p) and K_(j+1)<=C x_(j+1)^d
+imply, if p-d>nu+1,
+
+ ||X_N^A-X_N^C||_(H_N) <= C M Y^(-p+d+1).                (10)
+
+Indeed factor Y^-nu and sum u_j^(-p+d+nu); the shift by one is
+bounded uniformly. For super-polynomial logarithmic rarity, the
+right side can be C_H M Y^-H for every fixed H. A fixed finite
+scalar/tensor extractor on the mature norm inherits this bound;
+any running-domain terminal extractor price must instead be included
+in K or stated separately. This is not an original-law variance or
+continuum nontriviality estimate.
+
+The special core bound (7) can use the coherent reference's O(g^4)
+marginal cancellation. Generic corrections need only the O(g^2)
+feedback weight (2). It is incorrect to assign the special cancellation
+to each arbitrary rare source.
+
+5. NATIVE REGISTRATION STILL REQUIRED
+
+The direct protected value theorem supplies a plausible polynomial
+entry mechanism under the fixed C base: K_col^t with t=O(log x_i).
+For a generic running birth, ALL relative-field, current, curvature,
+compact-reference and reconstructed-tower tests must first be
+transported on complete scalar-localized source reads. Restricting to
+a stronger hereditary source subclass does not automatically include
+the physical source inputs; their mother-cube/collar certificate is
+separate.
+
+The exact interpolation identity
+
+ D_j F = integral_0^1 Cov_(C+sD)(F(Psi), Delta D) ds        (11)
+
+suggests a value bound using the complete prepared Delta D norm. It
+does not require differentiating F in its shrinking field radius.
+However (11) gives the second line of (1) only if the SAME complete
+protected source images, actual C+sD cluster budgets and degree-zero
+two-mark carrier bound hold for immature as well as mature sources.
+An action comparison known only for one fixed-radius reference is not
+enough. Neither is an estimate for a born D before its preparation.
+
+Finally H_j must be genuinely constructed with exact profile, tensor,
+vacuum/contact and current conventions. The classical static radius
+gain alone does not give the quantum age estimate in (1). Boundary,
+retained-hole, reset and private-coordinate records require their
+own types and may not be filed as homogeneous B_i without proof.
+
+This finite renewal lemma explains exactly how polynomial admission
+and sufficiently small complete discrepancies would close the
+homogeneous correction iteration. It does not claim that all native
+hypotheses have already been verified, and proves no continuum limit.
+
+6. A NONLINEAR UNMARKED BOOTSTRAP, IF ITS EXACT PRODUCER IS BUILT
+
+The one-step normalized logarithm has a quadratic remainder, so the
+following finite numerical consequence is useful. Suppose a genuinely
+constructed unmarked difference, with d_0=0, satisfies
+
+ d_n <= C sum_(j<n) u_(j+1)^d W(n,j+1)
+                              [r_j+u_j^b d_j^2],
+ r_j<=C_r u_j^-p, b>=0.                                 (12)
+
+Here d_n is the SAME complete current prepared norm throughout. The
+power u^b records any proved conversion from that norm to the quadratic
+interaction estimate; it is not an omitted preparation cost. The forcing
+r_j must be a registered actual map/outer-factor difference or initial
+forcing. With identical exact maps, counterterms and initial action,
+no new difference can simply be inserted under the name of an R birth.
+
+Set s=p-d-1 and assume
+
+                  s>max(nu,d+b+1).                       (13)
+
+The forcing sum in (12) is bounded by C_F u_n^-s. If inductively
+d_j<=A u_j^-s for j<n, the quadratic sum is at most
+
+ C_Q A^2 u_n^-nu sum_(j<n) u_j^(d+nu+b-2s)
+ <= C'_Q A^2 u_n^(-2s+d+b+1)
+ <= C'_Q A^2 Y^[-(s-d-b-1)] u_n^-s.                     (14)
+
+Adjacent u ratios are bounded; constants include those comparisons.
+The integral comparison is valid since (13) implies
+2s>d+nu+b+1. Choose A=2C_F (or a larger positive fixed constant),
+then raise Y so C'_Q A^2 Y^[-(s-d-b-1)]<=A/2. Finite induction gives
+
+                       d_n<=A u_n^-s                     (15)
+
+uniformly in n,N. If a retained marginal/counterterm driver costs at
+most C u_j^c d_j, c>=0, then s>c+1 additionally yields
+
+ sum_(j<n) C u_j^c d_j <= C' A u_n^(-s+c+1).              (16)
+
+Thus a sufficiently small complete rare forcing can control both a
+quadratic correction recurrence and an explicitly priced driven marginal.
+For a logarithmic rare tail of exponent greater than one, any fixed
+power p in this numerical statement is available after all its costs
+are fixed, provided the ACTUAL forcing has that stronger tail.
+
+Equations (12)--(16) do not construct the required core or prepared norm.
+They apply only after a same-coordinate unmarked evolution, actual
+forcing, all nonlinear source images, and uniform core admission with
+the explicit marginal driver have been proved. In particular the
+unknown complete Dprep bound has not been assumed as a conclusion:
+(12) is the specific producer recurrence that would replace it.

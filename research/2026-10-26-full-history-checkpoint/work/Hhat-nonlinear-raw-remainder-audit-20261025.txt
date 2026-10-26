@@ -1,0 +1,250 @@
+STRONG HHAT EXTENSION: NONLINEAR RAW-REMAINDER AUDIT
+25 October 2026. Scoped proof and physical-matching correction.
+
+Scope: the proposed independent-current Hhat and nonlinear remainder.
+The linear Hhat/S_J estimates are being audited separately. This note
+derives the multiplier identity, corrects the physical remainder being
+matched, and proves the required quadratic gradient bound from the
+native coefficient kernel bounds. It does not certify a normalized law.
+
+PRIMARY FACTS
+
+B102 (80), printed p290, uses Delta_pi in its cubic remainder. Its
+derivative estimates are (85)--(98), pp291--293. B102 printed p297,
+visually checked in B102-elliptic-21.png, explicitly replaces Delta_pi
+by raw Delta in functional (74) before equations (127)--(128). Thus the
+V in the strong Q-constrained equation (143), and subsequently (180),
+is the corresponding RAW-Delta remainder. B102 (137)--(140), pp298--299,
+give the physical Landau cancellation used to bound Delta H.
+
+1. EXACT NORMALIZATION AND MULTIPLIER SIGN
+
+Normalize the coarse constraint first: write Q for the complete native
+row map with its L^j eta factor INCLUDED, so QH0=I. Use the native
+weighted fine/coarse bilinear pairings for transposes. Write a_Q for
+the resulting diagonal coarse multiplier defined by
+
+ A := Delta_a = Delta_raw + D R D* + Q* a_Q Q.
+
+This convention absorbs the explicit (L^j eta)^{-1} in B102 (129).
+If Q is instead kept unnormalized, every identity below must restore
+that diagonal row factor; it cannot simply be deleted.
+
+Let
+
+ G0=A^{-1}, W=(QG0Q*)^{-1}, H0=G0Q*W,
+ G_Q=G0-G0Q*WQG0,
+ Hhat=(I-G_Q S_J)^{-1}H0.
+
+All inverses are on their stated Dirichlet/constraint spaces. Then
+QG_Q=0 and QHhat=I. Moreover
+
+ A G_Q=I-Q*WQG0,
+ A Hhat=Q*W+S_J Hhat-Q*WQG0 S_J Hhat,
+
+so, EXACTLY,
+
+ (A-S_J)Hhat=Q*Lambda,
+ Lambda=W[I-QG0 S_J Hhat].                         (1)
+
+The proposed minus sign in Lambda is correct. Define two operators
+
+ K_Q=Q*Lambda-Q*a_Q,
+ L_Q=K_Q+S_J Hhat=A Hhat-Q*a_Q
+                   =(Delta_raw+DRD*)Hhat.          (2)
+
+The final expression in (2) is an identity, not a prescription to
+estimate second derivatives separately. The bounded expression
+Q*Lambda-Q*a_Q+S_JHhat is the one to use off the physical graph.
+
+On the physical graph, the separately verified linear result gives
+Hhat=H and RD*H=0, while B102 (138) gives S_JH=Delta'_pi H.
+Consequently
+
+ K_Q=Delta_pi H,                 L_Q=Delta_raw H.   (3)
+
+The K_Q version matches (80). The L_Q version matches the raw V needed
+by (127), (143), (180). This distinction is essential: equality of
+scalar functionals only on the Landau subspace would not imply equality
+of their unrestricted derivatives. The L_Q version gives equality as
+functionals of ALL admitted A' at a fixed physical (U,J), and therefore
+gives the exact unrestricted derivatives as well.
+
+2. THE CORRECTED INDEPENDENT-CURRENT REMAINDER
+
+In the following write H=Hhat, L=L_Q; coefficients are fixed while
+differentiating with respect to A'. Define D by the literal equation
+
+ D(A')=C(A'-H D(A')),
+ Z(A')=A'-H D(A'),
+ D_3(A')=D(A')-C^(2)(A').                          (4)
+
+C has no constant or linear term. D starts with C^(2), independently
+of H; hence D_3 starts at degree three. Define
+
+ Vhat_raw(A') = -<H D_3(A'),J> - <A',L D(A')>
+       + (1/2)<D(A'),H*L D(A')> + V0(Z(A')).       (5)
+
+This is a new, declared continuation in independent (U,J), not an
+identity theorem inference from physical points. At physical (U,J)
+and unweakened coefficients it is exactly the raw V specified above,
+for every A' in the shared chart. Its quadratic current correction is
+still the explicitly polarized form
+
+ <A',Delta_hat^(2)A'> = 2<H C^(2)(A'),J>.
+
+It must be built with THIS H, not an independently continued old H.
+
+Off the physical graph H*L need not be symmetric: S_J is one-sided
+and Lambda need not be symmetric. Formula (5) is nevertheless a
+well-defined scalar. Its derivative automatically uses
+
+ Sym(H*L)=(H*L+L*H)/2.                              (6)
+
+One may insert Sym in (5) without changing its value. All stars are
+analytic bilinear transposes, never parameter conjugations.
+
+3. COMPLETE FLUCTUATION DERIVATIVE
+
+Let D'=dD/dA', D_3'=dD_3/dA'. Direct differentiation of every occurrence
+of A', including those in D, gives
+
+ grad Vhat_raw = -D_3'^* H*J
+                 -L D-D'^*L*A'
+                 +D'^* Sym(H*L)D
+                 +(I-D'^*H*) grad V0(Z).            (7)
+
+There is no missing half factor in the third line: differentiating
+the quadratic scalar produces Sym(H*L). In particular, replacing
+the second term's derivative by only -L D omits a quadratic term.
+Writing L*A' as H*Delta_raw A' offgraph would reintroduce an estimate
+which has not been proved and is unnecessary.
+
+4. WEIGHTED BOUNDS AND THE PROPOSITION 4 ESTIMATE
+
+Let X_1 be the native field/first-covariant-difference norm
+max(|A'|_(-1),|nabla A'|_(-2)), and let Y be the source norm |.|_(-3).
+Let Z_c be the dimensionless coarse-constraint norm. In a homogeneous
+unit-scale problem Z_c is the usual color sup norm. Keep the native
+weighted pairings in all mixed-grade formulas.
+
+For specificity, if a coarse row at scale ell uses the pairing weight
+ell^d and Q has absorbed ell, the associated coarse SOURCE norm Z_c#
+has weight ell^4. This follows from H having field order ell^{-1},
+J source order ell^{-3}, and the volume ell^d. L has source order
+ell^{-3}, so L*A' has the same coarse source order ell^{-4}. These
+are coordinate-normalized weights, not an instruction to replace the
+native pairings. At homogeneous coarse scale ell=1 they disappear.
+
+The needed coefficient estimates, inherited from the native two-ended
+weighted kernel/tree estimates and the convergent Hhat series, are
+
+ ||H z||_(X_1) <= C_H ||z||_(Z_c),
+ ||H* f||_(Z_c#) <= C_H ||f||_Y,
+ ||L z||_Y <= C_L ||z||_(Z_c),
+ ||L* A'||_(Z_c#) <= C_L ||A'||_(X_1).               (8)
+
+The L estimate uses (2), the coarse inverse W estimate, and the bound
+for S_JHhat. Its transpose estimate follows from the same two-ended
+kernels. A forward sup-operator norm alone would NOT imply that
+transpose estimate uniformly in volume; the native kernel bounds are
+part of (8). The factors Q*, W, QG0, S_J and Hhat must all remain in
+the complete tree read. The linear audit supplies the stronger Hhat
+slots separately; only (8) is needed in the present gradient proof.
+
+The averaging nonlinearity C has the native local analytic bounds,
+including the derivative kernel estimate behind B102 (73). For r small
+and ||A'||_(X_1)<=r, (4) is a contraction, and its differentiated form is
+
+ D'=(I+C'(Z)H)^{-1} C'(Z).                          (9)
+
+Thus ||D||_(Z_c)<=C r^2 and its adjoint derivative obeys
+
+ ||D'^* w||_Y <= C r ||w||_(Z_c#).
+
+These follow from the local row kernel of C' and the exponentially
+summable kernels of H, using the same weighted Schur sums as (73).
+For the genuinely cubic remainder, the exact useful identity is
+
+ D_3'=(I+C'(Z)H)^{-1}
+       [C'(Z)-C^(2)'(A')-C'(Z)H C^(2)'(A')].        (10)
+
+Because Z-A'=-HD=O(r^2), every bracketed term in (10) has order r^2:
+C'(Z)-C^(2)'(Z)=O(r^2), C^(2)'(Z)-C^(2)'(A')=O(r^2),
+and C'(Z)H C^(2)'(A')=O(r^2). The same kernel composition gives
+
+ ||D_3'^* w||_Y <= C r^2 ||w||_(Z_c#).              (11)
+
+No differentiation of the independent current is used here.
+
+For V0, the local plaquette expansion and the discrete integration by
+parts in B102 (90)--(96) give
+
+ ||grad V0(Z)||_Y <= C ||Z||_(X_1)^2 <= C r^2.       (12)
+
+This is the actual first-derivative estimate: the derivative falling
+on a covariant difference is handled by the local commutator cancellation
+in (93)--(96). It does not require an uncontrolled second spatial
+derivative of Z or an offgraph Landau identity. Since H has the first
+difference bound, ||Z||_(X_1)<=C r, so that proof applies unchanged.
+
+Take ||J||_Y<=gamma. The five lines/parts in (7) have respective Y bounds
+
+ C gamma r^2,   C r^2,   C r^2,   C r^3,
+ (1+C r) C r^2.
+
+For the fourth term, both H*L and L*H are bounded Z_c -> Z_c# by (8).
+Consequently
+
+             ||grad Vhat_raw(A')||_Y <= C r^2.     (13)
+
+C is uniform in the homogeneous grade and volume on fixed strict
+coefficient/current caps. This is the precise analogue of Proposition 4,
+including its full chain derivative. It depends only on the first-order
+field norm of A', even though the corrected linear response has stronger
+slots available.
+
+5. HIGHER DERIVATIVES, LOCALIZERS, AND PHYSICAL IDENTIFICATION
+
+The functions in (4)--(5) are holomorphic on a strict larger ball. On
+||A'||_(X_1),||B'||_(X_1)<=r inside that ball, analytic Cauchy estimates
+applied to (13) yield
+
+ ||grad Vhat_raw(A')-grad Vhat_raw(B')||_Y
+                      <= C r ||A'-B'||_(X_1).       (14)
+
+Thus composing with a uniformly bounded strong Q-constrained covariance
+gives the contraction estimate required by the nonlinear response. Fixed
+higher normalized-direction derivatives follow by the same Cauchy
+argument with strict reserves. This does not claim a dimension-independent
+bound for a sum over every unnormalized background coordinate.
+
+For B116-style weakening, expand Hhat, L_Q and each other coefficient
+into their complete native localized words, including every J branch,
+then attach the scalar weakening weights to complete words. The
+independent linear audit must supply (8) uniformly on the selected
+simultaneous s polydisc. Under those bounds, (4)--(14) hold verbatim
+with H(s),L(s). Neither QH(s)=I nor a Landau Ward identity at s!=1 is
+used in this nonlinear estimate. At s=1, the exact unweakened identities
+(1)--(3) restore the physical raw action and its derivatives.
+
+One must not localize only an endpoint of H*J, L* A', or H*L while
+discarding their other branches. The estimates use their full kernels
+and complete support unions. Coefficient derivatives in U,J,s are
+handled on their actual strict complete-read domains; the same explicit
+coefficients must be differentiated throughout (5), (7), and the
+quadratic Delta_hat^(2). Uniform fixed-order packet derivatives follow
+from Cauchy when the packet's native norm and synthesis radius are fixed.
+
+CONCLUSION
+
+The K_Q proposal has the correct multiplier sign and valid cubic
+gradient estimates, but matches the Delta_pi remainder. For the strong
+response equation, replace it by L_Q=K_Q+S_JHhat. The corrected formula
+(5) matches the physical raw remainder for all A', has the exact
+gradient (7), and obeys (13)--(14) under the native coefficient kernel
+bounds. This supplies a consistent nonlinear extension without using
+offgraph Ward identities. The chosen independent-current continuation,
+quadratic precision, scalar remainder, and eventual normalizer must now
+be kept consistent; the old canonical normalization is not identified
+by physical-graph agreement alone.
